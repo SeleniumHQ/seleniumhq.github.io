@@ -1,0 +1,29 @@
+baseURL = "/"
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Selenium Documentation"
+theme = "hugo-theme-learn"
+copyright = "2013-{year}"
+
+# Code highlighting
+pygmentsUseClasses = false
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsStyle = "solarized-dark"
+
+enableGitInfo = true
+
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "selenium"  
+  editURL = "https://github.com/SeleniumHQ/docs/edit/master/docs_source_files/content/"
+  ghrepo = "https://github.com/SeleniumHQ/docs/"
+  description = "Selenium Documentation"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+
+# For search functionality
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
