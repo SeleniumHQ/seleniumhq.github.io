@@ -6,7 +6,6 @@
   <input type="radio" name="tabset{{$codeTabId}}" id="tab{{$index}}{{$codeTabId}}" aria-controls="{{$language}}{{$codeTabId}}" checked>
     <label for="tab{{$index}}{{$codeTabId}}">{{index $languagesNice $index}}</label>
   {{ end }}  
-  {{ if .Inner }}{{/* We don't use the inner content, but Hugo will complain if we don't reference it. */}}{{ end }}
   <div class="tab-panels">
       {{- .Inner -}}
   </div>
