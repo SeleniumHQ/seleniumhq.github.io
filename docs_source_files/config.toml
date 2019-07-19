@@ -17,7 +17,7 @@ enableGitInfo = true
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "selenium"  
-  editURL = "https://github.com/SeleniumHQ/docs/edit/master/docs_source_files/content/"
+  editURL = "https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/"
   ghrepo = "https://github.com/SeleniumHQ/docs/"
   description = "Selenium Documentation"
   showVisitedLinks = true
