@@ -1,9 +1,10 @@
 ---
-title: "Get started with WebDriver"
+title: "Getting started with WebDriver"
 chapter: true
+weight: 4
 ---
 
-# Get started with WebDriver
+# Getting started with WebDriver
 
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.
