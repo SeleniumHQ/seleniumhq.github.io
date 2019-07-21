@@ -1,6 +1,7 @@
 baseURL = "https://seleniumhq.github.io/docs/new_site"
 languageCode = "en-US"
 defaultContentLanguage = "en"
+canonifyurls = "true"
 
 title = "Selenium Documentation"
 theme = "hugo-theme-learn"
