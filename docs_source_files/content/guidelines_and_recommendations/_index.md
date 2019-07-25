@@ -1,5 +1,6 @@
 ---
 title: "Guidelines and recommendations"
+menuTitle: "Guidelines"
 chapter: true
 weight: 7
 ---
