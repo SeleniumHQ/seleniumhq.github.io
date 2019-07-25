@@ -1,7 +1,6 @@
 ---
 title: "Mouse and keyboard actions in detail"
 weight: 4
-draft: true
 ---
 
 Suppose you have an arbitrary web element **e:**
