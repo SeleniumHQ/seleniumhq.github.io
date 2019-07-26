@@ -1,5 +1,6 @@
 ---
-title: "Quick Tour"
+title: "Quick tour"
+weight: 1
 ---
 
 Selenium is not just one tool or API
@@ -7,8 +8,8 @@ but it composes many tools.
 
 ## WebDriver
 
-_[WebDriver](wd.md)_ is also known as Selenium 2. If you are 
-beginning with desktop website test automation then you
+_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ is also known as Selenium 2.
+If you are beginning with desktop website test automation then you
 are going to be using WebDriver APIs. WebDriver uses browser
 automation APIs provided by browser vendors to control browser and
 run tests. This is as if a real user is operating the browser. Since
@@ -19,7 +20,8 @@ same application which you push live.
 
 ## Remote Control
 
-_[Remote Control](rc.md)_ is also known as Selenium 1. 
+[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp)
+is also known as Selenium 1. 
 Selenium RC was the most prominent Selenium tool
 before the advent of Selenium WebDriver. Selenium RC would use a
 proxy server and inject JavaScript into a browser to be able to control
@@ -27,7 +29,9 @@ it. Given the intrusive nature Selenium RC had on a browser,
 you could never be sure if what you were testing was the same as 
 the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
 Selenium 3 would completely get rid of Selenium RC APIs. If you are
-still using Selenium RC then you must _[migrate](rctowd.md)_ to Selenium WebDriver.
+still using Selenium RC then you must 
+[_migrate_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+to Selenium WebDriver.
 
 
 ## IDE
@@ -47,12 +51,12 @@ WebDriver API, you will never use Selenium IDE.
 
 Soon after development of WebDriver tests, you may face a need of
 running your tests on multiple browser and operating system combinations.
-This is where _[Grid](grid.md)_ comes to the rescue.
+This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
 
 
 ## HTML Runner
 
 This tool allows you to run Test Suites from the command
 line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner](html-runner.md)_
+tools. _[HTML Runner]({{< ref "/getting_started/html-runner.md" >}})_
 

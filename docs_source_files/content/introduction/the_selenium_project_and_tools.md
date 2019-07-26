@@ -48,7 +48,7 @@ Selenium's minimalist design approach gives it
 versatility to be included as a component in bigger applications.
 The surrounding infrastructure provided under the Selenium umbrella
 gives you the tools to put together
-your own [grid of browsers](grid.md)
+your own [grid of browsers]({{< ref "/grid/_index.md" >}})
 so tests can be run on different browsers and multiple operating systems
 across a range of machines.
 
@@ -109,7 +109,7 @@ for a niché audience and a specific use case,
 to the world's _de facto_ browser automation library.
 
 Just as Selenium RC made use of the tools of the trade available at the time,
-[Selenium WebDriver](wd.md) drives that tradition on by taking
+[Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) drives that tradition on by taking
 the browser interaction part to the browser vendor's home turf,
 and asking them to take responsibility of the backend, browser-facing implementations.
 Recently this work has evolved into a W3C standardisation process
