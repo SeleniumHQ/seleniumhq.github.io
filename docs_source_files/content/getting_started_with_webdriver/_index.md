@@ -25,4 +25,5 @@ through a user-facing interface that enables the different browser backends
 to be used transparently,
 enabling cross-browser and cross-platform automation.
 
-More details about drivers can be found in [Driver Idiosyncrasies](drivers.md).
+More details about drivers can be found in 
+[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).

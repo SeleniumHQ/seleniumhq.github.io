@@ -65,7 +65,7 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 {{< / code-tab >}}
 
 The issue here is that the default
-[page load strategy](#page_load_strategy)
+[page load strategy]({{< ref "/webdriver/page_loading_strategy.md" >}})
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is
@@ -76,14 +76,15 @@ about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
 Fortunately, using the normal instruction set available on
-the [_WebElement_](#web_element) interface—such
+the [_WebElement_]({{< ref "/webdriver/web_element.md" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
  in that the function calls won't return
  (or the callback won't trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
- [_Keyboard_](#keyboard) and [_Mouse_](#mouse),
+ [_Keyboard_]({{< ref "/webdriver/keyboard.md" >}}) 
+ and [_Mouse_]({{< ref "/webdriver/mouse.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
@@ -95,7 +96,7 @@ between the browser and your WebDriver script,
 most Selenium clients ship with a _wait_ package.
 When employing a wait,
 you are using what is commonly referred to
-as an [_explicit wait_](#explicit_wait).
+as an [_explicit wait_](#explicit-wait).
 
 
 ## Explicit wait
@@ -271,7 +272,7 @@ to find an exhaustive list of expected conditions:
 ## Implicit wait
 
 There is a second type of wait that is distinct from
-[explicit wait](#explicit_wait) called _implicit wait_.
+[explicit wait](#explicit-wait) called _implicit wait_.
 By implicitly waiting, WebDriver polls the DOM
 for a certain duration when trying to find _any_ element.
 This can be useful when certain elements on the webpage
@@ -279,7 +280,7 @@ are not available immediately and need some time to load.
 
 Implicit waiting for elements to appear is disabled by default
 and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit_wait) and implicit waits
+Mixing [explicit waits](#explicit-wait) and implicit waits
 will cause unintended consequences, namely waits sleeping for the maximum
 time even if the element is available or condition is true.
 
