@@ -13,7 +13,7 @@ WebDriver's aim is to emulate a real user's interaction
 with the browser as closely as possible.
 This is possible at varying levels in different browsers.
 For more details on the different driver idiosyncracies,
-please see _[Driver Idiosyncracies](drivers.md)_.
+please see _[Driver Idiosyncracies]({{< ref "/driver_idiosyncrasies/_index.md" >}})_.
 
 Even though all the drivers share a single user-facing interface
 for controlling the browser,
@@ -427,7 +427,7 @@ has an excellent writeup on Microsoft's implementation.
 Current releases of Opera are built on top of the Chromium engine,
 and WebDriver is now supported via the closed-source
 [Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases),
-which can be [added to your PATH](#adding_executables_to_your_path) or as a 
+which can be [added to your PATH](#adding-executables-to-your-path) or as a 
 system property.
 
 Instantiating a driver session is similar to Firefox and Chromium:
