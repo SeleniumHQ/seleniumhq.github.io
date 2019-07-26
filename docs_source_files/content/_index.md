@@ -23,8 +23,8 @@ to further an open discussion around automation of the web platform.
 The project organises [an annual conference](//seleniumconf.com/)
 to teach and nurture the community.
 
-At the core of Selenium is _[WebDriver](wd.md)_, an interface to
-write instruction sets that can be run interchangeably in many 
+At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, 
+an interface to write instruction sets that can be run interchangeably in many 
 browsers. Here is one of the simplest instructions you can make:
 
 {{< code-tab >}}
@@ -124,10 +124,10 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 {{< / code-tab >}}
 
 
-See the _[Quick Tour](quick.md)_ for a full explanation
+See the _[Quick Tour]({{< ref "/getting_started/quick.md" >}})_ for a full explanation
 of what goes on behind the scenes when you run this code.
-You should continue on to the [narrative documentation](#narrative)
-to understand how you can [install](install.md) and
+You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
+to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
 successfully use Selenium as a test automation tool,
 and scaling simple tests like this to run
 in large, distributed environments on multiple browsers,
@@ -141,8 +141,8 @@ get up to speed right away.
 
 * [Quick tour]({{< ref "/getting_started/quick.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.md#selenium_remote_control" >}})
-  * [IDE]({{< ref "/getting_started/quick.md#selenium_ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.md#selenium_grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.md#selenium_html_runner" >}})
+  * [Remote Control]({{< ref "/getting_started/quick.md#remote-control" >}})
+  * [IDE]({{< ref "/getting_started/quick.md#ide" >}})
+  * [Grid]({{< ref "/getting_started/quick.md#grid" >}})
+  * [HTML Runner]({{< ref "/getting_started/quick.md#html-runner" >}})
 

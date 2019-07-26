@@ -12,7 +12,7 @@ get up to speed right away.
 
 * [Quick tour]({{< ref "/getting_started/quick.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.md#selenium_remote_control" >}})
-  * [IDE]({{< ref "/getting_started/quick.md#selenium_ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.md#selenium_grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.md#selenium_html_runner" >}})
+  * [Remote Control]({{< ref "/getting_started/quick.md#remote-control" >}})
+  * [IDE]({{< ref "/getting_started/quick.md#ide" >}})
+  * [Grid]({{< ref "/getting_started/quick.md#grid" >}})
+  * [HTML Runner]({{< ref "/getting_started/quick.md#html-runner" >}})

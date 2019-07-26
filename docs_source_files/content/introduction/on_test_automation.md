@@ -28,7 +28,7 @@ Browser automation has the reputation of being “flaky”,
 but in reality that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
 to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions](wd.html#waits)
+in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.md" >}})
 between the browser and WebDriver.
 
 By keeping your tests short
@@ -166,7 +166,7 @@ to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
 The point is, these two lines of code do not distract you from the ultimate purpose of this test:
 configuring a unicorn.
 
-The intricacies of the [Page Object model](guidelines.html#page_object_models)
+The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.md" >}})
 will be discussed in later chapters, but we will introduce the concept here:
 
 Your tests should be composed of actions,
