@@ -1,4 +1,4 @@
-baseURL = "https://seleniumhq.github.io/docs/new_site"
+baseURL = "https://seleniumhq.github.io/docs/site"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 canonifyurls = "true"
