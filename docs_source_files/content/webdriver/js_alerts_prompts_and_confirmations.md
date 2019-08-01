@@ -233,6 +233,6 @@ await alert.sendKeys("Selenium");
 //Press the OK button
 await alert.accept();
 
-Note: To use await, the above code should be inside an async function
+//Note: To use await, the above code should be inside an async function
   {{< / code-panel >}}
 {{< / code-tab >}}
