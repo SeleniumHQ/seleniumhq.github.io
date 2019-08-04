@@ -38,7 +38,29 @@ title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
 
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
 [Languages.es]
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
