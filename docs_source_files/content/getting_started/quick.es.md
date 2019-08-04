@@ -1,7 +1,13 @@
 ---
-title: "Quick tour"
+title: "Tour rápido"
 weight: 1
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 Selenium is not just one tool or API
 but it composes many tools.
@@ -58,5 +64,5 @@ This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
 
 This tool allows you to run Test Suites from the command
 line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner]({{< ref "/getting_started/html-runner.md" >}})_
+tools. _[HTML Runner]({{< ref "/getting_started/html-runner.es.md" >}})_
 

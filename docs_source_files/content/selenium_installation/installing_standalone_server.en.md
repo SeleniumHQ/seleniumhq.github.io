@@ -3,9 +3,6 @@ title: "Installing Standalone server"
 weight: 3
 ---
 
-## Installing Standalone server
-
-
 If you plan to use [Grid]({{< ref "/grid/_index.md" >}}) then you should download the
 [selenium-server-standalone JAR](//www.seleniumhq.org/download/) file.
  The _selenium-server-standalone_ jar is never uploaded, but all the components are available via
