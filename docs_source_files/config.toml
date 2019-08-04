@@ -1,9 +1,12 @@
 baseURL = "https://seleniumhq.github.io/docs/site"
 languageCode = "en-US"
 defaultContentLanguage = "en"
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
+
 canonifyurls = "true"
 
-title = "Selenium Documentation"
+title = "Documentation for Selenium"
 theme = "hugo-theme-learn"
 copyright = "2013-{year}"
 
@@ -20,7 +23,7 @@ enableGitInfo = true
   themeVariant = "selenium"  
   editURL = "https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/"
   ghrepo = "https://github.com/SeleniumHQ/docs/"
-  description = "Selenium Documentation"
+  description = "Documentation for Selenium"
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
@@ -28,3 +31,14 @@ enableGitInfo = true
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Documentation for Selenium"
+weight = 1
+languageName = "English"
+
+[Languages.es]
+title = "Documentación de Selenium"
+weight = 2
+languageName = "Español"

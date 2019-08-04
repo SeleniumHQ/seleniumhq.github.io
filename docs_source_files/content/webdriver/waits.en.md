@@ -65,7 +65,7 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 {{< / code-tab >}}
 
 The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.md" >}})
+[page load strategy]({{< ref "/webdriver/page_loading_strategy.en.md" >}})
 used in WebDriver listens for the `document.readyState`
 to change to `"complete"` before returning from the call to _navigate_.
 Because the `p` element is
@@ -76,15 +76,15 @@ about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
 Fortunately, using the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.md" >}}) interface—such
+the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
  in that the function calls won't return
  (or the callback won't trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.md" >}}) 
- and [_Mouse_]({{< ref "/webdriver/mouse.md" >}}),
+ [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}}) 
+ and [_Mouse_]({{< ref "/webdriver/mouse.en.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 

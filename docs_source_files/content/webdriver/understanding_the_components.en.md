@@ -1,5 +1,5 @@
 ---
-title: "Understanding the componets"
+title: "Understanding the components"
 weight: 1
 ---
 
