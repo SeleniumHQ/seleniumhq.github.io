@@ -49,6 +49,11 @@ name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
 url = "https://github.com/seleniumhq/docs/issues"
 weight = 11
 
+[[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
 [Languages.es]
 title = "Documentación de Selenium"
 weight = 2
@@ -64,3 +69,8 @@ weight = 10
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema"
 url = "https://github.com/seleniumhq/docs/issues"
 weight = 11
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Créditos"
+url = "front_matter/copyright_and_attributions"
+weight = 20
