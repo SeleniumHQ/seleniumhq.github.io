@@ -339,7 +339,7 @@ Edge(executable_path='/path/to/MicrosoftWebDriver.exe')
 new EdgeDriver("/path/to/MicrosoftWebDriver.exe");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"
+Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
@@ -411,10 +411,10 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe");
 Ie(executable_path='/path/to/IEDriverServer.exe')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-new InternetExplorerDriver("/path/to/geckodriver");
+new InternetExplorerDriver("C:/path/to/IEDriver.exe");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"
+Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
