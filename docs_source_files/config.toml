@@ -74,3 +74,24 @@ weight = 11
 name = "<i class='fas fa-fw fa-bullhorn'></i> Créditos"
 url = "front_matter/copyright_and_attributions"
 weight = 20
+
+[Languages.nl]
+title = "Selenium documentatie"
+weight = 1
+languageName = "Nederlands"
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Meld een probleem"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "front_matter/copyright_and_attributions"
+weight = 20
