@@ -3,6 +3,12 @@ title: "Waits"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 WebDriver can generally be said to have a blocking API.
 Because it is an out-of-process library that
 _instructs_ the browser what to do,

@@ -4,6 +4,12 @@ chapter: true
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 # Getting started with WebDriver
 
 Selenium supports automation of all the major browsers in the market

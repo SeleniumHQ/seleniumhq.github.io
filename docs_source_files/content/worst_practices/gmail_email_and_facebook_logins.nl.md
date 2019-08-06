@@ -4,6 +4,12 @@ menuTitle: "Gmail, email and Facebook"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 For multiple reasons, logging into sites like Gmail and Facebook
 using WebDriver is not recommended.
 Aside from being against the usage terms for these sites
