@@ -81,14 +81,14 @@ url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
+name = "<i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír"
 url = "contributing"
 weight = 30
 
 [Languages.nl]
 title = "Selenium documentatie"
 weight = 3
-languageName = "Dutch"
+languageName = "Nederlands"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -107,6 +107,6 @@ url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.nl.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
+name = "<i class='fas fa-fw fa-bullhorn'></i> Hoe bij te dragen"
 url = "contributing"
 weight = 30
