@@ -3,6 +3,12 @@ title: "Link spidering"
 weight: 7
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Using WebDriver to spider through links
 is not a recommended practice not because it cannot be done,
 but because it’s definitely not the most ideal tool.

@@ -2,6 +2,12 @@
 title: "The Selenium Browser Automation Project"
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 # The Selenium Browser Automation Project
 
 Selenium is an umbrella project for a range of tools and libraries 

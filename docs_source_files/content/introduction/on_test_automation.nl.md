@@ -3,6 +3,12 @@ title: "On test automation"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 First, start by asking yourself whether or not you really need to use a browser.
 Odds are good that, at some point, if you're working on a complex web application,
 you will need to open a browser and actually test it.

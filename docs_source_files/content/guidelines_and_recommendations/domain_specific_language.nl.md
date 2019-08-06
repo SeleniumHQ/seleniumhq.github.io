@@ -3,6 +3,12 @@ title: "Domain specific language"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 A domain specific language (DSL) is a system which provides the user with
 an expressive means of solving a problem. It allows a user to
 interact with the system on their terms – not just programmer-speak.

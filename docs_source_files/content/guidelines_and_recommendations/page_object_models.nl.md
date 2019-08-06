@@ -3,6 +3,12 @@ title: "Page object models"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Page Object is a Design Pattern which has become popular in test
 automation for enhancing test maintenance and reducing code
 duplication. A page object is an object-oriented class that serves as

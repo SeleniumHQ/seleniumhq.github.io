@@ -3,6 +3,12 @@ title: "Web element"
 weight: 9
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Represents a DOM element. WebElements can be found by searching from the
 document root using a WebDriver instance, or by searching under another
 WebElement:
