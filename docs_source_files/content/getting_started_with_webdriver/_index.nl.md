@@ -1,35 +1,28 @@
 ---
-title: "Getting started with WebDriver"
+title: "Aan de slag met WebDriver"
 chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# Aan de slag met WebDriver
 
-# Getting started with WebDriver
+Door middel van _WebDriver_ ondersteunt Selenium alle grote browsers op de markt.
+WebDriver is een API en protocol dat een taal-onafhankelijke interface aanbied die
+de browser kan aansturen. Elke browser bevat een specifieke WebDriver implementatie.
+We verwijzen naar deze implementatie als *driver*.
+De driver is verantwoordelijk voor de vertaalslag naar de browser en staat in voor
+de communicatie van en naar Selenium en de browser.
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+Deze opsplitsing is bewust gedaan zodat de leverancier van de browser de 
+verantwoordelijkheid van de implementatie op zich neemt. Selenium maakt gebruik
+van deze aangeleverde drivers indien mogelijk. Eveneens bied ze haar eigen drivers 
+aan voor het geval dat de leverancier hierover niet beschikt. Deze worden onderhouden
+door de community.
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
+Selenium schakelt al deze stukken aan elkaar door middel van een interface.
+Deze zorgt voor een transparante en gebruiksvriendelijke manier om de backend
+van de verschillende browsers aan te spreken. Hierdoor onstaat een browser en
+platform onafhankelijke oplossing.
 
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
-
-More details about drivers can be found in 
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+Meer info over de drivers kan je terugvinden via 
+[Driver Eigenschappen]({{< ref "/driver_idiosyncrasies/_index.nl.md" >}}).
