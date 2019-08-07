@@ -54,7 +54,7 @@ Test Suite voorbeeld:
 ```
 
 
-## Hoe selenium-html-runner headless starten
+## Selenium-html-runner headless starten
 
 Hieronder vind je een voorbeeld van hoe je de selenium-html-runner
 start. Het resultaat van onderstaand voorbeeld is sterk afhankelijk

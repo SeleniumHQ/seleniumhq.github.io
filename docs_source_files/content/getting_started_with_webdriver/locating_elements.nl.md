@@ -1,15 +1,16 @@
 ---
-title: "Locating elements"
+title: "Localisatie van elementen"
 weight: 3
 ---
 
 {{% notice info %}}
+### Localisatie van elementen
 <i class="fas fa-language"></i> Page being translated from 
 English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-### Locating one element
+### Localisatie van elementen
 
 One of the most fundamental techniques to learn when using WebDriver is
 how to find elements on the page. WebDriver offers a number of built-in selector

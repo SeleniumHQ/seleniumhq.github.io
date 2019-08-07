@@ -3,31 +3,24 @@ title: "Browsers"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## Algemene browsers
 
-## Consumer browsers
+Selenium ondersteunt officieel volgende browsers:
 
-The Selenium framework officially supports the following browsers:
-
-| Browser | Maintainer | Versions Supported |
+| Browser | Beheerder | Ondersteunde versies |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | All versions |
-| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 and newer |
-| Internet Explorer | Selenium | 6 and newer |
-| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer |
-| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 and newer |
+| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Alle versies |
+| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 en nieuwer |
+| Internet Explorer | Selenium | 6 en nieuwer |
+| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 en nieuwer |
+| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 en nieuwer |
 
-## Specialised browsers
+## Gespecialiseerde browsers
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
+Er bestaan ook gespecialiseerde browser die enkel in ontwikkelomgevingen gebruikt
+worden. Deze kunnen ook gebruikt worden voor het automatiseren van de browser.
+Selenium biedt ondersteuning voor de volgende drivers:
 
-| Driver Name | Purpose | Maintainer |
+| Driver | Doel | Beheerder |
 | -------- | ---------- | ------------------ |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino | Selenium project |
+| HtmlUnitDriver | Headless browser emulator ontwikkeld door Rhino | Selenium project |
