@@ -247,3 +247,11 @@ h4 {
 #sidebar ul.topics > li > a {
   font-size: 1rem !important;
 }
+
+/*
+  Color for the select element of the languages
+*/
+
+.select-style select option {
+  color: black;
+}
