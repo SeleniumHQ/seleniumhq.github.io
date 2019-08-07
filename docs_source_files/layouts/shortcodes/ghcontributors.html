@@ -2,22 +2,22 @@
   .ghContributors {
     display: flex;
     flex-flow: wrap;
-    align-content: flex-start
+    align-content: flex-start;
   }
 
   .ghContributors > div {
-    width: 50% ;
+    width: 50%;
     display: inline-flex;
     margin-bottom: 5px;
   }
-  
+
   .ghContributors > div label {
-    padding-left: 4px ;
+    padding-left: 4px;
   }
-  
+
   .ghContributors > div span {
     font-size: x-small;
-    padding-left: 4px ;
+    padding-left: 4px;
   }
 </style>
 <div class="ghContributors">
@@ -29,8 +29,16 @@
 
   {{ range getJSON $url }}
   <div style="padding: 10px;">
-    <img src="{{.avatar_url}}" class="inline" width="32" height="32" style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; ">
-    <label><a href="{{.html_url}}">@{{.login}}</a></label>
+    <img
+      src="{{.avatar_url}}"
+      class="inline"
+      width="32"
+      height="32"
+      style="height: 32px;height: 32px;margin-bottom:.25em; vertical-align:middle; "
+    />
+    <label
+      ><a href="{{.html_url}}">@{{.login}}</a></label
+    >
     <span class="contributions">{{.contributions}} commits</span>
   </div>
   {{ end }}
