@@ -1,23 +1,17 @@
 ---
-title: "Copyright and attributions"
+title: "Copyright et attributions"
 weight: 1
 ---
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
+English to French. Do you speak French? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-## **The Selenium Documentation**
+## **The Documentation of Selenium**
 
 Copyright {{< copyright >}}, Software Freedom Conservancy.
-
-Er is veel tijd en werk gestroken in het maken van deze
-documentatie met als doel zo correct en compleet mogelijk te zijn
-maar dit impliceert geen geschiktheid of garantie.
-Deze informatie wordt aangeboden op een "as-is" basis.
-De auteur en de uitgever
 
 Every effort has been made to make this documentation
 as complete and as accurate as possible,
