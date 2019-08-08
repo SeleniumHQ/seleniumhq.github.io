@@ -6,7 +6,7 @@ weight: 1
 首先，您需要为自动化项目安装 Selenium 绑定库。
 库的安装过程取决于您选择使用的语言。
 
-## Java
+## _Java_
 
 可以使用 Maven 安装 Java 的 Selenium 库。
 在项目 pom.xml 中添加 _selenium-java_ 依赖项：
@@ -41,7 +41,7 @@ _selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自
 </dependency>
 ```
 
-## Python
+## _Python_
 
 可以使用 pip 安装 Python 的 Selenium 库：
 
@@ -56,7 +56,7 @@ pip install selenium
 python setup.py install
 ```
 
-## `C#`
+## _C#_
 
 可以使用 NuGet 安装 C# 的 Selenium 库：
 
@@ -67,7 +67,7 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-## Ruby
+## _Ruby_
 
 可以使用 gem 安装 Ruby 的 Selenium 库：
 
@@ -75,7 +75,7 @@ dotnet add package Selenium.WebDriver
 gem install selenium-webdriver
 ```
 
-## JavaScript
+## _JavaScript_
 
 可以使用 npm 安装 JavaScript 的 Selenium 库
 

@@ -6,7 +6,7 @@ weight: 1
 First you need to install the Selenium bindings for your automation project.
 The installation process for libraries depends on the language you choose to use.
 
-## Java
+## _Java_
 Installation of Selenium libraries for Java can be done using Maven.
 Add the _selenium-java_ dependency in your project pom.xml:
 
@@ -44,7 +44,7 @@ you should add the following dependency:
 </dependency>
 ```
 
-## Python
+## _Python_
 Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
@@ -58,7 +58,7 @@ Alternatively you can download the [PyPI source archive](https://pypi.org/projec
 python setup.py install
 ```
 
-## C#
+## _C#_
 Installation of Selenium libraries for C# can be done using NuGet:
 
 ```shell
@@ -68,14 +68,14 @@ Install-Package Selenium.WebDriver
 dotnet add package Selenium.WebDriver
 ```
 
-## Ruby
+## _Ruby_
 Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-## JavaScript
+## _JavaScript_
 Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
