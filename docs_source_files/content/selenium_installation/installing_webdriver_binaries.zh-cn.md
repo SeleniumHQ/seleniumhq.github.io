@@ -1,16 +1,8 @@
 ---
-title: "Installing WebDriver binaries"
+title: "安装 WebDriver 二进制文件"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+要执行项目并控制浏览器，需要安装特定于浏览器的 WebDriver 二进制文件。
 
-To execute your project and control browser you need to have
-browser-specific WebDriver binaries installed.
-
-Download the [WebDriver binary]({{< ref "/webdriver/driver_requirements.zh-cn.md#quick-reference" >}})
-supported by your browser and place it in the
-[System PATH]({{< ref "/webdriver/driver_requirements.zh-cn.md#adding-executables-to-your-path" >}}).
+下载 [WebDriver 二进制文件]({{< ref "/webdriver/driver_requirements.zh-cn.md#quick-reference" >}}) 并放入 [系统 PATH 环境变量]({{< ref "/webdriver/driver_requirements.zh-cn.md#adding-executables-to-your-path" >}}) 中.
