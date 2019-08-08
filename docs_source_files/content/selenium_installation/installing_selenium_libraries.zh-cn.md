@@ -1,19 +1,15 @@
 ---
-title: "Installing Selenium libraries"
+title: "安装 Selenium 库"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.
+首先，您需要为自动化项目安装 Selenium 绑定库。
+库的安装过程取决于您选择使用的语言。
 
 ## Java
-Installation of Selenium libraries for Java can be done using Maven.
-Add the _selenium-java_ dependency in your project pom.xml:
+
+可以使用 Maven 安装 Java 的 Selenium 库。
+在项目 pom.xml 中添加 _selenium-java_ 依赖项：
 
 ```xml
 <dependency>
@@ -23,12 +19,9 @@ Add the _selenium-java_ dependency in your project pom.xml:
 </dependency>
 ```
 
-The _selenium-java_ dependency supports running your automation
-project with all Selenium supported browsers. If you want to run tests
-only in a specific browser, you can add the dependency for that browser
-in your _pom.xml_ file.
-For example, you should add following dependency in your _pom.xml_
-file to run your tests only in Firefox:
+_selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自动化项目。
+如果只想在特定的浏览器中运行测试，可以在 _pom.xml_ 文件中添加该浏览器的依赖项。
+例如，您应该在 _pom.xml_ 文件中添加以下依赖项，以便于只在 Firefox 中运行测试：
 
 ```xml
 <dependency>
@@ -38,8 +31,7 @@ file to run your tests only in Firefox:
 </dependency>
 ```
 
-In a similar manner, if you want to run tests only in Chrome,
-you should add the following dependency:
+同样，如果你只想在 Chrome 上运行测试，您应该添加以下依赖项：
 
 ```xml
 <dependency>
@@ -50,21 +42,23 @@ you should add the following dependency:
 ```
 
 ## Python
-Installation of Selenium libraries for Python can be done using pip:
+
+可以使用 pip 安装 Python 的 Selenium 库：
 
 ```shell
 pip install selenium
 ```
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+或者，您也可以下载 [PyPI source archive](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) 并使用 _setup.py_ 进行安装：
 
 ```shell
 python setup.py install
 ```
 
-## C#
-Installation of Selenium libraries for C# can be done using NuGet:
+## `C#`
+
+可以使用 NuGet 安装 C# 的 Selenium 库：
 
 ```shell
 # Using package manager
@@ -74,19 +68,17 @@ dotnet add package Selenium.WebDriver
 ```
 
 ## Ruby
-Installation of Selenium libraries for Ruby can be done using gem:
+
+可以使用 gem 安装 Ruby 的 Selenium 库：
 
 ```shell
 gem install selenium-webdriver
 ```
 
 ## JavaScript
-Installation of Selenium libraries for JavaScript can be done using npm:
+
+可以使用 npm 安装 JavaScript 的 Selenium 库
 
 ```shell
 npm install selenium-webdriver
 ```
-
-
-
-
