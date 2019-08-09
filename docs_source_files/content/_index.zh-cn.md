@@ -2,35 +2,19 @@
 title: "Selenium 浏览器自动化项目"
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+# Selenium 浏览器自动化项目
 
-# The Selenium Browser Automation Project
+Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目。
 
-Selenium is an umbrella project for a range of tools and libraries
-that enable and support the automation of web browsers.
+它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器，以及用于实现 [W3C WebDriver 规范](//www.w3.org/TR/webdriver/) 的基础结构，该 规范 允许您为所有主要 Web 浏览器编写可互换的代码。
 
-It provides extensions to emulate user interaction with browsers,
-a distribution server for scaling browser allocation,
-and the infrastructure for implementations of the
-[W3C WebDriver specification](//www.w3.org/TR/webdriver/)
-that lets you write interchangeable code for all major web browsers.
+这个项目是由志愿者贡献者实现的，他们投入了自己数千小时的时间，并使源代码[免费提供](attr.md#license)给任何人使用、享受和改进。
 
-This project is made possible by volunteer contributors
-who have put in thousands of hours of their own time,
-and made the source code [freely available](attr.md#license)
-for anyone to use, enjoy, and improve.
+Selenium 汇集了浏览器供应商，工程师和爱好者，以进一步围绕 Web 平台自动化进行公开讨论。
+该项目组织了[一次年度会议](//seleniumconf.com/)，以教学和培养社区。
 
-Selenium brings together browser vendors, engineers, and enthusiasts
-to further an open discussion around automation of the web platform.
-The project organises [an annual conference](//seleniumconf.com/)
-to teach and nurture the community.
-
-At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_,
-an interface to write instruction sets that can be run interchangeably in many
-browsers. Here is one of the simplest instructions you can make:
+Selenium 的核心是 _[WebDriver]({{< ref "/webdriver/_index.md" >}})_，这是一个编写指令集的接口，可以在许多浏览器中互换运行。
+这里有一个最简单的说明：
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -129,22 +113,14 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-See the _[Quick Tour]({{< ref "/getting_started/quick.zh-cn.md" >}})_ for a full explanation
-of what goes on behind the scenes when you run this code.
-You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
-to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
-successfully use Selenium as a test automation tool,
-and scaling simple tests like this to run
-in large, distributed environments on multiple browsers,
-on several different operating systems.
+请参阅 _[快速浏览]({{< ref "/getting_started/quick.zh-cn.md" >}})_ 以获得运行此代码时幕后发生的事情的完整解释。
+您应该继续阅读[介绍]({{< ref "/introduction/_index.md" >}})，了解如何[安装]({{< ref "/selenium_installation/_index.md" >}})并成功地使用 Selenium 作为测试自动化工具，并将这样的简单测试扩展到多个浏览器上的大型分布式环境中，在多个不同的操作系统上运行。
 
-## Getting started
+## 入门指南
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+如果您刚刚接触 Selenium，我们有一些资源可以帮助您快速上手。
 
-* [Quick tour]({{< ref "/getting_started/quick.zh-cn.md" >}})
+* [快速浏览]({{< ref "/getting_started/quick.zh-cn.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.zh-cn.md#webdriver" >}})
   * [Remote Control]({{< ref "/getting_started/quick.zh-cn.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.zh-cn.md#ide" >}})
