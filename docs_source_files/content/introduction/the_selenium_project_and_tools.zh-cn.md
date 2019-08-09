@@ -1,122 +1,92 @@
 ---
-title: "The Selenium project and tools"
+title: "Selenium 项目和工具"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+### Selenium 控制网页浏览器
 
-### Selenium controls web browsers
+_Selenium_ 有很多功能，
+但其核心是 web 浏览器自动化的一个工具集，
+它使用最好的技术来远程控制浏览器实例，
+并模拟用户与浏览器的交互。
 
-_Selenium_ is many things,
-but at its core it's a toolset for web browser automation
-that uses the best techniques available
-to remotely control browser instances
-and emulate a user's interaction with the browser.
+它允许用户模拟终端用户执行的常见活动；将文本输入到字段中，选择下拉值和复选框，并单击文档中的链接。
+它还提供许多其他控件，比如鼠标移动、任意 JavaScript 执行等等。
 
-It allows users to simulate common activities performed by end-users;
-entering text into fields,
-selecting drop-down values and checking boxes,
-and clicking links in documents.
-It also provides many other controls such as mouse movement,
-arbitrary JavaScript execution, and much more.
+虽然 Selenium 主要用于网站的前端测试，但其核心是浏览器用户代理库。
+这些接口在应用程序中无处不在，它们鼓励与其他库进行组合，以满足您的目的。
 
-Although used primarily for front-end testing of websites,
-Selenium is at its core a browser user agent _library_.
-The interfaces are ubiquitous to their application,
-which encourages composition with other libraries to suit your purpose.
+### 一个接口来统治它们
 
+该项目的指导原则之一是支持所有（主要）浏览器技术的通用接口。
+Web 浏览器是非常复杂的，高度工程化的应用程序，
+以完全不同的方式执行它们的操作，但是在执行这些操作时，它们通常看起来是一样的
+即使文本以相同的字体呈现，图像也会显示在相同的位置，并且链接会将您带到相同的目的地。
+下面发生的事情就像白天和黑夜一样不同。
+Selenium “抽象”了这些差异，向编写代码的人隐藏了它们的细节和复杂性。
+这允许您编写几行代码来执行一个复杂的工作流程，
+但是这几行代码将在 Firefox、 Internet Explorer、 Chrome 和所有其他支持的浏览器上执行。
 
-### One interface to rule them all
+### 工具和支持
 
-One of the project's guiding principles
-is to support a common interface for all (major) browser technologies.
-Web browsers are incredibly complex, highly engineered applications,
-performing their operations in completely different ways
-but which frequently look the same while doing so.
-Even though the text is rendered in the same fonts,
-the images are displayed in the same place
-and the links take you to the same destination.
-What is happening underneath is as different as night and day.
-Selenium “abstracts” these differences,
-hiding their details and intricacies from the person writing the code.
-This allows you to write several lines of code to perform a complicated workflow,
-but these same lines will execute on Firefox,
-Internet Explorer, Chrome, and all other supported browsers.
+Selenium 的极简设计方法使其具有通用性，可以作为更大应用程序中的组件。
+Selenium 保护伞下提供的周边基础设施为您提供了组合自己的
+[浏览器 grid]({{< ref "/grid/_index.md" >}}) 的工具，
+因此测试就可以跨一系列机器在不同的浏览器和多个操作系统上运行。
 
+想象一下，
+服务器机房或数据中心的一组计算机同时启动浏览器，访问站点的链接、表单和表格 &mdash;
+全天 24 小时测试应用程序。
+通过为最常见的语言提供的简单编程接口，
+这些测试将不知疲倦地并行运行，
+当错误发生时向您报告。
 
-### Tools and support
+通过为用户提供工具和文档，
+不仅可以控制浏览器，
+还可以方便地扩展和部署这些 grid，
+从而帮助您实现这一目标。
 
-Selenium's minimalist design approach gives it
-versatility to be included as a component in bigger applications.
-The surrounding infrastructure provided under the Selenium umbrella
-gives you the tools to put together
-your own [grid of browsers]({{< ref "/grid/_index.md" >}})
-so tests can be run on different browsers and multiple operating systems
-across a range of machines.
+通过为用户提供工具和文档，不仅可以控制浏览器，
+还可以简化网格的伸缩和部署。
+来帮助您实现这一目标，
+这些工具和文档
 
-Imagine a bank of computers in your server room or data centre
-all firing up browsers at the same time
-hitting your site's links, forms,
-and tables&mdash;testing your application 24 hours a day.
-Through the simple programming interface
-provided for the most common languages,
-these tests will run tirelessly in parallel,
-reporting back to you when errors occur.
+### 谁在使用 Selenium
 
-It's an aim to help make this a reality for you,
-by providing users with tools and documentation to not only control browsers,
-but to make it easy to scale and deploy such grids.
+世界上许多最重要的公司都在基于浏览器的测试中采用了 Selenium，
+这常常取代了多年来涉及其他专有工具的工作。
+随着它越来越受欢迎，
+它的需求和挑战也成倍增加。
 
+随着网络变得越来越复杂，新的技术被添加到网站上，
+这个项目的任务就是尽可能地跟上它们。
+作为一个开源项目，这种支持是通过许多志愿者的慷慨捐赠来提供的，
+每个志愿者都有一份“日常工作”。
 
-### Who uses Selenium
+该项目的另一个任务是鼓励更多的志愿者参与到这项工作中来，
+并建立一个强大的社区，以便项目能够继续跟上新兴的技术，
+并继续成为功能测试自动化的主导平台。
 
-Many of the most important companies in the world
-have adopted Selenium for their browser-based testing,
-often replacing years-long efforts involving other proprietary tools.
-As it has grown in popularity, so have its requirements and challenges multiplied.
+### 历史
 
-As the web becomes more complicated
-and new technologies are added to websites,
-it's the mission of this project to keep up with them where possible.
-Being an open source project,
-this support is provided through the generous donation of time from many volunteers,
-every one of which has a “day job”.
+当 Selenium 1 于 2004 年发布时，
+出于减少在 web 应用程序前端手工验证一致行为所花费的时间的需要。
+它利用了当时可用的工具，
+并严重依赖于向测试中的 web 页面注入 JavaScript 来模拟用户的交互。
 
-Another mission of the project is to encourage
-more volunteers to partake in this effort,
-and build a strong community
-so that the project can continue to keep up with emerging technologies
-and remain a dominant platform for functional test automation.
+虽然 JavaScript 是一个很好的工具，
+可以让您自省 DOM 的属性，
+并进行某些客户端观察，
+否则您将无法进行这些观察，
+但是它不具备像使用鼠标和键盘那样自然复制用户交互的能力。
 
+从那时起，Selenium 已经成长并成熟了很多，
+成为世界上许多（不是大多数）大型机构广泛使用的工具。
+Selenium 已经从 Thoughtworks 为特定受众和特定用例开发的自制测试自动化工具包，
+转移到世界上的浏览器自动化库。
 
-### History
-
-When Selenium 1 was released in 2004,
-it was out of the necessity to reduce time spent
-manually verifying consistent behaviour in the front-end of a web application.
-It made use of what tools were available at the time,
-and relied heavily on the injection of JavaScript to the web page under test
-to emulate a user's interaction.
-
-Whilst JavaScript is a good tool to let you introspect the properties of the DOM
-and to do certain client-side observations that you would otherwise not be able to do,
-it falls short on the ability to naturally replicate a user's interactions
-as if the mouse and keyboard are being used.
-
-Since then, Selenium has grown and matured a lot,
-into a tool widely used by many&mdash;if not most&mdash;of
-the largest organisations around the world.
-Selenium has gone from a homebrewed test automation toolkit developed at Thoughtworks
-for a niché audience and a specific use case,
-to the world's _de facto_ browser automation library.
-
-Just as Selenium RC made use of the tools of the trade available at the time,
-[Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) drives that tradition on by taking
-the browser interaction part to the browser vendor's home turf,
-and asking them to take responsibility of the backend, browser-facing implementations.
-Recently this work has evolved into a W3C standardisation process
-where the goal is to turn the WebDriver component in Selenium
-into the _du jeur_ remote control library for user agents.
+正如 Selenium RC 利用了当时可用的工具一样，
+[Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) 将浏览器交互部分带到浏览器供应商的地盘，
+并要求他们负责后端、面向浏览器的实现，从而推动了这一传统。
+最近，这项工作已经发展成为 W3C 标准化过程，
+其目标是将 Selenium 中的 WebDriver 组件转换为用户代理的 _du jeur_ 远程控制库。
