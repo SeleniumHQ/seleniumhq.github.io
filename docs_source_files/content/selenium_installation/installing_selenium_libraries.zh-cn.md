@@ -31,7 +31,7 @@ _selenium-java_ 依赖项支持在所有 Selenium 支持的浏览器中运行自
 </dependency>
 ```
 
-同样，如果你只想在 Chrome 上运行测试，您应该添加以下依赖项：
+同样，如果您只想在 Chrome 上运行测试，您应该添加以下依赖项：
 
 ```xml
 <dependency>
