@@ -3,33 +3,10 @@ title: "Acerca de esta documentación"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.
+Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
 
-If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
-[https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues)
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!
+Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar [https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues) y buscar para ver si el problema ya se ha archivado o no. Si no, ¡no dudes en abrir uno!
 
-Many members of the community frequent
-the _#selenium_ IRC channel at [irc.freenode.net](//freenode.net/). 
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it's much easier for everyone when we get contributions
-from outside the normal committers.
-
-
+Muchos miembros de la comunidad frecuentan el canal IRC _#selenium_ en [irc.freenode.net](//freenode.net/). ¡No dude en venir y hacer preguntas y si obtiene ayuda que cree que podría ser útil en estos documentos, asegúrese de agregar su contribución! Podemos actualizar estos documentos, pero es mucho más fácil para todos cuando recibimos contribuciones de fuera de los encargados normales.
 
