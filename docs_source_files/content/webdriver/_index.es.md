@@ -4,40 +4,18 @@ chapter: true
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # WebDriver
 
-The biggest change in Selenium recently
-has been the inclusion of the WebDriver API.
-Driving a browser natively as a user would either locally
-or on a remote machine using the Selenium server,
-it marks a leap forward in terms of browser automation.
+El cambio más grande en Selenium, recientemente, ha sido la inclusión de la API WebDriver. Manejar un navegador de forma nativa como lo haría un usuario localmente o en una máquina remota usando el servidor Selenium, marca un salto adelante en términos de automatización del navegador.
 
-Selenium WebDriver fits in the same role as RC did,
-and has incorporated the original 1.x bindings.
-It refers to both the language bindings
-and the implementations of the individual browser controlling code.
-This is commonly referred to as just _WebDriver_
-or sometimes as _Selenium 2_.
+Selenium WebDriver encaja en el mismo rol que RC, y ha incorporado los enlaces 1.x originales. Se refiere tanto a los enlaces de lenguaje como a las implementaciones del código de control del navegador individual. Esto se conoce comúnmente como WebDriver o, a veces, como Selenium 2.
 
 Selenium 1.0 + WebDriver = Selenium 2.0
 
-* WebDriver is designed in a simpler
-  and more concise programming interface
-  along with addressing some limitations in the Selenium-RC API.
+* El WebDriver está diseñado en una interfaz de programación más simple y concisa junto con algunas limitaciones en la API Selenium-RC.
 
-* WebDriver is a compact object-oriented API
-  when compared to Selenium 1.0.
+* El WebDriver es una API compacta orientada a objetos en comparación con Selenium 1.0.
 
-* It drives the browser much more effectively
-  and overcomes the limitations of Selenium 1
-  that affected our functional test coverage,
-  like the file upload or download, pop-ups, and dialogs barrier.
+* Este, comtrola al navegador de manera mucho más efectiva y supera las limitaciones de Selenium 1 que afectaron nuestra cobertura de prueba funcional, como la carga o descarga de archivos, ventanas emergentes y barreras de diálogo.
 
-* WebDriver overcomes the limitation of Selenium RC's 
-  [single-host origin policy](//en.wikipedia.org/wiki/Same-origin_policy).
+WebDriver supera la limitación de la [política del mismo origen](//es.m.wikipedia.org/wiki/Pol%C3%ADtica_del_mismo_origen) de host único de Selenium RC.
