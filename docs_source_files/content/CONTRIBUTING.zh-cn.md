@@ -132,7 +132,7 @@ Fixes #141
 
 去 <https://github.com/yourusername/docs.git> 并按下 _Pull
 Request_ 并填写表单。
-**请注明您已签署了 CLA** （见 Step 6）。
+**请注明您已签署了 CLA** （见 Step 7）。
 
 Pull requests 通常会在几天内被审查。
 如果有需要处理的注释，在新的提交中应用您的更改（最好是 [fixups](http://git-scm.com/docs/git-commit)) 并推送到同一个分支。

@@ -166,7 +166,7 @@ Cela réduira d'autant le temps d'intégration de votre demande.
 Rendez-vous sur https://github.com/yourusername/docs.git 
 et cliquez sur le bouton _Pull Request_ 
 et remplissez le formulaire. 
-**Merci d'indiquer que vous avez signé le CLA** (voir Etape 6).
+**Merci d'indiquer que vous avez signé le CLA** (voir Etape 7).
 
 Les Pull Requests sont généralement traitées en quelques jours.
 Si il y a des commentaires à prendre en compte de votre part, 
