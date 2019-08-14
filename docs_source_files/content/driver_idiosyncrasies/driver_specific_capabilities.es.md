@@ -3,18 +3,12 @@ title: "Capacidades especificas de los controladores"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### Definir Capacidades (_Capabilities_) usando `FirefoxOptions`
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` es la nueva forma de definir capacidades para el navegador Firefox y, por lo general, debe usarse con preferencia a las capacidades deseadas.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -29,20 +23,20 @@ options.headless = True
 driver = webdriver.Firefox(options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### Configuración de un perfil personalizado
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+Es posible crear un perfil personalizado para Firefox como se muestra a continuación.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -60,21 +54,20 @@ firefox_profile.set_preference("javascript.enabled", False)
 options.profile = firefox_profile
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Todavía no tenemos una muestra de código C#: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
 {{< / code-tab >}}
+
 
 ## Internet Explorer
 
 ### fileUploadDialogTimeout
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir el cuadro de diálogo Cargar archivo. IEDriver tiene un tiempo de espera predeterminado de 1000 ms, pero puede aumentar el tiempo de espera usando la _capability_ fileUploadDialogTimeout.
 
