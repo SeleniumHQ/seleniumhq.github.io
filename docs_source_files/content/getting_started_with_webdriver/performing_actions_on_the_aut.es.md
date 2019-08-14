@@ -3,13 +3,8 @@ title: "Ejecutando acciones en la AUT*"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-You can set an element's text using the sendKeys method as follows:
+Puede establecer el texto de un elemento utilizando el método sendKeys de la siguiente manera:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,9 +29,7 @@ await driver.findElement(By.name('name')).sendKeys(name);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Some web applications use JavaScript libraries to add drag-and-drop
-functionality. The following is a basic example of dragging one
-element onto another element:
+Algunas aplicaciones web usan bibliotecas JavaScript para agregar la funcionalidad de arrastrar y soltar. El siguiente es un ejemplo básico de arrastrar un elemento a otro elemento:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -67,9 +60,9 @@ await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Clicking on an element
+### Al hacer clic en un elemento
 
-You can click on an element using the click method:
+Puede hacer clic en un elemento utilizando el método de clic:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
