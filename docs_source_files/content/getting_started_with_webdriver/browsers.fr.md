@@ -3,31 +3,26 @@ title: "Navigateurs"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## Navigateurs consommateurs
 
-## Consumer browsers
+Le framework Selenium supporte officiellement les navigateurs suivants:
 
-The Selenium framework officially supports the following browsers:
+| Navigateur        | Mainteneur                                                                                                                 | Versions supportées   |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------- |
+| Chromium          | [Chromium](//sites.google.com/a/chromium.org/chromedriver/)                                                                | Toutes versions       |
+| Firefox           | [Mozilla](//github.com/mozilla/geckodriver/)                                                                               | 54 and plus récentes  |
+| Internet Explorer | Selenium                                                                                                                   | 6 et plus récentes    |
+| Opera             | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 et plus récentes |
+| Safari            | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/)                                                            | 10 et plus récentes   |
 
-| Browser           | Maintainer                                                                                                                 | Versions Supported |
-| ----------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| Chromium          | [Chromium](//sites.google.com/a/chromium.org/chromedriver/)                                                                | All versions       |
-| Firefox           | [Mozilla](//github.com/mozilla/geckodriver/)                                                                               | 54 and newer       |
-| Internet Explorer | Selenium                                                                                                                   | 6 and newer        |
-| Opera             | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer     |
-| Safari            | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/)                                                            | 10 and newer       |
+## Navigateurs spécialisés
 
-## Specialised browsers
+Il existe également un ensemble de navigateurs spécialisés, 
+utilisés typiquement dans des environnements de développement.
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
+Ils peuvent également être utilisés à des fins d'automatisation,
+et Selenium fournit un support pour les navigateurs spécialisés suivants:
 
-| Driver Name    | Purpose                                   | Maintainer       |
-| -------------- | ----------------------------------------- | ---------------- |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino | Selenium project |
+| Nom Driver     | Utilisation                                         | Mainteneur      |
+| -------------- | --------------------------------------------------- | --------------- |
+| HtmlUnitDriver | Emulateur de navigateur headless supproté par Rhino | Projet Selenium |

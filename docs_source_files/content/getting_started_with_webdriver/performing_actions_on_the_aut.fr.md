@@ -3,13 +3,7 @@ title: "Réaliser des action sur l'AUT*"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-You can set an element's text using the sendKeys method as follows:
+Il est possible de renseigner le texte d'un élément web grâce à la méthode _sendKeys_, comme suit:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,9 +28,9 @@ await driver.findElement(By.name('name')).sendKeys(name);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Some web applications use JavaScript libraries to add drag-and-drop
-functionality. The following is a basic example of dragging one
-element onto another element:
+Certaines applications web utilisent des librairies Javascript pour ajouter
+des fonctionnalités de drag-and-drop. Suit un exemple basique permettant de
+dragger un élément sur un autre :
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -67,9 +61,9 @@ await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Clicking on an element
+### Cliquer sur un élément
 
-You can click on an element using the click method:
+Il est possible de cliquer sur un élément en utilisant la méhode _click_:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -89,4 +83,4 @@ await driver.findElement(By.css("input[type='submit']")).click();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-***AUT**: Application under test
+***AUT***: Application testée (Application under test en anglais)
