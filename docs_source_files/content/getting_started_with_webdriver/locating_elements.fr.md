@@ -9,184 +9,182 @@ English to French. Do you speak French? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-### Locating one element
+### Localiser des éléments
 
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-WebElement cheese = driver.findElement(By.id("cheese"));  
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-driver.find_element_by_id("cheese")
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-IWebElement element = driver.FindElement(By.Id("cheese"));  
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-driver.find_element(id: "cheese")  
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
-
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
-
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+Une des techniques fondamentales à maîtriser lorsque l'on utilise WebDriver 
+consiste à chercher des éléments sur une page. 
+WebDriver offre pour cela un ensemble pré-défini de type de selecteurs,
+parmi lesquels la recherche d'une élément par son attribut ID:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement cheese = driver.findElement(By.id("cheese"));
-WebElement cheddar = cheese.findElement(By.id("cheddar"));
+WebElement cheese = driver.findElement(By.id("fromage"));  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-cheese = driver.find_element_by_id("cheese")
-cheddar = cheese.find_elements_by_id("cheddar")
+driver.find_element_by_id("fromage")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IWebElement cheese = driver.FindElement(By.Id("cheese"));
-IWebElement cheddar = cheese.FindElement(By.Id("cheddar"));
+IWebElement element = driver.FindElement(By.Id("fromage"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-cheese = driver.find_element(id: "cheese")
-cheddar = cheese.find_elements(id: "cheddar")
+driver.find_element(id: "fromage")  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
-const cheddar = await cheese.findElement(By.id('cheddar'));
+const fromage = await driver.findElement(By.id('fromage'));
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
-interface. In WebDriver, this is known as a _role-based interface_.
-Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are
-clearly defined and try to adhere to having only a single role of
-responsibility.  You can read more about WebDriver's design and what
-roles are supported in which drivers in the [Some Other Section Which
-Must Be Named](#).
+Comme démontré dans cet exemple, la localisation des éléments à l'aide de WebDriver
+se fait via une instance de l'objet `WebDriver`. 
+La méthode `findElement(By)` retourne un autre type d'objet fondamental, un `WebElement`.
+
+* `WebDriver` represente la navigateur
+* `WebElement` represente un noeud particulier du DOM
+  (un lien, un champ texte, etc.)
+
+Un fois que l'on a obtenu la référence de l'élément web qui a été "trouvé",
+on peut encore réduire la portée de notre recherche
+en utilisant le même appel de méthode sur l'instance de cet objet:
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+WebElement fromage = driver.findElement(By.id("fromage"));
+WebElement cheddar = fromage.findElement(By.id("cheddar"));
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+fromage = driver.find_element_by_id("fromage")
+cheddar = fromage.find_elements_by_id("cheddar")
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+IWebElement fromage = driver.FindElement(By.Id("fromage"));
+IWebElement cheddar = fromage.FindElement(By.Id("cheddar"));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+fromage = driver.find_element(id: "fromage")
+cheddar = fromage.find_elements(id: "cheddar")
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const fromage = await driver.findElement(By.id('fromage'));
+const cheddar = await fromage.findElement(By.id('cheddar'));
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+Nous pouvons faire cela car les types _WebDriver_ et _WebElement_
+implémentent tous deux l'interface [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext).
+Dans WebDriver, ce principe est connu sous le nom de _role-based interface_.
+Les interfaces basées sur le rôle nous permettent de déterminer
+si une implémentation particulière de driver supporte une fonctionnalité donnée.
+Ces interfaces sont clairement définies et tente d'adhérer au principe de responsabilité unique.
+Vous pouvez en lire plus sur le design de WebDriver et sur quels drivers supportent quels rôles dans le chapitre [Un Autre Chapitre Qui Aura Un Nom](#).
 <!-- TODO: A new section needs to be created for the above.-->
 
-Consequently, the _By_ interface used above also supports a
-number of additional locator strategies.  A nested lookup might not be
-the most effective cheese location strategy since it requires two
-separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
-narrowed context.
+Par conséquent, l'interface _By_ utilisée précédement fournit également
+d'autres stratégies de localisation. Une recherche imbriquée peut ne pas 
+être la startégie la plus adaptée pour trouver notre cheddar 
+puisqu'elle nécessite que deux instructions séparées soient envoyées au navigateur ;
+tout d'abord rechercher un élément ayant pour ID "fromage", 
+puis une recherche pour "cheddar" dans ce contexte plus restreint.
 
-To improve the performance slightly, we should try to use a more
-specific locator: WebDriver supports looking up elements
-by CSS locators, allowing us to combine the two previous locators into
-one search:
+Pour améliorer légèrement les performances, nous pourrions essayer
+un sélecteur (une stratégie de localisation) plus spécifique : 
+WebDriver supporte la localisation d'élément via sélecteur CSS,
+nous permettant de combiner les deux sélecteurs précédents en un seul:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-driver.findElement(By.cssSelector("#cheese #cheddar"));
+driver.findElement(By.cssSelector("#fromage #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-cheddar = driver.find_element_by_css_selector("#cheese #cheddar")
+cheddar = driver.find_element_by_css_selector("#fromage #cheddar")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-driver.FindElement(By.CssSelector("#cheese #cheddar"));
+driver.FindElement(By.CssSelector("#fromage #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
+mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
+const cheddar = await driver.findElement(By.css('#fromage #cheddar'));
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Locating multiple elements
+### Localiser plusieurs éléments
 
-It's possible that the document we are working with may turn out to have an
-ordered list of the cheese we like the best:
+Il est possible que le document web sur lequel nous travaillons
+dispose d'une liste ordonnée de nos fromages préférés:
 
 ```html
-<ol id=cheese>
+<ol id=fromage>
  <li id=cheddar>…
  <li id=brie>…
  <li id=rochefort>…
  <li id=camembert>…
 </ul>
 ```
+Puisque plus de fromage est sans conteste meilleur, et qu'il serait lourd
+de devoir récupérer chaque item un par un, une technique supérieure est d'utiliser
+la forme plurielle `findElements(By)`. Cette méthode retourne une collection
+d'éléments web. Si un seul élement a été trouvé, la méthode renverra tout de même
+une collection (d'un seul élément). Si aucun élément ne correspond au sélécteur,
+la collection retournée sera alors vide.
 
-Since more cheese is undisputably better, and it would be cumbersome
-to have to retrieve each of the items individually, a superior
-technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
-elements. If only one element is found, it will still return a
-collection (of one element). If no elements match the locator, an
-empty list will be returned.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"));
+List<WebElement> pleinDeFromage = driver.findElements(By.cssSelector("#fromage li"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
+plein_de_fromage = driver.find_elements_by_css_selector("#fromage li")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
+IReadOnlyList<IWebElement> pleinDeFromage = driver.FindElements(By.CssSelector(“#fromage li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese li")
+plein_de_fromage = driver.find_elements(css: "#fromage li")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const muchoCheese = await driver.findElements(By.css('#cheese li'));
+const pleinDeFromage = await driver.findElements(By.css('#fromage li'));
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element selection strategies
+### Stratégie de sélection des éléments
 
-There are eight different built-in element location strategies in WebDriver:
+WebDriver possède huit stratégies de localisation pré-définies différentes:
 
-| Locator           | Description                                                                                          |
-| ----------------- | ---------------------------------------------------------------------------------------------------- |
-| class name        | Locates elements whose class name contains the search value (compound class names are not permitted) |
-| css selector      | Locates elements matching a CSS selector                                                             |
-| id                | Locates elements whose ID attribute matches the search value                                         |
-| name              | Locates elements whose NAME attribute matches the search value                                       |
-| link text         | Locates anchor elements whose visible text matches the search value                                  |
-| partial link text | Locates anchor elements whose visible text matches the search value                                  |
-| tag name          | Locates elements whose tag name matches the search value                                             |
-| xpath             | Locates elements matching an XPath expression                                                        |
+| Sélecteur         | Description                                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------------------------ |
+| class name        | Localise les éléments dont le nom de la classe contient la valeur recherchée (nom composés non permis) |
+| css selector      | Localise les éléments correspondant à un sélecteur CSS                                                 |
+| id                | Localise les éléments dont l'attribut ID correspond à la valeur recherchée                             |
+| name              | Localise les éléments dont l'attribut NAME correspond à la valeur recherchée                           |
+| link text         | Localise les éléments de type ancre (lien) dont le texte visible correspond à la valeur recherchée     |
+| partial link text | Localise les éléments de type ancre (lien) dont le texte visible contient la valeur recherchée         |
+| tag name          | Localise les éléments dont le nom de tag correspond à la valeur recherchée                             |
+| xpath             | Localise les éléments correspondant à un chemin XPath                                                  |
 
-### Tips on using selectors
+### Astuces d'utilisation des sélecteurs
 
-In general, if HTML IDs are available, unique, and consistently
-predictable, they are the preferred method for locating an element on
-a page. They tend to work very quickly, and forego much processing
-that comes with complicated DOM traversals.
+En règle général, si des ID HTML sont disponibles, uniques et prédictibles avec constance,
+alors il est préférable d'utiliser cette stratégie pour la localisation d'élément sur une page.
+Elle a tendance à être très rapide et évite les longs traitements liés à des traversées complexes du DOM.
 
-If unique IDs are unavailable, a well-written CSS selector is the
-preferred method of locating an element. XPath works as well as CSS
-selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they're typically
-not performance tested by browser vendors and tend to be quite slow.
+Si des IDs uniques ne sont pas disponibles, un sélecteur CSS bien écrit
+est la méthode de localisation la plus adaptée. Un sélecteur XPath marchera
+aussi bien qu'un sélecteur CSS, cependant sa syntaxe est plus complexe, et souvent,
+plus compliquée à débugguer. Même si les sélecteur XPath sont très flexibles,
+ils sont rarement testés d'un point de vue performance par les fournisseurs de navigateur
+et ont donc tendance à être assez lents.
 
-Selection strategies based on link text and partial link text have
-drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+Les stratégies basés sur link text et partial link text sont
+contraingnantes du fait qu'elles ne fonctionnent 
+que sur des éléments de type lien hypertexte. De plus, elles
+sont implémentées au sein de WebDriver via des sélecteurs XPath.
 
-Tag name can be a dangerous way to locate elements. There are
-frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the _findElements(By)_ method which
-returns a collection of elements.
+Le nom de tag est une façon dangereuse de localiser des éléments. 
+Il y a fréquemment de multiples éléments ayant le même tag sur une page.
+Cette stratégie est principalement utile lorsque utilisée avec la méthode
+_findElements(By)_, renvoyant une collection des élements.
 
-The recommendation is to keep your locators as compact and
-readable as possible. Asking WebDriver to traverse the DOM structure
-is an expensive operation, and the more you can narrow the scope of
-your search, the better.
+Au final, la recommendation est de garder ses sélecteurs aussi compacts et lisibles que possible.
+Demander à WebDriver de traverser la structure du DOM est une opération très coûteuse,
+de fait plus le scope de recherche sera restreint, meilleures seront les performances.

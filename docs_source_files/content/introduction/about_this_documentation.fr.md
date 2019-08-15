@@ -3,33 +3,22 @@ title: "A propos de cette documentation"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Cette documentation, tout comme le code lui-même, est maintenue à 100% 
+par des volontaires de la communauté Selenium.
+Beaucoup font partie des utilisateurs de la première heure,
+mais encore plus sont des utilisateurs récents,
+et ont donné de leur temps pour améliorer l'accueil des nouveaux utilisateurs.
 
-These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.
-
-If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
+Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir !
+La meilleure façon de communiquer un problème est de visiter
 [https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues)
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!
+et de vérifier si ce problème a déjà été remonté.
+Si ce n'est pas le cas, n'hésitez pas à ouvrir une nouvel issue !
 
-Many members of the community frequent
-the _#selenium_ IRC channel at [irc.freenode.net](//freenode.net/). 
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it's much easier for everyone when we get contributions
-from outside the normal committers.
-
-
-
+De nombreux membre de la communauté fréquentent le canal IRC [irc.freenode.net](//freenode.net/). 
+N'hésitez pas à passer et poser vos questions. 
+Si vous recevez de l'aide et pensez que cela devrait faire partie de la documentation, 
+votre contribution sera plus que bienvenue !
+Nous pouvons mettre à jour cette documentation,
+mais c'est beaucoup plus facile pour tout le monde
+lorsque nous recevons des contributions venant de nouvelles personnes.
