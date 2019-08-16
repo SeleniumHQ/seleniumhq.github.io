@@ -64,8 +64,6 @@ et faites un check out sur votre copie locale.
 % git remote add upstream git://github.com/seleniumhq/docs.git
 ```
 
-https://gohugo.io/getting-started/installing/
-
 #### Dépendences: Hugo
 
 La documentation utilise [Hugo](https://gohugo.io/) afin de construire et afficher le site.

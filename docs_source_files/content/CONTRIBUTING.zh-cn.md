@@ -46,8 +46,6 @@ Selenium 项目欢迎新的贡献者。
 % git remote add upstream git://github.com/seleniumhq/docs.git
 ```
 
-<https://gohugo.io/getting-started/installing/>
-
 #### 依赖关系：Hugo
 
 文档使用 [Hugo](https://gohugo.io/) 来建立和渲染网站。
