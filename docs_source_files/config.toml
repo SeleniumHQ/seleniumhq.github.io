@@ -37,6 +37,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
+baseURL = "https://seleniumhq.github.io/docs/site/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -63,6 +64,7 @@ weight = 30
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
+baseURL = "https://seleniumhq.github.io/docs/site/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
@@ -89,6 +91,7 @@ weight = 30
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
+baseURL = "https://seleniumhq.github.io/docs/site/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -115,6 +118,7 @@ weight = 30
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
+baseURL = "https://seleniumhq.github.io/docs/site/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -141,6 +145,7 @@ weight = 30
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
+baseURL = "https://seleniumhq.github.io/docs/site/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
