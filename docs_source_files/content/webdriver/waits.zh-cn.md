@@ -242,7 +242,17 @@ WebDriverWait(driver, timeout=3).until(some_condition)
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+(async function(){
+
+// Apply timeout for 10 seconds
+driver.manage().setTimeouts( { implicit: 10000 } );
+
+// Navigate to url
+driver.get('http://somedomain/url_that_delays_loading');
+
+let webElement = await driver.findElement(By.id("myDynamicElement"));
+
+}());
   {{< / code-panel >}}
 {{< / code-tab >}}
 
