@@ -320,10 +320,10 @@ my_dynamic_element = driver.find_element_by_id("myDynamicElement")
 (async function(){
 
 // Apply timeout for 10 seconds
-driver.manage().setTimeouts( { implicit: 10000 } );
+await driver.manage().setTimeouts( { implicit: 10000 } );
 
 // Navigate to url
-driver.get('http://somedomain/url_that_delays_loading');
+await driver.get('http://somedomain/url_that_delays_loading');
 
 let webElement = await driver.findElement(By.id("myDynamicElement"));
 
