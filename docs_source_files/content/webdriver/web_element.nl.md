@@ -35,10 +35,24 @@ search_box.send_keys("webdriver")
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-driver.get('http://www.google.com')
-  .then(() =>   driver.findElement(By.tagName('form')) )
-  .then((searchForm) => searchForm.findElement(By.name('q')) )
-  .then((searchBox) => searchBox.sendKeys('webdriver') );
+let {Builder, By} = require('selenium-webdriver');
+driver = new Builder().forBrowser('chrome').build();
+
+(async function test(){
+
+//Navigate to url
+await driver.get('http://www.google.com');
+
+//Get and store DOM element '<form>'
+let searchForm = await driver.findElement(By.name('f'));
+
+//Get search box element from webElement 'form'
+let searchBar = await searchForm.findElement(By.name('q'));
+
+//Perform action using WebElement
+await searchBar.sendKeys('Webdriver');
+
+})();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
