@@ -12,9 +12,10 @@ it by sending us pull requests!
 
 ### Localisatie van elementen
 
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
+Een van de meest fundamentele technieken die nodig zijn om WebDriver onder
+de knie te krijgen, is het lokaliseren van elementen op een pagina.
+WebDriver beschikt over een aantal ingebouwde selector types, een van hen
+is het lokaliseren van een element op basis van zijn ID:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,17 +35,16 @@ const cheese = await driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
+In het bovenstaande voorbeeld kan je zien dat het lokaliseren van de elementen
+gedaan word op een instantie van het `WebDriver` object. De methode
+`findElement(By)` geeft een ander fundamenteel object type terug: `WebElement`.
 
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
+* `WebDriver` stelt de browser voor
+* `WebElement` stelt een bepaalde DOM node voor (een link, input veld etc)
 
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+Wanneer een web element gevonden is, kan je op basis van dat element een nieuwe
+opzoeking starten. Deze zal dan binnen de scope van het gevonden element gedaan
+worden:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -69,9 +69,11 @@ const cheddar = await cheese.findElement(By.id('cheddar'));
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
-interface. In WebDriver, this is known as a _role-based interface_.
+Dit is mogelijk omdat zowel _WebDriver_ als _WebElement_ de [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
+interface implementeren. Binnen WebDriver staat dit bekend als een _role-based interface_.
+
+
+. In WebDriver, this is known as a _role-based interface_.
 Role-based interfaces allow you to determine whether a particular
 driver implementation supports a given feature. These interfaces are
 clearly defined and try to adhere to having only a single role of

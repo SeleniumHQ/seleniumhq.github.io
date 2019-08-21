@@ -1,15 +1,9 @@
 ---
-title: "Performing actions on the AUT*"
+title: "Acties op de AUT*"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-You can set an element's text using the sendKeys method as follows:
+Je kan de tekst van een element invullen aan de hand van de sendKeys methode:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,9 +28,9 @@ await driver.findElement(By.name('name')).sendKeys(name);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Some web applications use JavaScript libraries to add drag-and-drop
-functionality. The following is a basic example of dragging one
-element onto another element:
+Sommige applicaties gebruiken Javascript libraries om drag-en-drop
+functionaliteit toe te voegen. Hieronder vind je een simpel voorbeeld
+waarbij een element versleept word naar een ander element:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -67,9 +61,9 @@ await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Clicking on an element
+### Op een element klikken
 
-You can click on an element using the click method:
+Je kan op een element klikken door middel van de click methode:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

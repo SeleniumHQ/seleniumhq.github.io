@@ -1,27 +1,20 @@
 ---
-title: "Third party drivers and plugins"
+title: "Externe drivers en plugins"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium ondersteunt externe plugins. Hieronder vind je plugins die ontwikkeld
+zijn en onderhouden worden door externe partijen. Meer informatie omtrent
+het ontwikkelen van je eigen plugin of het publiceren ervan kan je de documentatie
+raadplegen.
 
-Selenium can be extended through the use of plugins. Here are a number of 
-plugins created and maintained by third parties. For more information on how 
-to create your own plugin or have it listed, consult the docs.
+Deze plugins worden niet ondersteund, onderhouden, gehost of aanbevolen door
+het Selenium project. De plugins die hieronder opgelijst staan, dragen niet altijd
+de Apache License v2.0. Sommige plugins vallen onder een andere gratis of open source
+licentie; anderen zijn enkel beschikbaar onder patent. Vragen in verband met licenties
+van plugins dienen gericht te worden aan de respectievelijke ontwikkelaars.
 
-Please note that these plugins are not supported, maintained, hosted, or 
-endorsed by the Selenium project. In addition, be advised that the plugins 
-listed below are not necessarily licensed under the Apache License v.2.0. 
-Some of the plugins are available under another free and open source software 
-license; others are only available under a proprietary license. Any questions 
-about plugins and their license of distribution need to be raised with their 
-respective developer(s).
-
-| Browser | Latest version | Changelog | Issues | Wiki |
+| Browser | Laatste versie | Changelog | Problemen | Wiki |
 | -------- | ---------- | ---------- | ---------- | ---------- |
 | [Google ChromeDriver](//sites.google.com/a/chromium.org/chromedriver/) | [2.29](//chromedriver.storage.googleapis.com/index.html) |  [changelog](//chromedriver.storage.googleapis.com/2.29/notes.txt) | [issues](//bugs.chromium.org/p/chromedriver/issues/list) | [wiki](//github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
 
