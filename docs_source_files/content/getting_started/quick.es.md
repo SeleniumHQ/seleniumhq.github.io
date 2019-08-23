@@ -31,9 +31,5 @@ Poco después del desarrollo de las pruebas de WebDriver, es posible que deba ej
 
 ## HTML Runner
 
-This tool allows you to run Test Suites from the command
-line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner]({{< ref "/getting_started/html-runner.es.md" >}})_
-
 Esta herramienta le permite ejecutar Test Suites desde la línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles. _[HTML Runner]({{< ref "/getting_started/html-runner.es.md">}})_
 
