@@ -12,7 +12,7 @@ it by sending us pull requests!
 Represents a KeyBoard event. KeyBoard actions are performed by using low-level
 interface which allows us to provide virtualized device input to the web browser.
 
-# sendKeys
+## sendKeys
 
 The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 
