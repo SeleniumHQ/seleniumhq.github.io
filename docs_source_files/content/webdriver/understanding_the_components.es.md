@@ -3,78 +3,71 @@ title: "Entendiendo los componentes"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Construir una suite de test usando WebDriver requerirá que entiendas y 
+uses de forma efectiva diferentes componentes. Como con todo en
+el desarrollo de software, la gente usa diferentes términos para la misma idea.
+A continuación hay un desglose de cómo los términos son usados en esa descripción.
 
-Building a test suite using WebDriver will require you to understand and 
-effectively use a number of different components. As with everything in 
-software, different people use different terms for the same idea. Below is
-a breakdown of how terms are used in this description.
+### Terminología
 
-### Terminology
+* **API:** Interfaz de Programación de Aplicaciones. Es un conjunto de "comandos" 
+que se utilizan para manipular el WebDriver.
+* **Library:** Un módulo de código que contiene las APIs y el código necesario
+para implementarlos. Las librerías son específicas para cada lenguaje, por ejemplo
+ficheros .jar en Java, ficheros .dll para .NET, etc.
+* **Driver:** El responsable de controlar el navegador actual. La mayoría de los drivers
+son creados por los _vendors_ del navegador. Los Drivers son generalmente
+módulos ejecutables que corren en el sistema con el propio navegador,
+no en el sistema ejecutando la suite de test. (Aunque esos pueden ser el
+mismo sistema.) _NOTE: Algunas personas se refieren a los drivers como proxies._
+* **Framework:** Una librería adicional usada como un soporte para la suites de WebDriver.
+Estos _frameworks_ pueden ser _test frameworks_ como JUnit o NUnit.
+También pueden ser _frameworks_ soportando lenguaje natural como 
+Cucumber o Robotium. Los _frameworks_ también pueden ser escritos y usados para
+cosas como la manipulación o configuración del sistema bajo la prueba, creación
+de datos, _test oracles_, etc
 
-* **API:** Application Programming Interface. This is the set of "commands" 
-you use to manipulate WebDriver.
-* **Library:** A code module which contains the APIs and the code necessary
-to implement them. Libraries are specific to each language binding, eg .jar 
-files for Java, .dll files for .NET, etc.
-* **Driver:** Responsible for controlling the actual browser. Most drivers 
-are created by the browser vendors themselves. Drivers are generally 
-executable modules that run on the system with the browser itself,
-not on the system executing the test suite. (Although those may be the 
-same system.) _NOTE: Some people refer to the drivers as proxies._
-* **Framework:** An additional library used as a support for WebDriver 
-suites. These frameworks may be test frameworks such as JUnit or NUnit. 
-They may also be frameworks supporting natural language features such 
-as Cucumber or Robotium. Frameworks may also be written and used for 
-things such as manipulating or configuring the system under test, data 
-creation, test oracles, etc.
+### Las Partes y las Piezas
 
-
-### The Parts and Pieces
-At its minimum, WebDriver talks to a browser through a driver. Communication
-is two way: WebDriver passes commands to the browser through the driver, and 
-receives information back via the same route.
+Como mínimo, el WebDriver habla con un navegador a través del driver. La comunicación
+es bidireccional: el WebDriver pasa comandos al navegador a través del driver, y
+recive la información de vuelta por la misma ruta.
 
 ![Basic communication](/images/basic_comms.png?width=400px)
 
-The driver is specific to the browser, such as ChromeDriver for Google's 
-Chrome/Chromium, GeckoDriver for Mozilla's Firefox, etc. The driver runs on 
-the same system as the browser. This may, or may not be, the same system where 
-the tests themselves are executing.
+El driver es específico para el navegador, como es ChromeDriver para Chrome/Chromium
+de Google, GeckoDriver para Mozilla Firefox, etc. El driver corre en el 
+mismo sistema que el browser. Esto puede, o no puede ser, el mismo sistema donde
+los tests se están ejecutando.
 
-This simple example above is _direct_ communication. Communication to the 
-browser may also be _remote_ communication through Selenium Server or 
-RemoteWebDriver. RemoteWebDriver runs on the same system as the driver 
-and the browser.
+Este simple ejemplo anterior es de comunicación directa. La comunicación con el
+navegador puede ser remota a través de Selenium Server o RemoteWebdriver. Éste 
+último corre en el mismo sistema que el driver y el browser. 
 
 ![Remote communication](/images/remote_comms.png?width=400px)
 
-Remote communication can also take place using Selenium Server or Selenium 
-Grid, both of which in turn talk to the driver on the host system
+La comunicación remota puede también hacerse usando Selenium Server o Selenium
+Grid, ambos a su vez hablan con el driver en el sistema anfitrión.
 
 ![Remote communication with Grid](/images/remote_comms_server.png?width=400px)
 
-## Where Frameworks fit in
+## Dónde encaja el Framework
 
-WebDriver has one job and one job only: communicate with the browser via any
-of the methods above. WebDriver doesn't know a thing about testing: it doesn't
-know how to compare things, assert pass or fail, and it certainly doesn't know
-a thing about reporting or Given/When/Then grammar.
+El WebDriver tiene un trabajo y solo un trabajo: comunicarse con el navegador a 
+través de uno de los métodos nombrados. El WebDriver no tiene que saber nada sobre 
+testing: no sabe cómo comparar cosas, asegurar un _pass_ o _fail_, y ciertamente
+no sabe nada acerca de reportes o sobre la gramática _Given/When/Then_.
 
-This is where various frameworks come in to play. At a minimum you'll need a 
-test framework that matches the language bindings, eg NUnit for .NET, JUnit 
-for Java, RSpec for Ruby, etc.
+Aquí es donde varios _frameworks_ entran en juego. Como mínimo neesitarás un
+_framework_ de test que compare los enlaces de idiomas, por ejempolo NUnit para .NET,
+JUnit para Java, RSpec para Ruby, etc.
 
-The test framework is responsible for running and executing your WebDriver 
-and related steps in your tests. As such, you can think of it looking akin 
-to the following image.
+El _framework_ de test es responsable de correr y ejecutar tu WebDriver
+y los pasos de tus tests. Como tal, puedes pensar que se parece 
+a la siguiente imagen.
 
 ![Test framework](/images/test_framework.png?width=400px)
 
-Natural language frameworks/tools such as Cucumber may exist as part of that 
-Test Framework box in the figure above, or they may wrap the Test Framework 
-entirely in their own implementation.
+Los _frameworks_ o herramientas de lenguage natural como Cucumber pueden existir
+como parte de la caja de _Test Framework_ de la figura de arriba, o envolver totalmente
+el _Test Framework_ en su propia implementación.
