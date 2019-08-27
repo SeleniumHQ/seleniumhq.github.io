@@ -1,130 +1,96 @@
 ---
-title: "On test automation"
+title: "关于测试自动化"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+首先，问问自己是否真的需要使用浏览器。
+在某些情况下，如果您正在开发一个复杂的 web 应用程序，
+您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
 
-First, start by asking yourself whether or not you really need to use a browser.
-Odds are good that, at some point, if you're working on a complex web application,
-you will need to open a browser and actually test it.
+然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。
+此外，它们通常需要大量的基础设施才能有效运行。
+经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成，
+还是使用较低级的方法完成，这是一个很好的规则。
 
-Functional end-user tests such as Selenium tests are expensive to run, however.
-Furthermore, they typically require substantial infrastructure
-to be in place to be run effectively.
-It's a good rule to always ask yourself if what you want to test
-can be done using more lightweight test approaches such as unit tests
-or with a lower-level approach.
+一旦确定您正在进行Web浏览器测试业务，
+并且您的 Selenium 环境已经准备好开始编写测试，
+您通常会执行以下三个步骤的组合：
 
-Once you have made the determination that you're in the web browser testing business,
-and you have your Selenium environment ready to begin writing tests,
-you will generally perform some combination of three steps:
+* 设置数据
+* 执行一组离散的操作
+* 评估结果
 
-* Set up the data
-* Perform a discrete set of actions
-* Evaluate the results
+您需要尽可能缩短这些步骤;
+一到两个操作在大多数时间内应该足够了。
+浏览器自动化具有“脆弱”的美誉，
+但实际上那是因为用户经常对它要求过高。
+在后面的章节中，我们将回到您可以使用的技术，
+为了缓解测试中明显的间歇性问题，
+特别是如何克服 浏览器 和 WebDriver 之间的[竞争条件]({{< ref "/webdriver/waits.zh-cn.md" >}})。
 
-You will want to keep these steps as short as possible;
-one to two operations should be enough much of the time.
-Browser automation has the reputation of being “flaky”,
-but in reality that is because users frequently demand too much of it.
-In later chapters, we will return to techniques you can use
-to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.zh-cn.md" >}})
-between the browser and WebDriver.
+通过保持测试简短并仅在您完全没有替代方案时使用Web浏览器，您可以用最小的代码片段来完成很多测试。
 
-By keeping your tests short
-and using the web browser only when you have absolutely no alternative,
-you can have many tests with minimal flake.
+Selenium测试的一个显著优势是，它能够从用户的角度测试应用程序的所有组件（从后端到前端）。
+因此，换句话说，虽然功能测试运行起来可能很昂贵，但它们同时也包含了大量关键业务部分。
 
-A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
-from backend to frontend, from a user's perspective.
-So in other words, whilst functional tests may be expensive to run,
-they also encompass large business-critical portions at one time.
+### 测试要求
 
+如前所述，Selenium 测试运行起来可能很昂贵。
+在多大程度上取决于您正在运行测试的浏览器，
+但历史上浏览器的行为变化太大，以至于通常是针对多个浏览器进行交叉测试的既定目标。
 
-### Testing requirements
+Selenium 允许您在多个操作系统上的多个浏览器上运行相同的指令，
+但是对所有可能的浏览器、它们的不同版本以及它们所运行的许多操作系统的枚举将很快成为一项繁重的工作。
 
-As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you're running the tests against,
-but historically browsers' behaviour has varied so much that it has often
-been a stated goal to cross-test against multiple browsers.
+### 让我们从一个例子开始
 
-Selenium allows you to run the same instructions against multiple browsers
-on multiple operating systems,
-but the enumeration of all the possible browsers,
-their different versions, and the many operating systems they run on
-will quickly become a non-trivial undertaking.
+Larry 写了一个网站，允许用户订购他们自己定制的独角兽。
 
+一般的工作流程(我们称之为“幸福之路”)是这样的:
 
-### Let’s start with an example
+* 创建一个账户
+* 配置他们的独角兽
+* 添加到购物车
+* 检验并付款
+* 给出关于他们独角兽的反馈
 
-Larry has written a web site which allows users to order their own
-custom unicorns.
+编写一个宏大的 Selenium 脚本来执行所有这些操作是很诱人的 — 很多人都会尝试这样做。
+**抵制诱惑！**
+这样做会导致测试:
+a) 需要很长时间;
+b) 会受到一些与页面呈现时间问题有关的常见问题的影响;
+c) 如果失败，它不会给出一个简洁的、“可检查”的方法来诊断出了什么问题。
 
-The general workflow (what we'll call the “happy path”) is something
-like this:
+测试此场景的首选策略是将其分解为一系列独立的、快速的测试，每个测试都有一个存在的“理由”。
 
-* Create an account
-* Configure their unicorn
-* Add her to the shopping cart
-* Check out and pay
-* Give feedback about their unicorn
+假设您想测试第二步：
+配置您的独角兽。
+它将执行以下操作:
 
+* 创建一个帐户
+* 配置一个独角兽
 
-It would be tempting to write one grand Selenium script
-to perform all these operations–many will try.
-**Resist the temptation!**
-Doing so will result in a test that
-a) takes a long time,
-b) will be subject to some common issues around page rendering timing issues, and
-c) is such that if it fails,
-it won't give you a concise, “glanceable” method for diagnosing what went wrong.
+请注意，我们跳过了这些步骤的其余部分，
+在完成这一步之后，我们将在其他小的、离散的测试用例中测试工作流的其余部分。
 
-The preferred strategy for testing this scenario would be
-to break it down to a series of independent, speedy tests,
-each of which has one “reason” to exist.
+首先，您需要创建一个帐户。在这里您可以做出一些选择：
 
-Let's pretend you want to test the second step:
-Configuring your unicorn.
-It will perform the following actions:
+* 您想使用现有帐户吗？
+* 您想创建一个新帐户吗？
+* 在配置开始之前，是否需要考虑有任何特殊属性的用户需要吗？
 
-* Create an account
-* Configure a unicorn
+不管您如何回答这个问题，
+解决方案是让它成为测试中“设置数据”部分的一部分 - 如果 Larry 公开了一个 API，
+使您(或任何人)能够创建和更新用户帐户，
+一定要用它来回答这个问题
+请确保使用这个 API 来回答这个问题 — 如果可能的话，
+您希望只有在您拥有一个用户之后才启动浏览器，您可以使用该用户的凭证进行登录。
 
-Note that we're skipping the rest of these steps,
-we will test the rest of the workflow in other small, discrete test cases,
-after we're done with this one.
+如果每个工作流的每个测试都是从创建用户帐户开始的，那么每个测试的执行都会增加许多秒。
+调用 API 并与数据库进行通信是快速、“无头”的操作，
+不需要打开浏览器、导航到正确页面、点击并等待表单提交等昂贵的过程。
 
-To start off, you need to create an account.
-Here you have some choices to make:
-
-* Do you want to use an existing account?
-* Do you want to create a new account?
-* Are there any special properties of such a user that need to be
-  taken into account before configuration begins?
-
-Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test–
-if Larry has exposed an API which enables you (or anyone)
-to create and update user accounts,
-be sure to use that to answer this question–
-if possible, you want to launch the browser only after you have a user "in hand",
-whose credentials you can just log in with.
-
-If each test for each workflow begins with the creation of a user account,
-many seconds will be added to the execution of each test.
-Calling an API and talking to a database are quick,
-“headless” operations that don't require the expensive process of
-opening a browser, navigating to the right pages,
-clicking and waiting for the forms to be submitted, etc.
-
-Ideally, you can address this set-up phase in one line of code,
-which will execute before any browser is launched:
+理想情况下，您可以在一行代码中处理这个设置阶段，这些代码将在任何浏览器启动之前执行:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -166,36 +132,29 @@ account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As you can imagine, the `UserFactory` can be extended
-to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
-The point is, these two lines of code do not distract you from the ultimate purpose of this test:
-configuring a unicorn.
+您可以想象，`UserFactory`可以扩展为提供诸如`createAdminUser()`、`createUserWithPayment()`的方法。
+关键是，这两行代码不会分散您对此测试的最终目的的注意力：
+配置独角兽。
 
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.zh-cn.md" >}})
-will be discussed in later chapters, but we will introduce the concept here:
+[页面对象模型]({{< ref "/guidelines_and_recommendations/page_object_models.zh-cn.md" >}})
+的复杂性将在后面的章节中讨论，但我们将在这里介绍这个概念：
 
-Your tests should be composed of actions,
-performed from the user's point of view,
-within the context of pages in the site.
-These pages are stored as objects,
-which will contain specific information about how the web page is composed
-and how actions are performed–
-very little of which should concern you as a tester.
+您的测试应该由操作组成，从用户的角度出发，在站点的页面上下文中执行。
+这些页面被存储为对象，
+其中包含关于 web 页面如何组成以及如何执行操作的特定信息 — 作为测试人员，您应该很少关注这些信息。
 
-What kind of unicorn do you want?
-You might want pink, but not necessarily.
-Purple has been quite popular lately.
-Does she need sunglasses? Star tattoos?
-These choices, while difficult, are your primary concern as a tester–
-you need to ensure that your order fulfillment center
-sends out the right unicorn to the right person,
-and that starts with these choices.
+您想要什么样的独角兽？
+您可能想要粉红色，但不一定。
+紫色最近很流行。
+她需要太阳镜吗？
+明星纹身？
+这些选择虽然困难，但是作为测试人员，
+您的主要关注点是 — 您需要确保您的订单履行中心将正确的独角兽发送给正确的人，而这就要从这些选择开始。
 
-Notice that nowhere in that paragraph do we talk about buttons,
-fields, drop-downs, radio buttons, or web forms.
-**Neither should your tests!**
-You want to write your code like the user trying to solve their problem.
-Here is one way of doing this (continuing from the previous example):
+请注意，我们在该段落中没有讨论按钮，字段，下拉菜单，单选按钮或 Web 表单。
+**您的测试也不应该！**
+您希望像尝试解决问题的用户一样编写代码。
+这是一种方法（从前面的例子继续）：
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -241,8 +200,8 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Now that you've configured your unicorn,
-you need to move on to step 3: making sure it actually worked.
+既然您已经配置好了独角兽，
+您需要进入第三步:确保它确实有效。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -268,31 +227,20 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still hasn't done anything but talk about unicorns in this code–
-no buttons, no locators, no browser controls.
-This method of _modelling_ the application
-allows you to keep these test-level commands in place and unchanging,
-even if Larry decides next week that he no longer likes Ruby-on-Rails
-and decides to re-implement the entire site
-in the latest Haskell bindings with a Fortran front-end.
+请注意，测试人员在这段代码中除了谈论独角兽之外还没有做任何事情 — 没有按钮、定位器和浏览器控件。
+这种对应用程序建模的方法允许您保持这些测试级别的命令不变，
+即使 Larry 下周决定不再喜欢 Ruby-on-Rails，
+并决定用最新的带有 Fortran 前端的 Haskell 绑定重新实现整个站点。
 
-Your page objects will require some small maintenance
-in order to conform to the site redesign,
-but these tests will remain the same.
-Taking this basic design,
-you will want to keep going through your workflows with the fewest browser-facing steps possible.
-Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
-Is there more than one unicorn in the cart before you start?
-How many can fit in the shopping cart?
-If you create more than one with the same name and/or features, will it break?
-Will it only keep the existing one or will it add another?
+为了符合站点的重新设计，您的页面对象需要进行一些小的维护，但是这些测试将保持不变。
+采用这一基本设计，您将希望继续使用尽可能少的面向浏览器的步骤来完成您的工作流。
+您的下一个工作流程将包括在购物车中添加独角兽。
+您可能需要多次迭代此测试，以确保购物车正确地保持其状态：
+在开始之前，购物车中是否有多个独角兽？
+购物车能装多少？
+如果您创建多个具有相同名称或特性，它会崩溃吗？
+它将只保留现有的一个还是添加另一个?
 
-Each time you move through the workflow,
-you want to try to avoid having to create an account,
-login as the user, and configure the unicorn.
-Ideally, you'll be able to create an account
-and pre-configure a unicorn via the API or database.
-Then all you have to do is log in as the user, locate Sparkles,
-and add her to the cart.
-
+每次通过工作流时，您都希望尽量避免创建帐户、以用户身份登录和配置独角兽。
+理想情况下，您将能够创建一个帐户，并通过 API 或数据库预先配置独角兽。
+然后，您只需作为用户登录，找到 Sparkles，并将它添加到购物车中。
