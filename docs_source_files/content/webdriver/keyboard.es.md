@@ -18,7 +18,25 @@ The sendKeys types a key sequence in DOM element even if modifier key sequence i
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HelloSelenium {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            // Navigate to Url
+            driver.get("https://google.com");
+
+            // Enter text "q" and perform keyboard action "Enter"
+            driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 // We don't have a Python code sample yet -  Help us out and raise a PR
