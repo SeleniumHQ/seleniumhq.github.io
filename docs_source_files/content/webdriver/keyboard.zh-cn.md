@@ -15,11 +15,11 @@ The sendKeys types a key sequence in DOM element even if modifier key sequence i
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HelloSelenium {
     public static void main(String[] args) {
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new FirefoxDriver();
         try {
             // Navigate to Url
             driver.get("https://google.com");
@@ -39,13 +39,24 @@ public class HelloSelenium {
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-// We don't have a Ruby code sample yet -  Help us out and raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Enter text "cheese" and perform keyboard action "Enter"
+  driver.find_element(name: 'q').send_keys 'cheese', :return
+
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By, Key} = require('selenium-webdriver');
 
 (async function example() {
-    let driver = await new Builder().forBrowser('chrome').build();
+    let driver = await new Builder().forBrowser('firefox').build();
 
     try {
         // Navigate to Url

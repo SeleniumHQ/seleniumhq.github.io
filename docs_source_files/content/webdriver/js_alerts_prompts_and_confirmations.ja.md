@@ -64,7 +64,17 @@ string text = alert.Text;
 alert.Accept();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# Click the link to activate the alert
+driver.find_element(:link_text, 'See an example alert').click
+
+# Store the alert reference in a variable
+alert = driver.switch_to.alert
+
+# Store the alert text in a variable
+alert_text = alert.text
+
+# Press on OK button
+alert.accept
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 //Click the link to activate the alert
@@ -144,11 +154,21 @@ string text = alert.Text;
 alert.Dismiss();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# Click the link to activate the alert
+driver.find_element(:link_text, 'See a sample confirm').click
+
+# Store the alert reference in a variable
+alert = driver.switch_to.alert
+
+# Store the alert text in a variable
+alert_text = alert.text
+
+# Press on Cancel button
+alert.dismiss
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 //Click the link to activate the alert
-await driver.findElement(By.linkText('See an example alert')).click();
+await driver.findElement(By.linkText('See a sample confirm')).click();
 
 // Wait for the alert to be displayed
 await driver.wait(until.alertIsPresent());
@@ -220,11 +240,21 @@ alert.SendKeys("Selenium");
 alert.Accept();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# Click the link to activate the alert
+driver.find_element(:link_text, 'See a sample prompt').click
+
+# Store the alert reference in a variable
+alert = driver.switch_to.alert
+
+# Type a message
+alert.send_keys("selenium")
+
+# Press on Ok button
+alert.accept
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 //Click the link to activate the alert
-await driver.findElement(By.linkText('See an example alert')).click();
+await driver.findElement(By.linkText('See a sample prompt')).click();
 
 // Wait for the alert to be displayed
 await driver.wait(until.alertIsPresent());
