@@ -167,3 +167,30 @@ name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/SeleniumHQ/docs"
 weight = 10
+
+[Languages.ja]
+title = "Seleniumドキュメント"
+weight = 6
+languageName = "日本語"
+baseURL = "https://seleniumhq.github.io/docs/site/ja"
+
+[[Languages.ja.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/docs"
+weight = 10
+
+[[Languages.ja.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> バグ報告"
+url = "https://github.com/seleniumhq/docs/issues"
+weight = 11
+
+[[Languages.ja.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> クレジット"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.ja.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 貢献方法"
+url = "contributing"
+weight = 30
