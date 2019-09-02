@@ -454,7 +454,7 @@ finally:
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 try {
-    #WebDriver code here...
+    //WebDriver code here...
 } finally {
     driver.Quit();
 }
