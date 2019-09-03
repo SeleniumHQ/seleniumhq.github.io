@@ -29,7 +29,11 @@ search_box = search_form.find_element_by_name("q")
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+IWebDriver driver = new FirefoxDriver();
+driver.Url = "http://www.google.com";
+IWebElement searchForm = driver.FindElement(By.TagName("form"));
+IWebElement searchbox = driver.FindElement(By.Name("q"));
+searchbox.SendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
