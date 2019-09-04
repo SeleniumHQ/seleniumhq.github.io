@@ -33,7 +33,15 @@ public class HelloSelenium {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-// We don't have a Python code sample yet -  Help us out and raise a PR
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Firefox()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Enter "webdriver" text and perform "ENTER" keyboard action
+driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
