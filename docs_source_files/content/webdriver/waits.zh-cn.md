@@ -60,7 +60,19 @@ IWebElement element = driver.FindElement(By.TagName("p"));
 assertEquals(element.Text, "Hello from JavaScript!");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+begin
+  # Navigate to URL
+  driver.get 'file:///race_condition.html'
+
+  # Get and store Paragraph Text
+  search_form = driver.find_element(:css,'p').text
+
+  "Hello from JavaScript!".eql? search_form
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.get('file:///race_condition.html');
@@ -150,7 +162,22 @@ assert el.text == "Hello from JavaScript!"
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+def document_initialised(driver)
+  driver.execute_script('return initialised')
+end
+
+begin
+  driver.get 'file:///race_condition.html'
+  wait.until{document_initialised driver}
+  search_form = driver.find_element(:css,'p').text
+  "Hello from JavaScript!".eql? search_form
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const documentInitialised = () =>
@@ -319,7 +346,16 @@ my_dynamic_element = driver.find_element_by_id("myDynamicElement")
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+driver.manage.timeouts.implicit_wait = 10
+
+begin
+  driver.get 'http://somedomain/url_that_delays_loading'
+  search_form = driver.find_element(:id,'dynamic_element')
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 (async function(){
