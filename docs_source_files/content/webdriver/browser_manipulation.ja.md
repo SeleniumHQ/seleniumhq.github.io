@@ -84,7 +84,11 @@ driver.get("https://www.seleniumhq.org")
 driver.Navigate().GoToUrl(@"http://google.com");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Convenient way
+driver.get 'https://www.seleniumhq.org'
+
+# Longer Way
+driver.navigate.to 'https://www.seleniumhq.org'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.get('https://seleniumhq.github.io/docs/');
@@ -521,7 +525,8 @@ driver.findElement(By.tagName("button")).click();
 driver.FindElement(By.TagName("button")).Click();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# This won't work
+driver.find_element(:tag_name,'button').click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // This won't work
