@@ -514,7 +514,8 @@ using something like:
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# This Wont work
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //This won't work
@@ -554,7 +555,14 @@ driver.switchTo().frame(iframe);
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# Store iframe web element
+iframe = driver.find_element_by_css_selector("#modal > iframe")
+
+# switch to selected iframe
+driver.switch_to.frame(iframe)
+
+# Now click on button
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Store the web element
@@ -605,7 +613,11 @@ driver.switchTo().frame("myframe");
 driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# Switch frame by id
+driver.switch_to.frame('buttonframe')
+
+# Now, Click on the button
+driver.find_element_by_tag_name('button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Using the ID
@@ -716,11 +728,11 @@ int width1 = size.getWidth();
 int height1 = size.getHeight();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-//Access each dimension individually
+# Access each dimension individually
 width = driver.get_window_size().get("width")
 height = driver.get_window_size().get("height")
 
-//Or store the dimensions and query them later
+# Or store the dimensions and query them later
 size = driver.get_window_size()
 width1 = size.get("width")
 height1 = size.get("height")
@@ -776,11 +788,11 @@ int x1 = position.getX();
 int y1 = position.getY();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-// Access each dimension individually
+# Access each dimension individually
 x = driver.get_window_position().get('x')
 y = driver.get_window_position().get('y')
 
-// Or store the dimensions and query them later
+# Or store the dimensions and query them later
 position = driver.get_window_position()
 x1 = position.get('x')
 y1 = position.get('y')
@@ -819,7 +831,7 @@ Moves the window to the chosen position.
 driver.manage().window().setPosition(new Point(0, 0));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-// Move the window to the top left of the primary monitor
+# Move the window to the top left of the primary monitor
 driver.set_window_position(0, 0)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
