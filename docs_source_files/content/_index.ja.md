@@ -1,35 +1,19 @@
 ---
-title: "The Selenium Browser Automation Project"
+title: "Seleniumブラウザー自動化プロジェクト"
 ---
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-# The Selenium Browser Automation Project
+# Seleniumブラウザー自動化プロジェクト
 
-Selenium is an umbrella project for a range of tools and libraries
-that enable and support the automation of web browsers.
+Seleniumはブラウザー自動化を可能にし、それを支えるツール群とライブラリー群プロジェクトです。
 
-It provides extensions to emulate user interaction with browsers,
-a distribution server for scaling browser allocation,
-and the infrastructure for implementations of the
-[W3C WebDriver specification](//www.w3.org/TR/webdriver/)
-that lets you write interchangeable code for all major web browsers.
+ユーザーとブラウザーのやり取りのエミュレーション、ブラウザーの割当を増強したり縮減する分散型サーバー、そしてすべてのメジャーなブラウザー用に置換可能なコードの実装を可能にする[W3C WebDriver 仕様](//www.w3.org/TR/webdriver/)インフラの提供します。
 
-This project is made possible by volunteer contributors
-who have put in thousands of hours of their own time,
-and made the source code [freely available](attr.md#license)
-for anyone to use, enjoy, and improve.
+このプロジェクトは多くの有志貢献者の何千時間に及ぶ個々の時間を費やした事とソースコード[自由に利用可能](attr.md#license)を誰にでも利用、楽しめ、そして改良できることによって実現しました。
 
-Selenium brings together browser vendors, engineers, and enthusiasts
-to further an open discussion around automation of the web platform.
-The project organises [an annual conference](//seleniumconf.com/)
-to teach and nurture the community.
+Seleniumはウェブプラットフォームの自動化のより開かれた議論をするためブラウザーベンダー、エンジニア、愛好家をまとめます。このプロジェクトはコミュニティーを導きと育成のために[年次カンファレンス](//seleniumconf.com/)開催します。
 
-At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_,
-an interface to write instruction sets that can be run interchangeably in many
-browsers. Here is one of the simplest instructions you can make:
+Seleniumの中核は[_WebDriver_]({{< ref "/webdriver/_index.md" >}})であり、様々なブラウザーを変えてインストラクション集を実行できるインターフェースです。これは作りえる一番基本的な
+インストラクションの一つです:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -65,7 +49,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-#This example requires Selenium WebDriver 3.13 or newer
+#この例にはSelenium WebDriver 3.13 または新しいのが必要です
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
@@ -128,22 +112,14 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 {{< / code-tab >}}
 
 
-See the _[Quick Tour]({{< ref "/getting_started/quick.ja.md" >}})_ for a full explanation
-of what goes on behind the scenes when you run this code.
-You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
-to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
-successfully use Selenium as a test automation tool,
-and scaling simple tests like this to run
-in large, distributed environments on multiple browsers,
-on several different operating systems.
+上記のコードを実行した時、舞台裏で何が起きているかの詳しい説明には[_クイックツアー_]({{< ref "/getting_started/quick.ja.md" >}})を参照してください。
+どのように[インストール]({{< ref "/selenium_installation/_index.md" >}})するのか、そしてSeleniumをテスト自動化ツールとして上手く利用し、上記の様な基本的なテストを大きいスケールの分散型環境で複数のブラウザー、様々オペレーティングシステムで実行するため拡張方法を理解するため[順序順ドキュメンテーション]({{< ref "/introduction/_index.md" >}})に進んでください。
 
-## Getting started
+## 入門
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+もしSeleniumが初めてでしたら、素早く知識を得るためのリソースを用意しました。
 
-* [Quick tour]({{< ref "/getting_started/quick.ja.md" >}})
+* [クイックツアー]({{< ref "/getting_started/quick.ja.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.ja.md#webdriver" >}})
   * [Remote Control]({{< ref "/getting_started/quick.ja.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.ja.md#ide" >}})
