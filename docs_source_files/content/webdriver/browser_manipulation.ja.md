@@ -860,9 +860,7 @@ toolbars.
   {{< code-panel language="java" >}}driver.manage().window().maximize();{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.maximize_window(){{< / code-panel >}}
   {{< code-panel language="csharp" >}}driver.Manage().Window.Maximize();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR    
-  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -874,8 +872,6 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="java" >}}driver.manage().window().fullscreen();{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.fullscreen_window(){{< / code-panel >}}
   {{< code-panel language="csharp" >}}driver.Manage().Window.FullScreen();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR    
-  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.full_screen{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
 {{< / code-tab >}}
