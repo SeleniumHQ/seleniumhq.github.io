@@ -1,69 +1,40 @@
 ---
-title: Contributing to the Selenium Documentation
+title: Seleniumドキュメンテーションに貢献
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+Seleniumは大きなソフトウェアプロジェクトです、そしてドキュメンテーションはどのように機能しているかを理解し、ソフトウェアの持ち得る可能性の効果的な利用方法を学ぶための鍵です。
 
-Selenium is a big software project and documentation is key to
-understanding how things work and learning effective ways to exploit
-its potential.
+ドキュメンテーションの一部はまだ[**www.seleniumhq.org** リポジトリ](https://github.com/SeleniumHQ/www.seleniumhq.org)から配信されています。
+このドキュメンテーションはSelenium RCと他の旧式の機能にあまりにも重点が置かれているので私達は段階的に廃止し、新しく書き直しをしていきます。
 
-Part of the documentation of Selenium is still served from our
-[**www.seleniumhq.org** repository](https://github.com/SeleniumHQ/www.seleniumhq.org).
-We are however phasing out this documentation which focuses too much
-on Selenium RC and other antiquated pieces, in favour of this rewrite.
+この新しいドキュメンテーションプロジェクトはSeleniumのドキュメンテーションを一から書き直すことから始まりました。これは更新されたSeleniumを効果的に使用する為のハンドブックを提供する為の継続的な努力です（特定なリリースを目標するのではない）。私達は古いドキュメンテーションのうちまだ有効なものを移行したいと思っています。
 
-The new documentation is a project started to rewrite Selenium's
-documentation from scratch. This is an ongoing effort (not targetted
-at any specific release) to provide an updated handbook on how to use
-Selenium effectively. We hope to bring over the pieces of the old
-documentation that makes sense.
-
-Contributions toward the new docs follow the process described in
-the below section about contributions. You should spend some time
-familiarising yourself with the documentation by reading
-[more about it]({{< ref "/introduction/about_this_documentation.ja.md" >}}).
+新しいドキュメンテーションの貢献には下記の貢献についてのセクションに書いてある手順をもとにしてます。多少の時間をかけて読むことによってドキュメンテーションに馴染んでください。
+[もっと詳しく読む]({{< ref "/introduction/about_this_documentation.ja.md" >}})
 
 ---
 
-The Selenium project welcomes contributions from everyone. There are a
-number of ways you can help:
+Seleniumプロジェクトはすべての人からの貢献を歓迎します。手伝うにはいくつかの方法があります:
 
-## Report an issue
+## 課題を報告する
 
-When reporting a new issues or commenting on existing issues please
-make sure discussions are related to concrete technical issues with the
-Selenium software and/or its documentation.
+新たに問題を報告する時や、既存の課題についてコメントする時にはSeleniumソフトウェアそのものかそれに関わるドキュメンテーションの具体的な技術問題に付いてのみ討議するようにしてください。
 
-All of the Selenium components change quite fast over time, so this
-might cause the documentation to be out of date. If you find this to
-be the case, as mentioned, don't doubt to create an issue for that.
-It also might be possible that you know how to bring up to date the
-documentation, so please send us a pull request with the related
-changes.
+すべてのSeleniumのコンポーネントは時間と共にかなり早く更新されます、なのでこれがドキュメンテーションを形骸化を招くかもしれません。もしそのようなことを発見した場合には、迷わず問題を報告してください。または、ひょっとしてドキュメンテーションの更新方法を知っているならば、修正点を含むプルリクエストを提出してください。
 
-If you are not sure about what you have found is an issue or not,
-please ask first about it to the
-[selenium-users@ mailing list](https://groups.google.com/forum/#!forum/selenium-users),
-or join us in the `#selenium` channel
-on [irc.freenode.org](https://webchat.freenode.net/) or [Slack](https://seleniumhq.herokuapp.com/).
+もし、見つけたものが問題かどうか確信がないときは[selenium-users@ メーリングリスト](https://groups.google.com/forum/#!forum/selenium-users)で質問してください,または[irc.freenode.org](https://webchat.freenode.net/)か[Slack](https://seleniumhq.herokuapp.com/)の`#selenium`チャンネルに参加してください。
 
-## Contributions
+## 貢献
 
-The Selenium project welcomes new contributors. Individuals making
-significant and valuable contributions over time are made _Committers_
-and given commit-access to the project.
+Seleniumプロジェクトは新たな貢献者を歓迎します。 重要かつ価値のある貢献をある程度の期間して頂いた方には_コミッター_(_Committers_)になっていただきプロジェクトへのcommit-accessの権限が譲与されます。
 
-This document will guide you through the contribution process.
+このドキュメンテーションは貢献プロセスを案内します。
 
-### Step 1: Fork
+### ステップ　１： フォーク (_Fork_)
 
-Fork the project [on Github](https://github.com/seleniumhq/docs)
-and check out your copy locally.
+[Github](https://github.com/seleniumhq/docs)のプロジェクトをフォークして
+ローカル環境にチェックアウトしてください。
 
 ```shell
 % git clone git@github.com:username/docs.git
@@ -73,124 +44,93 @@ and check out your copy locally.
 
 https://gohugo.io/getting-started/installing/
 
-#### Dependencies: Hugo
+#### 依存関係： ヒューゴ (Hugo)
 
-The docs use [Hugo](https://gohugo.io/) to build and render the site.
-To verify everything locally before even commiting any changes, please
-[install Hugo](https://gohugo.io/getting-started/installing/) and
-[run the local server](https://gohugo.io/getting-started/usage/#livereload)
-to render the site locally.
+ドキュメンテーションは[ヒューゴ (Hugo)](https://gohugo.io/) を用いてサイトの生成とレンダーしています。 
+変更点をコミットする前にすべてをローカル環境で確認するために、
+[ヒューゴ (Hugo)をインストール](https://gohugo.io/getting-started/installing/) して
+サイトをローカル環境でレンダーするために[ローカルサーバーを実行](https://gohugo.io/getting-started/usage/#livereload)してください。
 
-### Step 2: Branch
+### ステップ　２：ブランチ (_Branch_)
 
-Create a feature branch and start hacking:
+フィーチャーブランチを作成して、取り組み始める:
 
 ```shell
 % git checkout -b my-feature-branch
 ```
 
-We practice HEAD-based development, which means all changes are applied
-directly on top of master.
+私達はHEAD-based開発を実践しています、すなわち全ての変更はmaster上に直接反映されます。
 
-### Step 3: Commit
+### ステップ　３：コミット(_Commit_)
 
-First make sure git knows your name and email address:
+初めにgitにあなたの名前とメールアドレスを登録済みか確認してください:
 
 ```shell
 % git config --global user.name 'Santa Claus'
 % git config --global user.email 'santa@example.com'
 ```
 
-**Writing good commit messages is important.** A commit message
-should describe what changed, why, and reference issues fixed (if
-any). Follow these guidelines when writing one:
+**良質なコミットメッセージを書くことは重要です。**コミットメッセージには変更点、理由、修正したissueへの参照(もし存在するならば)を記述すべきです。コミットメッセージを書く時には次のガイドラインに従ってください:
 
-1. The first line should be around 50 characters or less and contain a
-    short description of the change.
-2. Keep the second line blank.
-3. Wrap all other lines at 72 columns.
-4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+1. １行目は５０字以内で、変更内容の要約を含める。
+2. ２行目は空行にする。
+3. 各行を７２列で改行する。
+4. もしあるならば`Fixes #N`を含める, 但し_N_はこのコミットが修正するissueナンバーです。
 
-A good commit message can look like this:
+良質なコミットメッセージとはこんな感じです:
 
 ```text
-explain commit normatively in one line
+一行でコミットを規範的に説明する
 
-Body of commit message is a few lines of text, explaining things
-in more detail, possibly giving some background about the issue
-being fixed, etc.
+コミットメッセージの本文は２〜３行でより詳しく説明し、修正されるissueに
+ついての背景など可能な限り入れます。
 
-The body of the commit message can be several paragraphs, and
-please do proper word-wrap and keep columns shorter than about
-72 characters or so. That way `git log` will show things
-nicely even when it is indented.
+コミットメッセージいくつかのパラグラフになる場合があります、そして正し
+く改行して、一行が７２文字以内になるよう努めてください。そうすると
+`git log`がインデントされていてもきれいに表示されます。
 
 Fixes #141
 ```
 
-The first line must be meaningful as it's what people see when they
-run `git shortlog` or `git log --oneline`.
+一行目は意味のあるものではないといけません、というのは`git shortlog`又は`git log --oneline`を実行したときに人に見えるものだからです。
 
-### Step 4: Rebase
+### ステップ　４: リーベース(_Rebase_)
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+ (`git merge`ではなく)`git rebase`を使用してコードの同期化時々します。
 
 ```shell
 % git fetch upstream
 % git rebase upstream/master
 ```
 
-### Step 5: Test
+### ステップ　５: 検証
 
-Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
-with this you can be safe that your changes have not broken anything.
+いつも[ローカルサーバーを実行すること](https://gohugo.io/getting-started/usage/#livereload)を覚えてくださいそうすることで変更点が他の物を壊さない確証が得られます。
 
-### Step 6: Translations
+### ステップ　６: 翻訳
 
-If you are updating the docs, adding new ones, or deleting deprecated ones, please remember
-to update the translations of it. Of course, it is possible that you do not speak all the
-translated languages in the docs. For that, please create an
-[issue](https://github.com/SeleniumHQ/docs/issues) where you clearly describe that something
-in the docs has changed and its translation needs to be updated. With that, someone who speaks
-that needed language can chime in and help us to keep it up to date.
+もし新しいものを付け加えたり、いらなくなったものを削除したりして、ドキュメンテーションを更新するならば翻訳も忘れずに更新してください。もちろんすべての翻訳言語が話せるとは限りませんです。そのような場合には[課題(issue)](https://github.com/SeleniumHQ/docs/issues)を作成し、ドキュメンテーション上どこが変更されたのかと翻訳が必要であること明記してください。それによって、その必要な言語が話せるどなたかが立候補してドキュメンテーションが更新され続ける事を手助けしてくれます。
 
-### Step 7: Sign the CLA
+### ステップ　７：CLAに署名する
 
-Before we can accept, we first ask people to sign a
-[Contributor License Agreement](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0)
-(or CLA). We ask this so that we know that contributors have the right
-to donate the code.
+受け入れができる前に、私達は最初に[貢献者ライセンス同意書(_Contributor License Agreement_)](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0)(又はCLA)に署名をお願いしています。私達がお願いするのには貢献者がコードを寄付する権利を有することを私達が知るためです。
 
-When you open your pull request we ask that you indicate that you've
-signed the CLA. This will reduce the time it takes for us to integrate
-it.
+プルリクエストを提出する時にCLA貢献者ライセンス同意書に署名したことを提示してください。そうすると統合させるまでの時間を減らせます。
 
-### Step 8: Push
+### ステップ　８: プッシュ(_Push_)
 
 ```shell
 % git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/docs.git and press the _Pull
-Request_ and fill out the form. **Please indicate that you've signed
-the CLA** (see Step 6).
+https://github.com/yourusername/docs.git へ行き _PullRequest_ を押して、フォームに記入します。**CLAに署名したことを提示してください** (ステップ 6参照)。
 
-Pull requests are usually reviewed within a few days. If there are
-comments to address, apply your changes in new commits (preferably
-[fixups](http://git-scm.com/docs/git-commit)) and push to the same
-branch.
+通常プルリクエストは２−３日中にレビューされます。もし処理しなくてはいけないコメントがあるならば、新たなコミット(_commit_)に修正箇所を含めます。(なるべく[フィックスアップ(_fixups_)](http://git-scm.com/docs/git-commit)を使用する)そして同じブランチ(_branch_)にプッシュ(_push_)します。
 
-### Step 9: Integration
+### ステップ　9: 統合
 
-When code review is complete, a committer will take your PR and
-integrate it on the docs's gh-pages branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
-your branch history.
+コードレビュー終了した時に、_コミッター_(_Committers_)がPR（プルリクエスト）を受取り、ドキュメントのgh-pagesブランチと統合させます。masterブランチの履歴を一本線で維持したいので、スクワッシュ(_squash_)とリーベース(_rebase_)をあなたのブランチに対して通常行います。
 
-## Communication
+## コミュニケーション
 
-Selenium contributors frequent the `#selenium` channel on
-[`irc.freenode.org`](https://webchat.freenode.net/) or on
-or [Slack](https://seleniumhq.herokuapp.com/). You can also join
-the [`selenium-developers@` mailing list](https://groups.google.com/forum/#!forum/selenium-developers).
+Seleniumの貢献者は頻繁に[`irc.freenode.org`](https://webchat.freenode.net/)や[Slack](https://seleniumhq.herokuapp.com/)の`#selenium`チャンネルに集まります。[`selenium-developers@` メーリングリスト](https://groups.google.com/forum/#!forum/selenium-developers)にも参加することができます。
