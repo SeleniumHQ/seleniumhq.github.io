@@ -753,7 +753,14 @@ int width1 = size.Width;
 int height1 = size.Height;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Access each dimension individually
+width = driver.manage.window.size.width
+height = driver.manage.window.size.height
+
+# Or store the dimensions and query them later
+size = driver.manage.window.size
+width1 = size.width
+height1 = size.height
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
@@ -773,7 +780,7 @@ Restores the window and sets the window size.
   {{< code-panel language="java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.set_window_size(1024, 768){{< / code-panel >}}
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.set_window_size(1024,768){{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -844,7 +851,7 @@ driver.set_window_position(0, 0)
 driver.Manage().Window.Position = new Point(0, 0);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+driver.manage.window.move_to(0,0)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Move the window to the top left of the primary monitor
