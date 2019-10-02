@@ -4,7 +4,7 @@ weight: 3
 ---
 
 Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
+To reduce this, and make your tests cleaner, there is a
 `Select` class in the Selenium support package.
 To use it, you will need the following import statement:
 

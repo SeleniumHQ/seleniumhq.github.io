@@ -8,11 +8,11 @@ weight: 5
 
 The biggest change in Selenium recently
 has been the inclusion of the WebDriver API.
-Driving a browser natively as a user would either locally
+Driving a browser natively, as a user would, either locally
 or on a remote machine using the Selenium server,
-it marks a leap forward in terms of browser automation.
+marks a leap forward in terms of browser automation.
 
-Selenium WebDriver fits in the same role as RC did,
+Selenium WebDriver fits the same role as RC did,
 and has incorporated the original 1.x bindings.
 It refers to both the language bindings
 and the implementations of the individual browser controlling code.
@@ -26,7 +26,7 @@ Selenium 1.0 + WebDriver = Selenium 2.0
   along with addressing some limitations in the Selenium-RC API.
 
 * WebDriver is a compact object-oriented API
-  when compared to Selenium 1.0.
+  compared to Selenium 1.0.
 
 * It drives the browser much more effectively
   and overcomes the limitations of Selenium 1

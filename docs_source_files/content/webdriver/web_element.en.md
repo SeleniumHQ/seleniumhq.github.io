@@ -3,7 +3,7 @@ title: "Web element"
 weight: 9
 ---
 
-Represents a DOM element. WebElements can be found by searching from the
+WebElement represents a DOM element. WebElements can be found by searching from the
 document root using a WebDriver instance, or by searching under another
 WebElement:
 

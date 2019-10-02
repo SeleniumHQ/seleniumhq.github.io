@@ -21,7 +21,7 @@ complete with its own node infrastructure.
 
 This example will show you how to start the Selenium 2 Grid Hub,
 and register both a WebDriver node and a Selenium 1 RC legacy node.
-We’ll also show you how to call the grid from Java.
+We will also show you how to call the grid from Java.
 The hub and nodes are shown here running on the same machine,
 but of course you can copy the selenium-server-standalone to multiple machines.
 
@@ -66,7 +66,7 @@ are possible command-line flags.
 
 You certainly can get by with only the simple command shown above,
 but if you need more advanced configuration,
-then you may also for convenience specify a JSON format config file
+you can also specify a JSON format config file, for convenience,
 to configure the hub when you start it.
 You can do it like so:
 
@@ -192,26 +192,26 @@ hub/node to be reachable from a different machine.
 #### Specifying the port
 
 The default TCP/IP port used by the hub is 4444. If you need to change the port 
-please use above mentioned configurations
+please use above mentioned configurations.
 
 ## Troubleshooting
 
 ### Using Log file
-For advance troubleshooting you can specify log file to log system messages.
-For that start Selenium GRID hub or node with -log argument. Please see the below example
+For advanced troubleshooting you can specify a log file to log system messages.
+Start Selenium GRID hub or node with -log argument. Please see the below example:
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -log log.txt
 ```
 
-Use your favorite text editor to open log file (log.txt in above example) to find 
+Use your favorite text editor to open log file (log.txt in the example above) to find 
 "ERROR" logs if you get issues.
 
 ### Using `-debug` argument
 
-Also you can use `-debug` argument to print debug logs on console.
-For that start Selenium Grid Hub or Node with `-debug` argument. Please see 
-the below example
+Also you can use `-debug` argument to print debug logs to console.
+Start Selenium Grid Hub or Node with `-debug` argument. Please see 
+the below example:
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -debug
@@ -223,11 +223,12 @@ The Selenium Grid must be protected from external access using appropriate
 firewall permissions.
 
 Failure to protect your Grid could result in one or more of the following occurring:
-* You provide open access to your Grid infrastructure
-* You allow 3rd parties to access internal web applications and files
-* You allow 3rd parties to run custom binaries
 
-See this blog post on [Detectify](//labs.detectify.com) which gives a good 
+* You provide open access to your Grid infrastructure
+* You allow third parties to access internal web applications and files
+* You allow third parties to run custom binaries
+
+See this blog post on [Detectify](//labs.detectify.com), which gives a good 
 overview of how a publicly exposed Grid could be misused: 
 [Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
 
@@ -236,7 +237,7 @@ overview of how a publicly exposed Grid could be misused:
 [Docker](//www.docker.com/) provides a convenient way to
 provision and scale Selenium Grid infrastructure in a unit known as a container.
 Containers are standardised units of software that contain everything required
-to run the desired application including all dependencies in a reliable and repeatable
+to run the desired application, including all dependencies, in a reliable and repeatable
 way on different machines.
 
 The Selenium project maintains a set of Docker images which you can download

@@ -105,7 +105,7 @@ const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
 
 ### Locating multiple elements
 
-It's possible that the document we are working with may turn out to have an
+It is possible that the document we are working with may turn out to have an
 ordered list of the cheese we like the best:
 
 ```html
@@ -122,7 +122,7 @@ to have to retrieve each of the items individually, a superior
 technique for retrieving cheese is to make use of the pluralized
 version `findElements(By)`. This method returns a collection of web
 elements. If only one element is found, it will still return a
-collection (of one element). If no elements match the locator, an
+collection (of one element). If no element matches the locator, an
 empty list will be returned.
 
 {{< code-tab >}}
@@ -168,7 +168,7 @@ that comes with complicated DOM traversals.
 If unique IDs are unavailable, a well-written CSS selector is the
 preferred method of locating an element. XPath works as well as CSS
 selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they're typically
+debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.
 
 Selection strategies based on link text and partial link text have

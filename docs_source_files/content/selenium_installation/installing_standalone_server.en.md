@@ -10,7 +10,7 @@ If you plan to use [Grid]({{< ref "/grid/_index.md" >}}) then you should downloa
  The standalone JAR contains everything, including the remote Selenium server
  and the client-side bindings.
  This means that if you use the selenium-server-standalone jar
- in your project, then you don't have to add selenium-java
+ in your project, you do not have to add selenium-java
  or a browser specific jar.
 
  ```xml

@@ -5,7 +5,7 @@ weight: 6
 
 Performance testing using Selenium and WebDriver
 is generally not advised.
-Not because it is incapable
+Not because it is incapable,
 but because it is not optimised for the job
 and you are unlikely to get good results.
 
@@ -38,11 +38,11 @@ you will need to be able to analyse overall performance
 independent of environment differences,
 identify poor code practices,
 breakdown of performance of individual resources
-(i.e. CSS or JavaScript)
+(i.e. CSS or JavaScript),
 in order to know what to improve.
 There are performance testing tools available
 that can do this job already,
-and which provide reporting and analysis
-which can even make improvement suggestions.
+that provide reporting and analysis,
+and can even make improvement suggestions.
 
-Example (open source) packages to use are: JMeter ?
+Example (open source) packages to use are: [JMeter](//jmeter.apache.org/)

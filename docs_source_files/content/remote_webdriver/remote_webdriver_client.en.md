@@ -3,7 +3,7 @@ title: "Remote WebDriver client"
 weight: 2
 ---
 
-First, we need to connect to the RemoteWebDriver.
+To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
 We do this by pointing the URL to the address of the server running our tests.
 In order to customize our configuration, we set desired capabilities.
 Below is an example of instantiating a remote WebDriver object

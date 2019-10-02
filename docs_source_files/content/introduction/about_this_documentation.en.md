@@ -22,7 +22,7 @@ Feel free to drop in and ask questions
 and if you get help which you think could be of use within these documents,
 be sure to add your contribution!
 We can update these documents,
-but it's much easier for everyone when we get contributions
+but it is much easier for everyone when we get contributions
 from outside the normal committers.
 
 

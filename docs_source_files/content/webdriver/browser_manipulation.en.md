@@ -12,7 +12,7 @@ weight: 3
 Ruby is not installed by default on Windows. Download the latest 
 [version](//rubyinstaller.org/downloads) and run the installer. You can
 leave all settings at default values, except at the 
-_Installation Destination and Optional Tasks_ screen check 
+_Installation Destination and Optional Tasks_ screen check where you need to check the 
 _Add Ruby executables to your PATH_ checkbox. To drive any browser, you have
 to install `selenium-webdriver` Ruby gem. To install it, open command prompt 
 and type this:
@@ -28,7 +28,7 @@ Gemfile:
 gem "selenium-webdriver"
 ```
 
-And then execute the following command in prompt:
+And then execute the following command in command prompt:
 
 ```shell
 bundle install
@@ -153,7 +153,10 @@ You can read the current page title from the browser:
 
 
 ## Windows and tabs
-WebDriver doesn't make the distinction between windows and tabs. If
+
+### Get window handle
+
+WebDriver does not make the distinction between windows and tabs. If
 your site opens a new tab or window, Selenium will let you work with it
 using a window handle.  Each window has a unique identifier which remains
 persistent in a single session. You can get the window handle of the
@@ -383,8 +386,8 @@ instead of close:
 * Quit will:
   * Close all the windows and tabs associated with that WebDriver
   session
-  * The browser process
-  * The background driver process
+  * Close the browser process
+  * Close the background driver process
   * Notify Selenium Grid that the browser is no longer in use so it can
    be used by another session (if you are using Selenium Grid)
 
@@ -475,7 +478,7 @@ try {
 {{< / code-tab >}}
 
 Python's WebDriver now supports the python context manager,
-which when using the with keyword can automatically quit the driver at
+which when using the `with` keyword can automatically quit the driver at
 the end of execution.
 
 ```python
@@ -505,7 +508,7 @@ see the following:
 </div>
 ```
 
-If it wasn't for the iframe we would expect to click on the button
+If it was not for the iframe we would expect to click on the button
 using something like:
 
 {{< code-tab >}}

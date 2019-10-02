@@ -7,7 +7,7 @@ WebDriver can generally be said to have a blocking API.
 Because it is an out-of-process library that
 _instructs_ the browser what to do,
 and because the web platform has an intrinsically asynchronous nature,
-WebDriver doesn't track the active, real-time state of the DOM.
+WebDriver does not track the active, real-time state of the DOM.
 This comes with some challenges that we will discuss here.
 
 From experience,
@@ -87,12 +87,12 @@ It “might” be intermittent because no guarantees can be made
 about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.
 
-Fortunately, using the normal instruction set available on
+Fortunately, the normal instruction set available on
 the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
  as _WebElement.click_ and _WebElement.sendKeys_—are
  guaranteed to be synchronous,
- in that the function calls won't return
- (or the callback won't trigger in callback-style languages)
+ in that the function calls will not return
+ (or the callback will not trigger in callback-style languages)
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}}) 
@@ -231,7 +231,7 @@ to operate on the driver reference passed in to the condition
 rather than the reference to the driver in the outer scope.
 
 Because the wait will swallow _no such element_ errors
-that are raised when the element isn't found,
+that are raised when the element is not found,
 the condition will retry until the element is found.
 Then it will take the return value, a _WebElement_,
 and pass it back through to our script.
@@ -244,7 +244,7 @@ the wait will throw/raise an error/exception called a _timeout error_.
 ### Options
 
 The wait condition can be customised to match your needs.
-Sometimes it's unnecessary to wait the full extent of the default timeout,
+Sometimes it is unnecessary to wait the full extent of the default timeout,
 as the penalty for not hitting a successful condition can be expensive.
 
 The wait lets you pass in an argument to override the timeout:
@@ -270,7 +270,7 @@ WebDriverWait(driver, timeout=3).until(some_condition)
 
 ### Expected conditions
 
-Because it's quite a common occurrence
+Because it is quite a common occurrence
 to have to synchronise the DOM and your instructions,
 most clients also come with a set of predefined _expected conditions_.
 As might be obvious by the name,

@@ -43,7 +43,7 @@ Selenium IDE can be used to generate _quick and dirty_
 Java, Python, and Ruby). Given the maintainability of code generated
 through Selenium IDE, it is not recommended to use it for anything
 more than getting acquainted with element locators or generating
-_throw away code_. We're sure that once you get used to the
+_throw away code_. We are sure that once you get used to the
 WebDriver API, you will never use Selenium IDE.
 
 

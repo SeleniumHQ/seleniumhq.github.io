@@ -16,3 +16,4 @@ reports are popular for importing results to a Continuous Integration
 (CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
 for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
+[NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)

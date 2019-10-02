@@ -15,8 +15,8 @@ including HTTP response codes.
 
 Selenium WebDriver is a completely different approach
 to browser automation,
-preferring to act more like a user
-and this is represented in the way you write tests with WebDriver.
+preferring to act more like a user.
+This is represented in the way you write tests with WebDriver.
 In automated functional testing,
 checking the status code
 is not a particularly important detail of a test's failure;

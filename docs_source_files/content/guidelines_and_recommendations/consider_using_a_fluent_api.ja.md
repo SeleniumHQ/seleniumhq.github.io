@@ -8,8 +8,8 @@ weight: 8
 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
 {{% /notice %}}
 
-Martin Fowler coined the term "Fluent API". Selenium already
-implements something like this in their `FluentWait` class which is
+Martin Fowler coined the term ["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html). 
+Selenium already implements something like this in their `FluentWait` class which is
 meant as an alternative to the standard <code>Wait</code> class.
 You could enable the Fluent API design pattern in your page object
 and then query the Google search page with a code snippet like this one:

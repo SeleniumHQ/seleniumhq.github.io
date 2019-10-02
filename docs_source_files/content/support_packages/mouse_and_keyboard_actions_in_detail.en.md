@@ -23,7 +23,7 @@ e = driver.find_element_by_id("testElement")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can simulate mouse clicking on e if it's visible and has a height and width
+You can simulate mouse clicking on e if it is visible and has a height and width
 that are greater than 0:
 
 {{< code-tab >}}
@@ -44,8 +44,8 @@ e.click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Moreover, it's possible to mimic hovering of the cursor over **e**. In order
-to do so, you'll need the following import statement:
+Moreover, it is possible to mimic hovering of the cursor over **e**. In order
+to do so, you will need the following import statement:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -92,7 +92,7 @@ actions.perform()
 If **e** is an **input** or **textarea** element, the following keyboard 
 actions can be carried out:
 
-1. Enter a sequence of characters in e:
+* Enter a sequence of characters in e:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -112,7 +112,7 @@ e.send_keys("Test")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-<p>2. Delete the text that's in e (if there is any):
+* Delete the text that is in e (if there is any):
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

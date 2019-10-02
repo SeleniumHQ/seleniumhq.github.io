@@ -13,8 +13,8 @@ campatible tools.
 * Combination of releases of geckodriver / firefox /
 selenium-html-runner matters. There might be a software
 compatibility matrix somewhere.
-* selenium-html-runner runs only Test Suite (not Test Case - what
-is for example an export from Monitis Transaction Monitor). Be
+* selenium-html-runner runs only Test Suite (not Test Case - 
+for example an export from Monitis Transaction Monitor). Be
 sure you comply with this.
 * For Linux users with no DISPLAY - you need to start html-runner
 with Virtual display (search for xvfb)

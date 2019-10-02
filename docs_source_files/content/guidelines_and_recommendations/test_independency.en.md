@@ -3,10 +3,10 @@ title: "Test independency"
 weight: 7
 ---
 
-Write each test as its own unit. Write the tests in a way that won't be
+Write each test as its own unit. Write the tests in a way that will not be
 reliant on other tests to complete:
 
-Let's say there is a content management system with which you can create
+Let us say there is a content management system with which you can create
 some custom content which then appears on your website as a module after 
 publishing, and it may take some time to sync between the CMS and the 
 application.
