@@ -15,7 +15,7 @@ or in the case of Facebook the developer tools service
 which exposes an API for creating test accounts, friends and so forth.
 Although using an API might seem like a bit of extra hard work,
 you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
+The API is also unlikely to change,
 whereas webpages and HTML locators change often
 and require you to update your test framework.
 

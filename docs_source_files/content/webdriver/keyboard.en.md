@@ -3,7 +3,7 @@ title: "Keyboard"
 weight: 10
 ---
 
-Represents a KeyBoard event. KeyBoard actions are performed by using low-level
+Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
 interface which allows us to provide virtualized device input to the web browser.
 
 ## sendKeys

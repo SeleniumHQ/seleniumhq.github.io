@@ -4,7 +4,7 @@ weight: 6
 ---
 
 WebDriver provides an API for working with the three types of native
-popup message offered by JavaScript. These popups are styled by the
+popup messages offered by JavaScript. These popups are styled by the
 browser and offer limited customisation.
 
 ## Alerts

@@ -15,7 +15,7 @@ The Selenium framework officially supports the following browsers:
 | Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer |
 | Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 and newer |
 
-## Specialised browsers
+## Specialized browsers
 
 There is also a set of specialized browsers out there
 typically used in development environments.

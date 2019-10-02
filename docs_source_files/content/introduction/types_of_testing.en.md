@@ -8,7 +8,7 @@ feature matches its requirements.
 This generally involves the customer's feedback or specification.
 
 For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behavior.
+directly with Selenium by simulating user expected behaviour.
 This simulation could be done by record/playback or through the
 different supported languages as explained in this documentation.
 Note: Acceptance testing is a subtype of **_functional testing_**,
@@ -18,15 +18,15 @@ which some people might also refer to.
 This type of test is done in order to determine if a product's
 feature functions properly, without issues.
              
-This generally include: the tests work without errors 
-(404, exceptions...), in an usable way (right redirections),   
-in an accessible way and matching its specifications            
+This generally includes: the tests work without errors 
+(404, exceptions...), in a usable way (correct redirections),   
+in an accessible way and matching its specifications 
 (see **_acceptance testing_** above).
 
 For web applications, the automation of this testing can be
 done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through     
-the different supported languages as explainedin this documentation.
+This simulation could be done by record/playback or through 
+the different supported languages as explained in this documentation.
 
 ### Performance testing
 As its name indicates, performance tests are done in order
@@ -37,7 +37,7 @@ There are two main sub-types for performance testing:
 #### Load testing
 Load testing is done in order to verify how well the 
 application works under different defined loads 
-(usually a particular number of users connected at once)
+(usually a particular number of users connected at once).
 
 #### Stress testing
 Stress testing is done in order to verify how well the
@@ -71,14 +71,14 @@ and can include several different types, depending
 on the application and development team.
             
 ### Test driven development (TDD)
-Rather than a test type per se, TDD is an iterative
+Rather than a test type _per se_, TDD is an iterative
 development methodology in which tests drive the design of a feature.
 
 Each cycle starts by creating a set of unit tests that
-the feature should pass (which should fail their first time executed).
+the feature should eventually pass (they should fail their first time executed).
 
 After this, development takes place in order to make the tests pass. 
-The tests are executed again starting another cycle 
+The tests are executed again, starting another cycle 
 and this process continues until all tests are passing.
 
 This aims to speed up the development of an application
@@ -86,14 +86,14 @@ based on the fact that defects are less costly the earlier they are found.
 
 ### Behavior-driven development (BDD)
 BDD is also an iterative development methodology
-based on above (TDD) in which the goal is to involve
+based on the above TDD, in which the goal is to involve
 all the parties in the development of an application.
 
 Each cycle starts by creating some specification 
 (which should fail). Then create the failing unit 
-tests (which should also fail) and then create the development. 
+tests (which should also fail) and then do the development. 
 
-This cycle is repeated until all type of tests are passing.
+This cycle is repeated until all types of tests are passing.
 
 In order to do so, a specification language is 
 used. It should be understandable by all parties and 
@@ -101,7 +101,7 @@ simple, standard and explicit.
 Most tools use **_Gherkin_** as this language.
 
 The goal is to be able to detect even more errors
-than TDD by targeting potential acceptance errors
+than TDD, by targeting potential acceptance errors
 too and make communication between parties smoother.
 
 A set of tools are currently available in order 
@@ -109,7 +109,7 @@ to write the specifications and match them with code functions,
 such as **_Cucumber_** or **_SpecFlow._**
 
 A set of tools are built on top of Selenium to make this process
-even faster by directly transform the BDD specifications into 
+even faster by directly transforming the BDD specifications into 
 executable code.
 Some of these are: **_JBehave, Capybara and Robot Framework_**.
             

@@ -5,11 +5,11 @@ weight: 2
 
 You will occasionally want to validate the colour of something as part of your tests;
 the problem is that colour definitions on the web are not constant.
-Wouldn't it be nice if there was an easy way to compare
-a HEX representation of a colour with an RGB representation of a colour,
-or an RGBA representation of a colour with a HSLA representation of a colour?
+Would it not be nice if there was an easy way to compare
+a HEX representation of a colour with a RGB representation of a colour,
+or a RGBA representation of a colour with a HSLA representation of a colour?
 
-Worry not. There's a solution: the _Color_ class!
+Worry not. There is a solution: the _Color_ class!
 
 First of all, you will need to import the class:
 

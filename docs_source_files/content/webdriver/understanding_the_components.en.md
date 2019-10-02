@@ -19,7 +19,7 @@ files for Java, .dll files for .NET, etc.
 are created by the browser vendors themselves. Drivers are generally 
 executable modules that run on the system with the browser itself,
 not on the system executing the test suite. (Although those may be the 
-same system.) _NOTE: Some people refer to the drivers as proxies._
+same system.) NOTE: _Some people refer to the drivers as proxies._
 * **Framework:** An additional library used as a support for WebDriver 
 suites. These frameworks may be test frameworks such as JUnit or NUnit. 
 They may also be frameworks supporting natural language features such 
@@ -55,12 +55,12 @@ Grid, both of which in turn talk to the driver on the host system
 ## Where Frameworks fit in
 
 WebDriver has one job and one job only: communicate with the browser via any
-of the methods above. WebDriver doesn't know a thing about testing: it doesn't
-know how to compare things, assert pass or fail, and it certainly doesn't know
+of the methods above. WebDriver does not know a thing about testing: it does not
+know how to compare things, assert pass or fail, and it certainly does not know
 a thing about reporting or Given/When/Then grammar.
 
-This is where various frameworks come in to play. At a minimum you'll need a 
-test framework that matches the language bindings, eg NUnit for .NET, JUnit 
+This is where various frameworks come in to play. At a minimum you will need a 
+test framework that matches the language bindings, e.g. NUnit for .NET, JUnit 
 for Java, RSpec for Ruby, etc.
 
 The test framework is responsible for running and executing your WebDriver 

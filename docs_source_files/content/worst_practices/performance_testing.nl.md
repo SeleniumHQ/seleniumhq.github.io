@@ -51,4 +51,4 @@ that can do this job already,
 and which provide reporting and analysis
 which can even make improvement suggestions.
 
-Example (open source) packages to use are: JMeter ?
+Example (open source) packages to use are: [JMeter](//jmeter.apache.org/)
