@@ -1,0 +1,198 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/projects.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <h1>Selenium Projects</h1>
+    <div class="header-description">
+        <p class="body-large">
+            Selenium has many projects that combine to form a versatile testing system.
+        </p>
+    </div>
+</section>
+
+{{ partial "selenium-supporters.html" . }}
+
+<div class="product-container webdriver dark-background">
+    <div class="intro" id="selenium-webdriver">
+        <div class="product-logo-container">
+            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_logo_square_red.png"/>
+        </div>
+        <h2>Selenium WebDriver</h2>
+        <p>Selenium WebDriver can drive a browser natively either locally or on remote machines.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="webdriverShow" class="toggle-button" onClick="showWebDriver()">+ Show more</b>
+    </div>
+    <div id="webdriverContent" class="content hide">
+        <p>The biggest change in Selenium recently has been the inclusion of the WebDriver API. Driving a browser natively as a user would either locally or on a remote machine using the Selenium Server it marks a leap forward in terms of browser automation.</p>
+        <p>Selenium WebDriver fits in the same role as RC did, and has incorporated the original 1.x bindings. It refers to both the language bindings and the implementations of the individual browser controlling code. This is commonly referred to as just "WebDriver" or sometimes as Selenium 2.</p>
+        <i>Selenium 1.0 + WebDriver = Selenium 2.0 </i>
+        <ul>
+            <li>WebDriver is designed in a simpler and more concise programming interface along with addressing some limitations in the Selenium-RC API.</li>
+            <li>WebDriver is a compact Object Oriented API when compared to Selenium1.0</li>
+            <li>It drives the browser much more effectively and overcomes the limitations of Selenium 1.x which affected our functional test coverage, like the file upload or download, pop-ups and dialogs barrier</li>
+            <li>WebDriver overcomes the limitation of Selenium RC's Single Host origin policy</li>
+        </ul>
+
+        <p>WebDriver is the name of the key interface against which tests should be written in Java, the implementing classes one should use are listed as below:</p>
+
+        <p>ChromeDriver, EventFiringWebDriver, FirefoxDriver, HtmlUnitDriver, InternetExplorerDriver, PhantomJSDriver, RemoteWebDriver, SafariDriver</p>
+
+        <p>For More information on Selenium WebDriver, please see the documentation and Remote Control to WebDriver Migration Notes.</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideWebDriver()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container grid dark-background">
+    <div class="intro" id="selenium-grid">
+        <div class="product-logo-container">
+            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_grid_logo_square.png"/>
+        </div>
+        <h2>Selenium Grid</h2>
+        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on may servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="gridShow" class="toggle-button" onClick="showGrid()">+ Show more</b>
+    </div>
+    <div id="gridContent" class="content hide">
+        <p>With the release of Selenium 2.0, the Selenium Server now has built-in Grid functionality. To see the how to configure this, please see the wiki.</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideGrid()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container ide dark-background">
+    <div class="intro" id="selenium-ide">
+        <div class="product-logo-container">
+            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_ide_logo_square.png"/>
+        </div>
+        <h2>Selenium IDE</h2>
+        <p>Selenium IDE is a Chrome and Firefox extension that makes it easy to record and playback tests in the browser.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="ideShow" class="toggle-button" onClick="showIDE()">+ Show more</b>
+    </div>
+    <div id="ideContent" class="content hide">
+        <h3>Web Ready</h3>
+        <p>Simple, turn-key solution to quickly author reliable end-to-end tests. Works out of the box for any web app.</p>
+
+        <h3>Easy Debugging</h3>
+        <p>Enjoy easier test debugging with rich IDE features like setting breakpoints and pausing on exceptions.</p>
+
+        <h3>Cross-browser Execution</h3>
+        <p>Run your tests on any browser/OS combination in parallel using the Command-line Runner for Selenium IDE.</p>
+
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideIDE()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container remoteControl dark-background">
+    <div class="intro" id="selenium-remote">
+        <h2>Selenium Remote Control</h2>
+        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on many servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="remoteControlShow" class="toggle-button" onClick="showRemoteControl()">+ Show more</b>
+    </div>
+    <div id="remoteControlContent" class="content hide">
+        <p>Selenium Remote Control (RC) is a test tool that allows you to write automated web application UI tests in any programming language against any HTTP website using any mainstream JavaScript-enabled browser.</p>
+
+        <p>Selenium RC comes in two parts.</p>
+
+        <ol>
+            <li>A server which automatically launches and kills browsers, and acts as a HTTP proxy for web requests from them.</li>
+            <li>Client libraries for your favorite computer language.</li>
+        </ol>
+
+        <p>Selenium Remote Control is great for testing complex AJAX-based web user interfaces under a Continuous Integration system. It is also an ideal solution for users of Selenium IDE who want to write tests in a more expressive programming language than the Selenese HTML table format.</p>
+
+        <p>Read More about Selenium Remote-Control in our documentation</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideRemoteControl()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+{{ partial "selenium-blog-link.html" . }}
+
+{{ partial "supporting-supporters.html" . }}
+
+{{ partial "support-selenium.html" . }}
+
+</body>
+
+{{ partial "footer.html" . }}
+
+<script>
+    function showWebDriver() {
+      const webdriverContent = document.getElementById("webdriverContent");
+      const webdriverButton = document.getElementById("webdriverShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideWebDriver() {
+      const webdriverContent = document.getElementById("webdriverContent");
+      const webdriverButton = document.getElementById("webdriverShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showGrid() {
+      const webdriverContent = document.getElementById("gridContent");
+      const webdriverButton = document.getElementById("gridShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideGrid() {
+      const webdriverContent = document.getElementById("gridContent");
+      const webdriverButton = document.getElementById("gridShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showIDE() {
+      const webdriverContent = document.getElementById("ideContent");
+      const webdriverButton = document.getElementById("ideShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideIDE() {
+      const webdriverContent = document.getElementById("ideContent");
+      const webdriverButton = document.getElementById("ideShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showRemoteControl() {
+      const webdriverContent = document.getElementById("remoteControlContent");
+      const webdriverButton = document.getElementById("remoteControlShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideRemoteControl() {
+      const webdriverContent = document.getElementById("remoteControlContent");
+      const webdriverButton = document.getElementById("remoteControlShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+</script>

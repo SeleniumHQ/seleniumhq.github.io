@@ -1,0 +1,92 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/blog.css"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="filter-container-mobile">
+    <div class="filter-toggle" onClick="toggleFilter()">
+        <span id="plus" class="plusminus show">+</span>
+        <span id="minus" class="plusminus">-</span>
+        <span>Filter</span>
+    </div>
+    <div id="filterToggleContainer" class="filter-toggle-container">
+        {{ partial "blog-filter.html" . }}
+    </div>
+</div>
+
+<div class="blog-container">
+    <div class="blog-content">
+        {{ range where .Paginator.Pages "Type" "blog"}}
+            <div class="container dark-background">
+                {{ .Date.Format "January 2, 2006"}}
+                <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+                {{ .Content }}
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - {{ .Title }}&body={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/facebook.png"/></a>
+                </div>
+            </div>
+        {{ end }}
+
+        {{ $paginator := .Paginator }}
+
+        <div class="pagination-container">
+            {{ if $paginator.HasNext }}
+            <div class="button-container">
+                <a href="{{ $paginator.Next.URL }}">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
+            {{ end }}
+
+            {{ if $paginator.HasPrev }}
+            <div class="button-container">
+                <a href="{{ $paginator.Prev.URL }}">
+                    <div class="button page-button"><b>NEWER POSTS</b></div>
+                </a>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="filter-container">
+        {{ partial "blog-filter.html" . }}
+    </div>
+</div>
+
+{{ partial "selenium-supporters.html" . }}
+
+{{ partial "supporting-supporters.html" . }}
+
+{{ partial "support-selenium.html" . }}
+
+</body>
+
+{{ partial "footer.html" . }}
+
+<script>
+    function toggleFilter() {
+      const filter = document.getElementById("filterToggleContainer");
+      const plus = document.getElementById("plus");
+      const minus = document.getElementById("minus");
+
+      if (filter.className === "filter-toggle-container") {
+        filter.className = "filter-toggle-container show"
+        plus.className = "plusminus"
+        minus.className = "plusminus show"
+      } else {
+        filter.className = "filter-toggle-container"
+        plus.className = "plusminus show"
+        minus.className = "plusminus"
+      }
+    }
+</script>

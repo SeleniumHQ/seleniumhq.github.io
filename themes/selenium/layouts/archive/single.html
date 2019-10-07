@@ -1,0 +1,45 @@
+{{ $archYear := .Date.Format "2006" }}
+
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/blog.css"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog - {{ $archYear }} Archive</h1></a>
+</section>
+
+<div class="blog-container">
+    <div class="blog-content">
+        {{ range where .Site.Pages "Section" "blog" }}
+        {{ if eq (.Date.Format "2006") $archYear }}
+        <div class="container dark-background">
+            {{ .Date.Format "January 2, 2006"}}
+            <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+            {{ .Content }}
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - {{ .Title }}&body={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/facebook.png"/></a>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+
+        </div>
+    </div>
+</div>
+
+{{ partial "selenium-supporters.html" . }}
+
+{{ partial "supporting-supporters.html" . }}
+
+{{ partial "support-selenium.html" . }}
+
+</body>
+
+{{ partial "footer.html" . }}

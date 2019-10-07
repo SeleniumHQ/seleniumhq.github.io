@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/blog.css"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+  <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="blog-container">
+  <div class="blog-content">
+    <div class="container dark-background">
+      {{ .Date.Format "January 2, 2006"}}
+      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+      {{ .Content }}
+
+      <div class="share-container">
+        <h3>Share this: </h3>
+
+        <a href="mailto:?&subject=Selenium Blog - {{ .Title }}&body={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status={{ .Permalink }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/twitter.png"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ .Site.BaseURL }}"><img class="social-icon" src="{{ .Site.BaseURL }}/images/facebook.png"/></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="blog-sidepane">
+    <h3>Support the Selenium project</h3>
+    <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
+    <div class="button-container">
+      <a href="https://www.seleniumhq.org/sponsors/">
+        <div class="button support-button"><b>LEARN MORE</b></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+{{ partial "footer.html" . }}

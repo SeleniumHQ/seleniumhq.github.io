@@ -1,0 +1,180 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Remote WebDriver</title>
+<link rel="icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link rel=prev href="/documentation/wd" title=WebDriver>
+<link rel=next href=guidelines.html title="Guidelines and Recommendations">
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<h1>Remote WebDriver</h1>
+
+You can use WebDriver remotely the same way you would use it
+locally. The primary difference is that a remote WebDriver needs to be
+configured so that it can run your tests on a separate machine.
+
+A remote WebDriver is composed of two pieces: a client and a
+server. The client is your WebDriver test and the server is simply a
+Java servlet, which can be hosted in any modern JEE app server.
+
+<h2>The Remote WebDriver server</h2>
+
+The server will always run on the machine with the browser you want to
+test. The server can be used either from the command line or through code
+configuration.
+
+
+<h3>Starting the server from the command line</h3>
+
+Once you have downloaded selenium-server-standalone-{VERSION}.jar,
+place it on the computer with the browser you want to test. Then, from
+the directory with the jar, run the following:
+
+<pre><code>$ java -jar selenium-server-standalone-{VERSION}.jar</code></pre>
+
+
+<h3>Considerations for running the server</h3>
+
+The caller is expected to terminate each session properly, calling
+either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.
+
+The selenium-server keeps in-memory logs for each ongoing session,
+which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
+you forget to terminate these sessions, your server may leak memory. If
+you keep extremely long-running sessions, you will probably need to
+stop/quit every now and then (or increase memory with -Xmx jvm option).
+
+
+<h3>Timeouts (from version 2.21)</h3>
+
+The server has two different timeouts, which can be set as follows:
+
+<pre><code class=shell>$ java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60</code></pre>
+
+<dl>
+ <dt>browserTimeout</dt>
+ <dd>Controls how long the browser is allowed to hang (value in seconds).
+
+ <dt>timeout</dt>
+ <dd>Controls how long the client is allowed to be gone
+  before the session is reclaimed (value in seconds).
+</dl>
+
+<p>The system property <var>selenium.server.session.timeout</var>
+ is no longer supported as of 2.21.
+
+<p>Please note that the <var>browserTimeout</var>
+ is intended as a backup timeout mechanism
+ when the ordinary timeout mechanism fails,
+ which should be used mostly in grid/server environments
+ to ensure that crashed/lost processes do not stay around for too long,
+ polluting the runtime environment.
+
+
+<h3>Configuring the server programmatically</h3>
+
+<p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
+a URL, but it's also possible to host the page in a lightweight
+container, such as Jetty configured entirely in code. Steps to do this
+follow.
+
+<p>Download the "selenium-server.zip" and unpack. Put the JARs on the
+CLASSPATH. Create a new class called <code>AppServer</code>. Here, I'm using
+Jetty, so you'll need to <a href="http://www.eclipse.org/jetty/download.html">download</a> that as well:
+
+<pre><code class=java>import org.mortbay.jetty.Connector;
+import org.mortbay.jetty.Server;
+import org.mortbay.jetty.nio.SelectChannelConnector;
+import org.mortbay.jetty.security.SslSocketConnector;
+import org.mortbay.jetty.webapp.WebAppContext;
+
+import javax.servlet.Servlet;
+import java.io.File;
+
+import org.openqa.selenium.remote.server.DriverServlet;
+
+public class AppServer {
+  private Server server = new Server();
+
+  public AppServer() throws Exception {
+    WebAppContext context = new WebAppContext();
+    context.setContextPath("");
+    context.setWar(new File("."));
+    server.addHandler(context);
+
+    context.addServlet(DriverServlet.class, "/wd/*");
+
+    SelectChannelConnector connector = new SelectChannelConnector();
+    connector.setPort(3001);
+    server.addConnector(connector);
+
+    server.start();
+  }
+}</code></pre>
+
+<h2>Running Remote WebDriver client</h2>
+
+<p>First, we need to connect to the RemoteWebDriver.
+ We do this by pointing the URL to the address of the server running our tests.
+ In order to customize our configuration, we set desired capabilities.
+ Below is an example of instantiating a remote WebDriver object
+ pointing to our remote web server, <em>www.example.com</em>,
+ running our tests on Firefox.
+
+<pre><code class=ruby>require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :remote, url: "http://www.example.com", desired_capabilities: :firefox
+driver.get "http://www.google.com"
+driver.close</code></pre>
+
+<p>To further customize our test configuration, we can add other desired capabilities.
+
+
+<h3>Desired capabilities</h3>
+
+<p>Desired capabilities can be expanded further.
+ All remote Webdriver capabilities are sent through JsonWireProtocol.
+ For a list of configurable capabilities, and more information on JsonWireProtocol,
+ please visit the documentation <a href="https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities">here</a>.
+
+<p>For example, suppose you wanted to run Chrome on Windows XP,
+ using Chrome version 27:
+
+<pre><code class=ruby>caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.platform = Windows XP
+caps.version = 27
+
+driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps</code></pre>
+
+
+<h3>Local file detector</h3>
+
+<p>The Local File Detector allows the transfer of files from the client
+machine to the remote server.  For example, if a test needs to upload a
+file to a web application, a remote WebDriver can automatically transfer
+the file from the local machine to the remote web server during
+runtime. This allows the file to be uploaded from the remote machine
+running the test. It is not enabled by default and can be enabled in
+the following way:
+
+<pre>
+ <code class=java>driver.setFileDetector(new LocalFileDetector());</code>
+ <code class=ruby>@driver.file_detector = lambda do |args|
+  # args => ["/path/to/file"]
+  str = args.first.to_s
+  str if File.exist?(str)
+end</code>
+</pre>
+
+<p>Once the above code is defined, you can upload a file in your test in the following way:
+
+<pre>
+ <code class=java>driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+WebElement upload = driver.findElement(By.id("myfile"));
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");</code>
+ <code class=ruby>@driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
+    element = @driver.find_element(:id, 'myfile')
+    element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"</code>
+</pre>
+

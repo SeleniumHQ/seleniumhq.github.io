@@ -1,0 +1,319 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Getting started with WebDriver</title>
+<link rel="icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link rel=prev href=install.html title=Installation>
+<link rel=next href="/documentation/wd" title=WebDriver>
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<h1>Getting started with WebDriver</h1>
+
+<p>Selenium supports automation of all the major browsers in the market
+ through the use of <em>WebDriver</em>.
+ WebDriver is an API and protocol that defines a language-neutral interface
+ for controlling the behaviour of web browsers.
+ Each browser is backed by a specific WebDriver implementation, called a *driver*.
+ The driver is the component responsible for delegating down to the browser,
+ and handles communication to and from Selenium and the browser.
+
+<p>This separation is part of a conscious effort to have browser vendors
+ take responsibility for the implementation for their browsers.
+ Selenium makes use of these third party drivers where possible,
+ but also provides its own drivers maintained by the project
+ for the cases when this is not a reality.
+
+<p>The Selenium framework ties all of these pieces together
+ through a user-facing interface that enables the different browser backends
+ to be used transparently,
+ enabling cross-browser and cross-platform automation.
+
+<p>More details about drivers can be found in
+ <a href=drivers.html>Driver Idiosyncracies</a>.
+
+<h2>Consumer browsers</h2>
+
+<p>The Selenium framework officially supports the following browsers:
+
+<table>
+ <tr><th>Browser</th> <th>Maintainer</th> <th>Versions Supported</th></tr>
+
+ <tr><td>Chromium</td> <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Chromium</a></td> <td>All versions</td></tr>
+ <tr><td>Firefox</td> <td><a href="https://github.com/mozilla/geckodriver">Mozilla</a></td> <td>54 and newer</td></tr>
+ <tr><td>Internet Explorer</td> <td>Selenium</td> <td>6 and newer</td></tr>
+ <tr><td>Opera</td> <td>Opera <a href="//github.com/operasoftware/operachromiumdriver">Chromium</a> / <a href="//github.com/operasoftware/operaprestodriver">Presto</a></td> <td>10.5 and newer</td></tr>
+ <tr><td>Safari</td> <td><a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Apple</a></td> <td>10 and newer</td></tr>
+</table>
+
+<h2>Specialised browsers</h2>
+
+<p>There is also a set of specialized browsers out there
+ typically used in development environments.
+ We can make use of some of these browsers for automation purposes also,
+ and Selenium ties in support for the following specialized drivers:
+
+<table>
+ <tr><th>Driver Name</th> <th>Purpose</th> <th>Maintainer</th></tr>
+
+ <tr>
+  <td>PhantomJSDriver</td>
+  <td>Headless PhantomJS browser backed by QtWebKit.</td>
+  <td><a href=//github.com/detro/ghostdriver>GhostDriver project</a></td>
+ </tr>
+
+ <tr>
+  <td>HtmlUnitDriver</td>
+  <td>Headless browser emulator backed by Rhino.</td>
+  <td>Selenium project</td>
+ </tr>
+</table>
+
+<h2>Other third party drivers and plugins</h2>
+
+<p>Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
+
+<p>Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project. In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.2.0. Some of the plugins are available under another free and open source software license; others are only available under a proprietary license. Any questions about plugins and their license of distribution need to be raised with their respective developer(s).
+
+<table>
+ <tr>
+ <th>Browser</th><th>Latest version</th><th></th><th></th><th></th></tr>
+ <tr>
+  <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Google ChromeDriver</a></td>
+  <td><a href="//chromedriver.storage.googleapis.com/index.html">2.29</a> - 2017-04-04</td>
+  <td><a href="//chromedriver.storage.googleapis.com/2.29/notes.txt">changelog</a></td>
+  <td><a href="//bugs.chromium.org/p/chromedriver/issues/list">issues</a></td>
+  <td><a href="//github.com/SeleniumHQ/selenium/wiki/ChromeDriver">wiki</a></td>
+ </tr>
+</table>
+
+<h2>Locating elements</h2>
+
+
+<h3>Locating one element</h3>
+
+<p>One of the most fundamental techniques to learn when using WebDriver is
+how to find elements on the page. WebDriver offers a number of built-in selector
+types, amongst them finding an element by its ID attribute:
+
+<pre>
+  <code class=java>WebElement cheese = driver.findElement(By.id("cheese"));</code>
+  <code class=python>driver.find_element_by_id("cheese")</code>
+  <code class=cs>IWebElement element = driver.FindElement(By.Id("cheese"));</code>
+  <code class=ruby>driver.find_element(id: "cheese")</code>
+  <code class=javascript>driver.findElement(By.id('cheese'))</code>
+</pre>
+
+<p>As seen in the example, locating elements in WebDriver is done on the
+<code>WebDriver</code> instance object.  The <code>findElement(By)</code> method returns
+another fundamental object type, the <code>WebElement</code>.
+
+<ul>
+ <li><code>WebDriver</code> represents the browser
+ <li><code>WebElement</code> represents a particular DOM node
+  (a control, e.g. a link or input field, etc.)
+</ul>
+
+<p>Once you have a reference to a web element that's been “found”,
+ you can narrow the scope of your search
+ by using the same call on that object instance:
+
+<pre>
+  <code class=java>
+    WebElement cheese = driver.findElement(By.id("cheese"));
+    WebElement cheddar = cheese.findElement(By.id("cheddar"));
+  </code>
+  <code class=python>
+    cheese = driver.find_element_by_id("cheese")
+    cheddar = cheese.find_elements_by_id("cheddar")
+  </code>
+  <code class=ruby>
+    cheese = driver.find_element(id: "cheese")
+    cheddar = cheese.find_elements(id: "cheddar")
+  </code>
+</pre>
+
+<p>You can do this because both the <em>WebDriver</em> and <em>WebElement</em> types
+implement the <em><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext</a></em>
+interface. In WebDriver, this is known as a <em>role-based interface</em>.
+Role-based interfaces allow you to determine whether a particular
+driver implementation supports a given feature. These interfaces are
+clearly defined and try to adhere to having only a single role of
+responsibility.  You can read more about WebDriver's design and what
+roles are supported in which drivers in the [Some Other Section Which
+Must Be Named](#).
+<!-- TODO: A new section needs to be created for the above.-->
+
+<p>Consequently, the <em>By</em> interface used above also supports a
+number of additional locator strategies.  A nested lookup might not be
+the most effective cheese location strategy since it requires two
+separate commands to be issued to the browser; first searching the DOM
+for an element with ID “cheese”, then a search for “cheddar” in a
+narrowed context.
+
+<p>To improve the performance slightly, we should try to use a more
+specific locator: WebDriver supports looking up elements
+by CSS locators, allowing us to combine the two previous locators into
+one search:
+
+<pre><code class=java>driver.findElement(By.cssSelector("#cheese #cheddar"));</code><code class=python>cheddar = driver.find_element_by_css_selector("#cheese #cheddar")</code></pre>
+
+
+<h3>Locating multiple elements</h3>
+
+<p>It's possible that the document we are working with may turn out to have an
+ordered list of the cheese we like the best:
+
+<pre><code class=html>&lt;ol id=cheese&gt;
+ &lt;li id=cheddar&gt;…
+ &lt;li id=brie&gt;…
+ &lt;li id=rochefort&gt;…
+ &lt;li id=camembert&gt;…
+&lt;/ul&gt;</code></pre>
+
+<p>Since more cheese is undisputably better, and it would be cumbersome
+to have to retrieve each of the items individually, a superior
+technique for retrieving cheese is to make use of the pluralized
+version <code>findElements(By)</code>. This method returns a collection of web
+elements. If only one element is found, it will still return a
+collection (of one element). If no elements match the locator, an
+empty list will be returned.
+
+<pre>
+  <code class=java>List&lt;WebElement&gt; muchoCheese = driver.findElements(By.cssSelector("#cheese li"));</code>
+  <code class=python>mucho_cheese = driver.find_elements_by_css_selector("#cheese li")</code>
+  <code class=ruby>mucho_cheese = driver.find_elements(css: "#cheese li")</code>
+</pre>
+
+
+<h3>Element selection strategies</h3>
+
+<p>There are eight different built-in element location strategies in WebDriver:
+
+<table>
+ <tr>
+  <th>Locator</th>
+  <th>Description</th>
+ </tr>
+
+ <tr>
+  <td>class name</td>
+  <td>Locates elements whose class name contains the search value
+   (compound class names are not permitted)</td>
+ </tr>
+
+ <tr>
+  <td>css selector</td>
+  <td>Locates elements matching a CSS selector</td>
+ </tr>
+
+ <tr>
+  <td>id</td>
+  <td>Locates elements whose ID attribute matches the search value</td>
+ </tr>
+
+ <tr>
+  <td>name</td>
+  <td>Locates elements whose NAME attribute matches the search value</td>
+ </tr>
+
+ <tr>
+  <td>link text</td>
+  <td>Locates anchor elements whose visible text matches the search value</td>
+ </tr>
+
+ <tr>
+  <td>partial link text</td>
+  <td>Locates anchor elements whose visible text partially matches the search value</td>
+ </tr>
+
+ <tr>
+  <td>tag name</td>
+  <td>Locates elements whose tag name matches the search value</td>
+ </tr>
+
+ <tr>
+  <td>xpath</td>
+  <td>Locates elements matching an XPath expression</td>
+ </tr>
+</table>
+
+
+<h3>Tips on using selectors</h3>
+
+<p>In general, if HTML IDs are available, unique, and consistently
+predictable, they are the preferred method for locating an element on
+a page.  They tend to work very quickly, and forego much processing
+that comes with complicated DOM traversals.
+
+<p>If unique IDs are unavailable, a well-written CSS selector is the
+preferred method of locating an element.  XPath works as well as CSS
+selectors, but the syntax is complicated and frequently difficult to
+debug.  Though XPath selectors are very flexible, they're typically
+not performance tested by browser vendors and tend to be quite slow.
+
+<p>Selection strategies based on link text and partial link text have
+drawbacks in that they only work on link elements.  Additionally, they
+call down to XPath selectors internally in WebDriver.
+
+<p>Tag name can be a dangerous way to locate elements.  There are
+frequently multiple elements of the same tag present on the page.
+This is mostly useful when calling the <em>findElements(By)</em> method which
+returns a collection of elements.
+
+<p>The recommendation is to keep your locators as compact and
+readable as possible.  Asking WebDriver to traverse the DOM structure
+is an expensive operation, and the more you can narrow the scope of
+your search, the better.
+
+<h2>Performing actions on the AUT</h2>
+
+<p>You can set an element's text using the sendKeys method as follows:
+
+<pre>
+  <code class=java>
+    String name = "Charles";
+    driver.findElement(By.name("name")).sendKeys(name);
+  </code>
+  <code class=python>
+    name = "Charles"
+    driver.find_element_by_name("name").send_keys(name)
+  </code>
+  <code class=ruby>
+    name = "Charles"
+    driver.find_element(name: "name").send_keys(name)
+  </code>
+</pre>
+
+<p>Some web applications use JavaScript libraries to add drag-and-drop
+functionality. The following is a basic example of dragging one
+element onto another element:
+
+<pre>
+  <code class=java>
+    WebElement source = driver.findElement(By.id("source"));
+    WebElement target = driver.findElement(By.id("target"));
+    new Actions(driver).dragAndDrop(source, target).build().perform();
+  </code>
+  <code class=python>
+    source = driver.find_element_by_id("source")
+    target = driver.find_element_by_id("target")
+    ActionChains(driver).drag_and_drop(source, target).perform()
+  </code>
+  <code class=ruby>
+    source = driver.find_element(id: "source")
+    target = driver.find_element(id: "target")
+    driver.action.drag_and_drop(source, target).perform
+  </code>
+</pre>
+
+
+<h3>Clicking on an element</h3>
+
+<p>You can click on an element using the click method:
+
+<pre>
+  <code class=java>driver.findElement(By.cssSelector("input[type='submit']")).click();</code>
+  <code class=python>driver.find_element_by_css_selector("input[type='submit']").click()</code>
+  <code class=ruby>driver.find_element(css: "input[type='submit']").click</code>
+</pre>

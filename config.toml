@@ -1,0 +1,12 @@
+baseURL = "https://www.seleniumhq.org/"
+languageCode = "en-us"
+title = "SeleniumHQ Browser Automation"
+theme = "selenium"
+MetaDataFormat = "toml"
+paginate = 3
+[taxonomies]
+  year = "year"
+[permalinks]
+	page = "/:title/"
+	about = "/:filename/"
+	archive = "blog/:year"

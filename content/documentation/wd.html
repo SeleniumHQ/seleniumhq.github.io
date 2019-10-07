@@ -1,0 +1,1461 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>WebDriver</title>
+<link rel="icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link rel=prev href=start.html title="Getting Started">
+<link rel=next href=remote.html title="Remote WebDriver">
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<h1>WebDriver</h1>
+
+<p>The biggest change in Selenium recently
+ has been the inclusion of the WebDriver API.
+ Driving a browser natively as a user would either locally
+ or on a remote machine using the Selenium server,
+ it marks a leap forward in terms of browser automation.
+
+<p>Selenium WebDriver fits in the same role as RC did,
+ and has incorporated the original 1.x bindings.
+ It refers to both the language bindings
+ and the implementations of the individual browser controlling code.
+ This is commonly referred to as just <em>WebDriver</em>
+ or sometimes as <em>Selenium 2</em>.
+
+<p>Selenium 1.0 + WebDriver = Selenium 2.0
+
+<ul>
+ <li>WebDriver is designed in a simpler
+  and more concise programming interface
+  along with addressing some limitations in the Selenium-RC API.
+
+ <li>WebDriver is a compact object-oriented API
+  when compared to Selenium 1.0.
+
+ <li>It drives the browser much more effectively
+  and overcomes the limitations of Selenium 1
+  that affected our functional test coverage,
+  like the file upload or download, pop-ups, and dialogs barrier.
+
+ <li>WebDriver overcomes the limitation of Selenium RC's
+  <a href="https://en.wikipedia.org/wiki/Same-origin_policy">single-host origin policy.</a>
+</ul>
+
+<h2>Understanding The Components</h2>
+
+
+<p>Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
+
+<h3>Terminology</h3>
+
+<ul>
+	<li><strong>API:</strong> Application Programming Interface. This is the set of "commands" you use to manipulate WebDriver.
+	<li><strong>Library:</strong> A code module which contains the APIs and the code necessary to implement them. Libraries are specific to each language binding, eg .jar files for Java, .dll files for .NET, etc.
+	<li><strong>Driver:</strong> Responsible for controlling the actual browser. Most drivers are created by the browser vendors themselves. Drivers are generally executable modules that run on the system with the browser itself, not on the system executing the test suite. (Although those may be the same system.) <em>NOTE: Some people refer to the drivers as proxies.</em>
+	<li><strong>Framework:</strong> An additional library used as a support for WebDriver suites. These frameworks may be test frameworks such as JUnit or NUnit. They may also be frameworks supporting natural language features such as Cucumber or Robotium. Frameworks may also be written and used for things such as manipulating or configuring the system under test, data creation, test oracles, etc.
+</ul>
+
+
+
+<h3>The Parts and Pieces</h3>
+<p>At its minimum, WebDriver talks to a browser through a driver. Communication is two way: WebDriver passes commands to the browser through the driver, and recieves information back via the same route.
+</br>
+<img src="{{ .Site.BaseURL }}/images/docs/basic_comms.png" width="400px" style="float:none">
+
+<p>The driver is specific to the browser, such as ChromeDriver for Google's Chrome/Chromium, GeckoDriver for Mozilla's Firefox, etc. The driver runs on the same system as the browser. This may, or may not be, the same system where the tests themselves are executing.
+
+<p>This simple example above is <em>direct</em> communication. Communication to the browser may also be <em>remote</em> communication through Selenium Server or RemoteWebDriver. RemoteWebDriver runs on the same system as the driver and the browser.
+</br>
+
+<img src="{{ .Site.BaseURL }}/images/docs/remote_comms.png" width="400px" style="float:none">
+
+<p>Remote communication can also take place using Selenium Server or Selenium Grid, both of which in turn talk to the driver on the host system
+</br>
+<img src="{{ .Site.BaseURL }}/images/docs/remote_comms_server.png" width="400px" >
+
+
+<h3>Where Frameworks Fit In</h3>
+
+<p>WebDriver has one job and one job only: communicate with the browser via any of the methods above. WebDriver doesn't know a thing about testing: it doesn't know how to compare things, assert pass or fail, and it certainly doesn't know a thing about reporting or Given/When/Then grammar.
+
+<p>This is where various frameworks come in to play. At a minimum you'll need a test framework that matches the language bindings, eg NUnit for .NET, JUnit for Java, RSpec for Ruby, etc.
+
+<p>The test framework is responsible for running and executing your WebDriver and related steps in your tests. As such, you can think of it looking akin to the following image.
+
+</br>
+<img src="{{ .Site.BaseURL }}/images/docs/test_framework.png" width="400px" style="float:none">
+
+<p>Natural language frameworks/tools such as Cucumber may exist as part of that Test Framework box in the figure above, or they may wrap the Test Framework entirely in their own implementation.
+
+<h2>Driver requirements</h2>
+
+<p>Through WebDriver, Selenium supports all major browsers on the market
+ such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
+ Where possible, WebDriver drives the browser
+ using the browser's built-in support for automation,
+ although not all browsers have official support for remote control.
+
+<p>WebDriver's aim is to emulate a real user's interaction
+ with the browser as closely as possible.
+ This is possible at varying levels in different browsers.
+ For more details on the different driver idiosyncracies,
+ please see <em><a href=drivers.html>Driver Idiosyncracies</a></em>.
+
+<p>Even though all the drivers share a single user-facing interface
+ for contolling the browser,
+ they have slightly different ways of setting up browser sessions.
+ Since many of the driver implementations are provided by third parties,
+ they are not included in the standard Selenium distribution.
+
+<p>Driver instantiation, profile management, and various browser specific settings
+ are examples of parameters that have different requirements depending on the browser.
+ This section explains the basic requirements
+ for getting you started with the different browsers.
+
+<h3>Adding Executables to your PATH</h3>
+<p>Most drivers require an extra executable for Selenium to communicate
+ with the browser. You can manually specify where the executable lives
+ before starting WebDriver, but this can make your tests less portable,
+ as the executables will need to be in the same place on every machine,
+ or included within your test code repository.
+<p>By adding a folder containing WebDriver's binaries to your system's
+ path, Selenium will be able to locate the additional binaries without
+ requiring your test code to locate the exact location of the driver.
+<ul>
+ <li>Create a directory to place the executables in, like
+  <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></li>
+  <li>Add the directory to your PATH:
+   <ul>
+    <li>On Windows - Open a command prompt as administrator
+     and the run the following command
+     to permanently add the directory to your path
+     for all users on your machine:
+     <pre><code class=bat>setx /m path "%path%;C:\WebDriver\bin\"</code></pre>
+
+    <li>Bash users on macOS and Linux - In a terminal:
+    <pre><code class=shell>export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile</code></pre>
+   </ul>
+
+ <li><p>You are now ready to test your changes.
+  Close all open command prompts and open a new one.
+  Type out the name of one of the binaries
+  in the folder you created in the previous step,
+  e.g: <pre><code class=shell>chromedriver</code></pre>
+  If your <var>PATH</var> is configured correctly,
+  you will see some some output relating to the startup of the driver:
+
+  <p><pre><samp>Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+Only local connections are allowed.</samp></pre>
+
+  <p>You can regain control of your command prompt
+   by pressing <kbd>Ctrl + C</kbd>.
+</ul>
+
+
+<h3>Quick reference</h3>
+
+<table>
+ <tr>
+  <th>Browser
+  <th>Supported OS
+  <th>Maintained by
+  <th>Download
+  <th>Issue Tracker
+ </tr>
+
+ <tr>
+  <th>Chromium/Chrome
+  <td>Windows<br>
+   macOS<br>
+   Linux
+  <td>Google
+  <td><a href="https://chromedriver.storage.googleapis.com/index.html">Downloads</a>
+  <td><a href="https://bugs.chromium.org/p/chromedriver/issues/list">Issues</a>
+ </tr>
+
+ <tr>
+  <th>Firefox
+  <td>Windows<br>
+   macOS<br>
+   Linux
+  <td>Mozilla
+  <td><a href=https://github.com/mozilla/geckodriver/releases>Downloads</a>
+  <td><a href=https://github.com/mozilla/geckodriver/issues>Issues</a>
+ </tr>
+
+ <tr>
+  <th>Edge
+  <td>Windows 10
+  <td>Microsoft
+  <td><a href=https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/>Downloads</a>
+  <td><a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver">Issues</a>
+ </tr>
+
+ <tr>
+  <th>Internet Explorer
+  <td>Windows
+  <td>Selenium Project
+  <td><a href=http://selenium-release.storage.googleapis.com/index.html>Downloads</a>
+  <td><a href=https://github.com/SeleniumHQ/selenium/labels/D-IE>Issues</a>
+ </tr>
+
+ <tr>
+  <th>Safari
+  <td>macOS El Capitan and newer
+  <td>Apple
+  <td>Built in
+  <td><a href=https://bugreport.apple.com/logon>Issues</a>
+ </tr>
+
+ <tr>
+  <th>Opera
+  <td>Windows<br>
+   macOS<br>
+   Linux
+  <td>Opera
+  <td><a href=https://github.com/operasoftware/operachromiumdriver/releases>Downloads</a>
+  <td><a href=https://github.com/operasoftware/operachromiumdriver/issues>Issues</a>
+ </tr>
+</table>
+
+
+<h4>Chromium/Chrome</h4>
+
+<p>To drive Chrome or Chromium, you have to download
+ <a href=//sites.google.com/a/chromium.org/chromedriver/downloads>chromedriver</a>
+ and put it in a folder that is on your system's path.
+
+<p>On Linux or macOS, this means modifying
+ the <var>PATH</var> environmental variable.
+ You can see what directories, separated by a colon,
+ make up your system's path by executing the following command:
+
+<pre><code class=shell>$ echo $PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre>
+
+<p>To include chromedriver on the path if it isn't already,
+ make sure you include the chromedriver binary's parent directory.
+ The following line will set the <var>PATH</var> environmental variable
+ its current content, plus an additional path added after the colon:
+
+<pre><code class=shell>$ export PATH="$PATH:/path/to/chromedriver"</code></pre>
+
+<p>When chromedriver is available on your path,
+ you should be able to execute the _chromedriver_ executable from any directory.
+
+<p>To instantiate a Chrome/Chromium session, you can do the following:
+
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+WebDriver driver = new ChromeDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Chrome
+
+driver = Chrome()</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Chrome
+
+with Chrome() as driver:
+    #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+IWebDriver driver = new ChromeDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :chrome</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    //your code inside this block
+})();</code>
+</pre>
+
+<p>Remember that you have to set the path to the chromedriver executable.
+ This is possible using the following line:
+
+<pre>
+ <code class=java>System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");</code>
+ <code class=python>Chrome(executable_path='/path/to/chromedriver')</code>
+ <code class=ruby>Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"</code>
+</pre>
+
+<p>The chromedriver is implemented as a WebDriver remote server
+ that by exposing Chrome's internal automation proxy interface
+ instructs the browser what to do.
+
+
+<h3>Firefox</h3>
+
+<p>Starting with Selenium 3, Mozilla has taken over implementation of
+ Firefox Driver, with <a href=https://github.com/mozilla/geckodriver>geckodriver</a>.
+ The new driver for Firefox is called geckodriver and works with Firefox
+ 48 and newer. Since the Firefox WebDriver is under development, the
+ newer the Firefox version the better the support.
+
+<p>As geckodriver is the new default way of launching Firefox, you can
+ instantiate Firefox in the same way as Selenium 2:
+
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Firefox.FirefoxDriver;
+
+WebDriver driver = new FirefoxDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Firefox
+
+driver = Firefox()</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Firefox
+
+with Firefox() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
+IWebDriver driver = new FirefoxDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :firefox</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('firefox').build();
+   //your code inside this block
+})();</code>
+</pre>
+
+
+<p>If you prefer not to set geckodriver's location using PATH,
+ set the geckodriver binary location programmatically:
+
+<pre>
+  <code class=java>System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver");</code>
+  <code class=python>Firefox(executable_path='/path/to/geckodriver')</code>
+  <code class=ruby>Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"</code>
+</pre>
+
+<p>It is also possible to set the property at run time:
+
+<pre><code class=shell>mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver</code></pre>
+
+<p>It is currently possible to revert to the older, more feature complete
+ Firefox driver, by installing Firefox
+ <a href="https://ftp.mozilla.org/pub/firefox/releases/47.0.1/">47.0.1</a>
+ or <a href="https://ftp.mozilla.org/pub/firefox/releases/45.0esr/">45 ESR</a>
+ and specifying a desired capability of <strong>marionette</strong> as
+ <strong>false</strong>. Later releases of Firefox are no longer compatible.
+
+
+<h3>Edge</h3>
+
+<p>Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
+ Updates to Edge are bundled with major Windows updates,
+ so you'll need to download a binary which matches the build number of your currently installed build of Windows.
+ The <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge Developer site</a>
+ contains links to all the available binaries. Bugs against the EdgeDriver implementation can be raised with
+ <a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver">Microsoft</a>.  If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft offer free VMs for testers on the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/"> Edge Developer site</a>.
+
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+WebDriver driver = new EdgeDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Edge
+
+driver = Edge()</code>
+<code class=python>#Or use the context manager
+from selenium.webdriver import Edge
+
+with Edge() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Edge;
+
+IWebDriver driver = new EdgeDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :edge</code>
+<code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('MicrosoftEdge').build();
+   //your code inside this block
+})();</code>
+</pre>
+
+<p>If Edge driver is not present in your path, you can set the path using the following line:
+
+<pre>
+  <code class=java>System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe");</code>
+  <code class=python>Edge(executable_path='/path/to/MicrosoftWebDriver.exe')</code>
+  <code class=ruby>Selenium::WebDriver::Edge.driver_path = "C:\path\to\MicrosoftWebDriver.exe"</code>
+</pre>
+
+
+<h3>Internet Explorer</h3>
+<p>Internet Explorer was Microsoft's default browser until Windows 10, although it is still included in Windows 10. Internet Explorer Driver is the only driver The Selenium project aims to support the same releases
+ <a href="https://support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer">
+  Microsoft considers current</a>. Older releases may work, but will be unsupported.
+<p>While the Selenium project provides binaries for both the 32-bit and 64-bit versions of Internet Explorer, there are some <a href="http://jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">limitations</a> with Internet Explorer 10 &amp; 11 with the 64-bit driver, but using the 32-bit driver continues to work well. It should be noted that as Internet Explorer preferences are saved against the logged in user's account, some <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">additional setup is required</a>.
+
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+WebDriver driver = new InternetExplorerDriver();</code>
+ <code class=python>#Simple assignment
+from selenium.webdriver import Ie
+
+driver = Ie()</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Ie
+
+with Ie() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+IWebDriver driver = new InternetExplorerDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :internet_explorer</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('internet explorer').build();
+   //your code inside this block
+})();</code>
+</pre>
+
+<p>If Internet Explorer driver is not present in your path, you can set the path using the following line:
+
+<pre>
+  <code class=java>System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe");</code>
+  <code class=python>Ie(executable_path='/path/to/IEDriverServer.exe')</code>
+  <code class=ruby>Selenium::WebDriver::IE.driver_path = "C:\path\to\IEDriver.exe"</code>
+</pre>
+
+Microsoft also offer a WebDriver binary for <a href="https://www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>. It has not been updated since 2014 and is based of a draft version of the W3 specification. <a href="http://jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">Jim Evans</a> has an excellent writeup on Microsoft's implementation.
+
+
+<h3>Opera</h3>
+
+<p>Current releases of Opera are built on top of the Chromium engine,
+ and WebDriver is now supported via the closed-source
+ <a href="https://github.com/operasoftware/operachromiumdriver/releases">Opera Chromium Driver</a>,
+ which can be <a href="#adding_executables_to_your_path">added to your PATH</a>
+ or as a system property.
+
+<p>Instantiating a driver session is similar to Firefox and Chromium:
+
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.opera.OperaDriver;
+
+WebDriver driver = new OperaDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Opera
+
+driver = Opera()</code>
+<code class=python>#Or use the context manager
+from selenium.webdriver import Opera
+
+with Opera() as driver:
+   #your code inside this indent</code>
+<code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Opera;
+
+IWebDriver driver = new OperaDriver();</code>
+<code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :opera</code>
+</pre>
+
+<h3>Safari</h3>
+
+<p>Starting with Safari 10 on macOS El Capitan and Sierra,
+ WebDriver support is included with each release of the browser.
+ To enable support:
+
+<ol>
+ <li>Enable the Developer menu from Safari preferences
+ <li>Check the <em>Allow Remote Automation</em> option
+  from with the Develop menu
+ <li>Run <pre><code class=shell>/usr/bin/safaridriver -p 1337</code></pre> from the terminal
+  for the first time and type your password
+  at the prompt to authorise WebDriver
+</ol>
+
+<p>You can then start a driver session using:
+<pre>
+ <code class=java>import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.safari.SafariDriver;
+
+WebDriver driver = new SafariDriver();</code>
+<code class=python>#Simple assignment
+from selenium.webdriver import Safari
+
+driver = Safari()</code>
+ <code class=python>#Or use the context manager
+from selenium.webdriver import Safari
+
+with Safari() as driver:
+   #your code inside this indent</code>
+ <code class=cs>using OpenQA.Selenium;
+using OpenQA.Selenium.Safari;
+
+IWebDriver driver = new SafariDriver();</code>
+ <code class=ruby>require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :safari</code>
+ <code class=javascript>const {Builder} = require('selenium-webdriver');
+
+(async function myFunction() {
+   let driver = await new Builder().forBrowser('safari').build();
+   //your code inside this block
+})();</code>
+</pre>
+
+<p>Those looking to automate Safari on iOS should look to the
+ <a href="http://appium.io/">Appium project</a>. Whilst Safari was previously
+ available for Windows, Apple has long since dropped support, making it
+ a poor choice of test platform.
+
+
+<h3>Mock browsers</h3>
+
+
+<h4>HtmlUnit</h4>
+
+<p>HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents and provides an API that allows you
+to invoke pages, fill out forms, click links, etc. It has JavaScript support and is able to work with AJAX libraries,
+simulating Chrome, Firefox or Internet Explorer depending on the configuration used. It has been moved to a
+<a href="http://htmlunit.sourceforge.net/gettingStarted.html">new</a> location.</p> The source is maintained on svn.
+
+
+<h4>PhantomJS</h4>
+
+<p>PhantomJS is a headless browser based on Webkit, albeit a version much older than that used by Google Chrome or
+ Safari. <!-- Unlike HtmlUnit driver, it also supports Javascript ()-->. Whilst historically a popular choice, it would now be
+ wise to avoid PhantomJS. The project has been unmaintained
+ <a href="https://groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE">since the 5th of August</a>, so whilst the web
+ will continue to change, PhantomJS will not be updated.  This was after Google announced the ability to run Chrome
+ headlessly, something also now offered by Mozilla&apos;s Firefox.</p>
+
+<h2>Browser launching and manipulation</h2>
+
+<!-- #codeExamples -->
+<!-- Remember to cover profile and extensions here -->
+
+
+<h3>Ruby</h3>
+
+<p>Ruby is not installed by default on Windows. Download the latest <a href="http://rubyinstaller.org/downloads">version</a> and run the installer. You can leave all settings at default values, except at the <em>Installation Destination and Optional Tasks</em> screen check <em>Add Ruby executables to your PATH</em> checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
+
+<pre><code class=shell>$ gem install selenium-webdriver</code></pre>
+
+Or, if you use <a href="https://bundler.io">Bundler</a>, add this line to your application's Gemfile:
+
+<pre><code class=ruby always-show>gem "selenium-webdriver"</code></pre>
+
+And then execute the following command in prompt:
+
+<pre><code class=shell>$ bundle install</code></pre>
+
+<h3>Internet Explorer</h3>
+
+<p>Internet Explorer is installed by default on Windows, so no installation is needed. To drive Internet Explorer on Windows, you have to download the latest <a href="http://www.seleniumhq.org/download/">Internet Explorer Driver</a> and put the file into a folder that is in PATH. To find out which directories are in PATH, type <em>echo %PATH%</em> in command prompt.
+
+<pre><code class=bat>$ echo %PATH%
+C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</code></pre>
+
+<em>C:\Ruby200\bin</em> looks like a good place. Unzip `IEDriverServer` file and move `IEDriverServer.exe` there.
+
+This should open a new Internet Explorer window:
+
+<pre><code class=ruby always-show>require "selenium-webdriver"
+driver = Selenium::WebDriver.for :internet_explorer</code></pre>
+
+<h2>Browser Navigation</h2>
+
+<h3>Navigate To</h3>
+
+<p>The first thing you will want to do after launching a browser is to
+ open your website. This can be achieved in a single line:
+
+<pre>
+ <code class=java>
+//Convenient
+driver.get("https://www.seleniumhq.org");
+
+//Longer way
+driver.navigate().to("https://seleniumhq.github.io/docs/");
+ </code>
+ <code class=python>driver.get("https://www.seleniumhq.org")</code>
+ <code class=ruby>
+# Convenient
+driver.get 'https://www.seleniumhq.org'
+
+# Longer way
+driver.navigate.to 'https://seleniumhq.github.io/docs/'
+ </code>
+ <code class=cs>driver.Navigate().GoToUrl(@"http://google.com");</code>
+ <code class=javascript>driver.get("https://seleniumhq.github.io/docs/");</code>
+</pre>
+
+<h3>Get Current URL</h3>
+
+<p>You can read the current URL from the browser&apos;s address bar
+ using:</p>
+<pre>
+ <code class=java>driver.getCurrentUrl();</code>
+ <code class=python>driver.current_url</code>
+ <code class=ruby>driver.current_url</code>
+ <code class=cs>driver.Url;</code>
+ <code class=javascript>await driver.getCurrentUrl();</code>
+</pre>
+
+<h3>Back</h3>
+<p>Pressing the browser&apos;s back button:
+<pre>
+ <code class=java>driver.navigate().back();</code>
+ <code class=python>driver.back()</code>
+ <code class=ruby>driver.navigate.back</code>
+ <code class=cs>driver.Navigate().Back();</code>
+ <code class=javascript>driver.back();</code>
+</pre>
+
+<h3>Forward</h3>
+<p>Pressing the browser&apos;s forward button:
+ <pre>
+  <code class=java>driver.navigate().forward();</code>
+  <code class=python>driver.forward()</code>
+  <code class=ruby>driver.navigate.forward</code>
+  <code class=cs>driver.Navigate().Forward();</code>
+  <code class=javascript>driver.forward();</code>
+ </pre>
+
+<h3>Refresh</h3>
+<p>Refresh the current page:
+<pre>
+  <code class=java>driver.navigate().refresh();</code>
+  <code class=python>driver.refresh()</code>
+  <code class=ruby>driver.navigate.refresh</code>
+  <code class=cs>driver.Navigate().Refresh();</code>
+  <code class=javascript>driver.refresh();</code>
+ </pre>
+
+<h3>Get Title</h3>
+<p>You can read the current page title from the browser:</p>
+<pre>
+  <code class=java>driver.getTitle();</code>
+  <code class=python>driver.title</code>
+  <code class=ruby>driver.title</code>
+  <code class=cs>driver.Title;</code>
+  <code class=javascript>driver.getTitle();</code>
+ </pre>
+
+<h2>Windows and tabs</h2>
+<p>WebDriver doesn't make the distinction between windows and tabs.  If
+ your site opens a new tab or window, Selenium will let you work with it
+ using a window handle.  Each window has a unique identifier which remains
+ persistent in a single session. You can get the window handle of the
+ current window by using:</p>
+<pre>
+ <code class=java>driver.getWindowHandle();</code>
+ <code class=python>driver.current_window_handle</code>
+ <code class=cs>driver.CurrentWindowHandle</code>
+ <code class=ruby>driver.window_handle</code>
+ <code class=javascript>await driver.getWindowHandle();</code>
+</pre>
+<h3>Switching windows or tabs</h3>
+<p>Clicking a link which opens in a <a href="https://seleniumhq.github.io/docs/" target="_blank">
+ new window</a> will visible focus the new window or tab on screen, but
+ WebDriver will not know which window the Operating System considers
+ active.  To work with the new window you will need to switch to it.  If
+ you have only two tabs or windows open, and you know which window you
+ start with, by the process of elimination you can loop over both windows
+ or tabs that WebDriver can see, and switch to the one which is not the
+ original.</p>
+<pre>
+ <code class=java>//Store the ID of the original window
+String originalWindow = driver.getWindowHandle();
+
+//Check we don't have other windows open already
+assert driver.getWindowHandles().size() == 1;
+
+//Click the link which opens in a new window
+driver.findElement(By.linkText("new window")).click();
+
+//Wait for the new window or tab
+wait.until(numberOfWindowsToBe(2));
+
+//Loop through until we find a new window handle
+for (String windowHandle : driver.getWindowHandles()) {
+    if(!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle);
+        break;
+    }
+}
+
+//Wait for the new tab to finish loading content
+wait.until(titleIs("Selenium documentation"));</code>
+ <code class=python>from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+# Start the driver
+with webdriver.Firefox() as driver:
+    # Open URL
+    driver.get("https://seleniumhq.github.io/docs/wd.html")
+
+    # Setup wait for later
+    wait = WebDriverWait(driver, 10)
+
+    # Store the ID of the original window
+    original_window = driver.current_window_handle
+
+    # Check we don't have other windows open already
+    assert len(driver.window_handles) == 1
+
+    # Click the link which opens in a new window
+    driver.find_element_by_link_text("new window").click()
+
+    # Wait for the new window or tab
+    wait.until(EC.number_of_windows_to_be(2))
+
+    # Loop through until we find a new window handle
+    for window_handle in driver.window_handles:
+        if window_handle != original_window:
+            driver.switch_to.window(window_handle)
+            break
+
+    # Wait for the new tab to finish loading content
+    wait.until(EC.title_is("Selenium documentation"))</code>
+ <code class=cs>//Store the ID of the original window
+String originalWindow = driver.CurrentWindowHandle;
+
+//Check we don't have other windows open already
+Assert.AreEqual(driver.WindowHandles.Count, 1);
+
+//Click the link which opens in a new window
+driver.FindElement(By.LinkText("new window")).Click();
+
+//Wait for the new window or tab
+wait.Until(wd => wd.WindowHandles.Count == 2);
+
+//Loop through until we find a new window handle
+foreach(String window in driver.WindowHandles)
+{
+    if(originalWindow != window)
+    {
+        driver.SwitchTo().Window(window);
+        break;
+    }
+}
+//Wait for the new tab to finish loading content
+wait.Until(wd => wd.Title == "Selenium documentation");</code>
+ <code class=ruby>#Store the ID of the original window
+original_window = driver.window_handle
+
+#Check we don't have other windows open already
+assert(driver.window_handles.length == 1, 'Expected one window')
+
+#Click the link which opens in a new window
+driver.find_element(link: 'new window').click
+
+#Wait for the new window or tab
+wait.until { driver.window_handles.length == 2 }
+
+#Loop through until we find a new window handle
+driver.window_handles.each do |handle|
+    if handle != original_window
+        driver.switch_to.window handle
+        break
+    end
+end
+
+#Wait for the new tab to finish loading content
+wait.until { driver.title == 'Selenium documentation'}
+ </code>
+ <code class=javascript>//Store the ID of the original window
+const originalWindow = await driver.getWindowHandle();
+
+//Check we don't have other windows open already
+assert((await driver.getAllWindowHandles()).length === 1);
+
+//Click the link which opens in a new window
+await driver.findElement(By.linkText('new window')).click();
+
+//Wait for the new window or tab
+await driver.wait(function() {
+    return driver.getAllWindowHandles().then(function(windows) {
+        return windows.length === 2;
+    });
+}, 10000);
+
+//Loop through until we find a new window handle
+const windows = (await driver.getAllWindowHandles());
+for (let i = 0; i < windows.length; i++) {
+    if(windows[i]!==originalWindow) {
+        await driver.switchTo().window(windows[i]);
+    }
+}
+
+//Wait for the new tab to finish loading content
+await driver.wait(until.titleIs('Selenium documentation'), 10000);</code>
+</pre>
+
+<h3>Closing a window or tab</h3>
+<p>When you are finished with a window or tab <em>and</em> it is not the
+ last window or tab open in your browser, you should close it and switch
+ back to the window you were using previously.  Assuming you followed the
+ code sample in the previous section you will have the previous window
+ handle stored in a variable. Put this together and you will get:</p>
+<pre>
+ <code class=java>//Close the tab or window
+driver.close();
+
+//Switch back to the old tab or window
+driver.switchTo().window(originalWindow);</code>
+ <code class=python>#Close the tab or window
+driver.close()
+
+#Switch back to the old tab or window
+driver.switch_to.window(original_window)</code>
+ <code class=cs>//Close the tab or window
+driver.Close();
+
+//Switch back to the old tab or window
+driver.SwitchTo().Window(originalWindow);</code>
+ <code class=ruby>#Close the tab or window
+driver.close
+
+#Switch back to the old tab or window
+driver.switch_to.window original_window</code>
+ <code class=javascript>//Close the tab or window
+await driver.close();
+
+//Switch back to the old tab or window
+await driver.switchTo().window(originalWindow);
+ </code>
+</pre>
+<p>Forgetting to switch back to another window handle after closing a
+ window will leave WebDriver executing on the now closed page, and will
+ trigger a <strong>No Such Window Exception</strong>. You must switch
+ back to a valid window handle in order to continue execution.</p>
+
+<h3>Quiting the browser at the end of a session</h3>
+<p>When you are finished with the browser session you should call quit,
+ instead of close:
+<pre>
+ <code class=java>driver.quit();</code>
+ <code class=python>driver.quit()</code>
+ <code class=cs>driver.Quit();</code>
+ <code class=ruby>driver.quit</code>
+ <code class=javascript>await driver.quit();</code>
+</pre>
+<p>Quit will:
+ <ul>
+  <li>Close all the windows and tabs associated with that WebDriver
+   session</li>
+  <li>The browser process</li>
+  <li>The background driver process</li>
+  <li>Notify Selenium Grid that the browser is no longer in use so it can
+   be used by another session (if you are using Selenium Grid).</li>
+ </ul>
+<p>Failure to call quit will leave extra background processes and ports
+ running on your machine which could cause you problems later.</p>
+<p>Some test frameworks offer methods and annotations which you can hook
+ into to tear down at the end of a test.</p>
+<pre>
+ <code class=java>/**
+ * Example using JUnit
+ * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+ */
+@AfterAll
+public static void tearDown() {
+    driver.quit();
+}</code>
+ <code class=cs>/*
+    Example using Visual Studio's UnitTesting
+    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+*/
+[TestCleanup]
+public void TearDown()
+{
+    driver.Quit();
+}</code>
+</pre>
+<p>If not running WebDriver in a test context, you may consider using
+ try  / finally which is offered by most languages so that an exception
+ will still clean up the WebDriver session.</p>
+<pre>
+ <code class=java>try {
+    //WebDriver code here...
+} finally {
+    driver.quit();
+}</code>
+ <code class=python>try:
+    #WebDriver code here...
+finally:
+    driver.quit()</code>
+ <code class=cs>try {
+    #WebDriver code here...
+} finally {
+    driver.Quit();
+}</code>
+ <code class=ruby>begin
+    #WebDriver code here...
+ensure
+    driver.quit
+end</code>
+ <code class=javascript>try {
+    //WebDriver code here...
+} finally {
+    await driver.quit();
+}</code>
+</pre>
+<p>Python&apos;s WebDriver now supports the python context manager,
+ which when using the with keyword can automatically quit the driver at
+ the end of execution.</p>
+<pre>
+ <code class=python always-show>with webdriver.Firefox() as driver:
+    #WebDriver code here...
+
+#WebDriver will automatically quit after indentation</code>
+</pre>
+
+<h2>Window Management</h2>
+<p>Screen resolution can impact how your web application renders, so
+ WebDriver provides mechanisms for moving and resizing the browser
+ window.
+
+<h3>Get Window Size</h3>
+<p>Fetches the size of the browser window in pixels.
+<pre>
+ <code class=java>//Access each dimension individually
+int width = driver.manage().window().getSize().getWidth();
+int height = driver.manage().window().getSize().getHeight();
+
+//Or store the dimensions and query them later
+Dimension size = driver.manage().window().getSize();
+int width1 = size.getWidth();
+int height1 = size.getHeight();</code>
+ <code class=python>//Access each dimension individually
+width = driver.get_window_size().get("width")
+height = driver.get_window_size().get("height")
+
+//Or store the dimensions and query them later
+size = driver.get_window_size()
+width1 = size.get("width")
+height1 = size.get("height")</code>
+</pre>
+
+<h3>Set Window Size</h3>
+<p>Restores the window and sets the window size.
+<pre>
+ <code class=java>driver.manage().window().setSize(new Dimension(1024, 768));</code>
+ <code class=python>driver.set_window_size(1024,768)</code>
+</pre>
+
+<h3>Get Window Position</h3>
+<p>Fetches the coordinates of the top left coordinate of the browser window.
+<pre>
+ <code class=java>//Access each dimension individually
+int x = driver.manage().window().getPosition().getX();
+int y = driver.manage().window()..getPosition().getY();
+
+//Or store the dimensions and query them later
+Point position = driver.manage().window().getPosition();
+int x1 = position.getX();
+int y1 = position.getY();</code>
+ <code class=python>//Access each dimension individually
+x = driver.get_window_position().get('x')
+y = driver.get_window_position().get('y')
+
+//Or store the dimensions and query them later
+position = driver.get_window_position()
+x1 = position.get('x')
+y1 = position.get('y')</code>
+</pre>
+
+<h3>Set Window Position</h3>
+<p>Moves the window to the chosen position.
+<pre>
+ <code class=java>//Move the window to the top left of the primary monitor
+driver.manage().window().setPosition(new Point(0,0));</code>
+ <code class=python>//Move the window to the top left of the primary monitor
+driver.set_window_position(0, 0)</code>
+</pre>
+
+<h3>Maximise Window</h3>
+<p>Enlarges the window. For most operating systems, the window will fill
+ the screen, without blocking the operating system&apos;s own menus and
+ toolbars.
+<pre>
+ <code class=java>driver.manage().window().maximize();</code>
+ <code class=python>driver.maximize_window()</code>
+</pre>
+
+<h3>Fullscreen Window</h3>
+<p>Fills the entire screen, similar to pressing F11 in most browsers.
+<pre>
+ <code class=java>driver.manage().window().fullscreen();</code>
+ <code class=python>driver.fullscreen_window()</code>
+</pre>
+
+<h2>Waits</h2>
+
+<p>WebDriver can generally be said to have a blocking API.
+ Because it is an out-of-process library that
+ <em>instructs</em> the browser what to do,
+ and because the web platform has an intrinsically asynchronous nature,
+ WebDriver doesn't track the active, real-time state of the DOM.
+ This comes with some challenges that we will discuss here.
+
+<p>From experience,
+ most intermittents that arise from use of Selenium and WebDriver
+ are connected to <em>race conditions</em> that occur between
+ the browser and the user's instructions.
+ An example could be that the user instructs the browser to navigate to a page,
+ then gets a <strong>no such element</strong> error
+ when trying to find an element.
+
+<p>Consider the following document:
+
+<pre><code class=html>&lt;!doctype html&gt;
+&lt;meta charset=utf-8&gt;
+&lt;title&gt;Race Condition Example&lt;title&gt;
+
+&lt;script&gt;
+  var initialised = false;
+  window.addEventListener("load", function() {
+    var newElement = document.createElement("p");
+    newElement.textContent = "Hello from JavaScript!";
+    document.body.appendChild(newElement);
+    initialised = true;
+  });
+&lt;/script&gt;</code></pre>
+
+<p>The WebDriver instructions might look innocent enough:
+
+<pre>
+<code class=python>driver.navigate("file:///race_condition.html")
+el = driver.find_element_by_tag_name("p")
+assert el.text == "Hello from JavaScript!"</code>
+<code class=java>
+driver.get("file:///race_condition.html");
+WebElement element = driver.findElement(By.tagName("p"));
+assertEquals(element.getText(), "Hello from JavaScript!");
+</code>
+</pre>
+
+<p>The issue here is that the default
+ <a href=#page_load_strategy>page load strategy</a>
+ used in WebDriver listens for the <var>document.readyState</var>
+ to change to <code>"complete"</code> before returning from the call to <em>navigate</em>.
+ Because the <code>p</code> element is
+ added <em>after</em> the document has completed loading,
+ this WebDriver script <em>might</em> be intermittent.
+ It “might” be intermittent because no guarantees can be made
+ about elements or events that trigger asynchronously
+ without explicitly waiting&mdash;or blocking&mdash;on those events.
+
+<p>Fortunately, using the normal instruction set available on
+ the <em><a href=#web_element>WebElement</a></em> interface&mdash;such
+ as <em>WebElement.click</em> and <em>WebElement.sendKeys</em>&mdash;are
+ guaranteed to be synchronous,
+ in that the function calls won't return
+ (or the callback won't trigger in callback-style languages)
+ until the command has been completed in the browser.
+ The advanced user interaction APIs,
+ <em><a href=#keyboard>Keyboard</a></em> and
+ <em><a href=#mouse>Mouse</a></em>,
+ are exceptions as they are explicitly intended as
+ “do what I say” asynchronous commands.
+
+<p>Waiting is having the automated task execution
+ elapse a certain amount of time before continuing with the next step.
+
+<p>To overcome the problem of race conditions
+ between the browser and your WebDriver script,
+ most Selenium clients ship with a <em>wait</em> package.
+ When employing a wait,
+ you are using what is commonly referred to
+ as an <em><a href=#explicit_wait>explicit wait</a></em>.
+
+
+<h3>Explicit Wait</h3>
+
+<p><em>Explicit waits</em> are available to Selenium clients
+ for imperative, procedural languages.
+ They allow your code to halt program execution,
+ or freeze the thread,
+ until the <em>condition</em> you pass it resolves.
+ The condition is called with a certain frequency
+ until the timeout of the wait is elapsed.
+ This means that for as long as the condition returns a falsy value,
+ it will keep trying and waiting.
+
+<p>Since explicit waits allow you to wait for a condition to occur,
+ they make a good fit for synchronising the state between the browser and its DOM,
+ and your WebDriver script.
+
+<p>To remedy our buggy instruction set from earlier,
+ we could employ a wait to have the <em>findElement</em> call
+ wait until the dynamically added element from the script
+ has been added to the DOM:
+
+<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
+
+def document_initialised(driver):
+    return driver.execute_script("return initialised")
+
+driver.navigate("file:///race_condition.html")
+WebDriverWait(driver).until(document_initialised)
+el = driver.find_element_by_tag_name("p")
+assert el.text == "Hello from JavaScript!"</code></pre>
+
+<p>We pass in the <em>condition</em> as a function reference
+ that the <em>wait</em> will run repeatedly until its return value is truthy.
+ A “truthful” return value is anything that evaluates to boolean true
+ in the language at hand, such as a string, number, a boolean,
+ an object (including a <em>WebElement</em>),
+ or a populated (non-empty) sequence or list.
+ That means an <em>empty list</em> evaluates to false.
+ When the condition is truthful and the blocking wait is aborted,
+ the return value from the condition becomes the return value of the wait.
+
+<p>With this knowledge,
+ and because the wait utility ignores <em>no such element</em> errors by default,
+ we can refactor our instructions to be more concise:
+
+<pre><code class=python>from selenium.webdriver.support.ui import WebDriverWait
+
+driver.navigate("file:///race_condition.html")
+el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
+assert el.text == "Hello from JavaScript!"</code></pre>
+
+<p>In that example, we pass in an anonymous function
+ (but we could also define it explicitly as we did earlier so it may be reused).
+ The first and only argument that is passed to our condition
+ is always a reference to our driver object, <em>WebDriver</em>
+ (called <em>d</em> in the example).
+ In a multi-threaded environment, you should be careful
+ to operate on the driver reference passed in to the condition
+ rather than the reference to the driver in the outer scope.
+
+<p>Because the wait will swallow <em>no such element</em> errors
+ that are raised when the element isn't found,
+ the condition will retry until the element is found.
+ Then it will take the return value, a <em>WebElement</em>,
+ and pass it back through to our script.
+
+<p>If the condition fails,
+ e.g. a truthful return value from the condition is never reached,
+ the wait will throw/raise an error/exception called a <em>timeout error</em>.
+
+
+<h4>Options</h4>
+
+<p>The wait condition can be customised to match your needs.
+ Sometimes it's unnecessary to wait the full extent of the default timeout,
+ as the penalty for not hitting a successful condition can be expensive.
+
+<p>The wait lets you pass in an argument to override the timeout:
+
+<pre><code class=python>WebDriverWait(driver, timeout=3).until(some_condition)</code></pre>
+
+
+<h4>Expected conditions</h4>
+
+<p>Because it's quite a common occurrence
+ to have to synchronise the DOM and your instructions,
+ most clients also come with a set of predefined <em>expected conditions</em>.
+ As might be obvious by the name,
+ they are conditions that are predefined for frequent wait operations.
+
+<p>The conditions available in the different language bindings vary,
+ but this is a non-exhaustive list of a few:
+
+<!-- TODO(ato): Fill in -->
+<dl>
+ <dt>alert is present
+ <dd>
+
+ <dt>element exists
+ <dd>
+
+ <dt>element is visible
+ <dd>
+
+ <dt>title contains
+ <dd>
+
+ <dt>title is
+ <dd>
+
+ <dt>element staleness
+ <dd>
+
+ <dt>visible text
+ <dd>
+</dl>
+
+<p>You can refer to the API documentation for each client binding
+ to find an exhaustive list of expected conditions:
+
+<ul>
+ <li>Java's <code><a href=//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html>org.openqa.selenium.support.ui.ExpectedConditions</a></code> class
+ <li>Python's <code><a href="//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected">selenium.webdriver.support.expected_conditions</a></code> class
+ <li>.NET's <code><a href=//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm>OpenQA.Selenium.Support.UI.ExpectedConditions</a></code> type
+</ul>
+
+
+<h3>Implicit Wait</h3>
+
+<p>There is a second type of wait that is distinct from
+ <a href=#explicit_wait>explicit wait</a> called <em>implicit wait</em>.
+ By implicitly waiting, WebDriver polls the DOM
+ for a certain duration when trying to find <em>any</em> element.
+ This can be useful when certain elements on the webpage
+ are not available immediately and need some time to load.
+
+<p>Implicit waiting for elements to appear is disabled by default
+ and will need to be manually enabled on a per-session basis.
+ Mixing <a href=#explicit_wait>explicit waits</a> and implicit waitis
+ will cause unintended consequences, namely waits sleeping for the maximum
+ time even if the element is available or condition is true.
+
+<p><strong>Warning:</strong>
+ Do not mix implicit and explicit waits.
+ Doing so can cause unpredictable wait times.
+ For example, setting an implicit wait of 10 seconds
+ and an explicit wait of 15 seconds
+ could cause a timeout to occur after 20 seconds.
+
+<p>An implicit wait is to tell WebDriver to poll the DOM
+ for a certain amount of time when trying to find an element or elements
+ if they are not immediately available.
+ The default setting is 0, meaning disabled.
+ Once set, the implicit wait is set for the life of the session.
+
+<pre>
+  <code class=java>
+WebDriver driver = new FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get("http://somedomain/url_that_delays_loading");
+WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
+  </code>
+  <code class=python>
+driver = Firefox()
+driver.implicitly_wait(10)
+driver.get("http://somedomain/url_that_delays_loading")
+my_dynamic_element = driver.find_element_by_id("myDynamicElement")
+  </code>
+</pre>
+
+
+<h4>FluentWait</h4>
+
+<p>FluentWait instance defines the maximum amount of time to wait for a condition,
+ as well as the frequency with which to check the condition.
+
+<p>Users may configure the wait to ignore specific types of exceptions whilst waiting,
+ such as <code>NoSuchElementException</code>s when searching for an element on the page.
+
+<pre><code class=java>// Waiting 30 seconds for an element to be present on the page, checking
+// for its presence once every 5 seconds.
+Wait&lt;WebDriver&gt; wait = new FluentWait&lt;WebDriver&gt;(driver)
+  .withTimeout(30, SECONDS)
+  .pollingEvery(5, SECONDS)
+  .ignoring(NoSuchElementException.class);
+
+WebElement foo = wait.until(new Function&lt;WebDriver, WebElement&gt;() {
+  public WebElement apply(WebDriver driver) {
+    return driver.findElement(By.id("foo"));
+  }
+});</code></pre>
+
+<pre><code class=java>FluentWait&lt;By&gt; fluentWait = new FluentWait&lt;By&gt;(By.tagName("TEXTAREA"));
+fluentWait.pollingEvery(100, TimeUnit.MILLISECONDS);
+fluentWait.withTimeout(1000, TimeUnit.MILLISECONDS);
+fluentWait.until(new Predicate&lt;By&gt;() {
+  public boolean apply(By by) {
+    try {
+      return browser.findElement(by).isDisplayed();
+    } catch (NoSuchElementException ex) {
+      return false;
+    }
+  }
+});
+browser.findElement(By.tagName("TEXTAREA")).sendKeys("text to enter");</code></pre>
+
+<h2>Support classes</h2>
+
+<h2>JavaScript Alerts, Prompts and Confirmations</h2>
+
+<p>WebDriver provides an API for working with the three types of native
+ popup message offered by JavaScript. These popups are styled by the
+ browser and offer limited customisation.
+
+<h3>Alerts</h3>
+
+<p>The simplest of these is referred to as an alert, which shows a
+ custom message, and a single button which dismisses the alert, labelled
+ in most browsers as OK. It can also be dismissed in most browsers by
+ pressing the close button, but this will always do the same thing as
+ the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
+
+<p>WebDriver can get the text from the popup and accept or dismiss these
+ alerts.
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See an example alert")).click();
+
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+//Store the alert text in a variable
+String text = alert.getText();
+
+//Press the OK button
+alert.accept();
+ </code>
+ <code class="python">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See an example alert").click()
+
+# Wait for the alert to be displayed and store it in a variable
+alert = wait.until(expected_conditions.alert_is_present())
+
+# Store the alert text in a variable
+text = alert.text
+
+# Press the OK button
+alert.accept()
+ </code>
+</pre>
+
+<h3>Confirm</h3>
+
+<p>A confirm box is similar to an alert, except the user can also choose
+ to cancel the message. <a onclick="window.confirm('Are you sure?')">See
+ a sample confirm</a>.
+
+<p>This example also shows a different approach to storing an alert:
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample confirm")).click();
+
+//Wait for the alert to be displayed
+wait.until(ExpectedConditions.alertIsPresent());
+
+//Store the alert in a variable
+Alert alert = driver.switchTo().alert();
+
+//Store the alert in a variable for reuse
+String text = alert.getText();
+
+//Press the Cancel button
+alert.dismiss();
+ </code>
+ <code class="python">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See a sample confirm").click()
+
+# Wait for the alert to be displayed
+wait.until(expected_conditions.alert_is_present())
+
+# Store the alert in a variable for reuse
+alert = driver.switch_to.alert
+
+# Store the alert text in a variable
+text = alert.text
+
+# Press the Cancel button
+alert.dismiss()
+ </code>
+</pre>
+
+<h3>Prompt</h3>
+
+<p>Prompts are similar to confirm boxes, except they also include a text
+ input. Similar to working with form elements, you can use WebDriver&apos;s
+ send keys to fill in a response. This will completely replace the placeholder
+ text. Pressing the cancel button will not submit any text.
+ <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
+ See a sample prompt</a>.
+
+<pre>
+ <code class=java>
+//Click the link to activate the alert
+driver.findElement(By.linkText("See a sample prompt")).click();
+
+//Wait for the alert to be displayed and store it in a variable
+Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+
+//Type your message
+alert.sendKeys("Selenium");
+
+//Press the OK button
+alert.accept();
+ </code>
+ <code class="python">
+# Click the link to activate the alert
+driver.find_element_by_link_text("See a sample prompt").click()
+
+# Wait for the alert to be displayed
+wait.until(expected_conditions.alert_is_present())
+
+# Store the alert in a variable for reuse
+alert = Alert(driver)
+
+# Type your message
+alert.send_keys("Selenium")
+
+# Press the OK button
+alert.accept()
+ </code>
+</pre>
+
+<h2>HTTP proxies</h2>
+
+<h2>Page Load Strategy</h2>
+
+<h2>Web Element</h2>
+
+<p>Represents a DOM element. WebElements can be found by searching from the
+ document root using a WebDriver instance, or by searching under another
+ WebElement:
+
+<pre>
+  <code class=javascript>
+driver.get('http://www.google.com')
+  .then(() =>   driver.findElement(By.tagName('form')) )
+  .then((searchForm) => searchForm.findElement(By.name('q')) )
+  .then((searchBox) => searchBox.sendKeys('webdriver') );
+  </code>
+  <code class=python>
+driver = Firefox()
+driver.get("http://www.google.com")
+search_form = driver.find_element_by_tag_name("form")
+search_box = search_form.find_element_by_name("q")
+search_box.send_keys("webdriver")
+  </code>
+</pre>
+
+<h2>Keyboard</h2>
+
+<h2>Mouse</h2>

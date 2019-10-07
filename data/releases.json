@@ -1,0 +1,44 @@
+{
+  "3.8": {
+    "version": "3.8",
+    "links": {
+      "IEDriverServer_Win32_3.8.0.zip": {
+        "name": "IEDriverServer_Win32_3.8.0.zip",
+        "url": "https://selenium-release.storage.googleapis.com/3.8/IEDriverServer_Win32_3.8.0.zip",
+        "lastModified": "2017-12-01 18:51:10",
+        "size":"0.85MB",
+        "etag": "6b3697a6300e0b8806463ffde51cbb31",
+        "version": "3.8"
+      },
+      "IEDriverServer_x64_3.8.0.zip": {
+        "name": "IEDriverServer_x64_3.8.0.zip",
+        "url": "https://selenium-release.storage.googleapis.com/3.8/IEDriverServer_x64_3.8.0.zip",
+        "lastModified": "2017-12-01 18:51:10",
+        "size":"0.98MB",
+        "etag": "2a78a8be1a73de773ad801d16b7c2c5b",
+        "version": "3.8"
+      }
+    }
+  },
+  "3.7": {
+    "version": "3.7",
+    "links": {
+      "IEDriverServer_Win32_3.7.0.zip": {
+        "name": "IEDriverServer_Win32_3.7.0.zip",
+        "url": "https://selenium-release.storage.googleapis.com/3.7/IEDriverServer_Win32_3.7.0.zip",
+        "lastModified": "2017-11-03 01:37:52",
+        "size":"0.85MB",
+        "etag": "18bd8ca48f4fe2074e121793502b2100",
+        "version": "3.7"
+      },
+      "IEDriverServer_x64_3.7.0.zip": {
+        "name": "IEDriverServer_x64_3.8.0.zip",
+        "url": "https://selenium-release.storage.googleapis.com/3.7/IEDriverServer_x64_3.7.0.zip",
+        "lastModified": "2017-11-03 01:37:51",
+        "size":"0.98MB",
+        "etag": "ab4ffe9461002f140659fcfb3d98b5f3",
+        "version": "3.7"
+      }
+    }
+  }
+}

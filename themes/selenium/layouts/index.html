@@ -1,0 +1,110 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,700" rel="stylesheet">
+
+
+<body>
+    <section class="hero homepage" style="background-image: url({{ .Site.BaseURL }}/images/green-bg-opt.jpg)">
+        <h1>Selenium automates browsers. That's it!</h1>
+        <h1 class="sub-header">What you do with that power is entirely up to you.</h1>
+        <div class="header-description">
+            <p class="body-large">
+                Primarily it is for automating web applications for testing purposes,
+                but is certainly not limited to just that.
+            </p>
+            <p class="body-large">
+                Boring web-based administration tasks can (and should) also be automated as well.
+            </p>
+        </div>
+    </section>
+
+    <section class="getting-started dark-background">
+        <h2>Getting Started</h2>
+        <div class="getting-started-topic-container">
+        <div class="getting-started-topic">
+            <div class="getting-started-logo-container">
+                <img class="getting-started-logo" src="{{ .Site.BaseURL }}/images/selenium_logo_square_red.png"/>
+            </div>
+            <h3 class="webdriver-header">Selenium WebDriver</h3>
+            <p class= "body">If you want to create robust, browser-based regression automation suites
+                and tests, scale and distribute scripts across many environments, then you want
+                to use Selenium WebDriver, a collection of language specific bindings to drive
+                a browser - the way it is meant to be driven.</p>
+            <div class="download-button-container">
+                <a href="/downloads">
+                <div class="download-button webdriver"><b>DOWNLOAD</b></div>
+                </a>
+            </div>
+        </div>
+        <div class="getting-started-topic with-margin">
+            <div class="getting-started-logo-container">
+                <img class="getting-started-logo" src="{{ .Site.BaseURL }}/images/selenium_ide_logo_square.png"/>
+            </div>
+            <h3 class="ide-header">Selenium IDE</h3>
+            <p class= "body">
+              If you want to create quick bug reproduction scripts,
+              create scripts to aid in automation-aided exporatory
+              testing, then you want to use Selenium IDE; a Firefox
+              add-on that will do simple record-and-playback of
+              interactions with the browser.
+            </p>
+            <div class="download-button-container">
+                <a href="/downloads">
+                <div class="download-button ide"><b>DOWNLOAD</b></div>
+                </a>
+            </div>
+        </div>
+        <div class="getting-started-topic">
+            <div class="getting-started-logo-container">
+                <img class="getting-started-logo" src="{{ .Site.BaseURL }}/images/selenium_grid_logo_square.png"/>
+            </div>
+            <h3 class="grid-header">Selenium Grid</h3>
+            <p class= "body">If you want to scale by distributing tests on several machines ( parallel execution )
+                and manage multiple environments from a central point, making it easy to run the tests
+                against a vast combination of browsers / OS then you want to use Selenium Grid.</p>
+            <div class="download-button-container">
+                <a href="/downloads">
+                <div class="download-button grid"><b>DOWNLOAD</b></div>
+                </a>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    {{ partial "selenium-supporters.html" . }}
+
+    <div class="news dark-background">
+      <span class="news-header"><h2>News</h2></span>
+        {{ range first 3 (where .Data.Pages "Type" "blog") }}
+        <div class="news-item">
+            <div class="news-metadata">
+                <h4>{{ .Title }}</h4>
+                <p class= "body">{{ .Date.Format "Monday, January 1"}}</p>
+            </div>
+            <div class="news-description">
+                <p class= "body">{{ .Description }}</p>
+                <a href="{{ .Permalink }}">
+                    <div class="read-more">
+                        <span>Read More</span>
+                        <div id="arrowRight" class="arrow-right"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+      {{ end }}
+        <div class="button-container green">
+            <a href="/blog">
+                <div class="button green"><b>MORE NEWS</b></div>
+            </a>
+        </div>
+    </div>
+</body>
+
+{{ partial "support-selenium.html" . }}
+
+{{ partial "donate.html" . }}
+
+{{ partial "footer.html" . }}
+

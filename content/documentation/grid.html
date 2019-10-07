@@ -1,0 +1,300 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Selenium Grid</title>
+<link rel="icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link rel=prev href=worst.html title="Worst Practices">
+<link rel=next href=drivers.html title="Driver Idiosyncracies">
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<h1>Selenium Grid</h1>
+
+<p><em>Selenium Grid</em> is a smart proxy server
+ that allows Selenium tests to route commands to remote web browser instances.
+ Its aim is to provide an easy way to run tests in parallel on multiple machines.
+
+<p>With Selenium Grid,
+ one server acts as the hub that routes JSON formatted test commands
+ to one or more registered Grid nodes.
+ Tests contact the hub to obtain access to remote browser instances.
+ The hub has a list of registered servers that it provides access to,
+ and allows us to control these instances.
+
+<p>Selenium Grid allows us to run tests in parallel on multiple machines,
+ and to manage different browser versions and browser configurations centrally
+ (instead of in each individual test).
+
+<p>Selenium Grid isn't a silver bullet.
+ It solves a subset of common delegation and distribution problems,
+ but will for example not manage your infrastructure
+ and might not suit your specific needs.
+
+<div id="purposes">
+<h2>Purposes and main functionality of a Selenium Grid</h2>
+</div>
+<dl>
+    <dt>Central entry point for all tests</dt>
+    <dt>Management and control of the nodes / environment where the browsers run on</dt>
+    <dt>Scaling</dt>
+    <dt>Running tests in parallel</dt>
+    <dt>Cross platform testing</dt>
+    <dt>Load balancing</dt>
+</dl>
+
+
+<div id="components">
+<h2>Components of a Selenium Grid</h2>
+</div>
+
+<img src="{{ .Site.BaseURL }}/images/docs/grid.png">
+
+<dl>
+    <dt>Hub</dt>
+    <ul>
+        <li>Intermediary and manager</li>
+        <li>Accepts requests to run tests</li>
+        <li>Takes instructions from client and executes them remotely on the nodes</li>
+        <li>Manages threads</li>
+    </ul>
+
+    <p>A <em>hub</em> is a central point where all your tests are sent to.
+        Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the
+        respective clients (i.e. CI server, Developer machine etc.)
+        The hub will connect one or more nodes
+        that tests will be delegated to.
+
+
+    <dt>Nodes</dt>
+    <ul>
+        <li>This is where the browsers live</li>
+        <li>Registers itself to the hub and commincates its capabilities</li>
+        <li>Receives requests from the hub and executes them</li>
+    </ul>
+
+    <p><em>Nodes</em> are different Selenium instances
+        that will execute tests on individual computer systems.
+        There can be many nodes in a grid.
+        The machines which are nodes need do not need to be the same platform
+        or have the same browser selection as that of the hub or the other nodes.
+        A node on Windows might have the capability of
+        offering Internet Explorer as a browser option,
+        whereas this wouldn't be possible on Linux or Mac.
+</dl>
+
+
+
+<div id="setup">
+<h2>Setting up your own Selenium Grid</h2>
+</div>
+
+<p>To use Selenium Grid,
+ you need to maintain your own infrastructure for the nodes.
+ As this can be a cumbersome and time intense effort,
+ many organizations use IaaS providers
+ such as Amazon EC2 and Google Compute
+ to provide this infrastructure.
+
+<p>Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.
+ It is certainly possible to also run nodes on your own hardware.
+ This chapter will go into detail about the option of running your own grid,
+ complete with its own node infrastructure.
+
+
+<h3>Quick start</h3>
+
+<p>This example will show you how to start the Selenium 2 Grid Hub,
+ and register both a WebDriver node and a Selenium 1 RC legacy node.
+ We’ll also show you how to call the grid from Java.
+ The hub and nodes are shown here running on the same machine,
+ but of course you can copy the selenium-server-standalone to multiple machines.
+
+<p>The <em>selenium-server-standalone</em> package includes the hub,
+ WebDriver, and legacy RC needed to run the grid.
+ <em>ant</em> is not required anymore.
+ You can download the <em>selenium-server-standalone-.jar</em> from
+ <a href=http://www.seleniumhq.org/download/>http://www.seleniumhq.org/download/</a>.
+
+
+<h4>Step 1: Start the hub</h4>
+
+<p>The hub is the central point that will receive test requests
+ and distribute them to the right nodes.
+ The distribution is done on a capabilities basis,
+ meaning a test requiring a set of capabilities
+ will only be distributed to nodes offering that set or subset of capabilities.
+
+<p>Because a test's desired capabilities are just what the name implies, <em>desired</em>,
+ the hub cannot guarantee that it will locate a node
+ fully matching the requested desired capabilities set.
+
+<p>Open a command prompt
+ and navigate to the directory where you copied
+ the <em>selenium-server-standalone.jar</em> file.
+ You start the hub by passing the <code>-role hub</code> flag
+ to the standalone server:
+
+<pre><code>$ java -jar selenium-server-standalone.jar -role hub</code></pre>
+
+<p>The hub will listen to port 4444 by default.
+ You can view the status of the hub by opening a browser window and navigating to
+ <a href=http://localhost:4444/grid/console>http://localhost:4444/grid/console</a>.
+
+<p>To change the default port,
+ you can add the optional <code>-port</code> flag
+ with an integer representing the port to listen to when you run the command.
+ Also, all of the other options you see in the JSON config file (seen below)
+ are possible command-line flags.
+
+<p>You certainly can get by with only the simple command shown above,
+ but if you need more advanced configuration,
+ then you may also for convenience specify a JSON format config file
+ to configure the hub when you start it.
+ You can do it like so:
+
+<pre><code>$ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug</code></pre>
+
+<p>Below you will see an example of a <em>hubConfig.json</em> file.
+ We will go into more detail on how to provide node configuration files in step 2.
+
+<pre><code class=json>{"_comment" : "Configuration for Hub - hubConfig.json",
+  "host": ip,
+  "maxSession": 5,
+  "port": 4444,
+  "cleanupCycle": 5000,
+  "timeout": 300000,
+  "newSessionWaitTimeout": -1,
+  "servlets": [],
+  "prioritizer": null,
+  "capabilityMatcher": "org.openqa.grid.internal.utils.DefaultCapabilityMatcher",
+  "throwOnCapabilityNotPresent": true,
+  "nodePolling": 180000,
+  "platform": "WINDOWS"}</code></pre>
+
+
+<h4>Step 2: Start the nodes</h4>
+
+<p>Regardless of whether you want to run a grid with new WebDriver functionality,
+ or a grid with Selenium 1 RC functionality,
+ or both at the same time,
+ you use the same <em>selenium-server-standalone.jar</em> file to start the nodes:
+
+<pre><code>$ java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444</code></pre>
+
+<p>If a port is not specified through the <code>-port</code> flag,
+ a free port will be chosen. You can run multiple nodes on one machine
+ but if you do so, you need to be aware of your systems memory resources
+ and problems with screenshots if your tests take them.
+
+
+<h5>Configuration of node with options</h5>
+
+<p>As mentioned, for backwards compatibility
+ “wd” and “rc” roles are still a valid subset of the “node” role.
+ But those roles limit the types of remote connections to their corresponding API,
+ while “node” allows both RC and WebDriver remote connections.
+
+<p>Passing JVM properties (using the <code>-D</code> flag
+ <em>before the -jar argument</em>)
+ on the command line as well,
+ and these will be picked up and propagated to the nodes:
+
+<pre><code>-Dwebdriver.chrome.driver=chromedriver.exe</code></pre>
+
+
+<h5>Configuration of node with JSON</h5>
+
+<p>You can also start grid nodes that are configured
+ with a JSON configuration file
+
+<pre><code>$ java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json</code></pre>
+
+<p>And here is an example of a <em>nodeConfig.json</em> file:
+
+<pre><code class=json>{
+  "capabilities": [
+    {
+      "browserName": "firefox",
+      "acceptSslCerts": true,
+      "javascriptEnabled": true,
+      "takesScreenshot": false,
+      "firefox_profile": "",
+      "browser-version": "27",
+      "platform": "WINDOWS",
+      "maxInstances": 5,
+      "firefox_binary": "",
+      "cleanSession": true
+    },
+    {
+      "browserName": "chrome",
+      "maxInstances": 5,
+      "platform": "WINDOWS",
+      "webdriver.chrome.driver": "C:/Program Files (x86)/Google/Chrome/Application/chrome.exe"
+    },
+    {
+      "browserName": "internet explorer",
+      "maxInstances": 1,
+      "platform": "WINDOWS",
+      "webdriver.ie.driver": "C:/Program Files (x86)/Internet Explorer/iexplore.exe"
+    }
+  ],
+  "configuration": {
+    "_comment" : "Configuration for Node",
+    "cleanUpCycle": 2000,
+    "timeout": 30000,
+    "proxy": "org.openqa.grid.selenium.proxy.WebDriverRemoteProxy",
+    "port": 5555,
+    "host": ip,
+    "register": true,
+    "hubPort": 4444,
+    "maxSession": 5
+  }
+}</code></pre>
+
+<h5>A note about the <code>-host</code> flag</h5>
+
+<p>For both hub and node, if the <code>-host</code> flag is not specified,
+ <code>0.0.0.0</code> will be used by default. This will bind to all the
+ public (non-loopback) IPv4 interfaces of the machine. If you have a special
+ network configuration or any component that creates extra network interfaces,
+ it is advised to set the <code>-host</code> flag with a value that allows the
+ hub/node to be reachable from a different machine.
+
+<h5>Specifying the Port</h5>
+
+<p>The default TCP/IP port used by the hub is 4444. If you need to change the port please use above mentioned configurations</p>
+
+<h4>Troubleshooting</h4>
+
+<h5>Using Log file</h5>
+<p> For advance troubleshooting you can specify log file to log system messeges.
+For that start Selenium GRID hub or node with -log argument. Please see the below example
+</p>
+<pre><code>java -jar selenium-server-standalone.jar -role hub -log log.txt</code></pre>
+
+<p>Use your favorite text editor to open log file (log.txt in above example) to find "ERROR" logs if you get issues</p>
+
+<h5>Using -debug argument</h5>
+<p> Also you can use -debug argument to print debug logs on console.
+For that start Selenium GRID hub or node with -debug argument. Please see the below example
+</p>
+<pre><code>java -jar selenium-server-standalone.jar -role hub -debug</code></pre>
+
+
+<h2>Docker Selenium</h2>
+<p><a href="https://www.docker.com/">Docker</a> provides a convenient way to
+  provision and scale Selenium Grid infrastructure in a unit known as a container.  Containers are standardised units of software that contain everything required
+  to run the desired application including all dependencies in a reliable and repeatable
+  way on different machines.
+
+  The Selenium project maintains a set of Docker images which you can download
+  and run to get a working grid up and running quickly.  Nodes are available for
+  both Firefox and Chrome.  Full details of how to provision a grid can be found
+  within the <a href="https://github.com/SeleniumHQ/docker-selenium">Docker Selenium</a>
+  repository.
+
+  <h3>Prerequisite</h3>
+  <p>The only requirement to run a grid is to have Docker installed and working.
+  <a href="https://www.docker.com/products/docker-desktop">Install Docker</a>
+
+
