@@ -1,5 +1,5 @@
-{{ $languages := (slice "java" "python" "cs" "ruby" "javascript") }}
-{{ $languagesNice := (slice "Java" "Python" "C#" "Ruby" "JavaScript") }}
+{{ $languages := (slice "java" "python" "cs" "ruby" "javascript" "kotlin") }}
+{{ $languagesNice := (slice "Java" "Python" "C#" "Ruby" "JavaScript" "Kotlin") }}
 {{ $codeTabId := printf "code%d" .Ordinal }}
 <div class="tabset">
   {{ range $index, $language := $languages }}

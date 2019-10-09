@@ -82,6 +82,6 @@ Installation of Selenium libraries for JavaScript can be done using npm:
 npm install selenium-webdriver
 ```
 
-
-
+## _Kotlin_
+Due to missing native language bindings for Kotlin, you have to use the Java Bindings, e.g. with maven [Java](#java)
 

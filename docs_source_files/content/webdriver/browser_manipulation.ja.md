@@ -93,6 +93,13 @@ driver.navigate.to 'https://www.seleniumhq.org'
   {{< code-panel language="javascript" >}}
 await driver.get('https://seleniumhq.github.io/docs/');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Convenient
+driver.get("https://www.seleniumhq.org")
+
+//Longer way
+driver.navigate().to("https://seleniumhq.github.io/docs/")
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get current URL
@@ -105,6 +112,7 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Back
@@ -117,6 +125,7 @@ Pressing the browser's back button:
   {{< code-panel language="csharp" >}}driver.Navigate().Back();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.back{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().back();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().back() {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -129,6 +138,7 @@ Pressing the browser's forward button:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Refresh
@@ -141,6 +151,7 @@ Refresh the current page:
   {{< code-panel language="csharp" >}}driver.Navigate().Refresh();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.refresh{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().refresh();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().refresh(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get title
@@ -153,11 +164,15 @@ You can read the current page title from the browser:
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
 {{< / code-tab >}}
 
 
 ## Windows and tabs
-WebDriver doesn't make the distinction between windows and tabs. If
+
+### Get window handle
+
+WebDriver does not make the distinction between windows and tabs. If
 your site opens a new tab or window, Selenium will let you work with it
 using a window handle.  Each window has a unique identifier which remains
 persistent in a single session. You can get the window handle of the
@@ -169,6 +184,7 @@ current window by using:
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Switching windows or tabs
@@ -317,6 +333,31 @@ windows.forEach(async handle => {
 //Wait for the new tab to finish loading content
 await driver.wait(until.titleIs('Selenium documentation'), 10000);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Store the ID of the original window
+val originalWindow = driver.getWindowHandle()
+
+//Check we don't have other windows open already
+assert(driver.getWindowHandles().size() === 1)
+
+//Click the link which opens in a new window
+driver.findElement(By.linkText("new window")).click()
+
+//Wait for the new window or tab
+wait.until(numberOfWindowsToBe(2))
+
+//Loop through until we find a new window handle
+for (windowHandle in driver.getWindowHandles()) {
+      if (!originalWindow.contentEquals(windowHandle)) {
+          driver.switchTo().window(windowHandle)
+           break
+      }
+}
+
+//Wait for the new tab to finish loading content
+wait.until(titleIs("Selenium documentation"))
+ 
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -364,6 +405,14 @@ await driver.close();
 //Switch back to the old tab or window
 await driver.switchTo().window(originalWindow);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Close the tab or window
+driver.close()
+
+//Switch back to the old tab or window
+driver.switchTo().window(originalWindow)
+
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Forgetting to switch back to another window handle after closing a
@@ -382,6 +431,7 @@ instead of close:
   {{< code-panel language="csharp" >}}driver.Quit();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.quit{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.quit();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.quit(){{< / code-panel >}}
 {{< / code-tab >}}
 
 * Quit will:
@@ -435,6 +485,17 @@ after('Tear down', async function () {
   await driver.quit();
 });
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+  
+/**
+ * Example using JUnit
+ * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+ */
+@AfterAll
+fun tearDown() {
+    driver.quit()
+}
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If not running WebDriver in a test context, you may consider using
@@ -474,6 +535,13 @@ try {
     //WebDriver code here...
 } finally {
     await driver.quit();
+}
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+try {
+    //WebDriver code here...
+} finally {
+    driver.quit()
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -532,6 +600,10 @@ driver.find_element(:tag_name,'button').click
   {{< code-panel language="javascript" >}}
 // This won't work
 await driver.findElement(By.css('button')).click();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//This won't work
+driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -598,6 +670,16 @@ await driver.switchTo().frame(iframe);
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Store the web element
+WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+
+//Switch to the frame
+driver.switchTo().frame(iframe)
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Using a name or ID
@@ -650,6 +732,16 @@ await driver.switchTo().frame('myframe');
 // Now we can click the button
 await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Using the ID
+driver.switchTo().frame("buttonframe")
+
+//Or using the name instead
+driver.switchTo().frame("myframe")
+
+//Now we can click the button
+driver.findElement(By.tagName("button")).click()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Using an index
@@ -681,6 +773,10 @@ driver.switch_to.frame(iframe)
 // Switches to the second frame
 await driver.switchTo().frame(1);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Switches to the second frame  
+driver.switchTo().frame(1)
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -709,6 +805,10 @@ driver.switch_to.default_content
   {{< code-panel language="javascript" >}}
 // Return to the top level
 await driver.switchTo().defaultContent();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Return to the top level
+driver.switchTo().defaultContent()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -770,6 +870,16 @@ const rect = await driver.manage().window().getRect();
 const width1 = rect.width;
 const height1 = rect.height;
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+//Access each dimension individually
+val width = driver.manage().window().getSize().getWidth()
+val height = driver.manage().window().getSize().getHeight()
+
+//Or store the dimensions and query them later
+val size = driver.manage().window().getSize()
+val width1 = size.getWidth()
+val height1 = size.getHeight()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Set window size
@@ -781,6 +891,7 @@ Restores the window and sets the window size.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get window position
@@ -830,6 +941,17 @@ const rect = await driver.manage().window().getRect();
 const x1 = rect.x;
 const y1 = rect.y;
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Access each dimension individually
+val x = driver.manage().window().position.x
+val y = driver.manage().window().position.y
+
+// Or store the dimensions and query them later
+val position = driver.manage().window().position
+val x1 = position.x
+int y1 = position.y
+  
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Set window position
@@ -856,6 +978,10 @@ driver.manage.window.move_to(0,0)
 // Move the window to the top left of the primary monitor
 await driver.manage().window().setRect({ x: 0, y: 0 });
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Move the window to the top left of the primary monitor
+driver.manage().window().position = Point(0,0)
+    {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Maximise window
@@ -869,6 +995,7 @@ toolbars.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Maximize();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Fullscreen window
@@ -881,4 +1008,5 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="csharp" >}}driver.Manage().Window.FullScreen();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.full_screen{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
 {{< / code-tab >}}

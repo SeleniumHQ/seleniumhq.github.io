@@ -30,6 +30,9 @@ driver.find_element(id: "cheese")
   {{< code-panel language="javascript" >}}
 const cheese = await driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val cheese: WebElement = driver.findElement(By.id("cheese"))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 As seen in the example, locating elements in WebDriver is done on the
@@ -64,6 +67,10 @@ cheddar = cheese.find_elements(id: "cheddar")
   {{< code-panel language="javascript" >}}
 const cheese = await driver.findElement(By.id('cheese'));
 const cheddar = await cheese.findElement(By.id('cheddar'));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val cheese = driver.findElement(By.id("cheese"))
+val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -106,6 +113,9 @@ mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
   {{< code-panel language="javascript" >}}
 const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.findElement(By.cssSelector("#cheese #cheddar"))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Locating multiple elements
@@ -146,6 +156,9 @@ mucho_cheese = driver.find_elements(css: "#cheese li")
   {{< code-panel language="javascript" >}}
 const muchoCheese = await driver.findElements(By.css('#cheese li'));
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Element selection strategies
@@ -173,7 +186,7 @@ that comes with complicated DOM traversals.
 If unique IDs are unavailable, a well-written CSS selector is the
 preferred method of locating an element. XPath works as well as CSS
 selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they're typically
+debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.
 
 Selection strategies based on link text and partial link text have

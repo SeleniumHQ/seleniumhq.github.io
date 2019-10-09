@@ -74,6 +74,11 @@ await driver.get('file:///race_condition.html');
 const element = await driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.get("file:///race_condition.html")
+val element = driver.findElement(By.tagName("p"))
+assert(element.text == "Hello from JavaScript!")
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 The issue here is that the default
@@ -190,6 +195,15 @@ await driver.wait(() => documentInitialised(), 10000);
 const element = await driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.get("https://google.com/ncr")
+driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
+// Initialize and wait till element(link) became clickable - timeout in 10 seconds
+val firstResult = WebDriverWait(driver, 10)
+      .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
+// Print the first result
+println(firstResult.text)
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 We pass in the _condition_ as a function reference
@@ -227,6 +241,12 @@ assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.get("file:///race_condition.html")
+val ele = WebDriverWait(getWebDriver(), 10)
+            .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
+assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -274,6 +294,9 @@ WebDriverWait(driver, timeout=3).until(some_condition)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -377,6 +400,12 @@ let webElement = await driver.findElement(By.id("myDynamicElement"));
 
 }());
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val driver = FirefoxDriver()
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS)
+driver.get("http://somedomain/url_that_delays_loading")
+val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## FluentWait
@@ -416,6 +445,14 @@ element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val wait = FluentWait<WebDriver>(getWebDriver())
+        .withTimeout(Duration.ofSeconds(30))
+        .pollingEvery(Duration.ofSeconds(3))
+        .ignoring(NoSuchElementException::class.java)
+
+val foo = wait.until {it.findElement(By.id("foo")) }
   {{< / code-panel >}}
 {{< / code-tab >}}
 
