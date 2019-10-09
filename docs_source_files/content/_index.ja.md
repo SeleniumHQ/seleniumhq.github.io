@@ -23,7 +23,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
 public class HelloSelenium {
@@ -34,8 +33,8 @@ public class HelloSelenium {
         try {
             driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
-            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>a")));
-            System.out.println(firstResult.getText());
+            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>div")));
+            System.out.println(firstResult.getAttribute("textContent"));
         } finally {
             driver.quit();
         }
@@ -54,8 +53,8 @@ with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
     driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
-    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
-    print(first_result.text)
+    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
+    print(first_result.get_attribute("textContent"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using System;
@@ -108,6 +107,31 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         await driver.quit();
     }
 })();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.firefox.FirefoxDriver
+import org.openqa.selenium.support.ui.WebDriverWait
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated
+
+class HelloSelenium {
+
+    public main(args: Array<String>) {
+        val driver = new FirefoxDriver()
+        val wait = new WebDriverWait(driver, 10)
+        try {
+            driver.get("https://google.com/ncr")
+            driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
+            val firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>div")))
+            System.out.println(firstResult.getAttribute("textContent"))
+        } finally {
+            driver.quit()
+        }
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 

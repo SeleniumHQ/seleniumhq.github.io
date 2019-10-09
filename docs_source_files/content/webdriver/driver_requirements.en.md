@@ -155,6 +155,12 @@ const chrome = require('selenium-webdriver/chrome');
     //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.chrome.ChromeDriver
+
+val driver: WebDriver = ChromeDriver()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Remember that you have to set the path to the chromedriver executable.
@@ -175,6 +181,9 @@ Selenium::WebDriver::Chrome.driver_path = "/path/to/chromedriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 chrome.setDefaultService(new chrome.ServiceBuilder('path/to/chromedriver').build());
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -231,6 +240,12 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.Firefox.FirefoxDriver
+
+val driver: WebDriver = FirefoxDriver()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If you prefer not to set geckodriver's location using PATH,
@@ -251,6 +266,9 @@ Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -317,6 +335,12 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.edge.EdgeDriver
+
+val driver: WebDriver = EdgeDriver()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If Edge driver is not present in your path, you can set the path using 
@@ -337,6 +361,9 @@ Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -392,6 +419,12 @@ const {Builder} = require('selenium-webdriver');
    //your code inside this block
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.ie.InternetExplorerDriver
+
+val driver: WebDriver = InternetExplorerDriver()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 If Internet Explorer driver is not present in your path, you can set the path 
@@ -412,6 +445,9 @@ Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -463,6 +499,12 @@ driver = Selenium::WebDriver.for :opera
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.opera.OperaDriver
+
+val driver: WebDriver = OperaDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -520,6 +562,12 @@ const {Builder} = require('selenium-webdriver');
    let driver = await new Builder().forBrowser('safari').build();
    //your code inside this block
 })();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.safari.SafariDriver
+
+val driver: WebDriver = SafariDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 

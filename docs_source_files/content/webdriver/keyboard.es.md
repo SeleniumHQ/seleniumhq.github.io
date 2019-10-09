@@ -84,4 +84,27 @@ const {Builder, By, Key} = require('selenium-webdriver');
     }
 })();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.WebDriver
+import org.openqa.selenium.WebElement
+import org.openqa.selenium.ChromeDriver
+
+class HelloSelenium {
+
+    fun main() {
+        driver = ChromeDriver()
+        try {
+            // Navigate to Url
+            driver.get("https://google.com")
+
+            // Enter text "q" and perform keyboard action "Enter"
+            driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+        } finally {
+            driver.quit()
+        }
+    }
+}
+  {{< / code-panel >}}
 {{< / code-tab >}}

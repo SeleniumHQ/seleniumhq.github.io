@@ -27,6 +27,10 @@ driver.find_element(name: "name").send_keys(name)
 const name = "Charles";
 await driver.findElement(By.name('name')).sendKeys(name);
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val name = "Charles"
+driver.findElement(By.name("name")).sendKeys(name)
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Algunas aplicaciones web usan bibliotecas JavaScript para agregar la funcionalidad de arrastrar y soltar. El siguiente es un ejemplo básico de arrastrar un elemento a otro elemento:
@@ -58,6 +62,11 @@ const source = await driver.findElement(By.id('source'));
 const target = await driver.findElement(By.id('target'));
 await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val source = driver.findElement(By.id("source"))
+val target = driver.findElement(By.id("target"))
+Actions(driver).dragAndDrop(source, target).build().perform()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Al hacer clic en un elemento
@@ -79,6 +88,9 @@ driver.find_element(css: "input[type='submit']").click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.findElement(By.css("input[type='submit']")).click();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.findElement(By.cssSelector("input[type='submit']")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 

@@ -71,10 +71,10 @@ The general workflow (what we'll call the “happy path”) is something
 like this:
 
 * Create an account
-* Configure their unicorn
-* Add her to the shopping cart
+* Configure the unicorn
+* Add it to the shopping cart
 * Check out and pay
-* Give feedback about their unicorn
+* Give feedback about the unicorn
 
 
 It would be tempting to write one grand Selenium script
@@ -97,9 +97,9 @@ It will perform the following actions:
 * Create an account
 * Configure a unicorn
 
-Note that we're skipping the rest of these steps, 
+Note that we are skipping the rest of these steps, 
 we will test the rest of the workflow in other small, discrete test cases,
-after we're done with this one.
+after we are done with this one.
 
 To start off, you need to create an account.
 Here you have some choices to make:
@@ -164,6 +164,20 @@ account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+val user = UserFactory.createCommonUser() //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -240,9 +254,26 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// The Unicorn is a top-level Object--it has attributes, which are set here. 
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+val sparkles = Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
+
+// Since we are already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+val addUnicornPage = accountPage.addUnicorn()
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
+
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
-Now that you've configured your unicorn,
+Now that you have configured your unicorn,
 you need to move on to step 3: making sure it actually worked.
 
 {{< code-tab >}}
@@ -267,9 +298,16 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// The exists() method from UnicornConfirmationPage will take the Sparkles 
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+//CHECK Boris
+assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still hasn't done anything but talk about unicorns in this code–
+Note that the tester still has not done anything but talk about unicorns in this code–
 no buttons, no locators, no browser controls.
 This method of _modelling_ the application
 allows you to keep these test-level commands in place and unchanging,
@@ -292,7 +330,7 @@ Will it only keep the existing one or will it add another?
 Each time you move through the workflow,
 you want to try to avoid having to create an account,
 login as the user, and configure the unicorn.
-Ideally, you'll be able to create an account
+Ideally, you will be able to create an account
 and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.

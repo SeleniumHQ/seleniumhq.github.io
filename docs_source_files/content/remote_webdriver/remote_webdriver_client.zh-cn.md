@@ -38,6 +38,12 @@ driver.close
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+firefoxOptions = FirefoxOptions()
+driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), firefoxOptions)
+driver.get("http://www.google.com")
+driver.quit()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -80,6 +86,14 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val chromeOptions = ChromeOptions()
+chromeOptions.setCapability("browserVersion", "67");
+chromeOptions.setCapability("platformName", "Windows XP");
+val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
+driver.get("http://www.google.com")
+driver.quit();
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -113,6 +127,9 @@ end
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.setFileDetector(new LocalFileDetector())
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Once the above code is defined, you can upload a file in your test in the following way:
@@ -137,5 +154,9 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
+val upload: WebElement = driver.findElement(By.id("myfile"))
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
+  {{< / code-panel >}}
 {{< / code-tab >}}
-

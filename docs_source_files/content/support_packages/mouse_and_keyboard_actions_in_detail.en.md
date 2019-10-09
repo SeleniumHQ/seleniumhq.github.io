@@ -21,6 +21,9 @@ e = driver.find_element_by_id("testElement")
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val element = driver.findElement(By.id("testElement"))
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 You can simulate mouse clicking on e if it is visible and has a height and width
@@ -42,6 +45,9 @@ e.click()
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+e.click()
+  {{< / code-panel >}}
 {{< / code-tab >}}
 
 Moreover, it is possible to mimic hovering of the cursor over **e**. In order
@@ -58,10 +64,13 @@ from selenium.webdriver import ActionChains
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.interactions.Actions
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -82,10 +91,15 @@ actions.perform()
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val actions = Actions(driver)
+actions.moveToElement(e);
+actions.perform();
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -105,10 +119,13 @@ e.send_keys("Test")
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+e.sendKeys("Test")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -125,9 +142,12 @@ e.clear()
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+e.clear()
   {{< / code-panel >}}
 {{< / code-tab >}}
