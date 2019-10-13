@@ -1,5 +1,5 @@
 ---
-title: "Browsers"
+title: "浏览器"
 weight: 1
 ---
 
@@ -8,25 +8,24 @@ weight: 1
 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
 {{% /notice %}}
 
-## Consumer browsers
+## 消费级浏览器
 
-The Selenium framework officially supports the following browsers:
+当前Selenium框架支持以下浏览器:
 
-| Browser | Maintainer | Versions Supported |
+| 浏览器 | 维护者 | 支持的版本 |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | All versions |
-| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 and newer |
-| Internet Explorer | Selenium | 6 and newer |
-| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer |
-| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 and newer |
+| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 所有版本 |
+| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54及以上版本 |
+| Internet Explorer | Selenium | 6及以上版本 |
+| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5及以上版本 |
+| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10及以上版本 |
 
-## Specialised browsers
+## 专业级浏览器
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
+还有一些通常在开发环境中使用的专业级浏览器。
+我们也可以使用其中一些浏览器实现自动化的目的，
+Selenium支持以下专业驱动:
 
-| Driver Name | Purpose | Maintainer |
+| 驱动名称 | 用途 | 维护者 |
 | -------- | ---------- | ------------------ |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino | Selenium project |
+| HtmlUnitDriver | Rhino支持的无头浏览器模拟器 | Selenium项目组 |
