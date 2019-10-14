@@ -206,10 +206,12 @@ and because the wait utility ignores _no such element_ errors by default,
 we can refactor our instructions to be more concise:
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+    {{< code-panel language="java" >}}
+WebElement foo = new WebDriverWait(driver, 3)
+            .until(driver -> driver.findElement(By.name("q")));
+assertEquals(foo.getText(), "Hello from JavaScript!"); 
+    {{< / code-panel >}} 
+{{< code-panel language="python" >}}
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
