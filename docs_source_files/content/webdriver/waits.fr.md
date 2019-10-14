@@ -207,7 +207,9 @@ we can refactor our instructions to be more concise:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR
+WebElement foo = new WebDriverWait(driver, 3)
+          .until(driver -> driver.findElement(By.name("q")));
+assertEquals(foo.getText(), "Hello from JavaScript!"); 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium.webdriver.support.ui import WebDriverWait
