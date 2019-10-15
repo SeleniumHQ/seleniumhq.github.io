@@ -1,0 +1,383 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Introduction</title>
+<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href=se.css>
+<link rel=prev href=quick.html title="Quick Tour">
+<link rel=next href=install.html title=Install>
+<script src=docs.js></script>
+
+<h1>Introduction</h1>
+
+
+<h2>The Selenium project and tools</h2>
+
+
+<h3>Selenium controls web browsers</h3>
+
+<p><em>Selenium</em> is many things,
+ but at its core it's a toolset for web browser automation
+ that uses the best techniques available
+ to remotely control browser instances
+ and emulate a user's interaction with the browser.
+
+<p>It allows users to simulate common activities performed by end-users;
+ entering text into fields,
+ selecting drop-down values and checking boxes,
+ and clicking links in documents.
+ It also provides many other controls such as mouse movement,
+ arbitrary JavaScript execution, and much more.
+
+<p>Although used primarily for front-end testing of websites,
+ Selenium is at its core a browser user agent <em>library</em>.
+ The interfaces are ubiquitous to their application,
+ which encourages composition with other libraries to suit your purpose.
+
+
+<h3>One interface to rule them all</h3>
+
+<p>One of the project's guiding principles
+ is to support a common interface for all (major) browser technologies.
+ Web browsers are incredibly complex, highly engineered applications,
+ performing their operations in completely different ways
+ but which frequently look the same while doing so.
+ Even though the text is rendered in the same fonts,
+ the images are displayed in the same place
+ and the links take you to the same destination.
+ What is happening underneath is as different as night and day.
+ Selenium “abstracts” these differences,
+ hiding their details and intricacies from the person writing the code.
+ This allows you to write several lines of code to perform a complicated workflow,
+ but these same lines will execute on Firefox,
+ Internet Explorer, Chrome, and all other supported browsers.
+
+
+<h3>Tools and support</h3>
+
+<p>Selenium's minimalist design approach gives it
+ versatility to be included as a component in bigger applications.
+ The surrounding infrastructure provided under the Selenium umbrella
+ gives you the tools to put together
+ your own <a href="/documentation/grid">grid of browsers</a>
+ so tests can be run on different browsers and multiple operating systems
+ across a range of machines.
+
+<p>Imagine a bank of computers in your server room or data centre
+ all firing up browsers at the same time
+ hitting your site's links, forms,
+ and tables&mdash;testing your application 24 hours a day.
+ Through the simple programming interface
+ provided for the most common languages,
+ these tests will run tirelessly in parallel,
+ reporting back to you when errors occur.
+
+<p>It's an aim to help make this a reality for you,
+ by providing users with tools and documentation to not only control browsers,
+ but to make it easy to scale and deploy such grids.
+
+
+<h3>Who uses Selenium</h3>
+
+<p>Many of the most important companies in the world
+ have adopted Selenium for their browser-based testing,
+ often replacing years-long efforts involving other proprietary tools.
+ As it has grown in popularity, so have its requirements and challenges multiplied.
+
+<p>As the web becomes more complicated
+ and new technologies are added to websites,
+ it's the mission of this project to keep up with them where possible.
+ Being an open source project,
+ this support is provided through the generous donation of time from many volunteers,
+ every one of which has a “day job”.
+
+<p>Another mission of the project is to encourage
+ more volunteers to partake in this effort,
+ and build a strong community
+ so that the project can continue to keep up with emerging technologies
+ and remain a dominant platform for functional test automation.
+
+
+<h3>History</h3>
+
+<p>When Selenium 1 was released in 2004,
+ it was out of the necessity to reduce time spent
+ manually verifying consistent behaviour in the front-end of a web application.
+ It made use of what tools were available at the time,
+ and relied heavily on the injection of JavaScript to the web page under test
+ to emulate a user's interaction.
+
+<p>Whilst JavaScript is a good tool to let you introspect the properties of the DOM
+ and to do certain client-side observations that you would otherwise not be able to do,
+ it falls short on the ability to naturally replicate a user's interactions
+ as if the mouse and keyboard are being used.
+
+<p>Since then, Selenium has grown and matured a lot,
+ into a tool widely used by many&mdash;if not most&mdash;of
+ the largest organisations around the world.
+ Selenium has gone from a homebrewed test automation toolkit developed at Thoughtworks
+ for a niché audience and a specific use case,
+ to the world's <em>de facto</em> browser automation library.
+
+<p>Just as Selenium RC made use of the tools of the trade available at the time,
+ <a href="documentation/wd">Selenium WebDriver</a> drives that tradition on by taking
+ the browser interaction part to the browser vendor's home turf,
+ and asking them to take responsibility of the backend, browser-facing implementations.
+ Recently this work has evolved into a W3C standardisation process
+ where the goal is to turn the WebDriver component in Selenium
+ into the <em>du jeur</em> remote control library for user agents.
+
+
+<h2>On test automation</h2>
+
+<p>First, start by asking yourself whether or not you really need to use a browser.
+ Odds are good that, at some point, if you're working on a complex web application,
+ you will need to open a browser and actually test it.
+
+<p>Functional end-user tests such as Selenium tests are expensive to run, however.
+ Furthermore, they typically require substantial infrastructure
+ to be in place to be run effectively.
+ It's a good rule to always ask yourself if what you want to test
+ can be done using more lightweight test approaches such as unit tests
+ or with a lower-level approach.
+
+<p>Once you have made the determination that you're in the web browser testing business,
+ and you have your Selenium environment ready to begin writing tests,
+ you will generally perform some combination of three steps:
+
+<ol>
+ <li>Set up the data
+ <li>Perform a discrete set of actions
+ <li>Evaluate the results
+</ol>
+
+<p>You will want to keep these steps as short as possible;
+ one to two operations should be enough much of the time.
+ Browser automation has the reputation of being “flaky”,
+ but in reality that is because users frequently demand too much of it.
+ In later chapters, we will return to techniques you can use
+ to mitigate apparent intermittent problems in tests,
+ in particular on how to <a href="/documentation/wd#waits">overcome race conditions</a>
+ between the browser and WebDriver.
+
+<p>By keeping your tests short
+ and using the web browser only when you have absolutely no alternative,
+ you can have many tests with minimal flake.
+
+<p>A distinct advantage of Selenium tests
+ are their inherent ability to test all components of the application,
+ from backend to frontend, from a user's perspective.
+ So in other words, whilst functional tests may be expensive to run,
+ they also encompass large business-critical portions at one time.
+
+
+<h3>Testing requirements</h3>
+
+<p>As mentioned before, Selenium tests can be expensive to run.
+ To what extent depends on the browser you're running the tests against,
+ but historically browsers' behaviour has varied so much that it has often
+ been a stated goal to cross-test against multiple browsers.
+
+<p>Selenium allows you to run the same instructions against multiple browsers
+ on multiple operating systems,
+ but the enumeration of all the possible browsers,
+ their different versions, and the many operating systems they run on
+ will quickly become a non-trival undertaking.
+
+
+<h3>Let’s start with an example</h3>
+
+<p>Larry has written a web site which allows users to order their own
+ custom unicorns.
+
+<p>The general workflow (what we'll call the “happy path”) is something
+ like this:
+
+<ul>
+ <li>Create an account
+ <li>Configure their unicorn
+ <li>Add her to the shopping cart
+ <li>Check out and pay
+ <li>Give feedback about their unicorn
+</ul>
+
+<p>It would be tempting to write one grand Selenium script
+ to perform all these operations–many will try.
+ <strong>Resist the temptation!</strong>
+ Doing so will result in a test that
+ (a) takes a long time,
+ (b) will be subject to some common issues around page rendering timing issues, and
+ (c) is such that if it fails,
+ it won't give you a concise, “glanceable” method for diagnosing what went wrong.
+
+<p>The preferred strategy for testing this scenario would be
+ to break it down to a series of independent, speedy tests,
+ each of which has one “reason” to exist.
+
+<p>Let's pretend you want to test the second step:
+ Configuring your unicorn.
+ It will perform the following actions:
+
+<ul>
+ <li>Create an account
+ <li>Configure a unicorn
+</ul>
+
+<p>Note that we're skipping the rest of these steps–
+ we will test the rest of the workflow in other <small>small, discrete test cases</small>,
+ after we're done with this one.
+
+<p>To start off, you need to create an account.
+ Here you have some choices to make:
+
+<ul>
+ <li>Do you want to use an existing account?
+ <li>Do you want to create a new account?
+ <li>Are there any special properties of such a user that need to be
+  taken into account before configuration begins?
+</ul>
+
+<p>Regardless of how you answer this question,
+ the solution is to make it part of the “set up the data” portion of the test–
+ if Larry has exposed an API which enables you (or anyone)
+ to create and update user accounts,
+ be sure to use that to answer this question–
+ if possible, you want to launch the browser only after you have a user “in hand”,
+ whose credentials you can just log in with.
+
+<p>If each test for each workflow begins with the creation of a user account,
+ many seconds will be added to the execution of each test.
+ Calling an API and talking to a database are quick,
+ “headless” operations that don't require the expensive process of
+ opening a browser, navigating to the right pages,
+ clicking and waiting for the forms to be submitted, etc.
+
+<p>Ideally, you can address this set-up phase in one line of code,
+ which will execute before any browser is launched:
+
+<pre><code class=java>// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+User user = UserFactory.createCommonUser(); //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());</code></pre>
+
+<p>As you can imagine, the <code>UserFactory</code> can be extended
+ to provide methods such as <code>createAdminUser()</code>, and <code>createUserWithPayment()</code>.
+ The point is, these two lines of code do not distract you from the ultimate purpose of this test:
+ configuring a unicorn.
+
+<p>The intricacies of the <a href="/documentation/guidelines#page_object_models">Page Object model</a>
+ will be discussed in later chapters, but we will introduce the concept here:
+
+<p>Your tests should be composed of actions,
+ performed from the user's point of view,
+ within the context of pages in the site.
+ These pages are stored as objects,
+ which will contain specific information about how the web page is composed
+ and how actions are performed–
+ very little of which should concern you as a tester.
+
+<p>What kind of unicorn do you want?
+ You might want pink, but not necessarily.
+ Purple has been quite popular lately.
+ Does she need sunglasses? Star tattoos?
+ These choices, while difficult, are your primary concern as a tester–
+ you need to ensure that your order fulfillment center
+ sends out the right unicorn to the right person,
+ and that starts with these choices.
+
+<p>Notice that nowhere in that paragraph do we talk about buttons,
+ fields, drop-downs, radio buttons, or web forms.
+ <strong>Neither should your tests!</strong>
+ You want to write your code like the user trying to solve their problem.
+ Here is one way of doing this (continuing from the previous example):
+
+<pre><code class=java>// The Unicorn is a top-level Object--it has attributes, which are set here. 
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
+
+// Since we're already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+AddUnicornPage addUnicornPage = accountPage.addUnicorn();
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);</code></pre>
+
+<p>Now that you've configured your unicorn,
+ you need to move on to step 3: making sure it actually worked.
+
+<pre><code class=java>// The exists() method from UnicornConfirmationPage will take the Sparkles 
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+Assert.assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles));</code></pre>
+
+<p>Note that the tester still hasn't done anything but talk about unicorns in this code–
+ no buttons, no locators, no browser controls.
+ This method of <em>modelling</em> the application
+ allows you to keep these test-level commands in place and unchanging,
+ even if Larry decides next week that he no longer likes Ruby-on-Rails
+ and decides to re-implement the entire site
+ in the latest Haskell bindings with a Fortran front-end.
+
+<p>Your page objects will require some small maintenance
+ in order to conform to the site redesign,
+ but these tests will remain the same.
+ Taking this basic design,
+ you will want to keep going through your workflows with the fewest browser-facing steps possible.
+ Your next workflow will involve adding a unicorn to the shopping cart.
+ You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
+ Is there more than one unicorn in the cart before you start?
+ How many can fit in the shopping cart?
+ If you create more than one with the same name and/or features, will it break?
+ Will it only keep the existing one or will it add another?
+
+<p>Each time you move through the workflow,
+ you want to try to avoid having to create an account,
+ login as the user, and configure the unicorn.
+ Ideally, you'll be able to create an account
+ and pre-configure a unicorn via the API or database.
+ Then all you have to do is log in as the user, locate Sparkles,
+ and add her to the cart.
+
+
+<h2>Types of testing</h2>
+
+<p>TODO: Add paragraphs about acceptance testing, performance testing,
+ load testing, regression testing, test driven development, and/or
+ behavior-driven development (JBehave, Capybara, & Robot Framework),
+ with how they relate to Selenium.
+
+
+<h2>About this documentation</h2>
+
+<p>These docs, like the code itself, are maintained 100% by volunteers
+ within the Selenium community.
+ Many have been using it since its inception,
+ but many more have only been using it for a short while,
+ and have given their time to help improve the on-boarding experience
+ for new users.
+
+<p>If there is an issue with the documentation, we want to know!
+ The best way to communicate an issue is to visit
+ <a href=//github.com/seleniumhq/docs/issues>https://github.com/seleniumhq/docs/issues</a>
+ and search to see whether or not the issue has been filed already.
+ If not, feel free to open one!
+
+<p>Many members of the community frequent
+ the <em>#selenium</em> IRC channel at <a href=//freenode.net/>irc.freenode.net</a>. Feel free to drop in and ask questions
+ and if you get help which you think could be of use within these documents,
+ be sure to add your contribution!
+ We can update these documents,
+ but it's much easier for everyone when we get contributions
+ from outside the normal committers.
