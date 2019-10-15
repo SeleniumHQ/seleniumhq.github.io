@@ -1,16 +1,281 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="0; url={{ .Site.BaseURL }}/documentation/en">
-        <script type="text/javascript">
-            window.location.href = "{{ .Site.BaseURL }}/documentation/en"
-        </script>
-        <title>Page Redirection - Selenium Docs</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this 
-        <a href='{{ .Site.BaseURL }}/documentation/en'>link to the Selenium Docs</a>.
-    </body>
-</html>
+<!DOCTYPE html><meta charset=utf-8>
+<title>Selenium documentation</title>
+<link rel=icon href=favicon.ico type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href=favicon.ico type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link title="Quick Tour" rel=next href=quick.html>
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<body class=front>
+
+<h1>The Selenium Browser Automation Project</h1>
+
+<p>Selenium is an umbrella project for a range of tools and libraries
+    that enable and support the automation of web browsers.
+
+<p>It provides extensions to emulate user interaction with browsers,
+    a distribution server for scaling browser allocation,
+    and the infrastructure for implementations of the
+    <a href="//www.w3.org/TR/webdriver/">W3C WebDriver specification</a>
+    that lets you write interchangeable code for all major web browsers.
+
+<p>This project is made possible by volunteer contributors
+    who have put in thousands of hours of their own time,
+    and made the source code <a href="/documentation/attr#license">freely available</a>
+    for anyone to use, enjoy, and improve.
+
+<p>Selenium brings together browser vendors, engineers, and enthusiasts
+    to further an open discussion around automation of the web platform.
+    The project organises <a href="http://seleniumconf.com/">an annual conference</a>
+    to teach and nurture the community.
+
+<p>At the core of Selenium is <em><a href="/documentation/wd">WebDriver</a></em>,
+    an interface to write instruction sets
+    that can be run interchangeably in many browsers.
+    Here is one of the simplest instructions you can make:
+
+    <!-- TODO(ato): We should find a better example.  Perhaps Todo list? -->
+<pre>
+ <code class=java>import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+
+public class HelloSelenium {
+
+    public static void main(String[] args) {
+        WebDriver driver = new FirefoxDriver();
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        try {
+            driver.get("https://google.com/ncr");
+            driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
+            WebElement firstResult = wait.until(presenceOfElementLocated(By.cssSelector("h3>a")));
+            System.out.println(firstResult.getText());
+        } finally {
+            driver.quit();
+        }
+    }
+}</code>
+ <code class=python>from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support.expected_conditions import presence_of_element_located
+
+#This example requires Selenium WebDriver 3.13 or newer
+with webdriver.Firefox() as driver:
+    wait = WebDriverWait(driver, 10)
+    driver.get("https://google.com/ncr")
+    driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
+    first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>a")))
+    print(first_result.text)</code>
+ <code class=cs>using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
+
+namespace Selenium.Docs
+{
+    [TestClass]
+    public class HelloSelenium
+    {
+        private static IWebDriver driver;
+
+        [TestMethod]
+        public void Example()
+        {
+            driver = new FirefoxDriver();
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            driver.Navigate().GoToUrl("http://www.google.com/ncr");
+            driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Return);
+            IWebElement firstResult = wait.Until(wd => wd.FindElement(By.CssSelector("h3>a")));
+            Console.WriteLine(firstResult.Text);
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            driver.Quit();
+        }
+    }
+}</code>
+ <code class=ruby>require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :firefox
+wait = Selenium::WebDriver::Wait.new(timeout: 10)
+
+begin
+  driver.get 'https://google.com/ncr'
+  driver.find_element(name: 'q').send_keys 'cheese', :return
+  first_result = wait.until { driver.find_element(css: 'h3>a') }
+  puts first_result.text
+ensure
+  driver.quit
+end</code>
+ <code class=javascript>const {Builder, By, Key, until} = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    try {
+        await driver.get('https://www.google.com/ncr');
+        await driver.findElement(By.name('q')).sendKeys('cheese', Key.RETURN);
+        let firstResult = await driver.wait(until.elementLocated(By.css('h3>a')),10000);
+        console.log(await firstResult.getText());
+    } finally {
+        await driver.quit();
+    }
+})();</code></pre>
+
+<p>See the <em><a href="/quick">Quick Tour</a></em>
+    for a full explanation
+    of what goes on behind the scenes when you run this code.
+    You should continue on to the <a href=#narrative>narrative documentation</a>
+    to understand how you can <a href=install.html>install</a> and
+    successfully use Selenium as a test automation tool,
+    and scaling simple tests like this to run
+    in large, distributed environments on multiple browsers,
+    on several different operating systems.
+
+
+<h2>Getting started</h2>
+
+<p>If you are new to Selenium,
+    we have a few resources that can help you
+    get up to speed right away.
+
+<div id=gettingstarted><ul>
+    <li><a href="/documentation/quick#quick_tour">Quick tour</a>
+        <ul>
+            <li><a href="/documentation/quick#webdriver">WebDriver</a>
+            <li><a href="/documentation/quick#selenium_remote_control">Selenium Remote Control</a>
+            <li><a href="/documentation/quick#selenium_ide">Selenium IDE</a>
+            <li><a href="/documentation/quick#selenium_grid">Selenium Grid</a>
+            <li><a href="/documentation/quick#selenium_html_runner">Selenium HTML Runner</a>
+        </ul></li>
+</ul>
+</div>
+
+
+<h2>Narrative documentation</h2>
+
+<p>Narrative documentation in chapter form
+    explaining how to use Selenium in detail, from bottom up.
+
+<div id=narrative><ul>
+    <li><a href="/documentation/intro#introduction">Introduction</a>
+        <ul>
+            <li><a href="/documentation/intro#the_selenium_project_and_tools">The Selenium project and tools</a>
+            <li><a href="/documentation/intro#on_test_automation">On test automation</a>
+            <li><a href="/documentation/intro#types_of_testing">Types of testing</a>
+            <li><a href="/documentation/intro#about_this_documentation">About this documentation</a>
+        </ul>
+    </li>
+    <li><a href=https://www.seleniumhq.org/selenium-ide>Selenium IDE</a>
+    </li>
+    <li><a href="/documentation/install#selenium_installation">Selenium installation</a>
+        <ul>
+            <li><a href="/documentation/install#using_browser_specific_jar">Using browser specific JAR</a>
+            <li><a href="/documentation/install#using_non_browser_specific_jar">Using non browser specific JAR</a>
+            <li><a href="/documentation/install#using_standalone_jar">Using standalone JAR</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/start#getting_started_with_webdriver">Getting started with WebDriver</a>
+        <ul>
+            <li><a href="/documentation/start#consumer_browsers">Consumer browsers</a>
+            <li><a href="/documentation/start#specialised_browsers">Specialised browsers</a>
+            <li><a href="/documentation/start#other_third_party_drivers_and_plugins">Other third party drivers and plugins</a>
+            <li><a href="/documentation/start#locating_elements">Locating elements</a>
+            <li><a href="/documentation/start#performing_actions_on_the_aut">Performing actions on the AUT</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/wd#webdriver">WebDriver</a>
+        <ul>
+            <li><a href="/documentation/wd#driver_requirements">Driver requirements</a>
+            <li><a href="/documentation/wd#browser_launching_and_manipulation">Browser launching and manipulation</a>
+            <li><a href="/documentation/wd#waits">Waits</a>
+            <li><a href="/documentation/wd#support_classes">Support classes</a>
+            <li><a href="/documentation/wd#javascript_alerts_prompts_and_confirmations">JavaScript Alerts, Prompts and Confirmations</a>
+            <li><a href="/documentation/wd#http_proxies">HTTP proxies</a>
+            <li><a href="/documentation/wd#page_loading_strategy">Page loading strategy</a>
+            <li><a href="/documentation/wd#web_elements">Web elements</a>
+            <li><a href="/documentation/wd#keyboard">Keyboard</a>
+            <li><a href="/documentation/wd#mouse">Mouse</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/remote#remote_webdriver">Remote WebDriver</a>
+        <ul>
+            <li><a href="/documentation/remote#the_remote_webdriver_server">The Remote WebDriver server</a>
+            <li><a href="/documentation/remote#running_remote_webdriver_client">Running Remote WebDriver client</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/guidelines#guidelines_and_recommendations">Guidelines and Recommendations</a>
+        <ul>
+            <li><a href="/documentation/guidelines#page_object_models">Page object models</a>
+            <li><a href="/documentation/guidelines#domain_specific_language">Domain Specific Language</a>
+            <li><a href="/documentation/guidelines#generating_application_state">Generating application state</a>
+            <li><a href="/documentation/guidelines#mock_external_services">Mock external services</a>
+            <li><a href="/documentation/guidelines#improved_reporting">Improved reporting</a>
+            <li><a href="/documentation/guidelines#avoid_sharing_state">Avoid sharing state</a>
+            <li><a href="/documentation/guidelines#test_independency">Test independency</a>
+            <li><a href="/documentation/guidelines#consider_using_a_fluent_api">Consider using a fluent API</a>
+            <li><a href="/documentation/guidelines#fresh_browser_per_test">Fresh browser per test</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/worst#worst_practices">Worst practices</a>
+        <ul>
+            <li><a href="/documentation/worst#captchas">Captchas</a>
+            <li><a href="/documentation/worst#file_downloads">File downloads</a>
+            <li><a href="/documentation/worst#http_response_codes">HTTP response codes</a>
+            <li><a href="/documentation/worst#gmail_email_and_facebook_logins">Gmail, email, and Facebook logins</a>
+            <li><a href="/documentation/worst#test_dependency">Test dependency</a>
+            <li><a href="/documentation/worst#performance_testing">Performance testing</a>
+            <li><a href="/documentation/worst#link_spidering">Link spidering</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/grid#selenium_grid">Selenium Grid</a>
+        <ul>
+            <li><a href="/documentation/grid#purposes">Purposes and main functionalitys</a>
+            <li><a href="/documentation/grid#components">Components of a Selenium Grid</a>
+            <li><a href="/documentation/grid#setup">Setting up your own Selenium Grid</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/drivers#driver_idiosyncrasies">Driver idiosyncrasies</a>
+        <ul>
+            <li><a href="/documentation/drivers#shared_capabilities">Shared capabilities</a>
+            <li><a href="/documentation/drivers#driver_specific_capabilities">Driver specific capabilities</a>
+        </ul>
+    </li>
+    <li><a href="/documentation/support#support_packages">Support Packages</a>
+        <ul>
+            <li><a href="/documentation/support#browser_navigation">Browser navigation</a>
+            <li><a href="/documentation/support#working_with_colours">Working with colours</a>
+            <li><a href="/documentation/support#working_with_select_elements">Working with select elements</a>
+            <li><a href="/documentation/support#mouse_and_keyboard_actions_in_detail">Mouse and keyboard actions in detail</a>
+            <li><a href="/documentation/support#working_with_web_elements">Working with web elements</a>
+        </ul>
+    </li>
+</ul>
+</div>
+
+
+<h2>Front matter</h2>
+
+<div id=frontmatter><ul>
+    <li><a href="/documentation/attr#copyright_and_attributions">Copyright and attributions</a>
+        <ul>
+            <li><a href="/documentation/attr#attributions">Attributions</a>
+            <li><a href="/documentation/attr#html_version_and_source_code">HTML version and source code</a>
+            <li><a href="/documentation/attr#license">License</a>
+        </ul></li>
+    <li><a href="/documentation/typo#typographical_conventions">Typographical conventions</a>
+        <ul>
+            <li><a href="/documentation/typo#capitalisation_of_titles">Capitalisation of titles</a>
+            <li><a href="/documentation/typo#line_length">Line length</a>
+        </ul></li>
+</ul>
+</div>

@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset=utf-8>
+<title>Driver idiosyncrasies</title>
+<link rel="icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel="shortcut icon" href="../../../docs/favicon.ico" type="image/vnd.microsoft.icon">
+<link rel=stylesheet href="{{ .Site.BaseURL }}/css/documentation.css">
+<link rel=prev href=grid.html title=Grid>
+<link rel=next href=support.html title="The Java Support Package">
+<script src="{{ .Site.BaseURL }}/js/docs.js"></script>
+
+<h1>Driver idiosyncrasies</h1>
+
+
+<h2>Shared capabilities</h2>
+
+<h3>pageLoadStrategy</h3>
+<p>When navigating to a new page via URL, by default Selenium will wait
+ until the page has fully loaded before responding. This works well for
+ beginners, but can cause long wait times on pages that load a large
+ number of third party resources. Using a non default strategy can make
+ test execution faster in cases like this, but can also introduce flakiness
+ where elements on the page change position as elements load in and change
+ size.
+
+ <p>The page load strategy queries the
+ <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState">
+  document.readyState</a> as described in the table below:
+<table>
+ <tr><th>Strategy</th><th>Ready State</th><th>Notes</th></tr>
+ <tr><td>normal</td><td>complete</td><td>Used by default, waits for all
+  resources to download</td></tr>
+ <tr><td>eager</td><td>interactive</td><td>DOM access is ready, but other
+  resources like images may still be loading</td></tr>
+ <tr><td>none</td><td>Any</td><td>Does not block WebDriver at all</td></tr>
+</table>
+
+
+<h2>Driver specific capabilities</h2>
+
+<h3>Firefox</h3>
+<h4>Define Capabilities using FirefoxOptions</h4>
+<p>FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.</p>
+<pre><code class=java>
+FirefoxOptions options = new FirefoxOptions();
+options.addPreference("network.proxy.type", 0);
+driver = new RemoteWebDriver(options);
+</code></pre>
+
+<h4>Setting a custom profile</h4>
+<p>It is possible to create a custom profile for Firefox as demonstrated below.</p>
+<pre><code class=java>
+FirefoxProfile profile = new FirefoxProfile();
+FirefoxOptions options = new FirefoxOptions();
+options.setProfile(profile);
+driver = new RemoteWebDriver(options);
+</code></pre>
+
+<h3>Internet Explorer</h3>
+
+<h4>fileUploadDialogTimeout</h4>
+
+<p>In some environments, Internet Explorer may timeout when opening the
+ File Upload dialog. IEDriver has a default timeout of 1000ms, but you
+ can increase the timeout using the fileUploadDialogTimeout capability.

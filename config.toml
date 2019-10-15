@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://www.seleniumhq.org/"
 languageCode = "en-us"
 title = "SeleniumHQ Browser Automation"
 theme = "selenium"
