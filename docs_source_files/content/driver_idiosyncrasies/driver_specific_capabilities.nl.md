@@ -23,7 +23,9 @@ options.headless = True
 driver = webdriver.Firefox(options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var options = new FirefoxOptions();
+options.Proxy.Kind = ProxyKind.Direct;
+var driver = new FirefoxDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
@@ -54,7 +56,10 @@ firefox_profile.set_preference("javascript.enabled", False)
 options.profile = firefox_profile
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var options = new FirefoxOptions();
+var profile = new FirefoxProfile();
+options.Profile = profile;
+var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
@@ -70,3 +75,22 @@ options.profile = firefox_profile
 
 Het kan gebeuren dat Internet Explorer een timeout gooit wanneer het File Upload venster geopend word. IEDriver heeft standaard een timeout van 1000ms. Deze kan, in het geval van het File Upload venster, verhoogd worden via de `fileUploadDialogTimeout`-capability.
 
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// We don't have a Java code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# We don't have a Python code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+var options = new InternetExplorerOptions();
+options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
+var driver = new RemoteWebDriver(options);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# We don't have a Ruby code sample yet -  Help us out and raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+{{< / code-tab >}}
