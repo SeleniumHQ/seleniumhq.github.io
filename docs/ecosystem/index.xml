@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ecosystem on SeleniumHQ Browser Automation</title>
-    <link>/site/ecosystem/</link>
+    <link>https://seleniumhq.github.io/site/ecosystem/</link>
     <description>Recent content in Ecosystem on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/site/ecosystem/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://seleniumhq.github.io/site/ecosystem/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

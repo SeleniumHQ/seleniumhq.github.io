@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "https://seleniumhq.github.io/site/documentation"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
@@ -37,7 +37,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
-baseURL = "/documentation/en"
+baseURL = "https://seleniumhq.github.io/site/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -52,19 +52,19 @@ weight = 11
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> Credits"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
-url = "/contributing"
+url = "contributing"
 weight = 30
 
 [Languages.es]
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
-baseURL = "/documentation/es"
+baseURL = "https://seleniumhq.github.io/site/documentation/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
@@ -79,19 +79,19 @@ weight = 11
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> Créditos"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír"
-url = "/contributing"
+url = "contributing"
 weight = 30
 
 [Languages.nl]
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
-baseURL = "/documentation/nl"
+baseURL = "https://seleniumhq.github.io/site/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -106,19 +106,19 @@ weight = 11
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> Credits"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Hoe bij te dragen"
-url = "/contributing"
+url = "contributing"
 weight = 30
 
 [Languages.zh-cn]
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
-baseURL = "/documentation/zh-cn"
+baseURL = "https://seleniumhq.github.io/site/documentation/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -133,19 +133,19 @@ weight = 11
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> Credits"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
-url = "/contributing"
+url = "contributing"
 weight = 30
 
 [Languages.fr]
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
-baseURL = "/documentation/fr"
+baseURL = "https://seleniumhq.github.io/site/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
@@ -154,12 +154,12 @@ weight = 11
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> Crédits"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Comment contribuer"
-url = "/contributing"
+url = "contributing"
 weight = 30
 
 [[Languages.fr.menu.shortcuts]]
@@ -172,7 +172,7 @@ weight = 10
 title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
-baseURL = "/documentation/ja"
+baseURL = "https://seleniumhq.github.io/site/documentation/ja"
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
@@ -187,10 +187,10 @@ weight = 11
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-trophy'></i> クレジット"
-url = "/front_matter/copyright_and_attributions"
+url = "front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> 貢献方法"
-url = "/contributing"
+url = "contributing"
 weight = 30
