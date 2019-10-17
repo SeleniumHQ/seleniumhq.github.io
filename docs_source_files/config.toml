@@ -1,4 +1,4 @@
-baseURL = "https://seleniumhq.github.io/docs/site"
+baseURL = ""
 languageCode = "en-US"
 defaultContentLanguage = "en"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
@@ -21,8 +21,8 @@ enableGitInfo = true
 [params]
   # Change default color scheme with a variant one. Can be "red", "blue", "green".
   themeVariant = "selenium"
-  editURL = "https://github.com/SeleniumHQ/docs/edit/gh-pages/docs_source_files/content/"
-  ghrepo = "https://github.com/SeleniumHQ/docs/"
+  editURL = "https://github.com/SeleniumHQ/site/edit/master/docs_source_files/content/"
+  ghrepo = "https://github.com/SeleniumHQ/site/"
   description = "Documentation for Selenium"
   showVisitedLinks = true
   disableBreadcrumb = false
@@ -37,160 +37,160 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
-baseURL = "https://seleniumhq.github.io/docs/site/en"
+baseURL = "/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.en.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> Credits"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
-url = "contributing"
+url = "/contributing"
 weight = 30
 
 [Languages.es]
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
-baseURL = "https://seleniumhq.github.io/docs/site/es"
+baseURL = "/documentation/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Créditos"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> Créditos"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír"
-url = "contributing"
+url = "/contributing"
 weight = 30
 
 [Languages.nl]
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
-baseURL = "https://seleniumhq.github.io/docs/site/nl"
+baseURL = "/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Meld een probleem"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.nl.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> Credits"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Hoe bij te dragen"
-url = "contributing"
+url = "/contributing"
 weight = 30
 
 [Languages.zh-cn]
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
-baseURL = "https://seleniumhq.github.io/docs/site/zh-cn"
+baseURL = "/documentation/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.zh-cn.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> Credits"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> How to contribute"
-url = "contributing"
+url = "/contributing"
 weight = 30
 
 [Languages.fr]
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
-baseURL = "https://seleniumhq.github.io/docs/site/fr"
+baseURL = "/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.fr.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Crédits"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> Crédits"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> Comment contribuer"
-url = "contributing"
+url = "/contributing"
 weight = 30
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [Languages.ja]
 title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
-baseURL = "https://seleniumhq.github.io/docs/site/ja"
+baseURL = "/documentation/ja"
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/docs"
+url = "https://github.com/SeleniumHQ/site"
 weight = 10
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> バグ報告"
-url = "https://github.com/seleniumhq/docs/issues"
+url = "https://github.com/seleniumhq/site/issues"
 weight = 11
 
 [[Languages.ja.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> クレジット"
-url = "front_matter/copyright_and_attributions"
+name = "<i class='fas fa-fw fa-trophy'></i> クレジット"
+url = "/front_matter/copyright_and_attributions"
 weight = 20
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> 貢献方法"
-url = "contributing"
+url = "/contributing"
 weight = 30
