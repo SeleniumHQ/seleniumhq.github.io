@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Hacking with IntelliJ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="/" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsor">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/help">Support</a>
+    <a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img src="/images/search.png" class="search-icon" />
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+  <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="blog-container">
+  <div class="blog-content">
+    <div class="container dark-background">
+      February 8, 2017
+      <a href="/blog/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
+      <p>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they’ve asked us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and state my biases up-front so you’re aware of them.</p>
+
+<p>I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It’s still my favourite IDE for my Java work, and it’s plenty of fun to use. For some time, I’ve been using the (free) Community Edition, which is ample for many coding needs.</p>
+
+<p>Most of my work is in Java, and that’s where I know IDEA best. I dabble in Ruby and Python, and I’ve written a reasonably large amount of Javascript, all in IDEA.</p>
+
+<p>The Pros:</p>
+
+<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you’re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don’t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)</p>
+
+<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I’ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I’ll be honest, sometimes when they don’t). It’s made making use of lambdas a lot easier.</p>
+
+<p>For a while, IDEA was becoming slower and more bloated, but I’m pleased to see that, partly thanks to the work of developers from Facebook, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
+
+<p>There’s a nice wide range of plugins available for IDEA. I’ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn’t have been possible, but having them there is incredibly useful and makes the IDE even more capable.</p>
+
+<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely — it’s fun to see what new language features we’ll be able to use in the future!</p>
+
+<p>The Cons:</p>
+
+<p>Although it’s a fine product, there are some niggles to be had.</p>
+
+<p>Most annoyingly, the built in code analysis doesn’t always warn that some Java classes won’t compile. The most recent example was where IDEA didn’t flag that some lambdas couldn’t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release — certainly these same files compiled just fine with older Java releases.</p>
+
+<p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it’ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this same capability was present in IDEA!</p>
+
+<p>On the Selenium project, we use Buck for our builds. The Buck plugin doesn’t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an Ant step before a build is run, and it would be extremely useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s irksome to forget to run things!</p>
+
+<p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind it supports OSS. What’s not to love?</p>
+
+
+      <div class="share-container">
+        <h3>Share this: </h3>
+
+        <a href="mailto:?&subject=Selenium Blog - Hacking%20with%20IntelliJ&body=%2fblog%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=%2fblog%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u="><img class="social-icon" src="/images/facebook.png"/></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="blog-sidepane">
+    <h3>Support the Selenium project</h3>
+    <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
+    <div class="button-container">
+      <a href="https://www.seleniumhq.org/sponsors/">
+        <div class="button support-button"><b>LEARN MORE</b></div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Contribute</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Sponsors/Sponsoring</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a>License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium Webdriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-remote">Selenium Remote Control</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/help"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

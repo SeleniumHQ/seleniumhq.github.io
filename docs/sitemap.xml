@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/thirdparty/chromedriver/</loc>
+    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/thirdparty/</loc>
+    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/archive/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2019/</loc>
+    <lastmod>2019-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/long-live-selenium-ide/</loc>
+    <lastmod>2018-08-06T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/downloads/c#/</loc>
+    <lastmod>2018-08-02T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/downloads/</loc>
+    <lastmod>2018-08-02T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2018/</loc>
+    <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/firefox-55/</loc>
+    <lastmod>2017-08-09T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/thirdparty/geckodriver/</loc>
+    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/thirdparty/perl-6/</loc>
+    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/thirdparty/perl/</loc>
+    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/downloads/java/</loc>
+    <lastmod>2017-04-21T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/hacking-with-intellij/</loc>
+    <lastmod>2017-02-08T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2017/</loc>
+    <lastmod>2017-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/selenium-3.0/</loc>
+    <lastmod>2016-10-13T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/selenium-3-is-coming/</loc>
+    <lastmod>2016-10-04T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/year/2016/</loc>
+    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/announcing-selenium-3-beta/</loc>
+    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/year/</loc>
+    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/blog/fall-selenium-conf/</loc>
+    <lastmod>2016-06-23T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/2016/</loc>
+    <lastmod>2016-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/thirdparty/flex-pilot/</loc>
+    <lastmod>2011-04-07T00:00:00+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>1970-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/ecosystem/</loc>
+  </url>
+  
+  <url>
+    <loc>/getinvolved/</loc>
+  </url>
+  
+  <url>
+    <loc>/events/</loc>
+  </url>
+  
+  <url>
+    <loc>/history/</loc>
+  </url>
+  
+  <url>
+    <loc>/maven/</loc>
+  </url>
+  
+  <url>
+    <loc>/projects/</loc>
+  </url>
+  
+  <url>
+    <loc>/help/</loc>
+  </url>
+  
+  <url>
+    <loc>/sponsor/</loc>
+  </url>
+  
+  <url>
+    <loc>/sponsors/</loc>
+  </url>
+  
+</urlset>
