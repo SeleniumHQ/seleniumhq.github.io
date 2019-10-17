@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/index.css"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/index.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,700" rel="stylesheet">
 
@@ -33,7 +33,7 @@
                 to use Selenium WebDriver, a collection of language specific bindings to drive
                 a browser - the way it is meant to be driven.</p>
             <div class="download-button-container">
-                <a href="/downloads">
+                <a href="{{"downloads" | relURL}}">
                 <div class="download-button webdriver"><b>DOWNLOAD</b></div>
                 </a>
             </div>
@@ -51,7 +51,7 @@
               interactions with the browser.
             </p>
             <div class="download-button-container">
-                <a href="/downloads">
+                <a href="{{"downloads" | relURL}}">
                 <div class="download-button ide"><b>DOWNLOAD</b></div>
                 </a>
             </div>
@@ -65,7 +65,7 @@
                 and manage multiple environments from a central point, making it easy to run the tests
                 against a vast combination of browsers / OS then you want to use Selenium Grid.</p>
             <div class="download-button-container">
-                <a href="/downloads">
+                <a href="{{"downloads" | relURL}}">
                 <div class="download-button grid"><b>DOWNLOAD</b></div>
                 </a>
             </div>
@@ -95,7 +95,7 @@
         </div>
       {{ end }}
         <div class="button-container green">
-            <a href="/blog">
+            <a href="{{ .Site.BaseURL }}/blog">
                 <div class="button green"><b>MORE NEWS</b></div>
             </a>
         </div>
