@@ -23,17 +23,29 @@ to the use of the information contained herein.
 
 ### Thanks to:
 
-#### [Documentation](//github.com/SeleniumHQ/docs/)
-
-{{% ghcontributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
-
-#### [Selenium Main Repo](//github.com/SeleniumHQ/selenium/)
+#### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/selenium/contributors?per_page=100" %}}
+
+#### [Selenium IDE](//github.com/SeleniumHQ/selenium-ide/)
+
+{{% ghcontributors "https://api.github.com/repos/seleniumhq/selenium-ide/contributors?per_page=100" %}}
 
 #### [Docker Selenium](//github.com/SeleniumHQ/docker-selenium/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docker-selenium/contributors?per_page=100" %}}
+
+#### [Selenium Website & Docs](//github.com/SeleniumHQ/site/)
+
+{{% ghcontributors "https://api.github.com/repos/seleniumhq/site/contributors?per_page=100" %}}
+
+#### [Previous Selenium Website](//github.com/SeleniumHQ/www.seleniumhq.org/)
+
+{{% ghcontributors "https://api.github.com/repos/seleniumhq/www.seleniumhq.org/contributors?per_page=100" %}}
+
+#### [Previous Documentation Rewrite Project](//github.com/SeleniumHQ/docs/)
+
+{{% ghcontributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
 
 ## Third-Party software used by Selenium documentation project:
