@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Downloads on SeleniumHQ Browser Automation</title>
-    <link>/downloads/</link>
+    <link>/site/downloads/</link>
     <description>Recent content in Downloads on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 02 Aug 2018 00:00:00 +0200</lastBuildDate>
     
-	<atom:link href="/downloads/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/site/downloads/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/downloads/c#/</link>
+      <link>/site/downloads/c#/</link>
       <pubDate>Thu, 02 Aug 2018 00:00:00 +0200</pubDate>
       
-      <guid>/downloads/c#/</guid>
+      <guid>/site/downloads/c#/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/downloads/java/</link>
+      <link>/site/downloads/java/</link>
       <pubDate>Fri, 21 Apr 2017 00:00:00 +0200</pubDate>
       
-      <guid>/downloads/java/</guid>
+      <guid>/site/downloads/java/</guid>
       <description></description>
     </item>
     

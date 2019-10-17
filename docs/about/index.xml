@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>About Selenium on SeleniumHQ Browser Automation</title>
-    <link>/about/</link>
+    <link>/site/about/</link>
     <description>Recent content in About Selenium on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
-	<atom:link href="/about/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/site/about/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

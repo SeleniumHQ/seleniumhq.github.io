@@ -2,57 +2,57 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Third Party on SeleniumHQ Browser Automation</title>
-    <link>/thirdparty/</link>
+    <link>/site/thirdparty/</link>
     <description>Recent content in Third Party on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0100</lastBuildDate>
     
-	<atom:link href="/thirdparty/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/site/thirdparty/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>/thirdparty/chromedriver/</link>
+      <link>/site/thirdparty/chromedriver/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0100</pubDate>
       
-      <guid>/thirdparty/chromedriver/</guid>
+      <guid>/site/thirdparty/chromedriver/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/thirdparty/geckodriver/</link>
+      <link>/site/thirdparty/geckodriver/</link>
       <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>/thirdparty/geckodriver/</guid>
+      <guid>/site/thirdparty/geckodriver/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/thirdparty/perl-6/</link>
+      <link>/site/thirdparty/perl-6/</link>
       <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>/thirdparty/perl-6/</guid>
+      <guid>/site/thirdparty/perl-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/thirdparty/perl/</link>
+      <link>/site/thirdparty/perl/</link>
       <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
       
-      <guid>/thirdparty/perl/</guid>
+      <guid>/site/thirdparty/perl/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>/thirdparty/flex-pilot/</link>
+      <link>/site/thirdparty/flex-pilot/</link>
       <pubDate>Thu, 07 Apr 2011 00:00:00 +0200</pubDate>
       
-      <guid>/thirdparty/flex-pilot/</guid>
+      <guid>/site/thirdparty/flex-pilot/</guid>
       <description>A Selenium IDE plugin for integrating with Flex-Pilot, for Flex automation. More info.</description>
     </item>
     

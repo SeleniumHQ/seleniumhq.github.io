@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "/site"
 languageCode = "en-us"
 title = "SeleniumHQ Browser Automation"
 theme = "selenium"
