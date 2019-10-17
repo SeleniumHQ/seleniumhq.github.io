@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Guidelines and recommendations on Selenium documentatie</title>
+    <link>/documentation/nl/guidelines_and_recommendations/</link>
+    <description>Recent content in Guidelines and recommendations on Selenium documentatie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="/documentation/nl/guidelines_and_recommendations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Page object models</title>
+      <link>/documentation/nl/guidelines_and_recommendations/page_object_models/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/page_object_models/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
+    </item>
+    
+    <item>
+      <title>Domain specific language</title>
+      <link>/documentation/nl/guidelines_and_recommendations/domain_specific_language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/domain_specific_language/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
+Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;rsquo;t care about the decoration, animations, or graphics.</description>
+    </item>
+    
+    <item>
+      <title>Generating application state</title>
+      <link>/documentation/nl/guidelines_and_recommendations/generating_application_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/generating_application_state/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Selenium should not be used to prepare a test case. All repetitive actions, and preparation for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+    </item>
+    
+    <item>
+      <title>Mock external services</title>
+      <link>/documentation/nl/guidelines_and_recommendations/mock_external_services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/mock_external_services/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
+    </item>
+    
+    <item>
+      <title>Improved reporting</title>
+      <link>/documentation/nl/guidelines_and_recommendations/improved_reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/improved_reporting/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
+    </item>
+    
+    <item>
+      <title>Avoid sharing state</title>
+      <link>/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
+Don&amp;rsquo;t share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
+    </item>
+    
+    <item>
+      <title>Test independency</title>
+      <link>/documentation/nl/guidelines_and_recommendations/test_independency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/test_independency/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Write each test as its own unit. Write the tests in a way that won&amp;rsquo;t be reliant on other tests to complete:
+Let&amp;rsquo;s say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+    </item>
+    
+    <item>
+      <title>Consider using a fluent API</title>
+      <link>/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
+    </item>
+    
+    <item>
+      <title>Fresh browser per test</title>
+      <link>/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.</description>
+    </item>
+    
+  </channel>
+</rss>
