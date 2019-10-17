@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>版权页 on Selenium 文档</title>
-    <link>/documentation/zh-cn/front_matter/</link>
+    <link>https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/</link>
     <description>Recent content in 版权页 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="/documentation/zh-cn/front_matter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Copyright and attributions</title>
-      <link>/documentation/zh-cn/front_matter/copyright_and_attributions/</link>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
@@ -24,10 +24,10 @@ Every effort has been made to make this documentation as complete and as accurat
     
     <item>
       <title>Typographical conventions</title>
-      <link>/documentation/zh-cn/front_matter/typographical_conventions/</link>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/documentation/zh-cn/front_matter/typographical_conventions/</guid>
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/front_matter/typographical_conventions/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.
 Line length When editing the documentation’s source, which is written in plain HTML, limit your line lengths to around 72 characters.</description>
