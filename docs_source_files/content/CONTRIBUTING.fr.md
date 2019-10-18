@@ -161,7 +161,7 @@ Cela réduira d'autant le temps d'intégration de votre demande.
 % git push origin my-feature-branch
 ```
 
-Rendez-vous sur https://github.com/yourusername/docs.git 
+Rendez-vous sur https://github.com/yourusername/site.git 
 et cliquez sur le bouton _Pull Request_ 
 et remplissez le formulaire. 
 **Merci d'indiquer que vous avez signé le CLA** (voir Etape 7).

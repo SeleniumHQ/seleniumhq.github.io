@@ -128,7 +128,7 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-去 <https://github.com/yourusername/docs.git> 并按下 _Pull
+去 <https://github.com/yourusername/site.git> 并按下 _Pull
 Request_ 并填写表单。
 **请注明您已签署了 CLA** （见 Step 7）。
 

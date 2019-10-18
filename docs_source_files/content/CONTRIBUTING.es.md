@@ -119,7 +119,7 @@ Cuando abre su solicitud (_pull request_), le pedimos que indique que ha firmado
 % git push origin my-feature-branch
 ```
 
-Vaya a https://github.com/yourusername/docs.git y presione _Pull Request_ y complete el formulario. **Indique que ha firmado el CLA** (consulte el Paso 7).
+Vaya a https://github.com/yourusername/site.git y presione _Pull Request_ y complete el formulario. **Indique que ha firmado el CLA** (consulte el Paso 7).
 
 Las solicitudes generalmente se revisan en unos pocos días. Si hay comentarios que abordar, aplique sus cambios en los nuevos commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) y avance a la misma rama (_branch_).
 

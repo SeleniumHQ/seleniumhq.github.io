@@ -123,7 +123,7 @@ Fixes #141
 % git push origin my-feature-branch
 ```
 
-https://github.com/yourusername/docs.git へ行き _PullRequest_ を押して、フォームに記入します。**CLAに署名したことを提示してください** (ステップ 6参照)。
+https://github.com/yourusername/site.git へ行き _PullRequest_ を押して、フォームに記入します。**CLAに署名したことを提示してください** (ステップ 6参照)。
 
 通常プルリクエストは２−３日中にレビューされます。もし処理しなくてはいけないコメントがあるならば、新たなコミット(_commit_)に修正箇所を含めます。(なるべく[フィックスアップ(_fixups_)](http://git-scm.com/docs/git-commit)を使用する)そして同じブランチ(_branch_)にプッシュ(_push_)します。
 

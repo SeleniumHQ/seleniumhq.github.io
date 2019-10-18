@@ -165,7 +165,7 @@ it.
 % git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/docs.git and press the _Pull
+Go to https://github.com/yourusername/site.git and press the _Pull
 Request_ and fill out the form. **Please indicate that you've signed
 the CLA** (see Step 7).
 

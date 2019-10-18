@@ -594,7 +594,7 @@ and provides an API that allows you to invoke pages, fill out forms, click
 links, etc. It has JavaScript support and is able to work with AJAX libraries,
 simulating Chrome, Firefox or Internet Explorer depending on the configuration
 used. It has been moved to a 
-[new location](//htmlunit.sourceforge.net/gettingStarted.html). 
+[new location](http://htmlunit.sourceforge.net/gettingStarted.html). 
 The source is maintained on svn.
 
 
