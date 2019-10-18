@@ -14,7 +14,7 @@ permettant l'écriture de code interchangeable pour tous les principaux navigate
 
 Ce projet est rendu possible grâce au contributeurs volontaires 
 ayant investi des milliers d'heures de leur temps 
-et rendu le code source [disponible librement](attr.md#license)
+et rendu le code source [disponible librement]({{< ref "/front_matter/copyright_and_attributions.fr.md#license" >}})
 à quiconque souhaitant l'utiliser et l'améliorer ou simplement s'amuser.
 
 Selenium rassemble distributeurs de navigateur, ingénieurs et entousiastes

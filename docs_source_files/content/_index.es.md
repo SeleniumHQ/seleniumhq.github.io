@@ -9,7 +9,7 @@ Selenium es un proyecto padre que cobija a una gama de herramientas y biblioteca
 Proporciona extensiones para emular la interacción del usuario con los navegadores, un servidor de distribución para escalar la asignación del navegador y la infraestructura para implementaciones de la 
 [Especificación W3C del WebDriver](//www.w3.org/TR/webdriver/) que le permite escribir código intercambiable para todos los principales navegadores web.
 
-Este proyecto es posible gracias a los colaboradores voluntarios que han dedicado miles de horas de su propio tiempo y han hecho que el código fuente [esté disponible gratuitamente](licencia attr.md #) para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+Este proyecto es posible gracias a los colaboradores voluntarios que han dedicado miles de horas de su propio tiempo y han hecho que el código fuente [esté disponible gratuitamente]({{< ref "/front_matter/copyright_and_attributions.es.md#license" >}}) para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
 
 Selenium reúne a proveedores de navegadores, ingenieros y entusiastas para promover una discusión abierta sobre la automatización de la plataforma web.
 El proyecto organiza [una conferencia anual](//seleniumconf.com/) para enseñar y nutrir a la comunidad.

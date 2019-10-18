@@ -15,7 +15,7 @@ that lets you write interchangeable code for all major web browsers.
 
 This project is made possible by volunteer contributors
 who have put in thousands of hours of their own time,
-and made the source code [freely available](attr.md#license)
+and made the source code [freely available]({{< ref "/front_matter/copyright_and_attributions.en.md#license" >}})
 for anyone to use, enjoy, and improve.
 
 Selenium brings together browser vendors, engineers, and enthusiasts

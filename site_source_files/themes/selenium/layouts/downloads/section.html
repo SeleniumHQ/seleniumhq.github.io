@@ -46,7 +46,7 @@
 
     <p>In order to create scripts that interact with the Selenium Server (Selenium RC, Selenium Remote WebDriver) or create local Selenium WebDriver scripts, you need to make use of language-specific client drivers. These languages include both 1.x and 2.x style clients.</p>
 
-    <p>While language bindings for <a href="/thirdparty">other languages exist</a>, these are the core ones that are supported by the main project hosted on GitHub.</p>
+    <p>While language bindings for <a href="{{"thirdparty" | relURL}}">other languages exist</a>, these are the core ones that are supported by the main project hosted on GitHub.</p>
 
 
     <div class="table">
@@ -103,7 +103,7 @@
 
 <div class="container basic">
     <h2>Maven Information</h2>
-    <p>If you're using Maven, you will find more information <a href="/maven">here</a>.</p>
+    <p>If you're using Maven, you will find more information <a href="{{"maven" | relURL}}">here</a>.</p>
 </div>
 
 <div class="container basic dark-background">
@@ -209,7 +209,7 @@
         <h2>Selenium Projects</h2>
         <p>Selenium has many projects that combine to make a versatile testing system.</p>
         <div class="button-container">
-            <a href="/projects">
+            <a href="{{"projects" | relURL}}">
                 <div class="button"><b>VIEW PROJECTS</b></div>
             </a>
         </div>
@@ -238,11 +238,11 @@
         {{ range .Site.Data.releases }}
         <div class="releases-row">
             <div id="{{.version}}-expand" class="name toggle show" >
-                <img class="expand-icon" src="{{ .Site.BaseURL }}/images/prev_releases_plus.png" onClick="openVersion({{.version}})"/>
+                <img class="expand-icon" src="{{"images/prev_releases_plus.png" | relURL}}" onClick="openVersion({{.version}})"/>
                 {{ .version }}
             </div>
             <div id="{{.version}}-collapse" class="name toggle">
-                <img class="collapse-icon" src="{{ .Site.BaseURL }}/images/prev_releases_plus.png" onClick="openVersion({{.version}})"/>
+                <img class="collapse-icon" src="{{"images/prev_releases_plus.png" | relURL}}" onClick="openVersion({{.version}})"/>
                 {{ .version }}
             </div>
             <div class="last-modified"></div>
