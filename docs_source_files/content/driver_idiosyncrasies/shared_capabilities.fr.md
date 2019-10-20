@@ -22,8 +22,8 @@ The page load strategy queries the
 [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
 as described in the table below:
 
-| Strategy | Ready State | Notes                                                                     |
-| -------- | ----------- | ------------------------------------------------------------------------- |
-| normal   | complete    | Used by default, waits for all resources to download                      |
-| eager    | interactive | DOM access is ready, but other resources like images may still be loading |
-| none     | Any         | Does not block WebDriver at all                                           |
+| Strategy | Ready State | Notes |
+| -------- | ----------- | ----- |
+| normal | complete | Used by default, waits for all resources to download |
+| eager | interactive | DOM access is ready, but other resources like images may still be loading |
+| none | Any | Does not block WebDriver at all |
