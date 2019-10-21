@@ -40,6 +40,11 @@ languageName = "English"
 baseURL = "https://seleniumhq.github.io/site/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
+
+[[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/SeleniumHQ/site"
@@ -65,6 +70,11 @@ title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
 baseURL = "https://seleniumhq.github.io/site/documentation/es"
+
+[[Languages.es.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
@@ -94,6 +104,11 @@ languageName = "Nederlands"
 baseURL = "https://seleniumhq.github.io/site/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
+
+[[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/SeleniumHQ/site"
@@ -119,6 +134,11 @@ title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
 baseURL = "https://seleniumhq.github.io/site/documentation/zh-cn"
+
+[[Languages.zh-cn.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
@@ -163,6 +183,11 @@ url = "contributing"
 weight = 30
 
 [[Languages.fr.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
+
+[[Languages.fr.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
 url = "https://github.com/SeleniumHQ/site"
@@ -173,6 +198,11 @@ title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
 baseURL = "https://seleniumhq.github.io/site/documentation/ja"
+
+[[Languages.ja.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://seleniumhq.github.io/site/"
+weight = 1
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
