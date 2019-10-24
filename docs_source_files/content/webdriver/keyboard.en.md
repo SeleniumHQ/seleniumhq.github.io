@@ -44,9 +44,35 @@ driver.get("http://www.google.com")
 driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+
+namespace HelloSeleniumTesting
+{
+    public class HelloSelenium
+    {
+        public static void Main(string[] args)
+        {
+            IWebDriver driver = new FirefoxDriver();
+            try
+            {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://google.com");
+
+                // Enter text "q" and perform keyboard action "Enter"
+                driver.FindElement(By.Name("q")).SendKeys("q" + Keys.Enter);
+            }
+            finally
+            {
+                driver.Quit();
+            }
+
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
+  
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
