@@ -9,12 +9,13 @@ branches:
     - /.*/
 script:
   - chmod +x $TRAVIS_BUILD_DIR/build-site.sh && $TRAVIS_BUILD_DIR/build-site.sh
+  - git --no-pager branch -a
 deploy:
   - provider: script
     script: chmod +x $TRAVIS_BUILD_DIR/deploy.sh && $TRAVIS_BUILD_DIR/deploy.sh
     skip_cleanup: true
-#    on:
-#      branch: master
+    on:
+      branch: master
 #notifications:
 #  irc:
 #    channels:
