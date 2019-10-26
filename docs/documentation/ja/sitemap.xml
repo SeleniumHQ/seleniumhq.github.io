@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
@@ -214,7 +214,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/page_object_models/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -249,7 +249,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/grid/purposes_and_main_functionalities/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -459,7 +459,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/grid/components_of_a_grid/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -494,7 +494,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/domain_specific_language/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -949,7 +949,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/generating_application_state/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1124,7 +1124,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/grid/setting_up_your_own_grid/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1474,7 +1474,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/improved_reporting/</loc>
-    <lastmod>2019-10-02T21:51:03+02:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1649,7 +1649,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1789,7 +1789,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1894,7 +1894,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/test_independency/</loc>
-    <lastmod>2019-08-30T03:51:59-05:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1929,7 +1929,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/</loc>
-    <lastmod>2019-10-02T21:51:03+02:00</lastmod>
+    <lastmod>2019-10-26T22:52:36+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2314,7 +2314,6 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/categories/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2384,7 +2383,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/</loc>
-    <lastmod>2019-10-10T00:14:35+02:00</lastmod>
+    <lastmod>2019-10-18T18:26:40+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2419,7 +2418,6 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/documentation/ja/tags/</loc>
-    <priority>0</priority>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"

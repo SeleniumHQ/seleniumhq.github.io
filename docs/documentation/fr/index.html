@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Le Projet d&#39;Automatisation de Navigateur Selenium :: Documentation Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/nucleus.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/fontawesome-all.min.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/hybrid.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/featherlight.min.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/perfect-scrollbar.min.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/auto-complete.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/atom-one-dark-reasonable.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/theme.css?1571415930" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/fr/css/hugo-theme.css?1571415930" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/nucleus.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/fontawesome-all.min.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/hybrid.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/featherlight.min.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/perfect-scrollbar.min.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/auto-complete.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/atom-one-dark-reasonable.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/theme.css?1572125904" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/fr/css/hugo-theme.css?1572125904" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/fr/css/theme-selenium.css?1571415930" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/fr/css/theme-selenium.css?1572125904" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/jquery-3.3.1.min.js?1571415930"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/jquery-3.3.1.min.js?1572125904"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/lunr.min.js?1571415930"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/auto-complete.js?1571415930"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/lunr.min.js?1572125904"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/auto-complete.js?1572125904"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/search.js?1571415930"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/fr/js/search.js?1572125904"></script>
 
     
   </div>
@@ -1803,29 +1803,29 @@ Voici par exemple une des plus simples instructions disponibles:</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.WebDriverWait<span style="color:#719e07">;</span>
-<span style="color:#719e07">import static</span> org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.ui.WebDriverWait;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">static</span> org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
 
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
-        WebDriverWait wait <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> 10<span style="color:#719e07">);</span>
-        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span><span style="color:#719e07">);</span>
-            driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
-            WebElement firstResult <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>presenceOfElementLocated<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h3&gt;div&#34;</span><span style="color:#719e07">)));</span>
-            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>firstResult<span style="color:#719e07">.</span>getAttribute<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;textContent&#34;</span><span style="color:#719e07">));</span>
-        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-        <span style="color:#719e07">}</span>
-    <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+        WebDriverWait <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 10);
+        <span style="color:#719e07">try</span> {
+            driver.get(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
+            driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
+            WebElement <span style="color:#268bd2">firstResult</span> <span style="color:#719e07">=</span> wait.until(presenceOfElementLocated(By.cssSelector(<span style="color:#2aa198">&#34;h3&gt;div&#34;</span>)));
+            System.out.println(firstResult.getAttribute(<span style="color:#2aa198">&#34;textContent&#34;</span>));
+        } <span style="color:#719e07">finally</span> {
+            driver.quit();
+        }
+    }
+}
   </code></pre></div>
 </section>
   
@@ -1901,20 +1901,20 @@ wait <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</
 
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder, By, Key, until} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder, By, Key, until} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> example() {
-    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
     <span style="color:#719e07">try</span> {
         <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
 
         <span style="color:#586e75">// Enter text &#34;cheese&#34; and perform keyboard action &#34;Enter&#34;
-</span><span style="color:#586e75"></span>        <span style="color:#268bd2">await</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;cheese&#39;</span>, Key.ENTER);
+</span><span style="color:#586e75"></span>        await driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;cheese&#39;</span>, Key.ENTER);
 
-        <span style="color:#268bd2">let</span> firstResult <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.wait(until.elementLocated(By.css(<span style="color:#2aa198">&#39;h3&gt;div&#39;</span>)), <span style="color:#2aa198">10000</span>);
+        <span style="color:#268bd2">let</span> firstResult <span style="color:#719e07">=</span> await driver.wait(until.elementLocated(By.css(<span style="color:#2aa198">&#39;h3&gt;div&#39;</span>)), <span style="color:#2aa198">10000</span>);
 
-        console.log(<span style="color:#268bd2">await</span> firstResult.getAttribute(<span style="color:#2aa198">&#39;textContent&#39;</span>));
+        console.log(await firstResult.getAttribute(<span style="color:#2aa198">&#39;textContent&#39;</span>));
     }
     <span style="color:#719e07">finally</span>{
         driver.quit();
@@ -3088,19 +3088,19 @@ pourront vous aider à vous mettre à niveau très rapidement.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/clipboard.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/perfect-scrollbar.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/perfect-scrollbar.jquery.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/jquery.sticky.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/featherlight.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/highlight.pack.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/clipboard.min.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/perfect-scrollbar.min.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/perfect-scrollbar.jquery.min.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/jquery.sticky.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/featherlight.min.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/highlight.pack.js?1572125904"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/modernizr.custom-3.6.0.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/learn.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/fr/js/hugo-learn.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/modernizr.custom-3.6.0.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/learn.js?1572125904"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/fr/js/hugo-learn.js?1572125904"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/fr/mermaid/mermaid.css?1571415931" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/fr/mermaid/mermaid.js?1571415931"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/fr/mermaid/mermaid.css?1572125904" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/fr/mermaid/mermaid.js?1572125904"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

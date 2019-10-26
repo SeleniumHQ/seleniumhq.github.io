@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Waits :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1571415931" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1572125905" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1571415931" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1572125905" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1572125905"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1571415931"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1571415931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1572125905"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1572125905"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1571415931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1572125905"></script>
 
     
   </div>
@@ -1890,9 +1890,9 @@ when trying to find an element.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span><span style="color:#719e07">);</span>
-WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;p&#34;</span><span style="color:#719e07">));</span>
-assertEquals<span style="color:#719e07">(</span>element<span style="color:#719e07">.</span>getText<span style="color:#719e07">(),</span> <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span><span style="color:#719e07">);</span>
+driver.get(<span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span>);
+WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>));
+assertEquals(element.getText(), <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -1941,9 +1941,9 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;file:///race_condition.html&#39;</span>);
-<span style="color:#719e07">const</span> element <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;p&#39;</span>));
-assert.strictEqual(<span style="color:#268bd2">await</span> element.getText(), <span style="color:#2aa198">&#39;Hello from JavaScript!&#39;</span>);
+await driver.get(<span style="color:#2aa198">&#39;file:///race_condition.html&#39;</span>);
+<span style="color:#268bd2">const</span> element <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;p&#39;</span>));
+assert.strictEqual(await element.getText(), <span style="color:#2aa198">&#39;Hello from JavaScript!&#39;</span>);
   
 </code></pre></div>
 </section>
@@ -2056,14 +2056,14 @@ has been added to the DOM:</p>
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
-driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span><span style="color:#719e07">);</span>
-driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
+driver.get(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
+driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
 <span style="color:#586e75">// Initialize and wait till element(link) became clickable - timeout in 10 seconds
-</span><span style="color:#586e75"></span>WebElement firstResult <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> 10<span style="color:#719e07">)</span>
-        <span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>elementToBeClickable<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>xpath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;//a/h3&#34;</span><span style="color:#719e07">)));</span>
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">firstResult</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 10)
+        .until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
 <span style="color:#586e75">// Print the first result
-</span><span style="color:#586e75"></span>System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>firstResult<span style="color:#719e07">.</span>getText<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>System.out.println(firstResult.getText());
   </code></pre></div>
 </section>
   
@@ -2125,13 +2125,13 @@ wait <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</
 
 <section id="javascriptcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> documentInitialised <span style="color:#719e07">=</span> () =&gt;
+<span style="color:#268bd2">const</span> documentInitialised <span style="color:#719e07">=</span> () =&gt;
     driver.executeScript(<span style="color:#2aa198">&#39;return initialised&#39;</span>);
 
-<span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;file:///race_condition.html&#39;</span>);
-<span style="color:#268bd2">await</span> driver.wait(() =&gt; documentInitialised(), <span style="color:#2aa198">10000</span>);
-<span style="color:#719e07">const</span> element <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;p&#39;</span>));
-assert.strictEqual(<span style="color:#268bd2">await</span> element.getText(), <span style="color:#2aa198">&#39;Hello from JavaScript!&#39;</span>);
+await driver.get(<span style="color:#2aa198">&#39;file:///race_condition.html&#39;</span>);
+await driver.wait(() =&gt; documentInitialised(), <span style="color:#2aa198">10000</span>);
+<span style="color:#268bd2">const</span> element <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;p&#39;</span>));
+assert.strictEqual(await element.getText(), <span style="color:#2aa198">&#39;Hello from JavaScript!&#39;</span>);
   
 </code></pre></div>
 </section>
@@ -2207,9 +2207,9 @@ we can refactor our instructions to be more concise:</p>
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement foo <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> 3<span style="color:#719e07">)</span>
-            <span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>driver <span style="color:#719e07">-&gt;</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)));</span>
-assertEquals<span style="color:#719e07">(</span>foo<span style="color:#719e07">.</span>getText<span style="color:#719e07">(),</span> <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span><span style="color:#719e07">);</span> 
+WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 3)
+            .until(driver <span style="color:#719e07">-&gt;</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)));
+assertEquals(foo.getText(), <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>); 
   </code></pre></div>
 </section>
   
@@ -2333,7 +2333,7 @@ as the penalty for not hitting a successful condition can be expensive.</p>
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//new WebDriverWait(driver,3).until(some_condition(WebElement))
-</span><span style="color:#586e75"></span><span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> 3<span style="color:#719e07">).</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>elementToBeClickable<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>xpath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;//a/h3&#34;</span><span style="color:#719e07">)));</span>
+</span><span style="color:#586e75"></span><span style="color:#719e07">new</span> WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
   </code></pre></div>
 </section>
   
@@ -2482,10 +2482,10 @@ Once set, the implicit wait is set for the life of the session.</p>
 
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
-driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>timeouts<span style="color:#719e07">().</span>implicitlyWait<span style="color:#719e07">(</span>10<span style="color:#719e07">,</span> TimeUnit<span style="color:#719e07">.</span>SECONDS<span style="color:#719e07">);</span>
-driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span><span style="color:#719e07">);</span>
-WebElement myDynamicElement <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myDynamicElement&#34;</span><span style="color:#719e07">));</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+driver.get(<span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>);
+WebElement <span style="color:#268bd2">myDynamicElement</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>));
   </code></pre></div>
 </section>
   
@@ -2533,15 +2533,15 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 <section id="javascriptcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span>(){
+(async <span style="color:#268bd2">function</span>(){
 
 <span style="color:#586e75">// Apply timeout for 10 seconds
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.manage().setTimeouts( { implicit<span style="color:#719e07">:</span> <span style="color:#2aa198">10000</span> } );
+</span><span style="color:#586e75"></span>await driver.manage().setTimeouts( { implicit<span style="color:#719e07">:</span> <span style="color:#2aa198">10000</span> } );
 
 <span style="color:#586e75">// Navigate to url
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;http://somedomain/url_that_delays_loading&#39;</span>);
+</span><span style="color:#586e75"></span>await driver.get(<span style="color:#2aa198">&#39;http://somedomain/url_that_delays_loading&#39;</span>);
 
-<span style="color:#268bd2">let</span> webElement <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>));
+<span style="color:#268bd2">let</span> webElement <span style="color:#719e07">=</span> await driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>));
 
 }());
   
@@ -2612,16 +2612,16 @@ such as <code>NoSuchElementException</code> when searching for an element on the
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Waiting 30 seconds for an element to be present on the page, checking
 </span><span style="color:#586e75">// for its presence once every 5 seconds.
-</span><span style="color:#586e75"></span>Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> wait <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FluentWait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;(</span>driver<span style="color:#719e07">)</span>
-  <span style="color:#719e07">.</span>withTimeout<span style="color:#719e07">(</span>Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>30<span style="color:#719e07">))</span>
-  <span style="color:#719e07">.</span>pollingEvery<span style="color:#719e07">(</span>Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>5<span style="color:#719e07">))</span>
-  <span style="color:#719e07">.</span>ignoring<span style="color:#719e07">(</span>NoSuchElementException<span style="color:#719e07">.</span>class<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FluentWait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span>(driver)
+  .withTimeout(Duration.ofSeconds(30))
+  .pollingEvery(Duration.ofSeconds(5))
+  .ignoring(NoSuchElementException.class);
 
-WebElement foo <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Function<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">,</span> WebElement<span style="color:#719e07">&gt;()</span> <span style="color:#719e07">{</span>
-  <span style="color:#268bd2">public</span> WebElement <span style="color:#268bd2">apply</span><span style="color:#719e07">(</span>WebDriver driver<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">return</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;foo&#34;</span><span style="color:#719e07">));</span>
-  <span style="color:#719e07">}</span>
-<span style="color:#719e07">});</span>
+WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> wait.until(<span style="color:#719e07">new</span> Function<span style="color:#719e07">&lt;</span>WebDriver, WebElement<span style="color:#719e07">&gt;</span>() {
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">WebElement</span> apply(WebDriver <span style="color:#268bd2">driver</span>) {
+    <span style="color:#719e07">return</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;foo&#34;</span>));
+  }
+});
   </code></pre></div>
 </section>
   
@@ -3802,19 +3802,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1572125905"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1572125905"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1571415931" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1571415931"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1572125905" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1572125905"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

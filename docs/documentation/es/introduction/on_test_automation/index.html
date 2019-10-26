@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Sobre automatización de pruebas :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1571415928" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1571415928" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1572125897" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1572125897" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1571415928" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1572125897" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1571415928"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1572125897"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1571415928"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1571415928"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1572125897"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1572125897"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1571415928"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1572125897"></script>
 
     
   </div>
@@ -1928,13 +1928,13 @@ Deberá realizar las siguientes acciones:</p>
 </span><span style="color:#586e75">// privilegios administrativos. En el momento en que se cree el usuario, su correo electrónico
 </span><span style="color:#586e75">// la dirección y la contraseña se generan aleatoriamente; ni siquiera necesita
 </span><span style="color:#586e75">// conocerlos.
-</span><span style="color:#586e75"></span>User user <span style="color:#719e07">=</span> UserFactory<span style="color:#719e07">.</span>createCommonUser<span style="color:#719e07">();</span> <span style="color:#586e75">// Este método se define en otra parte.
+</span><span style="color:#586e75"></span>User <span style="color:#268bd2">user</span> <span style="color:#719e07">=</span> UserFactory.createCommonUser(); <span style="color:#586e75">// Este método se define en otra parte.
 </span><span style="color:#586e75"></span>
 <span style="color:#586e75">// Inicie sesión como este usuario.
 </span><span style="color:#586e75">// Iniciar sesión en este sitio lo lleva a su página personal &#34;Mi cuenta&#34;, por lo que
 </span><span style="color:#586e75">// El método loginAs devuelve el objeto AccountPage, lo que le permite
 </span><span style="color:#586e75">// realiza acciones desde AccountPage.
-</span><span style="color:#586e75"></span>AccountPage accountPage <span style="color:#719e07">=</span> loginAs<span style="color:#719e07">(</span>user<span style="color:#719e07">.</span>getEmail<span style="color:#719e07">(),</span> user<span style="color:#719e07">.</span>getPassword<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>AccountPage <span style="color:#268bd2">accountPage</span> <span style="color:#719e07">=</span> loginAs(user.getEmail(), user.getPassword());
   </code></pre></div>
 </section>
   
@@ -2060,17 +2060,17 @@ Lo deseable es escribir el código como el usuario que intenta resolver su probl
 <span style="color:#586e75">// El Unicornio es un Objeto de nivel superior: tiene atributos, que se establecen aquí.
 </span><span style="color:#586e75">// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
 </span><span style="color:#586e75">// con el navegador de cualquier manera.
-</span><span style="color:#586e75"></span>Unicorn sparkles <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Sparkles&#34;</span><span style="color:#719e07">,</span> UnicornColors<span style="color:#719e07">.</span>PURPLE<span style="color:#719e07">,</span> UnicornAccessories<span style="color:#719e07">.</span>SUNGLASSES<span style="color:#719e07">,</span> UnicornAdornments<span style="color:#719e07">.</span>STAR_TATTOOS<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>Unicorn <span style="color:#268bd2">sparkles</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn(<span style="color:#2aa198">&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
 <span style="color:#586e75">// Como ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
 </span><span style="color:#586e75">// lugar real donde configuras unicornios. Llamando al método &#34;addUnicorn&#34;
 </span><span style="color:#586e75">// nos lleva allí.
-</span><span style="color:#586e75"></span>AddUnicornPage addUnicornPage <span style="color:#719e07">=</span> accountPage<span style="color:#719e07">.</span>addUnicorn<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>AddUnicornPage <span style="color:#268bd2">addUnicornPage</span> <span style="color:#719e07">=</span> accountPage.addUnicorn();
 
 <span style="color:#586e75">// Ahora que estamos en AddUnicornPage, pasaremos el objeto &#34;sparkles&#34;
 </span><span style="color:#586e75">// al método createUnicorn(). Este método tomará los atributos de Sparkles,
 </span><span style="color:#586e75">// llena el formulario y hace clic en el botón enviar.
-</span><span style="color:#586e75"></span>UnicornConfirmationPage unicornConfirmationPage <span style="color:#719e07">=</span> addUnicornPage<span style="color:#719e07">.</span>createUnicorn<span style="color:#719e07">(</span>sparkles<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>UnicornConfirmationPage <span style="color:#268bd2">unicornConfirmationPage</span> <span style="color:#719e07">=</span> addUnicornPage.createUnicorn(sparkles);
   </code></pre></div>
 </section>
   
@@ -2191,7 +2191,7 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 <span style="color:#586e75">// El método exist() de UnicornConfirmationPage tomará Sparkles
 </span><span style="color:#586e75">// objeto: una especificación de los atributos que desea ver y compararlos
 </span><span style="color:#586e75">// con los campos en la página.
-</span><span style="color:#586e75"></span>Assert<span style="color:#719e07">.</span>assertTrue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Deben haberse creado Sparkles, con todos los atributos intactos.&#34;</span><span style="color:#719e07">,</span> unicornConfirmationPage<span style="color:#719e07">.</span>exists<span style="color:#719e07">(</span>sparkles<span style="color:#719e07">));</span>
+</span><span style="color:#586e75"></span>Assert.assertTrue(<span style="color:#2aa198">&#34;Deben haberse creado Sparkles, con todos los atributos intactos.&#34;</span>, unicornConfirmationPage.exists(sparkles));
   </code></pre></div>
 </section>
   
@@ -3381,19 +3381,19 @@ Si crea más de uno con el mismo nombre o características, ¿se romperá? ¿Con
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1571415928"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1572125897"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1571415928"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1571415928"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1572125897"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1572125897"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1571415928" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1571415928"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1572125897" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1572125897"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Domain specific language :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1571415929" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1571415929" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1572125901" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1571415929" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1572125901" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1571415929"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1572125901"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1571415929"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1571415929"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1572125901"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1572125901"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1571415929"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1572125901"></script>
 
     
   </div>
@@ -1817,15 +1817,15 @@
 an expressive means of solving a problem. It allows a user to
 interact with the system on their terms – not just programmer-speak.</p>
 
-<p>Your users, in general, don&rsquo;t care how your site looks. They don&rsquo;t
+<p>Your users, in general, do not care how your site looks. They do not
 care about the decoration, animations, or graphics. They
 want to use your system to push their new employees through the
-process with minimal difficulty.  They want to book travel to Alaska.
-They want to configure and buy unicorns at a discount. Your job as the
+process with minimal difficulty; they want to book travel to Alaska;
+they want to configure and buy unicorns at a discount. Your job as
 tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you&rsquo;re
+With that in mind, we set about “modeling” the application you are
 working on, such that the test scripts (the user&rsquo;s only pre-release
-proxy) “speak” for and represent the user.</p>
+proxy) “speak” for, and represent the user.</p>
 
 <p>With Selenium, DSL is usually represented by methods, written to make
 the API simple and readable – they enable a report between the
@@ -1840,7 +1840,7 @@ intelligence specialists, etc.).</p>
 <li><strong>Extensible:</strong> Functionality can (reasonably) be added
 without breaking contracts and existing functionality.</li>
 <li><strong>Maintainable:</strong> By leaving the implementation details out of test
-cases, you are well-insulated against changes to the AUT (application under test).</li>
+cases, you are well-insulated against changes to the AUT*.</li>
 </ul>
 
 <h2 id="java">Java</h2>
@@ -1852,49 +1852,51 @@ and available to the method.</p>
 </span><span style="color:#586e75"> * Takes a username and password, fills out the fields, and clicks &#34;login&#34;.
 </span><span style="color:#586e75"> * @return An instance of the AccountPage
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> AccountPage <span style="color:#268bd2">loginAsUser</span><span style="color:#719e07">(</span>String username<span style="color:#719e07">,</span> String password<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-  WebElement loginField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;loginField&#34;</span><span style="color:#719e07">));</span>
-  loginField<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
-  loginField<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span>username<span style="color:#719e07">);</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">AccountPage</span> loginAsUser(String <span style="color:#268bd2">username</span>, String <span style="color:#268bd2">password</span>) {
+  WebElement <span style="color:#268bd2">loginField</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;loginField&#34;</span>));
+  loginField.clear();
+  loginField.sendKeys(username);
 
   <span style="color:#586e75">// Fill out the password field. The locator we&#39;re using is &#34;By.id&#34;, and we should
 </span><span style="color:#586e75"></span>  <span style="color:#586e75">// have it defined elsewhere in the class.
-</span><span style="color:#586e75"></span>  WebElement passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">));</span>
-  passwordField<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
-  passwordField<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span>password<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>  WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>));
+  passwordField.clear();
+  passwordField.sendKeys(password);
 
   <span style="color:#586e75">// Click the login button, which happens to have the id &#34;submit&#34;.
-</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;submit&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>  driver.findElement(By.id(<span style="color:#2aa198">&#34;submit&#34;</span>)).click();
 
   <span style="color:#586e75">// Create and return a new instance of the AccountPage (via the built-in Selenium
 </span><span style="color:#586e75"></span>  <span style="color:#586e75">// PageFactory).
-</span><span style="color:#586e75"></span>  <span style="color:#719e07">return</span> PageFactory<span style="color:#719e07">.</span>newInstance<span style="color:#719e07">(</span>AccountPage<span style="color:#719e07">.</span>class<span style="color:#719e07">);</span>
-<span style="color:#719e07">}</span></code></pre></div>
+</span><span style="color:#586e75"></span>  <span style="color:#719e07">return</span> PageFactory.newInstance(AccountPage.class);
+}</code></pre></div>
 <p>This method completely abstracts the concepts of input fields,
 buttons, clicking, and even pages from your test code. Using this
-approach, all your tester has to do is call this method. This gives
+approach, all a tester has to do is call this method. This gives
 you a maintenance advantage: if the login fields ever changed, you
 would only ever have to change this method - not your tests.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginTest</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-    loginAsUser<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cbrown&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cl0wn3&#34;</span><span style="color:#719e07">);</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> loginTest() {
+    loginAsUser(<span style="color:#2aa198">&#34;cbrown&#34;</span>, <span style="color:#2aa198">&#34;cl0wn3&#34;</span>);
 
     <span style="color:#586e75">// Now that we&#39;re logged in, do some other stuff--since we used a DSL to support
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// our testers, it&#39;s as easy as choosing from available methods.
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">do</span><span style="color:#719e07">.</span>something<span style="color:#719e07">();</span>
-    <span style="color:#719e07">do</span><span style="color:#719e07">.</span>somethingElse<span style="color:#719e07">();</span>
-    Assert<span style="color:#719e07">.</span>assertTrue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Something should have been done!&#34;</span><span style="color:#719e07">,</span> something<span style="color:#719e07">.</span>wasDone<span style="color:#719e07">());</span>
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">do</span>.something();
+    <span style="color:#719e07">do</span>.somethingElse();
+    Assert.assertTrue(<span style="color:#2aa198">&#34;Something should have been done!&#34;</span>, something.wasDone());
 
     <span style="color:#586e75">// Note that we still haven&#39;t referred to a button or web control anywhere in this
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// script...
-</span><span style="color:#586e75"></span><span style="color:#719e07">}</span></code></pre></div>
+</span><span style="color:#586e75"></span>}</code></pre></div>
 <p>It bears repeating: one of your primary goals should be writing an
 API that allows your tests to address <strong>the problem at hand, and NOT
 the problem of the UI</strong>. The UI is a secondary concern for your
-users – they don&rsquo;t care about the UI, they just want to get their job
+users – they do not care about the UI, they just want to get their job
 done. Your test scripts should read like a laundry list of things
 the user wants to DO, and the things they want to KNOW. The tests
 should not concern themselves with HOW the UI requires you to go
 about it.</p>
+
+<p>*<strong>AUT</strong>: Application under test</p>
 
 
 <footer class=" footline" >
@@ -1904,7 +1906,7 @@ about it.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/">
       “Domain specific language”
-    </a> was last updated on: 07 Aug 2019 17:32:57 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/dbb0d383e245202978e367aa3c5174acf4b03963">i18n: add zh-cn structure (#298) (dbb0d38)</a>
+    </a> was last updated on: 26 Oct 2019 22:52:36 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/70b83c3e93e63c2936da3f7d9d03de9e508cf4e6">removing differences in non translated files (#11) [deploy site] (70b83c3)</a>
 </h5>
         
         </div> 
@@ -3021,19 +3023,19 @@ about it.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1571415929"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1572125901"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1571415929"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1571415929"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1572125901"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1571415929" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1571415929"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1572125901" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1572125901"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

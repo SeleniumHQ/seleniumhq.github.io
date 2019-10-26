@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Setting up your own Grid :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1571415931" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1571415931" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1572125905" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1572125905" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1571415931" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1572125905" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1572125905"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1571415931"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1571415931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1572125905"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1572125905"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1571415931"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1572125905"></script>
 
     
   </div>
@@ -1848,7 +1848,7 @@ complete with its own node infrastructure.</p>
 
 <p>This example will show you how to start the Selenium 2 Grid Hub,
 and register both a WebDriver node and a Selenium 1 RC legacy node.
-We’ll also show you how to call the grid from Java.
+We will also show you how to call the grid from Java.
 The hub and nodes are shown here running on the same machine,
 but of course you can copy the selenium-server-standalone to multiple machines.</p>
 
@@ -1888,7 +1888,7 @@ are possible command-line flags.</p>
 
 <p>You certainly can get by with only the simple command shown above,
 but if you need more advanced configuration,
-then you may also for convenience specify a JSON format config file
+you can also specify a JSON format config file, for convenience,
 to configure the hub when you start it.
 You can do it like so:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug</code></pre></div>
@@ -1991,35 +1991,38 @@ hub/node to be reachable from a different machine.</p>
 <h4 id="specifying-the-port">Specifying the port</h4>
 
 <p>The default TCP/IP port used by the hub is 4444. If you need to change the port
-please use above mentioned configurations</p>
+please use above mentioned configurations.</p>
 
 <h2 id="troubleshooting">Troubleshooting</h2>
 
 <h3 id="using-log-file">Using Log file</h3>
 
-<p>For advance troubleshooting you can specify log file to log system messages.
-For that start Selenium GRID hub or node with -log argument. Please see the below example</p>
+<p>For advanced troubleshooting you can specify a log file to log system messages.
+Start Selenium GRID hub or node with -log argument. Please see the below example:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -log log.txt</code></pre></div>
-<p>Use your favorite text editor to open log file (log.txt in above example) to find
+<p>Use your favorite text editor to open log file (log.txt in the example above) to find
 &ldquo;ERROR&rdquo; logs if you get issues.</p>
 
 <h3 id="using-debug-argument">Using <code>-debug</code> argument</h3>
 
-<p>Also you can use <code>-debug</code> argument to print debug logs on console.
-For that start Selenium Grid Hub or Node with <code>-debug</code> argument. Please see
-the below example</p>
+<p>Also you can use <code>-debug</code> argument to print debug logs to console.
+Start Selenium Grid Hub or Node with <code>-debug</code> argument. Please see
+the below example:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone.jar -role hub -debug</code></pre></div>
 <h2 id="warning">Warning</h2>
 
 <p>The Selenium Grid must be protected from external access using appropriate
 firewall permissions.</p>
 
-<p>Failure to protect your Grid could result in one or more of the following occurring:
-* You provide open access to your Grid infrastructure
-* You allow 3rd parties to access internal web applications and files
-* You allow 3rd parties to run custom binaries</p>
+<p>Failure to protect your Grid could result in one or more of the following occurring:</p>
 
-<p>See this blog post on <a href="//labs.detectify.com">Detectify</a> which gives a good
+<ul>
+<li>You provide open access to your Grid infrastructure</li>
+<li>You allow third parties to access internal web applications and files</li>
+<li>You allow third parties to run custom binaries</li>
+</ul>
+
+<p>See this blog post on <a href="//labs.detectify.com">Detectify</a>, which gives a good
 overview of how a publicly exposed Grid could be misused:
 <a href="//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/">Don&rsquo;t Leave your Grid Wide Open</a>.</p>
 
@@ -2028,7 +2031,7 @@ overview of how a publicly exposed Grid could be misused:
 <p><a href="//www.docker.com/">Docker</a> provides a convenient way to
 provision and scale Selenium Grid infrastructure in a unit known as a container.
 Containers are standardised units of software that contain everything required
-to run the desired application including all dependencies in a reliable and repeatable
+to run the desired application, including all dependencies, in a reliable and repeatable
 way on different machines.</p>
 
 <p>The Selenium project maintains a set of Docker images which you can download
@@ -2050,7 +2053,7 @@ repository.</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/site/documentation/ja/grid/setting_up_your_own_grid/">
       “Setting up your own Grid”
-    </a> was last updated on: 30 Aug 2019 03:51:59 -0500: <a href="https://github.com/SeleniumHQ/site/commit/a907369eb2e805aa6bda4252bc0c320a6cb926d2">Add Japanese translation (#358) (a907369)</a>
+    </a> was last updated on: 26 Oct 2019 22:52:36 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/70b83c3e93e63c2936da3f7d9d03de9e508cf4e6">removing differences in non translated files (#11) [deploy site] (70b83c3)</a>
 </h5>
         
         </div> 
@@ -3167,19 +3170,19 @@ repository.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1572125905"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1571415931"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1571415931"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1572125905"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1572125905"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1571415931" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1571415931"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1572125905" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1572125905"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
