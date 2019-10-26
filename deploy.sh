@@ -15,6 +15,7 @@ then
 fi
 
 git --no-pager branch -a
+git status
 #git add .
 #git commit -m "Publishing on `date`, commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}, [skip ci]" || true
 #git push --force origin HEAD:master
