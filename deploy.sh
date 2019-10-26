@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if git --no-pager log -1 --oneline | grep '\\[deploy site\\]'; then
+if git --no-pager log -1 --oneline | grep '[deploy site]'; then
   echo -e "\033[0;32mDeploying Selenium site to GitHub...\033[0m"
 
   if [ -n "$GITHUB_AUTH_SECRET" ]
