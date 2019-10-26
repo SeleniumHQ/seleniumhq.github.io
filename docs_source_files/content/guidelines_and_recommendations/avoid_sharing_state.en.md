@@ -3,6 +3,7 @@ title: "Avoid sharing state"
 weight: 6
 ---
 
+
 Although mentioned in several places it is worth mentioning again. Ensure 
 tests are isolated from one another.
 

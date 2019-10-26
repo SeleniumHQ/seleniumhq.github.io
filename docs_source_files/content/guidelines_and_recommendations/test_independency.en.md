@@ -3,6 +3,7 @@ title: "Test independency"
 weight: 7
 ---
 
+
 Write each test as its own unit. Write the tests in a way that will not be
 reliant on other tests to complete:
 
