@@ -7,7 +7,7 @@ if git --no-pager log -1 --oneline | grep "\\[deploy site\\]"; then
   then
       touch ~/.git-credentials
       chmod 0600 ~/.git-credentials
-      echo "$GITHUB_AUTH_SECRET" > ~/.git-credentials
+      echo $GITHUB_AUTH_SECRET > ~/.git-credentials
       git config credential.helper store
       git config user.email "selenium-ci@users.noreply.github.com"
       git config user.name "Selenium CI Bot"
