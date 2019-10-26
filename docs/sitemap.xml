@@ -1,21 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/chromedriver/</loc>
-    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
+    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/</loc>
-    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/</loc>
-    <lastmod>2019-03-12T00:00:00+01:00</lastmod>
+    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -30,17 +29,17 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/long-live-selenium-ide/</loc>
-    <lastmod>2018-08-06T00:00:00+02:00</lastmod>
+    <lastmod>2018-08-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/downloads/c#/</loc>
-    <lastmod>2018-08-02T00:00:00+02:00</lastmod>
+    <lastmod>2018-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/downloads/</loc>
-    <lastmod>2018-08-02T00:00:00+02:00</lastmod>
+    <lastmod>2018-08-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -50,32 +49,32 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/firefox-55/</loc>
-    <lastmod>2017-08-09T00:00:00+02:00</lastmod>
+    <lastmod>2017-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/geckodriver/</loc>
-    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/perl-6/</loc>
-    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/perl/</loc>
-    <lastmod>2017-06-15T00:00:00+02:00</lastmod>
+    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/downloads/java/</loc>
-    <lastmod>2017-04-21T00:00:00+02:00</lastmod>
+    <lastmod>2017-04-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/hacking-with-intellij/</loc>
-    <lastmod>2017-02-08T00:00:00+01:00</lastmod>
+    <lastmod>2017-02-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -85,34 +84,32 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/selenium-3.0/</loc>
-    <lastmod>2016-10-13T00:00:00+02:00</lastmod>
+    <lastmod>2016-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/selenium-3-is-coming/</loc>
-    <lastmod>2016-10-04T00:00:00+02:00</lastmod>
+    <lastmod>2016-10-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/year/2016/</loc>
-    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2016-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/announcing-selenium-3-beta/</loc>
-    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
+    <lastmod>2016-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/year/</loc>
-    <lastmod>2016-07-29T00:00:00+02:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2016-07-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://seleniumhq.github.io/site/blog/fall-selenium-conf/</loc>
-    <lastmod>2016-06-23T00:00:00+02:00</lastmod>
+    <lastmod>2016-06-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -122,7 +119,7 @@
   
   <url>
     <loc>https://seleniumhq.github.io/site/thirdparty/flex-pilot/</loc>
-    <lastmod>2011-04-07T00:00:00+02:00</lastmod>
+    <lastmod>2011-04-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>

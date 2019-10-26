@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Driver requirements :: Documentation for Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/nucleus.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/fontawesome-all.min.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/hybrid.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/featherlight.min.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/perfect-scrollbar.min.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/auto-complete.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/atom-one-dark-reasonable.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/theme.css?1571999162" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/en/css/hugo-theme.css?1571999162" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/nucleus.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/fontawesome-all.min.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/hybrid.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/featherlight.min.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/perfect-scrollbar.min.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/auto-complete.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/atom-one-dark-reasonable.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/theme.css?1572125895" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/en/css/hugo-theme.css?1572125895" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/en/css/theme-selenium.css?1571999162" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/en/css/theme-selenium.css?1572125895" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/jquery-3.3.1.min.js?1571999162"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/jquery-3.3.1.min.js?1572125895"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/lunr.min.js?1571999162"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/auto-complete.js?1571999162"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/lunr.min.js?1572125895"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/auto-complete.js?1572125895"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/search.js?1571999162"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/en/js/search.js?1572125895"></script>
 
     
   </div>
@@ -1859,34 +1859,33 @@ requiring your test code to locate the exact location of the driver.</p>
 <ul>
 <li>Create a directory to place the executables in, like
 <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></li>
-<li>Add the directory to your PATH:
+
+<li><p>Add the directory to your PATH:</p>
 
 <ul>
-<li>On Windows - Open a command prompt as administrator
+<li><p>On Windows - Open a command prompt as administrator
 and the run the following command
 to permanently add the directory to your path
-for all users on your machine:</li>
+for all users on your machine:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">setx /m path <span style="color:#2aa198">&#34;%path%;C:\WebDriver\bin\&#34;</span></code></pre></div></li>
+
+<li><p>Bash users on macOS and Linux - In a terminal:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#268bd2">$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile</code></pre></div></li>
 </ul></li>
-</ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">setx /m path <span style="color:#2aa198">&#34;%path%;C:\WebDriver\bin\&#34;</span></code></pre></div>
-<ul>
-<li>Bash users on macOS and Linux - In a terminal:</li>
-</ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#268bd2">$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile</code></pre></div>
-<ul>
-<li>You are now ready to test your changes.
+
+<li><p>You are now ready to test your changes.
 Close all open command prompts and open a new one.
 Type out the name of one of the binaries
 in the folder you created in the previous step,
-e.g.:</li>
-</ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">  chromedriver</code></pre></div>
-<ul>
-<li>If your <code>PATH</code> is configured correctly,
-you will see some some output relating to the startup of the driver:</li>
-</ul>
+e.g.:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chromedriver</code></pre></div></li>
+
+<li><p>If your <code>PATH</code> is configured correctly,
+you will see some some output relating to the startup of the driver:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
-Only local connections are allowed.</code></pre></div>
+Only local connections are allowed.</code></pre></div></li>
+</ul>
+
 <p>You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd></p>
 
 <h3 id="quick-reference">Quick reference</h3>
@@ -2016,10 +2015,10 @@ you should be able to execute the <em>chromedriver</em> executable from any dire
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
   </code></pre></div>
 </section>
   
@@ -2066,11 +2065,11 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-<span style="color:#719e07">const</span> chrome <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/chrome&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> chrome <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/chrome&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> myFunction() {
-    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> myFunction() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
     <span style="color:#586e75">//your code inside this block
 </span><span style="color:#586e75"></span>})();
   
@@ -2134,7 +2133,7 @@ This is possible using the following line:</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/path/to/chromedriver&#34;</span><span style="color:#719e07">);</span>
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/chromedriver&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2238,10 +2237,10 @@ instantiate Firefox in the same way as Selenium 2:</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.Firefox.FirefoxDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Firefox.FirefoxDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
   </code></pre></div>
 </section>
   
@@ -2287,10 +2286,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> myFunction() {
-   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> myFunction() {
+   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
    <span style="color:#586e75">//your code inside this block
 </span><span style="color:#586e75"></span>})();
   
@@ -2354,7 +2353,7 @@ set the geckodriver binary location programmatically:</p>
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span><span style="color:#719e07">);</span>
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2464,10 +2463,10 @@ offer free VMs for testers on the <a href="//developer.microsoft.com/en-us/micro
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.edge.EdgeDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.edge.EdgeDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> EdgeDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> EdgeDriver();
   </code></pre></div>
 </section>
   
@@ -2513,10 +2512,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> myFunction() {
-   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;MicrosoftEdge&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> myFunction() {
+   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;MicrosoftEdge&#39;</span>).build();
    <span style="color:#586e75">//your code inside this block
 </span><span style="color:#586e75"></span>})();
   
@@ -2580,7 +2579,7 @@ the following line:</p>
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;C:/path/to/MicrosoftWebDriver.exe&#34;</span><span style="color:#719e07">);</span>
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/MicrosoftWebDriver.exe&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2685,10 +2684,10 @@ preferences are saved against the logged in user&rsquo;s account, some
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.ie.InternetExplorerDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerDriver();
   </code></pre></div>
 </section>
   
@@ -2734,10 +2733,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> myFunction() {
-   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;internet explorer&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> myFunction() {
+   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;internet explorer&#39;</span>).build();
    <span style="color:#586e75">//your code inside this block
 </span><span style="color:#586e75"></span>})();
   
@@ -2801,7 +2800,7 @@ using the following line:</p>
 
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;C:/path/to/IEDriver.exe&#34;</span><span style="color:#719e07">);</span>
+System.setProperty(<span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/IEDriver.exe&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2906,10 +2905,10 @@ system property.</p>
 
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.opera.OperaDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.opera.OperaDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> OperaDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> OperaDriver();
   </code></pre></div>
 </section>
   
@@ -2983,10 +2982,12 @@ To enable support:</p>
 <li>Enable the Developer menu from Safari preferences</li>
 <li>Check the <em>Allow Remote Automation</em> option from with
 the Develop menu</li>
-<li>Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver</li>
+
+<li><p>Run the following command from the terminal for the first
+time and type your password at the prompt to authorise WebDriver</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/bin/safaridriver -p <span style="color:#2aa198">1337</span>&lt;/</code></pre></div></li>
 </ul>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/bin/safaridriver -p <span style="color:#2aa198">1337</span>&lt;/</code></pre></div>
+
 <p>You can then start a driver session using:</p>
 
 
@@ -3030,10 +3031,10 @@ time and type your password at the prompt to authorise WebDriver</li>
 
 <section id="javacode10" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.safari.SafariDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.safari.SafariDriver;
 
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SafariDriver<span style="color:#719e07">();</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SafariDriver();
   </code></pre></div>
 </section>
   
@@ -3079,10 +3080,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode10" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#719e07">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> myFunction() {
-   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;safari&#39;</span>).build();
+(async <span style="color:#268bd2">function</span> myFunction() {
+   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;safari&#39;</span>).build();
    <span style="color:#586e75">//your code inside this block
 </span><span style="color:#586e75"></span>})();
   
@@ -4255,19 +4256,19 @@ something also now offered by Mozilla&rsquo;s Firefox.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/clipboard.min.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/perfect-scrollbar.min.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/perfect-scrollbar.jquery.min.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/jquery.sticky.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/featherlight.min.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/highlight.pack.js?1571999162"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/clipboard.min.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/perfect-scrollbar.min.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/perfect-scrollbar.jquery.min.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/jquery.sticky.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/featherlight.min.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/highlight.pack.js?1572125895"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/modernizr.custom-3.6.0.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/learn.js?1571999162"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/en/js/hugo-learn.js?1571999162"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/modernizr.custom-3.6.0.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/learn.js?1572125895"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/en/js/hugo-learn.js?1572125895"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/en/mermaid/mermaid.css?1571999162" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/en/mermaid/mermaid.js?1571999162"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/en/mermaid/mermaid.css?1572125895" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/en/mermaid/mermaid.js?1572125895"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

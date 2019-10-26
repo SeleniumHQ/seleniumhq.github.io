@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Remote WebDriver server :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1571999166" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1571999166" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1572125901" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1572125901" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1571999166" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1572125901" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1571999166"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1572125901"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1571999166"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1571999166"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1572125901"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1572125901"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1571999166"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1572125901"></script>
 
     
   </div>
@@ -1875,35 +1875,35 @@ follow.</p>
 CLASSPATH. Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
 Jetty, so you&rsquo;ll need to <a href="//www.eclipse.org/jetty/download.html">download</a>
 that as well:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> org.mortbay.jetty.Connector<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.mortbay.jetty.Server<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.mortbay.jetty.nio.SelectChannelConnector<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.mortbay.jetty.security.SslSocketConnector<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.mortbay.jetty.webapp.WebAppContext<span style="color:#719e07">;</span>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Connector;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Server;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.nio.SelectChannelConnector;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.security.SslSocketConnector;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.webapp.WebAppContext;
 
-<span style="color:#719e07">import</span> javax.servlet.Servlet<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> java.io.File<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">javax</span>.servlet.Servlet;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.io.File;
 
-<span style="color:#719e07">import</span> org.openqa.selenium.remote.server.DriverServlet<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.remote.server.DriverServlet;
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">AppServer</span> <span style="color:#719e07">{</span>
-  <span style="color:#268bd2">private</span> Server server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server<span style="color:#719e07">();</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> AppServer {
+  <span style="color:#268bd2">private</span> <span style="color:#268bd2">Server</span> server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server();
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span><span style="color:#719e07">()</span> <span style="color:#268bd2">throws</span> Exception <span style="color:#719e07">{</span>
-    WebAppContext context <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext<span style="color:#719e07">();</span>
-    context<span style="color:#719e07">.</span>setContextPath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;&#34;</span><span style="color:#719e07">);</span>
-    context<span style="color:#719e07">.</span>setWar<span style="color:#719e07">(</span><span style="color:#719e07">new</span> File<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;.&#34;</span><span style="color:#719e07">));</span>
-    server<span style="color:#719e07">.</span>addHandler<span style="color:#719e07">(</span>context<span style="color:#719e07">);</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span>() <span style="color:#268bd2">throws</span> <span style="color:#268bd2">Exception</span> {
+    WebAppContext <span style="color:#268bd2">context</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext();
+    context.setContextPath(<span style="color:#2aa198">&#34;&#34;</span>);
+    context.setWar(<span style="color:#719e07">new</span> File(<span style="color:#2aa198">&#34;.&#34;</span>));
+    server.addHandler(context);
 
-    context<span style="color:#719e07">.</span>addServlet<span style="color:#719e07">(</span>DriverServlet<span style="color:#719e07">.</span>class<span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/wd/*&#34;</span><span style="color:#719e07">);</span>
+    context.addServlet(DriverServlet.class, <span style="color:#2aa198">&#34;/wd/*&#34;</span>);
 
-    SelectChannelConnector connector <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector<span style="color:#719e07">();</span>
-    connector<span style="color:#719e07">.</span>setPort<span style="color:#719e07">(</span>3001<span style="color:#719e07">);</span>
-    server<span style="color:#719e07">.</span>addConnector<span style="color:#719e07">(</span>connector<span style="color:#719e07">);</span>
+    SelectChannelConnector <span style="color:#268bd2">connector</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector();
+    connector.setPort(3001);
+    server.addConnector(connector);
 
-    server<span style="color:#719e07">.</span>start<span style="color:#719e07">();</span>
-  <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span></code></pre></div>
+    server.start();
+  }
+}</code></pre></div>
 
 <footer class=" footline" >
 	
@@ -1912,7 +1912,7 @@ that as well:</p>
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/site/documentation/zh-cn/remote_webdriver/remote_webdriver_server/">
       “Remote WebDriver server”
-    </a> was last updated on: 07 Aug 2019 17:32:57 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/dbb0d383e245202978e367aa3c5174acf4b03963">i18n: add zh-cn structure (#298) (dbb0d38)</a>
+    </a> was last updated on: 23 Aug 2019 15:55:37 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/8912417d2d715717fced0e032648daff129639e2">Duplicate translation in two languages on the quick tour page. (#349) (8912417)</a>
 </h5>
         
         </div> 
@@ -3026,19 +3026,19 @@ that as well:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1571999166"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1572125901"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1571999166"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1571999166"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1572125901"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1572125901"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1571999166" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1571999166"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1572125901" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1572125901"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
