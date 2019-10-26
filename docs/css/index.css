@@ -218,7 +218,7 @@ is the line that separates the content*/
 .button-container.green {
     display: flex;
     justify-content: flex-end;
-    padding-right: 40px;
+    padding-right: 0;
     margin-bottom: 75px;
 }
 
