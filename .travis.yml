@@ -16,12 +16,12 @@ deploy:
     script: chmod +x $TRAVIS_BUILD_DIR/deploy.sh && $TRAVIS_BUILD_DIR/deploy.sh
     on:
       branch: master
-#notifications:
-#  irc:
-#    channels:
-#      - "chat.freenode.net#selenium"
-#    on_success: change
-#    on_failure: always
-#    template:
-#      - "%{repository} (%{commit}): %{message}"
-#      - "Build details: %{build_url}"
+notifications:
+  irc:
+    channels:
+      - "chat.freenode.net#selenium"
+    on_success: change
+    on_failure: always
+    template:
+      - "%{repository} (%{commit}): %{message}"
+      - "Build details: %{build_url}"
