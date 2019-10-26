@@ -7,12 +7,13 @@ branches:
   only:
     - master
     - /.*/
+# Testing if the site builds
 script:
-  - chmod +x $TRAVIS_BUILD_DIR/build-site.sh && $TRAVIS_BUILD_DIR/build-site.sh
+  - cd docs_source_files && hugo && cd ..
+  - cd site_source_files && hugo && cd ..
 deploy:
   - provider: script
     script: chmod +x $TRAVIS_BUILD_DIR/deploy.sh && $TRAVIS_BUILD_DIR/deploy.sh
-    skip_cleanup: true
     on:
       branch: master
 #notifications:
