@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Browser manipulation :: Seleniumドキュメント</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1571999168" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1571999168" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/nucleus.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/fontawesome-all.min.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hybrid.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/featherlight.min.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/perfect-scrollbar.min.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/auto-complete.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/atom-one-dark-reasonable.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme.css?1572126811" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/ja/css/hugo-theme.css?1572126811" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1571999168" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/ja/css/theme-selenium.css?1572126811" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1571999168"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery-3.3.1.min.js?1572126811"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1571999168"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1571999168"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/lunr.min.js?1572126811"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/auto-complete.js?1572126811"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1571999168"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/ja/js/search.js?1572126811"></script>
 
     
   </div>
@@ -1531,6 +1531,10 @@
         <ul>
           
               <li> 
+                  <a class="padding" href="https://seleniumhq.github.io/site/"><i class='fas fa-home'></i> Selenium Home</a>
+              </li>
+          
+              <li> 
                   <a class="padding" href="https://github.com/SeleniumHQ/site"><i class='fab fa-fw fa-github'></i> GitHub リポ</a>
               </li>
           
@@ -1930,10 +1934,10 @@ open your website. This can be achieved in a single line:</p>
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Convenient
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.seleniumhq.org&#34;</span><span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.get(<span style="color:#2aa198">&#34;https://www.seleniumhq.org&#34;</span>);
 
 <span style="color:#586e75">//Longer way
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>to<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://seleniumhq.github.io/docs/&#34;</span><span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.navigate().to(<span style="color:#2aa198">&#34;https://seleniumhq.github.io/docs/&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -1970,7 +1974,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;https://seleniumhq.github.io/docs/&#39;</span>);
+await driver.get(<span style="color:#2aa198">&#39;https://seleniumhq.github.io/docs/&#39;</span>);
   
 </code></pre></div>
 </section>
@@ -2033,7 +2037,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javacode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getCurrentUrl<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getCurrentUrl();</code></pre></div>
 </section>
   
 
@@ -2058,7 +2062,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javascriptcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getCurrentUrl();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getCurrentUrl();
 </code></pre></div>
 </section>
   
@@ -2114,7 +2118,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>back<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().back();</code></pre></div>
 </section>
   
 
@@ -2139,7 +2143,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javascriptcode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().back();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().back();
 </code></pre></div>
 </section>
   
@@ -2195,7 +2199,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javacode4" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>forward<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().forward();</code></pre></div>
 </section>
   
 
@@ -2220,7 +2224,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javascriptcode4" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().forward();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().forward();
 </code></pre></div>
 </section>
   
@@ -2276,7 +2280,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javacode5" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>refresh<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().refresh();</code></pre></div>
 </section>
   
 
@@ -2301,7 +2305,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javascriptcode5" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.navigate().refresh();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().refresh();
 </code></pre></div>
 </section>
   
@@ -2357,7 +2361,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javacode6" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getTitle<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getTitle();</code></pre></div>
 </section>
   
 
@@ -2382,7 +2386,7 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 
 <section id="javascriptcode6" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getTitle();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getTitle();
 </code></pre></div>
 </section>
   
@@ -2444,7 +2448,7 @@ current window by using:</p>
 
 
 <section id="javacode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getWindowHandle<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getWindowHandle();</code></pre></div>
 </section>
   
 
@@ -2469,7 +2473,7 @@ current window by using:</p>
 
 
 <section id="javascriptcode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.getWindowHandle();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getWindowHandle();
 </code></pre></div>
 </section>
   
@@ -2534,27 +2538,27 @@ to the one which is not the original.</p>
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Store the ID of the original window
-</span><span style="color:#586e75"></span>String originalWindow <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>getWindowHandle<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>String <span style="color:#268bd2">originalWindow</span> <span style="color:#719e07">=</span> driver.getWindowHandle();
 
 <span style="color:#586e75">//Check we don&#39;t have other windows open already
-</span><span style="color:#586e75"></span><span style="color:#719e07">assert</span> driver<span style="color:#719e07">.</span>getWindowHandles<span style="color:#719e07">().</span>size<span style="color:#719e07">()</span> <span style="color:#719e07">==</span> 1<span style="color:#719e07">;</span>
+</span><span style="color:#586e75"></span><span style="color:#719e07">assert</span> driver.getWindowHandles().size() <span style="color:#719e07">==</span> 1;
 
 <span style="color:#586e75">//Click the link which opens in a new window
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;new window&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).click();
 
 <span style="color:#586e75">//Wait for the new window or tab
-</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>numberOfWindowsToBe<span style="color:#719e07">(</span>2<span style="color:#719e07">));</span>
+</span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(2));
 
 <span style="color:#586e75">//Loop through until we find a new window handle
-</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> <span style="color:#719e07">(</span>String windowHandle <span style="color:#719e07">:</span> driver<span style="color:#719e07">.</span>getWindowHandles<span style="color:#719e07">())</span> <span style="color:#719e07">{</span>
-    <span style="color:#719e07">if</span><span style="color:#719e07">(!</span>originalWindow<span style="color:#719e07">.</span>contentEquals<span style="color:#719e07">(</span>windowHandle<span style="color:#719e07">))</span> <span style="color:#719e07">{</span>
-        driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>window<span style="color:#719e07">(</span>windowHandle<span style="color:#719e07">);</span>
-        <span style="color:#719e07">break</span><span style="color:#719e07">;</span>
-    <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span>
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (String <span style="color:#268bd2">windowHandle</span> <span style="color:#719e07">:</span> driver.getWindowHandles()) {
+    <span style="color:#719e07">if</span>(<span style="color:#719e07">!</span>originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle);
+        <span style="color:#719e07">break</span>;
+    }
+}
 
 <span style="color:#586e75">//Wait for the new tab to finish loading content
-</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>titleIs<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Selenium documentation&#34;</span><span style="color:#719e07">));</span>  
+</span><span style="color:#586e75"></span>wait.until(titleIs(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>));  
   </code></pre></div>
 </section>
   
@@ -2662,30 +2666,30 @@ wait<span style="color:#719e07">.</span>until { driver<span style="color:#719e07
 <section id="javascriptcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">//Store the ID of the original window
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> originalWindow <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.getWindowHandle();
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> originalWindow <span style="color:#719e07">=</span> await driver.getWindowHandle();
 
 <span style="color:#586e75">//Check we don&#39;t have other windows open already
-</span><span style="color:#586e75"></span>assert((<span style="color:#268bd2">await</span> driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">1</span>);
+</span><span style="color:#586e75"></span>assert((await driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">1</span>);
 
 <span style="color:#586e75">//Click the link which opens in a new window
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#39;new window&#39;</span>)).click();
+</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;new window&#39;</span>)).click();
 
 <span style="color:#586e75">//Wait for the new window or tab
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.wait(
-    <span style="color:#268bd2">async</span> () =&gt; (<span style="color:#268bd2">await</span> driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">2</span>,
+</span><span style="color:#586e75"></span>await driver.wait(
+    async () =&gt; (await driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">2</span>,
     <span style="color:#2aa198">10000</span>
   );
 
 <span style="color:#586e75">//Loop through until we find a new window handle
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> windows <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.getAllWindowHandles();
-windows.forEach(<span style="color:#268bd2">async</span> handle =&gt; {
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> windows <span style="color:#719e07">=</span> await driver.getAllWindowHandles();
+windows.forEach(async handle =&gt; {
   <span style="color:#719e07">if</span> (handle <span style="color:#719e07">!==</span> originalWindow) {
-    <span style="color:#268bd2">await</span> driver.switchTo().<span style="color:#b58900">window</span>(handle);
+    await driver.switchTo().<span style="color:#b58900">window</span>(handle);
   }
 });
 
 <span style="color:#586e75">//Wait for the new tab to finish loading content
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.wait(until.titleIs(<span style="color:#2aa198">&#39;Selenium documentation&#39;</span>), <span style="color:#2aa198">10000</span>);
+</span><span style="color:#586e75"></span>await driver.wait(until.titleIs(<span style="color:#2aa198">&#39;Selenium documentation&#39;</span>), <span style="color:#2aa198">10000</span>);
   
 </code></pre></div>
 </section>
@@ -2772,10 +2776,10 @@ handle stored in a variable. Put this together and you will get:</p>
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>close<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.close();
 
 <span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>window<span style="color:#719e07">(</span>originalWindow<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow);
   </code></pre></div>
 </section>
   
@@ -2821,10 +2825,10 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 <section id="javascriptcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.close();
+</span><span style="color:#586e75"></span>await driver.close();
 
 <span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().<span style="color:#b58900">window</span>(originalWindow);
+</span><span style="color:#586e75"></span>await driver.switchTo().<span style="color:#b58900">window</span>(originalWindow);
   
 </code></pre></div>
 </section>
@@ -2894,7 +2898,7 @@ instead of close:</p>
 
 
 <section id="javacode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.quit();</code></pre></div>
 </section>
   
 
@@ -2919,7 +2923,7 @@ instead of close:</p>
 
 
 <section id="javascriptcode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.quit();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.quit();
 </code></pre></div>
 </section>
   
@@ -2996,9 +3000,9 @@ into to tear down at the end of a test.</p>
 </span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">@AfterAll</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
-    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-<span style="color:#719e07">}</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit();
+}
   </code></pre></div>
 </section>
   
@@ -3043,8 +3047,8 @@ into to tear down at the end of a test.</p>
 </span><span style="color:#586e75"> * Example using Mocha
 </span><span style="color:#586e75"> * https://mochajs.org/#hooks
 </span><span style="color:#586e75"> */</span>
-after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, <span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> () {
-  <span style="color:#268bd2">await</span> driver.quit();
+after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style="color:#268bd2">function</span> () {
+  await driver.quit();
 });
   
 </code></pre></div>
@@ -3113,11 +3117,11 @@ will still clean up the WebDriver session.</p>
 
 <section id="javacode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+<span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
-</span><span style="color:#586e75"></span><span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-<span style="color:#719e07">}</span>
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    driver.quit();
+}
   </code></pre></div>
 </section>
   
@@ -3164,7 +3168,7 @@ will still clean up the WebDriver session.</p>
 <span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
 </span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
-    <span style="color:#268bd2">await</span> driver.quit();
+    await driver.quit();
 }
   
 </code></pre></div>
@@ -3253,7 +3257,7 @@ using something like:</p>
 <section id="javacode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//This won&#39;t work
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
   </code></pre></div>
 </section>
   
@@ -3290,7 +3294,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javascriptcode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// This won&#39;t work
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
   
 </code></pre></div>
 </section>
@@ -3360,13 +3364,13 @@ find the frame using your preferred selector and switch to it.</p>
 <section id="javacode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Store the web element
-</span><span style="color:#586e75"></span>WebElement iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span><span style="color:#719e07">));</span>
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">iframe</span> <span style="color:#719e07">=</span> driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
 
 <span style="color:#586e75">//Switch to the frame
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span>iframe<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe);
 
 <span style="color:#586e75">//Now we can click the button
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
   </code></pre></div>
 </section>
   
@@ -3421,13 +3425,13 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javascriptcode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Store the web element
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> iframe <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
 
 <span style="color:#586e75">// Switch to the frame
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().frame(iframe);
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(iframe);
 
 <span style="color:#586e75">// Now we can click the button
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
   
 </code></pre></div>
 </section>
@@ -3497,13 +3501,13 @@ one found will be switched to.</p>
 <section id="javacode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Using the ID
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;buttonframe&#34;</span><span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
 
 <span style="color:#586e75">//Or using the name instead
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myframe&#34;</span><span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
 
 <span style="color:#586e75">//Now we can click the button
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
   </code></pre></div>
 </section>
   
@@ -3552,13 +3556,13 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javascriptcode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Using the ID
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>);
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>);
 
 <span style="color:#586e75">// Or using the name instead
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().frame(<span style="color:#2aa198">&#39;myframe&#39;</span>);
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;myframe&#39;</span>);
 
 <span style="color:#586e75">// Now we can click the button
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
   
 </code></pre></div>
 </section>
@@ -3627,7 +3631,7 @@ queried using <em>window.frames</em> in JavaScript.</p>
 <section id="javacode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Switches to the second frame  
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
+</span><span style="color:#586e75"></span>driver.switchTo().frame(1);
   </code></pre></div>
 </section>
   
@@ -3667,7 +3671,7 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 <section id="javascriptcode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Switches to the second frame
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().frame(<span style="color:#2aa198">1</span>);
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">1</span>);
   
 </code></pre></div>
 </section>
@@ -3730,7 +3734,7 @@ like so:</p>
 <section id="javacode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>defaultContent<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent();
   </code></pre></div>
 </section>
   
@@ -3767,7 +3771,7 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 <section id="javascriptcode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.switchTo().defaultContent();
+</span><span style="color:#586e75"></span>await driver.switchTo().defaultContent();
   
 </code></pre></div>
 </section>
@@ -3835,13 +3839,13 @@ window.</p>
 <section id="javacode18" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">().</span>getWidth<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">().</span>getHeight<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">width</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getHeight();
 
 <span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Dimension size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>getWidth<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>getHeight<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>Dimension <span style="color:#268bd2">size</span> <span style="color:#719e07">=</span> driver.manage().window().getSize();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">width1</span> <span style="color:#719e07">=</span> size.getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height1</span> <span style="color:#719e07">=</span> size.getHeight();
   </code></pre></div>
 </section>
   
@@ -3896,12 +3900,12 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 <section id="javascriptcode18" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> { width, height } <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().getRect();
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { width, height } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
 
 <span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> rect <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().getRect();
-<span style="color:#719e07">const</span> width1 <span style="color:#719e07">=</span> rect.width;
-<span style="color:#719e07">const</span> height1 <span style="color:#719e07">=</span> rect.height;
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> width1 <span style="color:#719e07">=</span> rect.width;
+<span style="color:#268bd2">const</span> height1 <span style="color:#719e07">=</span> rect.height;
   
 </code></pre></div>
 </section>
@@ -3966,7 +3970,7 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="javacode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>setSize<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Dimension<span style="color:#719e07">(</span>1024<span style="color:#719e07">,</span> 768<span style="color:#719e07">));</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().setSize(<span style="color:#719e07">new</span> Dimension(1024, 768));</code></pre></div>
 </section>
   
 
@@ -3991,7 +3995,7 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="javascriptcode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
 </code></pre></div>
 </section>
   
@@ -4049,13 +4053,13 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 <section id="javacode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">().</span>getX<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">().</span>getY<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">x</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getY();
 
 <span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Point position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>getX<span style="color:#719e07">();</span>
-<span style="color:#dc322f">int</span> y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>getY<span style="color:#719e07">();</span>
+</span><span style="color:#586e75"></span>Point <span style="color:#268bd2">position</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">x1</span> <span style="color:#719e07">=</span> position.getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y1</span> <span style="color:#719e07">=</span> position.getY();
   </code></pre></div>
 </section>
   
@@ -4103,12 +4107,12 @@ y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</s
 <section id="javascriptcode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> { x, y } <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().getRect();
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { x, y } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
 
 <span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#719e07">const</span> rect <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().getRect();
-<span style="color:#719e07">const</span> x1 <span style="color:#719e07">=</span> rect.x;
-<span style="color:#719e07">const</span> y1 <span style="color:#719e07">=</span> rect.y;
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> x1 <span style="color:#719e07">=</span> rect.x;
+<span style="color:#268bd2">const</span> y1 <span style="color:#719e07">=</span> rect.y;
   
 </code></pre></div>
 </section>
@@ -4177,7 +4181,7 @@ int y1 = position.y
 <section id="javacode21" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>setPosition<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Point<span style="color:#719e07">(</span>0<span style="color:#719e07">,</span> 0<span style="color:#719e07">));</span>
+</span><span style="color:#586e75"></span>driver.manage().window().setPosition(<span style="color:#719e07">new</span> Point(0, 0));
   </code></pre></div>
 </section>
   
@@ -4213,7 +4217,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 <section id="javascriptcode21" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().setRect({ x<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span>, y<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span> });
+</span><span style="color:#586e75"></span>await driver.manage().<span style="color:#b58900">window</span>().setRect({ x<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span>, y<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span> });
   
 </code></pre></div>
 </section>
@@ -4275,7 +4279,7 @@ toolbars.</p>
 
 
 <section id="javacode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>maximize<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().maximize();</code></pre></div>
 </section>
   
 
@@ -4300,7 +4304,7 @@ toolbars.</p>
 
 
 <section id="javascriptcode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().maximize();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().maximize();
 </code></pre></div>
 </section>
   
@@ -4356,7 +4360,7 @@ toolbars.</p>
 
 
 <section id="javacode23" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>fullscreen<span style="color:#719e07">();</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
 </section>
   
 
@@ -4381,7 +4385,7 @@ toolbars.</p>
 
 
 <section id="javascriptcode23" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#268bd2">await</span> driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
 </code></pre></div>
 </section>
   
@@ -5518,19 +5522,19 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1571999168"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/clipboard.min.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.min.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/perfect-scrollbar.jquery.min.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/jquery.sticky.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/featherlight.min.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/highlight.pack.js?1572126812"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1571999168"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1571999168"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/modernizr.custom-3.6.0.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/learn.js?1572126812"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/ja/js/hugo-learn.js?1572126812"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1571999168" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1571999168"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.css?1572126812" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/ja/mermaid/mermaid.js?1572126812"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

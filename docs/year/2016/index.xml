@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2016 on SeleniumHQ Browser Automation</title>
@@ -6,7 +6,7 @@
     <description>Recent content in 2016 on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://seleniumhq.github.io/site/year/2016/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Announcing Selenium 3.0-beta1</title>
       <link>https://seleniumhq.github.io/site/blog/announcing-selenium-3-beta/</link>
-      <pubDate>Fri, 29 Jul 2016 00:00:00 +0200</pubDate>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/blog/announcing-selenium-3-beta/</guid>
       <description>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.
@@ -24,7 +24,7 @@ We’d love you to try it out on your projects, and provide us with feedback on 
     <item>
       <title>Fall Selenium Conf, Save the Date &amp; Call for Speakers!</title>
       <link>https://seleniumhq.github.io/site/blog/fall-selenium-conf/</link>
-      <pubDate>Thu, 23 Jun 2016 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/blog/fall-selenium-conf/</guid>
       <description>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.

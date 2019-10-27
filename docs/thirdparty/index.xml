@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Third Party on SeleniumHQ Browser Automation</title>
@@ -6,7 +6,7 @@
     <description>Recent content in Third Party on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://seleniumhq.github.io/site/thirdparty/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title></title>
       <link>https://seleniumhq.github.io/site/thirdparty/chromedriver/</link>
-      <pubDate>Tue, 12 Mar 2019 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/thirdparty/chromedriver/</guid>
       <description></description>
@@ -23,7 +23,7 @@
     <item>
       <title></title>
       <link>https://seleniumhq.github.io/site/thirdparty/geckodriver/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/thirdparty/geckodriver/</guid>
       <description></description>
@@ -32,7 +32,7 @@
     <item>
       <title></title>
       <link>https://seleniumhq.github.io/site/thirdparty/perl-6/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/thirdparty/perl-6/</guid>
       <description></description>
@@ -41,7 +41,7 @@
     <item>
       <title></title>
       <link>https://seleniumhq.github.io/site/thirdparty/perl/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/thirdparty/perl/</guid>
       <description></description>
@@ -50,7 +50,7 @@
     <item>
       <title></title>
       <link>https://seleniumhq.github.io/site/thirdparty/flex-pilot/</link>
-      <pubDate>Thu, 07 Apr 2011 00:00:00 +0200</pubDate>
+      <pubDate>Thu, 07 Apr 2011 00:00:00 +0000</pubDate>
       
       <guid>https://seleniumhq.github.io/site/thirdparty/flex-pilot/</guid>
       <description>A Selenium IDE plugin for integrating with Flex-Pilot, for Flex automation. More info.</description>
