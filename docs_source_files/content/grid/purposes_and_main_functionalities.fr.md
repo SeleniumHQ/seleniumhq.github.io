@@ -11,7 +11,7 @@ it by sending us pull requests!
 {{% /notice %}}
 
 * Central entry point for all tests
-* Management and control of the nodes / environment where the browsers run on
+* Management and control of the nodes / environment where the browsers run
 * Scaling
 * Running tests in parallel
 * Cross platform testing
