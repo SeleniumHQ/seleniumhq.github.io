@@ -21,7 +21,10 @@ driver.quit();
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+ FirefoxOptions firefoxOptions = new FirefoxOptions();
+ IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), firefoxOptions);
+ driver.Navigate().GoToUrl("http://www.google.com");
+ driver.Quit();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
