@@ -19,8 +19,8 @@ WebElement e = driver.findElement(By.id("testElement"));
 e = driver.find_element_by_id("testElement")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ IWebElement e = driver.FindElement(By.Id("testElement"));
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -43,8 +43,8 @@ e.click();
 e.click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ e.Click();
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -67,8 +67,8 @@ import org.openqa.selenium.interactions.Actions;
 from selenium.webdriver import ActionChains
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ using OpenQA.Selenium.Interactions;
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -94,8 +94,10 @@ actions.move_to_element(e)
 actions.perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ Actions actions = new Actions(driver);
+ actions.MoveToElement(e);
+ actions.Perform();
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -122,8 +124,8 @@ e.sendKeys("Test");
 e.send_keys("Test")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ e.SendKeys("Test");
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -145,8 +147,8 @@ e.clear();
 e.clear()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ e.Clear();
+ {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
