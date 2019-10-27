@@ -240,8 +240,13 @@ el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+ using (var driver = new FirefoxDriver())
+ {
+        var foo = new WebDriverWait(driver, TimeSpan.FromSeconds(3))
+                        .Until(drv => drv.FindElement(By.Name("q")));
+        Debug.Assert(foo.Text.Equals("Hello from JavaScript!"));
+} 
+{{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -293,8 +298,7 @@ new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xp
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -444,8 +448,17 @@ wait = WebDriverWait(driver, 10, poll_frequency=1, ignored_exceptions=[ElementNo
 element = wait.until(EC.element_to_be_clickable((By.XPATH, "//div")))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
+using (var driver = new FirefoxDriver())
+{
+  WebDriverWait wait = new WebDriverWait(driver, timeout: TimeSpan.FromSeconds(30))
+  {
+      PollingInterval = TimeSpan.FromSeconds(5),
+  };
+  wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
+
+  var foo = wait.Until(drv => drv.FindElement(By.Id("foo")));
+}
+{{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
