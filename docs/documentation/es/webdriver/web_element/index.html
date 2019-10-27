@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.59.0" />
     <meta name="description" content="Documentation for Selenium">
 
 
@@ -12,20 +12,20 @@
     <title>Elemento web :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1571999165" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1571999165" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1572126804" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1571999165" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1572126804" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1571999165"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1572126804"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1571999165"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1571999165"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1572126804"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1572126804"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1571999165"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1572126804"></script>
 
     
   </div>
@@ -1531,6 +1531,10 @@
         <ul>
           
               <li> 
+                  <a class="padding" href="https://seleniumhq.github.io/site/"><i class='fas fa-home'></i> Selenium Home</a>
+              </li>
+          
+              <li> 
                   <a class="padding" href="https://github.com/SeleniumHQ/site"><i class='fab fa-fw fa-github'></i> Repo en GitHub</a>
               </li>
           
@@ -1849,11 +1853,11 @@ WebElement:</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
-driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
-WebElement searchForm <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;form&#34;</span><span style="color:#719e07">));</span>
-WebElement searchBox <span style="color:#719e07">=</span> searchForm<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
-searchBox<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver&#34;</span><span style="color:#719e07">);</span>
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
+WebElement <span style="color:#268bd2">searchForm</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;form&#34;</span>));
+WebElement <span style="color:#268bd2">searchBox</span> <span style="color:#719e07">=</span> searchForm.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
+searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -1913,19 +1917,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <span style="color:#268bd2">let</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
 
-(<span style="color:#268bd2">async</span> <span style="color:#268bd2">function</span> test(){
+(async <span style="color:#268bd2">function</span> test(){
 
 <span style="color:#586e75">//Navigate to url
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> driver.get(<span style="color:#2aa198">&#39;http://www.google.com&#39;</span>);
+</span><span style="color:#586e75"></span>await driver.get(<span style="color:#2aa198">&#39;http://www.google.com&#39;</span>);
 
 <span style="color:#586e75">//Get and store DOM element &#39;&lt;form&gt;&#39;
-</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> searchForm <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;f&#39;</span>));
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> searchForm <span style="color:#719e07">=</span> await driver.findElement(By.name(<span style="color:#2aa198">&#39;f&#39;</span>));
 
 <span style="color:#586e75">//Get search box element from webElement &#39;form&#39;
-</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> searchBar <span style="color:#719e07">=</span> <span style="color:#268bd2">await</span> searchForm.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> searchBar <span style="color:#719e07">=</span> await searchForm.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
 
 <span style="color:#586e75">//Perform action using WebElement
-</span><span style="color:#586e75"></span><span style="color:#268bd2">await</span> searchBar.sendKeys(<span style="color:#2aa198">&#39;Webdriver&#39;</span>);
+</span><span style="color:#586e75"></span>await searchBar.sendKeys(<span style="color:#2aa198">&#39;Webdriver&#39;</span>);
 
 })();
   
@@ -3071,19 +3075,19 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1571999165"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1572126804"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1571999165"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1571999165"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1572126804"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1571999165" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1571999165"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1572126804" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1572126804"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Guidelines and recommendations on Selenium 文档</title>
@@ -18,7 +18,7 @@
       
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves don’t need to change; only the code within the page object needs to change.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves do not need to change; only the code within the page object needs to change.</description>
     </item>
     
     <item>
@@ -29,7 +29,7 @@
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;rsquo;t care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty.</description>
+Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
     </item>
     
     <item>
@@ -39,7 +39,7 @@ Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;r
       
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium should not be used to prepare a test case. All repetitive actions, and preparation for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT (e.</description>
+ Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
     </item>
     
     <item>
@@ -70,8 +70,8 @@ Your users, in general, don&amp;rsquo;t care how your site looks. They don&amp;r
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
-Don&amp;rsquo;t share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.
-Clean up stale data in the application that might be picked up by another test e.</description>
+ Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.
+ Clean up stale data in the application that might be picked up by another test e.</description>
     </item>
     
     <item>
@@ -81,8 +81,8 @@ Clean up stale data in the application that might be picked up by another test e
       
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/test_independency/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Write each test as its own unit. Write the tests in a way that won&amp;rsquo;t be reliant on other tests to complete:
-Let&amp;rsquo;s say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+ Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
+Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
     </item>
     
     <item>
@@ -92,7 +92,7 @@ Let&amp;rsquo;s say there is a content management system with which you can crea
       
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
+ Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.</description>
     </item>
     
