@@ -12,20 +12,20 @@
     <title>Esperas :: Documentación de Selenium</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1572126804" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1572126804" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/nucleus.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/fontawesome-all.min.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hybrid.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/featherlight.min.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/perfect-scrollbar.min.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/auto-complete.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/atom-one-dark-reasonable.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/theme.css?1572208568" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/es/css/hugo-theme.css?1572208568" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1572126804" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/es/css/theme-selenium.css?1572208568" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery-3.3.1.min.js?1572208568"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1572126804"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1572126804"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/lunr.min.js?1572208568"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/auto-complete.js?1572208568"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1572126804"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/es/js/search.js?1572208568"></script>
 
     
   </div>
@@ -1781,13 +1781,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#explicit-wait">Explicit wait</a>
-<ul>
-<li><a href="#options">Options</a></li>
-<li><a href="#expected-conditions">Expected conditions</a></li>
-</ul></li>
-<li><a href="#implicit-wait">Implicit wait</a></li>
-<li><a href="#fluentwait">FluentWait</a></li>
+<li><a href="#explicit-wait">Explicit wait</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2234,67 +2228,70 @@ el <span style="color:#719e07">=</span> WebDriverWait(driver)<span style="color:
 
 <section id="csharpcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ <span style="color:#719e07">using</span> (<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver())
+ {
+      <span style="color:#dc322f">var</span> foo = <span style="color:#719e07">new</span> WebDriverWait(driver, TimeSpan.FromSeconds(<span style="color:#2aa198">3</span>))
+                      .Until(drv =&gt; drv.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)));
+      Debug.Assert(foo.Text.Equals(<span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>));
+ }
+  
+
+
+&lt;section id=<span style="color:#2aa198">&#34;rubycode2&#34;</span> class=<span style="color:#2aa198">&#34;tab-panel&#34;</span>&gt;
+  &lt;div class=<span style="color:#2aa198">&#34;highlight&#34;</span>&gt;&lt;pre style=<span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class=<span style="color:#2aa198">&#34;language-ruby&#34;</span> data-lang=<span style="color:#2aa198">&#34;ruby&#34;</span>&gt;
+&lt;span style=<span style="color:#2aa198">&#34;color:#586e75&#34;</span>&gt;# We don&amp;#<span style="color:#2aa198">39</span>;t have a Ruby code sample yet -  Help us <span style="color:#719e07">out</span> and raise a PR  &lt;/span&gt;
+  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+  
+
+
+&lt;section id=<span style="color:#2aa198">&#34;javascriptcode2&#34;</span> class=<span style="color:#2aa198">&#34;tab-panel&#34;</span>&gt;
+  &lt;div class=<span style="color:#2aa198">&#34;highlight&#34;</span>&gt;&lt;pre style=<span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class=<span style="color:#2aa198">&#34;language-javascript&#34;</span> data-lang=<span style="color:#2aa198">&#34;javascript&#34;</span>&gt;
+&lt;span style=<span style="color:#2aa198">&#34;color:#586e75&#34;</span>&gt;<span style="color:#586e75">// We don&amp;#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>&lt;/span&gt;&lt;span style=<span style="color:#2aa198">&#34;color:#586e75&#34;</span>&gt;&lt;/span&gt;  
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
+  
+
+
+&lt;section id=<span style="color:#2aa198">&#34;kotlincode2&#34;</span> class=<span style="color:#2aa198">&#34;tab-panel&#34;</span>&gt;
+  &lt;div class=<span style="color:#2aa198">&#34;highlight&#34;</span>&gt;&lt;pre style=<span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class=<span style="color:#2aa198">&#34;language-kotlin&#34;</span> data-lang=<span style="color:#2aa198">&#34;kotlin&#34;</span>&gt;
+driver.&lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;<span style="color:#719e07">get</span>&lt;/span&gt;(&lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">34</span>;file:<span style="color:#586e75">///race_condition.html&amp;#34;&lt;/span&gt;)
+</span><span style="color:#586e75"></span>&lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;val&lt;/span&gt; ele = WebDriverWait(getWebDriver(), &lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;<span style="color:#2aa198">10</span>&lt;/span&gt;)
+            .until(ExpectedConditions.presenceOfElementLocated(By.tagName(&lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">34</span>;p&amp;#<span style="color:#2aa198">34</span>;&lt;/span&gt;)))
+assert(ele.text == &lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">34</span>;Hello <span style="color:#719e07">from</span> JavaScript!&amp;#<span style="color:#2aa198">34</span>;&lt;/span&gt;)
+  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/section&gt;
 </code></pre></div>
 </section>
-  
 
-
-<section id="rubycode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span>)
-<span style="color:#719e07">val</span> ele = WebDriverWait(getWebDriver(), <span style="color:#2aa198">10</span>)
-            .until(ExpectedConditions.presenceOfElementLocated(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>)))
-assert(ele.text == <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>)
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<p>In that example, we pass in an anonymous function
+In that example, we pass in an anonymous function
 (but we could also define it explicitly as we did earlier so it may be reused).
 The first and only argument that is passed to our condition
-is always a reference to our driver object, <em>WebDriver</em>
-(called <code>d</code> in the example).
+is always a reference to our driver object, _WebDriver_
+(called `d` in the example).
 In a multi-threaded environment, you should be careful
 to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.</p>
+rather than the reference to the driver in the outer scope.
 
-<p>Because the wait will swallow <em>no such element</em> errors
-that are raised when the element isn&rsquo;t found,
+Because the wait will swallow _no such element_ errors
+that are raised when the element isn't found,
 the condition will retry until the element is found.
-Then it will take the return value, a <em>WebElement</em>,
-and pass it back through to our script.</p>
+Then it will take the return value, a _WebElement_,
+and pass it back through to our script.
 
-<p>If the condition fails,
+If the condition fails,
 e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a <em>timeout error</em>.</p>
+the wait will throw/raise an error/exception called a _timeout error_.
 
-<h3 id="options">Options</h3>
 
-<p>The wait condition can be customised to match your needs.
-Sometimes it&rsquo;s unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.</p>
+### Options
 
-<p>The wait lets you pass in an argument to override the timeout:</p>
+The wait condition can be customised to match your needs.
+Sometimes it's unnecessary to wait the full extent of the default timeout,
+as the penalty for not hitting a successful condition can be expensive.
+
+The wait lets you pass in an argument to override the timeout:
 
 
 
@@ -2302,40 +2299,40 @@ as the penalty for not hitting a successful condition can be expensive.</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode8" id="tab0code8" aria-controls="javacode8" checked>
+      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
     
-    <label for="tab0code8">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode8" id="tab1code8" aria-controls="pythoncode8">
-    
-    <label for="tab1code8">Python</label>
+    <label for="tab0code3">Java</label>
     
     
-      <input type="radio" name="tabsetcode8" id="tab2code8" aria-controls="cscode8">
+      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
     
-    <label for="tab2code8">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode8" id="tab3code8" aria-controls="rubycode8">
-    
-    <label for="tab3code8">Ruby</label>
+    <label for="tab1code3">Python</label>
     
     
-      <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
+      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
     
-    <label for="tab4code8">JavaScript</label>
+    <label for="tab2code3">C#</label>
     
     
-      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
     
-    <label for="tab5code8">Kotlin</label>
+    <label for="tab3code3">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
+    
+    <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode8" class="tab-panel">
+<section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//new WebDriverWait(driver,3).until(some_condition(WebElement))
 </span><span style="color:#586e75"></span><span style="color:#719e07">new</span> WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
@@ -2344,7 +2341,7 @@ as the penalty for not hitting a successful condition can be expensive.</p>
   
 
 
-<section id="pythoncode8" class="tab-panel">
+<section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="color:#2aa198">3</span>)<span style="color:#719e07">.</span>until(some_condition)
   </code></pre></div>
@@ -2352,16 +2349,15 @@ WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="co
   
 
 
-<section id="csharpcode8" class="tab-panel">
+<section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ <span style="color:#719e07">new</span> WebDriverWait(driver, TimeSpan.FromSeconds(<span style="color:#2aa198">3</span>)).Until(ExpectedConditions.ElementToBeClickable(By.XPath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));  
 </code></pre></div>
 </section>
   
 
 
-<section id="rubycode8" class="tab-panel">
+<section id="rubycode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
   </code></pre></div>
@@ -2369,7 +2365,7 @@ WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="co
   
 
 
-<section id="javascriptcode8" class="tab-panel">
+<section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
@@ -2378,7 +2374,7 @@ WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="co
   
 
 
-<section id="kotlincode8" class="tab-panel">
+<section id="kotlincode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 WebDriverWait(driver, <span style="color:#2aa198">3</span>).until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)))
   </code></pre></div>
@@ -2386,65 +2382,61 @@ WebDriverWait(driver, <span style="color:#2aa198">3</span>).until(ExpectedCondit
 </div>
 </div>
 
-<h3 id="expected-conditions">Expected conditions</h3>
+### Expected conditions
 
-<p>Because it&rsquo;s quite a common occurrence
+Because it's quite a common occurrence
 to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined <em>expected conditions</em>.
+most clients also come with a set of predefined _expected conditions_.
 As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.</p>
+they are conditions that are predefined for frequent wait operations.
 
-<p>The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:</p>
+The conditions available in the different language bindings vary,
+but this is a non-exhaustive list of a few:
 
 <!-- TODO(ato): Fill in -->
+* alert is present
+* element exists
+* element is visible
+* title contains
+* title is
+* element staleness
+* visible text
 
-<ul>
-<li>alert is present</li>
-<li>element exists</li>
-<li>element is visible</li>
-<li>title contains</li>
-<li>title is</li>
-<li>element staleness</li>
-<li>visible text</li>
-</ul>
+You can refer to the API documentation for each client binding
+to find an exhaustive list of expected conditions:
 
-<p>You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:</p>
+* Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
+* Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
+* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.html) type
 
-<ul>
-<li>Java&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html">org.openqa.selenium.support.ui.ExpectedConditions</a> class</li>
-<li>Python&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected">selenium.webdriver.support.expected_conditions</a> class</li>
-<li>.NET&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.html">OpenQA.Selenium.Support.UI.ExpectedConditions</a> type</li>
-</ul>
 
-<h2 id="implicit-wait">Implicit wait</h2>
+## Implicit wait
 
-<p>There is a second type of wait that is distinct from
-<a href="#explicit-wait">explicit wait</a> called <em>implicit wait</em>.
+There is a second type of wait that is distinct from
+[explicit wait](#explicit-wait) called _implicit wait_.
 By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find <em>any</em> element.
+for a certain duration when trying to find _any_ element.
 This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.</p>
+are not available immediately and need some time to load.
 
-<p>Implicit waiting for elements to appear is disabled by default
+Implicit waiting for elements to appear is disabled by default
 and will need to be manually enabled on a per-session basis.
-Mixing <a href="#explicit-wait">explicit waits</a> and implicit waits
+Mixing [explicit waits](#explicit-wait) and implicit waits
 will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.</p>
+time even if the element is available or condition is true.
 
-<p><em>Warning:</em>
+*Warning:*
 Do not mix implicit and explicit waits.
 Doing so can cause unpredictable wait times.
 For example, setting an implicit wait of 10 seconds
 and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.</p>
+could cause a timeout to occur after 20 seconds.
 
-<p>An implicit wait is to tell WebDriver to poll the DOM
+An implicit wait is to tell WebDriver to poll the DOM
 for a certain amount of time when trying to find an element or elements
 if they are not immediately available.
 The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.</p>
+Once set, the implicit wait is set for the life of the session.
 
 
 
@@ -2452,40 +2444,40 @@ Once set, the implicit wait is set for the life of the session.</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode9" id="tab0code9" aria-controls="javacode9" checked>
+      <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
     
-    <label for="tab0code9">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode9" id="tab1code9" aria-controls="pythoncode9">
-    
-    <label for="tab1code9">Python</label>
+    <label for="tab0code4">Java</label>
     
     
-      <input type="radio" name="tabsetcode9" id="tab2code9" aria-controls="cscode9">
+      <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4">
     
-    <label for="tab2code9">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode9" id="tab3code9" aria-controls="rubycode9">
-    
-    <label for="tab3code9">Ruby</label>
+    <label for="tab1code4">Python</label>
     
     
-      <input type="radio" name="tabsetcode9" id="tab4code9" aria-controls="javascriptcode9">
+      <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4">
     
-    <label for="tab4code9">JavaScript</label>
+    <label for="tab2code4">C#</label>
     
     
-      <input type="radio" name="tabsetcode9" id="tab5code9" aria-controls="kotlincode9">
+      <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4">
     
-    <label for="tab5code9">Kotlin</label>
+    <label for="tab3code4">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
+    
+    <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode9" class="tab-panel">
+<section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
 driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -2496,7 +2488,7 @@ WebElement <span style="color:#268bd2">myDynamicElement</span> <span style="colo
   
 
 
-<section id="pythoncode9" class="tab-panel">
+<section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 driver <span style="color:#719e07">=</span> Firefox()
 driver<span style="color:#719e07">.</span>implicitly_wait(<span style="color:#2aa198">10</span>)
@@ -2507,7 +2499,7 @@ my_dynamic_element <span style="color:#719e07">=</span> driver<span style="color
   
 
 
-<section id="csharpcode9" class="tab-panel">
+<section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
 driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(<span style="color:#2aa198">10</span>);
@@ -2519,7 +2511,7 @@ IWebElement dynamicElement = driver.FindElement(By.Name(<span style="color:#2aa1
   
 
 
-<section id="rubycode9" class="tab-panel">
+<section id="rubycode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
 driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>
@@ -2536,7 +2528,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
   
 
 
-<section id="javascriptcode9" class="tab-panel">
+<section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 (async <span style="color:#268bd2">function</span>(){
 
@@ -2555,7 +2547,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
   
 
 
-<section id="kotlincode9" class="tab-panel">
+<section id="kotlincode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">val</span> driver = FirefoxDriver()
 driver.manage().timeouts().implicitlyWait(<span style="color:#2aa198">10</span>, TimeUnit.SECONDS)
@@ -2566,13 +2558,13 @@ driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;h
 </div>
 </div>
 
-<h2 id="fluentwait">FluentWait</h2>
+## FluentWait
 
-<p>FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.</p>
+FluentWait instance defines the maximum amount of time to wait for a condition,
+as well as the frequency with which to check the condition.
 
-<p>Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as <code>NoSuchElementException</code> when searching for an element on the page.</p>
+Users may configure the wait to ignore specific types of exceptions whilst waiting,
+such as `NoSuchElementException` when searching for an element on the page.
 
 
 
@@ -2580,40 +2572,40 @@ such as <code>NoSuchElementException</code> when searching for an element on the
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode10" id="tab0code10" aria-controls="javacode10" checked>
+      <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
     
-    <label for="tab0code10">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode10" id="tab1code10" aria-controls="pythoncode10">
-    
-    <label for="tab1code10">Python</label>
+    <label for="tab0code5">Java</label>
     
     
-      <input type="radio" name="tabsetcode10" id="tab2code10" aria-controls="cscode10">
+      <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5">
     
-    <label for="tab2code10">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode10" id="tab3code10" aria-controls="rubycode10">
-    
-    <label for="tab3code10">Ruby</label>
+    <label for="tab1code5">Python</label>
     
     
-      <input type="radio" name="tabsetcode10" id="tab4code10" aria-controls="javascriptcode10">
+      <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5">
     
-    <label for="tab4code10">JavaScript</label>
+    <label for="tab2code5">C#</label>
     
     
-      <input type="radio" name="tabsetcode10" id="tab5code10" aria-controls="kotlincode10">
+      <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5">
     
-    <label for="tab5code10">Kotlin</label>
+    <label for="tab3code5">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
+    
+    <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode10" class="tab-panel">
+<section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Waiting 30 seconds for an element to be present on the page, checking
 </span><span style="color:#586e75">// for its presence once every 5 seconds.
@@ -2632,7 +2624,7 @@ WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=<
   
 
 
-<section id="pythoncode10" class="tab-panel">
+<section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 driver <span style="color:#719e07">=</span> Firefox()
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>)
@@ -2643,16 +2635,24 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
   
 
 
-<section id="csharpcode10" class="tab-panel">
+<section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> (<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver())
+{
+  WebDriverWait wait = <span style="color:#719e07">new</span> WebDriverWait(driver, timeout: TimeSpan.FromSeconds(<span style="color:#2aa198">30</span>))
+  {
+      PollingInterval = TimeSpan.FromSeconds(<span style="color:#2aa198">5</span>),
+  };
+  wait.IgnoreExceptionTypes(<span style="color:#719e07">typeof</span>(NoSuchElementException));
+
+  <span style="color:#dc322f">var</span> foo = wait.Until(drv =&gt; drv.FindElement(By.Id(<span style="color:#2aa198">&#34;foo&#34;</span>)));
+}  
 </code></pre></div>
 </section>
   
 
 
-<section id="rubycode10" class="tab-panel">
+<section id="rubycode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
   </code></pre></div>
@@ -2660,7 +2660,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
   
 
 
-<section id="javascriptcode10" class="tab-panel">
+<section id="javascriptcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
@@ -2669,7 +2669,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
   
 
 
-<section id="kotlincode10" class="tab-panel">
+<section id="kotlincode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">val</span> wait = FluentWait&lt;WebDriver&gt;(getWebDriver())
         .withTimeout(Duration.ofSeconds(<span style="color:#2aa198">30</span>))
@@ -2682,6 +2682,9 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 </div>
 </div>
 
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2690,7 +2693,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/site/documentation/es/webdriver/waits/">
       “Esperas”
-    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/3086db33e7f13d94301f35e3a073cb2695b45480">TabDefinition (3086db3)</a>
+    </a> was last updated on: 27 Oct 2019 20:59:28 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/2c8567b207e1e78482e30eac64578056dda58606">Added C# code examples (#24) (2c8567b)</a>
 </h5>
         
         </div> 
@@ -3807,19 +3810,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/clipboard.min.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.min.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/perfect-scrollbar.jquery.min.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/jquery.sticky.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/featherlight.min.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/highlight.pack.js?1572208568"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1572126804"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1572126804"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/modernizr.custom-3.6.0.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/learn.js?1572208568"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/es/js/hugo-learn.js?1572208568"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1572126804" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1572126804"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.css?1572208568" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/es/mermaid/mermaid.js?1572208568"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -12,20 +12,20 @@
     <title>Mouse and keyboard actions in detail :: Selenium 文档</title>
 
     
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1572126808" rel="stylesheet">
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1572126808" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/nucleus.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/fontawesome-all.min.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hybrid.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/featherlight.min.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/perfect-scrollbar.min.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/auto-complete.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/atom-one-dark-reasonable.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme.css?1572208572" rel="stylesheet">
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/hugo-theme.css?1572208572" rel="stylesheet">
     
-      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1572126808" rel="stylesheet">
+      <link href="https://seleniumhq.github.io/site/documentation/zh-cn/css/theme-selenium.css?1572208572" rel="stylesheet">
     
 
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1572126808"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery-3.3.1.min.js?1572208572"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1572126808"></script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1572126808"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/lunr.min.js?1572208572"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/auto-complete.js?1572208572"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/seleniumhq.github.io\/site\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1572126808"></script>
+<script type="text/javascript" src="https://seleniumhq.github.io/site/documentation/zh-cn/js/search.js?1572208572"></script>
 
     
   </div>
@@ -1866,8 +1866,8 @@ e <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ IWebElement e = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;testElement&#34;</span>));
+ 
 </code></pre></div>
 </section>
   
@@ -1958,8 +1958,8 @@ e<span style="color:#719e07">.</span>click()
 
 <section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ e.Click();
+ 
 </code></pre></div>
 </section>
   
@@ -2050,8 +2050,8 @@ to do so, you will need the following import statement:</p>
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ <span style="color:#719e07">using</span> OpenQA.Selenium.Interactions;
+ 
 </code></pre></div>
 </section>
   
@@ -2145,8 +2145,10 @@ actions<span style="color:#719e07">.</span>perform()
 
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ Actions actions = <span style="color:#719e07">new</span> Actions(driver);
+ actions.MoveToElement(e);
+ actions.Perform();
+ 
 </code></pre></div>
 </section>
   
@@ -2243,8 +2245,8 @@ e<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;
 
 <section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ e.SendKeys(<span style="color:#2aa198">&#34;Test&#34;</span>);
+ 
 </code></pre></div>
 </section>
   
@@ -2336,8 +2338,8 @@ e<span style="color:#719e07">.</span>clear()
 
 <section id="csharpcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+ e.Clear();
+ 
 </code></pre></div>
 </section>
   
@@ -2376,7 +2378,7 @@ e.clear()
 <h5 class="meta-data">
     <a href="https://seleniumhq.github.io/site/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/">
       “Mouse and keyboard actions in detail”
-    </a> was last updated on: 10 Oct 2019 00:14:35 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/3086db33e7f13d94301f35e3a073cb2695b45480">TabDefinition (3086db3)</a>
+    </a> was last updated on: 27 Oct 2019 21:42:58 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/76418a12c1af0dcef779b5037b3760329d39ffb8">Mouse and keyboard actions in detail using c# (#40) (76418a1)</a>
 </h5>
         
         </div> 
@@ -3493,19 +3495,19 @@ e.clear()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1572126808"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/clipboard.min.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.min.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/jquery.sticky.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/featherlight.min.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/highlight.pack.js?1572208572"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1572126808"></script>
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1572126808"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/learn.js?1572208572"></script>
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/js/hugo-learn.js?1572208572"></script>
 
-    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1572126808" rel="stylesheet" />
-    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1572126808"></script>
+    <link href="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.css?1572208572" rel="stylesheet" />
+    <script src="https://seleniumhq.github.io/site/documentation/zh-cn/mermaid/mermaid.js?1572208572"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
