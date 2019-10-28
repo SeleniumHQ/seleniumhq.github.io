@@ -71,7 +71,7 @@ driver.navigate.back
 driver.navigate.refresh
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-	# Navigate to a URL (both of the statements below are
+# Navigate to a URL (both of the statements below are
 # functionally equivalent).
 driver.get("https://www.google.com");
 driver.navigate().to("https://www.google.com");
