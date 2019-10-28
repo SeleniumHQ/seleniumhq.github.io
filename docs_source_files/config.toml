@@ -1,4 +1,4 @@
-baseURL = "https://selenium.dev/documentation"
+baseURL = "http://selenium.dev/documentation"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
@@ -37,11 +37,11 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
-baseURL = "https://selenium.dev/documentation/en"
+baseURL = "http://selenium.dev/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.en.menu.shortcuts]]
@@ -69,11 +69,11 @@ weight = 30
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
-baseURL = "https://selenium.dev/documentation/es"
+baseURL = "http://selenium.dev/documentation/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.es.menu.shortcuts]]
@@ -101,11 +101,11 @@ weight = 30
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
-baseURL = "https://selenium.dev/documentation/nl"
+baseURL = "http://selenium.dev/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.nl.menu.shortcuts]]
@@ -133,11 +133,11 @@ weight = 30
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
-baseURL = "https://selenium.dev/documentation/zh-cn"
+baseURL = "http://selenium.dev/documentation/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.zh-cn.menu.shortcuts]]
@@ -165,7 +165,7 @@ weight = 30
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
-baseURL = "https://selenium.dev/documentation/fr"
+baseURL = "http://selenium.dev/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
@@ -184,7 +184,7 @@ weight = 30
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.fr.menu.shortcuts]]
@@ -197,11 +197,11 @@ weight = 10
 title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
-baseURL = "https://selenium.dev/documentation/ja"
+baseURL = "http://selenium.dev/documentation/ja"
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://selenium.dev/"
+url = "http://selenium.dev/"
 weight = 1
 
 [[Languages.ja.menu.shortcuts]]
