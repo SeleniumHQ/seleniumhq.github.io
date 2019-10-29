@@ -109,7 +109,7 @@ selectObject.SelectByIndex(1);
 selectObject.SelectByValue("value1");
 
 // Select an <option> based upon its text
- selectObject.SelectByText("Bread");
+selectObject.SelectByText("Bread");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Select an <option> based upon the <select> element's internal index
