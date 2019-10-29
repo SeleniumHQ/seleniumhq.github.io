@@ -5,8 +5,6 @@ disableToc: true
 
 Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
 
-Parte de la documentación de Selenium todavía se sirve de nuestro [repositorio ** www.seleniumhq.org ** ](https://github.com/SeleniumHQ/www.seleniumhq.org). Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
-
 La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.
 
 Los aportes a los nuevos documentos siguen el proceso descrito en la sección a continuación sobre las contribuciones. Debería pasar un tiempo familiarizándose con la documentación leyendo [más sobre ella]({{<ref "/introduction/about_this_documentation.es.md">}}).
