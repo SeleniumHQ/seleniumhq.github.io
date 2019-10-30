@@ -5,9 +5,6 @@ disableToc: true
 
 Selenium 是一个大型软件项目，文档是了解事物如何运作和学习有效利用其潜力的关键。
 
-Selenium 的部分文档仍然在我们的 [**www.seleniumhq.org** 存储库](https://github.com/SeleniumHQ/www.seleniumhq.org) 中提供。
-然而，我们正在逐步淘汰这个过分关注 Selenium RC 和其他陈旧作品的文档，以重写。
-
 新的文档是一个从头开始重写 Selenium 项目的文档。这是一项正在进行的工作（不针对任何特定的发行版），目的是提供一个关于如何有效使用 Selenium 的更新手册。我们希望带回来一些有意义的旧文档。
 
 对新文档的贡献遵循以下关于贡献的部分中描述的过程。
