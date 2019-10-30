@@ -18,7 +18,8 @@ il est non intrusif par nature. Ainsi vous testez exactement l'application qui s
 
 ## Remote Control
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp) aussi connu sous le nom de Selenium 1.
+_[Remote Control]({{< ref "/legacy_docs/selenium_rc.fr.md" >}})_
+aussi connu sous le nom de Selenium 1.
 Selenium RC était l'outil Selenium central avant l'avènement de Selenium WebDriver.
 Selenium RC utilise un serveur proxy et injecte du Javascript dans le navigateur 
 afin de pouvoir en prendre le contrôle.
