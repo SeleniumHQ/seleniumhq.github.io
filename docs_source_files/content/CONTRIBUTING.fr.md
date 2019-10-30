@@ -8,11 +8,6 @@ et sa documentation est la clé
 pour comprendre comment fonctionnent les choses 
 et apprendre à exploiter son potentiel efficacement.
 
-Une partie de la documentation Selenium est toujours hébergée sur notre [dépôt **www.seleniumhq.org**](https://github.com/SeleniumHQ/www.seleniumhq.org).
-Cependant nous abandonnons progressivement cette documentation 
-qui se concrentre trop sur Selenium RC et autres parties obsolètes,
- en faveur de cette réécriture.
-
 C'est un projet démarré dans le but de réécrire la documentation Selenium à partir de zéro. 
 C'est un effort continu (sans cible de release spécifique) 
 dans le but de fournir un manuel à jour sur l'utilisation effective de Selenium. 
