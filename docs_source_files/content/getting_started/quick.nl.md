@@ -17,7 +17,7 @@ code en is daarom niet-intrusief. Zo test je dezelfde applicatie als diegene die
 
 ## Remote Control
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp)
+_[Remote Control]({{< ref "/legacy_docs/selenium_rc.nl.md" >}})_
 staat ook bekend als Selenium 1.
 Selenium RC werd het meest gebruikt totdat Selenium WebDriver verscheen.
 Selenium RC gebruikte een proxy server om Javascript in de browser te injecteren, zodat deze

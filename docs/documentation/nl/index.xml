@@ -117,6 +117,17 @@ Starting the server from the command line Once you have downloaded selenium-serv
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/nl/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/nl/legacy_docs/selenium_rc/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+    </item>
+    
+    <item>
       <title>The Selenium project and tools</title>
       <link>https://seleniumhq.github.io/site/documentation/nl/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -582,7 +593,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <guid>https://seleniumhq.github.io/site/documentation/nl/contributing/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.</description>
+The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch. This is an ongoing effort (not targeted at any specific release) to provide an updated handbook on how to use Selenium effectively.</description>
     </item>
     
   </channel>
