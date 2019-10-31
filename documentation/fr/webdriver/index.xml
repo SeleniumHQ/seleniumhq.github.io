@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebDriver on Documentation Selenium</title>
+    <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/</link>
+    <description>Recent content in WebDriver on Documentation Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/site/documentation/fr/webdriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Comprendre les composants</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/understanding_the_components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/understanding_the_components/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
+Terminology  API: Application Programming Interface.</description>
+    </item>
+    
+    <item>
+      <title>Les pré-requis de WebDriver</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/driver_requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/driver_requirements/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+    </item>
+    
+    <item>
+      <title>Manipulation du navigateur</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/browser_manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/browser_manipulation/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem.</description>
+    </item>
+    
+    <item>
+      <title>Waits</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/waits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/waits/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+    </item>
+    
+    <item>
+      <title>Classes de support</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/support_classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/support_classes/</guid>
+      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ </description>
+    </item>
+    
+    <item>
+      <title>Alerts, prompts et confirmations Javascript</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
+Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
+    </item>
+    
+    <item>
+      <title>Proxys HTTP</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/http_proxies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/http_proxies/</guid>
+      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ </description>
+    </item>
+    
+    <item>
+      <title>Stratégie de chargement de la page</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/page_loading_strategy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/page_loading_strategy/</guid>
+      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ </description>
+    </item>
+    
+    <item>
+      <title>Web element</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/web_element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/web_element/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.</description>
+    </item>
+    
+    <item>
+      <title>Clavier</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/keyboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/keyboard/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
+sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
+    </item>
+    
+    <item>
+      <title>Souris</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/webdriver/mouse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/webdriver/mouse/</guid>
+      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ </description>
+    </item>
+    
+  </channel>
+</rss>
