@@ -124,6 +124,17 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/es/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/es/legacy_docs/selenium_rc/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+    </item>
+    
+    <item>
       <title>WebDriver remoto - servidor</title>
       <link>https://seleniumhq.github.io/site/documentation/es/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -572,8 +583,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       
       <guid>https://seleniumhq.github.io/site/documentation/es/contributing/</guid>
       <description>Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
-Parte de la documentación de Selenium todavía se sirve de nuestro repositorio ** www.seleniumhq.org ** . Sin embargo, estamos eliminando gradualmente esta documentación que se centra demasiado en Selenium RC y otras piezas anticuadas, a favor de esta reescritura.
-La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero.</description>
+La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.</description>
     </item>
     
   </channel>

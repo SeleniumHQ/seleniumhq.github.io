@@ -102,6 +102,18 @@ java -jar selenium-server-standalone-{VERSION}.jar Considerations for running th
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/en/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/en/legacy_docs/selenium_rc/</guid>
+      <description>Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
+RC Components Selenium RC components are:
+ The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an HTTP proxy, intercepting and verifying HTTP messages passed between the browser and the AUT.</description>
+    </item>
+    
+    <item>
       <title>Shared capabilities</title>
       <link>https://seleniumhq.github.io/site/documentation/en/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -549,8 +561,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       
       <guid>https://seleniumhq.github.io/site/documentation/en/contributing/</guid>
       <description>Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.
-The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch.</description>
+The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch. This is an ongoing effort (not targeted at any specific release) to provide an updated handbook on how to use Selenium effectively. We hope to bring over the pieces of the old documentation that makes sense.</description>
     </item>
     
   </channel>

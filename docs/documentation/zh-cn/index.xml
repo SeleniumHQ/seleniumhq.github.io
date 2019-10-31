@@ -76,6 +76,18 @@ Starting the server from the command line Once you have downloaded selenium-serv
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/legacy_docs/selenium_rc/</guid>
+      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
+RC Components Selenium RC components are:</description>
+    </item>
+    
+    <item>
       <title>Selenium 项目和工具</title>
       <link>https://seleniumhq.github.io/site/documentation/zh-cn/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -616,7 +628,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       
       <guid>https://seleniumhq.github.io/site/documentation/zh-cn/contributing/</guid>
       <description>Selenium 是一个大型软件项目，文档是了解事物如何运作和学习有效利用其潜力的关键。
-Selenium 的部分文档仍然在我们的 www.seleniumhq.org 存储库 中提供。 然而，我们正在逐步淘汰这个过分关注 Selenium RC 和其他陈旧作品的文档，以重写。
 新的文档是一个从头开始重写 Selenium 项目的文档。这是一项正在进行的工作（不针对任何特定的发行版），目的是提供一个关于如何有效使用 Selenium 的更新手册。我们希望带回来一些有意义的旧文档。
 对新文档的贡献遵循以下关于贡献的部分中描述的过程。 您应该花一些时间通过阅读 更多相关信息 来熟悉文档。
 Selenium 项目欢迎来自每个人的贡献。有很多方法可以帮助您：
@@ -626,7 +637,7 @@ Selenium 项目欢迎来自每个人的贡献。有很多方法可以帮助您�
 贡献 Selenium 项目欢迎新的贡献者。 随着时间的推移，作出重要和有价值贡献的个人成为提交者，并获得对项目的提交访问权。
 本文将指导您完成贡献流程。
 Step 1: Fork 在 Github 上 Fork 项目，并在本地检查您的副本。
-% git clone git@github.com:username/docs.git % cd docs % git remote add upstream git://github.</description>
+% git clone git@github.com:username/docs.git % cd docs % git remote add upstream git://github.com/seleniumhq/docs.git 依赖关系：Hugo 文档使用 Hugo 来建立和渲染网站。 要在执行任何更改之前在本地验证所有内容，请 安装 Hugo 并 运行本地服务器 以在本地呈现站点。</description>
     </item>
     
   </channel>
