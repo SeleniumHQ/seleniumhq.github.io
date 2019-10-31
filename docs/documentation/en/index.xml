@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>The Selenium Browser Automation Project on Documentation for Selenium</title>
@@ -99,6 +99,18 @@ WebDriver WebDriver is also known as Selenium 2. If you are beginning with deskt
       <description>The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
 Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test. Then, from the directory with the jar, run the following:
 java -jar selenium-server-standalone-{VERSION}.jar Considerations for running the server The caller is expected to terminate each session properly, calling either Selenium#stop() or WebDriver#quit.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/en/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/en/legacy_docs/selenium_rc/</guid>
+      <description>Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
+RC Components Selenium RC components are:
+ The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an HTTP proxy, intercepting and verifying HTTP messages passed between the browser and the AUT.</description>
     </item>
     
     <item>
@@ -363,7 +375,7 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       
       <guid>https://seleniumhq.github.io/site/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
     </item>
     
     <item>
@@ -549,8 +561,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       
       <guid>https://seleniumhq.github.io/site/documentation/en/contributing/</guid>
       <description>Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-Part of the documentation of Selenium is still served from our www.seleniumhq.org repository. We are however phasing out this documentation which focuses too much on Selenium RC and other antiquated pieces, in favour of this rewrite.
-The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch.</description>
+The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch. This is an ongoing effort (not targeted at any specific release) to provide an updated handbook on how to use Selenium effectively. We hope to bring over the pieces of the old documentation that makes sense.</description>
     </item>
     
   </channel>

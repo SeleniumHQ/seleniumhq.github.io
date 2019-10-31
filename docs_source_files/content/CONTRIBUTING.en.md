@@ -7,13 +7,8 @@ Selenium is a big software project and documentation is key to
 understanding how things work and learning effective ways to exploit
 its potential.
 
-Part of the documentation of Selenium is still served from our
-[**www.seleniumhq.org** repository](https://github.com/SeleniumHQ/www.seleniumhq.org).
-We are however phasing out this documentation which focuses too much
-on Selenium RC and other antiquated pieces, in favour of this rewrite.
-
 The new documentation is a project started to rewrite Selenium's
-documentation from scratch. This is an ongoing effort (not targetted
+documentation from scratch. This is an ongoing effort (not targeted
 at any specific release) to provide an updated handbook on how to use
 Selenium effectively. We hope to bring over the pieces of the old
 documentation that makes sense.
