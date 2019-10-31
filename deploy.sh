@@ -14,7 +14,7 @@ if git --no-pager log -1 --oneline | grep "\\[deploy site\\]"; then
       git config user.name "Selenium CI Bot"
   fi
 
-  git remote add github "https://selenium-ci:${GITHUB_AUTH_SECRET}@github.com/SeleniumHQ/site.git"
+  git remote add github "https://selenium-ci:${GITHUB_AUTH_SECRET}@github.com/SeleniumHQ/seleniumhq.github.io.git"
   git fetch github
   # git stash save || true
   git checkout -t github/master -b github/master
