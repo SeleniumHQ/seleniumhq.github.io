@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote WebDriver on Documentation Selenium</title>
+    <link>https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/</link>
+    <description>Recent content in Remote WebDriver on Documentation Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Le serveur Remote WebDriver</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/remote_webdriver_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/remote_webdriver_server/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
+Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description>
+    </item>
+    
+    <item>
+      <title>Le client Remote WebDriver</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/remote_webdriver/remote_webdriver_client/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
+    </item>
+    
+  </channel>
+</rss>

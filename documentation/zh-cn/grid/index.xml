@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grid on Selenium 文档</title>
+    <link>https://seleniumhq.github.io/site/documentation/zh-cn/grid/</link>
+    <description>Recent content in Grid on Selenium 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/site/documentation/zh-cn/grid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Purposes and main functionalities</title>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
+      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
+  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+    </item>
+    
+    <item>
+      <title>Components of a Grid</title>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/grid/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/grid/components_of_a_grid/</guid>
+      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
+ Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own Grid</title>
+      <link>https://seleniumhq.github.io/site/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
+      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
+ To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+    </item>
+    
+  </channel>
+</rss>
