@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/projects.css"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/projects.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
@@ -18,7 +18,7 @@
 <div class="product-container webdriver dark-background">
     <div class="intro" id="selenium-webdriver">
         <div class="product-logo-container">
-            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_logo_square_red.png"/>
+            <img class="product-logo" src="{{"images/selenium_logo_square_red.png" | relURL}}"/>
         </div>
         <h2>Selenium WebDriver</h2>
         <p>Selenium WebDriver can drive a browser natively either locally or on remote machines.</p>
@@ -52,7 +52,7 @@
 <div class="product-container grid dark-background">
     <div class="intro" id="selenium-grid">
         <div class="product-logo-container">
-            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_grid_logo_square.png"/>
+            <img class="product-logo" src="{{"images/selenium_grid_logo_square.png" | relURL}}"/>
         </div>
         <h2>Selenium Grid</h2>
         <p>Selenium Grid takes Selenium Remote Control to another level by running tests on may servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
@@ -72,7 +72,7 @@
 <div class="product-container ide dark-background">
     <div class="intro" id="selenium-ide">
         <div class="product-logo-container">
-            <img class="product-logo" src="{{ .Site.BaseURL }}/images/selenium_ide_logo_square.png"/>
+            <img class="product-logo" src="{{"images/selenium_ide_logo_square.png" | relURL}}"/>
         </div>
         <h2>Selenium IDE</h2>
         <p>Selenium IDE is a Chrome and Firefox extension that makes it easy to record and playback tests in the browser.</p>
