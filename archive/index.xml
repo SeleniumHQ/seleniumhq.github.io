@@ -1,49 +1,49 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Archive on SeleniumHQ Browser Automation</title>
-    <link>https://seleniumhq.github.io/site/archive/</link>
+    <link>http://selenium.dev/archive/</link>
     <description>Recent content in Archive on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 01 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://seleniumhq.github.io/site/archive/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://selenium.dev/archive/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog</title>
-      <link>https://seleniumhq.github.io/site/blog/2019/</link>
+      <link>http://selenium.dev/blog/2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/blog/2019/</guid>
+      <guid>http://selenium.dev/blog/2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://seleniumhq.github.io/site/blog/2018/</link>
+      <link>http://selenium.dev/blog/2018/</link>
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/blog/2018/</guid>
+      <guid>http://selenium.dev/blog/2018/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://seleniumhq.github.io/site/blog/2017/</link>
+      <link>http://selenium.dev/blog/2017/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/blog/2017/</guid>
+      <guid>http://selenium.dev/blog/2017/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog</title>
-      <link>https://seleniumhq.github.io/site/blog/2016/</link>
+      <link>http://selenium.dev/blog/2016/</link>
       <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/blog/2016/</guid>
+      <guid>http://selenium.dev/blog/2016/</guid>
       <description></description>
     </item>
     

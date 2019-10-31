@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Year on SeleniumHQ Browser Automation</title>
-    <link>https://seleniumhq.github.io/site/year/</link>
+    <link>http://selenium.dev/year/</link>
     <description>Recent content in Year on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 29 Jul 2016 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://seleniumhq.github.io/site/year/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://selenium.dev/year/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>2016</title>
-      <link>https://seleniumhq.github.io/site/year/2016/</link>
-      <pubDate>Fri, 29 Jul 2016 00:00:00 +0200</pubDate>
+      <link>http://selenium.dev/year/2016/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/year/2016/</guid>
+      <guid>http://selenium.dev/year/2016/</guid>
       <description></description>
     </item>
     

@@ -1,42 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on Documentation Selenium</title>
-    <link>https://seleniumhq.github.io/site/documentation/fr/grid/</link>
+    <link>http://selenium.dev/documentation/fr/grid/</link>
     <description>Recent content in Grid on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://seleniumhq.github.io/site/documentation/fr/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://selenium.dev/documentation/fr/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Objectifs et fonctionnalitées</title>
-      <link>https://seleniumhq.github.io/site/documentation/fr/grid/purposes_and_main_functionalities/</link>
+      <link>http://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/fr/grid/purposes_and_main_functionalities/</guid>
+      <guid>http://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/</guid>
       <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     
     <item>
       <title>Composant d&#39;une Grid</title>
-      <link>https://seleniumhq.github.io/site/documentation/fr/grid/components_of_a_grid/</link>
+      <link>http://selenium.dev/documentation/fr/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/fr/grid/components_of_a_grid/</guid>
+      <guid>http://selenium.dev/documentation/fr/grid/components_of_a_grid/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
     </item>
     
     <item>
       <title>Mettre en place votre propre Grid</title>
-      <link>https://seleniumhq.github.io/site/documentation/fr/grid/setting_up_your_own_grid/</link>
+      <link>http://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/fr/grid/setting_up_your_own_grid/</guid>
+      <guid>http://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
 Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>

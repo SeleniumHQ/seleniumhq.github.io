@@ -1,22 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paquetes de soporte on Documentación de Selenium</title>
-    <link>https://seleniumhq.github.io/site/documentation/es/support_packages/</link>
+    <link>http://selenium.dev/documentation/es/support_packages/</link>
     <description>Recent content in Paquetes de soporte on Documentación de Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://seleniumhq.github.io/site/documentation/es/support_packages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://selenium.dev/documentation/es/support_packages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Navegación</title>
-      <link>https://seleniumhq.github.io/site/documentation/es/support_packages/browser_navigation/</link>
+      <link>http://selenium.dev/documentation/es/support_packages/browser_navigation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/es/support_packages/browser_navigation/</guid>
+      <guid>http://selenium.dev/documentation/es/support_packages/browser_navigation/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  There are commands for various webpage loading actions:
 Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
@@ -24,20 +24,20 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     
     <item>
       <title>Trabajando con colores</title>
-      <link>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_colours/</link>
+      <link>http://selenium.dev/documentation/es/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_colours/</guid>
+      <guid>http://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
     </item>
     
     <item>
       <title>Trabajando con elementos select</title>
-      <link>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_select_elements/</link>
+      <link>http://selenium.dev/documentation/es/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_select_elements/</guid>
+      <guid>http://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.</description>
@@ -45,10 +45,10 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     
     <item>
       <title>Acciones en detalle del mouse y teclado</title>
-      <link>https://seleniumhq.github.io/site/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <link>http://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <guid>http://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Suppose you have an arbitrary web element e:
 Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
@@ -56,10 +56,10 @@ Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&a
     
     <item>
       <title>Trabajando con elementos web</title>
-      <link>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_web_elements/</link>
+      <link>http://selenium.dev/documentation/es/support_packages/working_with_web_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://seleniumhq.github.io/site/documentation/es/support_packages/working_with_web_elements/</guid>
+      <guid>http://selenium.dev/documentation/es/support_packages/working_with_web_elements/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
