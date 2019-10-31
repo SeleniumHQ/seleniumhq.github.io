@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Selenium installation on Seleniumドキュメント</title>
-    <link>http://selenium.dev/documentation/ja/selenium_installation/</link>
+    <link>https://selenium.dev/documentation/ja/selenium_installation/</link>
     <description>Recent content in Selenium installation on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="http://selenium.dev/documentation/ja/selenium_installation/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://selenium.dev/documentation/ja/selenium_installation/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Installing Selenium libraries</title>
-      <link>http://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</link>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</guid>
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
 Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
@@ -25,10 +25,10 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
     
     <item>
       <title>Installing WebDriver binaries</title>
-      <link>http://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</link>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</guid>
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
 Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
@@ -36,10 +36,10 @@ Download the WebDriver binary supported by your browser and place it in the Syst
     
     <item>
       <title>Installing Standalone server</title>
-      <link>http://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</link>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</guid>
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.</description>
     </item>

@@ -3,2520 +3,2520 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started/"
+                href="https://selenium.dev/documentation/en/getting_started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started/"
+                href="https://selenium.dev/documentation/es/getting_started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started/"
+                href="https://selenium.dev/documentation/fr/getting_started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started/"
+                href="https://selenium.dev/documentation/ja/getting_started/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started/"
+                href="https://selenium.dev/documentation/nl/getting_started/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/browser_navigation/</loc>
+    <loc>https://selenium.dev/documentation/nl/support_packages/browser_navigation/</loc>
     <lastmod>2019-10-27T22:26:51+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/en/support_packages/browser_navigation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/es/support_packages/browser_navigation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/browser_navigation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/fr/support_packages/browser_navigation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/ja/support_packages/browser_navigation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/browser_navigation/"
+                href="https://selenium.dev/documentation/nl/support_packages/browser_navigation/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started_with_webdriver/browsers/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started_with_webdriver/browsers/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/en/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started_with_webdriver/browsers/"
+                href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/browsers/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/captchas/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/captchas/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/en/worst_practices/captchas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/es/worst_practices/captchas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/captchas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/fr/worst_practices/captchas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/ja/worst_practices/captchas/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/captchas/"
+                href="https://selenium.dev/documentation/nl/worst_practices/captchas/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/front_matter/copyright_and_attributions/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/es/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/fr/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/front_matter/copyright_and_attributions/"
+                href="https://selenium.dev/documentation/nl/front_matter/copyright_and_attributions/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/selenium_installation/installing_selenium_libraries/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/selenium_installation/installing_selenium_libraries/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/en/selenium_installation/installing_selenium_libraries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/zh-cn/selenium_installation/installing_selenium_libraries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/selenium_installation/installing_selenium_libraries/"
+                href="https://selenium.dev/documentation/nl/selenium_installation/installing_selenium_libraries/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started/quick/</loc>
+    <loc>https://selenium.dev/documentation/nl/getting_started/quick/</loc>
     <lastmod>2019-10-30T23:00:27+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started/quick/"
+                href="https://selenium.dev/documentation/en/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started/quick/"
+                href="https://selenium.dev/documentation/es/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started/quick/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started/quick/"
+                href="https://selenium.dev/documentation/fr/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started/quick/"
+                href="https://selenium.dev/documentation/ja/getting_started/quick/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started/quick/"
+                href="https://selenium.dev/documentation/nl/getting_started/quick/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/page_object_models/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/page_object_models/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/page_object_models/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/page_object_models/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/"
+                href="https://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_server/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_server/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/en/remote_webdriver/remote_webdriver_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_server/"
+                href="https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_server/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/legacy_docs/selenium_rc/</loc>
+    <loc>https://selenium.dev/documentation/nl/legacy_docs/selenium_rc/</loc>
     <lastmod>2019-10-30T23:00:27+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/en/legacy_docs/selenium_rc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/es/legacy_docs/selenium_rc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/fr/legacy_docs/selenium_rc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/legacy_docs/selenium_rc/"
+                href="https://selenium.dev/documentation/nl/legacy_docs/selenium_rc/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/introduction/the_selenium_project_and_tools/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/introduction/the_selenium_project_and_tools/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/introduction/the_selenium_project_and_tools/"
+                href="https://selenium.dev/documentation/nl/introduction/the_selenium_project_and_tools/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/understanding_the_components/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/understanding_the_components/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/en/webdriver/understanding_the_components/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/es/webdriver/understanding_the_components/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/fr/webdriver/understanding_the_components/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/ja/webdriver/understanding_the_components/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/understanding_the_components/"
+                href="https://selenium.dev/documentation/nl/webdriver/understanding_the_components/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/grid/components_of_a_grid/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/grid/components_of_a_grid/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/en/grid/components_of_a_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/es/grid/components_of_a_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/fr/grid/components_of_a_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/ja/grid/components_of_a_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/nl/grid/components_of_a_grid/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/domain_specific_language/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/domain_specific_language/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/domain_specific_language/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/domain_specific_language/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/driver_requirements/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/driver_requirements/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/en/webdriver/driver_requirements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/es/webdriver/driver_requirements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/fr/webdriver/driver_requirements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/ja/webdriver/driver_requirements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/driver_requirements/"
+                href="https://selenium.dev/documentation/nl/webdriver/driver_requirements/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/"
+                href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/third_party_drivers_and_plugins/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/file_downloads/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/file_downloads/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/en/worst_practices/file_downloads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/es/worst_practices/file_downloads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/fr/worst_practices/file_downloads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/ja/worst_practices/file_downloads/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/file_downloads/"
+                href="https://selenium.dev/documentation/nl/worst_practices/file_downloads/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started/html-runner/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started/html-runner/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/en/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/es/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/fr/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/ja/getting_started/html-runner/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started/html-runner/"
+                href="https://selenium.dev/documentation/nl/getting_started/html-runner/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/selenium_installation/installing_webdriver_binaries/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/en/selenium_installation/installing_webdriver_binaries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/selenium_installation/installing_webdriver_binaries/"
+                href="https://selenium.dev/documentation/nl/selenium_installation/installing_webdriver_binaries/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/introduction/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/introduction/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/introduction/"
+                href="https://selenium.dev/documentation/en/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/introduction/"
+                href="https://selenium.dev/documentation/es/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/introduction/"
+                href="https://selenium.dev/documentation/zh-cn/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/introduction/"
+                href="https://selenium.dev/documentation/fr/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/introduction/"
+                href="https://selenium.dev/documentation/ja/introduction/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/introduction/"
+                href="https://selenium.dev/documentation/nl/introduction/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/introduction/on_test_automation/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/introduction/on_test_automation/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/en/introduction/on_test_automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/es/introduction/on_test_automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/fr/introduction/on_test_automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/ja/introduction/on_test_automation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/introduction/on_test_automation/"
+                href="https://selenium.dev/documentation/nl/introduction/on_test_automation/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/</loc>
+    <loc>https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/</loc>
     <lastmod>2019-10-27T22:04:05+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/en/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/"
+                href="https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/front_matter/typographical_conventions/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/front_matter/typographical_conventions/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/en/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/es/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/fr/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/ja/front_matter/typographical_conventions/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/front_matter/typographical_conventions/"
+                href="https://selenium.dev/documentation/nl/front_matter/typographical_conventions/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/working_with_colours/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/support_packages/working_with_colours/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/en/support_packages/working_with_colours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/es/support_packages/working_with_colours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_colours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/fr/support_packages/working_with_colours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/ja/support_packages/working_with_colours/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/working_with_colours/"
+                href="https://selenium.dev/documentation/nl/support_packages/working_with_colours/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/browser_manipulation/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/browser_manipulation/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/es/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/fr/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/browser_manipulation/"
+                href="https://selenium.dev/documentation/nl/webdriver/browser_manipulation/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/generating_application_state/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/generating_application_state/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/generating_application_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/generating_application_state/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/generating_application_state/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/http_response_codes/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/http_response_codes/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/en/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/es/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/fr/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/ja/worst_practices/http_response_codes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/http_response_codes/"
+                href="https://selenium.dev/documentation/nl/worst_practices/http_response_codes/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/selenium_installation/installing_standalone_server/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/en/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/selenium_installation/installing_standalone_server/"
+                href="https://selenium.dev/documentation/nl/selenium_installation/installing_standalone_server/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started_with_webdriver/locating_elements/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started_with_webdriver/locating_elements/"
+                href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/locating_elements/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/selenium_installation/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/selenium_installation/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/selenium_installation/"
+                href="https://selenium.dev/documentation/en/selenium_installation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/selenium_installation/"
+                href="https://selenium.dev/documentation/es/selenium_installation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/selenium_installation/"
+                href="https://selenium.dev/documentation/zh-cn/selenium_installation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/selenium_installation/"
+                href="https://selenium.dev/documentation/fr/selenium_installation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/selenium_installation/"
+                href="https://selenium.dev/documentation/ja/selenium_installation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/selenium_installation/"
+                href="https://selenium.dev/documentation/nl/selenium_installation/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/en/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/"
+                href="https://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/introduction/types_of_testing/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/introduction/types_of_testing/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/en/introduction/types_of_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/es/introduction/types_of_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/fr/introduction/types_of_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/ja/introduction/types_of_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/introduction/types_of_testing/"
+                href="https://selenium.dev/documentation/nl/introduction/types_of_testing/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/working_with_select_elements/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/support_packages/working_with_select_elements/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/en/support_packages/working_with_select_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/es/support_packages/working_with_select_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/fr/support_packages/working_with_select_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/working_with_select_elements/"
+                href="https://selenium.dev/documentation/nl/support_packages/working_with_select_elements/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started_with_webdriver/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started_with_webdriver/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/en/getting_started_with_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/es/getting_started_with_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started_with_webdriver/"
+                href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/introduction/about_this_documentation/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/introduction/about_this_documentation/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/en/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/es/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/fr/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/ja/introduction/about_this_documentation/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/introduction/about_this_documentation/"
+                href="https://selenium.dev/documentation/nl/introduction/about_this_documentation/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/getting_started_with_webdriver/performing_actions_on_the_aut/"
+                href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/performing_actions_on_the_aut/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/en/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/"
+                href="https://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/mock_external_services/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/mock_external_services/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/mock_external_services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/mock_external_services/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/mock_external_services/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
+    <loc>https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</loc>
     <lastmod>2019-10-27T21:40:43+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/"
+                href="https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/waits/</loc>
+    <loc>https://selenium.dev/documentation/nl/webdriver/waits/</loc>
     <lastmod>2019-10-27T21:06:29+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/waits/"
+                href="https://selenium.dev/documentation/en/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/waits/"
+                href="https://selenium.dev/documentation/es/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/waits/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/waits/"
+                href="https://selenium.dev/documentation/fr/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/waits/"
+                href="https://selenium.dev/documentation/ja/webdriver/waits/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/waits/"
+                href="https://selenium.dev/documentation/nl/webdriver/waits/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/improved_reporting/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/improved_reporting/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/improved_reporting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/improved_reporting/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/improved_reporting/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/support_classes/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/support_classes/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/en/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/es/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/fr/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/ja/webdriver/support_classes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/support_classes/"
+                href="https://selenium.dev/documentation/nl/webdriver/support_classes/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/test_dependency/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/test_dependency/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/en/worst_practices/test_dependency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/es/worst_practices/test_dependency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/fr/worst_practices/test_dependency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/ja/worst_practices/test_dependency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/test_dependency/"
+                href="https://selenium.dev/documentation/nl/worst_practices/test_dependency/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/"
+                href="https://selenium.dev/documentation/en/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/"
+                href="https://selenium.dev/documentation/es/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/"
+                href="https://selenium.dev/documentation/fr/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/"
+                href="https://selenium.dev/documentation/ja/webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/"
+                href="https://selenium.dev/documentation/nl/webdriver/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/working_with_web_elements/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/support_packages/working_with_web_elements/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/en/support_packages/working_with_web_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/es/support_packages/working_with_web_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_web_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/fr/support_packages/working_with_web_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/working_with_web_elements/"
+                href="https://selenium.dev/documentation/nl/support_packages/working_with_web_elements/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/avoid_sharing_state/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/js_alerts_prompts_and_confirmations/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/js_alerts_prompts_and_confirmations/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/js_alerts_prompts_and_confirmations/"
+                href="https://selenium.dev/documentation/nl/webdriver/js_alerts_prompts_and_confirmations/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/performance_testing/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/performance_testing/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/en/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/es/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/fr/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/ja/worst_practices/performance_testing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/performance_testing/"
+                href="https://selenium.dev/documentation/nl/worst_practices/performance_testing/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/remote_webdriver/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/remote_webdriver/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/remote_webdriver/"
+                href="https://selenium.dev/documentation/en/remote_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/remote_webdriver/"
+                href="https://selenium.dev/documentation/es/remote_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/remote_webdriver/"
+                href="https://selenium.dev/documentation/zh-cn/remote_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/remote_webdriver/"
+                href="https://selenium.dev/documentation/fr/remote_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/remote_webdriver/"
+                href="https://selenium.dev/documentation/ja/remote_webdriver/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/remote_webdriver/"
+                href="https://selenium.dev/documentation/nl/remote_webdriver/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/http_proxies/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/http_proxies/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/en/webdriver/http_proxies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/es/webdriver/http_proxies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/fr/webdriver/http_proxies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/ja/webdriver/http_proxies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/http_proxies/"
+                href="https://selenium.dev/documentation/nl/webdriver/http_proxies/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/link_spidering/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/link_spidering/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/en/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/es/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/fr/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/ja/worst_practices/link_spidering/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/link_spidering/"
+                href="https://selenium.dev/documentation/nl/worst_practices/link_spidering/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/test_independency/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/test_independency/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/test_independency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/test_independency/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/test_independency/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/consider_using_a_fluent_api/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/page_loading_strategy/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/page_loading_strategy/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/en/webdriver/page_loading_strategy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/es/webdriver/page_loading_strategy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/page_loading_strategy/"
+                href="https://selenium.dev/documentation/nl/webdriver/page_loading_strategy/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/worst_practices/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/worst_practices/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/worst_practices/"
+                href="https://selenium.dev/documentation/en/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/worst_practices/"
+                href="https://selenium.dev/documentation/es/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/worst_practices/"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/worst_practices/"
+                href="https://selenium.dev/documentation/fr/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/worst_practices/"
+                href="https://selenium.dev/documentation/ja/worst_practices/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/worst_practices/"
+                href="https://selenium.dev/documentation/nl/worst_practices/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/en/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/"
+                href="https://selenium.dev/documentation/nl/guidelines_and_recommendations/fresh_browser_per_test/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/grid/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/grid/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/grid/"
+                href="https://selenium.dev/documentation/en/grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/grid/"
+                href="https://selenium.dev/documentation/es/grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/grid/"
+                href="https://selenium.dev/documentation/zh-cn/grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/grid/"
+                href="https://selenium.dev/documentation/fr/grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/grid/"
+                href="https://selenium.dev/documentation/ja/grid/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/grid/"
+                href="https://selenium.dev/documentation/nl/grid/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/web_element/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/web_element/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/web_element/"
+                href="https://selenium.dev/documentation/en/webdriver/web_element/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/web_element/"
+                href="https://selenium.dev/documentation/es/webdriver/web_element/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/web_element/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/web_element/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/web_element/"
+                href="https://selenium.dev/documentation/fr/webdriver/web_element/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/web_element/"
+                href="https://selenium.dev/documentation/ja/webdriver/web_element/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/web_element/"
+                href="https://selenium.dev/documentation/nl/webdriver/web_element/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/driver_idiosyncrasies/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/driver_idiosyncrasies/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/driver_idiosyncrasies/"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/keyboard/</loc>
+    <loc>https://selenium.dev/documentation/nl/webdriver/keyboard/</loc>
     <lastmod>2019-10-27T21:26:49+02:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/en/webdriver/keyboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/es/webdriver/keyboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/keyboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/fr/webdriver/keyboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/ja/webdriver/keyboard/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/keyboard/"
+                href="https://selenium.dev/documentation/nl/webdriver/keyboard/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/webdriver/mouse/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/webdriver/mouse/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/webdriver/mouse/"
+                href="https://selenium.dev/documentation/en/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/webdriver/mouse/"
+                href="https://selenium.dev/documentation/es/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/webdriver/mouse/"
+                href="https://selenium.dev/documentation/zh-cn/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/webdriver/mouse/"
+                href="https://selenium.dev/documentation/fr/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/webdriver/mouse/"
+                href="https://selenium.dev/documentation/ja/webdriver/mouse/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/webdriver/mouse/"
+                href="https://selenium.dev/documentation/nl/webdriver/mouse/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/support_packages/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/support_packages/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/support_packages/"
+                href="https://selenium.dev/documentation/en/support_packages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/support_packages/"
+                href="https://selenium.dev/documentation/es/support_packages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/support_packages/"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/support_packages/"
+                href="https://selenium.dev/documentation/fr/support_packages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/support_packages/"
+                href="https://selenium.dev/documentation/ja/support_packages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/support_packages/"
+                href="https://selenium.dev/documentation/nl/support_packages/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/legacy_docs/</loc>
+    <loc>https://selenium.dev/documentation/nl/legacy_docs/</loc>
     <lastmod>2019-10-30T23:00:27+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/legacy_docs/"
+                href="https://selenium.dev/documentation/en/legacy_docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/legacy_docs/"
+                href="https://selenium.dev/documentation/es/legacy_docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/legacy_docs/"
+                href="https://selenium.dev/documentation/zh-cn/legacy_docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/legacy_docs/"
+                href="https://selenium.dev/documentation/fr/legacy_docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/legacy_docs/"
+                href="https://selenium.dev/documentation/ja/legacy_docs/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/legacy_docs/"
+                href="https://selenium.dev/documentation/nl/legacy_docs/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/front_matter/</loc>
+    <loc>https://selenium.dev/documentation/nl/front_matter/</loc>
     <lastmod>2019-10-30T23:00:27+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/front_matter/"
+                href="https://selenium.dev/documentation/en/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/front_matter/"
+                href="https://selenium.dev/documentation/es/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/front_matter/"
+                href="https://selenium.dev/documentation/zh-cn/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/front_matter/"
+                href="https://selenium.dev/documentation/fr/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/front_matter/"
+                href="https://selenium.dev/documentation/ja/front_matter/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/front_matter/"
+                href="https://selenium.dev/documentation/nl/front_matter/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/categories/</loc>
+    <loc>https://selenium.dev/documentation/nl/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/categories/"
+                href="https://selenium.dev/documentation/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/categories/"
+                href="https://selenium.dev/documentation/es/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/categories/"
+                href="https://selenium.dev/documentation/zh-cn/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/categories/"
+                href="https://selenium.dev/documentation/fr/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/categories/"
+                href="https://selenium.dev/documentation/ja/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/categories/"
+                href="https://selenium.dev/documentation/nl/categories/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/contributing/</loc>
+    <loc>https://selenium.dev/documentation/nl/contributing/</loc>
     <lastmod>2019-10-29T22:05:07+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/contributing/"
+                href="https://selenium.dev/documentation/en/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/contributing/"
+                href="https://selenium.dev/documentation/es/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/contributing/"
+                href="https://selenium.dev/documentation/zh-cn/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/contributing/"
+                href="https://selenium.dev/documentation/fr/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/contributing/"
+                href="https://selenium.dev/documentation/ja/contributing/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/contributing/"
+                href="https://selenium.dev/documentation/nl/contributing/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/tags/</loc>
+    <loc>https://selenium.dev/documentation/nl/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/tags/"
+                href="https://selenium.dev/documentation/en/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/tags/"
+                href="https://selenium.dev/documentation/es/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/tags/"
+                href="https://selenium.dev/documentation/zh-cn/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/tags/"
+                href="https://selenium.dev/documentation/fr/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/tags/"
+                href="https://selenium.dev/documentation/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/tags/"
+                href="https://selenium.dev/documentation/nl/tags/"
                 />
   </url>
   
   <url>
-    <loc>http://selenium.dev/documentation/nl/</loc>
-    <lastmod>2019-10-26T23:02:38+02:00</lastmod>
+    <loc>https://selenium.dev/documentation/nl/</loc>
+    <lastmod>2019-10-26T21:38:27+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="http://selenium.dev/documentation/en/"
+                href="https://selenium.dev/documentation/en/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="http://selenium.dev/documentation/es/"
+                href="https://selenium.dev/documentation/es/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="http://selenium.dev/documentation/zh-cn/"
+                href="https://selenium.dev/documentation/zh-cn/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="http://selenium.dev/documentation/fr/"
+                href="https://selenium.dev/documentation/fr/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="http://selenium.dev/documentation/ja/"
+                href="https://selenium.dev/documentation/ja/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="http://selenium.dev/documentation/nl/"
+                href="https://selenium.dev/documentation/nl/"
                 />
   </url>
   

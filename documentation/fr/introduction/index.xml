@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Introduction on Documentation Selenium</title>
-    <link>http://selenium.dev/documentation/fr/introduction/</link>
+    <link>https://selenium.dev/documentation/fr/introduction/</link>
     <description>Recent content in Introduction on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="http://selenium.dev/documentation/fr/introduction/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://selenium.dev/documentation/fr/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Le projet Selenium et les outils</title>
-      <link>http://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</link>
+      <link>https://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</guid>
+      <guid>https://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Selenium controls web browsers Selenium is many things, but at its core it&amp;rsquo;s a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
@@ -24,10 +24,10 @@ It allows users to simulate common activities performed by end-users; entering t
     
     <item>
       <title>A propos du test automatisé</title>
-      <link>http://selenium.dev/documentation/fr/introduction/on_test_automation/</link>
+      <link>https://selenium.dev/documentation/fr/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
+      <guid>https://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
 Functional end-user tests such as Selenium tests are expensive to run, however.</description>
@@ -35,10 +35,10 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
     
     <item>
       <title>Types  de test</title>
-      <link>http://selenium.dev/documentation/fr/introduction/types_of_testing/</link>
+      <link>https://selenium.dev/documentation/fr/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
+      <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
 For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
@@ -46,10 +46,10 @@ For web applications, the automation of this testing can be done directly with S
     
     <item>
       <title>A propos de cette documentation</title>
-      <link>http://selenium.dev/documentation/fr/introduction/about_this_documentation/</link>
+      <link>https://selenium.dev/documentation/fr/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/fr/introduction/about_this_documentation/</guid>
+      <guid>https://selenium.dev/documentation/fr/introduction/about_this_documentation/</guid>
       <description>Cette documentation, tout comme le code lui-même, est maintenue à 100% par des volontaires de la communauté Selenium. Beaucoup font partie des utilisateurs de la première heure, mais encore plus sont des utilisateurs récents, et ont donné de leur temps pour améliorer l&amp;rsquo;accueil des nouveaux utilisateurs.
 Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir ! La meilleure façon de communiquer un problème est de visiter https://github.com/seleniumhq/docs/issues et de vérifier si ce problème a déjà été remonté.</description>
     </item>

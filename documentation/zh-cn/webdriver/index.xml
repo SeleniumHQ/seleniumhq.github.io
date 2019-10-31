@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebDriver on Selenium 文档</title>
-    <link>http://selenium.dev/documentation/zh-cn/webdriver/</link>
+    <link>https://selenium.dev/documentation/zh-cn/webdriver/</link>
     <description>Recent content in WebDriver on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="http://selenium.dev/documentation/zh-cn/webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://selenium.dev/documentation/zh-cn/webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding the components</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
@@ -24,10 +24,10 @@ Terminology  API: Application Programming Interface. This is the set of &amp;ldq
     
     <item>
       <title>Driver requirements</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers.</description>
@@ -35,20 +35,20 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
     
     <item>
       <title>Browser manipulation</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:</description>
     </item>
     
     <item>
       <title>Waits</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/waits/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/waits/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/waits/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
 From experience, most intermittents that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
@@ -56,19 +56,19 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
     
     <item>
       <title>Support classes</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/support_classes/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/support_classes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/support_classes/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/support_classes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JavaScript alerts, prompts and confirmations</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
 Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
@@ -76,28 +76,28 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
     
     <item>
       <title>Http proxies</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Page loading strategy</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web element</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
 Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) search_form = driver.find_element_by_tag_name(&amp;#34;form&amp;#34;) search_box = search_form.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
@@ -105,10 +105,10 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
     
     <item>
       <title>Keyboard</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/keyboard/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
       <description>Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.</description>
@@ -116,10 +116,10 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     
     <item>
       <title>Mouse</title>
-      <link>http://selenium.dev/documentation/zh-cn/webdriver/mouse/</link>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/mouse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/zh-cn/webdriver/mouse/</guid>
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/mouse/</guid>
       <description></description>
     </item>
     

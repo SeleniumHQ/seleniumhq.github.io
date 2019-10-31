@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>El Proyecto para Automatización de Navegadores Selenium on Documentación de Selenium</title>
-    <link>http://selenium.dev/documentation/es/</link>
+    <link>https://selenium.dev/documentation/es/</link>
     <description>Recent content in El Proyecto para Automatización de Navegadores Selenium on Documentación de Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="http://selenium.dev/documentation/es/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://selenium.dev/documentation/es/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Capacidades compartidas</title>
-      <link>http://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</link>
+      <link>https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</guid>
+      <guid>https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Estrategia de carga de la página (pageLoadStrategy) Al navegar a una nueva página a través de URL, por defecto Selenium esperará hasta que la página se haya cargado completamente antes de responder. Esto funciona bien para principiantes, pero puede causar largos tiempos de espera en páginas que cargan una gran cantidad de recursos de terceros. El uso de una estrategia no predeterminada puede hacer que la ejecución de la prueba sea más rápida en casos como este, pero también puede introducir inestabilidad donde los elementos en la página cambian de posición a medida que los elementos se cargan y cambian de tamaño.</description>
     </item>
     
     <item>
       <title>Captchas</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/captchas/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/captchas/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/captchas/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
  Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
@@ -33,10 +33,10 @@
     
     <item>
       <title>Derechos de autor y atribuciones</title>
-      <link>http://selenium.dev/documentation/es/front_matter/copyright_and_attributions/</link>
+      <link>https://selenium.dev/documentation/es/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/front_matter/copyright_and_attributions/</guid>
+      <guid>https://selenium.dev/documentation/es/front_matter/copyright_and_attributions/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
@@ -44,40 +44,40 @@ Every effort has been made to make this documentation as complete and as accurat
     
     <item>
       <title>El proyecto Selenium y herramientas</title>
-      <link>http://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</link>
+      <link>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</guid>
+      <guid>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</guid>
       <description>Selenium controla navegadores web Selenium es muchas cosas, pero en esencia es un conjunto de herramientas para la automatización del navegador web que utiliza las mejores técnicas disponibles para controlar de forma remota las instancias del navegador y emular la interacción de un usuario con el navegador.
 Permite a los testers simular actividades comunes realizadas por los usuarios finales; ingresar texto en los campos, seleccionar valores desplegables y casillas de verificación, y hacer clic en los enlaces de los documentos.</description>
     </item>
     
     <item>
       <title>Entendiendo los componentes</title>
-      <link>http://selenium.dev/documentation/es/webdriver/understanding_the_components/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/understanding_the_components/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/understanding_the_components/</guid>
       <description>Construir una suite de test usando WebDriver requerirá que entiendas y uses de forma efectiva diferentes componentes. Como con todo en el desarrollo de software, la gente usa diferentes términos para la misma idea. A continuación hay un desglose de cómo los términos son usados en esa descripción.
 Terminología  API: Interfaz de Programación de Aplicaciones. Es un conjunto de &amp;ldquo;comandos&amp;rdquo; que se utilizan para manipular el WebDriver. Library: Un módulo de código que contiene las APIs y el código necesario para implementarlos.</description>
     </item>
     
     <item>
       <title>Guía rápida</title>
-      <link>http://selenium.dev/documentation/es/getting_started/quick/</link>
+      <link>https://selenium.dev/documentation/es/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started/quick/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started/quick/</guid>
       <description>Selenium no es solo una herramienta o API, sino que compone muchas herramientas.
 WebDriver WebDriver también se conoce como Selenium 2. Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador.</description>
     </item>
     
     <item>
       <title>Instalación de las librerías Selenium</title>
-      <link>http://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</link>
+      <link>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</guid>
+      <guid>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</guid>
       <description>Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.
 Java La instalación de las bibliotecas Selenium para Java se puede hacer usando Maven. Agregue la dependencia selenium-java en el archivo pom.xml de su proyecto:
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dependencia de selenium-java admite la ejecución de su proyecto de automatización con todos los navegadores compatibles con Selenium.</description>
@@ -85,20 +85,20 @@ Java La instalación de las bibliotecas Selenium para Java se puede hacer usando
     
     <item>
       <title>Modelos de objetos de página</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
     </item>
     
     <item>
       <title>Navegación</title>
-      <link>http://selenium.dev/documentation/es/support_packages/browser_navigation/</link>
+      <link>https://selenium.dev/documentation/es/support_packages/browser_navigation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/support_packages/browser_navigation/</guid>
+      <guid>https://selenium.dev/documentation/es/support_packages/browser_navigation/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  There are commands for various webpage loading actions:
 Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
@@ -106,29 +106,29 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     
     <item>
       <title>Navegadores</title>
-      <link>http://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</link>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
       <description>Navegadores (Browsers) de consumidores El marco Selenium admite oficialmente los siguientes navegadores:
    Navegador Desarrollador Versiones soportadas     Chromium Chromium Todas las versiones   Firefox Mozilla 54 y recientes   Internet Explorer Selenium 6 y recientes   Opera Opera Chromium / Presto 10.5 y recientes   Safari Apple 10 y recientes    Navegadores especializados También hay un conjunto de navegadores especializados que generalmente se usan en entornos de desarrollo.</description>
     </item>
     
     <item>
       <title>Propósitos y funcionalidades principales</title>
-      <link>http://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
+      <link>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
+      <guid>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
       <description> Punto de entrada central para todas las pruebas Gestión y control de los nodos / entorno donde se ejecutan los navegadores Ejecución de pruebas a gran escala Ejecución de pruebas en paralelo Pruebas de diferentes plataformas (Cross-platform and cross-browser) Balanceo de carga  </description>
     </item>
     
     <item>
       <title>Selenium 1 (Selenium RC)</title>
-      <link>http://selenium.dev/documentation/es/legacy_docs/selenium_rc/</link>
+      <link>https://selenium.dev/documentation/es/legacy_docs/selenium_rc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/legacy_docs/selenium_rc/</guid>
+      <guid>https://selenium.dev/documentation/es/legacy_docs/selenium_rc/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
 How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
@@ -136,10 +136,10 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
     
     <item>
       <title>WebDriver remoto - servidor</title>
-      <link>http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/</link>
+      <link>https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/</guid>
+      <guid>https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
 Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description>
@@ -147,79 +147,79 @@ Starting the server from the command line Once you have downloaded selenium-serv
     
     <item>
       <title>Capacidades especificas de los controladores</title>
-      <link>http://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <link>https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <guid>https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Definir Capacidades (Capabilities) usando FirefoxOptions FirefoxOptions es la nueva forma de definir capacidades para el navegador Firefox y, por lo general, debe usarse con preferencia a las capacidades deseadas.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.</description>
     </item>
     
     <item>
       <title>Componentes de un Grid</title>
-      <link>http://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
+      <link>https://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
+      <guid>https://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
       <description>Concentrador o Hub  Intermediario y administrador Acepta solicitudes para ejecutar pruebas Toma instrucciones del cliente y las ejecuta de forma remota en los nodos Administra hilos  Un hub es un punto central al que se envían todas sus pruebas. Cada Selenium Grid consta de un centro exactamente. El concentrador debe ser accesible desde los respectivos clientes (es decir, servidor CI (Continuos Integration), máquina del desarrollador, etc.) El concentrador conectará uno o más nodos a los que se delegarán las pruebas.</description>
     </item>
     
     <item>
       <title>Controladores de otros fabricantes y plugins</title>
-      <link>http://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
       <description>El Selenium se puede ampliar o extender mediante el uso de complementos (plugins). Aquí hay una serie de complementos creados y mantenidos por terceros. Para obtener más información sobre cómo crear su propio complemento o tenerlo en la lista, consulte los documentos.
 Tenga en cuenta que estos complementos no son compatibles, mantenidos, alojados o respaldados por el proyecto Selenium. Además, tenga en cuenta que los complementos que se enumeran a continuación no están necesariamente autorizados bajo la licencia Apache v.</description>
     </item>
     
     <item>
       <title>Convenciones tipográficas</title>
-      <link>http://selenium.dev/documentation/es/front_matter/typographical_conventions/</link>
+      <link>https://selenium.dev/documentation/es/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/front_matter/typographical_conventions/</guid>
+      <guid>https://selenium.dev/documentation/es/front_matter/typographical_conventions/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
     </item>
     
     <item>
       <title>Descarga de archivos</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/file_downloads/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/file_downloads/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/file_downloads/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform.</description>
     </item>
     
     <item>
       <title>HTML runner</title>
-      <link>http://selenium.dev/documentation/es/getting_started/html-runner/</link>
+      <link>https://selenium.dev/documentation/es/getting_started/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started/html-runner/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started/html-runner/</guid>
       <description>Selenium HTML-runner le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
 Información común  La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de Monitis Transaction Monitor).</description>
     </item>
     
     <item>
       <title>Instalación de las librerías WebDriver</title>
-      <link>http://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
+      <link>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</guid>
+      <guid>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</guid>
       <description>Para ejecutar su proyecto y controlar el navegador, debe tener instalados los binarios de WebDriver específicos del navegador.
 Descargue el binario del WebDriver compatible con su navegador y colóquelo en el RUTA o PATH del sistema.</description>
     </item>
     
     <item>
       <title>Lenguage de dominio específico</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
 Your users, in general, do not care how your site looks.</description>
@@ -227,10 +227,10 @@ Your users, in general, do not care how your site looks.</description>
     
     <item>
       <title>Requerimientos de los controladores</title>
-      <link>http://selenium.dev/documentation/es/webdriver/driver_requirements/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/driver_requirements/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/driver_requirements/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
@@ -238,110 +238,110 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
     
     <item>
       <title>Sobre automatización de pruebas</title>
-      <link>http://selenium.dev/documentation/es/introduction/on_test_automation/</link>
+      <link>https://selenium.dev/documentation/es/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
+      <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
       <description>Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
 Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.</description>
     </item>
     
     <item>
       <title>Trabajando con colores</title>
-      <link>http://selenium.dev/documentation/es/support_packages/working_with_colours/</link>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
     </item>
     
     <item>
       <title>WebDriver remoto - cliente</title>
-      <link>http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/</link>
+      <link>https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/</guid>
+      <guid>https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>
     
     <item>
       <title>Configurando tu propio Grid</title>
-      <link>http://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
+      <link>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
+      <guid>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
       <description>Para usar Selenium Grid, debe mantener su propia infraestructura para los nodos. Como esto puede ser un esfuerzo demandante e intenso, muchas organizaciones utilizan proveedores de IaaS como Amazon EC2 y Google Compute para proporcionar esta infraestructura.
 Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que proporcionan un Selenium Grid como servicio en la nube. Ciertamente, también es posible ejecutar nodos en su infraestructura propia.</description>
     </item>
     
     <item>
       <title>Códigos de respuesta HTTP</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/http_response_codes/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/http_response_codes/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/http_response_codes/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.</description>
     </item>
     
     <item>
       <title>Generar el estado de la aplicación</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
     </item>
     
     <item>
       <title>Instalación del servidor Standalone</title>
-      <link>http://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</link>
+      <link>https://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</guid>
+      <guid>https://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</guid>
       <description>Si planeas usar Grid debes descargar el fichero selenium-server-standalone JAR. El jar selenium-server-standalone nunca se carga, pero todos los componentes están disponibles a través de selenium-server. El standalone JAR contiene todo, incluso el servidor remoto de Selenium y los enlaces del lado del cliente. Ésto quiere decir que si usas el selenium-server-standalone jar en tu proyecto, no tienes que añadir selenium-java o un jar de navegador específico.
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.</description>
     </item>
     
     <item>
       <title>Localizando elementos</title>
-      <link>http://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/</link>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/</guid>
       <description>Localizando un elemento Una de las técnicas más fundamentales por aprender al usar WebDriver es cómo encontrar elementos en la página. WebDriver ofrece varios tipos de selectores integrados, entre ellos encontrar un elemento por su atributo ID:
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = await driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.</description>
     </item>
     
     <item>
       <title>Manipulación de Navegadores</title>
-      <link>http://selenium.dev/documentation/es/webdriver/browser_manipulation/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/browser_manipulation/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/browser_manipulation/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem.</description>
     </item>
     
     <item>
       <title>Tipos de pruebas</title>
-      <link>http://selenium.dev/documentation/es/introduction/types_of_testing/</link>
+      <link>https://selenium.dev/documentation/es/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
+      <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
       <description>Prueba de aceptación Este tipo de prueba se realiza para determinar si la característica de un producto cumple con sus requisitos. Esto generalmente implica la retroalimentación o especificación del cliente.
 Para aplicaciones web, la automatización de este tipo de prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario. Esta simulación se puede realizar mediante grabación / reproducción o mediante los diferentes lenguajes de programación admitidos, tal como se explica en esta documentación.</description>
     </item>
     
     <item>
       <title>Trabajando con elementos select</title>
-      <link>http://selenium.dev/documentation/es/support_packages/working_with_select_elements/</link>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.</description>
@@ -349,10 +349,10 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     
     <item>
       <title>Acciones en detalle del mouse y teclado</title>
-      <link>http://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <link>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <guid>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Suppose you have an arbitrary web element e:
 Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
@@ -360,40 +360,40 @@ Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&a
     
     <item>
       <title>Acerca de esta documentación</title>
-      <link>http://selenium.dev/documentation/es/introduction/about_this_documentation/</link>
+      <link>https://selenium.dev/documentation/es/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/introduction/about_this_documentation/</guid>
+      <guid>https://selenium.dev/documentation/es/introduction/about_this_documentation/</guid>
       <description>Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
 Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar https://github.</description>
     </item>
     
     <item>
       <title>Ejecutando acciones en la AUT*</title>
-      <link>http://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>Puede establecer el texto de un elemento utilizando el método sendKeys de la siguiente manera:
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Algunas aplicaciones web usan bibliotecas JavaScript para agregar la funcionalidad de arrastrar y soltar.</description>
     </item>
     
     <item>
       <title>Esperas</title>
-      <link>http://selenium.dev/documentation/es/webdriver/waits/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/waits/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/waits/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
     </item>
     
     <item>
       <title>Gmail, email y Facebook logins</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
 The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
@@ -401,60 +401,60 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     
     <item>
       <title>Mock de servicios externos</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
     </item>
     
     <item>
       <title>Clases de apoyo</title>
-      <link>http://selenium.dev/documentation/es/webdriver/support_classes/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/support_classes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/support_classes/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/support_classes/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
     
     <item>
       <title>Dependencia entre pruebas</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/test_dependency/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/test_dependency/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/test_dependency/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
     </item>
     
     <item>
       <title>Mejores reportes</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
     </item>
     
     <item>
       <title>Trabajando con elementos web</title>
-      <link>http://selenium.dev/documentation/es/support_packages/working_with_web_elements/</link>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/support_packages/working_with_web_elements/</guid>
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
     
     <item>
       <title>Alertas, avisos y confirmaciones de JavaScript</title>
-      <link>http://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
 Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
@@ -462,10 +462,10 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
     
     <item>
       <title>Evitar compartir estados</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
  Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
@@ -473,10 +473,10 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
     
     <item>
       <title>Pruebas de desempeño</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/performance_testing/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/performance_testing/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/performance_testing/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
 It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
@@ -484,10 +484,10 @@ It may seem ideal to performance test in the context of the user but a suite of 
     
     <item>
       <title>Independencia en las pruebas</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
 Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
@@ -495,50 +495,50 @@ Let us say there is a content management system with which you can create some c
     
     <item>
       <title>Proxies Http</title>
-      <link>http://selenium.dev/documentation/es/webdriver/http_proxies/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/http_proxies/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/http_proxies/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
     
     <item>
       <title>Rastreo de enlaces</title>
-      <link>http://selenium.dev/documentation/es/worst_practices/link_spidering/</link>
+      <link>https://selenium.dev/documentation/es/worst_practices/link_spidering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/worst_practices/link_spidering/</guid>
+      <guid>https://selenium.dev/documentation/es/worst_practices/link_spidering/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.</description>
     </item>
     
     <item>
       <title>Considerar el uso de un API fluída</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
     </item>
     
     <item>
       <title>Estrategia de carga de página</title>
-      <link>http://selenium.dev/documentation/es/webdriver/page_loading_strategy/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/page_loading_strategy/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/page_loading_strategy/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
     
     <item>
       <title>Elemento web</title>
-      <link>http://selenium.dev/documentation/es/webdriver/web_element/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/web_element/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/web_element/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
 Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.</description>
@@ -546,20 +546,20 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
     
     <item>
       <title>Nueva instancia del navegador por prueba</title>
-      <link>http://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.</description>
     </item>
     
     <item>
       <title>Teclado</title>
-      <link>http://selenium.dev/documentation/es/webdriver/keyboard/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/keyboard/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/keyboard/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
@@ -568,20 +568,20 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     
     <item>
       <title>Mouse</title>
-      <link>http://selenium.dev/documentation/es/webdriver/mouse/</link>
+      <link>https://selenium.dev/documentation/es/webdriver/mouse/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/webdriver/mouse/</guid>
+      <guid>https://selenium.dev/documentation/es/webdriver/mouse/</guid>
       <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  </description>
     </item>
     
     <item>
       <title>Contribuyendo a la documentación de Selenium</title>
-      <link>http://selenium.dev/documentation/es/contributing/</link>
+      <link>https://selenium.dev/documentation/es/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://selenium.dev/documentation/es/contributing/</guid>
+      <guid>https://selenium.dev/documentation/es/contributing/</guid>
       <description>Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
 La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.</description>
     </item>
