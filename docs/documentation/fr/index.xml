@@ -130,6 +130,17 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/legacy_docs/selenium_rc/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+    </item>
+    
+    <item>
       <title>Tour rapide</title>
       <link>https://seleniumhq.github.io/site/documentation/fr/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -586,8 +597,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <guid>https://seleniumhq.github.io/site/documentation/fr/contributing/</guid>
       <description>Selenium est un gros projet logiciel
 et sa documentation est la clé pour comprendre comment fonctionnent les choses et apprendre à exploiter son potentiel efficacement.
-Une partie de la documentation Selenium est toujours hébergée sur notre dépôt www.seleniumhq.org. Cependant nous abandonnons progressivement cette documentation qui se concrentre trop sur Selenium RC et autres parties obsolètes, en faveur de cette réécriture.
-C&amp;rsquo;est un projet démarré dans le but de réécrire la documentation Selenium à partir de zéro.</description>
+C&amp;rsquo;est un projet démarré dans le but de réécrire la documentation Selenium à partir de zéro. C&amp;rsquo;est un effort continu (sans cible de release spécifique) dans le but de fournir un manuel à jour sur l&amp;rsquo;utilisation effective de Selenium. Nous espérons rappatrier les parties de l&amp;rsquo;ancienne documentation lorsque nécessaire.</description>
     </item>
     
   </channel>

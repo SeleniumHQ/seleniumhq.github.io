@@ -111,6 +111,18 @@ java -jar selenium-server-standalone-{VERSION}.</description>
     </item>
     
     <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/ja/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/ja/legacy_docs/selenium_rc/</guid>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
+RC Components Selenium RC components are:</description>
+    </item>
+    
+    <item>
       <title>Shared capabilities</title>
       <link>https://seleniumhq.github.io/site/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -600,7 +612,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       
       <guid>https://seleniumhq.github.io/site/documentation/ja/contributing/</guid>
       <description>Seleniumは大きなソフトウェアプロジェクトです、そしてドキュメンテーションはどのように機能しているかを理解し、ソフトウェアの持ち得る可能性の効果的な利用方法を学ぶための鍵です。
-ドキュメンテーションの一部はまだwww.seleniumhq.org リポジトリから配信されています。 このドキュメンテーションはSelenium RCと他の旧式の機能にあまりにも重点が置かれているので私達は段階的に廃止し、新しく書き直しをしていきます。
 この新しいドキュメンテーションプロジェクトはSeleniumのドキュメンテーションを一から書き直すことから始まりました。これは更新されたSeleniumを効果的に使用する為のハンドブックを提供する為の継続的な努力です（特定なリリースを目標するのではない）。私達は古いドキュメンテーションのうちまだ有効なものを移行したいと思っています。
 新しいドキュメンテーションの貢献には下記の貢献についてのセクションに書いてある手順をもとにしてます。多少の時間をかけて読むことによってドキュメンテーションに馴染んでください。 もっと詳しく読む
 Seleniumプロジェクトはすべての人からの貢献を歓迎します。手伝うにはいくつかの方法があります:
