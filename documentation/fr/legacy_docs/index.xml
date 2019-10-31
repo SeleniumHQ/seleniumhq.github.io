@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Legacy on Documentation Selenium</title>
+    <link>https://seleniumhq.github.io/site/documentation/fr/legacy_docs/</link>
+    <description>Recent content in Legacy on Documentation Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/site/documentation/fr/legacy_docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium 1 (Selenium RC)</title>
+      <link>https://seleniumhq.github.io/site/documentation/fr/legacy_docs/selenium_rc/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://seleniumhq.github.io/site/documentation/fr/legacy_docs/selenium_rc/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+    </item>
+    
+  </channel>
+</rss>

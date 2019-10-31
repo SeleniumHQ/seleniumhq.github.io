@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Seleniumドキュメント</title>
+    <link>https://seleniumhq.github.io/site/documentation/ja/tags/</link>
+    <description>Recent content in Tags on Seleniumドキュメント</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://seleniumhq.github.io/site/documentation/ja/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

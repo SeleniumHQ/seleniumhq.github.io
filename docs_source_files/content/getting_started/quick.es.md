@@ -14,8 +14,15 @@ _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ también se conoce como Seleni
 
 ## Control remoto
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp) también se conoce como Selenium 1.
-Selenium RC fue la herramienta de Selenium más destacada antes del advenimiento de Selenium WebDriver. Selenium RC usaba un servidor proxy e inyectaba JavaScript en un navegador para poder controlarlo. Dada la naturaleza intrusiva que Selenium RC tenía en un navegador, nunca podría estar seguro de si lo que estaba probando era lo mismo que la aplicación que quería publicar (desplegar). Las API de Selenium 2 todavía contienen API de Selenium RC, pero Selenium 3 eliminará completamente las API de Selenium RC. Si todavía utiliza Selenium RC, debe [_migrar_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0) a Selenium WebDriver.
+_[Remote Control]({{< ref "/legacy_docs/selenium_rc.es.md" >}})_
+también se conoce como Selenium 1.
+Selenium RC fue la herramienta de Selenium más destacada antes del advenimiento de Selenium WebDriver. 
+Selenium RC usaba un servidor proxy e inyectaba JavaScript en un navegador para poder controlarlo. 
+Dada la naturaleza intrusiva que Selenium RC tenía en un navegador, nunca podría estar seguro de si lo 
+que estaba probando era lo mismo que la aplicación que quería publicar (desplegar). Las API de Selenium 2 
+todavía contienen API de Selenium RC, pero Selenium 3 eliminará completamente las API de Selenium RC. 
+Si todavía utiliza Selenium RC, debe [_migrar_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0) 
+a Selenium WebDriver.
 
 
 ## IDE

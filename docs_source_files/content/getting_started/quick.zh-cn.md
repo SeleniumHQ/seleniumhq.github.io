@@ -16,7 +16,7 @@ WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏�
 
 ## Remote Control
 
-[_Remote Control_](https://www.seleniumhq.org/docs/05_selenium_rc.jsp)
+_[Remote Control]({{< ref "/legacy_docs/selenium_rc.zh-cn.md" >}})_
 也被称为 Selenium 1。
 Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。
 Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。
