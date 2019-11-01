@@ -230,6 +230,16 @@ Download the WebDriver binary supported by your browser and place it in the Syst
     </item>
     
     <item>
+      <title>Migrating from RC to WebDriver</title>
+      <link>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</guid>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests. But what of users who already have suites of existing tests? This guide is designed to demonstrate how to migrate your existing tests to the new APIs, allowing all new tests to be written using the new features offered by WebDriver.</description>
+    </item>
+    
+    <item>
       <title>On test automation</title>
       <link>https://selenium.dev/documentation/ja/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
