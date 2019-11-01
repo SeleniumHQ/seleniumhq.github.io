@@ -21,7 +21,7 @@ Selenium RC usaba un servidor proxy e inyectaba JavaScript en un navegador para 
 Dada la naturaleza intrusiva que Selenium RC tenía en un navegador, nunca podría estar seguro de si lo 
 que estaba probando era lo mismo que la aplicación que quería publicar (desplegar). Las API de Selenium 2 
 todavía contienen API de Selenium RC, pero Selenium 3 eliminará completamente las API de Selenium RC. 
-Si todavía utiliza Selenium RC, debe [_migrar_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0) 
+Si todavía utiliza Selenium RC, debe [_migrar_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.es.md" >}}) 
 a Selenium WebDriver.
 
 

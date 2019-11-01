@@ -21,7 +21,7 @@ if git --no-pager log -1 --oneline | grep "\\[deploy site\\]"; then
   git pull
   chmod +x "$TRAVIS_BUILD_DIR"/build-site.sh && "$TRAVIS_BUILD_DIR"/build-site.sh
   git add .
-  git commit -m "Deploying on $(date), commit ${TRAVIS_COMMIT} and job ${TRAVIS_JOB_NUMBER}, [skip ci]" || true
+  git commit -m "Deploying on $(date), commit ${TRAVIS_COMMIT}, [skip ci]" || true
   git push github HEAD:master
 else
   echo -e "\033[0;32mCommit to master did not trigger deployment, add [deploy site] to the commit message if you intend to deploy...\033[0m"
