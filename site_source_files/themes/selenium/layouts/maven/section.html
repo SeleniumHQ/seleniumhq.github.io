@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/maven.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
+<link rel="stylesheet" href="{{"css/maven.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
@@ -31,7 +31,7 @@
 <div class="container dark-background maven-diagram-section">
     <div class="maven-diagram-container">
         <a href="https://www.seleniumhq.org/images/maven.png">
-            <img class="maven-diagram" src="{{ .Site.BaseURL }}/images/maven-diagram.png"/>
+            <img class="maven-diagram" src="{{"images/maven-diagram.png" | relURL}}"/>
         </a>
     </div>
 

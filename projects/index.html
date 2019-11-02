@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Selenium Projects</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsor">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/help">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/main.css"/>
+<link rel="stylesheet" href="/css/projects.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <h1>Selenium Projects</h1>
+    <div class="header-description">
+        <p class="body-large">
+            Selenium has many projects that combine to form a versatile testing system.
+        </p>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters separator">
+    <h2>Selenium Supporters</h2>
+    <div class="sponsors">
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/applitools.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/browserstack.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/CBT.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/experitest.jpg"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/saucelabs.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/synthetics.png"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<div class="product-container webdriver dark-background">
+    <div class="intro" id="selenium-webdriver">
+        <div class="product-logo-container">
+            <img class="product-logo" src="/images/selenium_logo_square_red.png"/>
+        </div>
+        <h2>Selenium WebDriver</h2>
+        <p>Selenium WebDriver can drive a browser natively either locally or on remote machines.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="webdriverShow" class="toggle-button" onClick="showWebDriver()">+ Show more</b>
+    </div>
+    <div id="webdriverContent" class="content hide">
+        <p>The biggest change in Selenium recently has been the inclusion of the WebDriver API. Driving a browser natively as a user would either locally or on a remote machine using the Selenium Server it marks a leap forward in terms of browser automation.</p>
+        <p>Selenium WebDriver fits in the same role as RC did, and has incorporated the original 1.x bindings. It refers to both the language bindings and the implementations of the individual browser controlling code. This is commonly referred to as just "WebDriver" or sometimes as Selenium 2.</p>
+        <i>Selenium 1.0 + WebDriver = Selenium 2.0 </i>
+        <ul>
+            <li>WebDriver is designed in a simpler and more concise programming interface along with addressing some limitations in the Selenium-RC API.</li>
+            <li>WebDriver is a compact Object Oriented API when compared to Selenium1.0</li>
+            <li>It drives the browser much more effectively and overcomes the limitations of Selenium 1.x which affected our functional test coverage, like the file upload or download, pop-ups and dialogs barrier</li>
+            <li>WebDriver overcomes the limitation of Selenium RC's Single Host origin policy</li>
+        </ul>
+
+        <p>WebDriver is the name of the key interface against which tests should be written in Java, the implementing classes one should use are listed as below:</p>
+
+        <p>ChromeDriver, EventFiringWebDriver, FirefoxDriver, HtmlUnitDriver, InternetExplorerDriver, PhantomJSDriver, RemoteWebDriver, SafariDriver</p>
+
+        <p>For More information on Selenium WebDriver, please see the documentation and Remote Control to WebDriver Migration Notes.</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideWebDriver()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container grid dark-background">
+    <div class="intro" id="selenium-grid">
+        <div class="product-logo-container">
+            <img class="product-logo" src="/images/selenium_grid_logo_square.png"/>
+        </div>
+        <h2>Selenium Grid</h2>
+        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on may servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="gridShow" class="toggle-button" onClick="showGrid()">+ Show more</b>
+    </div>
+    <div id="gridContent" class="content hide">
+        <p>With the release of Selenium 2.0, the Selenium Server now has built-in Grid functionality. To see the how to configure this, please see the wiki.</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideGrid()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container ide dark-background">
+    <div class="intro" id="selenium-ide">
+        <div class="product-logo-container">
+            <img class="product-logo" src="/images/selenium_ide_logo_square.png"/>
+        </div>
+        <h2>Selenium IDE</h2>
+        <p>Selenium IDE is a Chrome and Firefox extension that makes it easy to record and playback tests in the browser.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="ideShow" class="toggle-button" onClick="showIDE()">+ Show more</b>
+    </div>
+    <div id="ideContent" class="content hide">
+        <h3>Web Ready</h3>
+        <p>Simple, turn-key solution to quickly author reliable end-to-end tests. Works out of the box for any web app.</p>
+
+        <h3>Easy Debugging</h3>
+        <p>Enjoy easier test debugging with rich IDE features like setting breakpoints and pausing on exceptions.</p>
+
+        <h3>Cross-browser Execution</h3>
+        <p>Run your tests on any browser/OS combination in parallel using the Command-line Runner for Selenium IDE.</p>
+
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideIDE()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<div class="product-container remoteControl dark-background">
+    <div class="intro" id="selenium-remote">
+        <h2>Selenium Remote Control</h2>
+        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on many servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
+    </div>
+    <div class="toggle-section">
+        <b id="remoteControlShow" class="toggle-button" onClick="showRemoteControl()">+ Show more</b>
+    </div>
+    <div id="remoteControlContent" class="content hide">
+        <p>Selenium Remote Control (RC) is a test tool that allows you to write automated web application UI tests in any programming language against any HTTP website using any mainstream JavaScript-enabled browser.</p>
+
+        <p>Selenium RC comes in two parts.</p>
+
+        <ol>
+            <li>A server which automatically launches and kills browsers, and acts as a HTTP proxy for web requests from them.</li>
+            <li>Client libraries for your favorite computer language.</li>
+        </ol>
+
+        <p>Selenium Remote Control is great for testing complex AJAX-based web user interfaces under a Continuous Integration system. It is also an ideal solution for users of Selenium IDE who want to write tests in a more expressive programming language than the Selenese HTML table format.</p>
+
+        <p>Read More about Selenium Remote-Control in our documentation</p>
+
+        <div class="toggle-section">
+            <b class="toggle-button" onClick="hideRemoteControl()">- Show less</b>
+        </div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container blog-link-container">
+    <div class="support-selenium">
+        <h2>Keep up with Selenium</h2>
+        <div class="button-container">
+            <a href="/blog">
+                <div class="button blog"><b>SELENIUM BLOG</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters-bottom">
+    <h2>Supporting Supporters</h2>
+    <div class="sponsors-bottom">
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/bestcasino.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/chameleonjohn.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/groundwork.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/henix.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/KatalonStudio.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/mailosaur.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Perfecto.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/serentaflowers.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/valsa.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Cigniti.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/qytera.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Tricentis.jpg"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="https://www.seleniumhq.org/sponsors/">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Contribute</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Sponsors/Sponsoring</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a>License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-remote">Selenium Remote Control</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/help"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+
+
+<script>
+    function showWebDriver() {
+      const webdriverContent = document.getElementById("webdriverContent");
+      const webdriverButton = document.getElementById("webdriverShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideWebDriver() {
+      const webdriverContent = document.getElementById("webdriverContent");
+      const webdriverButton = document.getElementById("webdriverShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showGrid() {
+      const webdriverContent = document.getElementById("gridContent");
+      const webdriverButton = document.getElementById("gridShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideGrid() {
+      const webdriverContent = document.getElementById("gridContent");
+      const webdriverButton = document.getElementById("gridShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showIDE() {
+      const webdriverContent = document.getElementById("ideContent");
+      const webdriverButton = document.getElementById("ideShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideIDE() {
+      const webdriverContent = document.getElementById("ideContent");
+      const webdriverButton = document.getElementById("ideShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+
+    function showRemoteControl() {
+      const webdriverContent = document.getElementById("remoteControlContent");
+      const webdriverButton = document.getElementById("remoteControlShow");
+
+      webdriverContent.className = 'content'
+      webdriverButton.className = 'toggle-button hide'
+    }
+    function hideRemoteControl() {
+      const webdriverContent = document.getElementById("remoteControlContent");
+      const webdriverButton = document.getElementById("remoteControlShow");
+
+      webdriverContent.className = 'content hide'
+      webdriverButton.className = 'toggle-button'
+    }
+</script>
