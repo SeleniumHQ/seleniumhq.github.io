@@ -25,7 +25,7 @@ Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览�
 Selenium 2 APIs 包含有 Selenium RC APIs，
 但是 Selenium 3 会完全摆脱 Selenium RC APIs。
 如果您还在使用 Selenium RC，则必须
-[_迁移_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+[_迁移_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.zh-cn.md" >}})
 到 Selenium WebDriver.
 
 ## IDE

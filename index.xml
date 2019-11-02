@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/</link>
+    <description>Recent content on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/chromedriver/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/chromedriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2019/</link>
+      <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selenium IDE Is Dead, Long Live Selenium IDE! </title>
+      <link>https://selenium.dev/blog/long-live-selenium-ide/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/long-live-selenium-ide/</guid>
+      <description>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:
+As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as Chrome and Edge will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/c#/</link>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/c#/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Firefox 55 and Selenium IDE</title>
+      <link>https://selenium.dev/blog/firefox-55/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/firefox-55/</guid>
+      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work.
+The reasons for this are complex, but boil down to two main causes:
+ Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/geckodriver/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/geckodriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/perl-6/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/perl-6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/perl/</link>
+      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/java/</link>
+      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hacking with IntelliJ</title>
+      <link>https://selenium.dev/blog/hacking-with-intellij/</link>
+      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/hacking-with-intellij/</guid>
+      <description>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they’ve asked us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and state my biases up-front so you’re aware of them.
+I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago.</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2017/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2017/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selenium 3.0: Out Now!</title>
+      <link>https://selenium.dev/blog/selenium-3.0/</link>
+      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/selenium-3.0/</guid>
+      <description>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:
+As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as Chrome and Edge will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 3 Is Coming</title>
+      <link>https://selenium.dev/blog/selenium-3-is-coming/</link>
+      <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/selenium-3-is-coming/</guid>
+      <description>Selenium 3 is coming! As I write this, we think that “beta 4” will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing. TL;DR:
+ WebDriver users will just find bug fixes and a drop-in replacement for 2.x. Selenium Grid users will also find bug fixes and a simple update. The WebDriver APIs are now the only APIs actively supported by the Selenium project.</description>
+    </item>
+    
+    <item>
+      <title>Announcing Selenium 3.0-beta1</title>
+      <link>https://selenium.dev/blog/announcing-selenium-3-beta/</link>
+      <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/announcing-selenium-3-beta/</guid>
+      <description>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.
+We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.</description>
+    </item>
+    
+    <item>
+      <title>Fall Selenium Conf, Save the Date &amp; Call for Speakers!</title>
+      <link>https://selenium.dev/blog/fall-selenium-conf/</link>
+      <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/fall-selenium-conf/</guid>
+      <description>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.
+Our initial goal was to bring the event to a new country, but for a number of reasons that proved more challenging than we’d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we’re pleased to be bringing it back there this year!
+The conference will be held at The Mermaid in downtown London on November 14-16:</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2016/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/flex-pilot/</link>
+      <pubDate>Thu, 07 Apr 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/flex-pilot/</guid>
+      <description>A Selenium IDE plugin for integrating with Flex-Pilot, for Flex automation. More info.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Blog</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsor">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/help">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog - 2018 Archive</h1></a>
+</section>
+
+<div class="blog-container">
+    <div class="blog-content">
+        
+        
+        <div class="container dark-background">
+            August 6, 2018
+            <a href="https://selenium.dev/blog/long-live-selenium-ide/"><h2>Selenium IDE Is Dead, Long Live Selenium IDE! </h2></a>
+            <p>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:</p>
+
+<p>As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as Chrome and Edge will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability. Selenium Grid users may require updates to their configuration as the json config file format has been updated, as have some of command line parameter options, but the upgrade should also be smooth.</p>
+
+<p>The major change in Selenium 3.0 is we’re removing the original Selenium Core implementation and replacing it with one backed by WebDriver. This will affect all users of the Selenium RC APIs. For more information, please see the previous post.</p>
+
+<p>A lot has changed in the 5 years between versions 2 and 3. When we shipped Selenium 2, the Selenium project was responsible for providing the driver for each browser. Now, we are happy to say that all the major browser vendors ship their own implementations (Apple, Google, Microsoft, and Mozilla). Because the browser vendors know their browsers better than anyone, their WebDriver implementations can be tightly coupled to the browser, leading to a better testing experience for you.</p>
+
+<p>The other notable change has been that there is now a W3C specification for browser automation, based on the Open Source WebDriver. This has yet to reach “recommendation” status, but the people working on it (including members of the Selenium project!) are now focusing on finishing the text and writing the implementations.</p>
+
+<p>Mozilla has been a front-runner in implementing the W3C WebDriver protocol. On the plus side, this has exposed problems with the spec as it has evolved, but it also means that Firefox support is hard to track as their engineering efforts have been forward looking, rather than on supporting the current wire protocol used by Selenium WebDriver. For now, the best advice we can offer is for you to try the latest release of geckodriver and Selenium together.</p>
+
+<p>These are exciting times for browser automation! Selenium 3.0 is a major release and we’re looking forward to improving things further, as well as tracking the ongoing work of the W3C spec. Our goal is to keep the changes your tests need to deal with to an absolute minimum, to continue preserving the hard work that’s gone into writing your existing tests.</p>
+
+<p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make Selenium 3 possible. That’s not just the developers and contributors to the Open Source project (past and present), but also the engineers from Google, Microsoft, Mozilla, and Apple, and everyone involved with the W3C spec. I’d also like to say thank you to everyone who’s taken the time to report bugs, our users and our community. The project is great fun to work on and you’re the reason for that. A final thank you is due to the Software Freedom Conservancy, who have provided invaluable help with the logistics of running a large OSS project.</p>
+
+<p>Happy hacking, everyone! May your tests run fast and true!</p>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%20Is%20Dead%2c%20Long%20Live%20Selenium%20IDE%21%20&body=https%3a%2f%2fselenium.dev%2fblog%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        </div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters separator">
+    <h2>Selenium Supporters</h2>
+    <div class="sponsors">
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/applitools.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/browserstack.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/CBT.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/experitest.jpg"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/saucelabs.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/synthetics.png"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters-bottom">
+    <h2>Supporting Supporters</h2>
+    <div class="sponsors-bottom">
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/bestcasino.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/chameleonjohn.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/groundwork.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/henix.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/KatalonStudio.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/mailosaur.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Perfecto.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/serentaflowers.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/valsa.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Cigniti.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/qytera.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Tricentis.jpg"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="https://www.seleniumhq.org/sponsors/">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Contribute</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Sponsors/Sponsoring</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a>License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-remote">Selenium Remote Control</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/help"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+
