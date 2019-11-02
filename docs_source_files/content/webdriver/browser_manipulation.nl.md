@@ -45,7 +45,7 @@ bundle install
 
 Internet Explorer is installed by default on Windows, so no installation is 
 needed. To drive Internet Explorer on Windows, you have to download the latest
-[Internet Explorer Driver](//www.seleniumhq.org/download/) and put the file 
+[Internet Explorer Driver](https://selenium.dev) and put the file 
 into a folder that is in `PATH`. To find out which directories are in `PATH`, 
 type `echo %PATH%` in command prompt.
 
@@ -74,33 +74,33 @@ open your website. This can be achieved in a single line:
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 //Convenient
-driver.get("https://www.seleniumhq.org");
+driver.get("https://selenium.dev");
 
 //Longer way
-driver.navigate().to("https://seleniumhq.github.io/docs/");
+driver.navigate().to("https://selenium.dev");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver.get("https://www.seleniumhq.org")
+driver.get("https://selenium.dev")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-driver.Navigate().GoToUrl(@"http://google.com");
+driver.Navigate().GoToUrl(@"https://selenium.dev");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Convenient way
-driver.get 'https://www.seleniumhq.org'
+driver.get 'https://selenium.dev'
 
 # Longer Way
-driver.navigate.to 'https://www.seleniumhq.org'
+driver.navigate.to 'https://selenium.dev'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-await driver.get('https://seleniumhq.github.io/docs/');
+await driver.get('https://selenium.dev');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Convenient
-driver.get("https://www.seleniumhq.org")
+driver.get("https://selenium.dev")
 
 //Longer way
-driver.navigate().to("https://seleniumhq.github.io/docs/")
+driver.navigate().to("https://selenium.dev")
   {{< / code-panel >}}
 {{< / code-tab >}}
 

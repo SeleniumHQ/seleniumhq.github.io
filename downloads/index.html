@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Downloads</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsor">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/help">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/main.css"/>
+<link rel="stylesheet" href="/css/downloads.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<div>
+<section class="hero">
+    <h1>Downloads</h1>
+    <div class="header-description">
+        <p class="body-large">
+            Below is where you can find the latest releases of all the Selenium components. You can also find a list of previous releases, source code, and additional information for Maven users (Maven is a popular Java build tool).
+        </p>
+        <p onClick="showPreviousReleases()" class="releases-button">Previous Releases</p>
+    </div>
+</section>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters separator">
+    <h2>Selenium Supporters</h2>
+    <div class="sponsors">
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/applitools.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/browserstack.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/CBT.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/experitest.jpg"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/saucelabs.png"/></div>
+        <div class="sponsor-logo"><img class="sponsor-logo" src="/images/sponsors/synthetics.png"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<div class="split-section container dark-background">
+    <div class="left">
+        <h2>Selenium Standalone Server</h2>
+        <p>The Selenium Server is needed in order to run Remote Selenium WebDriver. Selenium 3.X is no longer capable of running Selenium RC directly, rather it does it through emulation and the WebDriverBackedSelenium interface.</p>
+    </div>
+    <div class="right">
+        <p>Download version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
+        <p>To run Selenium tests exported from the legacy IDE, use the <a href="https://bit.ly/2A7OoTV">Selenium HTML Runner.</a></p>
+        <p>To use the Selenium Server in a Grid configuration see the <a href="https://github.com/SeleniumHQ/selenium/wiki/Grid2">wiki page</a>.</p>
+    </div>
+</div>
+
+<div class="split-section container">
+        <div class="left">
+            <h2>The Internet Explorer Driver Server</h2>
+            <p>This is required if you want to make use of the latest and greatest features of the WebDriver InternetExplorerDriver. Please make sure that this is available on your $PATH (or %PATH% on Windows) in order for the IE Driver to work as expected.</p>
+        </div>
+        <div class="right">
+            <p>Download version 3.14.0 for (recommended)
+                <a href="https://goo.gl/9Cqa4q">32 bit Windows IE</a> or <a href="https://goo.gl/AtHQuv">64 bit Windows IE</a></p></br><a href="http://goo.gl/LJ07LL">CHANGELOG</a>
+            </p>
+        </div>
+</div>
+
+<div class="container basic dark-background">
+    <h2>Selenium Client & WebDriver Language Bindings</h2>
+
+    <p>In order to create scripts that interact with the Selenium Server (Selenium RC, Selenium Remote WebDriver) or create local Selenium WebDriver scripts, you need to make use of language-specific client drivers. These languages include both 1.x and 2.x style clients.</p>
+
+    <p>While language bindings for <a href="/thirdparty">other languages exist</a>, these are the core ones that are supported by the main project hosted on GitHub.</p>
+
+
+    <div class="table">
+
+        <div class="row">
+            <span class="row-component single label">Language</span>
+            <span class="row-component single label">Client Version</span>
+            <span class="row-component single label">Release Date</span>
+            <span class="row-component links label"></span>
+        </div>
+
+        
+            
+            <div class="row">
+                <span class="row-component single">C#</span>
+                <span class="row-component single">3.14.0</span>
+                <span class="row-component single">Thursday, August 02</span>
+                <span class="row-component links">
+                    <a href="https://goo.gl/uJJ5Sc" class="link">Download</a>
+                    <a href="https://goo.gl/t3faSQ" class="link">Changelog</a>
+                    <a href="https://goo.gl/uutZjZ" class="link">API Docs</a>
+                    <a class="link"></a>
+                </span>
+            </div>
+            
+        
+            
+            <div class="row">
+                <span class="row-component single">Java</span>
+                <span class="row-component single">3.4.0</span>
+                <span class="row-component single">Friday, April 21</span>
+                <span class="row-component links">
+                    <a href="https://bit.ly/2zm3ZzF" class="link">Download</a>
+                    <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="link">Changelog</a>
+                    <a href="https://seleniumhq.github.io/selenium/docs/api/java/index.html" class="link">API Docs</a>
+                    <a class="link"></a>
+                </span>
+            </div>
+            
+        
+    </div>
+</div>
+
+<div class="container">
+    <h2>C# NuGet</h2>
+    <p>Nuget latest release is 3.4.0. Released on 2017-04-21</p>
+
+    <ul>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriver">WebDriver</a></li>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriverBackedSelenium">WebDriverBackedSelenium</a></li>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.Support">Support</a></li>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.RC">RC</a></li>
+    </ul>
+</div>
+
+<div class="container basic dark-background">
+    <h2>Selenium IDE</h2>
+    <p>Selenium IDE is a Chrome and Firefox plugin which records and plays back user interactions with the browser. Use this to either create simple scripts or assist in exploratory testing.</p>
+
+    <p>
+        Download latest released version
+        <a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd">for Chrome</a>
+        or for <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Firefox</a>
+        or view the <a href="https://github.com/SeleniumHQ/selenium-ide/releases">Release Notes.</a></p>
+
+    <p>Download previous <a href="https://addons.mozilla.org/en-GB/firefox/addon/selenium-ide/versions/">IDE versions here</a>.</p>
+</div>
+
+<div class="container basic">
+    <h2>Maven Information</h2>
+    <p>If you're using Maven, you will find more information <a href="/maven">here</a>.</p>
+</div>
+
+<div class="container basic dark-background">
+    <h2>Third Party Drivers, Bindings, and Plugins</h2>
+    <p>
+        Selenium can be extended through the use of plugins.
+        Here are a number of plugins created and maintained by third parties.
+        For more information on how to create your own plugin or have it listed,
+        learn more <a href="https://www.seleniumhq.org/selenium-ide/docs/en/plugins/plugins-getting-started/">here</a>.
+    </p>
+</div>
+
+<div class="container basic">
+    <h2>Platforms Supported by Selenium</h2>
+</div>
+
+<div id="browsersExpand" class="toggle-button" onClick="expandBrowsers()">+ Browsers</div>
+<div id="browsersCollapse" class="toggle-button hide" onClick="collapseBrowsers()">- Browsers</div>
+<div id="browsersContent" class="toggled-content dark-background hide">
+    <h3>Firefox</h3>
+    <p>Support for Firefox is the latest release, the previous release, the latest ESR release and the previous ESR release.</p>
+    <p>For example Selenium 2.40.0 (released on Feb 19, 2014) supports Firefox 27, 26, 24, 17</p>
+    <p>Selenium with Firefox can be run on any platform that Firefox supports for those versions, that also allow users to install a custom Firefox extension.</p>
+
+    <h3>Internet Explorer</h3>
+    <p>Versions 7, 8, 9, 10 and 11 are supported. Version 11 requires additional configuration.</p>
+    <p>The selenium project tests each release on Windows 7.</p>
+
+    <h3>Safari</h3>
+    <p>SafariDriver requires Safari 5.1+ (Note, due to Apple potentially dropping support > Safari 6.X for Windows, new developments in the bindings may not work in the Windows platform)</p>
+
+    <h3>Opera</h3>
+    <p>OperaDriver is supported by Opera Software, refer to their documentation for supported versions.</p>
+
+    <h3>Chrome</h3>
+    <p>ChromeDriver is supported by the Chromium project, please refer to their documentation for any compatibility information</p>
+</div>
+
+<div id="osExpand" class="toggle-button" onClick="expandOS()">+ Operating Systems</div>
+<div id="osCollapse" class="toggle-button hide" onClick="collapseOS()">- Operating Systems</div>
+<div id="osContent" class="toggled-content dark-background hide">
+    <h3>Microsoft Windows</h3>
+    <p>Most versions of MS Windows that are currently still supported by Microsoft should work with Selenium. Although we currently run tests before each release against Windows 7. This does not mean Selenium won't attempt to support different versions of Windows. This only means we don't continually run tests on other particular version of Windows.</p>
+
+    <h3>Apple OS X</h3>
+    <p>We currently do not use any version of OS X in our automated tests against the selenium project. However most developers on the project are using a recent version of OS X and we'll continue to support the current stable release and often the previous release.</p>
+
+    <h3>Linux</h3>
+    <p>We test mainly on Ubuntu, but other variations of Linux should also work where the browser manufacturers support them.</p>
+</div>
+
+<div id="languagesExpand" class="toggle-button" onClick="expandLanguages()">+ Programming Languages & Frameworks</div>
+<div id="languagesCollapse" class="toggle-button hide" onClick="collapseLanguages()">- Programming Languages & Frameworks</div>
+<div id="languagesContent" class="toggled-content dark-background hide">
+    <p>Programming languages are supported through Selenium "drivers." These are libraries made for each language that expose commands from the Selenium API natively in the form of methods/functions.</p>
+    <p>Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework. Some testing frameworks that can be used with Selenium are listed below.</p>
+
+
+    <h3>C#</h3>
+    <p>Frameworks available: <a href="https://nunit.org/">NUnit</a></p>
+
+    <h3>Java</h3>
+    <p>Frameworks available: <a href="https://junit.org/junit5/">JUnit</a>, <a href="https://testng.org/doc/index.html">TestNG</a></p>
+
+    <h3>JavaScript</h3>
+    <p>
+        Frameworks available:
+        <a href="http://www.webdriverjs.com/">WebdriverJS</a>,
+        <a href="https://webdriver.io/">WebdriverIO</a>,
+        <a href="http://nightwatchjs.org/">NightwatchJS</a>,
+        <a href="http://nemo.js.org/">NemoJS</a>
+    </p>
+
+    <h3>PHP</h3>
+    <p>Frameworks available: <a href="https://github.com/minkphp/docs/blob/master/index.rst">Behat + Mink</a></p>
+
+    <h3>Python</h3>
+    <p>Frameworks available:
+        <a href="https://docs.python.org/2/library/unittest.html">unittest</a>,
+        <a href="http://pyunit.sourceforge.net/">pyunit</a>,
+        <a href="http://pytest.org">py.test</a>,
+        <a href="https://code.google.com/archive/p/robotframework-seleniumlibrary/">robot framework</a>
+    </p>
+
+    <h3>Ruby</h3>
+    <p>Frameworks available:
+        <a href="http://rspec.info/">RSpec</a>,
+        <a href="https://ruby-doc.org/stdlib-1.8.7/libdoc/test/unit/rdoc/Test/Unit.html">Test::Unit</a>
+    </p>
+
+</div>
+
+<div class="container dark-background">
+    <h2>Source Code</h2>
+    <p>You can also find a list of the Selenium source code at our GitHub repository <a href="https://github.com/SeleniumHQ/selenium">here</a>.</p>
+</div>
+</div>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="selenium-supporters-bottom">
+    <h2>Supporting Supporters</h2>
+    <div class="sponsors-bottom">
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/bestcasino.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/chameleonjohn.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/groundwork.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/henix.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/KatalonStudio.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/mailosaur.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Perfecto.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/serentaflowers.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/valsa.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Cigniti.jpg"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/qytera.png"/></div>
+        <div class="sponsor-logo-bottom"><img class="sponsor-logo" src="/images/sponsors/Tricentis.jpg"/></div>
+    </div>
+</div>
+
+<body>
+
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Selenium Projects</h2>
+        <p>Selenium has many projects that combine to make a versatile testing system.</p>
+        <div class="button-container">
+            <a href="/projects">
+                <div class="button"><b>VIEW PROJECTS</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="modalBackdrop" class="modal-backdrop"></div>
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Contribute</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Sponsors/Sponsoring</a>
+            <a href="https://www.seleniumhq.org/sponsors/">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a>License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-remote">Selenium Remote Control</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/help"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+
+
+
+<div id="releasesContainer" class="releases-container">
+    <div class="close-container">
+        <div class="close" onClick="hidePreviousReleases()"><div class="close-x">X</div></div>
+    </div>
+    <h2>Previous Releases</h2>
+    <div class="releases-table">
+        <div class="releases-header">
+            <div class="name">Name</div>
+            <div class="last-modified">Last Modified</div>
+            <div class="size">Size</div>
+            <div class="etag">ETag</div>
+        </div>
+        
+        <div class="releases-row">
+            <div id="3.7-expand" class="name toggle show" >
+                <img class="expand-icon" src="/images/prev_releases_plus.png" onClick="openVersion(&#34;3.7&#34;)"/>
+                3.7
+            </div>
+            <div id="3.7-collapse" class="name toggle">
+                <img class="collapse-icon" src="/images/prev_releases_plus.png" onClick="openVersion(&#34;3.7&#34;)"/>
+                3.7
+            </div>
+            <div class="last-modified"></div>
+            <div class="size"></div>
+            <div class="etag"></div>
+            <div class="releases-data"></div>
+        </div>
+        <div id="3.7-data" class="data">
+        
+            <div class="releases-row">
+                <div class="name"><a href="https://selenium-release.storage.googleapis.com/3.7/IEDriverServer_Win32_3.7.0.zip">IEDriverServer_Win32_3.7.0.zip</a></div>
+                <div class="last-modified"> 2017-11-03 01:37:52</div>
+                <div class="size"> 0.85MB</div>
+                <div class="etag"> 18bd8ca48f4fe2074e121793502b2100</div>
+            </div>
+        
+            <div class="releases-row">
+                <div class="name"><a href="https://selenium-release.storage.googleapis.com/3.7/IEDriverServer_x64_3.7.0.zip">IEDriverServer_x64_3.8.0.zip</a></div>
+                <div class="last-modified"> 2017-11-03 01:37:51</div>
+                <div class="size"> 0.98MB</div>
+                <div class="etag"> ab4ffe9461002f140659fcfb3d98b5f3</div>
+            </div>
+        
+        </div>
+        
+        <div class="releases-row">
+            <div id="3.8-expand" class="name toggle show" >
+                <img class="expand-icon" src="/images/prev_releases_plus.png" onClick="openVersion(&#34;3.8&#34;)"/>
+                3.8
+            </div>
+            <div id="3.8-collapse" class="name toggle">
+                <img class="collapse-icon" src="/images/prev_releases_plus.png" onClick="openVersion(&#34;3.8&#34;)"/>
+                3.8
+            </div>
+            <div class="last-modified"></div>
+            <div class="size"></div>
+            <div class="etag"></div>
+            <div class="releases-data"></div>
+        </div>
+        <div id="3.8-data" class="data">
+        
+            <div class="releases-row">
+                <div class="name"><a href="https://selenium-release.storage.googleapis.com/3.8/IEDriverServer_Win32_3.8.0.zip">IEDriverServer_Win32_3.8.0.zip</a></div>
+                <div class="last-modified"> 2017-12-01 18:51:10</div>
+                <div class="size"> 0.85MB</div>
+                <div class="etag"> 6b3697a6300e0b8806463ffde51cbb31</div>
+            </div>
+        
+            <div class="releases-row">
+                <div class="name"><a href="https://selenium-release.storage.googleapis.com/3.8/IEDriverServer_x64_3.8.0.zip">IEDriverServer_x64_3.8.0.zip</a></div>
+                <div class="last-modified"> 2017-12-01 18:51:10</div>
+                <div class="size"> 0.98MB</div>
+                <div class="etag"> 2a78a8be1a73de773ad801d16b7c2c5b</div>
+            </div>
+        
+        </div>
+        
+    </div>
+</div>
+
+<script>
+  document.addEventListener('keydown', function(e) {
+    if (e.keyCode === 27) {
+      hidePreviousReleases();
+    }
+  });
+
+    function openVersion(version) {
+      const dataRow = document.getElementById(version + '-data')
+      const dataExpand = document.getElementById(version + '-expand')
+      const dataCollapse = document.getElementById(version + '-collapse')
+      if(dataRow.className === "data") {
+        dataRow.className = 'data show'
+        dataExpand.className = 'name toggle'
+        dataCollapse.className = 'name toggle show'
+      } else {
+        dataRow.className = 'data'
+        dataExpand.className = 'name toggle show'
+        dataCollapse.className = 'name toggle'
+      }
+    }
+
+    function expandBrowsers() {
+      const browsersExpand = document.getElementById('browsersExpand')
+      const browsersCollapse = document.getElementById('browsersCollapse')
+      const browsersContent = document.getElementById('browsersContent')
+
+      browsersExpand.className = 'toggle-button hide';
+      browsersCollapse.className = 'toggle-button';
+      browsersContent.className = 'toggled-content dark-background';
+    }
+
+    function collapseBrowsers() {
+      const browsersExpand = document.getElementById('browsersExpand')
+      const browsersCollapse = document.getElementById('browsersCollapse')
+      const browsersContent = document.getElementById('browsersContent')
+
+      browsersExpand.className = 'toggle-button';
+      browsersCollapse.className = 'toggle-button hide';
+      browsersContent.className = 'toggled-content dark-background hide';
+    }
+
+    function expandOS() {
+      const osExpand = document.getElementById('osExpand')
+      const osCollapse = document.getElementById('osCollapse')
+      const osContent = document.getElementById('osContent')
+      osExpand.className = 'toggle-button hide';
+      osCollapse.className = 'toggle-button';
+      osContent.className = 'toggled-content dark-background';
+    }
+
+    function collapseOS() {
+      const osExpand = document.getElementById('osExpand')
+      const osCollapse = document.getElementById('osCollapse')
+      const osContent = document.getElementById('osContent')
+
+      osExpand.className = 'toggle-button';
+      osCollapse.className = 'toggle-button hide';
+      osContent.className = 'toggled-content dark-background hide';
+    }
+
+    function expandLanguages() {
+      const languagesExpand = document.getElementById('languagesExpand')
+      const languagesCollapse = document.getElementById('languagesCollapse')
+      const languagesContent = document.getElementById('languagesContent')
+      languagesExpand.className = 'toggle-button hide';
+      languagesCollapse.className = 'toggle-button';
+      languagesContent.className = 'toggled-content dark-background';
+    }
+
+    function collapseLanguages() {
+      const languagesExpand = document.getElementById('languagesExpand')
+      const languagesCollapse = document.getElementById('languagesCollapse')
+      const languagesContent = document.getElementById('languagesContent')
+
+      languagesExpand.className = 'toggle-button';
+      languagesCollapse.className = 'toggle-button hide';
+      languagesContent.className = 'toggled-content dark-background hide';
+    }
+
+    function showPreviousReleases() {
+      const backdrop = document.getElementById('modalBackdrop')
+      const releases = document.getElementById('releasesContainer')
+
+      backdrop.className = "modal-backdrop show"
+      releases.className = "releases-container show"
+    }
+
+    function hidePreviousReleases() {
+      const backdrop = document.getElementById('modalBackdrop')
+      const releases = document.getElementById('releasesContainer')
+
+      backdrop.className = "modal-backdrop"
+      releases.className = "releases-container"
+    }
+</script>

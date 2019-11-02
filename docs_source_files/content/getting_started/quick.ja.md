@@ -35,7 +35,7 @@ you could never be sure if what you were testing was the same as
 the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
 Selenium 3 would completely get rid of Selenium RC APIs. If you are
 still using Selenium RC then you must
-[_migrate_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+[_migrate_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.ja.md" >}})
 to Selenium WebDriver.
 
 

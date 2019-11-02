@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css"/>
+<link rel="stylesheet" href="{{"css/header.css" | relURL}}"/>
 
 <html>
 <head>
@@ -10,9 +10,9 @@
 
 <header id="header" class="header">
     <a href="{{ .Site.BaseURL }}" class="headerLink">
-      <img class="logo logo-large" src="{{ .Site.BaseURL }}/images/selenium_logo_large.png"/>
-      <img class="logo logo-small" src="{{ .Site.BaseURL }}/images/selenium_logo_square_green.png"/>
-      <img class="logo logo-small logo-hide" src="{{ .Site.BaseURL }}/images/selenium_logo_square_white.png"/>
+      <img class="logo logo-large" src="{{"images/selenium_logo_large.png" | relURL}}"/>
+      <img class="logo logo-small" src="{{"images/selenium_logo_square_green.png" | relURL}}"/>
+      <img class="logo logo-small logo-hide" src="{{"images/selenium_logo_square_white.png" | relURL}}"/>
     </a>
 
   <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
@@ -50,7 +50,7 @@
         <div class="search-bar-container">
             <!--<div class="search-bar" onFocus="activateSearch()">-->
                 <!--<input />-->
-                <!--<img src="{{ .Site.BaseURL }}/images/search.png" class="search-icon" />-->
+                <!--<img class="search-icon" src="{{"images/search.png" | relURL}}"/>-->
             <!--</div>-->
             <script>
               (function() {
@@ -64,7 +64,7 @@
               })();
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
-            <img src="{{ .Site.BaseURL }}/images/search.png" class="search-icon" />
+            <img class="search-icon" src="{{"images/search.png" | relURL}}"/>
         </div>
         </div>
   </nav>

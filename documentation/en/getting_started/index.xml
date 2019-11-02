@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting started on Documentation for Selenium</title>
+    <link>https://selenium.dev/documentation/en/getting_started/</link>
+    <description>Recent content in Getting started on Documentation for Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/en/getting_started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quick tour</title>
+      <link>https://selenium.dev/documentation/en/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/getting_started/quick/</guid>
+      <description>Selenium is not just one tool or API but it composes many tools.
+WebDriver WebDriver is also known as Selenium 2. If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive in nature.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/en/getting_started/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/getting_started/html-runner/</guid>
+      <description>Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
+Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor). Be sure you comply with this. For Linux users with no DISPLAY - you need to start html-runner with Virtual display (search for xvfb)  Example Linux environment Install / download following software packages:</description>
+    </item>
+    
+  </channel>
+</rss>
