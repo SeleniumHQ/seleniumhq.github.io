@@ -81,7 +81,7 @@ Selenium-IDE.
 ## Installation
 
 Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the [downloads page](http://seleniumhq.org/download/).
+in the programming language of your choice. You could download them from the [downloads page](https://selenium.dev/downloads/).
 
 Once you've chosen a language to work with, you simply need to:
 
@@ -122,7 +122,7 @@ If you get a version number (which needs to be 1.5 or later), you're ready to st
 
 ### Using the Java Client Driver
 
-* Download Selenium java client driver zip from the SeleniumHQ [downloads page](http://seleniumhq.org/download/).
+* Download Selenium java client driver zip from the SeleniumHQ [downloads page](https://selenium.dev/downloads/).
 * Extract selenium-java-<version-number>.jar file
 * Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
 * Create a java project.
@@ -141,7 +141,7 @@ Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.
 
 ### Using the Python Client Driver 
 
-* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](http://seleniumhq.org/download/) 
+* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](https://selenium.dev/downloads/) 
 * Either write your Selenium test in Python or export
   a script from Selenium-IDE to a python file.
 * Run Selenium server from the console
@@ -151,7 +151,7 @@ For details on Python client driver configuration, see the appendix Python Clien
 
 ### Using the .NET Client Driver
 
-* Download Selenium RC from the SeleniumHQ [downloads page](http://seleniumhq.org/download/)
+* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
 * Extract the folder
 * Download and install [NUnit](https://nunit.org/download/) (
   Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
@@ -1389,7 +1389,7 @@ security certificate.
 ## Supporting Additional Browsers and Browser Configurations
 
 The Selenium API supports running against multiple browsers in addition to 
-Internet Explorer and Mozilla Firefox.  See the SeleniumHQ.org website for
+Internet Explorer and Mozilla Firefox.  See the https://selenium.dev website for
 supported browsers.  In addition, when a browser is not directly supported,
 you may still run your Selenium tests against a browser of your choosing by
 using the "\*custom" run-mode (i.e. in place of \*firefox or \*iexplore) when 

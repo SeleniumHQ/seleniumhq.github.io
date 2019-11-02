@@ -25,7 +25,7 @@ kon aangestuurd worden. Wegens de grote impact op de browser, wegens Javascript 
 nooit zeker of je dezelfde applicatie aan het testen was als diegene die live stond.
 In Selenium 2 zitten nog Selenium RC API's, maar sinds de release van Selenium 3, zijn al deze
 API's verwijderd. Als je nog steeds Selenium RC gebruikt, moet je
-[_overschakelen_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0) naar
+[_overschakelen_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.nl.md" >}}) naar
 Selenium WebDriver.
 
 ## IDE

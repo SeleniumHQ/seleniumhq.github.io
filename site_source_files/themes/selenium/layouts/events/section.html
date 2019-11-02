@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/events.css"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/events.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
@@ -33,24 +33,24 @@
         </div>
     </div>
     <div class="wide-photo-container">
-        <img class="wide-photo" src="{{ .Site.BaseURL }}/images/events/wide.png"/>
+        <img class="wide-photo" src="{{"images/events/wide.png" | relURL}}"/>
     </div>
 </div>
 <div class="collage-container">
         <div class="square-photo-container">
-            <img class="square-photo" src="{{ .Site.BaseURL }}/images/events/square1.png"/>
+            <img class="square-photo" src="{{"images/events/square1.png" | relURL}}"/>
         </div>
         <div class="square-photo-container">
-            <img class="square-photo" src="{{ .Site.BaseURL }}/images/events/square2.png"/>
+            <img class="square-photo" src="{{"images/events/square2.png" | relURL}}"/>
         </div>
         <div class="square-photo-container">
-            <img class="square-photo" src="{{ .Site.BaseURL }}/images/events/square3.png"/>
+            <img class="square-photo" src="{{"images/events/square3.png" | relURL}}"/>
         </div>
         <div class="square-photo-container">
-            <img class="square-photo" src="{{ .Site.BaseURL }}/images/events/square4.png"/>
+            <img class="square-photo" src="{{"images/events/square4.png" | relURL}}"/>
         </div>
         <div class="tall-photo-container">
-            <img class="tall-photo" src="{{ .Site.BaseURL }}/images/events/tall.png"/>
+            <img class="tall-photo" src="{{"images/events/tall.png" | relURL}}"/>
         </div>
 </div>
 

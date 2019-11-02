@@ -13,7 +13,7 @@ Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que 
 
 Este ejemplo le mostrará cómo iniciar Selenium 2 Grid Hub y registrar un nodo WebDriver y un nodo heredado Selenium 1 RC. También le mostraremos cómo llamar a la grid desde Java. El concentrador (_hub_) y los nodos se muestran aquí ejecutándose en la misma máquina, pero, por supuesto, puede copiar el servidor independiente de Selenium (_selenium-server-standalone_) en varias máquinas.
 
-El paquete `selenium-server-standalone` incluye el hub, WebDriver y el RC heredado necesario para ejecutar la Grid, _ant_ ya no es necesario. Puede descargar el `selenium-server-standalone-.jar` desde [http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/).
+El paquete `selenium-server-standalone` incluye el hub, WebDriver y el RC heredado necesario para ejecutar la Grid, _ant_ ya no es necesario. Puede descargar el `selenium-server-standalone-.jar` desde [https://selenium.dev/downloads/](https://selenium.dev/downloads/).
 
 
 ### Paso 1: Inicie el Hub

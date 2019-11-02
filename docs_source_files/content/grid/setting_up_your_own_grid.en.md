@@ -29,7 +29,7 @@ The `selenium-server-standalone` package includes the hub,
 WebDriver, and legacy RC needed to run the Grid, 
 _ant_ is not required anymore.
 You can download the `selenium-server-standalone-.jar` from
-[http://www.seleniumhq.org/download/](http://www.seleniumhq.org/download/).
+[https://selenium.dev/downloads/](https://selenium.dev/downloads/).
 
 
 ### Step 1: Start the Hub

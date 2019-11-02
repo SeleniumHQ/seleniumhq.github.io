@@ -29,7 +29,7 @@ que celle qui sera déployée en production.
 A noter que les APIs Selenium 2 contiennent les APIs Selenium RC,
 mais les APIs Selenium 3, elles, se débarrasseront complètement de Selenium RC.
 Si vous utilisez toujours Selenium RC, vous devez 
-[_migrer_](https://www.seleniumhq.org/docs/03_webdriver.jsp#migrating-from-selenium-1-0)
+[_migrer_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.fr.md" >}})
 vers Selenium WebDriver.
 
 
