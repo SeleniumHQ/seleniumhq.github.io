@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction on Documentation for Selenium</title>
+    <link>https://selenium.dev/documentation/en/introduction/</link>
+    <description>Recent content in Introduction on Documentation for Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/en/introduction/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Selenium project and tools</title>
+      <link>https://selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/</guid>
+      <description>Selenium controls web browsers Selenium is many things, but at its core it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents. It also provides many other controls such as mouse movement, arbitrary JavaScript execution, and much more.</description>
+    </item>
+    
+    <item>
+      <title>On test automation</title>
+      <link>https://selenium.dev/documentation/en/introduction/on_test_automation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/introduction/on_test_automation/</guid>
+      <description>First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
+Functional end-user tests such as Selenium tests are expensive to run, however. Furthermore, they typically require substantial infrastructure to be in place to be run effectively. It is a good rule to always ask yourself if what you want to test can be done using more lightweight test approaches such as unit tests or with a lower-level approach.</description>
+    </item>
+    
+    <item>
+      <title>Types of testing</title>
+      <link>https://selenium.dev/documentation/en/introduction/types_of_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/introduction/types_of_testing/</guid>
+      <description>Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
+    </item>
+    
+    <item>
+      <title>About this documentation</title>
+      <link>https://selenium.dev/documentation/en/introduction/about_this_documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/en/introduction/about_this_documentation/</guid>
+      <description>These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.
+If there is an issue with the documentation, we want to know! The best way to communicate an issue is to visit https://github.</description>
+    </item>
+    
+  </channel>
+</rss>
