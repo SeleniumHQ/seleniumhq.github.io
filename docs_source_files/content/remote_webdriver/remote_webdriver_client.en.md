@@ -72,11 +72,10 @@ driver.quit();
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-ChromeOptions chromeOptions = new ChromeOptions();
-DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
-desiredCapabilities.SetCapability("browserVersion", "78");
-desiredCapabilities.SetCapability("platformName", "Windows 10");
-IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), desiredCapabilities);
+var chromeOptions = new ChromeOptions();
+chromeOptions.BrowserVersion = "67";
+chromeOptions.PlatformName = "Windows XP";
+IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
 driver.Navigate().GoToUrl("http://www.google.com");
 driver.Quit();
   {{< / code-panel >}}

@@ -9,7 +9,7 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-First, we need to connect to the RemoteWebDriver.
+To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
 We do this by pointing the URL to the address of the server running our tests.
 In order to customize our configuration, we set desired capabilities.
 Below is an example of instantiating a remote WebDriver object
@@ -31,7 +31,7 @@ driver.quit();
  IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), firefoxOptions);
  driver.Navigate().GoToUrl("http://www.google.com");
  driver.Quit();
- {{< / code-panel >}}
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
 
@@ -78,7 +78,12 @@ driver.quit();
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var chromeOptions = new ChromeOptions();
+chromeOptions.BrowserVersion = "67";
+chromeOptions.PlatformName = "Windows XP";
+IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
+driver.Navigate().GoToUrl("http://www.google.com");
+driver.Quit();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 caps = Selenium::WebDriver::Remote::Capabilities.chrome
@@ -119,7 +124,11 @@ driver.setFileDetector(new LocalFileDetector());
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var allowsDetection = this.driver as IAllowsFileDetection;
+if (allowsDetection != null)
+{
+   allowsDetection.FileDetector = new LocalFileDetector();
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 @driver.file_detector = lambda do |args|
@@ -148,7 +157,9 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+IWebElement upload = driver.FindElement(By.Id("myfile"));
+upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 @driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
@@ -164,4 +175,3 @@ val upload: WebElement = driver.findElement(By.id("myfile"))
 upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
 {{< / code-tab >}}
-
