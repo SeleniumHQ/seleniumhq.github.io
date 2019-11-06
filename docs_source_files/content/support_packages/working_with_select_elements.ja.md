@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.Select;
 from selenium.webdriver.support.select import Select
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+using OpenQA.Selenium.Support.UI
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 include Selenium::WebDriver::Support
@@ -47,14 +47,15 @@ select_element = driver.find_element_by_id('selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+IWebElement selectElement = driver.FindElement(By.Id("selectElementID"));
+var selectObject = new SelectElement(selectElement);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -99,7 +100,14 @@ select_object.select_by_value('value1')
 select_object.select_by_visible_text('Bread')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Select an <option> based upon the <select> element's internal index
+selectObject.SelectByIndex(1);
+
+// Select an <option> based upon its value attribute
+selectObject.SelectByValue("value1");
+
+// Select an <option> based upon its text
+ selectObject.SelectByText("Bread");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Select an <option> based upon the <select> element's internal index
@@ -112,7 +120,7 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Select an <option> based upon the <select> element's internal index
@@ -154,7 +162,7 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that have been selected
@@ -179,14 +187,15 @@ List<WebElement> allAvailableOptions = selectObject.getOptions();
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Return a IList<IWebElement> of options that the <select> element contains
+IList<IWebElement> allAvailableOptions = selectObject.Options;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Return an Array[Element] of options that the &lt;select&gt; element contains
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that the <select> element contains
@@ -224,7 +233,17 @@ select_object.deselect_by_visible_text('Bread')
 select_object.deselect_all()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Deselect an <option> based upon the <select> element's internal index
+selectObject.DeselectByIndex(1);
+
+// Deselect an <option> based upon its value attribute
+selectObject.DeselectByValue("value1");
+
+// Deselect an <option> based upon its text
+selectObject.DeselectByText("Bread");
+
+// Deselect all selected <option> elements
+selectObject.DeselectAll();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Deselect an <option> based upon the <select> element's internal index
@@ -240,7 +259,7 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Deselect an <option> based upon the <select> element's internal index
@@ -268,13 +287,13 @@ Boolean doesThisAllowMultipleSelections = selectObject.isMultiple();
 does_this_allow_multiple_selections = select_object.is_multiple
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// We don't have a JavaScript code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple
