@@ -72,7 +72,12 @@ driver.quit();
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var chromeOptions = new ChromeOptions();
+chromeOptions.BrowserVersion = "67";
+chromeOptions.PlatformName = "Windows XP";
+IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
+driver.Navigate().GoToUrl("http://www.google.com");
+driver.Quit();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 caps = Selenium::WebDriver::Remote::Capabilities.chrome
@@ -113,7 +118,11 @@ driver.setFileDetector(new LocalFileDetector());
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+var allowsDetection = this.driver as IAllowsFileDetection;
+if (allowsDetection != null)
+{
+   allowsDetection.FileDetector = new LocalFileDetector();
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 @driver.file_detector = lambda do |args|
@@ -142,7 +151,9 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
 # We don't have a Python code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+IWebElement upload = driver.FindElement(By.Id("myfile"));
+upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 @driver.navigate.to "http://sso.dev.saucelabs.com/test/guinea-file-upload"
