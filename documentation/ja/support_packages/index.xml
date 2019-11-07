@@ -40,7 +40,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       <guid>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
     </item>
     
     <item>

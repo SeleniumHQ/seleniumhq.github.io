@@ -30,7 +30,7 @@ java -jar selenium-server-standalone-{VERSION}.</description>
       
       <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
     </item>
     

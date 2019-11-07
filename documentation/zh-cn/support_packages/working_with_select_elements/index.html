@@ -12,20 +12,20 @@
     <title>Working with select elements :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1572946008" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1572946008" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1573150345" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1573150345" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1572946008" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1573150345" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1572946008"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1573150345"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1572946008"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1572946008"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1573150345"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1573150345"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1572946008"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1573150345"></script>
 
     
   </div>
@@ -1941,8 +1941,8 @@ To use it, you will need the following import statement:</p>
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium.Support.UI
+  
 </code></pre></div>
 </section>
   
@@ -1958,7 +1958,7 @@ To use it, you will need the following import statement:</p>
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -2035,8 +2035,9 @@ select_object <span style="color:#719e07">=</span> Select(select_element)
 
 <section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+IWebElement selectElement = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
+<span style="color:#dc322f">var</span> selectObject = <span style="color:#719e07">new</span> SelectElement(selectElement);
+  
 </code></pre></div>
 </section>
   
@@ -2151,8 +2152,15 @@ select_object<span style="color:#719e07">.</span>select_by_visible_text(<span st
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.SelectByIndex(<span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.SelectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span> selectObject.SelectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+  
 </code></pre></div>
 </section>
   
@@ -2366,8 +2374,9 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Return a IList&lt;IWebElement&gt; of options that the &lt;select&gt; element contains
+</span><span style="color:#586e75"></span>IList&lt;IWebElement&gt; allAvailableOptions = selectObject.Options;
+  
 </code></pre></div>
 </section>
   
@@ -2479,8 +2488,18 @@ select_object<span style="color:#719e07">.</span>deselect_all()
 
 <section id="csharpcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.DeselectByIndex(<span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.DeselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.DeselectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+
+<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
+</span><span style="color:#586e75"></span>selectObject.DeselectAll();
+  
 </code></pre></div>
 </section>
   
@@ -2591,8 +2610,8 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
 
 <section id="csharpcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">bool</span> doesThisAllowMultipleSelections = selectObject.IsMultiple;
+  
 </code></pre></div>
 </section>
   
@@ -2631,7 +2650,7 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/">
       “Working with select elements”
-    </a> was last updated on: 27 Oct 2019 21:17:22 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/f55a20808da1ae23e101aae94620a87e11a5110e">Added C# Sendkeys code example (#31) (f55a208)</a>
+    </a> was last updated on: 06 Nov 2019 18:59:39 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/2eba263790d478a1ae522b3e298c64b0a650d466">Working with select elements using C# (#52) (2eba263)</a>
 </h5>
         
         </div> 
@@ -3796,19 +3815,19 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1572946008"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1573150345"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1572946008"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1572946008"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1573150345"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1573150345"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1572946008" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1572946008"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1573150345" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1573150345"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

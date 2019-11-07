@@ -273,7 +273,7 @@ Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selen
       
       <guid>https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>
     
     <item>
@@ -587,13 +587,14 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Contribuyendo a la documentación de Selenium</title>
+      <title>Contribuyendo al sitio y documentación de Selenium</title>
       <link>https://selenium.dev/documentation/es/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/contributing/</guid>
-      <description>Selenium es un gran proyecto de software y la documentación es clave para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
-La nueva documentación es un proyecto que comenzó a reescribir la documentación de Selenium desde cero. Este es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar un manual actualizado sobre cómo usar Selenium de manera efectiva. Esperamos traer las piezas de la documentación antigua que aún tienen sentido.</description>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Selenium es un proyecto grande de software, su documentación y sitio son claves para comprender cómo funcionan las cosas y aprender formas efectivas de explotar su potencial.
+Este proyecto continene el sitio y la documentación de Selenium. Éste es un esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar información actualizada sobre cómo usar Selenium de efectivamente, cómo involucrarse y cómo contribuír a Selenium.</description>
     </item>
     
   </channel>

@@ -12,20 +12,20 @@
     <title>Remote WebDriver client :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1572946001" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1572946001" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1573150338" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1573150338" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1572946001" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1573150338" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1572946001"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1573150338"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1572946001"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1572946001"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1573150338"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1573150338"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1572946001"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1573150338"></script>
 
     
   </div>
@@ -2067,8 +2067,13 @@ driver.quit();
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+chromeOptions.BrowserVersion = <span style="color:#2aa198">&#34;67&#34;</span>;
+chromeOptions.PlatformName = <span style="color:#2aa198">&#34;Windows XP&#34;</span>;
+IWebDriver driver = <span style="color:#719e07">new</span> RemoteWebDriver(<span style="color:#719e07">new</span> Uri(<span style="color:#2aa198">&#34;http://localhost:4444/wd/hub&#34;</span>), chromeOptions);
+driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
+driver.Quit();
+  
 </code></pre></div>
 </section>
   
@@ -2175,8 +2180,12 @@ driver.setFileDetector(<span style="color:#719e07">new</span> LocalFileDetector(
 
 <section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#dc322f">var</span> allowsDetection = <span style="color:#719e07">this</span>.driver <span style="color:#719e07">as</span> IAllowsFileDetection;
+<span style="color:#719e07">if</span> (allowsDetection != <span style="color:#719e07">null</span>)
+{
+   allowsDetection.FileDetector = <span style="color:#719e07">new</span> LocalFileDetector();
+}
+  
 </code></pre></div>
 </section>
   
@@ -2272,8 +2281,10 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span>);
+IWebElement upload = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;myfile&#34;</span>));
+upload.SendKeys(<span style="color:#2aa198">@&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span>);
+  
 </code></pre></div>
 </section>
   
@@ -2316,7 +2327,7 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/remote_webdriver/remote_webdriver_client/">
       “Remote WebDriver client”
-    </a> was last updated on: 28 Oct 2019 01:49:41 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/90f397078ecff647309bd49ea72389bcc8c5ecc5">C# Remote WebDriver Client Example (#15) (90f3970)</a>
+    </a> was last updated on: 06 Nov 2019 19:33:23 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/c0f3224218f985efb0e4d4e3e1699fe18ef8079d">DesiredCapabilities, Local file detector using C# (#53) (c0f3224)</a>
 </h5>
         
         </div> 
@@ -3481,19 +3492,19 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1572946001"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1573150338"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1572946001"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1572946001"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1573150338"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1573150338"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1572946001" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1572946001"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1573150338" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1573150338"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

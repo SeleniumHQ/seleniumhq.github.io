@@ -257,7 +257,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however. 
       
       <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
     </item>
     
@@ -376,7 +376,7 @@ For web applications, the automation of this testing can be done directly with S
       <guid>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
     </item>
     
     <item>
@@ -616,27 +616,14 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     </item>
     
     <item>
-      <title>Seleniumドキュメンテーションに貢献</title>
+      <title>Contributing to the Selenium Site &amp; Documentation</title>
       <link>https://selenium.dev/documentation/ja/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/contributing/</guid>
-      <description>Seleniumは大きなソフトウェアプロジェクトです、そしてドキュメンテーションはどのように機能しているかを理解し、ソフトウェアの持ち得る可能性の効果的な利用方法を学ぶための鍵です。
-この新しいドキュメンテーションプロジェクトはSeleniumのドキュメンテーションを一から書き直すことから始まりました。これは更新されたSeleniumを効果的に使用する為のハンドブックを提供する為の継続的な努力です（特定なリリースを目標するのではない）。私達は古いドキュメンテーションのうちまだ有効なものを移行したいと思っています。
-新しいドキュメンテーションの貢献には下記の貢献についてのセクションに書いてある手順をもとにしてます。多少の時間をかけて読むことによってドキュメンテーションに馴染んでください。 もっと詳しく読む
-Seleniumプロジェクトはすべての人からの貢献を歓迎します。手伝うにはいくつかの方法があります:
-課題を報告する 新たに問題を報告する時や、既存の課題についてコメントする時にはSeleniumソフトウェアそのものかそれに関わるドキュメンテーションの具体的な技術問題に付いてのみ討議するようにしてください。
-すべてのSeleniumのコンポーネントは時間と共にかなり早く更新されます、なのでこれがドキュメンテーションを形骸化を招くかもしれません。もしそのようなことを発見した場合には、迷わず問題を報告してください。または、ひょっとしてドキュメンテーションの更新方法を知っているならば、修正点を含むプルリクエストを提出してください。
-もし、見つけたものが問題かどうか確信がないときはselenium-users@ メーリングリストで質問してください,またはirc.freenode.orgかSlackの#seleniumチャンネルに参加してください。
-貢献 Seleniumプロジェクトは新たな貢献者を歓迎します。 重要かつ価値のある貢献をある程度の期間して頂いた方にはコミッター(Committers)になっていただきプロジェクトへのcommit-accessの権限が譲与されます。
-このドキュメンテーションは貢献プロセスを案内します。
-ステップ　１： フォーク (Fork) Githubのプロジェクトをフォークして ローカル環境にチェックアウトしてください。
-% git clone git@github.com:username/docs.git % cd docs % git remote add upstream git://github.com/seleniumhq/docs.git https://gohugo.io/getting-started/installing/
-依存関係： ヒューゴ (Hugo) ドキュメンテーションはヒューゴ (Hugo) を用いてサイトの生成とレンダーしています。 変更点をコミットする前にすべてをローカル環境で確認するために、 ヒューゴ (Hugo)をインストール して サイトをローカル環境でレンダーするためにローカルサーバーを実行してください。
-ステップ　２：ブランチ (Branch) フィーチャーブランチを作成して、取り組み始める:
-% git checkout -b my-feature-branch 私達はHEAD-based開発を実践しています、すなわち全ての変更はmaster上に直接反映されます。
-ステップ　３：コミット(Commit) 初めにgitにあなたの名前とメールアドレスを登録済みか確認してください:
-% git config --global user.name &amp;#39;Santa Claus&amp;#39; % git config --global user.</description>
+      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
+ Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
+This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
     </item>
     
   </channel>

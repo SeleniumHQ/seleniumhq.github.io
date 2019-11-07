@@ -260,7 +260,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       
       <guid>https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>
     
     <item>
@@ -602,8 +602,8 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       
       <guid>https://selenium.dev/documentation/nl/contributing/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch. This is an ongoing effort (not targeted at any specific release) to provide an updated handbook on how to use Selenium effectively.</description>
+ Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
+This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
     </item>
     
   </channel>

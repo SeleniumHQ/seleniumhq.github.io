@@ -12,20 +12,20 @@
     <title>Browser navigation :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1572946005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1572946005" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1573150342" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1573150342" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1572946005" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1573150342" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1572946005"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1573150342"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1572946005"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1572946005"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1573150342"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1573150342"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1572946005"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1573150342"></script>
 
     
   </div>
@@ -2007,8 +2007,22 @@ driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.<
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
+# Navigate to a URL (both <span style="color:#719e07">of</span> the statements below are
+# functionally equivalent).
+driver.get(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>);
+driver.navigate().to(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>);
+
+# Go forward one page <span style="color:#719e07">in</span> the browser (<span style="color:#719e07">if</span> you<span style="color:#2aa198">&#39;re not on the
+</span><span style="color:#2aa198"># last page that was viewed).
+</span><span style="color:#2aa198">driver.navigate().forward();
+</span><span style="color:#2aa198">
+</span><span style="color:#2aa198"># Go back one page in the browser (if you&#39;</span>re not on the
+# first page that was viewed).
+driver.navigate().back();
+
+# Refresh the current page.
+driver.navigate().refresh();
+  
 </code></pre></div>
 </section>
   
@@ -2044,7 +2058,7 @@ driver.navigate().to(<span style="color:#2aa198">&#34;https://www.google.com&#34
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/support_packages/browser_navigation/">
       “Browser navigation”
-    </a> was last updated on: 27 Oct 2019 22:26:51 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/01f61f95a3c5398689b7fa06f6041c32795a762d">Browser navigation c# example (#49) (01f61f9)</a>
+    </a> was last updated on: 06 Nov 2019 05:33:01 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/f3be1f12f1eb02ebdd716fdbbebaf5e3fa79cf43">Browser navigation using JavaScript (#51) (f3be1f1)</a>
 </h5>
         
         </div> 
@@ -3206,19 +3220,19 @@ driver.navigate().to(<span style="color:#2aa198">&#34;https://www.google.com&#34
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1572946006"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1573150342"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1572946006"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1572946006"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1573150342"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1573150342"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1572946006" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1572946006"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1573150342" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1573150342"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

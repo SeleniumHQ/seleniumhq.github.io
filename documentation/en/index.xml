@@ -345,7 +345,7 @@ For web applications, the automation of this testing can be done directly with S
       
       <guid>https://selenium.dev/documentation/en/support_packages/working_with_select_elements/</guid>
       <description>Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
     </item>
     
     <item>
@@ -564,13 +564,14 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     </item>
     
     <item>
-      <title>Contributing to the Selenium Documentation</title>
+      <title>Contributing to the Selenium Site &amp; Documentation</title>
       <link>https://selenium.dev/documentation/en/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/contributing/</guid>
-      <description>Selenium is a big software project and documentation is key to understanding how things work and learning effective ways to exploit its potential.
-The new documentation is a project started to rewrite Selenium&amp;rsquo;s documentation from scratch. This is an ongoing effort (not targeted at any specific release) to provide an updated handbook on how to use Selenium effectively. We hope to bring over the pieces of the old documentation that makes sense.</description>
+      <description>Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
+This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.
+Contributions toward the site and docs follow the process described in the below section about contributions.</description>
     </item>
     
   </channel>

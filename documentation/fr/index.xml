@@ -232,7 +232,7 @@ Download the WebDriver binary supported by your browser and place it in the Syst
       
       <guid>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>
     
     <item>
@@ -377,7 +377,7 @@ For web applications, the automation of this testing can be done directly with S
       
       <guid>https://selenium.dev/documentation/fr/introduction/about_this_documentation/</guid>
       <description>Cette documentation, tout comme le code lui-même, est maintenue à 100% par des volontaires de la communauté Selenium. Beaucoup font partie des utilisateurs de la première heure, mais encore plus sont des utilisateurs récents, et ont donné de leur temps pour améliorer l&amp;rsquo;accueil des nouveaux utilisateurs.
-Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir ! La meilleure façon de communiquer un problème est de visiter https://github.com/seleniumhq/docs/issues et de vérifier si ce problème a déjà été remonté.</description>
+Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir ! La meilleure façon de communiquer un problème est de visiter https://github.com/seleniumhq/seleniumhq.github.io/issues et de vérifier si ce problème a déjà été remonté.</description>
     </item>
     
     <item>
@@ -600,14 +600,14 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Contribuer à la Documentation Selenium</title>
+      <title>Contributing to the Selenium Site &amp; Documentation</title>
       <link>https://selenium.dev/documentation/fr/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/contributing/</guid>
-      <description>Selenium est un gros projet logiciel
-et sa documentation est la clé pour comprendre comment fonctionnent les choses et apprendre à exploiter son potentiel efficacement.
-C&amp;rsquo;est un projet démarré dans le but de réécrire la documentation Selenium à partir de zéro. C&amp;rsquo;est un effort continu (sans cible de release spécifique) dans le but de fournir un manuel à jour sur l&amp;rsquo;utilisation effective de Selenium. Nous espérons rappatrier les parties de l&amp;rsquo;ancienne documentation lorsque nécessaire.</description>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
+This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
     </item>
     
   </channel>

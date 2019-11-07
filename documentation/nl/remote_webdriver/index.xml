@@ -29,7 +29,7 @@ Starting the server from the command line Once you have downloaded selenium-serv
       
       <guid>https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- First, we need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
+ To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>
     
   </channel>
