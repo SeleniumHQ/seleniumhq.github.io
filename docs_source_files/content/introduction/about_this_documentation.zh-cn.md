@@ -8,7 +8,7 @@ weight: 4
 
 如果文档有问题，我们想知道！
 沟通问题的最佳方式是访问
-[https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues)
+[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues)
 并搜索问题是否已经提交。
 如果没有，请随意打开一个！
 

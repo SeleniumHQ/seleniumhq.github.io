@@ -17,7 +17,7 @@ for new users.
 
 If there is an issue with the documentation, we want to know!
 The best way to communicate an issue is to visit
-[https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues)
+[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues)
 and search to see whether or not the issue has been filed already.
 If not, feel free to open one!
 
