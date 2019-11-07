@@ -1,6 +1,6 @@
-[![Travis Status](https://travis-ci.com/SeleniumHQ/seleniumhq.github.io.svg?branch=gh-pages)](//travis-ci.com/SeleniumHQ/seleniumhq.github.io/builds)
+[![Travis Status](https://travis-ci.com/SeleniumHQ/seleniumhq.github.io.svg?branch=master)](//travis-ci.com/SeleniumHQ/seleniumhq.github.io/builds)
 
-[![SeleniumHQ](https://selenium.dev/images/selenium_logo_square_green.png)](https://selenium.dev)
+<a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="200" alt="Selenium"/></a>
 
 # Selenium Site and Documentation
 
