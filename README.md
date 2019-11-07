@@ -11,7 +11,7 @@ This is the repository used to build and publish the official Selenium [website]
 We use [Hugo](https://gohugo.io/) to build and render the site and docs,
 which are two separate Hugo projects.
 
-After cloning the repository, If you want to make changes to the
+After cloning the repository, if you want to make changes to the
 site, work on the `site_source_files` directory. To make changes to the docs,
 switch to the `docs_source_files` directory. To see a live preview of your
 changes, run `hugo server` on each directory.
@@ -21,7 +21,7 @@ changes, run `hugo server` on each directory.
 % hugo server
 ```
 
-A full contribution guideline can be see at [contributing](https://selenium.dev/documentation/en/contributing/)
+A full contribution guideline can be seen at [contributing](https://selenium.dev/documentation/en/contributing/)
 
 ## How to get involved?
 

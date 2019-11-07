@@ -113,7 +113,7 @@ h1.sub-header {
       padding: 10px;
       display: flex;
       align-items: center;
-  }
+}
 
 .sponsor-logo img {
     width: 100%;
@@ -294,7 +294,7 @@ h1.sub-header {
 }
 
 .row-component {
-    border-bottom: 1px solid rgb(148, 156, 161, 0.45);
+    border-bottom: 1px solid rgb(148, 156, 161);
     margin-right: 25px;
     padding: 10px 10px 10px 0px;
 }
@@ -374,6 +374,5 @@ h1.sub-header {
 
     .involvements {
       flex-direction: column;
-    }
     }
 }
