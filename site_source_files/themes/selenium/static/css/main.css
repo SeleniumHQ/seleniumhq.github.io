@@ -88,14 +88,14 @@ h1.sub-header {
 
 /*Supporters*/
 
-.selenium-supporters {
+.selenium-sponsors {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 75px;
 }
 
-.selenium-supporters h2 {
+.selenium-sponsors h2 {
     color: #43B02A;
     padding: 50px 20px 50px 0px;
     margin: 0;
@@ -103,6 +103,7 @@ h1.sub-header {
 
 .sponsors {
     display: flex;
+    flex-flow: row wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -119,13 +120,13 @@ h1.sub-header {
     width: 100%;
 }
 
-.selenium-supporters-bottom {
+.selenium-sponsors-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.selenium-supporters-bottom h2 {
+.selenium-sponsors-bottom h2 {
     color: #43B02A;
     padding: 30px;
 }

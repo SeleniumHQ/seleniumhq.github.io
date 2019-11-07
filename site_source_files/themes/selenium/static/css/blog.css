@@ -167,11 +167,11 @@ a {
 
 .sponsors {
   margin: 0 20px;
-  border-bottom: 1px solid rgb(148, 156, 161, 0.45);
+  border-bottom: 1px solid rgb(148, 156, 161);
   padding-bottom: 50px;
 }
 
-.selenium-supporters.separator {
+.selenium-sponsors.separator {
   padding-bottom: 25px;
 }
 

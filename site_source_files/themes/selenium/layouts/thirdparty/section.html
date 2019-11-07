@@ -13,15 +13,13 @@
     </div>
 </section>
 
-{{ partial "selenium-supporters.html" . }}
-
 <div class="warning container">
     <div class="warning-exclamation">!</div>
     <div>
     <span class="important">Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project.</span>
     In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.2.0. Some of the plugins are available under another free and open source software license; others are only available under a proprietary license. Any questions about plugins and their license of distribution need to be raised with their respective developer(s).
     </div>
-    </div>
+</div>
 
 <div class="container dark-background">
     <h2>Third Party Browser Drivers</h2>
@@ -139,20 +137,9 @@
         {{ end }}
 </div>
 
-{{ partial "supporting-supporters.html" . }}
+{{ partial "selenium-level-sponsors.html" . }}
 
-<div class="support-selenium-container">
-    <div class="support-selenium">
-        <h2>Support the Selenium Project</h2>
-        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
-        <div class="button-container">
-            <a href="{{"downloads" | relURL}}">
-                <div class="button"><b>LEARN MORE</b></div>
-            </a>
-        </div>
-    </div>
-</div>
-
+{{ partial "support-selenium.html" . }}
 </body>
 
 {{ partial "footer.html" . }}
