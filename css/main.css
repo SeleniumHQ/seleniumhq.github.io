@@ -88,14 +88,14 @@ h1.sub-header {
 
 /*Supporters*/
 
-.selenium-supporters {
+.selenium-sponsors {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 75px;
 }
 
-.selenium-supporters h2 {
+.selenium-sponsors h2 {
     color: #43B02A;
     padding: 50px 20px 50px 0px;
     margin: 0;
@@ -103,6 +103,7 @@ h1.sub-header {
 
 .sponsors {
     display: flex;
+    flex-flow: row wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -113,19 +114,19 @@ h1.sub-header {
       padding: 10px;
       display: flex;
       align-items: center;
-  }
+}
 
 .sponsor-logo img {
     width: 100%;
 }
 
-.selenium-supporters-bottom {
+.selenium-sponsors-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.selenium-supporters-bottom h2 {
+.selenium-sponsors-bottom h2 {
     color: #43B02A;
     padding: 30px;
 }
@@ -294,7 +295,7 @@ h1.sub-header {
 }
 
 .row-component {
-    border-bottom: 1px solid rgb(148, 156, 161, 0.45);
+    border-bottom: 1px solid rgb(148, 156, 161);
     margin-right: 25px;
     padding: 10px 10px 10px 0px;
 }
@@ -374,6 +375,5 @@ h1.sub-header {
 
     .involvements {
       flex-direction: column;
-    }
     }
 }

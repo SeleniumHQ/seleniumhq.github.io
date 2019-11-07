@@ -42,12 +42,11 @@ header {
 }
 
 .subnav-item a {
-  color: gray;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
 .subnav-item a:hover {
-  color: white;
   text-decoration: underline;
 }
 
@@ -254,6 +253,11 @@ nav .nav-item {
 
   .about-subnav-active {
     display: flex;
+  }
+
+  .subnav-item a {
+    color: rgb(182, 182, 182);
+    text-decoration: none;
   }
 
 }
