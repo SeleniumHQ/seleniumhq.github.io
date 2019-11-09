@@ -78,11 +78,11 @@
 
     <div class="news dark-background">
       <span class="news-header"><h2>News</h2></span>
-        {{ range first 3 (where .Data.Pages "Type" "blog") }}
+        {{ range first 3 (where .Paginator.Pages "Type" "blog") }}
         <div class="news-item">
             <div class="news-metadata">
                 <h4>{{ .Title }}</h4>
-                <p class= "body">{{ .Date.Format "Monday, January 1"}}</p>
+                <p class= "body">{{ .Date.Format "Monday, January 1, 2006"}}</p>
             </div>
             <div class="news-description">
                 <p class= "body">{{ .Description }}</p>
