@@ -145,7 +145,5 @@ class HelloSelenium {
 
 * [クイックツアー]({{< ref "/getting_started/quick.ja.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.ja.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.ja.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.ja.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.ja.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.ja.md#html-runner" >}})

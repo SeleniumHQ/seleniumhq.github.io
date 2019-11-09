@@ -23,22 +23,6 @@ code, it is not intrusive in nature. Hence, you are testing the
 same application which you push live.
 
 
-## Remote Control
-
-_[Remote Control]({{< ref "/legacy_docs/selenium_rc.ja.md" >}})_
-is also known as Selenium 1.
-Selenium RC was the most prominent Selenium tool
-before the advent of Selenium WebDriver. Selenium RC would use a
-proxy server and inject JavaScript into a browser to be able to control
-it. Given the intrusive nature Selenium RC had on a browser,
-you could never be sure if what you were testing was the same as
-the application you wanted to push live. Selenium 2 APIs yet contain Selenium RC APIs but
-Selenium 3 would completely get rid of Selenium RC APIs. If you are
-still using Selenium RC then you must
-[_migrate_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.ja.md" >}})
-to Selenium WebDriver.
-
-
 ## IDE
 
 _[IDE](https://www.seleniumhq.org/selenium-ide)_ is a
@@ -57,10 +41,3 @@ WebDriver API, you will never use Selenium IDE.
 Soon after development of WebDriver tests, you may face a need of
 running your tests on multiple browser and operating system combinations.
 This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
-
-
-## HTML Runner
-
-This tool allows you to run Test Suites from the command
-line. Test Suites are HTML exports from Selenium IDE or compatible
-tools. _[HTML Runner]({{< ref "/getting_started/html-runner.ja.md" >}})_

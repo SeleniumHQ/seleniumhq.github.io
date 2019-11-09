@@ -16,23 +16,6 @@ C'est comme si un utilisateur réel utilisait le navigateur.
 Puisque WebDriver n'a pas besoin que ses APIs soient compilées avec le code de l'application testée,
 il est non intrusif par nature. Ainsi vous testez exactement l'application qui sera en production.
 
-## Remote Control
-
-_[Remote Control]({{< ref "/legacy_docs/selenium_rc.fr.md" >}})_
-aussi connu sous le nom de Selenium 1.
-Selenium RC était l'outil Selenium central avant l'avènement de Selenium WebDriver.
-Selenium RC utilise un serveur proxy et injecte du Javascript dans le navigateur 
-afin de pouvoir en prendre le contrôle.
-Etant donné la nature intrusive de Selenium RC sur la navigateur, 
-vous ne pouvez jamais être sûr de tester la même application 
-que celle qui sera déployée en production. 
-A noter que les APIs Selenium 2 contiennent les APIs Selenium RC,
-mais les APIs Selenium 3, elles, se débarrasseront complètement de Selenium RC.
-Si vous utilisez toujours Selenium RC, vous devez 
-[_migrer_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.fr.md" >}})
-vers Selenium WebDriver.
-
-
 ## IDE
 
 _[IDE](https://www.seleniumhq.org/selenium-ide)_ est un plugin Firefox
@@ -53,10 +36,4 @@ Peu après le développement de tests basés sur WebDriver,
 il se peut que vous rencontriez le besoin d'exécuter ceux-ci
 sur des combinaisons différentes de navigateurs / système d'exploitation.
 C'est ici que _[Grid]({{< ref "/grid/_index.md" >}})_ intervient pour vous aider.
-
-
-## HTML Runner
-
-Cet outil permet de permet d'exécuter des Test Suites depuis la ligne de commande.
-Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible. _[HTML Runner]({{< ref "/getting_started/html-runner.fr.md" >}})_
 

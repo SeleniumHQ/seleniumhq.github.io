@@ -1,6 +1,6 @@
 ---
 title: "HTML runner"
-weight: 2
+weight: 3
 ---
 
 _Selenium HTML-runner_ 允许您从命令行运行 Test Suites。

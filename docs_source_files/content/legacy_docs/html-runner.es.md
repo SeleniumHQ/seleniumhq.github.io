@@ -1,22 +1,20 @@
 ---
-title: "Runner HTML"
-weight: 2
+title: "HTML runner"
+weight: 3
 ---
 
-_Selenium HTML-runner_ permet d'exécuter des Test Suites depuis la ligne de commande.
-Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
+_Selenium HTML-runner_ le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
 
-## Informations générales
 
-* Les combinaisons de version de geckodriver / firefox /
-selenium-html-runner sont importantes. Il doit y avoir
-une matrice de compatibilité quelque part.
-* selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor). Assurez-vous de vous y conformer.
-* Pour les utilisateurs Linux sans affichage - vous devez exécuter html-runner 
-  avec un affichage virtuel (cherchez xvfb)
+## Información común
 
-## Exemple sur environnement Linux
-Installer / télécharger les packages suivants:
+* La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte.
+* selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de _Monitis Transaction Monitor_). Asegúrese de cumplir con esto.
+* Para usuarios de Linux sin PANTALLA: debe iniciar html-runner con pantalla virtual (busque xvfb).
+
+
+## Ejemplo de un entorno Linux
+Descargue e instale los siguientes paquetes de software:
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -29,13 +27,13 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-Example de Test Suite:
+Ejemplo de la Test Suite:
 
 ```html
 [user@localhost ~]$ cat testsuite.html
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 <head>
   <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
   <title>Test Suite</title>
@@ -43,17 +41,16 @@ Example de Test Suite:
 <body>
 <table id="suiteTable" cellpadding="1" cellspacing="1" border="1" class="selenium"><tbody>
 <tr><td><b>Test Suite</b></td></tr>
-<tr><td><a href="YOUR-TEST-SCENARIO.html">YOUR-TEST-SCENARIO</a></td></tr>
+<tr><td><a href="YOUR-TEST-SCENARIO.html">SU-ESCENARIO-DE-PRUEBAS</a></td></tr>
 </tbody></table>
 </body>
 </html>
 ```
 
 
-## Comment exécuter selenium-html-runner en mode headless
+## Cómo ejecutar el elenium-html-runner sin cabeza (_headless_)
 
-Pour la partie la plus importante, voici un exemple d'exécution de selenium-html-runner !
-Votre expérience peut varier selon les combinaisons logicielles - versions de geckodriver/FF/html-runner.
+Ahora, la parte más importante, ¡un ejemplo de cómo ejecutar selenium-html-runner! Su experiencia puede variar según las combinaciones de software: versiones geckodriver / Firefox / html-runner.
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

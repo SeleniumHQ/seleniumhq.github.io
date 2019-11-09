@@ -15,19 +15,6 @@ worden aangeboden. Laatstgenoemden worden gebruikt om de browser aan te sturen. 
 manier word een echte gebruiker gesimuleerd.WebDriver staat los van de applicatieve 
 code en is daarom niet-intrusief. Zo test je dezelfde applicatie als diegene die live staat.
 
-## Remote Control
-
-_[Remote Control]({{< ref "/legacy_docs/selenium_rc.nl.md" >}})_
-staat ook bekend als Selenium 1.
-Selenium RC werd het meest gebruikt totdat Selenium WebDriver verscheen.
-Selenium RC gebruikte een proxy server om Javascript in de browser te injecteren, zodat deze
-kon aangestuurd worden. Wegens de grote impact op de browser, wegens Javascript injectie, was je
-nooit zeker of je dezelfde applicatie aan het testen was als diegene die live stond.
-In Selenium 2 zitten nog Selenium RC API's, maar sinds de release van Selenium 3, zijn al deze
-API's verwijderd. Als je nog steeds Selenium RC gebruikt, moet je
-[_overschakelen_]({{< ref "/legacy_docs/migrating_from_rc_to_webdriver.nl.md" >}}) naar
-Selenium WebDriver.
-
 ## IDE
 
 _[IDE](https://www.seleniumhq.org/selenium-ide)_ is een Firefox plugin die gebruikt kan
@@ -43,8 +30,4 @@ Nadat je enkele WebDriver testen hebt geschreven, zal je snel tot de constatatie
 dat je testen wil uitvoeren tegen verschillende (versies van) browsers.
 Hiervoor kun je _[Grid]({{< ref "/grid/_index.nl.md" >}})_ gebruiken.
 
-## HTML Runner
-
-Hiermee kun je Test Suites uitvoeren via de command line. Test Suites zijn
-HTML exports vanuit Selenium IDE of andere compatiebele tools _[HTML Runner]({{< ref "/getting_started/html-runner.nl.md" >}})_.
 

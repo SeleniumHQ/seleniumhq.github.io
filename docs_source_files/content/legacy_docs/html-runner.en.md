@@ -1,6 +1,6 @@
 ---
 title: "HTML runner"
-weight: 2
+weight: 3
 ---
 
 _Selenium HTML-runner_ allows you to run Test Suites from a
