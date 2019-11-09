@@ -77,8 +77,8 @@
     {{ partial "platinum-level-sponsors.html" . }}
 
     <div class="news dark-background">
-      <span class="news-header"><h2>News</h2></span>
-        {{ range first 3 (where .Paginator.Pages "Type" "blog") }}
+        <span class="news-header"><h2>News</h2></span>
+        {{ range first 3 (where .Site.RegularPages "Type" "blog") }}
         <div class="news-item">
             <div class="news-metadata">
                 <h4>{{ .Title }}</h4>
@@ -94,7 +94,7 @@
                 </a>
             </div>
         </div>
-      {{ end }}
+        {{ end }}
         <div class="button-container green">
             <a href="{{"blog" | relURL}}">
                 <div class="button green"><b>MORE NEWS</b></div>
