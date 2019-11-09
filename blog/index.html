@@ -207,107 +207,169 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Monday, August 6, 2018
-                <a href="https://selenium.dev/blog/long-live-selenium-ide/"><h2>Selenium IDE Is Dead, Long Live Selenium IDE! </h2></a>
-                <p>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:</p>
+                Monday, August 6, 2018 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+                <a href="https://selenium.dev/blog/2018/long-live-selenium-ide/"><h2>Selenium IDE Is Dead, Long Live Selenium IDE! </h2></a>
+                <p>In August of 2017 Simon shared the bleak, hard news that as of Firefox 55 Selenium IDE would no longer work.
+Selenium IDE (or as we’ll refer to it from here on out – the Legacy IDE) was, and is, dead.</p>
 
-<p>As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as Chrome and Edge will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability. Selenium Grid users may require updates to their configuration as the json config file format has been updated, as have some of command line parameter options, but the upgrade should also be smooth.</p>
+<p>Since then quite a lot has happened with the IDE. We have a new version of it which we are referring to as… Selenium IDE!</p>
 
-<p>The major change in Selenium 3.0 is we’re removing the original Selenium Core implementation and replacing it with one backed by WebDriver. This will affect all users of the Selenium RC APIs. For more information, please see the previous post.</p>
+<p><strong>It is currently in “alpha” and available for use in both
+<a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd">Chrome</a> and
+<a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Firefox</a>.</strong></p>
 
-<p>A lot has changed in the 5 years between versions 2 and 3. When we shipped Selenium 2, the Selenium project was responsible for providing the driver for each browser. Now, we are happy to say that all the major browser vendors ship their own implementations (Apple, Google, Microsoft, and Mozilla). Because the browser vendors know their browsers better than anyone, their WebDriver implementations can be tightly coupled to the browser, leading to a better testing experience for you.</p>
+<p>In his post Simon also mentioned “the fine people at <a href="https://applitools.com">Applitools</a>“. This includes Tomer Steinfeld,
+Dave Haeffner, and Doron Zavalevsky. Together, along with contributions from the rest of the Selenium community and
+the SideeX project, we have been able to get the new Selenium IDE out into the wild. We are also working to close the gap
+on feature parity with its predecessor along with adding some much needed enhancements to the tool (more on that in future posts).</p>
 
-<p>The other notable change has been that there is now a W3C specification for browser automation, based on the Open Source WebDriver. This has yet to reach “recommendation” status, but the people working on it (including members of the Selenium project!) are now focusing on finishing the text and writing the implementations.</p>
+<p>We’d love for you to give the new IDE a try and let us know what you think. Visit either the
+<a href="https://chrome.google.com/webstore/detail/selenium-ide/mooikfkahbdckldjjndioackbalphokd">Chrome Web Store</a> or
+<a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide/">Firefox Add-ons</a> to install it. For info on how to
+use the tool, you can check out the getting started documentation on Selenium HQ.</p>
 
-<p>Mozilla has been a front-runner in implementing the W3C WebDriver protocol. On the plus side, this has exposed problems with the spec as it has evolved, but it also means that Firefox support is hard to track as their engineering efforts have been forward looking, rather than on supporting the current wire protocol used by Selenium WebDriver. For now, the best advice we can offer is for you to try the latest release of geckodriver and Selenium together.</p>
+<p>If you have any questions you can find us on the <a href="https://selenium.dev/support/">Selenium Slack/IRC chat channel</a>.
+Think you found a bug? <a href="https://github.com/SeleniumHQ/selenium-ide/issues">File an issue</a>. Want to contribute?
+Take a look at the project on <a href="https://github.com/SeleniumHQ/selenium-ide">GitHub</a>.</p>
 
-<p>These are exciting times for browser automation! Selenium 3.0 is a major release and we’re looking forward to improving things further, as well as tracking the ongoing work of the W3C spec. Our goal is to keep the changes your tests need to deal with to an absolute minimum, to continue preserving the hard work that’s gone into writing your existing tests.</p>
-
-<p>As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make Selenium 3 possible. That’s not just the developers and contributors to the Open Source project (past and present), but also the engineers from Google, Microsoft, Mozilla, and Apple, and everyone involved with the W3C spec. I’d also like to say thank you to everyone who’s taken the time to report bugs, our users and our community. The project is great fun to work on and you’re the reason for that. A final thank you is due to the Software Freedom Conservancy, who have provided invaluable help with the logistics of running a large OSS project.</p>
-
-<p>Happy hacking, everyone! May your tests run fast and true!</p>
+<p>Happy Testing!</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%20Is%20Dead%2c%20Long%20Live%20Selenium%20IDE%21%20&body=https%3a%2f%2fselenium.dev%2fblog%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%20Is%20Dead%2c%20Long%20Live%20Selenium%20IDE%21%20&body=https%3a%2f%2fselenium.dev%2fblog%2f2018%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2018%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Wednesday, August 9, 2017
-                <a href="https://selenium.dev/blog/firefox-55/"><h2>Firefox 55 and Selenium IDE</h2></a>
-                <p>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work.</p>
+                Wednesday, August 9, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/"><h2>Firefox 55 and Selenium IDE</h2></a>
+                <p>The bad news: <strong>from Firefox 55 onwards, Selenium IDE will no longer work</strong>.</p>
 
 <p>The reasons for this are complex, but boil down to two main causes:</p>
 
 <ul>
-<li>Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.<br /></li>
+<li>Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard
+to make Firefox <a href="https://blog.mozilla.org/blog/2017/06/13/faster-better-firefox/">faster and more stable</a>,
+while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of
+that process, Firefox is switching extensions from the original <a href="https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/">XPI</a>
+format, to a newer, more widely adopted <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Web Extension</a> mechanism.<br /></li>
 <li>The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</li>
 </ul>
 
-<p>Selenium is one of the most widely used pieces of testing software there is. Despite this, the team of people regularly contributing is small: since the start of the year, there are only 11 people who have made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person has been maintaining the IDE.</p>
+<p><a href="https://selenium.dev">Selenium</a> is one of the most widely used pieces of testing software there is. Despite this,
+the team of people regularly contributing is small: since the start of the year, there are only 11 people who have
+made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person
+has been maintaining the IDE.</p>
 
-<p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking that committer for his time and effort. Thank you, Samit!</p>
+<p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding
+owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it
+in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking
+that committer for his time and effort. Thank you, Samit!</p>
 
-<p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE using modern APIs, to be usable across more than just Firefox. The fine people at Applitools are helping with this effort.</p>
+<p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to
+fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE
+using modern APIs, to be usable across more than just Firefox.
+The fine people at <a href="https://applitools.com/">Applitools</a> are helping with this effort.</p>
 
-<p>The third thing? That’s you. You could help us.</p>
+<p>The third thing? That’s you. <strong>You could help us</strong>.</p>
 
-<p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer Slack, you can join us on that too. Or there’s the ever useful selenium-developers mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!</p>
+<p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool,
+then please come and join us! The main technical discussions are happening on the #selenium IRC channel.
+If you’d prefer <a href="https://selenium.dev/support/">Slack</a>, you can join us on that too. Or there’s the ever
+useful <a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers</a> mailing list.
+Come on board. We’d love your help, and IDE is a wonderful thing to contribute to!</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Firefox%2055%20and%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2ffirefox-55%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2ffirefox-55%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Firefox%2055%20and%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Wednesday, February 8, 2017
-                <a href="https://selenium.dev/blog/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
-                <p>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they’ve asked us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and state my biases up-front so you’re aware of them.</p>
+                Wednesday, February 8, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2017/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
+                <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a>
+which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part
+of that programme, which the Selenium project has participated in for many years, they’ve asked
+us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and
+state my biases up-front so you’re aware of them.</p>
 
-<p>I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It’s still my favourite IDE for my Java work, and it’s plenty of fun to use. For some time, I’ve been using the (free) Community Edition, which is ample for many coding needs.</p>
+<p>I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it
+slightly over ten years ago. It’s still my favourite IDE for my Java work, and it’s plenty of
+fun to use. For some time, I’ve been using the (free) Community Edition, which is ample for many
+coding needs.</p>
 
-<p>Most of my work is in Java, and that’s where I know IDEA best. I dabble in Ruby and Python, and I’ve written a reasonably large amount of Javascript, all in IDEA.</p>
+<p>Most of my work is in Java, and that’s where I know IDEA best. I dabble in Ruby and Python, and
+I’ve written a reasonably large amount of Javascript, all in IDEA.</p>
 
 <p>The Pros:</p>
 
-<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you’re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don’t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)</p>
+<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages.
+If you’re a polyglot programmer, being able to stay in the same tool for much of your work makes life
+a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively.
+I don’t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely
+and seems to work well. The built in type detection and code navigation features are impressive
+(particularly for untyped languages such as JS)</p>
 
-<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I’ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I’ll be honest, sometimes when they don’t). It’s made making use of lambdas a lot easier.</p>
+<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring
+options it offers. These are great, and always have been. One nice feature I’ve noticed as we move
+to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where
+they make sense (and, I’ll be honest, sometimes when they don’t). It’s made making use of lambdas
+a lot easier.</p>
 
-<p>For a while, IDEA was becoming slower and more bloated, but I’m pleased to see that, partly thanks to the work of developers from Facebook, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
+<p>For a while, IDEA was becoming slower and more bloated, but I’m pleased to see that, partly thanks
+to the work of developers from <a href="http://facebook.com/">Facebook</a>, the latest releases feel snappier
+and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to
+receiving patches to their core product: it displays a level of respect for external contributors
+that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
 
-<p>There’s a nice wide range of plugins available for IDEA. I’ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn’t have been possible, but having them there is incredibly useful and makes the IDE even more capable.</p>
+<p>There’s a nice wide range of plugins available for IDEA. I’ve hooked up the Buck plugin and made
+use of it. Without an extensions API, this plugin would’t have been possible, but having them
+there is incredibly useful and makes the IDE even more capable.</p>
 
-<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely — it’s fun to see what new language features we’ll be able to use in the future!</p>
+<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively
+closely — it’s fun to see what new language features we’ll be able to use in the future!</p>
 
 <p>The Cons:</p>
 
 <p>Although it’s a fine product, there are some niggles to be had.</p>
 
-<p>Most annoyingly, the built in code analysis doesn’t always warn that some Java classes won’t compile. The most recent example was where IDEA didn’t flag that some lambdas couldn’t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release — certainly these same files compiled just fine with older Java releases.</p>
+<p>Most annoyingly, the built in code analysis doesn&rsquo;t always warn that some Java classes won’t compile.
+The most recent example was where IDEA didn&rsquo;t flag that some lambdas couldn&rsquo;t be used since the
+choice of method to use was ambiguous. This may be because the Java language continues its slothful
+way forward, and the compiler improves with each release — certainly these same files compiled just
+fine with older Java releases.</p>
 
-<p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it’ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this same capability was present in IDEA!</p>
+<p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far
+as possible. One of the features I like about Eclipse is that it’ll compile as much as it can,
+even if there are invalid source files. When doing TDD, this allows you to move just a little bit
+faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this
+same capability was present in IDEA!</p>
 
-<p>On the Selenium project, we use Buck for our builds. The Buck plugin doesn’t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an Ant step before a build is run, and it would be extremely useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s irksome to forget to run things!</p>
+<p>On the Selenium project, we use <a href="http://buckbuild.com/">Buck</a> for our builds. The Buck plugin
+doesn&rsquo;t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that
+can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability
+to run an <a href="http://ant.apache.org/">Ant</a> step before a build is run, and it would be extremely
+useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s
+irksome to forget to run things!</p>
 
-<p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind it supports OSS. What’s not to love?</p>
+<p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind
+it supports OSS. What’s not to love?</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Hacking%20with%20IntelliJ&body=https%3a%2f%2fselenium.dev%2fblog%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Hacking%20with%20IntelliJ&body=https%3a%2f%2fselenium.dev%2fblog%2f2017%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2017%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

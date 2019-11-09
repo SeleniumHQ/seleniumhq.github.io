@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>Announcing Selenium 3.0-beta1</title>
+  <title>Firefox 55 and Selenium IDE</title>
   <link rel="icon" href="/favicon.ico" type="image/png">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -152,32 +152,50 @@
 <div class="blog-container">
   <div class="blog-content">
     <div class="container dark-background">
-      July 29, 2016
-      <a href="https://selenium.dev/blog/announcing-selenium-3-beta/"><h2>Announcing Selenium 3.0-beta1</h2></a>
-      <p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.</p>
+      August 9, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
+      <a href="https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/"><h2>Firefox 55 and Selenium IDE</h2></a>
+      <p>The bad news: <strong>from Firefox 55 onwards, Selenium IDE will no longer work</strong>.</p>
 
-<p>We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.0 itself! Please remember that this is a beta release, so your feedback is incredibly helpful and valuable in order to help us smooth any rough edges.</p>
-
-<p>For the last six years we’ve been advising users to switch to the newer WebDriver APIs and to stop using the original RC APIs. With Selenium 3.0, the original implementation of RC has been removed, replaced by one that sits on top of WebDriver. For many users, this change will go completely unnoticed, as they’re no longer using the RC APIs. For those of you who still are, we’ve done our best to make the change as smooth as possible, but we welcome high quality bug reports to help us fix any problems that occur. Maven users will need to add a dependency on the new “leg-rc” package to access the old RC APIs.</p>
-
-<p>There are some other changes that you might need to be aware of:</p>
+<p>The reasons for this are complex, but boil down to two main causes:</p>
 
 <ul>
-<li>You’ll need to be running Java 8 to use the Java pieces of Selenium. This is the oldest version of Java officially supported by Oracle, so hopefully you’re using it already!</li>
-<li>Support for Firefox is via Mozilla’s geckodriver.</li>
-<li>Support for Safari is provided on macOS (Sierra or later) via Apple’s own safaridriver.</li>
-<li>Support for Edge is provided by MS through their webdriver server.</li>
-<li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as MS no longer supports them.</li>
+<li>Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard
+to make Firefox <a href="https://blog.mozilla.org/blog/2017/06/13/faster-better-firefox/">faster and more stable</a>,
+while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of
+that process, Firefox is switching extensions from the original <a href="https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/">XPI</a>
+format, to a newer, more widely adopted <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Web Extension</a> mechanism.<br /></li>
+<li>The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</li>
 </ul>
 
-<p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in learning more then a recent webinar by Simon is a great place to start.</p>
+<p><a href="https://selenium.dev">Selenium</a> is one of the most widely used pieces of testing software there is. Despite this,
+the team of people regularly contributing is small: since the start of the year, there are only 11 people who have
+made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person
+has been maintaining the IDE.</p>
+
+<p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding
+owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it
+in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking
+that committer for his time and effort. Thank you, Samit!</p>
+
+<p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to
+fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE
+using modern APIs, to be usable across more than just Firefox.
+The fine people at <a href="https://applitools.com/">Applitools</a> are helping with this effort.</p>
+
+<p>The third thing? That’s you. <strong>You could help us</strong>.</p>
+
+<p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool,
+then please come and join us! The main technical discussions are happening on the #selenium IRC channel.
+If you’d prefer <a href="https://selenium.dev/support/">Slack</a>, you can join us on that too. Or there’s the ever
+useful <a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers</a> mailing list.
+Come on board. We’d love your help, and IDE is a wonderful thing to contribute to!</p>
 
 
       <div class="share-container">
         <h3>Share this: </h3>
 
-        <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%203.0-beta1&body=https%3a%2f%2fselenium.dev%2fblog%2fannouncing-selenium-3-beta%2f"><img class="social-icon" src="/images/mail.png"/></a>
-        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2fannouncing-selenium-3-beta%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="mailto:?&subject=Selenium Blog - Firefox%2055%20and%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
       </div>
     </div>

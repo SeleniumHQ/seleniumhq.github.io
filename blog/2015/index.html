@@ -1,9 +1,11 @@
+
+
 <!DOCTYPE html>
 <link rel="stylesheet" href="/css/header.css"/>
 
 <html>
 <head>
-  <title>Selenium 3 Is Coming</title>
+  <title>Blog</title>
   <link rel="icon" href="/favicon.ico" type="image/png">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -146,102 +148,84 @@
 
 <body>
 <section class="hero">
-  <a href="/blog"><h1>Selenium Blog</h1></a>
+    <a href="/blog"><h1>Selenium Blog - 2015 Archive</h1></a>
 </section>
 
 <div class="blog-container">
-  <div class="blog-content">
-    <div class="container dark-background">
-      October 4, 2016
-      <a href="https://selenium.dev/blog/selenium-3-is-coming/"><h2>Selenium 3 Is Coming</h2></a>
-      <p>Selenium 3 is coming! As I write this, we think that “beta 4” will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.
-TL;DR:</p>
+    <div class="blog-content">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <div class="container dark-background">
+            December 21, 2015 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2015/selenium-conf-india-save-the-date/"><h2>Selenium Conf India — Save The Date!</h2></a>
+            <p>In <a href="http://year-2015.seleniumconf.org/next-year/">our last update</a> we mentioned there
+will be 2 Selenium Confs in 2016 — one in India, another somewhere else (TBD).</p>
 
-<ul>
-<li>WebDriver users will just find bug fixes and a drop-in replacement for 2.x.</li>
-<li>Selenium Grid users will also find bug fixes and a simple update.</li>
-<li>The WebDriver APIs are now the only APIs actively supported by the Selenium project.</li>
-<li>The Selenium RC APIs have been moved to a “legacy” package.</li>
-<li>The original code powering Selenium RC has been replaced with something backed by WebDriver, which is also contained in the “legacy” package.</li>
-<li>By a quirk of timing, Mozilla have made changes to Firefox that mean that from Firefox 48 you must use their geckodriver to use that browser, regardless of whether you’re using Selenium 2 or 3.</li>
-</ul>
+<p>Well, <strong>we are pleased to announce the official dates and location for Selenium Conf India!</strong></p>
 
-<p>In more depth:</p>
+<p>When: June 24th &amp; 25th, 2016</p>
 
-<p>When we released Selenium 2.0 in 2011, we introduced the new WebDriver APIs, and encouraged everyone to start moving to them. If you’re using the WebDriver APIs, then Selenium 3.0 is a simple drop-in upgrade. We’ve not changed any of the public WebDriver APIs, and the code is essentially the same as the last 2.x release. If you’re using Selenium Grid, the same applies: in most cases, you can just drop in the new JAR (or update your maven dependency to 3.0.0), and you’re done.</p>
+<p>Where: Bangalore, India (at <a href="http://www.chancerypavilion.com/">The Chancery Pavilion Hotel</a>)</p>
 
-<p>If the update to Selenium 3 is such a non-event, why did we call this Selenium 3.0? To answer this question, I first need to provide some history, and tell you a little about how Selenium works under the hood. The very first version of Selenium was “just” a very complicated Javascript framework, running in the browser and interpreting the table-based tests you may be familiar with if you use Selenium IDE. We call this “Selenium Core”. This Javascript framework formed the basis of the original implementation of Selenium RC (the oldest set of Selenium APIs, where all the method and functions were on the “Selenium” interface, and which have been deprecated for some time now). Over time, the needs of modern web testing have grown ever more complicated and sophisticated, and Selenium Core is now less capable of meeting these needs than it was before.</p>
-
-<p>With Selenium 3.0, we are deleting the original Selenium Core implementation. If you use the old RC interfaces, we provide an alternative implementation that’s backed by WebDriver. This is the same “webdriver-backed selenium” that has been available as part of Selenium 2 since its release. Because the underlying technology has changed from Selenium Core to WebDriver, you may find some places where your existing tests using RC run into issues. Our experience with migrating suites is that it’s normally a systemic issue that can be fixed with a minimal engineering effort (that is, the problem is normally isolated to a few places, and these can be rewritten to avoid problems)</p>
-
-<p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or later!). It’s strongly recommended that you do not do this unless you absolutely need to.
-If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project has made available for you to use that can be downloaded from the project’s website. It takes the same arguments as the old runner, and we’ve done our best to ensure the output of tests remains the same too.</p>
-
-<p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As such, if you use Firefox for your testing, you’ll need to use the geckodriver, which is an executable similar to the chromedriver and the Microsoft WebDriver for Edge. You’ll need to start using geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone’s working flat out to give you the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with Firefox.</p>
-
-<p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.</p>
-
-
-      <div class="share-container">
-        <h3>Share this: </h3>
-
-        <a href="mailto:?&subject=Selenium Blog - Selenium%203%20Is%20Coming&body=https%3a%2f%2fselenium.dev%2fblog%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/mail.png"/></a>
-        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-      </div>
-    </div>
-  </div>
+<p>Mark you calendars! We’ll have more details as they become available (e.g., call for speakers,
+ticket sales, etc.). To get the latest updates, be sure to
+<a href="http://eepurl.com/bEGBvX">sign up for the Selenium Conf mailing list</a>.</p>
 
 
-  <div class="filter-container">
-    <div class="blog-filter">
-    <div class="filter-section">
-        <h3>Search blog</h3>
-        <div class="search-container">
-            <div class="search-bar-container">
-                
-                
-                
-                
-                <script>
-                  (function() {
-                    var cx = '018435082943254453647:ktxsp1-jcb8';
-                    var gcse = document.createElement('script');
-                    gcse.type = 'text/javascript';
-                    gcse.async = true;
-                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(gcse, s);
-                  })();
-                </script>
-                <gcse:searchbox-only></gcse:searchbox-only>
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Conf%20India%20%e2%80%94%20Save%20The%20Date%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2015%2fselenium-conf-india-save-the-date%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2015%2fselenium-conf-india-save-the-date%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
-    </div>
-    <div class="filter-section">
-        <h3>Archive</h3>
-        <div class="archive-link-container">
-            <a href="/blog/2018">2018</a>
-            <a href="/blog/2017">2017</a>
-            <a href="/blog/2016">2016</a>
-            <a href="/blog/2015">2015</a>
+        
+        
+        
+        <div class="container dark-background">
+            November 6, 2015 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2015/selenium-conf-2016/"><h2>Selenium Conf 2016 </h2></a>
+            <p>Interested in learning what’s in store for Se Conf 2016? Then be sure to read
+<a href="http://year-2015.seleniumconf.org/next-year/">this write-up from the Conference Organizers</a>.</p>
+
+<p>Also, if you want to receive email notifications about the conference (e.g., when and
+where it will be, call for speakers, ticket sales, etc.) then go
+<a href="http://eepurl.com/bEGBvX">here</a> and complete the sign-up form.</p>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Conf%202016%20&body=https%3a%2f%2fselenium.dev%2fblog%2f2015%2fselenium-conf-2016%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2015%2fselenium-conf-2016%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
         </div>
-    </div>
-    <div class="filter-section">
-        <h3>Support the Selenium project</h3>
-        <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
-        <div class="learn-more button-container">
-            <a href="/sponsors">
-                <div class="button support-button"><b>LEARN MORE</b></div>
-            </a>
+        
+        
+        
+        
+
         </div>
     </div>
 </div>
-
-  </div>
-</div>
-
-</body>
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="/css/main.css"/>
@@ -306,6 +290,31 @@ If you’re someone who runs tests exported from IDE in the table format, there 
     </div>
 </div>
 
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="/sponsors">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
 
 <!DOCTYPE html>
 <link rel="stylesheet" href="/css/footer.css"/>

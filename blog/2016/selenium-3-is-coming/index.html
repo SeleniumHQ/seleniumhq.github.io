@@ -3,7 +3,7 @@
 
 <html>
 <head>
-  <title>Firefox 55 and Selenium IDE</title>
+  <title>Selenium 3 Is Coming</title>
   <link rel="icon" href="/favicon.ico" type="image/png">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
@@ -152,33 +152,80 @@
 <div class="blog-container">
   <div class="blog-content">
     <div class="container dark-background">
-      August 9, 2017
-      <a href="https://selenium.dev/blog/firefox-55/"><h2>Firefox 55 and Selenium IDE</h2></a>
-      <p>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work.</p>
+      October 4, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+      <a href="https://selenium.dev/blog/2016/selenium-3-is-coming/"><h2>Selenium 3 Is Coming</h2></a>
+      <p><a href="https://selenium.dev/downloads/">Selenium 3</a> is coming! As I write this, we think that “beta 4” will be the
+last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this
+will have on your testing.</p>
 
-<p>The reasons for this are complex, but boil down to two main causes:</p>
+<p>TL;DR:</p>
 
 <ul>
-<li>Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.<br /></li>
-<li>The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</li>
+<li>WebDriver users will just find bug fixes and a drop-in replacement for 2.x.</li>
+<li>Selenium Grid users will also find bug fixes and a simple update.</li>
+<li>The WebDriver APIs are now the only APIs actively supported by the Selenium project.</li>
+<li>The Selenium RC APIs have been moved to a “legacy” package.</li>
+<li>The original code powering Selenium RC has been replaced with something backed by WebDriver,
+which is also contained in the “legacy” package.</li>
+<li>By a quirk of timing, Mozilla have made changes to Firefox that mean that from Firefox 48 you must use
+their geckodriver to use that browser, regardless of whether you’re using Selenium 2 or 3.</li>
 </ul>
 
-<p>Selenium is one of the most widely used pieces of testing software there is. Despite this, the team of people regularly contributing is small: since the start of the year, there are only 11 people who have made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person has been maintaining the IDE.</p>
+<p>In more depth:</p>
 
-<p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking that committer for his time and effort. Thank you, Samit!</p>
+<p>When we released <a href="https://selenium.dev/blog/2011/selenium-2.0/">Selenium 2.0</a> in 2011, we introduced
+the new WebDriver APIs, and encouraged everyone to start moving to them. If you’re using the WebDriver
+APIs, then Selenium 3.0 is a simple drop-in upgrade. We’ve not changed any of the public WebDriver APIs,
+and the code is essentially the same as the last 2.x release. If you’re using Selenium Grid, the same
+applies: in most cases, you can just drop in the new JAR (or update your maven dependency to 3.0.0),
+and you’re done.</p>
 
-<p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE using modern APIs, to be usable across more than just Firefox. The fine people at Applitools are helping with this effort.</p>
+<p>If the update to Selenium 3 is such a non-event, why did we call this Selenium 3.0? To answer this
+question, I first need to provide some history, and tell you a little about how Selenium works
+under the hood. The very first version of Selenium was “just” a very complicated Javascript framework,
+running in the browser and interpreting the table-based tests you may be familiar with if you use Selenium
+IDE. We call this “Selenium Core”. This Javascript framework formed the basis of the original implementation
+of Selenium RC (the oldest set of Selenium APIs, where all the method and functions were on the
+“<a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium</a>”
+interface, and which have been deprecated for some time now). Over time, the needs of modern web testing
+have grown ever more complicated and sophisticated, and Selenium Core is now less capable of meeting these
+needs than it was before.</p>
 
-<p>The third thing? That’s you. You could help us.</p>
+<p>With Selenium 3.0, we are deleting the original Selenium Core implementation. If you use the old RC interfaces,
+we provide an alternative implementation that’s backed by WebDriver. This is the same “webdriver-backed selenium”
+that has been available as part of Selenium 2 since its release. Because the underlying technology has changed from
+Selenium Core to WebDriver, you may find some places where your existing tests using RC run into issues. Our
+experience with migrating suites is that it’s normally a systemic issue that can be fixed with a minimal engineering
+effort (that is, the problem is normally isolated to a few places, and these can be rewritten to avoid problems)</p>
 
-<p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer Slack, you can join us on that too. Or there’s the ever useful selenium-developers mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!</p>
+<p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them
+to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or
+later!). It’s strongly recommended that you do not do this unless you absolutely need to.
+If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project
+has made available for you to use that can be downloaded from the project’s website. It takes the same arguments as the
+old runner, and we’ve done our best to ensure the output of tests remains the same too.</p>
+
+<p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a
+way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As
+such, if you use Firefox for your testing, you’ll need to use the
+<a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>, which is an executable similar to the
+<a href="https://sites.google.com/a/chromium.org/chromedriver/">chromedriver</a> and the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft
+WebDriver</a> for Edge. You’ll need to start using
+geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that
+geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone’s working flat out to give you
+the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with
+Firefox.</p>
+
+<p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank
+everyone who has been part of this process, and the Selenium users around the world who have done so much to make the
+project as successful as it is.</p>
 
 
       <div class="share-container">
         <h3>Share this: </h3>
 
-        <a href="mailto:?&subject=Selenium Blog - Firefox%2055%20and%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2ffirefox-55%2f"><img class="social-icon" src="/images/mail.png"/></a>
-        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2ffirefox-55%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="mailto:?&subject=Selenium Blog - Selenium%203%20Is%20Coming&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/twitter.png"/></a>
         <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
       </div>
     </div>
