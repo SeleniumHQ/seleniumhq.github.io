@@ -82,7 +82,7 @@
         <div class="news-item">
             <div class="news-metadata">
                 <h4>{{ .Title }}</h4>
-                <p class= "body">{{ .Date.Format "Monday, January 1, 2006"}}</p>
+                <p class= "body">{{ .Date.Format "Monday, January 1, 2006"}} by <a href="{{ .Params.AuthorLink }}">{{ .Params.Author }}</a></p>
             </div>
             <div class="news-description">
                 <p class= "body">{{ .Description }}</p>
