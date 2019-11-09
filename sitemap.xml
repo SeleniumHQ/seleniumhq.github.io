@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://selenium.dev/thirdparty/chromedriver/</loc>
-    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
+    <loc>https://selenium.dev/blog/2019/seleniumconf-london-2019/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/</loc>
+    <lastmod>2019-11-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/chromedriver/</loc>
     <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url>
   

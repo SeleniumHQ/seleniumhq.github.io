@@ -195,16 +195,6 @@ Tenga en cuenta que estos complementos no son compatibles, mantenidos, alojados 
     </item>
     
     <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/es/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
-Información común  La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de Monitis Transaction Monitor).</description>
-    </item>
-    
-    <item>
       <title>Instalación de las librerías WebDriver</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -304,6 +294,16 @@ Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que 
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/es/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
+Información común  La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de Monitis Transaction Monitor).</description>
     </item>
     
     <item>

@@ -212,16 +212,6 @@ Deze plugins worden niet ondersteund, onderhouden, gehost of aanbevolen door het
     </item>
     
     <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/nl/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/nl/getting_started/html-runner/</guid>
-      <description>Met de Selenium HTML-runner kan je Test Suites starten vanaf de command line. Test Suites zijn HTML exports vanuit Selenium IDE of andere compatiebele tools.
-Algemene informatie  De combinatie van geckodriver / firefox / selenium-html-runner is belangrijk. Er is mogelijks ergens een matrix die de compatibiliteit toelicht. selenium-html-runner voert enkel Test Suites uit (geen Test Case - wat bijvoorbeeld een export van Monitis Transaction Monitor is). Wees zeker dat je hieraan voldoet.</description>
-    </item>
-    
-    <item>
       <title>Installing WebDriver binaries</title>
       <link>https://selenium.dev/documentation/nl/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -301,6 +291,16 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <guid>https://selenium.dev/documentation/nl/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/nl/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/nl/legacy_docs/html-runner/</guid>
+      <description>Met de Selenium HTML-runner kan je Test Suites starten vanaf de command line. Test Suites zijn HTML exports vanuit Selenium IDE of andere compatiebele tools.
+Algemene informatie  De combinatie van geckodriver / firefox / selenium-html-runner is belangrijk. Er is mogelijks ergens een matrix die de compatibiliteit toelicht. selenium-html-runner voert enkel Test Suites uit (geen Test Case - wat bijvoorbeeld een export van Monitis Transaction Monitor is). Wees zeker dat je hieraan voldoet.</description>
     </item>
     
     <item>

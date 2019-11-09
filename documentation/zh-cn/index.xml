@@ -149,8 +149,8 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
       <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
 WebDriver WebDriver 也被称为 Selenium 2。 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
-Remote Control Remote Control 也被称为 Selenium 1。 Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。 Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。 考虑到 Selenium RC 在浏览器上的侵入性， 您永远不能确定您测试的应用程序是否与您想要推送的应用程序相同。 Selenium 2 APIs 包含有 Selenium RC APIs， 但是 Selenium 3 会完全摆脱 Selenium RC APIs。 如果您还在使用 Selenium RC，则必须 迁移 到 Selenium WebDriver.
-IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。</description>
+IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。
+Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。 这就是 Grid 应用的地方。</description>
     </item>
     
     <item>
@@ -216,19 +216,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
-    </item>
-    
-    <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
-公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
- 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
-  示例 Linux 环境 安装 / 下载以下软件包：
-[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
     </item>
     
     <item>
@@ -332,6 +319,19 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
+公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
+ 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
+  示例 Linux 环境 安装 / 下载以下软件包：
+[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
     </item>
     
     <item>

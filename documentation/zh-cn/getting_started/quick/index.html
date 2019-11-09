@@ -12,20 +12,20 @@
     <title>快速浏览 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1573320765" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1573320765" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1573331461" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1573331461" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1573320765" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1573331461" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1573320765"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1573331461"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1573320765"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1573320765"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1573331461"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1573331461"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1573320765"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1573331461"></script>
 
     
   </div>
@@ -123,25 +123,6 @@
       <li data-nav-id="/getting_started/quick/" title="快速浏览" class="dd-item active">
         <a href="https://selenium.dev/documentation/zh-cn/getting_started/quick/">
         快速浏览
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started/html-runner/" title="HTML runner" class="dd-item ">
-        <a href="https://selenium.dev/documentation/zh-cn/getting_started/html-runner/">
-        HTML runner
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1513,6 +1494,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/html-runner/" title="HTML runner" class="dd-item ">
+        <a href="https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/">
+        HTML runner
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1854,10 +1854,8 @@
 <li>
 <ul>
 <li><a href="#webdriver">WebDriver</a></li>
-<li><a href="#remote-control">Remote Control</a></li>
 <li><a href="#ide">IDE</a></li>
 <li><a href="#grid">Grid</a></li>
-<li><a href="#html-runner">HTML Runner</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1897,20 +1895,6 @@ WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏�
 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。
 因此，您测试的应用程序与实时推送的应用程序相同。</p>
 
-<h2 id="remote-control">Remote Control</h2>
-
-<p><em><a href="https://selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/">Remote Control</a></em>
-也被称为 Selenium 1。
-Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。
-Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。
-考虑到 Selenium RC 在浏览器上的侵入性，
-您永远不能确定您测试的应用程序是否与您想要推送的应用程序相同。
-Selenium 2 APIs 包含有 Selenium RC APIs，
-但是 Selenium 3 会完全摆脱 Selenium RC APIs。
-如果您还在使用 Selenium RC，则必须
-<a href="https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/"><em>迁移</em></a>
-到 Selenium WebDriver.</p>
-
 <h2 id="ide">IDE</h2>
 
 <p><em><a href="https://www.seleniumhq.org/selenium-ide">IDE</a></em> 是一个 Firefox 插件，
@@ -1925,12 +1909,6 @@ Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ru
 <p>在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。
 这就是 <em><a href="https://selenium.dev/documentation/zh-cn/grid/">Grid</a></em> 应用的地方。</p>
 
-<h2 id="html-runner">HTML Runner</h2>
-
-<p>此工具允许您从命令行运行 Test Suites。
-Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
-<em><a href="https://selenium.dev/documentation/zh-cn/getting_started/html-runner/">HTML Runner</a></em></p>
-
 
 <footer class=" footline" >
 	
@@ -1939,7 +1917,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/getting_started/quick/">
       “快速浏览”
-    </a> was last updated on: 01 Nov 2019 22:18:57 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/f5d8efe87dfe74ebc858e342fff953134dadf153">Adding legacy instructions to migrate from RC to WD [deploy site] (f5d8efe)</a>
+    </a> was last updated on: 09 Nov 2019 21:29:07 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/a540bcbb049e3e0b85c106753d92c746feee4527">Moving HTML runner and RC info in the docs to the legacy section. (a540bcb)</a>
 </h5>
         
         </div> 
@@ -1998,25 +1976,6 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
             
         
                     
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2024,6 +1983,9 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2992,6 +2954,22 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -3088,7 +3066,7 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
 			<a class="nav nav-prev" href="https://selenium.dev/documentation/zh-cn/getting_started/" title="入门指南"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://selenium.dev/documentation/zh-cn/getting_started/html-runner/" title="HTML runner" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://selenium.dev/documentation/zh-cn/introduction/" title="介绍" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3098,19 +3076,19 @@ Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1573320765"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1573331461"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1573320765"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1573320765"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1573331461"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1573331461"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1573320765" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1573320765"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1573331461" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1573331461"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -33,5 +33,18 @@ RC Components Selenium RC components are:</description>
  How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests. But what of users who already have suites of existing tests? This guide is designed to demonstrate how to migrate your existing tests to the new APIs, allowing all new tests to be written using the new features offered by WebDriver.</description>
     </item>
     
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
+公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
+ 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
+  示例 Linux 环境 安装 / 下载以下软件包：
+[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
+    </item>
+    
   </channel>
 </rss>

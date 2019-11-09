@@ -257,16 +257,6 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
     </item>
     
     <item>
-      <title>Runner HTML</title>
-      <link>https://selenium.dev/documentation/fr/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
-Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
-    </item>
-    
-    <item>
       <title>Travailler avec les couleurs</title>
       <link>https://selenium.dev/documentation/fr/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -346,6 +336,16 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
 Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+    </item>
+    
+    <item>
+      <title>Runner HTML</title>
+      <link>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
+Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
     </item>
     
     <item>

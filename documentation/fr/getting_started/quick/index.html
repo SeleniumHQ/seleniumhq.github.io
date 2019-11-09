@@ -12,20 +12,20 @@
     <title>Tour rapide :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1573320767" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1573320767" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1573331463" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1573331463" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1573320767" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1573331463" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1573320767"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1573331463"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1573320767"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1573320767"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1573331463"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1573331463"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1573320767"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1573331463"></script>
 
     
   </div>
@@ -123,25 +123,6 @@
       <li data-nav-id="/getting_started/quick/" title="Tour rapide" class="dd-item active">
         <a href="https://selenium.dev/documentation/fr/getting_started/quick/">
         Tour rapide
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started/html-runner/" title="Runner HTML" class="dd-item ">
-        <a href="https://selenium.dev/documentation/fr/getting_started/html-runner/">
-        Runner HTML
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1513,6 +1494,25 @@
 
             
           
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/html-runner/" title="Runner HTML" class="dd-item ">
+        <a href="https://selenium.dev/documentation/fr/legacy_docs/html-runner/">
+        Runner HTML
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
         
         </ul>
               
@@ -1854,10 +1854,8 @@
 <li>
 <ul>
 <li><a href="#webdriver">WebDriver</a></li>
-<li><a href="#remote-control">Remote Control</a></li>
 <li><a href="#ide">IDE</a></li>
 <li><a href="#grid">Grid</a></li>
-<li><a href="#html-runner">HTML Runner</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1899,22 +1897,6 @@ C&rsquo;est comme si un utilisateur réel utilisait le navigateur.
 Puisque WebDriver n&rsquo;a pas besoin que ses APIs soient compilées avec le code de l&rsquo;application testée,
 il est non intrusif par nature. Ainsi vous testez exactement l&rsquo;application qui sera en production.</p>
 
-<h2 id="remote-control">Remote Control</h2>
-
-<p><em><a href="https://selenium.dev/documentation/fr/legacy_docs/selenium_rc/">Remote Control</a></em>
-aussi connu sous le nom de Selenium 1.
-Selenium RC était l&rsquo;outil Selenium central avant l&rsquo;avènement de Selenium WebDriver.
-Selenium RC utilise un serveur proxy et injecte du Javascript dans le navigateur
-afin de pouvoir en prendre le contrôle.
-Etant donné la nature intrusive de Selenium RC sur la navigateur,
-vous ne pouvez jamais être sûr de tester la même application
-que celle qui sera déployée en production.
-A noter que les APIs Selenium 2 contiennent les APIs Selenium RC,
-mais les APIs Selenium 3, elles, se débarrasseront complètement de Selenium RC.
-Si vous utilisez toujours Selenium RC, vous devez
-<a href="https://selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/"><em>migrer</em></a>
-vers Selenium WebDriver.</p>
-
 <h2 id="ide">IDE</h2>
 
 <p><em><a href="https://www.seleniumhq.org/selenium-ide">IDE</a></em> est un plugin Firefox
@@ -1935,11 +1917,6 @@ il se peut que vous rencontriez le besoin d&rsquo;exécuter ceux-ci
 sur des combinaisons différentes de navigateurs / système d&rsquo;exploitation.
 C&rsquo;est ici que <em><a href="https://selenium.dev/documentation/fr/grid/">Grid</a></em> intervient pour vous aider.</p>
 
-<h2 id="html-runner">HTML Runner</h2>
-
-<p>Cet outil permet de permet d&rsquo;exécuter des Test Suites depuis la ligne de commande.
-Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible. <em><a href="https://selenium.dev/documentation/fr/getting_started/html-runner/">HTML Runner</a></em></p>
-
 
 <footer class=" footline" >
 	
@@ -1948,7 +1925,7 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/getting_started/quick/">
       “Tour rapide”
-    </a> was last updated on: 01 Nov 2019 22:18:57 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/f5d8efe87dfe74ebc858e342fff953134dadf153">Adding legacy instructions to migrate from RC to WD [deploy site] (f5d8efe)</a>
+    </a> was last updated on: 09 Nov 2019 21:29:07 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/a540bcbb049e3e0b85c106753d92c746feee4527">Moving HTML runner and RC info in the docs to the legacy section. (a540bcb)</a>
 </h5>
         
         </div> 
@@ -2007,25 +1984,6 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
             
         
                     
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -2033,6 +1991,9 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3001,6 +2962,22 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -3097,7 +3074,7 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
 			<a class="nav nav-prev" href="https://selenium.dev/documentation/fr/getting_started/" title="Pour débuter"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://selenium.dev/documentation/fr/getting_started/html-runner/" title="Runner HTML" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://selenium.dev/documentation/fr/introduction/" title="Introduction" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3107,19 +3084,19 @@ Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compat
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1573320767"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1573331463"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1573320767"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1573320767"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1573331463"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1573331463"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1573320767" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1573320767"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1573331463" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1573331463"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
