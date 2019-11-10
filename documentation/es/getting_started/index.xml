@@ -18,7 +18,7 @@
       
       <guid>https://selenium.dev/documentation/es/getting_started/quick/</guid>
       <description>Selenium no es solo una herramienta o API, sino que compone muchas herramientas.
-WebDriver WebDriver también se conoce como Selenium 2. Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador.</description>
+WebDriver Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador. Dado que el WebDriver no requiere que su API se compile con el código de la aplicación que va a probar, no es de naturaleza intrusiva.</description>
     </item>
     
   </channel>

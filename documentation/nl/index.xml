@@ -82,7 +82,7 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       
       <guid>https://selenium.dev/documentation/nl/getting_started/quick/</guid>
       <description>Selenium is niet enkel een instrument of API, het bestaat uit verschillende instrumenten.
-WebDriver WebDriver staat ook bekend als Selenium 2. Als je begint met het automatiseren van websites, dan zul je de WebDriver API&amp;rsquo;s gebruiken. WebDriver gebruikt automatisatie API&amp;rsquo;s die door de browsers zelf worden aangeboden. Laatstgenoemden worden gebruikt om de browser aan te sturen. Op die manier word een echte gebruiker gesimuleerd.WebDriver staat los van de applicatieve code en is daarom niet-intrusief.</description>
+WebDriver Als je begint met het automatiseren van websites, dan zul je de WebDriver API&amp;rsquo;s gebruiken. WebDriver gebruikt automatisatie API&amp;rsquo;s die door de browsers zelf worden aangeboden. Laatstgenoemden worden gebruikt om de browser aan te sturen. Op die manier word een echte gebruiker gesimuleerd.WebDriver staat los van de applicatieve code en is daarom niet-intrusief. Zo test je dezelfde applicatie als diegene die live staat.</description>
     </item>
     
     <item>

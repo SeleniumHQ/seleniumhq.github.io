@@ -12,20 +12,20 @@
     <title>WebDriver :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1573422987" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1573422987" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1573427458" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1573427458" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1573422987" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1573427458" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1573422987"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1573427458"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1573422987"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1573422987"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1573427458"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1573427458"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1573422987"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1573427458"></script>
 
     
   </div>
@@ -1896,23 +1896,33 @@
 
 	
 
+
+<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!</p>
+</div>
+
+
 <h1 id="webdriver">WebDriver</h1>
 
-<p>El cambio más grande en Selenium, recientemente, ha sido la inclusión de la API WebDriver. Manejar un navegador de forma nativa como lo haría un usuario localmente o en una máquina remota usando el servidor Selenium, marca un salto adelante en términos de automatización del navegador.</p>
+<p>WebDriver drives a browser natively, as a user would, either locally
+or on a remote machine using the Selenium server,
+marks a leap forward in terms of browser automation.</p>
 
-<p>Selenium WebDriver encaja en el mismo rol que RC, y ha incorporado los enlaces 1.x originales. Se refiere tanto a los enlaces de lenguaje como a las implementaciones del código de control del navegador individual. Esto se conoce comúnmente como WebDriver o, a veces, como Selenium 2.</p>
+<p>Selenium WebDriver refers to both the language bindings
+and the implementations of the individual browser controlling code.
+This is commonly referred to as just <em>WebDriver</em>.</p>
 
-<p>Selenium 1.0 + WebDriver = Selenium 2.0</p>
+<p>Selenium WebDriver is a <a href="https://www.w3.org/TR/webdriver1/">W3C Recommendation</a></p>
 
 <ul>
-<li><p>El WebDriver está diseñado en una interfaz de programación más simple y concisa junto con algunas limitaciones en la API Selenium-RC.</p></li>
+<li><p>WebDriver is designed as a simple
+and more concise programming interface.</p></li>
 
-<li><p>El WebDriver es una API compacta orientada a objetos en comparación con Selenium 1.0.</p></li>
+<li><p>WebDriver is a compact object-oriented API.</p></li>
 
-<li><p>Este, comtrola al navegador de manera mucho más efectiva y supera las limitaciones de Selenium 1 que afectaron nuestra cobertura de prueba funcional, como la carga o descarga de archivos, ventanas emergentes y barreras de diálogo.</p></li>
+<li><p>It drives the browser effectively.</p></li>
 </ul>
-
-<p>WebDriver supera la limitación de la <a href="//es.m.wikipedia.org/wiki/Pol%C3%ADtica_del_mismo_origen">política del mismo origen</a> de host único de Selenium RC.</p>
 
 
 
@@ -1925,7 +1935,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/">
       “WebDriver”
-    </a> was last updated on: 31 Oct 2019 16:02:21 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/b1f9857b4347c82ca59fefcde0ab10ec9a16ac25">Fixing repo name in the deploy script (b1f9857)</a>
+    </a> was last updated on: 10 Nov 2019 23:33:31 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/7893626d1ceeb85ab42da8db371c5e5ec6c11c61">Updating wording in docs and fixing some links [deploy site] (7893626)</a>
 </h5>
         
             </div> 
@@ -3120,19 +3130,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1573422987"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1573427458"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1573422987"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1573422987"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1573427458"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1573427458"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1573422987" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1573422987"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1573427458" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1573427458"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
