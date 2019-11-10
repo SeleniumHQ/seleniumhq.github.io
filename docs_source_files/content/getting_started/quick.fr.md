@@ -8,9 +8,9 @@ mais est composé de nombreux outils.
 
 ## WebDriver
 
-_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ aussi connu sous le nom de Selenium 2.
-Si vous débutez dans l'automatisation de test de site web _desktop_ vous allez utiliser les APIs WebDriver.
-WebDriver utilise les APIs d'automatisation fournies par les distributeurs de navigateur 
+Si vous débutez dans l'automatisation de test de site web _desktop_ 
+vous allez utiliser les APIs WebDriver. _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ utilise 
+les APIs d'automatisation fournies par les distributeurs de navigateur 
 pour les contrôler et exécuter les tests. 
 C'est comme si un utilisateur réel utilisait le navigateur. 
 Puisque WebDriver n'a pas besoin que ses APIs soient compilées avec le code de l'application testée,
@@ -18,16 +18,13 @@ il est non intrusif par nature. Ainsi vous testez exactement l'application qui s
 
 ## IDE
 
-_[IDE](https://selenium.dev/selenium-ide)_ est un plugin Firefox
-qui peut être utilisé pour enregistrer les étapes d'un test depuis firefox lui-même.
-Selenium IDE peut être utiliser pour générer des tests en mode _quick and dirty_
-dans une variété de langage (à savoir C#, Java, Python et Ruby).
-Etant donné la maintenabilité du code généré via Selenium IDE,
-il n'est pas recommandé de l'utiliser pour autre chose que
-de se familiariser avec des locators de web element
-ou générer du code temporaire (_throw away code_).
-Nous sommes sûr qu'une fois habitué à l'API WebDriver, 
-vous n'utiliserez plus jamais Selenium IDE.
+_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment) 
+is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome 
+and Firefox extension and is generally the most efficient way to develop 
+test cases. It records the users actions in the browser for you, using 
+existing Selenium commands, with parameters defined by the context of 
+that element. This is not only a time-saver, but also an excellent way 
+of learning Selenium script syntax.
 
 
 ## Grid
