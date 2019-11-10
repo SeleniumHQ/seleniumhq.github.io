@@ -126,7 +126,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
     </item>
     
     <item>
@@ -413,6 +413,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
+      <title>Legacy Selenium IDE</title>
+      <link>https://selenium.dev/documentation/fr/legacy_docs/selenium_ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/legacy_docs/selenium_ide/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
+    </item>
+    
+    <item>
       <title>Réaliser des action sur l&#39;AUT*</title>
       <link>https://selenium.dev/documentation/fr/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -430,6 +440,17 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

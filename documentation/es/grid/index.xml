@@ -39,5 +39,16 @@
 Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que proporcionan un Selenium Grid como servicio en la nube. Ciertamente, también es posible ejecutar nodos en su infraestructura propia.</description>
     </item>
     
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+    </item>
+    
   </channel>
 </rss>
