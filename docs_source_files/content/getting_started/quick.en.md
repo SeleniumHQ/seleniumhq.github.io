@@ -20,7 +20,7 @@ same application which you push live.
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ is a
+_[IDE](https://selenium.dev/selenium-ide)_ is a
 Firefox plugin which can be used to record test steps in Firefox itself. 
 Selenium IDE can be used to generate _quick and dirty_
  test code in a variety of programming languages (i.e. C#,

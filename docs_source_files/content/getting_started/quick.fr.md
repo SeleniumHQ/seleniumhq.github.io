@@ -18,7 +18,7 @@ il est non intrusif par nature. Ainsi vous testez exactement l'application qui s
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ est un plugin Firefox
+_[IDE](https://selenium.dev/selenium-ide)_ est un plugin Firefox
 qui peut être utilisé pour enregistrer les étapes d'un test depuis firefox lui-même.
 Selenium IDE peut être utiliser pour générer des tests en mode _quick and dirty_
 dans une variété de langage (à savoir C#, Java, Python et Ruby).

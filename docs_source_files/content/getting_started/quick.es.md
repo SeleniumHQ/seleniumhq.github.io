@@ -14,7 +14,7 @@ _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ también se conoce como Seleni
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ es un complemento de Firefox que se puede utilizar para grabar los pasos de prueba en el propio Firefox. Selenium IDE se puede utilizar para generar código de prueba rápido y sucio (_quick and dirty_) en una variedad de lenguajes de programación (es decir, C #, Java, Python y Ruby).
+_[IDE](https://selenium.dev/selenium-ide)_ es un complemento de Firefox que se puede utilizar para grabar los pasos de prueba en el propio Firefox. Selenium IDE se puede utilizar para generar código de prueba rápido y sucio (_quick and dirty_) en una variedad de lenguajes de programación (es decir, C #, Java, Python y Ruby).
 Dada la mantenibilidad del código generado a través de Selenium IDE, no se recomienda usarlo para nada más que familiarizarse con los localizadores (_locators_) de elementos o generar código descartable (_throw away code_). Estamos seguros de que una vez que se acostumbre a la API WebDriver, nunca usará Selenium IDE.
 
 

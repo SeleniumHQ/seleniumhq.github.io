@@ -17,7 +17,7 @@ code en is daarom niet-intrusief. Zo test je dezelfde applicatie als diegene die
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ is een Firefox plugin die gebruikt kan
+_[IDE](https://selenium.dev/selenium-ide)_ is een Firefox plugin die gebruikt kan
 worden om testen op te nemen in Firefox. Selenium IDE kan gebruikt worden om _quick and dirty_
 testcode te genereren in verschillende programmeertalen (vb. C#, Java, Python en Ruby).
 De resulterende code vergt veel onderhoud en is daardoor alleen aan te raden om gewend te

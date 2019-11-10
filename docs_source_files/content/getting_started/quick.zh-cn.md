@@ -16,7 +16,7 @@ WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏�
 
 ## IDE
 
-_[IDE](https://www.seleniumhq.org/selenium-ide)_ 是一个 Firefox 插件，
+_[IDE](https://selenium.dev/selenium-ide)_ 是一个 Firefox 插件，
 可以用来记录 Firefox 本身的测试步骤。
 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。
 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外，
