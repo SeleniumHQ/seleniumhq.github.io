@@ -3,6 +3,13 @@ title: "关于测试自动化"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Chinese. Do you speak Chinese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
+
 首先，问问自己是否真的需要使用浏览器。
 在某些情况下，如果您正在开发一个复杂的 web 应用程序，
 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
@@ -260,7 +267,6 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 // The exists() method from UnicornConfirmationPage will take the Sparkles 
 // object--a specification of the attributes you want to see, and compare
 // them with the fields on the page.
-//CHECK Boris
 assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -282,3 +288,17 @@ assertTrue("Sparkles should have been created, with all attributes intact", unic
 每次通过工作流时，您都希望尽量避免创建帐户、以用户身份登录和配置独角兽。
 理想情况下，您将能够创建一个帐户，并通过 API 或数据库预先配置独角兽。
 然后，您只需作为用户登录，找到 Sparkles，并将它添加到购物车中。
+
+### To automate or not to automate?
+
+Is automation always advantageous? When should one decide to automate test
+cases?
+
+It is not always advantageous to automate test cases. There are times when
+manual testing may be more appropriate. For instance, if the application’s user
+interface will change considerably in the near future, then any automation
+might need to be rewritten anyway. Also, sometimes there simply is not enough
+time to build test automation. For the short term, manual testing may be more
+effective. If an application has a very tight deadline, there is currently no
+test automation available, and it’s imperative that the testing get done within
+that time frame, then manual testing is the best solution.
