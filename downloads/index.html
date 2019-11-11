@@ -150,7 +150,8 @@
     <h1>Downloads</h1>
     <div class="header-description">
         <p class="body-large">
-            Below is where you can find the latest releases of all the Selenium components. You can also find a list of previous releases, source code, and additional information for Maven users (Maven is a popular Java build tool).
+            Below is where you can find the latest releases of all the Selenium components. You can also find a
+            list of previous releases, source code, and additional information for Maven users.
         </p>
         <p onClick="showPreviousReleases()" class="releases-button">Previous Releases</p>
     </div>
@@ -158,24 +159,41 @@
 
 <div class="split-section container dark-background">
     <div class="left">
-        <h2>Selenium Standalone Server</h2>
-        <p>The Selenium Server is needed in order to run Remote Selenium WebDriver. Selenium 3.X is no longer capable of running Selenium RC directly, rather it does it through emulation and the WebDriverBackedSelenium interface.</p>
+        <h2>Selenium Server (Grid)</h2>
+        <p>The Selenium Server is needed in order to run Remote Selenium WebDriver (Grid).</p>
     </div>
     <div class="right">
-        <p>Download version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
-        <p>To run Selenium tests exported from the legacy IDE, use the <a href="https://bit.ly/2A7OoTV">Selenium HTML Runner.</a></p>
-        <p>To use the Selenium Server in a Grid configuration see the <a href="https://github.com/SeleniumHQ/selenium/wiki/Grid2">wiki page</a>.</p>
+        <p>Latest stable version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
+        <p>To use the Selenium Server in a Grid configuration see the <a href="https://selenium.dev/documentation/en/grid/">documentation</a>.</p>
+        <p>Latest Selenium 4 Alpha version
+            <a href="https://selenium-release.storage.googleapis.com/4.0/selenium-server-standalone-4.0.0-alpha-2.jar">4.0.0-alpha-2</a>
+        </p>
     </div>
 </div>
 
 <div class="split-section container">
         <div class="left">
             <h2>The Internet Explorer Driver Server</h2>
-            <p>This is required if you want to make use of the latest and greatest features of the WebDriver InternetExplorerDriver. Please make sure that this is available on your $PATH (or %PATH% on Windows) in order for the IE Driver to work as expected.</p>
+            <p>This is required if you want to make use of the latest and greatest features of the WebDriver InternetExplorerDriver.<br>
+                Please make sure that this is available on your <code>$PATH</code> (or <code>%PATH%</code> on Windows) in order for the IE
+                Driver to work as expected.
+            </p>
         </div>
         <div class="right">
-            <p>Download version 3.14.0 for (recommended)
-                <a href="https://goo.gl/9Cqa4q">32 bit Windows IE</a> or <a href="https://goo.gl/AtHQuv">64 bit Windows IE</a></p></br><a href="http://goo.gl/LJ07LL">CHANGELOG</a>
+            <p>Download version 3.150.1 for:
+                <ul>
+                    <li>
+                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip">
+                            32 bit Windows IE
+                        </a> (recommended)
+                    </li>
+                    <li>
+                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_x64_3.150.1.zip">
+                            64 bit Windows IE
+                        </a>
+                    </li>
+                </ul>
+            <a href="http://goo.gl/LJ07LL">CHANGELOG</a>
             </p>
         </div>
 </div>
@@ -183,16 +201,18 @@
 <div class="container basic dark-background">
     <h2>Selenium Client & WebDriver Language Bindings</h2>
 
-    <p>In order to create scripts that interact with the Selenium Server (Selenium RC, Selenium Remote WebDriver) or create local Selenium WebDriver scripts, you need to make use of language-specific client drivers. These languages include both 1.x and 2.x style clients.</p>
+    <p>In order to create scripts that interact with the Selenium Server (Remote WebDriver) or create local Selenium WebDriver scripts,
+        you need to make use of language-specific client drivers.</p>
 
-    <p>While language bindings for <a href="/thirdparty">other languages exist</a>, these are the core ones that are supported by the main project hosted on GitHub.</p>
+    <p>While language bindings for <a href="/thirdparty">other languages exist</a>,
+        these are the core ones that are supported by the main project hosted on GitHub.</p>
 
 
     <div class="table">
 
         <div class="row">
             <span class="row-component single label">Language</span>
-            <span class="row-component single label">Client Version</span>
+            <span class="row-component single label">Version</span>
             <span class="row-component single label">Release Date</span>
             <span class="row-component links label"></span>
         </div>
@@ -200,14 +220,26 @@
         
             
             <div class="row">
-                <span class="row-component single">C#</span>
-                <span class="row-component single">3.14.0</span>
-                <span class="row-component single">Thursday, August 02</span>
+                <span class="row-component single">Ruby</span>
+                <span class="row-component single">3.142.6</span>
+                <span class="row-component single">October 04, 2019</span>
                 <span class="row-component links">
-                    <a href="https://goo.gl/uJJ5Sc" class="link">Download</a>
-                    <a href="https://goo.gl/t3faSQ" class="link">Changelog</a>
-                    <a href="https://goo.gl/uutZjZ" class="link">API Docs</a>
-                    <a class="link"></a>
+                    <a href="http://rubygems.org/gems/selenium-webdriver" class="link">Download</a>
+                    <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/rb/CHANGES" class="link">Changelog</a>
+                    <a href="https://seleniumhq.github.io/selenium/docs/api/rb/index.html" class="link">API Docs</a>
+                </span>
+            </div>
+            
+        
+            
+            <div class="row">
+                <span class="row-component single">JavaScript</span>
+                <span class="row-component single">4.0.0-alpha.5</span>
+                <span class="row-component single">September 08, 2019</span>
+                <span class="row-component links">
+                    <a href="https://npmjs.org/package/selenium-webdriver" class="link">Download</a>
+                    <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/javascript/node/selenium-webdriver/CHANGES.md" class="link">Changelog</a>
+                    <a href="https://seleniumhq.github.io/selenium/docs/api/javascript/index.html" class="link">API Docs</a>
                 </span>
             </div>
             
@@ -215,13 +247,38 @@
             
             <div class="row">
                 <span class="row-component single">Java</span>
-                <span class="row-component single">3.4.0</span>
-                <span class="row-component single">Friday, April 21</span>
+                <span class="row-component single">3.141.59</span>
+                <span class="row-component single">November 14, 2018</span>
                 <span class="row-component links">
                     <a href="https://bit.ly/2zm3ZzF" class="link">Download</a>
                     <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG" class="link">Changelog</a>
                     <a href="https://seleniumhq.github.io/selenium/docs/api/java/index.html" class="link">API Docs</a>
-                    <a class="link"></a>
+                </span>
+            </div>
+            
+        
+            
+            <div class="row">
+                <span class="row-component single">Python</span>
+                <span class="row-component single">3.141.0</span>
+                <span class="row-component single">November 01, 2018</span>
+                <span class="row-component links">
+                    <a href="http://pypi.python.org/pypi/selenium" class="link">Download</a>
+                    <a href="https://raw.githubusercontent.com/SeleniumHQ/selenium/master/py/CHANGES" class="link">Changelog</a>
+                    <a href="https://seleniumhq.github.io/selenium/docs/api/py/index.html" class="link">API Docs</a>
+                </span>
+            </div>
+            
+        
+            
+            <div class="row">
+                <span class="row-component single">C#</span>
+                <span class="row-component single">3.14.0</span>
+                <span class="row-component single">August 02, 2018</span>
+                <span class="row-component links">
+                    <a href="https://goo.gl/uJJ5Sc" class="link">Download</a>
+                    <a href="https://goo.gl/t3faSQ" class="link">Changelog</a>
+                    <a href="https://goo.gl/uutZjZ" class="link">API Docs</a>
                 </span>
             </div>
             
@@ -231,13 +288,13 @@
 
 <div class="container">
     <h2>C# NuGet</h2>
-    <p>Nuget latest release is 3.4.0. Released on 2017-04-21</p>
+    <p>Nuget latest release is 3.14.0. Released on 2018-08-02</p>
 
     <ul>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriver">WebDriver</a></li>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriverBackedSelenium">WebDriverBackedSelenium</a></li>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.Support">Support</a></li>
-        <li><a href="http://www.nuget.org/List/Packages/Selenium.RC">RC</a></li>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.RC">RC</a> (Final version 3.1.0 Released 2017-02-16)</li>
     </ul>
 </div>
 
@@ -262,7 +319,7 @@
 <div class="container basic dark-background">
     <h2>Third Party Drivers, Bindings, and Plugins</h2>
     <p>
-        Selenium can be extended through the use of plugins.
+        Selenium can be extended through the use of plugins.<br>
         Here are a number of plugins created and maintained by third parties.
         For more information on how to create your own plugin or have it listed,
         learn more <a href="https://selenium.dev/selenium-ide/docs/en/plugins/plugins-getting-started/">here</a>.

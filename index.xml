@@ -26,6 +26,24 @@ If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &a
     
     <item>
       <title></title>
+      <link>https://selenium.dev/downloads/ruby/</link>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/javascript/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://selenium.dev/thirdparty/chromedriver/</link>
       <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
       
@@ -39,6 +57,24 @@ If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &a
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/java/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/python/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/python/</guid>
       <description></description>
     </item>
     
@@ -106,15 +142,6 @@ The reasons for this are complex, but boil down to two main causes:
       <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/thirdparty/perl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://selenium.dev/downloads/java/</link>
-      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/downloads/java/</guid>
       <description></description>
     </item>
     
