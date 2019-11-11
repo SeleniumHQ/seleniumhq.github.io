@@ -126,7 +126,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
     </item>
     
     <item>
@@ -147,7 +147,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       
       <guid>https://selenium.dev/documentation/fr/getting_started/quick/</guid>
       <description>Selenium n&amp;rsquo;est pas juste un outil ou une API mais est composé de nombreux outils.
-WebDriver WebDriver aussi connu sous le nom de Selenium 2. Si vous débutez dans l&amp;rsquo;automatisation de test de site web desktop vous allez utiliser les APIs WebDriver. WebDriver utilise les APIs d&amp;rsquo;automatisation fournies par les distributeurs de navigateur pour les contrôler et exécuter les tests. C&amp;rsquo;est comme si un utilisateur réel utilisait le navigateur. Puisque WebDriver n&amp;rsquo;a pas besoin que ses APIs soient compilées avec le code de l&amp;rsquo;application testée, il est non intrusif par nature.</description>
+WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web desktop vous allez utiliser les APIs WebDriver. WebDriver utilise les APIs d&amp;rsquo;automatisation fournies par les distributeurs de navigateur pour les contrôler et exécuter les tests. C&amp;rsquo;est comme si un utilisateur réel utilisait le navigateur. Puisque WebDriver n&amp;rsquo;a pas besoin que ses APIs soient compilées avec le code de l&amp;rsquo;application testée, il est non intrusif par nature.</description>
     </item>
     
     <item>
@@ -257,16 +257,6 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
     </item>
     
     <item>
-      <title>Runner HTML</title>
-      <link>https://selenium.dev/documentation/fr/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
-Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
-    </item>
-    
-    <item>
       <title>Travailler avec les couleurs</title>
       <link>https://selenium.dev/documentation/fr/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -349,6 +339,16 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
     </item>
     
     <item>
+      <title>Runner HTML</title>
+      <link>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
+Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
+    </item>
+    
+    <item>
       <title>Travailler avec les éléments select</title>
       <link>https://selenium.dev/documentation/fr/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -413,6 +413,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
+      <title>Legacy Selenium IDE</title>
+      <link>https://selenium.dev/documentation/fr/legacy_docs/selenium_ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/legacy_docs/selenium_ide/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
+    </item>
+    
+    <item>
       <title>Réaliser des action sur l&#39;AUT*</title>
       <link>https://selenium.dev/documentation/fr/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -430,6 +440,17 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

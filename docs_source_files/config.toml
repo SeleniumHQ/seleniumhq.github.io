@@ -47,12 +47,12 @@ weight = 1
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.en.menu.shortcuts]]
@@ -79,12 +79,12 @@ weight = 1
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.es.menu.shortcuts]]
@@ -111,12 +111,12 @@ weight = 1
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Meld een probleem"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.nl.menu.shortcuts]]
@@ -143,12 +143,12 @@ weight = 1
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.zh-cn.menu.shortcuts]]
@@ -169,7 +169,7 @@ baseURL = "https://selenium.dev/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.fr.menu.shortcuts]]
@@ -190,7 +190,7 @@ weight = 1
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [Languages.ja]
@@ -207,12 +207,12 @@ weight = 1
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> バグ報告"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.ja.menu.shortcuts]]

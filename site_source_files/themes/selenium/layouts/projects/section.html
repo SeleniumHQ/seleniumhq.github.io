@@ -25,44 +25,30 @@
         <b id="webdriverShow" class="toggle-button" onClick="showWebDriver()">+ Show more</b>
     </div>
     <div id="webdriverContent" class="content hide">
-        <p>The biggest change in Selenium recently has been the inclusion of the WebDriver API. Driving a browser natively as a user would either locally or on a remote machine using the Selenium Server it marks a leap forward in terms of browser automation.</p>
-        <p>Selenium WebDriver fits in the same role as RC did, and has incorporated the original 1.x bindings. It refers to both the language bindings and the implementations of the individual browser controlling code. This is commonly referred to as just "WebDriver" or sometimes as Selenium 2.</p>
-        <i>Selenium 1.0 + WebDriver = Selenium 2.0 </i>
+        <p>
+            WebDriver drives a browser natively, as a user would, either locally
+            or on a remote machine using the Selenium server,
+            marks a leap forward in terms of browser automation.
+        </p>
+        <p>
+            Selenium WebDriver refers to both the language bindings
+            and the implementations of the individual browser controlling code.
+            This is commonly referred to as just <i>WebDriver</i>.
+        </p>
+        <p>
+            Selenium WebDriver is a <a href="https://www.w3.org/TR/webdriver1/">W3C Recommendation</a>
+        </p>
+
         <ul>
-            <li>WebDriver is designed in a simpler and more concise programming interface along with addressing some limitations in the Selenium-RC API.</li>
-            <li>WebDriver is a compact Object Oriented API when compared to Selenium1.0</li>
-            <li>It drives the browser much more effectively and overcomes the limitations of Selenium 1.x which affected our functional test coverage, like the file upload or download, pop-ups and dialogs barrier</li>
-            <li>WebDriver overcomes the limitation of Selenium RC's Single Host origin policy</li>
+            <li>WebDriver is designed as a simple and more concise programming interface.</li>
+            <li>WebDriver is a compact object-oriented API</li>
+            <li>It drives the browser effectively.</li>
         </ul>
-
-        <p>WebDriver is the name of the key interface against which tests should be written in Java, the implementing classes one should use are listed as below:</p>
-
-        <p>ChromeDriver, EventFiringWebDriver, FirefoxDriver, HtmlUnitDriver, InternetExplorerDriver, PhantomJSDriver, RemoteWebDriver, SafariDriver</p>
 
         <p>For More information on Selenium WebDriver, please see the documentation and Remote Control to WebDriver Migration Notes.</p>
 
         <div class="toggle-section">
             <b class="toggle-button" onClick="hideWebDriver()">- Show less</b>
-        </div>
-    </div>
-</div>
-
-<div class="product-container grid dark-background">
-    <div class="intro" id="selenium-grid">
-        <div class="product-logo-container">
-            <img class="product-logo" src="{{"images/selenium_grid_logo_square.png" | relURL}}"/>
-        </div>
-        <h2>Selenium Grid</h2>
-        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on may servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
-    </div>
-    <div class="toggle-section">
-        <b id="gridShow" class="toggle-button" onClick="showGrid()">+ Show more</b>
-    </div>
-    <div id="gridContent" class="content hide">
-        <p>With the release of Selenium 2.0, the Selenium Server now has built-in Grid functionality. To see the how to configure this, please see the wiki.</p>
-
-        <div class="toggle-section">
-            <b class="toggle-button" onClick="hideGrid()">- Show less</b>
         </div>
     </div>
 </div>
@@ -95,30 +81,22 @@
     </div>
 </div>
 
-<div class="product-container remoteControl dark-background">
-    <div class="intro" id="selenium-remote">
-        <h2>Selenium Remote Control</h2>
-        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on many servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
+<div class="product-container grid dark-background">
+    <div class="intro" id="selenium-grid">
+        <div class="product-logo-container">
+            <img class="product-logo" src="{{"images/selenium_grid_logo_square.png" | relURL}}"/>
+        </div>
+        <h2>Selenium Grid</h2>
+        <p>Selenium Grid takes Selenium Remote Control to another level by running tests on may servers at the same time,</br>cutting down on the time it takes to test multiple browsers or operating systems.</p>
     </div>
     <div class="toggle-section">
-        <b id="remoteControlShow" class="toggle-button" onClick="showRemoteControl()">+ Show more</b>
+        <b id="gridShow" class="toggle-button" onClick="showGrid()">+ Show more</b>
     </div>
-    <div id="remoteControlContent" class="content hide">
-        <p>Selenium Remote Control (RC) is a test tool that allows you to write automated web application UI tests in any programming language against any HTTP website using any mainstream JavaScript-enabled browser.</p>
-
-        <p>Selenium RC comes in two parts.</p>
-
-        <ol>
-            <li>A server which automatically launches and kills browsers, and acts as a HTTP proxy for web requests from them.</li>
-            <li>Client libraries for your favorite computer language.</li>
-        </ol>
-
-        <p>Selenium Remote Control is great for testing complex AJAX-based web user interfaces under a Continuous Integration system. It is also an ideal solution for users of Selenium IDE who want to write tests in a more expressive programming language than the Selenese HTML table format.</p>
-
-        <p>Read More about Selenium Remote-Control in our documentation</p>
+    <div id="gridContent" class="content hide">
+        <p>With the release of Selenium 2.0, the Selenium Server now has built-in Grid functionality. To see the how to configure this, please see the wiki.</p>
 
         <div class="toggle-section">
-            <b class="toggle-button" onClick="hideRemoteControl()">- Show less</b>
+            <b class="toggle-button" onClick="hideGrid()">- Show less</b>
         </div>
     </div>
 </div>

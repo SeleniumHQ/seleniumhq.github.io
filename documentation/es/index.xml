@@ -69,7 +69,7 @@ Terminología  API: Interfaz de Programación de Aplicaciones. Es un conjunto de
       
       <guid>https://selenium.dev/documentation/es/getting_started/quick/</guid>
       <description>Selenium no es solo una herramienta o API, sino que compone muchas herramientas.
-WebDriver WebDriver también se conoce como Selenium 2. Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador.</description>
+WebDriver Si está comenzando con la automatización de pruebas de sitios web de escritorio, entonces va a utilizar las API de WebDriver. WebDriver utiliza las API de automatización del navegador proporcionadas por los desarrolladores de los navegadores para controlar el navegador y ejecutar pruebas. Esto es como si un usuario real estuviera manipulando el navegador. Dado que el WebDriver no requiere que su API se compile con el código de la aplicación que va a probar, no es de naturaleza intrusiva.</description>
     </item>
     
     <item>
@@ -90,7 +90,7 @@ Java La instalación de las bibliotecas Selenium para Java se puede hacer usando
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
     </item>
     
     <item>
@@ -195,16 +195,6 @@ Tenga en cuenta que estos complementos no son compatibles, mantenidos, alojados 
     </item>
     
     <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/es/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
-Información común  La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de Monitis Transaction Monitor).</description>
-    </item>
-    
-    <item>
       <title>Instalación de las librerías WebDriver</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -252,8 +242,9 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
-      <description>Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
-Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.</description>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar.</description>
     </item>
     
     <item>
@@ -304,6 +295,16 @@ Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que 
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/es/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner le permite ejecutar Test Suites desde una línea de comandos. Las suites de prueba son exportaciones HTML desde Selenium IDE o herramientas compatibles.
+Información común  La combinación de lanzamientos de geckodriver / firefox / selenium-html runner es importante. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suite (no Test Case, lo que es, por ejemplo, una exportación de Monitis Transaction Monitor).</description>
     </item>
     
     <item>
@@ -410,6 +411,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
+      <title>Legacy Selenium IDE</title>
+      <link>https://selenium.dev/documentation/es/legacy_docs/selenium_ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/legacy_docs/selenium_ide/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
+    </item>
+    
+    <item>
       <title>Mock de servicios externos</title>
       <link>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -417,6 +428,17 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

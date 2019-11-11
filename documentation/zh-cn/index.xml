@@ -51,7 +51,7 @@ Every effort has been made to make this documentation as complete and as accurat
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves do not need to change; only the code within the page object needs to change.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
     </item>
     
     <item>
@@ -148,9 +148,8 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
       <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
-WebDriver WebDriver 也被称为 Selenium 2。 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
-Remote Control Remote Control 也被称为 Selenium 1。 Selenium RC 是 Selenium WebDriver 出现之前最突出的 Selenium 工具。 Selenium RC 将使用一个代理服务器，并将 JavaScript 注入到浏览器中，以便能够控制它。 考虑到 Selenium RC 在浏览器上的侵入性， 您永远不能确定您测试的应用程序是否与您想要推送的应用程序相同。 Selenium 2 APIs 包含有 Selenium RC APIs， 但是 Selenium 3 会完全摆脱 Selenium RC APIs。 如果您还在使用 Selenium RC，则必须 迁移 到 Selenium WebDriver.
-IDE IDE 是一个 Firefox 插件， 可以用来记录 Firefox 本身的测试步骤。 Selenium IDE 可用于快速生成各种编程语言（C#、Java、Python 和 Ruby）的测试代码。 考虑到通过 Selenium IDE 生成的代码的可维护性，除了熟悉元素定位器或生成丢弃的代码之外， 不推荐将其用于其他任何用途。 我们确信，一旦您习惯了 WebDriver API，您将永远不会使用 Selenium IDE。</description>
+WebDriver 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
+IDE IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome and Firefox extension and is generally the most efficient way to develop test cases. It records the users actions in the browser for you, using existing Selenium commands, with parameters defined by the context of that element.</description>
     </item>
     
     <item>
@@ -219,19 +218,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
-公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
- 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
-  示例 Linux 环境 安装 / 下载以下软件包：
-[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -289,7 +275,8 @@ Line length When editing the documentation’s source, which is written in plain
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/</guid>
-      <description>首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ 首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
 然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。 此外，它们通常需要大量的基础设施才能有效运行。 经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成， 还是使用较低级的方法完成，这是一个很好的规则。
 一旦确定您正在进行Web浏览器测试业务， 并且您的 Selenium 环境已经准备好开始编写测试， 您通常会执行以下三个步骤的组合：
  设置数据 执行一组离散的操作 评估结果  您需要尽可能缩短这些步骤; 一到两个操作在大多数时间内应该足够了。 浏览器自动化具有“脆弱”的美誉， 但实际上那是因为用户经常对它要求过高。 在后面的章节中，我们将回到您可以使用的技术， 为了缓解测试中明显的间歇性问题， 特别是如何克服 浏览器 和 WebDriver 之间的竞争条件。
@@ -297,11 +284,7 @@ Line length When editing the documentation’s source, which is written in plain
 Selenium测试的一个显著优势是，它能够从用户的角度测试应用程序的所有组件（从后端到前端）。 因此，换句话说，虽然功能测试运行起来可能很昂贵，但它们同时也包含了大量关键业务部分。
 测试要求 如前所述，Selenium 测试运行起来可能很昂贵。 在多大程度上取决于您正在运行测试的浏览器， 但历史上浏览器的行为变化太大，以至于通常是针对多个浏览器进行交叉测试的既定目标。
 Selenium 允许您在多个操作系统上的多个浏览器上运行相同的指令， 但是对所有可能的浏览器、它们的不同版本以及它们所运行的许多操作系统的枚举将很快成为一项繁重的工作。
-让我们从一个例子开始 Larry 写了一个网站，允许用户订购他们自己定制的独角兽。
-一般的工作流程(我们称之为“幸福之路”)是这样的:
- 创建一个账户 配置他们的独角兽 添加到购物车 检验并付款 给出关于他们独角兽的反馈  编写一个宏大的 Selenium 脚本来执行所有这些操作是很诱人的 — 很多人都会尝试这样做。 抵制诱惑！ 这样做会导致测试: a) 需要很长时间; b) 会受到一些与页面呈现时间问题有关的常见问题的影响; c) 如果失败，它不会给出一个简洁的、“可检查”的方法来诊断出了什么问题。
-测试此场景的首选策略是将其分解为一系列独立的、快速的测试，每个测试都有一个存在的“理由”。
-假设您想测试第二步： 配置您的独角兽。 它将执行以下操作:</description>
+让我们从一个例子开始 Larry 写了一个网站，允许用户订购他们自己定制的独角兽。</description>
     </item>
     
     <item>
@@ -332,6 +315,19 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
+    </item>
+    
+    <item>
+      <title>HTML runner</title>
+      <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</guid>
+      <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
+公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
+ 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
+  示例 Linux 环境 安装 / 下载以下软件包：
+[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
     </item>
     
     <item>
@@ -411,6 +407,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
+      <title>Legacy Selenium IDE</title>
+      <link>https://selenium.dev/documentation/zh-cn/legacy_docs/selenium_ide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/selenium_ide/</guid>
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
+    </item>
+    
+    <item>
       <title>Mock external services</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -451,6 +457,17 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
 From experience, most intermittents that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

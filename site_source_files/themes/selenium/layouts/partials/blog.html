@@ -1,5 +1,5 @@
 <div class="container dark-background">
-    {{ .Date.Format "January 2, 2006"}}
+    {{ .Date.Format "Monday, January 2, 2006"}} by <a href="{{ .Params.AuthorLink }}">{{ .Params.Author }}</a>
     <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
     {{ .Content }}
 

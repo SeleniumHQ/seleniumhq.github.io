@@ -27,8 +27,9 @@ Permite a los testers simular actividades comunes realizadas por los usuarios fi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
-      <description>Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
-Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.</description>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar.</description>
     </item>
     
     <item>

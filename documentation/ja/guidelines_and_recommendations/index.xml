@@ -18,7 +18,7 @@
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI. The benefit is that if the UI changes for the page, the tests themselves do not need to change; only the code within the page object needs to change.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
     </item>
     
     <item>

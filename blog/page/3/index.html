@@ -207,27 +207,90 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                June 23, 2016
-                <a href="https://selenium.dev/blog/fall-selenium-conf/"><h2>Fall Selenium Conf, Save the Date &amp; Call for Speakers!</h2></a>
-                <p>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.</p>
+                Friday, July 29, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2016/announcing-selenium-3-beta/"><h2>Announcing Selenium 3.0-beta1</h2></a>
+                <p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”.
+Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re
+excited to announce the release of the first beta — Selenium 3.0.0-beta1.</p>
 
-<p>Our initial goal was to bring the event to a new country, but for a number of reasons that proved more challenging than we’d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we’re pleased to be bringing it back there this year!</p>
+<p>We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship
+the 3.0 itself! Please remember that this is a beta release, so your feedback is incredibly helpful and valuable in
+order to help us smooth any rough edges.</p>
 
-<p>The conference will be held at The Mermaid in downtown London on November 14-16:</p>
+<p>For the last six years we’ve been advising users to switch to the newer WebDriver APIs and to stop using the original
+RC APIs. With Selenium 3.0, the original implementation of RC has been removed, replaced by one that sits on top of
+WebDriver. For many users, this change will go completely unnoticed, as they’re no longer using the RC APIs. For those
+of you who still are, we’ve done our best to make the change as smooth as possible, but <a href="https://github.com/seleniumhq/selenium/issues">we welcome high quality bug
+reports</a> to help us fix any problems that occur. Maven users will need
+to add a dependency on the new “leg-rc” package to access the old RC APIs.</p>
+
+<p>There are some other changes that you might need to be aware of:</p>
 
 <ul>
-<li>The 14th will be all-day pre-conference workshops</li>
-<li>The 15th-16th will be the conference</li>
+<li>You’ll need to be running Java 8 to use the Java pieces of Selenium. This is the oldest version of Java officially supported by Oracle, so hopefully you’re using it already!</li>
+<li>Support for Firefox is via Mozilla’s <a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>.</li>
+<li>Support for Safari is provided on macOS (Sierra or later) via Apple’s own <a href="https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html">safaridriver</a>.</li>
+<li>Support for Edge is provided by MS through their <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver server</a>.</li>
+<li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as <a href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support">MS no longer supports them</a>.</li>
 </ul>
 
-<p>Go here to sign up for the email list for conference updates (e.g., when tickets go on sale) as well as submit a talk. Call for speakers are open from now until July 29th.</p>
+<p>We’ll be posting more information about Selenium 3.0 to this blog soon, but until then if you’re interested in
+learning more then a recent webinar by Simon is a great place to start.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Fall%20Selenium%20Conf%2c%20Save%20the%20Date%20%26%20Call%20for%20Speakers%21&body=https%3a%2f%2fselenium.dev%2fblog%2ffall-selenium-conf%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2ffall-selenium-conf%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%203.0-beta1&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fannouncing-selenium-3-beta%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fannouncing-selenium-3-beta%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Thursday, June 23, 2016 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+                <a href="https://selenium.dev/blog/2016/fall-selenium-conf-save-the-date/"><h2>Fall Selenium Conf, Save the Date &amp; Call for Speakers!</h2></a>
+                <p>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.</p>
+
+<p>Our initial goal was to bring the event to a new country, but for a number of reason that proved more challenging than
+we&rsquo;d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we’re pleased to be bringing it back there
+this year!</p>
+
+<p>The conference will be held at The Mermaid in downtown London on November 14-16:</p>
+
+<ul>
+<li>The 14th will be&nbsp;all-day pre-conference workshops</li>
+<li>The 15th-16th will be the conference</li>
+</ul>
+
+<p>Go <a href="http://seleniumconf.co.uk/">here</a> to sign up for the email list for conference updates (e.g., when tickets go on
+sale) as well as submit a talk. Call for speakers are open from now until July 29th.</p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Fall%20Selenium%20Conf%2c%20Save%20the%20Date%20%26%20Call%20for%20Speakers%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2ffall-selenium-conf-save-the-date%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2ffall-selenium-conf-save-the-date%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Monday, February 8, 2016 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+                <a href="https://selenium.dev/blog/2016/selenium-conf-india-2016-update/"><h2>Selenium Conf India 2016 Update</h2></a>
+                <p>Selenium Conf India is happening this June 24-26 in Bangalore, India.</p>
+
+<p>Tickets, call for speakers, and sponsorship slots are now available!</p>
+
+<p><a href="http://2016.seleniumconf.in/">http://2016.seleniumconf.in/</a></p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Conf%20India%202016%20Update&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-conf-india-2016-update%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-conf-india-2016-update%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
@@ -236,6 +299,12 @@
         
 
         <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/blog/page/4/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
             
 
             
@@ -322,7 +391,7 @@
         </div>
         
         <div class="sponsor-logo">
-            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=seleniumhq.org&utm_content=synthetics-logo+&mpc=REF-seleniumhq.org-EN-generic--synthetics-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
                 <img class="sponsor-logo" src="/images/sponsors/synthetics.png"/>
             </a>
         </div>
@@ -406,10 +475,10 @@
             <a href="/blog">News</a>
             <a href="/history">History</a>
             <a href="/sponsor">Contribute</a>
-            <a href="/sponsors">Sponsors/Sponsoring</a>
+            <a href="/sponsors">Sponsors</a>
             <a href="/getinvolved">Get Involved</a>
             <a href="/ecosystem">Ecosystem</a>
-            <a>License</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
         </div>
         <div class="footer-section">
             <a href="/downloads"><h3>Downloads</h3></a>
@@ -421,7 +490,6 @@
             <a href="/projects"><h3>Projects</h3></a>
             <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
             <a href="/projects/#selenium-grid">Selenium Grid</a>
-            <a href="/projects/#selenium-remote">Selenium Remote Control</a>
             <a href="/projects/#selenium-ide">Selenium IDE</a>
         </div>
         <div class="footer-section">
@@ -442,7 +510,7 @@
     </div>
 </footer>
 <div class="sfc">
-    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
 </div>
 <body>
 

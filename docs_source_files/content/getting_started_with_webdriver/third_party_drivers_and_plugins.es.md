@@ -8,7 +8,11 @@ El Selenium se puede ampliar o extender mediante el uso de complementos (_plugin
 
 Tenga en cuenta que estos complementos no son compatibles, mantenidos, alojados o respaldados por el proyecto Selenium. Además, tenga en cuenta que los complementos que se enumeran a continuación no están necesariamente autorizados bajo la licencia Apache v.2.0. Algunos de los complementos están disponibles bajo otra licencia de software libre y de código abierto; otros solo están disponibles bajo una licencia patentada. Cualquier pregunta sobre los complementos y su licencia de distribución debe plantearse con sus respectivos desarrolladores.
 
-| Navegador | Versión reciente | Control de cambios | Hallazgos | Documentación |
-| -------- | ---------- | ---------- | ---------- | ---------- |
-| [Google ChromeDriver](//sites.google.com/a/chromium.org/chromedriver/) | [2.29](//chromedriver.storage.googleapis.com/index.html) |  [changelog](//chromedriver.storage.googleapis.com/2.29/notes.txt) | [issues](//bugs.chromium.org/p/chromedriver/issues/list) | [wiki](//github.com/SeleniumHQ/selenium/wiki/ChromeDriver)
+|Browser|Latest|Change log|Issue Tracker|
+|--- |--- |--- |--- |
+|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[latest](https://github.com/mozilla/geckodriver/releases)|[change log](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[issue tracker](https://github.com/mozilla/geckodriver/issues)|
+|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[latest](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[change log](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[issue tracker](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[latest](https://github.com/operasoftware/operachromiumdriver/releases)|-|[issue tracker](https://github.com/operasoftware/operachromiumdriver/issues)|
+|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|-|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
+|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|-|-|[issue tracker](https://bugreport.apple.com/)|
 
