@@ -47,5 +47,14 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

@@ -3,34 +3,70 @@ title: "Sobre automatización de pruebas"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
 
-Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar. Además, por lo general requieren una infraestructura sustancial para poder funcionar de manera efectiva. Es una buena regla preguntarse siempre si lo que desea probar se puede hacer utilizando enfoques de prueba más livianos, como pruebas unitarias o con un enfoque de nivel inferior.
+Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las
+probabilidades son buenas de que, en algún momento, si está trabajando en una
+aplicación web compleja, necesitará abrir un navegador y probarla.
 
-Una vez que haya tomado la determinación de que está en el negocio de las pruebas con un navegador web, y tenga su entorno Selenium listo para comenzar a escribir las pruebas, generalmente realizará una combinación de tres pasos:
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de
+Selenium, son caras de ejecutar. Además, por lo general requieren una
+infraestructura sustancial para poder funcionar de manera efectiva. Es una
+buena regla preguntarse siempre si lo que desea probar se puede hacer
+utilizando enfoques de prueba más livianos, como pruebas unitarias o con un
+enfoque de nivel inferior.
+
+Una vez que haya tomado la determinación de que está en el negocio de las
+pruebas con un navegador web, y tenga su entorno Selenium listo para comenzar a
+escribir las pruebas, generalmente realizará una combinación de tres pasos:
 
 * Configurar los datos
 * Realizar un conjunto discreto de acciones
 * Evaluar los resultados
 
-Deberá mantener estos pasos lo más cortos posible; una o dos operaciones deberían ser suficientes la mayor parte del tiempo. La automatización del navegador tiene la reputación de ser "inestable", pero en realidad eso se debe a que los usuarios suelen exigir demasiado. En capítulos posteriores, volveremos a las técnicas que puede usar para mitigar aparentes problemas intermitentes en las pruebas, en particular sobre cómo [superar las condiciones de carrera]({{<ref "/webdriver/waits.es.md">}}) entre el navegador y WebDriver.
+Deberá mantener estos pasos lo más cortos posible; una o dos operaciones
+deberían ser suficientes la mayor parte del tiempo. La automatización del
+navegador tiene la reputación de ser "inestable", pero en realidad eso se debe
+a que los usuarios suelen exigir demasiado. En capítulos posteriores,
+volveremos a las técnicas que puede usar para mitigar aparentes problemas
+intermitentes en las pruebas, en particular sobre cómo [superar las condiciones
+de carrera]({{<ref "/webdriver/waits.es.md">}}) entre el navegador y
+WebDriver.
 
-Al mantener sus pruebas cortas y usar el navegador web solo cuando no tiene absolutamente ninguna alternativa, puede realizar muchas pruebas con un minimo desgaste.
+Al mantener sus pruebas cortas y usar el navegador web solo cuando no tiene
+absolutamente ninguna alternativa, puede realizar muchas pruebas con un minimo
+desgaste.
 
-Una ventaja distintiva de las pruebas de Selenium es su capacidad inherente para probar todos los componentes de la aplicación, desde el backend hasta el frontend, desde la perspectiva del usuario. En otras palabras, si bien las pruebas funcionales pueden ser costosas de ejecutar, también abarcan grandes porciones críticas para el negocio al mismo tiempo.
+Una ventaja distintiva de las pruebas de Selenium es su capacidad inherente
+para probar todos los componentes de la aplicación, desde el backend hasta el
+frontend, desde la perspectiva del usuario. En otras palabras, si bien las
+pruebas funcionales pueden ser costosas de ejecutar, también abarcan grandes
+porciones críticas para el negocio al mismo tiempo.
 
 
 ### Requisitos de prueba
 
-Como se mencionó anteriormente, las pruebas de Selenium pueden ser costosas de ejecutar. Incluso depende del navegador con el que esté ejecutando las pruebas, pero históricamente el comportamiento de los navegadores ha variado tanto que a menudo ha sido un objetivo declarado realizar pruebas con múltiples navegadores (_cross browser_).
+Como se mencionó anteriormente, las pruebas de Selenium pueden ser costosas de
+ejecutar. Incluso depende del navegador con el que esté ejecutando las pruebas,
+pero históricamente el comportamiento de los navegadores ha variado tanto que a
+menudo ha sido un objetivo declarado realizar pruebas con múltiples navegadores
+(_cross browser_).
 
-Selenium le permite ejecutar las mismas instrucciones en múltiples navegadores y en múltiples sistemas operativos, pero la enumeración de todos los navegadores posibles, sus diferentes versiones y los muchos sistemas operativos en los que se ejecutan se le convertirá rápidamente en una tarea compleja.
+Selenium le permite ejecutar las mismas instrucciones en múltiples navegadores
+y en múltiples sistemas operativos, pero la enumeración de todos los
+navegadores posibles, sus diferentes versiones y los muchos sistemas operativos
+en los que se ejecutan se le convertirá rápidamente en una tarea compleja.
 
 
 ### Comencemos con un ejemplo
 
-Larry ha escrito un sitio web que permite a los usuarios ordenar sus propios unicornios personalizados.
+Larry ha escrito un sitio web que permite a los usuarios ordenar sus propios 
+unicornios personalizados.
 
 El flujo de trabajo general (lo que llamaremos el "camino feliz") es algo como esto:
 
@@ -41,14 +77,17 @@ El flujo de trabajo general (lo que llamaremos el "camino feliz") es algo como e
 * Dar comentarios sobre tu unicornio
 
 
-Sería tentador escribir un gran script Selenium para realizar todas estas operaciones, muchos lo intentarán.
+Sería tentador escribir un gran script Selenium para realizar todas estas operaciones, 
+muchos lo intentarán.
 **¡Resista la tentación!**
 Hacerlo dará como resultado una prueba que
 a) lleva mucho tiempo,
 b) estará sujeto a algunos problemas comunes relacionados con los problemas de tiempo de renderizado de la página, y
 c) es tal que si falla, no le dará un método conciso y "fácil de ver" para diagnosticar lo que salió mal.
 
-La estrategia preferida para probar este escenario sería dividirlo en una serie de pruebas rápidas e independientes, cada una de las cuales tiene una "razón" para existir.
+La estrategia preferida para probar este escenario sería dividirlo en una serie
+de pruebas rápidas e independientes, cada una de las cuales tiene una "razón"
+para existir.
 
 Supongamos que quieres probar el segundo paso:
 Configurando tu unicornio.
@@ -57,7 +96,9 @@ Deberá realizar las siguientes acciones:
 * Crea una cuenta
 * Configurar un unicornio
 
-Tenga en cuenta que estamos omitiendo el resto de estos pasos, probaremos el resto del flujo de trabajo en otros casos de prueba pequeños y discretos, una vez que hayamos terminado con este.
+Tenga en cuenta que estamos omitiendo el resto de estos pasos, probaremos el
+resto del flujo de trabajo en otros casos de prueba pequeños y discretos, una
+vez que hayamos terminado con este.
 
 Para comenzar, debe crear una cuenta. Aquí tienes algunas opciones a resolver:
 
@@ -65,11 +106,22 @@ Para comenzar, debe crear una cuenta. Aquí tienes algunas opciones a resolver:
 * ¿Quieres crear una nueva cuenta?
 * ¿Hay alguna propiedad especial de dicho usuario que deba tenerse en cuenta antes de que comience la configuración?
 
-Independientemente de cómo responda estas preguntas, la solución es hacer que forme parte del flujo de "configurar los datos" de la prueba –si Larry ha expuesto una API que le permite a usted (o cualquier persona) crear y actualizar cuentas de usuario, asegúrese de usarla para responder esta situación– si es posible, lo deseable es iniciar el navegador solo después de tener un usuario disponible, cuyas credenciales le permitan iniciar sesión.
+Independientemente de cómo responda estas preguntas, la solución es hacer que
+forme parte del flujo de "configurar los datos" de la prueba –si Larry ha
+expuesto una API que le permite a usted (o cualquier persona) crear y
+actualizar cuentas de usuario, asegúrese de usarla para responder esta
+situación– si es posible, lo deseable es iniciar el navegador solo después de
+tener un usuario disponible, cuyas credenciales le permitan iniciar sesión.
 
-Si cada prueba para cada flujo de trabajo comienza con la creación de una cuenta de usuario, se agregarán muchos segundos a la ejecución de cada prueba. Llamar a una API y hablar con una base de datos son operaciones rápidas y sin interfaz gráfica (_headless_) que no requieren el costoso proceso de abrir un navegador, navegar a las páginas correctas, hacer clic y esperar a que se envíen los formularios, etc.
+Si cada prueba para cada flujo de trabajo comienza con la creación de una
+cuenta de usuario, se agregarán muchos segundos a la ejecución de cada prueba.
+Llamar a una API y hablar con una base de datos son operaciones rápidas y sin
+interfaz gráfica (_headless_) que no requieren el costoso proceso de abrir un
+navegador, navegar a las páginas correctas, hacer clic y esperar a que se
+envíen los formularios, etc.
 
-Idealmente, puede abordar esta fase de configuración en una línea de código, que se ejecutará antes de que se inicie cualquier navegador:
+Idealmente, puede abordar esta fase de configuración en una línea de código,
+que se ejecutará antes de que se inicie cualquier navegador:
 
 
 
@@ -127,17 +179,33 @@ val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Como se puede imaginar, la `UserFactory` se puede ampliar para proporcionar métodos como `createAdminUser()` y `createUserWithPayment()`. El punto es que estas dos líneas de código no le distraigan del objetivo final de esta prueba: configurar un unicornio.
+Como se puede imaginar, la `UserFactory` se puede ampliar para proporcionar
+métodos como `createAdminUser()` y `createUserWithPayment()`. El punto es que
+estas dos líneas de código no le distraigan del objetivo final de esta prueba:
+configurar un unicornio.
 
-Las complejidades del [Modelo de objeto de página (_Page Object Model_)]({{<ref "/guidelines_and_recommendations/page_object_models.es.md">}}) se analizarán en capítulos posteriores, pero presentaremos el concepto aquí:
+Las complejidades del [Modelo de objeto de página (_Page Object Model_)]({{<ref
+"/guidelines_and_recommendations/page_object_models.es.md">}}) se analizarán en
+capítulos posteriores, pero presentaremos el concepto aquí:
 
-Sus pruebas deben estar compuestas de acciones, realizadas desde el punto de vista del usuario, dentro del contexto de las páginas del sitio. Estas páginas se almacenan como objetos, que contendrán información específica sobre cómo se compone la página web y cómo se realizan las acciones, muy poco de lo que debería preocuparte como _tester_.
+Sus pruebas deben estar compuestas de acciones, realizadas desde el punto de
+vista del usuario, dentro del contexto de las páginas del sitio. Estas páginas
+se almacenan como objetos, que contendrán información específica sobre cómo se
+compone la página web y cómo se realizan las acciones, muy poco de lo que
+debería preocuparte como _tester_.
 
-¿Qué tipo de unicornio quieres? Es posible que desee rosa, pero no necesariamente. El morado ha sido muy popular últimamente. ¿El necesita gafas de sol? ¿Tatuajes de estrellas? Estas elecciones, si bien son difíciles, son su principal preocupación como probador: debe asegurarse de que su centro de cumplimiento de pedidos envíe el unicornio correcto a la persona adecuada, y eso comienza con estas elecciones.
+¿Qué tipo de unicornio quieres? Es posible que desee rosa, pero no
+necesariamente. El morado ha sido muy popular últimamente. ¿El necesita gafas
+de sol? ¿Tatuajes de estrellas? Estas elecciones, si bien son difíciles, son su
+principal preocupación como probador: debe asegurarse de que su centro de
+cumplimiento de pedidos envíe el unicornio correcto a la persona adecuada, y
+eso comienza con estas elecciones.
 
-Observe que en ninguna parte de ese párrafo hablamos de botones, campos, menús desplegables, botones de opción o formularios web.
+Observe que en ninguna parte de ese párrafo hablamos de botones, campos, menús
+desplegables, botones de opción o formularios web.
 **¡Tampoco debería hacerlo sus pruebas!**
-Lo deseable es escribir el código como el usuario que intenta resolver su problema. Aquí hay una forma de hacerlo (continuando con el ejemplo anterior):
+Lo deseable es escribir el código como el usuario que intenta resolver su
+problema. Aquí hay una forma de hacerlo (continuando con el ejemplo anterior):
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -228,18 +296,48 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 // The exists() method from UnicornConfirmationPage will take the Sparkles 
 // object--a specification of the attributes you want to see, and compare
 // them with the fields on the page.
-//CHECK Boris
 assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Tenga en cuenta que el _tester_ aún no ha hecho nada más que hablar de unicornios en este código, sin botones, sin localizadores, sin controles del navegador.
-Este método de "modelado" de la aplicación le permite mantener estos comandos de nivel de prueba en su lugar y sin cambios, incluso si Larry decide la próxima semana que ya no le gusta Ruby-on-Rails y decide volver a implementar todo el sitio con las librerías más recientes de Haskell y con un front-end en Fortran.
+Tenga en cuenta que el _tester_ aún no ha hecho nada más que hablar de
+unicornios en este código, sin botones, sin localizadores, sin controles del
+navegador.
+Este método de "modelado" de la aplicación le permite mantener estos comandos
+de nivel de prueba en su lugar y sin cambios, incluso si Larry decide la
+próxima semana que ya no le gusta Ruby-on-Rails y decide volver a implementar
+todo el sitio con las librerías más recientes de Haskell y con un front-end en
+Fortran.
 
-Los objetos de su página requerirán un pequeño mantenimiento para cumplir con el rediseño del sitio, pero estas pruebas seguirán siendo las mismas. Tomando este diseño básico, querrá continuar con sus flujos de trabajo con la menor cantidad posible de pasos orientados hacia el navegador. Su próximo flujo de trabajo implicará agregar un unicornio al carrito de compras. Probablemente requeriá muchas iteraciones de esta prueba para asegurarse de que el carrito mantenga su estado correctamente:
+Los objetos de su página requerirán un pequeño mantenimiento para cumplir con
+el rediseño del sitio, pero estas pruebas seguirán siendo las mismas. Tomando
+este diseño básico, querrá continuar con sus flujos de trabajo con la menor
+cantidad posible de pasos orientados hacia el navegador. Su próximo flujo de
+trabajo implicará agregar un unicornio al carrito de compras. Probablemente
+requeriá muchas iteraciones de esta prueba para asegurarse de que el carrito
+mantenga su estado correctamente:
 ¿Hay más de un unicornio en el carrito antes de comenzar?
 ¿Cuántos pueden caber en el carrito de compras?
-Si crea más de uno con el mismo nombre o características, ¿se romperá? ¿Conservará solo el existente o agregará otro?
+Si crea más de uno con el mismo nombre o características, ¿se romperá?
+¿Conservará solo el existente o agregará otro?
 
-Cada vez que se mueva por el flujo de trabajo, debe intentar evitar tener que crear una cuenta, iniciar sesión como usuario y configurar el unicornio. Idealmente, podrá crear una cuenta y preconfigurar un unicornio a través de la API o la base de datos. Luego, todo lo que tiene que hacer es iniciar sesión como usuario, localizar Sparkles y agregarla al carrito.
+Cada vez que se mueva por el flujo de trabajo, debe intentar evitar tener que
+crear una cuenta, iniciar sesión como usuario y configurar el unicornio.
+Idealmente, podrá crear una cuenta y preconfigurar un unicornio a través de la
+API o la base de datos. Luego, todo lo que tiene que hacer es iniciar sesión
+como usuario, localizar Sparkles y agregarla al carrito.
 
+
+### To automate or not to automate?
+
+Is automation always advantageous? When should one decide to automate test
+cases?
+
+It is not always advantageous to automate test cases. There are times when
+manual testing may be more appropriate. For instance, if the application’s user
+interface will change considerably in the near future, then any automation
+might need to be rewritten anyway. Also, sometimes there simply is not enough
+time to build test automation. For the short term, manual testing may be more
+effective. If an application has a very tight deadline, there is currently no
+test automation available, and it’s imperative that the testing get done within
+that time frame, then manual testing is the best solution.

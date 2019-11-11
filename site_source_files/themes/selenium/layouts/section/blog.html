@@ -21,9 +21,9 @@
 
 <div class="blog-container">
     <div class="blog-content">
-        {{ range where .Paginator.Pages "Type" "blog"}}
+        {{ range where .Paginator.Pages "Type" "blog" }}
             <div class="container dark-background">
-                {{ .Date.Format "January 2, 2006"}}
+                {{ .Date.Format "Monday, January 2, 2006"}} by <a href="{{ .Params.AuthorLink }}">{{ .Params.Author }}</a>
                 <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
                 {{ .Content }}
 

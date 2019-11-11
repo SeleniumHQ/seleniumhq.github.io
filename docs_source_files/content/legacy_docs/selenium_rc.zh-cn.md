@@ -27,7 +27,7 @@ Selenium RC components are:
 
 Here is a simplified architecture diagram:
 
-![Architecture Diagram Simple](/images/legacy_docs_selenium_rc_architecture_diagram_simple.png) 
+![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
 
 The diagram shows the client libraries communicate with the
 Server passing each Selenium command for execution. Then the server passes the 
@@ -1089,14 +1089,14 @@ If you are using Selenium 1.0 you can probably skip this section, since multiwin
 the default behavior.  However, prior to version 1.0, Selenium by default ran the 
 application under test in a sub frame as shown here.
 
-![Single window mode](/images/legacy_docs_selenium_rc_single_window_mode.png)
+![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
 
 Some applications didn't run correctly in a sub frame, and needed to be 
 loaded into the top frame of the window. The multi-window mode option allowed
 the AUT to run in a separate window rather than in the default 
 frame where it could then have the top frame it required.
 
-![Multiwindow Mode](/images/legacy_docs_selenium_rc_multi_window_mode.png)
+![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
 
 For older versions of Selenium you must specify multiwindow mode explicitly
 with the following option:
@@ -1284,7 +1284,7 @@ from the same origin).
 
 Here is an architectural diagram. 
 
-![Architectural Diagram 1](/images/legacy_docs_selenium_rc_architecture_diagram_1.png)
+![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
 
 As a test suite starts in your favorite language, the following happens:
 
@@ -1317,7 +1317,7 @@ through the Selenium RC server.
 
 Here is the architectural diagram. 
 
-![Architectural Diagram 1](/images/legacy_docs_selenium_rc_architecture_diagram_2.png)
+![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
 
 As a test suite starts in your favorite language, the following happens:
 

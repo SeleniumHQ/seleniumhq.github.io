@@ -18,17 +18,7 @@
       
       <guid>https://selenium.dev/documentation/fr/getting_started/quick/</guid>
       <description>Selenium n&amp;rsquo;est pas juste un outil ou une API mais est composé de nombreux outils.
-WebDriver WebDriver aussi connu sous le nom de Selenium 2. Si vous débutez dans l&amp;rsquo;automatisation de test de site web desktop vous allez utiliser les APIs WebDriver. WebDriver utilise les APIs d&amp;rsquo;automatisation fournies par les distributeurs de navigateur pour les contrôler et exécuter les tests. C&amp;rsquo;est comme si un utilisateur réel utilisait le navigateur. Puisque WebDriver n&amp;rsquo;a pas besoin que ses APIs soient compilées avec le code de l&amp;rsquo;application testée, il est non intrusif par nature.</description>
-    </item>
-    
-    <item>
-      <title>Runner HTML</title>
-      <link>https://selenium.dev/documentation/fr/getting_started/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/getting_started/html-runner/</guid>
-      <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
-Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
+WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web desktop vous allez utiliser les APIs WebDriver. WebDriver utilise les APIs d&amp;rsquo;automatisation fournies par les distributeurs de navigateur pour les contrôler et exécuter les tests. C&amp;rsquo;est comme si un utilisateur réel utilisait le navigateur. Puisque WebDriver n&amp;rsquo;a pas besoin que ses APIs soient compilées avec le code de l&amp;rsquo;application testée, il est non intrusif par nature.</description>
     </item>
     
   </channel>
