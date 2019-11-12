@@ -174,7 +174,7 @@
     <h3>Edge</h3>
     <p>
         Microsoft is implementing and maintaining the Microsoft Edge WebDriver, please refer to their
-        <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">documentation</a>
+        <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads">documentation</a>
         for any compatibility information
     </p>
 </div>
@@ -232,10 +232,14 @@
     <div class="close-container">
         <div class="close" onClick="hidePreviousReleases()"><div class="close-x">X</div></div>
     </div>
-    <h2>Previous Releases</h2>
+    <h2>
+        Previous Releases,
+        a complete list can be seen <a href="https://selenium-release.storage.googleapis.com/index.html">here</a>
+    </h2>
     <div class="releases-table">
         <div class="releases-header">
             <div class="name">Name</div>
+            <div class="version">Version</div>
             <div class="last-modified">Last Modified</div>
             <div class="size">Size</div>
             <div class="etag">ETag</div>
@@ -250,6 +254,7 @@
                 <img class="collapse-icon" src="{{"images/prev_releases_plus.png" | relURL}}" onClick="openVersion({{.version}})"/>
                 {{ .version }}
             </div>
+            <div class="version"></div>
             <div class="last-modified"></div>
             <div class="size"></div>
             <div class="etag"></div>
@@ -259,6 +264,7 @@
         {{ range .links }}
             <div class="releases-row">
                 <div class="name"><a href="{{ .url }}">{{ .name }}</a></div>
+                <div class="version"> {{ .version }}</div>
                 <div class="last-modified"> {{ .lastModified }}</div>
                 <div class="size"> {{ .size }}</div>
                 <div class="etag"> {{ .etag }}</div>

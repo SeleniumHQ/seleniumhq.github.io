@@ -139,6 +139,14 @@ html, body {
     border-bottom-width: 1px;
 }
 
+.releases-container .version {
+    width: 100px;
+    padding: 5px 5px 5px 0px;
+    margin: 5px 10px;
+    border-bottom: 5px solid rgb(182, 182, 182);
+    border-bottom-width: 1px;
+}
+
 .releases-container .last-modified {
     width: 250px;
     padding: 5px 5px 5px 0px;
