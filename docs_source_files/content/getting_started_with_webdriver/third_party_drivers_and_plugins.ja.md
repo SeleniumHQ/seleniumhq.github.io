@@ -25,5 +25,5 @@ respective developer(s).
 |[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[latest](https://github.com/mozilla/geckodriver/releases)|[change log](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[issue tracker](https://github.com/mozilla/geckodriver/issues)|
 |[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[latest](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[change log](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[issue tracker](https://bugs.chromium.org/p/chromedriver/issues/list)|
 |[Opera](http://choice.opera.com/developer/tools/operadriver/)|[latest](https://github.com/operasoftware/operachromiumdriver/releases)|-|[issue tracker](https://github.com/operasoftware/operachromiumdriver/issues)|
-|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|-|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
-|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|-|-|[issue tracker](https://bugreport.apple.com/)|
+|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[latest](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
+|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Built in|-|[issue tracker](https://bugreport.apple.com/)|

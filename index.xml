@@ -26,10 +26,19 @@ If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &a
     
     <item>
       <title></title>
-      <link>https://selenium.dev/thirdparty/chromedriver/</link>
-      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      <link>https://selenium.dev/downloads/ruby/</link>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/thirdparty/chromedriver/</guid>
+      <guid>https://selenium.dev/downloads/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/javascript/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/javascript/</guid>
       <description></description>
     </item>
     
@@ -39,6 +48,24 @@ If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &a
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2019/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/java/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/python/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/python/</guid>
       <description></description>
     </item>
     
@@ -80,42 +107,6 @@ It is currently in “alpha” and available for use in both Chrome and Firefox.
       <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work.
 The reasons for this are complex, but boil down to two main causes:
  Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original XPI format, to a newer, more widely adopted Web Extension mechanism.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://selenium.dev/thirdparty/geckodriver/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/thirdparty/geckodriver/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://selenium.dev/thirdparty/perl-6/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/thirdparty/perl-6/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://selenium.dev/thirdparty/perl/</link>
-      <pubDate>Thu, 15 Jun 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/thirdparty/perl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://selenium.dev/downloads/java/</link>
-      <pubDate>Fri, 21 Apr 2017 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/downloads/java/</guid>
-      <description></description>
     </item>
     
     <item>
@@ -233,11 +224,182 @@ Also, if you want to receive email notifications about the conference (e.g., whe
     
     <item>
       <title></title>
-      <link>https://selenium.dev/thirdparty/flex-pilot/</link>
-      <pubDate>Thu, 07 Apr 2011 00:00:00 +0000</pubDate>
+      <link>https://selenium.dev/thirdparty/chromedriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/thirdparty/flex-pilot/</guid>
-      <description>A Selenium IDE plugin for integrating with Flex-Pilot, for Flex automation. More info.</description>
+      <guid>https://selenium.dev/thirdparty/chromedriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/edgedriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/edgedriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-capybara/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-capybara/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-codeceptjs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-codeceptjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-fluentlenium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-fluentlenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-nerodia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-nerodia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-selenide/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-selenide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-seleniumbase/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-seleniumbase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-watir/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-watir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/framwework-webdriverio/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/framwework-webdriverio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/geckodriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/geckodriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/go-selenium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/go-selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/hs-webdriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/hs-webdriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/javascript-wd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/javascript-wd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/operadriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/operadriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/perl-selenium-remote-driver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/perl-selenium-remote-driver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/php-webdriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/php-webdriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/r-selenium/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/r-selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/safaridriver/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/safaridriver/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/thirdparty/webdriver.dart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/thirdparty/webdriver.dart/</guid>
+      <description></description>
     </item>
     
   </channel>
