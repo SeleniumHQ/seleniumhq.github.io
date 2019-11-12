@@ -28,16 +28,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/chromedriver/</loc>
-    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/thirdparty/</loc>
-    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/archive/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -75,21 +65,6 @@
   <url>
     <loc>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</loc>
     <lastmod>2017-08-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/thirdparty/geckodriver/</loc>
-    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/thirdparty/perl-6/</loc>
-    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/thirdparty/perl/</loc>
-    <lastmod>2017-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -148,13 +123,88 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/flex-pilot/</loc>
-    <lastmod>2011-04-07T00:00:00+00:00</lastmod>
+    <loc>https://selenium.dev/blog/</loc>
+    <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://selenium.dev/blog/</loc>
-    <lastmod>1970-01-01T00:00:00+00:00</lastmod>
+    <loc>https://selenium.dev/thirdparty/chromedriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/edgedriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-capybara/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-codeceptjs/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-fluentlenium/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-nerodia/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-selenide/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-seleniumbase/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-watir/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/framwework-webdriverio/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/geckodriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/go-selenium/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/hs-webdriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/javascript-wd/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/operadriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/perl-selenium-remote-driver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/php-webdriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/r-selenium/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/safaridriver/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/webdriver.dart/</loc>
   </url>
   
   <url>
@@ -199,6 +249,10 @@
   
   <url>
     <loc>https://selenium.dev/sponsors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/thirdparty/</loc>
   </url>
   
   <url>
