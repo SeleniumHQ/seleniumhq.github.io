@@ -1,7 +1,13 @@
 ---
 title: "HTML runner"
-weight: 2
+weight: 3
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 _Selenium HTML-runner_ allows you to run Test Suites from a
 command line. Test Suites are HTML exports from Selenium IDE or

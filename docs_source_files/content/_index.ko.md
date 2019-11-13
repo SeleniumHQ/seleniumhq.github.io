@@ -2,12 +2,6 @@
 title: "Selenium 브라우저 자동화 프로젝트"
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Selenium 브라우저 자동화 프로젝트
 
 Selenium은 웹 브라우저의 자동화를 가능하게 하고 지원하는 다양한 도구와 라이브러리를 포함한 프로젝트입니다.
@@ -18,8 +12,7 @@ Selenium은 웹 브라우저의 자동화를 가능하게 하고 지원하는 �
 
 이 프로젝트는 자신의 수천 시간을 투자해준 기여자들이, [누구나 자유롭게]({{< ref "/front_matter/copyright_and_attributions.ko.md#license" >}}) 사용하고, 즐기고, 개선할 수 있도록 소스 코드를 제공해주었기에 가능했습니다.
 
-Selenium은 브라우저 공급 업체, 엔지니어, 매니아를 모아 웹 플랫폼 자동화에 대한 공개 토론을 진행합니다. 이 프로젝트 [매년 컨퍼런스](//seleniumconf.com/)
-를 개최하여 커뮤니티를 육성하고 가르침을 전합니다.
+Selenium은 브라우저 공급 업체, 엔지니어, 매니아를 모아 웹 플랫폼 자동화에 대한 공개 토론을 진행합니다. 이 프로젝트 [매년 컨퍼런스](//seleniumconf.com/)를 개최하여 커뮤니티를 육성하고 가르침을 전합니다.
 
 Selenium의 핵심은 _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ 입니다. 
 이는 다양한 브라우저에서 호환 가능한 지시사항을 작성할 수 있는 인터페이스라 할 수 있습니다. 다음은 가장 간단한 지시사항 예시입니다:
@@ -151,7 +144,7 @@ class HelloSelenium {
 {{< / code-tab >}}
 
 
-이 코드를 실행할 때의 동작 원리에 대한 전체적인 설명은 _[Quick Tour]({{< ref "/getting_started/quick.ko.md" >}})_ 를 참고하십시오.
+이 코드를 실행할 때의 동작 원리에 대한 전체적인 설명은 _[퀵 투어]({{< ref "/getting_started/quick.ko.md" >}})_ 를 참고하십시오.
 Selenium 설치 방법과 자동화 툴로써 활용하는 방안에 대해 더 알아보고 싶다면 [narrative documentation]({{< ref "/introduction/_index.md" >}}) 를 참고하십시오. 이를 통해 Selenium을 테스트 자동화 툴로써 성공적으로 활용하여, 간단한 테스트를 제작하고 다양한 브라우저와 운영체제 환경에서 실행할 수 있을 것입니다.
 
 ## 시작하기
@@ -159,10 +152,8 @@ Selenium 설치 방법과 자동화 툴로써 활용하는 방안에 대해 더 
 Selenium을 처음 사용해보신다면,
 빠른 이해를 도울 수 있는 몇 가지 문서가 있습니다.
 
-* [Quick tour]({{< ref "/getting_started/quick.ko.md" >}})
+* [퀵 투어]({{< ref "/getting_started/quick.ko.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.ko.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.ko.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.ko.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.ko.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.ko.md#html-runner" >}})
 

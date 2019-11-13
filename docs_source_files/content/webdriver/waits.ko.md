@@ -3,6 +3,12 @@ title: "Waits"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 WebDriver can generally be said to have a blocking API.
 Because it is an out-of-process library that
 _instructs_ the browser what to do,
@@ -11,7 +17,7 @@ WebDriver does not track the active, real-time state of the DOM.
 This comes with some challenges that we will discuss here.
 
 From experience,
-most intermittents that arise from use of Selenium and WebDriver
+most intermittent issues that arise from use of Selenium and WebDriver
 are connected to _race conditions_ that occur between
 the browser and the user's instructions.
 An example could be that the user instructs the browser to navigate to a page,

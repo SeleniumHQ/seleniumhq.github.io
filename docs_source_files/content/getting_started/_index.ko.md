@@ -1,18 +1,15 @@
 ---
-title: "Getting started"
+title: "시작하기"
 chapter: true
 weight: 1
 ---
 
-# Getting started
+# 시작하기
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+만약 여러분이 Selenium이 처음이라면,
+빠르게 시작할 수 있도록 도와줄 몇 가지 문서가 있습니다.
 
-* [Quick tour]({{< ref "/getting_started/quick.ko.md" >}})
+* [퀵 투어]({{< ref "/getting_started/quick.ko.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.ko.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.ko.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.ko.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.ko.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.ko.md#html-runner" >}})

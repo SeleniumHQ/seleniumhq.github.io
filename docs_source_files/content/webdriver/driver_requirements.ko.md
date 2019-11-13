@@ -3,6 +3,12 @@ title: "Driver requirements"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Through WebDriver, Selenium supports all major browsers on the market
 such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari.
 Where possible, WebDriver drives the browser

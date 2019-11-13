@@ -3,6 +3,12 @@ title: "Consider using a fluent API"
 weight: 8
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 
 Martin Fowler coined the term ["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html). Selenium already
 implements something like this in their `FluentWait` class, which is

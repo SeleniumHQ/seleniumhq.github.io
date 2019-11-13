@@ -3,6 +3,12 @@ title: "When to use Grid"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Generally speaking, there’s two reasons why you might want to use Grid.
 
 * To run your tests against multiple browsers, multiple versions of browser,

@@ -3,6 +3,12 @@ title: "Link spidering"
 weight: 7
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Using WebDriver to spider through links
 is not a recommended practice. Not because it cannot be done,
 but because WebDriver is definitely not the most ideal tool for this.

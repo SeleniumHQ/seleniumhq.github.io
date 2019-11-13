@@ -4,6 +4,12 @@ chapter: true
 weight: 6
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 # Remote WebDriver
 
 You can use WebDriver remotely the same way you would use it

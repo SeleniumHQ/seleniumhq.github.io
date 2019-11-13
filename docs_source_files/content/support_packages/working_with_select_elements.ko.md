@@ -3,6 +3,12 @@ title: "Working with select elements"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Select elements can require quite a bit of boiler plate code to automate.
 To reduce this, and make your tests cleaner, there is a
 `Select` class in the Selenium support package.
