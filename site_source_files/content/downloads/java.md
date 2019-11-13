@@ -1,10 +1,10 @@
 +++
 Description = ""
 Key = "bindings"
-Date = 2017-04-21
+Date = 2018-11-14
 Language = "Java"
-ClientVersion = "3.4.0"
-Author = "Gordon Child"
+ClientVersion = "3.141.59"
+Author = "Selenium Team"
 DownloadLink = "https://bit.ly/2zm3ZzF"
 ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/master/java/CHANGELOG"
 DocsLink = "https://seleniumhq.github.io/selenium/docs/api/java/index.html"

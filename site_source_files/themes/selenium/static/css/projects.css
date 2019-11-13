@@ -28,6 +28,18 @@
     border-left-width: 5px;
 }
 
+.product-container  a {
+    text-decoration: none;
+}
+
+.learn-more {
+    display: flex;
+    font-weight: bold;
+    width: 85px;
+    border-bottom: 2px solid;
+    transition: 0.3s;
+}
+
 .product-container.webdriver {
     border-left-color: #cf0a2c;
 }
@@ -37,6 +49,10 @@
 }
 
 .product-container.webdriver b {
+    color: #cf0a2c;
+}
+
+.learn-more.webdriver {
     color: #cf0a2c;
 }
 
@@ -52,6 +68,11 @@
     color: #645d9c;
 }
 
+.learn-more.grid {
+    color: #645d9c;
+}
+
+
 .product-container.ide {
     border-left-color: #0033a0;
 }
@@ -64,16 +85,8 @@
     color: #0033a0;
 }
 
-.product-container.remoteControl {
-    border-left-color: #ef4b0a;
-}
-
-.product-container.remoteControl h2 {
-    color: #ef4b0a;
-}
-
-.product-container.remoteControl b {
-    color: #ef4b0a;
+.learn-more.ide {
+    color: #0033a0;
 }
 
 .product-logo-container {
@@ -88,7 +101,7 @@
 }
 
 .intro {
-    border-bottom: 1px solid rgb(148, 156, 161, 0.45);
+    border-bottom: 1px solid rgb(148, 156, 161);
 }
 
 .toggle-section {

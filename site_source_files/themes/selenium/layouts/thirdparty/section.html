@@ -5,10 +5,10 @@
 
 <body>
 <section class="hero">
-    <h1>Third Party Drivers, Bindings, and Plugins</h1>
+    <h1>Third Party Drivers, Bindings, Plugins, and Frameworks</h1>
     <div class="header-description">
         <p class="body-large">
-            Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
+            Selenium can be extended in different ways. Here are a number of projects created and maintained by third parties.
         </p>
     </div>
 </section>
@@ -16,125 +16,79 @@
 <div class="warning container">
     <div class="warning-exclamation">!</div>
     <div>
-    <span class="important">Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project.</span>
-    In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.2.0. Some of the plugins are available under another free and open source software license; others are only available under a proprietary license. Any questions about plugins and their license of distribution need to be raised with their respective developer(s).
+    <span class="important">Please note that these projects are not supported, maintained, hosted, or endorsed by the Selenium project.</span>
+    In addition, be advised that the projects listed below are not necessarily licensed under the Apache License v.2.0. Some of the
+        projects are available under another free and open source software license; others are only available under a proprietary
+        license. Any questions about projects and their license of distribution need to be raised with their respective developer(s).
     </div>
 </div>
 
 <div class="container dark-background">
-    <h2>Third Party Browser Drivers</h2>
+    <h2>Browser Drivers</h2>
     <div class="table">
         <div class="row">
             <div class="row-component double label">Browser</div>
-            <div class="row-component single label">Version</div>
+            <div class="row-component single label">Releases</div>
             <div class="row-component single label">Change log</div>
-            <div class="row-component single label">Docs</div>
-            <div class="row-component double label">More Info</div>
-            <div class="row-component single label">Release</div>
+            <div class="row-component single label">Issue tracker</div>
         </div>
         {{ range where .Data.Pages "Type" "thirdparty" }}
             {{ if eq .Params.Key "drivers"}}
             <div class="row">
                 <a href="{{ .Params.BrowserLink }}" class="row-component double">{{ .Params.Browser }}</a>
-                <a href="{{ .Params.VersionLink }}" class="row-component single">{{ .Params.Version }}</a>
-                <a href="{{ .Params.ChangelogLink }}" class="row-component single">{{ .Params.Changelog }}</a>
-                <a href="{{ .Params.DocsLink }}" class="row-component single">{{ .Params.Docs }}</a>
-                <a href="{{ .Params.MoreInfoLink }}" class="row-component double">{{ .Params.MoreInfo }}</a>
-                <div class="row-component single">{{ .Date.Format "Monday, January 1"}}</div>
+                <a href="{{ .Params.ReleasesLink }}" class="row-component single">Releases Link</a>
+                <a href="{{ .Params.ChangelogLink }}" class="row-component single">Change log</a>
+                <a href="{{ .Params.IssueTrackerLink }}" class="row-component single">Issue tracker</a>
             </div>
             {{ end }}
         {{ end }}
     </div>
 
-    <h2>Third Party Language Bindings</h2>
+    <h2>Language Bindings</h2>
     <div class="table">
         <div class="row">
-            <div class="row-component single label">Browser</div>
-            <div class="row-component three label">Author</div>
+            <div class="row-component single label">Name</div>
+            <div class="row-component single label">Language</div>
+            <div class="row-component single label">Author</div>
         </div>
         {{ range where .Data.Pages "Type" "thirdparty" }}
             {{ if eq .Params.Key "bindings"}}
             <div class="row">
-                <a href="{{ .Params.LanguageLink }}" class="row-component single">{{ .Params.Language }}</a>
-                <div class="row-component three">{{ .Params.Author }}</div>
+                <a href="{{ .Params.BindingLink }}" class="row-component single">{{ .Params.BindingName }}</a>
+                <div class="row-component single">{{ .Params.Language }}</div>
+                <div class="row-component single">{{ .Params.Author }}</div>
             </div>
             {{ end }}
         {{ end }}
     </div>
 
-    <h2>Selenium GRID Plugins</h2>
-    <h3>Move mouse away from screen</h3>
-    <p class="description">This plugin is made of 2 parts, a servlet that lives on the NODE machine and does the actual moving of the mouse, and an extension of the Selenium Grid, to send an HTTP request to the servlet before a new test session is started.</p>
-    <div class="table">
-        <div class="row">
-            <div class="row-component four label">Links:</div>
-            <div class="row-component single label">Version</div>
-            <div class="row-component single label">Author</div>
-            <div class="row-component single label">License</div>
-            <div class="row-component single label">Release</div>
-        </div>
-        <div class="row">
-            <div class="row-component four label">
-                <a href="https://github.com/AutomatedTester/speedy-gonzales-proxy" class="row-component single">Proxy extension</a>
-                <a href="https://github.com/AutomatedTester/speedy-gonzales-servlette" class="row-component single">Servlet to move the mouse</a>
-            </div>
-            <div class="row-component single">N/A</div>
-            <a href="http://www.theautomatedtester.co.uk/" class="row-component single">David Burns</a>
-            <div class="row-component single">Unknown</div>
-            <div class="row-component single">2012</div>
-        </div>
-    </div>
+    <h2>Frameworks</h2>
+    <p>
+        Programming languages are supported through Selenium <i>drivers</i>.<br>
+        These are libraries made for each language that expose commands from the Selenium API natively in the form of methods/functions.
+    </p>
+    <p>
+        Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.<br>
+        Some testing frameworks that can be used with Selenium are listed below.
+    </p>
 
-    <h3>VisGrid-UI for Selenium Grid 2.0</h3>
-    <p class="description">VisGrid is a GUI for Selenium Grid. You can start hub, create and attach a Selenium node very easily and quickly.</p>
     <div class="table">
         <div class="row">
-            <div class="row-component four label">Links:</div>
-            <div class="row-component single label">Version</div>
+            <div class="row-component single label">Name</div>
+            <div class="row-component single label">Language</div>
             <div class="row-component single label">Author</div>
-            <div class="row-component single label">License</div>
-            <div class="row-component single label">Release</div>
         </div>
+        {{ range where .Data.Pages "Type" "thirdparty" }}
+        {{ if eq .Params.Key "framework"}}
         <div class="row">
-            <div class="row-component four label">
-                <a href="https://github.com/AutomatedTester/speedy-gonzales-proxy" class="row-component single">Proxy extension</a>
-                <a href="https://github.com/AutomatedTester/speedy-gonzales-servlette" class="row-component single">Servlet to move the mouse</a>
-            </div>
-            <div class="row-component single">N/A</div>
-            <a href="http://www.theautomatedtester.co.uk/" class="row-component single">David Burns</a>
-            <div class="row-component single">Unknown</div>
-            <div class="row-component single">2012</div>
-        </div>
-    </div>
-
-    <h2>Selenium IDE Plugins</h2>
-    {{ range where .Data.Pages "Type" "thirdparty" }}
-    {{ if eq .Params.Key "selenium-plugins"}}
-    <h3>{{ .Params.Name }}</h3>
-    <div class="description">
-    <p>{{ .Content }}</p>
-    </div>
-    <div class="table">
-        <div class="row">
-            <div class="row-component four label">Links:</div>
-            <div class="row-component single label">Version</div>
-            <div class="row-component single label">Author</div>
-            <div class="row-component single label">License</div>
-            <div class="row-component single label">Release</div>
-        </div>
-        <div class="row">
-            <div class="row-component four label">
-                <a href="{{ .Params.DownloadLink }}" class="row-component single">Download</a>
-                <a href="{{ .Params.SupportLink }}" class="row-component single">Support</a>
-            </div>
-            <div class="row-component single">{{ .Params.Version }}</div>
+            <a href="{{ .Params.BindingLink }}" class="row-component single">{{ .Params.BindingName }}</a>
+            <div class="row-component single">{{ .Params.Language }}</div>
             <div class="row-component single">{{ .Params.Author }}</div>
-            <div class="row-component single">{{ .Params.License }}</div>
-            <div class="row-component single">{{ .Date.Format "Monday, January 1"}}</div>
         </div>
+        {{ end }}
+        {{ end }}
     </div>
-        {{ end }}
-        {{ end }}
+
 </div>
 
 {{ partial "selenium-level-sponsors.html" . }}

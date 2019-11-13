@@ -61,8 +61,11 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/support_classes/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
+ Locator Strategies Events LoadableComponent ThreadGuard etc.  Let&amp;rsquo;s Start:
+ThreadGuard  This class is only available in the Java Binding
+ ThreadGuard checks that a driver is called only from the same thread that created it.</description>
     </item>
     
     <item>
