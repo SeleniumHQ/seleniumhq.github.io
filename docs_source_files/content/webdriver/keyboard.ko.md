@@ -3,6 +3,12 @@ title: "Keyboard"
 weight: 10
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
 interface which allows us to provide virtualized device input to the web browser.
 

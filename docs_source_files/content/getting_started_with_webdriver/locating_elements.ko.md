@@ -3,6 +3,12 @@ title: "Locating elements"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ### Locating one element
 
 One of the most fundamental techniques to learn when using WebDriver is

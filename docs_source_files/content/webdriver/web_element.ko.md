@@ -3,6 +3,12 @@ title: "Web element"
 weight: 9
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 WebElement represents a DOM element. WebElements can be found by searching from the
 document root using a WebDriver instance, or by searching under another
 WebElement:

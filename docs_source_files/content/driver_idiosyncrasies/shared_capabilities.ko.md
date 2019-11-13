@@ -3,6 +3,12 @@ title: "Shared capabilities"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ### pageLoadStrategy
 When navigating to a new page via URL, by default Selenium will wait
 until the page has fully loaded before responding. This works well for

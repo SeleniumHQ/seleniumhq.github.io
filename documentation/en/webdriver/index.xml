@@ -48,7 +48,7 @@ gem install selenium-webdriver Or, if you use Bundler, add this line to your app
       
       <guid>https://selenium.dev/documentation/en/webdriver/waits/</guid>
       <description>WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
-From experience, most intermittents that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
+From experience, most intermittent issues that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
     </item>
     
     <item>
@@ -57,7 +57,10 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/webdriver/support_classes/</guid>
-      <description></description>
+      <description>WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
+ Locator Strategies Events LoadableComponent ThreadGuard etc.  Let&amp;rsquo;s Start:
+ThreadGuard  This class is only available in the Java Binding
+ ThreadGuard checks that a driver is called only from the same thread that created it.</description>
     </item>
     
     <item>

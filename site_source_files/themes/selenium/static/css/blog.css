@@ -175,6 +175,10 @@ a {
   padding-bottom: 25px;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Mobile-only styles */
 @media only screen and (max-width: 768px) {
   .blog-container{

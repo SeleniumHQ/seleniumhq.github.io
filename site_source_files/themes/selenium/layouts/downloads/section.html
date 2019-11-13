@@ -4,12 +4,12 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
-<div>
 <section class="hero">
     <h1>Downloads</h1>
     <div class="header-description">
         <p class="body-large">
-            Below is where you can find the latest releases of all the Selenium components. You can also find a list of previous releases, source code, and additional information for Maven users (Maven is a popular Java build tool).
+            Below is where you can find the latest releases of all the Selenium components. You can also find a
+            list of previous releases, source code, and additional information for Maven users.
         </p>
         <p onClick="showPreviousReleases()" class="releases-button">Previous Releases</p>
     </div>
@@ -17,24 +17,41 @@
 
 <div class="split-section container dark-background">
     <div class="left">
-        <h2>Selenium Standalone Server</h2>
-        <p>The Selenium Server is needed in order to run Remote Selenium WebDriver. Selenium 3.X is no longer capable of running Selenium RC directly, rather it does it through emulation and the WebDriverBackedSelenium interface.</p>
+        <h2>Selenium Server (Grid)</h2>
+        <p>The Selenium Server is needed in order to run Remote Selenium WebDriver (Grid).</p>
     </div>
     <div class="right">
-        <p>Download version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
-        <p>To run Selenium tests exported from the legacy IDE, use the <a href="https://bit.ly/2A7OoTV">Selenium HTML Runner.</a></p>
-        <p>To use the Selenium Server in a Grid configuration see the <a href="https://github.com/SeleniumHQ/selenium/wiki/Grid2">wiki page</a>.</p>
+        <p>Latest stable version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
+        <p>To use the Selenium Server in a Grid configuration see the <a href="https://selenium.dev/documentation/en/grid/">documentation</a>.</p>
+        <p>Latest Selenium 4 Alpha version
+            <a href="https://selenium-release.storage.googleapis.com/4.0/selenium-server-standalone-4.0.0-alpha-2.jar">4.0.0-alpha-2</a>
+        </p>
     </div>
 </div>
 
 <div class="split-section container">
         <div class="left">
             <h2>The Internet Explorer Driver Server</h2>
-            <p>This is required if you want to make use of the latest and greatest features of the WebDriver InternetExplorerDriver. Please make sure that this is available on your $PATH (or %PATH% on Windows) in order for the IE Driver to work as expected.</p>
+            <p>This is required if you want to make use of the latest and greatest features of the WebDriver InternetExplorerDriver.<br>
+                Please make sure that this is available on your <code>$PATH</code> (or <code>%PATH%</code> on Windows) in order for the IE
+                Driver to work as expected.
+            </p>
         </div>
         <div class="right">
-            <p>Download version 3.14.0 for (recommended)
-                <a href="https://goo.gl/9Cqa4q">32 bit Windows IE</a> or <a href="https://goo.gl/AtHQuv">64 bit Windows IE</a></p></br><a href="http://goo.gl/LJ07LL">CHANGELOG</a>
+            <p>Download version 3.150.1 for:
+                <ul>
+                    <li>
+                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip">
+                            32 bit Windows IE
+                        </a> (recommended)
+                    </li>
+                    <li>
+                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_x64_3.150.1.zip">
+                            64 bit Windows IE
+                        </a>
+                    </li>
+                </ul>
+            <a href="http://goo.gl/LJ07LL">CHANGELOG</a>
             </p>
         </div>
 </div>
@@ -42,16 +59,18 @@
 <div class="container basic dark-background">
     <h2>Selenium Client & WebDriver Language Bindings</h2>
 
-    <p>In order to create scripts that interact with the Selenium Server (Selenium RC, Selenium Remote WebDriver) or create local Selenium WebDriver scripts, you need to make use of language-specific client drivers. These languages include both 1.x and 2.x style clients.</p>
+    <p>In order to create scripts that interact with the Selenium Server (Remote WebDriver) or create local Selenium WebDriver scripts,
+        you need to make use of language-specific client drivers.</p>
 
-    <p>While language bindings for <a href="{{"thirdparty" | relURL}}">other languages exist</a>, these are the core ones that are supported by the main project hosted on GitHub.</p>
+    <p>While language bindings for <a href="{{"thirdparty" | relURL}}">other languages exist</a>,
+        these are the core ones that are supported by the main project hosted on GitHub.</p>
 
 
     <div class="table">
 
         <div class="row">
             <span class="row-component single label">Language</span>
-            <span class="row-component single label">Client Version</span>
+            <span class="row-component single label">Version</span>
             <span class="row-component single label">Release Date</span>
             <span class="row-component links label"></span>
         </div>
@@ -61,12 +80,11 @@
             <div class="row">
                 <span class="row-component single">{{ .Params.Language }}</span>
                 <span class="row-component single">{{ .Params.ClientVersion }}</span>
-                <span class="row-component single">{{ .Date.Format "Monday, January 02" }}</span>
+                <span class="row-component single">{{ .Date.Format "January 02, 2006" }}</span>
                 <span class="row-component links">
                     <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
                     <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
                     <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
-                    <a class="link"></a>
                 </span>
             </div>
             {{ end }}
@@ -76,13 +94,13 @@
 
 <div class="container">
     <h2>C# NuGet</h2>
-    <p>Nuget latest release is 3.4.0. Released on 2017-04-21</p>
+    <p>Nuget latest release is 3.14.0. Released on 2018-08-02</p>
 
     <ul>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriver">WebDriver</a></li>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.WebDriverBackedSelenium">WebDriverBackedSelenium</a></li>
         <li><a href="http://www.nuget.org/List/Packages/Selenium.Support">Support</a></li>
-        <li><a href="http://www.nuget.org/List/Packages/Selenium.RC">RC</a></li>
+        <li><a href="http://www.nuget.org/List/Packages/Selenium.RC">RC</a> (Final version 3.1.0 Released 2017-02-16)</li>
     </ul>
 </div>
 
@@ -107,7 +125,7 @@
 <div class="container basic dark-background">
     <h2>Third Party Drivers, Bindings, and Plugins</h2>
     <p>
-        Selenium can be extended through the use of plugins.
+        Selenium can be extended through the use of plugins.<br>
         Here are a number of plugins created and maintained by third parties.
         For more information on how to create your own plugin or have it listed,
         learn more <a href="https://selenium.dev/selenium-ide/docs/en/plugins/plugins-getting-started/">here</a>.
@@ -122,76 +140,64 @@
 <div id="browsersCollapse" class="toggle-button hide" onClick="collapseBrowsers()">- Browsers</div>
 <div id="browsersContent" class="toggled-content dark-background hide">
     <h3>Firefox</h3>
-    <p>Support for Firefox is the latest release, the previous release, the latest ESR release and the previous ESR release.</p>
-    <p>For example Selenium 2.40.0 (released on Feb 19, 2014) supports Firefox 27, 26, 24, 17</p>
-    <p>Selenium with Firefox can be run on any platform that Firefox supports for those versions, that also allow users to install a custom Firefox extension.</p>
+    <p>GeckoDriver is implemented and supported by Mozilla, refer to their
+        <a href="https://firefox-source-docs.mozilla.org/testing/geckodriver/Support.html">documentation</a>
+        for supported versions.
+    </p>
 
     <h3>Internet Explorer</h3>
-    <p>Versions 7, 8, 9, 10 and 11 are supported. Version 11 requires additional configuration.</p>
-    <p>The selenium project tests each release on Windows 7.</p>
+    <p>Only version 11 is supported, and it requires additional
+        <a href="https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">configuration</a>.
+    </p>
 
     <h3>Safari</h3>
-    <p>SafariDriver requires Safari 5.1+ (Note, due to Apple potentially dropping support > Safari 6.X for Windows, new developments in the bindings may not work in the Windows platform)</p>
+    <p>
+        SafariDriver is supported directly by Apple, for more information, check their
+        <a href="https://developer.apple.com/documentation/webkit/about_webdriver_for_safari">documentation</a>
+    </p>
 
     <h3>Opera</h3>
-    <p>OperaDriver is supported by Opera Software, refer to their documentation for supported versions.</p>
+    <p>
+        OperaDriver is supported by Opera Software, refer to their
+        <a href="https://github.com/operasoftware/operachromiumdriver/releases">documentation</a>
+        for supported versions.
+    </p>
 
     <h3>Chrome</h3>
-    <p>ChromeDriver is supported by the Chromium project, please refer to their documentation for any compatibility information</p>
+    <p>
+        ChromeDriver is supported by the Chromium project, please refer to their
+        <a href="https://sites.google.com/a/chromium.org/chromedriver/">documentation</a>
+        for any compatibility information
+    </p>
+
+    <h3>Edge</h3>
+    <p>
+        Microsoft is implementing and maintaining the Microsoft Edge WebDriver, please refer to their
+        <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads">documentation</a>
+        for any compatibility information
+    </p>
 </div>
 
 <div id="osExpand" class="toggle-button" onClick="expandOS()">+ Operating Systems</div>
 <div id="osCollapse" class="toggle-button hide" onClick="collapseOS()">- Operating Systems</div>
 <div id="osContent" class="toggled-content dark-background hide">
     <h3>Microsoft Windows</h3>
-    <p>Most versions of MS Windows that are currently still supported by Microsoft should work with Selenium. Although we currently run tests before each release against Windows 7. This does not mean Selenium won't attempt to support different versions of Windows. This only means we don't continually run tests on other particular version of Windows.</p>
+    <p>
+        Most versions of MS Windows that are currently still supported by Microsoft should work with Selenium.
+        Although we use the latest MS Windows to troubleshoot things, it does not mean Selenium won't attempt to support different
+        versions of Windows. This only means we don't continually run tests on other particular version of Windows.
+    </p>
 
-    <h3>Apple OS X</h3>
-    <p>We currently do not use any version of OS X in our automated tests against the selenium project. However most developers on the project are using a recent version of OS X and we'll continue to support the current stable release and often the previous release.</p>
+    <h3>macOS</h3>
+    <p>
+        We currently do not use any version of macOS in our automated tests against the selenium project. However most developers on the
+        project are using a recent version of macOS and we'll continue to support the current stable release and often the previous release.
+    </p>
 
     <h3>Linux</h3>
-    <p>We test mainly on Ubuntu, but other variations of Linux should also work where the browser manufacturers support them.</p>
-</div>
-
-<div id="languagesExpand" class="toggle-button" onClick="expandLanguages()">+ Programming Languages & Frameworks</div>
-<div id="languagesCollapse" class="toggle-button hide" onClick="collapseLanguages()">- Programming Languages & Frameworks</div>
-<div id="languagesContent" class="toggled-content dark-background hide">
-    <p>Programming languages are supported through Selenium "drivers." These are libraries made for each language that expose commands from the Selenium API natively in the form of methods/functions.</p>
-    <p>Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework. Some testing frameworks that can be used with Selenium are listed below.</p>
-
-
-    <h3>C#</h3>
-    <p>Frameworks available: <a href="https://nunit.org/">NUnit</a></p>
-
-    <h3>Java</h3>
-    <p>Frameworks available: <a href="https://junit.org/junit5/">JUnit</a>, <a href="https://testng.org/doc/index.html">TestNG</a></p>
-
-    <h3>JavaScript</h3>
     <p>
-        Frameworks available:
-        <a href="http://www.webdriverjs.com/">WebdriverJS</a>,
-        <a href="https://webdriver.io/">WebdriverIO</a>,
-        <a href="http://nightwatchjs.org/">NightwatchJS</a>,
-        <a href="http://nemo.js.org/">NemoJS</a>
+        We test mainly on Ubuntu, but other variations of Linux should also work where the browser manufacturers support them.
     </p>
-
-    <h3>PHP</h3>
-    <p>Frameworks available: <a href="https://github.com/minkphp/docs/blob/master/index.rst">Behat + Mink</a></p>
-
-    <h3>Python</h3>
-    <p>Frameworks available:
-        <a href="https://docs.python.org/2/library/unittest.html">unittest</a>,
-        <a href="http://pyunit.sourceforge.net/">pyunit</a>,
-        <a href="http://pytest.org">py.test</a>,
-        <a href="https://code.google.com/archive/p/robotframework-seleniumlibrary/">robot framework</a>
-    </p>
-
-    <h3>Ruby</h3>
-    <p>Frameworks available:
-        <a href="http://rspec.info/">RSpec</a>,
-        <a href="https://ruby-doc.org/stdlib-1.8.7/libdoc/test/unit/rdoc/Test/Unit.html">Test::Unit</a>
-    </p>
-
 </div>
 
 <div class="container dark-background">
@@ -225,10 +231,14 @@
     <div class="close-container">
         <div class="close" onClick="hidePreviousReleases()"><div class="close-x">X</div></div>
     </div>
-    <h2>Previous Releases</h2>
+    <h2>
+        Previous Releases,
+        a complete list can be seen <a href="https://selenium-release.storage.googleapis.com/index.html">here</a>
+    </h2>
     <div class="releases-table">
         <div class="releases-header">
             <div class="name">Name</div>
+            <div class="version">Version</div>
             <div class="last-modified">Last Modified</div>
             <div class="size">Size</div>
             <div class="etag">ETag</div>
@@ -243,6 +253,7 @@
                 <img class="collapse-icon" src="{{"images/prev_releases_plus.png" | relURL}}" onClick="openVersion({{.version}})"/>
                 {{ .version }}
             </div>
+            <div class="version"></div>
             <div class="last-modified"></div>
             <div class="size"></div>
             <div class="etag"></div>
@@ -252,6 +263,7 @@
         {{ range .links }}
             <div class="releases-row">
                 <div class="name"><a href="{{ .url }}">{{ .name }}</a></div>
+                <div class="version"> {{ .version }}</div>
                 <div class="last-modified"> {{ .lastModified }}</div>
                 <div class="size"> {{ .size }}</div>
                 <div class="etag"> {{ .etag }}</div>
@@ -321,25 +333,6 @@
       osExpand.className = 'toggle-button';
       osCollapse.className = 'toggle-button hide';
       osContent.className = 'toggled-content dark-background hide';
-    }
-
-    function expandLanguages() {
-      const languagesExpand = document.getElementById('languagesExpand')
-      const languagesCollapse = document.getElementById('languagesCollapse')
-      const languagesContent = document.getElementById('languagesContent')
-      languagesExpand.className = 'toggle-button hide';
-      languagesCollapse.className = 'toggle-button';
-      languagesContent.className = 'toggled-content dark-background';
-    }
-
-    function collapseLanguages() {
-      const languagesExpand = document.getElementById('languagesExpand')
-      const languagesCollapse = document.getElementById('languagesCollapse')
-      const languagesContent = document.getElementById('languagesContent')
-
-      languagesExpand.className = 'toggle-button';
-      languagesCollapse.className = 'toggle-button hide';
-      languagesContent.className = 'toggled-content dark-background hide';
     }
 
     function showPreviousReleases() {

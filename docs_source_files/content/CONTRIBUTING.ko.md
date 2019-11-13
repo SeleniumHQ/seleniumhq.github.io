@@ -3,6 +3,12 @@ title: Contributing to the Selenium Site & Documentation
 disableToc: true
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 Selenium is a big software project, its site and documentation are key
 to understanding how things work and learning effective ways to exploit
 its potential.

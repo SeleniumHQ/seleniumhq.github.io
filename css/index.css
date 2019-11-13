@@ -97,7 +97,7 @@ the text under the Hero Image*/
 is the line that separates the content*/
 
 .getting-started-topic:not(:last-child) {
-  border-right: 1px solid rgb(148, 156, 161, 0.45);
+  border-right: 1px solid rgb(148, 156, 161);
   padding-right: 70px;
 }
 
@@ -126,7 +126,7 @@ is the line that separates the content*/
 .news-metadata {
     flex: 1;
     border-top: 1px;
-    border-top-color: rgb(148, 156, 161, 0.45);
+    border-top-color: rgb(148, 156, 161);
     border-top-style: solid;
     margin: 10px 30px 30px 30px;
 }
@@ -142,7 +142,7 @@ is the line that separates the content*/
 .news-description {
     flex: 2;
     border-top: 1px;
-    border-top-color: rgb(148, 156, 161, 0.45);
+    border-top-color: rgb(148, 156, 161);
     border-top-style: solid;
     margin: 10px 30px 30px 30px;
     padding: 10px;
@@ -293,7 +293,7 @@ is the line that separates the content*/
     .getting-started-topic:not(:last-child) {
       border-right: none;
       padding-right: 0;
-      border-bottom: 1px solid rgb(148, 156, 161, 0.45);
+      border-bottom: 1px solid rgb(148, 156, 161);
       margin-bottom: 50px;
   }
 

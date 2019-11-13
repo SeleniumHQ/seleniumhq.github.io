@@ -3,6 +3,12 @@ title: "On test automation"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 First, start by asking yourself whether or not you really need to use a browser.
 Odds are that, at some point, if you are working on a complex web application,
 you will need to open a browser and actually test it.
