@@ -20,4 +20,4 @@ _[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment)
 ## Grid
 
 WebDriver 테스트 이후, 여러분은 여러 브라우저와 운영체제 조합에서 테스트의 필요성을 느낄 수도 있습니다.
-이는 _[Grid]({{< ref "/grid/_index.md" >}})_ 를 통해 해결할 수 있습니다.
+이 문제는 _[Grid]({{< ref "/grid/_index.md" >}})_ 를 통해 해결할 수 있습니다.
