@@ -12,20 +12,20 @@
     <title>Support classes :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1573602331" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1573602331" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1573656669" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1573656669" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1573602331" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1573656669" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1573602331"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1573656669"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1573602331"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1573602331"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1573656669"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1573656669"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1573602331"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1573656669"></script>
 
     
   </div>
@@ -1887,7 +1887,20 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#threadguard"><strong>ThreadGuard</strong></a>
+<ul>
+<li>
+<ul>
+<li><a href="#note">Note:</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1913,6 +1926,78 @@
 
 
 
+
+<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
+您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
+</div>
+
+
+<p>WebDriver support classes are provided to simplify maintaining your code.
+They provide a nice abstraction to make modeling HTML element(s) as domain
+objects easier, also providing helper methods to make using such objects easy to
+reason about. We will learn about:</p>
+
+<ul>
+<li>Locator Strategies</li>
+<li>Events</li>
+<li>LoadableComponent</li>
+<li>ThreadGuard</li>
+<li>etc.</li>
+</ul>
+
+<p>Let&rsquo;s Start:</p>
+
+<h2 id="threadguard"><strong>ThreadGuard</strong></h2>
+
+<p>
+<div class="notices info" ><p>This class is only available in the Java Binding</p>
+</div>
+
+ThreadGuard checks that a driver is called only from the same thread that created it.
+Threading issues especially when running tests in Parallel may have mysterious
+and hard to diagnose errors. Using this wrapper prevents this category of errors
+and will raise an exception when it happens.</p>
+
+<p>The following example simulate a clash of threads:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> DriverClash {
+  <span style="color:#586e75">//thread main (id 1) created this driver
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">WebDriver</span> protectedDriver <span style="color:#719e07">=</span> ThreadGuard.protect(<span style="color:#719e07">new</span> ChromeDriver());
+
+  <span style="color:#268bd2">static</span> {
+    System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;&lt;Set path to your Chromedriver&gt;&#34;</span>);
+  }
+
+  <span style="color:#586e75">//Thread-1 (id 24) is calling the same driver causing the clash to happen
+</span><span style="color:#586e75"></span>  Runnable <span style="color:#268bd2">r1</span> <span style="color:#719e07">=</span> () <span style="color:#719e07">-&gt;</span> {protectedDriver.get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);};
+  Thread <span style="color:#268bd2">thr1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Thread(r1);
+
+  <span style="color:#dc322f">void</span> <span style="color:#268bd2">runThreads</span>(){
+    thr1.start();
+  }
+
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+    <span style="color:#719e07">new</span> DriverClash().runThreads();
+  }
+}</code></pre></div>
+<p>The result shown below:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Exception in thread &#34;Thread-1&#34; org.openqa.selenium.WebDriverException:
+Thread safety error; this instance of WebDriver was constructed
+on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
+This is not permitted and *will* cause undefined behaviour</code></pre></div>
+<p>As seen in the example:</p>
+
+<ul>
+<li><code>protectedDriver</code> Will be created in Main thread</li>
+<li>We use Java <code>Runnable</code> to spin up a new process and a new <code>Thread</code> to run the process</li>
+<li>Both <code>Thread</code> will clash because the Main Thread does not have <code>protectedDriver</code> in it&rsquo;s memory.</li>
+<li><code>ThreadGuard.protect</code> will throw an exception.</li>
+</ul>
+
+<h4 id="note">Note:</h4>
+
+<p>This does not replace the need for using <code>ThreadLocal</code> to manage drivers when running parallel.</p>
+
+
 <footer class=" footline" >
 	
 </footer>
@@ -1920,7 +2005,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/support_classes/">
       “Support classes”
-    </a> was last updated on: 07 Nov 2019 20:02:10 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/206a262399f09ee2c3f0687ff91454ca3f37d5de">Updating support section. (206a2623)</a>
+    </a> was last updated on: 13 Nov 2019 14:49:29 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/353a44e1993b6d3ed4794acf0b035051f3d7071a">Add ThreadGuard to support page (#67) [deploy site] (353a44e1)</a>
 </h5>
         
         </div> 
@@ -3117,19 +3202,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1573602331"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1573656669"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1573602331"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1573602331"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1573656669"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1573656669"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1573602331" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1573602331"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1573656669" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1573656669"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
