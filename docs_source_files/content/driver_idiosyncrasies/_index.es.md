@@ -1,5 +1,5 @@
 ---
-title: "Carácter de los controladores"
+title: "Comportamientos del controlador"
 chapter: true
 weight: 10
 ---
@@ -11,4 +11,4 @@ it by sending us pull requests!
 {{% /notice %}}
 
 
-# Carácter de los controladores
+# Comportamientos del controlador
