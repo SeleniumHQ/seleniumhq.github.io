@@ -165,13 +165,13 @@ a {
 
 /*Sponsors*/
 
-.sponsors {
+.backers {
   margin: 0 20px;
   border-bottom: 1px solid rgb(148, 156, 161);
   padding-bottom: 50px;
 }
 
-.selenium-sponsors.separator {
+.selenium-backers.separator {
   padding-bottom: 25px;
 }
 

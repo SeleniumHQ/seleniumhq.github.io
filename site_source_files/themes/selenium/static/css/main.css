@@ -88,27 +88,27 @@ h1.sub-header {
 
 /*Supporters*/
 
-.selenium-sponsors {
+.selenium-backers {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 75px;
 }
 
-.selenium-sponsors h2 {
+.selenium-backers h2 {
     color: #43B02A;
     padding: 50px 20px 50px 0px;
     margin: 0;
 }
 
-.sponsors {
+.backers {
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.sponsor-logo {
+.backer-logo {
       width: 20%;
       overflow: hidden;
       padding: 10px;
@@ -116,30 +116,22 @@ h1.sub-header {
       align-items: center;
 }
 
-.sponsor-logo img {
+.backer-logo img {
     width: 100%;
 }
 
-.selenium-sponsors-bottom {
+.selenium-backers-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.selenium-sponsors-bottom h2 {
+.selenium-backers-bottom h2 {
     color: #43B02A;
     padding: 30px;
 }
 
-.sponsors-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-.sponsor-logo-bottom {
+.backer-logo-bottom {
     width: 15%;
     overflow: hidden;
     padding: 10px;
@@ -147,7 +139,7 @@ h1.sub-header {
     align-items: center;
 }
 
-.sponsor-logo-bottom img {
+.backer-logo-bottom img {
     width: 100%;
 }
 
@@ -343,12 +335,12 @@ h1.sub-header {
         font-size: 30px;
     }
 
-    .sponsors, .sponsors-bottom {
+    .backers {
         flex-flow: row wrap;
         margin-bottom: 30px;
     }
 
-    .sponsor-logo, .sponsor-logo-bottom {
+    .backer-logo, .backer-logo-bottom {
         width: 40%;
         margin: 0px;
     }
