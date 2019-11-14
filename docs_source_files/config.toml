@@ -224,3 +224,35 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> 貢献方法"
 url = "contributing"
 weight = 30
+
+[Languages.ko]
+title = "Selenium 문서"
+weight = 7
+languageName = "한국어"
+baseURL = "https://selenium.dev/documentation/ko"
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium 홈"
+url = "https://selenium.dev/"
+weight = 1
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
+weight = 10
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> 버그 신고"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
+weight = 11
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-trophy'></i> 크레딧"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 기여하기"
+url = "contributing"
+weight = 30
