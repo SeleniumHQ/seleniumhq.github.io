@@ -158,6 +158,12 @@ h1.sub-header {
     padding: 30px;
 }
 
+.support-selenium-container.page-not-found {
+    background-color: #6F757A;
+    height: 620px;
+    padding: 30px;
+}
+
 .support-selenium {
     text-align: center;
     color: white;
@@ -224,6 +230,12 @@ h1.sub-header {
   color: #59CBE8;
   background-color: #fff;
 }
+
+.button.page-not-found:hover {
+    color: #6F757A;
+    border-color: #6F757A;
+}
+
 
 .button-container a {
     text-decoration: none;
@@ -351,6 +363,17 @@ h1.sub-header {
       padding: 20px;
     }
 
+    .support-selenium-container.page-not-found {
+      height: 100%;
+    }
+
+    .support-selenium-container.page-not-found h1,h2 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
     .support-selenium {
       text-align: left;
     }
@@ -362,7 +385,7 @@ h1.sub-header {
     }
 
     .support-selenium p {
-    font-size: 15px;
+        font-size: 15px;
     }
 
     .involvements {
