@@ -1,5 +1,5 @@
 ---
-title: "Consider using a fluent API"
+title: "Benutze eine fluent API"
 weight: 8
 ---
 
