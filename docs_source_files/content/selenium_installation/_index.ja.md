@@ -1,14 +1,10 @@
 ---
-title: "Selenium installation"
+title: "Seleniumのインストール"
 chapter: true
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-# Selenium Installation
+# Seleniumのインストール
 
-Selenium setup is quite different from the setup of other commercial tools. To use Selenium in your automation project you need to install the language bindings libraries for your language of choice. In addition you will need WebDriver binaries for the browsers you want to automate and run test on.
+Seleniumのセットアップは他の商用ツールと少し違います。自動化プロジェクトでSeleniumを使うためには、選択した言語の言語バインディングライブラリをインストールする必要があります。加えて、自動化でテストを実行したいブラウザのWebDriverバイナリも必要となります。
