@@ -368,7 +368,14 @@ h1.sub-header {
       height: 100%;
     }
 
-    .support-selenium-container.page-not-found h1,h2 {
+    .support-selenium-container.page-not-found h1 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .support-selenium-container.page-not-found h2 {
       height: 100%;
       text-align: center;
       padding: 20px;
