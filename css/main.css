@@ -99,6 +99,7 @@ h1.sub-header {
     color: #43B02A;
     padding: 50px 20px 50px 0px;
     margin: 0;
+    text-align: center;
 }
 
 .backers {
@@ -367,7 +368,14 @@ h1.sub-header {
       height: 100%;
     }
 
-    .support-selenium-container.page-not-found h1,h2 {
+    .support-selenium-container.page-not-found h1 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .support-selenium-container.page-not-found h2 {
       height: 100%;
       text-align: center;
       padding: 20px;
