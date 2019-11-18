@@ -23,44 +23,62 @@
     </div>
 </div>
 
-<div class="container dark-background">
+<div class="container no-background">
     <h2>Browser Drivers</h2>
-    <div class="table">
-        <div class="row">
-            <div class="row-component double label">Browser</div>
-            <div class="row-component single label">Releases</div>
-            <div class="row-component single label">Change log</div>
-            <div class="row-component single label">Issue tracker</div>
-        </div>
+    <table class="data-list">
+        <thead>
+        <tr>
+            <th scope="col">Browser</th>
+            <th scope="col">Releases</th>
+            <th scope="col">Change log</th>
+            <th scope="col">Issue tracker</th>
+        </tr>
+        </thead>
+        <tbody>
         {{ range where .Data.Pages "Type" "thirdparty" }}
-            {{ if eq .Params.Key "drivers"}}
-            <div class="row">
-                <a href="{{ .Params.BrowserLink }}" class="row-component double">{{ .Params.Browser }}</a>
-                <a href="{{ .Params.ReleasesLink }}" class="row-component single">Releases Link</a>
-                <a href="{{ .Params.ChangelogLink }}" class="row-component single">Change log</a>
+        {{ if eq .Params.Key "drivers"}}
+        <tr>
+            <td data-label="Browser">
+                <a href="{{ .Params.BrowserLink }}">{{ .Params.Browser }}</a>
+            </td>
+            <td data-label="Releases">
+                <a href="{{ .Params.ReleasesLink }}">Releases Link</a>
+            </td>
+            <td data-label="Change log">
+                <a href="{{ .Params.ChangelogLink }}">Change log</a>
+            </td>
+            <td data-label="Issue tracker">
                 <a href="{{ .Params.IssueTrackerLink }}" class="row-component single">Issue tracker</a>
-            </div>
-            {{ end }}
+            </td>
+        </tr>
         {{ end }}
-    </div>
+        {{ end }}
+        </tbody>
+    </table>
 
     <h2>Language Bindings</h2>
-    <div class="table">
-        <div class="row">
-            <div class="row-component single label">Name</div>
-            <div class="row-component single label">Language</div>
-            <div class="row-component single label">Author</div>
-        </div>
+    <table class="data-list">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Language</th>
+            <th scope="col">Author</th>
+        </tr>
+        </thead>
+        <tbody>
         {{ range where .Data.Pages "Type" "thirdparty" }}
-            {{ if eq .Params.Key "bindings"}}
-            <div class="row">
-                <a href="{{ .Params.BindingLink }}" class="row-component single">{{ .Params.BindingName }}</a>
-                <div class="row-component single">{{ .Params.Language }}</div>
-                <div class="row-component single">{{ .Params.Author }}</div>
-            </div>
-            {{ end }}
+        {{ if eq .Params.Key "bindings"}}
+        <tr>
+            <td data-label="Name">
+                <a href="{{ .Params.BindingLink }}">{{ .Params.BindingName }}</a>
+            </td>
+            <td data-label="Language">{{ .Params.Language }}</td>
+            <td data-label="Author">{{ .Params.Author }}</td>
+        </tr>
         {{ end }}
-    </div>
+        {{ end }}
+        </tbody>
+    </table>
 
     <h2>Frameworks</h2>
     <p>
@@ -71,23 +89,28 @@
         Selenium is often used for automating web applications for testing purposes, but it does not include a testing framework.<br>
         Some testing frameworks that can be used with Selenium are listed below.
     </p>
-
-    <div class="table">
-        <div class="row">
-            <div class="row-component single label">Name</div>
-            <div class="row-component single label">Language</div>
-            <div class="row-component single label">Author</div>
-        </div>
+    <table class="data-list">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Language</th>
+            <th scope="col">Author</th>
+        </tr>
+        </thead>
+        <tbody>
         {{ range where .Data.Pages "Type" "thirdparty" }}
         {{ if eq .Params.Key "framework"}}
-        <div class="row">
-            <a href="{{ .Params.BindingLink }}" class="row-component single">{{ .Params.BindingName }}</a>
-            <div class="row-component single">{{ .Params.Language }}</div>
-            <div class="row-component single">{{ .Params.Author }}</div>
-        </div>
+        <tr>
+            <td data-label="Name">
+                <a href="{{ .Params.BindingLink }}">{{ .Params.BindingName }}</a>
+            </td>
+            <td data-label="Language">{{ .Params.Language }}</td>
+            <td data-label="Author">{{ .Params.Author }}</td>
+        </tr>
         {{ end }}
         {{ end }}
-    </div>
+        </tbody>
+    </table>
 
 </div>
 

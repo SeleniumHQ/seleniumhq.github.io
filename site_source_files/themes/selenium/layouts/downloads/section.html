@@ -38,19 +38,13 @@
             </p>
         </div>
         <div class="right">
-            <p>Download version 3.150.1 for:
-                <ul>
-                    <li>
-                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip">
+            <p>Download version 3.150.1 for:<br>
+                <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_Win32_3.150.1.zip">
                             32 bit Windows IE
-                        </a> (recommended)
-                    </li>
-                    <li>
-                        <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_x64_3.150.1.zip">
-                            64 bit Windows IE
-                        </a>
-                    </li>
-                </ul>
+                </a> (recommended)
+                <a href="https://selenium-release.storage.googleapis.com/3.150/IEDriverServer_x64_3.150.1.zip">
+                    64 bit Windows IE
+                </a>
             <a href="http://goo.gl/LJ07LL">CHANGELOG</a>
             </p>
         </div>
@@ -65,31 +59,32 @@
     <p>While language bindings for <a href="{{"thirdparty" | relURL}}">other languages exist</a>,
         these are the core ones that are supported by the main project hosted on GitHub.</p>
 
-
-    <div class="table">
-
-        <div class="row">
-            <span class="row-component single label">Language</span>
-            <span class="row-component single label">Version</span>
-            <span class="row-component single label">Release Date</span>
-            <span class="row-component links label"></span>
-        </div>
-
-        {{ range where .Data.Pages "Type" "downloads" }}
-            {{ if eq .Params.Key "bindings"}}
-            <div class="row">
-                <span class="row-component single">{{ .Params.Language }}</span>
-                <span class="row-component single">{{ .Params.ClientVersion }}</span>
-                <span class="row-component single">{{ .Date.Format "January 02, 2006" }}</span>
-                <span class="row-component links">
-                    <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
-                    <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
-                    <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
-                </span>
-            </div>
+    <table class="data-list">
+        <thead>
+            <tr>
+                <th scope="col">Language</th>
+                <th scope="col">Version</th>
+                <th scope="col">Release Date</th>
+                <th scope="col">Links</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{ range where .Data.Pages "Type" "downloads" }}
+                {{ if eq .Params.Key "bindings"}}
+                <tr>
+                    <td data-label="Language">{{ .Params.Language }}</td>
+                    <td data-label="Version">{{ .Params.ClientVersion }}</td>
+                    <td data-label="Release Date">{{ .Date.Format "January 02, 2006" }}</td>
+                    <td data-label="Links">
+                        <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
+                        <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
+                        <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
+                    </td>
+                </tr>
+                {{ end }}
             {{ end }}
-        {{ end }}
-    </div>
+        </tbody>
+    </table>
 </div>
 
 <div class="container">
