@@ -289,26 +289,33 @@ h1.sub-header {
 
 /*Tables & Rows*/
 
-.table {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
+.data-list {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
 }
 
-.row {
-    display: flex;
+.data-list tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
 
-.row-component {
-    border-bottom: 1px solid rgb(148, 156, 161);
-    margin-right: 25px;
-    padding: 10px 10px 10px 0px;
+.data-list th,
+.data-list td {
+    padding: .625em;
+    text-align: center;
 }
 
-.row .label {
-    color: #0033a0;
-    font-weight: bold;
+.data-list th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
+
 
 /***/
 
@@ -368,7 +375,14 @@ h1.sub-header {
       height: 100%;
     }
 
-    .support-selenium-container.page-not-found h1,h2 {
+    .support-selenium-container.page-not-found h1 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .support-selenium-container.page-not-found h2 {
       height: 100%;
       text-align: center;
       padding: 20px;
@@ -392,4 +406,49 @@ h1.sub-header {
     .involvements {
       flex-direction: column;
     }
+
+    .data-list {
+        border: 0;
+    }
+
+    .data-list thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .data-list tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .data-list td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .data-list td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .data-list td:last-child {
+        border-bottom: 0;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 10px 10px;
+    }
+
 }
