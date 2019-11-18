@@ -152,6 +152,10 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/thirdparty/framwework-qaf/</loc>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/thirdparty/framwework-selenide/</loc>
   </url>
   
