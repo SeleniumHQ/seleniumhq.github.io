@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/index.css" | relURL}}"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,700" rel="stylesheet">
+
+
+<body>
+<section class="hero homepage" style="background-image: url({{"images/green-bg-opt.jpg" | relURL}})">
+<h1>Selenium automates browsers. That's it!</h1>
+<h1 class="sub-header">What you do with that power is entirely up to you.</h1>
+<div class="header-description">
+    <p class="body-large">
+        Primarily it is for automating web applications for testing purposes,
+        but is certainly not limited to just that.
+    </p>
+    <p class="body-large">
+        Boring web-based administration tasks can (and should) also be automated as well.
+    </p>
+</div>
+</section>
+
+<div class="support-selenium-container page-not-found">
+    <div class="support-selenium">
+        <h1>404</h1>
+        <h1>Element not found</h1>
+        <br>
+        <h1>Sorry, we meant page not found!</h1>
+        <h2>The page you are looking for might have been removed, had its name changed or is temporarily unavailable.</h2>
+        <br>
+        <div class="button-container">
+            <a href="{{ .Site.BaseURL }}">
+            <div class="button page-not-found"><b>GO TO HOMEPAGE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+{{ partial "selenium-level-sponsors.html" . }}
+
+{{ partial "footer.html" . }}
+

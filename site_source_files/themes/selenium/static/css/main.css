@@ -88,27 +88,28 @@ h1.sub-header {
 
 /*Supporters*/
 
-.selenium-sponsors {
+.selenium-backers {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 75px;
 }
 
-.selenium-sponsors h2 {
+.selenium-backers h2 {
     color: #43B02A;
     padding: 50px 20px 50px 0px;
     margin: 0;
+    text-align: center;
 }
 
-.sponsors {
+.backers {
     display: flex;
     flex-flow: row wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.sponsor-logo {
+.backer-logo {
       width: 20%;
       overflow: hidden;
       padding: 10px;
@@ -116,30 +117,22 @@ h1.sub-header {
       align-items: center;
 }
 
-.sponsor-logo img {
+.backer-logo img {
     width: 100%;
 }
 
-.selenium-sponsors-bottom {
+.selenium-backers-bottom {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.selenium-sponsors-bottom h2 {
+.selenium-backers-bottom h2 {
     color: #43B02A;
     padding: 30px;
 }
 
-.sponsors-bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-}
-
-.sponsor-logo-bottom {
+.backer-logo-bottom {
     width: 15%;
     overflow: hidden;
     padding: 10px;
@@ -147,7 +140,7 @@ h1.sub-header {
     align-items: center;
 }
 
-.sponsor-logo-bottom img {
+.backer-logo-bottom img {
     width: 100%;
 }
 
@@ -163,6 +156,12 @@ h1.sub-header {
 .support-selenium-container.blog-link-container {
     background-color: #43B02A;
     height: 220px;
+    padding: 30px;
+}
+
+.support-selenium-container.page-not-found {
+    background-color: #6F757A;
+    height: 620px;
     padding: 30px;
 }
 
@@ -233,6 +232,12 @@ h1.sub-header {
   background-color: #fff;
 }
 
+.button.page-not-found:hover {
+    color: #6F757A;
+    border-color: #6F757A;
+}
+
+
 .button-container a {
     text-decoration: none;
 }
@@ -284,26 +289,33 @@ h1.sub-header {
 
 /*Tables & Rows*/
 
-.table {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
+.data-list {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
 }
 
-.row {
-    display: flex;
+.data-list tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
 }
 
-.row-component {
-    border-bottom: 1px solid rgb(148, 156, 161);
-    margin-right: 25px;
-    padding: 10px 10px 10px 0px;
+.data-list th,
+.data-list td {
+    padding: .625em;
+    text-align: center;
 }
 
-.row .label {
-    color: #0033a0;
-    font-weight: bold;
+.data-list th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
 }
+
 
 /***/
 
@@ -343,12 +355,12 @@ h1.sub-header {
         font-size: 30px;
     }
 
-    .sponsors, .sponsors-bottom {
+    .backers {
         flex-flow: row wrap;
         margin-bottom: 30px;
     }
 
-    .sponsor-logo, .sponsor-logo-bottom {
+    .backer-logo, .backer-logo-bottom {
         width: 40%;
         margin: 0px;
     }
@@ -357,6 +369,24 @@ h1.sub-header {
       height: 100%;
       text-align: left;
       padding: 20px;
+    }
+
+    .support-selenium-container.page-not-found {
+      height: 100%;
+    }
+
+    .support-selenium-container.page-not-found h1 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .support-selenium-container.page-not-found h2 {
+      height: 100%;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
     }
 
     .support-selenium {
@@ -370,10 +400,55 @@ h1.sub-header {
     }
 
     .support-selenium p {
-    font-size: 15px;
+        font-size: 15px;
     }
 
     .involvements {
       flex-direction: column;
     }
+
+    .data-list {
+        border: 0;
+    }
+
+    .data-list thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .data-list tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    .data-list td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    .data-list td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .data-list td:last-child {
+        border-bottom: 0;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 10px 10px;
+    }
+
 }

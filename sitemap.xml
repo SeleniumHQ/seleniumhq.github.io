@@ -152,6 +152,10 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/thirdparty/framwework-qaf/</loc>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/thirdparty/framwework-selenide/</loc>
   </url>
   
@@ -217,6 +221,10 @@
   
   <url>
     <loc>https://selenium.dev/ecosystem/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/exceptions/</loc>
   </url>
   
   <url>
