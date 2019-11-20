@@ -109,11 +109,11 @@
 
 /* Mobile-only styles */
 @media only screen and (max-width: 900px) {
-    .sponsors {
+    .backers {
         flex-wrap: wrap;
     }
 
-    .sponsor-logo {
+    .backer-logo {
         width: 30%;
         margin: 0px;
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Carácter de los controladores on Documentación de Selenium</title>
+    <title>Comportamientos del controlador on Documentación de Selenium</title>
     <link>https://selenium.dev/documentation/es/driver_idiosyncrasies/</link>
-    <description>Recent content in Carácter de los controladores on Documentación de Selenium</description>
+    <description>Recent content in Comportamientos del controlador on Documentación de Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
