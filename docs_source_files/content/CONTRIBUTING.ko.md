@@ -150,14 +150,7 @@ Fixes #141
 
 항상 로컬 서버를 실행하는 것을 기억하십시오. 그러면 당신의 변경 사항들이 아무것도 안 건드리고 안전합니다. 
 
-### 7 단계 : CLA 서명
-
-우리가 받아들이기 전에, 우리는 먼저 사람들에게 [컨트리뷰터 라이센스 동의서](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0)(혹은 CLA) 서명을 요구합니다. 그럼으로써 우리는 컨트리뷰터들이 코드를 기부하는 권리를 가지는지 알 수 있습니다. 
-
-당신이 pull request를 열면 우리는 CLA에 서명을 했는지 나타내기를 요구합니다. 이렇게 함으로써 우리는 시간을 줄일 수 있습니다. 
-
-
-### 8 단계 : Push
+### 7 단계 : Push
 
 ```shell
 % git push origin my-feature-branch
@@ -168,7 +161,7 @@ https://github.com/yourusername/seleniumhq.github.io.git 에서  _Pull Request_ 
 Pull request 는 몇 일 내에 확인됩니다. 주소에 코멘트들이 있다면, 새로운 커밋에 변경 사항(가급적
 [fixups](http://git-scm.com/docs/git-commit))을 적용하고 같은 branch 에 push 해주시기 바랍니다. 
 
-### 9 단계 : Integration
+### 8 단계 : Integration
 
 코드 확인이 완료되었으면, committer는 당신의 PR을 저장소의 master branch에 통합할 것입니다. 왜냐하면 우리는 master branch에 순차적인 이력을 유지하고 싶기 때문에, 우리는 당신의 branch 이력은 squash나 rebase 할 것입니다. 
 
