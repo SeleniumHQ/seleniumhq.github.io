@@ -19,3 +19,9 @@ Avoid large PRs, help reviewers by making them as simple and short as possible.
 - [ ] Code example added (and I also added the example to all translated languages)
 - [ ] Improved translation
 - [ ] Added new translation (and I also added a notice to each document missing translation)
+
+### Checklist:
+<!--- Go over all the following points, and put an `x` in all the boxes that apply. -->
+- [ ] I have read the [**contributing**](https://selenium.dev/documentation/en/contributing/) document.
+- [ ] I have used [hugo](https://gohugo.io/) to render the site/docs locally and I am sure it works.
+<!--- Provide a general summary of your changes in the Title above -->
