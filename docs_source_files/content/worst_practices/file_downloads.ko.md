@@ -1,21 +1,8 @@
 ---
-title: "File downloads"
+title: "파일 다운로드"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Whilst it is possible to start a download
-by clicking a link with a browser under Selenium's control,
-the API does not expose download progress,
-making it less than ideal for testing downloaded files.
-This is because downloading files is not considered an important aspect
-of emulating user interaction with the web platform.
-Instead, find the link using Selenium
-(and any required cookies)
-and pass it to a HTTP request library like
-[libcurl](//curl.haxx.se/libcurl/).
+Selenium의 제어 하에 브라우저로 링크를 클릭하면 다운로드를 시작할 수 있지만, API는 다운로드 진행 상황을 노출시키지 않아 다운로드 파일 테스트에 이상적이지 않다.
+이것은 파일 다운로드가 웹 플랫폼과의 사용자 상호작용을 모방하는 중요한 측면으로 여겨지지 않기 때문이다.
+대신 Selenium(및 필요한 쿠키)을 사용하여 링크를 찾아 HTTP 요청 라이브러리 like [libcurl](//curl.haxx.se/libcurl/).에 전달하라.
