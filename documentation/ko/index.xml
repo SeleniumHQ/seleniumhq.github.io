@@ -34,17 +34,6 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
-      <title>Captchas</title>
-      <link>https://selenium.dev/documentation/ko/worst_practices/captchas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/worst_practices/captchas/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so do not try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
-    </item>
-    
-    <item>
       <title>Copyright and attributions</title>
       <link>https://selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -142,6 +131,16 @@ Terminology  API: Application Programming Interface.</description>
     </item>
     
     <item>
+      <title>자동화 튜링 테스트</title>
+      <link>https://selenium.dev/documentation/ko/worst_practices/captchas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/worst_practices/captchas/</guid>
+      <description>캡차(CAPTCHA)는 컴퓨터와 인간을 구분하기 위한 완전 자동화된 공공 튜링 테스트(Completely Automated Public Turing Test to telling Computer and Humans addition)의 줄임말로, 자동화를 방지하도록 명시되어 있으므로 시도하지 마시오! CAPTCHA 검사를 수행하기 위한 두 가지 주요 전략이 있다.
+ 테스트 환경에서 CAPTCHA 비활성화 테스트가 CAPTCHA를 우회할 수 있도록 후크 추가  </description>
+    </item>
+    
+    <item>
       <title>퀵 투어</title>
       <link>https://selenium.dev/documentation/ko/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -193,16 +192,6 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.</description>
-    </item>
-    
-    <item>
-      <title>File downloads</title>
-      <link>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform.</description>
     </item>
     
     <item>
@@ -279,6 +268,15 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
     </item>
     
     <item>
+      <title>파일 다운로드</title>
+      <link>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</guid>
+      <description>Selenium의 제어 하에 브라우저로 링크를 클릭하면 다운로드를 시작할 수 있지만, API는 다운로드 진행 상황을 노출시키지 않아 다운로드 파일 테스트에 이상적이지 않다. 이것은 파일 다운로드가 웹 플랫폼과의 사용자 상호작용을 모방하는 중요한 측면으로 여겨지지 않기 때문이다. 대신 Selenium(및 필요한 쿠키)을 사용하여 링크를 찾아 HTTP 요청 라이브러리 like libcurl.에 전달하라.</description>
+    </item>
+    
+    <item>
       <title>Browser manipulation</title>
       <link>https://selenium.dev/documentation/ko/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -310,13 +308,13 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
     </item>
     
     <item>
-      <title>HTTP response codes</title>
+      <title>HTTP 응답 코드</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/http_response_codes/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.</description>
+      <description>Selenium RC의 일부 브라우저 구성에서 Selenium은 자동화되고 있는 브라우저와 사이트 사이의 프록시 역할을 했다. 이것은 셀레니움을 통과하는 모든 브라우저 트래픽이 캡처되거나 조작될 수 있다는 것을 의미했다. captureNetworkTraffic() 방법은 HTTP 응답 코드를 포함하여 자동화되고 있는 브라우저와 사이트 사이의 모든 네트워크 트래픽을 캡처하기 위한 것이다.
+Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근방식으로, 사용자처럼 행동하는 것을 선호한다. 이는 당신이 WebDriver로 시험을 작성하는 방식으로 표현된다. 자동 기능 테스트에서 상태 코드 확인은 테스트 실패의 특별히 중요한 세부 사항은 아니다; 그 이전의 단계들이 더 중요하다.</description>
     </item>
     
     <item>
@@ -384,14 +382,13 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Gmail, email and Facebook logins</title>
+      <title>Gmail, 이메일과 Facebook logins</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
+      <description>여러 가지 이유로, WebDriver를 사용하여 Gmail이나 Facebook과 같은 사이트에 로그인하는 것은 권장되지 않는다. 이러한 사이트의 사용 조건에 반대하는 것 외에도(계정 종료의 위험이 있는 경우) 느리고 신뢰할 수 없다.
+이상적인 방법은 이메일 제공자들이 제공하는 API를 사용하는 것이다. 또는 Facebook의 경우 시험 계정, 친구 등을 만들기 위한 API를 공개하는 개발자 도구 서비스를 이용하는 것이다. 비록 API를 사용하는 것이 조금 더 힘든 일처럼 보일지 모르지만, 당신은 속도, 신뢰성, 그리고 안정성에 대한 보상을 받을 것이다.</description>
     </item>
     
     <item>
@@ -479,16 +476,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
     </item>
     
     <item>
-      <title>Test dependency</title>
-      <link>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
-    </item>
-    
-    <item>
       <title>Working with web elements</title>
       <link>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -496,6 +483,15 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</guid>
       <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  </description>
+    </item>
+    
+    <item>
+      <title>실험 의존성</title>
+      <link>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</guid>
+      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;rdquo;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
     </item>
     
     <item>
@@ -521,14 +517,24 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
     </item>
     
     <item>
-      <title>Performance testing</title>
+      <title>Working with cookies</title>
+      <link>https://selenium.dev/documentation/ko/support_packages/working_with_cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/support_packages/working_with_cookies/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+    </item>
+    
+    <item>
+      <title>성능 테스트</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable, but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
+      <description>Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다. 불가능해서가 아니라, 그것들이 성능을 테스트하는데 최적화되어 있지 않기 때문에 좋은 결과를 얻지 못 할 것이다.
+사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&amp;rsquo;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
+예를 들어 브라우저 시작 속도, HTTP 서버의 속도, JavaScript 또는 CSS를 호스팅하는 타사 서버의 응답, WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은 결과에 변화를 일으킬 것이다.</description>
     </item>
     
     <item>
@@ -542,16 +548,6 @@ It may seem ideal to performance test in the context of the user but a suite of 
     </item>
     
     <item>
-      <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Using WebDriver to spider through links is not a recommended practice. Not because it cannot be done, but because WebDriver is definitely not the most ideal tool for this. WebDriver needs time to start up, and can take several seconds, up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.</description>
-    </item>
-    
-    <item>
       <title>Test independency</title>
       <link>https://selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -560,6 +556,16 @@ It may seem ideal to performance test in the context of the user but a suite of 
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
 Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+    </item>
+    
+    <item>
+      <title>링크 이동</title>
+      <link>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</guid>
+      <description>WebDriver를 링크를 통해 이동하는 것은 권장되는 연습이 아니다. 할 수 없어서가 아니라, WebDriver가 확실히 이것에 가장 이상적인 도구가 아니기 때문이다. WebDriver를 시작하는 데 시간이 필요하며 최대 1분까지 몇 초 정도 걸릴 수 있음 시험이 어떻게 작성되느냐에 따라, 그냥 페이지로 가서 DOM을 통과한다.
+curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사용함으로써, browser를 만들고 페이지로 이동하는데 의존하지 않는 방법이기에 WebDriver를 사용하는 것보다 더 많은 시간을 절약할 수 있다. 당신은 이 작업에 WebDriver를 사용하지 않음으로써 많은 시간을 절약하고 있다.</description>
     </item>
     
     <item>
@@ -626,14 +632,15 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Contributing to the Selenium Site &amp; Documentation</title>
+      <title>Selenium 사이트와 문서에 기여하기</title>
       <link>https://selenium.dev/documentation/ko/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/contributing/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
-This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
+      <description>Selenium은 거대한 소프트웨어 프로젝트로, 사이트와 문서는 작동 원리를 이해하고 잠재력을 효과적으로 활용하는 데 중요한 역할을 합니다.
+이 프로젝트는 Selenium 사이트와 문서를 담고 있습니다. 여기엔 Selenium을 효과적으로 사용하기 위한 업데이트 정보를 제공하고, 어떻게 참여하고 기여할 수 있는지에 대한 지속적인 노력이 담겨 있습니다.
+사이트와 문서에 기여하기 위한 방법은 아래 기술된 과정을 따릅니다. 여러분은 익숙해질 때 까지 더 보기를 충분한 시간을 들여 읽어보시고 바랍니다.
+Selenium은 여러분의 기여를 환영합니다. 기여하는 방법은 여러 가지가 있습니다:</description>
     </item>
     
   </channel>

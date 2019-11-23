@@ -83,46 +83,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ko/worst_practices/captchas/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/worst_practices/captchas/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/worst_practices/captchas/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -523,6 +483,46 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/ko/worst_practices/captchas/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/worst_practices/captchas/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/worst_practices/captchas/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/ko/getting_started/quick/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -719,46 +719,6 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/worst_practices/file_downloads/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/worst_practices/file_downloads/"
                 />
   </url>
   
@@ -1083,6 +1043,46 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/worst_practices/file_downloads/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/worst_practices/file_downloads/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/ko/webdriver/browser_manipulation/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -1204,7 +1204,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ko/worst_practices/http_response_codes/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1564,7 +1564,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1923,48 +1923,8 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/worst_practices/test_dependency/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/worst_practices/test_dependency/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ko/webdriver/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2039,6 +1999,46 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/worst_practices/test_dependency/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/worst_practices/test_dependency/"
                 />
   </url>
   
@@ -2123,46 +2123,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/worst_practices/performance_testing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/worst_practices/performance_testing/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ko/remote_webdriver/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -2199,6 +2159,86 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://selenium.dev/documentation/ko/remote_webdriver/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ko/support_packages/working_with_cookies/</loc>
+    <lastmod>2019-11-23T13:31:11+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/support_packages/working_with_cookies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/support_packages/working_with_cookies/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/worst_practices/performance_testing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/worst_practices/performance_testing/"
                 />
   </url>
   
@@ -2283,46 +2323,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/worst_practices/link_spidering/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/worst_practices/link_spidering/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -2359,6 +2359,46 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ko/worst_practices/link_spidering/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/worst_practices/link_spidering/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/worst_practices/link_spidering/"
                 />
   </url>
   
@@ -2444,7 +2484,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ko/worst_practices/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2882,46 +2922,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ko/contributing/</loc>
-    <lastmod>2019-11-14T16:38:19+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/contributing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/contributing/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ko/</loc>
     <lastmod>2019-11-14T16:38:19+09:00</lastmod>
     <xhtml:link
@@ -2958,6 +2958,46 @@
                 rel="alternate"
                 hreflang="ko"
                 href="https://selenium.dev/documentation/ko/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ko/contributing/</loc>
+    <lastmod>2019-11-23T19:30:08+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/contributing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/contributing/"
                 />
   </url>
   

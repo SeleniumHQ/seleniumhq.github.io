@@ -524,6 +524,16 @@ It may seem ideal to performance test in the context of the user but a suite of 
     </item>
     
     <item>
+      <title>Working with cookies</title>
+      <link>https://selenium.dev/documentation/nl/support_packages/working_with_cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/nl/support_packages/working_with_cookies/</guid>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+    </item>
+    
+    <item>
       <title>Http proxies</title>
       <link>https://selenium.dev/documentation/nl/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
