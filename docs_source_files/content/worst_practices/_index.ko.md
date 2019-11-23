@@ -4,4 +4,4 @@ chapter: true
 weight: 8
 
 ---
-# 좋지 
+# 좋지 않는 관행 
