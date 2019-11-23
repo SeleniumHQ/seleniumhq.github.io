@@ -20,8 +20,6 @@
         </div>
     </section>
 
-    {{ partial "selenium-supporters.html" . }}
-
     <div class="section-container dark-background">
         <h2>Goals</h2>
         <div class="section zero ">
@@ -63,7 +61,7 @@
                     <a href="http://selenium.dev">http://selenium.dev</a> will be for donations that equal or are more than the Platinum level.</li>
                 <li>For donations that are equal to the Selenium level, your logo will be placed on each page of the documentation
                     hosted at
-                    <a href="http://selenium.dev/docs/">http://selenium.dev/docs/</a>
+                    <a href="http://selenium.dev/documentation/">http://selenium.dev/documentation/</a>
                 </li>
                 <li>Logo placement is time-based, per category: the first to donate is at the top, with subsequent sponsors'
                     logos placed in the order they donated. Position will be maintained as long as sponsorship is continued
@@ -84,7 +82,7 @@
                 <a href="https://github.com/SeleniumHQ/www.seleniumhq.org/wiki/Documentation">wiki</a>. </p>
 
             <p>Feel free to post questions on the
-                <a href="groups.google.com/group/selenium-developers">Selenium Developers Group</a>.</p>
+                <a href="https://groups.google.com/group/selenium-developers">Selenium Developers Group</a>.</p>
         </div>
     </div>
 
@@ -149,9 +147,11 @@
                 check, make it payable to "Software Freedom Conservancy" and write "Selenium Sponsorship" in the "memo" field.
                 Checks should be sent to the following address, so that the Conservancy can process them:
             </p>
-            <pre>        Software Freedom Conservancy, Inc.
-                    137 MONTAGUE ST STE 380
-                    Brooklyn, NY 11201-3548</pre>
+            <code>
+                Software Freedom Conservancy, Inc.<br>
+                137 MONTAGUE ST STE 380<br>
+                Brooklyn, NY 11201-3548
+            </code>
             <p>We can also email you wire transfer instructions and/or provide an invoice for your sponsorship.
             </p>
             <p>
@@ -164,7 +164,8 @@
     </div>
 
 
-    {{ partial "supporting-supporters.html" . }} {{ partial "support-selenium.html" . }}
+    {{ partial "selenium-level-sponsors.html" . }}
+    {{ partial "support-selenium.html" . }}
 
 </body>
 

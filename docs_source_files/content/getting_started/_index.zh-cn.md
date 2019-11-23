@@ -10,7 +10,5 @@ weight: 1
 
 * [快速浏览]({{< ref "/getting_started/quick.zh-cn.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.zh-cn.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.zh-cn.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.zh-cn.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.zh-cn.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.zh-cn.md#html-runner" >}})

@@ -177,8 +177,6 @@ get up to speed right away.
 
 * [Quick tour]({{< ref "/getting_started/quick.nl.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.nl.md#webdriver" >}})
-  * [Remote Control]({{< ref "/getting_started/quick.nl.md#remote-control" >}})
   * [IDE]({{< ref "/getting_started/quick.nl.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.nl.md#grid" >}})
-  * [HTML Runner]({{< ref "/getting_started/quick.nl.md#html-runner" >}})
 

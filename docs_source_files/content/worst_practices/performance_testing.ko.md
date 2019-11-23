@@ -26,5 +26,4 @@ WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은
 분석할 수 있어야 한다. 이 작업을 이미 수행할 수 있고, 보고 및 분석을 제공할 
 수 있으며, 개선 제안도 할 수 있는 성능 테스트 도구가 있다.
 
-
 Example (open source) packages to use are: [JMeter](//jmeter.apache.org/)

@@ -1,4 +1,4 @@
-baseURL = "https://seleniumhq.github.io/site/documentation"
+baseURL = "https://selenium.dev/documentation"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 # Force to have /en/my-page and /fr/my-page routes, even for default language.
@@ -37,22 +37,22 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
-baseURL = "https://seleniumhq.github.io/site/documentation/en"
+baseURL = "https://selenium.dev/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.en.menu.shortcuts]]
@@ -69,22 +69,22 @@ weight = 30
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
-baseURL = "https://seleniumhq.github.io/site/documentation/es"
+baseURL = "https://selenium.dev/documentation/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> Repo en GitHub"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.es.menu.shortcuts]]
@@ -101,22 +101,22 @@ weight = 30
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
-baseURL = "https://seleniumhq.github.io/site/documentation/nl"
+baseURL = "https://selenium.dev/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Meld een probleem"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.nl.menu.shortcuts]]
@@ -133,22 +133,22 @@ weight = 30
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
-baseURL = "https://seleniumhq.github.io/site/documentation/zh-cn"
+baseURL = "https://selenium.dev/documentation/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Report a bug"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.zh-cn.menu.shortcuts]]
@@ -165,11 +165,11 @@ weight = 30
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
-baseURL = "https://seleniumhq.github.io/site/documentation/fr"
+baseURL = "https://selenium.dev/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.fr.menu.shortcuts]]
@@ -184,35 +184,35 @@ weight = 30
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [Languages.ja]
 title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
-baseURL = "https://seleniumhq.github.io/site/documentation/ja"
+baseURL = "https://selenium.dev/documentation/ja"
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
-url = "https://seleniumhq.github.io/site/"
+url = "https://selenium.dev/"
 weight = 1
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub リポ"
 identifier = "ds"
-url = "https://github.com/SeleniumHQ/site"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
 weight = 10
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> バグ報告"
-url = "https://github.com/seleniumhq/site/issues"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
 weight = 11
 
 [[Languages.ja.menu.shortcuts]]
@@ -222,5 +222,37 @@ weight = 20
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-bullhorn'></i> 貢献方法"
+url = "contributing"
+weight = 30
+
+[Languages.ko]
+title = "Selenium 문서"
+weight = 7
+languageName = "한국어"
+baseURL = "https://selenium.dev/documentation/ko"
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium 홈"
+url = "https://selenium.dev/"
+weight = 1
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
+weight = 10
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> 버그 신고"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
+weight = 11
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-trophy'></i> 크레딧"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.ko.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> 기여하기"
 url = "contributing"
 weight = 30

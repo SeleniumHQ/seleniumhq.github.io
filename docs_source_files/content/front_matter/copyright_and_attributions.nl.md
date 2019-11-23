@@ -47,9 +47,9 @@ to the use of the information contained herein.
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docker-selenium/contributors?per_page=100" %}}
 
-#### [Selenium Website & Docs](//github.com/SeleniumHQ/site/)
+#### [Selenium Website & Docs](//github.com/SeleniumHQ/seleniumhq.github.io/)
 
-{{% ghcontributors "https://api.github.com/repos/seleniumhq/site/contributors?per_page=100" %}}
+{{% ghcontributors "https://api.github.com/repos/seleniumhq/seleniumhq.github.io/contributors?per_page=100" %}}
 
 #### [Previous Selenium Website](//github.com/SeleniumHQ/www.seleniumhq.org/)
 

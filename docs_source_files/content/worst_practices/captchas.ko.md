@@ -9,3 +9,4 @@ Public Turing Test to telling Computer and Humans addition)의 줄임말로, 자
 
 * 테스트 환경에서 CAPTCHA 비활성화
 * 테스트가 CAPTCHA를 우회할 수 있도록 후크 추가
+

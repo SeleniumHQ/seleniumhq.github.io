@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/help.css"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/help.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
@@ -13,68 +13,11 @@
     </div>
 </section>
 
-<div class="section dark-background">
-    <h2>Selenium-Level Sponsors</h2>
-    <div class="sponsors">
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/applitools.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/browserstack.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/CBT.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/experitest.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/saucelabs.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/synthetics.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Subject7_logo.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Selocity_logo.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Microfocus_logo.png"/></div>
-      </div>
-</div>
-
-<div class="section">
-    <h2>Platinum-Level Sponsors</h2>
-    <div class="sponsors">
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/testbirds.jpg"/></div>
-    </div>
-</div>
-
-<div class="section dark-background">
-    <h2>Gold-Level Sponsors</h2>
-    <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/charlotte.png"/></div>
-</div>
-
-<div class="section">
-    <h2>Silver-Level Sponsors</h2>
-    <div class="sponsors">
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/es-logo.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/mailosaur.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Tricentis-Logo-350px.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/dev_9_logo_color_v2.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/xenon-banner-jadeglobal-2.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Perfecto.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/qytera.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/GroundWork-Make-IT-Easier.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/Cigniti.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/logo_JetBrains_1.png"/></div>
-      </div>
-</div>
-
-<div class="section dark-background">
-    <h2>Bronze-Level Sponsors</h2>
-    <div class="sponsors">
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/bacic-media-group.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/loadview-by-dotcom-monitor-1.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/henix.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/bestcasino.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/top-rated-online-casino.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/KatalonStudio.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/hipper-logo.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/top-online-forex-brokers.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/valsa.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/robot-info-logo2.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/vst-consulting-logo.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/serentaflowers.jpg"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/chameleonjohn.png"/></div>
-        <div class="sponsor-logo"><img class="sponsor-logo" src="{{ .Site.BaseURL }}/images/sponsors/TopBargains_Website_Logo.png"/></div>
-      </div>
-</div>
+{{ partial "selenium-level-sponsors.html" . }}
+{{ partial "platinum-level-sponsors.html" . }}
+{{ partial "gold-level-sponsors.html" . }}
+{{ partial "silver-level-sponsors.html" . }}
+{{ partial "bronze-level-sponsors.html" . }}
 
 <div class="section">
     <h2>Sponsoring</h2>

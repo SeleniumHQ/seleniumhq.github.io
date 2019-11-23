@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grid on Documentación de Selenium</title>
+    <link>https://selenium.dev/documentation/es/grid/</link>
+    <description>Recent content in Grid on Documentación de Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/es/grid/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Propósitos y funcionalidades principales</title>
+      <link>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
+      <description> Punto de entrada central para todas las pruebas Gestión y control de los nodos / entorno donde se ejecutan los navegadores Ejecución de pruebas a gran escala Ejecución de pruebas en paralelo Pruebas de diferentes plataformas (Cross-platform and cross-browser) Balanceo de carga  </description>
+    </item>
+    
+    <item>
+      <title>Componentes de un Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
+      <description>Concentrador o Hub  Intermediario y administrador Acepta solicitudes para ejecutar pruebas Toma instrucciones del cliente y las ejecuta de forma remota en los nodos Administra hilos  Un hub es un punto central al que se envían todas sus pruebas. Cada Selenium Grid consta de un centro exactamente. El concentrador debe ser accesible desde los respectivos clientes (es decir, servidor CI (Continuos Integration), máquina del desarrollador, etc.) El concentrador conectará uno o más nodos a los que se delegarán las pruebas.</description>
+    </item>
+    
+    <item>
+      <title>Configurando tu propio Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
+      <description>Para usar Selenium Grid, debe mantener su propia infraestructura para los nodos. Como esto puede ser un esfuerzo demandante e intenso, muchas organizaciones utilizan proveedores de IaaS como Amazon EC2 y Google Compute para proporcionar esta infraestructura.
+Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que proporcionan un Selenium Grid como servicio en la nube. Ciertamente, también es posible ejecutar nodos en su infraestructura propia.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+    </item>
+    
+  </channel>
+</rss>

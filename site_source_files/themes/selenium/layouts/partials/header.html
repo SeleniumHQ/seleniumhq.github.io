@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/header.css"/>
+<link rel="stylesheet" href="{{"css/header.css" | relURL}}"/>
 
 <html>
 <head>
@@ -10,9 +10,9 @@
 
 <header id="header" class="header">
     <a href="{{ .Site.BaseURL }}" class="headerLink">
-      <img class="logo logo-large" src="{{ .Site.BaseURL }}/images/selenium_logo_large.png"/>
-      <img class="logo logo-small" src="{{ .Site.BaseURL }}/images/selenium_logo_square_green.png"/>
-      <img class="logo logo-small logo-hide" src="{{ .Site.BaseURL }}/images/selenium_logo_square_white.png"/>
+      <img class="logo logo-large" src="{{"images/selenium_logo_large.png" | relURL}}"/>
+      <img class="logo logo-small" src="{{"images/selenium_logo_square_green.png" | relURL}}"/>
+      <img class="logo logo-small logo-hide" src="{{"images/selenium_logo_square_white.png" | relURL}}"/>
     </a>
 
   <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
@@ -38,19 +38,19 @@
                     <a href="{{"getinvolved" | relURL}}">Get Involved</a>
                   </div>
                   <div class="subnav subnav-item">
-                    <a href="{{"sponsor" | relURL}}">Sponsors</a>
+                    <a href="{{"sponsors" | relURL}}">Sponsors</a>
                   </div>
               </ul>
 		<a class="nav-item" href="{{"downloads" | relURL}}">Downloads</a>
 		<a class="nav-item" href="{{"projects" | relURL}}">Projects</a>
 		<a class="nav-item" href="{{"documentation" | relURL}}">Documentation</a>
-		<a class="nav-item" href="{{"help" | relURL}}">Support</a>
+		<a class="nav-item" href="{{"support" | relURL}}">Support</a>
 		<a class="nav-item" href="{{"blog" | relURL}}">Blog</a>
         <div class="nav-item">
         <div class="search-bar-container">
             <!--<div class="search-bar" onFocus="activateSearch()">-->
                 <!--<input />-->
-                <!--<img src="{{ .Site.BaseURL }}/images/search.png" class="search-icon" />-->
+                <!--<img class="search-icon" src="{{"images/search.png" | relURL}}"/>-->
             <!--</div>-->
             <script>
               (function() {
@@ -64,7 +64,7 @@
               })();
             </script>
             <gcse:searchbox-only></gcse:searchbox-only>
-            <img src="{{ .Site.BaseURL }}/images/search.png" class="search-icon" />
+            <img class="search-icon" src="{{"images/search.png" | relURL}}"/>
         </div>
         </div>
   </nav>

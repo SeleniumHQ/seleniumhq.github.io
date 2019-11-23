@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>入门指南 on Selenium 文档</title>
+    <link>https://selenium.dev/documentation/zh-cn/getting_started/</link>
+    <description>Recent content in 入门指南 on Selenium 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/zh-cn/getting_started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>快速浏览</title>
+      <link>https://selenium.dev/documentation/zh-cn/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
+      <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
+WebDriver 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
+IDE IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome and Firefox extension and is generally the most efficient way to develop test cases. It records the users actions in the browser for you, using existing Selenium commands, with parameters defined by the context of that element.</description>
+    </item>
+    
+  </channel>
+</rss>

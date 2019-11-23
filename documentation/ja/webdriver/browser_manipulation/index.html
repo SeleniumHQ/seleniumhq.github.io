@@ -1,0 +1,5769 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.59.0" />
+    <meta name="description" content="Documentation for Selenium">
+
+
+    <link rel="icon" href="https://selenium.dev/documentation/ja/images/favicon.png" type="image/png">
+
+    <title>Browser manipulation :: Seleniumドキュメント</title>
+
+    
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1574173804" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1574173804" rel="stylesheet">
+    
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1574173804" rel="stylesheet">
+    
+
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1574173804"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/webdriver/browser_manipulation/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://selenium.dev/documentation/ja/">
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"
+    width="100%" height="100%" xml:space="preserve">
+    <defs>
+      <style>.cls-1{fill:#fff;}</style>
+    </defs>
+    <title>Selenium</title>
+    <path class="cls-1" d="M46.2,26.37a18.85,18.85,0,0,1-2.57-.2,25,25,0,0,1-2.74-.53l0-1.39a25.31,25.31,0,0,0,2.71.53,18,18,0,0,0,2.5.2,5.51,5.51,0,0,0,3.29-.84,2.79,2.79,0,0,0,1.14-2.39,2.85,2.85,0,0,0-1.24-2.49A6,6,0,0,0,48,18.55q-.78-.29-1.67-.55A15.93,15.93,0,0,1,44,17.13a5.92,5.92,0,0,1-1.58-1.05,3.6,3.6,0,0,1-.9-1.34A5,5,0,0,1,41.23,13a4.46,4.46,0,0,1,.41-1.93,4.31,4.31,0,0,1,1.17-1.5,5.26,5.26,0,0,1,1.82-1A8,8,0,0,1,47,8.28a20.51,20.51,0,0,1,4.41.57l0,1.42a20,20,0,0,0-2.23-.44,15.2,15.2,0,0,0-2-.15,4.86,4.86,0,0,0-3.08.9A2.9,2.9,0,0,0,42.88,13a3.25,3.25,0,0,0,.21,1.21,2.61,2.61,0,0,0,.7,1,4.83,4.83,0,0,0,1.27.79,14.31,14.31,0,0,0,2,.68q1.11.33,2.06.71a6.21,6.21,0,0,1,1.65.94,4.09,4.09,0,0,1,1.1,1.38,4.54,4.54,0,0,1,.4,2,4.15,4.15,0,0,1-1.56,3.48A7.16,7.16,0,0,1,46.2,26.37Z"/>
+    <path class="cls-1" d="M60.62,26.32a5.46,5.46,0,0,1-4.28-1.62A6.9,6.9,0,0,1,54.88,20a7.8,7.8,0,0,1,1.43-5,5,5,0,0,1,4.14-1.75,4.24,4.24,0,0,1,3.47,1.43A6.48,6.48,0,0,1,65.1,18.8q0,.54,0,.92a3.22,3.22,0,0,1-.09.64H56.44a5.39,5.39,0,0,0,1.17,3.5A4.18,4.18,0,0,0,60.8,25a10.52,10.52,0,0,0,1.82-.17,11.77,11.77,0,0,0,1.93-.52l.12,1.27a10.68,10.68,0,0,1-2,.55A11.47,11.47,0,0,1,60.62,26.32ZM60.4,14.43q-3.68,0-3.94,4.74h7.15a6.49,6.49,0,0,0-.78-3.63A2.76,2.76,0,0,0,60.4,14.43Z"/>
+    <path class="cls-1" d="M68.64,7h1.58V26.11H68.64Z"/>
+    <path class="cls-1" d="M79.56,26.32a5.46,5.46,0,0,1-4.28-1.62A6.9,6.9,0,0,1,73.83,20a7.8,7.8,0,0,1,1.43-5,5,5,0,0,1,4.14-1.75,4.24,4.24,0,0,1,3.47,1.43A6.48,6.48,0,0,1,84,18.8q0,.54,0,.92a3.22,3.22,0,0,1-.09.64H75.38a5.4,5.4,0,0,0,1.17,3.5A4.18,4.18,0,0,0,79.75,25a10.52,10.52,0,0,0,1.82-.17,11.8,11.8,0,0,0,1.93-.52l.12,1.27a10.68,10.68,0,0,1-2,.55A11.47,11.47,0,0,1,79.56,26.32Zm-.21-11.89q-3.68,0-3.94,4.74h7.15a6.49,6.49,0,0,0-.78-3.63A2.76,2.76,0,0,0,79.35,14.43Z"/>
+    <path class="cls-1" d="M87.51,13.37h1.32l.12,1.49h.12q.94-.45,1.72-.78t1.43-.54a8.42,8.42,0,0,1,1.2-.31,6.54,6.54,0,0,1,1.1-.09A3.3,3.3,0,0,1,97,14a3.63,3.63,0,0,1,.83,2.63v9.51H96.24v-9a3,3,0,0,0-.55-2,2.18,2.18,0,0,0-1.69-.6,7.25,7.25,0,0,0-2.24.41,20.1,20.1,0,0,0-2.67,1.12v10H87.51Z"/>
+    <path class="cls-1" d="M102.75,10.52a.93.93,0,0,1-1.06-1,1.06,1.06,0,0,1,2.12,0A.93.93,0,0,1,102.75,10.52Zm-.8,2.85h1.58V26.11h-1.58Z"/>
+    <path class="cls-1" d="M110.81,26.34q-3.14,0-3.14-3.47V13.37h1.58v9a3.16,3.16,0,0,0,.48,2,1.92,1.92,0,0,0,1.59.6,6.83,6.83,0,0,0,2.48-.48q1.25-.48,2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9,7.9,0,0,1-1.23.33A7.34,7.34,0,0,1,110.81,26.34Z"/>
+    <path class="cls-1" d="M122.18,13.37h1.3l.14,1.49h.09a19.53,19.53,0,0,1,2.58-1.31,5.51,5.51,0,0,1,2-.41,2.83,2.83,0,0,1,3,1.77h.12q.8-.5,1.45-.83a12.61,12.61,0,0,1,1.2-.54,6.17,6.17,0,0,1,1-.31,5.18,5.18,0,0,1,1-.09,3.3,3.3,0,0,1,2.45.84,3.63,3.63,0,0,1,.83,2.63v9.51h-1.56v-9a2.9,2.9,0,0,0-.55-2,2.21,2.21,0,0,0-1.69-.59,5.14,5.14,0,0,0-1.78.38A14.45,14.45,0,0,0,131.6,16v10.1H130v-9a2.9,2.9,0,0,0-.55-2,2.21,2.21,0,0,0-1.69-.59,5.24,5.24,0,0,0-1.86.4A14,14,0,0,0,123.76,16V26.11h-1.58Z"/>
+    <path class="cls-1" d="M21.45,21.51a2.49,2.49,0,0,0-2.55,2.21.08.08,0,0,0,.08.1h4.95a.08.08,0,0,0,.08-.09A2.41,2.41,0,0,0,21.45,21.51Z"/>
+    <path class="cls-1" d="M32.06,4.91,21.56,16.7a.32.32,0,0,1-.47,0l-5.36-5.53a.32.32,0,0,1,0-.4l1.77-2.27a.32.32,0,0,1,.52,0l3,3.32a.32.32,0,0,0,.49,0L29.87.36A.23.23,0,0,0,29.69,0H.25A.25.25,0,0,0,0,.25v33.5A.25.25,0,0,0,.25,34h32a.25.25,0,0,0,.25-.25V5.06A.23.23,0,0,0,32.06,4.91Zm-23,25.36a8.08,8.08,0,0,1-5.74-2,.31.31,0,0,1,0-.41l1.25-1.75A.31.31,0,0,1,5,26a6.15,6.15,0,0,0,4.2,1.64c1.64,0,2.44-.76,2.44-1.56,0-2.48-8.08-.78-8.08-6.06,0-2.33,2-4.27,5.32-4.27a7.88,7.88,0,0,1,5.25,1.76.31.31,0,0,1,0,.43L12.9,19.65a.31.31,0,0,1-.45.05,6.08,6.08,0,0,0-3.84-1.32c-1.28,0-2,.57-2,1.41,0,2.23,8.06.74,8.06,6C14.67,28.33,12.84,30.27,9.05,30.27ZM26.68,25.4a.27.27,0,0,1-.28.28H19a.09.09,0,0,0-.08.1,2.81,2.81,0,0,0,3,2.32,4.62,4.62,0,0,0,2.56-.84.27.27,0,0,1,.4.06l.9,1.31a.28.28,0,0,1-.06.37,6.67,6.67,0,0,1-4.1,1.28,5.28,5.28,0,0,1-5.57-5.48,5.31,5.31,0,0,1,5.4-5.46c3.11,0,5.22,2.33,5.22,5.74Z"/>
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="検索...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1574173804"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1574173804"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
+    
+</script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1574173804"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting_started/" title="はじめる" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/getting_started/">
+          はじめる
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started/quick/" title="クイックツアー" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/getting_started/quick/">
+        クイックツアー
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/introduction/" title="紹介" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/introduction/">
+          紹介
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/the_selenium_project_and_tools/" title="The Selenium project and tools" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/">
+        The Selenium project and tools
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/on_test_automation/" title="On test automation" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/introduction/on_test_automation/">
+        On test automation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/types_of_testing/" title="Types of testing" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/introduction/types_of_testing/">
+        Types of testing
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/introduction/about_this_documentation/" title="About this documentation" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/introduction/about_this_documentation/">
+        About this documentation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/selenium_installation/" title="Seleniumのインストール" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/selenium_installation/">
+          Seleniumのインストール
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/selenium_installation/installing_selenium_libraries/" title="Seleniumライブラリのインストール" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/">
+        Seleniumライブラリのインストール
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/selenium_installation/installing_webdriver_binaries/" title="WebDriverバイナリのインストール" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/">
+        WebDriverバイナリのインストール
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/selenium_installation/installing_standalone_server/" title="スタンドアロンサーバのインストール" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/">
+        スタンドアロンサーバのインストール
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/getting_started_with_webdriver/" title="Getting started with WebDriver" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/">
+          Getting started with WebDriver
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started_with_webdriver/browsers/" title="Browsers" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/">
+        Browsers
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Third party drivers and plugins" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/">
+        Third party drivers and plugins
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Locating elements" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/">
+        Locating elements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/getting_started_with_webdriver/performing_actions_on_the_aut/" title="Performing actions on the AUT*" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/">
+        Performing actions on the AUT*
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/webdriver/" title="WebDriver" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/webdriver/">
+          WebDriver
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/understanding_the_components/" title="Understanding the components" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/understanding_the_components/">
+        Understanding the components
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/driver_requirements/" title="Driver requirements" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/driver_requirements/">
+        Driver requirements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/browser_manipulation/" title="Browser manipulation" class="dd-item active">
+        <a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/">
+        Browser manipulation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/waits/" title="Waits" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/waits/">
+        Waits
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/support_classes/" title="Support classes" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/support_classes/">
+        Support classes
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/js_alerts_prompts_and_confirmations/" title="JavaScript alerts, prompts and confirmations" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/">
+        JavaScript alerts, prompts and confirmations
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/http_proxies/" title="Http proxies" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/http_proxies/">
+        Http proxies
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/page_loading_strategy/" title="Page loading strategy" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
+        Page loading strategy
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/web_element/" title="Web element" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/web_element/">
+        Web element
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/keyboard/" title="Keyboard" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/keyboard/">
+        Keyboard
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/webdriver/mouse/" title="Mouse" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/webdriver/mouse/">
+        Mouse
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/remote_webdriver/">
+          Remote WebDriver
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/">
+        Remote WebDriver server
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/">
+        Remote WebDriver client
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/guidelines_and_recommendations/" title="Guidelines and recommendations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/">
+          Guidelines
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/page_object_models/" title="Page object models" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/">
+        Page object models
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Domain specific language" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/">
+        Domain specific language
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/generating_application_state/" title="Generating application state" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/">
+        Generating application state
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/mock_external_services/" title="Mock external services" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/">
+        Mock external services
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/improved_reporting/" title="Improved reporting" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/">
+        Improved reporting
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/avoid_sharing_state/" title="Avoid sharing state" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/">
+        Avoid sharing state
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/test_independency/" title="Test independency" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/">
+        Test independency
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/consider_using_a_fluent_api/" title="Consider using a fluent API" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/">
+        Consider using a fluent API
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/guidelines_and_recommendations/fresh_browser_per_test/" title="Fresh browser per test" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/">
+        Fresh browser per test
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/worst_practices/" title="Worst practices" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/worst_practices/">
+          Worst practices
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/captchas/" title="Captchas" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/captchas/">
+        Captchas
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/file_downloads/" title="File downloads" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/file_downloads/">
+        File downloads
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/http_response_codes/" title="HTTP response codes" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/http_response_codes/">
+        HTTP response codes
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email and Facebook logins" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/">
+        Gmail, email and Facebook
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/test_dependency/" title="Test dependency" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/test_dependency/">
+        Test dependency
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/performance_testing/" title="Performance testing" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/performance_testing/">
+        Performance testing
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/worst_practices/link_spidering/" title="Link spidering" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/worst_practices/link_spidering/">
+        Link spidering
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/grid/" title="Grid" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/grid/">
+          Grid
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/grid/purposes_and_main_functionalities/" title="Purposes and main functionalities" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/">
+        Purposes and functionalities
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/grid/components_of_a_grid/" title="Components of a Grid" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/grid/components_of_a_grid/">
+        Components of a Grid
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/grid/setting_up_your_own_grid/" title="Setting up your own Grid" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/">
+        Setting up your own Grid
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/grid/when_to_use_grid/" title="When to use Grid" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/grid/when_to_use_grid/">
+        When to use Grid
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/driver_idiosyncrasies/" title="Driver idiosyncrasies" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/">
+          Driver idiosyncrasies
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/">
+        Shared capabilities
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Driver specific capabilities" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/">
+        Driver specific capabilities
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/support_packages/" title="Support packages" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/support_packages/">
+          Support packages
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/browser_navigation/" title="Browser navigation" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/support_packages/browser_navigation/">
+        Browser navigation
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/working_with_colours/" title="Working with colours" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/support_packages/working_with_colours/">
+        Working with colours
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/working_with_select_elements/" title="Working with select elements" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/">
+        Working with select elements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mouse and keyboard actions in detail" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/">
+        Mouse and keyboard actions in detail
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/working_with_web_elements/" title="Working with web elements" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/">
+        Working with web elements
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/legacy_docs/" title="Legacy" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/legacy_docs/">
+          Legacy
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/selenium_rc/" title="Selenium 1 (Selenium RC)" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/">
+        Selenium 1 (Selenium RC)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/migrating_from_rc_to_webdriver/" title="Migrating from RC to WebDriver" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/">
+        Migrating from RC to WebDriver
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/html-runner/" title="HTML runner" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/legacy_docs/html-runner/">
+        HTML runner
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/legacy_docs/selenium_ide/" title="Legacy Selenium IDE" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/">
+        Legacy Selenium IDE
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+ 
+  
+    
+    <li data-nav-id="/front_matter/" title="Front matter" class="dd-item 
+        
+        
+        
+        ">
+      <a href="https://selenium.dev/documentation/ja/front_matter/">
+          Front matter
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Copyright and attributions" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/">
+        Copyright and attributions
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/front_matter/typographical_conventions/" title="Typographical conventions" class="dd-item ">
+        <a href="https://selenium.dev/documentation/ja/front_matter/typographical_conventions/">
+        Typographical conventions
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>更に</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://selenium.dev/"><i class='fas fa-home'></i> Selenium Home</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/SeleniumHQ/seleniumhq.github.io"><i class='fab fa-fw fa-github'></i> GitHub リポ</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/seleniumhq/seleniumhq.github.io/issues"><i class='fas fa-fw fa-exclamation-triangle'></i> バグ報告</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions"><i class='fas fa-fw fa-trophy'></i> クレジット</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://selenium.dev/documentation/ja/contributing"><i class='fas fa-fw fa-bullhorn'></i> 貢献方法</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="https://selenium.dev/documentation/en/webdriver/browser_manipulation/">English</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="es" value="https://selenium.dev/documentation/es/webdriver/browser_manipulation/">Español</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="nl" value="https://selenium.dev/documentation/nl/webdriver/browser_manipulation/">Nederlands</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh-cn" value="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/">中文简体</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="fr" value="https://selenium.dev/documentation/fr/webdriver/browser_manipulation/">Français</option>
+                    
+                  
+              
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="ja" value="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/" selected>日本語</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="ko" value="https://selenium.dev/documentation/ko/webdriver/browser_manipulation/">한국어</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> 履歴削除</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>    
+  &copy; 2013-2019
+</p>
+<p>    
+  Software Freedom Conservancy (SFC)
+</p>
+    </section>
+  </div>
+</nav>
+
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='このページを編集' href="https://github.com/SeleniumHQ/site/edit/master/docs_source_files/content/webdriver/browser_manipulation.ja.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">このページを編集</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='https://selenium.dev/documentation/ja/'>Seleniumブラウザー自動化プロジェクト</a> > <a href='https://selenium.dev/documentation/ja/webdriver/'>WebDriver</a> > Browser manipulation
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#ruby">Ruby</a></li>
+<li><a href="#internet-explorer">Internet Explorer</a></li>
+<li><a href="#browser-navigation">Browser navigation</a>
+<ul>
+<li><a href="#navigate-to">Navigate to</a></li>
+<li><a href="#get-current-url">Get current URL</a></li>
+<li><a href="#back">Back</a></li>
+<li><a href="#forward">Forward</a></li>
+<li><a href="#refresh">Refresh</a></li>
+<li><a href="#get-title">Get title</a></li>
+</ul></li>
+<li><a href="#windows-and-tabs">Windows and tabs</a>
+<ul>
+<li><a href="#get-window-handle">Get window handle</a></li>
+<li><a href="#switching-windows-or-tabs">Switching windows or tabs</a></li>
+<li><a href="#closing-a-window-or-tab">Closing a window or tab</a></li>
+<li><a href="#quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</a></li>
+</ul></li>
+<li><a href="#frames-and-iframes">Frames and Iframes</a>
+<ul>
+<li><a href="#using-a-webelement">Using a WebElement</a></li>
+<li><a href="#using-a-name-or-id">Using a name or ID</a></li>
+<li><a href="#using-an-index">Using an index</a></li>
+<li><a href="#leaving-a-frame">Leaving a frame</a></li>
+</ul></li>
+<li><a href="#window-management">Window management</a>
+<ul>
+<li><a href="#get-window-size">Get window size</a></li>
+<li><a href="#set-window-size">Set window size</a></li>
+<li><a href="#get-window-position">Get window position</a></li>
+</ul></li>
+<li><a href="#set-window-position">Set window position</a>
+<ul>
+<li><a href="#maximise-window">Maximise window</a></li>
+<li><a href="#fullscreen-window">Fullscreen window</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Browser manipulation
+            </h1>
+          
+
+        
+
+
+
+
+
+<!-- #codeExamples -->
+
+<!-- Remember to cover profile and extensions here -->
+
+
+<div class="notices info" ><p><i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
+日本語は話せますか？プルリクエストをして翻訳を手伝ってください!</p>
+</div>
+
+
+<h2 id="ruby">Ruby</h2>
+
+<p>Ruby is not installed by default on Windows. Download the latest
+<a href="//rubyinstaller.org/downloads">version</a> and run the installer. You can
+leave all settings at default values, except at the
+<em>Installation Destination and Optional Tasks</em> screen check
+<em>Add Ruby executables to your PATH</em> checkbox. To drive any browser, you have
+to install <code>selenium-webdriver</code> Ruby gem. To install it, open command prompt
+and type this:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver</code></pre></div>
+<p>Or, if you use <a href="//bundler.io">Bundler</a>, add this line to your application&rsquo;s
+Gemfile:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">gem <span style="color:#2aa198">&#34;selenium-webdriver&#34;</span></code></pre></div>
+<p>And then execute the following command in prompt:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bundle install</code></pre></div>
+<h2 id="internet-explorer">Internet Explorer</h2>
+
+<p>Internet Explorer is installed by default on Windows, so no installation is
+needed. To drive Internet Explorer on Windows, you have to download the latest
+<a href="https://selenium.dev/downloads/">Internet Explorer Driver</a> and put the file
+into a folder that is in <code>PATH</code>. To find out which directories are in <code>PATH</code>,
+type <code>echo %PATH%</code> in command prompt.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">$ echo <span style="color:#268bd2">%PATH%</span>
+C:\Ruby200\bin<span style="color:#586e75">;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</span></code></pre></div>
+<p><code>C:\Ruby200\bin</code> looks like a good place. Unzip <code>IEDriverServer</code> file and
+move <code>IEDriverServer.exe</code> there.</p>
+
+<p>This should open a new Internet Explorer window:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#b58900">require</span> <span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:internet_explorer</span></code></pre></div>
+<h2 id="browser-navigation">Browser navigation</h2>
+
+<h3 id="navigate-to">Navigate to</h3>
+
+<p>The first thing you will want to do after launching a browser is to
+open your website. This can be achieved in a single line:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+    
+    <label for="tab0code1">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1">
+    
+    <label for="tab1code1">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1">
+    
+    <label for="tab2code1">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1">
+    
+    <label for="tab3code1">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
+    
+    <label for="tab4code1">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+    
+    <label for="tab5code1">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Convenient
+</span><span style="color:#586e75"></span>driver.get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);
+
+<span style="color:#586e75">//Longer way
+</span><span style="color:#586e75"></span>driver.navigate().to(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+driver.Navigate().GoToUrl(<span style="color:#2aa198">@&#34;https://selenium.dev&#34;</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Convenient way</span>
+driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://selenium.dev&#39;</span>
+
+<span style="color:#586e75"># Longer Way</span>
+driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>to <span style="color:#2aa198">&#39;https://selenium.dev&#39;</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode1" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Convenient
+</span><span style="color:#586e75"></span>driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>)
+
+<span style="color:#586e75">//Longer way
+</span><span style="color:#586e75"></span>driver.navigate().to(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>)
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="get-current-url">Get current URL</h3>
+
+<p>You can read the current URL from the browser&rsquo;s address bar using:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
+    
+    <label for="tab0code2">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
+    
+    <label for="tab1code2">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
+    
+    <label for="tab2code2">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
+    
+    <label for="tab3code2">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
+    
+    <label for="tab4code2">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
+    
+    <label for="tab5code2">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getCurrentUrl();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>current_url</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Url;
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>current_url</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getCurrentUrl();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode2" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getCurrentUrl();</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="back">Back</h3>
+
+<p>Pressing the browser&rsquo;s back button:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    
+    <label for="tab0code3">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
+    
+    <label for="tab1code3">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
+    
+    <label for="tab2code3">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
+    
+    <label for="tab3code3">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
+    
+    <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().back();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>back()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Navigate().Back();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>back</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().back();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().back() </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="forward">Forward</h3>
+
+<p>Pressing the browser&rsquo;s forward button:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    
+    <label for="tab0code4">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4">
+    
+    <label for="tab1code4">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4">
+    
+    <label for="tab2code4">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4">
+    
+    <label for="tab3code4">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
+    
+    <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().forward();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>forward()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Navigate().Forward();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>forward</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().forward();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().forward();</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="refresh">Refresh</h3>
+
+<p>Refresh the current page:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    
+    <label for="tab0code5">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5">
+    
+    <label for="tab1code5">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5">
+    
+    <label for="tab2code5">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5">
+    
+    <label for="tab3code5">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
+    
+    <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().refresh();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>refresh()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Navigate().Refresh();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">.</span>refresh</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.navigate().refresh();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().refresh()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="get-title">Get title</h3>
+
+<p>You can read the current page title from the browser:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode6" id="tab0code6" aria-controls="javacode6" checked>
+    
+    <label for="tab0code6">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab1code6" aria-controls="pythoncode6">
+    
+    <label for="tab1code6">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab2code6" aria-controls="cscode6">
+    
+    <label for="tab2code6">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab3code6" aria-controls="rubycode6">
+    
+    <label for="tab3code6">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
+    
+    <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getTitle();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>title</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Title;
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>title</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getTitle();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getTitle()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="windows-and-tabs">Windows and tabs</h2>
+
+<h3 id="get-window-handle">Get window handle</h3>
+
+<p>WebDriver does not make the distinction between windows and tabs. If
+your site opens a new tab or window, Selenium will let you work with it
+using a window handle.  Each window has a unique identifier which remains
+persistent in a single session. You can get the window handle of the
+current window by using:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode7" id="tab0code7" aria-controls="javacode7" checked>
+    
+    <label for="tab0code7">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab1code7" aria-controls="pythoncode7">
+    
+    <label for="tab1code7">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab2code7" aria-controls="cscode7">
+    
+    <label for="tab2code7">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab3code7" aria-controls="rubycode7">
+    
+    <label for="tab3code7">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
+    
+    <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getWindowHandle();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>current_window_handle</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.CurrentWindowHandle;
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>window_handle</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.getWindowHandle();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getWindowHandle()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="switching-windows-or-tabs">Switching windows or tabs</h3>
+
+<p>Clicking a link which opens in a
+<a href="https://seleniumhq.github.io/docs/" target="_blank"> new window</a>
+will focus the new window or tab on screen, but WebDriver will not know which
+window the Operating System considers active.  To work with the new window
+you will need to switch to it. If you have only two tabs or windows open,
+and you know which window you start with, by the process of elimination
+you can loop over both windows or tabs that WebDriver can see, and switch
+to the one which is not the original.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode8" id="tab0code8" aria-controls="javacode8" checked>
+    
+    <label for="tab0code8">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab1code8" aria-controls="pythoncode8">
+    
+    <label for="tab1code8">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab2code8" aria-controls="cscode8">
+    
+    <label for="tab2code8">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab3code8" aria-controls="rubycode8">
+    
+    <label for="tab3code8">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
+    
+    <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Store the ID of the original window
+</span><span style="color:#586e75"></span>String <span style="color:#268bd2">originalWindow</span> <span style="color:#719e07">=</span> driver.getWindowHandle();
+
+<span style="color:#586e75">//Check we don&#39;t have other windows open already
+</span><span style="color:#586e75"></span><span style="color:#719e07">assert</span> driver.getWindowHandles().size() <span style="color:#719e07">==</span> 1;
+
+<span style="color:#586e75">//Click the link which opens in a new window
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).click();
+
+<span style="color:#586e75">//Wait for the new window or tab
+</span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(2));
+
+<span style="color:#586e75">//Loop through until we find a new window handle
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (String <span style="color:#268bd2">windowHandle</span> <span style="color:#719e07">:</span> driver.getWindowHandles()) {
+    <span style="color:#719e07">if</span>(<span style="color:#719e07">!</span>originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle);
+        <span style="color:#719e07">break</span>;
+    }
+}
+
+<span style="color:#586e75">//Wait for the new tab to finish loading content
+</span><span style="color:#586e75"></span>wait.until(titleIs(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>));  
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.support.ui <span style="color:#719e07">import</span> WebDriverWait
+<span style="color:#719e07">from</span> selenium.webdriver.support <span style="color:#719e07">import</span> expected_conditions <span style="color:#719e07">as</span> EC
+
+<span style="color:#586e75"># Start the driver</span>
+<span style="color:#719e07">with</span> webdriver<span style="color:#719e07">.</span>Firefox() <span style="color:#719e07">as</span> driver:
+    <span style="color:#586e75"># Open URL</span>
+    driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://seleniumhq.github.io/docs/wd.html&#34;</span>)
+
+    <span style="color:#586e75"># Setup wait for later</span>
+    wait <span style="color:#719e07">=</span> WebDriverWait(driver, <span style="color:#2aa198">10</span>)
+
+    <span style="color:#586e75"># Store the ID of the original window</span>
+    original_window <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>current_window_handle
+
+    <span style="color:#586e75"># Check we don&#39;t have other windows open already</span>
+    <span style="color:#719e07">assert</span> <span style="color:#b58900">len</span>(driver<span style="color:#719e07">.</span>window_handles) <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>
+
+    <span style="color:#586e75"># Click the link which opens in a new window</span>
+    driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;new window&#34;</span>)<span style="color:#719e07">.</span>click()
+
+    <span style="color:#586e75"># Wait for the new window or tab</span>
+    wait<span style="color:#719e07">.</span>until(EC<span style="color:#719e07">.</span>number_of_windows_to_be(<span style="color:#2aa198">2</span>))
+
+    <span style="color:#586e75"># Loop through until we find a new window handle</span>
+    <span style="color:#719e07">for</span> window_handle <span style="color:#719e07">in</span> driver<span style="color:#719e07">.</span>window_handles:
+        <span style="color:#719e07">if</span> window_handle <span style="color:#719e07">!=</span> original_window:
+            driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window(window_handle)
+            <span style="color:#719e07">break</span>
+
+    <span style="color:#586e75"># Wait for the new tab to finish loading content</span>
+    wait<span style="color:#719e07">.</span>until(EC<span style="color:#719e07">.</span>title_is(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>))
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Store the ID of the original window
+</span><span style="color:#586e75"></span><span style="color:#dc322f">string</span> originalWindow = driver.CurrentWindowHandle;
+
+<span style="color:#586e75">//Check we don&#39;t have other windows open already
+</span><span style="color:#586e75"></span>Assert.AreEqual(driver.WindowHandles.Count, <span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">//Click the link which opens in a new window
+</span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).Click();
+
+<span style="color:#586e75">//Wait for the new window or tab
+</span><span style="color:#586e75"></span>wait.Until(wd =&gt; wd.WindowHandles.Count == <span style="color:#2aa198">2</span>);
+
+<span style="color:#586e75">//Loop through until we find a new window handle
+</span><span style="color:#586e75"></span><span style="color:#719e07">foreach</span>(<span style="color:#dc322f">string</span> window <span style="color:#719e07">in</span> driver.WindowHandles)
+{
+    <span style="color:#719e07">if</span>(originalWindow != window)
+    {
+        driver.SwitchTo().Window(window);
+        <span style="color:#719e07">break</span>;
+    }
+}
+<span style="color:#586e75">//Wait for the new tab to finish loading content
+</span><span style="color:#586e75"></span>wait.Until(wd =&gt; wd.Title == <span style="color:#2aa198">&#34;Selenium documentation&#34;</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75">#Store the ID of the original window</span>
+original_window <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>window_handle
+
+<span style="color:#586e75">#Check we don&#39;t have other windows open already</span>
+assert(driver<span style="color:#719e07">.</span>window_handles<span style="color:#719e07">.</span>length <span style="color:#719e07">==</span> <span style="color:#2aa198">1</span>, <span style="color:#2aa198">&#39;Expected one window&#39;</span>)
+
+<span style="color:#586e75">#Click the link which opens in a new window</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">link</span>: <span style="color:#2aa198">&#39;new window&#39;</span>)<span style="color:#719e07">.</span>click
+
+<span style="color:#586e75">#Wait for the new window or tab</span>
+wait<span style="color:#719e07">.</span>until { driver<span style="color:#719e07">.</span>window_handles<span style="color:#719e07">.</span>length <span style="color:#719e07">==</span> <span style="color:#2aa198">2</span> }
+
+<span style="color:#586e75">#Loop through until we find a new window handle</span>
+driver<span style="color:#719e07">.</span>window_handles<span style="color:#719e07">.</span>each <span style="color:#719e07">do</span> <span style="color:#719e07">|</span>handle<span style="color:#719e07">|</span>
+    <span style="color:#719e07">if</span> handle <span style="color:#719e07">!=</span> original_window
+        driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window handle
+        <span style="color:#719e07">break</span>
+    <span style="color:#719e07">end</span>
+<span style="color:#719e07">end</span>
+
+<span style="color:#586e75">#Wait for the new tab to finish loading content</span>
+wait<span style="color:#719e07">.</span>until { driver<span style="color:#719e07">.</span>title <span style="color:#719e07">==</span> <span style="color:#2aa198">&#39;Selenium documentation&#39;</span>}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">//Store the ID of the original window
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> originalWindow <span style="color:#719e07">=</span> await driver.getWindowHandle();
+
+<span style="color:#586e75">//Check we don&#39;t have other windows open already
+</span><span style="color:#586e75"></span>assert((await driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">//Click the link which opens in a new window
+</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;new window&#39;</span>)).click();
+
+<span style="color:#586e75">//Wait for the new window or tab
+</span><span style="color:#586e75"></span>await driver.wait(
+    async () =&gt; (await driver.getAllWindowHandles()).length <span style="color:#719e07">===</span> <span style="color:#2aa198">2</span>,
+    <span style="color:#2aa198">10000</span>
+  );
+
+<span style="color:#586e75">//Loop through until we find a new window handle
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> windows <span style="color:#719e07">=</span> await driver.getAllWindowHandles();
+windows.forEach(async handle =&gt; {
+  <span style="color:#719e07">if</span> (handle <span style="color:#719e07">!==</span> originalWindow) {
+    await driver.switchTo().<span style="color:#b58900">window</span>(handle);
+  }
+});
+
+<span style="color:#586e75">//Wait for the new tab to finish loading content
+</span><span style="color:#586e75"></span>await driver.wait(until.titleIs(<span style="color:#2aa198">&#39;Selenium documentation&#39;</span>), <span style="color:#2aa198">10000</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Store the ID of the original window
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> originalWindow = driver.getWindowHandle()
+
+<span style="color:#586e75">//Check we don&#39;t have other windows open already
+</span><span style="color:#586e75"></span>assert(driver.getWindowHandles().size() === <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75">//Click the link which opens in a new window
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the new window or tab
+</span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(<span style="color:#2aa198">2</span>))
+
+<span style="color:#586e75">//Loop through until we find a new window handle
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (windowHandle <span style="color:#719e07">in</span> driver.getWindowHandles()) {
+      <span style="color:#719e07">if</span> (!originalWindow.contentEquals(windowHandle)) {
+          driver.switchTo().window(windowHandle)
+           <span style="color:#719e07">break</span>
+      }
+}
+
+<span style="color:#586e75">//Wait for the new tab to finish loading content
+</span><span style="color:#586e75"></span>wait.until(titleIs(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>))
+ 
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="closing-a-window-or-tab">Closing a window or tab</h3>
+
+<p>When you are finished with a window or tab <em>and</em> it is not the
+last window or tab open in your browser, you should close it and switch
+back to the window you were using previously.  Assuming you followed the
+code sample in the previous section you will have the previous window
+handle stored in a variable. Put this together and you will get:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode9" id="tab0code9" aria-controls="javacode9" checked>
+    
+    <label for="tab0code9">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab1code9" aria-controls="pythoncode9">
+    
+    <label for="tab1code9">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab2code9" aria-controls="cscode9">
+    
+    <label for="tab2code9">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab3code9" aria-controls="rubycode9">
+    
+    <label for="tab3code9">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab4code9" aria-controls="javascriptcode9">
+    
+    <label for="tab4code9">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode9" id="tab5code9" aria-controls="kotlincode9">
+    
+    <label for="tab5code9">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75">#Close the tab or window</span>
+driver<span style="color:#719e07">.</span>close()
+
+<span style="color:#586e75">#Switch back to the old tab or window</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window(original_window)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.Close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.SwitchTo().Window(originalWindow);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75">#Close the tab or window</span>
+driver<span style="color:#719e07">.</span>close
+
+<span style="color:#586e75">#Switch back to the old tab or window</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window original_window
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>await driver.close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>await driver.switchTo().<span style="color:#b58900">window</span>(originalWindow);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.close()
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow)
+
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Forgetting to switch back to another window handle after closing a
+window will leave WebDriver executing on the now closed page, and will
+trigger a <strong>No Such Window Exception</strong>. You must switch
+back to a valid window handle in order to continue execution.</p>
+
+<h3 id="quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</h3>
+
+<p>When you are finished with the browser session you should call quit,
+instead of close:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode10" id="tab0code10" aria-controls="javacode10" checked>
+    
+    <label for="tab0code10">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab1code10" aria-controls="pythoncode10">
+    
+    <label for="tab1code10">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab2code10" aria-controls="cscode10">
+    
+    <label for="tab2code10">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab3code10" aria-controls="rubycode10">
+    
+    <label for="tab3code10">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab4code10" aria-controls="javascriptcode10">
+    
+    <label for="tab4code10">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode10" id="tab5code10" aria-controls="kotlincode10">
+    
+    <label for="tab5code10">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.quit();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>quit()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Quit();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>quit</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.quit();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode10" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.quit()</code></pre></div>
+</section>
+</div>
+</div>
+
+<ul>
+<li>Quit will:
+
+<ul>
+<li>Close all the windows and tabs associated with that WebDriver
+session</li>
+<li>The browser process</li>
+<li>The background driver process</li>
+<li>Notify Selenium Grid that the browser is no longer in use so it can
+be used by another session (if you are using Selenium Grid)</li>
+</ul></li>
+</ul>
+
+<p>Failure to call quit will leave extra background processes and ports
+running on your machine which could cause you problems later.</p>
+
+<p>Some test frameworks offer methods and annotations which you can hook
+into to tear down at the end of a test.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode11" id="tab0code11" aria-controls="javacode11" checked>
+    
+    <label for="tab0code11">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab1code11" aria-controls="pythoncode11">
+    
+    <label for="tab1code11">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab2code11" aria-controls="cscode11">
+    
+    <label for="tab2code11">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab3code11" aria-controls="rubycode11">
+    
+    <label for="tab3code11">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab4code11" aria-controls="javascriptcode11">
+    
+    <label for="tab4code11">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode11" id="tab5code11" aria-controls="kotlincode11">
+    
+    <label for="tab5code11">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using JUnit
+</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">@AfterAll</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit();
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">/*
+</span><span style="color:#586e75">    Example using Visual Studio&#39;s UnitTesting
+</span><span style="color:#586e75">    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+</span><span style="color:#586e75">*/</span>
+[TestCleanup]
+<span style="color:#719e07">public</span> <span style="color:#719e07">void</span> TearDown()
+{
+    driver.Quit();
+}
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using Mocha
+</span><span style="color:#586e75"> * https://mochajs.org/#hooks
+</span><span style="color:#586e75"> */</span>
+after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style="color:#268bd2">function</span> () {
+  await driver.quit();
+});
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+  
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using JUnit
+</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style="color:#586e75"> */</span>
+@AfterAll
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit()
+}
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<p>If not running WebDriver in a test context, you may consider using
+<code>try  / finally</code> which is offered by most languages so that an exception
+will still clean up the WebDriver session.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode12" id="tab0code12" aria-controls="javacode12" checked>
+    
+    <label for="tab0code12">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab1code12" aria-controls="pythoncode12">
+    
+    <label for="tab1code12">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab2code12" aria-controls="cscode12">
+    
+    <label for="tab2code12">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab3code12" aria-controls="rubycode12">
+    
+    <label for="tab3code12">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab4code12" aria-controls="javascriptcode12">
+    
+    <label for="tab4code12">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab5code12" aria-controls="kotlincode12">
+    
+    <label for="tab5code12">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">try</span> {
+    <span style="color:#586e75">//WebDriver code here...
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    driver.quit();
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">try</span>:
+    <span style="color:#586e75">#WebDriver code here...</span>
+<span style="color:#719e07">finally</span>:
+    driver<span style="color:#719e07">.</span>quit()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#719e07">try</span> {
+    <span style="color:#586e75">//WebDriver code here...
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    driver.Quit();
+}
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#719e07">begin</span>
+    <span style="color:#586e75">#WebDriver code here...</span>
+<span style="color:#719e07">ensure</span>
+    driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#719e07">try</span> {
+    <span style="color:#586e75">//WebDriver code here...
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    await driver.quit();
+}
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">try</span> {
+    <span style="color:#586e75">//WebDriver code here...
+</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
+    driver.quit()
+}
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<p>Python&rsquo;s WebDriver now supports the python context manager,
+which when using the with keyword can automatically quit the driver at
+the end of execution.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">with</span> webdriver<span style="color:#719e07">.</span>Firefox() <span style="color:#719e07">as</span> driver:
+  <span style="color:#586e75"># WebDriver code here...</span>
+
+<span style="color:#586e75"># WebDriver will automatically quit after indentation</span></code></pre></div>
+<h2 id="frames-and-iframes">Frames and Iframes</h2>
+
+<p>Frames are a now deprecated means of building a site layout from
+multiple documents on the same domain. You are unlikely to work with
+them unless you are working with an pre HTML5 webapp.  Iframes allow
+the insertion of a document from an entirely different domain, and are
+still commonly used.</p>
+
+<p>If you need to work with frames or iframes, Webdriver allows you to
+work with them in the same way. Consider a button within an iframe.
+If we inspect the element using the browser development tools, we might
+see the following:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;modal&#34;</span>&gt;
+  &lt;<span style="color:#268bd2">iframe</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;buttonframe&#34;</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;myframe&#34;</span>  src<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://seleniumhq.github.io/docs/iframe.html&#34;</span>&gt;
+   &lt;<span style="color:#268bd2">button</span>&gt;Click here&lt;/<span style="color:#268bd2">button</span>&gt;
+ &lt;/<span style="color:#268bd2">iframe</span>&gt;
+&lt;/<span style="color:#268bd2">div</span>&gt;</code></pre></div>
+<p>If it wasn&rsquo;t for the iframe we would expect to click on the button
+using something like:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode13" id="tab0code13" aria-controls="javacode13" checked>
+    
+    <label for="tab0code13">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab1code13" aria-controls="pythoncode13">
+    
+    <label for="tab1code13">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab2code13" aria-controls="cscode13">
+    
+    <label for="tab2code13">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab3code13" aria-controls="rubycode13">
+    
+    <label for="tab3code13">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab4code13" aria-controls="javascriptcode13">
+    
+    <label for="tab4code13">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode13" id="tab5code13" aria-controls="kotlincode13">
+    
+    <label for="tab5code13">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//This won&#39;t work
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># This Wont work</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//This won&#39;t work
+</span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># This won&#39;t work</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// This won&#39;t work
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode13" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//This won&#39;t work
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<p>However, if there are no buttons outside of the iframe, you might
+instead get a <em>no such element</em> error. This happens because Selenium is
+only aware of the elements in the top level document. To interact with
+the button, we will need to first switch to the frame, in a similar way
+to how we switch windows. WebDriver offers three ways of switching to
+a frame.</p>
+
+<h3 id="using-a-webelement">Using a WebElement</h3>
+
+<p>Switching using a WebElement is the most flexible option. You can
+find the frame using your preferred selector and switch to it.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode14" id="tab0code14" aria-controls="javacode14" checked>
+    
+    <label for="tab0code14">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab1code14" aria-controls="pythoncode14">
+    
+    <label for="tab1code14">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab2code14" aria-controls="cscode14">
+    
+    <label for="tab2code14">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab3code14" aria-controls="rubycode14">
+    
+    <label for="tab3code14">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab4code14" aria-controls="javascriptcode14">
+    
+    <label for="tab4code14">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode14" id="tab5code14" aria-controls="kotlincode14">
+    
+    <label for="tab5code14">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">iframe</span> <span style="color:#719e07">=</span> driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
+
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Store iframe web element</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#modal &gt; iframe&#34;</span>)
+
+<span style="color:#586e75"># switch to selected iframe</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
+
+<span style="color:#586e75"># Now click on button</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>IWebElement iframe = driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
+
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(iframe);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Store iframe web element</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:css</span>,<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>)
+
+<span style="color:#586e75"># Switch to the frame</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame iframe
+
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Store the web element
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
+
+<span style="color:#586e75">// Switch to the frame
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(iframe);
+
+<span style="color:#586e75">// Now we can click the button
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode14" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>WebElement iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
+
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe)
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="using-a-name-or-id">Using a name or ID</h3>
+
+<p>If your frame or iframe has an id or name attribute, this can be used
+instead.  If the name or ID is not unique on the page, then the first
+one found will be switched to.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode15" id="tab0code15" aria-controls="javacode15" checked>
+    
+    <label for="tab0code15">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab1code15" aria-controls="pythoncode15">
+    
+    <label for="tab1code15">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab2code15" aria-controls="cscode15">
+    
+    <label for="tab2code15">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab3code15" aria-controls="rubycode15">
+    
+    <label for="tab3code15">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab4code15" aria-controls="javascriptcode15">
+    
+    <label for="tab4code15">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode15" id="tab5code15" aria-controls="kotlincode15">
+    
+    <label for="tab5code15">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Switch frame by id</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>)
+
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Switch by ID</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame <span style="color:#2aa198">&#39;buttonframe&#39;</span>
+
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Using the ID
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>);
+
+<span style="color:#586e75">// Or using the name instead
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;myframe&#39;</span>);
+
+<span style="color:#586e75">// Now we can click the button
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>)
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>)
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="using-an-index">Using an index</h3>
+
+<p>It is also possible to use the index of the frame, such as can be
+queried using <em>window.frames</em> in JavaScript.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode16" id="tab0code16" aria-controls="javacode16" checked>
+    
+    <label for="tab0code16">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab1code16" aria-controls="pythoncode16">
+    
+    <label for="tab1code16">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab2code16" aria-controls="cscode16">
+    
+    <label for="tab2code16">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab3code16" aria-controls="rubycode16">
+    
+    <label for="tab3code16">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab4code16" aria-controls="javascriptcode16">
+    
+    <label for="tab4code16">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode16" id="tab5code16" aria-controls="kotlincode16">
+    
+    <label for="tab5code16">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Switches to the second frame  
+</span><span style="color:#586e75"></span>driver.switchTo().frame(1);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="rubycode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Switch to the second frame</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">1</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Switches to the second frame
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">1</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># switching to second iframe based on index</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;iframe&#39;</span>)[<span style="color:#2aa198">1</span>]
+
+<span style="color:#586e75"># switch to selected iframe</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Switches to the second frame
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">1</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Switches to the second frame  
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">1</span>)
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="leaving-a-frame">Leaving a frame</h3>
+
+<p>To leave an iframe or frameset, switch back to the default content
+like so:</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode17" id="tab0code17" aria-controls="javacode17" checked>
+    
+    <label for="tab0code17">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab1code17" aria-controls="pythoncode17">
+    
+    <label for="tab1code17">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab2code17" aria-controls="cscode17">
+    
+    <label for="tab2code17">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab3code17" aria-controls="rubycode17">
+    
+    <label for="tab3code17">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab4code17" aria-controls="javascriptcode17">
+    
+    <label for="tab4code17">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode17" id="tab5code17" aria-controls="kotlincode17">
+    
+    <label for="tab5code17">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># switch back to default content</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.SwitchTo().DefaultContent();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Return to the top level</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>await driver.switchTo().defaultContent();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode17" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="window-management">Window management</h2>
+
+<p>Screen resolution can impact how your web application renders, so
+WebDriver provides mechanisms for moving and resizing the browser
+window.</p>
+
+<h3 id="get-window-size">Get window size</h3>
+
+<p>Fetches the size of the browser window in pixels.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode18" id="tab0code18" aria-controls="javacode18" checked>
+    
+    <label for="tab0code18">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab1code18" aria-controls="pythoncode18">
+    
+    <label for="tab1code18">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab2code18" aria-controls="cscode18">
+    
+    <label for="tab2code18">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab3code18" aria-controls="rubycode18">
+    
+    <label for="tab3code18">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab4code18" aria-controls="javascriptcode18">
+    
+    <label for="tab4code18">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode18" id="tab5code18" aria-controls="kotlincode18">
+    
+    <label for="tab5code18">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">width</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getHeight();
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Dimension <span style="color:#268bd2">size</span> <span style="color:#719e07">=</span> driver.manage().window().getSize();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">width1</span> <span style="color:#719e07">=</span> size.getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height1</span> <span style="color:#719e07">=</span> size.getHeight();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Access each dimension individually</span>
+width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
+height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()
+width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
+height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> width = driver.Manage().Window.Size.Width;
+<span style="color:#dc322f">int</span> height = driver.Manage().Window.Size.Height;
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>System.Drawing.Size size = driver.Manage().Window.Size;
+<span style="color:#dc322f">int</span> width1 = size.Width;
+<span style="color:#dc322f">int</span> height1 = size.Height;
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Access each dimension individually</span>
+width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>width
+height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>height
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size
+width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>width
+height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>height
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { width, height } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> width1 <span style="color:#719e07">=</span> rect.width;
+<span style="color:#268bd2">const</span> height1 <span style="color:#719e07">=</span> rect.height;
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode18" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().getSize().getWidth()
+<span style="color:#719e07">val</span> height = driver.manage().window().getSize().getHeight()
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().getSize()
+<span style="color:#719e07">val</span> width1 = size.getWidth()
+<span style="color:#719e07">val</span> height1 = size.getHeight()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="set-window-size">Set window size</h3>
+
+<p>Restores the window and sets the window size.
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode19" id="tab0code19" aria-controls="javacode19" checked>
+    
+    <label for="tab0code19">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab1code19" aria-controls="pythoncode19">
+    
+    <label for="tab1code19">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab2code19" aria-controls="cscode19">
+    
+    <label for="tab2code19">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab3code19" aria-controls="rubycode19">
+    
+    <label for="tab3code19">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab4code19" aria-controls="javascriptcode19">
+    
+    <label for="tab4code19">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode19" id="tab5code19" aria-controls="kotlincode19">
+    
+    <label for="tab5code19">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().setSize(<span style="color:#719e07">new</span> Dimension(1024, 768));</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>set_window_size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>)</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Size = <span style="color:#719e07">new</span> Size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>);
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>resize_to(<span style="color:#2aa198">1024</span>,<span style="color:#2aa198">768</span>)</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode19" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size(Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>))</code></pre></div>
+</section>
+</div>
+</div></p>
+
+<h3 id="get-window-position">Get window position</h3>
+
+<p>Fetches the coordinates of the top left coordinate of the browser window.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode20" id="tab0code20" aria-controls="javacode20" checked>
+    
+    <label for="tab0code20">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab1code20" aria-controls="pythoncode20">
+    
+    <label for="tab1code20">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab2code20" aria-controls="cscode20">
+    
+    <label for="tab2code20">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab3code20" aria-controls="rubycode20">
+    
+    <label for="tab3code20">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab4code20" aria-controls="javascriptcode20">
+    
+    <label for="tab4code20">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode20" id="tab5code20" aria-controls="kotlincode20">
+    
+    <label for="tab5code20">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">x</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getY();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Point <span style="color:#268bd2">position</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">x1</span> <span style="color:#719e07">=</span> position.getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y1</span> <span style="color:#719e07">=</span> position.getY();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Access each dimension individually</span>
+x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
+y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()
+x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
+y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> x = driver.Manage().Window.Position.X;
+<span style="color:#dc322f">int</span> y = driver.Manage().Window.Position.Y;
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Point position = driver.Manage().Window.Position;
+<span style="color:#dc322f">int</span> x1 = position.X;
+<span style="color:#dc322f">int</span> y1 = position.Y;
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { x, y } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> x1 <span style="color:#719e07">=</span> rect.x;
+<span style="color:#268bd2">const</span> y1 <span style="color:#719e07">=</span> rect.y;
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode20" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> x = driver.manage().window().position.x
+<span style="color:#719e07">val</span> y = driver.manage().window().position.y
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> position = driver.manage().window().position
+<span style="color:#719e07">val</span> x1 = position.x
+int y1 = position.y
+  
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="set-window-position">Set window position</h2>
+
+<p>Moves the window to the chosen position.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode21" id="tab0code21" aria-controls="javacode21" checked>
+    
+    <label for="tab0code21">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab1code21" aria-controls="pythoncode21">
+    
+    <label for="tab1code21">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab2code21" aria-controls="cscode21">
+    
+    <label for="tab2code21">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab3code21" aria-controls="rubycode21">
+    
+    <label for="tab3code21">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab4code21" aria-controls="javascriptcode21">
+    
+    <label for="tab4code21">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode21" id="tab5code21" aria-controls="kotlincode21">
+    
+    <label for="tab5code21">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.manage().window().setPosition(<span style="color:#719e07">new</span> Point(0, 0));
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Move the window to the top left of the primary monitor</span>
+driver<span style="color:#719e07">.</span>set_window_position(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.Manage().Window.Position = <span style="color:#719e07">new</span> Point(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>move_to(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>await driver.manage().<span style="color:#b58900">window</span>().setRect({ x<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span>, y<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span> });
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode21" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.manage().window().position = Point(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+    </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="maximise-window">Maximise window</h3>
+
+<p>Enlarges the window. For most operating systems, the window will fill
+the screen, without blocking the operating system&rsquo;s own menus and
+toolbars.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode22" id="tab0code22" aria-controls="javacode22" checked>
+    
+    <label for="tab0code22">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab1code22" aria-controls="pythoncode22">
+    
+    <label for="tab1code22">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab2code22" aria-controls="cscode22">
+    
+    <label for="tab2code22">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab3code22" aria-controls="rubycode22">
+    
+    <label for="tab3code22">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab4code22" aria-controls="javascriptcode22">
+    
+    <label for="tab4code22">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode22" id="tab5code22" aria-controls="kotlincode22">
+    
+    <label for="tab5code22">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().maximize();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>maximize_window()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Maximize();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>maximize</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().maximize();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().maximize()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="fullscreen-window">Fullscreen window</h3>
+
+<p>Fills the entire screen, similar to pressing F11 in most browsers.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode23" id="tab0code23" aria-controls="javacode23" checked>
+    
+    <label for="tab0code23">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab1code23" aria-controls="pythoncode23">
+    
+    <label for="tab1code23">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab2code23" aria-controls="cscode23">
+    
+    <label for="tab2code23">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab3code23" aria-controls="rubycode23">
+    
+    <label for="tab3code23">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab4code23" aria-controls="javascriptcode23">
+    
+    <label for="tab4code23">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab5code23" aria-controls="kotlincode23">
+    
+    <label for="tab5code23">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>fullscreen_window()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.FullScreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>full_screen</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().fullscreen()</code></pre></div>
+</section>
+</div>
+</div>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+<h5 class="meta-data">
+    <a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/">
+      “Browser manipulation”
+    </a> was last updated on: 11 Nov 2019 22:38:21 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/711584ec45be17e84b67a9f0ac8ec992999b2ca7">Deploying on Mon Nov 11 22:38:21 UTC 2019, commit 935bedf606cb487b460ebc586a063fa16e7b40eb, [skip ci] (711584ec)</a>
+</h5>
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="https://selenium.dev/documentation/ja/webdriver/driver_requirements/" title="Driver requirements"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="https://selenium.dev/documentation/ja/webdriver/waits/" title="Waits" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1574173804"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1574173804"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1574173804"></script>
+
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1574173804" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1574173804"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

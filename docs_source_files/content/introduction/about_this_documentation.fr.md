@@ -11,7 +11,7 @@ et ont donné de leur temps pour améliorer l'accueil des nouveaux utilisateurs.
 
 Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir !
 La meilleure façon de communiquer un problème est de visiter
-[https://github.com/seleniumhq/docs/issues](//github.com/seleniumhq/docs/issues)
+[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues)
 et de vérifier si ce problème a déjà été remonté.
 Si ce n'est pas le cas, n'hésitez pas à ouvrir une nouvel issue !
 

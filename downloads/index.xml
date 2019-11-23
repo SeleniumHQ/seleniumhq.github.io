@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Downloads on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/downloads/</link>
+    <description>Recent content in Downloads on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 04 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/downloads/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/ruby/</link>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/javascript/</link>
+      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/java/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/python/</link>
+      <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/c#/</link>
+      <pubDate>Thu, 02 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/c#/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

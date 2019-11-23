@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css"/>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/history.css"/>
+<link rel="stylesheet" href="{{"css/main.css" | relURL}}"/>
+<link rel="stylesheet" href="{{"css/history.css" | relURL}}"/>
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 
 <body>
@@ -58,9 +58,7 @@
     </div>
 </div>
 
-{{ partial "selenium-supporters.html" . }}
-
-{{ partial "supporting-supporters.html" . }}
+{{ partial "selenium-level-sponsors.html" . }}
 
 {{ partial "support-selenium.html" . }}
 

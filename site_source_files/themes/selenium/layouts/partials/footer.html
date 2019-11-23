@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/footer.css"/>
+<link rel="stylesheet" href="{{"css/footer.css" | relURL}}"/>
 
 <html>
 <head>
@@ -18,11 +18,11 @@
             <a href="{{"events" | relURL}}">Events</a>
             <a href="{{"blog" | relURL}}">News</a>
             <a href="{{"history" | relURL}}">History</a>
-            <a href="https://www.seleniumhq.org/sponsors/">Contribute</a>
-            <a href="https://www.seleniumhq.org/sponsors/">Sponsors/Sponsoring</a>
-            <a href="https://www.seleniumhq.org/sponsors/">Get Involved</a>
+            <a href="{{"sponsor" | relURL}}">Contribute</a>
+            <a href="{{"sponsors" | relURL}}">Sponsors</a>
+            <a href="{{"getinvolved" | relURL}}">Get Involved</a>
             <a href="{{"ecosystem" | relURL}}">Ecosystem</a>
-            <a>License</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
         </div>
         <div class="footer-section">
             <a href="{{"downloads" | relURL}}"><h3>Downloads</h3></a>
@@ -34,11 +34,10 @@
             <a href="{{"projects" | relURL}}"><h3>Projects</h3></a>
             <a href="{{"projects/#selenium-webdriver" | relURL}}">Selenium WebDriver</a>
             <a href="{{"projects/#selenium-grid" | relURL}}">Selenium Grid</a>
-            <a href="{{"projects/#selenium-remote" | relURL}}">Selenium Remote Control</a>
             <a href="{{"projects/#selenium-ide" | relURL}}">Selenium IDE</a>
         </div>
         <div class="footer-section">
-            <a href="{{"help" | relURL}}"><h3>Support</h3></a>
+            <a href="{{"support" | relURL}}"><h3>Support</h3></a>
             <a href="{{"blog" | relURL}}">Blog</a>
             <a href="{{"documentation" | relURL}}">Documentation</a>
         </div>
@@ -46,16 +45,16 @@
     <div class="social">
         Follow us on twitter to keep up-to-date with all Selenium development and community activity!
         <div class="social-icons">
-            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="{{ .Site.BaseURL }}/images/mail.png"/></a>
-            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="{{ .Site.BaseURL }}/images/github.png"/></a>
-            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="{{ .Site.BaseURL }}/images/twitter.png"/></a>
-            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="{{ .Site.BaseURL }}/images/facebook.png"/></a>
-            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="{{ .Site.BaseURL }}/images/youtube.png"/></a>
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="{{"images/mail.png" | relURL}}"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="{{"images/github.png" | relURL}}"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="{{"images/twitter.png" | relURL}}"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="{{"images/facebook.png" | relURL}}"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="{{"images/youtube.png" | relURL}}"/></a>
         </div>
     </div>
 </footer>
 <div class="sfc">
-    <p style="text-align:right;">All rights reserved, Software Freedom Conservancy</p>
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
 </div>
 <body>
 
