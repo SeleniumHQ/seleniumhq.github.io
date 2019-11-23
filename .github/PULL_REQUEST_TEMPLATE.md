@@ -15,10 +15,7 @@ Avoid large PRs, help reviewers by making them as simple and short as possible.
 
 ### Types of changes
 <!--- What types of changes does your code introduce? Put an `x` in all the boxes that apply: -->
-- [ ] Change to the site (I am attaching a screenshot showing the before and after, if needed)
+- [ ] Change to the site (I am attaching a screenshot showing the before and after)
 - [ ] Code example added (and I also added the example to all translated languages)
 - [ ] Improved translation
 - [ ] Added new translation (and I also added a notice to each document missing translation)
-
-### CLA
-- [ ] By placing an `X` in the preceding checkbox, I verify that I have signed the [Contributor License Agreement](https://github.com/SeleniumHQ/selenium/blob/master/CONTRIBUTING.md#step-6-sign-the-cla)
