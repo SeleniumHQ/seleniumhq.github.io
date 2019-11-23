@@ -1,15 +1,8 @@
 ---
-title: "Introduction"
+title: "소개"
 chapter: true
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-# Introduction
-
-Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers. 
+# 소개
+셀레니엄은 웹 브라우저의 자동화를 가능하게 하고 지원하는 다양한 도구와 도서관을 위한 우산 프로젝트다.
