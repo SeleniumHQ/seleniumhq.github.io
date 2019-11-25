@@ -161,7 +161,18 @@ account_page = login_as(user.get_email(), user.get_password())
 # Todavía no tenemos una muestra de código en Ruby - ayúdenos y genere un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Todavía no tenemos una muestra de código JavaScript - ayúdenos y genere un PR (pull request)
+// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+var user = userFactory.createCommonUser(); //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+var accountPage = loginAs(user.email, user.password);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Create a user who has read-only permissions--they can configure a unicorn,
