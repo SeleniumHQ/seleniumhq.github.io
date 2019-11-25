@@ -316,7 +316,11 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 # Todavía no tenemos una muestra de código en Ruby - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
+// The exists() method from UnicornConfirmationPage will take the Sparkles
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+assert(unicornConfirmationPage.exists(sparkles), "Sparkles should have been created, with all attributes intact");
+
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // The exists() method from UnicornConfirmationPage will take the Sparkles 
