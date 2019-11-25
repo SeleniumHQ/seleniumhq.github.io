@@ -258,7 +258,22 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
 # Todavía no tenemos una muestra de código en Ruby - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Todavía no tenemos una muestra de código en JavaScript - ayúdanos y genera un PR (pull request)
+// The Unicorn is a top-level Object--it has attributes, which are set here.
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+var sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
+
+// Since we are already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+
+var addUnicornPage = accountPage.addUnicorn();
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+var unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);
+
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // The Unicorn is a top-level Object--it has attributes, which are set here. 
