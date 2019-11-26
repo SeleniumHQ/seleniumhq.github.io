@@ -114,3 +114,44 @@ class HelloSelenium {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## keyDown
+
+The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+    // Please make a PR
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    // Please make a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+       // Please make a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+    # Please make a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+(async function example() {
+    let driver = await new Builder().forBrowser('chrome').build();
+
+    try {
+        // Navigate to Url
+        await driver.get('https://www.google.com');
+
+        // Enter text "webdriver" and perform keyboard action "Enter"
+        await driver.findElement(By.name('q')).sendKeys('webdriver', Key.ENTER);
+
+        // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+        await driver.actions().keyDown(Key.CONTROL).sendKeys('a').perform();
+    }
+    finally {
+        await driver.quit();
+    }
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // Please make a PR for this
+  {{< / code-panel >}}
+{{< / code-tab >}}
