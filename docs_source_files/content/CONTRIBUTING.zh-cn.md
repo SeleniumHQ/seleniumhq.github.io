@@ -60,7 +60,7 @@ Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
 and check out your copy locally.
 
 ```shell
-% git clone git@github.com:username/seleniumhq.github.io.git
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 

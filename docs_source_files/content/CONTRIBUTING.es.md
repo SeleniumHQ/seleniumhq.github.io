@@ -57,7 +57,7 @@ Haga _fork_ al proyecto [en Github](https://github.com/seleniumhq/seleniumhq.git
 y verifique su copia localmente.
 
 ```shell
-% git clone git@github.com:username/seleniumhq.github.io.git
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
