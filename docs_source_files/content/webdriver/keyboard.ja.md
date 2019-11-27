@@ -121,13 +121,54 @@ The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    // Please make a PR
+WebDriver driver = new ChromeDriver();
+try {
+    // Navigate to Url
+    driver.get("https://google.com");
+
+    // Enter text "q" and perform keyboard action "Enter"
+    driver.findElement(By.name("q")).sendKeys("webdriver" + Keys.ENTER);
+
+    Actions actionProvider = new Actions(driver);
+    Action keydown = actionProvider.keyDown(Keys.CONTROL).sendKeys("a").build();
+    keydown.perform();
+} finally {
+    driver.quit();
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-    // Please make a PR
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Enter "webdriver" text and perform "ENTER" keyboard action
+driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
+
+# Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+webdriver.ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-       // Please make a PR
+IWebDriver driver = new ChromeDriver();
+try
+{
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://google.com");
+
+    // Enter text "q" and perform keyboard action "Enter"
+    driver.FindElement(By.Name("q")).SendKeys("webdriver" + Keys.Enter);
+
+    // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+    Actions actionProvider = new Actions(driver);
+    IAction keydown = actionProvider.KeyDown(Keys.Control).SendKeys("a").Build();
+    keydown.Perform();
+}
+finally
+{
+    driver.Quit();
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
     # Please make a PR
