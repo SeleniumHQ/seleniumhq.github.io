@@ -172,7 +172,21 @@ finally
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # Please make a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Enter text "cheese" and perform keyboard action "Enter"
+  driver.find_element(name: 'q').send_keys 'q', :return
+
+  # Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+  driver.action.key_down(:control).send_keys('a').perform
+
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 (async function example() {
