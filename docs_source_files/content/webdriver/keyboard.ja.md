@@ -121,7 +121,30 @@ The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    // Please make a PR
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class HelloSelenium {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            // Navigate to Url
+            driver.get("https://google.com");
+            Actions action = new Actions(driver);
+
+            // Enter text "q" and perform keyboard action "Enter"
+            driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER);
+
+            // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+            action.keyDown(Keys.CONTROL).sendKeys("a").perform();
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
     // Please make a PR
