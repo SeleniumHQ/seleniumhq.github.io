@@ -207,6 +207,26 @@ end
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // Please make a PR for this
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+
+        // Enter text "q" and perform keyboard action "Enter"
+        driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+        val action = Actions(driver)
+
+        // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+        action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
