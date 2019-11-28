@@ -250,7 +250,8 @@ using (var driver = new FirefoxDriver())
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+let foo = await driver.findElement(By.name("q")).getText();
+assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
