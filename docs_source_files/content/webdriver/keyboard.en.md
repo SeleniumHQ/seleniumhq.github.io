@@ -49,8 +49,8 @@ using (var driver = new FirefoxDriver())
     // Navigate to Url
     driver.Navigate().GoToUrl("https://google.com");
 
-    // Enter text "q" and perform keyboard action "Enter"
-    driver.FindElement(By.Name("q")).SendKeys("q" + Keys.Enter);
+    // Enter "webdriver" text and perform "ENTER" keyboard action
+    driver.FindElement(By.Name("q")).SendKeys("webdriver" + Keys.Enter);
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
@@ -60,8 +60,8 @@ begin
   # Navigate to URL
   driver.get 'https://google.com'
 
-  # Enter text "cheese" and perform keyboard action "Enter"
-  driver.find_element(name: 'q').send_keys 'cheese', :return
+  # Enter "webdriver" text and perform "ENTER" keyboard action
+  driver.find_element(name: 'q').send_keys 'webdriver', :return
 
 ensure
   driver.quit
@@ -121,7 +121,7 @@ try {
     // Navigate to Url
     driver.get("https://google.com");
 
-    // Enter text "q" and perform keyboard action "Enter"
+    // Enter "webdriver" text and perform "ENTER" keyboard action
     driver.findElement(By.name("q")).sendKeys("webdriver" + Keys.ENTER);
 
     Actions actionProvider = new Actions(driver);
@@ -152,7 +152,7 @@ try
     // Navigate to Url
     driver.Navigate().GoToUrl("https://google.com");
 
-    // Enter text "q" and perform keyboard action "Enter"
+    // Enter "webdriver" text and perform "ENTER" keyboard action
     driver.FindElement(By.Name("q")).SendKeys("webdriver" + Keys.Enter);
 
     // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
@@ -172,8 +172,8 @@ begin
   # Navigate to URL
   driver.get 'https://google.com'
 
-  # Enter text "q" and perform keyboard action "Enter"
-  driver.find_element(name: 'q').send_keys 'q', :return
+  # Enter "webdriver" text and perform "ENTER" keyboard action
+  driver.find_element(name: 'q').send_keys 'webdriver', :return
 
   # Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
   driver.action.key_down(:control).send_keys('a').perform
@@ -213,8 +213,8 @@ fun main() {
         // Navigate to Url
         driver.get("https://google.com")
 
-        // Enter text "q" and perform keyboard action "Enter"
-        driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+        // Enter "webdriver" text and perform "ENTER" keyboard action
+        driver.findElement(By.name("q")).sendKeys("webdriver" + Keys.ENTER)
         val action = Actions(driver)
 
         // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
