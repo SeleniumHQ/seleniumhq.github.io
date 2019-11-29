@@ -12,20 +12,20 @@
     <title>Keyboard :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1574870742" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1574870742" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1575015574" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1575015574" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1574870742" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1575015574" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1574870742"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1575015574"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1574870742"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1574870742"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1575015574"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1575015574"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1574870742"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1575015574"></script>
 
     
   </div>
@@ -2059,10 +2059,10 @@ interface which allows us to provide virtualized device input to the web browser
 <span style="color:#719e07">from</span> selenium.webdriver.common.keys <span style="color:#719e07">import</span> Keys
 driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox()
 
-<span style="color:#586e75"># Navigate to url</span>
+<span style="color:#586e75"># Navigate to url</span>
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
-<span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
+<span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
 driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span><span style="color:#719e07">+</span>Keys<span style="color:#719e07">.</span>ENTER)
   </code></pre></div>
 </section>
@@ -2076,8 +2076,8 @@ driver<span style="color:#719e07">.</span>find_element_by_name(<span style="colo
     <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
 
-    <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
-</span><span style="color:#586e75"></span>    driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;q&#34;</span> + Keys.Enter);
+    <span style="color:#586e75">// Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
+</span><span style="color:#586e75"></span>    driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.Enter);
 }
   
 </code></pre></div>
@@ -2090,11 +2090,11 @@ driver<span style="color:#719e07">.</span>find_element_by_name(<span style="colo
 <span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
 driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>
 <span style="color:#719e07">begin</span>
-  <span style="color:#586e75"># Navigate to URL</span>
+  <span style="color:#586e75"># Navigate to URL</span>
   driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
 
-  <span style="color:#586e75"># Enter text &#34;cheese&#34; and perform keyboard action &#34;Enter&#34;</span>
-  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;cheese&#39;</span>, <span style="color:#2aa198">:return</span>
+  <span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
+  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;webdriver&#39;</span>, <span style="color:#2aa198">:return</span>
 
 <span style="color:#719e07">ensure</span>
   driver<span style="color:#719e07">.</span>quit
@@ -2206,7 +2206,7 @@ WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">
     <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>    driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
 
-    <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
+    <span style="color:#586e75">// Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
 </span><span style="color:#586e75"></span>    driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
 
     Actions <span style="color:#268bd2">actionProvider</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
@@ -2226,13 +2226,13 @@ WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">
 <span style="color:#719e07">from</span> selenium.webdriver.common.keys <span style="color:#719e07">import</span> Keys
 driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
 
-<span style="color:#586e75"># Navigate to url</span>
+<span style="color:#586e75"># Navigate to url</span>
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
-<span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
+<span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
 driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span><span style="color:#719e07">+</span>Keys<span style="color:#719e07">.</span>ENTER)
 
-<span style="color:#586e75"># Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page</span>
+<span style="color:#586e75"># Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>key_down(Keys<span style="color:#719e07">.</span>CONTROL)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;a&#34;</span>)<span style="color:#719e07">.</span>perform()
   </code></pre></div>
 </section>
@@ -2247,7 +2247,7 @@ IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
     <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
 
-    <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
+    <span style="color:#586e75">// Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
 </span><span style="color:#586e75"></span>    driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.Enter);
 
     <span style="color:#586e75">// Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
@@ -2267,7 +2267,21 @@ IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
 
 <section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-    <span style="color:#586e75"># Please make a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to URL</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+
+  <span style="color:#586e75"># Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action</span>
+  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;webdriver&#39;</span>, <span style="color:#2aa198">:return</span>
+
+  <span style="color:#586e75"># Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>key_down(<span style="color:#2aa198">:control</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#39;a&#39;</span>)<span style="color:#719e07">.</span>perform
+
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -2300,8 +2314,28 @@ IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
 
 <section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-    <span style="color:#586e75">// Please make a PR for this
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.By
+<span style="color:#719e07">import</span> org.openqa.selenium.Keys
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
+
+        <span style="color:#586e75">// Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
+</span><span style="color:#586e75"></span>        driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.ENTER)
+        <span style="color:#719e07">val</span> action = Actions(driver)
+
+        <span style="color:#586e75">// Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+</span><span style="color:#586e75"></span>        action.keyDown(Keys.CONTROL).sendKeys(<span style="color:#2aa198">&#34;a&#34;</span>).build().perform();
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2314,7 +2348,7 @@ IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 27 Nov 2019 22:03:44 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/8385ba8254cfc9f1cd98712c5cb72cda4dfca4fb">KeyDown Java, Python, CSharp Translation Completed (#96) [deploy site] (8385ba82)</a>
+    </a> was last updated on: 29 Nov 2019 09:17:53 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/b1e94b4bedf8926ae1ddefcf2ba59629959e9d7e">Unifying code samples for keyboard [deploy site] (b1e94b4b)</a>
 </h5>
         
         </div> 
@@ -3527,19 +3561,19 @@ IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1574870742"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1575015574"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1574870742"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1574870742"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1575015574"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1575015574"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1574870742" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1574870742"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1575015574" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1575015574"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
