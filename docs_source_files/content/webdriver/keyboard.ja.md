@@ -171,7 +171,21 @@ finally
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # Please make a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Enter text "q" and perform keyboard action "Enter"
+  driver.find_element(name: 'q').send_keys 'q', :return
+
+  # Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+  driver.action.key_down(:control).send_keys('a').perform
+
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 (async function example() {
@@ -193,6 +207,26 @@ finally
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // Please make a PR for this
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+
+        // Enter text "q" and perform keyboard action "Enter"
+        driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+        val action = Actions(driver)
+
+        // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
+        action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
