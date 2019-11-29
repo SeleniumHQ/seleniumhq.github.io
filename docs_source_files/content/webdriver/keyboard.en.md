@@ -172,7 +172,7 @@ begin
   # Navigate to URL
   driver.get 'https://google.com'
 
-  # Enter text "cheese" and perform keyboard action "Enter"
+  # Enter text "q" and perform keyboard action "Enter"
   driver.find_element(name: 'q').send_keys 'q', :return
 
   # Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
