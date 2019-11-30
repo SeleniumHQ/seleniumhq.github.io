@@ -231,3 +231,68 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## keyUp
+
+The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class HelloSelenium {
+    public static void main(String[] args) {
+        WebDriver driver = new FirefoxDriver();
+        try {
+            // Navigate to Url
+            driver.get("https://google.com");
+            Actions action = new Actions(driver);
+
+            // Store google search box WebElement
+            WebElement search = driver.findElement(By.name("q"));
+
+            // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+            action.keyDown(Keys.SHIFT).sendKeys(search,"qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").perform();
+        } finally {
+            driver.quit();
+        }
+    }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    // Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+    # Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder, By, Key} = require('selenium-webdriver');
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    try {
+        // Navigate to Url
+        await driver.get('https://www.google.com');
+
+        // Store google search box WebElement
+        let search = await driver.findElement(By.name('q'));
+
+        // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+        await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys("qwerty").keyUp(Key.SHIFT).sendKeys("qwerty").perform();
+    }
+    finally {
+        await driver.quit();
+    }
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
