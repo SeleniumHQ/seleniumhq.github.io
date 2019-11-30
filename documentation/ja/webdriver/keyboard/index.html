@@ -12,20 +12,20 @@
     <title>Keyboard :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1575015572" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1575015572" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1575128689" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1575128689" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1575015572" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1575128689" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1575015572"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1575128689"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1575015572"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1575015572"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1575128689"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1575128689"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1575015572"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1575128689"></script>
 
     
   </div>
@@ -1946,6 +1946,7 @@
 <ul>
 <li><a href="#sendkeys">sendKeys</a></li>
 <li><a href="#keydown">keyDown</a></li>
+<li><a href="#keyup">keyUp</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2339,6 +2340,139 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </div>
 </div>
 
+<h2 id="keyup">keyUp</h2>
+
+<p>The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
+    
+    <label for="tab0code3">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
+    
+    <label for="tab1code3">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
+    
+    <label for="tab2code3">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
+    
+    <label for="tab3code3">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
+    
+    <label for="tab4code3">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
+    
+    <label for="tab5code3">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.interactions.Actions;
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+        <span style="color:#719e07">try</span> {
+            <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>            driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+            Actions <span style="color:#268bd2">action</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
+
+            <span style="color:#586e75">// Store google search box WebElement
+</span><span style="color:#586e75"></span>            WebElement <span style="color:#268bd2">search</span> <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
+
+            <span style="color:#586e75">// Enters text &#34;qwerty&#34; with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+</span><span style="color:#586e75"></span>            action.keyDown(Keys.SHIFT).sendKeys(search,<span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Keys.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).perform();
+        } <span style="color:#719e07">finally</span> {
+            driver.quit();
+        }
+    }
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+    <span style="color:#719e07">//</span> Please <span style="color:#719e07">raise</span> a PR
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+    <span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+    <span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+
+        <span style="color:#586e75">// Store google search box WebElement
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">let</span> search <span style="color:#719e07">=</span> await driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
+
+        <span style="color:#586e75">// Enters text &#34;qwerty&#34; with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+</span><span style="color:#586e75"></span>        await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).perform();
+    }
+    <span style="color:#719e07">finally</span> {
+        await driver.quit();
+    }
+})();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+    <span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2347,7 +2481,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 29 Nov 2019 09:17:53 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/b1e94b4bedf8926ae1ddefcf2ba59629959e9d7e">Unifying code samples for keyboard [deploy site] (b1e94b4b)</a>
+    </a> was last updated on: 30 Nov 2019 21:13:23 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3b386dd94cc9447341e4e8e3c91635344e771b3a">Added keyUp documentation and sample code in Java and JavaScript (#103) [deploy site] (3b386dd9)</a>
 </h5>
         
         </div> 
@@ -3560,19 +3694,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1575015572"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1575128689"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1575015572"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1575015572"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1575128689"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1575128689"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1575015572" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1575015572"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1575128689" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1575128689"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
