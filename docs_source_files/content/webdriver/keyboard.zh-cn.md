@@ -265,7 +265,20 @@ public class HelloSelenium {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-    // Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store google search box WebElement
+search = driver.find_element_by_name("q")
+
+action = webdriver.ActionChains(driver)
+
+# Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+action.key_down(Keys.SHIFT).send_keys_to_element(search, "qwerty").key_up(Keys.SHIFT).send_keys("qwerty").perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
