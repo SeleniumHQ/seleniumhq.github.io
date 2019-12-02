@@ -268,7 +268,37 @@ public class HelloSelenium {
     // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // Please raise a PR
+ using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace HelloSelenium
+{
+    class HelloSelenium
+    {
+        public static void Main(string[] args)
+        {
+            IWebDriver driver = new ChromeDriver();
+            try
+            {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://google.com");
+
+                Actions action = new Actions(driver);
+                // Store google search box WebElement
+                IWebElement search = driver.FindElement(By.Name("q"));
+
+                // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+                action.KeyDown(Keys.Shift).SendKeys(search, "qwerty").KeyUp(Keys.Shift).SendKeys("qwerty").Perform();
+
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
+
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
     # Please raise a PR
