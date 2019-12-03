@@ -63,18 +63,6 @@ to the use of the information contained herein.
 | [Code Tabs Style](//codepen.io/markcaron/pen/MvGRYV) | --- | [MIT](//blog.codepen.io/legal/licensing/) |
 
 
-## HTML version and source code
-
-An HTML version of this documentation is freely available from
-[https://seleniumhq.github.io/docs](//seleniumhq.github.io/docs).
-
-The source code for the examples included,
-and for the book itself is available from the Selenium documentation repository
-at [https://seleniumhq.github.io/docs](//seleniumhq.github.io/docs).
-See instructions on how to check out the code via git at
-[https://help.github.com/articles/fetching-a-remote/](//help.github.com/articles/fetching-a-remote/).
-
-
 ## License
 
 All code and documentation originating from the Selenium project

@@ -192,7 +192,7 @@ current window by using:
 ### Switching windows or tabs
 
 Clicking a link which opens in a 
-<a href="https://seleniumhq.github.io/docs/" target="_blank"> new window</a>
+<a href="https://seleniumhq.github.io" target="_blank"> new window</a>
 will focus the new window or tab on screen, but WebDriver will not know which
 window the Operating System considers active.  To work with the new window 
 you will need to switch to it. If you have only two tabs or windows open, 
@@ -233,7 +233,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # Start the driver
 with webdriver.Firefox() as driver:
     # Open URL
-    driver.get("https://seleniumhq.github.io/docs/wd.html")
+    driver.get("https://seleniumhq.github.io")
 
     # Setup wait for later
     wait = WebDriverWait(driver, 10)
@@ -573,7 +573,7 @@ see the following:
 
 ```html
 <div id="modal">
-  <iframe id="buttonframe" name="myframe"  src="https://seleniumhq.github.io/docs/iframe.html">
+  <iframe id="buttonframe" name="myframe"  src="https://seleniumhq.github.io">
    <button>Click here</button>
  </iframe>
 </div>

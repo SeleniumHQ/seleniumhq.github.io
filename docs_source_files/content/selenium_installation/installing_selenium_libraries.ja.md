@@ -1,19 +1,15 @@
 ---
-title: "Installing Selenium libraries"
+title: "Seleniumライブラリのインストール"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.
+最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。
+インストールの方法は選択した言語によって異なります。
 
 ## _Java_
-Installation of Selenium libraries for Java can be done using Maven.
-Add the _selenium-java_ dependency in your project pom.xml:
+JavaへのSeleniumライブラリのインストールはMavenを使います。
+プロジェクトのpom.xmlに _selenium-java_ の依存関係を追加してください。
 
 ```xml
 <dependency>
@@ -23,12 +19,9 @@ Add the _selenium-java_ dependency in your project pom.xml:
 </dependency>
 ```
 
-The _selenium-java_ dependency supports running your automation
-project with all Selenium supported browsers. If you want to run tests
-only in a specific browser, you can add the dependency for that browser
-in your _pom.xml_ file.
-For example, you should add following dependency in your _pom.xml_
-file to run your tests only in Firefox:
+_selenium-java_ 依存関係は、Seleniumがサポートする全てのブラウザを自動化プロジェクトで実行できるようにします。
+もし特定のブラウザだけでテストを実行したい場合は、そのブラウザの依存関係を _pom.xml_ ファイルに追加することができます。
+例えば、Firefoxのみでテストを実行するためには下記の依存関係を _pom.xml_ ファイルに追加します。
 
 ```xml
 <dependency>
@@ -38,8 +31,7 @@ file to run your tests only in Firefox:
 </dependency>
 ```
 
-In a similar manner, if you want to run tests only in Chrome,
-you should add the following dependency:
+同じように、Chromeのみでテストを実行するためには下記の依存関係を追加します。
 
 ```xml
 <dependency>
@@ -50,21 +42,21 @@ you should add the following dependency:
 ```
 
 ## _Python_
-Installation of Selenium libraries for Python can be done using pip:
+PythonへのSeleniumライブラリのインストールはpipを使います。
 
 ```shell
 pip install selenium
 ```
 
-Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) and install it using _setup.py_:
+また、[PyPI source archive](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz)をダウンロードして、 _setup.py_ でインストールすることもできます。
 
 ```shell
 python setup.py install
 ```
 
 ## _C#_
-Installation of Selenium libraries for C# can be done using NuGet:
+C#へのSeleniumライブラリのインストールはNuGetを使います。
 
 ```shell
 # Using package manager
@@ -74,14 +66,14 @@ dotnet add package Selenium.WebDriver
 ```
 
 ## _Ruby_
-Installation of Selenium libraries for Ruby can be done using gem:
+RubyへのSeleniumライブラリのインストールはgemを使います。
 
 ```shell
 gem install selenium-webdriver
 ```
 
 ## _JavaScript_
-Installation of Selenium libraries for JavaScript can be done using npm:
+JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
 
 ```shell
 npm install selenium-webdriver

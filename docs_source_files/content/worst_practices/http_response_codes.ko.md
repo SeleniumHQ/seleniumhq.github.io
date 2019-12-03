@@ -1,59 +1,29 @@
 ---
-title: "HTTP response codes"
+title: "HTTP 응답 코드"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium RC의 일부 브라우저 구성에서 Selenium은 자동화되고 있는 브라우저와 
+사이트 사이의 프록시 역할을 했다. 이것은 셀레니움을 통과하는 모든 브라우저 
+트래픽이 캡처되거나 조작될 수 있다는 것을 의미했다. `captureNetworkTraffic()` 방법은 
+HTTP 응답 코드를 포함하여 자동화되고 있는 브라우저와 사이트 사이의 모든 네트워크 트래픽을 캡처하기 위한 것이다.
 
-For some browser configurations in Selenium RC,
-Selenium acted as a proxy between the browser
-and the site being automated.
-This meant that all browser traffic passed through Selenium
-could be captured or manipulated.
-The `captureNetworkTraffic()` method
-purported to capture all of the network traffic between the browser
-and the site being automated,
-including HTTP response codes.
+Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근방식으로, 사용자처럼 행동하는 것을 선호한다.
+이는 당신이 WebDriver로 시험을 작성하는 방식으로 표현된다. 자동 기능 테스트에서 상태 코드 확인은 테스트 
+실패의 특별히 중요한 세부 사항은 아니다; 그 이전의 단계들이 더 중요하다.
 
-Selenium WebDriver is a completely different approach
-to browser automation,
-preferring to act more like a user.
-This is represented in the way you write tests with WebDriver.
-In automated functional testing,
-checking the status code
-is not a particularly important detail of a test's failure;
-the steps that preceded it are more important.
+브라우저는 항상 HTTP 상태 코드, 예를 들어 404 또는 500 오류 페이지를 나타낸다.
+이러한 오류 페이지 중 하나에 부딪쳤을 때 "빠르게 실패"하는 간단한 방법은 페이지 
+로드 때마다 신뢰할 수 있는 지점(예: "h1" 태그)의 페이지 제목이나 내용을 확인하는 것이다.
+페이지 개체 모델을 사용하는 경우, 이 검사를 클래스 생성자 또는 페이지 로드가 예상되는 
+유사한 지점에 포함할 수 있다. 때때로, HTTP 코드는 브라우저의 에러 페이지에 표시될 수 있고 
+당신은 이것을 읽고 당신의 디버깅 출력을 향상시키기 위해 WebDriver를 사용할 수 있다.
 
-The browser will always represent the HTTP status code,
-imagine for example a 404 or a 500 error page.
-A simple way to “fail fast” when you encounter one of these error pages
-is to check the page title or content of a reliable point
-(e.g. the `<h1>` tag) after every page load.
-If you are using the page object model,
-you can include this check in your class constructor
-or similar point where the page load is expected.
-Occasionally, the HTTP code may even be represented
-in the browser's error page
-and you could use WebDriver to read this
-and improve your debugging output.
+웹페이지 자체를 확인하는 것은 웹브라이버의 이상적인 관행과 일치한다.
 
-Checking the webpage itself is in line
-with WebDriver's ideal practice
-of representing and asserting upon the user’s view of the website.
-
-If you insist, an advanced solution to capturing HTTP status codes
-is to replicate the behaviour of Selenium RC by using a proxy.
-WebDriver API provides the ability to set a proxy for the browser,
-and there are a number of proxies that will
-programmatically allow you to manipulate
-the contents of requests sent to and received from the web server.
-Using a proxy lets you decide how you want to respond
-to redirection response codes.
-Additionally, not every browser
-makes the response codes available to WebDriver,
-so opting to use a proxy
-allows you to have a solution that works for every browser.
+당신이 주장한다면, HTTP 상태 코드를 캡처하는 고급 해결책은 프록시를 사용하여 Selenium RC의 
+행동을 복제하는 것이다. WebDriver API는 브라우저의 프록시를 설정할 수 있는 기능을 제공하며, 
+웹 서버로부터 송수신되는 요청의 내용을 프로그램적으로 조작할 수 있는 다수의 프록시가 있다.
+프록시를 사용하면 리디렉션 응답 코드에 응답할 방법을 결정할 수 있다. 또한, 모든 브라우저가 
+WebDriver에서 응답 코드를 사용할 수 있게 하는 것은 아니므로, 프록시를 사용하기로 선택하면 
+모든 브라우저에 적합한 솔루션을 가질 수 있다.

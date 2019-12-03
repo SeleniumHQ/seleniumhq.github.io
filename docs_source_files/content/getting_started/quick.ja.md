@@ -1,41 +1,26 @@
 ---
-title: "Quick tour"
+title: "クイックツアー"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
-Selenium is not just one tool or API
-but it composes many tools.
+Seleniumは一つのツールやAPIではありません。たくさんのツールから構成されています。
 
 ## WebDriver
 
-If you are beginning with desktop website test automation then you
-are going to be using WebDriver APIs. _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ 
-uses browser automation APIs provided by browser vendors to control browser and
-run tests. This is as if a real user is operating the browser. Since
-WebDriver does not require its API to be compiled with application
-code, it is not intrusive in nature. Hence, you are testing the
-same application which you push live.
-
+デスクトップのウェブサイトのテスト自動化をはじめるのなら、WebDriver APIを使いましょう。
+_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ はブラウザ自動化のAPIを使用します。このAPIは、ブラウザをコントロールしてテストを実行するためにブラウザベンダーによって提供されています。これは現実のユーザーがブラウザを操作するかのように動きます。
+WebDriverのAPIはアプリケーションのコードと一緒にコンパイルする必要がありませんから、全く邪魔になりません。
+これによって、あなたは本番環境と同じアプリケーションをテストすることができます。
 
 ## IDE
 
-_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment) 
-is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome 
-and Firefox extension and is generally the most efficient way to develop 
-test cases. It records the users actions in the browser for you, using 
-existing Selenium commands, with parameters defined by the context of 
-that element. This is not only a time-saver, but also an excellent way 
-of learning Selenium script syntax.
-
+_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment: 統合開発環境)はSeleniumのテストケースを開発するためのツールです。
+これは利用しやすいChromeとFirefoxの拡張機能であり、テストケースを開発するための一般に最も効率的なツールです。
+IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。
+これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
 
 
 ## Grid
 
-Soon after development of WebDriver tests, you may face a need of
-running your tests on multiple browser and operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
+WebDriverのテストを開発した後、テストを複数のブラウザやOSの組み合わせで実行する必要性に直面するかもしれません。
+_[Grid]({{< ref "/grid/_index.md" >}})_ はその助けになります。
