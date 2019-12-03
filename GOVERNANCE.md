@@ -214,3 +214,72 @@ ard TSC motion.
 
 1. Invite to the Slack PLC chat room (`selenium-plc`)
 1. Tweet congratulations to the new PLC member from the SeleniumHQ Twitter account
+
+## Communication Channels
+
+The project maintains various channels for providing information, supporting development
+and enabling communication between team members. Adherence to the project's
+[Code of Conduct](/CODE_OF_CONDUCT.md) is strictly mandatory for all types of communication
+in these channels.
+
+- Twitter Account ([`@seleniumhq`](https://twitter.com/seleniumhq)): for communicating
+and promoting news around the project or project related topics.
+- [Chat Room](https://webchat.freenode.net/#selenium): chat for all Selenium users to seek
+help and support on problems using the project.
+- [Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y):
+mirrors the IRC Chat room and is also used by all Selenium users to seek help and support
+on problems using the project.
+- Project Committers Channel, `selenium-committers` in the Slack channel mentioned above:
+private channel for members of the Project Committers team to discuss contributions and
+organise other collaborative efforts.
+- TLC Channel, `selenium-tlc` in the Slack channel mentioned above:
+private channel for TLC members to discuss technical planning and technical project roadmap. 
+- PLC Channel, `selenium-plc` in the Slack channel mentioned above:
+private channel for PLC members to overall project planning, roadmap and related issues. 
+
+## Consensus Seeking Process
+
+The PLC and TLC follow a [Consensus Seeking](https://en.wikipedia.org/wiki/Consensus-seeking_decision-making)
+decision making model.
+
+When an agenda item has appeared to reach a consensus, the moderator will ask
+"Does anyone object?" as a final call for dissent from the consensus.
+
+If an agenda item cannot reach a consensus, a PLC/TLC member can call for either
+a closing vote or a vote to table the issue to the next meeting. The call for a
+vote must be approved by a majority of the TSC or else the discussion will continue.
+Simple majority wins.
+
+## Sponsorship
+
+The Selenium project is a member of the Software Freedom Conservancy, a 501(c)3 non-profit
+organization. The Conservancy has allowed us to pool organizational resources with other
+projects, such as Inkscape, Samba, and Wine, in order to reduce the management overhead
+associated with creating our own, dedicated legal entity.
+
+Please see more details at https://selenium.dev/sponsor/
+
+## Commercial and Community Driven Projects
+
+The wide use of the tools provided by the Selenium project has created a large offer of
+commercial services and open source/community driven projects. The Selenium project
+enables and encourages anyone to start any type of project or service that has as its
+objective to simplify and spread the use of Selenium across the community.
+
+Nevertheless, due to its open source, community and non-profit origin, the Selenium
+project will only mention on its website projects of the same nature based on Selenium
+or WebDriver. If a commercial tool or project wants to be mentioned in the Selenium website,
+please see the [Sponsorship](#sponsorship) section of this document.      
+
+
+## Raising Issues Related to Governance
+
+This governance model necessarily leaves many situations unspecified. If questions arise
+as to how a given situation should proceed according to the overall goals of the project,
+the best thing to do is to open a GitHub issue and ping the PLC/TLC members.
+
+----
+
+This work is a derivative of the [ESLint Project Governance Model](https://github.com/eslint/eslint/blob/master/docs/maintainer-guide/governance.md).
+
+This work is licensed under a [Creative Commons Attribution-ShareAlike 2.0 UK: England & Wales License](https://creativecommons.org/licenses/by-sa/2.0/uk/).
