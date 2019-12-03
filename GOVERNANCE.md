@@ -98,10 +98,74 @@ be nominated to become a TLC member, described below.
 #### Process for Adding Committers
 
 1. Add the GitHub user to relevant GitHub team:
-    * "selenium-committers" for the main Selenium repo
-    * "selenium-ide" for the Selenium IDE repo
-    * "documentation" for the website and documentation repo
-    * "docker-owners" for the Docker-Selenium repo
+    * `selenium-committers` for the main Selenium repo
+    * `selenium-ide` for the Selenium IDE repo
+    * `documentation` for the website and documentation repo
+    * `docker-owners` for the Docker-Selenium repo
 1. Invite to Slack team chat room (`selenium-committers`)
 1. Tweet congratulations to the new committer from the SeleniumHQ Twitter account
 
+
+### Technical Leadership Committee (TLC)
+
+The technical decisions and roadmap of the Selenium project are governed by
+a Technical Leadership Committee (TLC) which is responsible for a high-level
+technical guidance of the project.
+
+The TLC has final authority over this project including:
+
+* Technical direction
+* Repository hosting
+* Contribution policy (shared with the PLC)
+
+TSC seats are not time-limited. There is no fixed size of the TLC. The TLC
+should be of such a size as to ensure adequate coverage of important areas
+of expertise balanced with the ability to make decisions efficiently.
+
+The TLC may add additional members to the TLC by a standard TLC motion.
+
+A TLC member may be removed from the TLC by voluntary resignation, or by a stand
+ard TLC motion.
+
+No more than 1/3 of the TLC members may be affiliated with the same employer.
+If removal or resignation of a TLC member, or a change of employment by a TLC
+member, creates a situation where more than 1/3 of the TLC membership shares an
+employer, then the situation must be immediately remedied by the resignation or
+removal of one or more TLC members affiliated with the over-represented employer(s).
+
+TLC members have additional responsibilities over and above those of a Committer.
+These responsibilities ensure the project has a technical viability and sustainability
+in a smooth way. TLC members are expected to review code contributions, approve
+changes to this document, and manage the copyrights within the project outputs.
+
+TLC members fulfill all requirements of Committers, and also:
+
+* May merge external pull requests for accepted issues upon reviewing and approving
+the changes.
+* Push code directly to the repos or, when necessary, create and merge their own pull
+requests once they have collected the feedback they deem necessary.
+* Discuss once a month the technical status and project roadmap.
+
+To become a TLC member:
+
+* Work in a helpful and collaborative way with the community.
+* Have given good feedback on others' submissions and displayed an overall understanding
+of the code quality standards for the project.
+* Commit to being a part of the community for the long-term.
+* Have submitted a minimum of 20 qualifying pull requests.
+
+A Committer is invited to become a TLC member by existing TLC members. A nomination
+will result in discussion and then a decision by the TLC.
+
+#### Process for Adding TLC Members
+
+1. Add the GitHub user to the "Selenium TLC" team
+1. Set the GitHub user to have the "Owner" role for the SeleniumHQ organization
+1. Invite to the Slack TLC chat room (`selenium-tlc`)
+1. Add the TLC member to the different package distribution organizations
+    * NPM
+    * SonarType (maven)
+    * pypi.org
+    * rubygems.org
+    * nuget.org
+1. Tweet congratulations to the new TLC member from the SeleniumHQ Twitter account
