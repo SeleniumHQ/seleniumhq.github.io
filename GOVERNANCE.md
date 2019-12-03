@@ -230,8 +230,8 @@ The current TLC members are:
 
 * [@barancev](https://github.com/barancev)
 * [@jimevans](https://github.com/jimevans)
-* [@manoj9788](https://github.com/manoj9788)
 * [@shs96c](https://github.com/shs96c)
+* [@titusfortner](https://github.com/titusfortner)
 
 ### Project Leadership Committee (PLC)
 
@@ -278,12 +278,12 @@ ard TSC motion.
 1. Invite to the Slack PLC chat room (`selenium-plc`)
 1. Tweet congratulations to the new PLC member from the SeleniumHQ Twitter account
 
-The current TLC members are:
+The current PLC members are:
 
 * [@barancev](https://github.com/barancev)
 * [@jimevans](https://github.com/jimevans)
+* [@manoj9788](https://github.com/manoj9788)
 * [@shs96c](https://github.com/shs96c)
-* [@titusfortner](https://github.com/titusfortner)
 
 
 ## Communication Channels
