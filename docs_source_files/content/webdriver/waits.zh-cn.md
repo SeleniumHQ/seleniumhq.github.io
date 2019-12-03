@@ -250,7 +250,8 @@ using (var driver = new FirefoxDriver())
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+let foo = await driver.findElement(By.name("q")).getText();
+assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
@@ -302,7 +303,7 @@ WebDriverWait(driver, timeout=3).until(some_condition)
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+  await driver.wait(until.elementLocated(By.id('foo')), 30000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))

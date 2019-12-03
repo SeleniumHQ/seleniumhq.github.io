@@ -57,7 +57,7 @@ Haga _fork_ al proyecto [en Github](https://github.com/seleniumhq/seleniumhq.git
 y verifique su copia localmente.
 
 ```shell
-% git clone git@github.com:username/seleniumhq.github.io.git
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
@@ -182,17 +182,7 @@ Use `git rebase` (not `git merge`) para sincronizar tu trabajo de vez en cuando.
 Recuerde siempre [ejecutar el servidor local](https://gohugo.io/getting-started/usage/#livereload), 
 con esto puede estar seguro de que sus cambios no han roto nada.
 
-### Paso 7: Firme el CLA
-
-Antes de que podamos aceptar, primero le pedimos a las personas que firmen un
-[Acuerdo de licencia de colaborador](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0)
-(o CLA). Pedimos esto para que sepamos que los contribuyentes tienen 
-el derecho de donar el código.
-
-Cuando abre su solicitud (_pull request_), le pedimos que indique 
-que ha firmado el CLA. Esto reducirá el tiempo que nos lleva integrarlo.
-
-### Paso 8: Suba sus cambios (_Push_)
+### Paso 7: Suba sus cambios (_Push_)
 
 ```shell
 % git push origin my-feature-branch
@@ -207,7 +197,7 @@ Si hay comentarios que abordar, aplique sus cambios en los nuevos
 commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) 
 y avance a la misma rama (_branch_).
 
-### Paso 9: Integración
+### Paso 8: Integración
 
 Cuando se completa la revisión del código, un committer tomará su 
 PR (_pull request_) y lo integrará en la rama (_branch_) gh-pages de los

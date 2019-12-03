@@ -66,3 +66,7 @@ pre {
 .warning.red strong {
     padding-top: 20px;
 }
+
+pre {
+    overflow-x: auto;
+}

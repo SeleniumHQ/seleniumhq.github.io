@@ -56,18 +56,6 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Installing Selenium libraries</title>
-      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; The selenium-java dependency supports running your automation project with all Selenium supported browsers. If you want to run tests only in a specific browser, you can add the dependency for that browser in your pom.</description>
-    </item>
-    
-    <item>
       <title>Page object models</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -85,17 +73,6 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
       <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
-      <title>Quick tour</title>
-      <link>https://selenium.dev/documentation/ja/getting_started/quick/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/getting_started/quick/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium is not just one tool or API but it composes many tools.
-WebDriver If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive in nature.</description>
     </item>
     
     <item>
@@ -120,6 +97,23 @@ java -jar selenium-server-standalone-{VERSION}.</description>
  Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
 How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
 RC Components Selenium RC components are:</description>
+    </item>
+    
+    <item>
+      <title>Seleniumライブラリのインストール</title>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</guid>
+      <description>最初にあなたの自動化プロジェクトにSeleniumのバインディングをインストールする必要があります。 インストールの方法は選択した言語によって異なります。
+Java JavaへのSeleniumライブラリのインストールはMavenを使います。 プロジェクトのpom.xmlに selenium-java の依存関係を追加してください。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 依存関係は、Seleniumがサポートする全てのブラウザを自動化プロジェクトで実行できるようにします。 もし特定のブラウザだけでテストを実行したい場合は、そのブラウザの依存関係を pom.xml ファイルに追加することができます。 例えば、Firefoxのみでテストを実行するためには下記の依存関係を pom.xml ファイルに追加します。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-firefox-driver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 同じように、Chromeのみでテストを実行するためには下記の依存関係を追加します。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-chrome-driver&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Python PythonへのSeleniumライブラリのインストールはpipを使います。
+pip install selenium また、PyPI source archive (selenium-x.x.x.tar.gz)をダウンロードして、 setup.py でインストールすることもできます。
+python setup.py install C# C#へのSeleniumライブラリのインストールはNuGetを使います。
+# Using package manager Install-Package Selenium.WebDriver # or using .Net CLI dotnet add package Selenium.WebDriver Ruby RubyへのSeleniumライブラリのインストールはgemを使います。
+gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラリのインストールはnpmを使います。</description>
     </item>
     
     <item>
@@ -152,6 +146,18 @@ It allows users to simulate common activities performed by end-users; entering t
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
+    </item>
+    
+    <item>
+      <title>クイックツアー</title>
+      <link>https://selenium.dev/documentation/ja/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/getting_started/quick/</guid>
+      <description>Seleniumは一つのツールやAPIではありません。たくさんのツールから構成されています。
+WebDriver デスクトップのウェブサイトのテスト自動化をはじめるのなら、WebDriver APIを使いましょう。 WebDriver はブラウザ自動化のAPIを使用します。このAPIは、ブラウザをコントロールしてテストを実行するためにブラウザベンダーによって提供されています。これは現実のユーザーがブラウザを操作するかのように動きます。 WebDriverのAPIはアプリケーションのコードと一緒にコンパイルする必要がありませんから、全く邪魔になりません。 これによって、あなたは本番環境と同じアプリケーションをテストすることができます。
+IDE IDE (Integrated Development Environment: 統合開発環境)はSeleniumのテストケースを開発するためのツールです。 これは利用しやすいChromeとFirefoxの拡張機能であり、テストケースを開発するための一般に最も効率的なツールです。 IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。 これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
+Grid WebDriverのテストを開発した後、テストを複数のブラウザやOSの組み合わせで実行する必要性に直面するかもしれません。 Grid はその助けになります。</description>
     </item>
     
     <item>
@@ -205,17 +211,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
-    </item>
-    
-    <item>
-      <title>Installing WebDriver binaries</title>
-      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
     </item>
     
     <item>
@@ -273,6 +268,16 @@ Line length When editing the documentation’s source, which is written in plain
     </item>
     
     <item>
+      <title>WebDriverバイナリのインストール</title>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>プロジェクトを実行し、ブラウザをコントロールするためにはブラウザ固有のWebDriverバイナリをインストールする必要があります。
+使用するブラウザがサポートするWebDriverバイナリをダウンロードして、 System PATHの通った場所に配置してください。</description>
+    </item>
+    
+    <item>
       <title>Working with colours</title>
       <link>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -326,16 +331,6 @@ Selenium WebDriver is a completely different approach to browser automation, pre
     </item>
     
     <item>
-      <title>Installing Standalone server</title>
-      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.</description>
-    </item>
-    
-    <item>
       <title>Locating elements</title>
       <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -377,6 +372,16 @@ For web applications, the automation of this testing can be done directly with S
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+    </item>
+    
+    <item>
+      <title>スタンドアロンサーバのインストール</title>
+      <link>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</guid>
+      <description>Gridを使う予定なら、selenium-server-standalone JARファイルをダウンロードする必要があります。selenium-server-standalone jarは決してアップロードされることはありませんが、selenium-serverを通して全てのコンポーネントが利用可能です。 このスタンドアロンJARはリモートSeleniumサーバとクライアントサイドバインディングを含む全てが入っています。 これはプロジェクトでselenium-server-standalone jarを使えば、selenium-javaやブラウザ固有のjarを追加しなくても良いということです。
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
@@ -543,6 +548,16 @@ It may seem ideal to performance test in the context of the user but a suite of 
     </item>
     
     <item>
+      <title>Working with cookies</title>
+      <link>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
+      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
+ First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+    </item>
+    
+    <item>
       <title>Http proxies</title>
       <link>https://selenium.dev/documentation/ja/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -624,9 +639,9 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
       
       <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
+ Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
     </item>
     
     <item>

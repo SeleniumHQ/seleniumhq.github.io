@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Getting started on Seleniumドキュメント</title>
+    <title>はじめる on Seleniumドキュメント</title>
     <link>https://selenium.dev/documentation/ja/getting_started/</link>
-    <description>Recent content in Getting started on Seleniumドキュメント</description>
+    <description>Recent content in はじめる on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -12,14 +12,15 @@
     
     
     <item>
-      <title>Quick tour</title>
+      <title>クイックツアー</title>
       <link>https://selenium.dev/documentation/ja/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/getting_started/quick/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium is not just one tool or API but it composes many tools.
-WebDriver If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive in nature.</description>
+      <description>Seleniumは一つのツールやAPIではありません。たくさんのツールから構成されています。
+WebDriver デスクトップのウェブサイトのテスト自動化をはじめるのなら、WebDriver APIを使いましょう。 WebDriver はブラウザ自動化のAPIを使用します。このAPIは、ブラウザをコントロールしてテストを実行するためにブラウザベンダーによって提供されています。これは現実のユーザーがブラウザを操作するかのように動きます。 WebDriverのAPIはアプリケーションのコードと一緒にコンパイルする必要がありませんから、全く邪魔になりません。 これによって、あなたは本番環境と同じアプリケーションをテストすることができます。
+IDE IDE (Integrated Development Environment: 統合開発環境)はSeleniumのテストケースを開発するためのツールです。 これは利用しやすいChromeとFirefoxの拡張機能であり、テストケースを開発するための一般に最も効率的なツールです。 IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。 これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
+Grid WebDriverのテストを開発した後、テストを複数のブラウザやOSの組み合わせで実行する必要性に直面するかもしれません。 Grid はその助けになります。</description>
     </item>
     
   </channel>

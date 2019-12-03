@@ -12,20 +12,20 @@
     <title>Contribuyendo al sitio y documentación de Selenium :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1573914071" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1573914071" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1575364226" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1575364226" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1573914071" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1575364226" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1573914071"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1575364226"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1573914071"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1573914071"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1575364226"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1575364226"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1573914071"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1575364226"></script>
 
     
   </div>
@@ -977,13 +977,13 @@
  
   
     
-    <li data-nav-id="/worst_practices/" title="Peores prácticas" class="dd-item 
+    <li data-nav-id="/worst_practices/" title="Malas prácticas" class="dd-item 
         
         
         
         ">
       <a href="https://selenium.dev/documentation/es/worst_practices/">
-          Peores prácticas
+          Malas prácticas
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1432,6 +1432,25 @@
       <li data-nav-id="/support_packages/working_with_web_elements/" title="Trabajando con elementos web" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/support_packages/working_with_web_elements/">
         Trabajando con elementos web
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+ 
+  
+    
+      <li data-nav-id="/support_packages/working_with_cookies/" title="Working with cookies" class="dd-item ">
+        <a href="https://selenium.dev/documentation/es/support_packages/working_with_cookies/">
+        Working with cookies
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1984,7 +2003,7 @@ hacen contribuciones significativas y valiosas a lo largo del tiempo se hacen
 
 <p>Haga <em>fork</em> al proyecto <a href="https://github.com/seleniumhq/seleniumhq.github.io">en Github</a>
 y verifique su copia localmente.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git clone git@github.com:username/seleniumhq.github.io.git
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % <span style="color:#b58900">cd</span> seleniumhq.github.io</code></pre></div>
 <h4 id="dependencias-hugo">Dependencias: Hugo</h4>
 
@@ -2085,17 +2104,7 @@ ven cuando ejecutan <code>git shortlog</code> o<code>git log --oneline</code>.</
 <p>Recuerde siempre <a href="https://gohugo.io/getting-started/usage/#livereload">ejecutar el servidor local</a>,
 con esto puede estar seguro de que sus cambios no han roto nada.</p>
 
-<h3 id="paso-7-firme-el-cla">Paso 7: Firme el CLA</h3>
-
-<p>Antes de que podamos aceptar, primero le pedimos a las personas que firmen un
-<a href="https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&amp;formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0">Acuerdo de licencia de colaborador</a>
-(o CLA). Pedimos esto para que sepamos que los contribuyentes tienen
-el derecho de donar el código.</p>
-
-<p>Cuando abre su solicitud (<em>pull request</em>), le pedimos que indique
-que ha firmado el CLA. Esto reducirá el tiempo que nos lleva integrarlo.</p>
-
-<h3 id="paso-8-suba-sus-cambios-push">Paso 8: Suba sus cambios (<em>Push</em>)</h3>
+<h3 id="paso-7-suba-sus-cambios-push">Paso 7: Suba sus cambios (<em>Push</em>)</h3>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git push origin my-feature-branch</code></pre></div>
 <p>Vaya a <a href="https://github.com/yourusername/site.git">https://github.com/yourusername/site.git</a> y presione
 <em>Pull Request</em> y complete el formulario.
@@ -2106,7 +2115,7 @@ Si hay comentarios que abordar, aplique sus cambios en los nuevos
 commits (preferiblemente <a href="http://git-scm.com/docs/git-commit">arreglos o <em>fixups</em></a>)
 y avance a la misma rama (<em>branch</em>).</p>
 
-<h3 id="paso-9-integración">Paso 9: Integración</h3>
+<h3 id="paso-8-integración">Paso 8: Integración</h3>
 
 <p>Cuando se completa la revisión del código, un committer tomará su
 PR (<em>pull request</em>) y lo integrará en la rama (<em>branch</em>) gh-pages de los
@@ -2127,7 +2136,7 @@ comunidad pueden encontrarse en <a href="https://selenium.dev/support">https://s
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/contributing/">
       “Contribuyendo al sitio y documentación de Selenium”
-    </a> was last updated on: 09 Nov 2019 17:32:53 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/adc841d592ed18515ab5402bfe3ba114ae59dcb0">Deploying on Sat Nov  9 17:32:53 UTC 2019, commit b69a8117c2d13e4f4b3958f62f0034f233decd35, [skip ci] (adc841d5)</a>
+    </a> was last updated on: 27 Nov 2019 02:13:40 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/c5a9c2087d03e223fd54c6ac803639ff391fcbd1">Add: Added doc for keyDown in Keyboard actions (#94) [deploy site] (c5a9c208)</a>
 </h5>
         
         </div> 
@@ -3163,6 +3172,22 @@ comunidad pueden encontrarse en <a href="https://selenium.dev/support">https://s
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -3314,19 +3339,19 @@ comunidad pueden encontrarse en <a href="https://selenium.dev/support">https://s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1573914072"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1575364226"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1573914072"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1573914072"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1575364226"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1575364226"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1573914072" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1573914072"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1575364226" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1575364226"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
