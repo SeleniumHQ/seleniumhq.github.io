@@ -159,7 +159,7 @@ will result in discussion and then a decision by the TLC.
 
 #### Process for Adding TLC Members
 
-1. Add the GitHub user to the "Selenium TLC" team
+1. Add the GitHub user to the `Selenium TLC` team
 1. Set the GitHub user to have the "Owner" role for the SeleniumHQ organization
 1. Invite to the Slack TLC chat room (`selenium-tlc`)
 1. Add the TLC member to the different package distribution organizations
@@ -169,3 +169,48 @@ will result in discussion and then a decision by the TLC.
     * rubygems.org
     * nuget.org
 1. Tweet congratulations to the new TLC member from the SeleniumHQ Twitter account
+
+### Project Leadership Committee (PLC)
+
+The overall continuity and future of the project is overseen by the Project
+Leadership Committee (PLC), which acts as a bridge between the Selenium project
+and the Software Freedom Conservancy (SFC).
+
+Since there are many different facets to the Selenium project, the PLC wants to
+reflect more than just people who sling code about. The PLC gets involved in
+different ways, such as whenever the project spends money, enters legal agreements,
+or has to deal with lawyers. Typically the PLC will discuss the topic with the rest
+of the community, and then a voting session will take place.
+
+PLC seats are not time-limited. Only one person may be affiliated with the any
+given employer can be on the PLC at a time. The PLC member count should be always
+odd so that no votes are ever tied, an ideal minimum number is 5. PLC members
+should also be active members of the community.
+
+To become a PLC member:
+
+* An existing PLC member steps down and suggests someone (or some people) to replace them.
+* Be a committer or a contributor.
+* Commit to being a part of the community for the long-term.
+* The existing PLC consults with the TLC and the active Committers, who vote on whether or
+not to add those people.
+    * No-one is ever suggested publicly without first discussing the idea with 
+      them first (to make sure that they are okay with it).
+
+
+The PLC has final authority over this project including:
+
+* Project governance and process (including this policy).
+* Contribution policy (shared with the PLC).
+* Budget and legal related issues.
+
+The PLC also should discuss once a month the overall status of the project and any pending or
+upcoming topics.
+
+A PLC member may be removed from the PLC by voluntary resignation, or by a stand
+ard TSC motion.
+
+#### Process for Adding PLC Members
+
+1. Invite to the Slack PLC chat room (`selenium-plc`)
+1. Tweet congratulations to the new PLC member from the SeleniumHQ Twitter account
