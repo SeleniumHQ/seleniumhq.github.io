@@ -59,7 +59,7 @@ Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
 and check out your copy locally.
 
 ```shell
-% git clone git@github.com:username/seleniumhq.github.io.git
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
@@ -183,18 +183,7 @@ Use `git rebase` (not `git merge`) to sync your work from time to time.
 Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
 with this you can be safe that your changes have not broken anything.
 
-### Step 7: Sign the CLA
-
-Before we can accept, we first ask people to sign a
-[Contributor License Agreement](https://spreadsheets.google.com/spreadsheet/viewform?hl=en_US&formkey=dFFjXzBzM1VwekFlOWFWMjFFRjJMRFE6MQ#gid=0)
-(or CLA). We ask this so that we know that contributors have the right
-to donate the code.
-
-When you open your pull request we ask that you indicate that you've
-signed the CLA. This will reduce the time it takes for us to integrate
-it.
-
-### Step 8: Push
+### Step 7: Push
 
 ```shell
 % git push origin my-feature-branch
@@ -209,7 +198,7 @@ comments to address, apply your changes in new commits (preferably
 [fixups](http://git-scm.com/docs/git-commit)) and push to the same
 branch.
 
-### Step 9: Integration
+### Step 8: Integration
 
 When code review is complete, a committer will take your PR and
 integrate it on the repository's master branch. Because we like to keep a
