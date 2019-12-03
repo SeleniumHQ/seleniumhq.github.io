@@ -1,8 +1,13 @@
 ---
-title: "Improved reporting"
+title: "Detailiertes Reporting"
 weight: 5
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Selenium is not designed to report on the status of test cases
 run. Taking advantage of the built-in reporting capabilities of unit
 test frameworks is a good start.  Most unit test frameworks have

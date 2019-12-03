@@ -1,7 +1,13 @@
 ---
-title: "Third party drivers and plugins"
+title: "Driverimplementierungen anderer Anbieter und Plugins"
 weight: 2
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 Selenium can be extended through the use of plugins. Here are a number of 
 plugins created and maintained by third parties. For more information on how 

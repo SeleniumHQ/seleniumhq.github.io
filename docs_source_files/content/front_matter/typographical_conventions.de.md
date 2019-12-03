@@ -1,9 +1,14 @@
 ---
-title: "Typographical conventions"
+title: "Typographische Richtlinien"
 weight: 2
 ---
 
-## Capitalisation of titles
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+## Großschreibung bei Überschriften
 
 One should avoid title capitalisation,
 such as _A Very Fine Heading_,
@@ -14,7 +19,7 @@ orthographic conventions.
 We prefer what is known as _sentence case_,
 with a single initial capital to start headers.
 
-## Line length
+## Zeilenlänge
 
 When editing the documentation’s source,
 which is written in plain HTML,

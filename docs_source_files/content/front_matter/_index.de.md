@@ -1,7 +1,7 @@
 ---
-title: "Front matter"
+title: "Hinweise"
 chapter: true
 weight: 13
 ---
 
-# Front matter
+# Hinweise

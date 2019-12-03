@@ -1,7 +1,13 @@
 ---
-title: "Remote WebDriver server"
+title: "Remote WebDriver Server"
 weight: 1
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 The server will always run on the machine with the browser you want to
 test. The server can be used either from the command line or through code

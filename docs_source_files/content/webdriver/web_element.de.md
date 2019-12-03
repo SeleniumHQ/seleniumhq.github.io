@@ -1,7 +1,13 @@
 ---
-title: "Web element"
+title: "Webelement"
 weight: 9
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 WebElement represents a DOM element. WebElements can be found by searching from the
 document root using a WebDriver instance, or by searching under another

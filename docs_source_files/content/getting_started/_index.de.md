@@ -1,16 +1,16 @@
 ---
-title: "Getting started"
+title: "Erste Schritte"
 chapter: true
 weight: 1
 ---
 
-# Getting started
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+# Erste Schritte
 
-* [Quick tour]({{< ref "/getting_started/quick.en.md" >}})
-  * [WebDriver]({{< ref "/getting_started/quick.en.md#webdriver" >}})
-  * [IDE]({{< ref "/getting_started/quick.en.md#ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.en.md#grid" >}})
+Falls Du Anfänger bist haben wir hier einige Hilfeseiten die Dir helfen
+die ersten Schritte zu bewältigen.
+
+* [Kurzeinführung]({{< ref "/getting_started/quick.de.md" >}})
+  * [WebDriver]({{< ref "/getting_started/quick.de.md#webdriver" >}})
+  * [IDE]({{< ref "/getting_started/quick.de.md#ide" >}})
+  * [Grid]({{< ref "/getting_started/quick.de.md#grid" >}})

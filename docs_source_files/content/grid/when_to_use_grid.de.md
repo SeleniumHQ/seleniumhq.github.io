@@ -1,8 +1,13 @@
 ---
-title: "When to use Grid"
+title: "Einsatz eines Grid"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Generally speaking, there’s two reasons why you might want to use Grid.
 
 * To run your tests against multiple browsers, multiple versions of browser,

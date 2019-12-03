@@ -1,9 +1,15 @@
 ---
-title: "Locating elements"
+title: "Elemente lokalisieren"
 weight: 3
 ---
 
 ### Locating one element
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 One of the most fundamental techniques to learn when using WebDriver is
 how to find elements on the page. WebDriver offers a number of built-in selector

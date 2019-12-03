@@ -1,8 +1,13 @@
 ---
-title: "Working with colours"
+title: "Arbeiten mit Farben"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 You will occasionally want to validate the colour of something as part of your tests;
 the problem is that colour definitions on the web are not constant.
 Would it not be nice if there was an easy way to compare

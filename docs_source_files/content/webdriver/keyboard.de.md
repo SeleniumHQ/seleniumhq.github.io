@@ -1,8 +1,13 @@
 ---
-title: "Keyboard"
+title: "Tastatur"
 weight: 10
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
 interface which allows us to provide virtualized device input to the web browser.
 

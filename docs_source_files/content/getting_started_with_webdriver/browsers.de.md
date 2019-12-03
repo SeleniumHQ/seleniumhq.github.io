@@ -3,6 +3,11 @@ title: "Browsers"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 ## Consumer browsers
 
 The Selenium framework officially supports the following browsers:

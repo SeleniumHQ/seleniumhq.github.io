@@ -1,10 +1,17 @@
 ---
-title: "Getting started with WebDriver"
+title: "Erste Schritte mit WebDriver"
 chapter: true
 weight: 4
 ---
 
-# Getting started with WebDriver
+# Erste Schritte mit WebDriver
+
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 Selenium supports automation of all the major browsers in the market
 through the use of _WebDriver_.

@@ -1,8 +1,14 @@
 ---
-title: "Installing Selenium libraries"
+title: "Bibliotheken installieren"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+ 
 First you need to install the Selenium bindings for your automation project.
 The installation process for libraries depends on the language you choose to use.
 

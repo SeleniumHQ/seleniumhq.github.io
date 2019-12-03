@@ -1,7 +1,7 @@
 ---
-title: "Worst practices"
+title: "Wie man es nicht machen sollte"
 chapter: true
 weight: 8
 ---
 
-# Worst practices
+# Wie man es nicht machen sollte

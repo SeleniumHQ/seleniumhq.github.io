@@ -3,6 +3,11 @@ title: "Support classes"
 weight: 5
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 WebDriver support classes are provided to simplify maintaining your code.
 They provide a nice abstraction to make modeling HTML element(s) as domain
 objects easier, also providing helper methods to make using such objects easy to

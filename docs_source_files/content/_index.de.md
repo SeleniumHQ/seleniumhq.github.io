@@ -2,6 +2,12 @@
 title: "The Selenium Browser Automation Project"
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+
 # The Selenium Browser Automation Project
 
 Selenium is an umbrella project for a range of tools and libraries 
@@ -15,7 +21,7 @@ that lets you write interchangeable code for all major web browsers.
 
 This project is made possible by volunteer contributors
 who have put in thousands of hours of their own time,
-and made the source code [freely available]({{< ref "/front_matter/copyright_and_attributions.en.md#license" >}})
+and made the source code [freely available]({{< ref "/front_matter/copyright_and_attributions.de.md#license" >}})
 for anyone to use, enjoy, and improve.
 
 Selenium brings together browser vendors, engineers, and enthusiasts
@@ -154,7 +160,7 @@ class HelloSelenium {
 {{< / code-tab >}}
 
 
-See the _[Quick Tour]({{< ref "/getting_started/quick.en.md" >}})_ for a full explanation
+See the _[Quick Tour]({{< ref "/getting_started/quick.de.md" >}})_ for a full explanation
 of what goes on behind the scenes when you run this code.
 You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
 to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
@@ -169,8 +175,8 @@ If you are new to Selenium,
 we have a few resources that can help you
 get up to speed right away.
 
-* [Quick tour]({{< ref "/getting_started/quick.en.md" >}})
-  * [WebDriver]({{< ref "/getting_started/quick.en.md#webdriver" >}})
-  * [IDE]({{< ref "/getting_started/quick.en.md#ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.en.md#grid" >}})
+* [Quick tour]({{< ref "/getting_started/quick.de.md" >}})
+  * [WebDriver]({{< ref "/getting_started/quick.de.md#webdriver" >}})
+  * [IDE]({{< ref "/getting_started/quick.de.md#ide" >}})
+  * [Grid]({{< ref "/getting_started/quick.de.md#grid" >}})
 

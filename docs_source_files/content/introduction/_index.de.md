@@ -1,9 +1,9 @@
 ---
-title: "Introduction"
+title: "Einführung"
 chapter: true
 weight: 2
 ---
 
-# Introduction
+# Einführung
 
-Selenium is an umbrella project for a range of tools and libraries that enable and support the automation of web browsers. 
+Selenium ist ein Überbegriff für eine Sammlung von Werkzeugen und Programmbibliotheken die es ermöglichen Webbrowser zu automatisieren.

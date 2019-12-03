@@ -1,8 +1,13 @@
 ---
-title: "Working with select elements"
+title: "Arbeiten mit Auswahlelementen"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Select elements can require quite a bit of boiler plate code to automate.
 To reduce this, and make your tests cleaner, there is a
 `Select` class in the Selenium support package.

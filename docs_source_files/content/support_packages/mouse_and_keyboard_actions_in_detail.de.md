@@ -1,8 +1,13 @@
 ---
-title: "Mouse and keyboard actions in detail"
+title: "Maus- und Keyboardaktionen im Detail"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Suppose you have an arbitrary web element **e:**
 
 {{< code-tab >}}

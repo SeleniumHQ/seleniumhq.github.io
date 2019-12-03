@@ -1,8 +1,13 @@
 ---
-title: "Generating application state"
+title: "Erstellen eines Applikations Zustandes"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Selenium should not be used to prepare a test case.  All repetitive
 actions and preparations for a test case, should be done through other
 methods.  For example, most web UIs have authentication (e.g. a login

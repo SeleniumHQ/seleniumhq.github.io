@@ -6,6 +6,12 @@ weight: 5
 
 # WebDriver
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+
 WebDriver drives a browser natively, as a user would, either locally
 or on a remote machine using the Selenium server,
 marks a leap forward in terms of browser automation.

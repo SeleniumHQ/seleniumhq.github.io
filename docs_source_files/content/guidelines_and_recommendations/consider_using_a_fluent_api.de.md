@@ -3,7 +3,11 @@ title: "Consider using a fluent API"
 weight: 8
 ---
 
-
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Martin Fowler coined the term ["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html). Selenium already
 implements something like this in their `FluentWait` class, which is
 meant as an alternative to the standard <code>Wait</code> class. 

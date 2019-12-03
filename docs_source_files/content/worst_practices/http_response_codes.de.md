@@ -1,8 +1,13 @@
 ---
-title: "HTTP response codes"
+title: "HTTP Antwortcodes"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 For some browser configurations in Selenium RC,
 Selenium acted as a proxy between the browser
 and the site being automated.

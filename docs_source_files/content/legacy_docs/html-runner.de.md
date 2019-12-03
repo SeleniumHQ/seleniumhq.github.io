@@ -3,6 +3,11 @@ title: "HTML runner"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 _Selenium HTML-runner_ allows you to run Test Suites from a
 command line. Test Suites are HTML exports from Selenium IDE or
 campatible tools.

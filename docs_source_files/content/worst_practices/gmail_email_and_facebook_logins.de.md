@@ -1,9 +1,14 @@
 ---
-title: "Gmail, email and Facebook logins"
-menuTitle: "Gmail, email and Facebook"
+title: "Gmail, Email und Facebook Logins"
+menuTitle: "Gmail, Email und Facebook"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 For multiple reasons, logging into sites like Gmail and Facebook
 using WebDriver is not recommended.
 Aside from being against the usage terms for these sites

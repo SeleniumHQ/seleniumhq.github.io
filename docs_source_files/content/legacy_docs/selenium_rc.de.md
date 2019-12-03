@@ -3,7 +3,11 @@ title: "Selenium 1 (Selenium RC)"
 weight: 1
 ---
 
-
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 ## Introduction
 Selenium RC was the main Selenium project for a long time, before the
 WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.

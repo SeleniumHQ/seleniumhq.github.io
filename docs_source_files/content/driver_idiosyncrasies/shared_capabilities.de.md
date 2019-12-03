@@ -1,8 +1,13 @@
 ---
-title: "Shared capabilities"
+title: "Geteilte capabilities"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 ### pageLoadStrategy
 When navigating to a new page via URL, by default Selenium will wait
 until the page has fully loaded before responding. This works well for

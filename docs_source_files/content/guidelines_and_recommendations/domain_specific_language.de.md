@@ -1,8 +1,13 @@
 ---
-title: "Domain specific language"
+title: "Domänenspezifische Sprache"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 A domain specific language (DSL) is a system which provides the user with
 an expressive means of solving a problem. It allows a user to
 interact with the system on their terms – not just programmer-speak.

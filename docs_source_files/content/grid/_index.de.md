@@ -1,10 +1,16 @@
 ---
-title: "Grid"
+title: "Selenium Grid"
 chapter: true
 weight: 9
 ---
 
-# Grid
+# Selenium Grid
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 _Selenium Grid_ is a smart proxy server
 that allows Selenium tests to route commands to remote web browser instances.

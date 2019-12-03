@@ -1,8 +1,13 @@
 ---
-title: "About this documentation"
+title: "Über diese Dokumentation"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 These docs, like the code itself, are maintained 100% by volunteers
 within the Selenium community.
 Many have been using it since its inception,

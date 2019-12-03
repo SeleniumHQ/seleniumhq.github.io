@@ -1,7 +1,14 @@
 ---
-title: Contributing to the Selenium Site & Documentation
+title: Mitwirken bei der Selenium Website & Dokumentation
 disableToc: true
 ---
+
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 
 Selenium is a big software project, its site and documentation are key
 to understanding how things work and learning effective ways to exploit
@@ -15,8 +22,7 @@ involved and how to contribute to Selenium.
 Contributions toward the site and docs follow the process described in
 the below section about contributions. You should spend some time
 familiarising yourself with the documentation by reading
-[more about it]({{< ref "/introduction/about_this_documentation.en.md" >}}).
-
+[more about it]({{< ref "/introduction/about_this_documentation.de.md" >}}).
 ---
 
 The Selenium project welcomes contributions from everyone. There are a
@@ -101,7 +107,7 @@ the English content. When you are changing a file, **be sure** to make your
 changes in all the other translated files as well. This might differ depending
 on the change, for example:
  
-* If you add a code example to the `browser_manipulation.en.md` file,
+* If you add a code example to the `browser_manipulation.de.md` file,
 also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
 `browser_manipulation.ja.md`, and all other translated files.
 * If you find a translation that can be improved, only change the translated

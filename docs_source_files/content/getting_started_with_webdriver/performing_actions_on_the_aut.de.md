@@ -1,8 +1,13 @@
 ---
-title: "Performing actions on the AUT*"
+title: "Aktionen ausführen in der AUT*"
 weight: 4
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 You can set an element's text using the sendKeys method as follows:
 
 {{< code-tab >}}
@@ -95,4 +100,4 @@ driver.findElement(By.cssSelector("input[type='submit']")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-***AUT**: Application under test
+***AUT**: Application under test (= zu testende Applikation)

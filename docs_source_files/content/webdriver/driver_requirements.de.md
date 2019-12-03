@@ -1,8 +1,13 @@
 ---
-title: "Driver requirements"
+title: "Driver Vorraussetzungen"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 Through WebDriver, Selenium supports all major browsers on the market
 such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari.
 Where possible, WebDriver drives the browser

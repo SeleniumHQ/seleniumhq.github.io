@@ -3,6 +3,12 @@ title: "Remote WebDriver client"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+
 To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
 We do this by pointing the URL to the address of the server running our tests.
 In order to customize our configuration, we set desired capabilities.

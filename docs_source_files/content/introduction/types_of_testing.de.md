@@ -1,7 +1,13 @@
 ---
-title: "Types of testing"
+title: "Testarten"
 weight: 3
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 ## Acceptance testing
 This type of test is done in order to determine if a product's
 feature matches its requirements. 

@@ -1,11 +1,16 @@
 ---
-title: "Guidelines and recommendations"
-menuTitle: "Guidelines"
+title: "Anleitungen und Empfehlungen"
+menuTitle: "Anleitungen"
 chapter: true
 weight: 7
 ---
 
-# Guidelines and recommendations
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
+# Anleitungen und Empfehlungen
 
 A note on "Best Practices": We've intentionally avoided the phrase "Best
 Practices" in this documentation. No one approach works for all situations.
