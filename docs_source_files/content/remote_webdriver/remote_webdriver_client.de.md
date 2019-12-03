@@ -54,13 +54,7 @@ driver.quit()
 To further customize our test configuration, we can add other desired capabilities.
 
 
-## Desired capabilities
-
-Desired capabilities can be expanded further.
-All remote Webdriver capabilities are sent through JsonWireProtocol.
-For a list of configurable capabilities, and more information on JsonWireProtocol,
-please visit the documentation
-[here](//github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities).
+## Browser options
 
 For example, suppose you wanted to run Chrome on Windows XP,
 using Chrome version 67:
