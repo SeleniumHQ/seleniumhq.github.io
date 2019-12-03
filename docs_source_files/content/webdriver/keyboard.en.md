@@ -308,7 +308,21 @@ namespace HelloSelenium
 
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Store google search box WebElement
+  search = driver.find_element(name: 'q')
+
+  # Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+  driver.action.key_down(:shift).send_keys(search,'qwerty').key_up(:shift).send_keys("qwerty").perform
+
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By, Key} = require('selenium-webdriver');
