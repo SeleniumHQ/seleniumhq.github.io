@@ -105,6 +105,62 @@ be nominated to become a TLC member, described below.
 1. Invite to Slack team chat room (`selenium-committers`)
 1. Tweet congratulations to the new committer from the SeleniumHQ Twitter account
 
+The current Committers are (divided by repo):
+
+Selenium IDE:
+* [@corevo](https://github.com/corevo)
+* [@manoj9788](https://github.com/manoj9788)
+* [@shs96c](https://github.com/shs96c)
+
+Selenium:
+* [@adamgoucher](https://github.com/adamgoucher)
+* [@andreastt](https://github.com/andreastt)
+* [@AutomatedTester](https://github.com/AutomatedTester)
+* [@barancev](https://github.com/barancev)
+* [@cgoldberg](https://github.com/cgoldberg)
+* [@corevo](https://github.com/corevo)
+* [@davehunt](https://github.com/davehunt)
+* [@ddavison](https://github.com/ddavison)
+* [@dfabulich](https://github.com/dfabulich)
+* [@diemol](https://github.com/diemol)
+* [@DominikDary](https://github.com/DominikDary)
+* [@freynaud](https://github.com/freynaud)
+* [@illicitonion](https://github.com/illicitonion)
+* [@jarib](https://github.com/jarib)
+* [@jimevans](https://github.com/jimevans)
+* [@jleyba](https://github.com/jleyba)
+* [@jlipps](https://github.com/jlipps)
+* [@joshbruning](https://github.com/joshbruning)
+* [@juangj](https://github.com/juangj)
+* [@julianharty](https://github.com/julianharty)
+* [@krosenvold](https://github.com/krosenvold)
+* [@lmtierney](https://github.com/lmtierney)
+* [@lukeis](https://github.com/lukeis)
+* [@mach6](https://github.com/mach6)
+* [@mtscout6](https://github.com/mtscout6)
+* [@nirvdrum](https://github.com/nirvdrum)
+* [@p0deje](https://github.com/p0deje)
+* [@santiycr](https://github.com/santiycr)
+* [@sevaseva](https://github.com/sevaseva)
+* [@shs96c](https://github.com/shs96c)
+* [@titusfortner](https://github.com/titusfortner)
+* [@tourdedavetner](https://github.com/tourdedave)
+* [@twalpole](https://github.com/twalpole)
+
+Selenium Site & Docs:
+* [@ahunsberger](https://github.com/ahunsberger)
+* [@ddavison](https://github.com/ddavison)
+* [@diemol](https://github.com/diemol)
+* [@lukeis](https://github.com/lukeis)
+* [@manoj9788](https://github.com/manoj9788)
+
+Docker-Selenium:
+* [@ddavison](https://github.com/ddavison)
+* [@diemol](https://github.com/diemol)
+* [@elgalu](https://github.com/elgalu)
+* [@kayabendroth](https://github.com/kayabendroth)
+* [@mtscout6](https://github.com/mtscout6)
+* [@WillAbides](https://github.com/WillAbides)
 
 ### Technical Leadership Committee (TLC)
 
@@ -170,6 +226,13 @@ will result in discussion and then a decision by the TLC.
     * nuget.org
 1. Tweet congratulations to the new TLC member from the SeleniumHQ Twitter account
 
+The current TLC members are:
+
+* [@barancev](https://github.com/barancev)
+* [@jimevans](https://github.com/jimevans)
+* [@manoj9788](https://github.com/manoj9788)
+* [@shs96c](https://github.com/shs96c)
+
 ### Project Leadership Committee (PLC)
 
 The overall continuity and future of the project is overseen by the Project
@@ -214,6 +277,14 @@ ard TSC motion.
 
 1. Invite to the Slack PLC chat room (`selenium-plc`)
 1. Tweet congratulations to the new PLC member from the SeleniumHQ Twitter account
+
+The current TLC members are:
+
+* [@barancev](https://github.com/barancev)
+* [@jimevans](https://github.com/jimevans)
+* [@shs96c](https://github.com/shs96c)
+* [@titusfortner](https://github.com/titusfortner)
+
 
 ## Communication Channels
 
