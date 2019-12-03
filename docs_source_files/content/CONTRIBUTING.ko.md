@@ -39,7 +39,7 @@ Selenium 프로젝트는 새로운 기여자를 환영합니다. 꾸준히 중�
 로컬에서 확인하세요.
 
 ```shell
-% git clone git@github.com:username/seleniumhq.github.io.git
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
