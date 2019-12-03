@@ -18,7 +18,13 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+ from selenium import webdriver
+ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+ 
+ driver = webdriver.Remote(command_executor='http://example:4444/wd/hub',
+                           desired_capabilities=DesiredCapabilities.FIREFOX)
+ driver.get('http://google.com/')
+ driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
  FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -63,7 +69,19 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+ 
+capabilities = DesiredCapabilities.CHROME.copy()
+capabilities['platform'] = 'XP'
+capabilities['version'] = 67
+
+driver = webdriver.Remote(command_executor='http://example:4444/wd/hub',
+                         desired_capabilities=capabilities)
+driver.get('http://google.com/')
+driver.quit()
+
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var chromeOptions = new ChromeOptions();
