@@ -362,6 +362,50 @@ wait.until(titleIs("Selenium documentation"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+### Create new window (or) new tab and switch
+Creates a new window (or) tab and will focus the new window or tab on screen.
+You don't need to switch to work with the new window (or) tab. If you have more than two windows
+(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
+and switch to the one which is not the original.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder} = require('selenium-webdriver');
+(async function example() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    try {
+        // Navigate to Url
+        await driver.get('https://www.google.com');
+
+        // Opens a new tab and switches to new tab
+        await driver.switchTo().newWindow('tab');
+
+        // Opens a new window and switches to new window
+        await driver.switchTo().newWindow('window');
+    }
+    finally {
+        await driver.quit();
+    }
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
 
 ### Closing a window or tab
 
