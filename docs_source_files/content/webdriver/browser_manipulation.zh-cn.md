@@ -380,23 +380,12 @@ __Note: This feature works with Selenium 4 and later versions.__
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const {Builder} = require('selenium-webdriver');
-(async function example() {
-    let driver = await new Builder().forBrowser('chrome').build();
-    try {
-        // Navigate to Url
-        await driver.get('https://www.google.com');
+// Opens a new tab and switches to new tab
+await driver.switchTo().newWindow('tab');
 
-        // Opens a new tab and switches to new tab
-        await driver.switchTo().newWindow('tab');
+// Opens a new window and switches to new window
+await driver.switchTo().newWindow('window');
 
-        // Opens a new window and switches to new window
-        await driver.switchTo().newWindow('window');
-    }
-    finally {
-        await driver.quit();
-    }
-})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please raise a PR
