@@ -40,7 +40,19 @@ driver.get "http://www.google.com"
 driver.close
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const { Builder, Capabilities } = require("selenium-webdriver");
+let chromeCapabilities = Capabilities.chrome();
+(async function helloSelenium() {
+    let driver = new Builder()
+        .forBrowser("chrome")
+        .withCapabilities(chromeCapabilities)
+        .usingServer('http://localhost:4444/wd/hub').build();
+    try {
+        await driver.get('http://www.google.com');
+    } finally {
+        await driver.quit();
+    }
+})();  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 firefoxOptions = FirefoxOptions()
@@ -87,7 +99,28 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const { Builder, Capabilities } = require("selenium-webdriver");
+let chromeCapabilities = Capabilities.chrome();
+//Setting chrome options
+const capabilityName = 'goog:chromeOptions';
+var browserOptions = {
+	'args': [
+        "--start-maximized",
+        '--disable-gpu'
+	]
+};
+chromeCapabilities.set(capabilityName, browserOptions);
+(async function helloSelenium() {
+    let driver = new Builder()
+        .forBrowser("chrome")
+        .withCapabilities(chromeCapabilities)
+        .usingServer('http://localhost:4444/wd/hub').build();
+    try {
+        await driver.get('http://www.google.com');
+    } finally {
+        await driver.quit();
+    }
+})();  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val chromeOptions = ChromeOptions()
