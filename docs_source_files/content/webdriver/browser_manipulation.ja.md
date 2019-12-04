@@ -398,7 +398,11 @@ await driver.switchTo().newWindow('window');
 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB)
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
