@@ -375,7 +375,11 @@ driver.switchTo().newWindow(WindowType.TAB);
 driver.switchTo().newWindow(WindowType.WINDOW);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-// Please raise a PR
+# Opens a new tab and switches to new tab
+driver.switch_to.new_window('tab')
+
+# Opens a new window and switches to new window
+driver.switch_to.new_window('window')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
