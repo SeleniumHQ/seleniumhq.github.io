@@ -370,7 +370,11 @@ __Note: This feature works with Selenium 4 and later versions.__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a PR
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB);
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 // Please raise a PR
