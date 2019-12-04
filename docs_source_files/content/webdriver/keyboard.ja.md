@@ -313,7 +313,21 @@ namespace HelloSelenium
 
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Store google search box WebElement
+  search = driver.find_element(name: 'q')
+
+  # Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+  driver.action.key_down(:shift).send_keys(search,'qwerty').key_up(:shift).send_keys("qwerty").perform
+
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By, Key} = require('selenium-webdriver');
@@ -335,6 +349,26 @@ const {Builder, By, Key} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // Please raise a PR
+import org.openqa.selenium.By
+import org.openqa.selenium.Keys
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+
+        // Store google search box WebElement
+        val search = driver.findElement(By.name("q"))
+        val action = Actions(driver)
+
+        // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
+        action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform();
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
