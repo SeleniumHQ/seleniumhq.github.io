@@ -197,7 +197,7 @@ upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< code-panel language="javascript" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
 var upload = driver.findElement(By.id("myfile"));
-upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");    
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
