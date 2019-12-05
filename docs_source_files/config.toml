@@ -266,7 +266,7 @@ baseURL = "https://selenium.dev/documentation/de"
 [[Languages.de.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
 url = "https://selenium.dev"
-weight = 1
+weight = 8
 
 [[Languages.de.menu.shortcuts]]
 name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
