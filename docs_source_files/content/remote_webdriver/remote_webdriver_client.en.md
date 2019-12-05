@@ -40,7 +40,7 @@ let chromeCapabilities = Capabilities.chrome();
     let driver = new Builder()
         .forBrowser("chrome")
         .withCapabilities(chromeCapabilities)
-        .usingServer('http://localhost:4444/wd/hub').build();
+        .build();
     try {
         await driver.get('http://www.google.com');
     } finally {
@@ -108,7 +108,7 @@ chromeCapabilities.set(capabilityName, browserOptions);
     let driver = new Builder()
         .forBrowser("chrome")
         .withCapabilities(chromeCapabilities)
-        .usingServer('http://localhost:4444/wd/hub').build();
+        .build();
     try {
         await driver.get('http://www.google.com');
     } finally {
