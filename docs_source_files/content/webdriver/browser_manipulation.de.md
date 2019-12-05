@@ -390,7 +390,14 @@ driver.switch_to.new_window('window')
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-// Please raise a PR
+# Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
+# The user has to switch to new tab (or) new window
+
+# Opens a new tab and switches to new tab
+driver.manage.new_window(:tab)
+
+# Opens a new window and switches to new window
+driver.manage.new_window(:window)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Opens a new tab and switches to new tab
