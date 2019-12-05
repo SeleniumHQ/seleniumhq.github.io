@@ -76,7 +76,7 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Dit is mogelijk omdat zowel _WebDriver_ als _WebElement_ de [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
+Dit is mogelijk omdat zowel _WebDriver_ als _WebElement_ de [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
 interface implementeren. Binnen WebDriver staat dit bekend als een _role-based interface_.
 
 
