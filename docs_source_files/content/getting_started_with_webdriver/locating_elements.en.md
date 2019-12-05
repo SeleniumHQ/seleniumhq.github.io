@@ -70,7 +70,7 @@ val cheddar = cheese.findElement(By.id("cheddar"))
 {{< / code-tab >}}
 
 You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
+implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
 interface. In WebDriver, this is known as a _role-based interface_.
 Role-based interfaces allow you to determine whether a particular
 driver implementation supports a given feature. These interfaces are
