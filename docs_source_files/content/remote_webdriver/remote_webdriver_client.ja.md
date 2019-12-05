@@ -164,7 +164,8 @@ if (allowsDetection != null)
 end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+var remote = require('selenium-webdriver/remote');
+driver.setFileDetector(new remote.FileDetector);   
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.setFileDetector(new LocalFileDetector())
@@ -193,7 +194,9 @@ upload.SendKeys(@"/Users/sso/the/local/path/to/darkbulb.jpg");
     element.send_keys "/Users/sso/SauceLabs/sauce/hostess/maitred/maitred/public/images/darkbulb.jpg"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload");
+var upload = driver.findElement(By.id("myfile"));
+upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
