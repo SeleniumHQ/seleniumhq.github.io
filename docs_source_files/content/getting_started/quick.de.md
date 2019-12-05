@@ -3,37 +3,30 @@ title: "Kurze Einführung"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-Selenium is not just one tool or API
-but it composes many tools.
+Selenium ist nicht ein einzelnes Tool oder eine API, es besteht aus mehreren Tools
 
 ## WebDriver
 
-If you are beginning with desktop website test automation then you
-are going to be using WebDriver APIs. _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ 
-uses browser automation APIs provided by browser vendors to control browser and
-run tests. This is as if a real user is operating the browser. Since
-WebDriver does not require its API to be compiled with application
-code, it is not intrusive in nature. Hence, you are testing the
-same application which you push live.
-
+Startest Du mit dem automatisieren von Websiten, dann wirst Du die WebDriver APIs verwenden.
+_[WebDriver]({{< ref "/webdriver/_index.md" >}})_ verwendet die von den Browsern
+Herstellern zur Verfügung gestellten APIs um den Browser zu steuern und Test
+auszuführen. Die Ausführung simuliert einen echten Benutzer. Da der WebDriver eigenständig
+ist und nicht mit der Applikation kompiliert werden muss, handelt es sich um eine minimal 
+invasive Methode. Es kann exakt die Applikation getestet werden die später veröffentlicht wird.  
 
 ## IDE
 
-_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment) 
-is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome 
-and Firefox extension and is generally the most efficient way to develop 
-test cases. It records the users actions in the browser for you, using 
-existing Selenium commands, with parameters defined by the context of 
-that element. This is not only a time-saver, but also an excellent way 
-of learning Selenium script syntax.
+_[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment = Entwicklungsumgebung)
+ist ein Werkzeug um Seleniumtests zu erstellen. Es ist eine einfach zu handhabende 
+Erweiterung für Chrome und Firefox und in der Regel ist dies die effizienteste Weg
+um Testfälle zu erstellen. Benutzerinteraktionen werden aufgezeichnet mit Hilfe von 
+bestehenden Selenium Befehlen. Diese werden mit den entsprechenden Parametern versehen.
+Das ist nicht nur zeitsparend sondern auch ein guter Weg um sich mit der Seleniumsyntax 
+vertraut zu machen.
 
 ## Grid
 
-Soon after development of WebDriver tests, you may face a need of
-running your tests on multiple browser and operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes to the rescue.
+Sehr bald nachdem Du die ersten WebDriver Tests erstellt hast, wirst Du Dir 
+wünschen Deine Tests auf unterscchen Browsern und Betriebssystemkombinationen
+auszuführen. Das ist der Moment an dem _[Grid]({{< ref "/grid/_index.md" >}})_ ins 
+Spiel kommt.

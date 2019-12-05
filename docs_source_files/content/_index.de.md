@@ -1,37 +1,33 @@
 ---
-title: "The Selenium Browser Automation Project"
+title: "Das Selenium Browser Automations Projekt"
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
 
-# The Selenium Browser Automation Project
+# Das Selenium Browser Automations Projekt
 
-Selenium is an umbrella project for a range of tools and libraries 
-that enable and support the automation of web browsers. 
+Selenium ist ein Sammlung von Projekten für einige Werkzeuge und Programmbibliotheken
+die es ermöglichen Webbrowser zu automatisieren.
 
-It provides extensions to emulate user interaction with browsers,
-a distribution server for scaling browser allocation,
-and the infrastructure for implementations of the 
-[W3C WebDriver specification](//www.w3.org/TR/webdriver/)
-that lets you write interchangeable code for all major web browsers.
+Selenium bietet Erweiterungen um Benutzereingaben in Browsern zu simulieren,
+einen Server um eine vielzahl von Browsern anzusprechen und eine Infrastruktur
+um die [W3C WebDriver Spezifikation](//www.w3.org/TR/webdriver/) welche 
+es ermöglicht die meistgenutzen Browser mit dem gleichen Programmcode
+zu steuern.
 
-This project is made possible by volunteer contributors
-who have put in thousands of hours of their own time,
-and made the source code [freely available]({{< ref "/front_matter/copyright_and_attributions.de.md#license" >}})
-for anyone to use, enjoy, and improve.
+Das Projekt wird durch viele Freiwillige Unterstützer möglich gemacht, sie haben
+tausende von Stunden ihrer Freizeit investiert und haben den Programmcode für 
+jeden [öffentlich zugänglich gemacht]({{< ref "/front_matter/copyright_and_attributions.de.md#license" >}})
+für jeden um diesen zu verwenden und ihn zu verbessern.
 
-Selenium brings together browser vendors, engineers, and enthusiasts
-to further an open discussion around automation of the web platform.
-The project organises [an annual conference](//seleniumconf.com/)
-to teach and nurture the community.
+Selenium fördert Disskussionen in Bezug Automation der Webplattform mit Browserhersteller, 
+Ingeneure und Enthusiasten. Jedes Jahr wird vom Projekt eine [Konferenz](//seleniumconf.com/) 
+organisiert um Wissen zu vermitteln und die Community zu fördern.
 
-At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, 
-an interface to write instruction sets that can be run interchangeably in many 
-browsers. Here is one of the simplest instructions you can make:
+
+Das Herzstück von Selenium ist der _[WebDriver]({{< ref "/webdriver/_index.md" >}})_. Es 
+handelt sich um ein Interface um das es ermöglicht Befehle für eine Vielzahl von Browsern
+auszuführen. Hier ein einfaches Beispiel welche Möglichkeiten geboten werden: 
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -160,22 +156,20 @@ class HelloSelenium {
 {{< / code-tab >}}
 
 
-See the _[Quick Tour]({{< ref "/getting_started/quick.de.md" >}})_ for a full explanation
-of what goes on behind the scenes when you run this code.
-You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
-to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
-successfully use Selenium as a test automation tool,
-and scaling simple tests like this to run
-in large, distributed environments on multiple browsers,
-on several different operating systems.
+Sie Dir die _[Kurzeinführung]({{< ref "/getting_started/quick.de.md" >}})_ an um detailierte
+Informationen zu erhalten was im Hintergrund passiert wenn Du diesen Code ausführst.
+Du solltest mit der [Einführung]({{< ref "/introduction/_index.md" >}}) fortsetzen
+um die Installation zu verstehen und um Selenium erfolgreich einzusetzen, Testsets in größeren
+Umfang einzusetzen auf vielen verschiedenen Browsern und unterschiedlichen Betriebssystemen.
 
-## Getting started
 
-If you are new to Selenium,
-we have a few resources that can help you
-get up to speed right away.
+## Erste Schritte
 
-* [Quick tour]({{< ref "/getting_started/quick.de.md" >}})
+Wenn Selenium für Dich Neuland ist, haben wir hier ein paar Quellen die Dir weiterhelfen
+möglichst schnell beginnen zu können.
+
+
+* [Kurze Einführung]({{< ref "/getting_started/quick.de.md" >}})
   * [WebDriver]({{< ref "/getting_started/quick.de.md#webdriver" >}})
   * [IDE]({{< ref "/getting_started/quick.de.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.de.md#grid" >}})
