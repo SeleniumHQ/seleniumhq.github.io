@@ -12,20 +12,20 @@
     <title>Browser manipulation :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1575406040" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1575406040" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1575542290" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1575542290" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1575406040" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1575542290" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1575406040"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1575542290"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1575406040"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1575406040"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1575542290"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1575542290"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1575406040"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1575542290"></script>
 
     
   </div>
@@ -1959,6 +1959,7 @@
 <ul>
 <li><a href="#get-window-handle">Get window handle</a></li>
 <li><a href="#switching-windows-or-tabs">Switching windows or tabs</a></li>
+<li><a href="#create-new-window-or-new-tab-and-switch">Create new window (or) new tab and switch</a></li>
 <li><a href="#closing-a-window-or-tab">Closing a window or tab</a></li>
 <li><a href="#quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</a></li>
 </ul></li>
@@ -2883,13 +2884,14 @@ windows.forEach(async handle =&gt; {
 </div>
 </div>
 
-<h3 id="closing-a-window-or-tab">Closing a window or tab</h3>
+<h3 id="create-new-window-or-new-tab-and-switch">Create new window (or) new tab and switch</h3>
 
-<p>When you are finished with a window or tab <em>and</em> it is not the
-last window or tab open in your browser, you should close it and switch
-back to the window you were using previously.  Assuming you followed the
-code sample in the previous section you will have the previous window
-handle stored in a variable. Put this together and you will get:</p>
+<p>Creates a new window (or) tab and will focus the new window or tab on screen.
+You don&rsquo;t need to switch to work with the new window (or) tab. If you have more than two windows
+(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
+and switch to the one which is not the original.</p>
+
+<p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p>
 
 
 
@@ -2932,11 +2934,11 @@ handle stored in a variable. Put this together and you will get:</p>
 
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>driver.close();
+<span style="color:#586e75">// Opens a new tab and switches to new tab
+</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.TAB);
 
-<span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow);
+<span style="color:#586e75">// Opens a new window and switches to new window
+</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.WINDOW);
   </code></pre></div>
 </section>
   
@@ -2944,11 +2946,11 @@ handle stored in a variable. Put this together and you will get:</p>
 
 <section id="pythoncode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75">#Close the tab or window</span>
-driver<span style="color:#719e07">.</span>close()
+<span style="color:#586e75"># Opens a new tab and switches to new tab</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>new_window(<span style="color:#2aa198">&#39;tab&#39;</span>)
 
-<span style="color:#586e75">#Switch back to the old tab or window</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window(original_window)
+<span style="color:#586e75"># Opens a new window and switches to new window</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>new_window(<span style="color:#2aa198">&#39;window&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2956,12 +2958,8 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="csharpcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>driver.Close();
-
-<span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>driver.SwitchTo().Window(originalWindow);
-  
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
   
@@ -2969,11 +2967,7 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="rubycode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75">#Close the tab or window</span>
-driver<span style="color:#719e07">.</span>close
-
-<span style="color:#586e75">#Switch back to the old tab or window</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window original_window
+<span style="color:#dc322f">//</span> <span style="color:#cb4b16">Please</span> <span style="color:#719e07">raise</span> a <span style="color:#cb4b16">PR</span>
   </code></pre></div>
 </section>
   
@@ -2981,11 +2975,12 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="javascriptcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>await driver.close();
+<span style="color:#586e75">// Opens a new tab and switches to new tab
+</span><span style="color:#586e75"></span>await driver.switchTo().newWindow(<span style="color:#2aa198">&#39;tab&#39;</span>);
 
-<span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>await driver.switchTo().<span style="color:#b58900">window</span>(originalWindow);
+<span style="color:#586e75">// Opens a new window and switches to new window
+</span><span style="color:#586e75"></span>await driver.switchTo().newWindow(<span style="color:#2aa198">&#39;window&#39;</span>);
+
   
 </code></pre></div>
 </section>
@@ -2994,26 +2989,23 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="kotlincode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>driver.close()
+<span style="color:#586e75">// Opens a new tab and switches to new tab
+</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.TAB)
 
-<span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow)
-
+<span style="color:#586e75">// Opens a new window and switches to new window
+</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.WINDOW)
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>Forgetting to switch back to another window handle after closing a
-window will leave WebDriver executing on the now closed page, and will
-trigger a <strong>No Such Window Exception</strong>. You must switch
-back to a valid window handle in order to continue execution.</p>
+<h3 id="closing-a-window-or-tab">Closing a window or tab</h3>
 
-<h3 id="quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</h3>
-
-<p>When you are finished with the browser session you should call quit,
-instead of close:</p>
+<p>When you are finished with a window or tab <em>and</em> it is not the
+last window or tab open in your browser, you should close it and switch
+back to the window you were using previously.  Assuming you followed the
+code sample in the previous section you will have the previous window
+handle stored in a variable. Put this together and you will get:</p>
 
 
 
@@ -3055,61 +3047,89 @@ instead of close:</p>
 
 
 <section id="javacode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.quit();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow);
+  </code></pre></div>
 </section>
   
 
 
 <section id="pythoncode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>quit()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75">#Close the tab or window</span>
+driver<span style="color:#719e07">.</span>close()
+
+<span style="color:#586e75">#Switch back to the old tab or window</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window(original_window)
+  </code></pre></div>
 </section>
   
 
 
 <section id="csharpcode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Quit();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.Close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.SwitchTo().Window(originalWindow);
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>quit</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75">#Close the tab or window</span>
+driver<span style="color:#719e07">.</span>close
+
+<span style="color:#586e75">#Switch back to the old tab or window</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>window original_window
+  </code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.quit();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>await driver.close();
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>await driver.switchTo().<span style="color:#b58900">window</span>(originalWindow);
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode9" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.quit()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Close the tab or window
+</span><span style="color:#586e75"></span>driver.close()
+
+<span style="color:#586e75">//Switch back to the old tab or window
+</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow)
+
+  </code></pre></div>
 </section>
 </div>
 </div>
 
-<ul>
-<li>Quit will:
+<p>Forgetting to switch back to another window handle after closing a
+window will leave WebDriver executing on the now closed page, and will
+trigger a <strong>No Such Window Exception</strong>. You must switch
+back to a valid window handle in order to continue execution.</p>
 
-<ul>
-<li>Close all the windows and tabs associated with that WebDriver
-session</li>
-<li>Close the browser process</li>
-<li>Close the background driver process</li>
-<li>Notify Selenium Grid that the browser is no longer in use so it can
-be used by another session (if you are using Selenium Grid)</li>
-</ul></li>
-</ul>
+<h3 id="quitting-the-browser-at-the-end-of-a-session">Quitting the browser at the end of a session</h3>
 
-<p>Failure to call quit will leave extra background processes and ports
-running on your machine which could cause you problems later.</p>
-
-<p>Some test frameworks offer methods and annotations which you can hook
-into to tear down at the end of a test.</p>
+<p>When you are finished with the browser session you should call quit,
+instead of close:</p>
 
 
 
@@ -3151,87 +3171,61 @@ into to tear down at the end of a test.</p>
 
 
 <section id="javacode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">/**
-</span><span style="color:#586e75"> * Example using JUnit
-</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-</span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">@AfterAll</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span>() {
-    driver.quit();
-}
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.quit();</code></pre></div>
 </section>
   
 
 
 <section id="pythoncode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>quit()</code></pre></div>
 </section>
   
 
 
 <section id="csharpcode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">/*
-</span><span style="color:#586e75">    Example using Visual Studio&#39;s UnitTesting
-</span><span style="color:#586e75">    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
-</span><span style="color:#586e75">*/</span>
-[TestCleanup]
-<span style="color:#719e07">public</span> <span style="color:#719e07">void</span> TearDown()
-{
-    driver.Quit();
-}
-  
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Quit();
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>quit</code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">/**
-</span><span style="color:#586e75"> * Example using Mocha
-</span><span style="color:#586e75"> * https://mochajs.org/#hooks
-</span><span style="color:#586e75"> */</span>
-after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style="color:#268bd2">function</span> () {
-  await driver.quit();
-});
-  
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.quit();
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-  
-<span style="color:#586e75">/**
-</span><span style="color:#586e75"> * Example using JUnit
-</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
-</span><span style="color:#586e75"> */</span>
-@AfterAll
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">tearDown</span>() {
-    driver.quit()
-}
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.quit()</code></pre></div>
 </section>
 </div>
 </div>
 
-<p>If not running WebDriver in a test context, you may consider using
-<code>try  / finally</code> which is offered by most languages so that an exception
-will still clean up the WebDriver session.</p>
+<ul>
+<li>Quit will:
+
+<ul>
+<li>Close all the windows and tabs associated with that WebDriver
+session</li>
+<li>Close the browser process</li>
+<li>Close the background driver process</li>
+<li>Notify Selenium Grid that the browser is no longer in use so it can
+be used by another session (if you are using Selenium Grid)</li>
+</ul></li>
+</ul>
+
+<p>Failure to call quit will leave extra background processes and ports
+running on your machine which could cause you problems later.</p>
+
+<p>Some test frameworks offer methods and annotations which you can hook
+into to tear down at the end of a test.</p>
 
 
 
@@ -3274,6 +3268,128 @@ will still clean up the WebDriver session.</p>
 
 <section id="javacode11" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using JUnit
+</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style="color:#586e75"> */</span>
+<span style="color:#268bd2">@AfterAll</span>
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit();
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">/*
+</span><span style="color:#586e75">    Example using Visual Studio&#39;s UnitTesting
+</span><span style="color:#586e75">    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+</span><span style="color:#586e75">*/</span>
+[TestCleanup]
+<span style="color:#719e07">public</span> <span style="color:#719e07">void</span> TearDown()
+{
+    driver.Quit();
+}
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using Mocha
+</span><span style="color:#586e75"> * https://mochajs.org/#hooks
+</span><span style="color:#586e75"> */</span>
+after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style="color:#268bd2">function</span> () {
+  await driver.quit();
+});
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode11" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+  
+<span style="color:#586e75">/**
+</span><span style="color:#586e75"> * Example using JUnit
+</span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+</span><span style="color:#586e75"> */</span>
+@AfterAll
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">tearDown</span>() {
+    driver.quit()
+}
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<p>If not running WebDriver in a test context, you may consider using
+<code>try  / finally</code> which is offered by most languages so that an exception
+will still clean up the WebDriver session.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode12" id="tab0code12" aria-controls="javacode12" checked>
+    
+    <label for="tab0code12">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab1code12" aria-controls="pythoncode12">
+    
+    <label for="tab1code12">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab2code12" aria-controls="cscode12">
+    
+    <label for="tab2code12">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab3code12" aria-controls="rubycode12">
+    
+    <label for="tab3code12">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab4code12" aria-controls="javascriptcode12">
+    
+    <label for="tab4code12">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode12" id="tab5code12" aria-controls="kotlincode12">
+    
+    <label for="tab5code12">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode12" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
 </span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
@@ -3284,7 +3400,7 @@ will still clean up the WebDriver session.</p>
   
 
 
-<section id="pythoncode11" class="tab-panel">
+<section id="pythoncode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">try</span>:
     <span style="color:#586e75">#WebDriver code here...</span>
@@ -3295,7 +3411,7 @@ will still clean up the WebDriver session.</p>
   
 
 
-<section id="csharpcode11" class="tab-panel">
+<section id="csharpcode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
@@ -3308,7 +3424,7 @@ will still clean up the WebDriver session.</p>
   
 
 
-<section id="rubycode11" class="tab-panel">
+<section id="rubycode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#719e07">begin</span>
     <span style="color:#586e75">#WebDriver code here...</span>
@@ -3320,7 +3436,7 @@ will still clean up the WebDriver session.</p>
   
 
 
-<section id="javascriptcode11" class="tab-panel">
+<section id="javascriptcode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
@@ -3333,7 +3449,7 @@ will still clean up the WebDriver session.</p>
   
 
 
-<section id="kotlincode11" class="tab-panel">
+<section id="kotlincode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">try</span> {
     <span style="color:#586e75">//WebDriver code here...
@@ -3378,113 +3494,6 @@ using something like:</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode12" id="tab0code12" aria-controls="javacode12" checked>
-    
-    <label for="tab0code12">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode12" id="tab1code12" aria-controls="pythoncode12">
-    
-    <label for="tab1code12">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode12" id="tab2code12" aria-controls="cscode12">
-    
-    <label for="tab2code12">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode12" id="tab3code12" aria-controls="rubycode12">
-    
-    <label for="tab3code12">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode12" id="tab4code12" aria-controls="javascriptcode12">
-    
-    <label for="tab4code12">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode12" id="tab5code12" aria-controls="kotlincode12">
-    
-    <label for="tab5code12">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//This won&#39;t work
-</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># This Wont work</span>
-driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//This won&#39;t work
-</span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># This won&#39;t work</span>
-driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// This won&#39;t work
-</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode12" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//This won&#39;t work
-</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<p>However, if there are no buttons outside of the iframe, you might
-instead get a <em>no such element</em> error. This happens because Selenium is
-only aware of the elements in the top level document. To interact with
-the button, we will need to first switch to the frame, in a similar way
-to how we switch windows. WebDriver offers three ways of switching to
-a frame.</p>
-
-<h3 id="using-a-webelement">Using a WebElement</h3>
-
-<p>Switching using a WebElement is the most flexible option. You can
-find the frame using your preferred selector and switch to it.</p>
-
-
-
-
-<div class="tabset">
-  
-    
       <input type="radio" name="tabsetcode13" id="tab0code13" aria-controls="javacode13" checked>
     
     <label for="tab0code13">Java</label>
@@ -3520,13 +3529,7 @@ find the frame using your preferred selector and switch to it.</p>
 
 <section id="javacode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//Store the web element
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">iframe</span> <span style="color:#719e07">=</span> driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
-
-<span style="color:#586e75">//Switch to the frame
-</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe);
-
-<span style="color:#586e75">//Now we can click the button
+<span style="color:#586e75">//This won&#39;t work
 </span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
   </code></pre></div>
 </section>
@@ -3535,13 +3538,7 @@ find the frame using your preferred selector and switch to it.</p>
 
 <section id="pythoncode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Store iframe web element</span>
-iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#modal &gt; iframe&#34;</span>)
-
-<span style="color:#586e75"># switch to selected iframe</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
-
-<span style="color:#586e75"># Now click on button</span>
+<span style="color:#586e75"># This Wont work</span>
 driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
@@ -3550,13 +3547,7 @@ driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="
 
 <section id="csharpcode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Store the web element
-</span><span style="color:#586e75"></span>IWebElement iframe = driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
-
-<span style="color:#586e75">//Switch to the frame
-</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(iframe);
-
-<span style="color:#586e75">//Now we can click the button
+<span style="color:#586e75">//This won&#39;t work
 </span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
   
 </code></pre></div>
@@ -3566,13 +3557,7 @@ driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="
 
 <section id="rubycode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Store iframe web element</span>
-iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:css</span>,<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>)
-
-<span style="color:#586e75"># Switch to the frame</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame iframe
-
-<span style="color:#586e75"># Now, Click on the button</span>
+<span style="color:#586e75"># This won&#39;t work</span>
 driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
   </code></pre></div>
 </section>
@@ -3581,13 +3566,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 
 <section id="javascriptcode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Store the web element
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
-
-<span style="color:#586e75">// Switch to the frame
-</span><span style="color:#586e75"></span>await driver.switchTo().frame(iframe);
-
-<span style="color:#586e75">// Now we can click the button
+<span style="color:#586e75">// This won&#39;t work
 </span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
   
 </code></pre></div>
@@ -3597,24 +3576,24 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 
 <section id="kotlincode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//Store the web element
-</span><span style="color:#586e75"></span>WebElement iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
-
-<span style="color:#586e75">//Switch to the frame
-</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe)
-
-<span style="color:#586e75">//Now we can click the button
+<span style="color:#586e75">//This won&#39;t work
 </span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="using-a-name-or-id">Using a name or ID</h3>
+<p>However, if there are no buttons outside of the iframe, you might
+instead get a <em>no such element</em> error. This happens because Selenium is
+only aware of the elements in the top level document. To interact with
+the button, we will need to first switch to the frame, in a similar way
+to how we switch windows. WebDriver offers three ways of switching to
+a frame.</p>
 
-<p>If your frame or iframe has an id or name attribute, this can be used
-instead.  If the name or ID is not unique on the page, then the first
-one found will be switched to.</p>
+<h3 id="using-a-webelement">Using a WebElement</h3>
+
+<p>Switching using a WebElement is the most flexible option. You can
+find the frame using your preferred selector and switch to it.</p>
 
 
 
@@ -3657,11 +3636,11 @@ one found will be switched to.</p>
 
 <section id="javacode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//Using the ID
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">iframe</span> <span style="color:#719e07">=</span> driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
 
-<span style="color:#586e75">//Or using the name instead
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe);
 
 <span style="color:#586e75">//Now we can click the button
 </span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
@@ -3672,10 +3651,13 @@ one found will be switched to.</p>
 
 <section id="pythoncode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Switch frame by id</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>)
+<span style="color:#586e75"># Store iframe web element</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#modal &gt; iframe&#34;</span>)
 
-<span style="color:#586e75"># Now, Click on the button</span>
+<span style="color:#586e75"># switch to selected iframe</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
+
+<span style="color:#586e75"># Now click on button</span>
 driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
@@ -3684,11 +3666,11 @@ driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="
 
 <section id="csharpcode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Using the ID
-</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>IWebElement iframe = driver.FindElement(By.CssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
 
-<span style="color:#586e75">//Or using the name instead
-</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(iframe);
 
 <span style="color:#586e75">//Now we can click the button
 </span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
@@ -3700,8 +3682,11 @@ driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="
 
 <section id="rubycode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Switch by ID</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame <span style="color:#2aa198">&#39;buttonframe&#39;</span>
+<span style="color:#586e75"># Store iframe web element</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:css</span>,<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>)
+
+<span style="color:#586e75"># Switch to the frame</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame iframe
 
 <span style="color:#586e75"># Now, Click on the button</span>
 driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
@@ -3712,11 +3697,11 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 
 <section id="javascriptcode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Using the ID
-</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>);
+<span style="color:#586e75">// Store the web element
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
 
-<span style="color:#586e75">// Or using the name instead
-</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;myframe&#39;</span>);
+<span style="color:#586e75">// Switch to the frame
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(iframe);
 
 <span style="color:#586e75">// Now we can click the button
 </span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
@@ -3728,11 +3713,11 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 
 <section id="kotlincode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//Using the ID
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>)
+<span style="color:#586e75">//Store the web element
+</span><span style="color:#586e75"></span>WebElement iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
 
-<span style="color:#586e75">//Or using the name instead
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>)
+<span style="color:#586e75">//Switch to the frame
+</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe)
 
 <span style="color:#586e75">//Now we can click the button
 </span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
@@ -3741,10 +3726,11 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 </div>
 </div>
 
-<h3 id="using-an-index">Using an index</h3>
+<h3 id="using-a-name-or-id">Using a name or ID</h3>
 
-<p>It is also possible to use the index of the frame, such as can be
-queried using <em>window.frames</em> in JavaScript.</p>
+<p>If your frame or iframe has an id or name attribute, this can be used
+instead.  If the name or ID is not unique on the page, then the first
+one found will be switched to.</p>
 
 
 
@@ -3787,17 +3773,26 @@ queried using <em>window.frames</em> in JavaScript.</p>
 
 <section id="javacode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Switches to the second frame  
-</span><span style="color:#586e75"></span>driver.switchTo().frame(1);
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
   </code></pre></div>
 </section>
   
 
 
-<section id="rubycode15" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Switch to the second frame</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">1</span>)
+<section id="pythoncode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Switch frame by id</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>)
+
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3805,21 +3800,27 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="csharpcode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Switches to the second frame
-</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">1</span>);
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.FindElement(By.TagName(<span style="color:#2aa198">&#34;button&#34;</span>)).Click();
   
 </code></pre></div>
 </section>
   
 
 
-<section id="pythoncode15" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># switching to second iframe based on index</span>
-iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;iframe&#39;</span>)[<span style="color:#2aa198">1</span>]
+<section id="rubycode15" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Switch by ID</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame <span style="color:#2aa198">&#39;buttonframe&#39;</span>
 
-<span style="color:#586e75"># switch to selected iframe</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
+<span style="color:#586e75"># Now, Click on the button</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:tag_name</span>,<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click
   </code></pre></div>
 </section>
   
@@ -3827,8 +3828,14 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="javascriptcode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Switches to the second frame
-</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">1</span>);
+<span style="color:#586e75">// Using the ID
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>);
+
+<span style="color:#586e75">// Or using the name instead
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">&#39;myframe&#39;</span>);
+
+<span style="color:#586e75">// Now we can click the button
+</span><span style="color:#586e75"></span>await driver.findElement(By.css(<span style="color:#2aa198">&#39;button&#39;</span>)).click();
   
 </code></pre></div>
 </section>
@@ -3837,17 +3844,23 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="kotlincode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Switches to the second frame  
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">1</span>)
+<span style="color:#586e75">//Using the ID
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>)
+
+<span style="color:#586e75">//Or using the name instead
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>)
+
+<span style="color:#586e75">//Now we can click the button
+</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click()
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="leaving-a-frame">Leaving a frame</h3>
+<h3 id="using-an-index">Using an index</h3>
 
-<p>To leave an iframe or frameset, switch back to the default content
-like so:</p>
+<p>It is also possible to use the index of the frame, such as can be
+queried using <em>window.frames</em> in JavaScript.</p>
 
 
 
@@ -3890,17 +3903,17 @@ like so:</p>
 
 <section id="javacode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>driver.switchTo().defaultContent();
+<span style="color:#586e75">// Switches to the second frame  
+</span><span style="color:#586e75"></span>driver.switchTo().frame(1);
   </code></pre></div>
 </section>
   
 
 
-<section id="pythoncode16" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># switch back to default content</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content()
+<section id="rubycode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Switch to the second frame</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">1</span>)
   </code></pre></div>
 </section>
   
@@ -3908,18 +3921,21 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="csharpcode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>driver.SwitchTo().DefaultContent();
+<span style="color:#586e75">// Switches to the second frame
+</span><span style="color:#586e75"></span>driver.SwitchTo().Frame(<span style="color:#2aa198">1</span>);
   
 </code></pre></div>
 </section>
   
 
 
-<section id="rubycode16" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Return to the top level</span>
-driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content
+<section id="pythoncode16" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># switching to second iframe based on index</span>
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;iframe&#39;</span>)[<span style="color:#2aa198">1</span>]
+
+<span style="color:#586e75"># switch to selected iframe</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
   </code></pre></div>
 </section>
   
@@ -3927,8 +3943,8 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="javascriptcode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>await driver.switchTo().defaultContent();
+<span style="color:#586e75">// Switches to the second frame
+</span><span style="color:#586e75"></span>await driver.switchTo().frame(<span style="color:#2aa198">1</span>);
   
 </code></pre></div>
 </section>
@@ -3937,22 +3953,17 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 <section id="kotlincode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>driver.switchTo().defaultContent()
+<span style="color:#586e75">// Switches to the second frame  
+</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">1</span>)
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h2 id="window-management">Window management</h2>
+<h3 id="leaving-a-frame">Leaving a frame</h3>
 
-<p>Screen resolution can impact how your web application renders, so
-WebDriver provides mechanisms for moving and resizing the browser
-window.</p>
-
-<h3 id="get-window-size">Get window size</h3>
-
-<p>Fetches the size of the browser window in pixels.</p>
+<p>To leave an iframe or frameset, switch back to the default content
+like so:</p>
 
 
 
@@ -3995,14 +4006,8 @@ window.</p>
 
 <section id="javacode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">width</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getWidth();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">height</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getHeight();
-
-<span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Dimension <span style="color:#268bd2">size</span> <span style="color:#719e07">=</span> driver.manage().window().getSize();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">width1</span> <span style="color:#719e07">=</span> size.getWidth();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">height1</span> <span style="color:#719e07">=</span> size.getHeight();
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent();
   </code></pre></div>
 </section>
   
@@ -4010,14 +4015,8 @@ window.</p>
 
 <section id="pythoncode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Access each dimension individually</span>
-width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
-height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
-
-<span style="color:#586e75"># Or store the dimensions and query them later</span>
-size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()
-width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
-height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
+<span style="color:#586e75"># switch back to default content</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content()
   </code></pre></div>
 </section>
   
@@ -4025,14 +4024,8 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="csharpcode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> width = driver.Manage().Window.Size.Width;
-<span style="color:#dc322f">int</span> height = driver.Manage().Window.Size.Height;
-
-<span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>System.Drawing.Size size = driver.Manage().Window.Size;
-<span style="color:#dc322f">int</span> width1 = size.Width;
-<span style="color:#dc322f">int</span> height1 = size.Height;
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.SwitchTo().DefaultContent();
   
 </code></pre></div>
 </section>
@@ -4041,14 +4034,8 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="rubycode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Access each dimension individually</span>
-width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>width
-height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>height
-
-<span style="color:#586e75"># Or store the dimensions and query them later</span>
-size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size
-width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>width
-height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>height
+<span style="color:#586e75"># Return to the top level</span>
+driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>default_content
   </code></pre></div>
 </section>
   
@@ -4056,13 +4043,8 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="javascriptcode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { width, height } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
-
-<span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
-<span style="color:#268bd2">const</span> width1 <span style="color:#719e07">=</span> rect.width;
-<span style="color:#268bd2">const</span> height1 <span style="color:#719e07">=</span> rect.height;
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>await driver.switchTo().defaultContent();
   
 </code></pre></div>
 </section>
@@ -4071,22 +4053,23 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 <section id="kotlincode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().getSize().getWidth()
-<span style="color:#719e07">val</span> height = driver.manage().window().getSize().getHeight()
-
-<span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().getSize()
-<span style="color:#719e07">val</span> width1 = size.getWidth()
-<span style="color:#719e07">val</span> height1 = size.getHeight()
+<span style="color:#586e75">// Return to the top level
+</span><span style="color:#586e75"></span>driver.switchTo().defaultContent()
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="set-window-size">Set window size</h3>
+<h2 id="window-management">Window management</h2>
 
-<p>Restores the window and sets the window size.
+<p>Screen resolution can impact how your web application renders, so
+WebDriver provides mechanisms for moving and resizing the browser
+window.</p>
+
+<h3 id="get-window-size">Get window size</h3>
+
+<p>Fetches the size of the browser window in pixels.</p>
+
 
 
 
@@ -4127,47 +4110,99 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="javacode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().setSize(<span style="color:#719e07">new</span> Dimension(1024, 768));</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">width</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getHeight();
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Dimension <span style="color:#268bd2">size</span> <span style="color:#719e07">=</span> driver.manage().window().getSize();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">width1</span> <span style="color:#719e07">=</span> size.getWidth();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">height1</span> <span style="color:#719e07">=</span> size.getHeight();
+  </code></pre></div>
 </section>
   
 
 
 <section id="pythoncode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>set_window_size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>)</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Access each dimension individually</span>
+width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
+height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_size()
+width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;width&#34;</span>)
+height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;height&#34;</span>)
+  </code></pre></div>
 </section>
   
 
 
 <section id="csharpcode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Size = <span style="color:#719e07">new</span> Size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>);
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> width = driver.Manage().Window.Size.Width;
+<span style="color:#dc322f">int</span> height = driver.Manage().Window.Size.Height;
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>System.Drawing.Size size = driver.Manage().Window.Size;
+<span style="color:#dc322f">int</span> width1 = size.Width;
+<span style="color:#dc322f">int</span> height1 = size.Height;
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>resize_to(<span style="color:#2aa198">1024</span>,<span style="color:#2aa198">768</span>)</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Access each dimension individually</span>
+width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>width
+height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size<span style="color:#719e07">.</span>height
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>size
+width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>width
+height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>height
+  </code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { width, height } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> width1 <span style="color:#719e07">=</span> rect.width;
+<span style="color:#268bd2">const</span> height1 <span style="color:#719e07">=</span> rect.height;
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode18" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size(Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>))</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().getSize().getWidth()
+<span style="color:#719e07">val</span> height = driver.manage().window().getSize().getHeight()
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().getSize()
+<span style="color:#719e07">val</span> width1 = size.getWidth()
+<span style="color:#719e07">val</span> height1 = size.getHeight()
+  </code></pre></div>
 </section>
 </div>
-</div></p>
+</div>
 
-<h3 id="get-window-position">Get window position</h3>
+<h3 id="set-window-size">Set window size</h3>
 
-<p>Fetches the coordinates of the top left coordinate of the browser window.</p>
-
+<p>Restores the window and sets the window size.
 
 
 
@@ -4208,93 +4243,46 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="javacode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">x</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getX();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">y</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getY();
-
-<span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Point <span style="color:#268bd2">position</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">x1</span> <span style="color:#719e07">=</span> position.getX();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">y1</span> <span style="color:#719e07">=</span> position.getY();
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().setSize(<span style="color:#719e07">new</span> Dimension(1024, 768));</code></pre></div>
 </section>
   
 
 
 <section id="pythoncode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Access each dimension individually</span>
-x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
-y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
-
-<span style="color:#586e75"># Or store the dimensions and query them later</span>
-position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()
-x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
-y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>set_window_size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>)</code></pre></div>
 </section>
   
 
 
 <section id="csharpcode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> x = driver.Manage().Window.Position.X;
-<span style="color:#dc322f">int</span> y = driver.Manage().Window.Position.Y;
-
-<span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Point position = driver.Manage().Window.Position;
-<span style="color:#dc322f">int</span> x1 = position.X;
-<span style="color:#dc322f">int</span> y1 = position.Y;
-  
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Size = <span style="color:#719e07">new</span> Size(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>);
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>resize_to(<span style="color:#2aa198">1024</span>,<span style="color:#2aa198">768</span>)</code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { x, y } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
-
-<span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
-<span style="color:#268bd2">const</span> x1 <span style="color:#719e07">=</span> rect.x;
-<span style="color:#268bd2">const</span> y1 <span style="color:#719e07">=</span> rect.y;
-  
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().setRect({ width<span style="color:#719e07">:</span> <span style="color:#2aa198">1024</span>, height<span style="color:#719e07">:</span> <span style="color:#2aa198">768</span> });
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> x = driver.manage().window().position.x
-<span style="color:#719e07">val</span> y = driver.manage().window().position.y
-
-<span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> position = driver.manage().window().position
-<span style="color:#719e07">val</span> x1 = position.x
-int y1 = position.y
-  
-  </code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size(Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>))</code></pre></div>
 </section>
 </div>
-</div>
+</div></p>
 
-<h2 id="set-window-position">Set window position</h2>
+<h3 id="get-window-position">Get window position</h3>
 
-<p>Moves the window to the chosen position.</p>
+<p>Fetches the coordinates of the top left coordinate of the browser window.</p>
 
 
 
@@ -4337,8 +4325,14 @@ int y1 = position.y
 
 <section id="javacode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>driver.manage().window().setPosition(<span style="color:#719e07">new</span> Point(0, 0));
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">x</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getY();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Point <span style="color:#268bd2">position</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">x1</span> <span style="color:#719e07">=</span> position.getX();
+<span style="color:#dc322f">int</span> <span style="color:#268bd2">y1</span> <span style="color:#719e07">=</span> position.getY();
   </code></pre></div>
 </section>
   
@@ -4346,8 +4340,14 @@ int y1 = position.y
 
 <section id="pythoncode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Move the window to the top left of the primary monitor</span>
-driver<span style="color:#719e07">.</span>set_window_position(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>)
+<span style="color:#586e75"># Access each dimension individually</span>
+x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
+y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
+
+<span style="color:#586e75"># Or store the dimensions and query them later</span>
+position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_window_position()
+x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;x&#39;</span>)
+y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;y&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -4355,8 +4355,14 @@ driver<span style="color:#719e07">.</span>set_window_position(<span style="color
 
 <section id="csharpcode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>driver.Manage().Window.Position = <span style="color:#719e07">new</span> Point(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>);
+<span style="color:#586e75">//Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> x = driver.Manage().Window.Position.X;
+<span style="color:#dc322f">int</span> y = driver.Manage().Window.Position.Y;
+
+<span style="color:#586e75">//Or store the dimensions and query them later
+</span><span style="color:#586e75"></span>Point position = driver.Manage().Window.Position;
+<span style="color:#dc322f">int</span> x1 = position.X;
+<span style="color:#dc322f">int</span> y1 = position.Y;
   
 </code></pre></div>
 </section>
@@ -4365,7 +4371,7 @@ driver<span style="color:#719e07">.</span>set_window_position(<span style="color
 
 <section id="rubycode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>move_to(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
   </code></pre></div>
 </section>
   
@@ -4373,8 +4379,13 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 <section id="javascriptcode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>await driver.manage().<span style="color:#b58900">window</span>().setRect({ x<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span>, y<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span> });
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> { x, y } <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> rect <span style="color:#719e07">=</span> await driver.manage().<span style="color:#b58900">window</span>().getRect();
+<span style="color:#268bd2">const</span> x1 <span style="color:#719e07">=</span> rect.x;
+<span style="color:#268bd2">const</span> y1 <span style="color:#719e07">=</span> rect.y;
   
 </code></pre></div>
 </section>
@@ -4383,18 +4394,23 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 <section id="kotlincode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>driver.manage().window().position = Point(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
-    </code></pre></div>
+<span style="color:#586e75">// Access each dimension individually
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> x = driver.manage().window().position.x
+<span style="color:#719e07">val</span> y = driver.manage().window().position.y
+
+<span style="color:#586e75">// Or store the dimensions and query them later
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> position = driver.manage().window().position
+<span style="color:#719e07">val</span> x1 = position.x
+int y1 = position.y
+  
+  </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="maximise-window">Maximise window</h3>
+<h2 id="set-window-position">Set window position</h2>
 
-<p>Enlarges the window. For most operating systems, the window will fill
-the screen, without blocking the operating system&rsquo;s own menus and
-toolbars.</p>
+<p>Moves the window to the chosen position.</p>
 
 
 
@@ -4436,46 +4452,65 @@ toolbars.</p>
 
 
 <section id="javacode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().maximize();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.manage().window().setPosition(<span style="color:#719e07">new</span> Point(0, 0));
+  </code></pre></div>
 </section>
   
 
 
 <section id="pythoncode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>maximize_window()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Move the window to the top left of the primary monitor</span>
+driver<span style="color:#719e07">.</span>set_window_position(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>)
+  </code></pre></div>
 </section>
   
 
 
 <section id="csharpcode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Maximize();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.Manage().Window.Position = <span style="color:#719e07">new</span> Point(<span style="color:#2aa198">0</span>, <span style="color:#2aa198">0</span>);
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>maximize</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>move_to(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+  </code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().maximize();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>await driver.manage().<span style="color:#b58900">window</span>().setRect({ x<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span>, y<span style="color:#719e07">:</span> <span style="color:#2aa198">0</span> });
+  
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode21" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().maximize()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Move the window to the top left of the primary monitor
+</span><span style="color:#586e75"></span>driver.manage().window().position = Point(<span style="color:#2aa198">0</span>,<span style="color:#2aa198">0</span>)
+    </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="fullscreen-window">Fullscreen window</h3>
+<h3 id="maximise-window">Maximise window</h3>
 
-<p>Fills the entire screen, similar to pressing F11 in most browsers.</p>
+<p>Enlarges the window. For most operating systems, the window will fill
+the screen, without blocking the operating system&rsquo;s own menus and
+toolbars.</p>
 
 
 
@@ -4517,38 +4552,119 @@ toolbars.</p>
 
 
 <section id="javacode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().maximize();</code></pre></div>
 </section>
   
 
 
 <section id="pythoncode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>fullscreen_window()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>maximize_window()</code></pre></div>
 </section>
   
 
 
 <section id="csharpcode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.FullScreen();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Maximize();
 </code></pre></div>
 </section>
   
 
 
 <section id="rubycode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>full_screen</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>maximize</code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().maximize();
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode22" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().maximize()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="fullscreen-window">Fullscreen window</h3>
+
+<p>Fills the entire screen, similar to pressing F11 in most browsers.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode23" id="tab0code23" aria-controls="javacode23" checked>
+    
+    <label for="tab0code23">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab1code23" aria-controls="pythoncode23">
+    
+    <label for="tab1code23">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab2code23" aria-controls="cscode23">
+    
+    <label for="tab2code23">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab3code23" aria-controls="rubycode23">
+    
+    <label for="tab3code23">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab4code23" aria-controls="javascriptcode23">
+    
+    <label for="tab4code23">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode23" id="tab5code23" aria-controls="kotlincode23">
+    
+    <label for="tab5code23">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>fullscreen_window()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.FullScreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>full_screen</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode23" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode23" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().fullscreen()</code></pre></div>
 </section>
 </div>
@@ -4562,7 +4678,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/">
       “Browser manipulation”
-    </a> was last updated on: 03 Dec 2019 21:45:53 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/282c77212d3049bf523b413bf615c00177cd5e9c">Removing references to old docs repo [deploy site] (282c7721)</a>
+    </a> was last updated on: 05 Dec 2019 15:52:21 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5d2ef6d93f3b7d7e862eee149ffcfac6188507ec">Add: Added new method doc &#39;newWindow&#39; implemented in selenium4.Also a… (#112) (5d2ef6d9)</a>
 </h5>
         
         </div> 
@@ -5775,19 +5891,19 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1575406040"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1575542290"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1575406040"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1575406040"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1575542290"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1575542290"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1575406040" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1575406040"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1575542290" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1575542290"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
