@@ -256,3 +256,35 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> 기여하기"
 url = "contributing"
 weight = 30
+
+[Languages.de]
+title = "Dokumentation für Selenium"
+weight = 1
+languageName = "Deutsch"
+baseURL = "https://selenium.dev/documentation/de"
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://selenium.dev"
+weight = 1
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
+weight = 10
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Fehler einmelden"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
+weight = 11
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-trophy'></i> Impressum"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.de.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Wie kann ich beitragen?"
+url = "contributing"
+weight = 30
