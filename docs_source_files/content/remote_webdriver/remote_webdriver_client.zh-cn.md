@@ -39,12 +39,11 @@ driver.get "http://www.google.com"
 driver.close
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
+const { Builder, Capabilities } = require("selenium-webdriver");
+var capabilities = Capabilities.firefox();
 (async function helloSelenium() {
-    let driver = new Builder()
-        .forBrowser('chrome')
-        .setChromeOptions(new chrome.Options())
+    let driver = new Builder()        
+        .withCapabilities(capabilities)
         .build();
     try {
         await driver.get('http://www.google.com');
@@ -98,15 +97,13 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome");
-const width = 780;
-const height = 480;
+const { Builder, Capabilities } = require("selenium-webdriver");
+const firefox = require("selenium-webdriver/firefox")
+var capabilities = Capabilities.firefox();
 (async function helloSelenium() {
     let driver = new Builder()
-        .forBrowser('chrome')
-        .setChromeOptions(
-            new chrome.Options().headless().windowSize({ width, height }))
+        .setFirefoxOptions(new firefox.Options().headless())
+        .withCapabilities(capabilities)
         .build();
     try {
         await driver.get('http://www.google.com');
