@@ -11,20 +11,20 @@
     <title>Waits :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1575565255" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1575565255" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1575638796" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1575638796" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1575565255" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1575638796" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1575565255"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1575638796"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1575565255"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1575565255"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1575638796"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1575638796"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1575565255"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1575638796"></script>
 
     
   </div>
@@ -2569,7 +2569,9 @@ WebDriverWait(driver, timeout<span style="color:#719e07">=</span><span style="co
 
 <section id="rubycode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+wait <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Wait</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">:timeout</span> <span style="color:#719e07">=&gt;</span> <span style="color:#2aa198">10</span>)
+
+wait<span style="color:#719e07">.</span>until { driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:id</span>, <span style="color:#2aa198">&#39;message&#39;</span>)<span style="color:#719e07">.</span>displayed? }
   </code></pre></div>
 </section>
   
@@ -2905,7 +2907,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/waits/">
       “Waits”
-    </a> was last updated on: 03 Dec 2019 11:13:23 -0300: <a href="https://github.com/SeleniumHQ/site/commit/c0fdf64da93b856cf7b533fd6da4149dcb63e16e">Add: Added some Javascript examples for the initial sections of documentation (#107) (c0fdf64d)</a>
+    </a> was last updated on: 06 Dec 2019 18:54:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/28fe3e7919c7b14611be069bf3f18d2ee1ae3513">Add: Added ruby sample code for new_window (#118) [deploy site] (28fe3e79)</a>
 </h5>
         
         </div> 
@@ -4118,19 +4120,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1575565255"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1575638796"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1575565255"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1575565255"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1575638796"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1575638796"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1575565255" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1575565255"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1575638796" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1575638796"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
