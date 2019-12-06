@@ -11,20 +11,20 @@
     <title>Kurze Einführung :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1575565236" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1575565236" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1575639144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1575639144" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1575565236" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1575639144" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1575565236"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1575639144"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1575565236"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1575565236"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1575639144"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1575639144"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1575565236"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1575639144"></script>
 
     
   </div>
@@ -1964,7 +1964,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/de/'>The Selenium Browser Automation Project</a> > <a href='https://selenium.dev/documentation/de/getting_started/'>Erste Schritte</a> > Kurze Einführung
+            <a href='https://selenium.dev/documentation/de/'>Das Selenium Browser Automations Projekt</a> > <a href='https://selenium.dev/documentation/de/getting_started/'>Erste Schritte</a> > Kurze Einführung
           
          
           
@@ -2012,40 +2012,33 @@
 
 
 
-<p>
-<div class="notices info" ><p><i class="fas fa-language"></i> Diese Seite wird von Englisch
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
-zu übersetzen indem Du uns einen Pull Reqeust schickst!</p>
-</div>
-
-Selenium is not just one tool or API
-but it composes many tools.</p>
+<p>Selenium ist nicht ein einzelnes Tool oder eine API, es besteht aus mehreren Tools</p>
 
 <h2 id="webdriver">WebDriver</h2>
 
-<p>If you are beginning with desktop website test automation then you
-are going to be using WebDriver APIs. <em><a href="https://selenium.dev/documentation/de/webdriver/">WebDriver</a></em>
-uses browser automation APIs provided by browser vendors to control browser and
-run tests. This is as if a real user is operating the browser. Since
-WebDriver does not require its API to be compiled with application
-code, it is not intrusive in nature. Hence, you are testing the
-same application which you push live.</p>
+<p>Startest Du mit dem automatisieren von Websiten, dann wirst Du die WebDriver APIs verwenden.
+<em><a href="https://selenium.dev/documentation/de/webdriver/">WebDriver</a></em> verwendet die von den Browsern
+Herstellern zur Verfügung gestellten APIs um den Browser zu steuern und Test
+auszuführen. Die Ausführung simuliert einen echten Benutzer. Da der WebDriver eigenständig
+ist und nicht mit der Applikation kompiliert werden muss, handelt es sich um eine minimal
+invasive Methode. Es kann exakt die Applikation getestet werden die später veröffentlicht wird.</p>
 
 <h2 id="ide">IDE</h2>
 
-<p><em><a href="https://selenium.dev/selenium-ide">IDE</a></em> (Integrated Development Environment)
-is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome
-and Firefox extension and is generally the most efficient way to develop
-test cases. It records the users actions in the browser for you, using
-existing Selenium commands, with parameters defined by the context of
-that element. This is not only a time-saver, but also an excellent way
-of learning Selenium script syntax.</p>
+<p><em><a href="https://selenium.dev/selenium-ide">IDE</a></em> (Integrated Development Environment = Entwicklungsumgebung)
+ist ein Werkzeug um Seleniumtests zu erstellen. Es ist eine einfach zu handhabende
+Erweiterung für Chrome und Firefox und in der Regel ist dies die effizienteste Weg
+um Testfälle zu erstellen. Benutzerinteraktionen werden aufgezeichnet mit Hilfe von
+bestehenden Selenium Befehlen. Diese werden mit den entsprechenden Parametern versehen.
+Das ist nicht nur zeitsparend sondern auch ein guter Weg um sich mit der Seleniumsyntax
+vertraut zu machen.</p>
 
 <h2 id="grid">Grid</h2>
 
-<p>Soon after development of WebDriver tests, you may face a need of
-running your tests on multiple browser and operating system combinations.
-This is where <em><a href="https://selenium.dev/documentation/de/grid/">Grid</a></em> comes to the rescue.</p>
+<p>Sehr bald nachdem Du die ersten WebDriver Tests erstellt hast, wirst Du Dir
+wünschen Deine Tests auf unterscchen Browsern und Betriebssystemkombinationen
+auszuführen. Das ist der Moment an dem <em><a href="https://selenium.dev/documentation/de/grid/">Grid</a></em> ins
+Spiel kommt.</p>
 
 
 <footer class=" footline" >
@@ -2055,7 +2048,7 @@ This is where <em><a href="https://selenium.dev/documentation/de/grid/">Grid</a>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/getting_started/quick/">
       “Kurze Einführung”
-    </a> was last updated on: 05 Dec 2019 17:19:45 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/ade0530665c211da6b6cad442004a765fe8d3af6">1st chunk for German translation (#110) [deploy site] (ade05306)</a>
+    </a> was last updated on: 06 Dec 2019 14:31:17 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/981bca8717ae104f74877d48ff5ae650aabdf437">German Translation chunk (#120) [deploy site] (981bca87)</a>
 </h5>
         
         </div> 
@@ -3262,19 +3255,19 @@ This is where <em><a href="https://selenium.dev/documentation/de/grid/">Grid</a>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1575565236"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1575639144"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1575565236"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1575565236"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1575639144"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1575639144"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1575565236" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1575565236"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1575639144" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1575639144"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
