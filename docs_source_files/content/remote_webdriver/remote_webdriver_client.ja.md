@@ -39,12 +39,12 @@ driver.get "http://www.google.com"
 driver.close
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-let chromeCapabilities = Capabilities.chrome();
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
 (async function helloSelenium() {
     let driver = new Builder()
-        .forBrowser("chrome")
-        .withCapabilities(chromeCapabilities)
+        .forBrowser('chrome')
+        .setChromeOptions(new chrome.Options())
         .build();
     try {
         await driver.get('http://www.google.com');
@@ -98,21 +98,15 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-let chromeCapabilities = Capabilities.chrome();
-//Setting chrome options
-const capabilityName = 'goog:chromeOptions';
-var browserOptions = {
-	'args': [
-        "--start-maximized",
-        '--disable-gpu'
-	]
-};
-chromeCapabilities.set(capabilityName, browserOptions);
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+const width = 780;
+const height = 480;
 (async function helloSelenium() {
     let driver = new Builder()
-        .forBrowser("chrome")
-        .withCapabilities(chromeCapabilities)
+        .forBrowser('chrome')
+        .setChromeOptions(
+            new chrome.Options().headless().windowSize({ width, height }))
         .build();
     try {
         await driver.get('http://www.google.com');
