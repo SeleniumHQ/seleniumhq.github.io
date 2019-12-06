@@ -387,7 +387,11 @@ driver.switch_to.new_window('tab')
 driver.switch_to.new_window('window')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+// Opens a new tab and switches to new tab
+driver.SwitchTo().NewWindow(WindowType.Tab)
+
+// Opens a new window and switches to new window
+driver.SwitchTo().NewWindow(WindowType.Window)
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
