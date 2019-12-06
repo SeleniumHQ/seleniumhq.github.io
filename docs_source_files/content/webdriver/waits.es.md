@@ -300,7 +300,9 @@ WebDriverWait(driver, timeout=3).until(some_condition)
   {{< code-panel language="csharp" >}}
  new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+wait.until { driver.find_element(:id, 'message').displayed? }
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
