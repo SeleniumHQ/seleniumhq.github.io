@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Erste Schritte on Dokumentation für Selenium</title>
+    <link>https://selenium.dev/documentation/de/getting_started/</link>
+    <description>Recent content in Erste Schritte on Dokumentation für Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/de/getting_started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Kurze Einführung</title>
+      <link>https://selenium.dev/documentation/de/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/de/getting_started/quick/</guid>
+      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ Selenium is not just one tool or API but it composes many tools.
+WebDriver If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests.</description>
+    </item>
+    
+  </channel>
+</rss>
