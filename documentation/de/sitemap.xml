@@ -454,7 +454,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/de/getting_started/quick/</loc>
-    <lastmod>2019-12-05T17:19:45+01:00</lastmod>
+    <lastmod>2019-12-06T14:31:17+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3287,6 +3287,51 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/de/</loc>
+    <lastmod>2019-12-06T14:31:17+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://selenium.dev/documentation/de/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/de/contributing/</loc>
     <lastmod>2019-12-05T17:19:45+01:00</lastmod>
     <xhtml:link
@@ -3372,51 +3417,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://selenium.dev/documentation/de/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/documentation/de/</loc>
-    <lastmod>2019-12-05T17:19:45+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/"
                 />
   </url>
   
