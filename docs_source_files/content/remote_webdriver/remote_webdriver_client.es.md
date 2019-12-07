@@ -103,17 +103,16 @@ const chrome = require("selenium-webdriver/chrome")
 var capabilities = Capabilities.chrome();
 //To avoid InsecureCertificateError for selenium4-aplha5
 capabilities.setAcceptInsecureCerts(true);
-const width = 780;
-const height = 480;
+capabilities.set("browserVersion", "67");
+capabilities.set("platformName", "Windows XP");
 (async function helloSelenium() {
     let driver = new Builder()
-        //Browser Window Size Set
-        .setChromeOptions(new chrome.Options().windowSize({ width, height }))
         .withCapabilities(capabilities)
         .build();
     try {
         await driver.get('http://www.google.com');
-    } finally {
+    }    
+    finally {       
         await driver.quit();
     }
 })();
