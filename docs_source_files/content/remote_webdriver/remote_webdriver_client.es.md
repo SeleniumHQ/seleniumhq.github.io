@@ -101,9 +101,12 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
 const { Builder, Capabilities } = require("selenium-webdriver");
 const firefox = require("selenium-webdriver/firefox")
 var capabilities = Capabilities.firefox();
+const width = 780;
+const height = 480;
 (async function helloSelenium() {
     let driver = new Builder()
-        .setFirefoxOptions(new firefox.Options().headless())
+        //Browser windowSize Set
+        .setFirefoxOptions(new firefox.Options().windowSize({ width, height }))
         .withCapabilities(capabilities)
         .build();
     try {
