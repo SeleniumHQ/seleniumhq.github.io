@@ -98,14 +98,16 @@ driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :des
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const { Builder, Capabilities } = require("selenium-webdriver");
-const firefox = require("selenium-webdriver/firefox")
-var capabilities = Capabilities.firefox();
+const chrome = require("selenium-webdriver/chrome")
+var capabilities = Capabilities.chrome();
+//To avoid InsecureCertificateError for selenium4-aplha5
+capabilities.setAcceptInsecureCerts(true);
 const width = 780;
 const height = 480;
 (async function helloSelenium() {
     let driver = new Builder()
-        //Browser windowSize Set
-        .setFirefoxOptions(new firefox.Options().windowSize({ width, height }))
+        //Browser Window Size Set
+        .setChromeOptions(new chrome.Options().windowSize({ width, height }))
         .withCapabilities(capabilities)
         .build();
     try {
