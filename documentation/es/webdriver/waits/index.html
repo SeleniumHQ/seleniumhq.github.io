@@ -11,20 +11,20 @@
     <title>Esperas :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1575829436" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1575829436" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1575975114" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1575975114" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1575829436" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1575975114" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1575829436"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1575975114"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1575829436"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1575829436"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1575975114"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1575975114"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1575829436"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1575975114"></script>
 
     
   </div>
@@ -2447,7 +2447,8 @@ el <span style="color:#719e07">=</span> WebDriverWait(driver)<span style="color:
 
 &lt;section id=<span style="color:#2aa198">&#34;javascriptcode2&#34;</span> class=<span style="color:#2aa198">&#34;tab-panel&#34;</span>&gt;
   &lt;div class=<span style="color:#2aa198">&#34;highlight&#34;</span>&gt;&lt;pre style=<span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span>&gt;&lt;code class=<span style="color:#2aa198">&#34;language-javascript&#34;</span> data-lang=<span style="color:#2aa198">&#34;javascript&#34;</span>&gt;
-&lt;span style=<span style="color:#2aa198">&#34;color:#268bd2&#34;</span>&gt;<span style="color:#719e07">let</span>&lt;/span&gt; foo &lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;=&lt;/span&gt; <span style="color:#719e07">await</span> driver.findElement(By.name(&lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">34</span>;q&amp;#<span style="color:#2aa198">34</span>;&lt;/span&gt;)).getText();
+&lt;span style=<span style="color:#2aa198">&#34;color:#268bd2&#34;</span>&gt;<span style="color:#719e07">let</span>&lt;/span&gt; ele &lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;=&lt;/span&gt; <span style="color:#719e07">await</span> driver.wait(until.elementLocated(By.css(&lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">39</span>;p&amp;#<span style="color:#2aa198">39</span>;&lt;/span&gt;)),&lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;<span style="color:#2aa198">10000</span>&lt;/span&gt;);
+&lt;span style=<span style="color:#2aa198">&#34;color:#268bd2&#34;</span>&gt;<span style="color:#719e07">let</span>&lt;/span&gt; foo &lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;=&lt;/span&gt; <span style="color:#719e07">await</span> ele.getText();
 assert(foo &lt;span style=<span style="color:#2aa198">&#34;color:#719e07&#34;</span>&gt;==&lt;/span&gt; &lt;span style=<span style="color:#2aa198">&#34;color:#2aa198&#34;</span>&gt;&amp;#<span style="color:#2aa198">34</span>;Hello <span style="color:#719e07">from</span> JavaScript&amp;#<span style="color:#2aa198">34</span>;&lt;/span&gt;);
   
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
@@ -2896,7 +2897,7 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/waits/">
       “Esperas”
-    </a> was last updated on: 08 Dec 2019 23:52:28 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/fea92d2940c02f34088428d6028dbda298279d6f">Modify: Updated the change for other translated pages too (#122) [deploy site] (fea92d29)</a>
+    </a> was last updated on: 10 Dec 2019 16:20:22 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/47f5fc81876354a3c6cba74c3c3f3e1dd06d8186">Modify: Updating code sample to match other examples in this section (#124) [deploy site] (47f5fc81)</a>
 </h5>
         
         </div> 
@@ -4109,19 +4110,19 @@ element <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1575829436"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1575975114"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1575829436"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1575829436"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1575975114"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1575975114"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1575829436" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1575829436"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1575975114" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1575975114"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
