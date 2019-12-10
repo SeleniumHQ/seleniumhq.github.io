@@ -250,7 +250,8 @@ assert el.text == "Hello from JavaScript!"
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-let foo = await driver.findElement(By.name("q")).getText();
+let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
+let foo = await ele.getText();
 assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
