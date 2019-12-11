@@ -1984,7 +1984,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/de/webdriver/waits/</loc>
-    <lastmod>2019-12-10T16:20:22+05:30</lastmod>
+    <lastmod>2019-12-11T21:55:44+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3059,51 +3059,6 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://selenium.dev/documentation/de/webdriver/keyboard/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/documentation/de/webdriver/mouse/</loc>
-    <lastmod>2019-12-05T17:19:45+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/webdriver/mouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/webdriver/mouse/"
                 />
   </url>
   

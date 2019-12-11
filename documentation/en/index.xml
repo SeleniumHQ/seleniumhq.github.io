@@ -587,15 +587,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.
     </item>
     
     <item>
-      <title>Mouse</title>
-      <link>https://selenium.dev/documentation/en/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/en/webdriver/mouse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Contributing to the Selenium Site &amp; Documentation</title>
       <link>https://selenium.dev/documentation/en/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

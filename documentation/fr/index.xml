@@ -622,16 +622,6 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Souris</title>
-      <link>https://selenium.dev/documentation/fr/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/webdriver/mouse/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- </description>
-    </item>
-    
-    <item>
       <title>Contributing to the Selenium Site &amp; Documentation</title>
       <link>https://selenium.dev/documentation/fr/contributing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
