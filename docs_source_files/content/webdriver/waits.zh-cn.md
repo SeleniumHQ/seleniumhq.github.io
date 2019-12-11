@@ -106,7 +106,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.zh-cn.md" >}}) interface—su
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.zh-cn.md" >}})
- and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.de.md" >}}),
+ and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.zh-cn.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
