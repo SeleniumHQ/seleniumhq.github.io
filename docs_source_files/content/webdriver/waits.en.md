@@ -101,7 +101,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.en.md" >}}) interface—such
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.en.md" >}})
- and [_Mouse_]({{< ref "/webdriver/mouse.en.md" >}}),
+ and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.de.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
