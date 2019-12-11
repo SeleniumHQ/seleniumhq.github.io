@@ -37,7 +37,8 @@ driver.close
 const { Builder, Capabilities } = require("selenium-webdriver");
 var capabilities = Capabilities.firefox();
 (async function helloSelenium() {
-    let driver = new Builder()        
+    let driver = new Builder()
+        .usingServer("http://example.com")   
         .withCapabilities(capabilities)
         .build();
     try {
@@ -101,6 +102,7 @@ capabilities.set("browserVersion", "67");
 capabilities.set("platformName", "Windows XP");
 (async function helloSelenium() {
     let driver = new Builder()
+        .usingServer("http://example.com")   
         .withCapabilities(capabilities)
         .build();
     try {
