@@ -137,7 +137,9 @@ the following way:
 driver.setFileDetector(new LocalFileDetector());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium.webdriver.remote.file_detector import UselessFileDetector
+
+driver.file_detector = UselessFileDetector()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var allowsDetection = this.driver as IAllowsFileDetection;
