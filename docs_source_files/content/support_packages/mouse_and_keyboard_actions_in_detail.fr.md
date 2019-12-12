@@ -102,7 +102,9 @@ actions.perform()
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
- await actions.move({origin: e}).perform();
+ await actions
+ .move({origin: e})
+ .perform();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val actions = Actions(driver)
@@ -130,7 +132,7 @@ e.send_keys("Test")
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.sendKeys("Test");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.sendKeys("Test")
@@ -153,7 +155,7 @@ e.clear()
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.clear();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.clear()
