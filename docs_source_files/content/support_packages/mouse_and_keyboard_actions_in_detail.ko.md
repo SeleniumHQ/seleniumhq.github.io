@@ -25,7 +25,7 @@ IWebElement e = driver.FindElement(By.Id("testElement"));
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+let e = await driver.findElement(By.id("testElement"));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val element = driver.findElement(By.id("testElement"))
@@ -49,7 +49,7 @@ e.Click();
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.click()
