@@ -73,7 +73,7 @@ using OpenQA.Selenium.Interactions;
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const actions = driver.actions();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.interactions.Actions
@@ -102,7 +102,7 @@ actions.perform()
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+ await actions.move({origin: e}).perform();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val actions = Actions(driver)
