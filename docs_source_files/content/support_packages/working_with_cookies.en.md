@@ -99,11 +99,11 @@ driver.manage.delete_all_cookies
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Go to the correct domain
-driver.get('http://www.example.com');
+await driver.get('http://www.example.com');
 
 // Now set the basic cookie. Here's one for the entire domain
 // the cookie name here is 'key' and its value is 'value'
-driver.manage().addCookie({name: 'cookie-1', value: 'cookieValue'});
+await driver.manage().addCookie({name: 'cookie-1', value: 'cookieValue'});
 
 // And now output all the available cookies for the current URL
 driver.manage().getCookies().then( (loadedCookies) =>{
@@ -113,9 +113,9 @@ driver.manage().getCookies().then( (loadedCookies) =>{
 });
 // You can delete cookies in 2 ways
 // By name
-driver.manage().deleteCookie('cookie-1');
+await driver.manage().deleteCookie('cookie-1');
 // Or all of them
-driver.manage().deleteAllCookies();
+await driver.manage().deleteAllCookies();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // We don't have a Kotlin code sample yet -  Help us out and raise a PR  
