@@ -81,7 +81,7 @@ driver.quit();
 var chromeOptions = new ChromeOptions();
 chromeOptions.BrowserVersion = "67";
 chromeOptions.PlatformName = "Windows XP";
-IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
+IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), chromeOptions);
 driver.Navigate().GoToUrl("http://www.google.com");
 driver.Quit();
   {{< / code-panel >}}
