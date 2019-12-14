@@ -117,15 +117,5 @@ sendKeys The sendKeys types a key sequence in DOM element even if modifier key s
 Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
-    <item>
-      <title>Mouse</title>
-      <link>https://selenium.dev/documentation/es/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/webdriver/mouse/</guid>
-      <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- </description>
-    </item>
-    
   </channel>
 </rss>

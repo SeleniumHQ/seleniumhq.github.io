@@ -107,7 +107,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.es.md" >}}) interface—such
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.es.md" >}}) 
- and [_Mouse_]({{< ref "/webdriver/mouse.es.md" >}}),
+ and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.es.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
@@ -236,7 +236,7 @@ assertEquals(foo.getText(), "Hello from JavaScript!");
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver).until(lambda d: d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -250,7 +250,8 @@ assert el.text == "Hello from JavaScript!"
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-let foo = await driver.findElement(By.name("q")).getText();
+let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
+let foo = await ele.getText();
 assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -300,7 +301,9 @@ WebDriverWait(driver, timeout=3).until(some_condition)
   {{< code-panel language="csharp" >}}
  new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+wait.until { driver.find_element(:id, 'message').displayed? }
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
