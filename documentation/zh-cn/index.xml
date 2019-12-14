@@ -238,17 +238,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Third party drivers and plugins</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
-Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project. In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.</description>
-    </item>
-    
-    <item>
       <title>Typographical conventions</title>
       <link>https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -295,6 +284,17 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <guid>https://selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/</guid>
       <description>要执行项目并控制浏览器，需要安装特定于浏览器的 WebDriver 二进制文件。
 下载 WebDriver 二进制文件 并放入 系统 PATH 环境变量 中.</description>
+    </item>
+    
+    <item>
+      <title>第三方驱动和插件</title>
+      <link>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <description>可以通过使用插件扩展 Selenium。这里有一些由第三方创建和维护的插件。有关如何创建插件和使用的更多信息，请参考文档。
+请注意，Selenium 项目不支持、维护、托管或认可这些插件。另外，请注意，下面列出的插件不一定是 Apache 2.0 授权的。 其中一些插件在其他的免费和开源软件许可下可用；其他的只能在私有许可下使用。关于插件及其发行许可的任何问题都需要向它的开发人员提出。
+   浏览器 最新版 变更记录 问题追踪     Mozilla GeckoDriver 最新版 变更记录 问题追踪   Google Chrome Driver 最新版 变更记录 问题追踪   Opera 最新版 - 问题追踪   Microsoft Edge Driver 最新版 - 问题追踪   SafariDriver 内置 - 问题追踪    </description>
     </item>
     
     <item>
@@ -438,17 +438,6 @@ Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&a
     </item>
     
     <item>
-      <title>Performing actions on the AUT*</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- You can set an element&amp;rsquo;s text using the sendKeys method as follows:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Some web applications use JavaScript libraries to add drag-and-drop functionality.</description>
-    </item>
-    
-    <item>
       <title>Waits</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -479,6 +468,17 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       <description>这些文档，就像代码本身一样，100% 由 Selenium 社区中的志愿者维护。 许多人自成立以来一直在使用它，但更多人只是在短时间内使用它，并且已经花时间帮助改善新用户的入门体验。
 如果文档有问题，我们想知道！ 沟通问题的最佳方式是访问 https://github.com/seleniumhq/seleniumhq.github.io/issues 并搜索问题是否已经提交。 如果没有，请随意打开一个！
 社区的许多成员经常光顾 irc.freenode.net 的 #selenium IRC 频道。 请随时来访并提出问题，如果您得到了您认为在这些文档中可能有用的帮助，请务必添加您的贡献！ 我们可以更新这些文档，但当我们从普通提交者之外获得贡献时，对每个人来说都容易得多。</description>
+    </item>
+    
+    <item>
+      <title>在 AUT* 中执行</title>
+      <link>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <description>使用 sendKeys 方法设置元素的文本，如下所示:
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
     </item>
     
     <item>
