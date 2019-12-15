@@ -22,7 +22,7 @@ e = driver.find_element_by_id("testElement")
  IWebElement e = driver.FindElement(By.Id("testElement"));
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e = driver.find_element(id:'testElement')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let e = driver.findElement(By.id("testElement"));
@@ -46,7 +46,7 @@ e.click()
  e.Click();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await e.click();
@@ -129,7 +129,7 @@ e.send_keys("Test")
  e.SendKeys("Test");
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.send_keys "Test"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await e.sendKeys("Test");
@@ -152,7 +152,7 @@ e.clear()
  e.Clear();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.clear
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await e.clear();
