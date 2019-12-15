@@ -149,7 +149,8 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
       <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
 WebDriver 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
-IDE IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome and Firefox extension and is generally the most efficient way to develop test cases. It records the users actions in the browser for you, using existing Selenium commands, with parameters defined by the context of that element.</description>
+Selenium IDE Selenium IDE (Integrated Development Environment 集成开发环境) 是用来开发 Selenium 测试用例的工具。这是一个易于使用的 Chrome 和 Firefox 浏览器扩展，通常是开发测试用例最有效率的方式。它使用现有的 Selenium 命令记录用户在浏览器中的操作, 参数由元素的上下文确定。这不仅节省了开发时间，而且是学习 Selenium 脚本语法的一种很好的方法。
+Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。 这就是 Grid 应用的地方。</description>
     </item>
     
     <item>
@@ -434,7 +435,7 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
+Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
     </item>
     
     <item>
