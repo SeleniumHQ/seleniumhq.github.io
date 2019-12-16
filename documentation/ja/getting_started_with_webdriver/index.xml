@@ -41,7 +41,7 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
       <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = await driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = driver.</description>
     </item>
     
     <item>
