@@ -58,10 +58,10 @@ driver = new Builder().forBrowser('chrome').build();
 await driver.get('http://www.google.com');
 
 //Get and store DOM element '<form>'
-let searchForm = await driver.findElement(By.name('f'));
+let searchForm = driver.findElement(By.name('f'));
 
 //Get search box element from webElement 'form'
-let searchBar = await searchForm.findElement(By.name('q'));
+let searchBar = searchForm.findElement(By.name('q'));
 
 //Perform action using WebElement
 await searchBar.sendKeys('Webdriver');
