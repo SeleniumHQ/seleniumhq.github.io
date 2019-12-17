@@ -69,7 +69,7 @@ from selenium.webdriver import ActionChains
  using OpenQA.Selenium.Interactions;
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+action = driver.action
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const actions = driver.actions();
@@ -98,7 +98,9 @@ actions.perform()
  actions.Perform();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+action
+.move_to(e)
+.perform
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
  await actions
