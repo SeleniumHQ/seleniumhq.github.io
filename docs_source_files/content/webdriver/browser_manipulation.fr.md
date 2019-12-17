@@ -717,7 +717,7 @@ driver.find_element(:tag_name,'button').click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Store the web element
-const iframe = await driver.findElement(By.css('#modal > iframe'));
+const iframe = driver.findElement(By.css('#modal > iframe'));
 
 // Switch to the frame
 await driver.switchTo().frame(iframe);

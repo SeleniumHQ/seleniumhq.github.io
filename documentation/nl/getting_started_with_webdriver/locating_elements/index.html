@@ -11,20 +11,20 @@
     <title>Localisatie van elementen :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1576335924" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1576335924" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1576537675" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1576537675" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1576335924" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1576537675" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1576335924"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1576537675"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1576335924"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1576335924"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1576537675"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1576537675"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1576335924"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1576537675"></script>
 
     
   </div>
@@ -2087,7 +2087,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#b5890
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> cheese <span style="color:#719e07">=</span> await driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
+<span style="color:#268bd2">const</span> cheese <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
   
 </code></pre></div>
 </section>
@@ -2193,8 +2193,8 @@ cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.
 
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> cheese <span style="color:#719e07">=</span> await driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
-<span style="color:#268bd2">const</span> cheddar <span style="color:#719e07">=</span> await cheese.findElement(By.id(<span style="color:#2aa198">&#39;cheddar&#39;</span>));
+<span style="color:#268bd2">const</span> cheese <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;cheese&#39;</span>));
+<span style="color:#268bd2">const</span> cheddar <span style="color:#719e07">=</span> cheese.findElement(By.id(<span style="color:#2aa198">&#39;cheddar&#39;</span>));
   
 </code></pre></div>
 </section>
@@ -2308,7 +2308,7 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> cheddar <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#cheese #cheddar&#39;</span>));
+<span style="color:#268bd2">const</span> cheddar <span style="color:#719e07">=</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;#cheese #cheddar&#39;</span>));
   
 </code></pre></div>
 </section>
@@ -2415,7 +2415,7 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 
 <section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> muchoCheese <span style="color:#719e07">=</span> await driver.findElements(By.css(<span style="color:#2aa198">&#39;#cheese li&#39;</span>));
+<span style="color:#268bd2">const</span> muchoCheese <span style="color:#719e07">=</span> driver.findElements(By.css(<span style="color:#2aa198">&#39;#cheese li&#39;</span>));
   
 </code></pre></div>
 </section>
@@ -2520,7 +2520,7 @@ your search, the better.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/getting_started_with_webdriver/locating_elements/">
       “Localisatie van elementen”
-    </a> was last updated on: 05 Dec 2019 16:06:48 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/8ab6949d81b6d7e6dfb6121706f379d0036fa744">Fix: Fixes search context link issue #115 (#116) [deploy site] (8ab6949d)</a>
+    </a> was last updated on: 17 Dec 2019 04:36:16 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/fc0464194d77a0f2157040755cd4df2488c4d784">Modify: Removed unneccessary awaits for find element (#138) [deploy site] (fc0464194)</a>
 </h5>
         
         </div> 
@@ -3717,19 +3717,19 @@ your search, the better.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1576335924"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1576537675"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1576335924"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1576335924"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1576537675"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1576537675"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1576335924" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1576335924"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1576537675" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1576537675"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

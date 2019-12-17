@@ -71,7 +71,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.get('file:///race_condition.html');
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -192,7 +192,7 @@ const documentInitialised = () =>
 
 await driver.get('file:///race_condition.html');
 await driver.wait(() => documentInitialised(), 10000);
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -405,7 +405,7 @@ await driver.manage().setTimeouts( { implicit: 10000 } );
 // Navigate to url
 await driver.get('http://somedomain/url_that_delays_loading');
 
-let webElement = await driver.findElement(By.id("myDynamicElement"));
+let webElement = driver.findElement(By.id("myDynamicElement"));
 
 }());
   {{< / code-panel >}}
