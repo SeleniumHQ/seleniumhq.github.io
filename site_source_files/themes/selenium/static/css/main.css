@@ -105,9 +105,9 @@ h1.sub-header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 4em;
+    width: 2em;
     padding: 0;
-    line-height: 4em;
+    line-height: 2em;
     background: none;
     border: 0;
   }
