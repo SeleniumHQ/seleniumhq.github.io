@@ -36,12 +36,13 @@ var driver = new FirefoxDriver(options);
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-import * as firefox from 'selenium-webdriver/firefox';
-import { Builder } from 'selenium-webdriver';
+const { Builder } = require("selenium-webdriver");
+const firefox = require('selenium-webdriver/firefox');
 
 const options = new firefox.Options();
+options.headless();
 const driver = new Builder()
-    .withCapabilities({ browserName: 'firefox' })
+    .forBrowser('firefox')
     .setFirefoxOptions(options)
     .build();
   {{< / code-panel >}}
