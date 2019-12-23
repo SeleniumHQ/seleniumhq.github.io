@@ -118,7 +118,25 @@ await driver.manage().deleteCookie('cookie-1');
 await driver.manage().deleteAllCookies();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+// Go to the correct domain
+driver.get("http://www.example.com")
+
+// Now set the cookie. This one's valid for the entire domain
+Cookie cookie = Cookie("key", "value")
+driver.manage().addCookie(cookie)
+
+// And now output all the available cookies for the current URL
+val allCookies = driver.manage().cookies
+for (loadedCookie in allCookies) {
+    println("${loadedCookie.name} -> ${loadedCookie.value}")
+}
+
+// You can delete cookies in 3 ways
+// By name
+driver.manage().deleteCookieNamed("CookieName");
+// By Cookie
+driver.manage().deleteCookie(loadedCookie);
+// Or all of them
+driver.manage().deleteAllCookies();
   {{< / code-panel >}}
 {{< / code-tab >}}
-
