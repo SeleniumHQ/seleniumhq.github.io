@@ -16,7 +16,7 @@ WebDriver API provides a way to interact with cookies with built-in methods:
 
 ## Add Cookie
 It is used to add a cookie to the current browsing context. 
-Add Cookie only accepts a set of defined serializable JSON object. <a href="https://w3c.github.io/webdriver/#cookies"> Here </a>
+Add Cookie only accepts a set of defined serializable JSON object. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Here </a>
 is the link to the list of accepted JSON key values
 
 First of all, you need to be on the domain that the cookie will be
@@ -27,7 +27,24 @@ e.g. http://example.com/some404page)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a PR
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class cookieTest {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            driver.get("http://www.example.com");
+
+            // set a cookie on the current domain
+            Cookie cookie = new Cookie("key", "value");
+            // Adds the cookie into current browser context
+            driver.manage().addCookie(cookie);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
 {{< code-panel language="python" >}}
 # Please raise a PR
@@ -61,7 +78,25 @@ It returns the serialized cookie data matching with the cookie name among all as
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class getCookieNamed {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            driver.get("http://www.example.com");
+            Cookie cookie = new Cookie("foo", "bar");
+            driver.manage().addCookie(cookie);
+
+            // Get cookie details with named cookie 'foo'
+            Cookie cookie1 = driver.manage().getCookieNamed("foo");
+            System.out.println(cookie1);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
 # Please raise a PR
@@ -84,6 +119,7 @@ const {Builder} = require('selenium-webdriver');
     // set a cookie on the current domain
     await driver.manage().addCookie({name:'foo', value: 'bar'});
 
+    // Get cookie details with named cookie 'Key' 
     driver.manage().getCookie('foo').then(function (cookie) {
         console.log('cookie details => ', cookie);
     });
@@ -101,7 +137,29 @@ If browser is no longer available it returns error.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.util.Set;
+
+public class getAllCookies {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            driver.get("http://www.example.com");
+            // Add few cookies
+            Cookie cookie = new Cookie("test1", "cookie1");
+            driver.manage().addCookie(cookie);
+            Cookie cookie1 = new Cookie("test2", "cookie2");
+            driver.manage().addCookie(cookie1);
+
+            // Get All available cookies
+            Set<Cookie> cookies = driver.manage().getCookies();
+            System.out.println(cookies);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
 # Please raise a PR
@@ -123,7 +181,7 @@ const {Builder} = require('selenium-webdriver');
 
     // Add few cookies
     await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test12', value:'cookie2'});
+    await driver.manage().addCookie({name:'test2', value:'cookie2'});
 
     // Get all Available cookies
     driver.manage().getCookies().then(function (cookies) {
@@ -143,7 +201,32 @@ It deletes the cookie data matching with the provided cookie name.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class deleteCookie {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            driver.get("http://www.example.com");
+            Cookie cookie = new Cookie("test1", "cookie1");
+            driver.manage().addCookie(cookie);
+            Cookie cookie1 = new Cookie("test2", "cookie2");
+            driver.manage().addCookie(cookie1);
+
+            // delete a cookie with name 'test1'
+            driver.manage().deleteCookieNamed("test1");
+
+            /*
+             Selenium Java bindings also provides a way to delete
+             cookie by passing cookie object of current browsing context
+             */
+            driver.manage().deleteCookie(cookie1);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
 # Please raise a PR
@@ -165,9 +248,9 @@ const {Builder} = require('selenium-webdriver');
 
     // Add few cookies
     await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test12', value:'cookie2'});
+    await driver.manage().addCookie({name:'test2', value:'cookie2'});
 
-    // Delete a cookie bu name 'test1'
+    // Delete a cookie with name 'test1'
     await driver.manage().deleteCookie('test1');
     
     // Get all Available cookies
@@ -188,7 +271,26 @@ It deletes all the cookies of the current browsing context.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class deleteAllCookies {
+    public static void main(String[] args) {
+        WebDriver driver = new ChromeDriver();
+        try {
+            driver.get("http://www.example.com");
+            Cookie cookie = new Cookie("test1", "cookie1");
+            driver.manage().addCookie(cookie);
+            Cookie cookie1 = new Cookie("test2", "cookie2");
+            driver.manage().addCookie(cookie1);
+
+            // deletes all cookies
+            driver.manage().deleteAllCookies();
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
 # Please raise a PR
@@ -210,15 +312,10 @@ const {Builder} = require('selenium-webdriver');
 
     // Add few cookies
     await driver.manage().addCookie({name:'test1', value:'cookie1'});
-    await driver.manage().addCookie({name:'test12', value:'cookie2'});
+    await driver.manage().addCookie({name:'test2', value:'cookie2'});
 
     // Delete all cookies
     await driver.manage().deleteAllCookies();
-
-    // Get all Available cookies
-    driver.manage().getCookies().then(function (cookies) {
-        console.log('cookie details => ', cookies);
-    });
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
