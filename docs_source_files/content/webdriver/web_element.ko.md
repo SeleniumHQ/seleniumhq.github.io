@@ -11,7 +11,96 @@ it by sending us pull requests!
 
 WebElement represents a DOM element. WebElements can be found by searching from the
 document root using a WebDriver instance, or by searching under another
-WebElement:
+WebElement.
+
+WebDriver API provides built-in methods to find the WebElements which are 
+based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc. 
+
+## Find Element
+
+It is used to find an element and returns a single WebElement reference, 
+that can be used for future element actions
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+WebDriver driver = new FirefoxDriver();
+
+driver.get("http://www.google.com");
+
+// Get search box element from webElement 'q' using Find Element
+WebElement searchBox = driver.findElement(By.name("q"));
+
+searchBox.sendKeys("webdriver");
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+driver = Firefox()
+
+driver.get("http://www.google.com")
+
+# Get search box element from webElement 'q' using Find Element
+search_box = driver.find_element_by_name("q")
+
+search_box.send_keys("webdriver")
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+IWebDriver driver = new FirefoxDriver();
+
+driver.Url = "http://www.google.com";
+
+// Get search box element from webElement 'q' using Find Element
+IWebElement searchbox = driver.FindElement(By.Name("q"));
+
+searchbox.SendKeys("webdriver");
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+
+  # Get search box element from webElement 'q' using Find Element
+  search_bar = driver.find_element(name: 'q')
+
+  # Perform action using WebElement
+  search_bar.send_keys 'Webdriver'
+ensure
+  driver.quit
+end
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let {Builder, By} = require('selenium-webdriver');
+driver = new Builder().forBrowser('chrome').build();
+
+(async function test(){
+
+//Navigate to url
+await driver.get('http://www.google.com');
+
+// Get search box element from webElement 'q' using Find Element
+let searchBar = driver.findElement(By.name('q'));
+
+//Perform action using WebElement
+await searchBar.sendKeys('Webdriver');
+
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val driver = ChromeDriver()
+
+driver.get("http://www.google.com")
+
+// Get search box element from webElement 'q' using Find Element
+val searchBox = driver.findElement(By.name("q"))
+
+searchBox.sendKeys("webdriver")
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Find Element From Element
+
+It is used to find a child element within the context of parent element. 
+To achieve this, the parent WebElement is chained with 'findElement' to access child elements
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -32,7 +121,7 @@ search_box.send_keys("webdriver")
 IWebDriver driver = new FirefoxDriver();
 driver.Url = "http://www.google.com";
 IWebElement searchForm = driver.FindElement(By.TagName("form"));
-IWebElement searchbox = driver.FindElement(By.Name("q"));
+IWebElement searchbox = searchForm.FindElement(By.Name("q"));
 searchbox.SendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
