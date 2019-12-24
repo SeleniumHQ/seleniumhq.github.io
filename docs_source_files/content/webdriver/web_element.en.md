@@ -12,7 +12,7 @@ based on different properties like ID, Name, Class, XPath, CSS Selectors, link T
 
 ## Find Element
 
-It is used to find an element and returns a single WebElement reference, 
+It is used to find an element and returns a first matching single WebElement reference, 
 that can be used for future element actions
 
 {{< code-tab >}}
@@ -88,6 +88,108 @@ driver.get("http://www.google.com")
 val searchBox = driver.findElement(By.name("q"))
 
 searchBox.sendKeys("webdriver")
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Find Elements
+
+Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list, 
+you need to loop over the list of elements to perform action on selected element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import java.util.List;
+
+public class findElementsExample {
+    public static void main(String[] args) {
+        WebDriver driver = new FirefoxDriver();
+        try {
+            driver.get("https://example.com");
+            // Get all the elements available with tag name 'p'
+            List<WebElement> elements = driver.findElements(By.tagName("p"));
+            for (WebElement element : elements) {
+                System.out.println("Paragraph text:" + element.getText());
+            }
+        } finally {
+            driver.quit();
+        }
+    }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+
+driver = webdriver.Firefox()
+
+# Navigate to Url
+driver.get("https://www.example.com")
+
+# Get all the elements available with tag name 'p'
+elements = driver.find_elements_by_tag_name('p')
+
+for e in elements:
+    print e.text
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+begin
+  # Navigate to URL
+  driver.get 'https://www.example.com'
+
+  # Get all the elements available with tag name 'p'
+  elements = driver.find_elements(:tag_name,'p')
+
+  elements.each { |e|
+    puts e.text
+  }
+ensure
+  driver.quit
+end
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder, By} = require('selenium-webdriver');
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    try {
+        // Navigate to Url
+        await driver.get('https://www.example.com');
+
+        // Get all the elements available with tag name 'p'
+        let elements = await driver.findElements(By.tagName('p'));
+        for(let e of elements) {
+            console.log(await e.getText());
+        }
+    }
+    finally {
+        await driver.quit();
+    }
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.firefox.FirefoxDriver
+
+fun main() {
+    val driver = FirefoxDriver()
+    try {
+        driver.get("https://example.com")
+        // Get all the elements available with tag name 'p'
+        val elements = driver.findElements(By.tagName("p"))
+        for (element in elements) {
+            println("Paragraph text:" + element.text)
+        }
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
