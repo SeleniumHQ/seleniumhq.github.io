@@ -30,16 +30,14 @@ e.g. http://example.com/some404page)
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class cookieTest {
+public class addCookie {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://www.example.com");
 
-            // set a cookie on the current domain
-            Cookie cookie = new Cookie("key", "value");
             // Adds the cookie into current browser context
-            driver.manage().addCookie(cookie);
+            driver.manage().addCookie(new Cookie("key", "value"));
         } finally {
             driver.quit();
         }
@@ -86,8 +84,7 @@ public class getCookieNamed {
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://www.example.com");
-            Cookie cookie = new Cookie("foo", "bar");
-            driver.manage().addCookie(cookie);
+            driver.manage().addCookie(new Cookie("foo", "bar"));
 
             // Get cookie details with named cookie 'foo'
             Cookie cookie1 = driver.manage().getCookieNamed("foo");
@@ -147,10 +144,8 @@ public class getAllCookies {
         try {
             driver.get("http://www.example.com");
             // Add few cookies
-            Cookie cookie = new Cookie("test1", "cookie1");
-            driver.manage().addCookie(cookie);
-            Cookie cookie1 = new Cookie("test2", "cookie2");
-            driver.manage().addCookie(cookie1);
+            driver.manage().addCookie(new Cookie("test1", "cookie1"));
+            driver.manage().addCookie(new Cookie("test2", "cookie2"));
 
             // Get All available cookies
             Set<Cookie> cookies = driver.manage().getCookies();
@@ -209,8 +204,7 @@ public class deleteCookie {
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://www.example.com");
-            Cookie cookie = new Cookie("test1", "cookie1");
-            driver.manage().addCookie(cookie);
+            driver.manage().addCookie(new Cookie("test1", "cookie1"));
             Cookie cookie1 = new Cookie("test2", "cookie2");
             driver.manage().addCookie(cookie1);
 
@@ -279,10 +273,8 @@ public class deleteAllCookies {
         WebDriver driver = new ChromeDriver();
         try {
             driver.get("http://www.example.com");
-            Cookie cookie = new Cookie("test1", "cookie1");
-            driver.manage().addCookie(cookie);
-            Cookie cookie1 = new Cookie("test2", "cookie2");
-            driver.manage().addCookie(cookie1);
+            driver.manage().addCookie(new Cookie("test1", "cookie1"));
+            driver.manage().addCookie(new Cookie("test2", "cookie2"));
 
             // deletes all cookies
             driver.manage().deleteAllCookies();
