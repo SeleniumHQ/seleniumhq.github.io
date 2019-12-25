@@ -39,7 +39,14 @@ public class addCookie {
 }
   {{< / code-panel >}}
 {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("http://www.example.com")
+
+# Adds the cookie into current browser context
+driver.add_cookie({"name": "key", "value": "value"})
   {{< / code-panel >}}
 {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -90,7 +97,18 @@ public class getCookieNamed {
 }
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+# Adds the cookie into current browser context
+driver.add_cookie({"name": "foo", "value": "bar"})
+
+# Get cookie details with named cookie 'foo'
+print driver.get_cookie("foo")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -110,7 +128,7 @@ const {Builder} = require('selenium-webdriver');
     // set a cookie on the current domain
     await driver.manage().addCookie({name:'foo', value: 'bar'});
 
-    // Get cookie details with named cookie 'Key' 
+    // Get cookie details with named cookie 'foo' 
     driver.manage().getCookie('foo').then(function (cookie) {
         console.log('cookie details => ', cookie);
     });
@@ -151,7 +169,18 @@ public class getAllCookies {
 }
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+driver.add_cookie({"name": "test1", "value": "cookie1"})
+driver.add_cookie({"name": "test2", "value": "cookie2"})
+
+# Get all available cookies
+print driver.get_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -217,7 +246,16 @@ public class deleteCookie {
 }
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+driver.add_cookie({"name": "test1", "value": "cookie1"})
+driver.add_cookie({"name": "test2", "value": "cookie2"})
+
+# Delete a cookie with name 'test1'
+driver.delete_cookie("test1")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -279,7 +317,16 @@ public class deleteAllCookies {
 }
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+driver.add_cookie({"name": "test1", "value": "cookie1"})
+driver.add_cookie({"name": "test2", "value": "cookie2"})
+
+#  Deletes all cookies
+driver.delete_all_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
