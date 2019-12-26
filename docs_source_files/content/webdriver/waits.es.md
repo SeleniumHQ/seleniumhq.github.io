@@ -246,6 +246,7 @@ assert el.text == "Hello from JavaScript!"
                       .Until(drv => drv.FindElement(By.Name("q")));
       Debug.Assert(foo.Text.Equals("Hello from JavaScript!"));
  }
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
@@ -299,7 +300,8 @@ new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xp
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
- new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
+new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
@@ -338,7 +340,7 @@ to find an exhaustive list of expected conditions:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.html) type
+* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
 
 ## Implicit wait
@@ -460,7 +462,8 @@ using (var driver = new FirefoxDriver())
   wait.IgnoreExceptionTypes(typeof(NoSuchElementException));
 
   var foo = wait.Until(drv => drv.FindElement(By.Id("foo")));
-}  {{< / code-panel >}}
+}  
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # We don't have a Ruby code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
