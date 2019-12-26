@@ -52,6 +52,17 @@ driver.add_cookie({"name": "key", "value": "value"})
 // Please raise a PR
   {{< / code-panel >}}
 {{< code-panel language="ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  
+  # Adds the cookie into current browser context
+  driver.manage.add_cookie(name: "key", value: "value")
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
 {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
@@ -114,7 +125,18 @@ print driver.get_cookie("foo")
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-#please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  driver.manage.add_cookie(name: "foo", value: "bar")
+
+  # Get cookie details with named cookie 'foo'
+  puts driver.manage.cookie_named('foo')
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
@@ -186,7 +208,19 @@ print driver.get_cookies()
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-#please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  driver.manage.add_cookie(name: "test1", value: "cookie1")
+  driver.manage.add_cookie(name: "test2", value: "cookie2")
+
+  # Get all available cookies
+  puts driver.manage.all_cookies
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
@@ -261,7 +295,19 @@ driver.delete_cookie("test1")
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-#please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  driver.manage.add_cookie(name: "test1", value: "cookie1")
+  driver.manage.add_cookie(name: "test2", value: "cookie2")
+
+  # delete a cookie with name 'test1'
+  driver.manage.delete_cookie('test1')
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
@@ -332,7 +378,19 @@ driver.delete_all_cookies()
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-#please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  driver.manage.add_cookie(name: "test1", value: "cookie1")
+  driver.manage.add_cookie(name: "test2", value: "cookie2")
+
+  # deletes all cookies
+  driver.manage.delete_all_cookies
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
