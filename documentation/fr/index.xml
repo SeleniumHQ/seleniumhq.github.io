@@ -534,7 +534,9 @@ It may seem ideal to performance test in the context of the user but a suite of 
       
       <guid>https://selenium.dev/documentation/fr/support_packages/working_with_cookies/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+ A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:
+Add Cookie It is used to add a cookie to the current browsing context.</description>
     </item>
     
     <item>
