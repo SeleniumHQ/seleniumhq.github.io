@@ -24,7 +24,14 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium import webdriver
+
+driver = webdriver.Remote(
+    desired_capabilities=webdriver.DesiredCapabilities.FIREFOX,
+    command_executor='http://www.example.com'
+)
+driver.get("http://www.google.com")
+driver.quit()  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
  FirefoxOptions firefoxOptions = new FirefoxOptions();
