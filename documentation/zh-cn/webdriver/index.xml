@@ -102,8 +102,9 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) search_form = driver.find_element_by_tag_name(&amp;#34;form&amp;#34;) search_box = search_form.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
+ WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
     </item>
     
     <item>
