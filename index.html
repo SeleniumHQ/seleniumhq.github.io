@@ -146,6 +146,43 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,700" rel="stylesheet">
 
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="banner-notification">
+    <section class="banner-message">
+            <div class= "banner-message-container" id="banner-conservancy">
+        
+                    The Selenium project is a member of Software Freedom Conservancy, which handles
+                    legal and financial needs for the project.  Conservancy is
+                    currently raising funds to continue their mission. Consider
+                    <a href="https://sfconservancy.org/supporter/">becoming a supporter</a>!
+        
+        
+            <button type="button" class="dismiss" aria-controls="banner-conservancy" aria-label="dismiss-this-banner">X</button>
+        
+            <script>          
+            (function(config) {
+                var banner = document.getElementById(config.id);
+                var button = banner.querySelector('.dismiss');
+        
+                var dismissed = parseInt(localStorage.getItem(config.id),10);
+                var duration  = config.duration;
+        
+                if (dismissed && (!duration || (dismissed > Date.now() - duration))) {
+                return banner.parentElement.removeChild(banner);
+                }
+
+                button && button.addEventListener('click', function() {
+                localStorage.setItem(config.id, Date.now());
+                return banner.parentElement.removeChild(banner);
+                });
+            })({ "id": "banner-conservancy", "duration": "" });
+                
+                </script>
+            </div>
+        </section>    
+    </div>
 
 <body>
     <section class="hero homepage" style="background-image: url(/images/green-bg-opt.jpg)">

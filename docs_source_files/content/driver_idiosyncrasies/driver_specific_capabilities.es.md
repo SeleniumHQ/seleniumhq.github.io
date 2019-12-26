@@ -30,7 +30,15 @@ var driver = new FirefoxDriver(options);
 # Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
+const { Builder } = require("selenium-webdriver");
+const firefox = require('selenium-webdriver/firefox');
+
+const options = new firefox.Options();
+options.headless();
+const driver = new Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(options)
+    .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = new FirefoxOptions()
