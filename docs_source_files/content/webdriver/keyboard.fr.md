@@ -94,10 +94,10 @@ const {Builder, By, Key} = require('selenium-webdriver');
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
-import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
 fun main() {
-    val driver = ChromeDriver()
+    val driver = FirefoxDriver()
     try {
         // Navigate to Url
         driver.get("https://google.com")
