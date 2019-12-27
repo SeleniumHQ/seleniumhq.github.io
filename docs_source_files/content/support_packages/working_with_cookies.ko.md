@@ -84,7 +84,20 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
 {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+
+        // Adds the cookie into current browser context
+        driver.manage().addCookie(Cookie("key", "value"));
+    } finally {
+        driver.quit()
+    }
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -163,7 +176,22 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("foo", "bar"));
+
+        // Get cookie details with named cookie 'foo'
+        val cookie = driver.manage().getCookieNamed("foo");
+        println(cookie);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -248,7 +276,23 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test2", "cookie2"));
+
+        // Get All available cookies
+        val cookies = driver.manage().cookies;
+        println(cookies);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -338,7 +382,29 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        val cookie1 = Cookie("test2", "cookie2")
+        driver.manage().addCookie(cookie1);
+
+        // delete a cookie with name 'test1'
+        driver.manage().deleteCookieNamed("test1");
+        /*
+         Selenium Java bindings also provides a way to delete
+         cookie by passing cookie object of current browsing context.
+         This feature also applies for kotlin as it uses selenium jar java bindings
+        */
+        driver.manage().deleteCookie(cookie1);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -416,6 +482,21 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test2", "cookie2"));
+
+        // deletes all cookies
+        driver.manage().deleteAllCookies();
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
