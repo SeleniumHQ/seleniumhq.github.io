@@ -160,7 +160,28 @@ driver.add_cookie({"name": "foo", "value": "bar"})
 print driver.get_cookie("foo")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace GetCookieNamed {
+    class GetCookieNamed {
+        public static void Main(string[] args) {
+            IWebDriver driver = new ChromeDriver();
+            try {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://example.com");
+                driver.Manage().Cookies.AddCookie(new Cookie("foo", "bar"));
+
+		        // Get cookie details with named cookie 'foo'
+                var cookie = driver.Manage().Cookies.GetCookieNamed("foo");
+                System.Console.WriteLine(cookie);
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -258,7 +279,30 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 print driver.get_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace GetAllCookies
+{
+    class GetCookieNamed
+    {
+        public static void Main(string[] args) {
+            IWebDriver driver = new ChromeDriver();
+            try {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://example.com");
+                driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+                driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
+
+		        // Get All available cookies
+                var cookies = driver.Manage().Cookies.AllCookies;
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -361,7 +405,35 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 driver.delete_cookie("test1")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace DeleteCookie
+{
+    class DeleteCookie
+    {
+        public static void Main(string[] args) {
+            IWebDriver driver = new ChromeDriver();
+            try {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://example.com");
+                driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+                var cookie = new Cookie("test2", "cookie2");
+                driver.Manage().Cookies.AddCookie(cookie);
+
+		        // delete a cookie with name 'test1'	
+                driver.Manage().Cookies.DeleteCookieNamed("test1");
+
+		        // Selenium .net bindings also provides a way to delete
+             	// cookie by passing cookie object of current browsing context
+                driver.Manage().Cookies.DeleteCookie(cookie);
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -466,7 +538,30 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 driver.delete_all_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace DeleteAllCookies
+{
+    class DeleteAllCookies
+    {
+        public static void Main(string[] args) {
+            IWebDriver driver = new ChromeDriver();
+            try {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://example.com");
+                driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+                driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
+   
+		        // deletes all cookies
+                driver.Manage().Cookies.DeleteAllCookies();
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
