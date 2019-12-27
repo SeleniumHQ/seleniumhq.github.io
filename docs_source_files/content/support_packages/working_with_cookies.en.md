@@ -49,7 +49,26 @@ driver.get("http://www.example.com")
 driver.add_cookie({"name": "key", "value": "value"})
   {{< / code-panel >}}
 {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace AddCookie {
+    class AddCookie {
+        public static void Main(string[] args) {
+            IWebDriver driver = new ChromeDriver();
+            try {
+                // Navigate to Url
+                driver.Navigate().GoToUrl("https://example.com");
+
+                // Adds the cookie into current browser context
+                driver.Manage().Cookies.AddCookie(new Cookie("key", "value"));
+            }
+            finally {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
 {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
