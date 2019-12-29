@@ -60,7 +60,7 @@ One such tools is **_JMeter_**.
 For a web application, details to measure include:
 throughput, latency, data loss, individual component loading times...
 
-Note: All browsers have a performance tab in their
+Note 1: All browsers have a performance tab in their
 developers' tools section (accessible by pressing F12)
 
 Note 2: is a subtype of **_non-functional testing_**
