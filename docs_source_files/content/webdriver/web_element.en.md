@@ -381,3 +381,88 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Get Active Element
+
+It is used to track (or) find DOM element which has the focus in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+  import org.openqa.selenium.*;
+  import org.openqa.selenium.chrome.ChromeDriver;
+  
+  public class activeElementTest {
+    public static void main(String[] args) {
+      WebDriver driver = new ChromeDriver();
+      try {
+        driver.get("http://www.google.com");
+        driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
+  
+        // Get attribute of current active element
+        String attr = driver.switchTo().activeElement().getAttribute("title");
+        System.out.println(attr);
+      } finally {
+        driver.quit();
+      }
+    }
+  }
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+  from selenium import webdriver
+  
+  driver = webdriver.Chrome()
+  driver.get("https://www.google.com")
+  driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
+  
+  # Get attribute of current active element
+  attr = driver.switch_to.active_element.get_attribute("title")
+  print attr
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}
+  require 'selenium-webdriver'
+  driver = Selenium::WebDriver.for :chrome
+  begin
+    driver.get 'https://www.google.com'
+    driver.find_element(:css,'[name="q"]').send_keys("webElement")
+  
+    # Get attribute of current active element
+    attr = driver.switch_to.active_element.attribute('title')
+    putc attr
+  ensure
+    driver.quit
+  end
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+  const {Builder, By} = require('selenium-webdriver');
+  
+  (async function example() {
+      let driver = await new Builder().forBrowser('chrome').build();
+      await driver.get('https://www.google.com');
+      await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
+  
+      // Get attribute of current active element
+      let attr = await driver.switchTo().activeElement().getAttribute("title");
+      console.log(`${attr}`)
+  })();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+  import org.openqa.selenium.By
+  import org.openqa.selenium.chrome.ChromeDriver
+  
+  fun main() {
+      val driver = ChromeDriver()
+      try {
+          driver.get("https://www.google.com")
+          driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
+  
+          // Get attribute of current active element
+          val attr = driver.switchTo().activeElement().getAttribute("title");
+          print(attr);
+      } finally {
+          driver.quit()
+      }
+  }
+  {{< / code-panel >}}
+{{< / code-tab >}}
