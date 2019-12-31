@@ -135,7 +135,30 @@ for e in elements:
     print e.text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using System.Collections.Generic;
+
+namespace FindElementsExample {
+ class FindElementsExample {
+  public static void Main(string[] args) {
+   IWebDriver driver = new FirefoxDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+
+    // Get all the elements available with tag name 'p'
+    IList < IWebElement > elements = driver.FindElements(By.TagName("p"));
+    foreach(IWebElement e in elements) {
+     System.Console.WriteLine(e.Text);
+    }
+
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -316,7 +339,31 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
       print e.text
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-  // Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Firefox;
+using System.Collections.Generic;
+
+namespace FindElementsFromElement {
+ class FindElementsFromElement {
+  public static void Main(string[] args) {
+   IWebDriver driver = new FirefoxDriver();
+   try {
+    driver.Navigate().GoToUrl("https://example.com");
+
+    // Get element with tag name 'div'
+    IWebElement element = driver.FindElement(By.TagName("div"));
+
+    // Get all the elements available with tag name 'p'
+    IList < IWebElement > elements = element.FindElements(By.TagName("p"));
+    foreach(IWebElement e in elements) {
+     System.Console.WriteLine(e.Text);
+    }
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
   require 'selenium-webdriver'
@@ -419,6 +466,27 @@ It is used to track (or) find DOM element which has the focus in the current bro
   print attr
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+  
+    namespace ActiveElement {
+     class ActiveElement {
+      public static void Main(string[] args) {
+       IWebDriver driver = new ChromeDriver();
+       try {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://www.google.com");
+        driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
+  
+        // Get attribute of current active element
+        string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
+        System.Console.WriteLine(attr);
+       } finally {
+        driver.Quit();
+       }
+      }
+     }
+    }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
   require 'selenium-webdriver'
