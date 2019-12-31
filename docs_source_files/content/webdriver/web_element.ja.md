@@ -425,7 +425,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}
+  {{< code-panel language="ruby" >}}
   require 'selenium-webdriver'
   driver = Selenium::WebDriver.for :chrome
   begin
