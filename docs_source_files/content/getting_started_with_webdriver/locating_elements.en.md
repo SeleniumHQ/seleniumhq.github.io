@@ -20,7 +20,7 @@ driver.find_element_by_id("cheese")
 IWebElement element = driver.FindElement(By.Id("cheese"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-driver.find_element(id: "cheese")  
+cheese = driver.find_element(id: 'cheese')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const cheese = driver.findElement(By.id('cheese'));
