@@ -117,7 +117,7 @@ mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
 IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese li")
+mucho_cheese = driver.find_elements(css: '#cheese li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const muchoCheese = driver.findElements(By.css('#cheese li'));

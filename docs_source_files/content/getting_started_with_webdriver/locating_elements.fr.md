@@ -150,7 +150,7 @@ plein_de_fromage = driver.find_elements_by_css_selector("#fromage li")
 IReadOnlyList<IWebElement> pleinDeFromage = driver.FindElements(By.CssSelector(“#fromage li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-plein_de_fromage = driver.find_elements(css: "#fromage li")
+plein_de_fromage = driver.find_elements(css: '#fromage li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const pleinDeFromage = driver.findElements(By.css('#fromage li'));
