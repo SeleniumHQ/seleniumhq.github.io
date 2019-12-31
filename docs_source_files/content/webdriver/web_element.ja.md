@@ -434,7 +434,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   
     # Get attribute of current active element
     attr = driver.switch_to.active_element.attribute('title')
-    putc attr
+    puts attr
   ensure
     driver.quit
   end
