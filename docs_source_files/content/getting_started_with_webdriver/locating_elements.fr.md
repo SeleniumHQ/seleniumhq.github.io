@@ -108,7 +108,7 @@ cheddar = driver.find_element_by_css_selector("#fromage #cheddar")
 driver.FindElement(By.CssSelector("#fromage #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
+driver.find_element(css: '#fromage #cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const cheddar = driver.findElement(By.css('#fromage #cheddar'));
