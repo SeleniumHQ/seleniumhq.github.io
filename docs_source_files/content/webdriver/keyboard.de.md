@@ -93,23 +93,18 @@ const {Builder, By, Key} = require('selenium-webdriver');
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.ChromeDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
-class HelloSelenium {
+fun main() {
+    val driver = FirefoxDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
 
-    fun main() {
-        driver = ChromeDriver()
-        try {
-            // Navigate to Url
-            driver.get("https://google.com")
-
-            // Enter text "q" and perform keyboard action "Enter"
-            driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
-        } finally {
-            driver.quit()
-        }
+        // Enter text "q" and perform keyboard action "Enter"
+        driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+    } finally {
+        driver.quit()
     }
 }
   {{< / code-panel >}}
@@ -338,7 +333,7 @@ const {Builder, By, Key} = require('selenium-webdriver');
         await driver.get('https://www.google.com');
 
         // Store google search box WebElement
-        let search = await driver.findElement(By.name('q'));
+        let search = driver.findElement(By.name('q'));
 
         // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
         await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys("qwerty").keyUp(Key.SHIFT).sendKeys("qwerty").perform();

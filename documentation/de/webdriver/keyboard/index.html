@@ -11,20 +11,20 @@
     <title>Tastatur :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1575721453" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1575721453" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1577671634" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1577671634" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1575721453" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1577671634" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1575721453"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1577671634"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1575721453"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1575721453"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1577671634"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1577671634"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1575721453"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1577671634"></script>
 
     
   </div>
@@ -657,25 +657,6 @@
       <li data-nav-id="/webdriver/keyboard/" title="Tastatur" class="dd-item active">
         <a href="https://selenium.dev/documentation/de/webdriver/keyboard/">
         Tastatur
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/mouse/" title="Maus" class="dd-item ">
-        <a href="https://selenium.dev/documentation/de/webdriver/mouse/">
-        Maus
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2169,23 +2150,18 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">import</span> org.openqa.selenium.By
 <span style="color:#719e07">import</span> org.openqa.selenium.Keys
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
-<span style="color:#719e07">import</span> org.openqa.selenium.WebElement
-<span style="color:#719e07">import</span> org.openqa.selenium.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver
 
-<span style="color:#719e07">class</span> <span style="color:#268bd2">HelloSelenium</span> {
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = FirefoxDriver()
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
 
-    <span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-        driver = ChromeDriver()
-        <span style="color:#719e07">try</span> {
-            <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>            driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-
-            <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
-</span><span style="color:#586e75"></span>            driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;q&#34;</span> + Keys.ENTER)
-        } <span style="color:#719e07">finally</span> {
-            driver.quit()
-        }
+        <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
+</span><span style="color:#586e75"></span>        driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;q&#34;</span> + Keys.ENTER)
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
     }
 }
   </code></pre></div>
@@ -2544,7 +2520,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
 
         <span style="color:#586e75">// Store google search box WebElement
-</span><span style="color:#586e75"></span>        <span style="color:#268bd2">let</span> search <span style="color:#719e07">=</span> await driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">let</span> search <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
 
         <span style="color:#586e75">// Enters text &#34;qwerty&#34; with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
 </span><span style="color:#586e75"></span>        await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).perform();
@@ -2595,7 +2571,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/webdriver/keyboard/">
       “Tastatur”
-    </a> was last updated on: 05 Dec 2019 17:19:45 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/ade0530665c211da6b6cad442004a765fe8d3af6">1st chunk for German translation (#110) [deploy site] (ade05306)</a>
+    </a> was last updated on: 24 Dec 2019 21:52:02 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/93759283bf94a18e21309f62b0f3d638d81a1d9c">Modify: Revamped kotlin code samples and document update in browser manipulation (#148) (93759283b)</a>
 </h5>
         
         </div> 
@@ -3060,25 +3036,6 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
             
         
                     
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -3086,6 +3043,9 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3798,7 +3758,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 			<a class="nav nav-prev" href="https://selenium.dev/documentation/de/webdriver/web_element/" title="Webelement"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://selenium.dev/documentation/de/webdriver/mouse/" title="Maus" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://selenium.dev/documentation/de/remote_webdriver/" title="Remote WebDriver" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3808,19 +3768,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1575721453"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1577671634"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1575721453"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1575721453"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1577671634"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1575721453" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1575721453"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1577671634" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1577671634"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

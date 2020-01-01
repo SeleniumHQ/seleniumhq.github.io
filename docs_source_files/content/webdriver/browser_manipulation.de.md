@@ -201,6 +201,10 @@ and you know which window you start with, by the process of elimination
 you can loop over both windows or tabs that WebDriver can see, and switch 
 to the one which is not the original.
 
+However, Selenium 4 provides a new api 
+<a href="https://selenium.dev/documentation/de/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch" target=""> NewWindow </a>
+which creates a new tab (or) new window and automatically switches to it.
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 //Store the ID of the original window
@@ -721,7 +725,7 @@ driver.find_element(:tag_name,'button').click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Store the web element
-const iframe = await driver.findElement(By.css('#modal > iframe'));
+const iframe = driver.findElement(By.css('#modal > iframe'));
 
 // Switch to the frame
 await driver.switchTo().frame(iframe);

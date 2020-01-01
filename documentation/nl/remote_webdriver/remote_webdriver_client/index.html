@@ -11,20 +11,20 @@
     <title>Remote WebDriver client :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1575721460" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1575721460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1577671639" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1577671639" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1575721460" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1577671639" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1575721460"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1577671639"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1575721460"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1575721460"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1577671639"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1577671639"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1575721460"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1577671639"></script>
 
     
   </div>
@@ -657,25 +657,6 @@
       <li data-nav-id="/webdriver/keyboard/" title="Keyboard" class="dd-item ">
         <a href="https://selenium.dev/documentation/nl/webdriver/keyboard/">
         Keyboard
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/mouse/" title="Mouse" class="dd-item ">
-        <a href="https://selenium.dev/documentation/nl/webdriver/mouse/">
-        Mouse
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2077,7 +2058,15 @@ driver.quit();
 
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+
+firefox_options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>FirefoxOptions()
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Remote(
+    command_executor<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;http://www.example.com&#39;</span>,
+    options<span style="color:#719e07">=</span>firefox_options
+)
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()  
   </code></pre></div>
 </section>
   
@@ -2113,6 +2102,7 @@ driver<span style="color:#719e07">.</span>close
 <span style="color:#268bd2">var</span> capabilities <span style="color:#719e07">=</span> Capabilities.firefox();
 (async <span style="color:#268bd2">function</span> helloSelenium() {
     <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()        
+        .usingServer(<span style="color:#2aa198">&#34;http://example.com&#34;</span>)   
         .withCapabilities(capabilities)
         .build();
     <span style="color:#719e07">try</span> {
@@ -2199,7 +2189,17 @@ driver.quit();
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+
+chrome_options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>ChromeOptions()
+chrome_options<span style="color:#719e07">.</span>set_capability(<span style="color:#2aa198">&#34;browserVersion&#34;</span>, <span style="color:#2aa198">&#34;67&#34;</span>)
+chrome_options<span style="color:#719e07">.</span>set_capability(<span style="color:#2aa198">&#34;platformName&#34;</span>, <span style="color:#2aa198">&#34;Windows XP&#34;</span>)
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Remote(
+    command_executor<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;http://www.example.com&#39;</span>,
+    options<span style="color:#719e07">=</span>chrome_options
+)
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()  
   </code></pre></div>
 </section>
   
@@ -2210,7 +2210,7 @@ driver.quit();
 <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
 chromeOptions.BrowserVersion = <span style="color:#2aa198">&#34;67&#34;</span>;
 chromeOptions.PlatformName = <span style="color:#2aa198">&#34;Windows XP&#34;</span>;
-IWebDriver driver = <span style="color:#719e07">new</span> RemoteWebDriver(<span style="color:#719e07">new</span> Uri(<span style="color:#2aa198">&#34;http://localhost:4444/wd/hub&#34;</span>), chromeOptions);
+IWebDriver driver = <span style="color:#719e07">new</span> RemoteWebDriver(<span style="color:#719e07">new</span> Uri(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>), chromeOptions);
 driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
 driver.Quit();
   
@@ -2242,6 +2242,7 @@ capabilities.set(<span style="color:#2aa198">&#34;browserVersion&#34;</span>, <s
 capabilities.set(<span style="color:#2aa198">&#34;platformName&#34;</span>, <span style="color:#2aa198">&#34;Windows XP&#34;</span>);
 (async <span style="color:#268bd2">function</span> helloSelenium() {
     <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
+        .usingServer(<span style="color:#2aa198">&#34;http://example.com&#34;</span>)   
         .withCapabilities(capabilities)
         .build();
     <span style="color:#719e07">try</span> {
@@ -2329,7 +2330,9 @@ driver.setFileDetector(<span style="color:#719e07">new</span> LocalFileDetector(
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#719e07">from</span> selenium.webdriver.remote.file_detector <span style="color:#719e07">import</span> UselessFileDetector
+
+driver<span style="color:#719e07">.</span>file_detector <span style="color:#719e07">=</span> UselessFileDetector()
   </code></pre></div>
 </section>
   
@@ -2431,7 +2434,9 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR  </span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span>)
+
+driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;myfile&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span>)
   </code></pre></div>
 </section>
   
@@ -2487,7 +2492,7 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/">
       “Remote WebDriver client”
-    </a> was last updated on: 07 Dec 2019 18:22:35 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/d8cd240a79120d28db2c9efb859bf942ca35089c">Add: Added JavaScript sample code for remote_webdriver_client (#114) [deploy site] (d8cd240a)</a>
+    </a> was last updated on: 27 Dec 2019 03:03:59 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/b59a3a29568b9ecd9f88ac61c28ba40bb5b071d3">Modify: PR for stale pr #111 (#153) [deploy site] (b59a3a295)</a>
 </h5>
         
         </div> 
@@ -2786,22 +2791,6 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -3700,19 +3689,19 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1575721460"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1577671640"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1575721460"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1575721460"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1577671640"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1577671640"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1575721460" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1575721460"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1577671640" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1577671640"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

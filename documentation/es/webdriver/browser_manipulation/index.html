@@ -11,20 +11,20 @@
     <title>Manipulación de Navegadores :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1575721457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1575721457" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1577671638" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1577671638" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1575721457" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1577671638" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1575721457"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1577671638"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1575721457"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1575721457"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1577671638"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1577671638"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1575721457"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1577671638"></script>
 
     
   </div>
@@ -657,25 +657,6 @@
       <li data-nav-id="/webdriver/keyboard/" title="Teclado" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/webdriver/keyboard/">
         Teclado
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/mouse/" title="Mouse" class="dd-item ">
-        <a href="https://selenium.dev/documentation/es/webdriver/mouse/">
-        Mouse
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2698,6 +2679,10 @@ and you know which window you start with, by the process of elimination
 you can loop over both windows or tabs that WebDriver can see, and switch
 to the one which is not the original.</p>
 
+<p>However, Selenium 4 provides a new api
+<a href="https://selenium.dev/documentation/es/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
+which creates a new tab (or) new window and automatically switches to it.</p>
+
 
 
 
@@ -3753,7 +3738,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javascriptcode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Store the web element
-</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> iframe <span style="color:#719e07">=</span> driver.findElement(By.css(<span style="color:#2aa198">&#39;#modal &gt; iframe&#39;</span>));
 
 <span style="color:#586e75">// Switch to the frame
 </span><span style="color:#586e75"></span>await driver.switchTo().frame(iframe);
@@ -4733,7 +4718,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/browser_manipulation/">
       “Manipulación de Navegadores”
-    </a> was last updated on: 06 Dec 2019 18:54:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/28fe3e7919c7b14611be069bf3f18d2ee1ae3513">Add: Added ruby sample code for new_window (#118) [deploy site] (28fe3e79)</a>
+    </a> was last updated on: 24 Dec 2019 21:52:02 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/93759283bf94a18e21309f62b0f3d638d81a1d9c">Modify: Revamped kotlin code samples and document update in browser manipulation (#148) (93759283b)</a>
 </h5>
         
         </div> 
@@ -5093,22 +5078,6 @@ toolbars.</p>
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -5946,19 +5915,19 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1575721458"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1577671638"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1575721458"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1575721458"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1577671638"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1577671638"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1575721458" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1575721458"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1577671638" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1577671638"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -76,7 +76,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.get('file:///race_condition.html');
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -106,7 +106,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.de.md" >}}) interface—such
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.de.md" >}})
- and [_Mouse_]({{< ref "/webdriver/mouse.de.md" >}}),
+ and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.de.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
@@ -197,7 +197,7 @@ const documentInitialised = () =>
 
 await driver.get('file:///race_condition.html');
 await driver.wait(() => documentInitialised(), 10000);
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -235,7 +235,7 @@ assertEquals(foo.getText(), "Hello from JavaScript!");
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver).until(lambda d: d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -250,7 +250,8 @@ assert el.text == "Hello from JavaScript!"
 # We don't have a Ruby code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-let foo = await driver.findElement(By.name("q")).getText();
+let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
+let foo = await ele.getText();
 assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -338,7 +339,7 @@ to find an exhaustive list of expected conditions:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.html) type
+* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
 
 ## Implicit wait
@@ -409,7 +410,7 @@ await driver.manage().setTimeouts( { implicit: 10000 } );
 // Navigate to url
 await driver.get('http://somedomain/url_that_delays_loading');
 
-let webElement = await driver.findElement(By.id("myDynamicElement"));
+let webElement = driver.findElement(By.id("myDynamicElement"));
 
 }());
   {{< / code-panel >}}

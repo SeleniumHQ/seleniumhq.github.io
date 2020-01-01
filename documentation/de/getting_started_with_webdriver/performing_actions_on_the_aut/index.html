@@ -11,20 +11,20 @@
     <title>Aktionen ausführen in der AUT* :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1575721452" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1575721452" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1577671633" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1577671633" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1575721452" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1577671633" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1575721452"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1577671633"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1575721452"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1575721452"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1577671633"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1577671633"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1575721452"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1577671633"></script>
 
     
   </div>
@@ -657,25 +657,6 @@
       <li data-nav-id="/webdriver/keyboard/" title="Tastatur" class="dd-item ">
         <a href="https://selenium.dev/documentation/de/webdriver/keyboard/">
         Tastatur
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/mouse/" title="Maus" class="dd-item ">
-        <a href="https://selenium.dev/documentation/de/webdriver/mouse/">
-        Maus
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2091,7 +2072,7 @@ driver.FindElement(By.Name(<span style="color:#2aa198">&#34;name&#34;</span>)).S
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#b58900">name</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>
-driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#34;name&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#b58900">name</span>)
+await driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#34;name&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#b58900">name</span>)
   </code></pre></div>
 </section>
   
@@ -2100,7 +2081,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#b5890
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">const</span> name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>;
-await driver.findElement(By.name(<span style="color:#2aa198">&#39;name&#39;</span>)).sendKeys(name);
+driver.findElement(By.name(<span style="color:#2aa198">&#39;name&#39;</span>)).sendKeys(name);
   
 </code></pre></div>
 </section>
@@ -2203,8 +2184,8 @@ driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</s
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({bridge<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
-<span style="color:#268bd2">const</span> source <span style="color:#719e07">=</span> await driver.findElement(By.id(<span style="color:#2aa198">&#39;source&#39;</span>));
-<span style="color:#268bd2">const</span> target <span style="color:#719e07">=</span> await driver.findElement(By.id(<span style="color:#2aa198">&#39;target&#39;</span>));
+<span style="color:#268bd2">const</span> source <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;source&#39;</span>));
+<span style="color:#268bd2">const</span> target <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#39;target&#39;</span>));
 await actions.dragAndDrop(source, target).perform();
   
 </code></pre></div>
@@ -2325,7 +2306,7 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/getting_started_with_webdriver/performing_actions_on_the_aut/">
       “Aktionen ausführen in der AUT*”
-    </a> was last updated on: 05 Dec 2019 17:19:45 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/ade0530665c211da6b6cad442004a765fe8d3af6">1st chunk for German translation (#110) [deploy site] (ade05306)</a>
+    </a> was last updated on: 17 Dec 2019 04:36:16 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/fc0464194d77a0f2157040755cd4df2488c4d784">Modify: Removed unneccessary awaits for find element (#138) [deploy site] (fc0464194)</a>
 </h5>
         
         </div> 
@@ -2632,22 +2613,6 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -3538,19 +3503,19 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1575721452"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1577671634"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1575721452"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1575721452"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1577671634"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1577671634"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1575721452" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1575721452"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1577671634" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1577671634"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

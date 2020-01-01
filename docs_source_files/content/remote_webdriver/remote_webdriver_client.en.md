@@ -18,7 +18,15 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium import webdriver
+
+firefox_options = webdriver.FirefoxOptions()
+driver = webdriver.Remote(
+    command_executor='http://www.example.com',
+    options=firefox_options
+)
+driver.get("http://www.google.com")
+driver.quit() 
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
  FirefoxOptions firefoxOptions = new FirefoxOptions();
@@ -37,7 +45,8 @@ driver.close
 const { Builder, Capabilities } = require("selenium-webdriver");
 var capabilities = Capabilities.firefox();
 (async function helloSelenium() {
-    let driver = new Builder()        
+    let driver = new Builder()
+        .usingServer("http://example.com")   
         .withCapabilities(capabilities)
         .build();
     try {
@@ -74,13 +83,23 @@ driver.get("http://www.google.com");
 driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium import webdriver
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.set_capability("browserVersion", "67")
+chrome_options.set_capability("platformName", "Windows XP")
+driver = webdriver.Remote(
+    command_executor='http://www.example.com',
+    options=chrome_options
+)
+driver.get("http://www.google.com")
+driver.quit()  
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var chromeOptions = new ChromeOptions();
 chromeOptions.BrowserVersion = "67";
 chromeOptions.PlatformName = "Windows XP";
-IWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), chromeOptions);
+IWebDriver driver = new RemoteWebDriver(new Uri("http://www.example.com"), chromeOptions);
 driver.Navigate().GoToUrl("http://www.google.com");
 driver.Quit();
   {{< / code-panel >}}
@@ -101,6 +120,7 @@ capabilities.set("browserVersion", "67");
 capabilities.set("platformName", "Windows XP");
 (async function helloSelenium() {
     let driver = new Builder()
+        .usingServer("http://example.com")   
         .withCapabilities(capabilities)
         .build();
     try {
@@ -137,7 +157,9 @@ the following way:
 driver.setFileDetector(new LocalFileDetector());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+from selenium.webdriver.remote.file_detector import UselessFileDetector
+
+driver.file_detector = UselessFileDetector()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var allowsDetection = this.driver as IAllowsFileDetection;
@@ -171,7 +193,9 @@ WebElement upload = driver.findElement(By.id("myfile"));
 upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
+
+driver.find_element_by_id("myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");

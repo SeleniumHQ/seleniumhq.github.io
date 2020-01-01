@@ -58,8 +58,8 @@ driver.action.drag_and_drop(source, target).perform
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const actions = driver.actions({bridge: true});
-const source = await driver.findElement(By.id('source'));
-const target = await driver.findElement(By.id('target'));
+const source = driver.findElement(By.id('source'));
+const target = driver.findElement(By.id('target'));
 await actions.dragAndDrop(source, target).perform();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}

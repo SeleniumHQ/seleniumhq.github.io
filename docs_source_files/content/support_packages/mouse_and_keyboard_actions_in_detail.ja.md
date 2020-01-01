@@ -21,10 +21,10 @@ e = driver.find_element_by_id("testElement")
  IWebElement e = driver.FindElement(By.Id("testElement"));
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e = driver.find_element(id:'testElement')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+let e = driver.findElement(By.id("testElement"));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val element = driver.findElement(By.id("testElement"))
@@ -45,10 +45,10 @@ e.click()
  e.Click();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.click()
@@ -69,10 +69,10 @@ from selenium.webdriver import ActionChains
  using OpenQA.Selenium.Interactions;
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+action = driver.action
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const actions = driver.actions();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.interactions.Actions
@@ -98,10 +98,14 @@ actions.perform()
  actions.Perform();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+action
+.move_to(e)
+.perform
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+ await actions
+ .move({origin: e})
+ .perform();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val actions = Actions(driver)
@@ -126,10 +130,10 @@ e.send_keys("Test")
  e.SendKeys("Test");
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.send_keys "Test"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.sendKeys("Test");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.sendKeys("Test")
@@ -149,10 +153,10 @@ e.clear()
  e.Clear();
  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+e.clear
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+await e.clear();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 e.clear()

@@ -1,29 +1,17 @@
 ---
-title: "Third party drivers and plugins"
+title: "第三方驱动和插件"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+可以通过使用插件扩展 Selenium。这里有一些由第三方创建和维护的插件。有关如何创建插件和使用的更多信息，请参考文档。
 
-Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.
+请注意，Selenium 项目不支持、维护、托管或认可这些插件。另外，请注意，下面列出的插件不一定是 Apache 2.0 授权的。
+其中一些插件在其他的免费和开源软件许可下可用；其他的只能在私有许可下使用。关于插件及其发行许可的任何问题都需要向它的开发人员提出。
 
-Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).
-
-|Browser|Latest|Change log|Issue Tracker|
+|浏览器|最新版|变更记录|问题追踪|
 |--- |--- |--- |--- |
-|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[latest](https://github.com/mozilla/geckodriver/releases)|[change log](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[issue tracker](https://github.com/mozilla/geckodriver/issues)|
-|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[latest](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[change log](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[issue tracker](https://bugs.chromium.org/p/chromedriver/issues/list)|
-|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[latest](https://github.com/operasoftware/operachromiumdriver/releases)|-|[issue tracker](https://github.com/operasoftware/operachromiumdriver/issues)|
-|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[latest](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
-|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Built in|-|[issue tracker](https://bugreport.apple.com/)|
+|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[最新版](https://github.com/mozilla/geckodriver/releases)|[变更记录](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[问题追踪](https://github.com/mozilla/geckodriver/issues)|
+|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[最新版](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[变更记录](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[问题追踪](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[最新版](https://github.com/operasoftware/operachromiumdriver/releases)|-|[问题追踪](https://github.com/operasoftware/operachromiumdriver/issues)|
+|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[最新版](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[问题追踪](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
+|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|内置|-|[问题追踪](https://bugreport.apple.com/)|

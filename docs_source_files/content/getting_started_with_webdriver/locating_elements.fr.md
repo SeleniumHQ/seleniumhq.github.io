@@ -30,7 +30,7 @@ IWebElement element = driver.FindElement(By.Id("fromage"));
 driver.find_element(id: "fromage")  
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const fromage = await driver.findElement(By.id('fromage'));
+const fromage = driver.findElement(By.id('fromage'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese: WebElement = driver.findElement(By.id("cheese"))
@@ -67,8 +67,8 @@ fromage = driver.find_element(id: "fromage")
 cheddar = fromage.find_elements(id: "cheddar")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const fromage = await driver.findElement(By.id('fromage'));
-const cheddar = await fromage.findElement(By.id('cheddar'));
+const fromage = driver.findElement(By.id('fromage'));
+const cheddar = fromage.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese = driver.findElement(By.id("cheese"))
@@ -111,7 +111,7 @@ driver.FindElement(By.CssSelector("#fromage #cheddar"));
 mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheddar = await driver.findElement(By.css('#fromage #cheddar'));
+const cheddar = driver.findElement(By.css('#fromage #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.findElement(By.cssSelector("#cheese #cheddar"))
@@ -153,7 +153,7 @@ IReadOnlyList<IWebElement> pleinDeFromage = driver.FindElements(By.CssSelector(â
 plein_de_fromage = driver.find_elements(css: "#fromage li")
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const pleinDeFromage = await driver.findElements(By.css('#fromage li'));
+const pleinDeFromage = driver.findElements(By.css('#fromage li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))
