@@ -413,3 +413,40 @@ const {Builder} = require('selenium-webdriver');
 // We don't have a Kotlin code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Same-Site Cookie Attribute
+
+It allows a user to instruct browsers to control whether cookies 
+are sent along with the request initiated by third party sites. 
+It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.
+
+Same-Site cookie attribute accepts two parameters as instructions
+
+# Strict:
+When the sameSite attribute is set as ‘Strict’, 
+the cookie will not be sent along with requests initiated by third party websites.
+
+# Lax:
+When you set a cookie' sameSite attribute to ‘Lax’, 
+the cookie will be sent along with the GET request initiated by third party website.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Code sample
+  {{< / code-panel >}}
+ {{< code-panel language="python" >}}
+ # code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+{{< / code-tab >}}
