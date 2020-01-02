@@ -499,7 +499,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   driver = Selenium::WebDriver.for :chrome
   begin
     driver.get 'https://www.google.com'
-    driver.find_element(:css,'[name="q"]').send_keys("webElement")
+    driver.find_element(css: '[name="q"]').send_keys('webElement')
   
     # Get attribute of current active element
     attr = driver.switch_to.active_element.attribute('title')
