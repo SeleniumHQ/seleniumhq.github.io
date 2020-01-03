@@ -273,3 +273,118 @@ val searchBox = searchForm.findElement(By.name("q"))
 searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Find Elements From Element
+
+It is used to find the list of matching child WebElements within the context of parent element. 
+To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+  import org.openqa.selenium.By;
+  import org.openqa.selenium.WebDriver;
+  import org.openqa.selenium.WebElement;
+  import org.openqa.selenium.chrome.ChromeDriver;
+  import java.util.List;
+  
+  public class findElementsFromElement {
+      public static void main(String[] args) {
+          WebDriver driver = new ChromeDriver();
+          try {
+              driver.get("https://example.com");
+  
+              // Get element with tag name 'div'
+              WebElement element = driver.findElement(By.tagName("div"));
+  
+              // Get all the elements available with tag name 'p'
+              List<WebElement> elements = element.findElements(By.tagName("p"));
+              for (WebElement e : elements) {
+                  System.out.println(e.getText());
+              }
+          } finally {
+              driver.quit();
+          }
+      }
+  }
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+  from selenium import webdriver
+  
+  driver = webdriver.Chrome()
+  driver.get("https://www.example.com")
+  
+  # Get element with tag name 'div'
+  element = driver.find_element_by_tag_name('div')
+  
+  # Get all the elements available with tag name 'p'
+  elements = element.find_elements_by_tag_name('p')
+  for e in elements:
+      print e.text
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+  // Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+  require 'selenium-webdriver'
+  driver = Selenium::WebDriver.for :chrome
+  begin
+    # Navigate to URL
+    driver.get 'https://www.example.com'
+  
+    # Get element with tag name 'div'
+    element = driver.find_element(:tag_name,'div')
+  
+    # Get all the elements available with tag name 'p'
+    elements = element.find_elements(:tag_name,'p')
+  
+    elements.each { |e|
+      puts e.text
+    }
+  ensure
+    driver.quit
+  end
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+  const {Builder, By} = require('selenium-webdriver');
+  
+  (async function example() {   
+      let driver = new Builder()
+          .forBrowser('chrome')
+          .build();
+  
+      await driver.get('https://www.example.com');
+  
+      // Get element with tag name 'div'
+      let element = driver.findElement(By.tagName("div"));
+  
+      // Get all the elements available with tag name 'p'
+      let elements = await element.findElements(By.tagName("p"));
+      for(let e of elements) {
+          console.log(await e.getText());
+      }
+  })();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+  import org.openqa.selenium.By
+  import org.openqa.selenium.chrome.ChromeDriver
+  
+  fun main() {
+      val driver = ChromeDriver()
+      try {
+          driver.get("https://example.com")
+  
+          // Get element with tag name 'div'
+          val element = driver.findElement(By.tagName("div"))
+  
+          // Get all the elements available with tag name 'p'
+          val elements = element.findElements(By.tagName("p"))
+          for (e in elements) {
+              println(e.text)
+          }
+      } finally {
+          driver.quit()
+      }
+  }
+  {{< / code-panel >}}
+{{< / code-tab >}}
+    
