@@ -11,20 +11,20 @@
     <title>On test automation :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1578025472" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1578025472" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1578026044" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1578026044" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1578025472" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1578026044" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1578025472"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1578026044"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1578025472"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1578025472"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1578026044"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1578026044"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1578025472"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1578026044"></script>
 
     
   </div>
@@ -2214,7 +2214,18 @@ account_page <span style="color:#719e07">=</span> login_as(user<span style="colo
 
 <section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># Create a user who has read-only permissions--they can configure a unicorn,</span>
+<span style="color:#586e75"># but they do not have payment information set up, nor do they have</span>
+<span style="color:#586e75"># administrative privileges. At the time the user is created, its email</span>
+<span style="color:#586e75"># address and password are randomly generated--you don&#39;t even need to</span>
+<span style="color:#586e75"># know them.</span>
+user <span style="color:#719e07">=</span> <span style="color:#cb4b16">UserFactory</span><span style="color:#719e07">.</span>create_common_user <span style="color:#586e75">#This method is defined elsewhere.</span>
+
+<span style="color:#586e75"># Log in as this user.</span>
+<span style="color:#586e75"># Logging in on this site takes you to your personal &#34;My Account&#34; page, so the</span>
+<span style="color:#586e75"># AccountPage object is returned by the loginAs method, allowing you to then</span>
+<span style="color:#586e75"># perform actions from the AccountPage.</span>
+account_page <span style="color:#719e07">=</span> login_as(user<span style="color:#719e07">.</span>email, user<span style="color:#719e07">.</span>password)
   </code></pre></div>
 </section>
   
@@ -2382,7 +2393,20 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 
 <section id="rubycode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># The Unicorn is a top-level Object--it has attributes, which are set here.</span>
+<span style="color:#586e75"># This only stores the values; it does not fill out any web forms or interact</span>
+<span style="color:#586e75"># with the browser in any way.</span>
+sparkles <span style="color:#719e07">=</span> <span style="color:#cb4b16">Unicorn</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">&#39;Sparkles&#39;</span>, <span style="color:#cb4b16">UnicornColors</span><span style="color:#719e07">.</span>PURPLE, <span style="color:#cb4b16">UnicornAccessories</span><span style="color:#719e07">.</span>SUNGLASSES, <span style="color:#cb4b16">UnicornAdornments</span><span style="color:#719e07">.</span>STAR_TATTOOS)
+
+<span style="color:#586e75"># Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the</span>
+<span style="color:#586e75"># actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method</span>
+<span style="color:#586e75"># takes us there.</span>
+add_unicorn_page <span style="color:#719e07">=</span> account_page<span style="color:#719e07">.</span>add_unicorn
+
+<span style="color:#586e75"># Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to</span>
+<span style="color:#586e75"># its createUnicorn() method. This method will take Sparkles&#39; attributes,</span>
+<span style="color:#586e75"># fill out the form, and click submit.</span>
+unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<span style="color:#719e07">.</span>create_unicorn(sparkles)
   </code></pre></div>
 </section>
   
@@ -2509,7 +2533,10 @@ you need to move on to step 3: making sure it actually worked.</p>
 
 <section id="rubycode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># The exists() method from UnicornConfirmationPage will take the Sparkles</span>
+<span style="color:#586e75"># object--a specification of the attributes you want to see, and compare</span>
+<span style="color:#586e75"># them with the fields on the page.</span>
+expect(unicorn_confirmation_page<span style="color:#719e07">.</span>exists?(sparkles))<span style="color:#719e07">.</span>to be, <span style="color:#2aa198">&#39;Sparkles should have been created, with all attributes intact&#39;</span>
   </code></pre></div>
 </section>
   
@@ -2589,7 +2616,7 @@ that time frame, then manual testing is the best solution.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/introduction/on_test_automation/">
       “On test automation”
-    </a> was last updated on: 08 Dec 2019 15:18:40 -0300: <a href="https://github.com/SeleniumHQ/site/commit/3bece74ac19f8389fecedc0ecef005e0aad8e583">Update waits.en.md (#121) (3bece74ac)</a>
+    </a> was last updated on: 03 Jan 2020 04:27:56 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/fd69d4fb5e7f24cee5f5dfcc43d8703a0e6e1e32">Add: Added Ruby code samples for test automation in introduction (#156) (fd69d4fb5)</a>
 </h5>
         
         </div> 
@@ -3786,19 +3813,19 @@ that time frame, then manual testing is the best solution.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1578025472"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1578026044"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1578025472"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1578025472"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1578026044"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1578026044"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1578025472" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1578025472"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1578026044" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1578026044"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
