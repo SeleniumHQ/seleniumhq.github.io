@@ -55,7 +55,25 @@ driver.get("http://www.example.com")
 driver.add_cookie({"name": "key", "value": "value"})
   {{< / code-panel >}}
 {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace AddCookie {
+ class AddCookie {
+  public static void Main(string[] args) {
+   IWebDriver driver = new ChromeDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+
+    // Adds the cookie into current browser context
+    driver.Manage().Cookies.AddCookie(new Cookie("key", "value"));
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
 {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -84,7 +102,20 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
 {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+
+        // Adds the cookie into current browser context
+        driver.manage().addCookie(Cookie("key", "value"));
+    } finally {
+        driver.quit()
+    }
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -128,7 +159,27 @@ driver.add_cookie({"name": "foo", "value": "bar"})
 print driver.get_cookie("foo")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace GetCookieNamed {
+ class GetCookieNamed {
+  public static void Main(string[] args) {
+   IWebDriver driver = new ChromeDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+    driver.Manage().Cookies.AddCookie(new Cookie("foo", "bar"));
+
+    // Get cookie details with named cookie 'foo'
+    var cookie = driver.Manage().Cookies.GetCookieNamed("foo");
+    System.Console.WriteLine(cookie);
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -163,7 +214,22 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("foo", "bar"));
+
+        // Get cookie details with named cookie 'foo'
+        val cookie = driver.manage().getCookieNamed("foo");
+        println(cookie);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -211,7 +277,27 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 print driver.get_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace GetAllCookies {
+ class GetAllCookies {
+  public static void Main(string[] args) {
+   IWebDriver driver = new ChromeDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
+
+    // Get All available cookies
+    var cookies = driver.Manage().Cookies.AllCookies;
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -248,7 +334,23 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test2", "cookie2"));
+
+        // Get All available cookies
+        val cookies = driver.manage().cookies;
+        println(cookies);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -298,7 +400,32 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 driver.delete_cookie("test1")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace DeleteCookie {
+ class DeleteCookie {
+  public static void Main(string[] args) {
+   IWebDriver driver = new ChromeDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+    var cookie = new Cookie("test2", "cookie2");
+    driver.Manage().Cookies.AddCookie(cookie);
+
+    // delete a cookie with name 'test1'	
+    driver.Manage().Cookies.DeleteCookieNamed("test1");
+
+    // Selenium .net bindings also provides a way to delete
+    // cookie by passing cookie object of current browsing context
+    driver.Manage().Cookies.DeleteCookie(cookie);
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -338,7 +465,26 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        val cookie1 = Cookie("test2", "cookie2")
+        driver.manage().addCookie(cookie1);
+
+        // delete a cookie with name 'test1'
+        driver.manage().deleteCookieNamed("test1");
+
+        // delete cookie by passing cookie object of current browsing context.
+        driver.manage().deleteCookie(cookie1);
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -381,7 +527,27 @@ driver.add_cookie({"name": "test2", "value": "cookie2"})
 driver.delete_all_cookies()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace DeleteAllCookies {
+ class DeleteAllCookies {
+  public static void Main(string[] args) {
+   IWebDriver driver = new ChromeDriver();
+   try {
+    // Navigate to Url
+    driver.Navigate().GoToUrl("https://example.com");
+    driver.Manage().Cookies.AddCookie(new Cookie("test1", "cookie1"));
+    driver.Manage().Cookies.AddCookie(new Cookie("test2", "cookie2"));
+
+    // deletes all cookies
+    driver.Manage().Cookies.DeleteAllCookies();
+   } finally {
+    driver.Quit();
+   }
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -416,6 +582,21 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("https://example.com")
+        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test2", "cookie2"));
+
+        // deletes all cookies
+        driver.manage().deleteAllCookies();
+    } finally {
+        driver.quit()
+    }
+}  
   {{< / code-panel >}}
 {{< / code-tab >}}
