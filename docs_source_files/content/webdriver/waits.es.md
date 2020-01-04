@@ -205,7 +205,7 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 driver.get("https://google.com/ncr")
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-val firstResult = WebDriverWait(driver, 10)
+val firstResult = WebDriverWait(driver, Duration.ofSeconds(10))
       .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
 // Print the first result
 println(firstResult.text)
@@ -257,7 +257,7 @@ assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), 10)
+val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
@@ -310,7 +310,7 @@ wait.until { driver.find_element(:id, 'message').displayed? }
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
+WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
