@@ -248,7 +248,11 @@ assert el.text == "Hello from JavaScript!"
  }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+  driver.get 'file:///race_condition.html'
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  ele = wait.until { driver.find_element(css: 'p')}
+  foo = ele.text
+  assert_match foo, 'Hello from JavaScript'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
