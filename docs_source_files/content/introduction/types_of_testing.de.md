@@ -9,7 +9,7 @@ auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
 zu übersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
 ## Acceptance testing
-This type of test is done in order to determine if a product's
+This type of test is done to determine if a product's
 feature matches its requirements. 
 This generally involves the customer's feedback or specification.
 
@@ -21,7 +21,7 @@ Note: Acceptance testing is a subtype of **_functional testing_**,
 which some people might also refer to.
             
 ### Functional testing
-This type of test is done in order to determine if a product's
+This type of test is done to determine if a product's
 feature functions properly, without issues.
              
 This generally includes: the tests work without errors 
@@ -35,29 +35,29 @@ This simulation could be done by record/playback or through
 the different supported languages as explained in this documentation.
 
 ### Performance testing
-As its name indicates, performance tests are done in order
+As its name indicates, performance tests are done 
 to measure how well an application is performing.
 
 There are two main sub-types for performance testing:
 
 #### Load testing
-Load testing is done in order to verify how well the 
+Load testing is done to verify how well the 
 application works under different defined loads 
 (usually a particular number of users connected at once).
 
 #### Stress testing
-Stress testing is done in order to verify how well the
+Stress testing is done to verify how well the
 application works under stress (or above the maximum supported load).
 
-Generally, performance tests are done by executing a 
-number of Selenium written tests simulating different users 
+Generally, performance tests are done by executing some 
+Selenium written tests simulating different users 
 hitting a particular function on the web app and 
 retrieving some meaningful measurements. 
 
 This is generally done by other tools that retrieve the metrics.
-One such tools is **_JMeter_**.
+One such tool is **_JMeter_**.
 
-For a web application, details to measure include:
+For a web application, details to measure include 
 throughput, latency, data loss, individual component loading times...
 
 Note 1: All browsers have a performance tab in their
@@ -69,10 +69,10 @@ as this is generally measured per system and not per function/feature.
 ### Regression testing
 This testing is generally done after a change, fix or feature addition. 
 
-In order to ensure that the change has not broken any of the existing 
+To ensure that the change has not broken any of the existing 
 functionality, some already executed tests are executed again. 
             
-The set of re-executed test can be full or partial
+The set of re-executed tests can be full or partial
 and can include several different types, depending
 on the application and development team.
             
@@ -83,7 +83,7 @@ development methodology in which tests drive the design of a feature.
 Each cycle starts by creating a set of unit tests that
 the feature should eventually pass (they should fail their first time executed).
 
-After this, development takes place in order to make the tests pass. 
+After this, development takes place to make the tests pass. 
 The tests are executed again, starting another cycle 
 and this process continues until all tests are passing.
 
@@ -95,7 +95,7 @@ BDD is also an iterative development methodology
 based on the above TDD, in which the goal is to involve
 all the parties in the development of an application.
 
-Each cycle starts by creating some specification 
+Each cycle starts by creating some specifications 
 (which should fail). Then create the failing unit 
 tests (which should also fail) and then do the development. 
 
@@ -110,12 +110,12 @@ The goal is to be able to detect even more errors
 than TDD, by targeting potential acceptance errors
 too and make communication between parties smoother.
 
-A set of tools are currently available in order 
+A set of tools are currently available 
 to write the specifications and match them with code functions,
 such as **_Cucumber_** or **_SpecFlow._**
 
 A set of tools are built on top of Selenium to make this process
 even faster by directly transforming the BDD specifications into 
 executable code.
-Some of these are: **_JBehave, Capybara and Robot Framework_**.
+Some of these are **_JBehave, Capybara and Robot Framework_**.
             
