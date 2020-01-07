@@ -3,9 +3,9 @@ title: "On test automation"
 weight: 2
 ---
 
-First, start by asking yourself whether or not you really need to use a browser.
+First, start by asking yourself whether or not you need to use a browser.
 Odds are that, at some point, if you are working on a complex web application,
-you will need to open a browser and actually test it.
+you will need to open a browser and test it.
 
 Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
@@ -25,7 +25,7 @@ you will generally perform some combination of three steps:
 You will want to keep these steps as short as possible;
 one or two operations should be enough most of the time.
 Browser automation has the reputation of being “flaky”,
-but in reality that is because users frequently demand too much of it.
+but in reality, that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
 to mitigate apparent intermittent problems in tests,
 in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.en.md" >}})
@@ -37,7 +37,7 @@ you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
 are their inherent ability to test all components of the application,
-from backend to frontend, from a user's perspective.
+from the backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
 
@@ -58,7 +58,7 @@ will quickly become a non-trivial undertaking.
 
 ### Let’s start with an example
 
-Larry has written a web site which allow users to order their own
+Larry has written a web site which allows users to order their 
 custom unicorns.
 
 The general workflow (what we will call the “happy path”) is something
@@ -92,10 +92,10 @@ It will perform the following actions:
 * Configure a unicorn
 
 Note that we are skipping the rest of these steps, 
-we will test the rest of the workflow in other small, discrete test cases,
+we will test the rest of the workflow in other small, discrete test cases 
 after we are done with this one.
 
-To start off, you need to create an account.
+To start, you need to create an account.
 Here you have some choices to make:
 
 * Do you want to use an existing account?
@@ -105,7 +105,7 @@ Here you have some choices to make:
 
 Regardless of how you answer this question,
 the solution is to make it part of the "set up the data" portion of the test.
-If Larry has exposed an API which enables you (or anyone)
+If Larry has exposed an API that enables you (or anyone)
 to create and update user accounts,
 be sure to use that to answer this question.
 If possible, you want to launch the browser only after you have a user "in hand",
@@ -318,7 +318,7 @@ unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
 {{< / code-tab >}}
 
 Now that you have configured your unicorn,
-you need to move on to step 3: making sure it actually worked.
+you need to move on to step 3: making sure it worked.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -365,13 +365,13 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.
 
-Your page objects will require some small maintenance
-in order to conform to the site redesign,
+Your page objects will require some small maintenance to 
+conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
 Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
+You will probably want many iterations of this test to make sure the cart is keeping its state properly:
 Is there more than one unicorn in the cart before you start?
 How many can fit in the shopping cart?
 If you create more than one with the same name and/or features, will it break?
@@ -397,5 +397,5 @@ interface will change considerably in the near future, then any automation
 might need to be rewritten anyway. Also, sometimes there simply is not enough
 time to build test automation. For the short term, manual testing may be more
 effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing get done within
+test automation available, and it’s imperative that the testing gets done within
 that time frame, then manual testing is the best solution.
