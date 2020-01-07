@@ -27,7 +27,7 @@ driver.find_element_by_id("fromage")
 IWebElement element = driver.FindElement(By.Id("fromage"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-driver.find_element(id: "fromage")  
+cheese = driver.find_element(id: 'cheese')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const fromage = driver.findElement(By.id('fromage'));
@@ -63,8 +63,8 @@ IWebElement fromage = driver.FindElement(By.Id("fromage"));
 IWebElement cheddar = fromage.FindElement(By.Id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-fromage = driver.find_element(id: "fromage")
-cheddar = fromage.find_elements(id: "cheddar")
+fromage = driver.find_element(id: 'fromage')
+cheddar = fromage.find_element(id: 'cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const fromage = driver.findElement(By.id('fromage'));
@@ -108,7 +108,7 @@ cheddar = driver.find_element_by_css_selector("#fromage #cheddar")
 driver.FindElement(By.CssSelector("#fromage #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
+driver.find_element(css: '#fromage #cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const cheddar = driver.findElement(By.css('#fromage #cheddar'));
@@ -150,7 +150,7 @@ plein_de_fromage = driver.find_elements_by_css_selector("#fromage li")
 IReadOnlyList<IWebElement> pleinDeFromage = driver.FindElements(By.CssSelector(“#fromage li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-plein_de_fromage = driver.find_elements(css: "#fromage li")
+plein_de_fromage = driver.find_elements(css: '#fromage li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const pleinDeFromage = driver.findElements(By.css('#fromage li'));
