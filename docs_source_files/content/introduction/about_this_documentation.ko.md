@@ -13,7 +13,7 @@ These docs, like the code itself, are maintained 100% by volunteers
 within the Selenium community.
 Many have been using it since its inception,
 but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
+and have given their time to help improve the onboarding experience
 for new users.
 
 If there is an issue with the documentation, we want to know!
