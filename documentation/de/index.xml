@@ -72,7 +72,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Die Dokumentation von Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+ Die Dokumentation von Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
     </item>
     
@@ -511,7 +511,8 @@ It may seem ideal to performance test in the context of the user but a suite of 
       
       <guid>https://selenium.dev/documentation/de/support_packages/working_with_cookies/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+ A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:</description>
     </item>
     
     <item>
@@ -602,8 +603,8 @@ Let us say there is a content management system with which you can create some c
       
       <guid>https://selenium.dev/documentation/de/webdriver/web_element/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.</description>
+ WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.</description>
     </item>
     
     <item>
