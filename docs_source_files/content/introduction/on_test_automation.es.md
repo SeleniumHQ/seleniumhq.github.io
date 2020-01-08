@@ -158,7 +158,18 @@ account_page = login_as(user.get_email(), user.get_password())
 // Todavía no tenemos una muestra de código C# - ayúdenos y genere un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código en Ruby - ayúdenos y genere un PR (pull request)
+# Cree un usuario que tenga permisos de solo lectura: puede configurar un unicornio,
+# pero no tienen configurada la información de pago, ni tienen
+# Privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+# la dirección y la contraseña se generan aleatoriamente; ni siquiera necesita
+# conocerlos.
+user = UserFactory.create_common_user #Este método se define en otra parte.
+
+# Inicie sesión como este usuario.
+# Iniciar sesión en este sitio lo lleva a su página personal "Mi cuenta", por lo que
+# El objeto loginAs devuelve el objeto AccountPage, lo que le permite
+# realizar acciones desde la página de cuenta.
+account_page = login_as(user.email, user.password)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Create a user who has read-only permissions--they can configure a unicorn,
@@ -255,7 +266,20 @@ unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
 // Todavía no tenemos una muestra de código en C# - ayúdanos y genera un PR (pull request)
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código en Ruby - ayúdanos y genera un PR (pull request)
+# El Unicornio es un Objeto de nivel superior: tiene atributos, que se establecen aquí.
+# Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+# con el navegador de cualquier manera.
+sparkles = Unicorn.new('Sparkles', UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
+
+# Como ya estamos "en" la página de la cuenta, tenemos que usarla para acceder a
+# lugar real donde se configuran los unicornios. Llamando al método "addUnicorn"
+# nos lleva allí.
+add_unicorn_page = account_page.add_unicorn
+
+# Ahora que estamos en AddUnicornPage, pasaremos el objeto "sparkles" a
+# su método createUnicorn(). Este método tomará los atributos de Sparkles,
+# completará el formulario y haga clic en enviar.
+unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // The Unicorn is a top-level Object--it has attributes, which are set here.
@@ -313,7 +337,10 @@ assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been cr
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código en Ruby - ayúdanos y genera un PR (pull request)
+# El método exist() de UnicornConfirmationPage tomará Sparkles
+# objeto: una especificación de los atributos que desea ver y compararlos
+# con los campos en la página.
+expect(unicorn_confirmation_page.exists?(sparkles)).to be, 'Sparkles should have been created, with all attributes intact'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // The exists() method from UnicornConfirmationPage will take the Sparkles
