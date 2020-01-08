@@ -11,20 +11,20 @@
     <title>Working with cookies :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1577671642" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1577671642" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1578500496" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1578500496" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1577671642" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1578500496" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1577671642"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1578500496"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1577671642"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1577671642"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1578500496"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1578500496"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1577671642"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1578500496"></script>
 
     
   </div>
@@ -1890,7 +1890,7 @@
     
     <section id="footer">
       <p>    
-  &copy; 2013-2019
+  &copy; 2013-2020
 </p>
 <p>    
   Software Freedom Conservancy (SFC)
@@ -2098,8 +2098,26 @@ driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> AddCookie {
+ <span style="color:#719e07">class</span> <span style="color:#268bd2">AddCookie</span> {
+  <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+   <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+
+    <span style="color:#586e75">// Adds the cookie into current browser context
+</span><span style="color:#586e75"></span>    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>));
+   } <span style="color:#719e07">finally</span> {
+    driver.Quit();
+   }
+  }
+ }
+}
+  
 </code></pre></div>
 </section>
 
@@ -2144,8 +2162,21 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://example.com&#34;</span>)
+
+        <span style="color:#586e75">// Adds the cookie into current browser context
+</span><span style="color:#586e75"></span>        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>));
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}  
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2239,8 +2270,28 @@ driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198
 
 <section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> GetCookieNamed {
+ <span style="color:#719e07">class</span> <span style="color:#268bd2">GetCookieNamed</span> {
+  <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+   <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;foo&#34;</span>, <span style="color:#2aa198">&#34;bar&#34;</span>));
+
+    <span style="color:#586e75">// Get cookie details with named cookie &#39;foo&#39;
+</span><span style="color:#586e75"></span>    <span style="color:#dc322f">var</span> cookie = driver.Manage().Cookies.GetCookieNamed(<span style="color:#2aa198">&#34;foo&#34;</span>);
+    System.Console.WriteLine(cookie);
+   } <span style="color:#719e07">finally</span> {
+    driver.Quit();
+   }
+  }
+ }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2291,8 +2342,23 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://example.com&#34;</span>)
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;foo&#34;</span>, <span style="color:#2aa198">&#34;bar&#34;</span>));
+
+        <span style="color:#586e75">// Get cookie details with named cookie &#39;foo&#39;
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> cookie = driver.manage().getCookieNamed(<span style="color:#2aa198">&#34;foo&#34;</span>);
+        println(cookie);
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}  
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2390,8 +2456,28 @@ driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> GetAllCookies {
+ <span style="color:#719e07">class</span> <span style="color:#268bd2">GetAllCookies</span> {
+  <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+   <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+
+    <span style="color:#586e75">// Get All available cookies
+</span><span style="color:#586e75"></span>    <span style="color:#dc322f">var</span> cookies = driver.Manage().Cookies.AllCookies;
+   } <span style="color:#719e07">finally</span> {
+    driver.Quit();
+   }
+  }
+ }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2444,8 +2530,24 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="kotlincode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://example.com&#34;</span>)
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+
+        <span style="color:#586e75">// Get All available cookies
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> cookies = driver.manage().cookies;
+        println(cookies);
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}  
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2544,8 +2646,33 @@ driver<span style="color:#719e07">.</span>delete_cookie(<span style="color:#2aa1
 
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> DeleteCookie {
+ <span style="color:#719e07">class</span> <span style="color:#268bd2">DeleteCookie</span> {
+  <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+   <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+    <span style="color:#dc322f">var</span> cookie = <span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>);
+    driver.Manage().Cookies.AddCookie(cookie);
+
+    <span style="color:#586e75">// delete a cookie with name &#39;test1&#39;	
+</span><span style="color:#586e75"></span>    driver.Manage().Cookies.DeleteCookieNamed(<span style="color:#2aa198">&#34;test1&#34;</span>);
+
+    <span style="color:#586e75">// Selenium .net bindings also provides a way to delete
+</span><span style="color:#586e75"></span>    <span style="color:#586e75">// cookie by passing cookie object of current browsing context
+</span><span style="color:#586e75"></span>    driver.Manage().Cookies.DeleteCookie(cookie);
+   } <span style="color:#719e07">finally</span> {
+    driver.Quit();
+   }
+  }
+ }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2601,8 +2728,27 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="kotlincode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://example.com&#34;</span>)
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+        <span style="color:#719e07">val</span> cookie1 = Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>)
+        driver.manage().addCookie(cookie1);
+
+        <span style="color:#586e75">// delete a cookie with name &#39;test1&#39;
+</span><span style="color:#586e75"></span>        driver.manage().deleteCookieNamed(<span style="color:#2aa198">&#34;test1&#34;</span>);
+        
+        <span style="color:#586e75">// delete cookie by passing cookie object of current browsing context.
+</span><span style="color:#586e75"></span>        driver.manage().deleteCookie(cookie1);
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}  
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2694,8 +2840,28 @@ driver<span style="color:#719e07">.</span>delete_all_cookies()
 
 <section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> DeleteAllCookies {
+ <span style="color:#719e07">class</span> <span style="color:#268bd2">DeleteAllCookies</span> {
+  <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
+   <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+    driver.Manage().Cookies.AddCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+
+    <span style="color:#586e75">// deletes all cookies
+</span><span style="color:#586e75"></span>    driver.Manage().Cookies.DeleteAllCookies();
+   } <span style="color:#719e07">finally</span> {
+    driver.Quit();
+   }
+  }
+ }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2746,8 +2912,23 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="kotlincode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://example.com&#34;</span>)
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
+        driver.manage().addCookie(Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+
+        <span style="color:#586e75">// deletes all cookies
+</span><span style="color:#586e75"></span>        driver.manage().deleteAllCookies();
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2760,7 +2941,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/">
       “Working with cookies”
-    </a> was last updated on: 27 Dec 2019 03:21:55 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/05dc2a217d5fcd3b6f24b20b1e987138c93d9d4c">Modify: Proposing a replacement of new cookie document (#150) [deploy site] (05dc2a217)</a>
+    </a> was last updated on: 03 Jan 2020 09:53:03 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/57bf6a3de0fe1858bada1a9c62ebbe8b8af5d834">Add: Added Kotlin and c# code samples for Cookie document (#154) [deploy site] (57bf6a3de)</a>
 </h5>
         
         </div> 
@@ -3957,19 +4138,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1577671642"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1578500496"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1577671642"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1577671642"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1578500496"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1578500496"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1577671642" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1577671642"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1578500496" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1578500496"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

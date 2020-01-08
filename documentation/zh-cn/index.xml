@@ -40,7 +40,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+ The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
     </item>
     
@@ -392,7 +392,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/locating_elements/</guid>
       <description>定位元素 使用 WebDriver 时要学习的最基本的技术之一是如何查找页面上的元素。 WebDriver 提供了许多内置的选择器类型，其中包括根据 id 属性查找元素:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     如示例所示，在 WebDriver 中定位元素是在 WebDriver 实例对象上完成的。 findElement(By) 方法返回另一个基本对象类型 WebElement。
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     如示例所示，在 WebDriver 中定位元素是在 WebDriver 实例对象上完成的。 findElement(By) 方法返回另一个基本对象类型 WebElement。
  WebDriver 代表浏览器 WebElement 表示特定的 DOM 节点（控件，例如链接或输入栏等）  一旦你已经找到一个元素的引用，你可以通过对该对象实例使用相同的调用来缩小搜索范围：
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
     </item>
