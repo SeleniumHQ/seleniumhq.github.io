@@ -5,29 +5,16 @@ chapter: true
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+# 指导方针和建议
 
-# Guidelines and recommendations
+关于"最佳实践"的注解: 我们觉得没有一种特定的方法能适用于所有的场景，所以在本篇文档中，我们有意
+的避开使用"最佳实践"这个词汇。我们倾向于使用"指导方针和建议"。我们鼓励你读一读这章，然后仔细的
+思考以下哪一种方法才是真正适合你的特定情况。
 
-A note on "Best Practices": We've intentionally avoided the phrase "Best
-Practices" in this documentation. No one approach works for all situations.
-We prefer the idea of "Guidelines and Recommendations". We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.
+处于种种原因，把功能测试做对是一个很困难的事情。即便应用程序的状态，复杂性，依赖还不够让测试变得
+足够复杂，操作浏览器（特别是跨浏览器的兼容性测试）就已经使的写一个好的测试变成一种挑战。
 
-Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.
+Selenium提供了一些工具来使功能测试用户更简单的操作浏览器，但是这些工具并不能帮助你来写一个好的
+架构的测试套件。这章我们会提供关于怎么来做web页面的功能测试的自动化给出一些意见，指导方针和建议。
 
-Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.
-
-This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.
+这章记录了很多历年来成功的使用Selenium的用户的常用的软件设计模式。
