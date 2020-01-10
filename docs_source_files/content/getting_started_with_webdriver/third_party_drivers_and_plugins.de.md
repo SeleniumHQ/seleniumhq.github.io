@@ -1,5 +1,5 @@
 ---
-title: "Driverimplementierungen anderer Anbieter und Plugins"
+title: "Treiberimplementierungen und Plugins von Drittanbietern"
 weight: 2
 ---
 
