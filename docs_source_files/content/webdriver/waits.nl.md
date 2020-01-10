@@ -149,7 +149,7 @@ WebDriver driver = new ChromeDriver();
 driver.get("https://google.com/ncr");
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-WebElement firstResult = new WebDriverWait(driver, 10)
+WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
         .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 // Print the first result
 System.out.println(firstResult.getText());
@@ -205,7 +205,7 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 driver.get("https://google.com/ncr")
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-val firstResult = WebDriverWait(driver, 10)
+val firstResult = WebDriverWait(driver, Duration.ofSeconds(10))
       .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
 // Print the first result
 println(firstResult.text)
@@ -228,7 +228,7 @@ we can refactor our instructions to be more concise:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement foo = new WebDriverWait(driver, 3)
+WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
             .until(driver -> driver.findElement(By.name("q")));
 assertEquals(foo.getText(), "Hello from JavaScript!");   
   {{< / code-panel >}}
@@ -247,7 +247,11 @@ assert el.text == "Hello from JavaScript!"
         Debug.Assert(foo.Text.Equals("Hello from JavaScript!"));
     }  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+  driver.get 'file:///race_condition.html'
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  ele = wait.until { driver.find_element(css: 'p')}
+  foo = ele.text
+  assert_match foo, 'Hello from JavaScript' 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
@@ -256,7 +260,7 @@ assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), 10)
+val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
@@ -292,8 +296,7 @@ The wait lets you pass in an argument to override the timeout:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//new WebDriverWait(driver,3).until(some_condition(WebElement))
-new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 WebDriverWait(driver, timeout=3).until(some_condition)
@@ -309,7 +312,7 @@ wait.until { driver.find_element(:id, 'message').displayed? }
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
+WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
