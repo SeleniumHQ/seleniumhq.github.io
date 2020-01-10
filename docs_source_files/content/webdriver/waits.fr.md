@@ -467,10 +467,28 @@ using (var driver = new FirefoxDriver())
 }
 {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+exception = Selenium::WebDriver::Error::NoSuchElementError
+
+begin
+  driver.get 'http://somedomain/url_that_delays_loading'
+  wait = Selenium::WebDriver::Wait.new(timeout: 30, interval: 5, message: 'Timed out after 30 sec', ignore: exception)
+  foo = wait.until { driver.find_element(id: 'foo')}
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const {Builder, until} = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    await driver.get('http://somedomain/url_that_delays_loading');
+    // Waiting 30 seconds for an element to be present on the page, checking
+    // for its presence once every 5 seconds.
+    let foo = await driver.wait(until.elementLocated(By.id('foo')), 30000, 'Timed out after 30 seconds', 5000);
+})(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val wait = FluentWait<WebDriver>(getWebDriver())
