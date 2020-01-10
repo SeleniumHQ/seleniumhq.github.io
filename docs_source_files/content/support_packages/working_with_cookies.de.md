@@ -1,5 +1,5 @@
 ---
-title: "Handling von Cookies"
+title: "Arbeiten mit Cookies"
 weight: 6
 ---
 
