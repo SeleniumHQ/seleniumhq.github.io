@@ -11,20 +11,20 @@
     <title>Guidelines and recommendations :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1578630939" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1578630939" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1578631460" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1578631460" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1578630939" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1578631460" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1578630939"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1578631460"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1578630939"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1578630939"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1578631460"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1578631460"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1578630939"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1578631460"></script>
 
     
   </div>
@@ -1967,33 +1967,19 @@
 
 	
 
+<h1 id="指导方针和建议">指导方针和建议</h1>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
-</div>
+<p>关于&rdquo;最佳实践&rdquo;的注解: 我们觉得没有一种特定的方法能适用于所有的场景，所以在本篇文档中，我们有意
+的避开使用&rdquo;最佳实践&rdquo;这个词汇。我们倾向于使用&rdquo;指导方针和建议&rdquo;。我们鼓励你读一读这章，然后仔细的
+思考以下哪一种方法才是真正适合你的特定情况。</p>
 
+<p>处于种种原因，把功能测试做对是一个很困难的事情。即便应用程序的状态，复杂性，依赖还不够让测试变得
+足够复杂，操作浏览器（特别是跨浏览器的兼容性测试）就已经使的写一个好的测试变成一种挑战。</p>
 
-<h1 id="guidelines-and-recommendations">Guidelines and recommendations</h1>
+<p>Selenium提供了一些工具来使功能测试用户更简单的操作浏览器，但是这些工具并不能帮助你来写一个好的
+架构的测试套件。这章我们会提供关于怎么来做web页面的功能测试的自动化给出一些意见，指导方针和建议。</p>
 
-<p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
-Practices&rdquo; in this documentation. No one approach works for all situations.
-We prefer the idea of &ldquo;Guidelines and Recommendations&rdquo;. We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.</p>
-
-<p>Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.</p>
-
-<p>Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.</p>
-
-<p>This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.</p>
+<p>这章记录了很多历年来成功的使用Selenium的用户的常用的软件设计模式。</p>
 
 
 
@@ -2006,7 +1992,7 @@ that have proven successful over the years.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/">
       “Guidelines and recommendations”
-    </a> was last updated on: 13 Dec 2019 10:18:13 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/98ed58bf8cb1d75d4b3527e6922615bad582dbf7">Deploying on Fri Dec 13 10:18:13 UTC 2019, commit 54f065808f2cb3b6b271bd2d6466c5a569e368e7, [skip ci] (98ed58bf8)</a>
+    </a> was last updated on: 10 Jan 2020 12:42:41 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/5548c12918b331204b7055c04f5fce567d920d4f">translate Guidelines and recommendations index to Chinese (#169) [deploy site] (5548c1291)</a>
 </h5>
         
             </div> 
@@ -3201,19 +3187,19 @@ that have proven successful over the years.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1578630939"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1578631460"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1578630939"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1578630939"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1578631460"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1578631460"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1578630939" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1578630939"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1578631460" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1578631460"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
