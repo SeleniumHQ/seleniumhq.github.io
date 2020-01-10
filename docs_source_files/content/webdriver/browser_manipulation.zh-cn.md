@@ -1,12 +1,8 @@
 ---
-title: "Browser manipulation"
+title: "操控浏览器"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
@@ -14,26 +10,22 @@ weight: 3
 
 ## Ruby
 
-Ruby is not installed by default on Windows. Download the latest
-[version](//rubyinstaller.org/downloads) and run the installer. You can
-leave all settings at default values, except at the
-_Installation Destination and Optional Tasks_ screen check
-_Add Ruby executables to your PATH_ checkbox. To drive any browser, you have
-to install `selenium-webdriver` Ruby gem. To install it, open command prompt
-and type this:
+默认情况下，Ruby 没有安装在 Windows 上。下载最新[版本](//rubyinstaller.org/downloads)
+并运行安装程序。你可以保留所有设置的默认值，除要勾选 _安装位置和可选任务_ 屏幕上 
+_将 Ruby 可执行程序添加到您的系统路径_ 复选框外。想要驱动任何浏览器，你必须安装 `selenium-webdriver` 
+Ruby gem. 打开命令提示符并输入以下命令来安装它:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Or, if you use [Bundler](//bundler.io), add this line to your application's
-Gemfile:
+如果你使用 [Bundler](//bundler.io)，添加这一行到你的应用程序的 Gemfile 中:
 
 ```ruby
 gem "selenium-webdriver"
 ```
 
-And then execute the following command in prompt:
+然后在命令提示符中执行以下命令：
 
 ```shell
 bundle install
@@ -42,262 +34,248 @@ bundle install
 
 ## Internet Explorer
 
-Internet Explorer is installed by default on Windows, so no installation is
-needed. To drive Internet Explorer on Windows, you have to download the latest
-[Internet Explorer Driver](https://selenium.dev/downloads/) and put the file
-into a folder that is in `PATH`. To find out which directories are in `PATH`,
-type `echo %PATH%` in command prompt.
-
+IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的 
+[Internet Explorer 驱动程序](https://selenium.dev/downloads/) 并将文件放入 `PATH` 
+路径中的文件夹中。要查看 `PATH` 路径中的目录，在命令提示符中键入 `echo %PATH%`。
+ 
 ```bat
 $ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
 ```
 
-`C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and
-move `IEDriverServer.exe` there.
+`C:\Ruby200\bin` 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
 
-This should open a new Internet Explorer window:
+这将打开一个新的 IE 浏览器窗口:
 
 ```ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer
 ```
 
-## Browser navigation
+## 浏览器导航
 
-### Navigate to
+### 打开网站
 
-The first thing you will want to do after launching a browser is to
-open your website. This can be achieved in a single line:
+启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Convenient
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 简便的方法
 driver.get("https://selenium.dev");
 
-//Longer way
+// 更长的方法
 driver.navigate().to("https://selenium.dev");
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
 driver.get("https://selenium.dev")
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
 driver.Navigate().GoToUrl(@"https://selenium.dev");
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Convenient way
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 简便的方法
 driver.get 'https://selenium.dev'
 
-# Longer Way
+# 更长的方法
 driver.navigate.to 'https://selenium.dev'
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
 await driver.get('https://selenium.dev');
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Convenient
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 简便的方法
 driver.get("https://selenium.dev")
 
-//Longer way
+// 更长的方法
 driver.navigate().to("https://selenium.dev")
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Get current URL
+### 获取当前 URL
 
-You can read the current URL from the browser's address bar using:
+您可以从浏览器的地址栏读取当前的 URL，使用:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.current_url{{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
-{{< / code-tab >}}
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.getCurrentUrl();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.current_url{{</ code-panel>}}
+  {{<code-panel language="csharp">}}driver.Url;{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.current_url{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.getCurrentUrl();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.getCurrentUrl();{{< / code-panel>}}
+{{</ code-tab>}}
 
-### Back
+### 后退
 
-Pressing the browser's back button:
+按下浏览器的后退按钮:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.navigate().back();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.back(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Navigate().Back();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.navigate.back{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.navigate().back();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().back() {{< / code-panel >}}
-{{< / code-tab >}}
-
-
-### Forward
-Pressing the browser's forward button:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.forward(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
-{{< / code-tab >}}
-
-### Refresh
-
-Refresh the current page:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.navigate().refresh();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.refresh(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Navigate().Refresh();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.navigate.refresh{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.navigate().refresh();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().refresh(){{< / code-panel >}}
-{{< / code-tab >}}
-
-### Get title
-
-You can read the current page title from the browser:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.title{{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
-{{< / code-tab >}}
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.navigate().back();{{</ code-panel>}}
+  {{<code-panel language="python">}}driver.back(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Navigate().Back();{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.navigate.back{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.navigate().back();{{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.navigate().back() {{</ code-panel>}}
+{{</ code-tab>}}
 
 
-## Windows and tabs
-WebDriver doesn't make the distinction between windows and tabs. If
-your site opens a new tab or window, Selenium will let you work with it
-using a window handle.  Each window has a unique identifier which remains
-persistent in a single session. You can get the window handle of the
-current window by using:
+### 前进
+按下浏览器的前进键:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.current_window_handle{{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
-{{< / code-tab >}}
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.navigate().forward();{{</ code-panel>}}
+  {{<code-panel language="python">}}driver.forward(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Navigate().Forward();{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.navigate.forward{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.navigate().forward();{{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.navigate().forward();{{</ code-panel>}}
+{{</ code-tab>}}
 
-### Switching windows or tabs
+### 刷新
+刷新当前页面:
 
-Clicking a link which opens in a
-<a href="https://seleniumhq.github.io" target="_blank"> new window</a>
-will focus the new window or tab on screen, but WebDriver will not know which
-window the Operating System considers active.  To work with the new window
-you will need to switch to it. If you have only two tabs or windows open,
-and you know which window you start with, by the process of elimination
-you can loop over both windows or tabs that WebDriver can see, and switch
-to the one which is not the original.
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.navigate().refresh();{{</ code-panel>}}
+  {{<code-panel language="python">}}driver.refresh(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Navigate().Refresh();{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.navigate.refresh{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.navigate().refresh();{{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.navigate().refresh(){{</ code-panel>}}
+{{</ code-tab>}}
 
-However, Selenium 4 provides a new api 
-<a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
-which creates a new tab (or) new window and automatically switches to it.
+### 获取标题
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Store the ID of the original window
+从浏览器中读取当前页面的标题:
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.getTitle();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.title{{</ code-panel>}}
+  {{<code-panel language="csharp">}}driver.Title;{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.title{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.getTitle();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.getTitle(){{< / code-panel>}}
+{{</ code-tab>}}
+
+
+## 窗口和标签页
+
+WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新标签页或窗口，Selenium 将允许您使用窗口句柄来处理它。
+每个窗口都有一个唯一的标识符，该标识符在单个会话中保持持久性。你可以使用以下方法获得当前窗口的窗口句柄:
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.getWindowHandle();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.current_window_handle{{</ code-panel>}}
+  {{<code-panel language="csharp">}}driver.CurrentWindowHandle;{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.window_handle{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.getWindowHandle();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.getWindowHandle(){{< / code-panel>}}
+{{</ code-tab>}}
+
+### 切换窗口或标签页
+
+
+单击在 <a href="https://seleniumhq.github.io"target="_blank">新窗口</a> 中打开链接，
+则屏幕会聚焦在新窗口或新标签页上，但 WebDriver 不知道操作系统认为哪个窗口是活动的。
+要使用新窗口，您需要切换到它。 如果只有两个选项卡或窗口被打开，并且你知道从哪个窗口开始，
+则你可以遍历 WebDriver， 通过排除法可以看到两个窗口或选项卡，然后切换到你需要的窗口或选项卡。
+
+不过，Selenium 4 提供了一个新的 api 
+<a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/#创建新窗口(或)新标签页并且切换"> NewWindow </a>，
+它创建一个新选项卡 (或) 新窗口并自动切换到它。
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 存储原始窗口的 ID
 String originalWindow = driver.getWindowHandle();
 
-//Check we don't have other windows open already
+// 检查一下，我们还没有打开其他的窗口
 assert driver.getWindowHandles().size() == 1;
 
-//Click the link which opens in a new window
+// 点击在新窗口中打开的链接
 driver.findElement(By.linkText("new window")).click();
 
-//Wait for the new window or tab
+// 等待新窗口或标签页
 wait.until(numberOfWindowsToBe(2));
 
-//Loop through until we find a new window handle
-for (String windowHandle : driver.getWindowHandles()) {
-    if(!originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle);
+// 循环执行，直到找到一个新的窗口句柄
+for (String windowHandle : driver.getWindowHandles()) {if(!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle);
         break;
     }
 }
 
-//Wait for the new tab to finish loading content
+// 等待新标签完成加载内容
 wait.until(titleIs("Selenium documentation"));
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-# Start the driver
+# 启动驱动程序
 with webdriver.Firefox() as driver:
-    # Open URL
+    # 打开网址
     driver.get("https://seleniumhq.github.io")
 
-    # Setup wait for later
+    # 设置等待
     wait = WebDriverWait(driver, 10)
 
-    # Store the ID of the original window
+    # 存储原始窗口的 ID
     original_window = driver.current_window_handle
 
-    # Check we don't have other windows open already
+    # 检查一下，我们还没有打开其他的窗口
     assert len(driver.window_handles) == 1
 
-    # Click the link which opens in a new window
+    # 单击在新窗口中打开的链接
     driver.find_element_by_link_text("new window").click()
 
-    # Wait for the new window or tab
+    # 等待新窗口或标签页
     wait.until(EC.number_of_windows_to_be(2))
 
-    # Loop through until we find a new window handle
+    # 循环执行，直到找到一个新的窗口句柄
     for window_handle in driver.window_handles:
         if window_handle != original_window:
             driver.switch_to.window(window_handle)
             break
 
-    # Wait for the new tab to finish loading content
+    # 等待新标签页完成加载内容
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Store the ID of the original window
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 存储原始窗口的 ID
 string originalWindow = driver.CurrentWindowHandle;
 
-//Check we don't have other windows open already
+// 检查一下，我们还没有打开其他的窗口
 Assert.AreEqual(driver.WindowHandles.Count, 1);
 
-//Click the link which opens in a new window
+// 单击在新窗口中打开的链接
 driver.FindElement(By.LinkText("new window")).Click();
 
-//Wait for the new window or tab
+// 等待新窗口或标签页
 wait.Until(wd => wd.WindowHandles.Count == 2);
 
-//Loop through until we find a new window handle
+// 循环执行，直到找到一个新的窗口句柄
 foreach(string window in driver.WindowHandles)
-{
-    if(originalWindow != window)
-    {
-        driver.SwitchTo().Window(window);
+{if(originalWindow != window)
+    {driver.SwitchTo().Window(window);
         break;
     }
 }
-//Wait for the new tab to finish loading content
+// 等待新标签页完成加载内容
 wait.Until(wd => wd.Title == "Selenium documentation");
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-#Store the ID of the original window
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 存储原始窗口的 ID
 original_window = driver.window_handle
 
-#Check we don't have other windows open already
-assert(driver.window_handles.length == 1, 'Expected one window')
+#检查一下，我们还没有打开其他的窗口
+assert(driver.window_handles.length == 1,'Expected one window')
 
-#Click the link which opens in a new window
-driver.find_element(link: 'new window').click
+#点击在新窗口中打开的链接
+driver.find_element(link:'new window').click
 
-#Wait for the new window or tab
-wait.until { driver.window_handles.length == 2 }
+#等待新窗口或标签页
+wait.until {driver.window_handles.length == 2}
 
-#Loop through until we find a new window handle
+#循环执行，直到找到一个新的窗口句柄
 driver.window_handles.each do |handle|
     if handle != original_window
         driver.switch_to.window handle
@@ -305,766 +283,720 @@ driver.window_handles.each do |handle|
     end
 end
 
-#Wait for the new tab to finish loading content
-wait.until { driver.title == 'Selenium documentation'}
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-//Store the ID of the original window
+#等待新标签页完成加载内容
+wait.until {driver.title =='Selenium documentation'}
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 存储原始窗口的 ID
 const originalWindow = await driver.getWindowHandle();
 
-//Check we don't have other windows open already
+// 检查一下，我们还没有打开其他的窗口
 assert((await driver.getAllWindowHandles()).length === 1);
 
-//Click the link which opens in a new window
+// 点击在新窗口中打开的链接
 await driver.findElement(By.linkText('new window')).click();
 
-//Wait for the new window or tab
-await driver.wait(
-    async () => (await driver.getAllWindowHandles()).length === 2,
+// 等待新窗口或标签页
+await driver.wait(async () => (await driver.getAllWindowHandles()).length === 2,
     10000
   );
 
-//Loop through until we find a new window handle
+// 循环执行，直到找到一个新的窗口句柄
 const windows = await driver.getAllWindowHandles();
-windows.forEach(async handle => {
-  if (handle !== originalWindow) {
-    await driver.switchTo().window(handle);
+windows.forEach(async handle => {if (handle !== originalWindow) {await driver.switchTo().window(handle);
   }
 });
 
-//Wait for the new tab to finish loading content
+// 等待新标签页完成加载内容
 await driver.wait(until.titleIs('Selenium documentation'), 10000);
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Store the ID of the original window
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 存储原始窗口的 ID
 val originalWindow = driver.getWindowHandle()
 
-//Check we don't have other windows open already
+// 检查一下，我们还没有打开其他的窗口
 assert(driver.getWindowHandles().size() === 1)
 
-//Click the link which opens in a new window
+// 点击在新窗口中打开的链接
 driver.findElement(By.linkText("new window")).click()
 
-//Wait for the new window or tab
+// 等待新窗口或标签页
 wait.until(numberOfWindowsToBe(2))
 
-//Loop through until we find a new window handle
-for (windowHandle in driver.getWindowHandles()) {
-      if (!originalWindow.contentEquals(windowHandle)) {
-          driver.switchTo().window(windowHandle)
+// 循环执行，直到找到一个新的窗口句柄
+for (windowHandle in driver.getWindowHandles()) {if (!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle)
            break
       }
 }
 
-//Wait for the new tab to finish loading content
+// 等待新标签页完成加载内容
 wait.until(titleIs("Selenium documentation"))
  
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Create new window (or) new tab and switch
-Creates a new window (or) tab and will focus the new window or tab on screen.
-You don't need to switch to work with the new window (or) tab. If you have more than two windows
-(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
-and switch to the one which is not the original.
+### 创建新窗口(或)新标签页并且切换
 
-__Note: This feature works with Selenium 4 and later versions.__
+创建一个新窗口 (或) 标签页，屏幕焦点将聚焦在新窗口或标签在上。您不需要切换到新窗口 (或) 标签页。如果除了新窗口之外，
+您打开了两个以上的窗口 (或) 标签页，您可以通过遍历 WebDriver 看到两个窗口或选项卡，并切换到非原始窗口。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Opens a new tab and switches to new tab
+_注意: 该特性适用于 Selenium 4 及其后续版本。_
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 打开新标签页并切换到新标签页
 driver.switchTo().newWindow(WindowType.TAB);
 
-// Opens a new window and switches to new window
+// 打开一个新窗口并切换到新窗口
 driver.switchTo().newWindow(WindowType.WINDOW);
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Opens a new tab and switches to new tab
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 打开新标签页并切换到新标签页
 driver.switch_to.new_window('tab')
 
-# Opens a new window and switches to new window
+# 打开一个新窗口并切换到新窗口
 driver.switch_to.new_window('window')
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Opens a new tab and switches to new tab
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 打开新标签页并切换到新标签页
 driver.SwitchTo().NewWindow(WindowType.Tab)
 
-// Opens a new window and switches to new window
+// 打开一个新窗口并切换到新窗口
 driver.SwitchTo().NewWindow(WindowType.Window)
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
-# The user has to switch to new tab (or) new window
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 注意：ruby 中的 new_window 只打开一个新标签页(或)窗口，不会自动切换
+# 用户必须切换到新选项卡 (或) 新窗口
 
-# Opens a new tab and switches to new tab
+# 打开新标签页并切换到新标签页
 driver.manage.new_window(:tab)
 
-# Opens a new window and switches to new window
+# 打开一个新窗口并切换到新窗口
 driver.manage.new_window(:window)
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Opens a new tab and switches to new tab
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 打开新标签页并切换到新标签页
 await driver.switchTo().newWindow('tab');
 
-// Opens a new window and switches to new window
+// 打开一个新窗口并切换到新窗口
 await driver.switchTo().newWindow('window');
 
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Opens a new tab and switches to new tab
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 打开新标签页并切换到新标签页
 driver.switchTo().newWindow(WindowType.TAB)
 
-// Opens a new window and switches to new window
+// 打开一个新窗口并切换到新窗口
 driver.switchTo().newWindow(WindowType.WINDOW)
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Closing a window or tab
+### 关闭窗口或标签页
 
-When you are finished with a window or tab _and_ it is not the
-last window or tab open in your browser, you should close it and switch
-back to the window you were using previously.  Assuming you followed the
-code sample in the previous section you will have the previous window
-handle stored in a variable. Put this together and you will get:
+当你完成了一个窗口或标签页的工作时，_并且_它不是浏览器中最后一个打开的窗口或标签页时，你应该关闭它并切换回你之前使用的窗口。
+假设您遵循了前一节中的代码示例，您将把前一个窗口句柄存储在一个变量中。把这些放在一起，你会得到:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Close the tab or window
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+//关闭标签页或窗口
 driver.close();
 
-//Switch back to the old tab or window
+//切回到之前的标签页或窗口
 driver.switchTo().window(originalWindow);
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-#Close the tab or window
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+#关闭标签页或窗口
 driver.close()
 
-#Switch back to the old tab or window
+#切回到之前的标签页或窗口
 driver.switch_to.window(original_window)
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Close the tab or window
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+//关闭标签页或窗口
 driver.Close();
 
-//Switch back to the old tab or window
+//切回到之前的标签页或窗口
 driver.SwitchTo().Window(originalWindow);
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-#Close the tab or window
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+#关闭标签页或窗口
 driver.close
 
-#Switch back to the old tab or window
+#切回到之前的标签页或窗口
 driver.switch_to.window original_window
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-//Close the tab or window
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+//关闭标签页或窗口
 await driver.close();
 
-//Switch back to the old tab or window
+//切回到之前的标签页或窗口
 await driver.switchTo().window(originalWindow);
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Close the tab or window
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+//关闭标签页或窗口
 driver.close()
 
-//Switch back to the old tab or window
+//切回到之前的标签页或窗口
 driver.switchTo().window(originalWindow)
 
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-Forgetting to switch back to another window handle after closing a
-window will leave WebDriver executing on the now closed page, and will
-trigger a **No Such Window Exception**. You must switch
-back to a valid window handle in order to continue execution.
+如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个 
+**No Such Window Exception 无此窗口异常**。必须切换回有效的窗口句柄才能继续执行。
 
-### Quitting the browser at the end of a session
+### 在会话结束时退出浏览器
 
-When you are finished with the browser session you should call quit,
-instead of close:
+当你完成了浏览器会话，你应该调用 quit 退出，而不是 close 关闭:
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.quit();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.quit(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Quit();{{< / code-panel>}}
+  {{<code-panel language="ruby">}}driver.quit{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.quit();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.quit(){{< / code-panel>}}
+{{</ code-tab>}}
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.quit();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.quit(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Quit();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.quit{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.quit();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.quit(){{< / code-panel >}}
-{{< / code-tab >}}
+* 退出将会
+  * 关闭所有与 WebDriver 会话相关的窗口和选项卡
+  * 结束浏览器进程
+  * 结束后台驱动进程
+  * 通知 Selenium Grid 浏览器不再使用，以便可以由另一个会话使用它(如果您正在使用 Selenium Grid)
 
-* Quit will:
-  * Close all the windows and tabs associated with that WebDriver
-  session
-  * The browser process
-  * The background driver process
-  * Notify Selenium Grid that the browser is no longer in use so it can
-   be used by another session (if you are using Selenium Grid)
+调用 quit() 失败将留下额外的后台进程和端口运行在机器上，这可能在以后导致一些问题。
 
-Failure to call quit will leave extra background processes and ports
-running on your machine which could cause you problems later.
+有的测试框架提供了一些方法和注释，您可以在测试结束时放入 teardown() 方法中。
 
-Some test frameworks offer methods and annotations which you can hook
-into to tear down at the end of a test.
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
+{{<code-tab>}}
+  {{<code-panel language="java">}}
 /**
- * Example using JUnit
+ * 使用 JUnit 的例子
  * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
  */
 @AfterAll
-public static void tearDown() {
-    driver.quit();
+public static void tearDown() {driver.quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 我们还没有 python 的示例代码，请帮助我们，并提交一个 PR
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
 /*
-    Example using Visual Studio's UnitTesting
+    使用 Visual Studio 的 UnitTesting 的例子
     https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
 */
 [TestCleanup]
 public void TearDown()
-{
-    driver.Quit();
+{driver.Quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 我们还没有 ruby 的示例代码，请帮助我们，并提交一个 PR
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
 /**
- * Example using Mocha
+ * 使用 Mocha 的例子
  * https://mochajs.org/#hooks
  */
-after('Tear down', async function () {
-  await driver.quit();
+after('Tear down', async function () {await driver.quit();
 });
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
   
 /**
- * Example using JUnit
+ * 使用 JUnit 的例子
  * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
  */
 @AfterAll
-fun tearDown() {
-    driver.quit()
+fun tearDown() {driver.quit()
 }
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-If not running WebDriver in a test context, you may consider using
-`try  / finally` which is offered by most languages so that an exception
-will still clean up the WebDriver session.
+如果不在测试上下文中运行 WebDriver，您可以考虑使用 `try / finally`，这是大多数语言都提供的，
+这样一个异常处理仍然可以清理 WebDriver 会话。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-try {
-    //WebDriver code here...
-} finally {
-    driver.quit();
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+try {//WebDriver 代码…} finally {driver.quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
 try:
-    #WebDriver code here...
+    #WebDriver 代码…
 finally:
     driver.quit()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-try {
-    //WebDriver code here...
-} finally {
-    driver.Quit();
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+try {//WebDriver 代码…} finally {driver.Quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
 begin
-    #WebDriver code here...
+    #WebDriver 代码…
 ensure
     driver.quit
 end
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-try {
-    //WebDriver code here...
-} finally {
-    await driver.quit();
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+try {//WebDriver 代码…} finally {await driver.quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-try {
-    //WebDriver code here...
-} finally {
-    driver.quit()
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+try {//WebDriver 代码…} finally {driver.quit()
 }
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-Python's WebDriver now supports the python context manager,
-which when using the with keyword can automatically quit the driver at
-the end of execution.
+Python 的 WebDriver 现在支持 Python 上下文管理器，当使用 with 关键字时，可以在执行结束时自动退出驱动程序。
 
 ```python
 with webdriver.Firefox() as driver:
-  # WebDriver code here...
+  # WebDriver 代码…
 
-# WebDriver will automatically quit after indentation
+# 在此缩进位置后 WebDriver 会自动退出
 ```
 
 ## Frames and Iframes
-Frames are a now deprecated means of building a site layout from
-multiple documents on the same domain. You are unlikely to work with
-them unless you are working with an pre HTML5 webapp.  Iframes allow
-the insertion of a document from an entirely different domain, and are
-still commonly used.
 
-If you need to work with frames or iframes, Webdriver allows you to
-work with them in the same way. Consider a button within an iframe.
-If we inspect the element using the browser development tools, we might
-see the following:
+框架是一种现在已被弃用的方法，用于从同一域中的多个文档构建站点布局。除非你使用的是 HTML5 
+之前的 webapp，否则你不太可能与他们合作。内嵌框架允许插入来自完全不同领域的文档，并且仍然经常使用。
+
+
+如果您需要使用框架或 iframe, Webdriver 允许您以相同的方式使用它们。考虑 iframe 中的一个按钮。
+如果我们使用浏览器开发工具检查元素，我们可能会看到以下内容:
 
 ```html
 <div id="modal">
-  <iframe id="buttonframe" name="myframe"  src="https://seleniumhq.github.io">
+  <iframe id="buttonframe"name="myframe"src="https://seleniumhq.github.io">
    <button>Click here</button>
  </iframe>
 </div>
 ```
 
-If it wasn't for the iframe we would expect to click on the button
-using something like:
+如果不是 iframe，我们可能会使用如下方式点击按钮:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//This won't work
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 这不会工作
 driver.findElement(By.tagName("button")).click();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# This Wont work
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 这不会工作
 driver.find_element_by_tag_name('button').click()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//This won't work
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 这不会工作
 driver.FindElement(By.TagName("button")).Click();
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# This won't work
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 这不会工作
 driver.find_element(:tag_name,'button').click
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// This won't work
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 这不会工作
 await driver.findElement(By.css('button')).click();
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//This won't work
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 这不会工作
 driver.findElement(By.tagName("button")).click()
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-However, if there are no buttons outside of the iframe, you might
-instead get a _no such element_ error. This happens because Selenium is
-only aware of the elements in the top level document. To interact with
-the button, we will need to first switch to the frame, in a similar way
-to how we switch windows. WebDriver offers three ways of switching to
-a frame.
+但是，如果 iframe 之外没有按钮，那么您可能会得到一个 _no such element 无此元素_ 的错误。
+这是因为 Selenium 只知道顶层文档中的元素。为了与按钮进行交互，我们需要首先切换到框架，
+这与切换窗口的方式类似。WebDriver 提供了三种切换到帧的方法。
 
-### Using a WebElement
+### 使用 WebElement
 
-Switching using a WebElement is the most flexible option. You can
-find the frame using your preferred selector and switch to it.
+使用 WebElement 进行切换是最灵活的选择。您可以使用首选的选择器找到框架并切换到它。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Store the web element
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 存储网页元素
 WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
 
-//Switch to the frame
+// 切换到 frame
 driver.switchTo().frame(iframe);
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.findElement(By.tagName("button")).click();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Store iframe web element
-iframe = driver.find_element_by_css_selector("#modal > iframe")
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 存储网页元素
+iframe = driver.find_element_by_css_selector("#modal> iframe")
 
-# switch to selected iframe
+# 切换到选择的 iframe
 driver.switch_to.frame(iframe)
 
-# Now click on button
+# 单击按钮
 driver.find_element_by_tag_name('button').click()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Store the web element
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 存储网页元素
 IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
 
-//Switch to the frame
+// 切换到 frame
 driver.SwitchTo().Frame(iframe);
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.FindElement(By.TagName("button")).Click();
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
 # Store iframe web element
-iframe = driver.find_element(:css,'#modal > iframe')
+iframe = driver.find_element(:css,'#modal> iframe')
 
-# Switch to the frame
+# 切换到 frame
 driver.switch_to.frame iframe
 
-# Now, Click on the button
+# 单击按钮
 driver.find_element(:tag_name,'button').click
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Store the web element
-const iframe = driver.findElement(By.css('#modal > iframe'));
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 存储网页元素
+const iframe = driver.findElement(By.css('#modal> iframe'));
 
-// Switch to the frame
+// 切换到 frame
 await driver.switchTo().frame(iframe);
 
-// Now we can click the button
+// 现在可以点击按钮
 await driver.findElement(By.css('button')).click();
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Store the web element
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 存储网页元素
 WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
-//Switch to the frame
+// 切换到 frame
 driver.switchTo().frame(iframe)
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.findElement(By.tagName("button")).click()
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Using a name or ID
-If your frame or iframe has an id or name attribute, this can be used
-instead.  If the name or ID is not unique on the page, then the first
-one found will be switched to.
+### 使用 name 或 id
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Using the ID
+如果您的 frame 或 iframe 具有 id 或 name 属性，则可以使用该属性。如果名称或 id 在页面上不是唯一的，
+那么将切换到找到的第一个。
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 使用 ID
 driver.switchTo().frame("buttonframe");
 
-//Or using the name instead
+// 或者使用 name 代替
 driver.switchTo().frame("myframe");
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.findElement(By.tagName("button")).click();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Switch frame by id
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 通过 id 切换框架
 driver.switch_to.frame('buttonframe')
 
-# Now, Click on the button
+# 单击按钮
 driver.find_element_by_tag_name('button').click()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Using the ID
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 使用 ID
 driver.SwitchTo().Frame("buttonframe");
 
-//Or using the name instead
+// 或者使用 name 代替
 driver.SwitchTo().Frame("myframe");
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.FindElement(By.TagName("button")).Click();
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
 # Switch by ID
 driver.switch_to.frame 'buttonframe'
 
-# Now, Click on the button
+# 单击按钮
 driver.find_element(:tag_name,'button').click
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Using the ID
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 使用 ID
 await driver.switchTo().frame('buttonframe');
 
-// Or using the name instead
+// 或者使用 name 代替
 await driver.switchTo().frame('myframe');
 
-// Now we can click the button
+// 现在可以点击按钮
 await driver.findElement(By.css('button')).click();
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Using the ID
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 使用 ID
 driver.switchTo().frame("buttonframe")
 
-//Or using the name instead
+// 或者使用 name 代替
 driver.switchTo().frame("myframe")
 
-//Now we can click the button
+// 现在可以点击按钮
 driver.findElement(By.tagName("button")).click()
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Using an index
+### 使用索引
 
 It is also possible to use the index of the frame, such as can be
 queried using _window.frames_ in JavaScript.
+还可以使用框架的索引，比如可以使用 JavaScript 中的 _window.frames_查询。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Switches to the second frame
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 切换到第 2 个框架
 driver.switchTo().frame(1);
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Switch to the second frame
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 切换到第 2 个框架
 driver.switch_to.frame(1)
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Switches to the second frame
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 切换到第 2 个框架
 driver.SwitchTo().Frame(1);
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# switching to second iframe based on index
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 基于索引切换到第 2 个 iframe
 iframe = driver.find_elements_by_tag_name('iframe')[1]
 
-# switch to selected iframe
+# 切换到选择的 iframe
 driver.switch_to.frame(iframe)
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Switches to the second frame
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 切换到第 2 个框架
 await driver.switchTo().frame(1);
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Switches to the second frame  
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 切换到第 2 个框架  
 driver.switchTo().frame(1)
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
 
-### Leaving a frame
+### 离开框架
 
-To leave an iframe or frameset, switch back to the default content
-like so:
+离开 iframe 或 frameset，切换回默认内容，如下所示:
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Return to the top level
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 回到顶层
 driver.switchTo().defaultContent();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# switch back to default content
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 切回到默认内容
 driver.switch_to.default_content()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Return to the top level
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 回到顶层
 driver.SwitchTo().DefaultContent();
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Return to the top level
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 回到顶层
 driver.switch_to.default_content
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Return to the top level
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 回到顶层
 await driver.switchTo().defaultContent();
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Return to the top level
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 回到顶层
 driver.switchTo().defaultContent()
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-## Window management
-Screen resolution can impact how your web application renders, so
-WebDriver provides mechanisms for moving and resizing the browser
-window.
+## 窗口管理
 
-### Get window size
-Fetches the size of the browser window in pixels.
+屏幕分辨率会影响 web 应用程序的呈现方式，因此 WebDriver 提供了移动和调整浏览器窗口大小的机制。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-//Access each dimension individually
+### 获取窗口大小
+获取浏览器窗口的大小(以像素为单位)。
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 分别获取每个尺寸
 int width = driver.manage().window().getSize().getWidth();
 int height = driver.manage().window().getSize().getHeight();
 
-//Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 Dimension size = driver.manage().window().getSize();
 int width1 = size.getWidth();
 int height1 = size.getHeight();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 分别获取每个尺寸
 width = driver.get_window_size().get("width")
 height = driver.get_window_size().get("height")
 
-# Or store the dimensions and query them later
+# 或者存储尺寸并在以后查询它们
 size = driver.get_window_size()
 width1 = size.get("width")
 height1 = size.get("height")
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 分别获取每个尺寸
 int width = driver.Manage().Window.Size.Width;
 int height = driver.Manage().Window.Size.Height;
 
-//Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 System.Drawing.Size size = driver.Manage().Window.Size;
 int width1 = size.Width;
 int height1 = size.Height;
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 分别获取每个尺寸
 width = driver.manage.window.size.width
 height = driver.manage.window.size.height
 
-# Or store the dimensions and query them later
+# 或者存储尺寸并在以后查询它们
 size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Access each dimension individually
-const { width, height } = await driver.manage().window().getRect();
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 分别获取每个尺寸
+const {width, height} = await driver.manage().window().getRect();
 
-// Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 const rect = await driver.manage().window().getRect();
 const width1 = rect.width;
 const height1 = rect.height;
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-//Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 分别获取每个尺寸
 val width = driver.manage().window().getSize().getWidth()
 val height = driver.manage().window().getSize().getHeight()
 
-//Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 val size = driver.manage().window().getSize()
 val width1 = size.getWidth()
 val height1 = size.getHeight()
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Set window size
+### 设置窗口大小
 
-Restores the window and sets the window size.
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.set_window_size(1024, 768){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
-{{< / code-tab >}}
+恢复窗口并设置窗口大小。
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.manage().window().setSize(new Dimension(1024, 768));{{</ code-panel>}}
+  {{<code-panel language="python">}}driver.set_window_size(1024, 768){{</ code-panel>}}
+  {{<code-panel language="csharp">}}driver.Manage().Window.Size = new Size(1024, 768);{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.manage.window.resize_to(1024,768){{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.manage().window().setRect({width: 1024, height: 768});{{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.manage().window().size(Dimension(1024, 768)){{</ code-panel>}}
+{{</ code-tab>}}
 
-### Get window position
+### 得到窗口的位置
 
-Fetches the coordinates of the top left coordinate of the browser window.
+获取浏览器窗口左上角的坐标。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Access each dimension individually
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 分别获取每个尺寸
 int x = driver.manage().window().getPosition().getX();
 int y = driver.manage().window().getPosition().getY();
 
-// Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 Point position = driver.manage().window().getPosition();
 int x1 = position.getX();
 int y1 = position.getY();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 分别获取每个尺寸
 x = driver.get_window_position().get('x')
 y = driver.get_window_position().get('y')
 
-# Or store the dimensions and query them later
+# 或者存储尺寸并在以后查询它们
 position = driver.get_window_position()
 x1 = position.get('x')
 y1 = position.get('y')
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-//Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 分别获取每个尺寸
 int x = driver.Manage().Window.Position.X;
 int y = driver.Manage().Window.Position.Y;
 
-//Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 Point position = driver.Manage().Window.Position;
 int x1 = position.X;
 int y1 = position.Y;
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Access each dimension individually
-const { x, y } = await driver.manage().window().getRect();
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
+# 我们还没有 Ruby 的示例代码，帮我们实现并提交一个 PR
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 分别获取每个尺寸
+const {x, y} = await driver.manage().window().getRect();
 
-// Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 const rect = await driver.manage().window().getRect();
 const x1 = rect.x;
 const y1 = rect.y;
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Access each dimension individually
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 分别获取每个尺寸
 val x = driver.manage().window().position.x
 val y = driver.manage().window().position.y
 
-// Or store the dimensions and query them later
+// 或者存储尺寸并在以后查询它们
 val position = driver.manage().window().position
 val x1 = position.x
 int y1 = position.y
   
-  {{< / code-panel >}}
-{{< / code-tab >}}
+  {{</ code-panel>}}
+{{</ code-tab>}}
 
-## Set window position
+## 设置窗口位置
 
-Moves the window to the chosen position.
+将窗口移动到设定的位置。
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-// Move the window to the top left of the primary monitor
+{{<code-tab>}}
+  {{<code-panel language="java">}}
+// 将窗口移动到主显示器的左上角
 driver.manage().window().setPosition(new Point(0, 0));
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Move the window to the top left of the primary monitor
+  {{</ code-panel>}}
+  {{<code-panel language="python">}}
+# 将窗口移动到主显示器的左上角
 driver.set_window_position(0, 0)
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Move the window to the top left of the primary monitor
+  {{</ code-panel>}}
+  {{<code-panel language="csharp">}}
+// 将窗口移动到主显示器的左上角
 driver.Manage().Window.Position = new Point(0, 0);
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+  {{</ code-panel>}}
+  {{<code-panel language="ruby">}}
 driver.manage.window.move_to(0,0)
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Move the window to the top left of the primary monitor
-await driver.manage().window().setRect({ x: 0, y: 0 });
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Move the window to the top left of the primary monitor
+  {{</ code-panel>}}
+  {{<code-panel language="javascript">}}
+// 将窗口移动到主显示器的左上角
+await driver.manage().window().setRect({x: 0, y: 0});
+  {{</ code-panel>}}
+  {{<code-panel language="kotlin">}}
+// 将窗口移动到主显示器的左上角
 driver.manage().window().position = Point(0,0)
-    {{< / code-panel >}}
-{{< / code-tab >}}
+    {{</ code-panel>}}
+{{</ code-tab>}}
 
-### Maximise window
-Enlarges the window. For most operating systems, the window will fill
-the screen, without blocking the operating system's own menus and
-toolbars.
+### 最大化窗口
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.manage().window().maximize();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.maximize_window(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Manage().Window.Maximize();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
-{{< / code-tab >}}
+扩大窗口。对于大多数操作系统，窗口将填满屏幕，而不会阻挡操作系统自己的菜单和工具栏。
 
-### Fullscreen window
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.manage().window().maximize();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.maximize_window(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Manage().Window.Maximize();{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.manage.window.maximize{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.manage().window().maximize();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
+{{</ code-tab>}}
 
-Fills the entire screen, similar to pressing F11 in most browsers.
+### 全屏窗口
 
-{{< code-tab >}}
-  {{< code-panel language="java" >}}driver.manage().window().fullscreen();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.fullscreen_window(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Manage().Window.FullScreen();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.manage.window.full_screen{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
-{{< / code-tab >}}
+填充整个屏幕，类似于在大多数浏览器中按下 F11。
+
+{{<code-tab>}}
+  {{<code-panel language="java">}}driver.manage().window().fullscreen();{{< / code-panel>}}
+  {{<code-panel language="python">}}driver.fullscreen_window(){{< / code-panel>}}
+  {{<code-panel language="csharp">}}driver.Manage().Window.FullScreen();{{</ code-panel>}}
+  {{<code-panel language="ruby">}}driver.manage.window.full_screen{{</ code-panel>}}
+  {{<code-panel language="javascript">}}await driver.manage().window().fullscreen();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.manage().window().fullscreen(){{< / code-panel>}}
+{{</ code-tab>}}
