@@ -9,9 +9,9 @@ English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-First, start by asking yourself whether or not you need to use a browser.
+First, start by asking yourself whether or not you really need to use a browser.
 Odds are good that, at some point, if you're working on a complex web application,
-you will need to open a browser and test it.
+you will need to open a browser and actually test it.
 
 Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
@@ -43,7 +43,7 @@ you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
 are their inherent ability to test all components of the application,
-from the backend to frontend, from a user's perspective.
+from backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
 
@@ -324,7 +324,7 @@ unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
 {{< / code-tab >}}
 
 Now that you've configured your unicorn,
-you need to move on to step 3: making sure it worked.
+you need to move on to step 3: making sure it actually worked.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -371,13 +371,13 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.
 
-Your page objects will require some small maintenance 
+Your page objects will require some small maintenance in order 
 to conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
 Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test to make sure the cart is keeping its state properly:
+You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
 Is there more than one unicorn in the cart before you start?
 How many can fit in the shopping cart?
 If you create more than one with the same name and/or features, will it break?
