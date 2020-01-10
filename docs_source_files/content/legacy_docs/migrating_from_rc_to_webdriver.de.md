@@ -156,7 +156,7 @@ for the element you want to interact with next, or for some Javascript variable
 to be set to a specific value. An example would be:
 
 ```java
-Wait<WebDriver> wait = new WebDriverWait(driver, 30);
+Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement element= wait.until(visibilityOfElementLocated(By.id("some_id")));
 ```
     
