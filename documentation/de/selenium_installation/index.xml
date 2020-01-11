@@ -40,7 +40,7 @@ Download the WebDriver binary supported by your browser and place it in the Syst
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+ If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
     </item>
     
   </channel>

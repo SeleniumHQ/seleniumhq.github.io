@@ -186,7 +186,7 @@ var remote = require('selenium-webdriver/remote');
 driver.setFileDetector(new remote.FileDetector);  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-driver.setFileDetector(new LocalFileDetector())
+driver.fileDetector = LocalFileDetector()
   {{< / code-panel >}}
 {{< / code-tab >}}
 

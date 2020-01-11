@@ -12,35 +12,50 @@
     
     
     <item>
-      <title>Understanding the components</title>
+      <title>了解组件</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
+      <description>使用 WebDriver 构建测试套件需要您理解并有效地使用许多不同的组件。就像软件中的一切一样， 不同的人对同一个想法使用不同的术语。下面是在这个描述中如何使用术语的细分。
+专业术语  API: 应用程序编程接口。这是一组用来操作 WebDriver 的 “命令”。 库: 一个代码模块，它包含 api 和实现这些 api 所需的代码。库是对应于具体的语言的，例如 Java 的 .jar 文件，.NET 的 .dll 文件，等等。 驱动程序: 负责控制实际的浏览器。大多数驱动程序是由浏览器厂商自己创建的。 驱动程序通常是与浏览器一起在系统上运行的可执行模块，而不是在执行测试套件的系统上。 (尽管它们可能是同一个系统。) 注意: 有些人把驱动称为代理。 框架: 用于支持 WebDriver 套件的附加库。这些框架可能是测试框架，如 JUnit 或 NUnit。 它们也可能是支持自然语言特性的框架，如 Cucumber 或 Robotium。还可以编写和使用框架来操作或配置被测试的系统、 数据创建、测试预言等等。  组成部分 至少，WebDriver 通过一个驱动程序与浏览器对话。通信有两种方式: WebDriver 通过驱动程序向浏览器传递命令， 然后通过相同的路径接收信息。
+驱动程序是特定于浏览器的，例如 ChromeDriver 对应于谷歌的 Chrome/Chromium， GeckoDriver 对应于 Mozilla 的 Firefox 的，等等。驱动程序在与浏览器相同的系统上运行。 这可能与执行测试本身的系统相同，也可能不同。
+上面这个简单的例子就是 _直接_通信。与浏览器的通信也可以是通过 Selenium 服务器或 RemoteWebDriver 进行的 _远程_通信。RemoteWebDriver 与驱动程序和浏览器运行在同一个系统上。
+远程通信也可以使用 Selenium Server 或 Selenium Grid 进行，这两者依次与主机系统上的驱动程序进行通信</description>
     </item>
     
     <item>
-      <title>Driver requirements</title>
+      <title>驱动要求</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers.</description>
+      <description>通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、 Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持， 但 WebDriver 尽可能使用浏览器的内置自动化支持来驱动浏览器。
+WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。
+在不同的浏览器中，这可能有不同的级别。有关不同驱动程序特性的详细信息， 请参见 _驱动程序特性_。
+尽管所有的驱动程序共享一个面向用户的界面来控制浏览器，但它们设置浏览器会话的方式略有不同。 由于许多驱动程序实现是由第三方提供的，所以它们不包括在标准的 Selenium 发行版中。
+驱动程序实例化、配置文件管理和各种特定于浏览器的设置都是具体参数的例子，这些参数根据浏览器有 不同的需求。本节介绍了使用不同浏览器的基本要求。
+将可执行文件添加到 PATH 中 大多数驱动程序需要 Selenium 额外的可执行文件才能与浏览器通信。您可以在启动 WebDriver 之前手动指定可执行文件的存放位置，但这会使测试的可移植性降低，因为可执行文件必须位于每台 计算机上的同一位置，或包含在测试代码存储库中。
+通过将包含 WebDriver 二进制文件的文件夹添加到系统 path 环境变量中，Selenium 将能够找到其他二进制文件，而无需您的测试代码来定位驱动程序的确切位置。
+ 创建一个目录来放置可执行文件，例如 C:\WebDriver\bin 或 /opt/WebDriver/bin 将目录添加到您的 path 中：
+ 在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：
+setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; 在 macOS 和 Linux 上的 Bash 用户 - 在终端中：
+export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可以测试更改了。关闭所有打开的命令提示符，然后打开一个新的提示符。 输入您在上一步创建的文件夹中的某一个二进制文件的名称，例如：</description>
     </item>
     
     <item>
-      <title>Browser manipulation</title>
+      <title>操控浏览器</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:</description>
+      <description>Ruby 默认情况下，Ruby 没有安装在 Windows 上。下载最新版本 并运行安装程序。你可以保留所有设置的默认值，除要勾选 安装位置和可选任务 屏幕上 将 Ruby 可执行程序添加到您的系统路径 复选框外。想要驱动任何浏览器，你必须安装 selenium-webdriver Ruby gem. 打开命令提示符并输入以下命令来安装它:
+gem install selenium-webdriver 如果你使用 Bundler，添加这一行到你的应用程序的 Gemfile 中:
+gem &amp;#34;selenium-webdriver&amp;#34; 然后在命令提示符中执行以下命令：
+bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的 Internet Explorer 驱动程序 并将文件放入 PATH 路径中的文件夹中。要查看 PATH 路径中的目录，在命令提示符中键入 echo %PATH%。
+$ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
+这将打开一个新的 IE 浏览器窗口:
+require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
     </item>
     
     <item>
