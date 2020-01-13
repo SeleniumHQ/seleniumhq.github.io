@@ -11,20 +11,20 @@
     <title>On test automation :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1578631457" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1578631457" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1578714493" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1578714493" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1578631457" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1578714493" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1578631457"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1578714493"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1578631457"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1578631457"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1578714493"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1578714493"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1578631457"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1578714493"></script>
 
     
   </div>
@@ -2027,7 +2027,7 @@ you will generally perform some combination of three steps:</p>
 <p>You will want to keep these steps as short as possible;
 one to two operations should be enough much of the time.
 Browser automation has the reputation of being “flaky”,
-but in reality that is because users frequently demand too much of it.
+but in reality, that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
 to mitigate apparent intermittent problems in tests,
 in particular on how to <a href="https://selenium.dev/documentation/nl/webdriver/waits/">overcome race conditions</a>
@@ -2058,7 +2058,7 @@ will quickly become a non-trivial undertaking.</p>
 
 <h3 id="let-s-start-with-an-example">Let’s start with an example</h3>
 
-<p>Larry has written a web site which allows users to order their own
+<p>Larry has written a web site which allows users to order their
 custom unicorns.</p>
 
 <p>The general workflow (what we&rsquo;ll call the “happy path”) is something
@@ -2095,10 +2095,10 @@ It will perform the following actions:</p>
 </ul>
 
 <p>Note that we&rsquo;re skipping the rest of these steps,
-we will test the rest of the workflow in other small, discrete test cases,
+we will test the rest of the workflow in other small, discrete test cases
 after we&rsquo;re done with this one.</p>
 
-<p>To start off, you need to create an account.
+<p>To start, you need to create an account.
 Here you have some choices to make:</p>
 
 <ul>
@@ -2110,7 +2110,7 @@ taken into account before configuration begins?</li>
 
 <p>Regardless of how you answer this question,
 the solution is to make it part of the &ldquo;set up the data&rdquo; portion of the test–
-if Larry has exposed an API which enables you (or anyone)
+if Larry has exposed an API that enables you (or anyone)
 to create and update user accounts,
 be sure to use that to answer this question–
 if possible, you want to launch the browser only after you have a user &ldquo;in hand&rdquo;,
@@ -2574,8 +2574,8 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.</p>
 
-<p>Your page objects will require some small maintenance
-in order to conform to the site redesign,
+<p>Your page objects will require some small maintenance in order
+to conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
@@ -2605,7 +2605,7 @@ interface will change considerably in the near future, then any automation
 might need to be rewritten anyway. Also, sometimes there simply is not enough
 time to build test automation. For the short term, manual testing may be more
 effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing get done within
+test automation available, and it’s imperative that the testing gets done within
 that time frame, then manual testing is the best solution.</p>
 
 
@@ -2616,7 +2616,7 @@ that time frame, then manual testing is the best solution.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/introduction/on_test_automation/">
       “On test automation”
-    </a> was last updated on: 03 Jan 2020 04:27:56 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/fd69d4fb5e7f24cee5f5dfcc43d8703a0e6e1e32">Add: Added Ruby code samples for test automation in introduction (#156) (fd69d4fb5)</a>
+    </a> was last updated on: 11 Jan 2020 08:26:48 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a8bc2acc65b6bb79e539320713353c08c17ef1bf">Style: Formatting and cleaning up doc with grammatical corrections (#165) (a8bc2acc6)</a>
 </h5>
         
         </div> 
@@ -3813,19 +3813,19 @@ that time frame, then manual testing is the best solution.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1578631457"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1578714493"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1578631457"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1578631457"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1578714493"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1578714493"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1578631457" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1578631457"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1578714493" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1578714493"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

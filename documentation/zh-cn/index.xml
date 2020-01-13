@@ -55,16 +55,6 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Purposes and main functionalities</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
       <title>Remote WebDriver server</title>
       <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -168,13 +158,12 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
     </item>
     
     <item>
-      <title>Components of a Grid</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</link>
+      <title>目的和主要功能</title>
+      <link>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
+      <guid>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
+      <description> 为所有的测试提供统一的入口 管理和控制运行着浏览器的节点/环境 扩展 并行测试 跨平台(操作系统)测试 负载测试  </description>
     </item>
     
     <item>
@@ -279,6 +268,16 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
     </item>
     
     <item>
+      <title>服务网格的组件</title>
+      <link>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</guid>
+      <description>转发器(hub)  中间人和管理者 接受请求 执行测试任务 接受客户端的指示并在远程节点上执行任务 管理进程  转发器(hub) 是一个接受所有所有测试任务的中心节点。 每个Selenium服务网格包含一个转发器(hub)。转发器(hub)需要能被所有的客户机（比如：持续集成服务器，开发机等等）访问到。 转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。
+节点  浏览器会被安装在节点上 节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等) 接受转发器(hub)的指示并执行这些指示  节点 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。 一个服务网格中可以有很多节点。 这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。 一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</description>
+    </item>
+    
+    <item>
       <title>第三方驱动和插件</title>
       <link>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -343,25 +342,14 @@ Selenium WebDriver is a completely different approach to browser automation, pre
     </item>
     
     <item>
-      <title>Setting up your own Grid</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
-    </item>
-    
-    <item>
       <title>Types of testing</title>
       <link>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
+ Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
     </item>
     
     <item>
@@ -410,6 +398,26 @@ bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不�
 $ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
 这将打开一个新的 IE 浏览器窗口:
 require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
+    </item>
+    
+    <item>
+      <title>配置自己的服务网格</title>
+      <link>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
+      <description>使用Selenium网格， 你需要维护你自己的基础设置来作为节点使用， 这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
+使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。 当然，在你自己的硬件群运行节点也是可行的。 这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
+快速开始 这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub), 然后注册WebDriver节点和Selenium 1 RC节点。 我们也会向你展示如何使用Java来使用Selenium服务网格。 这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到 多台终端机。
+selenium-server-standalone 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了. 你可以在https://selenium.dev/downloads/.下载 selenium-server-standalone-.jar
+第一步: 启动转发器(hub) 转发器(hub)是接受测试请求并分发到合适的节点的中心点。 分发是基于节点的能力的，这就意味着一个有特定需求的测试仅会被分发到能提供这个需求的节点上。
+因为一个测试所期望的能力，就如字面意思，期望，并不代表转发器(hub)能够找到一个真正满足所有期望的节点。
+打开命令行窗口，来到存放selenium-server-standalone.jar文件的地方。 启动转发器(hub)并传入-role hub作为参数来启动一个独立的服务：
+java -jar selenium-server-standalone.jar -role hub 转发器(hub)默认会监听4444端口，你也可以通过打开浏览器访问http://localhost:4444/grid/console来查看转发器(hub)的状态。
+如果需要改变默认端口，你可以添加-port加上一个数字作为参数来代表你期望监听的端口， 同时，所有其他的可选参数都可以在下面这个JSON配置文件里找到。
+你已经在上面获得了一个简单命令，当然如果你希望一些更高级的配置， 方便起见，你也可以指定一个JSON格式的配置文件来配置并启动你的转发器(hub)。 你可以这么做：
+java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug 下面你可以看到一个配置文件hubConfig.json的例子。 我们会在第二步深入探讨怎么来提供节点配置文件。
+{ &amp;#34;_comment&amp;#34; : &amp;#34;Configuration for Hub - hubConfig.json&amp;#34;, &amp;#34;host&amp;#34;: ip, &amp;#34;maxSession&amp;#34;: 5, &amp;#34;port&amp;#34;: 4444, &amp;#34;cleanupCycle&amp;#34;: 5000, &amp;#34;timeout&amp;#34;: 300000, &amp;#34;newSessionWaitTimeout&amp;#34;: -1, &amp;#34;servlets&amp;#34;: [], &amp;#34;prioritizer&amp;#34;: null, &amp;#34;capabilityMatcher&amp;#34;: &amp;#34;org.</description>
     </item>
     
     <item>
@@ -466,14 +474,16 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
     </item>
     
     <item>
-      <title>When to use Grid</title>
+      <title>什么时候应该使用服务网格</title>
       <link>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+      <description>通常来说，有2个原因你需要使用服务网格。
+ 在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试 缩短完成测试的时间  服务网格通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。 比如的测试套件里包含100个测试，你的服务网格支持4种不同的终端（虚拟机或者独立的物理设备） 来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。 在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。 一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
+服务网格也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。 比如，一个由虚拟机组成的服务网格，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。 比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了， Selenium服务网格会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。
+另外，一个服务网格可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个 Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进服务网格的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行， 显著的缩短的整个测试完成的时间。
+服务网格是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。</description>
     </item>
     
     <item>
