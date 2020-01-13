@@ -27,7 +27,9 @@ options.Proxy.Kind = ProxyKind.Direct;
 var driver = new FirefoxDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
+require 'selenium-webdriver'
+opts = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
+driver = Selenium::WebDriver.for(:firefox, options: opts)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const { Builder } = require("selenium-webdriver");
@@ -74,7 +76,10 @@ options.Profile = profile;
 var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
+profile = Selenium::WebDriver::Firefox::Profile.new
+profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
+driver = Selenium::WebDriver.for :firefox, options: options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
