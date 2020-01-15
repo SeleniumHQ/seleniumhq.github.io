@@ -1,32 +1,26 @@
 ---
-title: "Copyright"
+title: "Copyright und Unterstützung"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+
 ## **Die Dokumentation von Selenium**
 
 Copyright {{< copyright >}}, Software Freedom Conservancy.
 
-Every effort has been made to make this documentation
-as complete and as accurate as possible,
-but no warranty or fitness is implied.
-The information provided is on an “as-is” basis.
-The authors and the publisher shall have
-neither liability nor responsibility to any person or entity
-with respect to any loss or damages arising
-from the information contained in this book.
-No patent liability is assumed with respect
-to the use of the information contained herein.
+Diese Dokumentation wurde mit größter Sorgfalt erstellt,
+so vollständig und genau wie möglich. Jedoch kann keine Garantie
+für dessen Vollständigkeit übernommen werden. Alle bereitgestellten
+Informationen erfolgen ohne Gewähr. Die Autoren und der Herausgeber
+übernehmen keine Haftung oder Verantwortung gegenüber Personen oder
+Organisationen im Bezug auf entstehende Verluste oder Schäden die
+aus den Informationen dieser Website. Weiters kann keine Patenthaftung
+zur Verwendung der enthaltenen Informationen übernommen werden.
 
 
-## Attributions
+## Unterstützer
 
-### Thanks to:
+### Dank ergeht an:
 
 #### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 
@@ -40,20 +34,20 @@ to the use of the information contained herein.
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docker-selenium/contributors?per_page=100" %}}
 
-#### [Selenium Website & Docs](//github.com/SeleniumHQ/seleniumhq.github.io/)
+#### [Selenium Webseite & Dokumentation](//github.com/SeleniumHQ/seleniumhq.github.io/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/seleniumhq.github.io/contributors?per_page=100" %}}
 
-#### [Previous Selenium Website](//github.com/SeleniumHQ/www.seleniumhq.org/)
+#### [Vorhergehende Selenium Webseite](//github.com/SeleniumHQ/www.seleniumhq.org/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/www.seleniumhq.org/contributors?per_page=100" %}}
 
-#### [Previous Documentation Rewrite Project](//github.com/SeleniumHQ/docs/)
+#### [Vorgänger Projekt zur Neuentwicklung der Dokumentation](//github.com/SeleniumHQ/docs/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
 
-## Third-Party software used by Selenium documentation project:
+## rittanbieter Software die vom Selenium Dokumentationsprojekt genutzt wird:
 
 | Software | Version | License |
 | -------- | ------- | ------- |
@@ -62,16 +56,16 @@ to the use of the information contained herein.
 | [Code Tabs Style](//codepen.io/markcaron/pen/MvGRYV) | --- | [MIT](//blog.codepen.io/legal/licensing/) |
 
 
-## License
+## Lizenz
 
-All code and documentation originating from the Selenium project
-is licensed under the Apache 2.0 license,
-with the [Software Freedom Conservancy](//sfconservancy.org/)
-as the copyright holder.
+Der gesamte Code und die Dokumentation stammen aus dem Selenium-Projekt
+und sind unter der Lizenz von Apache 2.0 lizensiert.
+Die [Software Freedom Conservancy] (// sfconservancy.org/) tritt als
+als Inhaber des Urheberrechts auf.
 
-The license is included here for convenience,
-but you can also find it on the
-[Apache Foundation's websites](//apache.org/licenses/LICENSE-2.0.html):
+Die Lizenz ist hier der Einfachheit halber enthalten.
+Sie finden es aber auch auf 
+[Website der Apache Foundation] (// apache.org/licenses/LICENSE-2.0.html):
 
 ```markdown
                                  Apache License
