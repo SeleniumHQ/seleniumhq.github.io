@@ -11,20 +11,20 @@
     <title>Migration von RC zu WebDriver :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1578026037" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1578026037" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1578957784" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1578957784" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1578026037" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1578957784" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1578026037"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1578957784"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1578026037"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1578026037"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1578957784"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1578957784"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1578026037"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1578957784"></script>
 
     
   </div>
@@ -2126,7 +2126,7 @@ loading.</p>
 <p>The solution to this is to wait on something specific. Commonly, this might be
 for the element you want to interact with next, or for some Javascript variable
 to be set to a specific value. An example would be:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 30);
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement <span style="color:#268bd2">element</span><span style="color:#719e07">=</span> wait.until(visibilityOfElementLocated(By.id(<span style="color:#2aa198">&#34;some_id&#34;</span>)));</code></pre></div>
 <p>Where &ldquo;visibilityOfElementLocated&rdquo; is implemented as:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">ExpectedCondition</span><span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">visibilityOfElementLocated</span>(<span style="color:#268bd2">final</span> <span style="color:#268bd2">By</span> locator) {
@@ -2205,7 +2205,7 @@ in the JS standard &ldquo;arguments&rdquo; array.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/legacy_docs/migrating_from_rc_to_webdriver/">
       “Migration von RC zu WebDriver”
-    </a> was last updated on: 10 Dec 2019 10:52:09 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/c3e32e9a24d9cb5621794e834332ef51215d9ea6">Deploying on Tue Dec 10 10:52:09 UTC 2019, commit 47f5fc81876354a3c6cba74c3c3f3e1dd06d8186, [skip ci] (c3e32e9a2)</a>
+    </a> was last updated on: 10 Jan 2020 09:01:26 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/94b5e64a00b7b5374e30648e1acab978904b1921">Modify: Replacing Duration instead of deprecated WebDriverWait constructor … (#161) (94b5e64a0)</a>
 </h5>
         
         </div> 
@@ -3402,19 +3402,19 @@ in the JS standard &ldquo;arguments&rdquo; array.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1578026037"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1578957784"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1578026037"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1578026037"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1578957784"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1578957784"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1578026037" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1578026037"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1578957784" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1578957784"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

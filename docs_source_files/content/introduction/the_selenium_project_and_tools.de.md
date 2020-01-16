@@ -10,8 +10,8 @@ zu übersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
 ### Selenium controls web browsers
 
-_Selenium_ is many things,
-but at its core it is a toolset for web browser automation
+_Selenium_ is many things 
+but at its core, it is a toolset for web browser automation
 that uses the best techniques available
 to remotely control browser instances
 and emulate a user's interaction with the browser.
@@ -49,15 +49,15 @@ Internet Explorer, Chrome, and all other supported browsers.
 
 ### Tools and support
 
-Selenium's minimalist design approach gives it
+Selenium's minimalist design approach gives it the 
 versatility to be included as a component in bigger applications.
 The surrounding infrastructure provided under the Selenium umbrella
 gives you the tools to put together
-your own [grid of browsers]({{< ref "/grid/_index.md" >}})
+your [grid of browsers]({{< ref "/grid/_index.md" >}})
 so tests can be run on different browsers and multiple operating systems
 across a range of machines.
 
-Imagine a bank of computers in your server room or data centre
+Imagine a bank of computers in your server room or data center
 all firing up browsers at the same time
 hitting your site's links, forms,
 and tables&mdash;testing your application 24 hours a day.
@@ -67,7 +67,7 @@ these tests will run tirelessly in parallel,
 reporting back to you when errors occur.
 
 It is an aim to help make this a reality for you,
-by providing users with tools and documentation to not only control browsers,
+by providing users with tools and documentation to not only control browsers 
 but to make it easy to scale and deploy such grids.
 
 
@@ -97,7 +97,7 @@ and remain a dominant platform for functional test automation.
 When Selenium 1 was released in 2004,
 it was out of the necessity to reduce time spent
 manually verifying consistent behaviour in the front-end of a web application.
-It made use of what tools were available at the time,
+It made use of what tools were available at the time 
 and relied heavily on the injection of JavaScript to the web page under test
 to emulate a user's interaction.
 
@@ -115,7 +115,7 @@ to the world's _de facto_ browser automation library.
 
 Just as Selenium RC made use of the tools of the trade available at the time,
 [Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) drives that tradition on by taking
-the browser interaction part to the browser vendor's home turf,
+the browser interaction part to the browser vendor's home turf 
 and asking them to take responsibility of the backend, browser-facing implementations.
 Recently this work has evolved into a W3C standardisation process
 where the goal is to turn the WebDriver component in Selenium

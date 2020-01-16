@@ -1,86 +1,57 @@
 ---
-title: "Setting up your own Grid"
+title: "配置自己的服务网格"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+使用Selenium网格，
+你需要维护你自己的基础设置来作为节点使用，
+这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
 
-To use Selenium Grid,
-you need to maintain your own infrastructure for the nodes.
-As this can be a cumbersome and time intense effort,
-many organizations use IaaS providers
-such as Amazon EC2 and Google Compute
-to provide this infrastructure.
+使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。
+当然，在你自己的硬件群运行节点也是可行的。
+这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
 
-Other options include using providers such as Sauce Labs or Testing Bot
-who provide a Selenium Grid as a service in the cloud.
-It is certainly possible to also run nodes on your own hardware.
-This chapter will go into detail about the option of running your own grid,
-complete with its own node infrastructure.
+## 快速开始
 
+这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub),
+然后注册WebDriver节点和Selenium 1 RC节点。
+我们也会向你展示如何使用Java来使用Selenium服务网格。
+这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到
+多台终端机。
 
-## Quick start
+`selenium-server-standalone` 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了.
+你可以在[https://selenium.dev/downloads/](https://selenium.dev/downloads/).下载
+`selenium-server-standalone-.jar`
 
-This example will show you how to start the Selenium 2 Grid Hub,
-and register both a WebDriver node and a Selenium 1 RC legacy node.
-We will also show you how to call the grid from Java.
-The hub and nodes are shown here running on the same machine,
-but of course you can copy the selenium-server-standalone to multiple machines.
+### 第一步: 启动转发器(hub)
 
-The `selenium-server-standalone` package includes the hub,
-WebDriver, and legacy RC needed to run the Grid, 
-_ant_ is not required anymore.
-You can download the `selenium-server-standalone-.jar` from
-[https://selenium.dev/downloads/](https://selenium.dev/downloads/).
+转发器(hub)是接受测试请求并分发到合适的节点的中心点。
+分发是基于节点的能力的，这就意味着一个有特定需求的测试仅会被分发到能提供这个需求的节点上。
 
+因为一个测试所期望的能力，就如字面意思，期望，并不代表转发器(hub)能够找到一个真正满足所有期望的节点。
 
-### Step 1: Start the Hub
-
-The Hub is the central point that will receive test requests
-and distribute them to the right nodes.
-The distribution is done on a capabilities basis,
-meaning a test requiring a set of capabilities
-will only be distributed to nodes offering that set or subset of capabilities.
-
-Because a test's desired capabilities are just what the name implies, _desired_,
-the hub cannot guarantee that it will locate a node
-fully matching the requested desired capabilities set.
-
-Open a command prompt
-and navigate to the directory where you copied
-the `selenium-server-standalone.jar` file.
-You start the hub by passing the `-role hub` flag
-to the standalone server:
+打开命令行窗口，来到存放`selenium-server-standalone.jar`文件的地方。
+启动转发器(hub)并传入`-role hub`作为参数来启动一个独立的服务：
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub
 ```
 
-The Hub will listen to port 4444 by default.
-You can view the status of the hub by opening a browser window and navigating to
-[http://localhost:4444/grid/console](http://localhost:4444/grid/console).
+转发器(hub)默认会监听4444端口，你也可以通过打开浏览器访问[http://localhost:4444/grid/console](http://localhost:4444/grid/console)来查看转发器(hub)的状态。
 
-To change the default port,
-you can add the optional `-port` flag
-with an integer representing the port to listen to when you run the command.
-Also, all of the other options you see in the JSON config file (seen below)
-are possible command-line flags.
+如果需要改变默认端口，你可以添加`-port`加上一个数字作为参数来代表你期望监听的端口，
+同时，所有其他的可选参数都可以在下面这个JSON配置文件里找到。
 
-You certainly can get by with only the simple command shown above,
-but if you need more advanced configuration,
-you can also specify a JSON format config file, for convenience,
-to configure the hub when you start it.
-You can do it like so:
+你已经在上面获得了一个简单命令，当然如果你希望一些更高级的配置，
+方便起见，你也可以指定一个JSON格式的配置文件来配置并启动你的转发器(hub)。
+你可以这么做：
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug
 ```
 
-Below you will see an example of a `hubConfig.json` file.
-We will go into more detail on how to provide node configuration files in step 2.
+下面你可以看到一个配置文件`hubConfig.json`的例子。
+我们会在第二步深入探讨怎么来提供节点配置文件。
 
 ```json
 {
@@ -100,48 +71,34 @@ We will go into more detail on how to provide node configuration files in step 2
 ```
 
 
-### Step 2: Start the Nodes
+### 第二部: 启动节点
 
-Regardless of whether you want to run a grid with new WebDriver functionality,
-or a grid with Selenium 1 RC functionality,
-or both at the same time,
-you use the same `selenium-server-standalone.jar` file to start the nodes:
+无论你期望你的服务网格使用新的WebDriver的功能，还是Selenium 1 RC的功能，或者2者皆有。
+你都只需要使用`selenium-server-standalone.jar`来启动节点。
 
 ```shell
 java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444
 ```
 
-If a port is not specified through the `-port` flag,
-a free port will be chosen. You can run multiple nodes on one machine
-but if you do so, you need to be aware of your systems memory resources
-and problems with screenshots if your tests take them.
+如果不通过`-port`来指定端口，会选一个可用端口。你也可以在一个终端机上运行多个节点，
+但是如果你这么做了，你需要意识到当你的测试使用截屏会引发你的系统内存资源和问题。
 
+#### 配置节点的可选参数
 
-#### Configuration of Node with options
+正如前面提到的，作为一个向下兼容，"wd"和”rc”这两个角色都是节点角色的合法的自己。
+当节点同时允许RC饿WebDriver的远程链接时，这些角色限制了远程连接使用的API。
 
-As mentioned, for backwards compatibility
-“wd” and “rc” roles are still a valid subset of the “node” role.
-But those roles limit the types of remote connections to their corresponding API,
-while “node” allows both RC and WebDriver remote connections.
-
-Passing JVM properties (using the `-D` flag
-_before the -jar argument_)
-on the command line as well,
-and these will be picked up and propagated to the nodes:
-
+通过在命令行中设置JVM属性(_在-jar参数前_使用`-D`参数)，会被传递到节点里：
 `-Dwebdriver.chrome.driver=chromedriver.exe`
 
+#### 使用JSON配置节点
 
-#### Configuration of Node with JSON
-
-You can also start grid nodes that are configured
-with a JSON configuration file
+你也可以使用JSON配置文件来启动服务网格节点
 
 ```shell
 java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json
 ```
-
-And here is an example of a `nodeConfig.json` file:
+这里是一个配置文件`nodeConfig.json`的例子:
 
 ```json
 {
@@ -185,72 +142,59 @@ And here is an example of a `nodeConfig.json` file:
 }
 ```
 
-A note about the `-host` flag
+有关于`-host`参数的注解
 
-For both hub and node, if the `-host` flag is not specified,
-`0.0.0.0` will be used by default. This will bind to all the
-public (non-loopback) IPv4 interfaces of the machine. If you have a special
-network configuration or any component that creates extra network interfaces,
-it is advised to set the `-host` flag with a value that allows the
-hub/node to be reachable from a different machine.
+无论是转发器还是节点，如果不指定`-host`参数，会默认使用`0.0.0.0`，
+这么做会绑定终端机的所有的公共IPv4接口。如果你有一些特殊网络配置或者一些组件创建的网络接口，
+建议设置`-host`参数，来使你的转发器或节点能够被其他终端机访问。
 
-#### Specifying the port
+#### 指定端口
 
-The default TCP/IP port used by the hub is 4444. If you need to change the port 
-please use above mentioned configurations.
+转发器默认使用TCP/IP端口4444.如果你希望改端口，请用上面提到的配置方法。
 
-## Troubleshooting
+## 故障排查
 
-### Using Log file
-For advanced troubleshooting you can specify a log file to log system messages.
-Start Selenium GRID hub or node with -log argument. Please see the below example:
+### 使用日志文件
+
+如果需要进行高级故障排查你可以指定一个日志文件来记录系统信息。
+启动Selenium服务网格的转发器(hub)或节点的时候使用-log参数。下面是一个例子：
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -log log.txt
 ```
 
-Use your favorite text editor to open log file (log.txt in the example above) to find 
-"ERROR" logs if you get issues.
+使用你习惯的文本编辑器来打开日志文件(例子里用的log.txt)，查找"ERROR"日志来定位你的问题。
 
-### Using `-debug` argument
+### 使用 `-debug` 参数
 
-Also you can use `-debug` argument to print debug logs to console.
-Start Selenium Grid Hub or Node with `-debug` argument. Please see 
-the below example:
+同时，你也可以通过使用`-debug`来向控制台打印debug日志。
+启动Selenium服务网格的转发器(hub)或节点的时候使用`-debug`参数。下面是一个例子：
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -debug
 ```
 
-## Warning
+## 提醒
 
-The Selenium Grid must be protected from external access using appropriate
-firewall permissions.
+Selenium服务网格需要使用合适的防火墙许可来隔离外部访问。
 
-Failure to protect your Grid could result in one or more of the following occurring:
+如果不能有效的保护你的服务网格，可能会导致以下问题：
 
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
+* 提供了一个开发的接口来访问服务网格的基础设施
+* 你将会允许第三方来访问内部web服务和文件
+* 你将会允许第三方来执行定制的二进制文件
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good 
-overview of how a publicly exposed Grid could be misused: 
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
+请参考这篇文章[Detectify](//labs.detectify.com), 这里给了一个很好的概要，
+关于暴露一个服务网格后会如何被滥用：[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
 
 
 ## Docker Selenium
-[Docker](//www.docker.com/) provides a convenient way to
-provision and scale Selenium Grid infrastructure in a unit known as a container.
-Containers are standardised units of software that contain everything required
-to run the desired application, including all dependencies, in a reliable and repeatable
-way on different machines.
+[Docker](//www.docker.com/)提供了一个方便的途径来在容器中构建一个可扩张的Selenium服务网格基础设置，
+容器是软件的标准单元，包含了所有执行应用程序需要的东西，包括所有的依赖，它以一种可靠的，可以复制的方法来在不同的终端机上运行。
 
-The Selenium project maintains a set of Docker images which you can download
-and run to get a working grid up and running quickly. Nodes are available for
-both Firefox and Chrome. Full details of how to provision a grid can be found
-within the [Docker Selenium](//github.com/SeleniumHQ/docker-selenium) 
-repository.
+Selenium项目维护了一组Docker镜像，你可以下载并运行来快速的获得一个可用的服务网格。
+Firefox和Chrome都提供了可用的镜像。你可以在[Docker Selenium](//github.com/SeleniumHQ/docker-selenium) 找到关于如何启动服务网格的详细信息.
 
-### Prerequisite
-The only requirement to run a Grid is to have Docker installed and working.
+### 前提
+创建服务网格的唯一的前提是安装了Docker并能正常运行
 [Install Docker](//www.docker.com/products/docker-desktop).

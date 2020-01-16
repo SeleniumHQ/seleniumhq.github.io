@@ -30,7 +30,7 @@ you will generally perform some combination of three steps:
 You will want to keep these steps as short as possible;
 one or two operations should be enough most of the time.
 Browser automation has the reputation of being “flaky”,
-but in reality that is because users frequently demand too much of it.
+but in reality, that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
 to mitigate apparent intermittent problems in tests,
 in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.ja.md" >}})
@@ -63,7 +63,7 @@ will quickly become a non-trivial undertaking.
 
 ### Let’s start with an example
 
-Larry has written a web site which allow users to order their own
+Larry has written a web site which allows users to order their 
 custom unicorns.
 
 The general workflow (what we will call the “happy path”) is something
@@ -97,10 +97,10 @@ It will perform the following actions:
 * Configure a unicorn
 
 Note that we are skipping the rest of these steps, 
-we will test the rest of the workflow in other small, discrete test cases,
+we will test the rest of the workflow in other small, discrete test cases 
 after we are done with this one.
 
-To start off, you need to create an account.
+To start, you need to create an account.
 Here you have some choices to make:
 
 * Do you want to use an existing account?
@@ -110,7 +110,7 @@ Here you have some choices to make:
 
 Regardless of how you answer this question,
 the solution is to make it part of the "set up the data" portion of the test.
-If Larry has exposed an API which enables you (or anyone)
+If Larry has exposed an API that enables you (or anyone)
 to create and update user accounts,
 be sure to use that to answer this question.
 If possible, you want to launch the browser only after you have a user "in hand",
@@ -370,8 +370,8 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.
 
-Your page objects will require some small maintenance
-in order to conform to the site redesign,
+Your page objects will require some small maintenance in order to 
+conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
@@ -402,5 +402,5 @@ interface will change considerably in the near future, then any automation
 might need to be rewritten anyway. Also, sometimes there simply is not enough
 time to build test automation. For the short term, manual testing may be more
 effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing get done within
+test automation available, and it’s imperative that the testing gets done within
 that time frame, then manual testing is the best solution.

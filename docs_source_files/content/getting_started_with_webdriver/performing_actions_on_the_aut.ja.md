@@ -1,14 +1,10 @@
 ---
-title: "Performing actions on the AUT*"
+title: "AUT* を操作する"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-You can set an element's text using the sendKeys method as follows:
+次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -37,9 +33,8 @@ driver.findElement(By.name("name")).sendKeys(name)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Some web applications use JavaScript libraries to add drag-and-drop
-functionality. The following is a basic example of dragging one
-element onto another element:
+JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。
+次の例はある要素を別の要素へドラッグする例です。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -75,9 +70,9 @@ Actions(driver).dragAndDrop(source, target).build().perform()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Clicking on an element
+### 要素をクリックする
 
-You can click on an element using the click method:
+clickメソッドを使うと要素のクリックができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -100,4 +95,4 @@ driver.findElement(By.cssSelector("input[type='submit']")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-***AUT**: Application under test
+***AUT**: Application under test（テスト対象アプリケーション）
