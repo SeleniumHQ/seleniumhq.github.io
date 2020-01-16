@@ -42,7 +42,7 @@ and using the web browser only when you have absolutely no alternative,
 you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
+is their inherent ability to test all components of the application,
 from backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
@@ -359,7 +359,6 @@ assert(unicornConfirmationPage.exists(sparkles), "Sparkles should have been crea
 // The exists() method from UnicornConfirmationPage will take the Sparkles 
 // object--a specification of the attributes you want to see, and compare
 // them with the fields on the page.
-//CHECK Boris
 assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -372,8 +371,8 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.
 
-Your page objects will require some small maintenance in order 
-to conform to the site redesign,
+Your page objects will require some small maintenance in order to 
+conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
@@ -392,6 +391,7 @@ and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.
 
+
 ### To automate or not to automate?
 
 Is automation always advantageous? When should one decide to automate test
@@ -405,4 +405,3 @@ time to build test automation. For the short term, manual testing may be more
 effective. If an application has a very tight deadline, there is currently no
 test automation available, and it’s imperative that the testing gets done within
 that time frame, then manual testing is the best solution.
-

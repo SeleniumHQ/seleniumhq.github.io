@@ -11,20 +11,20 @@
     <title>On test automation :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1578957790" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1578957790" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1579202187" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1579202187" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1578957790" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1579202187" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1578957790"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1579202187"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1578957790"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1578957790"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1579202187"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1579202187"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1578957790"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1579202187"></script>
 
     
   </div>
@@ -2004,17 +2004,17 @@ it by sending us pull requests!</p>
 
 
 <p>First, start by asking yourself whether or not you really need to use a browser.
-Odds are good that, at some point, if you&rsquo;re working on a complex web application,
+Odds are that, at some point, if you are working on a complex web application,
 you will need to open a browser and actually test it.</p>
 
 <p>Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
 to be in place to be run effectively.
-It&rsquo;s a good rule to always ask yourself if what you want to test
+It is a good rule to always ask yourself if what you want to test
 can be done using more lightweight test approaches such as unit tests
 or with a lower-level approach.</p>
 
-<p>Once you have made the determination that you&rsquo;re in the web browser testing business,
+<p>Once you have made the determination that you are in the web browser testing business,
 and you have your Selenium environment ready to begin writing tests,
 you will generally perform some combination of three steps:</p>
 
@@ -2025,7 +2025,7 @@ you will generally perform some combination of three steps:</p>
 </ul>
 
 <p>You will want to keep these steps as short as possible;
-one to two operations should be enough much of the time.
+one or two operations should be enough most of the time.
 Browser automation has the reputation of being “flaky”,
 but in reality, that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
@@ -2038,7 +2038,7 @@ and using the web browser only when you have absolutely no alternative,
 you can have many tests with minimal flake.</p>
 
 <p>A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
+is their inherent ability to test all components of the application,
 from backend to frontend, from a user&rsquo;s perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.</p>
@@ -2046,7 +2046,7 @@ they also encompass large business-critical portions at one time.</p>
 <h3 id="testing-requirements">Testing requirements</h3>
 
 <p>As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you&rsquo;re running the tests against,
+To what extent depends on the browser you are running the tests against,
 but historically browsers&rsquo; behaviour has varied so much that it has often
 been a stated goal to cross-test against multiple browsers.</p>
 
@@ -2061,15 +2061,15 @@ will quickly become a non-trivial undertaking.</p>
 <p>Larry has written a web site which allows users to order their
 custom unicorns.</p>
 
-<p>The general workflow (what we&rsquo;ll call the “happy path”) is something
+<p>The general workflow (what we will call the “happy path”) is something
 like this:</p>
 
 <ul>
 <li>Create an account</li>
-<li>Configure their unicorn</li>
-<li>Add her to the shopping cart</li>
+<li>Configure the unicorn</li>
+<li>Add it to the shopping cart</li>
 <li>Check out and pay</li>
-<li>Give feedback about their unicorn</li>
+<li>Give feedback about the unicorn</li>
 </ul>
 
 <p>It would be tempting to write one grand Selenium script
@@ -2079,13 +2079,13 @@ Doing so will result in a test that
 a) takes a long time,
 b) will be subject to some common issues around page rendering timing issues, and
 c) is such that if it fails,
-it won&rsquo;t give you a concise, “glanceable” method for diagnosing what went wrong.</p>
+it will not give you a concise, “glanceable” method for diagnosing what went wrong.</p>
 
 <p>The preferred strategy for testing this scenario would be
 to break it down to a series of independent, speedy tests,
 each of which has one “reason” to exist.</p>
 
-<p>Let&rsquo;s pretend you want to test the second step:
+<p>Let us pretend you want to test the second step:
 Configuring your unicorn.
 It will perform the following actions:</p>
 
@@ -2094,9 +2094,9 @@ It will perform the following actions:</p>
 <li>Configure a unicorn</li>
 </ul>
 
-<p>Note that we&rsquo;re skipping the rest of these steps,
+<p>Note that we are skipping the rest of these steps,
 we will test the rest of the workflow in other small, discrete test cases
-after we&rsquo;re done with this one.</p>
+after we are done with this one.</p>
 
 <p>To start, you need to create an account.
 Here you have some choices to make:</p>
@@ -2109,11 +2109,11 @@ taken into account before configuration begins?</li>
 </ul>
 
 <p>Regardless of how you answer this question,
-the solution is to make it part of the &ldquo;set up the data&rdquo; portion of the test–
-if Larry has exposed an API that enables you (or anyone)
+the solution is to make it part of the &ldquo;set up the data&rdquo; portion of the test.
+If Larry has exposed an API that enables you (or anyone)
 to create and update user accounts,
-be sure to use that to answer this question–
-if possible, you want to launch the browser only after you have a user &ldquo;in hand&rdquo;,
+be sure to use that to answer this question.
+If possible, you want to launch the browser only after you have a user &ldquo;in hand&rdquo;,
 whose credentials you can just log in with.</p>
 
 <p>If each test for each workflow begins with the creation of a user account,
@@ -2244,7 +2244,7 @@ account_page <span style="color:#719e07">=</span> login_as(user<span style="colo
 </span><span style="color:#586e75">// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
 </span><span style="color:#586e75">// AccountPage object is returned by the loginAs method, allowing you to then
 </span><span style="color:#586e75">// perform actions from the AccountPage.
-</span><span style="color:#586e75"></span><span style="color:#268bd2">var</span> accountPage <span style="color:#719e07">=</span> loginAs(user.email, user.password); 
+</span><span style="color:#586e75"></span><span style="color:#268bd2">var</span> accountPage <span style="color:#719e07">=</span> loginAs(user.email, user.password);
   
 </code></pre></div>
 </section>
@@ -2347,7 +2347,7 @@ Here is one way of doing this (continuing from the previous example):</p>
 </span><span style="color:#586e75">// with the browser in any way.
 </span><span style="color:#586e75"></span>Unicorn <span style="color:#268bd2">sparkles</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn(<span style="color:#2aa198">&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-<span style="color:#586e75">// Since we&#39;re already &#34;on&#34; the account page, we have to use it to get to the
+<span style="color:#586e75">// Since we are already &#34;on&#34; the account page, we have to use it to get to the
 </span><span style="color:#586e75">// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
 </span><span style="color:#586e75">// takes us there.
 </span><span style="color:#586e75"></span>AddUnicornPage <span style="color:#268bd2">addUnicornPage</span> <span style="color:#719e07">=</span> accountPage.addUnicorn();
@@ -2458,7 +2458,7 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 </div>
 </div>
 
-<p>Now that you&rsquo;ve configured your unicorn,
+<p>Now that you have configured your unicorn,
 you need to move on to step 3: making sure it actually worked.</p>
 
 
@@ -2574,8 +2574,8 @@ even if Larry decides next week that he no longer likes Ruby-on-Rails
 and decides to re-implement the entire site
 in the latest Haskell bindings with a Fortran front-end.</p>
 
-<p>Your page objects will require some small maintenance in order
-to conform to the site redesign,
+<p>Your page objects will require some small maintenance in order to
+conform to the site redesign,
 but these tests will remain the same.
 Taking this basic design,
 you will want to keep going through your workflows with the fewest browser-facing steps possible.
@@ -2616,7 +2616,7 @@ that time frame, then manual testing is the best solution.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/introduction/on_test_automation/">
       “On test automation”
-    </a> was last updated on: 11 Jan 2020 08:26:48 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a8bc2acc65b6bb79e539320713353c08c17ef1bf">Style: Formatting and cleaning up doc with grammatical corrections (#165) (a8bc2acc6)</a>
+    </a> was last updated on: 16 Jan 2020 20:14:57 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/c0ed68f4aa72acbe14fc0ea3b082f7700de54541">Regarding PR #163 (#178) [deploy site] (c0ed68f4a)</a>
 </h5>
         
         </div> 
@@ -3813,19 +3813,19 @@ that time frame, then manual testing is the best solution.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1578957790"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1579202187"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1578957790"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1578957790"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1579202187"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1579202187"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1578957790" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1578957790"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1579202187" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1579202187"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

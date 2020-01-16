@@ -49,9 +49,8 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/getting_started_with_webdriver/browsers/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
+      <description>Endverbraucher Browser Folgende Browser werden offiziell vom Selenium Framework unterstützt:
+   Browser Wartungsverantwortlich Unterstützte Versionen     Chromium Chromium Alle Versionen   Firefox Mozilla 54 und neuer   Internet Explorer Selenium 6 und neuer   Opera Opera Chromium / Presto 10.5 und neuer   Safari Apple 10 und neuer    Spezielle Browser Es gibt einige spezielle Browsers die üblicherweise nur im Zuge von Projektentwicklungen eingesetzt werden.</description>
     </item>
     
     <item>
@@ -259,8 +258,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/front_matter/typographical_conventions/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Großschreibung bei Überschriften One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+      <description>Großschreibung bei Überschriften Im Englischen ist es erwünscht in den Überschriften nur den ersten Buchstaben groß zu schreiben und sich an die typografischen Regeln zu halten. Sinngemäß soll dies auch für die deutsche Übersetzung gelten. Daher sollen in Überschriften Großbuchstaben nur dann verwendet werden wenn es die deutsche Sprache auch vorsieht. Es kann verwirrend sein wenn Eine Sehr Schöne Überschrift Großbuchstaben verwendet die in der Rechtschreibung nicht vorgesehen sind.</description>
     </item>
     
     <item>
