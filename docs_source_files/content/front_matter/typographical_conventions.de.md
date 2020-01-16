@@ -3,41 +3,37 @@ title: "Typographische Richtlinien"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
 ## Großschreibung bei Überschriften
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratutious capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+Im Englischen ist es erwünscht in den Überschriften nur den
+ersten Buchstaben groß zu schreiben und sich an die typografischen
+Regeln zu halten. 
+Sinngemäß soll dies auch für die deutsche Übersetzung gelten. 
+Daher sollen in Überschriften Großbuchstaben nur dann verwendet werden
+wenn es die deutsche Sprache auch vorsieht. Es kann verwirrend sein wenn 
+_Eine Sehr Schöne Überschrift_ Großbuchstaben verwendet die in der 
+Rechtschreibung nicht vorgesehen sind.
 
 ## Zeilenlänge
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 72 characters.
+Wenn der Sourcecode, der in HTML geschrieben wurde,
+verändert wird, achte bitte darauf das die Zeilenlänge
+72 Zeichen nicht überschreitet.
 
-Some of us take this one step further
-and use what is called
-[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
+Einige von uns gehen sogar einen Schritt weiter und halten sich an
+[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line)
+(englische Quelle). Bei diesem Vorgehen wird im HTML Quellcode, welcher
+nicht von der Öffentlichkeit gelesen wird, an 'natürlichen Pausen' ein
+Zeilenumbruch eingefügt.
+Anders formuliert, Sätze werden an natürlichen Pausen umgebrochen.
+Statt sich mit den Zeilen der einzelnen Abschnitte zu befassen werden
+diese Nahe des rechten Bildrandes enden, Zeilenumbrüche können 
+jederzeit eingefügt werden sodass einzelne Inhalte getrennt werden.
 
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+Dadurch können diffs (Vergleiche zwischen zwei Dateien) sehr leicht 
+gelesen und verglichen werden, vor allem dann wenn man git als 
+Unterstützungwerkzeug verwendet. 
+
+Wir bestehen jedoch nicht darauf das alle Mitwirkenden dies auch 
+anwenden.
+
