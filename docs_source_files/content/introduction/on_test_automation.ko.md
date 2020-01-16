@@ -42,7 +42,7 @@ and using the web browser only when you have absolutely no alternative,
 you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
+is their inherent ability to test all components of the application,
 from backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
@@ -359,7 +359,6 @@ assert(unicornConfirmationPage.exists(sparkles), "Sparkles should have been crea
 // The exists() method from UnicornConfirmationPage will take the Sparkles 
 // object--a specification of the attributes you want to see, and compare
 // them with the fields on the page.
-//CHECK Boris
 assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -392,3 +391,17 @@ and pre-configure a unicorn via the API or database.
 Then all you have to do is log in as the user, locate Sparkles,
 and add her to the cart.
 
+
+### To automate or not to automate?
+
+Is automation always advantageous? When should one decide to automate test
+cases?
+
+It is not always advantageous to automate test cases. There are times when
+manual testing may be more appropriate. For instance, if the application’s user
+interface will change considerably in the near future, then any automation
+might need to be rewritten anyway. Also, sometimes there simply is not enough
+time to build test automation. For the short term, manual testing may be more
+effective. If an application has a very tight deadline, there is currently no
+test automation available, and it’s imperative that the testing get done within
+that time frame, then manual testing is the best solution.

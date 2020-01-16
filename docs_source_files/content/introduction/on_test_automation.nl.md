@@ -10,17 +10,17 @@ it by sending us pull requests!
 {{% /notice %}}
 
 First, start by asking yourself whether or not you really need to use a browser.
-Odds are good that, at some point, if you're working on a complex web application,
+Odds are that, at some point, if you are working on a complex web application,
 you will need to open a browser and actually test it.
 
 Functional end-user tests such as Selenium tests are expensive to run, however.
 Furthermore, they typically require substantial infrastructure
 to be in place to be run effectively.
-It's a good rule to always ask yourself if what you want to test
+It is a good rule to always ask yourself if what you want to test
 can be done using more lightweight test approaches such as unit tests
 or with a lower-level approach.
 
-Once you have made the determination that you're in the web browser testing business,
+Once you have made the determination that you are in the web browser testing business,
 and you have your Selenium environment ready to begin writing tests,
 you will generally perform some combination of three steps:
 
@@ -29,7 +29,7 @@ you will generally perform some combination of three steps:
 * Evaluate the results
 
 You will want to keep these steps as short as possible;
-one to two operations should be enough much of the time.
+one or two operations should be enough most of the time.
 Browser automation has the reputation of being “flaky”,
 but in reality that is because users frequently demand too much of it.
 In later chapters, we will return to techniques you can use
@@ -42,7 +42,7 @@ and using the web browser only when you have absolutely no alternative,
 you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
+is their inherent ability to test all components of the application,
 from backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
@@ -51,7 +51,7 @@ they also encompass large business-critical portions at one time.
 ### Testing requirements
 
 As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you're running the tests against,
+To what extent depends on the browser you are running the tests against,
 but historically browsers' behaviour has varied so much that it has often
 been a stated goal to cross-test against multiple browsers.
 
@@ -64,42 +64,42 @@ will quickly become a non-trivial undertaking.
 
 ### Let’s start with an example
 
-Larry has written a web site which allows users to order their own
+Larry has written a web site which allow users to order their own
 custom unicorns.
 
-The general workflow (what we'll call the “happy path”) is something
+The general workflow (what we will call the “happy path”) is something
 like this:
 
 * Create an account
-* Configure their unicorn
-* Add her to the shopping cart
+* Configure the unicorn
+* Add it to the shopping cart
 * Check out and pay
-* Give feedback about their unicorn
+* Give feedback about the unicorn
 
 
 It would be tempting to write one grand Selenium script
 to perform all these operations–many will try.
 **Resist the temptation!**
-Doing so will result in a test that
+Doing so will result in a test that 
 a) takes a long time,
 b) will be subject to some common issues around page rendering timing issues, and
 c) is such that if it fails, 
-it won't give you a concise, “glanceable” method for diagnosing what went wrong.
+it will not give you a concise, “glanceable” method for diagnosing what went wrong.
 
 The preferred strategy for testing this scenario would be
 to break it down to a series of independent, speedy tests,
 each of which has one “reason” to exist.
 
-Let's pretend you want to test the second step:
+Let us pretend you want to test the second step:
 Configuring your unicorn.
 It will perform the following actions:
 
 * Create an account
 * Configure a unicorn
 
-Note that we're skipping the rest of these steps, 
+Note that we are skipping the rest of these steps, 
 we will test the rest of the workflow in other small, discrete test cases,
-after we're done with this one.
+after we are done with this one.
 
 To start off, you need to create an account.
 Here you have some choices to make:
@@ -110,11 +110,11 @@ Here you have some choices to make:
   taken into account before configuration begins?
 
 Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test–
-if Larry has exposed an API which enables you (or anyone)
+the solution is to make it part of the "set up the data" portion of the test.
+If Larry has exposed an API which enables you (or anyone)
 to create and update user accounts,
-be sure to use that to answer this question–
-if possible, you want to launch the browser only after you have a user "in hand",
+be sure to use that to answer this question.
+If possible, you want to launch the browser only after you have a user "in hand",
 whose credentials you can just log in with.
 
 If each test for each workflow begins with the creation of a user account,
@@ -185,7 +185,7 @@ var user = userFactory.createCommonUser(); //This method is defined elsewhere.
 // Logging in on this site takes you to your personal "My Account" page, so the
 // AccountPage object is returned by the loginAs method, allowing you to then
 // perform actions from the AccountPage.
-var accountPage = loginAs(user.email, user.password); 
+var accountPage = loginAs(user.email, user.password);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Create a user who has read-only permissions--they can configure a unicorn,
@@ -241,7 +241,7 @@ Here is one way of doing this (continuing from the previous example):
 // with the browser in any way.
 Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-// Since we're already "on" the account page, we have to use it to get to the
+// Since we are already "on" the account page, we have to use it to get to the
 // actual place where you configure unicorns. Calling the "Add Unicorn" method
 // takes us there.
 AddUnicornPage addUnicornPage = accountPage.addUnicorn();
@@ -323,7 +323,7 @@ unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Now that you've configured your unicorn,
+Now that you have configured your unicorn,
 you need to move on to step 3: making sure it actually worked.
 
 {{< code-tab >}}
