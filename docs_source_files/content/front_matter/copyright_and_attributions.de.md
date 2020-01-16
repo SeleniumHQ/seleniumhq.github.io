@@ -47,7 +47,7 @@ zur Verwendung der enthaltenen Informationen übernommen werden.
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
 
-## rittanbieter Software die vom Selenium Dokumentationsprojekt genutzt wird:
+## Drittanbieter Software die vom Selenium Dokumentationsprojekt genutzt wird:
 
 | Software | Version | License |
 | -------- | ------- | ------- |
