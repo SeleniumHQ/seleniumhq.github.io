@@ -28,8 +28,7 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/front_matter/typographical_conventions/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Großschreibung bei Überschriften One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+      <description>Großschreibung bei Überschriften Im Englischen ist es erwünscht in den Überschriften nur den ersten Buchstaben groß zu schreiben und sich an die typografischen Regeln zu halten. Sinngemäß soll dies auch für die deutsche Übersetzung gelten. Daher sollen in Überschriften Großbuchstaben nur dann verwendet werden wenn es die deutsche Sprache auch vorsieht. Es kann verwirrend sein wenn Eine Sehr Schöne Überschrift Großbuchstaben verwendet die in der Rechtschreibung nicht vorgesehen sind.</description>
     </item>
     
   </channel>

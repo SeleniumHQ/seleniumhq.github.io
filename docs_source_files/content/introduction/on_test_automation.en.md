@@ -36,7 +36,7 @@ and using the web browser only when you have absolutely no alternative,
 you can have many tests with minimal flake.
 
 A distinct advantage of Selenium tests
-are their inherent ability to test all components of the application,
+is their inherent ability to test all components of the application,
 from backend to frontend, from a user's perspective.
 So in other words, whilst functional tests may be expensive to run,
 they also encompass large business-critical portions at one time.
