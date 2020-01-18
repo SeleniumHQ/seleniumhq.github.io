@@ -64,7 +64,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -80,7 +80,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 
 driver.get("http://www.google.com")
 
@@ -264,7 +264,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -283,7 +283,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 driver.get("http://www.google.com")
 val searchForm = driver.findElement(By.tagName("form"))
 val searchBox = searchForm.findElement(By.name("q"))
@@ -340,13 +340,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
 using System.Collections.Generic;
 
 namespace FindElementsFromElement {
  class FindElementsFromElement {
   public static void Main(string[] args) {
-   IWebDriver driver = new FirefoxDriver();
+   IWebDriver driver = new ChromeDriver();
    try {
     driver.Navigate().GoToUrl("https://example.com");
 
