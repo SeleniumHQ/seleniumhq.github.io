@@ -11,4 +11,4 @@ der Installation kommerzieller Tools. Um Selenium in Deinem Automationsprojekt
 zu verwenden, ist es notwendig zuerst die entsprechenden Bibliotheken der 
 verwendeten Programmiersprache zu installieren. Weiters benötigst Du die passenden
 WebDriver Dateien entsprechend des verwendeten Browsers, der für die Automation 
-benötigt, und auf dem die Tests ausgeführt werden.   
+benötigt, und auf dem die Tests ausgeführt werden.
