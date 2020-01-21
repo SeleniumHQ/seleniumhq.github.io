@@ -12,14 +12,13 @@
     
     
     <item>
-      <title>Copyright</title>
+      <title>Copyright und Unterstützung</title>
       <link>https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Die Dokumentation von Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
+      <description>Die Dokumentation von Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
+Diese Dokumentation wurde mit größter Sorgfalt erstellt, so vollständig und genau wie möglich. Jedoch kann keine Garantie für dessen Vollständigkeit übernommen werden. Alle bereitgestellten Informationen erfolgen ohne Gewähr. Die Autoren und der Herausgeber übernehmen keine Haftung oder Verantwortung gegenüber Personen oder Organisationen im Bezug auf entstehende Verluste oder Schäden die aus den Informationen dieser Website. Weiters kann keine Patenthaftung zur Verwendung der enthaltenen Informationen übernommen werden.</description>
     </item>
     
     <item>
