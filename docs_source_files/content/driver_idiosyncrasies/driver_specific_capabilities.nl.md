@@ -83,7 +83,16 @@ options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
 driver = Selenium::WebDriver.for :firefox, options: options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const { Builder } = require("selenium-webdriver");
+const firefox = require('selenium-webdriver/firefox');
+
+const options = new firefox.Options();
+let profile = '/path to custom profile';
+options.setProfile(profile);
+const driver = new Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(options)
+    .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = FirefoxOptions()
@@ -115,5 +124,8 @@ var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// We don't have a kotlin code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
 {{< / code-tab >}}
