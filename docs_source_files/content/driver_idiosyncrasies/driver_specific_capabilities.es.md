@@ -108,7 +108,9 @@ En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR  
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
+WebDriver driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # We don't have a Python code sample yet -  Help us out and raise a PR
@@ -125,6 +127,8 @@ var driver = new RemoteWebDriver(options);
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a kotlin code sample yet -  Help us out and raise a PR  
+val options = InternetExplorerOptions()
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
+val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
