@@ -70,7 +70,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -86,7 +86,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 
 driver.get("http://www.google.com")
 
@@ -99,7 +99,7 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list, 
+Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
 you need to loop over the list of elements to perform action on selected element.
 
 {{< code-tab >}}
@@ -224,7 +224,7 @@ fun main() {
 
 ## Find Element From Element
 
-It is used to find a child element within the context of parent element. 
+It is used to find a child element within the context of parent element.
 To achieve this, the parent WebElement is chained with 'findElement' to access child elements
 
 {{< code-tab >}}
@@ -270,7 +270,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -289,7 +289,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 driver.get("http://www.google.com")
 val searchForm = driver.findElement(By.tagName("form"))
 val searchBox = searchForm.findElement(By.name("q"))
@@ -299,7 +299,7 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements From Element
 
-It is used to find the list of matching child WebElements within the context of parent element. 
+It is used to find the list of matching child WebElements within the context of parent element.
 To achieve this, the parent WebElement is chained with 'findElements' to access child elements
 
 {{< code-tab >}}
@@ -309,16 +309,16 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   import org.openqa.selenium.WebElement;
   import org.openqa.selenium.chrome.ChromeDriver;
   import java.util.List;
-  
+
   public class findElementsFromElement {
       public static void main(String[] args) {
           WebDriver driver = new ChromeDriver();
           try {
               driver.get("https://example.com");
-  
+
               // Get element with tag name 'div'
               WebElement element = driver.findElement(By.tagName("div"));
-  
+
               // Get all the elements available with tag name 'p'
               List<WebElement> elements = element.findElements(By.tagName("p"));
               for (WebElement e : elements) {
@@ -332,13 +332,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
-  
+
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
-  
+
   # Get element with tag name 'div'
   element = driver.find_element_by_tag_name('div')
-  
+
   # Get all the elements available with tag name 'p'
   elements = element.find_elements_by_tag_name('p')
   for e in elements:
@@ -346,13 +346,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
 using System.Collections.Generic;
 
 namespace FindElementsFromElement {
  class FindElementsFromElement {
   public static void Main(string[] args) {
-   IWebDriver driver = new FirefoxDriver();
+   IWebDriver driver = new ChromeDriver();
    try {
     driver.Navigate().GoToUrl("https://example.com");
 
