@@ -11,20 +11,20 @@
     <title>Driver specific capabilities :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1579897611" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1579897611" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1579898514" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1579898514" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1579897611" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1579898514" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1579897611"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1579898514"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1579897611"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1579897611"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1579898514"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1579898514"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1579897611"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1579898514"></script>
 
     
   </div>
@@ -2287,8 +2287,10 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+InternetExplorerOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options); 
+  </code></pre></div>
 </section>
   
 
@@ -2331,8 +2333,10 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
 
 <section id="kotlincode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">val</span> options = InternetExplorerOptions()
+options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2</span>))
+<span style="color:#719e07">val</span> driver = RemoteWebDriver(options)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2345,7 +2349,7 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver specific capabilities”
-    </a> was last updated on: 18 Jan 2020 06:08:11 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/30ba67e5bdf83243584f2fa8dc9102e3b2229ed9">Add: Adding JS sample code for firefox custom profile and added missing code-panel for kotlin (#179) [deploy site] (30ba67e5b)</a>
+    </a> was last updated on: 25 Jan 2020 02:10:22 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/76c72c8e14e214e46c561fc8bec7e8f67ebc7f44">Add: Added java and kotlin sample code for fileUploadDialogTimeout (#182) [deploy site] (76c72c8e1)</a>
 </h5>
         
         </div> 
@@ -3542,19 +3546,19 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1579897611"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1579898514"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1579897611"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1579897611"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1579898514"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1579898514"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1579897611" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1579897611"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1579898514" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1579898514"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
