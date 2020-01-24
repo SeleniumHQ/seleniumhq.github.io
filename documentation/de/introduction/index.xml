@@ -50,8 +50,8 @@ For web applications, the automation of this testing can be done directly with S
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/introduction/about_this_documentation/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the onboarding experience for new users.</description>
+      <description>Diese Dokumentation wird so wie auch der Sourcecode von Selenium zu 100% von der Selenium Community gepflegt. Von Anfang an haben zahlreiche Benutzer diese Dokumentation verwendet. Viele haben Sie auch nur für einen sehr kurzen Zeitraum genutzt und haben Zeit investiert um für Neulinge den Einstieg in das Thema zu erleichtern.
+Falls Du einen Fehler in der Dokumentation entdeckst, freuen wir uns wenn Du uns darauf aufmerksam machst. Der beste Weg uns das mitzuteilen ist es einen Issue (engl.</description>
     </item>
     
   </channel>
