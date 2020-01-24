@@ -11,20 +11,20 @@
     <title>Webelement :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1579307985" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1579307985" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1579896076" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1579896076" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1579307985" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1579896076" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1579307985"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1579896076"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1579307985"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1579307985"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1579896076"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1579896076"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1579307985"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1579896076"></script>
 
     
   </div>
@@ -2123,7 +2123,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">let</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
 
 (async <span style="color:#268bd2">function</span> test(){
 
@@ -2145,7 +2145,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">val</span> driver = ChromeDriver()
+<span style="color:#719e07">val</span> driver = FirefoxDriver()
 
 driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
@@ -2459,7 +2459,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">let</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
 
 (async <span style="color:#268bd2">function</span> test(){
 
@@ -2484,7 +2484,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 
 <section id="kotlincode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">val</span> driver = ChromeDriver()
+<span style="color:#719e07">val</span> driver = FirefoxDriver()
 driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 <span style="color:#719e07">val</span> searchForm = driver.findElement(By.tagName(<span style="color:#2aa198">&#34;form&#34;</span>))
 <span style="color:#719e07">val</span> searchBox = searchForm.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>))
@@ -2545,16 +2545,16 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
   <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
   <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
   <span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.util.List;
-  
+
   <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> findElementsFromElement {
       <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
           WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
           <span style="color:#719e07">try</span> {
               driver.get(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
-  
+
               <span style="color:#586e75">// Get element with tag name &#39;div&#39;
 </span><span style="color:#586e75"></span>              WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;div&#34;</span>));
-  
+
               <span style="color:#586e75">// Get all the elements available with tag name &#39;p&#39;
 </span><span style="color:#586e75"></span>              List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">elements</span> <span style="color:#719e07">=</span> element.findElements(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>));
               <span style="color:#719e07">for</span> (WebElement <span style="color:#268bd2">e</span> <span style="color:#719e07">:</span> elements) {
@@ -2573,13 +2573,13 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
   <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
-  
+
   driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
   driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.example.com&#34;</span>)
-  
+
   <span style="color:#586e75"># Get element with tag name &#39;div&#39;</span>
   element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;div&#39;</span>)
-  
+
   <span style="color:#586e75"># Get all the elements available with tag name &#39;p&#39;</span>
   elements <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;p&#39;</span>)
   <span style="color:#719e07">for</span> e <span style="color:#719e07">in</span> elements:
@@ -2592,13 +2592,13 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#719e07">using</span> OpenQA.Selenium;
-<span style="color:#719e07">using</span> OpenQA.Selenium.Firefox;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
 <span style="color:#719e07">using</span> System.Collections.Generic;
 
 <span style="color:#719e07">namespace</span> FindElementsFromElement {
  <span style="color:#719e07">class</span> <span style="color:#268bd2">FindElementsFromElement</span> {
   <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
-   IWebDriver driver = <span style="color:#719e07">new</span> FirefoxDriver();
+   IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
    <span style="color:#719e07">try</span> {
     driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
 
@@ -2882,7 +2882,7 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/webdriver/web_element/">
       “Webelement”
-    </a> was last updated on: 08 Jan 2020 21:49:59 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/4cb9db7ac4d51536b49cd838f9e171cc7cf316f2">Add: Added get active element concept into web element doc (#158) [deploy site] (4cb9db7ac)</a>
+    </a> was last updated on: 25 Jan 2020 01:17:45 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/f888a17ad35b3ed3d19a0c2f496e283a4037dcdc">Modify: Updated code samples to target same browser with in section (#181) [deploy site] (f888a17ad)</a>
 </h5>
         
         </div> 
@@ -4079,19 +4079,19 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1579307986"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1579896076"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1579307986"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1579307986"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1579896076"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1579896076"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1579307986" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1579307986"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1579896076" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1579896076"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

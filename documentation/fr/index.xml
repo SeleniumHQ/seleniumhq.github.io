@@ -220,9 +220,8 @@ Veuillez noter que ces plugins ne sont pas supportés, maintenus ou hébergés p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Pour exécuter votre projet et contrôler le navigateur, vous devez installer des binaires WebDriver spécifiques au navigateur.
+Téléchargez le binaire WebDriver pris en charge par votre navigateur et placez-le dans le CHEMIN système.</description>
     </item>
     
     <item>
