@@ -127,8 +127,8 @@ var driver = new RemoteWebDriver(options);
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val options = InternetExplorerOptions();
-options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
-val driver = RemoteWebDriver(options); 
+val options = InternetExplorerOptions()
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
+val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
