@@ -72,9 +72,8 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium contrôle les navigateurs Web Selenium est beaucoup de choses, mais à la base, c&amp;rsquo;est un ensemble d&amp;rsquo;outils pour l&amp;rsquo;automatisation du navigateur Web qui utilise les meilleures techniques disponibles pour contrôler à distance les instances du navigateur et émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur avec le navigateur.
+Il permet aux utilisateurs de simuler les activités courantes effectuées par les utilisateurs finaux; saisir du texte dans les champs, sélectionner des valeurs déroulantes et cocher des cases, et cliquer sur les liens dans les documents.</description>
     </item>
     
     <item>
