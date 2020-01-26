@@ -110,7 +110,7 @@ aussi et rendre la communication entre les parties plus fluide.
 
 Un ensemble d'outils est actuellement disponible
 écrire les spécifications et les associer aux fonctions de code,
-tels que **_Concombre_** ou **_SpecFlow._ **
+tels que **_Concombre_** ou **_SpecFlow._**
 
 Un ensemble d'outils est construit sur Selenium pour rendre ce processus
 encore plus rapide en transformant directement les spécifications BDD en
