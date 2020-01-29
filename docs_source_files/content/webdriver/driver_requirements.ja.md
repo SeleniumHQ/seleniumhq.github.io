@@ -270,7 +270,10 @@ new FirefoxDriver("/path/to/geckodriver");
 Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const firefox = require('selenium-webdriver/firefox');
+
+const options = new firefox.Options();
+options.setBinary("/path/to/geckodriver");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
