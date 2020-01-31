@@ -19,12 +19,12 @@ il est non intrusif par nature. Ainsi vous testez exactement l'application qui s
 ## IDE
 
 _[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment) 
-is the tool you use to develop your Selenium test cases. It’s an easy-to-use Chrome 
-and Firefox extension and is generally the most efficient way to develop 
-test cases. It records the users actions in the browser for you, using 
-existing Selenium commands, with parameters defined by the context of 
-that element. This is not only a time-saver, but also an excellent way 
-of learning Selenium script syntax.
+est l'outil que vous utilisez pour développer vos cas de test Selenium. Il s'agit d'un Chrome facile à utiliser
+et l'extension Firefox et est généralement le moyen le plus efficace de développer
+cas de test. Il enregistre pour vous les actions des utilisateurs dans le navigateur, en utilisant
+commandes Selenium existantes, avec des paramètres définis par le contexte de
+cet élément. Ce n'est pas seulement un gain de temps, mais aussi un excellent moyen
+d'apprentissage de la syntaxe du script Selenium.
 
 
 ## Grid
