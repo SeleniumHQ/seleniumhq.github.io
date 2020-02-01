@@ -5,7 +5,7 @@ weight: 4
 
 WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器做什么的进程外库，而且web平台本质上是异步的，所以WebDriver不跟踪DOM的实时活动状态。这伴随着一些我们将在这里讨论的挑战。
 
-根根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的竞争情况有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 **no such element**的错误。 
+根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 _竞争条件_ 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 **no such element** 的错误。 
 
 考虑下面的文档：
 
@@ -25,7 +25,7 @@ WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器�
 </script>
 ```
 
-TWebDriver的说明可能看起来很简单:
+这个  WebDriver的说明可能看起来很简单:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -70,28 +70,21 @@ assert(element.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-这里的问题是WebDriver中使用的默认页面加载策略
-[页面加载策略]({{< ref "/webdriver/page_loading_strategy.zh-cn.md" >}})听从`document.readyState`在返回调用_navigate_之前将状态改为`"complete"` 。因为`p`元素是在文档完成加载_之后_添加的，所以这个WebDriver脚本_可能_是间歇性的。它“可能”间歇性是因为无法做出保证说异步触发这些元素或事件不需要显式等待或阻塞这些事件。
+这里的问题是WebDriver中使用的默认页面加载策略[页面加载策略]({{< ref "/webdriver/page_loading_strategy.zh-cn.md" >}})听从`document.readyState`在返回调用 _navigate_ 之前将状态改为`"complete"` 。因为`p`元素是在文档完成加载之后添加的，所以这个WebDriver脚本可能是间歇性的。它“可能”间歇性是因为无法做出保证说异步触发这些元素或事件不需要显式等待或阻塞这些事件。
 
-幸运的是，[_WebElement_]({{< ref "/webdriver/web_element.zh-cn.md" >}})接口上可用的正常指令集——例如_WebElement.click_和_WebElement.sendKeys_—是保证同步的，因为直到命令在浏览器中被完成之前函数调用是不会返回的(或者回调是不会在回调形式的语言中触发的)。高级用户交互APIs,[_键盘_]({{< ref "/webdriver/keyboard.zh-cn.md" >}})和[_鼠标_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.zh-cn.md" >}})是例外的，因为它们被明确地设计为“按我说的做”的异步命令。
+幸运的是，[_WebElement_]({{< ref "/webdriver/web_element.zh-cn.md" >}})接口上可用的正常指令集——例如 _WebElement.click_ 和 _WebElement.sendKeys_—是保证同步的，因为直到命令在浏览器中被完成之前函数调用是不会返回的(或者回调是不会在回调形式的语言中触发的)。高级用户交互APIs,[_键盘_]({{< ref "/webdriver/keyboard.zh-cn.md" >}})和[_鼠标_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.zh-cn.md" >}})是例外的，因为它们被明确地设计为“按我说的做”的异步命令。
 
 等待是在继续下一步之前会执行一个自动化任务来消耗一定的时间。
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
-为了克服浏览器和WebDriver脚本之间的竞争问题，大多数Selenium客户都附带了一个_等待_包。在使用等待时，您使用的是通常所说的[_显式等待_](#explicit-wait)。
+为了克服浏览器和WebDriver脚本之间的竞争问题，大多数Selenium客户都附带了一个 _wait_ 包。在使用等待时，您使用的是通常所说的[_显式等待_](#explicit-wait)。
 
 ## 显式等待
 
-_显示等待_ 是Selenium客户可以使用的命令式过程语言。它们允许您的代码暂停程序执行，或冻结线程，直到满足通过的_条件_。这个条件会以一定的频率一直被调用，直到等待超时。这意味着只要条件返回一个假值，它就会一直尝试和等待
+_显示等待_ 是Selenium客户可以使用的命令式过程语言。它们允许您的代码暂停程序执行，或冻结线程，直到满足通过的 _条件_ 。这个条件会以一定的频率一直被调用，直到等待超时。这意味着只要条件返回一个假值，它就会一直尝试和等待
 
 由于显式等待允许您等待条件的发生，所以它们非常适合在浏览器及其DOM和WebDriver脚本之间同步状态。
 
-为了弥补我们之前的错误指令集，我们可以使用等待来让_findElement_调用等待直到脚本中动态添加的元素被添加到DOM中:
+为了弥补我们之前的错误指令集，我们可以使用等待来让 _findElement_ 调用等待直到脚本中动态添加的元素被添加到DOM中:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -162,9 +155,9 @@ println(firstResult.text)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-我们将_条件_作为函数引用传递，_等待_将会重复运行直到其返回值为true。“truthful”返回值是在当前语言中计算为boolean true的任何值，例如字符串、数字、boolean、对象(包括_WebElement_)或填充(非空)的序列或列表。这意味着_空列表_的计算结果为false。当条件为true且阻塞等待终止时，条件的返回值将成为等待的返回值。
+我们将 _条件_ 作为函数引用传递， _等待_ 将会重复运行直到其返回值为true。“truthful”返回值是在当前语言中计算为boolean true的任何值，例如字符串、数字、boolean、对象(包括 _WebElement_ )或填充(非空)的序列或列表。这意味着 _空列表_ 的计算结果为false。当条件为true且阻塞等待终止时，条件的返回值将成为等待的返回值。
 
-有了这些知识，并且因为等待实用程序默认情况下会忽略_no such element_的错误，所以我们可以重构我们的指令使其更简洁:
+有了这些知识，并且因为等待实用程序默认情况下会忽略 _no such element_ 的错误，所以我们可以重构我们的指令使其更简洁:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -207,11 +200,11 @@ assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-在这个示例中，我们传递了一个匿名函数(但是我们也可以像前面那样显式地定义它，以便重用它)。传递给我们条件的第一个也是惟一一个参数始终是对驱动程序对象_WebDriver_的引用(在本例中称为`d`)。在多线程环境中，您应该小心操作传入条件的驱动程序引用，而不是外部范围中对驱动程序的引用。
+在这个示例中，我们传递了一个匿名函数(但是我们也可以像前面那样显式地定义它，以便重用它)。传递给我们条件的第一个，也是唯一的一个参数始终是对驱动程序对象 _WebDriver_ 的引用(在本例中称为`d`)。在多线程环境中，您应该小心操作传入条件的驱动程序引用，而不是外部范围中对驱动程序的引用。
 
-因为等待将会吞没在没有找到元素时引发的_no such element_的错误，这个条件会一直重试直到找到元素为止。然后它将获取返回值，一个_WebElement_，并将其传递回我们的脚本。
+因为等待将会吞没在没有找到元素时引发的 _no such element_ 的错误，这个条件会一直重试直到找到元素为止。然后它将获取一个 _WebElement_ 的返回值，并将其传递回我们的脚本。
 
-如果条件失败，例如从未得到条件为真实的返回值，等待将会抛出/引发一个叫_超时错误_的错误/异常。
+如果条件失败，例如从未得到条件为真实的返回值，等待将会抛出/引发一个叫 _timeout error_ 的错误/异常。
 
 ### 选项
 
@@ -243,7 +236,7 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
 
 ### 预期的条件
 
-由于必须同步DOM和指令是相当常见的情况，所以大多数客户端还附带一组预定义的_预期条件_。顾名思义，它们是为频繁等待操作预定义的条件。
+由于必须同步DOM和指令是相当常见的情况，所以大多数客户端还附带一组预定义的 _预期条件_ 。顾名思义，它们是为频繁等待操作预定义的条件。
 
 不同的语言绑定提供的条件各不相同，但这只是其中一些:
 
@@ -265,7 +258,7 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
 
 ## 隐式等待
 
-还有第二种区别于[显示等待](#explicit-wait) 类型的_隐式等待_。通过隐式等待，WebDriver在试图查找_任何_元素时在一定时间内轮询DOM。当网页上的某些元素不是立即可用并且需要一些时间来加载时是很有用的。
+还有第二种区别于[显示等待](#explicit-wait) 类型的 _隐式等待_ 。通过隐式等待，WebDriver在试图查找_任何_元素时在一定时间内轮询DOM。当网页上的某些元素不是立即可用并且需要一些时间来加载时是很有用的。
 
 默认情况下隐式等待元素出现是禁用的，它需要在单个会话的基础上手动启用。将[显式等待](#explicit-wait)和隐式等待混合在一起会导致意想不到的结果，就是说即使元素可用或条件为真也要等待睡眠的最长时间。
 
@@ -330,7 +323,7 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
 
 流畅等待实例定义了等待条件的最大时间量，以及检查条件的频率。
 
-户可以配置等待来忽略等待时出现的特定类型的异常，例如在页面上搜索元素时出现的`NoSuchElementException`。
+用户可以配置等待来忽略等待时出现的特定类型的异常，例如在页面上搜索元素时出现的`NoSuchElementException`。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
