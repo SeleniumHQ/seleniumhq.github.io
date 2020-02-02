@@ -116,7 +116,9 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
 WebDriver driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
+options = webdriver.IeOptions
+options.file_upload_dialog_timeout(2000)
+driver = webdriver.Ie(ie_driver_path, options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var options = new InternetExplorerOptions();
@@ -124,7 +126,9 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
 var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+options = Selenium::WebDriver::IE::Options.new
+options.file_upload_dialog_timeout = 2000
+driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
