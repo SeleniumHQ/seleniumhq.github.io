@@ -208,7 +208,7 @@ To become a TLC member:
 * Have given good feedback on others' submissions and displayed an overall understanding
 of the code quality standards for the project.
 * Commit to being a part of the community for the long-term.
-* Have submitted a minimum of 20 qualifying pull requests.
+* Have submitted a minimum of 20 qualifying pull requests or pushed a minimum of 20 qualifying commits across the different projects (IDE, Docker-Selenium, Selenium, Site & Docs).
 
 A Committer is invited to become a TLC member by existing TLC members. A nomination
 will result in discussion and then a decision by the TLC.
