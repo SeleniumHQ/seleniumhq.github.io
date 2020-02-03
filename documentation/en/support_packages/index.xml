@@ -42,13 +42,14 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
+      <title>Mouse actions in detail</title>
       <link>https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
+      <description>Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>
