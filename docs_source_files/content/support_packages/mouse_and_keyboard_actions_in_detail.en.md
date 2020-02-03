@@ -1,155 +1,632 @@
 ---
-title: "Mouse and keyboard actions in detail"
+title: "Mouse actions in detail"
 weight: 4
 ---
 
-Suppose you have an arbitrary web element **e:**
+Mouse represents a mouse event. Mouse actions are performed 
+by using low-level interface which allows us to 
+provide virtualized device input action to the web browser.
+
+## clickAndHold
+
+It will move to the element and clicks (without releasing) in the middle of the given element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement e = driver.findElement(By.id("testElement"));
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-e = driver.find_element_by_id("testElement")
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-IWebElement e = driver.FindElement(By.Id("testElement"));
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-val element = driver.findElement(By.id("testElement"))
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
-You can simulate mouse clicking on e if it is visible and has a height and width
-that are greater than 0:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-e.click();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-e.click()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-e.Click();
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-e.click()
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
-Moreover, it is possible to mimic hovering of the cursor over **e**. In order
-to do so, you will need the following import statement:
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+
+public class clickAndHold {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+
+      // Store 'google search' button web element
+      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      Actions actionProvider = new Actions(driver);
+      // Perform click-and-hold action on the element
+      actionProvider.clickAndHold(searchBtn).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-from selenium.webdriver import ActionChains
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform click-and-hold action on the element
+webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-using OpenQA.Selenium.Interactions;
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+        // Store 'google search' button web element
+        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        val actionProvider = Actions(driver)
+        // Perform click-and-hold action on the element
+        actionProvider.clickAndHold(searchBtn).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-With this statement in place, you can now move over the element in question:
+## contextClick
+This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-Actions actions = new Actions(driver);
-actions.moveToElement(e);
-actions.perform();
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class contextClick {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+
+      // Store 'google search' button web element
+      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      Actions actionProvider = new Actions(driver);
+      // Perform context-click action on the element
+      actionProvider.contextClick(searchBtn).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-actions = ActionChains(driver)
-actions.move_to_element(e)
-actions.perform()
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform context-click action on the element
+webdriver.ActionChains(driver).context_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
- Actions actions = new Actions(driver);
- actions.MoveToElement(e);
- actions.Perform();
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val actions = Actions(driver)
-actions.moveToElement(e);
-actions.perform();
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+        // Store 'google search' button web element
+        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        val actionProvider = Actions(driver)
+        // Perform context-click action on the element
+        actionProvider.contextClick(searchBtn).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If **e** is an **input** or **textarea** element, the following keyboard 
-actions can be carried out:
-
-* Enter a sequence of characters in e:
+## doubleClick
+It will move to the element and performs a double-click in the middle of the given element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-e.sendKeys("Test");
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class doubleClick {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+
+      // Store 'google search' button web element
+      WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
+      Actions actionProvider = new Actions(driver);
+      // Perform double-click action on the element
+      actionProvider.doubleClick(searchBtn).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-e.send_keys("Test")
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform double-click action on the element
+webdriver.ActionChains(driver).double_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-e.SendKeys("Test");
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-e.sendKeys("Test")
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+        // Store 'google search' button web element
+        val searchBtn = driver.findElement(By.linkText("Sign in"))
+        val actionProvider = Actions(driver)
+        // Perform double-click action on the element
+        actionProvider.doubleClick(searchBtn).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-* Delete the text that is in e (if there is any):
+## moveToElement
+This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-e.clear();
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class moveToElement {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+
+      // Store 'google search' button web element
+      WebElement searchBtn = driver.findElement(By.linkText("Gmail"));
+      Actions actionProvider = new Actions(driver);
+      // Performs mouse move action onto the element
+      actionProvider.moveToElement(searchBtn).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-e.clear()
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Gmail")
+
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_to_element(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-e.Clear();
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+# Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-e.clear()
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+        // Store 'google search' button web element
+        val searchBtn = driver.findElement(By.linkText("Gmail"))
+        val actionProvider = Actions(driver)
+        // Performs mouse move action onto the element
+        actionProvider.moveToElement(searchBtn).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## moveByOffset:
+
+This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class moveByOffset {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://google.com");
+
+      // Store 'google search' button web element
+      WebElement searchBtn = driver.findElement(By.linkText("Gmail"));
+      // Capture x and y offset positions of element
+      int xOffset = searchBtn.getRect().getX();
+      int yOffset = searchBtn.getRect().getY();
+      Actions actionProvider = new Actions(driver);
+      // Performs mouse move action onto the offset position
+      actionProvider.moveByOffset(xOffset, yOffset).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Gmail")
+#Set x and y offset positions of element
+xOffset = 100
+yOffset = 100
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
+        // Store 'google search' button web element
+        val searchBtn = driver.findElement(By.linkText("Gmail"))
+        // Capture x and y offset positions of element
+        val xOffset = searchBtn.rect.getX()
+        val yOffset = searchBtn.rect.getY()
+        val actionProvider = Actions(driver)
+        // Performs mouse move action onto the element
+        actionProvider.moveByOffset(xOffset, yOffset).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## dragAndDrop
+
+This method firstly performs a click-and-hold on the source element, 
+moves to the location of the target element and then releases the mouse.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class dragAndDrop {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
+      // Store 'box A' as source element
+      WebElement sourceEle = driver.findElement(By.id("draggable"));
+      // Store 'box B' as source element
+      WebElement targetEle = driver.findElement(By.id("droppable"));
+      Actions actionProvider = new Actions(driver);
+      // Performs drag and drop action of sourceEle onto the targetEle
+      actionProvider.dragAndDrop(sourceEle, targetEle).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+# Performs drag and drop action of sourceEle onto the targetEle
+webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+        // Store 'box A' as source element
+        val sourceEle = driver.findElement(By.id("draggable"))
+        // Store 'box B' as source element
+        val targetEle = driver.findElement(By.id("droppable"))
+        val actionProvider = Actions(driver)
+        // Performs drag and drop action of sourceEle onto the targetEle
+        actionProvider.dragAndDrop(sourceEle, targetEle).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## dragAndDropBy
+
+This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class dragAndDropBy {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
+      // Store 'box A' as source element
+      WebElement sourceEle = driver.findElement(By.id("draggable"));
+      // Store 'box B' as source element
+      WebElement targetEle = driver.findElement(By.id("droppable"));
+      int targetEleXOffset = targetEle.getLocation().getX();
+      int targetEleYOffset = targetEle.getLocation().getY();
+      Actions actionProvider = new Actions(driver);
+      // Performs dragAndDropBy onto the  target element offset position
+      actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+targetEleXOffset = targetEle.location.get("x")
+targetEleYOffset = targetEle.location.get("y")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+        // Store 'box A' as source element
+        val sourceEle = driver.findElement(By.id("draggable"))
+        // Store 'box B' as source element
+        val targetEle = driver.findElement(By.id("droppable"))
+        val targetEleXOffset = targetEle.location.getX()
+        val targetEleYOffset = targetEle.location.getY()
+        val actionProvider = Actions(driver)
+        // Performs dragAndDropBy onto the  target element offset position
+        actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform()
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## release
+
+This action releases the depressed left mouse button. If WebElement is passed, 
+it will release depressed left mouse button on the given WebElement
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class release {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
+      // Store 'box A' as source element
+      WebElement sourceEle = driver.findElement(By.id("draggable"));
+      // Store 'box B' as source element
+      WebElement targetEle = driver.findElement(By.id("droppable"));
+      Actions actionProvider = new Actions(driver);
+      actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform();
+      // Performs release event
+      actionProvider.release().build().perform();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
+#Performs release event
+webdriver.ActionChains(driver).release().perform()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.interactions.Actions
+
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+        // Store 'box A' as source element
+        val sourceEle = driver.findElement(By.id("draggable"))
+        // Store 'box B' as source element
+        val targetEle = driver.findElement(By.id("droppable"))
+        val actionProvider = Actions(driver)
+        actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform()
+        // Performs release event
+        actionProvider.release().build().perform()
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
