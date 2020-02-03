@@ -44,7 +44,17 @@ public class clickAndHold {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform click-and-hold action on the element
+webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -107,7 +117,17 @@ public class contextClick {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform context-click action on the element
+webdriver.ActionChains(driver).context_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -170,7 +190,17 @@ public class doubleClick {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform double-click action on the element
+webdriver.ActionChains(driver).double_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -233,7 +263,17 @@ public class moveToElement {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Gmail")
+
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_to_element(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -300,7 +340,19 @@ public class moveByOffset {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Gmail")
+#Set x and y offset positions of element
+xOffset = 100
+yOffset = 100
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -369,7 +421,18 @@ public class dragAndDrop {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+# Performs drag and drop action of sourceEle onto the targetEle
+webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -438,7 +501,21 @@ public class dragAndDropBy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+targetEleXOffset = targetEle.location.get("x")
+targetEleYOffset = targetEle.location.get("y")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
@@ -509,7 +586,21 @@ public class release {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
+#Performs release event
+webdriver.ActionChains(driver).release().perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
