@@ -174,7 +174,7 @@ The TLC has final authority over this project including:
 * Repository hosting
 * Contribution policy (shared with the PLC)
 
-TSC seats are not time-limited. There is no fixed size of the TLC. The TLC
+TLC seats are not time-limited. There is no fixed size of the TLC. The TLC
 should be of such a size as to ensure adequate coverage of important areas
 of expertise balanced with the ability to make decisions efficiently.
 
