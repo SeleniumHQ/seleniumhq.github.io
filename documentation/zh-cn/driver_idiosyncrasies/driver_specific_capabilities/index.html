@@ -11,20 +11,20 @@
     <title>Driver specific capabilities :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1580238005" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1580238005" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1580659491" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1580659491" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1580238005" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1580659491" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1580238005"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1580659491"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1580238005"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1580238005"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1580659491"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1580659491"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1580238005"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1580659491"></script>
 
     
   </div>
@@ -540,9 +540,9 @@
  
   
     
-      <li data-nav-id="/webdriver/waits/" title="Waits" class="dd-item ">
+      <li data-nav-id="/webdriver/waits/" title="等待" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/webdriver/waits/">
-        Waits
+        等待
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2297,7 +2297,9 @@ WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions
+options<span style="color:#719e07">.</span>file_upload_dialog_timeout(<span style="color:#2aa198">2000</span>)
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(ie_driver_path, options<span style="color:#719e07">=</span>options)
   </code></pre></div>
 </section>
   
@@ -2351,7 +2353,7 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver specific capabilities”
-    </a> was last updated on: 29 Jan 2020 00:19:32 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/7d007b974d86e3bafeb82f10649d3abb4d7e46cb">Add: Ruby sample code for file_upload_dialog_timeout  capability (IE) (#191) [deploy site] (7d007b974)</a>
+    </a> was last updated on: 01 Feb 2020 00:32:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3b2bfd750022a57aadfff7e6378b20f0d310e40e">Add : Added code sample for file_upload_dialog_timeout (IE) (#195) (3b2bfd750)</a>
 </h5>
         
         </div> 
@@ -3548,19 +3550,19 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1580238005"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1580659491"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1580238005"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1580238005"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1580659491"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1580659491"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1580238005" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1580238005"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1580659491" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1580659491"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
