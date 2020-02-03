@@ -195,7 +195,22 @@ public class doubleClick {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+const {Builder, By} = require('selenium-webdriver');
+
+(async function doubleClick() {
+  let driver = await new Builder().forBrowser('chrome').build();
+  try {
+    // Navigate to Url
+    await driver.get('https://www.google.com');
+    // Store 'google search' button web element
+    let searchBtn = driver.findElement(By.linkText("Sign in"));
+    // Perform double-click action on the element
+    await driver.actions().doubleClick(searchBtn).perform();
+  }
+  finally {
+    await driver.quit();
+  }
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
@@ -237,11 +252,11 @@ public class moveToElement {
       // Navigate to Url
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
-      WebElement searchBtn = driver.findElement(By.linkText("Gmail"));
+      // Store 'Gmail' anchor web element
+      WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
       Actions actionProvider = new Actions(driver);
       // Performs mouse move action onto the element
-      actionProvider.moveToElement(searchBtn).build().perform();
+      actionProvider.moveToElement(gmailLink).build().perform();
     } finally {
       driver.quit();
     }
@@ -258,7 +273,22 @@ public class moveToElement {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+const {Builder, By} = require('selenium-webdriver');
+
+(async function doubleClick() {
+  let driver = await new Builder().forBrowser('chrome').build();
+  try {
+    // Navigate to Url
+    await driver.get('https://www.google.com');
+    // Store 'Gmail' anchor web element
+    let gmailLink = driver.findElement(By.linkText("Gmail"));
+    // Performs mouse move action onto the element
+    await driver.actions().mouseMove(gmailLink).perform();
+  }
+  finally {
+    await driver.quit();
+  }
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
@@ -270,11 +300,11 @@ fun main() {
     try {
         // Navigate to Url
         driver.get("https://google.com")
-        // Store 'google search' button web element
-        val searchBtn = driver.findElement(By.linkText("Gmail"))
+        // Store 'Gmail' anchor web element
+        val gmailLink = driver.findElement(By.linkText("Gmail"))
         val actionProvider = Actions(driver)
         // Performs mouse move action onto the element
-        actionProvider.moveToElement(searchBtn).build().perform()
+        actionProvider.moveToElement(gmailLink).build().perform()
     } finally {
         driver.quit()
     }
