@@ -60,10 +60,9 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+      <description>Vous devez d&amp;rsquo;abord installer les fixations Selenium pour votre projet d&amp;rsquo;automatisation. Le processus d&amp;rsquo;installation des bibliothèques dépend de la langue que vous choisissez d&amp;rsquo;utiliser.
+Java L&amp;rsquo;installation des bibliothèques Selenium pour Java peut être effectuée à l&amp;rsquo;aide de Maven. Ajoutez la dépendance selenium-java dans votre projet pom.xml:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dépendance selenium-java prend en charge l&amp;rsquo;exécution de votre automatisation projet avec tous les navigateurs pris en charge par Selenium.</description>
     </item>
     
     <item>
