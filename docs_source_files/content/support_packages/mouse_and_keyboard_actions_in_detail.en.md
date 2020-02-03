@@ -47,7 +47,22 @@ public class clickAndHold {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+const {Builder, By} = require('selenium-webdriver');
+
+(async function clickAndHold() {
+  let driver = await new Builder().forBrowser('chrome').build();
+  try {
+    // Navigate to Url
+    await driver.get('https://www.google.com');
+    // Store 'google search' button web element
+    let searchBtn = driver.findElement(By.linkText("Sign in"));
+    // Perform mouseMove to element and mouseDown (click and hold) action on the element
+    await driver.actions().mouseMove(searchBtn).mouseDown(searchBtn).perform();
+  }
+  finally {
+    await driver.quit();
+  }
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
