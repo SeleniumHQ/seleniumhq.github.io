@@ -1,16 +1,11 @@
 ---
-title: "Installing Selenium libraries"
+title: "Selenium 라이브러리 설치"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.
+당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다.
+당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
 
 ## _Java_
 Maven을 사용한 Java용 Selenium 라이브러리 설치입니다.
