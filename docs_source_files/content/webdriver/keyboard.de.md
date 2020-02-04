@@ -367,3 +367,64 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## clear
+Clears the content of an editable element. 
+This is only applied for the elements which is editable and interactable, 
+otherwise selenium returns the error (invalid element state (or) Element not interactable)
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class clear {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://www.google.com");
+      // Store 'SearchInput' element
+      WebElement searchInput = driver.findElement(By.name("q"));
+      searchInput.sendKeys("selenium");
+      // Clears the entered text
+      searchInput.clear();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://www.google.com")
+        // Store 'searchInput' element
+        val searchInput = driver.findElement(By.name("q"))
+        searchInput.sendKeys("selenium")
+        // Clears the entered text
+        searchInput.clear()
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
