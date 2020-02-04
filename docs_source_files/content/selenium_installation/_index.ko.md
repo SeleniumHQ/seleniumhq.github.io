@@ -10,6 +10,5 @@ English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Selenium Installation
-
-Selenium setup is quite different from the setup of other commercial tools. To use Selenium in your automation project you need to install the language bindings libraries for your language of choice. In addition you will need WebDriver binaries for the browsers you want to automate and run test on. 
+# Selenium 설치
+Selenium 설치는 다른 상용도구들과는 꽤 다릅니다. Selenium을 자동화 프로젝트에 사용하기 위해서는 당신이 선택한 언어로 바인딩된 라이브러리 설치가 필요합니다. 자동화와 테스트를 실행할 브라우저를 위한 웹드라이버 바이너리가 추가적으로 필요합니다.
