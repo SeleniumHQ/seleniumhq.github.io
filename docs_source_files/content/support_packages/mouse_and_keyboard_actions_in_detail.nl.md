@@ -44,10 +44,47 @@ public class clickAndHold {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform click-and-hold action on the element
+webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class ClickAndHold
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://google.com");
+        // Store 'google search' button web element
+        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        Actions actionProvider = new Actions(driver);
+        // Perform click-and-hold action on the element
+        actionProvider.ClickAndHold(searchBtn).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -123,10 +160,47 @@ public class contextClick {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform context-click action on the element
+webdriver.ActionChains(driver).context_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class ContextClick
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://google.com");
+        // Store 'google search' button web element
+        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        Actions actionProvider = new Actions(driver);
+        // Perform context-click action on the element
+        actionProvider.ContextClick(searchBtn).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -202,10 +276,47 @@ public class doubleClick {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+searchBtn = driver.find_element_by_link_text("Sign in")
+
+# Perform double-click action on the element
+webdriver.ActionChains(driver).double_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class DoubleClick
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://google.com");
+        // Store 'google search' button web element
+        IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
+        Actions actionProvider = new Actions(driver);
+        // Perform double-click action on the element
+        actionProvider.DoubleClick(searchBtn).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -281,10 +392,47 @@ public class moveToElement {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+gmailLink = driver.find_element_by_link_text("Gmail")
+
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_to_element(gmailLink).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class MoveToElement
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://google.com");
+        // Store 'google search' button web element
+        IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
+        Actions actionProvider = new Actions(driver);
+        // Performs mouse move action onto the element
+        actionProvider.MoveToElement(gmailLink).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -364,10 +512,52 @@ public class moveByOffset {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+# Store 'google search' button web element
+gmailLink = driver.find_element_by_link_text("Gmail")
+#Set x and y offset positions of element
+xOffset = 100
+yOffset = 100
+# Performs mouse move action onto the element
+webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class MoveByOffset
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://google.com");
+        // Store 'google search' button web element
+        IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
+        // Set x and y offset positions of element
+        int xOffset = 100;
+        int yOffset = 100;
+        Actions actionProvider = new Actions(driver);
+        // Performs mouse move action onto the offset position
+        actionProvider.MoveByOffset(xOffset, yOffset).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -453,10 +643,50 @@ public class dragAndDrop {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+# Performs drag and drop action of sourceEle onto the targetEle
+webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class DragAndDrop
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
+        // Store 'box A' as source element
+        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
+        // Store 'box B' as source element
+        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
+        Actions actionProvider = new Actions(driver);
+        // Performs drag and drop action of sourceEle onto the targetEle
+        actionProvider.DragAndDrop(sourceEle, targetEle).Build().Perform();
+      }
+      finally
+      {
+          driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -540,10 +770,55 @@ public class dragAndDropBy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+targetEleXOffset = targetEle.location.get("x")
+targetEleYOffset = targetEle.location.get("y")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class DragAndDropToOffset
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
+        // Store 'box A' as source element
+        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
+        // Store 'box B' as source element
+        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
+        int targetEleXOffset = targetEle.Location.X;
+        int targetEleYOffset = targetEle.Location.Y;
+        Actions actionProvider = new Actions(driver);
+        // Performs drag and drop action of sourceEle onto the targetEle
+        actionProvider.DragAndDropToOffset(sourceEle, targetEleXOffset, targetEleYOffset).Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -632,10 +907,54 @@ public class release {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
+
+# Store 'box A' as source element
+sourceEle = driver.find_element_by_id("draggable")
+# Store 'box B' as source element
+targetEle  = driver.find_element_by_id("droppable")
+
+# Performs dragAndDropBy onto the target element offset position
+webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
+#Performs release event
+webdriver.ActionChains(driver).release().perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace SeleniumApp
+{
+  public class Release
+  {
+    public static void Main(string[] agrs)
+    {
+      IWebDriver driver = new ChromeDriver();
+      try
+      {
+        // Navigate to Url
+        driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
+        // Store 'box A' as source element
+        IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
+        // Store 'box B' as source element
+        IWebElement targetEle = driver.FindElement(By.Id("droppable"));
+        Actions actionProvider = new Actions(driver);
+        actionProvider.ClickAndHold(sourceEle).MoveToElement(targetEle).Build().Perform();
+        // Performs release event              
+        actionProvider.Release().Build().Perform();
+      }
+      finally
+      {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
