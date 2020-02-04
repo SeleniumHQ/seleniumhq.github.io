@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/de/images/favicon.png" type="image/png">
 
-    <title>Maus- und Keyboardaktionen im Detail :: Dokumentation für Selenium</title>
+    <title>Mausaktionen im Detail :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1580834128" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1580834128" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1580835316" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1580835316" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1580834128" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1580835316" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1580834128"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1580835316"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1580834128"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1580834128"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1580835316"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1580835316"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1580834128"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1580835316"></script>
 
     
   </div>
@@ -1390,9 +1390,9 @@
  
   
     
-      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Maus- und Keyboardaktionen im Detail" class="dd-item active">
+      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mausaktionen im Detail" class="dd-item active">
         <a href="https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/">
-        Maus- und Keyboardaktionen im Detail
+        Mausaktionen im Detail
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1945,7 +1945,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/de/'>Das Selenium Browser Automations Projekt</a> > <a href='https://selenium.dev/documentation/de/support_packages/'>Support packages</a> > Maus- und Keyboardaktionen im Detail
+            <a href='https://selenium.dev/documentation/de/'>Das Selenium Browser Automations Projekt</a> > <a href='https://selenium.dev/documentation/de/support_packages/'>Support packages</a> > Mausaktionen im Detail
           
          
           
@@ -1988,7 +1988,7 @@
           
             <h1>
               
-              Maus- und Keyboardaktionen im Detail
+              Mausaktionen im Detail
             </h1>
           
 
@@ -2146,8 +2146,24 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> clickAndHold() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    <span style="color:#586e75">// Store &#39;google search&#39; button web element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> searchBtn <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Sign in&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Perform mouseMove to element and mouseDown (press) action on the element
+</span><span style="color:#586e75"></span>    await actions.move({origin<span style="color:#719e07">:</span>searchBtn}).press().perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2315,8 +2331,24 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> contextClick() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    <span style="color:#586e75">// Store &#39;google search&#39; button web element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> searchBtn <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Sign in&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Perform context-click action on the element
+</span><span style="color:#586e75"></span>    await actions.contextClick(searchBtn).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2484,8 +2516,24 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> doubleClick() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    <span style="color:#586e75">// Store &#39;google search&#39; button web element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> searchBtn <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Sign in&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Perform double-click action on the element
+</span><span style="color:#586e75"></span>    await actions.doubleClick(searchBtn).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2574,11 +2622,11 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
       <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>      driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
 
-      <span style="color:#586e75">// Store &#39;google search&#39; button web element
-</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">searchBtn</span> <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
+      <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">gmailLink</span> <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
       Actions <span style="color:#268bd2">actionProvider</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
       <span style="color:#586e75">// Performs mouse move action onto the element
-</span><span style="color:#586e75"></span>      actionProvider.moveToElement(searchBtn).build().perform();
+</span><span style="color:#586e75"></span>      actionProvider.moveToElement(gmailLink).build().perform();
     } <span style="color:#719e07">finally</span> {
       driver.quit();
     }
@@ -2653,8 +2701,24 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> moveToElement() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> gmailLink <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Performs mouse move action onto the element
+</span><span style="color:#586e75"></span>    await actions.move({origin<span style="color:#719e07">:</span>gmailLink}).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2671,11 +2735,11 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
     <span style="color:#719e07">try</span> {
         <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-        <span style="color:#586e75">// Store &#39;google search&#39; button web element
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> searchBtn = driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>))
+        <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> gmailLink = driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>))
         <span style="color:#719e07">val</span> actionProvider = Actions(driver)
         <span style="color:#586e75">// Performs mouse move action onto the element
-</span><span style="color:#586e75"></span>        actionProvider.moveToElement(searchBtn).build().perform()
+</span><span style="color:#586e75"></span>        actionProvider.moveToElement(gmailLink).build().perform()
     } <span style="color:#719e07">finally</span> {
         driver.quit()
     }
@@ -2743,11 +2807,11 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
       <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>      driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
 
-      <span style="color:#586e75">// Store &#39;google search&#39; button web element
-</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">searchBtn</span> <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
+      <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">gmailLink</span> <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
       <span style="color:#586e75">// Capture x and y offset positions of element
-</span><span style="color:#586e75"></span>      <span style="color:#dc322f">int</span> <span style="color:#268bd2">xOffset</span> <span style="color:#719e07">=</span> searchBtn.getRect().getX();
-      <span style="color:#dc322f">int</span> <span style="color:#268bd2">yOffset</span> <span style="color:#719e07">=</span> searchBtn.getRect().getY();
+</span><span style="color:#586e75"></span>      <span style="color:#dc322f">int</span> <span style="color:#268bd2">xOffset</span> <span style="color:#719e07">=</span> gmailLink.getRect().getX();
+      <span style="color:#dc322f">int</span> <span style="color:#268bd2">yOffset</span> <span style="color:#719e07">=</span> gmailLink.getRect().getY();
       Actions <span style="color:#268bd2">actionProvider</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
       <span style="color:#586e75">// Performs mouse move action onto the offset position
 </span><span style="color:#586e75"></span>      actionProvider.moveByOffset(xOffset, yOffset).build().perform();
@@ -2830,8 +2894,28 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> moveByOffset() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> gmailLink <span style="color:#719e07">=</span> driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>));
+    <span style="color:#586e75">// Capture offset positions of element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> offset <span style="color:#719e07">=</span> await gmailLink.getRect();
+    <span style="color:#268bd2">let</span> x <span style="color:#719e07">=</span> await offset.x;
+    <span style="color:#268bd2">let</span> y <span style="color:#719e07">=</span> await offset.y;
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Performs mouse move action onto the element
+</span><span style="color:#586e75"></span>    await actions.move({x<span style="color:#719e07">:</span><span style="color:#b58900">parseInt</span>(x),y<span style="color:#719e07">:</span><span style="color:#b58900">parseInt</span>(y)}).pause(<span style="color:#2aa198">3000</span>).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2848,11 +2932,11 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
     <span style="color:#719e07">try</span> {
         <span style="color:#586e75">// Navigate to Url
 </span><span style="color:#586e75"></span>        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-        <span style="color:#586e75">// Store &#39;google search&#39; button web element
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> searchBtn = driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>))
+        <span style="color:#586e75">// Store &#39;Gmail&#39; anchor web element
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> gmailLink = driver.findElement(By.linkText(<span style="color:#2aa198">&#34;Gmail&#34;</span>))
         <span style="color:#586e75">// Capture x and y offset positions of element
-</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> xOffset = searchBtn.rect.getX()
-        <span style="color:#719e07">val</span> yOffset = searchBtn.rect.getY()
+</span><span style="color:#586e75"></span>        <span style="color:#719e07">val</span> xOffset = gmailLink.rect.getX()
+        <span style="color:#719e07">val</span> yOffset = gmailLink.rect.getY()
         <span style="color:#719e07">val</span> actionProvider = Actions(driver)
         <span style="color:#586e75">// Performs mouse move action onto the element
 </span><span style="color:#586e75"></span>        actionProvider.moveByOffset(xOffset, yOffset).build().perform()
@@ -3007,8 +3091,26 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> dragAndDrop() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>);
+    <span style="color:#586e75">// Store &#39;box A&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> sourceEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;draggable&#34;</span>));
+    <span style="color:#586e75">// Store &#39;box B&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> targetEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;droppable&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Performs drag and drop action of sourceEle onto the targetEle
+</span><span style="color:#586e75"></span>    await actions.dragAndDrop(sourceEle, targetEle).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3189,8 +3291,29 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> dragAndDropBy() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>);
+    <span style="color:#586e75">// Store &#39;box A&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> sourceEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;draggable&#34;</span>));
+    <span style="color:#586e75">// Store &#39;box B&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> targetEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;droppable&#34;</span>));
+    <span style="color:#268bd2">let</span> offset <span style="color:#719e07">=</span> await targetEle.getRect();
+    <span style="color:#268bd2">let</span> x <span style="color:#719e07">=</span> await offset.x;
+    <span style="color:#268bd2">let</span> y <span style="color:#719e07">=</span> await offset.y;
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    <span style="color:#586e75">// Performs dragAndDropBy onto the  target element offset position
+</span><span style="color:#586e75"></span>    await actions.dragAndDrop(sourceEle, {x<span style="color:#719e07">:</span><span style="color:#b58900">parseInt</span>(x), y<span style="color:#719e07">:</span><span style="color:#b58900">parseInt</span>(y)}).perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3372,8 +3495,27 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="javascriptcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> release() {
+  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+  <span style="color:#719e07">try</span> {
+    <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>);
+    <span style="color:#586e75">// Store &#39;box A&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> sourceEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;draggable&#34;</span>));
+    <span style="color:#586e75">// Store &#39;box B&#39; as source element
+</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> targetEle <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;droppable&#34;</span>));
+    <span style="color:#268bd2">const</span> actions <span style="color:#719e07">=</span> driver.actions({async<span style="color:#719e07">:</span> <span style="color:#cb4b16">true</span>});
+    await actions.move({origin<span style="color:#719e07">:</span>sourceEle}).press().perform();
+    <span style="color:#586e75">// Performs release event on target element
+</span><span style="color:#586e75"></span>    await actions.move({origin<span style="color:#719e07">:</span>targetEle}).release().perform();
+  }
+  <span style="color:#719e07">finally</span> {
+    await driver.quit();
+  }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3414,8 +3556,8 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/">
-      “Maus- und Keyboardaktionen im Detail”
-    </a> was last updated on: 04 Feb 2020 21:33:46 &#43;0600: <a href="https://github.com/SeleniumHQ/site/commit/b577bc381f3ddd80089e15845820f8978d61f1e8">Add: Added python and csharp code samples in doc Mouse action in detail  (#203) [deploy site] (b577bc381)</a>
+      “Mausaktionen im Detail”
+    </a> was last updated on: 04 Feb 2020 22:23:47 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/72e980f8e028b36e2314b157a354166955ab82d0">Add: Added JS code samples in doc Mouse action in detail (#202) [deploy site] (72e980f8e)</a>
 </h5>
         
         </div> 
@@ -4612,19 +4754,19 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1580834128"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1580835316"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1580834128"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1580834128"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1580835316"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1580835316"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1580834128" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1580834128"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1580835316" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1580835316"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
