@@ -195,17 +195,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Installing WebDriver binaries</title>
-      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -265,6 +254,16 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
       <guid>https://selenium.dev/documentation/ko/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+    </item>
+    
+    <item>
+      <title>웹드라이버 바이너리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
+당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description>
     </item>
     
     <item>
