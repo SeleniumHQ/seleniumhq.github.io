@@ -265,7 +265,7 @@ not to add those people.
 The PLC has final authority over this project including:
 
 * Project governance and process (including this policy).
-* Contribution policy (shared with the PLC).
+* Contribution policy (shared with the TLC).
 * Budget and legal related issues.
 
 The PLC also should discuss once a month the overall status of the project and any pending or
