@@ -342,7 +342,7 @@ objective to simplify and spread the use of Selenium across the community.
 
 Nevertheless, due to its open source, community and non-profit origin, the Selenium
 project will only mention on its website projects of the same nature based on Selenium
-or WebDriver. If a commercial tool or project wants to be mentioned in the Selenium website,
+or WebDriver, except on the sponsors page. If a commercial tool or project wants to be mentioned in the Selenium website,
 please see the [Sponsorship](#sponsorship) section of this document.      
 
 
