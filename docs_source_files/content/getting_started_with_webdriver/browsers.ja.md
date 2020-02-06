@@ -1,32 +1,27 @@
 ---
-title: "Browsers"
+title: "ブラウザ"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-## Consumer browsers
+## 一般のブラウザ
 
-The Selenium framework officially supports the following browsers:
+Seleniumフレームワークは公式に以下のブラウザをサポートしています。
 
-| Browser | Maintainer | Versions Supported |
+| ブラウザ | メンテナ | サポートバージョン |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | All versions |
-| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 and newer |
-| Internet Explorer | Selenium | 6 and newer |
-| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer |
-| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 and newer |
+| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 全てのバージョン |
+| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 以上 |
+| Internet Explorer | Selenium | 6 以上 |
+| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 以上 |
+| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 以上 |
 
-## Specialised browsers
+## 専用のブラウザ
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
+それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。
+これらのブラウザを自動化の目的で使用することができます。
+Seleniumは次の専用のブラウザをサポートしています。
 
-| Driver Name | Purpose | Maintainer |
+| ドライバー名 | 用途 | メンテナ |
 | -------- | ---------- | ------------------ |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino | Selenium project |
+| HtmlUnitDriver | Rhinoバックエンドのヘッドレスブラウザエミュレーター | Seleniumプロジェクト |

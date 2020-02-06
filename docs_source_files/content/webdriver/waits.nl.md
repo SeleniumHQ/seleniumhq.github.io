@@ -77,7 +77,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 await driver.get('file:///race_condition.html');
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
@@ -107,7 +107,7 @@ the [_WebElement_]({{< ref "/webdriver/web_element.nl.md" >}}) interface—such
  until the command has been completed in the browser.
  The advanced user interaction APIs,
  [_Keyboard_]({{< ref "/webdriver/keyboard.nl.md" >}}) 
- and [_Mouse_]({{< ref "/webdriver/mouse.nl.md" >}}),
+ and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.nl.md" >}}),
  are exceptions as they are explicitly intended as
  “do what I say” asynchronous commands.
 
@@ -149,7 +149,7 @@ WebDriver driver = new ChromeDriver();
 driver.get("https://google.com/ncr");
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-WebElement firstResult = new WebDriverWait(driver, 10)
+WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
         .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 // Print the first result
 System.out.println(firstResult.getText());
@@ -198,14 +198,14 @@ const documentInitialised = () =>
 
 await driver.get('file:///race_condition.html');
 await driver.wait(() => documentInitialised(), 10000);
-const element = await driver.findElement(By.css('p'));
+const element = driver.findElement(By.css('p'));
 assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("https://google.com/ncr")
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-val firstResult = WebDriverWait(driver, 10)
+val firstResult = WebDriverWait(driver, Duration.ofSeconds(10))
       .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
 // Print the first result
 println(firstResult.text)
@@ -228,7 +228,7 @@ we can refactor our instructions to be more concise:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement foo = new WebDriverWait(driver, 3)
+WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
             .until(driver -> driver.findElement(By.name("q")));
 assertEquals(foo.getText(), "Hello from JavaScript!");   
   {{< / code-panel >}}
@@ -236,7 +236,7 @@ assertEquals(foo.getText(), "Hello from JavaScript!");
 from selenium.webdriver.support.ui import WebDriverWait
 
 driver.navigate("file:///race_condition.html")
-el = WebDriverWait(driver).until(lambda d: return d.find_element_by_tag_name("p"))
+el = WebDriverWait(driver).until(lambda d: d.find_element_by_tag_name("p"))
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -247,15 +247,20 @@ assert el.text == "Hello from JavaScript!"
         Debug.Assert(foo.Text.Equals("Hello from JavaScript!"));
     }  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+  driver.get 'file:///race_condition.html'
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  ele = wait.until { driver.find_element(css: 'p')}
+  foo = ele.text
+  assert_match foo, 'Hello from JavaScript' 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-let foo = await driver.findElement(By.name("q")).getText();
+let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
+let foo = await ele.getText();
 assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), 10)
+val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
@@ -291,8 +296,7 @@ The wait lets you pass in an argument to override the timeout:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//new WebDriverWait(driver,3).until(some_condition(WebElement))
-new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 WebDriverWait(driver, timeout=3).until(some_condition)
@@ -300,13 +304,15 @@ WebDriverWait(driver, timeout=3).until(some_condition)
   {{< code-panel language="csharp" >}}
  new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+
+wait.until { driver.find_element(:id, 'message').displayed? } 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
+WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -335,7 +341,7 @@ to find an exhaustive list of expected conditions:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.html) type
+* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
 
 ## Implicit wait
@@ -406,7 +412,7 @@ await driver.manage().setTimeouts( { implicit: 10000 } );
 // Navigate to url
 await driver.get('http://somedomain/url_that_delays_loading');
 
-let webElement = await driver.findElement(By.id("myDynamicElement"));
+let webElement = driver.findElement(By.id("myDynamicElement"));
 
 }());
   {{< / code-panel >}}
@@ -459,10 +465,28 @@ using (var driver = new FirefoxDriver())
   var foo = wait.Until(drv => drv.FindElement(By.Id("foo")));
 }  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+exception = Selenium::WebDriver::Error::NoSuchElementError
+
+begin
+  driver.get 'http://somedomain/url_that_delays_loading'
+  wait = Selenium::WebDriver::Wait.new(timeout: 30, interval: 5, message: 'Timed out after 30 sec', ignore: exception)
+  foo = wait.until { driver.find_element(id: 'foo')}
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const {Builder, until} = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    await driver.get('http://somedomain/url_that_delays_loading');
+    // Waiting 30 seconds for an element to be present on the page, checking
+    // for its presence once every 5 seconds.
+    let foo = await driver.wait(until.elementLocated(By.id('foo')), 30000, 'Timed out after 30 seconds', 5000);
+})(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val wait = FluentWait<WebDriver>(getWebDriver())

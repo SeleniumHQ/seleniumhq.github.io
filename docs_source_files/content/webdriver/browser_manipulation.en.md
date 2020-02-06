@@ -194,6 +194,10 @@ and you know which window you start with, by the process of elimination
 you can loop over both windows or tabs that WebDriver can see, and switch 
 to the one which is not the original.
 
+However, Selenium 4 provides a new api 
+<a href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
+which creates a new tab (or) new window and automatically switches to it.
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 //Store the ID of the original window
@@ -356,6 +360,62 @@ wait.until(titleIs("Selenium documentation"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+### Create new window (or) new tab and switch
+Creates a new window (or) tab and will focus the new window or tab on screen.
+You don't need to switch to work with the new window (or) tab. If you have more than two windows
+(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
+and switch to the one which is not the original.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB);
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW);
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Opens a new tab and switches to new tab
+driver.switch_to.new_window('tab')
+
+# Opens a new window and switches to new window
+driver.switch_to.new_window('window')
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Opens a new tab and switches to new tab
+driver.SwitchTo().NewWindow(WindowType.Tab)
+
+// Opens a new window and switches to new window
+driver.SwitchTo().NewWindow(WindowType.Window)
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Note: The new_window in ruby only opens a new tab (or) Window and will not switch automatically
+# The user has to switch to new tab (or) new window
+
+# Opens a new tab and switches to new tab
+driver.manage.new_window(:tab)
+
+# Opens a new window and switches to new window
+driver.manage.new_window(:window)
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Opens a new tab and switches to new tab
+await driver.switchTo().newWindow('tab');
+
+// Opens a new window and switches to new window
+await driver.switchTo().newWindow('window');
+
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Opens a new tab and switches to new tab
+driver.switchTo().newWindow(WindowType.TAB)
+
+// Opens a new window and switches to new window
+driver.switchTo().newWindow(WindowType.WINDOW)
+  {{< / code-panel >}}
+{{< / code-tab >}}
 
 ### Closing a window or tab
 
@@ -658,7 +718,7 @@ driver.find_element(:tag_name,'button').click
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Store the web element
-const iframe = await driver.findElement(By.css('#modal > iframe'));
+const iframe = driver.findElement(By.css('#modal > iframe'));
 
 // Switch to the frame
 await driver.switchTo().frame(iframe);

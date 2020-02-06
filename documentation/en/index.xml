@@ -47,7 +47,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/</guid>
-      <description>The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+      <description>The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
     </item>
     
@@ -87,7 +87,7 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       
       <guid>https://selenium.dev/documentation/en/getting_started/quick/</guid>
       <description>Selenium is not just one tool or API but it composes many tools.
-WebDriver If you are beginning with desktop website test automation then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive in nature.</description>
+WebDriver If you are beginning with desktop website test automation, then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive.</description>
     </item>
     
     <item>
@@ -128,7 +128,7 @@ RC Components Selenium RC components are:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/introduction/the_selenium_project_and_tools/</guid>
-      <description>Selenium controls web browsers Selenium is many things, but at its core it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+      <description>Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents. It also provides many other controls such as mouse movement, arbitrary JavaScript execution, and much more.</description>
     </item>
     
@@ -178,7 +178,7 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       
       <guid>https://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val options = new FirefoxOptions() options.</description>
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.</description>
     </item>
     
     <item>
@@ -304,7 +304,7 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/selenium_installation/installing_standalone_server/</guid>
-      <description>If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.
+      <description>If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
@@ -315,7 +315,7 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       
       <guid>https://selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/</guid>
       <description>Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = await driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.</description>
     </item>
     
     <item>
@@ -334,7 +334,7 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/introduction/types_of_testing/</guid>
-      <description>Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+      <description>Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
 For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
     </item>
     
@@ -354,7 +354,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/introduction/about_this_documentation/</guid>
-      <description>These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.
+      <description>These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the onboarding experience for new users.
 If there is an issue with the documentation, we want to know! The best way to communicate an issue is to visit https://github.</description>
     </item>
     
@@ -387,13 +387,14 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
+      <title>Mouse actions in detail</title>
       <link>https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
+      <description>Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>
@@ -502,8 +503,9 @@ It may seem ideal to performance test in the context of the user but a suite of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/support_packages/working_with_cookies/</guid>
-      <description>First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.g. http://example.com/some404page)
-Java Python C# Ruby JavaScript Kotlin // Go to the correct domain driver.</description>
+      <description>A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:
+Add Cookie It is used to add a cookie to the current browsing context. Add Cookie only accepts a set of defined serializable JSON object. Here  is the link to the list of accepted JSON key values</description>
     </item>
     
     <item>
@@ -571,8 +573,9 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/en/webdriver/web_element/</guid>
-      <description>WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) search_form = driver.find_element_by_tag_name(&amp;#34;form&amp;#34;) search_box = search_form.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.Url = &amp;#34;http://www.google.com&amp;#34;; IWebElement searchForm = driver.</description>
+      <description>WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
     </item>
     
     <item>
@@ -584,15 +587,6 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
       <description>Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
-    </item>
-    
-    <item>
-      <title>Mouse</title>
-      <link>https://selenium.dev/documentation/en/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/en/webdriver/mouse/</guid>
-      <description></description>
     </item>
     
     <item>

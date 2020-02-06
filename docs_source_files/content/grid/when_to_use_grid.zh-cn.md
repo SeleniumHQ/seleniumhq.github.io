@@ -1,52 +1,26 @@
 ---
-title: "When to use Grid"
+title: "什么时候应该使用服务网格"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+通常来说，有2个原因你需要使用服务网格。
 
+* 在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试
+* 缩短完成测试的时间
 
-Generally speaking, there’s two reasons why you might want to use Grid.
+服务网格通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。
+比如的测试套件里包含100个测试，你的服务网格支持4种不同的终端（虚拟机或者独立的物理设备）
+来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。
+在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。
+一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
 
-* To run your tests against multiple browsers, multiple versions of browser,
-and browsers running on different operating systems.
-* To reduce the time it takes for the test suite to complete a test pass.
+服务网格也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。
+比如，一个由虚拟机组成的服务网格，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。
+比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了，
+Selenium服务网格会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。
+ 
+另外，一个服务网格可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个
+Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进服务网格的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行，
+显著的缩短的整个测试完成的时间。
 
-Grid is used to speed up the execution of a test pass by using
-multiple machines to run tests in parallel. For example, if you have a suite of
-100 tests, but you set up Grid to support 4 different machines (VMs or
-separate physical machines) to run those tests, your test suite will complete
-in (roughly) one-fourth the time as it would if you ran your tests sequentially
-on a single machine. For large test suites, and long-running test suite such as
-those performing large amounts of data-validation, this can be a significant
-time-saver. Some test suites can take hours to run. Another reason to boost the
-time spent running the suite is to shorten the turnaround time for test results
-after developers check-in code for the AUT. Increasingly software teams
-practicing Agile software development want test feedback as immediately as
-possible as opposed to wait overnight for an overnight test pass.
-
-Grid is also used to support running tests against multiple runtime
-environments, specifically, against different browsers at the same time. For
-example, a ‘grid’ of virtual machines can be setup with each supporting a
-different browser that the application to be tested must support. So, machine 1
-has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
-Chrome, and machine 4 the latest Firefox. When the test suite is run,
-Selenium-Grid receives each test-browser combination and assigns each test to
-run against its required browser.
-
-In addition, one can have a grid of all the same browser, type and version. For
-instance, one could have a grid of 4 machines each running 3 instances of
-Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
-instances. When the suite runs, each test is passed to Grid which
-assigns the test to the next available Firefox instance. In this manner one
-gets test pass where conceivably 12 tests are all running at the same time in
-parallel, significantly reducing the time required to complete a test pass.
-
-Grid is very flexible. These two examples can be combined to allow
-multiple instances of each browser type and version. A configuration such as
-this would provide both, parallel execution for fast test pass completion and
-support for multiple browser types and versions simultaneously.
+服务网格是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。

@@ -1,29 +1,18 @@
 ---
-title: "Third party drivers and plugins"
+title: "サードパーティのドライバとプラグイン"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+Seleniumはプラグインを通して拡張することができます。ここにはサードパーティによって作られたいくつかのプラグインがあります。
+独自のプラグインを作成する、またはリストする方法についてはドキュメントを参照してください。
 
-Selenium can be extended through the use of plugins. Here are a number of
-plugins created and maintained by third parties. For more information on how
-to create your own plugin or have it listed, consult the docs.
+これらのプラグインはSeleniumプロジェクトによってサポート、メンテナンス、主催、承認されているものではないことに注意してください。加えて、以下にリストされているプラグインは必ずしもApache License v.2.0によってライセンスされているわけではありません。
+いくつかは他のフリーかつオープンソースのライセンス下で使用可能であり、他のいくつかはプロプライエタリなライセンスの下でのみ使用可能です。プラグインとその配布ライセンスに関するどんな質問も、それぞれの開発者に対して上げる必要があります。
 
-Please note that these plugins are not supported, maintained, hosted, or
-endorsed by the Selenium project. In addition, be advised that the plugins
-listed below are not necessarily licensed under the Apache License v.2.0.
-Some of the plugins are available under another free and open source software
-license; others are only available under a proprietary license. Any questions
-about plugins and their license of distribution need to be raised with their
-respective developer(s).
-
-|Browser|Latest|Change log|Issue Tracker|
+|ブラウザ|最新版|変更履歴|イシュートラッカー|
 |--- |--- |--- |--- |
-|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[latest](https://github.com/mozilla/geckodriver/releases)|[change log](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[issue tracker](https://github.com/mozilla/geckodriver/issues)|
-|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[latest](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[change log](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[issue tracker](https://bugs.chromium.org/p/chromedriver/issues/list)|
-|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[latest](https://github.com/operasoftware/operachromiumdriver/releases)|-|[issue tracker](https://github.com/operasoftware/operachromiumdriver/issues)|
-|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[latest](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
-|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Built in|-|[issue tracker](https://bugreport.apple.com/)|
+|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[最新版](https://github.com/mozilla/geckodriver/releases)|[変更履歴](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[イシュートラッカー](https://github.com/mozilla/geckodriver/issues)|
+|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[最新版](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[変更履歴](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[イシュートラッカー](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[最新版](https://github.com/operasoftware/operachromiumdriver/releases)|-|[イシュートラッカー](https://github.com/operasoftware/operachromiumdriver/issues)|
+|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[最新版](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[イシュートラッカー](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
+|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|ビルトイン|-|[イシュートラッカー](https://bugreport.apple.com/)|

@@ -74,7 +74,7 @@ public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {
   @Override
   protected void load() {
     if ( isSFieldPresent ) {
-      Wait<WebDriver> wait = new WebDriverWait( driver, 3 );
+      Wait<WebDriver> wait = new WebDriverWait( driver, Duration.ofSeconds(3) );
       wait.until( visibilityOfElementLocated( By.id("gbqfq") ) ).click();
     }
   }

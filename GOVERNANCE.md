@@ -175,7 +175,7 @@ The TLC has final authority over this project including:
 * Repository hosting
 * Contribution policy (shared with the [Project Leadership Committee (PLC)](#project-leadership-committee-plc))
 
-TSC seats are not time-limited. There is no fixed size of the TLC. The TLC
+TLC seats are not time-limited. There is no fixed size of the TLC. The TLC
 should be of such a size as to ensure adequate coverage of important areas
 of expertise balanced with the ability to make decisions efficiently.
 
@@ -209,7 +209,7 @@ To become a TLC member:
 * Have given good feedback on others' submissions and displayed an overall understanding
 of the code quality standards for the project.
 * Commit to being a part of the community for the long-term.
-* Have submitted a minimum of 20 qualifying pull requests.
+* Have submitted a minimum of 20 qualifying pull requests or pushed a minimum of 20 qualifying commits across the different projects (IDE, Docker-Selenium, Selenium, Site & Docs).
 
 A Committer is invited to become a TLC member by existing TLC members. A nomination
 will result in discussion and then a decision by the TLC.

@@ -1,18 +1,12 @@
 ---
-title: "Locating elements"
+title: "要素を探す"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-### Locating one element
+### 一つの要素を探す
 
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
+ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -25,27 +19,22 @@ driver.find_element_by_id("cheese")
 IWebElement element = driver.FindElement(By.Id("cheese"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-driver.find_element(id: "cheese")  
+cheese = driver.find_element(id: 'cheese')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
+const cheese = driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
+例を見ての通り、WebDriverで要素を特定するには、`WebDriver`クラスのインスタンスを使います。`findElement(By)`メソッドは`WebElement`という別の基本的なオブジェクトを返します。
 
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
+* `WebDriver`はブラウザをあらわす
+* `WebElement`は特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす
 
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -61,12 +50,12 @@ IWebElement cheese = driver.FindElement(By.Id("cheese"));
 IWebElement cheddar = cheese.FindElement(By.Id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-cheese = driver.find_element(id: "cheese")
-cheddar = cheese.find_elements(id: "cheddar")
+cheese = driver.find_element(id: 'cheese')
+cheddar = cheese.find_element(id: 'cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
-const cheddar = await cheese.findElement(By.id('cheddar'));
+const cheese = driver.findElement(By.id('cheese'));
+const cheddar = cheese.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese = driver.findElement(By.id("cheese"))
@@ -74,28 +63,19 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext)
-interface. In WebDriver, this is known as a _role-based interface_.
-Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are
-clearly defined and try to adhere to having only a single role of
-responsibility.  You can read more about WebDriver's design and what
-roles are supported in which drivers in the [Some Other Section Which
-Must Be Named](#).
+これは _WebDriver_ と _WebElement_ クラスの両方が[_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)インターフェイスを実装しているため可能になっています。
+これはWebDriverでは _ロールベースインターフェイス (role-based interface)_ と呼ばれています。
+ロールベースインターフェイスは、どのドライバー実装がどの機能をサポートしているかどうかを判断する助けになります。これらのインターフェイスは明確に定義され、単一の役割の責任のみを持つことを守っています。
+WebDriverの設計と、どんな役割がどのドライバでサポートされているかは[Some Other Section Which Must Be Named](#)で読むことができます。
 <!-- TODO: A new section needs to be created for the above.-->
 
-Consequently, the _By_ interface used above also supports a
-number of additional locator strategies.  A nested lookup might not be
-the most effective cheese location strategy since it requires two
-separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
-narrowed context.
+その結果、 上で使っていた _By_ インターフェイスはいくつものロケータストラテジをサポートしています。
+ネストした探索はcheeseを探す方法としてもっとも効率的なものではないかもしれません。
+なぜなら、この方法は二つに分割されたコマンドをブラウザに発行するからです。具体的には、まずDOMから"cheese"というidの要素を探し出し、それから狭まった範囲で"cheddar"という要素を探しています。
 
-To improve the performance slightly, we should try to use a more
-specific locator: WebDriver supports looking up elements
-by CSS locators, allowing us to combine the two previous locators into
-one search:
+パフォーマンスをわずかに向上させるために、より効果的なロケータを使ってみましょう。
+WebDriverはCSSロケータによる要素の探索をサポートしています。
+これは先ほどの二つのロケータを1回の検索に組み合わせることができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -108,20 +88,19 @@ cheddar = driver.find_element_by_css_selector("#cheese #cheddar")
 driver.FindElement(By.CssSelector("#cheese #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
+driver.find_element(css: '#cheese #cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
+const cheddar = driver.findElement(By.css('#cheese #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Locating multiple elements
+### 複数の要素を探す
 
-It's possible that the document we are working with may turn out to have an
-ordered list of the cheese we like the best:
+今作業しているドキュメントに、私たちが一番好きなチーズについての順序付きリストがあるとします。
 
 ```html
 <ol id=cheese>
@@ -132,13 +111,11 @@ ordered list of the cheese we like the best:
 </ul>
 ```
 
-Since more cheese is undisputably better, and it would be cumbersome
-to have to retrieve each of the items individually, a superior
-technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
-elements. If only one element is found, it will still return a
-collection (of one element). If no elements match the locator, an
-empty list will be returned.
+チーズがたくさんある方が良いのは疑いの余地がなく、また一個一個取らなければなければならないのは面倒です。
+なので、チーズを取得する上位のテクニックは、複数形の`findElements(By)`を使うことです。
+このメソッドはWeb要素のコレクションを返します。
+もし一つの要素しか見つからなかった場合も、（一つの要素だけの）コレクションを返します。
+もしロケータにマッチする要素が一つもなかった場合は、空のリストが返ります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -151,54 +128,46 @@ mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
 IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese li")
+mucho_cheese = driver.find_elements(css: '#cheese li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const muchoCheese = await driver.findElements(By.css('#cheese li'));
+const muchoCheese = driver.findElements(By.css('#cheese li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element selection strategies
+### 要素選択の方法
 
-There are eight different built-in element location strategies in WebDriver:
+WebDriverには標準のロケータが8種類あります。
 
-| Locator | Description |
+| ロケータ | 詳細 |
 | -------- | ---------- |
-| class name | Locates elements whose class name contains the search value (compound class names are not permitted) |
-| css selector | Locates elements matching a CSS selector |
-| id | Locates elements whose ID attribute matches the search value |
-| name | Locates elements whose NAME attribute matches the search value |
-| link text | Locates anchor elements whose visible text matches the search value |
-| partial link text | Locates anchor elements whose visible text matches the search value |
-| tag name | Locates elements whose tag name matches the search value |
-| xpath | Locates elements matching an XPath expression |
+| class name | class名に値を含む要素を探す (複合クラス名は使えない) |
+| css selector | CSSセレクタが一致する要素を探す |
+| id | id属性が一致する要素を探す |
+| name | name属性が一致する要素を探す |
+| link text | a要素のテキストが一致する要素を探す|
+| partial link text | a要素のテキストが部分一致する要素を探す |
+| tag name | タグ名が一致する要素を探す |
+| xpath | XPathと一致する要素を探す |
 
-### Tips on using selectors
+### セレクタを使うときのコツ
 
-In general, if HTML IDs are available, unique, and consistently
-predictable, they are the preferred method for locating an element on
-a page. They tend to work very quickly, and forego much processing
-that comes with complicated DOM traversals.
+一般に、HTMLのid属性が利用可能でユニークかつ一貫している場合、ページで要素を探す方法として適しています。
+idは動作がとても速い傾向があり、複雑なDOMトラバースに伴う処理を省略できます。
 
-If unique IDs are unavailable, a well-written CSS selector is the
-preferred method of locating an element. XPath works as well as CSS
-selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they are typically
-not performance tested by browser vendors and tend to be quite slow.
+ユニークなidが使えない場合、きれいに書かれたCSSセレクタが要素を探す方法として適しています。
+XPathはCSSセレクタと同様に動作しますが、シンタックスは複雑で大抵の場合デバッグが困難です。
+XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。
 
-Selection strategies based on link text and partial link text have
-drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+link textセレクタとpartial link textセレクタはa要素でしか動作しないという欠点があります。
+加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。
 
-Tag name can be a dangerous way to locate elements. There are
-frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the _findElements(By)_ method which
-returns a collection of elements.
+タグ名によるロケータは危険な方法になり得ます。
+大抵の場合ページ上には同じタグ名の要素が複数あります。タグ名は要素のコレクションを返す _findElements(By)_ メソッドを使う時にもっとも役に立ちます。
 
-The recommendation is to keep your locators as compact and
-readable as possible. Asking WebDriver to traverse the DOM structure
-is an expensive operation, and the more you can narrow the scope of
-your search, the better.
+ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
+WebDriverでDOM構造のトラバースを行うのは重い処理となります。
+検索の範囲を狭めた方がより良い結果を得られます。

@@ -23,17 +23,6 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
-      <title>Browsers</title>
-      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.5 and newer   Safari Apple 10 and newer    Specialised browsers There is also a set of specialized browsers out there typically used in development environments.</description>
-    </item>
-    
-    <item>
       <title>Captchas</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -51,7 +40,7 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+ The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
     </item>
     
@@ -133,7 +122,7 @@ gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラ�
       
       <guid>https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium controls web browsers Selenium is many things, but at its core it&amp;rsquo;s a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+ Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents. It also provides many other controls such as mouse movement, arbitrary JavaScript execution, and much more.</description>
     </item>
     
@@ -158,6 +147,17 @@ Terminology  API: Application Programming Interface. This is the set of &amp;ldq
 WebDriver デスクトップのウェブサイトのテスト自動化をはじめるのなら、WebDriver APIを使いましょう。 WebDriver はブラウザ自動化のAPIを使用します。このAPIは、ブラウザをコントロールしてテストを実行するためにブラウザベンダーによって提供されています。これは現実のユーザーがブラウザを操作するかのように動きます。 WebDriverのAPIはアプリケーションのコードと一緒にコンパイルする必要がありませんから、全く邪魔になりません。 これによって、あなたは本番環境と同じアプリケーションをテストすることができます。
 IDE IDE (Integrated Development Environment: 統合開発環境)はSeleniumのテストケースを開発するためのツールです。 これは利用しやすいChromeとFirefoxの拡張機能であり、テストケースを開発するための一般に最も効率的なツールです。 IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。 これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
 Grid WebDriverのテストを開発した後、テストを複数のブラウザやOSの組み合わせで実行する必要性に直面するかもしれません。 Grid はその助けになります。</description>
+    </item>
+    
+    <item>
+      <title>ブラウザ</title>
+      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
+      <description> 一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
+   ブラウザ メンテナ サポートバージョン     Chromium Chromium 全てのバージョン   Firefox Mozilla 54 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
+   ドライバー名 用途 メンテナ     HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト    </description>
     </item>
     
     <item>
@@ -230,7 +230,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       
       <guid>https://selenium.dev/documentation/ja/introduction/on_test_automation/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- First, start by asking yourself whether or not you really need to use a browser. Odds are good that, at some point, if you&amp;rsquo;re working on a complex web application, you will need to open a browser and actually test it.
+ First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
 Functional end-user tests such as Selenium tests are expensive to run, however. Furthermore, they typically require substantial infrastructure to be in place to be run effectively.</description>
     </item>
     
@@ -243,17 +243,6 @@ Functional end-user tests such as Selenium tests are expensive to run, however. 
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
-    </item>
-    
-    <item>
-      <title>Third party drivers and plugins</title>
-      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
-Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project. In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.</description>
     </item>
     
     <item>
@@ -285,6 +274,17 @@ Line length When editing the documentation’s source, which is written in plain
       <guid>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+    </item>
+    
+    <item>
+      <title>サードパーティのドライバとプラグイン</title>
+      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <description>Seleniumはプラグインを通して拡張することができます。ここにはサードパーティによって作られたいくつかのプラグインがあります。 独自のプラグインを作成する、またはリストする方法についてはドキュメントを参照してください。
+これらのプラグインはSeleniumプロジェクトによってサポート、メンテナンス、主催、承認されているものではないことに注意してください。加えて、以下にリストされているプラグインは必ずしもApache License v.2.0によってライセンスされているわけではありません。 いくつかは他のフリーかつオープンソースのライセンス下で使用可能であり、他のいくつかはプロプライエタリなライセンスの下でのみ使用可能です。プラグインとその配布ライセンスに関するどんな質問も、それぞれの開発者に対して上げる必要があります。
+   ブラウザ 最新版 変更履歴 イシュートラッカー     Mozilla GeckoDriver 最新版 変更履歴 イシュートラッカー   Google Chrome Driver 最新版 変更履歴 イシュートラッカー   Opera 最新版 - イシュートラッカー   Microsoft Edge Driver 最新版 - イシュートラッカー   SafariDriver ビルトイン - イシュートラッカー    </description>
     </item>
     
     <item>
@@ -331,17 +331,6 @@ Selenium WebDriver is a completely different approach to browser automation, pre
     </item>
     
     <item>
-      <title>Locating elements</title>
-      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   driver.find_element(id: &amp;#34;cheese&amp;#34;)   const cheese = await driver.</description>
-    </item>
-    
-    <item>
       <title>Setting up your own Grid</title>
       <link>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -359,7 +348,7 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       
       <guid>https://selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+ Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
 For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
     </item>
     
@@ -385,14 +374,37 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
     </item>
     
     <item>
+      <title>要素を探す</title>
+      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</guid>
+      <description>一つの要素を探す ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     例を見ての通り、WebDriverで要素を特定するには、WebDriverクラスのインスタンスを使います。findElement(By)メソッドはWebElementという別の基本的なオブジェクトを返します。
+ WebDriverはブラウザをあらわす WebElementは特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす  一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;));   cheese = driver.find_element_by_id(&amp;#34;cheese&amp;#34;) cheddar = cheese.</description>
+    </item>
+    
+    <item>
       <title>About this documentation</title>
       <link>https://selenium.dev/documentation/ja/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/introduction/about_this_documentation/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.
+ These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the onboarding experience for new users.
 If there is an issue with the documentation, we want to know! The best way to communicate an issue is to visit https://github.</description>
+    </item>
+    
+    <item>
+      <title>AUT* を操作する</title>
+      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <description>次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).dragAndDrop(source, target).</description>
     </item>
     
     <item>
@@ -427,28 +439,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
-    </item>
-    
-    <item>
-      <title>Performing actions on the AUT*</title>
-      <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- You can set an element&amp;rsquo;s text using the sendKeys method as follows:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Some web applications use JavaScript libraries to add drag-and-drop functionality.</description>
-    </item>
-    
-    <item>
       <title>Waits</title>
       <link>https://selenium.dev/documentation/ja/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -468,6 +458,18 @@ From experience, most intermittents that arise from use of Selenium and WebDrive
       <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
  Generally speaking, there’s two reasons why you might want to use Grid.
  To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+    </item>
+    
+    <item>
+      <title>マウスアクションの詳細</title>
+      <link>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>
@@ -554,7 +556,9 @@ It may seem ideal to performance test in the context of the user but a suite of 
       
       <guid>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
       <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+ A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:
+Add Cookie It is used to add a cookie to the current browsing context.</description>
     </item>
     
     <item>
@@ -628,8 +632,9 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       
       <guid>https://selenium.dev/documentation/ja/webdriver/web_element/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) search_form = driver.find_element_by_tag_name(&amp;#34;form&amp;#34;) search_box = search_form.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
+ WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
     </item>
     
     <item>
@@ -642,16 +647,6 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
  Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
-    </item>
-    
-    <item>
-      <title>Mouse</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/webdriver/mouse/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
     </item>
     
     <item>
