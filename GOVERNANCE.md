@@ -272,7 +272,7 @@ The PLC also should discuss once a month the overall status of the project and a
 upcoming topics.
 
 A PLC member may be removed from the PLC by voluntary resignation, or by a stand
-ard TSC motion.
+ard PLC motion.
 
 #### Process for Adding PLC Members
 
