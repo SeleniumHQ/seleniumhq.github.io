@@ -84,7 +84,8 @@ technical weight is present and requires little effort to accept because it is
 well documented and tested.
 
 New Committers can be nominated by any existing Committer or TLC member. Once
-they have been nominated, there will be a vote by the TLC members.
+they have been nominated, the TLC members will seek a decision based on a 
+[Consensus Seeking Process](#consensus-seeking-process).
 
 It is important to recognize that having the Committer role is a privilege, not
 a right. That privilege must be earned and once earned, it can be removed by
@@ -258,8 +259,8 @@ To become a PLC member:
 * An existing PLC member steps down and suggests someone (or some people) to replace them.
 * Be a committer or a contributor.
 * Commit to being a part of the community for the long-term.
-* The existing PLC consults with the TLC and the active Committers, who vote on whether or
-not to add those people.
+* The existing PLC consults with the TLC and the active Committers, who will seek a decision
+based on a [Consensus Seeking Process](#consensus-seeking-process) to add or not those people.
     * No-one is ever suggested publicly without first discussing the idea with 
       them first (to make sure that they are okay with it).
 
