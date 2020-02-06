@@ -182,7 +182,7 @@ of expertise balanced with the ability to make decisions efficiently.
 The TLC may add additional members to the TLC by a standard TLC motion.
 
 A TLC member may be removed from the TLC by voluntary resignation, or by a 
-standard TLC motion.
+standard TLC or PLC motion.
 
 No more than 1/3 of the TLC members may be affiliated with the same employer.
 If removal or resignation of a TLC member, or a change of employment by a TLC
@@ -248,7 +248,7 @@ different ways, such as whenever the project spends money, enters legal agreemen
 or has to deal with lawyers. Typically the PLC will discuss the topic with the rest
 of the community, and then a voting session will take place.
 
-PLC seats are not time-limited. Only one person may be affiliated with the any
+PLC seats are not time-limited. Only one person may be affiliated with any
 given employer can be on the PLC at a time. The PLC member count should be always
 odd so that no votes are ever tied, an ideal minimum number is 5. PLC members
 should also be active members of the community.
