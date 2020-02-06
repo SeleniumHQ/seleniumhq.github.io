@@ -181,8 +181,8 @@ of expertise balanced with the ability to make decisions efficiently.
 
 The TLC may add additional members to the TLC by a standard TLC motion.
 
-A TLC member may be removed from the TLC by voluntary resignation, or by a stand
-ard TLC motion.
+A TLC member may be removed from the TLC by voluntary resignation, or by a 
+standard TLC motion.
 
 No more than 1/3 of the TLC members may be affiliated with the same employer.
 If removal or resignation of a TLC member, or a change of employment by a TLC
@@ -271,8 +271,8 @@ The PLC has final authority over this project including:
 The PLC also should discuss once a month the overall status of the project and any pending or
 upcoming topics.
 
-A PLC member may be removed from the PLC by voluntary resignation, or by a stand
-ard PLC motion.
+A PLC member may be removed from the PLC by voluntary resignation, or by a 
+standard PLC motion.
 
 #### Process for Adding PLC Members
 
