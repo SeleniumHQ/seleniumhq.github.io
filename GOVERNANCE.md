@@ -198,7 +198,9 @@ changes to this document, and manage the copyrights within the project outputs.
 TLC members fulfill all requirements of Committers, and also:
 
 * May merge external pull requests for accepted issues upon reviewing and approving
-the changes.
+the changes without the need to ping other committers who might have greater ownership 
+over the affected code area, given that reviewing and accepting the pull request
+does not require deep knowledge in the affected code area.
 * Push code directly to the repos or, when necessary, create and merge their own pull
 requests once they have collected the feedback they deem necessary.
 * Discuss once a month the technical status and project roadmap.
