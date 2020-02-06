@@ -27,10 +27,10 @@ driver.find_element_by_id("fromage")
 IWebElement element = driver.FindElement(By.Id("fromage"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-driver.find_element(id: "fromage")  
+cheese = driver.find_element(id: 'cheese')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const fromage = await driver.findElement(By.id('fromage'));
+const fromage = driver.findElement(By.id('fromage'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese: WebElement = driver.findElement(By.id("cheese"))
@@ -63,12 +63,12 @@ IWebElement fromage = driver.FindElement(By.Id("fromage"));
 IWebElement cheddar = fromage.FindElement(By.Id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-fromage = driver.find_element(id: "fromage")
-cheddar = fromage.find_elements(id: "cheddar")
+fromage = driver.find_element(id: 'fromage')
+cheddar = fromage.find_element(id: 'cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const fromage = await driver.findElement(By.id('fromage'));
-const cheddar = await fromage.findElement(By.id('cheddar'));
+const fromage = driver.findElement(By.id('fromage'));
+const cheddar = fromage.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese = driver.findElement(By.id("cheese"))
@@ -77,7 +77,7 @@ val cheddar = cheese.findElement(By.id("cheddar"))
 {{< / code-tab >}}
 
 Nous pouvons faire cela car les types _WebDriver_ et _WebElement_
-implémentent tous deux l'interface [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext).
+implémentent tous deux l'interface [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html).
 Dans WebDriver, ce principe est connu sous le nom de _role-based interface_.
 Les interfaces basées sur le rôle nous permettent de déterminer
 si une implémentation particulière de driver supporte une fonctionnalité donnée.
@@ -108,10 +108,10 @@ cheddar = driver.find_element_by_css_selector("#fromage #cheddar")
 driver.FindElement(By.CssSelector("#fromage #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#fromage #cheddar")
+driver.find_element(css: '#fromage #cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheddar = await driver.findElement(By.css('#fromage #cheddar'));
+const cheddar = driver.findElement(By.css('#fromage #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.findElement(By.cssSelector("#cheese #cheddar"))
@@ -150,10 +150,10 @@ plein_de_fromage = driver.find_elements_by_css_selector("#fromage li")
 IReadOnlyList<IWebElement> pleinDeFromage = driver.FindElements(By.CssSelector(“#fromage li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-plein_de_fromage = driver.find_elements(css: "#fromage li")
+plein_de_fromage = driver.find_elements(css: '#fromage li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const pleinDeFromage = await driver.findElements(By.css('#fromage li'));
+const pleinDeFromage = driver.findElements(By.css('#fromage li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))

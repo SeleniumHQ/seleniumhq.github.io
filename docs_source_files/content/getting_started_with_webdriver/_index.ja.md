@@ -1,34 +1,20 @@
 ---
-title: "Getting started with WebDriver"
+title: "WebDriverをはじめよう"
 chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-# Getting started with WebDriver
+# WebDriverをはじめよう
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+Seleniumは市場で主要なブラウザの全てを _WebDriver_ を使うことでサポートしています。
+WebDriverとはAPI群とプロトコルです。これらはウェブブラウザの動作をコントロールするための言語中立なインターフェイスを定義しています。
+それぞれのブラウザは特定のWebDriverの実装を持っており、これらは *driver* と呼ばれます。
+driverはブラウザに委譲する責務を持つコンポーネントであり、Seleniumとブラウザ間の通信を処理します。
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
+この分離は、ブラウザベンダーに自分たちのブラウザでの実装の責任を持たせるための意図的な努力のひとつです。
+Seleniumは可能な場合これらのサードパーティ製のdriverを使いますが、それが現実的でない場合のためにプロジェクトでメンテナンスしているdriverも提供しています。
 
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
+Seleniumフレームワークはこれら全ての要素をユーザ向けのインターフェイスを通して結びつけます。このインターフェイスは異なるブラウザバックエンドを透過的に使えるようにし、クロスブラウザ・クロスプラットフォームの自動化を可能にします。
 
-More details about drivers can be found in
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+driverのより詳しい資料は[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}})にあります。

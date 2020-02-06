@@ -70,7 +70,7 @@ export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
   chromedriver
   ```
 * If your `PATH` is configured correctly,
-you will see some some output relating to the startup of the driver:
+you will see some output relating to the startup of the driver:
 
 ```text
 Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
@@ -271,7 +271,10 @@ new FirefoxDriver("/path/to/geckodriver");
 Selenium::WebDriver::Firefox.driver_path = "/path/to/geckodriver"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const firefox = require('selenium-webdriver/firefox');
+
+const options = new firefox.Options();
+options.setBinary("/path/to/geckodriver");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")

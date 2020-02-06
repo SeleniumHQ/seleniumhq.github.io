@@ -40,20 +40,8 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       
       <guid>https://selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- The Documentation of Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
+ The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
-    </item>
-    
-    <item>
-      <title>Installing Selenium libraries</title>
-      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
     </item>
     
     <item>
@@ -99,6 +87,17 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
     </item>
     
     <item>
+      <title>Selenium 라이브러리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
+      <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
+Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.</description>
+    </item>
+    
+    <item>
       <title>Shared capabilities</title>
       <link>https://selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -115,7 +114,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       
       <guid>https://selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium controls web browsers Selenium is many things, but at its core it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+ Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
     </item>
     
@@ -195,17 +194,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Installing WebDriver binaries</title>
-      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -268,6 +256,16 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
     </item>
     
     <item>
+      <title>웹드라이버 바이너리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
+당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description>
+    </item>
+    
+    <item>
       <title>파일 다운로드</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -324,7 +322,7 @@ Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근�
       
       <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+ If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
     </item>
     
     <item>
@@ -356,7 +354,7 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       
       <guid>https://selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+ Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
 For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
     </item>
     
@@ -378,7 +376,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       
       <guid>https://selenium.dev/documentation/ko/introduction/about_this_documentation/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.</description>
+ These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the onboarding experience for new users.</description>
     </item>
     
     <item>
@@ -412,17 +410,6 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
-      <link>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   # We don&amp;#39;t have a Ruby code sample yet - Help us out and raise a PR    // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    val element = driver.</description>
-    </item>
-    
-    <item>
       <title>Performing actions on the AUT*</title>
       <link>https://selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -452,6 +439,18 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Generally speaking, there’s two reasons why you might want to use Grid.
  To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+    </item>
+    
+    <item>
+      <title>마우스 동작 세부 사항</title>
+      <link>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
@@ -523,7 +522,9 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       
       <guid>https://selenium.dev/documentation/ko/support_packages/working_with_cookies/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+ A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:
+Add Cookie It is used to add a cookie to the current browsing context.</description>
     </item>
     
     <item>
@@ -605,8 +606,8 @@ curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사
       
       <guid>https://selenium.dev/documentation/ko/webdriver/web_element/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement:
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); WebElement searchForm = driver.findElement(By.tagName(&amp;#34;form&amp;#34;)); WebElement searchBox = searchForm.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.</description>
+ WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.</description>
     </item>
     
     <item>
@@ -619,16 +620,6 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
  Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
 Java Python C# Ruby JavaScript Kotlin import org.</description>
-    </item>
-    
-    <item>
-      <title>Mouse</title>
-      <link>https://selenium.dev/documentation/ko/webdriver/mouse/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/webdriver/mouse/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- </description>
     </item>
     
     <item>

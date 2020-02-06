@@ -19,10 +19,10 @@ driver.find_element_by_id("cheese")
 IWebElement element = driver.FindElement(By.Id("cheese"));  
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-driver.find_element(id: "cheese")  
+cheese = driver.find_element(id: 'cheese')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
+const cheese = driver.findElement(By.id('cheese'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese: WebElement = driver.findElement(By.id("cheese"))
@@ -50,12 +50,12 @@ IWebElement cheese = driver.FindElement(By.Id("cheese"));
 IWebElement cheddar = cheese.FindElement(By.Id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-cheese = driver.find_element(id: "cheese")
-cheddar = cheese.find_elements(id: "cheddar")
+cheese = driver.find_element(id: 'cheese')
+cheddar = cheese.find_element(id: 'cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheese = await driver.findElement(By.id('cheese'));
-const cheddar = await cheese.findElement(By.id('cheddar'));
+const cheese = driver.findElement(By.id('cheese'));
+const cheddar = cheese.findElement(By.id('cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cheese = driver.findElement(By.id("cheese"))
@@ -63,7 +63,7 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Usted puede hacer esto porque los tipos _WebDriver_ y _WebElement_ implementan la interfaz [_SearchContext_](// seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html>SearchContext). En WebDriver, esto se conoce como _interfaz basada en roles_. Las interfaces basadas en roles le permiten determinar si una implementación de controlador particular admite una característica determinada. Estas interfaces están claramente definidas y tratan de cumplir con tener un solo rol de responsabilidad. Puede leer más sobre el diseño de WebDriver y qué roles se admiten en qué controladores en [Alguna otra sección que debe nombrarse](#).
+Usted puede hacer esto porque los tipos _WebDriver_ y _WebElement_ implementan la interfaz [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html). En WebDriver, esto se conoce como _interfaz basada en roles_. Las interfaces basadas en roles le permiten determinar si una implementación de controlador particular admite una característica determinada. Estas interfaces están claramente definidas y tratan de cumplir con tener un solo rol de responsabilidad. Puede leer más sobre el diseño de WebDriver y qué roles se admiten en qué controladores en [Alguna otra sección que debe nombrarse](#).
 <!-- TODO: se debe crear una nueva sección para lo anterior.-->
 
 En consecuencia, la interfaz _By_ utilizada anteriormente también admite una serie de estrategias de localización adicionales. Una búsqueda anidada podría no ser la estrategia de ubicación más efectiva, ya que requiere que se envíen dos comandos separados al navegador; primero buscando en el DOM un elemento con ID "_cheese_", luego una búsqueda de "cheddar" en un contexto restringido.
@@ -81,10 +81,10 @@ cheddar = driver.find_element_by_css_selector("#cheese #cheddar")
 driver.FindElement(By.CssSelector("#cheese #cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese #cheddar")
+driver.find_element(css: '#cheese #cheddar')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const cheddar = await driver.findElement(By.css('#cheese #cheddar'));
+const cheddar = driver.findElement(By.css('#cheese #cheddar'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.findElement(By.cssSelector("#cheese #cheddar"))
@@ -117,10 +117,10 @@ mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
 IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-mucho_cheese = driver.find_elements(css: "#cheese li")
+mucho_cheese = driver.find_elements(css: '#cheese li')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const muchoCheese = await driver.findElements(By.css('#cheese li'));
+const muchoCheese = driver.findElements(By.css('#cheese li'));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese li"))

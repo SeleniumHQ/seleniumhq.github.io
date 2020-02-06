@@ -1,39 +1,28 @@
 ---
-title: "Components of a Grid"
+title: "服务网格的组件"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
 ![Grid](/images/grid.png)
 
-## Hub
-* Intermediary and manager
-* Accepts requests to run tests
-* Takes instructions from client and executes them remotely on the nodes
-* Manages threads
+## 转发器(hub)
+* 中间人和管理者
+* 接受请求 执行测试任务
+* 接受客户端的指示并在远程节点上执行任务
+* 管理进程
 
-A _Hub_ is a central point where all your tests are sent.
-Each Selenium Grid consists of exactly one hub. The hub needs to be reachable
-from the respective clients (i.e. CI server, Developer machine etc.)
-The hub will connect one or more nodes
-that tests will be delegated to.
+_转发器(hub)_ 是一个接受所有所有测试任务的中心节点。
+每个Selenium服务网格包含一个转发器(hub)。转发器(hub)需要能被所有的客户机（比如：持续集成服务器，开发机等等）访问到。
+转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。
 
-## Nodes
+## 节点
 
-* Where the browsers live
-* Registers itself to the hub and communicates its capabilities
-* Receives requests from the hub and executes them
+* 浏览器会被安装在节点上
+* 节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等)
+* 接受转发器(hub)的指示并执行这些指示
 
-_Nodes_ are different Selenium instances
-that will execute tests on individual computer systems.
-There can be many nodes in a grid.
-The machines which are nodes do not need to be the same platform
-or have the same browser selection as that of the hub or the other nodes.
-A node on Windows might have the capability of
-offering Internet Explorer as a browser option,
-whereas this wouldn't be possible on Linux or Mac.
+_节点_ 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。
+一个服务网格中可以有很多节点。
+这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。
+一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。
 

@@ -86,6 +86,34 @@ h1.sub-header {
 
 /***/
 
+/* Banner Notification */
+
+.banner-message-container {
+    position: relative;
+    text-align: center;
+    padding: 1em 100px;
+    margin-bottom: 30px;
+    font-size: 100%;
+    font-family: "Encode Sans", sans-serif;
+    color: #363636;
+    background-color:#BAF3AE;
+  }
+  .banner-message-container a {
+    color:#0033a0;
+  }
+  .banner-message-container .dismiss {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2em;
+    padding: 0;
+    line-height: 2em;
+    background: none;
+    border: 0;
+  }
+  
+  /***/
+
 /*Supporters*/
 
 .selenium-backers {

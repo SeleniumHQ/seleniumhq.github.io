@@ -88,23 +88,18 @@ const {Builder, By, Key} = require('selenium-webdriver');
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
 import org.openqa.selenium.Keys
-import org.openqa.selenium.WebDriver
-import org.openqa.selenium.WebElement
-import org.openqa.selenium.ChromeDriver
+import org.openqa.selenium.firefox.FirefoxDriver
 
-class HelloSelenium {
+fun main() {
+    val driver = FirefoxDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://google.com")
 
-    fun main() {
-        driver = ChromeDriver()
-        try {
-            // Navigate to Url
-            driver.get("https://google.com")
-
-            // Enter text "q" and perform keyboard action "Enter"
-            driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
-        } finally {
-            driver.quit()
-        }
+        // Enter text "q" and perform keyboard action "Enter"
+        driver.findElement(By.name("q")).sendKeys("q" + Keys.ENTER)
+    } finally {
+        driver.quit()
     }
 }
   {{< / code-panel >}}
@@ -333,7 +328,7 @@ const {Builder, By, Key} = require('selenium-webdriver');
         await driver.get('https://www.google.com');
 
         // Store google search box WebElement
-        let search = await driver.findElement(By.name('q'));
+        let search = driver.findElement(By.name('q'));
 
         // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
         await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys("qwerty").keyUp(Key.SHIFT).sendKeys("qwerty").perform();
@@ -361,6 +356,67 @@ fun main() {
 
         // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
         action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform();
+    } finally {
+        driver.quit()
+    }
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## clear
+Clears the content of an editable element. 
+This is only applied for the elements which is editable and interactable, 
+otherwise selenium returns the error (invalid element state (or) Element not interactable)
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class clear {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      // Navigate to Url
+      driver.get("https://www.google.com");
+      // Store 'SearchInput' element
+      WebElement searchInput = driver.findElement(By.name("q"));
+      searchInput.sendKeys("selenium");
+      // Clears the entered text
+      searchInput.clear();
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please create a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.By
+import org.openqa.selenium.chrome.ChromeDriver
+fun main() {
+    val driver =  ChromeDriver()
+    try {
+        // Navigate to Url
+        driver.get("https://www.google.com")
+        // Store 'searchInput' element
+        val searchInput = driver.findElement(By.name("q"))
+        searchInput.sendKeys("selenium")
+        // Clears the entered text
+        searchInput.clear()
     } finally {
         driver.quit()
     }
