@@ -46,7 +46,8 @@ their type of contribution (e.g., close an issue after triaging it).
 
 Contributors have read-only access to source code and submit changes via pull
 requests. Contributor pull requests have their contribution reviewed and merged
-by a TLC member or a Committer. TLC members and Committers work with Contributors
+by a [Technical Leadership Committee (TLC)](#technical-leadership-committee-tlc) 
+member or a Committer. TLC members and Committers work with Contributors
 to review their code and prepare it for merging.
 
 As Contributors gain experience and familiarity with the project, their profile within,
@@ -172,7 +173,7 @@ The TLC has final authority over this project including:
 
 * Technical direction
 * Repository hosting
-* Contribution policy (shared with the PLC)
+* Contribution policy (shared with the [Project Leadership Committee (PLC)](#project-leadership-committee-plc))
 
 TSC seats are not time-limited. There is no fixed size of the TLC. The TLC
 should be of such a size as to ensure adequate coverage of important areas
