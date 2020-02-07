@@ -81,7 +81,19 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://www.google.com'
+  # Store 'Sign In' button web element
+  sign_in = driver.find_element(link_text: 'Sign in')
+  # Perform click-and-hold action on the element
+  driver.action.click_and_hold(sign_in).perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -197,7 +209,19 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://www.google.com'
+  # Store 'Sign In' button web element
+  sign_in = driver.find_element(link_text: 'Sign in')
+  # Perform context-click action on the element
+  driver.action.context_click(sign_in).perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -313,7 +337,19 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://www.google.com'
+  # Store 'Sign In' button web element
+  sign_in = driver.find_element(link_text: 'Sign in')
+  # Perform double-click action on the element
+  driver.action.double_click(sign_in).perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
