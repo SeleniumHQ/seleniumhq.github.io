@@ -321,9 +321,9 @@ When an agenda item has appeared to reach a consensus, the moderator will ask
 "Does anyone object?" as a final call for dissent from the consensus.
 
 If an agenda item cannot reach a consensus, a PLC/TLC member can call for either
-a closing vote or a vote to table the issue to the next meeting. The call for a
-vote must be approved by a majority of the TSC or else the discussion will continue.
-Simple majority wins.
+a closing vote or a vote to postpone further discussion on the issue until the next
+meeting. The call for a vote must be approved by a majority of the TSC or else the 
+discussion will continue. Simple majority wins.
 
 ## Sponsorship
 
