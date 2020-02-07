@@ -456,9 +456,14 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-upport is included with each release of the browser.
-To enable support:
-从 macOS El Capitan 和 Sierra 上的 Safari 10 开始，浏览器的每个版本都包含了对 WebDriver 的支持。使支持:
+High Sierra and later:
+* 首先从终端运行以下命令
+  时间并在提示符下键入密码以授权WebDriver
+```shell
+safaridriver --enable
+```
+
+El Capitan and Sierra:
 
 * 启用 Safari 首选项中的 Developer 菜单
 * 从 “开发” 菜单中选择 “允许远程自动化” 选项
