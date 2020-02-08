@@ -27,7 +27,9 @@ options.Proxy.Kind = ProxyKind.Direct;
 var driver = new FirefoxDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
+require 'selenium-webdriver'
+opts = Selenium::WebDriver::Firefox::Options.new(args: ['-headless'])
+driver = Selenium::WebDriver.for(:firefox, options: opts)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const { Builder } = require("selenium-webdriver");
@@ -74,10 +76,22 @@ options.Profile = profile;
 var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Todavía no tenemos una muestra de código Ruby: ayúdenos y genere un PR (_pull request_)
+profile = Selenium::WebDriver::Firefox::Profile.new
+profile['browser.download.dir'] = "/tmp/webdriver-downloads"
+options = Selenium::WebDriver::Firefox::Options.new(profile: profile)
+driver = Selenium::WebDriver.for :firefox, options: options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Todavía no tenemos una muestra de código JavaScript: ayúdenos y genere un PR (_pull request_)
+const { Builder } = require("selenium-webdriver");
+const firefox = require('selenium-webdriver/firefox');
+
+const options = new firefox.Options();
+let profile = '/path to custom profile';
+options.setProfile(profile);
+const driver = new Builder()
+    .forBrowser('firefox')
+    .setFirefoxOptions(options)
+    .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = FirefoxOptions()
@@ -94,10 +108,14 @@ En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// We don't have a Java code sample yet -  Help us out and raise a PR  
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
+WebDriver driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR
+options = webdriver.IeOptions
+options.file_upload_dialog_timeout(2000)
+driver = webdriver.Ie(ie_driver_path, options=options)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var options = new InternetExplorerOptions();
@@ -105,9 +123,16 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(2000);
 var driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+options = Selenium::WebDriver::IE::Options.new
+options.file_upload_dialog_timeout = 2000
+driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val options = InternetExplorerOptions()
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
+val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}

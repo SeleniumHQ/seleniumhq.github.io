@@ -4,27 +4,18 @@ chapter: true
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # WebDriver
 
-WebDriver drives a browser natively, as a user would, either locally
-or on a remote machine using the Selenium server,
-marks a leap forward in terms of browser automation.
+WebDriver 以本地化方式驱动浏览器，就像用户在本地或使用 Selenium 
+服务器的远程机器上所做的那样，这标志着浏览器自动化的飞跃。
 
-Selenium WebDriver refers to both the language bindings
-and the implementations of the individual browser controlling code.
-This is commonly referred to as just _WebDriver_.
+Selenium WebDriver 指的是语言绑定和各个浏览器控制代码的实现。
+这通常被称为 _WebDriver_。
 
-Selenium WebDriver is a [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
+Selenium WebDriver 是 [W3C 推荐标准](https://www.w3.org/TR/webdriver1/)
 
-* WebDriver is designed as a simple
-  and more concise programming interface.
+* WebDriver 被设计成一个简单和简洁的编程接口。
 
-* WebDriver is a compact object-oriented API.
+* WebDriver 是一个简洁的面向对象 API。
 
-* It drives the browser effectively.
+* 它能有效地驱动浏览器。

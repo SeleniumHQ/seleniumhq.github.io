@@ -1,17 +1,11 @@
 ---
-title: "Installing WebDriver binaries"
+title: "웹드라이버 바이너리 설치"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-To execute your project and control the browser you need to have
-browser-specific WebDriver binaries installed.
+당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
 
-Download the [WebDriver binary]({{< ref "/webdriver/driver_requirements.ko.md#quick-reference" >}})
-supported by your browser and place it in the 
-[System PATH]({{< ref "/webdriver/driver_requirements.ko.md#adding-executables-to-your-path" >}}).
+당신의 브라우저가 지원하는 [웹드라이버 바이너리]({{< ref "/webdriver/driver_requirements.ko.md#quick-reference" >}})
+를 다운로드하고, 
+[시스템 경로]({{< ref "/webdriver/driver_requirements.ko.md#adding-executables-to-your-path" >}})에 위치하세요.

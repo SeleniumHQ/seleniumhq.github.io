@@ -11,20 +11,20 @@
     <title>Driver spezifische Capabilities :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1577353438" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1577353438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1581075049" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1581075049" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1577353438" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1581075049" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1577353438"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1581075049"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1577353438"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1577353438"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1581075049"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1581075049"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1577353438"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1581075049"></script>
 
     
   </div>
@@ -1390,9 +1390,9 @@
  
   
     
-      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Maus- und Keyboardaktionen im Detail" class="dd-item ">
+      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Mausaktionen im Detail" class="dd-item ">
         <a href="https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/">
-        Maus- und Keyboardaktionen im Detail
+        Mausaktionen im Detail
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1591,9 +1591,9 @@
  
   
     
-      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Copyright" class="dd-item ">
+      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Copyright und Unterstützung" class="dd-item ">
         <a href="https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/">
-        Copyright
+        Copyright und Unterstützung
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1890,7 +1890,7 @@
     
     <section id="footer">
       <p>    
-  &copy; 2013-2019
+  &copy; 2013-2020
 </p>
 <p>    
   Software Freedom Conservancy (SFC)
@@ -2086,7 +2086,9 @@ options.Proxy.Kind = ProxyKind.Direct;
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+opts <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">args</span>: <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;-headless&#39;</span><span style="color:#719e07">]</span>)
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: opts)
   </code></pre></div>
 </section>
   
@@ -2200,7 +2202,10 @@ options.Profile = profile;
 
 <section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+profile <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Profile</span><span style="color:#719e07">.</span>new
+profile<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;browser.download.dir&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;/tmp/webdriver-downloads&#34;</span>
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">profile</span>: profile)
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: options
   </code></pre></div>
 </section>
   
@@ -2208,8 +2213,17 @@ options.Profile = profile;
 
 <section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> { Builder } <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
+<span style="color:#268bd2">const</span> firefox <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/firefox&#39;</span>);
+
+<span style="color:#268bd2">const</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> firefox.Options();
+<span style="color:#268bd2">let</span> profile <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;/path to custom profile&#39;</span>;
+options.setProfile(profile);
+<span style="color:#268bd2">const</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
+    .forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>)
+    .setFirefoxOptions(options)
+    .build();
+  
 </code></pre></div>
 </section>
   
@@ -2274,15 +2288,19 @@ can increase the timeout using the fileUploadDialogTimeout capability.</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// We don&#39;t have a Java code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+InternetExplorerOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  </code></pre></div>
 </section>
   
 
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># We don&#39;t have a Python code sample yet -  Help us out and raise a PR</span>
+options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions
+options<span style="color:#719e07">.</span>file_upload_dialog_timeout(<span style="color:#2aa198">2000</span>)
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(ie_driver_path, options<span style="color:#719e07">=</span>options)
   </code></pre></div>
 </section>
   
@@ -2301,7 +2319,9 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
 
 <section id="rubycode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR</span>
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">IE</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new
+options<span style="color:#719e07">.</span>file_upload_dialog_timeout <span style="color:#719e07">=</span> <span style="color:#2aa198">2000</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:ie</span>, <span style="color:#2aa198">options</span>: options)
   </code></pre></div>
 </section>
   
@@ -2312,6 +2332,16 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
 <span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode3" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> options = InternetExplorerOptions()
+options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2</span>))
+<span style="color:#719e07">val</span> driver = RemoteWebDriver(options)
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2324,7 +2354,7 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver spezifische Capabilities”
-    </a> was last updated on: 22 Dec 2019 00:51:22 -0300: <a href="https://github.com/SeleniumHQ/site/commit/f4395dd796ab1cd34384f0f47af2e00efae7762f">Add: Added JavaScript example for using FirefoxOptions (#142) [deploy site] (f4395dd79)</a>
+    </a> was last updated on: 01 Feb 2020 00:32:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3b2bfd750022a57aadfff7e6378b20f0d310e40e">Add : Added code sample for file_upload_dialog_timeout (IE) (#195) (3b2bfd750)</a>
 </h5>
         
         </div> 
@@ -3521,19 +3551,19 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1577353438"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1581075049"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1577353438"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1577353438"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1581075049"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1581075049"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1577353438" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1577353438"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1581075049" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1581075049"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

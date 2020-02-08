@@ -5,7 +5,7 @@ weight: 3
 
 Si planeas usar [Grid]({{< ref "/grid/_index.md" >}}) debes descargar el fichero 
 [selenium-server-standalone JAR](//selenium.dev/downloads/).
-El jar _selenium-server-standalone_ nunca se carga, pero todos los componentes están disponibles a través de 
+Todos los componentes están disponibles a través de 
 [selenium-server](//repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-server/).
 El _standalone_ JAR contiene todo, incluso el servidor remoto de Selenium 
 y los enlaces del lado del cliente.

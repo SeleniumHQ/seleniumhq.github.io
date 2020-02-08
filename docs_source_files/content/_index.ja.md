@@ -24,12 +24,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
+import java.time.Duration;
 
 public class HelloSelenium {
 
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver, 10);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             driver.get("https://google.com/ncr");
             driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
@@ -114,10 +115,11 @@ import org.openqa.selenium.Keys
 import org.openqa.selenium.firefox.FirefoxDriver
 import org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated
 import org.openqa.selenium.support.ui.WebDriverWait
+import java.time.Duration
 
 fun main() {
     val driver = FirefoxDriver()
-    val wait = WebDriverWait(driver, 10)
+    val wait = WebDriverWait(driver, Duration.ofSeconds(10))
     try {
         driver.get("https://google.com/ncr")
         driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)

@@ -3,32 +3,28 @@ title: "Über diese Dokumentation"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-These docs, like the code itself, are maintained 100% by volunteers
-within the Selenium community.
-Many have been using it since its inception,
-but many more have only been using it for a short while,
-and have given their time to help improve the on-boarding experience
-for new users.
+Diese Dokumentation wird so wie auch der Sourcecode von Selenium zu 100% 
+von der Selenium Community gepflegt. Von Anfang an haben zahlreiche 
+Benutzer diese Dokumentation verwendet. Viele haben Sie auch nur für einen
+sehr kurzen Zeitraum genutzt und haben Zeit investiert um für Neulinge
+den Einstieg in das Thema zu erleichtern.
 
-If there is an issue with the documentation, we want to know!
-The best way to communicate an issue is to visit
-[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues)
-and search to see whether or not the issue has been filed already.
-If not, feel free to open one!
+Falls Du einen Fehler in der Dokumentation entdeckst, freuen wir uns
+wenn Du uns darauf aufmerksam machst. Der beste Weg uns das mitzuteilen
+ist es einen Issue (engl. Fehler) einzumelden
+[https://github.com/seleniumhq/seleniumhq.github.io/issues](//github.com/seleniumhq/seleniumhq.github.io/issues).
+Bitte überzeuge Dich zuerst mit Hilfe der Suchfunktion ob der Fehler
+schon eingemeldet wurde oder nicht. Falls nicht, hab keine Scheu diesen
+einzumelden.
 
-Many members of the community frequent
-the _#selenium_ IRC channel at [irc.freenode.net](//freenode.net/). 
-Feel free to drop in and ask questions
-and if you get help which you think could be of use within these documents,
-be sure to add your contribution!
-We can update these documents,
-but it is much easier for everyone when we get contributions
-from outside the normal committers.
+Viele Nutzer der Selenium Community nutzen täglich den _#selenium_ IRC 
+Chat bei [irc.freenode.net](//freenode.net/).
+Hier kannst Du Fragen stellen und wenn Dir geholfen wird und Du der Meinung
+bist das könnte auch für andere Benutzer hilfreich sein, dann solltest
+Du dies auch anderen zur Verfügung stellen.
+Wir können die Dokumentation updaten, aber einfacher und schneller geht
+es natürlich wenn jeder Nutzer mithilft die Dokumentation am Laufenden 
+zu halten, auch wenn Sie nicht Committer sind.
 
 
 

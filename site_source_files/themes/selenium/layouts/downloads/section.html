@@ -24,7 +24,7 @@
         <p>Latest stable version <a href="https://bit.ly/2TlkRyu">3.141.59</a></p>
         <p>To use the Selenium Server in a Grid configuration see the <a href="https://selenium.dev/documentation/en/grid/">documentation</a>.</p>
         <p>Latest Selenium 4 Alpha version
-            <a href="https://selenium-release.storage.googleapis.com/4.0-alpha/selenium-server-4.0.0-alpha-3.jar">4.0.0-alpha-3</a>
+            <a href="https://selenium-release.storage.googleapis.com/4.0-alpha4/selenium-server-4.0.0-alpha-4.jar">4.0.0-alpha-4</a>
         </p>
     </div>
 </div>
@@ -63,8 +63,10 @@
         <thead>
             <tr>
                 <th scope="col">Language</th>
-                <th scope="col">Version</th>
+                <th scope="col">Stable Version</th>
                 <th scope="col">Release Date</th>
+                <th scope="col">Alpha Version</th>
+                <th scope="col">Alpha Release Date</th>
                 <th scope="col">Links</th>
             </tr>
         </thead>
@@ -73,10 +75,13 @@
                 {{ if eq .Params.Key "bindings"}}
                 <tr>
                     <td data-label="Language">{{ .Params.Language }}</td>
-                    <td data-label="Version">{{ .Params.ClientVersion }}</td>
+                    <td data-label="Stable Version">{{ .Params.ClientVersion }}</td>
                     <td data-label="Release Date">{{ .Date.Format "January 02, 2006" }}</td>
+                    <td data-label="Alpha Version">{{ .Params.AlphaClientVersion }}</td>
+                    <td data-label="Alpha Release Date">{{ .PublishDate.Format "January 02, 2006" }}</td>
                     <td data-label="Links">
                         <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
+                        <a href="{{ .Params.AlphaDownloadLink }}" class="link">Alpha Download</a>
                         <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
                         <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
                     </td>

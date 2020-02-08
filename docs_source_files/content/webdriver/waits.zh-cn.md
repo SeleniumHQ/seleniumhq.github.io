@@ -1,29 +1,13 @@
 ---
-title: "Waits"
+title: "等待"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器做什么的进程外库，而且web平台本质上是异步的，所以WebDriver不跟踪DOM的实时活动状态。这伴随着一些我们将在这里讨论的挑战。
 
-WebDriver can generally be said to have a blocking API.
-Because it is an out-of-process library that
-_instructs_ the browser what to do,
-and because the web platform has an intrinsically asynchronous nature,
-WebDriver doesn't track the active, real-time state of the DOM.
-This comes with some challenges that we will discuss here.
+根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 _竞争条件_ 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 **no such element** 的错误。 
 
-From experience,
-most intermittents that arise from use of Selenium and WebDriver
-are connected to _race conditions_ that occur between
-the browser and the user's instructions.
-An example could be that the user instructs the browser to navigate to a page,
-then gets a **no such element** error
-when trying to find an element.
-
-Consider the following document:
+考虑下面的文档：
 
 ```html
 <!doctype html>
@@ -41,7 +25,7 @@ Consider the following document:
 </script>
 ```
 
-The WebDriver instructions might look innocent enough:
+这个  WebDriver的说明可能看起来很简单:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -86,61 +70,21 @@ assert(element.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.zh-cn.md" >}})
-used in WebDriver listens for the `document.readyState`
-to change to `"complete"` before returning from the call to _navigate_.
-Because the `p` element is
-added _after_ the document has completed loading,
-this WebDriver script _might_ be intermittent.
-It “might” be intermittent because no guarantees can be made
-about elements or events that trigger asynchronously
-without explicitly waiting—or blocking—on those events.
+这里的问题是WebDriver中使用的默认页面加载策略[页面加载策略]({{< ref "/webdriver/page_loading_strategy.zh-cn.md" >}})听从`document.readyState`在返回调用 _navigate_ 之前将状态改为`"complete"` 。因为`p`元素是在文档完成加载之后添加的，所以这个WebDriver脚本可能是间歇性的。它“可能”间歇性是因为无法做出保证说异步触发这些元素或事件不需要显式等待或阻塞这些事件。
 
-Fortunately, using the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.zh-cn.md" >}}) interface—such
- as _WebElement.click_ and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls won't return
- (or the callback won't trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.zh-cn.md" >}})
- and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.zh-cn.md" >}}),
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.
+幸运的是，[_WebElement_]({{< ref "/webdriver/web_element.zh-cn.md" >}})接口上可用的正常指令集——例如 _WebElement.click_ 和 _WebElement.sendKeys_—是保证同步的，因为直到命令在浏览器中被完成之前函数调用是不会返回的(或者回调是不会在回调形式的语言中触发的)。高级用户交互APIs,[_键盘_]({{< ref "/webdriver/keyboard.zh-cn.md" >}})和[_鼠标_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.zh-cn.md" >}})是例外的，因为它们被明确地设计为“按我说的做”的异步命令。
 
-Waiting is having the automated task execution
-elapse a certain amount of time before continuing with the next step.
+等待是在继续下一步之前会执行一个自动化任务来消耗一定的时间。
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
+为了克服浏览器和WebDriver脚本之间的竞争问题，大多数Selenium客户都附带了一个 _wait_ 包。在使用等待时，您使用的是通常所说的[_显式等待_](#explicit-wait)。
 
+## 显式等待
 
-## Explicit wait
+_显示等待_ 是Selenium客户可以使用的命令式过程语言。它们允许您的代码暂停程序执行，或冻结线程，直到满足通过的 _条件_ 。这个条件会以一定的频率一直被调用，直到等待超时。这意味着只要条件返回一个假值，它就会一直尝试和等待
 
-_Explicit waits_ are available to Selenium clients
-for imperative, procedural languages.
-They allow your code to halt program execution,
-or freeze the thread,
-until the _condition_ you pass it resolves.
-The condition is called with a certain frequency
-until the timeout of the wait is elapsed.
-This means that for as long as the condition returns a falsy value,
-it will keep trying and waiting.
+由于显式等待允许您等待条件的发生，所以它们非常适合在浏览器及其DOM和WebDriver脚本之间同步状态。
 
-Since explicit waits allow you to wait for a condition to occur,
-they make a good fit for synchronising the state between the browser and its DOM,
-and your WebDriver script.
-
-To remedy our buggy instruction set from earlier,
-we could employ a wait to have the _findElement_ call
-wait until the dynamically added element from the script
-has been added to the DOM:
+为了弥补我们之前的错误指令集，我们可以使用等待来让 _findElement_ 调用等待直到脚本中动态添加的元素被添加到DOM中:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -148,7 +92,7 @@ WebDriver driver = new ChromeDriver();
 driver.get("https://google.com/ncr");
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER);
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-WebElement firstResult = new WebDriverWait(driver, 10)
+WebElement firstResult = new WebDriverWait(driver, Duration.ofSeconds(10))
         .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
 // Print the first result
 System.out.println(firstResult.getText());
@@ -204,30 +148,20 @@ assert.strictEqual(await element.getText(), 'Hello from JavaScript!');
 driver.get("https://google.com/ncr")
 driver.findElement(By.name("q")).sendKeys("cheese" + Keys.ENTER)
 // Initialize and wait till element(link) became clickable - timeout in 10 seconds
-val firstResult = WebDriverWait(driver, 10)
+val firstResult = WebDriverWait(driver, Duration.ofSeconds(10))
       .until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
 // Print the first result
 println(firstResult.text)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-We pass in the _condition_ as a function reference
-that the _wait_ will run repeatedly until its return value is truthy.
-A “truthful” return value is anything that evaluates to boolean true
-in the language at hand, such as a string, number, a boolean,
-an object (including a _WebElement_),
-or a populated (non-empty) sequence or list.
-That means an _empty list_ evaluates to false.
-When the condition is truthful and the blocking wait is aborted,
-the return value from the condition becomes the return value of the wait.
+我们将 _条件_ 作为函数引用传递， _等待_ 将会重复运行直到其返回值为true。“truthful”返回值是在当前语言中计算为boolean true的任何值，例如字符串、数字、boolean、对象(包括 _WebElement_ )或填充(非空)的序列或列表。这意味着 _空列表_ 的计算结果为false。当条件为true且阻塞等待终止时，条件的返回值将成为等待的返回值。
 
-With this knowledge,
-and because the wait utility ignores _no such element_ errors by default,
-we can refactor our instructions to be more concise:
+有了这些知识，并且因为等待实用程序默认情况下会忽略 _no such element_ 的错误，所以我们可以重构我们的指令使其更简洁:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement foo = new WebDriverWait(driver, 3)
+WebElement foo = new WebDriverWait(driver, Duration.ofSeconds(3))
           .until(driver -> driver.findElement(By.name("q")));
 assertEquals(foo.getText(), "Hello from JavaScript!");         
   {{< / code-panel >}}
@@ -247,7 +181,11 @@ using (var driver = new FirefoxDriver())
 }
 {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+  driver.get 'file:///race_condition.html'
+  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  ele = wait.until { driver.find_element(css: 'p')}
+  foo = ele.text
+  assert_match foo, 'Hello from JavaScript'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let ele = await driver.wait(until.elementLocated(By.css('p')),10000);
@@ -256,44 +194,27 @@ assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), 10)
+val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-In that example, we pass in an anonymous function
-(but we could also define it explicitly as we did earlier so it may be reused).
-The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_
-(called `d` in the example).
-In a multi-threaded environment, you should be careful
-to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.
+在这个示例中，我们传递了一个匿名函数(但是我们也可以像前面那样显式地定义它，以便重用它)。传递给我们条件的第一个，也是唯一的一个参数始终是对驱动程序对象 _WebDriver_ 的引用(在本例中称为`d`)。在多线程环境中，您应该小心操作传入条件的驱动程序引用，而不是外部范围中对驱动程序的引用。
 
-Because the wait will swallow _no such element_ errors
-that are raised when the element isn't found,
-the condition will retry until the element is found.
-Then it will take the return value, a _WebElement_,
-and pass it back through to our script.
+因为等待将会吞没在没有找到元素时引发的 _no such element_ 的错误，这个条件会一直重试直到找到元素为止。然后它将获取一个 _WebElement_ 的返回值，并将其传递回我们的脚本。
 
-If the condition fails,
-e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a _timeout error_.
+如果条件失败，例如从未得到条件为真实的返回值，等待将会抛出/引发一个叫 _timeout error_ 的错误/异常。
 
+### 选项
 
-### Options
+等待条件可以根据您的需要进行定制。有时候是没有必要等待缺省超时的全部范围，因为没有达到成功条件的代价可能很高。
 
-The wait condition can be customised to match your needs.
-Sometimes it's unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.
-
-The wait lets you pass in an argument to override the timeout:
+等待允许你传入一个参数来覆盖超时:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//new WebDriverWait(driver,3).until(some_condition(WebElement))
-new WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
+new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 WebDriverWait(driver, timeout=3).until(some_condition)
@@ -309,20 +230,15 @@ wait.until { driver.find_element(:id, 'message').displayed? }
   await driver.wait(until.elementLocated(By.id('foo')), 30000);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-WebDriverWait(driver, 3).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
+WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a/h3")))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Expected conditions
+### 预期的条件
 
-Because it's quite a common occurrence
-to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined _expected conditions_.
-As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.
+由于必须同步DOM和指令是相当常见的情况，所以大多数客户端还附带一组预定义的 _预期条件_ 。顾名思义，它们是为频繁等待操作预定义的条件。
 
-The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:
+不同的语言绑定提供的条件各不相同，但这只是其中一些:
 
 <!-- TODO(ato): Fill in -->
 * alert is present
@@ -333,41 +249,23 @@ but this is a non-exhaustive list of a few:
 * element staleness
 * visible text
 
-You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:
+您可以参考每个客户端绑定的API文档，以找到期望条件的详尽列表:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
 * .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
 
-## Implicit wait
+## 隐式等待
 
-There is a second type of wait that is distinct from
-[explicit wait](#explicit-wait) called _implicit wait_.
-By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find _any_ element.
-This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.
+还有第二种区别于[显示等待](#explicit-wait) 类型的 _隐式等待_ 。通过隐式等待，WebDriver在试图查找_任何_元素时在一定时间内轮询DOM。当网页上的某些元素不是立即可用并且需要一些时间来加载时是很有用的。
 
-Implicit waiting for elements to appear is disabled by default
-and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit-wait) and implicit waits
-will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.
+默认情况下隐式等待元素出现是禁用的，它需要在单个会话的基础上手动启用。将[显式等待](#explicit-wait)和隐式等待混合在一起会导致意想不到的结果，就是说即使元素可用或条件为真也要等待睡眠的最长时间。
 
-*Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
+*警告:*
+不要混合使用隐式和显式等待。这样做会导致不可预测的等待时间。例如，将隐式等待设置为10秒，将显式等待设置为15秒，可能会导致在20秒后发生超时。
 
-An implicit wait is to tell WebDriver to poll the DOM
-for a certain amount of time when trying to find an element or elements
-if they are not immediately available.
-The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.
+隐式等待是告诉WebDriver如果在查找一个或多个不是立即可用的元素时轮询DOM一段时间。默认设置为0，表示禁用。一旦设置好，隐式等待就被设置为会话的生命周期。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -421,13 +319,11 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## FluentWait
+## 流畅等待
 
-FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.
+流畅等待实例定义了等待条件的最大时间量，以及检查条件的频率。
 
-Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as `NoSuchElementException` when searching for an element on the page.
+用户可以配置等待来忽略等待时出现的特定类型的异常，例如在页面上搜索元素时出现的`NoSuchElementException`。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -462,10 +358,28 @@ using (var driver = new FirefoxDriver())
   var foo = wait.Until(drv => drv.FindElement(By.Id("foo")));
 }  {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :firefox
+exception = Selenium::WebDriver::Error::NoSuchElementError
+
+begin
+  driver.get 'http://somedomain/url_that_delays_loading'
+  wait = Selenium::WebDriver::Wait.new(timeout: 30, interval: 5, message: 'Timed out after 30 sec', ignore: exception)
+  foo = wait.until { driver.find_element(id: 'foo')}
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const {Builder, until} = require('selenium-webdriver');
+
+(async function example() {
+    let driver = await new Builder().forBrowser('firefox').build();
+    await driver.get('http://somedomain/url_that_delays_loading');
+    // Waiting 30 seconds for an element to be present on the page, checking
+    // for its presence once every 5 seconds.
+    let foo = await driver.wait(until.elementLocated(By.id('foo')), 30000, 'Timed out after 30 seconds', 5000);
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val wait = FluentWait<WebDriver>(getWebDriver())

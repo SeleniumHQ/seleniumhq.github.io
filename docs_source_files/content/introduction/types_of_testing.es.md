@@ -34,7 +34,7 @@ En general, esto lo hacen otras herramientas que recuperan las métricas. Una de
 
 Para una aplicación web, los detalles a medir incluyen: rendimiento (_throughput_), latencia, pérdida de datos, tiempos de carga de componentes individuales ...
 
-Nota: Todos los navegadores tienen una pestaña de rendimiento en la sección de herramientas de desarrolladores (accesible presionando F12).
+Nota 1: Todos los navegadores tienen una pestaña de rendimiento en la sección de herramientas de desarrolladores (accesible presionando F12).
 
 Nota 2: es un subtipo de **_pruebas no funcionales_** ya que generalmente se mide por sistema y no por función / característica.
 

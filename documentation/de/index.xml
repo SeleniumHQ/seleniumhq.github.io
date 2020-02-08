@@ -49,9 +49,8 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/getting_started_with_webdriver/browsers/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
+      <description>Endverbraucher Browser Folgende Browser werden offiziell vom Selenium Framework unterstützt:
+   Browser Wartungsverantwortlich Unterstützte Versionen     Chromium Chromium Alle Versionen   Firefox Mozilla 54 und neuer   Internet Explorer Selenium 6 und neuer   Opera Opera Chromium / Presto 10.5 und neuer   Safari Apple 10 und neuer    Spezielle Browser Es gibt einige spezielle Browsers die üblicherweise nur im Zuge von Projektentwicklungen eingesetzt werden.</description>
     </item>
     
     <item>
@@ -66,14 +65,13 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
-      <title>Copyright</title>
+      <title>Copyright und Unterstützung</title>
       <link>https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/front_matter/copyright_and_attributions/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Die Dokumentation von Selenium Copyright &amp;copy; 2013-2019 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
+      <description>Die Dokumentation von Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
+Diese Dokumentation wurde mit größter Sorgfalt erstellt, so vollständig und genau wie möglich. Jedoch kann keine Garantie für dessen Vollständigkeit übernommen werden. Alle bereitgestellten Informationen erfolgen ohne Gewähr. Die Autoren und der Herausgeber übernehmen keine Haftung oder Verantwortung gegenüber Personen oder Organisationen im Bezug auf entstehende Verluste oder Schäden die aus den Informationen dieser Website. Weiters kann keine Patenthaftung zur Verwendung der enthaltenen Informationen übernommen werden.</description>
     </item>
     
     <item>
@@ -83,7 +81,7 @@ Every effort has been made to make this documentation as complete and as accurat
       
       <guid>https://selenium.dev/documentation/de/introduction/the_selenium_project_and_tools/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Selenium controls web browsers Selenium is many things, but at its core it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
+ Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
 It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
     </item>
     
@@ -259,8 +257,7 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/front_matter/typographical_conventions/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Großschreibung bei Überschriften One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+      <description>Großschreibung bei Überschriften Im Englischen ist es erwünscht in den Überschriften nur den ersten Buchstaben groß zu schreiben und sich an die typografischen Regeln zu halten. Sinngemäß soll dies auch für die deutsche Übersetzung gelten. Daher sollen in Überschriften Großbuchstaben nur dann verwendet werden wenn es die deutsche Sprache auch vorsieht. Es kann verwirrend sein wenn Eine Sehr Schöne Überschrift Großbuchstaben verwendet die in der Rechtschreibung nicht vorgesehen sind.</description>
     </item>
     
     <item>
@@ -355,7 +352,7 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. The selenium-server-standalone jar is never uploaded, but all the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+ If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
     </item>
     
     <item>
@@ -365,7 +362,7 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
       
       <guid>https://selenium.dev/documentation/de/introduction/types_of_testing/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Acceptance testing This type of test is done in order to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
+ Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
 For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour.</description>
     </item>
     
@@ -413,14 +410,14 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Maus- und Keyboardaktionen im Detail</title>
+      <title>Mausaktionen im Detail</title>
       <link>https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.</description>
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.</description>
     </item>
     
     <item>
@@ -449,8 +446,8 @@ Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&a
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/introduction/about_this_documentation/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- These docs, like the code itself, are maintained 100% by volunteers within the Selenium community. Many have been using it since its inception, but many more have only been using it for a short while, and have given their time to help improve the on-boarding experience for new users.</description>
+      <description>Diese Dokumentation wird so wie auch der Sourcecode von Selenium zu 100% von der Selenium Community gepflegt. Von Anfang an haben zahlreiche Benutzer diese Dokumentation verwendet. Viele haben Sie auch nur für einen sehr kurzen Zeitraum genutzt und haben Zeit investiert um für Neulinge den Einstieg in das Thema zu erleichtern.
+Falls Du einen Fehler in der Dokumentation entdeckst, freuen wir uns wenn Du uns darauf aufmerksam machst. Der beste Weg uns das mitzuteilen ist es einen Issue (engl.</description>
     </item>
     
     <item>
@@ -511,7 +508,8 @@ It may seem ideal to performance test in the context of the user but a suite of 
       
       <guid>https://selenium.dev/documentation/de/support_packages/working_with_cookies/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- First of all, you need to be on the domain that the cookie will be valid for. If you are trying to preset cookies before you start interacting with a site and your homepage is large / takes a while to load an alternative is to find a smaller page on the site (typically the 404 page is small, e.</description>
+ A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+WebDriver API provides a way to interact with cookies with built-in methods:</description>
     </item>
     
     <item>

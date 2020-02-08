@@ -4,12 +4,12 @@ chapter: true
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# Installation de Selenium
 
-# Selenium Installation
 
-Selenium setup is quite different from the setup of other commercial tools. To use Selenium in your automation project you need to install the language bindings libraries for your language of choice. In addition you will need WebDriver binaries for the browsers you want to automate and run test on. 
+La configuration de Selenium est très différente de la configuration d'autres outils commerciaux. Pour utiliser Selenium dans votre projet d'automatisation, vous devez installer les bibliothèques de liaisons linguistiques pour la langue de votre choix. De plus, vous aurez besoin des fichiers binaires WebDriver pour les navigateurs sur lesquels vous souhaitez automatiser et exécuter le test.
+
+
+
+
+
