@@ -399,7 +399,16 @@ public class clear {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please create a PR
+from selenium import webdriver
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.google.com")
+# Store 'SearchInput' element
+SearchInput = driver.find_element_by_name("q")
+SearchInput.send_keys("selenium")
+# Clears the entered text
+SearchInput.clear()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please create a PR
@@ -408,7 +417,22 @@ public class clear {
 # Please create a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please create a PR
+const {Builder, By} = require('selenium-webdriver');
+(async function example() {
+    let driver = await new Builder().forBrowser('chrome').build();
+    try {
+        // Navigate to Url
+        await driver.get('https://www.google.com');
+        // Store 'SearchInput' element
+        let searchInput = driver.findElement(By.name('q'));
+        await searchInput.sendKeys("selenium");
+        // Clears the entered text
+        await searchInput.clear();
+    }
+    finally {
+        await driver.quit();
+    }
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.By
