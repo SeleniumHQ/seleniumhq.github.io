@@ -1,19 +1,12 @@
 ---
-title: "Remote WebDriver client"
+title: "リモートWebDriverクライアント"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
-To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
-We do this by pointing the URL to the address of the server running our tests.
-In order to customize our configuration, we set desired capabilities.
-Below is an example of instantiating a remote WebDriver object
-pointing to our remote web server, _www.example.com_,
-running our tests on Firefox.
+リモートWebDriverクライアントを実行するには、まずRemoteWebDriverに接続する必要があります。
+これを行うには、テストを実行しているサーバーのアドレスをURLに指定します。
+設定をカスタマイズするために、desired capabilitiesを設定します。
+以下は、Firefoxでテストを実行しているリモートWebサーバー _www.example.com_ を指定してリモートWebDriverオブジェクトをインスタンス化する例です。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -69,14 +62,11 @@ driver.quit()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+テスト設定をさらにカスタマイズするために、他のdesired capabilitiesを追加できます。
 
-To further customize our test configuration, we can add other desired capabilities.
+## ブラウザーオプション
 
-
-## Browser options
-
-For example, suppose you wanted to run Chrome on Windows XP,
-using Chrome version 67:
+例えば、Chromeバージョン67を使用して、Windows XPでChromeを実行する場合は、このようになるかと思います。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -147,15 +137,12 @@ driver.quit();
 {{< / code-tab >}}
 
 
-## Local file detector
+## ローカルファイルDetector
 
-The Local File Detector allows the transfer of files from the client
-machine to the remote server.  For example, if a test needs to upload a
-file to a web application, a remote WebDriver can automatically transfer
-the file from the local machine to the remote web server during
-runtime. This allows the file to be uploaded from the remote machine
-running the test. It is not enabled by default and can be enabled in
-the following way:
+ローカルファイルDetectorを使用すると、クライアントマシンからリモートサーバーにファイルを転送できます。 
+例えば、テストでファイルをWebアプリケーションにアップロードする必要がある場合、リモートWebDriverは実行時にローカルマシンからリモートWebサーバーにファイルを自動的に転送できます。 
+これにより、テストを実行しているリモートマシンからファイルをアップロードできます。 
+デフォルトでは有効になっておらず、次の方法で有効にできます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -189,7 +176,7 @@ driver.fileDetector = LocalFileDetector()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Once the above code is defined, you can upload a file in your test in the following way:
+上記のコードを定義したら、次の方法でテストにファイルをアップロードできます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
