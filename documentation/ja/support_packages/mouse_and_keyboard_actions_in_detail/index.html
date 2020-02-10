@@ -11,20 +11,20 @@
     <title>マウスアクションの詳細 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1581075064" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1581075064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1581266580" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1581266580" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1581075064" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1581266580" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1581075064"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1581266580"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1581075064"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1581075064"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1581266580"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1581266580"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1581075064"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1581266580"></script>
 
     
   </div>
@@ -2728,7 +2728,19 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="rubycode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to Url</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://www.google.com&#39;</span>
+  <span style="color:#586e75"># Store &#39;Gmail&#39; anchor web element</span>
+  gmail_link <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">link_text</span>: <span style="color:#2aa198">&#39;Gmail&#39;</span>)
+  <span style="color:#586e75"># Performs mouse move action onto the element</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>move_to(gmail_link)<span style="color:#719e07">.</span>perform
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -2921,7 +2933,22 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="rubycode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to Url</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://www.google.com&#39;</span>
+  <span style="color:#586e75"># Store &#39;Gmail&#39; anchor web element</span>
+  gmail_link <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">link_text</span>: <span style="color:#2aa198">&#39;Gmail&#39;</span>)
+  <span style="color:#586e75"># Capture x and y offset positions of element</span>
+  x_offset <span style="color:#719e07">=</span> gmail_link<span style="color:#719e07">.</span>rect<span style="color:#719e07">.</span>x
+  y_offset <span style="color:#719e07">=</span> gmail_link<span style="color:#719e07">.</span>rect<span style="color:#719e07">.</span>y
+  <span style="color:#586e75"># Performs mouse move action onto the offset position</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>move_to_location(x_offset, y_offset)<span style="color:#719e07">.</span>perform
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -3118,7 +3145,21 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="rubycode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to Url</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>
+  <span style="color:#586e75"># Store &#39;box A&#39; as source element</span>
+  source_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;draggable&#39;</span>)
+  <span style="color:#586e75"># Store &#39;box B&#39; as source element</span>
+  target_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;droppable&#39;</span>)
+  <span style="color:#586e75"># Performs drag and drop action of sourceEle onto the targetEle</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>drag_and_drop(source_ele, target_ele)<span style="color:#719e07">.</span>perform
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -3318,7 +3359,23 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="rubycode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to Url</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>
+  <span style="color:#586e75"># Store &#39;box A&#39; as source element</span>
+  source_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;draggable&#39;</span>)
+  target_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;droppable&#39;</span>)
+  <span style="color:#586e75"># Capture x and y offset positions of element</span>
+  x_offset <span style="color:#719e07">=</span> target_ele<span style="color:#719e07">.</span>rect<span style="color:#719e07">.</span>x
+  y_offset <span style="color:#719e07">=</span> target_ele<span style="color:#719e07">.</span>rect<span style="color:#719e07">.</span>y
+  <span style="color:#586e75"># Performs dragAndDropBy onto the  target element offset position</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>drag_and_drop_by(source_ele, x_offset, y_offset)<span style="color:#719e07">.</span>perform
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -3522,7 +3579,20 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 
 <section id="rubycode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to Url</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://crossbrowsertesting.github.io/drag-and-drop&#39;</span>
+  source_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;draggable&#39;</span>)
+  target_ele <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;droppable&#39;</span>)
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>click_and_hold(source_ele)<span style="color:#719e07">.</span>move_to(target_ele)<span style="color:#719e07">.</span>perform
+  <span style="color:#586e75"># Performs release event</span>
+  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>release<span style="color:#719e07">.</span>perform
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -3592,7 +3662,7 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/">
       “マウスアクションの詳細”
-    </a> was last updated on: 07 Feb 2020 15:51:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/22ae42ec5b74f34aff1a5d7ee8b01403d5b8427c">Add: Ruby sample code  for Mouse actions in detail  (#209) (22ae42ec5)</a>
+    </a> was last updated on: 09 Feb 2020 22:11:18 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/d91bd407136e953e8baa6af452e755a377494f65">Add: Adding Ruby code samples for dragAndDrop, dragAndDropBy and release (#213) [deploy site] (d91bd4071)</a>
 </h5>
         
         </div> 
@@ -4789,19 +4859,19 @@ webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="co
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1581075064"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1581266580"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1581075064"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1581075064"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1581266580"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1581266580"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1581075064" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1581075064"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1581266580" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1581266580"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
