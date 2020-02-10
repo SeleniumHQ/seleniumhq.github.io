@@ -127,17 +127,6 @@ It allows users to simulate common activities performed by end-users; entering t
     </item>
     
     <item>
-      <title>Understanding the components</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
-    </item>
-    
-    <item>
       <title>クイックツアー</title>
       <link>https://selenium.dev/documentation/ja/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -147,6 +136,23 @@ Terminology  API: Application Programming Interface. This is the set of &amp;ldq
 WebDriver デスクトップのウェブサイトのテスト自動化をはじめるのなら、WebDriver APIを使いましょう。 WebDriver はブラウザ自動化のAPIを使用します。このAPIは、ブラウザをコントロールしてテストを実行するためにブラウザベンダーによって提供されています。これは現実のユーザーがブラウザを操作するかのように動きます。 WebDriverのAPIはアプリケーションのコードと一緒にコンパイルする必要がありませんから、全く邪魔になりません。 これによって、あなたは本番環境と同じアプリケーションをテストすることができます。
 IDE IDE (Integrated Development Environment: 統合開発環境)はSeleniumのテストケースを開発するためのツールです。 これは利用しやすいChromeとFirefoxの拡張機能であり、テストケースを開発するための一般に最も効率的なツールです。 IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。 これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
 Grid WebDriverのテストを開発した後、テストを複数のブラウザやOSの組み合わせで実行する必要性に直面するかもしれません。 Grid はその助けになります。</description>
+    </item>
+    
+    <item>
+      <title>コンポーネントを理解する</title>
+      <link>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
+      <description>WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。 ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。 以下は、本説明での用語の使用方法の内訳です。
+用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;rdquo;コマンド&amp;rdquo;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
+ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。 ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。
+上記の簡単な例は 直接 通信です。ブラウザへのコミュニケーションは、Selenium ServerまたはRemoteWebDriverを経由した リモート 通信もできます。RemoteWebDriverは、ドライバーおよびブラウザと同じシステムで実行されます。
+リモート通信は、ホストシステム上のドライバーと順に通信するSelenium ServerまたはSelenium Gridを使用して行うこともできます。
+どのフレームワークに適しているか WebDriverには1つのジョブしかありません:　上記の任意のメソッドを経由してブラウザと通信します。WebDriverはテストに関することを知りません:　WebDriverは物事を比較する方法、成功または失敗を確認する方法を知りません、そして、レポートや Given/When/Then 文法に関しても確実に知りません。
+ここで、さまざまなフレームワークが登場します。 最低限必要なのは言語バインディングに一致するテストフレームワーク、例えば NUnit for .NET, JUnitfor Java, RSpec for Ruby などです。
+テストフレームワークは、WebDriverおよびテストの関連手順の実行を担当します。 それは下記図に似ていると考えることができます。
+上図でCucumberなどの自然言語のフレームワーク/ツールがテストフレームワークボックスの一部として存在する場合があります、またはテストフレームワークを独自の実装で完全に密閉する場合があります。</description>
     </item>
     
     <item>
@@ -179,17 +185,6 @@ Grid WebDriverのテストを開発した後、テストを複数のブラウザ
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
 Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
-    </item>
-    
-    <item>
-      <title>Driver requirements</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers.</description>
     </item>
     
     <item>
@@ -288,14 +283,24 @@ Line length When editing the documentation’s source, which is written in plain
     </item>
     
     <item>
-      <title>Browser manipulation</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</link>
+      <title>ドライバー要件</title>
+      <link>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
-gem install selenium-webdriver Or, if you use Bundler, add this line to your application&amp;rsquo;s Gemfile:</description>
+      <guid>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</guid>
+      <description>SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。 すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。
+WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。 これは、ブラウザーによって異なる水準となる可能性があります。 さまざまなドライバーの特異性の詳細については、 ドライバーの特異性 をご覧ください。
+ブラウザーを制御するためすべてのドライバーが単一のユーザー向けインターフェイスを共有している場合でも、 ブラウザーのセッションを設定する方法が少し異なります。 ドライバーの実装の多くはサードパーティによって提供されているため、 標準のSeleniumディストリビューションには含まれていません。
+ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。 このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。
+実行可能ファイルをパスに追加する ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。 WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。 実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。
+WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。
+ 実行可能ファイルを配置するディレクトリをこのように作成します。 C:\WebDriver\bin or /opt/WebDriver/bin PATHにディレクトリを追加します。
+ Windows - 管理者権限でコマンドプロンプトを開いて 次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
+setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
+export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  これで、変更をテストする準備ができました。 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
+chromedriver PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
+Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed.  Ctrl + C を押すと、コマンドプロンプトの制御を取り戻すことができます。
+クイックリファレンス    ブラウザー サポートOS メンテナ ダウンロード イシュートラッカー     Chromium/Chrome Windows/macOS/Linux Google ダウンロード イシュートラッカー   Firefox Windows/macOS/Linux Mozilla ダウンロード イシュートラッカー   Edge Windows 10 Microsoft ダウンロード イシュートラッカー   Internet Explorer Windows Selenium Project ダウンロード イシュートラッカー   Safari macOS El Capitan and newer Apple ビルトイン イシュートラッカー   Opera Windows/macOS/Linux Opera ダウンロード イシュートラッカー    Chromium/Chrome Chrome または Chromium を動かす場合、chromedriver をダウンロードして、システムパスのフォルダに置いてください。</description>
     </item>
     
     <item>
@@ -374,6 +379,22 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
     </item>
     
     <item>
+      <title>ブラウザー操作</title>
+      <link>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</guid>
+      <description>Ruby RubyはWindowsにデフォルトではインストールされません。最新バージョンをダウンロードし、インストーラーを実行します。 Installation Destination and Optional Tasks 画面で Add Ruby executables to your PATH チェックボックス以外のすべての設定をデフォルト値のままにすることができます。ブラウザーを操作するには、selenium-webdriver Ruby gemをインストールする必要があります。それをインストールするには、コマンドプロンプトを開き、次のように入力します。
+gem install selenium-webdriver または、Bundlerを使用する場合、次の行をアプリケーションのGemfileに追加します。
+gem &amp;#34;selenium-webdriver&amp;#34; そして、プロンプトで次のコマンドを実行します。
+bundle install Internet Explorer Internet ExplorerはデフォルトでWindowsにインストールされるため、インストールは不要です。 WindowsでInternet Explorerを動かすには、最新のInternet Explorer Driverをダウンロードし、ファイルを PATHにあるフォルダーに入れる必要があります。どのディレクトリが PATHにあるかを調べるには、コマンドプロンプトでecho％PATH％と入力します。
+$ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin は良い場所のようです。 IEDriverServerファイルを解凍し、IEDriverServer.exeをそこに移動します。
+これにより、新しいInternet Explorerウィンドウが開きます。
+require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer Browser操作 ナビゲート ブラウザーを起動した後に最初に行うことは、Webサイトを開くことです。これは1行で実現できます。
+Java Python C# Ruby JavaScript Kotlin //Convenient driver.get(&amp;#34;https://selenium.dev&amp;#34;); //Longer way driver.navigate().to(&amp;#34;https://selenium.dev&amp;#34;);   driver.get(&amp;#34;https://selenium.dev&amp;#34;)   driver.</description>
+    </item>
+    
+    <item>
       <title>要素を探す</title>
       <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -439,17 +460,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Waits</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/waits/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/webdriver/waits/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
-From experience, most intermittents that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
-    </item>
-    
-    <item>
       <title>When to use Grid</title>
       <link>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -473,6 +483,19 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     </item>
     
     <item>
+      <title>待機</title>
+      <link>https://selenium.dev/documentation/ja/webdriver/waits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/webdriver/waits/</guid>
+      <description>WebDriverは一般にブロッキングAPIを持っていると言えます。 ブラウザーに処理を 指示する Out-of-Processライブラリであり、Webプラットフォームは本質的に非同期の性質を持っているため、WebDriverはDOMのアクティブでリアルタイムな状態を追跡しません。 このことは、ここで説明するいくつかの課題が出てきます。
+経験から、SeleniumとWebDriverの使用から生じる断続的なもののほとんどは、ブラウザーとユーザーの指示の間で発生する 競合状態 に関連しています。 たとえば、ユーザーがブラウザーにページに移動するように指示し、要素を見つけようとすると、no such element エラーが表示される場合があります。
+次のドキュメントを考えてみましょう。
+&amp;lt;!doctype html&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;Race Condition Example&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; var initialised = false; window.addEventListener(&amp;#34;load&amp;#34;, function() { var newElement = document.createElement(&amp;#34;p&amp;#34;); newElement.textContent = &amp;#34;Hello from JavaScript!&amp;#34;; document.body.appendChild(newElement); initialised = true; }); &amp;lt;/script&amp;gt; WebDriverの指示は十分問題なく見えるかもしれません。
+Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition.html&amp;#34;); WebElement element = driver.findElement(By.tagName(&amp;#34;p&amp;#34;)); assertEquals(element.getText(), &amp;#34;Hello from JavaScript!&amp;#34;);   driver.navigate(&amp;#34;file:///race_condition.html&amp;#34;) el = driver.find_element_by_tag_name(&amp;#34;p&amp;#34;) assert el.text == &amp;#34;Hello from JavaScript!</description>
+    </item>
+    
+    <item>
       <title>Improved reporting</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -480,19 +503,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</guid>
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc. Here are some links for more information regarding report outputs for several languages.</description>
-    </item>
-    
-    <item>
-      <title>Support classes</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/support_classes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/webdriver/support_classes/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
- Locator Strategies Events LoadableComponent ThreadGuard etc.  Let&amp;rsquo;s Start:
-ThreadGuard  This class is only available in the Java Binding
- ThreadGuard checks that a driver is called only from the same thread that created it.</description>
     </item>
     
     <item>
@@ -516,6 +526,20 @@ ThreadGuard  This class is only available in the Java Binding
     </item>
     
     <item>
+      <title>サポートクラス</title>
+      <link>https://selenium.dev/documentation/ja/webdriver/support_classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/webdriver/support_classes/</guid>
+      <description>WebDriverサポートクラスは、コードのメンテナンスを簡素化するために提供されています。 ドメインオブジェクトとしてのHTML要素のモデリングを容易にする優れた抽象化を提供し、そのようなオブジェクトの使用を推論しやすくするヘルパーメソッドも提供します。 ここでは下記について学びます。
+ Locator Strategies Events LoadableComponent ThreadGuard etc.  さぁ、始めましょう。
+ThreadGuard  このクラスは、Javaバインディングでのみ使用可能です。
+ ThreadGuardは、ドライバーが、それを作成した同じスレッドからのみ呼び出されることを確認します。 特に並行してテストを実行する場合のスレッドの問題は、不可解でエラーの診断が難しい場合があります。 このラッパーを使用すると、このカテゴリのエラーが防止され、発生時に例外が発生します。
+次の例は、スレッドの衝突をシミュレートします。
+public class DriverClash { //thread main (id 1) created this driver  private WebDriver protectedDriver = ThreadGuard.protect(new ChromeDriver()); static { System.setProperty(&amp;#34;webdriver.chrome.driver&amp;#34;, &amp;#34;&amp;lt;Set path to your Chromedriver&amp;gt;&amp;#34;); } //Thread-1 (id 24) is calling the same driver causing the clash to happen  Runnable r1 = () -&amp;gt; {protectedDriver.get(&amp;#34;https://selenium.dev&amp;#34;);}; Thread thr1 = new Thread(r1); void runThreads(){ thr1.</description>
+    </item>
+    
+    <item>
       <title>Avoid sharing state</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -528,14 +552,15 @@ ThreadGuard  This class is only available in the Java Binding
     </item>
     
     <item>
-      <title>JavaScript alerts, prompts and confirmations</title>
+      <title>JavaScript アラート、プロンプトおよび確認</title>
       <link>https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
+      <description>WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。 これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。
+アラート これらの最も単純なものはアラートと呼ばれ、カスタムメッセージと、ほとんどのブラウザーでOKのラベルが付いたアラートを非表示にする単一のボタンを表示します。 ほとんどのブラウザーでは閉じるボタンを押すことで閉じることもできますが、これは常にOKボタンと同じことを行います。 アラートの例を参照してください。
+WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.find_element_by_link_text(&amp;#34;See an example alert&amp;#34;).</description>
     </item>
     
     <item>
@@ -626,27 +651,26 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
     </item>
     
     <item>
-      <title>Web element</title>
+      <title>Web要素</title>
       <link>https://selenium.dev/documentation/ja/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/web_element/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
-WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
-Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
+      <description>Web要素はDOM要素を表します。 Web要素は、WebDriverインスタンスを使用してドキュメントルートから検索するか、別のWeb要素の下で検索することで見つけることができます。
+WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
+要素の検索 要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。 これは、将来の要素アクションに使用できます。
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.Url = &amp;#34;http://www.google.com&amp;#34;; // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element IWebElement searchbox = driver.</description>
     </item>
     
     <item>
-      <title>Keyboard</title>
+      <title>キーボード</title>
       <link>https://selenium.dev/documentation/ja/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
+      <description>キーボードはキーボードイベントを表します。 キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
+sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.webdriver.common.keys import Keysdriver = webdriver.</description>
     </item>
     
     <item>
