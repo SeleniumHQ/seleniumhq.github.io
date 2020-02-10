@@ -751,7 +751,21 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
+  # Store 'box A' as source element
+  source_ele = driver.find_element(id: 'draggable')
+  # Store 'box B' as source element
+  target_ele = driver.find_element(id: 'droppable')
+  # Performs drag and drop action of sourceEle onto the targetEle
+  driver.action.drag_and_drop(source_ele, target_ele).perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -883,7 +897,23 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
+  # Store 'box A' as source element
+  source_ele = driver.find_element(id: 'draggable')
+  target_ele = driver.find_element(id: 'droppable')
+  # Capture x and y offset positions of element
+  x_offset = target_ele.rect.x
+  y_offset = target_ele.rect.y
+  # Performs dragAndDropBy onto the  target element offset position
+  driver.action.drag_and_drop_by(source_ele, x_offset, y_offset).perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
@@ -1019,7 +1049,20 @@ namespace SeleniumApp
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Navigate to Url
+  driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
+  source_ele = driver.find_element(id: 'draggable')
+  target_ele = driver.find_element(id: 'droppable')
+  driver.action.click_and_hold(source_ele).move_to(target_ele).perform
+  # Performs release event
+  driver.action.release.perform
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');

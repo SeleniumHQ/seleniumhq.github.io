@@ -1,24 +1,17 @@
 ---
-title: "Web element"
+title: "Web要素"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+Web要素はDOM要素を表します。
+Web要素は、WebDriverインスタンスを使用してドキュメントルートから検索するか、別のWeb要素の下で検索することで見つけることができます。
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
+WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
 
-WebDriver API provides built-in methods to find the WebElements which are
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+## 要素の検索
 
-## Find Element
-
-It is used to find an element and returns a first matching single WebElement reference,
-that can be used for future element actions
+要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。
+これは、将来の要素アクションに使用できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -96,10 +89,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements
+## 複数の要素の検索
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
-you need to loop over the list of elements to perform action on selected element.
+'要素の検索'に似ていますが、一致するWeb要素のリストを返します。
+リストから特定のWeb要素を使用するには、要素のリストをループして、選択した要素に対してアクションを実行する必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -221,10 +214,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Element From Element
+## 要素から要素の検索
 
-It is used to find a child element within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+親要素のコンテキスト内で子要素を見つけるために使用します。
+これを実現するには、親Web要素を'findElement'と連鎖して、子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -296,10 +289,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements From Element
+## 要素から複数の要素の検索
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+親要素のコンテキスト内で一致する子Web要素のリストを見つけるために使用します。
+これを実現するために、親Web要素は’findElements'と連鎖して子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -434,9 +427,9 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Active Element
+## アクティブな要素の取得
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+現在のブラウジングコンテキストにフォーカスがあるDOM要素を追跡（または）検索するために使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

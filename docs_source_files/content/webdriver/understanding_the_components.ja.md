@@ -1,79 +1,49 @@
 ---
-title: "Understanding the components"
+title: "コンポーネントを理解する"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。
+ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。
+以下は、本説明での用語の使用方法の内訳です。
 
-Building a test suite using WebDriver will require you to understand and
-effectively use a number of different components. As with everything in
-software, different people use different terms for the same idea. Below is
-a breakdown of how terms are used in this description.
+### 用語
 
-### Terminology
+* **API:** アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する"コマンド"をまとめたものです。
+* **ライブラリ:** APIとそれらを実装する必要なコードを含むコードモジュール。
+ライブラリは各言語バインディング向けのものです。例 .jar
+files for Java, .dll files for .NET, など.
+* **ドライバー:** 実際のブラウザを制御します。
+ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）_注: 一部の人々はドライバーをプロキシと呼んでいます。_
+* **フレームワーク:** WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。
 
-* **API:** Application Programming Interface. This is the set of "commands"
-you use to manipulate WebDriver.
-* **Library:** A code module which contains the APIs and the code necessary
-to implement them. Libraries are specific to each language binding, eg .jar
-files for Java, .dll files for .NET, etc.
-* **Driver:** Responsible for controlling the actual browser. Most drivers
-are created by the browser vendors themselves. Drivers are generally
-executable modules that run on the system with the browser itself,
-not on the system executing the test suite. (Although those may be the
-same system.) _NOTE: Some people refer to the drivers as proxies._
-* **Framework:** An additional library used as a support for WebDriver
-suites. These frameworks may be test frameworks such as JUnit or NUnit.
-They may also be frameworks supporting natural language features such
-as Cucumber or Robotium. Frameworks may also be written and used for
-things such as manipulating or configuring the system under test, data
-creation, test oracles, etc.
+### 部品構成
+最低限、WebDriverはドライバーを経由してブラウザーと通信します。
+コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
 
+![基本通信](/images/basic_comms.png?width=400px)
 
-### The Parts and Pieces
-At its minimum, WebDriver talks to a browser through a driver. Communication
-is two way: WebDriver passes commands to the browser through the driver, and
-receives information back via the same route.
+ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。
+ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。
 
-![Basic communication](/images/basic_comms.png?width=400px)
+上記の簡単な例は _直接_ 通信です。ブラウザへのコミュニケーションは、Selenium ServerまたはRemoteWebDriverを経由した _リモート_ 通信もできます。RemoteWebDriverは、ドライバーおよびブラウザと同じシステムで実行されます。
 
-The driver is specific to the browser, such as ChromeDriver for Google's
-Chrome/Chromium, GeckoDriver for Mozilla's Firefox, etc. The driver runs on
-the same system as the browser. This may, or may not be, the same system where
-the tests themselves are executing.
+![リモート通信](/images/remote_comms.png?width=400px)
 
-This simple example above is _direct_ communication. Communication to the
-browser may also be _remote_ communication through Selenium Server or
-RemoteWebDriver. RemoteWebDriver runs on the same system as the driver
-and the browser.
+リモート通信は、ホストシステム上のドライバーと順に通信するSelenium ServerまたはSelenium Gridを使用して行うこともできます。
 
-![Remote communication](/images/remote_comms.png?width=400px)
+![SeleniumGridを用いたリモート通信](/images/remote_comms_server.png?width=400px)
 
-Remote communication can also take place using Selenium Server or Selenium
-Grid, both of which in turn talk to the driver on the host system
+## どのフレームワークに適しているか
 
-![Remote communication with Grid](/images/remote_comms_server.png?width=400px)
+WebDriverには1つのジョブしかありません:　上記の任意のメソッドを経由してブラウザと通信します。WebDriverはテストに関することを知りません:　WebDriverは物事を比較する方法、成功または失敗を確認する方法を知りません、そして、レポートや Given/When/Then 文法に関しても確実に知りません。
 
-## Where Frameworks fit in
+ここで、さまざまなフレームワークが登場します。
+最低限必要なのは言語バインディングに一致するテストフレームワーク、例えば NUnit for .NET, JUnitfor Java, RSpec for Ruby などです。
 
-WebDriver has one job and one job only: communicate with the browser via any
-of the methods above. WebDriver doesn't know a thing about testing: it doesn't
-know how to compare things, assert pass or fail, and it certainly doesn't know
-a thing about reporting or Given/When/Then grammar.
+テストフレームワークは、WebDriverおよびテストの関連手順の実行を担当します。
+それは下記図に似ていると考えることができます。
 
-This is where various frameworks come in to play. At a minimum you'll need a
-test framework that matches the language bindings, eg NUnit for .NET, JUnit
-for Java, RSpec for Ruby, etc.
+![テストフレームワーク](/images/test_framework.png?width=400px)
 
-The test framework is responsible for running and executing your WebDriver
-and related steps in your tests. As such, you can think of it looking akin
-to the following image.
-
-![Test framework](/images/test_framework.png?width=400px)
-
-Natural language frameworks/tools such as Cucumber may exist as part of that
-Test Framework box in the figure above, or they may wrap the Test Framework
-entirely in their own implementation.
+上図でCucumberなどの自然言語のフレームワーク/ツールがテストフレームワークボックスの一部として存在する場合があります、またはテストフレームワークを独自の実装で完全に密閉する場合があります。
