@@ -11,20 +11,20 @@
     <title>Keyboard :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1581346715" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1581346715" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1581347222" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1581347222" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1581346715" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1581347222" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1581346715"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1581347222"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1581346715"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1581346715"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1581347222"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1581347222"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1581346715"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1581347222"></script>
 
     
   </div>
@@ -2640,7 +2640,16 @@ otherwise selenium returns the error (invalid element state (or) Element not int
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please create a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
+
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+<span style="color:#586e75"># Store &#39;SearchInput&#39; element</span>
+SearchInput <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)
+SearchInput<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;selenium&#34;</span>)
+<span style="color:#586e75"># Clears the entered text</span>
+SearchInput<span style="color:#719e07">.</span>clear()
   </code></pre></div>
 </section>
   
@@ -2665,8 +2674,23 @@ otherwise selenium returns the error (invalid element state (or) Element not int
 
 <section id="javascriptcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please create a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+        <span style="color:#586e75">// Store &#39;SearchInput&#39; element
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">let</span> searchInput <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
+        await searchInput.sendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>);
+        <span style="color:#586e75">// Clears the entered text
+</span><span style="color:#586e75"></span>        await searchInput.clear();
+    }
+    <span style="color:#719e07">finally</span> {
+        await driver.quit();
+    }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2703,7 +2727,7 @@ otherwise selenium returns the error (invalid element state (or) Element not int
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 05 Feb 2020 12:39:11 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/53326fff587e6fcdbf252cf2d4e1dd5c50fd6297">Add: Proposing element clear into Keyboard doc (#207) [deploy site] (53326fff5)</a>
+    </a> was last updated on: 10 Feb 2020 20:35:20 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/96ab874af8bc02826ff57f7e036e0d31bfc2a677">Add: Python and JS code samples for Clear command in keyboard document (#216) [deploy site] (96ab874af)</a>
 </h5>
         
         </div> 
@@ -3900,19 +3924,19 @@ otherwise selenium returns the error (invalid element state (or) Element not int
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1581346715"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1581347222"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1581346715"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1581346715"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1581347222"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1581347222"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1581346715" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1581346715"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1581347222" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1581347222"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
