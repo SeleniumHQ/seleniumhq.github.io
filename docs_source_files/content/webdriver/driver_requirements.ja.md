@@ -1,125 +1,94 @@
 ---
-title: "Driver requirements"
+title: "ドライバー要件"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。
+すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。
 
-Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
-Where possible, WebDriver drives the browser
-using the browser's built-in support for automation,
-although not all browsers have official support for remote control.
+WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。
+これは、ブラウザーによって異なる水準となる可能性があります。
+さまざまなドライバーの特異性の詳細については、 _[ドライバーの特異性]({{<ref "/driver_idiosyncrasies/_index.md">}})_ をご覧ください。
 
-WebDriver's aim is to emulate a real user's interaction
-with the browser as closely as possible.
-This is possible at varying levels in different browsers.
-For more details on the different driver idiosyncracies,
-please see _[Driver Idiosyncracies]({{< ref "/driver_idiosyncrasies/_index.md" >}})_.
+ブラウザーを制御するためすべてのドライバーが単一のユーザー向けインターフェイスを共有している場合でも、
+ブラウザーのセッションを設定する方法が少し異なります。
+ドライバーの実装の多くはサードパーティによって提供されているため、
+標準のSeleniumディストリビューションには含まれていません。
 
-Even though all the drivers share a single user-facing interface
-for controlling the browser,
-they have slightly different ways of setting up browser sessions.
-Since many of the driver implementations are provided by third parties,
-they are not included in the standard Selenium distribution.
+ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。
+このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。
 
-Driver instantiation, profile management, and various browser specific settings
-are examples of parameters that have different requirements depending on the browser.
-This section explains the basic requirements
-for getting you started with the different browsers.
+### 実行可能ファイルをパスに追加する
+ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。
+WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。
+実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。
 
-### Adding Executables to your PATH
-Most drivers require an extra executable for Selenium to communicate
-with the browser. You can manually specify where the executable lives
-before starting WebDriver, but this can make your tests less portable,
-as the executables will need to be in the same place on every machine,
-or included within your test code repository.
+WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。
 
-By adding a folder containing WebDriver's binaries to your system's
-path, Selenium will be able to locate the additional binaries without
-requiring your test code to locate the exact location of the driver.
-
-* Create a directory to place the executables in, like
+* 実行可能ファイルを配置するディレクトリをこのように作成します。
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
-* Add the directory to your PATH:
-  * On Windows - Open a command prompt as administrator
-     and the run the following command
-     to permanently add the directory to your path
-     for all users on your machine:
+* PATHにディレクトリを追加します。
+  * Windows - 管理者権限でコマンドプロンプトを開いて
+     次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
 
 ```shell
 setx /m path "%path%;C:\WebDriver\bin\"
 ```
-  * Bash users on macOS and Linux - In a terminal:
+  * macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
 
 ```shell
 export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
 ```
 
-* You are now ready to test your changes.
-  Close all open command prompts and open a new one.
-  Type out the name of one of the binaries
-  in the folder you created in the previous step,
-  e.g:
+* これで、変更をテストする準備ができました。
+  開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。
+  前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
 
   ```shell
   chromedriver
   ```
-* If your `PATH` is configured correctly,
-you will see some output relating to the startup of the driver:
+* `PATH`が正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
 
 ```text
 Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
 Only local connections are allowed.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl + C</kbd>
+<kbd>Ctrl + C</kbd> を押すと、コマンドプロンプトの制御を取り戻すことができます。
 
+### クイックリファレンス
 
-### Quick reference
-
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| ブラウザー | サポートOS | メンテナ | ダウンロード | イシュートラッカー |
 | ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows 10 | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](//selenium-release.storage.googleapis.com/index.html) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS El Capitan and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [Downloads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
-
+| Chromium/Chrome | Windows/macOS/Linux | Google | [ダウンロード](//chromedriver.storage.googleapis.com/index.html) | [イシュートラッカー](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [ダウンロード](//github.com/mozilla/geckodriver/releases) | [イシュートラッカー](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows 10 | Microsoft | [ダウンロード](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [イシュートラッカー](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
+| Internet Explorer | Windows | Selenium Project | [ダウンロード](//selenium-release.storage.googleapis.com/index.html) | [イシュートラッカー](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS El Capitan and newer | Apple | ビルトイン | [イシュートラッカー](//bugreport.apple.com/logon) |
+| Opera | Windows/macOS/Linux | Opera | [ダウンロード](//github.com/operasoftware/operachromiumdriver/releases) | [イシュートラッカー](//github.com/operasoftware/operachromiumdriver/issues) |
 
 ### Chromium/Chrome
 
-To drive Chrome or Chromium, you have to download
-[chromedriver](//sites.google.com/a/chromium.org/chromedriver/downloads)
-and put it in a folder that is on your system's path.
+Chrome または Chromium を動かす場合、[chromedriver](//sites.google.com/a/chromium.org/chromedriver/downloads) をダウンロードして、システムパスのフォルダに置いてください。
 
-On Linux or macOS, this means modifying
-the `PATH` environmental variable.
-You can see what directories, separated by a colon,
-make up your system's path by executing the following command:
+LinuxまたはmacOSでは、これは `PATH` 環境変数を変更することを意味します。
+次のコマンドを実行すると、コロンで区切られたディレクトリがシステムのパスを構成していることがわかります。
 
 ```shell
 $ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-To include chromedriver on the path if it isn't already,
-make sure you include the chromedriver binary's parent directory.
-The following line will set the `PATH` environmental variable
-its current content, plus an additional path added after the colon:
+まだパスを追加していない場合にchromedriverをパスに含めるには、chromedriverバイナリの親ディレクトリを必ず含めてください。
+次の行は、 `PATH` 環境変数の現在のコンテンツに加えて、コロンの後に追加のパスを設定します。
 
 ```shell
 $ export PATH="$PATH:/path/to/chromedriver"
 ```
 
-When chromedriver is available on your path,
-you should be able to execute the _chromedriver_ executable from any directory.
+パス上でchromedriverが使用可能な場合、任意のディレクトリから_chromedriver_実行可能ファイルを実行できるはずです。
 
-To instantiate a Chrome/Chromium session, you can do the following:
+Chrome / Chromiumセッションをインスタンス化するには、次のとおり。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -168,8 +137,8 @@ val driver: WebDriver = ChromeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Remember that you have to set the path to the chromedriver executable.
-This is possible using the following line:
+chromedriver実行可能ファイルへのパスを設定する必要があることに注意してください。
+これは、次の行を使えば可能です。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -192,21 +161,16 @@ System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The chromedriver is implemented as a WebDriver remote server
-that by exposing Chrome's internal automation proxy interface
-instructs the browser what to do.
-
+chromedriverは、Chromeの内部自動化プロキシインターフェイスを公開することにより、ブラウザーに処理を指示するWebDriverリモートサーバーとして実装されています。
 
 ### Firefox
 
-Starting with Selenium 3, Mozilla has taken over implementation of
-Firefox Driver, with [geckodriver](//github.com/mozilla/geckodriver).
-The new driver for Firefox is called geckodriver and works with Firefox
-48 and newer. Since the Firefox WebDriver is under development, the
-newer the Firefox version the better the support.
+Selenium 3以降、MozillaはFirefoxドライバーの実装である [geckodriver](//github.com/mozilla/geckodriver) を引き継ぎました。
+Firefox用の新しいドライバーはgeckodriverと呼ばれ、Firefox 48以降で動作します。
+Firefox WebDriverは開発中であるため、Firefoxバージョンが新しいほどサポートが向上します。
 
-As geckodriver is the new default way of launching Firefox, you can
-instantiate Firefox in the same way as Selenium 2:
+geckodriverはFirefoxを起動する新しいデフォルトの方法であるため、
+Selenium 2と同じ方法でFirefoxをインスタンス化できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -253,8 +217,8 @@ val driver: WebDriver = FirefoxDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you prefer not to set geckodriver's location using PATH,
-set the geckodriver binary location programmatically:
+PATHを使用してgeckodriverの場所を設定しない場合は、
+geckodriverバイナリの場所をプログラムで設定します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -280,31 +244,22 @@ System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-It is also possible to set the property at run time:
+実行時にプロパティを設定することも可能です。
 
 ```shell
 mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver
 ```
 
-It is currently possible to revert to the older, more feature complete
-Firefox driver, by installing Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/)
-or [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/)
-and specifying a desired capability of **marionette** as
-**false**. Later releases of Firefox are no longer compatible.
-
+Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/) または [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/) をインストール、および **marionette** の必要な機能を **false** として指定することにより、多くの機能が完了した古いFirefoxドライバーに戻すことが可能です。
+以降のFirefoxのリリースには互換性がありません。
 
 ### Edge
 
-Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
-Updates to Edge are bundled with major Windows updates,
-so you'll need to download a binary which matches the build number of your
-currently installed build of Windows.
-The [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-contains links to all the available binaries. Bugs against the EdgeDriver
-implementation can be raised with
-[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver).
-If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft
-offer free VMs for testers on the [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
+Edgeは、Microsoftの最新のブラウザーで、Windows 10およびServer 2016に含まれています。
+Edgeの更新は、主要なWindowsUpdateプログラムにバンドルされているため、現在インストールされているWindowsビルドのビルド番号に一致するバイナリをダウンロードする必要があります。 
+[Edge Developer サイト](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)には、利用可能なすべてのバイナリへのリンクが含まれています。 
+EdgeDriverの実装に対するバグは、[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver)に起票する可能性があります。 
+Edgeに対してテストを実行したいがWindows 10を実行していない場合、MicrosoftはEdge [Edge Developer サイト](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/)でテスター向けに無料のVMを提供しています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -351,8 +306,7 @@ val driver: WebDriver = EdgeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Edge driver is not present in your path, you can set the path using
-the following line:
+Edgeドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -376,19 +330,12 @@ System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
 {{< / code-tab >}}
 
 ### Internet Explorer
-Internet Explorer was Microsoft's default browser until Windows 10, although it
-is still included in Windows 10. Internet Explorer Driver is the only driver
-The Selenium project aims to support the same releases
-[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
-Older releases may work, but will be unsupported.
+Internet Explorerは、Windows 10まではMicrosoftのデフォルトのブラウザーでしたが、Windows 10にはまだ含まれています。
+Internet ExplorerドライバーはSeleniumプロジェクトは、同じリリースの[Microsoftの現在の考慮](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer)をサポートすることを目指す唯一のドライバーです。
+古いリリースは動作する可能性がありますが、サポートされません。
 
-While the Selenium project provides binaries for both the 32-bit and 64-bit
-versions of Internet Explorer, there are some
-[limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with Internet Explorer 10 & 11 with the 64-bit driver, but using the 32-bit
-driver continues to work well. It should be noted that as Internet Explorer
-preferences are saved against the logged in user's account, some
-[additional setup is required](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
+SeleniumプロジェクトはInternet Explorerの32ビット版と64ビット版の両方のバイナリを提供しますが、64ビットドライバーを使用するInternet Explorer 10および11にはいくつかの[制限](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)がありますが、32ビットドライバーの使うことでうまく機能します。
+ログインしたユーザーのアカウントに対してInternet Explorerの設定が保存されるため、[追加の設定が必要になること](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration)に注意してください。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -435,8 +382,7 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Internet Explorer driver is not present in your path, you can set the path
-using the following line:
+Internet Explorerドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -459,22 +405,13 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Microsoft also offer a WebDriver binary for
-[Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069).
-It has not been updated since 2014 and is based of a draft version of the
-W3 specification. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
-has an excellent writeup on Microsoft's implementation.
-
+Microsoftは、[Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069)上のInternet Explorer 11用のWebDriverバイナリも提供しています。 
+2014年以降更新されておらず、W3仕様のドラフトバージョンに基づいています。 [ジム エバンス](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)は、Microsoftの実装に関する優れた記事を持っています。
 
 ### Opera
+Operaの現在のリリースはChromiumエンジンの上に構築されており、WebDriverは[PATHに追加](#adding-executables-to-your-path)したりシステムプロパティとして追加したりできるクローズドソースの[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases)を介してサポートされるようになりました。
 
-Current releases of Opera are built on top of the Chromium engine,
-and WebDriver is now supported via the closed-source
-[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases),
-which can be [added to your PATH](#adding-executables-to-your-path) or as a
-system property.
-
-Instantiating a driver session is similar to Firefox and Chromium:
+ドライバーセッションのインスタンス化は、FirefoxとChromiumに似ています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -518,26 +455,23 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-High Sierra and later:
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+High Sierra 以降 :
+* まず端末から次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します
 ```shell
 safaridriver --enable
 ```
 
-El Capitan and Sierra:
+El Capitan と Sierra :
 
-* Enable the Developer menu from Safari preferences
-* Check the _Allow Remote Automation_ option from with
-the Develop menu
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+* Safariの設定から開発メニューを有効にします
+* 開発メニューから _リモート オートメーションを許可_ オプションをオンにします
+* まずターミナルから次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します
 
 ```shell
 /usr/bin/safaridriver -p 1337</
 ```
 
-You can then start a driver session using:
+その後、次を使用してドライバーセッションを開始できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -584,34 +518,20 @@ val driver: WebDriver = SafariDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+iOSでSafariを自動化する場合は、[Appium project](//appium.io/)をご覧ください。
+Safariは以前はWindowsで利用可能でしたが、Appleは長い間サポートを終了しており、テストプラットフォームの選択肢としては不適切です。
 
-Those looking to automate Safari on iOS should look to the
-[Appium project](//appium.io/). Whilst Safari was previously
-available for Windows, Apple has long since dropped support, making it
-a poor choice of test platform.
-
-
-## Mock browsers
-
+## モック ブラウザー
 
 ### HtmlUnit
 
-HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents
-and provides an API that allows you to invoke pages, fill out forms, click
-links, etc. It has JavaScript support and is able to work with AJAX libraries,
-simulating Chrome, Firefox or Internet Explorer depending on the configuration
-used. It has been moved to a
-[new location](http://htmlunit.sourceforge.net/gettingStarted.html).
-The source is maintained on svn.
-
+HtmlUnitは "Javaプログラム用のGUIレスブラウザー" です。 HTMLドキュメントをモデル化し、ページの呼び出し、フォームへの入力、リンクのクリックなどを可能にするAPIを提供します。
+JavaScriptをサポートしており、AJAXライブラリを使用して、使用する設定に応じてChrome、Firefox、またはInternet Explorerをシミュレートできます。
+[新しい場所](http://htmlunit.sourceforge.net/gettingStarted.html)に移動しました。
+ソースはsvnで管理されています。
 
 ### PhantomJS
 
-PhantomJS is a headless browser based on Webkit, albeit a version much older
-than that used by Google Chrome or Safari. Whilst historically a popular
-choice, it would now be wise to avoid PhantomJS. The project has been
-unmaintained
-[since the 5th of August](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE),
-so whilst the web will continue to change, PhantomJS will not be updated.
-This was after Google announced the ability to run Chrome headlessly,
-something also now offered by Mozilla's Firefox.
+PhantomJSは、Google ChromeまたはSafariで使用されているバージョンよりもはるかに古いバージョンですが、Webkitベースのヘッドレスブラウザーです。
+歴史的に人気のある選択肢でしたが、今ではPhantomJSを避ける​​のが賢明です。
+プロジェクトは[8月5日以降](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE)メンテナンスされていないため、Webの変更は継続されますが、PhantomJSは更新されません。これは、GoogleがChromeをヘッドレスで実行する機能を発表した後のことで、MozillaのFirefoxでも提供されています。

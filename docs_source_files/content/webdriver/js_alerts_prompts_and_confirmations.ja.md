@@ -1,27 +1,18 @@
 ---
-title: "JavaScript alerts, prompts and confirmations"
+title: "JavaScript アラート、プロンプトおよび確認"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。
+これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。
 
-WebDriver provides an API for working with the three types of native
-popup message offered by JavaScript. These popups are styled by the
-browser and offer limited customisation.
+## アラート
 
-## Alerts
+これらの最も単純なものはアラートと呼ばれ、カスタムメッセージと、ほとんどのブラウザーでOKのラベルが付いたアラートを非表示にする単一のボタンを表示します。
+ほとんどのブラウザーでは閉じるボタンを押すことで閉じることもできますが、これは常にOKボタンと同じことを行います。
+<a onclick="window.alert('Sample alert')">アラートの例を参照してください</a>。
 
-The simplest of these is referred to as an alert, which shows a
-custom message, and a single button which dismisses the alert, labelled
-in most browsers as OK. It can also be dismissed in most browsers by
-pressing the close button, but this will always do the same thing as
-the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
-
-WebDriver can get the text from the popup and accept or dismiss these
-alerts.
+WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -109,13 +100,12 @@ alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Confirm
+## 確認
 
-A confirm box is similar to an alert, except the user can also choose
-to cancel the message. <a onclick="window.confirm('Are you sure?')">See
-a sample confirm</a>.
+確認ダイアログボックスはアラートに似ていますが、ユーザーがメッセージをキャンセルすることも選択できる点が異なります。
+<a onclick="window.confirm('Are you sure?')">サンプルを確認してください</a>。
 
-This example also shows a different approach to storing an alert:
+この例は、アラートを保存する別の方法も示しています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -215,15 +205,13 @@ alert.dismiss()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Prompt
+## プロンプト
 
-Prompts are similar to confirm boxes, except they also include a text
-input. Similar to working with form elements, you can use WebDriver's
-send keys to fill in a response. This will completely replace the placeholder
-text. Pressing the cancel button will not submit any text.
-<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
-See a sample prompt</a>.
-
+プロンプトは確認ボックスに似ていますが、テキスト入力も含まれている点が異なります。
+フォーム要素の操作と同様に、WebDriverの送信キーを使用して応答を入力できます。
+これにより、プレースホルダーテキストが完全に置き換えられます。
+キャンセルボタンを押してもテキストは送信されません。
+<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">サンプルプロンプトを参照してください</a>。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

@@ -1,19 +1,14 @@
 ---
-title: "Keyboard"
+title: "キーボード"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
-Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
-interface which allows us to provide virtualized device input to the web browser.
+キーボードはキーボードイベントを表します。
+キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -112,7 +107,7 @@ fun main() {
 
 ## keyDown
 
-The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+keyDownは、修飾キー（CONTROL、SHIFT、ALT）を押す動作をシミュレートするために使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -228,7 +223,7 @@ fun main() {
 
 ## keyUp
 
-The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+keyUpは、修飾キー（CONTROL、SHIFT、ALT）のキーアップ（または）キーリリース操作をシミュレートするために使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -369,9 +364,10 @@ fun main() {
 {{< / code-tab >}}
 
 ## clear
-Clears the content of an editable element. 
-This is only applied for the elements which is editable and interactable, 
-otherwise selenium returns the error (invalid element state (or) Element not interactable)
+
+編集可能な要素のコンテンツをクリアします。
+これは、編集可能かつ対話可能な要素にのみ適用されます。
+そうでない場合、セレンはエラーを返します（無効な要素状態（または）要素は対話不可能）
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
