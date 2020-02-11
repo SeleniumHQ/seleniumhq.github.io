@@ -11,20 +11,20 @@
     <title>キーボード :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1581320608" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1581320608" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1581347227" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1581347227" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1581320608" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1581347227" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1581320608"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1581347227"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1581320608"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1581320608"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1581347227"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1581347227"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1581320608"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1581347227"></script>
 
     
   </div>
@@ -680,13 +680,13 @@
  
   
     
-    <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
+    <li data-nav-id="/remote_webdriver/" title="リモートWebDriver" class="dd-item 
         
         
         
         ">
       <a href="https://selenium.dev/documentation/ja/remote_webdriver/">
-          Remote WebDriver
+          リモートWebDriver
           
             <i class="fas fa-check read-icon"></i>
           
@@ -707,9 +707,9 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" class="dd-item ">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="リモートWebDriverサーバー" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/">
-        Remote WebDriver server
+        リモートWebDriverサーバー
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -726,9 +726,9 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" class="dd-item ">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="リモートWebDriverクライアント" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/">
-        Remote WebDriver client
+        リモートWebDriverクライアント
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2633,7 +2633,16 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please create a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
+
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+<span style="color:#586e75"># Store &#39;SearchInput&#39; element</span>
+SearchInput <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)
+SearchInput<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;selenium&#34;</span>)
+<span style="color:#586e75"># Clears the entered text</span>
+SearchInput<span style="color:#719e07">.</span>clear()
   </code></pre></div>
 </section>
   
@@ -2658,8 +2667,23 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please create a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+        <span style="color:#586e75">// Store &#39;SearchInput&#39; element
+</span><span style="color:#586e75"></span>        <span style="color:#268bd2">let</span> searchInput <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
+        await searchInput.sendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>);
+        <span style="color:#586e75">// Clears the entered text
+</span><span style="color:#586e75"></span>        await searchInput.clear();
+    }
+    <span style="color:#719e07">finally</span> {
+        await driver.quit();
+    }
+})();
+  
 </code></pre></div>
 </section>
   
@@ -2696,7 +2720,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/keyboard/">
       “キーボード”
-    </a> was last updated on: 10 Feb 2020 16:41:49 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/b2da41236d46f673092a25c0f80d455e83396a26">Add Japanese translation of &#34;WebDriver&#34; (#214) [deploy site] (b2da41236)</a>
+    </a> was last updated on: 10 Feb 2020 20:35:20 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/96ab874af8bc02826ff57f7e036e0d31bfc2a677">Add: Python and JS code samples for Clear command in keyboard document (#216) [deploy site] (96ab874af)</a>
 </h5>
         
         </div> 
@@ -3883,7 +3907,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 			<a class="nav nav-prev" href="https://selenium.dev/documentation/ja/webdriver/web_element/" title="Web要素"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="https://selenium.dev/documentation/ja/remote_webdriver/" title="Remote WebDriver" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="https://selenium.dev/documentation/ja/remote_webdriver/" title="リモートWebDriver" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3893,19 +3917,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1581320608"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1581347227"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1581320608"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1581320608"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1581347227"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1581347227"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1581320608" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1581320608"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1581347227" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1581347227"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

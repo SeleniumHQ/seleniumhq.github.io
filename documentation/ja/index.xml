@@ -65,18 +65,6 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Remote WebDriver server</title>
-      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
-Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test. Then, from the directory with the jar, run the following:
-java -jar selenium-server-standalone-{VERSION}.</description>
-    </item>
-    
-    <item>
       <title>Selenium 1 (Selenium RC)</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -167,6 +155,24 @@ Grid WebDriverのテストを開発した後、テストを複数のブラウザ
     </item>
     
     <item>
+      <title>リモートWebDriverサーバー</title>
+      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</guid>
+      <description>サーバーは、テストするブラウザーがインストールされたマシンで常に実行されます。 サーバーは、コマンドラインから、またはコード設定を通じて使用できます。
+コマンドラインからサーバーを起動する 一旦、selenium-server-standalone-{VERSION}.jarをダウンロードしたら、テストしたいブラウザーのあるコンピューターに配置します。 次に、jarを含むディレクトリから、次のコマンドを実行します。
+java -jar selenium-server-standalone-{VERSION}.jar サーバーを実行するにあたって考慮すること 呼び出し元は、Selenium#stop()またはWebDriver#quitを呼び出して、各セッションを適切に終了すべきです。
+selenium-serverは、進行中の各セッションのメモリ内ログを保持します。 これらのログは、Selenium#stop()またはWebDriver#quitが呼び出されるとクリアされます。 これらのセッションの終了を忘れると、サーバーでメモリリークが発生する可能性があります。 非常に長時間実行されるセッションを維持する場合は、時々停止または終了する必要があります（または-Xmx jvmオプションでメモリを増やします）。
+タイムアウト (version 2.21以降) サーバーには2つの異なるタイムアウトがあり、次のように設定できます。
+java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  ブラウザーのハングを許可する時間を制御します（値は秒単位）。  timeout  セッションが回収されるまでにクライアントがいなくなる時間を制御します（値は秒単位）。   システムプロパティselenium.server.session.timeoutは、2.21からサポートされなくなりました。
+browserTimeoutは、通常のタイムアウトメカニズムが失敗した場合の予備のタイムアウトメカニズムであることに注意してください。これは主にグリッド/サーバー環境で使用され、クラッシュ/失われたプロセスが長く滞留、ランタイム環境を汚染しないようにします。
+プログラムでサーバーを構成する 理論的には、プロセスはDriverServletをURLにマッピングするのと同じくらい簡単ですが、ページを全体的にコードで構成されたJettyなどの軽量コンテナでホストすることもできます。これを行う手順は次のとおりです。
+selenium-server.zipをダウンロードして解凍します。 JARをCLASSPATHに配置します。 AppServerという新しいクラスを作成します。 ここでは、Jettyを使用しているので、それもダウンロードする必要があります。
+import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.mortbay.jetty.nio.SelectChannelConnector; import org.mortbay.jetty.security.SslSocketConnector; import org.mortbay.jetty.webapp.WebAppContext; import javax.servlet.Servlet; import java.io.File; import org.openqa.selenium.remote.server.DriverServlet; public class AppServer { private Server server = new Server(); public AppServer() throws Exception { WebAppContext context = new WebAppContext(); context.</description>
+    </item>
+    
+    <item>
       <title>Components of a Grid</title>
       <link>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -230,17 +236,6 @@ Functional end-user tests such as Selenium tests are expensive to run, however. 
     </item>
     
     <item>
-      <title>Remote WebDriver client</title>
-      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
-    </item>
-    
-    <item>
       <title>Typographical conventions</title>
       <link>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -301,6 +296,16 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  これで、�
 chromedriver PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
 Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed.  Ctrl + C を押すと、コマンドプロンプトの制御を取り戻すことができます。
 クイックリファレンス    ブラウザー サポートOS メンテナ ダウンロード イシュートラッカー     Chromium/Chrome Windows/macOS/Linux Google ダウンロード イシュートラッカー   Firefox Windows/macOS/Linux Mozilla ダウンロード イシュートラッカー   Edge Windows 10 Microsoft ダウンロード イシュートラッカー   Internet Explorer Windows Selenium Project ダウンロード イシュートラッカー   Safari macOS El Capitan and newer Apple ビルトイン イシュートラッカー   Opera Windows/macOS/Linux Opera ダウンロード イシュートラッカー    Chromium/Chrome Chrome または Chromium を動かす場合、chromedriver をダウンロードして、システムパスのフォルダに置いてください。</description>
+    </item>
+    
+    <item>
+      <title>リモートWebDriverクライアント</title>
+      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
+      <description>リモートWebDriverクライアントを実行するには、まずRemoteWebDriverに接続する必要があります。 これを行うには、テストを実行しているサーバーのアドレスをURLに指定します。 設定をカスタマイズするために、desired capabilitiesを設定します。 以下は、Firefoxでテストを実行しているリモートWebサーバー www.example.com を指定してリモートWebDriverオブジェクトをインスタンス化する例です。
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.for :remote, url: &amp;#34;http://www.</description>
     </item>
     
     <item>
