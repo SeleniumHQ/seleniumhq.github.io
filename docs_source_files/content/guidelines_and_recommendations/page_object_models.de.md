@@ -41,14 +41,16 @@ page object:
  */
 public class Login {
 
-        public void testLogin() {
-                selenium.type("inputBox", "testUser");
-                selenium.type("password", "my supersecret password");
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("PageWaitPeriod");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  public void testLogin() {
+    // fill login data on sign-in page
+    driver.findElement(By.name("user_name")).sendKeys("testUser");
+    driver.findElement(By.name("password")).sendKeys("my supersecret password");
+    driver.findElement(By.name("sign-in")).click();
+
+    // verify h1 tag is "Hello userName" after login
+    driver.findElement(By.tagName("h1")).isDisplayed();
+    assertThat(driver.findElement(By.tagName("h1")).getText(), is("Hello userName"));
+  }
 }
 ```
 
@@ -65,65 +67,94 @@ Applying the page object techniques, this example could be rewritten like this
 in the following example of a page object for a Sign-in page.
 
 ```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 /**
  * Page Object encapsulates the Sign-in page.
  */
 public class SignInPage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  public SignInPage(WebDriver driver){
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+  }
 
-        public SignInPage(Selenium selenium) {
-                this.selenium = selenium;
-                if(!selenium.getTitle().equals("Sign in page")) {
-                        throw new IllegalStateException("This is not sign in page, current page is: "
-                                        +selenium.getLocation());
-                }
-        }
+  // <input name="user_name" type="text" valur=""></input>
+  @FindBy(name="user_name")
+  private WebElement usernamefield;
+  // <input name="password" type="password" valur=""></input>
+  @FindBy(name="password")
+  private WebElement passwordfield;
+  // <input name="sign-in" type="submit" valur="SignIn"></input>
+  @FindBy(name="sign-in")
+  private WebElement sign_in;
 
-        /**
-         * Login as valid user
-         *
-         * @param userName
-         * @param password
-         * @return HomePage object
-         */
-        public HomePage loginValidUser(String userName, String password) {
-                selenium.type("usernamefield", userName);
-                selenium.type("passwordfield", password);
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("waitPeriod");
-
-                return new HomePage(selenium);
-        }
+  /**
+  * Login as valid user
+  *
+  * @param userName
+  * @param password
+  * @return HomePage object
+  */
+  public HomePage loginValidUser(String userName, String password) {
+    this.usernamefield.sendKeys(userName);
+    this.passwordfield.sendKeys(password);
+    this.sign_in.click();
+    return new HomePage(this.driver);
+  }
 }
 ```
 
 and page object for a Home page could look like this.
 
 ```java
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 /**
  * Page Object encapsulates the Home Page
  */
 public class HomePage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  // <h1>Hello userName</h1>
+  @FindBy(tagName = "h1")
+  private WebElement message;
 
-        public HomePage(Selenium selenium) {
-                if (!selenium.getTitle().equals("Home Page of logged in user")) {
-                        throw new IllegalStateException("This is not Home Page of logged in user, current page" +
-                                        "is: " +selenium.getLocation());
-                }
-        }
+  public HomePage(WebDriver driver){
+    this.driver = driver;
+    PageFactory.initElements(driver, this);
+    if (!driver.getTitle().equals("Home Page of logged in user")) {
+      throw new IllegalStateException(
+      "This is not Home Page of logged in user, current page is: "
+      + driver.getCurrentUrl());
+    }
+  }
 
-        public HomePage manageProfile() {
-                // Page encapsulation to manage profile functionality
-                return new HomePage(selenium);
-        }
+  /**
+  * Get message (h1 tag)
+  *
+  * @return String message text
+  */
+  public String getMessageText() {
+    return message.getText();
+  }
 
-        /*More methods offering the services represented by Home Page
-        of Logged User. These methods in turn might return more Page Objects
-        for example click on Compose mail button could return ComposeMail class object*/
+  public HomePage manageProfile() {
+    // Page encapsulation to manage profile functionality
+    return new HomePage(driver);
+  }
 
+  /* More methods offering the services represented by Home Page
+  of Logged User. These methods in turn might return more Page Objects
+  for example click on Compose mail button could return 
+  ComposeMail class object */
 }
 ```
 
@@ -135,12 +166,13 @@ So now, the login test would use these two page objects as follows.
  */
 public class TestLogin {
 
-        public void testLogin() {
-                SignInPage signInPage = new SignInPage(selenium);
-                HomePage homePage = signInPage.loginValidUser("userName", "password");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  @Test
+  public void testLogin() {
+    SignInPage signInPage = new SignInPage(driver);
+    HomePage homePage = signInPage.loginValidUser("userName", "password");
+    assertThat(homePage.getMessageText(), is("Hello userName"));
+  }
+
 }
 ```
 
