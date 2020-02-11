@@ -405,7 +405,34 @@ SearchInput.send_keys("selenium")
 SearchInput.clear()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please create a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using System;
+
+namespace SnipetProjectDelete
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IWebDriver driver = new ChromeDriver();
+            try
+            {
+                // Navigate to Url
+                driver.Navigate().GoToUrl(@"https://www.google.com");
+                // Store 'SearchInput' element
+                IWebElement searchInput = driver.FindElement(By.Name("q"));
+                searchInput.SendKeys("selenium");
+                // Clears the entered text
+                searchInput.Clear();
+            }
+            finally
+            {
+                driver.Quit();
+            }
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please create a PR
