@@ -367,7 +367,7 @@ fun main() {
 
 編集可能な要素のコンテンツをクリアします。
 これは、編集可能かつ対話可能な要素にのみ適用されます。
-そうでない場合、セレンはエラーを返します（無効な要素状態（または）要素は対話不可能）
+そうでない場合、seleniumはエラーを返します（無効な要素状態（または）要素は対話不可能）
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -436,7 +436,19 @@ namespace SnipetProjectDelete
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please create a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  # store 'search_input' element
+  search_input = driver.find_element(name: 'q')
+  search_input.send_keys('selenium')
+  # Clears the entered text
+  search_input.clear
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
