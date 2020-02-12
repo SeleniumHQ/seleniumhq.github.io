@@ -1,26 +1,15 @@
 ---
-title: "Test independency"
+title: "テストの独立性"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+各テストを独自のユニットとして記述します。
+他のテストに依存しない方法でテストを記述してください。
 
-Write each test as its own unit. Write the tests in a way that will not be
-reliant on other tests to complete:
+公開後にモジュールとしてWebサイトに表示されるカスタムコンテンツを作成できるコンテンツ管理システム（CMS）があり、CMSとアプリケーション間の同期に時間がかかる場合があるとします。
 
-Let us say there is a content management system with which you can create
-some custom content which then appears on your website as a module after 
-publishing, and it may take some time to sync between the CMS and the 
-application.
+モジュールをテストする間違った方法は、1つのテストでコンテンツが作成および公開され、別のテストでモジュールをチェックすることです。
+コンテンツは公開後、他のテストですぐに利用できない可能性があるため、この方法はふさわしくありません。
 
-A wrong way of testing your module is that the content is created and 
-published in one test, and then checking the module in another test. This 
-is not feasible as the content may not be available immediately for the 
-other test after publishing.
-
-Instead, you can create a stub content which can be turned on and off 
-within the affected test, and use that for validating the module. However,
-for content creation, you can still have a separate test.
+代わりに、影響を受けるテスト内でオン/オフできるスタブコンテンツを作成し、それをモジュールの検証に使用できます。
+ただし、コンテンツの作成については、別のテストを行うことができます。
