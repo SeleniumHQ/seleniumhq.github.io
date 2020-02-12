@@ -67,13 +67,13 @@ public class SignInPage {
     PageFactory.initElements(driver, this);
   }
 
-  // <input name="user_name" type="text" valur=""></input>
+  // <input name="user_name" type="text" valur="">
   @FindBy(name="user_name")
   private WebElement usernamefield;
-  // <input name="password" type="password" valur=""></input>
+  // <input name="password" type="password" valur="">
   @FindBy(name="password")
   private WebElement passwordfield;
-  // <input name="sign-in" type="submit" valur="SignIn"></input>
+  // <input name="sign-in" type="submit" valur="SignIn">
   @FindBy(name="sign-in")
   private WebElement sign_in;
 
