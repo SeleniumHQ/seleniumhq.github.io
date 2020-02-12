@@ -1,18 +1,13 @@
 ---
-title: "Fresh browser per test"
+title: "テストごとに新しいブラウザを起動する"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Start each test from a clean known state.
-Ideally, spin up a new virtual machine for each test.
-If spinning up a new virtual machine is not practical,
-at least start a new WebDriver for each test.
-For Firefox, start a WebDriver with your known profile.
+クリーンな既知の状態から各テストを開始します。
+理想的には、テストごとに新しい仮想マシンを起動します。
+新しい仮想マシンの起動が実用的でない場合は、少なくともテストごとに新しいWebDriverを起動してください。
+Firefoxの場合、既知のプロファイルでWebDriverを起動します。
 
 ```java
 FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
