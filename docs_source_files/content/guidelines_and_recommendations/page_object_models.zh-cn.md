@@ -67,10 +67,8 @@ Applying the page object techniques, this example could be rewritten like this
 in the following example of a page object for a Sign-in page.
 
 ```java
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Page Object encapsulates the Sign-in page.
@@ -78,33 +76,29 @@ import org.openqa.selenium.support.PageFactory;
 public class SignInPage {
   protected static WebDriver driver;
 
+  // <input name="user_name" type="text" value="">
+  private By usernameBy = By.name("user_name");
+  // <input name="password" type="password" value="">
+  private By passwordBy = By.name("password");
+  // <input name="sign_in" type="submit" value="SignIn">
+  private By signinBy = By.name("sign_in");
+
   public SignInPage(WebDriver driver){
     this.driver = driver;
-    PageFactory.initElements(driver, this);
   }
 
-  // <input name="user_name" type="text" valur="">
-  @FindBy(name="user_name")
-  private WebElement usernamefield;
-  // <input name="password" type="password" valur="">
-  @FindBy(name="password")
-  private WebElement passwordfield;
-  // <input name="sign-in" type="submit" valur="SignIn">
-  @FindBy(name="sign-in")
-  private WebElement sign_in;
-
   /**
-  * Login as valid user
-  *
-  * @param userName
-  * @param password
-  * @return HomePage object
-  */
+    * Login as valid user
+    *
+    * @param userName
+    * @param password
+    * @return HomePage object
+    */
   public HomePage loginValidUser(String userName, String password) {
-    this.usernamefield.sendKeys(userName);
-    this.passwordfield.sendKeys(password);
-    this.sign_in.click();
-    return new HomePage(this.driver);
+    driver.findElement(usernameBy).sendKeys(userName);
+    driver.findElement(passwordBy).sendKeys(password);
+    driver.findElement(signinBy).click();
+    return new HomePage(driver);
   }
 }
 ```
@@ -112,10 +106,8 @@ public class SignInPage {
 and page object for a Home page could look like this.
 
 ```java
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * Page Object encapsulates the Home Page
@@ -124,37 +116,32 @@ public class HomePage {
   protected static WebDriver driver;
 
   // <h1>Hello userName</h1>
-  @FindBy(tagName = "h1")
-  private WebElement message;
+  private By messageBy = By.tagName("h1");
 
   public HomePage(WebDriver driver){
     this.driver = driver;
-    PageFactory.initElements(driver, this);
     if (!driver.getTitle().equals("Home Page of logged in user")) {
-      throw new IllegalStateException(
-      "This is not Home Page of logged in user, current page is: "
-      + driver.getCurrentUrl());
+      throw new IllegalStateException("This is not Home Page of logged in user," +
+            " current page is: " + driver.getCurrentUrl());
     }
   }
 
   /**
-  * Get message (h1 tag)
-  *
-  * @return String message text
-  */
+    * Get message (h1 tag)
+    *
+    * @return String message text
+    */
   public String getMessageText() {
-    return message.getText();
+    return driver.findElement(messageBy).getText();
   }
 
   public HomePage manageProfile() {
     // Page encapsulation to manage profile functionality
     return new HomePage(driver);
   }
-
   /* More methods offering the services represented by Home Page
   of Logged User. These methods in turn might return more Page Objects
-  for example click on Compose mail button could return 
-  ComposeMail class object */
+  for example click on Compose mail button could return ComposeMail class object */
 }
 ```
 
