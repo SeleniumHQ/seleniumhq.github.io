@@ -23,14 +23,13 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
     </item>
     
     <item>
-      <title>Captchas</title>
+      <title>CAPTCHA（キャプチャ）</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/captchas/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
+      <description>CAPTCHA（キャプチャ）は、 Completely Automated Public Turing test to tell Computers and Humans Apart （コンピューターと人間を区別するための完全に自動化された公開チューリングテスト）の略で、自動化を防ぐように明示的に設計されているため、試さないでください！ CAPTCHAチェックを回避するための2つの主要な戦略があります。
+ テスト環境でCAPTCHAを無効にします テストがCAPTCHAをバイパスできるようにするフックを追加します  </description>
     </item>
     
     <item>
@@ -199,16 +198,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>File downloads</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -306,6 +295,15 @@ Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on 
     </item>
     
     <item>
+      <title>ファイルダウンロード</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
+      <description>Seleniumの管理下にあるブラウザーでリンクをクリックしてダウンロードを開始することは可能ですが、APIはダウンロードの進行状況を公開しないため、ダウンロードしたファイルのテストには理想的ではありません。 これは、ファイルのダウンロードは、Webプラットフォームとのユーザーインタラクションをエミュレートする重要な側面とは見なされないためです。 代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 libcurl などのHTTPリクエストライブラリに渡します。</description>
+    </item>
+    
+    <item>
       <title>リモートWebDriverクライアント</title>
       <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -327,14 +325,16 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
     </item>
     
     <item>
-      <title>HTTP response codes</title>
+      <title>HTTPレスポンスコード</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
-Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
+      <description>Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。 これは、Seleniumを通過したすべてのブラウザートラフィックをキャプチャまたは操作できることを意味していました。 captureNetworkTraffic() メソッドは、HTTPレスポンスコードを含むブラウザーと自動化されているサイト間のすべてのネットワークトラフィックをキャプチャすることを目的としています。
+Selenium WebDriverは、ブラウザーの自動化に対するまったく異なるアプローチであり、ユーザーのように振る舞うことを好むため、WebDriverを使用してテストを記述する方法で表現します。 自動化された機能テストでは、ステータスコードの確認はテストの失敗の特に重要な詳細ではありません。 それに先行する手順がより重要です。
+ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。 これらのエラーページの1つに遭遇したときに&amp;rdquo;早く失敗&amp;rdquo;する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば &amp;lt;h1&amp;gt; タグ）のコンテンツをチェックすることです。 ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。 場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。 WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
+Webページ自体を確認することは、WebDriverの理想的なプラクティスに沿っており、WebDriverのユーザーのWebサイトの見え方を表現し、主張します。
+HTTPステータスコードをキャプチャするための高度なソリューションは、プロキシを使用してSelenium RCの動作を複製することです。 WebDriver APIは、ブラウザーのプロキシを設定する機能を提供します。 Webサーバーとの間で送受信されるリクエストのコンテンツをプログラムで操作できるプロキシがいくつかあります。 プロキシを使用すると、リダイレクトレスポンスコードへの応答方法を決めることができます。 さらに、すべてのブラウザーがWebDriverでレスポンスコードを利用できるようにするわけではないため、プロキシを使用することを選択すると、すべてのブラウザーで機能するソリューションが得られます。</description>
     </item>
     
     <item>
@@ -441,14 +441,15 @@ Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.
     </item>
     
     <item>
-      <title>Gmail, email and Facebook logins</title>
+      <title>Gmail、Eメール、Facebookログイン</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
+      <description>複数の理由から、WebDriverを使用してGmailやFacebookなどのサイトにログインすることはお勧めしません。 これらのサイトの使用条件（アカウントがシャットダウンされるリスクがある）に違反することは別として、それは遅く、信頼性がありません。
+理想的なプラクティスは、メールプロバイダーが提供するAPIを使用すること、またはFacebookの場合、テストアカウントや友人などを作成するためのAPIを公開する開発者ツールサービスを使用することです。 APIの使用は少し大変な作業のように思えるかもしれませんが、速度、信頼性、および安定性に見返りがあります。 また、APIが変更されることはほとんどありませんが、WebページとHTMLロケーターは頻繁に変更され、テストフレームワークを更新する必要があります。
+テストの任意の時点でWebDriverを使用してサードパーティのサイトにログインすると、テストが長くなるため、テストが失敗するリスクが高くなります。 一般的な経験則として、テストが長くなるほど脆弱で信頼性が低くなります。
+W3C準拠 のWebDriver実装は、サービス拒否攻撃を軽減できるように、navigatorオブジェクトにwebdriverプロパティで注釈を付けます。</description>
     </item>
     
     <item>
@@ -507,16 +508,6 @@ Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition
     </item>
     
     <item>
-      <title>Test dependency</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
-    </item>
-    
-    <item>
       <title>Working with web elements</title>
       <link>https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -541,6 +532,15 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
     </item>
     
     <item>
+      <title>テストの依存関係</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</guid>
+      <description>自動テストに関する一般的な考え方と誤解は、特定のテスト順序に関するものです。 テストは 任意 の順序で実行でき、成功するために完了するために他のテストに依存してはなりません。</description>
+    </item>
+    
+    <item>
       <title>改善されたレポート</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -562,17 +562,6 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
     </item>
     
     <item>
-      <title>Performance testing</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
-    </item>
-    
-    <item>
       <title>Working with cookies</title>
       <link>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -582,6 +571,19 @@ It may seem ideal to performance test in the context of the user but a suite of 
  A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
 WebDriver API provides a way to interact with cookies with built-in methods:
 Add Cookie It is used to add a cookie to the current browsing context.</description>
+    </item>
+    
+    <item>
+      <title>パフォーマンステスト</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</guid>
+      <description>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。 それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。
+ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。 たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。
+他の潜在的な魅力は &amp;ldquo;時間の節約&amp;rdquo; です。 機能テストとパフォーマンステストを同時に実行します。 ただし、機能テストとパフォーマンステストには反対の目的があります。 機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。
+Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。 このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。
+使用する（オープンソース）パッケージの例は次のとおりです。: JMeter</description>
     </item>
     
     <item>
@@ -608,17 +610,6 @@ Add Cookie It is used to add a cookie to the current browsing context.</descript
     </item>
     
     <item>
-      <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
-Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods don’t rely on creating a browser and navigating to a page.</description>
-    </item>
-    
-    <item>
       <title>テストの独立性</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -628,6 +619,16 @@ Instead of using WebDriver for this, you could save a ton of time by executing a
 公開後にモジュールとしてWebサイトに表示されるカスタムコンテンツを作成できるコンテンツ管理システム（CMS）があり、CMSとアプリケーション間の同期に時間がかかる場合があるとします。
 モジュールをテストする間違った方法は、1つのテストでコンテンツが作成および公開され、別のテストでモジュールをチェックすることです。 コンテンツは公開後、他のテストですぐに利用できない可能性があるため、この方法はふさわしくありません。
 代わりに、影響を受けるテスト内でオン/オフできるスタブコンテンツを作成し、それをモジュールの検証に使用できます。 ただし、コンテンツの作成については、別のテストを行うことができます。</description>
+    </item>
+    
+    <item>
+      <title>リンクスパイダー</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</guid>
+      <description>WebDriverを使用してリンクをスパイダーすることは、実行できないためではなく、最も理想的なツールではないため明らかに推奨される方法ではありません。 WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。
+このためにWebDriverを使用する代わりに、curl コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。 このタスクにWebDriverを使用しないことで、時間を大幅に節約できます。</description>
     </item>
     
     <item>
