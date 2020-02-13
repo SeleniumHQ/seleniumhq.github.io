@@ -198,7 +198,7 @@ changes to this document, and manage the copyrights within the project outputs.
 
 TLC members fulfill all requirements of Committers, and also:
 
-* May merge external pull requests for accepted issues upon reviewing and approving
+* May merge pull requests for accepted issues upon reviewing and approving
 the changes without the need to ping other committers who might have greater ownership 
 over the affected code area, given that reviewing and accepting the pull request
 does not require deep knowledge in the affected code area.
@@ -249,8 +249,8 @@ different ways, such as whenever the project spends money, enters legal agreemen
 or has to deal with lawyers. Typically the PLC will discuss the topic with the rest
 of the community, and then a voting session will take place.
 
-PLC seats are not time-limited. Only one person may be affiliated with any
-given employer can be on the PLC at a time. The PLC member count should be always
+PLC seats are not time-limited. Only one person on the PLC may be affiliated with
+any given employer at a time. The PLC member count should be always
 odd so that no votes are ever tied, an ideal minimum number is 5. PLC members
 should also be active members of the community.
 
