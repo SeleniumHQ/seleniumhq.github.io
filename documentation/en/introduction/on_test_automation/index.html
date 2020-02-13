@@ -11,20 +11,20 @@
     <title>On test automation :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1581501891" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1581501891" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1581593385" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1581593385" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1581501891" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1581593385" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1581501891"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1581593385"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1581501891"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1581501891"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1581593385"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1581593385"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1581501891"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1581593385"></script>
 
     
   </div>
@@ -2198,8 +2198,19 @@ account_page <span style="color:#719e07">=</span> login_as(user<span style="colo
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Create a user who has read-only permissions--they can configure a unicorn,
+</span><span style="color:#586e75">// but they do not have payment information set up, nor do they have
+</span><span style="color:#586e75">// administrative privileges. At the time the user is created, its email
+</span><span style="color:#586e75">// address and password are randomly generated--you don&#39;t even need to
+</span><span style="color:#586e75">// know them.
+</span><span style="color:#586e75"></span>User user = UserFactory.CreateCommonUser(); <span style="color:#586e75">//This method is defined elsewhere.
+</span><span style="color:#586e75"></span>
+<span style="color:#586e75">// Log in as this user.
+</span><span style="color:#586e75">// Logging in on this site takes you to your personal &#34;My Account&#34; page, so the
+</span><span style="color:#586e75">// AccountPage object is returned by the loginAs method, allowing you to then
+</span><span style="color:#586e75">// perform actions from the AccountPage.
+</span><span style="color:#586e75"></span>AccountPage accountPage = LoginAs(user.Email, user.Password);
+  
 </code></pre></div>
 </section>
   
@@ -2377,8 +2388,21 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// The Unicorn is a top-level Object--it has attributes, which are set here. 
+</span><span style="color:#586e75">// This only stores the values; it does not fill out any web forms or interact
+</span><span style="color:#586e75">// with the browser in any way.
+</span><span style="color:#586e75"></span>Unicorn sparkles = <span style="color:#719e07">new</span> Unicorn(<span style="color:#2aa198">&#34;Sparkles&#34;</span>, UnicornColors.Purple, UnicornAccessories.Sunglasses, UnicornAdornments.StarTattoos);
+
+<span style="color:#586e75">// Since we are already &#34;on&#34; the account page, we have to use it to get to the
+</span><span style="color:#586e75">// actual place where you configure unicorns. Calling the &#34;Add Unicorn&#34; method
+</span><span style="color:#586e75">// takes us there.
+</span><span style="color:#586e75"></span>AddUnicornPage addUnicornPage = accountPage.AddUnicorn();
+
+<span style="color:#586e75">// Now that we&#39;re on the AddUnicornPage, we will pass the &#34;sparkles&#34; object to
+</span><span style="color:#586e75">// its createUnicorn() method. This method will take Sparkles&#39; attributes,
+</span><span style="color:#586e75">// fill out the form, and click submit.
+</span><span style="color:#586e75"></span>UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.CreateUnicorn(sparkles);
+  
 </code></pre></div>
 </section>
   
@@ -2517,8 +2541,11 @@ you need to move on to step 3: making sure it actually worked.</p>
 
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// The exists() method from UnicornConfirmationPage will take the Sparkles 
+</span><span style="color:#586e75">// object--a specification of the attributes you want to see, and compare
+</span><span style="color:#586e75">// them with the fields on the page.
+</span><span style="color:#586e75"></span>Assert.True(unicornConfirmationPage.Exists(sparkles), <span style="color:#2aa198">&#34;Sparkles should have been created, with all attributes intact&#34;</span>);
+  
 </code></pre></div>
 </section>
   
@@ -2609,7 +2636,7 @@ that time frame, then manual testing is the best solution.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/introduction/on_test_automation/">
       “On test automation”
-    </a> was last updated on: 25 Jan 2020 02:10:22 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/76c72c8e14e214e46c561fc8bec7e8f67ebc7f44">Add: Added java and kotlin sample code for fileUploadDialogTimeout (#182) [deploy site] (76c72c8e1)</a>
+    </a> was last updated on: 12 Feb 2020 19:12:24 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/7fabb5d91c87aec69232b0ec9627ebac0abcfda9">Some c# samples added. (#220) [deploy site] (7fabb5d91)</a>
 </h5>
         
         </div> 
@@ -3806,19 +3833,19 @@ that time frame, then manual testing is the best solution.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1581501891"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1581593385"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1581501891"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1581501891"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1581593385"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1581593385"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1581501891" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1581501891"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1581593385" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1581593385"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
