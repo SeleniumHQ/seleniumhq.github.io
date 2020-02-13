@@ -154,9 +154,9 @@ Grid WebDriverのテストを開発した後、テストを複数のブラウザ
 ページオブジェクトデザインパターンには、次の利点があります。
  テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。 これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。  どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。 この&amp;rsquo;テストデザインパターン&amp;rsquo;が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。 詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。 多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。 ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
 最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。
-/*** * Tests login feature */ public class Login { public void testLogin() { selenium.type(&amp;#34;inputBox&amp;#34;, &amp;#34;testUser&amp;#34;); selenium.type(&amp;#34;password&amp;#34;, &amp;#34;my supersecret password&amp;#34;); selenium.click(&amp;#34;sign-in&amp;#34;); selenium.waitForPageToLoad(&amp;#34;PageWaitPeriod&amp;#34;); Assert.assertTrue(selenium.isElementPresent(&amp;#34;compose button&amp;#34;), &amp;#34;Login was unsuccessful&amp;#34;); } } このアプローチには2つの問題があります。
+/*** * Tests login feature */ public class Login { public void testLogin() { // fill login data on sign-in page  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign_in&amp;#34;)).click(); // verify h1 tag is &amp;#34;Hello userName&amp;#34; after login  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } このアプローチには2つの問題があります。
  テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。 どちらも単一のメソッドで絡み合っています。 AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。 IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。  ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
-/** * Page Object encapsulates the Sign-in page. */ public class SignInPage { private Selenium selenium; public SignInPage(Selenium selenium) { this.</description>
+import org.openqa.selenium.By; import org.</description>
     </item>
     
     <item>
