@@ -1,25 +1,11 @@
 ---
-title: "Link spidering"
+title: "リンクスパイダー"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Using WebDriver to spider through links
-is not a recommended practice not because it cannot be done,
-but because it’s definitely not the most ideal tool.
-WebDriver needs time to start up,
-and can take several seconds up to a minute
-depending on how your test is written,
-just to get to the page and traverse through the DOM.
+WebDriverを使用してリンクをスパイダーすることは、実行できないためではなく、最も理想的なツールではないため明らかに推奨される方法ではありません。
+WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。
 
-Instead of using WebDriver for this,
-you could save a ton of time
-by executing a [curl](//curl.haxx.se/) command,
-or using a library such as BeautifulSoup
-since these methods don’t rely
-on creating a browser and navigating to a page.
-You are saving tonnes of time by not using WebDriver for this task.
+このためにWebDriverを使用する代わりに、[curl](//curl.haxx.se/) コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。
+このタスクにWebDriverを使用しないことで、時間を大幅に節約できます。
