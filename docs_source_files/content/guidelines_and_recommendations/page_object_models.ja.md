@@ -28,14 +28,16 @@ weight: 1
  */
 public class Login {
 
-        public void testLogin() {
-                selenium.type("inputBox", "testUser");
-                selenium.type("password", "my supersecret password");
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("PageWaitPeriod");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  public void testLogin() {
+    // fill login data on sign-in page
+    driver.findElement(By.name("user_name")).sendKeys("testUser");
+    driver.findElement(By.name("password")).sendKeys("my supersecret password");
+    driver.findElement(By.name("sign_in")).click();
+
+    // verify h1 tag is "Hello userName" after login
+    driver.findElement(By.tagName("h1")).isDisplayed();
+    assertThat(driver.findElement(By.tagName("h1")).getText(), is("Hello userName"));
+  }
 }
 ```
 
@@ -49,65 +51,81 @@ AUTのUIが識別子、レイアウト、またはログインの入力および
 ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
 
 ```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 /**
  * Page Object encapsulates the Sign-in page.
  */
 public class SignInPage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  // <input name="user_name" type="text" value="">
+  private By usernameBy = By.name("user_name");
+  // <input name="password" type="password" value="">
+  private By passwordBy = By.name("password");
+  // <input name="sign_in" type="submit" value="SignIn">
+  private By signinBy = By.name("sign_in");
 
-        public SignInPage(Selenium selenium) {
-                this.selenium = selenium;
-                if(!selenium.getTitle().equals("Sign in page")) {
-                        throw new IllegalStateException("This is not sign in page, current page is: "
-                                        +selenium.getLocation());
-                }
-        }
+  public SignInPage(WebDriver driver){
+    this.driver = driver;
+  }
 
-        /**
-         * Login as valid user
-         *
-         * @param userName
-         * @param password
-         * @return HomePage object
-         */
-        public HomePage loginValidUser(String userName, String password) {
-                selenium.type("usernamefield", userName);
-                selenium.type("passwordfield", password);
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("waitPeriod");
-
-                return new HomePage(selenium);
-        }
+  /**
+    * Login as valid user
+    *
+    * @param userName
+    * @param password
+    * @return HomePage object
+    */
+  public HomePage loginValidUser(String userName, String password) {
+    driver.findElement(usernameBy).sendKeys(userName);
+    driver.findElement(passwordBy).sendKeys(password);
+    driver.findElement(signinBy).click();
+    return new HomePage(driver);
+  }
 }
 ```
 
 そして、ホームページのページオブジェクトは次のようになります。
 
 ```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 /**
  * Page Object encapsulates the Home Page
  */
 public class HomePage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  // <h1>Hello userName</h1>
+  private By messageBy = By.tagName("h1");
 
-        public HomePage(Selenium selenium) {
-                if (!selenium.getTitle().equals("Home Page of logged in user")) {
-                        throw new IllegalStateException("This is not Home Page of logged in user, current page" +
-                                        "is: " +selenium.getLocation());
-                }
-        }
+  public HomePage(WebDriver driver){
+    this.driver = driver;
+    if (!driver.getTitle().equals("Home Page of logged in user")) {
+      throw new IllegalStateException("This is not Home Page of logged in user," +
+            " current page is: " + driver.getCurrentUrl());
+    }
+  }
 
-        public HomePage manageProfile() {
-                // Page encapsulation to manage profile functionality
-                return new HomePage(selenium);
-        }
+  /**
+    * Get message (h1 tag)
+    *
+    * @return String message text
+    */
+  public String getMessageText() {
+    return driver.findElement(messageBy).getText();
+  }
 
-        /*More methods offering the services represented by Home Page
-        of Logged User. These methods in turn might return more Page Objects
-        for example click on Compose mail button could return ComposeMail class object*/
-
+  public HomePage manageProfile() {
+    // Page encapsulation to manage profile functionality
+    return new HomePage(driver);
+  }
+  /* More methods offering the services represented by Home Page
+  of Logged User. These methods in turn might return more Page Objects
+  for example click on Compose mail button could return ComposeMail class object */
 }
 ```
 
@@ -119,12 +137,13 @@ public class HomePage {
  */
 public class TestLogin {
 
-        public void testLogin() {
-                SignInPage signInPage = new SignInPage(selenium);
-                HomePage homePage = signInPage.loginValidUser("userName", "password");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  @Test
+  public void testLogin() {
+    SignInPage signInPage = new SignInPage(driver);
+    HomePage homePage = signInPage.loginValidUser("userName", "password");
+    assertThat(homePage.getMessageText(), is("Hello userName"));
+  }
+
 }
 ```
 
