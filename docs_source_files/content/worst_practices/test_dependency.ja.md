@@ -1,13 +1,8 @@
 ---
-title: "Test dependency"
+title: "テストの依存関係"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-A common idea and misconception about automated testing is regarding a
-specific test order. Your tests should be able to run in **any** order,
-and not rely on other tests to complete in order to be successful.
+自動テストに関する一般的な考え方と誤解は、特定のテスト順序に関するものです。
+テストは **任意** の順序で実行でき、成功するために完了するために他のテストに依存してはなりません。

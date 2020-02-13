@@ -23,11 +23,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/downloads/javascript/</loc>
-    <lastmod>2019-09-08T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/archive/</loc>
     <lastmod>2019-01-01T00:00:00+00:00</lastmod>
   </url>
@@ -60,6 +55,11 @@
   <url>
     <loc>https://selenium.dev/blog/2018/</loc>
     <lastmod>2018-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/downloads/javascript/</loc>
+    <lastmod>2017-10-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -1,29 +1,16 @@
 ---
-title: "Waits"
+title: "待機"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+WebDriverは一般にブロッキングAPIを持っていると言えます。
+ブラウザーに処理を _指示する_ Out-of-Processライブラリであり、Webプラットフォームは本質的に非同期の性質を持っているため、WebDriverはDOMのアクティブでリアルタイムな状態を追跡しません。
+このことは、ここで説明するいくつかの課題が出てきます。
 
-WebDriver can generally be said to have a blocking API.
-Because it is an out-of-process library that
-_instructs_ the browser what to do,
-and because the web platform has an intrinsically asynchronous nature,
-WebDriver doesn't track the active, real-time state of the DOM.
-This comes with some challenges that we will discuss here.
+経験から、SeleniumとWebDriverの使用から生じる断続的なもののほとんどは、ブラウザーとユーザーの指示の間で発生する _競合状態_ に関連しています。
+たとえば、ユーザーがブラウザーにページに移動するように指示し、要素を見つけようとすると、**no such element** エラーが表示される場合があります。
 
-From experience,
-most intermittents that arise from use of Selenium and WebDriver
-are connected to _race conditions_ that occur between
-the browser and the user's instructions.
-An example could be that the user instructs the browser to navigate to a page,
-then gets a **no such element** error
-when trying to find an element.
-
-Consider the following document:
+次のドキュメントを考えてみましょう。
 
 ```html
 <!doctype html>
@@ -41,7 +28,7 @@ Consider the following document:
 </script>
 ```
 
-The WebDriver instructions might look innocent enough:
+WebDriverの指示は十分問題なく見えるかもしれません。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -86,61 +73,24 @@ assert(element.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.ja.md" >}})
-used in WebDriver listens for the `document.readyState`
-to change to `"complete"` before returning from the call to _navigate_.
-Because the `p` element is
-added _after_ the document has completed loading,
-this WebDriver script _might_ be intermittent.
-It “might” be intermittent because no guarantees can be made
-about elements or events that trigger asynchronously
-without explicitly waiting—or blocking—on those events.
+ここでは、WebDriverで使用されるデフォルトの [ページロード戦略]({{< ref "/webdriver/page_loading_strategy.ja.md" >}}) が`document.readyState`をリッスンして、ナビゲーションの呼び出しから戻る前に`"complete"`に変更することが問題です。ドキュメントの読み込みが完了した後に`p`要素が追加されるため、このWebDriverスクリプトは断続的になる _可能性があります。_ これらのイベントを明示的に待機（またはブロック）せずに非同期でトリガーする要素またはイベントについては保証できないため、断続的である可能性があります。
 
-Fortunately, using the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.ja.md" >}}) interface—such
- as _WebElement.click_ and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls won't return
- (or the callback won't trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.ja.md" >}})
- and [[_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.ja.md" >}}),
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.
+幸いなことに、 _WebElement.click_ や _WebElement.sendKeys_ などのWebElementインターフェイスで使用可能な通常の命令セットを使用すると、コマンドの呼び出しがブラウザーで完了するまで関数呼び出しが返されない（または、コールバックはコールバックスタイルの言語ではトリガーされない）ため、同期が保証されます。高度なユーザーインタラクションAPIである[_キーボード_]({{< ref "/webdriver/keyboard.ja.md" >}})と[_マウス_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.ja.md" >}})は、 "言うことをする" 非同期コマンドとして明示的に意図されているため、例外です。
 
-Waiting is having the automated task execution
-elapse a certain amount of time before continuing with the next step.
+待機とは、自動化されたタスクの実行を一定時間経過させてから次のステップに進むことです。
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
+ブラウザーとWebDriverスクリプト間の競合状態の問題を克服するために、ほとんどのSeleniumクライアントには待機パッケージが付属しています。待機を使用する場合、一般に[_明示的な待機_](#明示的な待機)と呼ばれるものを使用しています。
 
+## 明示的な待機
 
-## Explicit wait
+Seleniumクライアントは、命令型の手続き型言語の _明示的な待機_  を利用できます。
+これにより、 _条件_ が解決するまで、コードでプログラムの実行を停止したり、スレッドをフリーズしたりできます。
+条件は、明示的な待機のタイムアウトが経過するまで特定の頻度で呼び出されます。
+つまり、条件がfalseの値を返す限り、試行、待機し続けます。
 
-_Explicit waits_ are available to Selenium clients
-for imperative, procedural languages.
-They allow your code to halt program execution,
-or freeze the thread,
-until the _condition_ you pass it resolves.
-The condition is called with a certain frequency
-until the timeout of the wait is elapsed.
-This means that for as long as the condition returns a falsy value,
-it will keep trying and waiting.
+明示的な待機により条件が発生するのを待機できるため、ブラウザーとそのDOM、およびWebDriverスクリプトの間で状態を同期するのに適しています。
 
-Since explicit waits allow you to wait for a condition to occur,
-they make a good fit for synchronising the state between the browser and its DOM,
-and your WebDriver script.
-
-To remedy our buggy instruction set from earlier,
-we could employ a wait to have the _findElement_ call
-wait until the dynamically added element from the script
-has been added to the DOM:
+以前のバグのある命令セットを修正するには、スクリプトから動的に追加された要素がDOMに追加されるまで、 _findElement_ 呼び出しを待機させるために待機を採用できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -211,19 +161,12 @@ println(firstResult.text)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-We pass in the _condition_ as a function reference
-that the _wait_ will run repeatedly until its return value is truthy.
-A “truthful” return value is anything that evaluates to boolean true
-in the language at hand, such as a string, number, a boolean,
-an object (including a _WebElement_),
-or a populated (non-empty) sequence or list.
-That means an _empty list_ evaluates to false.
-When the condition is truthful and the blocking wait is aborted,
-the return value from the condition becomes the return value of the wait.
+戻り値がtrueになるまで _待機_ が繰り返し実行される関数リファレンスとして _条件_ を渡します。
+"真の"戻り値とは、文字列、数値、ブール値、オブジェクト（ _WebElement_ を含む）、または入力された（空でない）シーケンスまたはリストなど、手元の言語でブール値trueと評価されるものです。
+つまり、 _空のリスト_ はfalseと評価されます。
+条件がtrueで、ブロッキング待機が中止されると、条件からの戻り値が待機の戻り値になります。
 
-With this knowledge,
-and because the wait utility ignores _no such element_ errors by default,
-we can refactor our instructions to be more concise:
+このナレッジと、ウェイトユーティリティはデフォルトで _no such element_ エラーを無視するため、より簡潔になるように命令をリファクタリングできます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -266,33 +209,21 @@ assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-In that example, we pass in an anonymous function
-(but we could also define it explicitly as we did earlier so it may be reused).
-The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_
-(called `d` in the example).
-In a multi-threaded environment, you should be careful
-to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.
+この例では、匿名関数を渡します（ただし、以前に行ったように明示的に定義して再利用できるようにすることもできます）。
+条件に渡される最初で唯一の引数は、常にドライバーオブジェクト　_WebDriver_　（この例では`d`と呼ばれます）への参照です。
+マルチスレッド環境では、外部スコープ内のドライバーへのリファレンスではなく、条件に渡されたドライバーのリファレンスを操作するように注意する必要があります。
 
-Because the wait will swallow _no such element_ errors
-that are raised when the element isn't found,
-the condition will retry until the element is found.
-Then it will take the return value, a _WebElement_,
-and pass it back through to our script.
+待機は、要素が見つからないときに発生する _no such element_ エラーを飲み込むため、要素が見つかるまで条件は再試行されます。
+次に、戻り値である _WebElement_ を取得して、スクリプトに渡します。
 
-If the condition fails,
-e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a _timeout error_.
+条件が失敗した場合、例えば条件からの真の戻り値に到達しない場合、待機は _timeout error_ と呼ばれるエラー/例外をスロー/発生させます。
 
+### オプション
 
-### Options
+待機条件は、ニーズに合わせてカスタマイズできます。
+成功した条件にヒットしないことに対するペナルティは高額になる可能性があるため、デフォルトのタイムアウトの全範囲を待つ必要がない場合があります。
 
-The wait condition can be customised to match your needs.
-Sometimes it's unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.
-
-The wait lets you pass in an argument to override the timeout:
+WebDriverWaitに引数を渡してタイムアウトをオーバーライドできます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -316,16 +247,12 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Expected conditions
+### 期待される条件
 
-Because it's quite a common occurrence
-to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined _expected conditions_.
-As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.
+DOMと指示を同期しなければならないことは非常に一般的であるため、ほとんどのクライアントには事前に定義された一連の _期待される条件_もあります。
+名前から明らかなように、これらは頻繁な待機操作に対して事前定義されている条件です。
 
-The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:
+異なる言語バインディングで利用可能な条件は異なりますが、これは少数の抜粋したリストです。
 
 <!-- TODO(ato): Fill in -->
 * alert is present
@@ -336,41 +263,29 @@ but this is a non-exhaustive list of a few:
 * element staleness
 * visible text
 
-You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:
+各クライアントバインディングのAPIドキュメントを参照して、予想される条件の完全なリストを見つけることができます。
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
 * .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
+## 暗黙的な待機
 
-## Implicit wait
+_暗黙的な待機_ と呼ばれる[明示的な待機](#明示的な待機)とは異なる2番目の種類の待機があります。
+暗黙的に待機することにより、WebDriverは _何か_ 要素を見つけようとするときに特定の期間DOMをポーリングします。
+これは、Webページ上の特定の要素がすぐに利用できず、ロードに時間がかかる場合に役立ちます。
 
-There is a second type of wait that is distinct from
-[explicit wait](#explicit-wait) called _implicit wait_.
-By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find _any_ element.
-This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.
+要素の表示を暗黙的に待機することはデフォルトで無効になっており、セッションごとに手動で有効にする必要があります。
+[明示的な待機](#明示的な待機)と暗黙的な待機を混在させると、意図しない結果、すなわち、要素が利用可能または条件が真であっても、最大時間スリープする待機が発生します。
 
-Implicit waiting for elements to appear is disabled by default
-and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit-wait) and implicit waits
-will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.
+*警告 :*
+暗黙的な待機と明示的な待機を混在させないでください。
+これを行うと、予測できない待機時間が発生する可能性があります。
+たとえば、10秒の暗黙的な待機と15秒の明示的な待機を設定すると、20秒後にタイムアウトが発生する可能性があります。
 
-*Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
-
-An implicit wait is to tell WebDriver to poll the DOM
-for a certain amount of time when trying to find an element or elements
-if they are not immediately available.
-The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.
+暗黙的な待機は、1つまたは複数の要素がすぐに利用できない場合にそれらを見つけようとするときにWebDriverにDOMを一定時間ポーリングするように指示することです。
+デフォルト設定は0で、無効を意味します。
+設定すると、セッションの存続期間中、暗黙的な待機が設定されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -426,11 +341,10 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
 
 ## FluentWait
 
-FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.
+FluentWaitインスタンスは、条件を待機する最大時間を定義します。
+状態を確認する頻度も同様です。
 
-Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as `NoSuchElementException` when searching for an element on the page.
+ユーザーは、ページ上の要素を検索するときの`NoSuchElementException`など、待機中に特定の種類の例外を無視するように待機を構成できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

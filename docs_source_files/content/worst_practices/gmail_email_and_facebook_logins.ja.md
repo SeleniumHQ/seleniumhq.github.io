@@ -1,37 +1,18 @@
 ---
-title: "Gmail, email and Facebook logins"
-menuTitle: "Gmail, email and Facebook"
+title: "Gmail、Eメール、Facebookログイン"
+menuTitle: "Gmail、Eメール、Facebook"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.
+複数の理由から、WebDriverを使用してGmailやFacebookなどのサイトにログインすることはお勧めしません。
+これらのサイトの使用条件（アカウントがシャットダウンされるリスクがある）に違反することは別として、それは遅く、信頼性がありません。
 
-The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.
+理想的なプラクティスは、メールプロバイダーが提供するAPIを使用すること、またはFacebookの場合、テストアカウントや友人などを作成するためのAPIを公開する開発者ツールサービスを使用することです。
+APIの使用は少し大変な作業のように思えるかもしれませんが、速度、信頼性、および安定性に見返りがあります。
+また、APIが変更されることはほとんどありませんが、WebページとHTMLロケーターは頻繁に変更され、テストフレームワークを更新する必要があります。
 
-Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.
+テストの任意の時点でWebDriverを使用してサードパーティのサイトにログインすると、テストが長くなるため、テストが失敗するリスクが高くなります。
+一般的な経験則として、テストが長くなるほど脆弱で信頼性が低くなります。
 
-WebDriver implementations that are
-[W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
-also annotate the `navigator` object
-with a `webdriver` property
-so that Denial of Service attacks can be mitigated.
+[W3C準拠](//w3c.github.io/webdriver/webdriver-spec.html) のWebDriver実装は、サービス拒否攻撃を軽減できるように、`navigator`オブジェクトに`webdriver`プロパティで注釈を付けます。

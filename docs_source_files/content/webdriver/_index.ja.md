@@ -4,27 +4,17 @@ chapter: true
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # WebDriver
 
-WebDriver drives a browser natively, as a user would, either locally
-or on a remote machine using the Selenium server,
-marks a leap forward in terms of browser automation.
+WebDriverは、ユーザーがローカルまたはSeleniumサーバーを使用するリモートマシンで行うように、ブラウザをネイティブに動かし、ブラウザの自動化に関して大きく前進します。
 
-Selenium WebDriver refers to both the language bindings
-and the implementations of the individual browser controlling code.
-This is commonly referred to as just _WebDriver_.
+Selenium WebDriverは言語バインディングと個々のブラウザ制御コードの実装の両方を参照します。  
+これは通常、単に _WebDriver_ と呼ばれます。
 
-Selenium WebDriver is a [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
+Selenium WebDriverは、[W3C勧告](https://www.w3.org/TR/webdriver1/)です。
 
-* WebDriver is designed as a simple
-  and more concise programming interface.
+* WebDriverはシンプルでより簡潔なプログラミングインターフェイスとして設計されています。
 
-* WebDriver is a compact object-oriented API.
+* WebDriverはコンパクトなオブジェクト指向APIです。
 
-* It drives the browser effectively.
+* ブラウザーを効果的に動かします。

@@ -11,20 +11,20 @@
     <title>Page object models :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1580886652" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1580886652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1581602106" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1581602106" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1580886652" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1581602106" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1580886652"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1581602106"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1580886652"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1580886652"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1581602106"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1581602106"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1580886652"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1581602106"></script>
 
     
   </div>
@@ -2022,14 +2022,16 @@ page object:</p>
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> Login {
 
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
-                selenium.type(<span style="color:#2aa198">&#34;inputBox&#34;</span>, <span style="color:#2aa198">&#34;testUser&#34;</span>);
-                selenium.type(<span style="color:#2aa198">&#34;password&#34;</span>, <span style="color:#2aa198">&#34;my supersecret password&#34;</span>);
-                selenium.click(<span style="color:#2aa198">&#34;sign-in&#34;</span>);
-                selenium.waitForPageToLoad(<span style="color:#2aa198">&#34;PageWaitPeriod&#34;</span>);
-                Assert.assertTrue(selenium.isElementPresent(<span style="color:#2aa198">&#34;compose button&#34;</span>),
-                                <span style="color:#2aa198">&#34;Login was unsuccessful&#34;</span>);
-        }
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
+    <span style="color:#586e75">// fill login data on sign-in page
+</span><span style="color:#586e75"></span>    driver.findElement(By.name(<span style="color:#2aa198">&#34;user_name&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;testUser&#34;</span>);
+    driver.findElement(By.name(<span style="color:#2aa198">&#34;password&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;my supersecret password&#34;</span>);
+    driver.findElement(By.name(<span style="color:#2aa198">&#34;sign-in&#34;</span>)).click();
+
+    <span style="color:#586e75">// verify h1 tag is &#34;Hello userName&#34; after login
+</span><span style="color:#586e75"></span>    driver.findElement(By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>)).isDisplayed();
+    assertThat(driver.findElement(By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>)).getText(), is(<span style="color:#2aa198">&#34;Hello userName&#34;</span>));
+  }
 }</code></pre></div>
 <p>There are two problems with this approach.</p>
 
@@ -2044,61 +2046,77 @@ use this login page.</li>
 
 <p>Applying the page object techniques, this example could be rewritten like this
 in the following example of a page object for a Sign-in page.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+
+<span style="color:#586e75">/**
 </span><span style="color:#586e75"> * Page Object encapsulates the Sign-in page.
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> SignInPage {
+  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver <span style="color:#268bd2">driver</span>;
 
-        <span style="color:#268bd2">private</span> <span style="color:#268bd2">Selenium</span> selenium;
+  <span style="color:#586e75">// &lt;input name=&#34;user_name&#34; type=&#34;text&#34; value=&#34;&#34;&gt;
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> usernameBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;user_name&#34;</span>);
+  <span style="color:#586e75">// &lt;input name=&#34;password&#34; type=&#34;password&#34; value=&#34;&#34;&gt;
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> passwordBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;password&#34;</span>);
+  <span style="color:#586e75">// &lt;input name=&#34;sign_in&#34; type=&#34;submit&#34; value=&#34;SignIn&#34;&gt;
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> signinBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;sign_in&#34;</span>);
 
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">SignInPage</span>(Selenium <span style="color:#268bd2">selenium</span>) {
-                <span style="color:#719e07">this</span>.selenium <span style="color:#719e07">=</span> selenium;
-                <span style="color:#719e07">if</span>(<span style="color:#719e07">!</span>selenium.getTitle().equals(<span style="color:#2aa198">&#34;Sign in page&#34;</span>)) {
-                        <span style="color:#719e07">throw</span> <span style="color:#719e07">new</span> IllegalStateException(<span style="color:#2aa198">&#34;This is not sign in page, current page is: &#34;</span>
-                                        <span style="color:#719e07">+</span>selenium.getLocation());
-                }
-        }
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">SignInPage</span>(WebDriver <span style="color:#268bd2">driver</span>){
+    <span style="color:#719e07">this</span>.driver <span style="color:#719e07">=</span> driver;
+  }
 
-        <span style="color:#586e75">/**
-</span><span style="color:#586e75">         * Login as valid user
-</span><span style="color:#586e75">         *
-</span><span style="color:#586e75">         * @param userName
-</span><span style="color:#586e75">         * @param password
-</span><span style="color:#586e75">         * @return HomePage object
-</span><span style="color:#586e75">         */</span>
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> loginValidUser(String <span style="color:#268bd2">userName</span>, String <span style="color:#268bd2">password</span>) {
-                selenium.type(<span style="color:#2aa198">&#34;usernamefield&#34;</span>, userName);
-                selenium.type(<span style="color:#2aa198">&#34;passwordfield&#34;</span>, password);
-                selenium.click(<span style="color:#2aa198">&#34;sign-in&#34;</span>);
-                selenium.waitForPageToLoad(<span style="color:#2aa198">&#34;waitPeriod&#34;</span>);
-
-                <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(selenium);
-        }
+  <span style="color:#586e75">/**
+</span><span style="color:#586e75">    * Login as valid user
+</span><span style="color:#586e75">    *
+</span><span style="color:#586e75">    * @param userName
+</span><span style="color:#586e75">    * @param password
+</span><span style="color:#586e75">    * @return HomePage object
+</span><span style="color:#586e75">    */</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> loginValidUser(String <span style="color:#268bd2">userName</span>, String <span style="color:#268bd2">password</span>) {
+    driver.findElement(usernameBy).sendKeys(userName);
+    driver.findElement(passwordBy).sendKeys(password);
+    driver.findElement(signinBy).click();
+    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(driver);
+  }
 }</code></pre></div>
 <p>and page object for a Home page could look like this.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+
+<span style="color:#586e75">/**
 </span><span style="color:#586e75"> * Page Object encapsulates the Home Page
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HomePage {
+  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver <span style="color:#268bd2">driver</span>;
 
-        <span style="color:#268bd2">private</span> <span style="color:#268bd2">Selenium</span> selenium;
+  <span style="color:#586e75">// &lt;h1&gt;Hello userName&lt;/h1&gt;
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> messageBy <span style="color:#719e07">=</span> By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>);
 
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span>(Selenium <span style="color:#268bd2">selenium</span>) {
-                <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>selenium.getTitle().equals(<span style="color:#2aa198">&#34;Home Page of logged in user&#34;</span>)) {
-                        <span style="color:#719e07">throw</span> <span style="color:#719e07">new</span> IllegalStateException(<span style="color:#2aa198">&#34;This is not Home Page of logged in user, current page&#34;</span> <span style="color:#719e07">+</span>
-                                        <span style="color:#2aa198">&#34;is: &#34;</span> <span style="color:#719e07">+</span>selenium.getLocation());
-                }
-        }
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span>(WebDriver <span style="color:#268bd2">driver</span>){
+    <span style="color:#719e07">this</span>.driver <span style="color:#719e07">=</span> driver;
+    <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>driver.getTitle().equals(<span style="color:#2aa198">&#34;Home Page of logged in user&#34;</span>)) {
+      <span style="color:#719e07">throw</span> <span style="color:#719e07">new</span> IllegalStateException(<span style="color:#2aa198">&#34;This is not Home Page of logged in user,&#34;</span> <span style="color:#719e07">+</span>
+            <span style="color:#2aa198">&#34; current page is: &#34;</span> <span style="color:#719e07">+</span> driver.getCurrentUrl());
+    }
+  }
 
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> manageProfile() {
-                <span style="color:#586e75">// Page encapsulation to manage profile functionality
-</span><span style="color:#586e75"></span>                <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(selenium);
-        }
+  <span style="color:#586e75">/**
+</span><span style="color:#586e75">    * Get message (h1 tag)
+</span><span style="color:#586e75">    *
+</span><span style="color:#586e75">    * @return String message text
+</span><span style="color:#586e75">    */</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">String</span> getMessageText() {
+    <span style="color:#719e07">return</span> driver.findElement(messageBy).getText();
+  }
 
-        <span style="color:#586e75">/*More methods offering the services represented by Home Page
-</span><span style="color:#586e75">        of Logged User. These methods in turn might return more Page Objects
-</span><span style="color:#586e75">        for example click on Compose mail button could return ComposeMail class object*/</span>
-
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> manageProfile() {
+    <span style="color:#586e75">// Page encapsulation to manage profile functionality
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(driver);
+  }
+  <span style="color:#586e75">/* More methods offering the services represented by Home Page
+</span><span style="color:#586e75">  of Logged User. These methods in turn might return more Page Objects
+</span><span style="color:#586e75">  for example click on Compose mail button could return ComposeMail class object */</span>
 }</code></pre></div>
 <p>So now, the login test would use these two page objects as follows.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/***
@@ -2106,12 +2124,13 @@ in the following example of a page object for a Sign-in page.</p>
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> TestLogin {
 
-        <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
-                SignInPage <span style="color:#268bd2">signInPage</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SignInPage(selenium);
-                HomePage <span style="color:#268bd2">homePage</span> <span style="color:#719e07">=</span> signInPage.loginValidUser(<span style="color:#2aa198">&#34;userName&#34;</span>, <span style="color:#2aa198">&#34;password&#34;</span>);
-                Assert.assertTrue(selenium.isElementPresent(<span style="color:#2aa198">&#34;compose button&#34;</span>),
-                                <span style="color:#2aa198">&#34;Login was unsuccessful&#34;</span>);
-        }
+  <span style="color:#268bd2">@Test</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
+    SignInPage <span style="color:#268bd2">signInPage</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SignInPage(driver);
+    HomePage <span style="color:#268bd2">homePage</span> <span style="color:#719e07">=</span> signInPage.loginValidUser(<span style="color:#2aa198">&#34;userName&#34;</span>, <span style="color:#2aa198">&#34;password&#34;</span>);
+    assertThat(homePage.getMessageText(), is(<span style="color:#2aa198">&#34;Hello userName&#34;</span>));
+  }
+
 }</code></pre></div>
 <p>There is a lot of flexibility in how the page objects may be designed, but
 there are a few basic rules for getting the desired maintainability of your
@@ -2150,7 +2169,7 @@ reader to search for blogs on these topics.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/">
       “Page object models”
-    </a> was last updated on: 14 Jan 2020 08:21:41 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/9a04ff76ca3529c6373994ee12ee7060bb0730bf">Add ja translation of &#34;Getting started with We...&#34; (#173) [deploy site] (9a04ff76c)</a>
+    </a> was last updated on: 13 Feb 2020 21:37:32 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/484f2b127e093c8b59e017a4268a892388a95a65">Remove deprecated Selenium class and use Webdriver class (#221) [deploy site] (484f2b127)</a>
 </h5>
         
         </div> 
@@ -3344,19 +3363,19 @@ reader to search for blogs on these topics.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1580886652"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1581602106"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1580886652"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1580886652"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1581602106"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1581602106"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1580886652" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1580886652"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1581602106" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1581602106"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

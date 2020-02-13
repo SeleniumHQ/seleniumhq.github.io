@@ -1,17 +1,11 @@
 ---
-title: "Support classes"
+title: "サポートクラス"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
-WebDriver support classes are provided to simplify maintaining your code.
-They provide a nice abstraction to make modeling HTML element(s) as domain
-objects easier, also providing helper methods to make using such objects easy to
-reason about. We will learn about:
+WebDriverサポートクラスは、コードのメンテナンスを簡素化するために提供されています。
+ドメインオブジェクトとしてのHTML要素のモデリングを容易にする優れた抽象化を提供し、そのようなオブジェクトの使用を推論しやすくするヘルパーメソッドも提供します。
+ここでは下記について学びます。
 
 * Locator Strategies
 * Events
@@ -19,20 +13,17 @@ reason about. We will learn about:
 * ThreadGuard
 * etc.
 
-Let's Start:
-
+さぁ、始めましょう。
 
 ## **ThreadGuard**
 {{% notice info %}}
-This class is only available in the Java Binding
+このクラスは、Javaバインディングでのみ使用可能です。
 {{% /notice %}}
-ThreadGuard checks that a driver is called only from the same thread that created it.
-Threading issues especially when running tests in Parallel may have mysterious
-and hard to diagnose errors. Using this wrapper prevents this category of errors
-and will raise an exception when it happens.
+ThreadGuardは、ドライバーが、それを作成した同じスレッドからのみ呼び出されることを確認します。
+特に並行してテストを実行する場合のスレッドの問題は、不可解でエラーの診断が難しい場合があります。
+このラッパーを使用すると、このカテゴリのエラーが防止され、発生時に例外が発生します。
 
-The following example simulate a clash of threads:
-
+次の例は、スレッドの衝突をシミュレートします。
 ```java
 public class DriverClash {
   //thread main (id 1) created this driver
@@ -56,7 +47,7 @@ public class DriverClash {
 }
 ```
 
-The result shown below:
+結果は以下のとおりです。
 ```text
 Exception in thread "Thread-1" org.openqa.selenium.WebDriverException:
 Thread safety error; this instance of WebDriver was constructed
@@ -64,14 +55,13 @@ on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
 This is not permitted and *will* cause undefined behaviour
 
 ```
-As seen in the example:
+下記例を参照してください。
 
- * `protectedDriver` Will be created in Main thread
- *  We use Java `Runnable` to spin up a new process and a new `Thread` to run the process
- *  Both `Thread` will clash because the Main Thread does not have `protectedDriver` in it's memory.
- * `ThreadGuard.protect` will throw an exception.
+ * `protectedDriver` はメインスレッドで作成されます
+ *  Java `Runnable`を使用して新しいプロセスを起動し、新しい`スレッド`を使用してプロセスを実行します
+ *  メインスレッドのメモリに`protectedDriver`がないため、両方の`スレッド`が衝突します。
+ * `ThreadGuard.protect`は例外をスローします。
 
-#### Note:
+#### 注意:
 
-This does not replace the need for using `ThreadLocal` to manage drivers when running parallel.
-
+これは、並列実行時にドライバーを管理するために `ThreadLocal`を使用する必要性を置き換えるものではありません。

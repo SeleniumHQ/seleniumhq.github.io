@@ -151,7 +151,18 @@ user = user_factory.create_common_user() #This method is defined elsewhere.
 account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+User user = UserFactory.CreateCommonUser(); //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+AccountPage accountPage = LoginAs(user.Email, user.Password);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Create a user who has read-only permissions--they can configure a unicorn,
@@ -262,7 +273,20 @@ add_unicorn_page = account_page.add_unicorn()
 unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// The Unicorn is a top-level Object--it has attributes, which are set here. 
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.Purple, UnicornAccessories.Sunglasses, UnicornAdornments.StarTattoos);
+
+// Since we are already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+AddUnicornPage addUnicornPage = accountPage.AddUnicorn();
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.CreateUnicorn(sparkles);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # The Unicorn is a top-level Object--it has attributes, which are set here.
@@ -334,7 +358,10 @@ Assert.assertTrue("Sparkles should have been created, with all attributes intact
 assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been created, with all attributes intact"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// The exists() method from UnicornConfirmationPage will take the Sparkles 
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+Assert.True(unicornConfirmationPage.Exists(sparkles), "Sparkles should have been created, with all attributes intact");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # The exists() method from UnicornConfirmationPage will take the Sparkles

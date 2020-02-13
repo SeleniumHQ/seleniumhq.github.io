@@ -1,33 +1,21 @@
 ---
-title: "Guidelines and recommendations"
-menuTitle: "Guidelines"
+title: "ガイドラインとレコメンデーション"
+menuTitle: "ガイドライン"
 chapter: true
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+# ガイドラインとレコメンデーション
 
-# Guidelines and recommendations
+「ベストプラクティス」に関するメモ：このドキュメントでは、"ベストプラクティス"というフレーズを意図的に避けています。
+ すべての状況に有効なアプローチはありません。
+ "ガイドラインとレコメンデーション"というアイデアを好みます。
+ これらを一通り読み、特定の環境でどのアプローチが効果的かを慎重に決定することをお勧めします。
 
-A note on "Best Practices": We've intentionally avoided the phrase "Best
-Practices" in this documentation. No one approach works for all situations.
-We prefer the idea of "Guidelines and Recommendations". We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.
+機能テストは、多くの理由で適切に行うのが困難です。
+まるでアプリケーションの状態、複雑さ、および依存関係が、テストを十分に難しくしないと思えるほど、ブラウザ（特にクロスブラウザの非互換性）を扱うのは、良いテストの作成を難しくします。
 
-Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.
+Seleniumは、機能的なユーザーインタラクションを簡単にするツールを提供しますが、適切に設計されたテストスイートの作成には役立ちません。
+この章では、機能的なWebページの自動化に取り組む方法に関するアドバイス、ガイドライン、および推奨事項を提供します。
 
-Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.
-
-This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.
+この章では、長年にわたって成功を収めてきたSeleniumの多くのユーザーの間で人気のあるソフトウェア設計パターンを記録します。

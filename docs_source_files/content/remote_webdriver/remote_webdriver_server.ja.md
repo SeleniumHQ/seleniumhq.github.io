@@ -1,76 +1,54 @@
 ---
-title: "Remote WebDriver server"
+title: "リモートWebDriverサーバー"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+サーバーは、テストするブラウザーがインストールされたマシンで常に実行されます。
+サーバーは、コマンドラインから、またはコード設定を通じて使用できます。
 
-The server will always run on the machine with the browser you want to
-test. The server can be used either from the command line or through code
-configuration.
+## コマンドラインからサーバーを起動する
 
-
-## Starting the server from the command line
-
-Once you have downloaded `selenium-server-standalone-{VERSION}.jar`,
-place it on the computer with the browser you want to test. Then, from
-the directory with the jar, run the following:
+一旦、`selenium-server-standalone-{VERSION}.jar`をダウンロードしたら、テストしたいブラウザーのあるコンピューターに配置します。
+次に、jarを含むディレクトリから、次のコマンドを実行します。
 
 ```shell
 java -jar selenium-server-standalone-{VERSION}.jar
 ```
 
-## Considerations for running the server
+## サーバーを実行するにあたって考慮すること
 
-The caller is expected to terminate each session properly, calling
-either `Selenium#stop()` or `WebDriver#quit`.
+呼び出し元は、`Selenium#stop()`または`WebDriver#quit`を呼び出して、各セッションを適切に終了すべきです。
 
-The selenium-server keeps in-memory logs for each ongoing session,
-which are cleared when `Selenium#stop()` or `WebDriver#quit` is called. If
-you forget to terminate these sessions, your server may leak memory. If
-you keep extremely long-running sessions, you will probably need to
-stop/quit every now and then (or increase memory with -Xmx jvm option).
+selenium-serverは、進行中の各セッションのメモリ内ログを保持します。
+これらのログは、`Selenium#stop()`または`WebDriver#quit`が呼び出されるとクリアされます。
+これらのセッションの終了を忘れると、サーバーでメモリリークが発生する可能性があります。
+非常に長時間実行されるセッションを維持する場合は、時々停止または終了する必要があります（または-Xmx jvmオプションでメモリを増やします）。
 
+## タイムアウト (version 2.21以降)
 
-## Timeouts (from version 2.21)
-
-The server has two different timeouts, which can be set as follows:
+サーバーには2つの異なるタイムアウトがあり、次のように設定できます。
 
 ```shell
 java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60
 ```
 
 * browserTimeout
-  * Controls how long the browser is allowed to hang (value in seconds).
+  * ブラウザーのハングを許可する時間を制御します（値は秒単位）。
 * timeout
-  * Controls how long the client is allowed to be gone
-  before the session is reclaimed (value in seconds).
+  * セッションが回収されるまでにクライアントがいなくなる時間を制御します（値は秒単位）。
 
-The system property `selenium.server.session.timeout`
-is no longer supported as of 2.21.
+システムプロパティ`selenium.server.session.timeout`は、2.21からサポートされなくなりました。
 
-Please note that the `browserTimeout`
-is intended as a backup timeout mechanism
-when the ordinary timeout mechanism fails,
-which should be used mostly in grid/server environments
-to ensure that crashed/lost processes do not stay around for too long,
-polluting the runtime environment.
+`browserTimeout`は、通常のタイムアウトメカニズムが失敗した場合の予備のタイムアウトメカニズムであることに注意してください。これは主にグリッド/サーバー環境で使用され、クラッシュ/失われたプロセスが長く滞留、ランタイム環境を汚染しないようにします。
 
+## プログラムでサーバーを構成する
 
-## Configuring the server programmatically
+理論的には、プロセスは`DriverServlet`をURLにマッピングするのと同じくらい簡単ですが、ページを全体的にコードで構成されたJettyなどの軽量コンテナでホストすることもできます。これを行う手順は次のとおりです。
 
-In theory, the process is as simple as mapping the `DriverServlet` to
-a URL, but it's also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.
-
-Download the `selenium-server.zip` and unpack. Put the JARs on the
-CLASSPATH. Create a new class called `AppServer`. Here, I'm using
-Jetty, so you'll need to [download](//www.eclipse.org/jetty/download.html)
-that as well:
+`selenium-server.zip`をダウンロードして解凍します。
+JARをCLASSPATHに配置します。
+`AppServer`という新しいクラスを作成します。
+ここでは、Jettyを使用しているので、それも[ダウンロード](//www.eclipse.org/jetty/download.html)する必要があります。
 
 ```java
 import org.mortbay.jetty.Connector;
