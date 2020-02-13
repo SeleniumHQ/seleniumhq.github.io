@@ -4,29 +4,17 @@ chapter: true
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
 # Grid
 
-_Selenium Grid_ is a smart proxy server
-that allows Selenium tests to route commands to remote web browser instances.
-Its aim is to provide an easy way to run tests in parallel on multiple machines.
+_Selenium Grid_ は、SeleniumテストがコマンドをリモートWebブラウザーインスタンスにルーティングできるようにする賢いプロキシサーバーです。
+その目的は、複数のマシンで並行してテストを実行する簡単な方法を提供することです。
 
-With Selenium Grid,
-one server acts as the hub that routes JSON formatted test commands
-to one or more registered Grid nodes.
-Tests contact the hub to obtain access to remote browser instances.
-The hub has a list of registered servers that it provides access to,
-and allows us to control these instances.
+Selenium Gridでは、1つのサーバーが、JSON形式のテストコマンドを1つ以上の登録済みのグリッドノードにルーティングするハブとして機能します。
+テストはハブに接続して、リモートブラウザーインスタンスへのアクセスを取得します。
+ハブには、アクセスを提供する登録済みサーバーのリストがあり、これらのインスタンスを制御できます。
 
-Selenium Grid allows us to run tests in parallel on multiple machines,
-and to manage different browser versions and browser configurations centrally
-(instead of in each individual test).
+Selenium Gridを使用すると、複数のマシンで並行してテストを実行し、さまざまなブラウザーバージョンとブラウザー構成を（個々のテストではなく）一元的に管理できます。
 
-Selenium Grid isn't a silver bullet.
-It solves a subset of common delegation and distribution problems,
-but will for example not manage your infrastructure
-and might not suit your specific needs.
+Selenium Gridは特効薬ではありません。
+一般的な委任および配布の問題のサブセットを解決しますが、たとえばインフラストラクチャを管理せず、特定のニーズに適さない場合があります。

@@ -1,17 +1,13 @@
 ---
-title: "Purposes and main functionalities"
-menuTitle: "Purposes and functionalities"
+title: "目的と主な機能"
+menuTitle: "目的と機能"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+* すべてのテストの中央エントリポイント
+* ブラウザーが実行されるノード・環境の管理と制御
+* スケーリング
+* テストを並列実行
+* クロスプラットフォームでのテスト
+* 負荷分散
 
-* Central entry point for all tests
-* Management and control of the nodes / environment where the browsers run
-* Scaling
-* Running tests in parallel
-* Cross platform testing
-* Load balancing
