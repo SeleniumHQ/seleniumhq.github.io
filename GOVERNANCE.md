@@ -236,6 +236,9 @@ The current TLC members are:
 * [@jimevans](https://github.com/jimevans)
 * [@shs96c](https://github.com/shs96c)
 * [@titusfortner](https://github.com/titusfortner)
+* [@automatedtester](https://github.com/automatedtester)
+* [@diemol](https://github.com/diemol)
+* [@tourdedave](https://github.com/tourdedave)
 
 ### Project Leadership Committee (PLC)
 
@@ -288,6 +291,7 @@ The current PLC members are:
 * [@jimevans](https://github.com/jimevans)
 * [@manoj9788](https://github.com/manoj9788)
 * [@shs96c](https://github.com/shs96c)
+* [@mmerrell](https://github.com/mmerrell)
 
 
 ## Communication Channels
