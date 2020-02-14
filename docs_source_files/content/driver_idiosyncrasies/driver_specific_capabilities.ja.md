@@ -1,19 +1,13 @@
 ---
-title: "Driver specific capabilities"
+title: "ドライバー固有の機能"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### `FirefoxOptions` を使用してCapabilitiesを定義する
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` は、Firefoxブラウザの機能を定義する新しい方法であり、通常はDesiredCapabilitiesよりも優先して使用する必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -56,9 +50,9 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### カスタムプロファイルを設定する
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+以下に示すように、Firefoxのカスタムプロファイルを作成することができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -110,9 +104,7 @@ driver = RemoteWebDriver(options)
 
 ### fileUploadDialogTimeout
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+環境によっては、ファイルアップロードダイアログを開くときにInternet Explorerがタイムアウトする場合があります。 IEDriverのデフォルトのタイムアウトは1000ミリ秒ですが、fileUploadDialogTimeout capabilityを使用してタイムアウトを増やすことができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
