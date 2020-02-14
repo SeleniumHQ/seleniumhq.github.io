@@ -1,52 +1,28 @@
 ---
-title: "When to use Grid"
+title: "グリッドを使用する場合"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+一般的に、グリッドを使用する理由は2つあります。
 
+* 複数のブラウザー、複数のバージョンのブラウザー、および異なるオペレーティングシステムで実行されているブラウザーに対してテストを実行するため。
+* テストスイートがテストがパスするのに完了するのにかかる時間を短縮するため。
 
-Generally speaking, there’s two reasons why you might want to use Grid.
+グリッドは、複数のマシンを使用してテストを並行して実行することにより、テストパスの実行を高速化するために使用されます。
+たとえば、100個のテストスイートがあり、それらのテストを実行するために4つの異なるマシン（VMまたは個別の物理マシン）をサポートするようにグリッドをセットアップした場合、テストスイートは単一のマシンでテストを連続して実行した場合と比較して（およそ）4分の1の時間で完了します。
+大規模なテストスイート、および大量のデータ検証を実行するような長時間実行されるテストスイートの場合、これは大幅な時間の節約になります。
+一部のテストスイートの実行には数時間かかる場合があります。 スイートの実行に費やす時間を増やすもう1つの理由は、開発者がAUTのコードをチェックインした後のテスト結果の所要時間を短縮することです。
+アジャイルソフトウェア開発を実践しているソフトウェアチームは、一晩テストパスを一晩待つのではなく、できるだけ早くテストフィードバックを求めています。
 
-* To run your tests against multiple browsers, multiple versions of browser,
-and browsers running on different operating systems.
-* To reduce the time it takes for the test suite to complete a test pass.
+グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。
+たとえば、仮想マシンの"グリッド"は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。
+したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。
+テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。
 
-Grid is used to speed up the execution of a test pass by using
-multiple machines to run tests in parallel. For example, if you have a suite of
-100 tests, but you set up Grid to support 4 different machines (VMs or
-separate physical machines) to run those tests, your test suite will complete
-in (roughly) one-fourth the time as it would if you ran your tests sequentially
-on a single machine. For large test suites, and long-running test suite such as
-those performing large amounts of data-validation, this can be a significant
-time-saver. Some test suites can take hours to run. Another reason to boost the
-time spent running the suite is to shorten the turnaround time for test results
-after developers check-in code for the AUT. Increasingly software teams
-practicing Agile software development want test feedback as immediately as
-possible as opposed to wait overnight for an overnight test pass.
+さらに、すべて同じブラウザ、タイプ、およびバージョンのグリッドを持つことができます。
+たとえば、それぞれがFirefox 70の3つのインスタンスを実行する4台のマシンのグリッドを持つことができ、利用可能なFirefoxインスタンスの"ある意味"での"サーバーファーム"を可能にします。
+スイートが実行されると、各テストはグリッドに渡され、グリッドは次に利用可能なFirefoxインスタンスにテストを割り当てます。 この方法で、おそらく12のテストがすべて同時に並行して実行されるテストパスを取得し、テストパスの完了に必要な時間を大幅に短縮します。
 
-Grid is also used to support running tests against multiple runtime
-environments, specifically, against different browsers at the same time. For
-example, a ‘grid’ of virtual machines can be setup with each supporting a
-different browser that the application to be tested must support. So, machine 1
-has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
-Chrome, and machine 4 the latest Firefox. When the test suite is run,
-Selenium-Grid receives each test-browser combination and assigns each test to
-run against its required browser.
-
-In addition, one can have a grid of all the same browser, type and version. For
-instance, one could have a grid of 4 machines each running 3 instances of
-Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
-instances. When the suite runs, each test is passed to Grid which
-assigns the test to the next available Firefox instance. In this manner one
-gets test pass where conceivably 12 tests are all running at the same time in
-parallel, significantly reducing the time required to complete a test pass.
-
-Grid is very flexible. These two examples can be combined to allow
-multiple instances of each browser type and version. A configuration such as
-this would provide both, parallel execution for fast test pass completion and
-support for multiple browser types and versions simultaneously.
+グリッドは非常に柔軟です。
+これらの2つの例を組み合わせて、各ブラウザタイプとバージョンの複数のインスタンスを許可することができます。
+このような構成では、迅速にテストがパスすることを完了するための並列実行と、複数のブラウザタイプおよびバージョンの同時サポートの両方が提供されます。
