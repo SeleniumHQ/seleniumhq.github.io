@@ -1,39 +1,28 @@
 ---
-title: "Components of a Grid"
+title: "グリッドのコンポーネント"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
 ![Grid](/images/grid.png)
 
-## Hub
-* Intermediary and manager
-* Accepts requests to run tests
-* Takes instructions from client and executes them remotely on the nodes
-* Manages threads
+## ハブ
+* 仲介者およびマネージャー
+* テストを実行する要求を受け入れます
+* クライアントから命令を受け取り、ノード上でリモートで実行します
+* スレッドを管理します
 
-A _Hub_ is a central point where all your tests are sent.
-Each Selenium Grid consists of exactly one hub. The hub needs to be reachable
-from the respective clients (i.e. CI server, Developer machine etc.)
-The hub will connect one or more nodes
-that tests will be delegated to.
+_ハブ_ は、すべてのテストが送信される中心点です。
+各Selenium Gridは、ちょうど1つのハブで構成されます。
+ハブは、それぞれのクライアント（CIサーバー、開発者マシンなど）から到達可能である必要があります。
+ハブは、テストが委任される1つ以上のノードを接続します。
 
-## Nodes
+## ノード
 
-* Where the browsers live
-* Registers itself to the hub and communicates its capabilities
-* Receives requests from the hub and executes them
+* ブラウザが存在する場所
+* ハブに自分自身を登録し、その機能を伝えます
+* ハブからリクエストを受信して実行します
 
-_Nodes_ are different Selenium instances
-that will execute tests on individual computer systems.
-There can be many nodes in a grid.
-The machines which are nodes do not need to be the same platform
-or have the same browser selection as that of the hub or the other nodes.
-A node on Windows might have the capability of
-offering Internet Explorer as a browser option,
-whereas this wouldn't be possible on Linux or Mac.
-
+_ノード_ は、個々のコンピューターシステムでテストを実行するさまざまなSeleniumインスタンスです。
+グリッドには多くのノードが存在する場合があります。
+ノードであるマシンは、ハブまたは他のノードと同じプラットフォームであったり、同じブラウザーを選定する必要はありません。
+Windows上のノードは、Internet Explorerをブラウザーオプションとして提供する機能を備えている場合がありますが、これはLinuxまたはMacでは不可能です。

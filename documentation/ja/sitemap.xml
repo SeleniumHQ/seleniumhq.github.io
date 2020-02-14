@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/browser_navigation/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -94,7 +94,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -138,53 +138,8 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -229,7 +184,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -273,53 +228,8 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -364,7 +274,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -409,7 +319,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started/quick/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -499,7 +409,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -633,98 +543,98 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/grid/components_of_a_grid/"
-                />
+    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</loc>
+    <lastmod>2020-02-15T05:18:05+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://selenium.dev/documentation/de/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/shared_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://selenium.dev/documentation/es/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="https://selenium.dev/documentation/nl/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://selenium.dev/documentation/fr/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://selenium.dev/documentation/ko/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://selenium.dev/documentation/ja/grid/components_of_a_grid/"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/"
                 />
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</loc>
-    <lastmod>2020-02-01T00:32:15+05:30</lastmod>
+    <loc>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</loc>
+    <lastmod>2020-02-14T19:07:11+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
-                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/de/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="nl"
-                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="fr"
-                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/"
+                href="https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/"
                 />
   </url>
   
   <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -814,7 +724,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -859,7 +769,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -904,7 +814,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -948,8 +858,53 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</loc>
+    <lastmod>2020-02-14T19:07:11+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://selenium.dev/documentation/de/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/grid/components_of_a_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/grid/components_of_a_grid/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1034,6 +989,51 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</loc>
+    <lastmod>2020-02-15T05:18:05+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/"
                 />
   </url>
   
@@ -1174,7 +1174,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/introduction/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1219,7 +1219,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/html-runner/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1309,7 +1309,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1353,53 +1353,8 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/grid/setting_up_your_own_grid/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ja/introduction/types_of_testing/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1444,7 +1399,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1534,7 +1489,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1623,8 +1578,53 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</loc>
+    <lastmod>2020-02-14T19:07:11+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://selenium.dev/documentation/de/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/grid/setting_up_your_own_grid/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1669,7 +1669,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/introduction/about_this_documentation/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1714,7 +1714,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1804,7 +1804,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1849,7 +1849,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1894,7 +1894,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-14T19:07:11+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2119,7 +2119,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2344,7 +2344,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2524,7 +2524,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/http_proxies/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2749,7 +2749,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2839,7 +2839,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/grid/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-14T19:07:11+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2973,51 +2973,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="nl"
-                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh-cn"
-                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="fr"
-                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/"
-                />
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/keyboard/</loc>
     <lastmod>2020-02-12T19:12:24+02:00</lastmod>
     <xhtml:link
@@ -3063,8 +3018,53 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/documentation/ja/driver_idiosyncrasies/</loc>
+    <lastmod>2020-02-15T05:18:05+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://selenium.dev/documentation/en/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://selenium.dev/documentation/de/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://selenium.dev/documentation/es/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="nl"
+                href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh-cn"
+                href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/"
+                />
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/ja/support_packages/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -3109,7 +3109,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -3154,7 +3154,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3243,7 +3243,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/contributing/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3288,7 +3288,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/</loc>
-    <lastmod>2020-01-31T04:14:27+05:30</lastmod>
+    <lastmod>2020-02-02T16:05:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
