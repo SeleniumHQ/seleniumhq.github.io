@@ -475,16 +475,6 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- </description>
-    </item>
-    
-    <item>
       <title>실험 의존성</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

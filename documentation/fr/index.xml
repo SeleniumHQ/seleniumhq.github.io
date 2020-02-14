@@ -482,16 +482,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
     </item>
     
     <item>
-      <title>Travailler avec les web elements</title>
-      <link>https://selenium.dev/documentation/fr/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- </description>
-    </item>
-    
-    <item>
       <title>Alerts, prompts et confirmations Javascript</title>
       <link>https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
