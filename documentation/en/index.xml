@@ -458,15 +458,6 @@ ThreadGuard  This class is only available in the Java Binding
     </item>
     
     <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/en/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/en/support_packages/working_with_web_elements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Avoid sharing state</title>
       <link>https://selenium.dev/documentation/en/guidelines_and_recommendations/avoid_sharing_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

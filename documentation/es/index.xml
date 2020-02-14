@@ -473,16 +473,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Trabajando con elementos web</title>
-      <link>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- </description>
-    </item>
-    
-    <item>
       <title>Alertas, avisos y confirmaciones de JavaScript</title>
       <link>https://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

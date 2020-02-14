@@ -451,15 +451,6 @@ Falls Du einen Fehler in der Dokumentation entdeckst, freuen wir uns wenn Du uns
     </item>
     
     <item>
-      <title>Arbeiten mit Webelementen</title>
-      <link>https://selenium.dev/documentation/de/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/de/support_packages/working_with_web_elements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Detailiertes Reporting</title>
       <link>https://selenium.dev/documentation/de/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
