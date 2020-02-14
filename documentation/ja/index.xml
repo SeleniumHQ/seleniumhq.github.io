@@ -73,16 +73,6 @@ gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラ�
     </item>
     
     <item>
-      <title>Shared capabilities</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
-    </item>
-    
-    <item>
       <title>The Selenium project and tools</title>
       <link>https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -167,23 +157,23 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
     </item>
     
     <item>
+      <title>共有機能</title>
+      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
+      <description> ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
+次の表で説明するように、ページロード戦略は document.readyState を問い合わせます。
+   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    </description>
+    </item>
+    
+    <item>
       <title>目的と主な機能</title>
       <link>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
       <description> すべてのテストの中央エントリポイント ブラウザーが実行されるノード・環境の管理と制御 スケーリング テストを並列実行 クロスプラットフォームでのテスト 負荷分散  </description>
-    </item>
-    
-    <item>
-      <title>Driver specific capabilities</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.</description>
     </item>
     
     <item>
@@ -270,6 +260,16 @@ Line length When editing the documentation’s source, which is written in plain
 Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記述したメソッドで表されます。 開発者と利害関係者（ユーザー、製品所有者、ビジネスインテリジェンススペシャリストなど）との伝達が可能になります。
 利点  Readable: ビジネス関係者はそれを理解できます。 Writable: 書きやすく、不要な重複を避けます。 Extensible: 機能は（合理的に）契約と既存の機能を壊すことなく追加できます。 Maintainable: 実装の詳細をテストケースから除外することにより、AUT* の変更に対して十分に隔離されます。  Java Javaの妥当なDSLメソッドの例を次に示します。 簡潔にするために、driverオブジェクトが事前に定義されており、メソッドで使用可能であることを前提としています。
 /** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.findElement(By.id(&amp;#34;loginField&amp;#34;)); loginField.clear(); loginField.sendKeys(username); // Fill out the password field. The locator we&amp;#39;re using is &amp;#34;By.</description>
+    </item>
+    
+    <item>
+      <title>ドライバー固有の機能</title>
+      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <description>Firefox FirefoxOptions を使用してCapabilitiesを定義する FirefoxOptions は、Firefoxブラウザの機能を定義する新しい方法であり、通常はDesiredCapabilitiesよりも優先して使用する必要があります。
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>
     
     <item>
