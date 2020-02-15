@@ -1,22 +1,16 @@
 ---
-title: "Working with colours"
+title: "色を扱う"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-You will occasionally want to validate the colour of something as part of your tests;
-the problem is that colour definitions on the web are not constant.
-Would it not be nice if there was an easy way to compare
-a HEX representation of a colour with a RGB representation of a colour,
-or a RGBA representation of a colour with a HSLA representation of a colour?
+テストの一部として何かの色を検証したい場合があります。
+問題は、ウェブ上の色の定義が一定ではないことです。
+色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
 
-Worry not. There is a solution: the _Color_ class!
+心配しないでください。解決策があります。:  _Color_ クラスです！
 
-First of all, you will need to import the class:
+まず、クラスをインポートする必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -37,10 +31,9 @@ include Selenium::WebDriver::Support
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now start creating colour objects.
-Every colour object will need to be created from a string representation of
-your colour.
-Supported colour representations are:
+これで、カラーオブジェクトの作成を開始できます。
+すべての色オブジェクトは、色の文字列表現から作成する必要があります。
+サポートされている色表現は、以下のとおりです。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -87,9 +80,7 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Color class also supports all of the base colour definitions
-specified in
-[http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
+Colorクラスは、 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4) で指定されているすべての基本色定義もサポートしています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -120,9 +111,8 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Sometimes browsers will return a colour value of "transparent"
-if no colour has been set on an element.
-The Color class also supports this:
+要素に色が設定されていない場合、ブラウザは "透明" の色の値を返すことがあります。
+Colorクラスもこれをサポートしています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -145,10 +135,7 @@ private val TRANSPARENT = Color.fromString("transparent")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now safely query an element
-to get its colour/background colour knowing that
-any response will be correctly parsed
-and converted into a valid Color object:
+レスポンスが正しく解析され、有効なColorオブジェクトに変換されることを認識して、要素を安全にクエリしてその色/背景色を取得できるようになりました。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -175,8 +162,7 @@ val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then directly compare colour objects:
-
+そして、色オブジェクトを直接比較できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -199,8 +185,7 @@ assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Or you can convert the colour into one of the following formats
-and perform a static validation:
+または、色を次の形式のいずれかに変換し、静的に検証することができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -231,4 +216,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Colours are no longer a problem.
+色はもはや問題ではありません。
