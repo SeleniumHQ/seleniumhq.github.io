@@ -154,9 +154,8 @@ WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&amp;rsquo;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
+Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au sélénium, sont cependant coûteux à exécuter. En outre, ils nécessitent généralement une infrastructure substantielle être en place pour fonctionner efficacement. C&amp;rsquo;est une bonne règle de toujours se demander si ce que l&amp;rsquo;on veut tester peut être fait en utilisant des approches de test plus légères telles que des tests unitaires ou avec une approche de niveau inférieur.</description>
     </item>
     
     <item>
