@@ -1,20 +1,14 @@
 ---
-title: "Improved reporting"
+title: "改善されたレポート"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Selenium is not designed to report on the status of test cases
-run. Taking advantage of the built-in reporting capabilities of unit
-test frameworks is a good start.  Most unit test frameworks have
-reports that can generate xUnit or HTML formatted reports.  xUnit
-reports are popular for importing results to a Continuous Integration
-(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
-for more information regarding report outputs for several languages.
+Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。
+単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。
+ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。
+xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。
+いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。
 <!-- TODO: Add links.-->
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)

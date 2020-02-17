@@ -34,15 +34,6 @@ If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &a
     </item>
     
     <item>
-      <title></title>
-      <link>https://selenium.dev/downloads/javascript/</link>
-      <pubDate>Sun, 08 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/downloads/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Blog</title>
       <link>https://selenium.dev/blog/2019/</link>
       <pubDate>Tue, 01 Jan 2019 00:00:00 +0000</pubDate>
@@ -95,6 +86,15 @@ It is currently in “alpha” and available for use in both Chrome and Firefox.
       <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://selenium.dev/downloads/javascript/</link>
+      <pubDate>Fri, 06 Oct 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/downloads/javascript/</guid>
       <description></description>
     </item>
     

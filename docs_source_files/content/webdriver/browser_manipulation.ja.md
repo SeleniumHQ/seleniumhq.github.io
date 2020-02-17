@@ -1,38 +1,26 @@
 ---
-title: "Browser manipulation"
+title: "ブラウザー操作"
 weight: 3
 ---
 
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
-
 ## Ruby
 
-Ruby is not installed by default on Windows. Download the latest
-[version](//rubyinstaller.org/downloads) and run the installer. You can
-leave all settings at default values, except at the
-_Installation Destination and Optional Tasks_ screen check
-_Add Ruby executables to your PATH_ checkbox. To drive any browser, you have
-to install `selenium-webdriver` Ruby gem. To install it, open command prompt
-and type this:
+RubyはWindowsにデフォルトではインストールされません。最新[バージョン](//rubyinstaller.org/downloads)をダウンロードし、インストーラーを実行します。 _Installation Destination and Optional Tasks_ 画面で _Add Ruby executables to your PATH_ チェックボックス以外のすべての設定をデフォルト値のままにすることができます。ブラウザーを操作するには、`selenium-webdriver` Ruby gemをインストールする必要があります。それをインストールするには、コマンドプロンプトを開き、次のように入力します。
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Or, if you use [Bundler](//bundler.io), add this line to your application's
-Gemfile:
+または、[Bundler](//bundler.io)を使用する場合、次の行をアプリケーションのGemfileに追加します。
 
 ```ruby
 gem "selenium-webdriver"
 ```
 
-And then execute the following command in prompt:
+そして、プロンプトで次のコマンドを実行します。
 
 ```shell
 bundle install
@@ -40,34 +28,28 @@ bundle install
 
 
 ## Internet Explorer
-
-Internet Explorer is installed by default on Windows, so no installation is
-needed. To drive Internet Explorer on Windows, you have to download the latest
-[Internet Explorer Driver](https://selenium.dev/downloads/) and put the file
-into a folder that is in `PATH`. To find out which directories are in `PATH`,
-type `echo %PATH%` in command prompt.
+Internet ExplorerはデフォルトでWindowsにインストールされるため、インストールは不要です。 
+WindowsでInternet Explorerを動かすには、最新の[Internet Explorer Driver](https://selenium.dev/downloads/)をダウンロードし、ファイルを `PATH`にあるフォルダーに入れる必要があります。どのディレクトリが `PATH`にあるかを調べるには、コマンドプロンプトで` echo％PATH％ `と入力します。
 
 ```bat
 $ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
 ```
 
-`C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and
-move `IEDriverServer.exe` there.
+`C:\Ruby200\bin` は良い場所のようです。 `IEDriverServer`ファイルを解凍し、`IEDriverServer.exe`をそこに移動します。
 
-This should open a new Internet Explorer window:
+これにより、新しいInternet Explorerウィンドウが開きます。
 
 ```ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer
 ```
 
-## Browser navigation
+## Browser操作
 
-### Navigate to
+### ナビゲート
 
-The first thing you will want to do after launching a browser is to
-open your website. This can be achieved in a single line:
+ブラウザーを起動した後に最初に行うことは、Webサイトを開くことです。これは1行で実現できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -102,9 +84,9 @@ driver.navigate().to("https://selenium.dev")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get current URL
+### 現在のURLを取得
 
-You can read the current URL from the browser's address bar using:
+ブラウザーのアドレスバーから現在のURLを読むには、次を使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getCurrentUrl();{{< / code-panel >}}
@@ -115,9 +97,9 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Back
+### 戻る
 
-Pressing the browser's back button:
+ブラウザーの戻るボタンを押す。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().back();{{< / code-panel >}}
@@ -128,9 +110,9 @@ Pressing the browser's back button:
   {{< code-panel language="kotlin" >}}driver.navigate().back() {{< / code-panel >}}
 {{< / code-tab >}}
 
+### 次へ
 
-### Forward
-Pressing the browser's forward button:
+ブラウザーの次へボタンを押す。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().forward();{{< / code-panel >}}
@@ -141,9 +123,9 @@ Pressing the browser's forward button:
   {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Refresh
+### 更新
 
-Refresh the current page:
+現在のページを更新する。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().refresh();{{< / code-panel >}}
@@ -154,9 +136,9 @@ Refresh the current page:
   {{< code-panel language="kotlin" >}}driver.navigate().refresh(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get title
+### タイトルの取得
 
-You can read the current page title from the browser:
+ブラウザーから現在のページタイトルを読むことができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getTitle();{{< / code-panel >}}
@@ -168,15 +150,14 @@ You can read the current page title from the browser:
 {{< / code-tab >}}
 
 
-## Windows and tabs
+## ウィンドウとタブ
 
-### Get window handle
+### ウィンドウハンドルの取得
 
-WebDriver does not make the distinction between windows and tabs. If
-your site opens a new tab or window, Selenium will let you work with it
-using a window handle.  Each window has a unique identifier which remains
-persistent in a single session. You can get the window handle of the
-current window by using:
+WebDriverは、ウィンドウとタブを区別しません。
+サイトが新しいタブまたはウィンドウを開く場合、Seleniumはウィンドウハンドルを使って連動します。
+各ウィンドウには一意の識別子があり、これは単一のセッションで持続します。
+次のコードを使用して、現在のウィンドウのウィンドウハンドルを取得できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getWindowHandle();{{< / code-panel >}}
@@ -187,20 +168,13 @@ current window by using:
   {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Switching windows or tabs
+### ウィンドウまたはタブの切り替え
 
-Clicking a link which opens in a
-<a href="https://seleniumhq.github.io" target="_blank"> new window</a>
-will focus the new window or tab on screen, but WebDriver will not know which
-window the Operating System considers active.  To work with the new window
-you will need to switch to it. If you have only two tabs or windows open,
-and you know which window you start with, by the process of elimination
-you can loop over both windows or tabs that WebDriver can see, and switch
-to the one which is not the original.
+<a href="https://seleniumhq.github.io" target="_blank"> 新しいウィンドウ</a>で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
+新しいウィンドウで作業するには、それに切り替える必要があります。
+開いているタブまたはウィンドウが2つしかなく、どちらのウィンドウから開始するかがわかっている場合、削除のプロセスによって、WebDriverが表示できる両方のウィンドウまたはタブをループし、元のウィンドウまたはタブに切り替えることができます。
 
-However, Selenium 4 provides a new api 
-<a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
-which creates a new tab (or) new window and automatically switches to it.
+ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI <a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/#新しいウィンドウ（または）新しいタブを作成して切り替える">NewWindow</a>が用意されています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -364,13 +338,13 @@ wait.until(titleIs("Selenium documentation"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Create new window (or) new tab and switch
-Creates a new window (or) tab and will focus the new window or tab on screen.
-You don't need to switch to work with the new window (or) tab. If you have more than two windows
-(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
-and switch to the one which is not the original.
+### 新しいウィンドウ（または）新しいタブを作成して切り替える
 
-__Note: This feature works with Selenium 4 and later versions.__
+新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
+新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
+新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。
+
+__注意: この機能は、Selenium 4以降のバージョンで機能します。__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -421,13 +395,11 @@ driver.switchTo().newWindow(WindowType.WINDOW)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Closing a window or tab
+### ウィンドウまたはタブを閉じる
 
-When you are finished with a window or tab _and_ it is not the
-last window or tab open in your browser, you should close it and switch
-back to the window you were using previously.  Assuming you followed the
-code sample in the previous section you will have the previous window
-handle stored in a variable. Put this together and you will get:
+ウィンドウまたはタブでの作業が終了し、 _かつ_ ブラウザーで最後に開いたウィンドウまたはタブではない場合、それを閉じて、以前使用していたウィンドウに切り替える必要があります。
+前のセクションのコードサンプルに従ったと仮定すると、変数に前のウィンドウハンドルが格納されます。
+これをまとめると以下のようになります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -475,15 +447,11 @@ driver.switchTo().window(originalWindow)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Forgetting to switch back to another window handle after closing a
-window will leave WebDriver executing on the now closed page, and will
-trigger a **No Such Window Exception**. You must switch
-back to a valid window handle in order to continue execution.
+ウィンドウを閉じた後に別のウィンドウハンドルに切り替えるのを忘れると、現在閉じられているページでWebDriverが実行されたままになり、 **No Such Window Exception** が発行されます。実行を継続するには、有効なウィンドウハンドルに切り替える必要があります。
 
-### Quitting the browser at the end of a session
+### セッションの終了時にブラウザーを終了する
 
-When you are finished with the browser session you should call quit,
-instead of close:
+ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.quit();{{< / code-panel >}}
@@ -494,19 +462,15 @@ instead of close:
   {{< code-panel language="kotlin" >}}driver.quit(){{< / code-panel >}}
 {{< / code-tab >}}
 
-* Quit will:
-  * Close all the windows and tabs associated with that WebDriver
-  session
-  * The browser process
-  * The background driver process
-  * Notify Selenium Grid that the browser is no longer in use so it can
-   be used by another session (if you are using Selenium Grid)
+* Quitは、
+  * そのWebDriverセッションに関連付けられているすべてのウィンドウとタブを閉じます
+  * ブラウザーのプロセス
+  * バックグラウンドのドライバーのプロセス
+  * ブラウザーが使用されなくなったことをSelenium Gridに通知して、別のセッションで使用できるようにします（Selenium Gridを使用している場合）
 
-Failure to call quit will leave extra background processes and ports
-running on your machine which could cause you problems later.
+quitの呼び出しに失敗すると、余分なバックグラウンドプロセスとポートがマシン上で実行されたままになり、後で問題が発生する可能性があります。
 
-Some test frameworks offer methods and annotations which you can hook
-into to tear down at the end of a test.
+一部のテストフレームワークでは、テストの終了時にフックできるメソッドとアノテーションを提供しています。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -558,9 +522,7 @@ fun tearDown() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If not running WebDriver in a test context, you may consider using
-`try  / finally` which is offered by most languages so that an exception
-will still clean up the WebDriver session.
+テストコンテキストでWebDriverを実行していない場合は、ほとんどの言語で提供されている `try  / finally` の使用を検討して、例外がWebDriverセッションをクリーンアップするようにします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -606,9 +568,8 @@ try {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Python's WebDriver now supports the python context manager,
-which when using the with keyword can automatically quit the driver at
-the end of execution.
+PythonのWebDriverは、pythonコンテキストマネージャーをサポートするようになりました。
+withキーワードを使用すると、実行終了時にドライバーを自動的に終了できます。
 
 ```python
 with webdriver.Firefox() as driver:
@@ -617,17 +578,12 @@ with webdriver.Firefox() as driver:
 # WebDriver will automatically quit after indentation
 ```  
 
-## Frames and Iframes
-Frames are a now deprecated means of building a site layout from
-multiple documents on the same domain. You are unlikely to work with
-them unless you are working with an pre HTML5 webapp.  Iframes allow
-the insertion of a document from an entirely different domain, and are
-still commonly used.
+## FrameとIframe
+frameは、同じドメイン上の複数のドキュメントからサイトレイアウトを構築する非推奨の手段となりました。 
+HTML5以前のWebアプリを使用している場合を除き、frameを使用することはほとんどありません。
+iframeは、まったく異なるドメインからのドキュメントの挿入を許可し、今でも一般的に使用されています。
 
-If you need to work with frames or iframes, Webdriver allows you to
-work with them in the same way. Consider a button within an iframe.
-If we inspect the element using the browser development tools, we might
-see the following:
+フレームまたはiframeを使用する必要がある場合、Webdriverを使用して同じ方法で作業できます。 iframe内のボタンがある場合を考えてみましょう。ブラウザー開発ツールを使用して要素を検査すると、次のように表示される場合があります。
 
 ```html
 <div id="modal">
@@ -637,8 +593,7 @@ see the following:
 </div>
 ```
 
-If it wasn't for the iframe we would expect to click on the button
-using something like:
+iframeがなければ、次のようなボタンを使用してボタンをクリックします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -667,17 +622,14 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-However, if there are no buttons outside of the iframe, you might
-instead get a _no such element_ error. This happens because Selenium is
-only aware of the elements in the top level document. To interact with
-the button, we will need to first switch to the frame, in a similar way
-to how we switch windows. WebDriver offers three ways of switching to
-a frame.
+ただし、iframeの外側にボタンがない場合は、代わりにno such elementエラーが発生する可能性があります。
+これは、Seleniumがトップレベルのドキュメントの要素のみを認識するために発生します。
+ボタンを操作するには、ウィンドウを切り替える方法と同様に、最初にフレームに切り替える必要があります。
+WebDriverは、フレームに切り替える3つの方法を提供します。
 
-### Using a WebElement
+### WebElementを使う
 
-Switching using a WebElement is the most flexible option. You can
-find the frame using your preferred selector and switch to it.
+WebElementを使用した切り替えは、最も柔軟なオプションです。好みのセレクタを使用してフレームを見つけ、それに切り替えることができます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -742,10 +694,10 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Using a name or ID
-If your frame or iframe has an id or name attribute, this can be used
-instead.  If the name or ID is not unique on the page, then the first
-one found will be switched to.
+### nameまたはIDを使う
+
+フレームまたはiframeにidまたはname属性がある場合、代わりにこれを使うことができます。
+名前またはIDがページ上で一意でない場合、最初に見つかったものに切り替えます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -804,10 +756,9 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Using an index
+### インデックスを使う
 
-It is also possible to use the index of the frame, such as can be
-queried using _window.frames_ in JavaScript.
+JavaScriptの _window.frames_ を使用して照会できるように、frameのインデックスを使用することもできます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -840,10 +791,9 @@ driver.switchTo().frame(1)
 {{< / code-tab >}}
 
 
-### Leaving a frame
+### frameを終了する
 
-To leave an iframe or frameset, switch back to the default content
-like so:
+iframeまたはフレームセットを終了するには、次のようにデフォルトのコンテンツに切り替えます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -872,13 +822,13 @@ driver.switchTo().defaultContent()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Window management
-Screen resolution can impact how your web application renders, so
-WebDriver provides mechanisms for moving and resizing the browser
-window.
+## ウィンドウマネジメント
 
-### Get window size
-Fetches the size of the browser window in pixels.
+画面解像度はWebアプリケーションのレンダリング方法に影響を与える可能性があるため、WebDriverはブラウザーウィンドウを移動およびサイズ変更するメカニズムを提供します。
+
+### ウィンドウサイズの取得
+
+ブラウザーウィンドウのサイズをピクセル単位で取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -942,9 +892,10 @@ val height1 = size.getHeight()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Set window size
+### ウィンドウサイズの設定
 
-Restores the window and sets the window size.
+ウィンドウを復元し、ウィンドウサイズを設定します。
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.set_window_size(1024, 768){{< / code-panel >}}
@@ -954,9 +905,9 @@ Restores the window and sets the window size.
   {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get window position
+### ウィンドウの位置を取得
 
-Fetches the coordinates of the top left coordinate of the browser window.
+ブラウザーウィンドウの左上の座標を取得します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1014,9 +965,9 @@ int y1 = position.y
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Set window position
+## ウィンドウの位置設定
 
-Moves the window to the chosen position.
+選択した位置にウィンドウを移動します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1044,10 +995,9 @@ driver.manage().window().position = Point(0,0)
     {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Maximise window
-Enlarges the window. For most operating systems, the window will fill
-the screen, without blocking the operating system's own menus and
-toolbars.
+### ウィンドウの最大化
+
+ウィンドウを拡大します。ほとんどのオペレーティングシステムでは、オペレーティングシステムのメニューとツールバーをブロックすることなく、ウィンドウが画面いっぱいに表示されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().maximize();{{< / code-panel >}}
@@ -1058,9 +1008,9 @@ toolbars.
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Fullscreen window
+### 全画面ウィンドウ
 
-Fills the entire screen, similar to pressing F11 in most browsers.
+ほとんどのブラウザーでF11を押すのと同じように、画面全体に表示されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().fullscreen();{{< / code-panel >}}

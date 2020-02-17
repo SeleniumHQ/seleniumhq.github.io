@@ -1,47 +1,33 @@
 ---
-title: "Domain specific language"
+title: "ドメイン固有言語（DSL）"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。
+それによって、ユーザーは、プログラマーの言葉でなく、自分の言葉でシステムとやりとりすることができます。
 
-A domain specific language (DSL) is a system which provides the user with
-an expressive means of solving a problem. It allows a user to
-interact with the system on their terms – not just programmer-speak.
+通常、ユーザーはサイトの外観を気にしません。
+装飾、アニメーション、グラフィックスは気にしません。
+彼らはあなたのシステムを使用して、新しい従業員を最小限の難しさでプロセスに押し込みたいと考えています。
+彼らはアラスカへの旅行を予約したい。
+ユニコーンを設定して割引価格で購入したいのです。
+テスターとしてのあなたの仕事は、この考え方を"とらえる"ことにできるだけ近づくことです。
+それを念頭に置いて、テストスクリプト（ユーザーの唯一のプレリリースの代理人）がユーザーを"代弁し"、表現するように、作業中のアプリケーションの"モデリング"に取り掛かります。
 
-Your users, in general, do not care how your site looks. They do not
-care about the decoration, animations, or graphics. They
-want to use your system to push their new employees through the
-process with minimal difficulty; they want to book travel to Alaska; 
-they want to configure and buy unicorns at a discount. Your job as
-tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you are
-working on, such that the test scripts (the user's only pre-release
-proxy) “speak” for, and represent the user.
+Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記述したメソッドで表されます。
+開発者と利害関係者（ユーザー、製品所有者、ビジネスインテリジェンススペシャリストなど）との伝達が可能になります。
 
-With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a report between the
-developers and the stakeholders (users, product owners, business
-intelligence specialists, etc.).
+## 利点
 
-## Benefits
-
-* **Readable:** Business stakeholders can understand it.
-* **Writable:** Easy to write, avoids unnecessary duplication.
-* **Extensible:** Functionality can (reasonably) be added
-  without breaking contracts and existing functionality.
-* **Maintainable:** By leaving the implementation details out of test
-  cases, you are well-insulated against changes to the AUT*.
-
+* **Readable:** ビジネス関係者はそれを理解できます。
+* **Writable:** 書きやすく、不要な重複を避けます。
+* **Extensible:** 機能は（合理的に）契約と既存の機能を壊すことなく追加できます。
+* **Maintainable:** 実装の詳細をテストケースから除外することにより、AUT* の変更に対して十分に隔離されます。
 
 ## Java
 
-Here is an example of a reasonable DSL method in Java.
-For brevity's sake, it assumes the `driver` object is pre-defined
-and available to the method.
+Javaの妥当なDSLメソッドの例を次に示します。
+簡潔にするために、`driver`オブジェクトが事前に定義されており、メソッドで使用可能であることを前提としています。
 
 ```java
 /**
@@ -68,11 +54,10 @@ public AccountPage loginAsUser(String username, String password) {
 }
 ```
 
-This method completely abstracts the concepts of input fields,
-buttons, clicking, and even pages from your test code. Using this
-approach, all a tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method - not your tests.
+このメソッドは、テストコードから入力フィールド、ボタン、クリック、さらにはページの概念を完全に抽象化します。
+このアプローチを使用すると、テスターはこのメソッドを呼び出すだけで済みます。
+これにより、メンテナンスの利点が得られます。
+ログインフィールドが変更された場合、テストではなく、このメソッドを変更するだけで済みます。
 
 ```java
 public void loginTest() {
@@ -89,14 +74,11 @@ public void loginTest() {
 }
 ```
 
-It bears repeating: one of your primary goals should be writing an
-API that allows your tests to address **the problem at hand, and NOT
-the problem of the UI**. The UI is a secondary concern for your
-users – they do not care about the UI, they just want to get their job
-done. Your test scripts should read like a laundry list of things
-the user wants to DO, and the things they want to KNOW. The tests
-should not concern themselves with HOW the UI requires you to go
-about it.
+繰り返しになります。
+主な目標の1つは、 テストが **UIの問題ではなく、手元の問題** に対処できるAPIを作成することです。
+UIはユーザーにとって二次的な関心事です。ユーザーはUIを気にせず、ただ仕事をやりたいだけです。
+テストスクリプトは、ユーザーがやりたいことと知りたいことの長々としたリストのように読む必要があります。
+テストでは、UIがどのようにそれを実行するように要求するかについて、気にするべきではありません。
 
-***AUT**: Application under test
+***AUT**: Application under test（テスト対象アプリケーション）
 

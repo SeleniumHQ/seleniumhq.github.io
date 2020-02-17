@@ -1,53 +1,21 @@
 ---
-title: "Performance testing"
+title: "パフォーマンステスト"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Performance testing using Selenium and WebDriver
-is generally not advised.
-Not because it is incapable
-but because it is not optimised for the job
-and you are unlikely to get good results.
+通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。
+それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。
 
-It may seem ideal to performance test
-in the context of the user but a suite of WebDriver tests
-are subjected to many points of external and internal fragility
-which are beyond your control;
-for example browser startup speed,
-speed of HTTP servers,
-response of third party servers that host JavaScript or CSS,
-and the instrumentation penalty
-of the WebDriver implementation itself.
-Variation at these points will cause variation in your results.
-It is difficult to separate the difference
-between the performance of your website
-and the performance of external resources,
-and it is also hard to tell what the performance penalty is
-for using WebDriver in the browser,
-especially if you are injecting scripts.
+ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。
+たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。
 
-The other potential attraction is "saving time" —
-carrying out functional and performance tests at the same time.
-However, functional and performance tests have opposing objectives.
-To test functionality, a tester may need to be patient
-and wait for loading,
-but this will cloud the performance testing results and vice versa.
+他の潜在的な魅力は "時間の節約" です。
+機能テストとパフォーマンステストを同時に実行します。
+ただし、機能テストとパフォーマンステストには反対の目的があります。
+機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。
 
-To improve the performance of your website,
-you will need to be able to analyse overall performance
-independent of environment differences,
-identify poor code practices,
-breakdown of performance of individual resources
-(i.e. CSS or JavaScript)
-in order to know what to improve.
-There are performance testing tools available
-that can do this job already,
-and which provide reporting and analysis
-which can even make improvement suggestions.
+Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。
+このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。
 
-Example (open source) packages to use are: [JMeter](//jmeter.apache.org/)
+使用する（オープンソース）パッケージの例は次のとおりです。: [JMeter](//jmeter.apache.org/)

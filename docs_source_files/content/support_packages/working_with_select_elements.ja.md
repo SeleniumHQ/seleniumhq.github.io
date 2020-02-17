@@ -1,17 +1,12 @@
 ---
-title: "Working with select elements"
+title: "選択要素の操作"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
-`Select` class in the Selenium support package.
-To use it, you will need the following import statement:
+一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。
+これを減らしてテストをきれいにするために、Seleniumサポートパッケージに `Select` クラスがあります。
+それを使用するには、次のimportステートメントが必要です。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,8 +29,7 @@ import org.openqa.selenium.support.ui.Select
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You are then able to create a Select object using a WebElement that
-references a `<select>` element.
+そして、 `<select>` 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -63,10 +57,8 @@ val selectObject = new Select(selectElement)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
-First of all, there are different ways of selecting an option
-from the `<select>` element.
+Selectオブジェクトは、 `<select>` 要素とやり取りできる一連のコマンドを提供します。
+まず、 `<select>` 要素からオプションを選択するさまざまな方法があります。
 
 ```html
 <select>
@@ -76,7 +68,7 @@ from the `<select>` element.
 </select>
 ```
 
-There are three ways to select the first option from the above element:
+上記の要素から最初のオプションを選択するには、3つの方法があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -134,7 +126,7 @@ selectObject.selectByVisibleText("Bread")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then check which options are selected by using:
+以下を使用して、選択されているオプションを確認できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -173,9 +165,7 @@ val firstSelectedOption = selectObject.firstSelectedOption
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-
-Or you may just be interested in what `<option>` elements
-the `<select>` element contains:
+または、 `<select>` 要素に含まれる `<option>` 要素に興味があるかもしれません。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -203,7 +193,7 @@ val allAvailableOptions = selectObject.options
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you want to deselect any elements, you now have four options:
+要素の選択を解除する場合は、4つの選択肢があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -276,8 +266,8 @@ selectObject.deselectAll()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Finally, some `<select>` elements allow you to select more than one option.
-You can find out if your `<select>` element is one of these by using:
+最後に、一部の `<select>` 要素を使用すると、複数のオプションを選択できます。
+`<select>` 要素がこれらの1つであるかどうかを調べるには、下記のように記述します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

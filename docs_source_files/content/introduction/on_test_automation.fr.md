@@ -3,129 +3,121 @@ title: "A propos du test automatisé"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Commencez par vous demander si vous avez vraiment besoin ou non d'un navigateur.
+Il est probable qu'à un moment donné, si vous travaillez sur une application Web complexe,
+vous devrez ouvrir un navigateur et le tester.
 
-First, start by asking yourself whether or not you really need to use a browser.
-Odds are that, at some point, if you are working on a complex web application,
-you will need to open a browser and actually test it.
+Les tests fonctionnels pour l'utilisateur final, tels que les tests au sélénium, sont cependant coûteux à exécuter.
+En outre, ils nécessitent généralement une infrastructure substantielle
+être en place pour fonctionner efficacement.
+C'est une bonne règle de toujours se demander si ce que l'on veut tester
+peut être fait en utilisant des approches de test plus légères telles que des tests unitaires
+ou avec une approche de niveau inférieur.
 
-Functional end-user tests such as Selenium tests are expensive to run, however.
-Furthermore, they typically require substantial infrastructure
-to be in place to be run effectively.
-It is a good rule to always ask yourself if what you want to test
-can be done using more lightweight test approaches such as unit tests
-or with a lower-level approach.
+Une fois que vous avez déterminé que vous êtes dans le domaine des tests de navigateurs Web,
+et vous avez votre environnement Selenium prêt à commencer à écrire des tests,
+vous effectuerez généralement une combinaison de trois étapes:
 
-Once you have made the determination that you are in the web browser testing business,
-and you have your Selenium environment ready to begin writing tests,
-you will generally perform some combination of three steps:
+* Configurer les données
+* Effectuer un ensemble discret d'actions
+* Évaluez les résultats
 
-* Set up the data
-* Perform a discrete set of actions
-* Evaluate the results
+Vous voudrez garder ces étapes aussi courtes que possible;
+une ou deux opérations devraient suffire la plupart du temps.
+L'automatisation des navigateurs a la réputation d'être "feuilletée",
+mais en réalité, c'est parce que les utilisateurs en demandent souvent trop.
+Dans les chapitres suivants, nous reviendrons sur les techniques que vous pouvez utiliser
+pour atténuer les problèmes intermittents apparents dans les tests,
+en particulier sur la façon de [surmonter les conditions de course]({{<ref "/webdriver/waits.fr.md">}})
+entre le navigateur et WebDriver.
 
-You will want to keep these steps as short as possible;
-one or two operations should be enough most of the time.
-Browser automation has the reputation of being “flaky”,
-but in reality, that is because users frequently demand too much of it.
-In later chapters, we will return to techniques you can use
-to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.fr.md" >}})
-between the browser and WebDriver.
+Garder vos tests courts
+et en utilisant le navigateur Web uniquement lorsque vous n'avez absolument aucune alternative,
+vous pouvez avoir de nombreuses tâches avec un flocon de neige minimal.
 
-By keeping your tests short
-and using the web browser only when you have absolutely no alternative,
-you can have many tests with minimal flake.
-
-A distinct advantage of Selenium tests
-is their inherent ability to test all components of the application,
-from backend to frontend, from a user's perspective.
-So in other words, whilst functional tests may be expensive to run,
-they also encompass large business-critical portions at one time.
+Un avantage distinct des tests au sélénium
+est leur capacité inhérente à tester tous les composants de l'application,
+du backend au frontend, du point de vue d'un utilisateur.
+En d'autres termes, alors que les tests fonctionnels peuvent être coûteux à exécuter,
+ils englobent également de grandes portions critiques pour l'entreprise à la fois.
 
 
-### Testing requirements
+### Exigences de test
 
-As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you are running the tests against,
-but historically browsers' behaviour has varied so much that it has often
-been a stated goal to cross-test against multiple browsers.
+Comme mentionné précédemment, les tests au sélénium peuvent être coûteux à exécuter.
+Dans quelle mesure cela dépend du navigateur sur lequel vous exécutez les tests,
+mais historiquement, le comportement des navigateurs a tellement varié qu'il a souvent
+était un objectif déclaré de contre-tester avec plusieurs navigateurs.
 
-Selenium allows you to run the same instructions against multiple browsers
-on multiple operating systems,
-but the enumeration of all the possible browsers,
-their different versions, and the many operating systems they run on
-will quickly become a non-trivial undertaking.
+Selenium vous permet d'exécuter les mêmes instructions sur plusieurs navigateurs
+sur plusieurs systèmes d'exploitation,
+mais l'énumération de tous les navigateurs possibles,
+leurs différentes versions et les nombreux systèmes d'exploitation sur lesquels ils s'exécutent
+deviendra rapidement une entreprise non triviale.
+
+### Commençons par un exemple
+
+Larry a écrit un site Web qui permet aux utilisateurs de commander leur
+licornes personnalisées.
+
+Le flux de travail général (ce que nous appellerons le "chemin heureux") est quelque chose
+comme ça:
+
+* Créer un compte
+* Configurer la licorne
+* Ajoutez-le au panier
+* Vérifiez et payez
+* Donnez votre avis sur la licorne
 
 
-### Let’s start with an example
+Il serait tentant d'écrire un grand script Selenium
+pour effectuer toutes ces opérations, beaucoup essaieront.
+**Résister à la tentation!**
+Cela entraînera un test qui
+a) prend beaucoup de temps,
+b) sera soumis à des problèmes courants concernant les problèmes de synchronisation du rendu de page, et
+c) est telle qu'en cas d'échec, il ne vous donnera pas une méthode concise et "lisible" pour diagnostiquer ce qui a mal tourné.
 
-Larry has written a web site which allows users to order their 
-custom unicorns.
+La stratégie préférée pour tester ce scénario serait
+pour le décomposer en une série de tests indépendants et rapides,
+chacun a une «raison» d'exister.
 
-The general workflow (what we will call the “happy path”) is something
-like this:
+Imaginons que vous souhaitiez tester la deuxième étape:
+Configuration de votre licorne.
+Il effectuera les actions suivantes:
 
-* Create an account
-* Configure the unicorn
-* Add it to the shopping cart
-* Check out and pay
-* Give feedback about the unicorn
+* Créer un compte
+* Configurer une licorne
 
+Notez que nous ignorons le reste de ces étapes,
+nous testerons le reste du workflow dans d'autres petits cas de test discrets
+après avoir fini avec celui-ci.
 
-It would be tempting to write one grand Selenium script
-to perform all these operations–many will try.
-**Resist the temptation!**
-Doing so will result in a test that 
-a) takes a long time,
-b) will be subject to some common issues around page rendering timing issues, and
-c) is such that if it fails, 
-it will not give you a concise, “glanceable” method for diagnosing what went wrong.
+Pour commencer, vous devez créer un compte.
+Vous avez ici quelques choix à faire:
 
-The preferred strategy for testing this scenario would be
-to break it down to a series of independent, speedy tests,
-each of which has one “reason” to exist.
+* Voulez-vous utiliser un compte existant?
+* Voulez-vous créer un nouveau compte?
+* Y a-t-il des propriétés spéciales d'un tel utilisateur qui doivent être
+  pris en compte avant le début de la configuration?
 
-Let us pretend you want to test the second step:
-Configuring your unicorn.
-It will perform the following actions:
+Quelle que soit la façon dont vous répondez à cette question,
+la solution consiste à l'intégrer à la partie "configurer les données" du test.
+Si Larry a exposé une API qui vous permet (ou n'importe qui)
+pour créer et mettre à jour des comptes utilisateurs,
+assurez-vous de l'utiliser pour répondre à cette question.
+Si possible, vous souhaitez lancer le navigateur uniquement après avoir un utilisateur "en main",
+dont vous pouvez simplement vous connecter avec les informations d'identification.
 
-* Create an account
-* Configure a unicorn
+Si chaque test pour chaque workflow commence par la création d'un compte utilisateur,
+plusieurs secondes seront ajoutées à l'exécution de chaque test.
+Appeler une API et parler à une base de données sont rapides,
+Opérations "sans tête" qui ne nécessitent pas le processus coûteux de
+ouvrir un navigateur, naviguer vers les bonnes pages,
+cliquer et attendre que les formulaires soient soumis, etc.
 
-Note that we are skipping the rest of these steps, 
-we will test the rest of the workflow in other small, discrete test cases 
-after we are done with this one.
-
-To start, you need to create an account.
-Here you have some choices to make:
-
-* Do you want to use an existing account?
-* Do you want to create a new account?
-* Are there any special properties of such a user that need to be
-  taken into account before configuration begins?
-
-Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test.
-If Larry has exposed an API that enables you (or anyone)
-to create and update user accounts,
-be sure to use that to answer this question.
-If possible, you want to launch the browser only after you have a user "in hand",
-whose credentials you can just log in with.
-
-If each test for each workflow begins with the creation of a user account,
-many seconds will be added to the execution of each test.
-Calling an API and talking to a database are quick,
-“headless” operations that don't require the expensive process of
-opening a browser, navigating to the right pages,
-clicking and waiting for the forms to be submitted, etc.
-
-Ideally, you can address this set-up phase in one line of code,
-which will execute before any browser is launched:
+Idéalement, vous pouvez traiter cette phase de configuration en une seule ligne de code,
+qui s'exécutera avant le lancement de tout navigateur:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -157,7 +149,18 @@ user = user_factory.create_common_user() #This method is defined elsewhere.
 account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Create a user who has read-only permissions--they can configure a unicorn,
+// but they do not have payment information set up, nor do they have
+// administrative privileges. At the time the user is created, its email
+// address and password are randomly generated--you don't even need to
+// know them.
+User user = UserFactory.CreateCommonUser(); //This method is defined elsewhere.
+
+// Log in as this user.
+// Logging in on this site takes you to your personal "My Account" page, so the
+// AccountPage object is returned by the loginAs method, allowing you to then
+// perform actions from the AccountPage.
+AccountPage accountPage = LoginAs(user.Email, user.Password);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Create a user who has read-only permissions--they can configure a unicorn,
@@ -203,36 +206,36 @@ val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As you can imagine, the `UserFactory` can be extended
-to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
-The point is, these two lines of code do not distract you from the ultimate purpose of this test:
-configuring a unicorn.
+Comme vous pouvez l'imaginer, la `UserFactory` peut être étendue
+pour fournir des méthodes telles que `createAdminUser ()` et `createUserWithPayment ()`.
+Le fait est que ces deux lignes de code ne vous distraient pas du but ultime de ce test:
+configurer une licorne.
 
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.fr.md" >}})
-will be discussed in later chapters, but we will introduce the concept here:
+Les subtilités du [modèle d'objet de page]({{<ref "/guidelines_and_recommendations/page_object_models.fr.md">}})
+sera discuté dans les chapitres suivants, mais nous présenterons le concept ici:
 
-Your tests should be composed of actions,
-performed from the user's point of view,
-within the context of pages in the site.
-These pages are stored as objects,
-which will contain specific information about how the web page is composed
-and how actions are performed–
-very little of which should concern you as a tester.
+Vos tests doivent être composés d'actions,
+réalisée du point de vue de l'utilisateur,
+dans le cadre des pages du site.
+Ces pages sont stockées en tant qu'objets,
+qui contiendra des informations spécifiques sur la composition de la page Web
+et comment les actions sont effectuées -
+dont très peu devrait vous concerner en tant que testeur.
 
-What kind of unicorn do you want?
-You might want pink, but not necessarily.
-Purple has been quite popular lately.
-Does she need sunglasses? Star tattoos?
-These choices, while difficult, are your primary concern as a tester–
-you need to ensure that your order fulfillment center
-sends out the right unicorn to the right person,
-and that starts with these choices.
+Quel genre de licorne veux-tu?
+Vous voudrez peut-être du rose, mais pas nécessairement.
+Le violet a été assez populaire ces derniers temps.
+A-t-elle besoin de lunettes de soleil? Tatouages ​​étoiles?
+Ces choix, bien que difficiles, sont votre principale préoccupation en tant que testeur -
+vous devez vous assurer que votre centre de traitement des commandes
+envoie la bonne licorne à la bonne personne,
+et cela commence par ces choix.
 
-Notice that nowhere in that paragraph do we talk about buttons,
-fields, drop-downs, radio buttons, or web forms.
-**Neither should your tests!**
-You want to write your code like the user trying to solve their problem.
-Here is one way of doing this (continuing from the previous example):
+Notez que nulle part dans ce paragraphe nous ne parlons de boutons,
+des champs, des listes déroulantes, des boutons radio ou des formulaires Web.
+**Vos tests ne devraient pas non plus!**
+Vous voulez écrire votre code comme l'utilisateur essayant de résoudre son problème.
+Voici une façon de procéder (à partir de l'exemple précédent):
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -268,7 +271,20 @@ add_unicorn_page = account_page.add_unicorn()
 unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// The Unicorn is a top-level Object--it has attributes, which are set here. 
+// This only stores the values; it does not fill out any web forms or interact
+// with the browser in any way.
+Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.Purple, UnicornAccessories.Sunglasses, UnicornAdornments.StarTattoos);
+
+// Since we are already "on" the account page, we have to use it to get to the
+// actual place where you configure unicorns. Calling the "Add Unicorn" method
+// takes us there.
+AddUnicornPage addUnicornPage = accountPage.AddUnicorn();
+
+// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
+// its createUnicorn() method. This method will take Sparkles' attributes,
+// fill out the form, and click submit.
+UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.CreateUnicorn(sparkles);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # The Unicorn is a top-level Object--it has attributes, which are set here.
@@ -323,8 +339,8 @@ unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Now that you have configured your unicorn,
-you need to move on to step 3: making sure it actually worked.
+Maintenant que vous avez configuré votre licorne,
+vous devez passer à l'étape 3: vous assurer que cela a réellement fonctionné.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -340,7 +356,10 @@ Assert.assertTrue("Sparkles should have been created, with all attributes intact
 assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been created, with all attributes intact"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// The exists() method from UnicornConfirmationPage will take the Sparkles 
+// object--a specification of the attributes you want to see, and compare
+// them with the fields on the page.
+Assert.True(unicornConfirmationPage.Exists(sparkles), "Sparkles should have been created, with all attributes intact");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # The exists() method from UnicornConfirmationPage will take the Sparkles
@@ -363,45 +382,44 @@ assertTrue("Sparkles should have been created, with all attributes intact", unic
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still has not done anything but talk about unicorns in this code–
-no buttons, no locators, no browser controls.
-This method of _modelling_ the application
-allows you to keep these test-level commands in place and unchanging,
-even if Larry decides next week that he no longer likes Ruby-on-Rails
-and decides to re-implement the entire site
-in the latest Haskell bindings with a Fortran front-end.
+Notez que le testeur n'a toujours rien fait d'autre que parler des licornes dans ce code -
+pas de boutons, pas de localisateurs, pas de commandes de navigateur.
+Cette méthode de _modélisation_ de l'application
+vous permet de garder ces commandes de niveau test en place et immuables,
+même si Larry décide la semaine prochaine qu'il n'aime plus Ruby-on-Rails
+et décide de réimplémenter l'ensemble du site
+dans les dernières fixations Haskell avec un frontal Fortran.
 
-Your page objects will require some small maintenance in order to 
-conform to the site redesign,
-but these tests will remain the same.
-Taking this basic design,
-you will want to keep going through your workflows with the fewest browser-facing steps possible.
-Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
-Is there more than one unicorn in the cart before you start?
-How many can fit in the shopping cart?
-If you create more than one with the same name and/or features, will it break?
-Will it only keep the existing one or will it add another?
+Vos objets de page nécessiteront une petite maintenance afin de
+se conformer à la refonte du site,
+mais ces tests resteront les mêmes.
+En prenant cette conception de base,
+vous souhaiterez continuer à parcourir vos workflows avec le moins d'étapes possibles face au navigateur.
+Votre prochain workflow impliquera l'ajout d'une licorne au panier d'achat.
+Vous voudrez probablement de nombreuses itérations de ce test afin de vous assurer que le chariot conserve correctement son état:
+Y a-t-il plus d'une licorne dans le panier avant de commencer?
+Combien peuvent tenir dans le panier?
+Si vous en créez plusieurs avec le même nom et / ou les mêmes fonctionnalités, est-ce que cela cassera?
+Gardera-t-il seulement celui existant ou en ajoutera-t-il un autre?
 
-Each time you move through the workflow,
-you want to try to avoid having to create an account,
-login as the user, and configure the unicorn.
-Ideally, you will be able to create an account
-and pre-configure a unicorn via the API or database.
-Then all you have to do is log in as the user, locate Sparkles,
-and add her to the cart.
+Chaque fois que vous vous déplacez dans le flux de travail,
+vous voulez éviter d'avoir à créer un compte,
+connectez-vous en tant qu'utilisateur et configurez la licorne.
+Idéalement, vous pourrez créer un compte
+et pré-configurer une licorne via l'API ou la base de données.
+Il vous suffit ensuite de vous connecter en tant qu'utilisateur, de localiser Sparkles,
+et l'ajouter au panier.
 
+### Automatiser ou ne pas automatiser?
 
-### To automate or not to automate?
+L'automatisation est-elle toujours avantageuse? Quand faut-il décider d'automatiser le test
+cas?
 
-Is automation always advantageous? When should one decide to automate test
-cases?
-
-It is not always advantageous to automate test cases. There are times when
-manual testing may be more appropriate. For instance, if the application’s user
-interface will change considerably in the near future, then any automation
-might need to be rewritten anyway. Also, sometimes there simply is not enough
-time to build test automation. For the short term, manual testing may be more
-effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing gets done within
-that time frame, then manual testing is the best solution.
+Il n'est pas toujours avantageux d'automatiser les cas de test. Il y a des moments où
+des tests manuels peuvent être plus appropriés. Par exemple, si l'utilisateur de l'application
+l'interface changera considérablement dans un avenir proche, alors toute automatisation
+pourrait avoir besoin d'être réécrit de toute façon. De plus, parfois, il n'y a tout simplement pas assez
+le temps de construire l'automatisation des tests. À court terme, les tests manuels peuvent être plus
+efficace. Si une demande a un délai très serré, il n’existe actuellement aucun
+l'automatisation des tests est disponible, et il est impératif que les tests soient effectués dans les
+ce délai, puis le test manuel est la meilleure solution.

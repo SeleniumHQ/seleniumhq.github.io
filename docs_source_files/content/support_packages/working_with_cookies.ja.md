@@ -1,29 +1,21 @@
 ---
-title: "Working with cookies"
+title: "クッキーの使用"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-A cookie is a small piece of data that is sent from a website and stored in your computer. 
-Cookies are mostly used to recognise the user and load the stored information. 
+Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。
+Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。
 
-WebDriver API provides a way to interact with cookies with built-in methods: 
+WebDriver APIは、組み込みメソッドでCookieと対話するメソッドを提供します。
 
-## Add Cookie
-It is used to add a cookie to the current browsing context. 
-Add Cookie only accepts a set of defined serializable JSON object. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Here </a>
-is the link to the list of accepted JSON key values
+## クッキーの追加
+現在のブラウジングコンテキストにCookieを追加するために使用されます。
+Cookieの追加では、一連の定義済みのシリアル化可能なJSONオブジェクトのみを受け入れます。
+受け入れられたJSONキー値のリストへのリンクは<a href="https://www.w3.org/TR/webdriver1/#cookies">こちら</a>にあります。
 
-First of all, you need to be on the domain that the cookie will be
-valid for. If you are trying to preset cookies before
-you start interacting with a site and your homepage is large / takes a while to load
-an alternative is to find a smaller page on the site (typically the 404 page is small, 
-e.g. http://example.com/some404page)
+まず、Cookieが有効になるドメインにいる必要があります。
+サイトとの対話を開始する前にCookieを事前設定しようとしていて、ホームページが大きい場合/代替の読み込みに時間がかかる場合は、サイトで小さいページを見つけることです。（通常、たとえば http://example.com/some404page のような、404ページは小さいです。）
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -119,9 +111,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Named Cookie
+## 命名されたクッキーの取得
 
-It returns the serialized cookie data matching with the cookie name among all associated cookies.
+関連付けられているすべてのCookieの中で、Cookie名と一致するシリアル化されたCookieデータを返します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -233,10 +225,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get All Cookies
+## 全てのクッキーの取得
 
-It returns a ‘successful serialized cookie data’ for current browsing context. 
-If browser is no longer available it returns error. 
+現在のブラウジングコンテキストの '成功したシリアル化されたCookieデータ' を返します。
+ブラウザが使用できなくなった場合、エラーが返されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -355,9 +347,9 @@ fun main() {
 {{< / code-tab >}}
 
 
-## Delete Cookie
+## クッキーの削除
 
-It deletes the cookie data matching with the provided cookie name.
+指定されたCookie名と一致するCookieデータを削除します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -489,9 +481,9 @@ fun main() {
 {{< / code-tab >}}
 
 
-## Delete All Cookies
+## 全てのクッキーの削除
 
-It deletes all the cookies of the current browsing context.
+現在のブラウジングコンテキストの全てのCookieを削除します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

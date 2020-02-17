@@ -93,17 +93,6 @@ Java La instalación de las bibliotecas Selenium para Java se puede hacer usando
     </item>
     
     <item>
-      <title>Navegación</title>
-      <link>https://selenium.dev/documentation/es/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/support_packages/browser_navigation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
-    </item>
-    
-    <item>
       <title>Navegadores</title>
       <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -358,14 +347,15 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Acciones en detalle del mouse y teclado</title>
+      <title>Acciones del mouse en detalle</title>
       <link>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
@@ -469,16 +459,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
-    </item>
-    
-    <item>
-      <title>Trabajando con elementos web</title>
-      <link>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- </description>
     </item>
     
     <item>

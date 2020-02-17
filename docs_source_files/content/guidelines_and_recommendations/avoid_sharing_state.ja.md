@@ -1,22 +1,16 @@
 ---
-title: "Avoid sharing state"
+title: "状態を共有しない"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+いくつかの場所で言及されていますが、再度言及する価値があります。
+テストが互いに分離されていることを確認してください。
 
-Although mentioned in several places it is worth mentioning again. Ensure 
-tests are isolated from one another.
+* テストデータを共有しないでください。
+アクションを実行する1つを選択する前に、それぞれが有効な注文をデータベースに照会するいくつかのテストを想像してください。
+2つのテストで同じ順序を選択すると、予期しない動作が発生する可能性があります。
 
-* Do not share test data. Imagine several tests that each query the database 
-for valid orders before picking one to perform an action on. Should two tests
-pick up the same order you are likely to get unexpected behaviour.
+* 別のテストで取得される可能性のあるアプリケーション内の古いデータを削除します。 例: 無効な注文レコード
 
-* Clean up stale data in the application that might be picked up by another 
-test e.g. invalid order records.
-
-* Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelisation simpler.
+* テストごとに新しいWebDriverインスタンスを作成します。
+これにより、テストの分離が保証され、並列化がより簡単になります。

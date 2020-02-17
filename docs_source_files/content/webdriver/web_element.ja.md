@@ -1,24 +1,17 @@
 ---
-title: "Web element"
+title: "Web要素"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+Web要素はDOM要素を表します。
+Web要素は、WebDriverインスタンスを使用してドキュメントルートから検索するか、別のWeb要素の下で検索することで見つけることができます。
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
+WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
 
-WebDriver API provides built-in methods to find the WebElements which are 
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc. 
+## 要素の検索
 
-## Find Element
-
-It is used to find an element and returns a first matching single WebElement reference, 
-that can be used for future element actions
+要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。
+これは、将来の要素アクションに使用できます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -69,7 +62,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -85,7 +78,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 
 driver.get("http://www.google.com")
 
@@ -96,10 +89,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements
+## 複数の要素の検索
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list, 
-you need to loop over the list of elements to perform action on selected element.
+'要素の検索'に似ていますが、一致するWeb要素のリストを返します。
+リストから特定のWeb要素を使用するには、要素のリストをループして、選択した要素に対してアクションを実行する必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -221,10 +214,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Element From Element
+## 要素から要素の検索
 
-It is used to find a child element within the context of parent element. 
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+親要素のコンテキスト内で子要素を見つけるために使用します。
+これを実現するには、親Web要素を'findElement'と連鎖して、子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -269,7 +262,7 @@ end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let {Builder, By} = require('selenium-webdriver');
-driver = new Builder().forBrowser('chrome').build();
+driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
@@ -288,7 +281,7 @@ await searchBar.sendKeys('Webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val driver = ChromeDriver()
+val driver = FirefoxDriver()
 driver.get("http://www.google.com")
 val searchForm = driver.findElement(By.tagName("form"))
 val searchBox = searchForm.findElement(By.name("q"))
@@ -296,10 +289,10 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements From Element
+## 要素から複数の要素の検索
 
-It is used to find the list of matching child WebElements within the context of parent element. 
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+親要素のコンテキスト内で一致する子Web要素のリストを見つけるために使用します。
+これを実現するために、親Web要素は’findElements'と連鎖して子要素にアクセスします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -308,16 +301,16 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   import org.openqa.selenium.WebElement;
   import org.openqa.selenium.chrome.ChromeDriver;
   import java.util.List;
-  
+
   public class findElementsFromElement {
       public static void main(String[] args) {
           WebDriver driver = new ChromeDriver();
           try {
               driver.get("https://example.com");
-  
+
               // Get element with tag name 'div'
               WebElement element = driver.findElement(By.tagName("div"));
-  
+
               // Get all the elements available with tag name 'p'
               List<WebElement> elements = element.findElements(By.tagName("p"));
               for (WebElement e : elements) {
@@ -331,13 +324,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
-  
+
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
-  
+
   # Get element with tag name 'div'
   element = driver.find_element_by_tag_name('div')
-  
+
   # Get all the elements available with tag name 'p'
   elements = element.find_elements_by_tag_name('p')
   for e in elements:
@@ -345,13 +338,13 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
-using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Chrome;
 using System.Collections.Generic;
 
 namespace FindElementsFromElement {
  class FindElementsFromElement {
   public static void Main(string[] args) {
-   IWebDriver driver = new FirefoxDriver();
+   IWebDriver driver = new ChromeDriver();
    try {
     driver.Navigate().GoToUrl("https://example.com");
 
@@ -376,13 +369,13 @@ namespace FindElementsFromElement {
   begin
     # Navigate to URL
     driver.get 'https://www.example.com'
-  
+
     # Get element with tag name 'div'
     element = driver.find_element(:tag_name,'div')
-  
+
     # Get all the elements available with tag name 'p'
     elements = element.find_elements(:tag_name,'p')
-  
+
     elements.each { |e|
       puts e.text
     }
@@ -392,17 +385,17 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   const {Builder, By} = require('selenium-webdriver');
-  
-  (async function example() {   
+
+  (async function example() {
       let driver = new Builder()
           .forBrowser('chrome')
           .build();
-  
+
       await driver.get('https://www.example.com');
-  
+
       // Get element with tag name 'div'
       let element = driver.findElement(By.tagName("div"));
-  
+
       // Get all the elements available with tag name 'p'
       let elements = await element.findElements(By.tagName("p"));
       for(let e of elements) {
@@ -413,15 +406,15 @@ namespace FindElementsFromElement {
   {{< code-panel language="kotlin" >}}
   import org.openqa.selenium.By
   import org.openqa.selenium.chrome.ChromeDriver
-  
+
   fun main() {
       val driver = ChromeDriver()
       try {
           driver.get("https://example.com")
-  
+
           // Get element with tag name 'div'
           val element = driver.findElement(By.tagName("div"))
-  
+
           // Get all the elements available with tag name 'p'
           val elements = element.findElements(By.tagName("p"))
           for (e in elements) {
@@ -434,22 +427,22 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Active Element
+## アクティブな要素の取得
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+現在のブラウジングコンテキストにフォーカスがあるDOM要素を追跡（または）検索するために使用します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
   import org.openqa.selenium.*;
   import org.openqa.selenium.chrome.ChromeDriver;
-  
+
   public class activeElementTest {
     public static void main(String[] args) {
       WebDriver driver = new ChromeDriver();
       try {
         driver.get("http://www.google.com");
         driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
-  
+
         // Get attribute of current active element
         String attr = driver.switchTo().activeElement().getAttribute("title");
         System.out.println(attr);
@@ -461,11 +454,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
-  
+
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")
   driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
-  
+
   # Get attribute of current active element
   attr = driver.switch_to.active_element.get_attribute("title")
   print attr
@@ -473,7 +466,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< code-panel language="csharp" >}}
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
-  
+
     namespace ActiveElement {
      class ActiveElement {
       public static void Main(string[] args) {
@@ -482,7 +475,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
         // Navigate to Url
         driver.Navigate().GoToUrl("https://www.google.com");
         driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
-  
+
         // Get attribute of current active element
         string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
         System.Console.WriteLine(attr);
@@ -499,7 +492,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   begin
     driver.get 'https://www.google.com'
     driver.find_element(css: '[name="q"]').send_keys('webElement')
-  
+
     # Get attribute of current active element
     attr = driver.switch_to.active_element.attribute('title')
     puts attr
@@ -509,12 +502,12 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   const {Builder, By} = require('selenium-webdriver');
-  
+
   (async function example() {
       let driver = await new Builder().forBrowser('chrome').build();
       await driver.get('https://www.google.com');
       await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
-  
+
       // Get attribute of current active element
       let attr = await driver.switchTo().activeElement().getAttribute("title");
       console.log(`${attr}`)
@@ -523,13 +516,13 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< code-panel language="kotlin" >}}
   import org.openqa.selenium.By
   import org.openqa.selenium.chrome.ChromeDriver
-  
+
   fun main() {
       val driver = ChromeDriver()
       try {
           driver.get("https://www.google.com")
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
-  
+
           // Get attribute of current active element
           val attr = driver.switchTo().activeElement().getAttribute("title");
           print(attr);
