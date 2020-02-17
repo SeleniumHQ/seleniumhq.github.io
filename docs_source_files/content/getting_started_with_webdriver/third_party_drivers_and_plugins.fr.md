@@ -3,12 +3,6 @@ title: "Driver tiers et plugins"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 Selenium peut être étendu à travers l'utilisation de plugins. Vous trouverez
 ici un certain nombre de plugins créés et maintenus par des tierces parties. 
 Pour de plus amples information sur la création de plugin ou pour en ajouter à la liste,

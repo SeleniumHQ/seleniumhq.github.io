@@ -60,10 +60,9 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+      <description>Vous devez d&amp;rsquo;abord installer les fixations Selenium pour votre projet d&amp;rsquo;automatisation. Le processus d&amp;rsquo;installation des bibliothèques dépend de la langue que vous choisissez d&amp;rsquo;utiliser.
+Java L&amp;rsquo;installation des bibliothèques Selenium pour Java peut être effectuée à l&amp;rsquo;aide de Maven. Ajoutez la dépendance selenium-java dans votre projet pom.xml:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dépendance selenium-java prend en charge l&amp;rsquo;exécution de votre automatisation projet avec tous les navigateurs pris en charge par Selenium.</description>
     </item>
     
     <item>
@@ -72,9 +71,8 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/the_selenium_project_and_tools/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium contrôle les navigateurs Web Selenium est beaucoup de choses, mais à la base, c&amp;rsquo;est un ensemble d&amp;rsquo;outils pour l&amp;rsquo;automatisation du navigateur Web qui utilise les meilleures techniques disponibles pour contrôler à distance les instances du navigateur et émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur avec le navigateur.
+Il permet aux utilisateurs de simuler les activités courantes effectuées par les utilisateurs finaux; saisir du texte dans les champs, sélectionner des valeurs déroulantes et cocher des cases, et cliquer sur les liens dans les documents.</description>
     </item>
     
     <item>
@@ -96,17 +94,6 @@ Starting the server from the command line Once you have downloaded selenium-serv
       <guid>https://selenium.dev/documentation/fr/getting_started_with_webdriver/browsers/</guid>
       <description>Navigateurs consommateurs Le framework Selenium supporte officiellement les navigateurs suivants:
    Navigateur Mainteneur Versions supportées     Chromium Chromium Toutes versions   Firefox Mozilla 54 and plus récentes   Internet Explorer Selenium 6 et plus récentes   Opera Opera Chromium / Presto 10.5 et plus récentes   Safari Apple 10 et plus récentes    Navigateurs spécialisés Il existe également un ensemble de navigateurs spécialisés, utilisés typiquement dans des environnements de développement.</description>
-    </item>
-    
-    <item>
-      <title>Navigation</title>
-      <link>https://selenium.dev/documentation/fr/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/support_packages/browser_navigation/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
     </item>
     
     <item>
@@ -156,9 +143,8 @@ WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&amp;rsquo;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
+Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au sélénium, sont cependant coûteux à exécuter. En outre, ils nécessitent généralement une infrastructure substantielle être en place pour fonctionner efficacement. C&amp;rsquo;est une bonne règle de toujours se demander si ce que l&amp;rsquo;on veut tester peut être fait en utilisant des approches de test plus légères telles que des tests unitaires ou avec une approche de niveau inférieur.</description>
     </item>
     
     <item>
@@ -209,9 +195,8 @@ Your users, in general, do not care how your site looks.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium peut être étendu à travers l&amp;rsquo;utilisation de plugins. Vous trouverez ici un certain nombre de plugins créés et maintenus par des tierces parties. Pour de plus amples information sur la création de plugin ou pour en ajouter à la liste, consultez la documentation.
-Veuillez noter que ces plugins ne sont pas supportés, maintenus ou hébergés par le projet Selenium.</description>
+      <description>Selenium peut être étendu à travers l&amp;rsquo;utilisation de plugins. Vous trouverez ici un certain nombre de plugins créés et maintenus par des tierces parties. Pour de plus amples information sur la création de plugin ou pour en ajouter à la liste, consultez la documentation.
+Veuillez noter que ces plugins ne sont pas supportés, maintenus ou hébergés par le projet Selenium. De plus, soyez avertis que les plugins listés ci-dessous ne sont pas nécessairement sous Apache License v.</description>
     </item>
     
     <item>
@@ -220,9 +205,8 @@ Veuillez noter que ces plugins ne sont pas supportés, maintenus ou hébergés p
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- To execute your project and control browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Pour exécuter votre projet et contrôler le navigateur, vous devez installer des binaires WebDriver spécifiques au navigateur.
+Téléchargez le binaire WebDriver pris en charge par votre navigateur et placez-le dans le CHEMIN système.</description>
     </item>
     
     <item>
@@ -302,8 +286,8 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, then you don&amp;rsquo;t have to add selenium-java or a browser specific jar.</description>
+      <description>Si vous prévoyez d&amp;rsquo;utiliser Grid, vous devez télécharger le selenium-server-standalone JAR. Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
@@ -312,9 +296,8 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/getting_started_with_webdriver/locating_elements/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Localiser des éléments Une des techniques fondamentales à maîtriser lorsque l&amp;rsquo;on utilise WebDriver consiste à chercher des éléments sur une page. WebDriver offre pour cela un ensemble pré-défini de type de selecteurs, parmi lesquels la recherche d&amp;rsquo;une élément par son attribut ID:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
+      <description>Localiser des éléments Une des techniques fondamentales à maîtriser lorsque l&amp;rsquo;on utilise WebDriver consiste à chercher des éléments sur une page. WebDriver offre pour cela un ensemble pré-défini de type de selecteurs, parmi lesquels la recherche d&amp;rsquo;une élément par son attribut ID:
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;fromage&amp;#34;));   driver.find_element_by_id(&amp;#34;fromage&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;fromage&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const fromage = driver.</description>
     </item>
     
     <item>
@@ -365,9 +348,8 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
+      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si un produit fonction correspond à ses besoins. Cela implique généralement les commentaires ou les spécifications du client.
+Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur. Cette simulation peut être effectuée par enregistrement / lecture ou par différentes langues prises en charge comme expliqué dans cette documentation.</description>
     </item>
     
     <item>
@@ -381,14 +363,15 @@ Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir
     </item>
     
     <item>
-      <title>Action clavier et souris en détail</title>
+      <title>Actions de la souris en détail</title>
       <link>https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
@@ -482,16 +465,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
-    </item>
-    
-    <item>
-      <title>Travailler avec les web elements</title>
-      <link>https://selenium.dev/documentation/fr/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- </description>
     </item>
     
     <item>
@@ -606,9 +579,9 @@ Let us say there is a content management system with which you can create some c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/web_element/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
-WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.</description>
+      <description>WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant racine du document à l&amp;rsquo;aide d&amp;rsquo;une instance WebDriver ou en recherchant sous une autre WebElement
+L&amp;rsquo;API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
+Find Element Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante, qui peut être utilisé pour de futures actions d&amp;rsquo;élément</description>
     </item>
     
     <item>
@@ -617,10 +590,9 @@ WebDriver API provides built-in methods to find the WebElements which are based 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/keyboard/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l&amp;rsquo;aide de bas niveau interface qui nous permet de fournir une entrée d&amp;rsquo;appareil virtualisé au navigateur Web.
+sendKeys SendKeys tape une séquence de touches dans l&amp;rsquo;élément DOM même si une séquence de touches de modification est rencontrée.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
     </item>
     
     <item>

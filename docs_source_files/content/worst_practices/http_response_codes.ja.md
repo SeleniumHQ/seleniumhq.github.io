@@ -1,58 +1,27 @@
 ---
-title: "HTTP response codes"
+title: "HTTPレスポンスコード"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-For some browser configurations in Selenium RC,
-Selenium acted as a proxy between the browser
-and the site being automated.
-This meant that all browser traffic passed through Selenium
-could be captured or manipulated.
-The `captureNetworkTraffic()` method
-purported to capture all of the network traffic between the browser
-and the site being automated,
-including HTTP response codes.
+Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。
+これは、Seleniumを通過したすべてのブラウザートラフィックをキャプチャまたは操作できることを意味していました。
+`captureNetworkTraffic()` メソッドは、HTTPレスポンスコードを含むブラウザーと自動化されているサイト間のすべてのネットワークトラフィックをキャプチャすることを目的としています。
 
-Selenium WebDriver is a completely different approach
-to browser automation,
-preferring to act more like a user
-and this is represented in the way you write tests with WebDriver.
-In automated functional testing,
-checking the status code
-is not a particularly important detail of a test's failure;
-the steps that preceded it are more important.
+Selenium WebDriverは、ブラウザーの自動化に対するまったく異なるアプローチであり、ユーザーのように振る舞うことを好むため、WebDriverを使用してテストを記述する方法で表現します。
+自動化された機能テストでは、ステータスコードの確認はテストの失敗の特に重要な詳細ではありません。
+それに先行する手順がより重要です。
 
-The browser will always represent the HTTP status code,
-imagine for example a 404 or a 500 error page.
-A simple way to “fail fast” when you encounter one of these error pages
-is to check the page title or content of a reliable point
-(e.g. the `<h1>` tag) after every page load.
-If you are using the page object model,
-you can include this check in your class constructor
-or similar point where the page load is expected.
-Occasionally, the HTTP code may even be represented
-in the browser's error page
-and you could use WebDriver to read this
-and improve your debugging output.
+ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。
+これらのエラーページの1つに遭遇したときに"早く失敗"する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば `<h1>` タグ）のコンテンツをチェックすることです。
+ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。
+場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。
+WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
 
-Checking the webpage itself is in line
-with WebDriver's ideal practice
-of representing and asserting upon the user’s view of the website.
+Webページ自体を確認することは、WebDriverの理想的なプラクティスに沿っており、WebDriverのユーザーのWebサイトの見え方を表現し、主張します。
 
-If you insist, an advanced solution to capturing HTTP status codes
-is to replicate the behaviour of Selenium RC by using a proxy.
-WebDriver API provides the ability to set a proxy for the browser,
-and there are a number of proxies that will
-programmatically allow you to manipulate
-the contents of requests sent to and received from the web server.
-Using a proxy lets you decide how you want to respond
-to redirection response codes.
-Additionally, not every browser
-makes the response codes available to WebDriver,
-so opting to use a proxy
-allows you to have a solution that works for every browser.
+HTTPステータスコードをキャプチャするための高度なソリューションは、プロキシを使用してSelenium RCの動作を複製することです。
+WebDriver APIは、ブラウザーのプロキシを設定する機能を提供します。
+Webサーバーとの間で送受信されるリクエストのコンテンツをプログラムで操作できるプロキシがいくつかあります。
+プロキシを使用すると、リダイレクトレスポンスコードへの応答方法を決めることができます。
+さらに、すべてのブラウザーがWebDriverでレスポンスコードを利用できるようにするわけではないため、プロキシを使用することを選択すると、すべてのブラウザーで機能するソリューションが得られます。

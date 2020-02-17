@@ -1,18 +1,13 @@
 ---
-title: "Consider using a fluent API"
+title: "Fluent APIの使用を検討する"
 weight: 8
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Martin Fowler coined the term ["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html). Selenium already
-implements something like this in their `FluentWait` class, which is
-meant as an alternative to the standard <code>Wait</code> class. 
-You could enable the Fluent API design pattern in your page object 
-and then query the Google search page with a code snippet like this one:
+マーチン・ファウラーは["Fluent API"](//www.martinfowler.com/bliki/FluentInterface.html)という用語を作り出しました。
+Seleniumは既に、`FluentWait`クラスでこのようなものを実装しています。
+これは、標準の<code>Wait</code>クラスの代替としてのものです。
+ページオブジェクトでFluent APIデザインパターンを有効にしてから、次のようなコードスニペットを使用してGoogle検索ページを照会できます。
 
 ```java
 driver.get( "http://www.google.com/webhp?hl=en&amp;tab=ww" );
@@ -20,8 +15,7 @@ GoogleSearchPage gsp = new GoogleSearchPage();
 gsp.withFluent().setSearchString().clickSearchButton();
 ```
 
-The Google page object class with this fluent behavior
-might look like this:
+この流暢な動作を持つGoogleページオブジェクトクラスは次のようになります。
 
 ```java
 public class GoogleSearchPage extends LoadableComponent<GoogleSearchPage> {

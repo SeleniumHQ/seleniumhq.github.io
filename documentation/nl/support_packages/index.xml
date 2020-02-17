@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Browser navigation</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/nl/support_packages/browser_navigation/</guid>
-      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
-    </item>
-    
-    <item>
       <title>Working with colours</title>
       <link>https://selenium.dev/documentation/nl/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -44,24 +33,15 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
+      <title>Details van muisactie</title>
       <link>https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
-    </item>
-    
-    <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/nl/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- </description>
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>

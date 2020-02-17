@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Browser navigation</title>
-      <link>https://selenium.dev/documentation/ko/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/support_packages/browser_navigation/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
-    </item>
-    
-    <item>
       <title>Browsers</title>
       <link>https://selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -45,25 +34,13 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Installing Selenium libraries</title>
-      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
-    </item>
-    
-    <item>
       <title>Page object models</title>
       <link>https://selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT*. The tests then use the methods of this page object class whenever they need to interact with that page of the UI.</description>
+ Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
     </item>
     
     <item>
@@ -96,6 +73,17 @@ Starting the server from the command line Once you have downloaded selenium-serv
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
 How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 라이브러리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
+      <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
+Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.</description>
     </item>
     
     <item>
@@ -195,17 +183,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Installing WebDriver binaries</title>
-      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -265,6 +242,16 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
       <guid>https://selenium.dev/documentation/ko/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+    </item>
+    
+    <item>
+      <title>웹드라이버 바이너리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
+당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description>
     </item>
     
     <item>
@@ -412,17 +399,6 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
-      <title>Mouse and keyboard actions in detail</title>
-      <link>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Suppose you have an arbitrary web element e:
-Java Python C# Ruby JavaScript Kotlin WebElement e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   e = driver.find_element_by_id(&amp;#34;testElement&amp;#34;)   IWebElement e = driver.FindElement(By.Id(&amp;#34;testElement&amp;#34;));   e = driver.find_element(id:&amp;#39;testElement&amp;#39;)   let e = driver.findElement(By.id(&amp;#34;testElement&amp;#34;));   val element = driver.findElement(By.id(&amp;#34;testElement&amp;#34;))     You can simulate mouse clicking on e if it is visible and has a height and width that are greater than 0:</description>
-    </item>
-    
-    <item>
       <title>Performing actions on the AUT*</title>
       <link>https://selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -455,6 +431,18 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
     </item>
     
     <item>
+      <title>마우스 동작 세부 사항</title>
+      <link>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
+    </item>
+    
+    <item>
       <title>Improved reporting</title>
       <link>https://selenium.dev/documentation/ko/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -473,16 +461,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
  Locator Strategies Events LoadableComponent ThreadGuard etc.</description>
-    </item>
-    
-    <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/support_packages/working_with_web_elements/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- </description>
     </item>
     
     <item>
