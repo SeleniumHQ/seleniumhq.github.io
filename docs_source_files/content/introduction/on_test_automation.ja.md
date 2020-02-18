@@ -1,130 +1,87 @@
 ---
-title: "On test automation"
+title: "テスト自動化について"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-First, start by asking yourself whether or not you really need to use a browser.
-Odds are that, at some point, if you are working on a complex web application,
-you will need to open a browser and actually test it.
+まず、本当にブラウザを使用する必要があるかどうかを自問することから始めます。
+ある時点で複雑なWebアプリケーションで作業している場合、おそらくブラウザを開いて実際にテストする必要があるでしょう。
 
-Functional end-user tests such as Selenium tests are expensive to run, however.
-Furthermore, they typically require substantial infrastructure
-to be in place to be run effectively.
-It is a good rule to always ask yourself if what you want to test
-can be done using more lightweight test approaches such as unit tests
-or with a lower-level approach.
+ただし、Seleniumテストなどの機能的なエンドユーザーテストの実行には費用がかかります。
+さらに、それらは通常、効果的に実行するために適切なインフラストラクチャを配置する必要があります。
+単体テストなどのより軽量なテストアプローチを使用して、または下位レベルのアプローチを使用して、テストすることを実行できるかどうかを常に自問するのは良いルールです。
 
-Once you have made the determination that you are in the web browser testing business,
-and you have your Selenium environment ready to begin writing tests,
-you will generally perform some combination of three steps:
+Webブラウザーのテストビジネスに参加していることを確認し、Selenium環境でテストの記述を開始できるようになったら、通常は3つのステップを組み合わせて実行します。
 
-* Set up the data
-* Perform a discrete set of actions
-* Evaluate the results
+* データを設定する
+* 個別の一連のアクションを実行する
+* 結果を評価する
 
-You will want to keep these steps as short as possible;
-one or two operations should be enough most of the time.
-Browser automation has the reputation of being “flaky”,
-but in reality, that is because users frequently demand too much of it.
-In later chapters, we will return to techniques you can use
-to mitigate apparent intermittent problems in tests,
-in particular on how to [overcome race conditions]({{< ref "/webdriver/waits.ja.md" >}})
-between the browser and WebDriver.
+これらの手順はできるだけ短くしてください。
+ほとんどの場合、1つまたは2つの操作で十分です。
+ブラウザの自動化は"不安定"であるという評判がありますが、実際には、ユーザーが頻繁に多くを求めることが多いためです。
+後の章では、特にブラウザーとWebDriver間の[競合状態を克服する]({{< ref "/webdriver/waits.ja.md" >}})方法に関する、テストでの断続的な問題を軽減するために使用できる手法に戻ります。
 
-By keeping your tests short
-and using the web browser only when you have absolutely no alternative,
-you can have many tests with minimal flake.
+テストを短くして、代替手段がまったくない場合にのみWebブラウザーを使用することで、不安定さを最小限にして多くのテストを実行できます。
 
-A distinct advantage of Selenium tests
-is their inherent ability to test all components of the application,
-from backend to frontend, from a user's perspective.
-So in other words, whilst functional tests may be expensive to run,
-they also encompass large business-critical portions at one time.
+Seleniumテストの明確な利点は、ユーザーの観点から、バックエンドからフロントエンドまで、アプリケーションのすべてのコンポーネントをテストする固有の機能です。
+つまり、機能テストは実行に費用がかかる可能性がありますが、同時にビジネスに不可欠な大規模な部分も含まれます。
 
+### テスト要件
 
-### Testing requirements
+前述のように、Seleniumテストの実行には費用がかかる場合があります。
+どの程度までテストを実行しているブラウザーに依存しますが、歴史的にブラウザーの動作は非常に多様であるため、多くの場合、複数のブラウザーに対するクロステストの目標として述べられてきました。
 
-As mentioned before, Selenium tests can be expensive to run.
-To what extent depends on the browser you are running the tests against,
-but historically browsers' behaviour has varied so much that it has often
-been a stated goal to cross-test against multiple browsers.
+Seleniumを使用すると、複数のオペレーティングシステム上の複数のブラウザーに対して同じ命令を実行できますが、すべての可能なブラウザー、それらの異なるバージョン、およびそれらが実行される多くのオペレーティングシステムの列挙はすぐに重要な作業になります。
 
-Selenium allows you to run the same instructions against multiple browsers
-on multiple operating systems,
-but the enumeration of all the possible browsers,
-their different versions, and the many operating systems they run on
-will quickly become a non-trivial undertaking.
+### 例から始めましょう
 
+ラリーは、ユーザーがカスタムユニコーンを注文できるWebサイトを作成しました。
 
-### Let’s start with an example
+一般的なワークフロー（"ハッピーパス"と呼ぶ）は次のようなものです。
 
-Larry has written a web site which allows users to order their 
-custom unicorns.
+* アカウントを作成する
+* ユニコーンを設定する
+* ショッピングカートにユニコーンを追加します
+* チェックアウトしてお支払い
+* ユニコーンについてフィードバックを送る
 
-The general workflow (what we will call the “happy path”) is something
-like this:
+これらのすべての操作を実行するために1つの壮大なSeleniumスクリプトを作成するのは魅力的です。
+**その誘惑に抵抗しましょう！** そうすると、  
+a）時間がかかる  
+b）ページレンダリングのタイミングの問題に関する一般的な問題が発生する  
+c）失敗した場合、簡潔で"一目瞭然"にならない、何がうまくいかなかったかを診断する方法がない  
+というテストになります。  
 
-* Create an account
-* Configure the unicorn
-* Add it to the shopping cart
-* Check out and pay
-* Give feedback about the unicorn
+このシナリオをテストするための好ましい戦略は、一連の独立した迅速なテストに分割することです。
+各テストには、1つの"理由"が存在します。
+
+2番目のステップであるユニコーンの構成をテストしたいと思います。
+次のアクションを実行します。
+
+* アカウントを作成する
+* ユニコーンを設定する
+
+これらの手順の残りをスキップしていることに注意してください。
+この手順を完了した後、他の小さな個別のテストケースで残りのワークフローをテストします。
+
+開始するには、アカウントを作成する必要があります。
+ここには、いくつかの選択があります。
+
+* 既存のアカウントを使用しますか？
+* 新しいアカウントを作成しますか？
+* 設定を開始する前に考慮する必要があるそのようなユーザーの特別なプロパティはありますか？
 
 
-It would be tempting to write one grand Selenium script
-to perform all these operations–many will try.
-**Resist the temptation!**
-Doing so will result in a test that 
-a) takes a long time,
-b) will be subject to some common issues around page rendering timing issues, and
-c) is such that if it fails, 
-it will not give you a concise, “glanceable” method for diagnosing what went wrong.
+この質問への回答方法に関係なく、テストの"データのセットアップ"部分の一部にすると解決します。
+ラリーが、ユーザー（またはだれでも）がユーザーアカウントを作成および更新できるAPIを公開している場合は、それを使用してこの質問に回答してください。
+可能であれば、資格情報を使用してログインできるユーザーが"手元に"いる場合にのみブラウザを起動します。
 
-The preferred strategy for testing this scenario would be
-to break it down to a series of independent, speedy tests,
-each of which has one “reason” to exist.
+各ワークフローの各テストがユーザーアカウントの作成から始まる場合、各テストの実行に何秒も追加されます。
+APIの呼び出しとデータベースとの対話は、ブラウザを開いたり、適切なページに移動したり、フォームをクリックして送信されるのを待つなどの高価なプロセスを必要としない、迅速な"ヘッドレス"操作です。
 
-Let us pretend you want to test the second step:
-Configuring your unicorn.
-It will perform the following actions:
-
-* Create an account
-* Configure a unicorn
-
-Note that we are skipping the rest of these steps, 
-we will test the rest of the workflow in other small, discrete test cases 
-after we are done with this one.
-
-To start, you need to create an account.
-Here you have some choices to make:
-
-* Do you want to use an existing account?
-* Do you want to create a new account?
-* Are there any special properties of such a user that need to be
-  taken into account before configuration begins?
-
-Regardless of how you answer this question,
-the solution is to make it part of the "set up the data" portion of the test.
-If Larry has exposed an API that enables you (or anyone)
-to create and update user accounts,
-be sure to use that to answer this question.
-If possible, you want to launch the browser only after you have a user "in hand",
-whose credentials you can just log in with.
-
-If each test for each workflow begins with the creation of a user account,
-many seconds will be added to the execution of each test.
-Calling an API and talking to a database are quick,
-“headless” operations that don't require the expensive process of
-opening a browser, navigating to the right pages,
-clicking and waiting for the forms to be submitted, etc.
-
-Ideally, you can address this set-up phase in one line of code,
-which will execute before any browser is launched:
+理想的には、1行のコードでこのセットアップフェーズに対処できます。
+これは、ブラウザーが起動する前に実行されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -213,36 +170,26 @@ val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As you can imagine, the `UserFactory` can be extended
-to provide methods such as `createAdminUser()`, and `createUserWithPayment()`.
-The point is, these two lines of code do not distract you from the ultimate purpose of this test:
-configuring a unicorn.
+ご想像のとおり、 `UserFactory` を拡張して `createAdminUser()` や `createUserWithPayment()` などのメソッドを提供できます。
+重要なのは、これらの2行のコードは、このテストの最終目的であるユニコーンの構成からあなたをそらすものではないということです。
 
-The intricacies of the [Page Object model]({{< ref "/guidelines_and_recommendations/page_object_models.ja.md" >}})
-will be discussed in later chapters, but we will introduce the concept here:
+[ページオブジェクトモデル]({{< ref "/guidelines_and_recommendations/page_object_models.ja.md" >}})の込み入った事柄については、後の章で説明しますが、ここで概念を紹介します。
 
-Your tests should be composed of actions,
-performed from the user's point of view,
-within the context of pages in the site.
-These pages are stored as objects,
-which will contain specific information about how the web page is composed
-and how actions are performed–
-very little of which should concern you as a tester.
+テストは、サイトのページのコンテキスト内で、ユーザーの観点から実行されるアクションで構成される必要があります。
+これらのページはオブジェクトとして保存され、Webページがどのように構成され、アクションがどのように実行されるかに関する特定の情報が含まれます。
 
-What kind of unicorn do you want?
-You might want pink, but not necessarily.
-Purple has been quite popular lately.
-Does she need sunglasses? Star tattoos?
-These choices, while difficult, are your primary concern as a tester–
-you need to ensure that your order fulfillment center
-sends out the right unicorn to the right person,
-and that starts with these choices.
+どんなユニコーンが欲しいですか？
+ピンクが必要かもしれませんが、必ずしもそうではありません。
+紫は最近非常に人気があります。
+彼女はサングラスが必要ですか？
+スタータトゥー？
+これらの選択は困難ですが、テスターとしての最大の関心事です。
+発送センターが適切なユニコーンを適切な人に送信することを確認する必要があります。
 
-Notice that nowhere in that paragraph do we talk about buttons,
-fields, drop-downs, radio buttons, or web forms.
-**Neither should your tests!**
-You want to write your code like the user trying to solve their problem.
-Here is one way of doing this (continuing from the previous example):
+この段落では、ボタン、フィールド、ドロップダウン、ラジオボタン、またはWebフォームについては説明していません。
+**また、テストするべきではありません！** 
+ユーザーが問題を解決しようとしているようにコードを書きたいと思います。
+これを実行する1つの方法を次に示します（前の例から継続）
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -346,8 +293,7 @@ unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Now that you have configured your unicorn,
-you need to move on to step 3: making sure it actually worked.
+ユニコーンの設定が完了したら、ステップ3に進んで、ユニコーンが実際に機能することを確認する必要があります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -389,45 +335,32 @@ assertTrue("Sparkles should have been created, with all attributes intact", unic
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Note that the tester still has not done anything but talk about unicorns in this code–
-no buttons, no locators, no browser controls.
-This method of _modelling_ the application
-allows you to keep these test-level commands in place and unchanging,
-even if Larry decides next week that he no longer likes Ruby-on-Rails
-and decides to re-implement the entire site
-in the latest Haskell bindings with a Fortran front-end.
+テスターはまだこのコードでユニコーンについて話しているだけです。
+ボタンもロケーターもブラウザーコントロールもありません。
+ラリーが来週、Ruby-on-Railsが好きではなくなったと判断し、Fortranフロントエンドを使用して最新のHaskellバインディングでサイト全体を再実装することを決めた場合でも、アプリケーションを _モデル化する_ この方法により、これらのテストレベルのコマンドを所定の位置に変えずに維持できます。
 
-Your page objects will require some small maintenance in order to 
-conform to the site redesign,
-but these tests will remain the same.
-Taking this basic design,
-you will want to keep going through your workflows with the fewest browser-facing steps possible.
-Your next workflow will involve adding a unicorn to the shopping cart.
-You will probably want many iterations of this test in order to make sure the cart is keeping its state properly:
-Is there more than one unicorn in the cart before you start?
-How many can fit in the shopping cart?
-If you create more than one with the same name and/or features, will it break?
-Will it only keep the existing one or will it add another?
+ページオブジェクトは、サイトの再設計に準拠するために若干のメンテナンスが必要になりますが、これらのテストは同じままです。
+この基本的な設計を採用することで、可能な限りブラウザに面した最小限の手順でワークフローを進めていきたいと思うでしょう。
+次のワークフローでは、ユニコーンをショッピングカートに追加します。
+カートの状態が適切に維持されていることを確認するために、おそらくこのテストを何度も繰り返す必要があります。
+開始する前に、カートに複数のユニコーンがありますか？
+ショッピングカートには何個収容できますか？
+同じ名前や機能で複数作成すると、壊れますか？
+既存のものを保持するだけですか、それとも別のものを追加しますか？
 
-Each time you move through the workflow,
-you want to try to avoid having to create an account,
-login as the user, and configure the unicorn.
-Ideally, you will be able to create an account
-and pre-configure a unicorn via the API or database.
-Then all you have to do is log in as the user, locate Sparkles,
-and add her to the cart.
+ワークフローを移動するたびに、アカウントを作成し、ユーザーとしてログインし、ユニコーンを設定する必要を避けたいと考えています。
+理想的には、APIまたはデータベースを介してアカウントを作成し、ユニコーンを事前設定できるようになります。
+その後、ユーザーとしてログインし、きらめきを見つけてカートに追加するだけです。
 
+### 自動化するかしないか
 
-### To automate or not to automate?
+自動化は常に有利ですか？
+テストケースの自動化をいつ決定する必要がありますか？
 
-Is automation always advantageous? When should one decide to automate test
-cases?
-
-It is not always advantageous to automate test cases. There are times when
-manual testing may be more appropriate. For instance, if the application’s user
-interface will change considerably in the near future, then any automation
-might need to be rewritten anyway. Also, sometimes there simply is not enough
-time to build test automation. For the short term, manual testing may be more
-effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing gets done within
-that time frame, then manual testing is the best solution.
+テストケースを自動化することは必ずしも有利ではありません。
+手動テストがより適切な場合があります。
+たとえば、近い将来にアプリケーションのユーザーインターフェースが大幅に変更される場合は、自動化を書き換える必要があるかもしれません。
+また、テストの自動化を構築する時間が足りない場合もあります。
+短期的には、手動テストの方が効果的です。
+アプリケーションの期限が非常に厳しい場合、現在利用できるテストの自動化はなく、その期間内にテストを実施することが不可欠です。
+手動テストが最適なソリューションです。
