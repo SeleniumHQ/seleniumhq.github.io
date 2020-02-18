@@ -1,120 +1,78 @@
 ---
-title: "Types of testing"
+title: "テストの種類"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-## Acceptance testing
-This type of test is done to determine if a product's
-feature matches its requirements.
-This generally involves the customer's feedback or specification.
+## 受入テスト
+このタイプのテストは、製品の機能が要件に一致するかどうかを判断するために行われます。
+これには通常、顧客のフィードバックまたは仕様が含まれます。
 
-For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behavior.
-This simulation could be done by record/playback or through the
-different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
+Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、このテストの自動化をSeleniumで直接実行できます。
+このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、またはサポートされているさまざまな言語によって実行できます。
+注：受入テストは **機能テスト** のサブタイプであり、一部の人はこれも参照する場合があります。
 
-### Functional testing
-This type of test is done to determine if a product's
-feature functions properly, without issues.
+### 機能テスト
+このタイプのテストは、製品の機能が問題なく正常に機能するかどうかを判断するために行われます。
 
-This generally include: the tests work without errors
-(404, exceptions...), in an usable way (right redirections),   
-in an accessible way and matching its specifications            
-(see **_acceptance testing_** above).
+これには通常、エラーなし（404、例外…）、使用可能な方法（正しいリダイレクト）、アクセス可能な方法、およびその仕様に一致するテスト（上記の **受入テスト** を参照）が含まれます。
 
-For web applications, the automation of this testing can be
-done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through     
-the different supported languages as explainedin this documentation.
+Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。
+このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
 
-### Performance testing
-As its name indicates, performance tests are done 
-to measure how well an application is performing.
+### パフォーマンステスト
+その名前が示すように、パフォーマンステストは、アプリケーションのパフォーマンスを測定するために行われます。
 
-There are two main sub-types for performance testing:
+パフォーマンステストには2つの主なサブタイプがあります。
 
-#### Load testing
-Load testing is done to verify how well the
-application works under different defined loads
-(usually a particular number of users connected at once)
+#### ロードテスト
+ロードテストは、定義されたさまざまな負荷（通常、特定の数のユーザーが同時に接続されている場合）でアプリケーションがどの程度機能するかを確認するために行われます。
 
-#### Stress testing
-Stress testing is done to verify how well the
-application works under stress (or above the maximum supported load).
+#### ストレステスト
+ストレステストは、ストレス下（またはサポートされている最大負荷以上）でアプリケーションがどの程度機能するかを確認するために行われます。
 
-Generally, performance tests are done by executing some 
-Selenium written tests simulating different users
-hitting a particular function on the web app and
-retrieving some meaningful measurements.
+一般に、パフォーマンステストは、Seleniumで書かれたテストを実行して、さまざまなユーザーがWebアプリの特定の機能を押して、意味のある測定値を取得することをシミュレートして実行されます。
 
-This is generally done by other tools that retrieve the metrics.
-One such tool is **_JMeter_**.
+これは通常、メトリックを取得する他のツールによって行われます。
+そのようなツールの1つが **_JMeter_** です。
 
-For a web application, details to measure include 
-throughput, latency, data loss, individual component loading times...
+Webアプリケーションの場合、測定する詳細には、スループット、待ち時間、データ損失、個々のコンポーネントの読み込み時間などが含まれます…
 
-Note 1: All browsers have a performance tab in their
-developers' tools section (accessible by pressing F12)
+注1：すべてのブラウザには、開発者のツールセクションにパフォーマンスタブがあります（F12キーを押すとアクセス可能）
 
-Note 2: is a subtype of **_non-functional testing_**
-as this is generally measured per system and not per function/feature.
+注2：これは一般に機能/機能ごとではなくシステムごとに測定されるため、 **_非機能テスト_** のサブタイプです。
 
-### Regression testing
-This testing is generally done after a change, fix or feature addition.
+### 回帰テスト
+このテストは通常、変更、修正、または機能の追加後に行われます。
 
-To ensure that the change has not broken any of the existing
-functionality, some already executed tests are executed again.
+変更によって既存の機能が破壊されないようにするために、すでに実行されたいくつかのテストが再度実行されます。
 
-The set of re-executed tests can be full or partial
-and can include several different types, depending
-on the application and development team.
+再実行されるテストのセットは、完全または部分的なものにすることができ、アプリケーションおよび開発チームに応じて、いくつかの異なるタイプを含めることができます。
 
-### Test driven development (TDD)
-Rather than a test type per se, TDD is an iterative
-development methodology in which tests drive the design of a feature.
+### テスト駆動開発 (TDD)
+テストタイプそのものではなく、TDDはテストが機能の設計を推進する反復的な開発方法論です。
 
-Each cycle starts by creating a set of unit tests that
-the feature should pass (which should fail their first time executed).
+各サイクルは、機能がパスする単体テストのセットを作成することから始まります（最初に実行すると失敗します）。
 
-After this, development takes place to make the tests pass.
-The tests are executed again starting another cycle
-and this process continues until all tests are passing.
+この後、テストに合格するための開発が行われます。
+別のサイクルを開始してテストが再度実行され、すべてのテストに合格するまでこのプロセスが続行されます。
 
-This aims to speed up the development of an application
-based on the fact that defects are less costly the earlier they are found.
+これは、欠陥が発見されるほどコストが安くなるという事実に基づいて、アプリケーションの開発をスピードアップすることを目的としています。
 
-### Behavior-driven development (BDD)
-BDD is also an iterative development methodology
-based on above (TDD) in which the goal is to involve
-all the parties in the development of an application.
+### ビヘイビア駆動開発 (BDD)
+BDDは、上記に基づいた反復開発方法論（TDD）でもあり、その目的は、アプリケーションの開発にすべての関係者を関与させることです。
 
-Each cycle starts by creating some specifications
-(which should fail). Then create the failing unit
-tests (which should also fail) and then create the development.
+各サイクルは、いくつかの仕様を作成することから始まります（これは失敗するはずです）。
+次に、失敗する単体テスト（これも失敗するはずです）を作成し、開発を作成します。
 
-This cycle is repeated until all type of tests are passing.
+このサイクルは、すべてのタイプのテストに合格するまで繰り返されます。
 
-In order to do so, a specification language is
-used. It should be understandable by all parties and
-simple, standard and explicit.
-Most tools use **_Gherkin_** as this language.
+そのためには、仕様言語が使用されます。
+すべての関係者が理解でき、単純で、標準的かつ明示的でなければなりません。
+ほとんどのツールは、この言語として **_Gherkin_**  を使用します。
 
-The goal is to be able to detect even more errors
-than TDD by targeting potential acceptance errors
-too and make communication between parties smoother.
+目標は、潜在的な受入エラーも対象とすることでTDDよりも多くのエラーを検出し、当事者間のコミュニケーションを円滑にすることです。
 
-A set of tools are currently available 
-to write the specifications and match them with code functions,
-such as **_Cucumber_** or **_SpecFlow._**
+現在、仕様を記述し、 **_Cucumber_** や **_SpecFlow_** などのコード関数と一致させるための一連のツールが利用可能です。
 
-A set of tools are built on top of Selenium to make this process
-even faster by directly transform the BDD specifications into
-executable code.
-Some of these are **_JBehave, Capybara and Robot Framework_**.
+Selenium上に一連のツールが構築されており、BDD仕様を実行可能コードに直接変換することにより、このプロセスをさらに高速化しています。 これらのいくつかは、 _**JBehave、Capybara、およびRobot Framework**_ です。
