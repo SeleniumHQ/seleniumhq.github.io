@@ -11,20 +11,20 @@
     <title>Alerts, prompts et confirmations Javascript :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582022078" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582022078" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582029935" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582029935" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582022078" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582029935" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582022078"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582029935"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582022078"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582022078"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582029935"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582029935"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582022078"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582029935"></script>
 
     
   </div>
@@ -1955,27 +1955,183 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>WebDriver provides an API for working with the three types of native
-popup message offered by JavaScript. These popups are styled by the
-browser and offer limited customisation.</p>
+<p>WebDriver fournit une API pour travailler avec
+les trois types de messages contextuels natifs
+proposés par JavaScript. Ces popups sont stylisés par le navigateur
+et offrent une personnalisation limitée.</p>
 
 <h2 id="alerts">Alerts</h2>
 
-<p>The simplest of these is referred to as an alert, which shows a
-custom message, and a single button which dismisses the alert, labelled
-in most browsers as OK. It can also be dismissed in most browsers by
-pressing the close button, but this will always do the same thing as
-the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.</p>
+<p>Le plus simple d&rsquo;entre eux est appelé une alerte, qui montre une
+message personnalisé, et un seul bouton qui rejette l&rsquo;alerte, étiqueté
+dans la plupart des navigateurs comme OK. Il peut également être ignoré dans la plupart des navigateurs par
+en appuyant sur le bouton de fermeture, mais cela fera toujours la même chose que
+le bouton OK. <a onclick="window.alert('Sample alert')">Voir un exemple d&rsquo;alerte</a>.</p>
 
-<p>WebDriver can get the text from the popup and accept or dismiss these
-alerts.</p>
+<p>WebDriver peut obtenir le texte de la fenêtre contextuelle et les accepter ou les rejeter
+alertes.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click();
+
+<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
+</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>alert.accept();
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Click the link to activate the alert</span>
+driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)<span style="color:#719e07">.</span>click()
+
+<span style="color:#586e75"># Wait for the alert to be displayed and store it in a variable</span>
+alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until(expected_conditions<span style="color:#719e07">.</span>alert_is_present())
+
+<span style="color:#586e75"># Store the alert text in a variable</span>
+text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
+
+<span style="color:#586e75"># Press the OK button</span>
+alert<span style="color:#719e07">.</span>accept()
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).Click();
+
+<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
+</span><span style="color:#586e75"></span>IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#dc322f">string</span> text = alert.Text;
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>alert.Accept();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Click the link to activate the alert</span>
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:link_text</span>, <span style="color:#2aa198">&#39;See an example alert&#39;</span>)<span style="color:#719e07">.</span>click
+
+<span style="color:#586e75"># Store the alert reference in a variable</span>
+alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>alert
+
+<span style="color:#586e75"># Store the alert text in a variable</span>
+alert_text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
+
+<span style="color:#586e75"># Press on OK button</span>
+alert<span style="color:#719e07">.</span>accept
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See an example alert&#39;</span>)).click();
+
+<span style="color:#586e75">// Wait for the alert to be displayed
+</span><span style="color:#586e75"></span>await driver.wait(until.alertIsPresent());
+
+<span style="color:#586e75">// Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alert <span style="color:#719e07">=</span> await driver.switchTo().alert();
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alertText <span style="color:#719e07">=</span> await alert.getText();
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>await alert.accept();
+
+<span style="color:#586e75">// Note: To use await, the above code should be inside an async function
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">//Click the link to activate the alert
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click()
+
+<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = wait.until(ExpectedConditions.alertIsPresent())
+
+<span style="color:#586e75">//Store the alert text in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.getText()
+
+<span style="color:#586e75">//Press the OK button
+</span><span style="color:#586e75"></span>alert.accept()
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="confirm">Confirm</h2>
+
+<p>Une boîte de confirmation est similaire à une alerte, sauf que l&rsquo;utilisateur peut également choisir
+pour annuler le message. <a onclick="window.confirm('êtes-vous sûr?')"> Voir
+un échantillon confirme </a>.</p>
+
+<p>Cet exemple montre également une approche différente du stockage d&rsquo;une alerte:</p>
 
 
 
@@ -2019,16 +2175,19 @@ alerts.</p>
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click();
 
-<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
+<span style="color:#586e75">//Wait for the alert to be displayed
+</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent());
 
-<span style="color:#586e75">//Store the alert text in a variable
+<span style="color:#586e75">//Store the alert in a variable
+</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> driver.switchTo().alert();
+
+<span style="color:#586e75">//Store the alert in a variable for reuse
 </span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
 
-<span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert.accept();
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span>alert.dismiss();
   </code></pre></div>
 </section>
   
@@ -2037,16 +2196,19 @@ alerts.</p>
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75"># Click the link to activate the alert</span>
-driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)<span style="color:#719e07">.</span>click()
+driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)<span style="color:#719e07">.</span>click()
 
-<span style="color:#586e75"># Wait for the alert to be displayed and store it in a variable</span>
-alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until(expected_conditions<span style="color:#719e07">.</span>alert_is_present())
+<span style="color:#586e75"># Wait for the alert to be displayed</span>
+wait<span style="color:#719e07">.</span>until(expected_conditions<span style="color:#719e07">.</span>alert_is_present())
+
+<span style="color:#586e75"># Store the alert in a variable for reuse</span>
+alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>alert
 
 <span style="color:#586e75"># Store the alert text in a variable</span>
 text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
 
-<span style="color:#586e75"># Press the OK button</span>
-alert<span style="color:#719e07">.</span>accept()
+<span style="color:#586e75"># Press the Cancel button</span>
+alert<span style="color:#719e07">.</span>dismiss()
   </code></pre></div>
 </section>
   
@@ -2055,16 +2217,19 @@ alert<span style="color:#719e07">.</span>accept()
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).Click();
+</span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).Click();
 
-<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
+<span style="color:#586e75">//Wait for the alert to be displayed
+</span><span style="color:#586e75"></span>wait.Until(ExpectedConditions.AlertIsPresent());
 
-<span style="color:#586e75">//Store the alert text in a variable
+<span style="color:#586e75">//Store the alert in a variable
+</span><span style="color:#586e75"></span>IAlert alert = driver.SwitchTo().Alert();
+
+<span style="color:#586e75">//Store the alert in a variable for reuse
 </span><span style="color:#586e75"></span><span style="color:#dc322f">string</span> text = alert.Text;
 
-<span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert.Accept();
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span>alert.Dismiss();
   
 </code></pre></div>
 </section>
@@ -2074,7 +2239,7 @@ alert<span style="color:#719e07">.</span>accept()
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#586e75"># Click the link to activate the alert</span>
-driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:link_text</span>, <span style="color:#2aa198">&#39;See an example alert&#39;</span>)<span style="color:#719e07">.</span>click
+driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:link_text</span>, <span style="color:#2aa198">&#39;See a sample confirm&#39;</span>)<span style="color:#719e07">.</span>click
 
 <span style="color:#586e75"># Store the alert reference in a variable</span>
 alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>alert
@@ -2082,8 +2247,8 @@ alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</
 <span style="color:#586e75"># Store the alert text in a variable</span>
 alert_text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
 
-<span style="color:#586e75"># Press on OK button</span>
-alert<span style="color:#719e07">.</span>accept
+<span style="color:#586e75"># Press on Cancel button</span>
+alert<span style="color:#719e07">.</span>dismiss
   </code></pre></div>
 </section>
   
@@ -2092,7 +2257,7 @@ alert<span style="color:#719e07">.</span>accept
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See an example alert&#39;</span>)).click();
+</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See a sample confirm&#39;</span>)).click();
 
 <span style="color:#586e75">// Wait for the alert to be displayed
 </span><span style="color:#586e75"></span>await driver.wait(until.alertIsPresent());
@@ -2103,8 +2268,8 @@ alert<span style="color:#719e07">.</span>accept
 <span style="color:#586e75">//Store the alert text in a variable
 </span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alertText <span style="color:#719e07">=</span> await alert.getText();
 
-<span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>await alert.accept();
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span>await alert.dismiss();
 
 <span style="color:#586e75">// Note: To use await, the above code should be inside an async function
 </span><span style="color:#586e75"></span>  
@@ -2116,28 +2281,32 @@ alert<span style="color:#719e07">.</span>accept
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click()
+</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click()
 
-<span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = wait.until(ExpectedConditions.alertIsPresent())
+<span style="color:#586e75">//Wait for the alert to be displayed
+</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent())
 
-<span style="color:#586e75">//Store the alert text in a variable
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.getText()
+<span style="color:#586e75">//Store the alert in a variable
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = driver.switchTo().alert()
 
-<span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert.accept()
+<span style="color:#586e75">//Store the alert in a variable for reuse
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.text
+
+<span style="color:#586e75">//Press the Cancel button
+</span><span style="color:#586e75"></span>alert.dismiss()
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h2 id="confirm">Confirm</h2>
+<h2 id="prompt">Prompt</h2>
 
-<p>A confirm box is similar to an alert, except the user can also choose
-to cancel the message. <a onclick="window.confirm('Are you sure?')">See
-a sample confirm</a>.</p>
-
-<p>This example also shows a different approach to storing an alert:</p>
+<p>Les invites sont similaires aux cases de confirmation, sauf qu&rsquo;elles incluent également un texte
+contribution. Comme pour travailler avec des éléments de formulaire, vous pouvez utiliser WebDriver
+envoyer des clés pour remplir une réponse. Cela remplacera complètement l&rsquo;espace réservé
+texte. En appuyant sur le bouton Annuler, aucun texte ne sera envoyé.
+<a onclick="window.prompt('Quel est votre outil de choix?',navigator.appName)">
+Voir un exemple d&rsquo;invite </a>.</p>
 
 
 
@@ -2181,181 +2350,6 @@ a sample confirm</a>.</p>
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click();
-
-<span style="color:#586e75">//Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent());
-
-<span style="color:#586e75">//Store the alert in a variable
-</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> driver.switchTo().alert();
-
-<span style="color:#586e75">//Store the alert in a variable for reuse
-</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
-
-<span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>alert.dismiss();
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Click the link to activate the alert</span>
-driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)<span style="color:#719e07">.</span>click()
-
-<span style="color:#586e75"># Wait for the alert to be displayed</span>
-wait<span style="color:#719e07">.</span>until(expected_conditions<span style="color:#719e07">.</span>alert_is_present())
-
-<span style="color:#586e75"># Store the alert in a variable for reuse</span>
-alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>alert
-
-<span style="color:#586e75"># Store the alert text in a variable</span>
-text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
-
-<span style="color:#586e75"># Press the Cancel button</span>
-alert<span style="color:#719e07">.</span>dismiss()
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).Click();
-
-<span style="color:#586e75">//Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>wait.Until(ExpectedConditions.AlertIsPresent());
-
-<span style="color:#586e75">//Store the alert in a variable
-</span><span style="color:#586e75"></span>IAlert alert = driver.SwitchTo().Alert();
-
-<span style="color:#586e75">//Store the alert in a variable for reuse
-</span><span style="color:#586e75"></span><span style="color:#dc322f">string</span> text = alert.Text;
-
-<span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>alert.Dismiss();
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Click the link to activate the alert</span>
-driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:link_text</span>, <span style="color:#2aa198">&#39;See a sample confirm&#39;</span>)<span style="color:#719e07">.</span>click
-
-<span style="color:#586e75"># Store the alert reference in a variable</span>
-alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>alert
-
-<span style="color:#586e75"># Store the alert text in a variable</span>
-alert_text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>text
-
-<span style="color:#586e75"># Press on Cancel button</span>
-alert<span style="color:#719e07">.</span>dismiss
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See a sample confirm&#39;</span>)).click();
-
-<span style="color:#586e75">// Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>await driver.wait(until.alertIsPresent());
-
-<span style="color:#586e75">// Store the alert in a variable
-</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alert <span style="color:#719e07">=</span> await driver.switchTo().alert();
-
-<span style="color:#586e75">//Store the alert text in a variable
-</span><span style="color:#586e75"></span><span style="color:#268bd2">let</span> alertText <span style="color:#719e07">=</span> await alert.getText();
-
-<span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>await alert.dismiss();
-
-<span style="color:#586e75">// Note: To use await, the above code should be inside an async function
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click()
-
-<span style="color:#586e75">//Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent())
-
-<span style="color:#586e75">//Store the alert in a variable
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> alert = driver.switchTo().alert()
-
-<span style="color:#586e75">//Store the alert in a variable for reuse
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> text = alert.text
-
-<span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>alert.dismiss()
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<h2 id="prompt">Prompt</h2>
-
-<p>Prompts are similar to confirm boxes, except they also include a text
-input. Similar to working with form elements, you can use WebDriver&rsquo;s
-send keys to fill in a response. This will completely replace the placeholder
-text. Pressing the cancel button will not submit any text.
-<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
-See a sample prompt</a>.</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
-    
-    <label for="tab0code3">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
-    
-    <label for="tab1code3">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
-    
-    <label for="tab2code3">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
-    
-    <label for="tab3code3">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
-    
-    <label for="tab4code3">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
-    
-    <label for="tab5code3">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">//Click the link to activate the alert
 </span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).click();
 
 <span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
@@ -2371,7 +2365,7 @@ See a sample prompt</a>.</p>
   
 
 
-<section id="pythoncode3" class="tab-panel">
+<section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75"># Click the link to activate the alert</span>
 driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)<span style="color:#719e07">.</span>click()
@@ -2392,7 +2386,7 @@ alert<span style="color:#719e07">.</span>accept()
   
 
 
-<section id="csharpcode3" class="tab-panel">
+<section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#586e75">//Click the link to activate the alert
 </span><span style="color:#586e75"></span>driver.FindElement(By.LinkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).Click();
@@ -2411,7 +2405,7 @@ alert<span style="color:#719e07">.</span>accept()
   
 
 
-<section id="rubycode3" class="tab-panel">
+<section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#586e75"># Click the link to activate the alert</span>
 driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa198">:link_text</span>, <span style="color:#2aa198">&#39;See a sample prompt&#39;</span>)<span style="color:#719e07">.</span>click
@@ -2429,7 +2423,7 @@ alert<span style="color:#719e07">.</span>accept
   
 
 
-<section id="javascriptcode3" class="tab-panel">
+<section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">//Click the link to activate the alert
 </span><span style="color:#586e75"></span>await driver.findElement(By.linkText(<span style="color:#2aa198">&#39;See a sample prompt&#39;</span>)).click();
@@ -2453,7 +2447,7 @@ alert<span style="color:#719e07">.</span>accept
   
 
 
-<section id="kotlincode3" class="tab-panel">
+<section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#586e75">//Click the link to activate the alert
 </span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).click()
@@ -2479,7 +2473,7 @@ alert<span style="color:#719e07">.</span>accept
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/">
       “Alerts, prompts et confirmations Javascript”
-    </a> was last updated on: 05 Feb 2020 07:03:15 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/f606b1e4a24327054046cbacb904bde186def8e2">Deploying on Wed Feb  5 07:03:15 UTC 2020, commit 9f9f10d4485b08f67dec580849f5bbf511e95f5e, [skip ci] (f606b1e4a)</a>
+    </a> was last updated on: 18 Feb 2020 18:13:51 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/e160d178eab49f93ef4d0759f7bd5829aca242d7">Modify: [EN]-&gt;[FR]: Webdriver-&gt; JS alerts and prompts (#234) [deploy site] (e160d178e)</a>
 </h5>
         
         </div> 
@@ -3644,19 +3638,19 @@ alert<span style="color:#719e07">.</span>accept
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582022078"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582029935"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582022078"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582022078"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582029935"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582029935"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582022078" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582022078"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582029935" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582029935"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

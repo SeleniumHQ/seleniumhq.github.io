@@ -473,9 +473,8 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
+      <description>WebDriver fournit une API pour travailler avec les trois types de messages contextuels natifs proposés par JavaScript. Ces popups sont stylisés par le navigateur et offrent une personnalisation limitée.
+Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre une message personnalisé, et un seul bouton qui rejette l&amp;rsquo;alerte, étiqueté dans la plupart des navigateurs comme OK. Il peut également être ignoré dans la plupart des navigateurs par en appuyant sur le bouton de fermeture, mais cela fera toujours la même chose que le bouton OK.</description>
     </item>
     
     <item>
