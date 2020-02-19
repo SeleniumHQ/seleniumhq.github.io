@@ -179,7 +179,7 @@
 	"title": "WebDriver Binaries installieren",
 	"tags": [],
 	"description": "",
-	"content": "  Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!\n To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.\nDownload the WebDriver binary supported by your browser and place it in the System PATH.\n"
+	"content": "Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.\nDownloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.\n"
 },
 {
 	"uri": "https://selenium.dev/documentation/de/support_packages/working_with_select_elements/",
