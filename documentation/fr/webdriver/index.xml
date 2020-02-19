@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/understanding_the_components/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface.</description>
+      <description>Pour créer une suite de tests à l&amp;rsquo;aide de WebDriver, vous devrez comprendre et utiliser efficacement un certain nombre de composants différents. logiciel, différentes personnes utilisent des termes différents pour la même idée. une ventilation de la façon dont les termes sont utilisés dans cette description.
+Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;rsquo;agit de l&amp;rsquo;ensemble des &amp;ldquo;commandes&amp;rdquo; vous utilisez pour manipuler WebDriver. Bibliothèque: Un module de code qui contient les API et le code nécessaires Les bibliothèques sont spécifiques à chaque liaison de langue, par exemple .</description>
     </item>
     
     <item>

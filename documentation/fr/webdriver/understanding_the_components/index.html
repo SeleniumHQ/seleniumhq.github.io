@@ -11,20 +11,20 @@
     <title>Comprendre les composants :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582107676" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582107676" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582110408" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582110408" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582107676" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582110408" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582107676"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582110408"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582107676"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582107676"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582110408"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582110408"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582107676"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582110408"></script>
 
     
   </div>
@@ -1926,10 +1926,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#terminology">Terminology</a></li>
-<li><a href="#the-parts-and-pieces">The Parts and Pieces</a></li>
+<li><a href="#terminologie">Terminologie</a></li>
+<li><a href="#les-pièces-et-pièces">Les pièces et pièces</a></li>
 </ul></li>
-<li><a href="#where-frameworks-fit-in">Where Frameworks fit in</a></li>
+<li><a href="#où-les-cadres-s-intègrent">Où les cadres s&rsquo;intègrent</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1958,84 +1958,77 @@
 
 
 
+<p>Pour créer une suite de tests à l&rsquo;aide de WebDriver, vous devrez comprendre et
+utiliser efficacement un certain nombre de composants différents.
+logiciel, différentes personnes utilisent des termes différents pour la même idée.
+une ventilation de la façon dont les termes sont utilisés dans cette description.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>Building a test suite using WebDriver will require you to understand and
-effectively use a number of different components. As with everything in
-software, different people use different terms for the same idea. Below is
-a breakdown of how terms are used in this description.</p>
-
-<h3 id="terminology">Terminology</h3>
+<h3 id="terminologie">Terminologie</h3>
 
 <ul>
-<li><strong>API:</strong> Application Programming Interface. This is the set of &ldquo;commands&rdquo;
-you use to manipulate WebDriver.</li>
-<li><strong>Library:</strong> A code module which contains the APIs and the code necessary
-to implement them. Libraries are specific to each language binding, eg .jar
-files for Java, .dll files for .NET, etc.</li>
-<li><strong>Driver:</strong> Responsible for controlling the actual browser. Most drivers
-are created by the browser vendors themselves. Drivers are generally
-executable modules that run on the system with the browser itself,
-not on the system executing the test suite. (Although those may be the
-same system.) <em>NOTE: Some people refer to the drivers as proxies.</em></li>
-<li><strong>Framework:</strong> An additional library used as a support for WebDriver
-suites. These frameworks may be test frameworks such as JUnit or NUnit.
-They may also be frameworks supporting natural language features such
-as Cucumber or Robotium. Frameworks may also be written and used for
-things such as manipulating or configuring the system under test, data
-creation, test oracles, etc.</li>
+<li><strong>API:</strong> Interface de programmation d&rsquo;application. Il s&rsquo;agit de l&rsquo;ensemble des &ldquo;commandes&rdquo;
+vous utilisez pour manipuler WebDriver.</li>
+<li><strong>Bibliothèque:</strong> Un module de code qui contient les API et le code nécessaires
+Les bibliothèques sont spécifiques à chaque liaison de langue, par exemple .jar
+fichiers pour Java, fichiers .dll pour .NET, etc.</li>
+<li><strong>Pilote:</strong> Responsable du contrôle du navigateur actuel.
+sont créés par les fournisseurs de navigateurs eux-mêmes.
+modules exécutables qui s&rsquo;exécutent sur le système avec le navigateur lui-même,
+pas sur le système exécutant la suite de tests (bien que ceux-ci puissent être
+même système.) <em>NOTE: Certaines personnes se réfèrent aux pilotes en tant que proxies.</em></li>
+<li><strong>Framework:</strong> Une bibliothèque supplémentaire utilisée comme support pour WebDriver
+Ces cadres peuvent être des cadres de test tels que JUnit ou NUnit.
+Il peut également s&rsquo;agir de cadres prenant en charge les fonctionnalités du langage naturel telles que
+comme Cucumber ou Robotium.Frameworks peut également être écrit et utilisé pour
+des choses telles que la manipulation ou la configuration du système sous test, les données
+création, test d&rsquo;oracles, etc.</li>
 </ul>
 
-<h3 id="the-parts-and-pieces">The Parts and Pieces</h3>
+<h3 id="les-pièces-et-pièces">Les pièces et pièces</h3>
 
-<p>At its minimum, WebDriver talks to a browser through a driver. Communication
-is two way: WebDriver passes commands to the browser through the driver, and
-receives information back via the same route.</p>
+<p>Au minimum, WebDriver communique avec un navigateur via un pilote.
+est à double sens: WebDriver passe des commandes au navigateur via le pilote, et
+reçoit des informations via le même itinéraire.</p>
 
-<p><img src="https://selenium.dev/documentation/fr/images/basic_comms.png?width=400px" alt="Basic communication" /></p>
+<p><img src="https://selenium.dev/documentation/fr/images/basic_comms.png?width=400px" alt="Communication de base" /></p>
 
-<p>The driver is specific to the browser, such as ChromeDriver for Google&rsquo;s
-Chrome/Chromium, GeckoDriver for Mozilla&rsquo;s Firefox, etc. The driver runs on
-the same system as the browser. This may, or may not be, the same system where
-the tests themselves are executing.</p>
+<p>Le pilote est spécifique au navigateur, tel que ChromeDriver pour Google
+Chrome / Chrome, GeckoDriver pour Firefox de Mozilla, etc. Le pilote fonctionne sur
+le même système que le navigateur. Il peut s&rsquo;agir ou non du même système sur lequel
+les tests eux-mêmes sont en cours d&rsquo;exécution.</p>
 
-<p>This simple example above is <em>direct</em> communication. Communication to the
-browser may also be <em>remote</em> communication through Selenium Server or
-RemoteWebDriver. RemoteWebDriver runs on the same system as the driver
-and the browser.</p>
+<p>Cet exemple simple ci-dessus est la communication <em>directe</em>.
+le navigateur peut également être une communication à <em>distance</em> via Selenium Server ou
+RemoteWebDriver. RemoteWebDriver fonctionne sur le même système que le pilote
+et le navigateur.</p>
 
-<p><img src="https://selenium.dev/documentation/fr/images/remote_comms.png?width=400px" alt="Remote communication" /></p>
+<p><img src="https://selenium.dev/documentation/fr/images/remote_comms.png?width=400px" alt="Communication à distance" /></p>
 
-<p>Remote communication can also take place using Selenium Server or Selenium
-Grid, both of which in turn talk to the driver on the host system</p>
+<p>La communication à distance peut également avoir lieu à l&rsquo;aide de Selenium Server ou Selenium
+Grille, qui à son tour parlent au conducteur sur le système hôte</p>
 
-<p><img src="https://selenium.dev/documentation/fr/images/remote_comms_server.png?width=400px" alt="Remote communication with Grid" /></p>
+<p><img src="https://selenium.dev/documentation/fr/images/remote_comms_server.png?width=400px" alt="Communication à distance avec Grid" /></p>
 
-<h2 id="where-frameworks-fit-in">Where Frameworks fit in</h2>
+<h2 id="où-les-cadres-s-intègrent">Où les cadres s&rsquo;intègrent</h2>
 
-<p>WebDriver has one job and one job only: communicate with the browser via any
-of the methods above. WebDriver doesn&rsquo;t know a thing about testing: it doesn&rsquo;t
-know how to compare things, assert pass or fail, and it certainly doesn&rsquo;t know
-a thing about reporting or Given/When/Then grammar.</p>
+<p>WebDriver a un seul travail et un seul travail: communiquez avec le navigateur via
+des méthodes ci-dessus.WebDriver ne sait rien du test: il ne sait pas
+savoir comparer les choses, affirmer réussir ou échouer, et il ne sait certainement pas
+une chose à propos de la grammaire Reporting ou Given / When / Then.</p>
 
-<p>This is where various frameworks come in to play. At a minimum you&rsquo;ll need a
-test framework that matches the language bindings, eg NUnit for .NET, JUnit
-for Java, RSpec for Ruby, etc.</p>
+<p>C&rsquo;est là que divers frameworks entrent en jeu. Au minimum, vous aurez besoin d&rsquo;un
+cadre de test qui correspond aux liaisons de langage, par exemple NUnit pour .NET, JUnit
+pour Java, RSpec pour Ruby, etc.</p>
 
-<p>The test framework is responsible for running and executing your WebDriver
-and related steps in your tests. As such, you can think of it looking akin
-to the following image.</p>
+<p>Le framework de test est responsable de l&rsquo;exécution et de l&rsquo;exécution de votre WebDriver
+et les étapes connexes dans vos tests. En tant que tel, vous pouvez penser qu&rsquo;il ressemble à
+à l&rsquo;image suivante.</p>
 
-<p><img src="https://selenium.dev/documentation/fr/images/test_framework.png?width=400px" alt="Test framework" /></p>
+<p><img src="https://selenium.dev/documentation/fr/images/test_framework.png?width=400px" alt="Cadre de test" /></p>
 
-<p>Natural language frameworks/tools such as Cucumber may exist as part of that
-Test Framework box in the figure above, or they may wrap the Test Framework
-entirely in their own implementation.</p>
+<p>Des cadres / outils en langage naturel tels que le concombre peuvent exister dans le cadre de cette
+Test Framework cadre dans la figure ci-dessus, ou ils peuvent envelopper le Test Framework
+entièrement dans leur propre mise en œuvre.</p>
 
 
 <footer class=" footline" >
@@ -2045,7 +2038,7 @@ entirely in their own implementation.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/webdriver/understanding_the_components/">
       “Comprendre les composants”
-    </a> was last updated on: 07 Feb 2020 16:59:19 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/f45a49989fb9a378b622eac3ad457199cefdd65c">update tophat banner with Selenium Conf India and Chicago details [deploy site] (f45a49989)</a>
+    </a> was last updated on: 19 Feb 2020 16:34:58 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/74b067292dd844578bf28cc52da824d789b3b80f">Modify: [EN]-&gt; [FR] tanslating WebDriver-Understanding the components document (#241) [deploy site] (74b067292)</a>
 </h5>
         
         </div> 
@@ -3207,19 +3200,19 @@ entirely in their own implementation.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582107676"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582110408"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582107676"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582107676"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582110408"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582110408"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582107676" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582107676"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582110408" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582110408"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
