@@ -1,39 +1,26 @@
 ---
-title: "Page object models"
+title: "ページオブジェクトモデル"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。
+ページオブジェクトは、AUT（テスト対象アプリケーション）のページへのインターフェイスとして機能するオブジェクト指向クラスです。
+テストは、そのページのUIと対話する必要があるときは常に、このページオブジェクトクラスのメソッドを使用します。
+利点は、ページのUIが変更された場合、テスト自体を変更する必要はなく、ページオブジェクト内のコードのみを変更する必要があることです。
+その後、その新しいUIをサポートするためのすべての変更は1か所に配置されます。
 
-Page Object is a Design Pattern which has become popular in test automation for
-enhancing test maintenance and reducing code duplication. A page object is an
-object-oriented class that serves as an interface to a page of your AUT. The
-tests then use the methods of this page object class whenever they need to
-interact with the UI of that page. The benefit is that if the UI changes for
-the page, the tests themselves don’t need to change, only the code within the
-page object needs to change. Subsequently all changes to support that new UI
-are located in one place.
+ページオブジェクトデザインパターンには、次の利点があります。
 
-The Page Object Design Pattern provides the following advantages:
+* テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。
+* これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。
 
-* There is a clean separation between test code and page specific code such as
-  locators (or their use if you’re using a UI Map) and layout.
-* There is a single repository for the services or operations offered by the page
-  rather than having these services scattered throughout the tests.
+どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。
+この'テストデザインパターン'が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。
+詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。
+多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。
+ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
 
-In both cases this allows any modifications required due to UI changes to all
-be made in one place. Useful information on this technique can be found on
-numerous blogs as this ‘test design pattern’ is becoming widely used. We
-encourage the reader who wishes to know more to search the internet for blogs
-on this subject. Many have written on this design pattern and can provide
-useful tips beyond the scope of this user guide. To get you started, though,
-we’ll illustrate page objects with a simple example.
-
-First, consider an example, typical of test automation, that does not use a
-page object:
+最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。
 
 ```java
 /***
@@ -41,93 +28,108 @@ page object:
  */
 public class Login {
 
-        public void testLogin() {
-                selenium.type("inputBox", "testUser");
-                selenium.type("password", "my supersecret password");
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("PageWaitPeriod");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  public void testLogin() {
+    // fill login data on sign-in page
+    driver.findElement(By.name("user_name")).sendKeys("testUser");
+    driver.findElement(By.name("password")).sendKeys("my supersecret password");
+    driver.findElement(By.name("sign_in")).click();
+
+    // verify h1 tag is "Hello userName" after login
+    driver.findElement(By.tagName("h1")).isDisplayed();
+    assertThat(driver.findElement(By.tagName("h1")).getText(), is("Hello userName"));
+  }
 }
 ```
 
-There are two problems with this approach.
+このアプローチには2つの問題があります。
 
-* There is no separation between the test method and the AUT’s locators (IDs in 
-this example); both are intertwined in a single method. If the AUT’s UI changes 
-its identifiers, layout, or how a login is input and processed, the test itself 
-must change.
-* The ID-locators would be spread in multiple tests, in all tests that had to 
-use this login page.
+* テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。
+どちらも単一のメソッドで絡み合っています。
+AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。
+* IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。
 
-Applying the page object techniques, this example could be rewritten like this
-in the following example of a page object for a Sign-in page.
+ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
 
 ```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 /**
  * Page Object encapsulates the Sign-in page.
  */
 public class SignInPage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  // <input name="user_name" type="text" value="">
+  private By usernameBy = By.name("user_name");
+  // <input name="password" type="password" value="">
+  private By passwordBy = By.name("password");
+  // <input name="sign_in" type="submit" value="SignIn">
+  private By signinBy = By.name("sign_in");
 
-        public SignInPage(Selenium selenium) {
-                this.selenium = selenium;
-                if(!selenium.getTitle().equals("Sign in page")) {
-                        throw new IllegalStateException("This is not sign in page, current page is: "
-                                        +selenium.getLocation());
-                }
-        }
+  public SignInPage(WebDriver driver){
+    this.driver = driver;
+  }
 
-        /**
-         * Login as valid user
-         *
-         * @param userName
-         * @param password
-         * @return HomePage object
-         */
-        public HomePage loginValidUser(String userName, String password) {
-                selenium.type("usernamefield", userName);
-                selenium.type("passwordfield", password);
-                selenium.click("sign-in");
-                selenium.waitForPageToLoad("waitPeriod");
-
-                return new HomePage(selenium);
-        }
+  /**
+    * Login as valid user
+    *
+    * @param userName
+    * @param password
+    * @return HomePage object
+    */
+  public HomePage loginValidUser(String userName, String password) {
+    driver.findElement(usernameBy).sendKeys(userName);
+    driver.findElement(passwordBy).sendKeys(password);
+    driver.findElement(signinBy).click();
+    return new HomePage(driver);
+  }
 }
 ```
 
-and page object for a Home page could look like this.
+そして、ホームページのページオブジェクトは次のようになります。
 
 ```java
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
 /**
  * Page Object encapsulates the Home Page
  */
 public class HomePage {
+  protected static WebDriver driver;
 
-        private Selenium selenium;
+  // <h1>Hello userName</h1>
+  private By messageBy = By.tagName("h1");
 
-        public HomePage(Selenium selenium) {
-                if (!selenium.getTitle().equals("Home Page of logged in user")) {
-                        throw new IllegalStateException("This is not Home Page of logged in user, current page" +
-                                        "is: " +selenium.getLocation());
-                }
-        }
+  public HomePage(WebDriver driver){
+    this.driver = driver;
+    if (!driver.getTitle().equals("Home Page of logged in user")) {
+      throw new IllegalStateException("This is not Home Page of logged in user," +
+            " current page is: " + driver.getCurrentUrl());
+    }
+  }
 
-        public HomePage manageProfile() {
-                // Page encapsulation to manage profile functionality
-                return new HomePage(selenium);
-        }
+  /**
+    * Get message (h1 tag)
+    *
+    * @return String message text
+    */
+  public String getMessageText() {
+    return driver.findElement(messageBy).getText();
+  }
 
-        /*More methods offering the services represented by Home Page
-        of Logged User. These methods in turn might return more Page Objects
-        for example click on Compose mail button could return ComposeMail class object*/
-
+  public HomePage manageProfile() {
+    // Page encapsulation to manage profile functionality
+    return new HomePage(driver);
+  }
+  /* More methods offering the services represented by Home Page
+  of Logged User. These methods in turn might return more Page Objects
+  for example click on Compose mail button could return ComposeMail class object */
 }
 ```
 
-So now, the login test would use these two page objects as follows.
+したがって、ログインテストでは、これら2つのページオブジェクトを次のように使用します。
 
 ```java
 /***
@@ -135,40 +137,33 @@ So now, the login test would use these two page objects as follows.
  */
 public class TestLogin {
 
-        public void testLogin() {
-                SignInPage signInPage = new SignInPage(selenium);
-                HomePage homePage = signInPage.loginValidUser("userName", "password");
-                Assert.assertTrue(selenium.isElementPresent("compose button"),
-                                "Login was unsuccessful");
-        }
+  @Test
+  public void testLogin() {
+    SignInPage signInPage = new SignInPage(driver);
+    HomePage homePage = signInPage.loginValidUser("userName", "password");
+    assertThat(homePage.getMessageText(), is("Hello userName"));
+  }
+
 }
 ```
 
-There is a lot of flexibility in how the page objects may be designed, but
-there are a few basic rules for getting the desired maintainability of your
-test code.
+ページオブジェクトの設計方法には多くの柔軟性がありますが、テストコードの望ましい保守性を得るための基本的なルールがいくつかあります。
 
-Page objects themselves should never make verifications or assertions. This is
-part of your test and should always be within the test’s code, never in an page
-object. The page object will contain the representation of the page, and the
-services the page provides via methods but no code related to what is being
-tested should be within the page object.
+ページオブジェクト自体は、検証やアサーションを行うべきではありません。
+これはテストの一部であり、常にページオブジェクトではなく、テストのコード内にある必要があります。
+ページオブジェクトには、ページの表現と、ページがメソッドを介して提供するサービスが含まれますが、テスト対象に関連するコードはページオブジェクト内に存在しないようにします。
 
-There is one, single, verification which can, and should, be within the page
-object and that is to verify that the page, and possibly critical elements on
-the page, were loaded correctly. This verification should be done while
-instantiating the page object. In the examples above, both the SignInPage and
-HomePage constructors check that the expected page is available and ready for
-requests from the test.
+ページオブジェクト内に存在する可能性のある単一の検証があります。
+これは、ページおよびページ上の重要な要素が正しく読み込まれたことを検証するためのものです。
+この検証は、ページオブジェクトをインスタンス化する間に実行する必要があります。
+上記の例では、SignInPageコンストラクターとHomePageコンストラクターの両方が期待するページを取得し、テストからの要求に対応できることを確認します。
 
-A page object does not necessarily need to represent an entire page. The Page
-Object design pattern could be used to represent components on a page. If a
-page in the AUT has multiple components, it may improve maintainability if
-there is a separate page object for each component.
+ページオブジェクトは、必ずしもページ全体を表す必要はありません。
+ページオブジェクトデザインパターンは、ページ上のコンポーネントを表すために使用できます。
+AUTのページに複数のコンポーネントがある場合、コンポーネントごとに個別のページオブジェクトがあると、保守性が向上する場合があります。
 
-There are other design patterns that also may be used in testing. Some use a
-Page Factory for instantiating their page objects. Discussing all of these is
-beyond the scope of this user guide. Here, we merely want to introduce the
-concepts to make the reader aware of some of the things that can be done. As
-was mentioned earlier, many have blogged on this topic and we encourage the
-reader to search for blogs on these topics.
+また、テストで使用できる他のデザインパターンがあります。
+ページファクトリを使用してページオブジェクトをインスタンス化するものもあります。
+これらすべてについて議論することは、このユーザーガイドの範囲を超えています。
+ここでは、読者にできることのいくつかを認識させるための概念を紹介したいだけです。
+前述のように、多くの人がこのトピックについてブログを書いていますし、読者がこれらのトピックに関するブログを検索することをお勧めします。

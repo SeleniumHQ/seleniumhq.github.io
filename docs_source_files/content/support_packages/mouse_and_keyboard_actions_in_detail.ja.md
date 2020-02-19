@@ -3,18 +3,13 @@ title: "マウスアクションの詳細"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-Mouse represents a mouse event. Mouse actions are performed 
-by using low-level interface which allows us to 
-provide virtualized device input action to the web browser.
+マウスは、マウスイベントを表します。
+マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
 
-## clickAndHold
+## クリックとホールド
 
-It will move to the element and clicks (without releasing) in the middle of the given element.
+要素に移動し、指定された要素の中央で（解放せずに）クリックします。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -141,8 +136,8 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## contextClick
-This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
+## コンテキストクリック（右クリック）
+このメソッドは、最初に要素の位置へのマウス移動を実行し、指定された要素でコンテキストクリック（右クリック）を実行します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -269,8 +264,8 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## doubleClick
-It will move to the element and performs a double-click in the middle of the given element.
+## ダブルクリック
+要素に移動し、指定された要素の中央でダブルクリックを実行します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -397,8 +392,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## moveToElement
-This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
+## 要素への移動
+このメソッドは、マウスを要素の中央に移動します。
+このアクションを実行すると、要素もビューにスクロールされます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -525,9 +521,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## moveByOffset:
+## オフセットによる移動
 
-This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
+このメソッドは、マウスを現在の位置（または0,0）から指定したオフセットだけ移動します。
+座標がビューウィンドウの外側にある場合、マウスはブラウザウィンドウの外側になります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -672,10 +669,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## dragAndDrop
+## ドラッグアンドドロップ
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+このメソッドは、最初にソース要素でクリックアンドホールドを実行し、ターゲット要素の位置に移動してからマウスを離します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -812,9 +808,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## dragAndDropBy
+## オフセット分のドラッグアンドドロップ
 
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+このメソッドは、まずソース要素でクリックアンドホールドを実行し、指定されたオフセットに移動してからマウスを離します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -965,10 +961,10 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## release
+## リリース
 
-This action releases the depressed left mouse button. If WebElement is passed, 
-it will release depressed left mouse button on the given WebElement
+このアクションは、押し下げられたマウスの左ボタンをリリースします。
+WebElementが渡されると、指定されたWebElementでマウスの左ボタンが押された状態でリリースされます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

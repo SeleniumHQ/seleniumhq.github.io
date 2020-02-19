@@ -12,25 +12,13 @@
     
     
     <item>
-      <title>Browser navigation</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/support_packages/browser_navigation/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed). driver.navigate().forward(); // Go back one page in the browser (if you&amp;#39;re not on the // first page that was viewed).</description>
-    </item>
-    
-    <item>
-      <title>Captchas</title>
+      <title>CAPTCHA（キャプチャ）</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/captchas/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
+      <description>CAPTCHA（キャプチャ）は、 Completely Automated Public Turing test to tell Computers and Humans Apart （コンピューターと人間を区別するための完全に自動化された公開チューリングテスト）の略で、自動化を防ぐように明示的に設計されているため、試さないでください！ CAPTCHAチェックを回避するための2つの主要な戦略があります。
+ テスト環境でCAPTCHAを無効にします テストがCAPTCHAをバイパスできるようにするフックを追加します  </description>
     </item>
     
     <item>
@@ -42,38 +30,6 @@ Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statemen
       <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
  The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
-    </item>
-    
-    <item>
-      <title>Page object models</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
-    </item>
-    
-    <item>
-      <title>Purposes and main functionalities</title>
-      <link>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
-      <title>Remote WebDriver server</title>
-      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
-Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test. Then, from the directory with the jar, run the following:
-java -jar selenium-server-standalone-{VERSION}.</description>
     </item>
     
     <item>
@@ -103,16 +59,6 @@ pip install selenium また、PyPI source archive (selenium-x.x.x.tar.gz)をダ�
 python setup.py install C# C#へのSeleniumライブラリのインストールはNuGetを使います。
 # Using package manager Install-Package Selenium.WebDriver # or using .Net CLI dotnet add package Selenium.WebDriver Ruby RubyへのSeleniumライブラリのインストールはgemを使います。
 gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラリのインストールはnpmを使います。</description>
-    </item>
-    
-    <item>
-      <title>Shared capabilities</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
     </item>
     
     <item>
@@ -167,45 +113,56 @@ Grid WebDriverのテストを開発した後、テストを複数のブラウザ
     </item>
     
     <item>
-      <title>Components of a Grid</title>
-      <link>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</link>
+      <title>ページオブジェクトモデル</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</guid>
+      <description>ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。 ページオブジェクトは、AUT（テスト対象アプリケーション）のページへのインターフェイスとして機能するオブジェクト指向クラスです。 テストは、そのページのUIと対話する必要があるときは常に、このページオブジェクトクラスのメソッドを使用します。 利点は、ページのUIが変更された場合、テスト自体を変更する必要はなく、ページオブジェクト内のコードのみを変更する必要があることです。 その後、その新しいUIをサポートするためのすべての変更は1か所に配置されます。
+ページオブジェクトデザインパターンには、次の利点があります。
+ テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。 これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。  どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。 この&amp;rsquo;テストデザインパターン&amp;rsquo;が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。 詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。 多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。 ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
+最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。
+/*** * Tests login feature */ public class Login { public void testLogin() { // fill login data on sign-in page  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign_in&amp;#34;)).click(); // verify h1 tag is &amp;#34;Hello userName&amp;#34; after login  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } このアプローチには2つの問題があります。
+ テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。 どちらも単一のメソッドで絡み合っています。 AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。 IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。  ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
+import org.openqa.selenium.By; import org.</description>
     </item>
     
     <item>
-      <title>Domain specific language</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</link>
+      <title>リモートWebDriverサーバー</title>
+      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
+      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</guid>
+      <description>サーバーは、テストするブラウザーがインストールされたマシンで常に実行されます。 サーバーは、コマンドラインから、またはコード設定を通じて使用できます。
+コマンドラインからサーバーを起動する 一旦、selenium-server-standalone-{VERSION}.jarをダウンロードしたら、テストしたいブラウザーのあるコンピューターに配置します。 次に、jarを含むディレクトリから、次のコマンドを実行します。
+java -jar selenium-server-standalone-{VERSION}.jar サーバーを実行するにあたって考慮すること 呼び出し元は、Selenium#stop()またはWebDriver#quitを呼び出して、各セッションを適切に終了すべきです。
+selenium-serverは、進行中の各セッションのメモリ内ログを保持します。 これらのログは、Selenium#stop()またはWebDriver#quitが呼び出されるとクリアされます。 これらのセッションの終了を忘れると、サーバーでメモリリークが発生する可能性があります。 非常に長時間実行されるセッションを維持する場合は、時々停止または終了する必要があります（または-Xmx jvmオプションでメモリを増やします）。
+タイムアウト (version 2.21以降) サーバーには2つの異なるタイムアウトがあり、次のように設定できます。
+java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  ブラウザーのハングを許可する時間を制御します（値は秒単位）。  timeout  セッションが回収されるまでにクライアントがいなくなる時間を制御します（値は秒単位）。   システムプロパティselenium.server.session.timeoutは、2.21からサポートされなくなりました。
+browserTimeoutは、通常のタイムアウトメカニズムが失敗した場合の予備のタイムアウトメカニズムであることに注意してください。これは主にグリッド/サーバー環境で使用され、クラッシュ/失われたプロセスが長く滞留、ランタイム環境を汚染しないようにします。
+プログラムでサーバーを構成する 理論的には、プロセスはDriverServletをURLにマッピングするのと同じくらい簡単ですが、ページを全体的にコードで構成されたJettyなどの軽量コンテナでホストすることもできます。これを行う手順は次のとおりです。
+selenium-server.zipをダウンロードして解凍します。 JARをCLASSPATHに配置します。 AppServerという新しいクラスを作成します。 ここでは、Jettyを使用しているので、それもダウンロードする必要があります。
+import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.mortbay.jetty.nio.SelectChannelConnector; import org.mortbay.jetty.security.SslSocketConnector; import org.mortbay.jetty.webapp.WebAppContext; import javax.servlet.Servlet; import java.io.File; import org.openqa.selenium.remote.server.DriverServlet; public class AppServer { private Server server = new Server(); public AppServer() throws Exception { WebAppContext context = new WebAppContext(); context.</description>
     </item>
     
     <item>
-      <title>Driver specific capabilities</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <title>共有機能</title>
+      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.</description>
+      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
+      <description> ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
+次の表で説明するように、ページロード戦略は document.readyState を問い合わせます。
+   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    </description>
     </item>
     
     <item>
-      <title>File downloads</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</link>
+      <title>目的と主な機能</title>
+      <link>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
+      <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
+      <description> すべてのテストの中央エントリポイント ブラウザーが実行されるノード・環境の管理と制御 スケーリング テストを並列実行 クロスプラットフォームでのテスト 負荷分散  </description>
     </item>
     
     <item>
@@ -230,17 +187,6 @@ Functional end-user tests such as Selenium tests are expensive to run, however. 
     </item>
     
     <item>
-      <title>Remote WebDriver client</title>
-      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
-    </item>
-    
-    <item>
       <title>Typographical conventions</title>
       <link>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -262,13 +208,13 @@ Line length When editing the documentation’s source, which is written in plain
     </item>
     
     <item>
-      <title>Working with colours</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
+      <title>グリッドのコンポーネント</title>
+      <link>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <guid>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</guid>
+      <description>ハブ  仲介者およびマネージャー テストを実行する要求を受け入れます クライアントから命令を受け取り、ノード上でリモートで実行します スレッドを管理します  ハブ は、すべてのテストが送信される中心点です。 各Selenium Gridは、ちょうど1つのハブで構成されます。 ハブは、それぞれのクライアント（CIサーバー、開発者マシンなど）から到達可能である必要があります。 ハブは、テストが委任される1つ以上のノードを接続します。
+ノード  ブラウザが存在する場所 ハブに自分自身を登録し、その機能を伝えます ハブからリクエストを受信して実行します  ノード は、個々のコンピューターシステムでテストを実行するさまざまなSeleniumインスタンスです。 グリッドには多くのノードが存在する場合があります。 ノードであるマシンは、ハブまたは他のノードと同じプラットフォームであったり、同じブラウザーを選定する必要はありません。 Windows上のノードは、Internet Explorerをブラウザーオプションとして提供する機能を備えている場合がありますが、これはLinuxまたはMacでは不可能です。</description>
     </item>
     
     <item>
@@ -280,6 +226,29 @@ Line length When editing the documentation’s source, which is written in plain
       <description>Seleniumはプラグインを通して拡張することができます。ここにはサードパーティによって作られたいくつかのプラグインがあります。 独自のプラグインを作成する、またはリストする方法についてはドキュメントを参照してください。
 これらのプラグインはSeleniumプロジェクトによってサポート、メンテナンス、主催、承認されているものではないことに注意してください。加えて、以下にリストされているプラグインは必ずしもApache License v.2.0によってライセンスされているわけではありません。 いくつかは他のフリーかつオープンソースのライセンス下で使用可能であり、他のいくつかはプロプライエタリなライセンスの下でのみ使用可能です。プラグインとその配布ライセンスに関するどんな質問も、それぞれの開発者に対して上げる必要があります。
    ブラウザ 最新版 変更履歴 イシュートラッカー     Mozilla GeckoDriver 最新版 変更履歴 イシュートラッカー   Google Chrome Driver 最新版 変更履歴 イシュートラッカー   Opera 最新版 - イシュートラッカー   Microsoft Edge Driver 最新版 - イシュートラッカー   SafariDriver ビルトイン - イシュートラッカー    </description>
+    </item>
+    
+    <item>
+      <title>ドメイン固有言語（DSL）</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</guid>
+      <description>ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。 それによって、ユーザーは、プログラマーの言葉でなく、自分の言葉でシステムとやりとりすることができます。
+通常、ユーザーはサイトの外観を気にしません。 装飾、アニメーション、グラフィックスは気にしません。 彼らはあなたのシステムを使用して、新しい従業員を最小限の難しさでプロセスに押し込みたいと考えています。 彼らはアラスカへの旅行を予約したい。 ユニコーンを設定して割引価格で購入したいのです。 テスターとしてのあなたの仕事は、この考え方を&amp;rdquo;とらえる&amp;rdquo;ことにできるだけ近づくことです。 それを念頭に置いて、テストスクリプト（ユーザーの唯一のプレリリースの代理人）がユーザーを&amp;rdquo;代弁し&amp;rdquo;、表現するように、作業中のアプリケーションの&amp;rdquo;モデリング&amp;rdquo;に取り掛かります。
+Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記述したメソッドで表されます。 開発者と利害関係者（ユーザー、製品所有者、ビジネスインテリジェンススペシャリストなど）との伝達が可能になります。
+利点  Readable: ビジネス関係者はそれを理解できます。 Writable: 書きやすく、不要な重複を避けます。 Extensible: 機能は（合理的に）契約と既存の機能を壊すことなく追加できます。 Maintainable: 実装の詳細をテストケースから除外することにより、AUT* の変更に対して十分に隔離されます。  Java Javaの妥当なDSLメソッドの例を次に示します。 簡潔にするために、driverオブジェクトが事前に定義されており、メソッドで使用可能であることを前提としています。
+/** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.findElement(By.id(&amp;#34;loginField&amp;#34;)); loginField.clear(); loginField.sendKeys(username); // Fill out the password field. The locator we&amp;#39;re using is &amp;#34;By.</description>
+    </item>
+    
+    <item>
+      <title>ドライバー固有の機能</title>
+      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <description>Firefox FirefoxOptions を使用してCapabilitiesを定義する FirefoxOptions は、Firefoxブラウザの機能を定義する新しい方法であり、通常はDesiredCapabilitiesよりも優先して使用する必要があります。
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>
     
     <item>
@@ -304,13 +273,34 @@ Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on 
     </item>
     
     <item>
-      <title>Generating application state</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/</link>
+      <title>ファイルダウンロード</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
+      <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
+      <description>Seleniumの管理下にあるブラウザーでリンクをクリックしてダウンロードを開始することは可能ですが、APIはダウンロードの進行状況を公開しないため、ダウンロードしたファイルのテストには理想的ではありません。 これは、ファイルのダウンロードは、Webプラットフォームとのユーザーインタラクションをエミュレートする重要な側面とは見なされないためです。 代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 libcurl などのHTTPリクエストライブラリに渡します。</description>
+    </item>
+    
+    <item>
+      <title>リモートWebDriverクライアント</title>
+      <link>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
+      <description>リモートWebDriverクライアントを実行するには、まずRemoteWebDriverに接続する必要があります。 これを行うには、テストを実行しているサーバーのアドレスをURLに指定します。 設定をカスタマイズするために、desired capabilitiesを設定します。 以下は、Firefoxでテストを実行しているリモートWebサーバー www.example.com を指定してリモートWebDriverオブジェクトをインスタンス化する例です。
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.for :remote, url: &amp;#34;http://www.</description>
+    </item>
+    
+    <item>
+      <title>色を扱う</title>
+      <link>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
+      <description>テストの一部として何かの色を検証したい場合があります。 問題は、ウェブ上の色の定義が一定ではないことです。 色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
+心配しないでください。解決策があります。: Color クラスです！
+まず、クラスをインポートする必要があります。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.Color    これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。</description>
     </item>
     
     <item>
@@ -325,25 +315,16 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
     </item>
     
     <item>
-      <title>HTTP response codes</title>
+      <title>HTTPレスポンスコード</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
-Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
-    </item>
-    
-    <item>
-      <title>Setting up your own Grid</title>
-      <link>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud. It is certainly possible to also run nodes on your own hardware.</description>
+      <description>Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。 これは、Seleniumを通過したすべてのブラウザートラフィックをキャプチャまたは操作できることを意味していました。 captureNetworkTraffic() メソッドは、HTTPレスポンスコードを含むブラウザーと自動化されているサイト間のすべてのネットワークトラフィックをキャプチャすることを目的としています。
+Selenium WebDriverは、ブラウザーの自動化に対するまったく異なるアプローチであり、ユーザーのように振る舞うことを好むため、WebDriverを使用してテストを記述する方法で表現します。 自動化された機能テストでは、ステータスコードの確認はテストの失敗の特に重要な詳細ではありません。 それに先行する手順がより重要です。
+ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。 これらのエラーページの1つに遭遇したときに&amp;rdquo;早く失敗&amp;rdquo;する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば &amp;lt;h1&amp;gt; タグ）のコンテンツをチェックすることです。 ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。 場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。 WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
+Webページ自体を確認することは、WebDriverの理想的なプラクティスに沿っており、WebDriverのユーザーのWebサイトの見え方を表現し、主張します。
+HTTPステータスコードをキャプチャするための高度なソリューションは、プロキシを使用してSelenium RCの動作を複製することです。 WebDriver APIは、ブラウザーのプロキシを設定する機能を提供します。 Webサーバーとの間で送受信されるリクエストのコンテンツをプログラムで操作できるプロキシがいくつかあります。 プロキシを使用すると、リダイレクトレスポンスコードへの応答方法を決めることができます。 さらに、すべてのブラウザーがWebDriverでレスポンスコードを利用できるようにするわけではないため、プロキシを使用することを選択すると、すべてのブラウザーで機能するソリューションが得られます。</description>
     </item>
     
     <item>
@@ -358,14 +339,13 @@ For web applications, the automation of this testing can be done directly with S
     </item>
     
     <item>
-      <title>Working with select elements</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link>
+      <title>アプリケーション状態の生成</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/</guid>
+      <description>Seleniumはテストケースの準備に使用しないでください。 テストケースのすべての反復アクションと準備は、他の方法で行う必要があります。 たとえば、ほとんどのWeb UIには認証があります（ログインフォームなど）。 すべてのテストの前にWebブラウザーからのログインをなくすことで、テストの速度と安定性の両方が向上します。 AUT* にアクセスするためのメソッドを作成する必要があります（APIを使用してログインし、Cookieを設定するなど）。 また、テスト用にデータをプリロードするメソッドの作成は、Seleniumを使用して実行しないほうがいいです。 前述のように、AUT* のデータを作成するには、既存のAPIを活用する必要があります。
+*AUT: Application under test（テスト対象アプリケーション）</description>
     </item>
     
     <item>
@@ -395,6 +375,26 @@ Java Python C# Ruby JavaScript Kotlin //Convenient driver.get(&amp;#34;https://s
     </item>
     
     <item>
+      <title>独自のグリッドを設定する</title>
+      <link>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</guid>
+      <description>Selenium Gridを使用するには、ノード用の独自のインフラストラクチャを維持する必要があります。 これは面倒で時間のかかる作業になる可能性があるため、多くの組織はこのインフラストラクチャを提供するためにAmazon EC2やGoogle ComputeなどのIaaSプロバイダーを使用しています。
+他の選択肢として、クラウドのサービスとしてSelenium Gridを提供するSauce LabsやTesting Botなどのプロバイダーの使うこともできます。 独自のハードウェアでノードを実行することも確かに可能です。 この章では、独自のノードインフラストラクチャを備えた独自のグリッドを実行するオプションについて詳しく説明します。
+クイックスタート この例では、Selenium 2グリッドハブを起動し、WebDriverノードとSelenium 1 RCレガシーノードの両方を登録する方法を示します。 また、Javaからグリッドを呼び出す方法も示します。 ここでは、ハブとノードが同じマシンで実行されていますが、もちろん、selenium-server-standaloneを複数のマシンにコピーできます。
+selenium-server-standaloneパッケージには、グリッドの実行に必要なハブ、WebDriver、およびレガシーRCが含まれています。 ant はもう必要ありません。 selenium-server-standalone-.jarは https://selenium.dev/downloads/ からダウンロードできます。
+ステップ1：ハブを開始する ハブは、テストリクエストを受信し、それらを適切なノードに配布する中心点です。 配布は機能ベースで行われます。 つまり、一連の機能を必要とするテストは、その機能セットまたは機能のサブセットを提供するノードにのみ配布されます。
+テストのDesiredCapabilitiesは、 任意の を意味するため、ハブはDesiredCapabilitiesの設定に完全に一致するノードを見つけることを保証できません。
+コマンドプロンプトを開き、selenium-server-standalone.jarファイルをコピーしたディレクトリに移動します。 ハブを起動するには、-role hubフラグをスタンドアロンサーバーに渡します。
+java -jar selenium-server-standalone.jar -role hub ハブはデフォルトでポート4444をリッスンします。 ブラウザーウィンドウを開いて http://localhost:4444/grid/console に移動すると、ハブのステータスを表示できます。
+デフォルトのポートを変更するには、コマンドを実行するときにリッスンするポートを表す整数を持つオプションの -port フラグを追加できます。 また、JSON構成ファイル（以下を参照）に表示される他のすべてのオプションは、可能なコマンドラインフラグです。
+確かに上記の簡単なコマンドだけでうまくいくことができますが、より高度な構成が必要な場合は、JSON形式の構成ファイルを指定して、開始時にハブを構成することもできます。 JSON形式の構成ファイルを指定して開始時にハブを構成する方法は以下のとおりです。
+java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug 以下に、 hubConfig.json ファイルの例を示します。 ステップ2でノード構成ファイルを提供する方法について詳しく説明します。
+{ &amp;#34;_comment&amp;#34; : &amp;#34;Configuration for Hub - hubConfig.json&amp;#34;, &amp;#34;host&amp;#34;: ip, &amp;#34;maxSession&amp;#34;: 5, &amp;#34;port&amp;#34;: 4444, &amp;#34;cleanupCycle&amp;#34;: 5000, &amp;#34;timeout&amp;#34;: 300000, &amp;#34;newSessionWaitTimeout&amp;#34;: -1, &amp;#34;servlets&amp;#34;: [], &amp;#34;prioritizer&amp;#34;: null, &amp;#34;capabilityMatcher&amp;#34;: &amp;#34;org.</description>
+    </item>
+    
+    <item>
       <title>要素を探す</title>
       <link>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -404,6 +404,17 @@ Java Python C# Ruby JavaScript Kotlin //Convenient driver.get(&amp;#34;https://s
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element_by_id(&amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     例を見ての通り、WebDriverで要素を特定するには、WebDriverクラスのインスタンスを使います。findElement(By)メソッドはWebElementという別の基本的なオブジェクトを返します。
  WebDriverはブラウザをあらわす WebElementは特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす  一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;));   cheese = driver.find_element_by_id(&amp;#34;cheese&amp;#34;) cheddar = cheese.</description>
+    </item>
+    
+    <item>
+      <title>選択要素の操作</title>
+      <link>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
+      <description>一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。 これを減らしてテストをきれいにするために、Seleniumサポートパッケージに Select クラスがあります。 それを使用するには、次のimportステートメントが必要です。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.ui.Select     そして、 &amp;lt;select&amp;gt; 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
+Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement);   select_element = driver.</description>
     </item>
     
     <item>
@@ -429,14 +440,15 @@ Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.
     </item>
     
     <item>
-      <title>Gmail, email and Facebook logins</title>
+      <title>Gmail、Eメール、Facebookログイン</title>
       <link>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
+      <description>複数の理由から、WebDriverを使用してGmailやFacebookなどのサイトにログインすることはお勧めしません。 これらのサイトの使用条件（アカウントがシャットダウンされるリスクがある）に違反することは別として、それは遅く、信頼性がありません。
+理想的なプラクティスは、メールプロバイダーが提供するAPIを使用すること、またはFacebookの場合、テストアカウントや友人などを作成するためのAPIを公開する開発者ツールサービスを使用することです。 APIの使用は少し大変な作業のように思えるかもしれませんが、速度、信頼性、および安定性に見返りがあります。 また、APIが変更されることはほとんどありませんが、WebページとHTMLロケーターは頻繁に変更され、テストフレームワークを更新する必要があります。
+テストの任意の時点でWebDriverを使用してサードパーティのサイトにログインすると、テストが長くなるため、テストが失敗するリスクが高くなります。 一般的な経験則として、テストが長くなるほど脆弱で信頼性が低くなります。
+W3C準拠 のWebDriver実装は、サービス拒否攻撃を軽減できるように、navigatorオブジェクトにwebdriverプロパティで注釈を付けます。</description>
     </item>
     
     <item>
@@ -450,24 +462,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Mock external services</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
-      <title>When to use Grid</title>
+      <title>グリッドを使用する場合</title>
       <link>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
+      <description>一般的に、グリッドを使用する理由は2つあります。
+ 複数のブラウザー、複数のバージョンのブラウザー、および異なるオペレーティングシステムで実行されているブラウザーに対してテストを実行するため。 テストスイートがテストがパスするのに完了するのにかかる時間を短縮するため。  グリッドは、複数のマシンを使用してテストを並行して実行することにより、テストパスの実行を高速化するために使用されます。 たとえば、100個のテストスイートがあり、それらのテストを実行するために4つの異なるマシン（VMまたは個別の物理マシン）をサポートするようにグリッドをセットアップした場合、テストスイートは単一のマシンでテストを連続して実行した場合と比較して（およそ）4分の1の時間で完了します。 大規模なテストスイート、および大量のデータ検証を実行するような長時間実行されるテストスイートの場合、これは大幅な時間の節約になります。 一部のテストスイートの実行には数時間かかる場合があります。 スイートの実行に費やす時間を増やすもう1つの理由は、開発者がAUTのコードをチェックインした後のテスト結果の所要時間を短縮することです。 アジャイルソフトウェア開発を実践しているソフトウェアチームは、一晩テストパスを一晩待つのではなく、できるだけ早くテストフィードバックを求めています。
+グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。 たとえば、仮想マシンの&amp;rdquo;グリッド&amp;rdquo;は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。 したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。 テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。
+さらに、すべて同じブラウザ、タイプ、およびバージョンのグリッドを持つことができます。 たとえば、それぞれがFirefox 70の3つのインスタンスを実行する4台のマシンのグリッドを持つことができ、利用可能なFirefoxインスタンスの&amp;rdquo;ある意味&amp;rdquo;での&amp;rdquo;サーバーファーム&amp;rdquo;を可能にします。 スイートが実行されると、各テストはグリッドに渡され、グリッドは次に利用可能なFirefoxインスタンスにテストを割り当てます。 この方法で、おそらく12のテストがすべて同時に並行して実行されるテストパスを取得し、テストパスの完了に必要な時間を大幅に短縮します。
+グリッドは非常に柔軟です。 これらの2つの例を組み合わせて、各ブラウザタイプとバージョンの複数のインスタンスを許可することができます。 このような構成では、迅速にテストがパスすることを完了するための並列実行と、複数のブラウザタイプおよびバージョンの同時サポートの両方が提供されます。</description>
     </item>
     
     <item>
@@ -476,10 +480,18 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
+      <description>マウスは、マウスイベントを表します。 マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
+クリックとホールド 要素に移動し、指定された要素の中央で（解放せずに）クリックします。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.</description>
+    </item>
+    
+    <item>
+      <title>モック外部サービス</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/</guid>
+      <description>外部サービスへの依存を排除すると、テストの速度と安定性が大幅に向上します。</description>
     </item>
     
     <item>
@@ -493,36 +505,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
 次のドキュメントを考えてみましょう。
 &amp;lt;!doctype html&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;Race Condition Example&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; var initialised = false; window.addEventListener(&amp;#34;load&amp;#34;, function() { var newElement = document.createElement(&amp;#34;p&amp;#34;); newElement.textContent = &amp;#34;Hello from JavaScript!&amp;#34;; document.body.appendChild(newElement); initialised = true; }); &amp;lt;/script&amp;gt; WebDriverの指示は十分問題なく見えるかもしれません。
 Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition.html&amp;#34;); WebElement element = driver.findElement(By.tagName(&amp;#34;p&amp;#34;)); assertEquals(element.getText(), &amp;#34;Hello from JavaScript!&amp;#34;);   driver.navigate(&amp;#34;file:///race_condition.html&amp;#34;) el = driver.find_element_by_tag_name(&amp;#34;p&amp;#34;) assert el.text == &amp;#34;Hello from JavaScript!</description>
-    </item>
-    
-    <item>
-      <title>Improved reporting</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc. Here are some links for more information regarding report outputs for several languages.</description>
-    </item>
-    
-    <item>
-      <title>Test dependency</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
-    </item>
-    
-    <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_web_elements/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
     </item>
     
     <item>
@@ -540,15 +522,21 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
     </item>
     
     <item>
-      <title>Avoid sharing state</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</link>
+      <title>テストの依存関係</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
- Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.
- Clean up stale data in the application that might be picked up by another test e.</description>
+      <guid>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</guid>
+      <description>自動テストに関する一般的な考え方と誤解は、特定のテスト順序に関するものです。 テストは 任意 の順序で実行でき、成功するために完了するために他のテストに依存してはなりません。</description>
+    </item>
+    
+    <item>
+      <title>改善されたレポート</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</guid>
+      <description>Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。 単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。 ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。 NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>
@@ -564,26 +552,42 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
     </item>
     
     <item>
-      <title>Performance testing</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
-    </item>
-    
-    <item>
-      <title>Working with cookies</title>
+      <title>クッキーの使用</title>
       <link>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
-      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
-WebDriver API provides a way to interact with cookies with built-in methods:
-Add Cookie It is used to add a cookie to the current browsing context.</description>
+      <description>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。 Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。
+WebDriver APIは、組み込みメソッドでCookieと対話するメソッドを提供します。
+クッキーの追加 現在のブラウジングコンテキストにCookieを追加するために使用されます。 Cookieの追加では、一連の定義済みのシリアル化可能なJSONオブジェクトのみを受け入れます。 受け入れられたJSONキー値のリストへのリンクはこちらにあります。
+まず、Cookieが有効になるドメインにいる必要があります。 サイトとの対話を開始する前にCookieを事前設定しようとしていて、ホームページが大きい場合/代替の読み込みに時間がかかる場合は、サイトで小さいページを見つけることです。（通常、たとえば http://example.com/some404page のような、404ページは小さいです。）
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context  driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } }   from selenium import webdriver driver = webdriver.Chrome() driver.get(&amp;#34;http://www.example.com&amp;#34;) # Adds the cookie into current browser context driver.</description>
+    </item>
+    
+    <item>
+      <title>パフォーマンステスト</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</guid>
+      <description>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。 それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。
+ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。 たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。
+他の潜在的な魅力は &amp;ldquo;時間の節約&amp;rdquo; です。 機能テストとパフォーマンステストを同時に実行します。 ただし、機能テストとパフォーマンステストには反対の目的があります。 機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。
+Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。 このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。
+使用する（オープンソース）パッケージの例は次のとおりです。: JMeter</description>
+    </item>
+    
+    <item>
+      <title>状態を共有しない</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</guid>
+      <description>いくつかの場所で言及されていますが、再度言及する価値があります。 テストが互いに分離されていることを確認してください。
+ テストデータを共有しないでください。 アクションを実行する1つを選択する前に、それぞれが有効な注文をデータベースに照会するいくつかのテストを想像してください。 2つのテストで同じ順序を選択すると、予期しない動作が発生する可能性があります。
+ 別のテストで取得される可能性のあるアプリケーション内の古いデータを削除します。 例: 無効な注文レコード
+ テストごとに新しいWebDriverインスタンスを作成します。 これにより、テストの分離が保証され、並列化がより簡単になります。
+  </description>
     </item>
     
     <item>
@@ -597,36 +601,36 @@ Add Cookie It is used to add a cookie to the current browsing context.</descript
     </item>
     
     <item>
-      <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
-Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods don’t rely on creating a browser and navigating to a page.</description>
-    </item>
-    
-    <item>
-      <title>Test independency</title>
+      <title>テストの独立性</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>各テストを独自のユニットとして記述します。 他のテストに依存しない方法でテストを記述してください。
+公開後にモジュールとしてWebサイトに表示されるカスタムコンテンツを作成できるコンテンツ管理システム（CMS）があり、CMSとアプリケーション間の同期に時間がかかる場合があるとします。
+モジュールをテストする間違った方法は、1つのテストでコンテンツが作成および公開され、別のテストでモジュールをチェックすることです。 コンテンツは公開後、他のテストですぐに利用できない可能性があるため、この方法はふさわしくありません。
+代わりに、影響を受けるテスト内でオン/オフできるスタブコンテンツを作成し、それをモジュールの検証に使用できます。 ただし、コンテンツの作成については、別のテストを行うことができます。</description>
     </item>
     
     <item>
-      <title>Consider using a fluent API</title>
+      <title>リンクスパイダー</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</guid>
+      <description>WebDriverを使用してリンクをスパイダーすることは、実行できないためではなく、最も理想的なツールではないため明らかに推奨される方法ではありません。 WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。
+このためにWebDriverを使用する代わりに、curl コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。 このタスクにWebDriverを使用しないことで、時間を大幅に節約できます。</description>
+    </item>
+    
+    <item>
+      <title>Fluent APIの使用を検討する</title>
       <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
-driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); The Google page object class with this fluent behavior might look like this:</description>
+      <description>マーチン・ファウラーは&amp;ldquo;Fluent API&amp;rdquo;という用語を作り出しました。 Seleniumは既に、FluentWaitクラスでこのようなものを実装しています。 これは、標準のWaitクラスの代替としてのものです。 ページオブジェクトでFluent APIデザインパターンを有効にしてから、次のようなコードスニペットを使用してGoogle検索ページを照会できます。
+driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); この流暢な動作を持つGoogleページオブジェクトクラスは次のようになります。
+public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&amp;gt; { private final WebDriver driver; private GSPFluentInterface gspfi; public class GSPFluentInterface { private GoogleSearchPage gsp; public GSPFluentInterface(GoogleSearchPage googleSearchPage) { gsp = googleSearchPage; } public GSPFluentInterface clickSearchButton() { gsp.searchButton.click(); return this; } public GSPFluentInterface setSearchString( String sstr ) { clearAndType( gsp.searchField, sstr ); return this; } } @FindBy(id = &amp;#34;gbqfq&amp;#34;) private WebElement searchField; @FindBy(id = &amp;#34;gbqfb&amp;#34;) private WebElement searchButton; public GoogleSearchPage(WebDriver driver) { gspfi = new GSPFluentInterface( this ); this.</description>
     </item>
     
     <item>
@@ -640,17 +644,6 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
     </item>
     
     <item>
-      <title>Fresh browser per test</title>
-      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
-    </item>
-    
-    <item>
       <title>Web要素</title>
       <link>https://selenium.dev/documentation/ja/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -660,6 +653,16 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
 WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
 要素の検索 要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。 これは、将来の要素アクションに使用できます。
 Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.Url = &amp;#34;http://www.google.com&amp;#34;; // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element IWebElement searchbox = driver.</description>
+    </item>
+    
+    <item>
+      <title>テストごとに新しいブラウザを起動する</title>
+      <link>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <description>クリーンな既知の状態から各テストを開始します。 理想的には、テストごとに新しい仮想マシンを起動します。 新しい仮想マシンの起動が実用的でない場合は、少なくともテストごとに新しいWebDriverを起動してください。 Firefoxの場合、既知のプロファイルでWebDriverを起動します。
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
     </item>
     
     <item>
