@@ -27,9 +27,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.</description>
+      <description>Zu Beginn ist es notwendig das die Selenium Bindings für Dein Automationsprojekt installiert werden. Der Installationsprozess ist von der gewählten Programmiersprache abhängig.
+Java Die Installation der Selenium Bibliotheken für Java kann mit Hilfe von Maven erfolgen. Füge in Deinem Projekt in die pom.xml die selenium-java dependecy hinzu.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Mit der selenium-java dependency ist es möglich Tests laufen zu lassen in allen von Selenium unterstützen Browsern. Falls Du Test nur in einem spezifischen Browser ausführen möchtest, ist es möglich auch nur die dependecy für den gewählten Browser in der pom.</description>
     </item>
     
     <item>
@@ -69,9 +69,8 @@ Diese Dokumentation wurde mit größter Sorgfalt erstellt, so vollständig und g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/introduction/the_selenium_project_and_tools/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium steuert Webbrowsers Selenium , ist Vieles, aber im Kern ist eine Sammlung von Werkzeugen um Webbrowser zu automatisieren. Es nutzt die besten Mechanismen die verfügbar sind um Browsersinstanzen zu steuern und Benutzereingaben zu simulieren.
+Es ermöglicht Aktionen von Benutzern zu simulieren; Texteingaben, Auswahl von Optionen in Drop-Downs, aktivieren von Checkboxen und anklicken von Links auf Webseiten. Es ermöglicht auch viele andere Möglichkeiten wie zum Beispiel Mausbewegungen, beliebige JavaScript Codeausführungen und vieles mehr.</description>
     </item>
     
     <item>
@@ -255,9 +254,8 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.
+Downloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.</description>
     </item>
     
     <item>
