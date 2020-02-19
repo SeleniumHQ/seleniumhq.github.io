@@ -9,7 +9,7 @@ weight: 8
 {{% /notice %}}
 
 Defines the current session's page loading strategy. 
-By default, when selenium loads a page, 
+By default, when Selenium WebDriver loads a page, 
 it follows the _normal_ pageLoadStrategy. 
 It is always recommended to stop downloading additional 
 resources (like images, css, js) when the page loading takes lot of time.
@@ -18,8 +18,8 @@ WebDriver _pageLoadStrategy_ supports the following values:
 
 ## normal
 
-This will make selenium to wait for the entire page is loaded. 
-When set to **normal** the selenium waits until the 
+This will make Selenium WebDriver to wait for the entire page is loaded. 
+When set to **normal**, Selenium WebDriver waits until the 
 [load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
 
 By default **normal** is set to browser if none is provided.
@@ -79,11 +79,11 @@ caps.setPageLoadStrategy("normal");
 
 ## eager
 
-This will make selenium to wait until the 
+This will make Selenium WebDriver to wait until the 
 initial HTML document has been completely loaded and parsed, 
 and discards loading of stylesheets, images and subframes.
 
-When set to **eager** selenium waits until 
+When set to **eager**, Selenium WebDriver waits until 
 [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
 
 {{< code-tab >}}
@@ -141,7 +141,7 @@ caps.setPageLoadStrategy("eager");
 
 ## none
 
-When set to **none** selenium only waits until the initial page is downloaded.
+When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
