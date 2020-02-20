@@ -28,9 +28,8 @@ Java Die Installation der Selenium Bibliotheken für Java kann mit Hilfe von Mav
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.
+Downloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.</description>
     </item>
     
     <item>
