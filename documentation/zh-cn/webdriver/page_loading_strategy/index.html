@@ -11,20 +11,20 @@
     <title>Page loading strategy :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582193885" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582193885" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582216275" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582216275" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582193885" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582216275" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582193885"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582216275"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582193885"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582193885"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582216275"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582216275"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582193885"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582216275"></script>
 
     
   </div>
@@ -2086,8 +2086,22 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <section id="kotlincode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL)
+    <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
+    }
+    <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2216,8 +2230,22 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER)
+    <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
+    }
+    <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2341,8 +2369,22 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 
 <section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE)
+    <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
+    }
+    <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2355,7 +2397,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/">
       “Page loading strategy”
-    </a> was last updated on: 20 Feb 2020 15:46:10 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/0c83c87fe7f9aaba0b6cc608e4f191378cf12724">Add: Adding initial document for Page load strategy (#240) [deploy site] (0c83c87fe)</a>
+    </a> was last updated on: 20 Feb 2020 20:31:00 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/74da35f2fb43cd20fc6186c3d489d74e7e030049">Add: Adding Kotlin sample code for  page load strategy (#244) (74da35f2f)</a>
 </h5>
         
         </div> 
@@ -3520,19 +3562,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582193885"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582216275"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582193885"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582193885"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582216275"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582216275"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582193885" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582193885"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582216275" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582216275"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

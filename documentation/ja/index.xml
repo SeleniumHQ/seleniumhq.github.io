@@ -189,13 +189,21 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
     </item>
     
     <item>
-      <title>Migrating from RC to WebDriver</title>
+      <title>RCからWebDriverへの移行</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests. But what of users who already have suites of existing tests? This guide is designed to demonstrate how to migrate your existing tests to the new APIs, allowing all new tests to be written using the new features offered by WebDriver.</description>
+      <description>Selenium WebDriverに移行する方法 Selenium 2を採用する際によくある質問は、「既存のテストセットに新しいテストを追加するときに正しいことは何ですか？」ということです。 フレームワークを初めて使用するユーザーは、新しいWebDriver APIを使用してテストを作成することから始めることができます。 しかし、既存のテストスイートを既に持っているユーザーはどうでしょうか？ このガイドは、既存のテストを新しいAPIに移行し、WebDriverが提供する新機能を使用してすべての新しいテストを作成する方法を示すことを目的としています。
+ここで紹介する方法は、1回の大規模なプッシュですべてをやり直す必要のない、WebDriver APIへの断片的な移行について説明しています。 これは、既存のテストの移行により多くの時間を割り当てることができることを意味します。 これにより、どこに労力を費やすかを決定しやすくなります。
+このガイドは、移行を行うための最良のサポートがあるため、Javaを使用して書かれています。 他の言語用のより優れたツールを提供するため、このガイドはそれらの言語を含むように拡張されます。
+WebDriverに移行する理由 一連のテストをあるAPIから別のAPIに移動するには、多大な労力が必要です。 なぜあなたとあなたのチームはこの動きを検討するのですか？ WebDriverを使用するためにSeleniumテストを移行することを検討する必要があるいくつかの理由を以下に示します。
+ 小さくコンパクトなAPI。 WebDriverのAPIは、元のSelenium RC APIよりもオブジェクト指向です。 これにより、作業が容易になります。 ユーザー操作のより良いエミュレーション。 可能な場合、WebDriverはWebページと対話するためにネイティブイベントを使用します。 これは、ユーザーがサイトやアプリを操作する方法をより厳密に模倣しています。 さらに、WebDriverは、サイトとの複雑な相互作用をモデル化できる高度なユーザーインタラクションAPIを提供します。 ブラウザーベンダーによるサポート。 Opera、Mozilla、GoogleはすべてWebDriverの開発に積極的に参加しており、それぞれにフレームワークの改善に取り組んでいるエンジニアがいます。 多くの場合、これはWebDriverのサポートがブラウザー自体に組み込まれていることを意味します。 テストは可能な限り高速で安定して実行されます。  はじめる前に 移行プロセスを可能な限り簡単にするために、すべてのテストが最新のSeleniumリリースで正しく実行されることを確認してください。 これは当たり前のように聞こえるかもしれませんが、言ってもらうのが最善です！
+はじめに 移行を開始する最初の手順は、Seleniumのインスタンスの取得方法を変更することです。 Selenium RCを使用する場合、これは次のように行われます。
+Selenium selenium = new DefaultSelenium(&amp;#34;localhost&amp;#34;, 4444, &amp;#34;*firefox&amp;#34;, &amp;#34;http://www.yoursite.com&amp;#34;); selenium.start(); これは次のように置き換える必要があります。
+WebDriver driver = new FirefoxDriver(); Selenium selenium = new WebDriverBackedSelenium(driver, &amp;#34;http://www.yoursite.com&amp;#34;); 次のステップ テストがエラーなしで実行されたら、次の段階は実際のテストコードを移行してWebDriver APIを使用することです。 コードがどれだけ適切に抽象化されているかによって、これは短いプロセスまたは長いプロセスになります。 どちらの場合でも、アプローチは同じであり、簡単に要約できます。 編集するときに新しいAPIを使用するようにコードを変更します。
+基になるWebDriver実装をSeleniumインスタンスから抽出する必要がある場合は、WrapsDriverにキャストするだけです。
+WebDriver driver = ((WrapsDriver) selenium).</description>
     </item>
     
     <item>
@@ -347,14 +355,15 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
     </item>
     
     <item>
-      <title>HTML runner</title>
+      <title>HTMLランナー</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/legacy_docs/html-runner/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
-Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - what is for example an export from Monitis Transaction Monitor). Be sure you comply with this.</description>
+      <description>Selenium HTMLランナー を使用すると、コマンドラインからテストスイートを実行できます。 テストスイートは、Selenium IDEまたは互換性ツールからのHTMLエクスポートです。
+共通情報  geckodriver / firefox / selenium-html-runnerのリリースの組み合わせが重要です。 どこかにソフトウェア互換性マトリックスがあるかもしれません。 selenium-html-runnerはテストスイートのみを実行します（テストケースではなく、Monitis Transaction Monitorからのエクスポートなど）。 必ずこれを順守してください。 DISPLAYのないLinuxユーザーの場合-仮想ディスプレイでhtml-runnerを起動する必要があります（xvfbを検索）。  Linux環境の例 次のソフトウェアパッケージをインストール/ダウンロードします。
+[user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.8|firefox&amp;#34; xorg-x11-server-Xvfb-1.19.3-11.el7.x86_64 firefox-52.4.0-1.el7.centos.x86_64 java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64 テストスイートの例
+[user@localhost ~]$ cat testsuite.html &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE html PUBLIC &amp;#34;-//W3C//DTD XHTML 1.0 Strict//EN&amp;#34; &amp;#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&amp;#34;&amp;gt; &amp;lt;html xmlns=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34; xml:lang=&amp;#34;en&amp;#34; lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta content=&amp;#34;text/html; charset=UTF-8&amp;#34; http-equiv=&amp;#34;content-type&amp;#34; /&amp;gt; &amp;lt;title&amp;gt;Test Suite&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;table id=&amp;#34;suiteTable&amp;#34; cellpadding=&amp;#34;1&amp;#34; cellspacing=&amp;#34;1&amp;#34; border=&amp;#34;1&amp;#34; class=&amp;#34;selenium&amp;#34;&amp;gt;&amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;b&amp;gt;Test Suite&amp;lt;/b&amp;gt;&amp;lt;/td&amp;gt;&amp;lt;/tr&amp;gt; &amp;lt;tr&amp;gt;&amp;lt;td&amp;gt;&amp;lt;a href=&amp;#34;YOUR-TEST-SCENARIO.</description>
     </item>
     
     <item>

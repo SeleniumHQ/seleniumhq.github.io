@@ -58,9 +58,10 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/support_classes/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
- Locator Strategies Events LoadableComponent ThreadGuard etc.</description>
+      <description>Les classes de support WebDriver sont fournies pour simplifier la maintenance de votre code.Elles fournissent une belle abstraction pour faciliter la modélisation des éléments HTML en tant qu&amp;rsquo;objets de domaine, ainsi que des méthodes d&amp;rsquo;aide pour rendre l&amp;rsquo;utilisation de ces objets facile à raisonner.
+ Stratégies de localisation Événements LoadableComponent ThreadGuard etc.  Commençons:
+ThreadGuard  Cette classe est uniquement disponible dans la liaison Java
+ ThreadGuard vérifie qu&amp;rsquo;un pilote est appelé uniquement à partir du même thread qui l&amp;rsquo;a créé.</description>
     </item>
     
     <item>
