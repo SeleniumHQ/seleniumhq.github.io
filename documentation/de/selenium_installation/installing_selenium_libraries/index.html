@@ -11,20 +11,20 @@
     <title>Bibliotheken installieren :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1581930957" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1581930957" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1582110396" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1582110396" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1581930957" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1582110396" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1581930957"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1582110396"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1581930957"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1581930957"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1582110396"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1582110396"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1581930957"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1582110396"></script>
 
     
   </div>
@@ -1958,38 +1958,34 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Diese Seite wird von Englisch
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
-zu übersetzen indem Du uns einen Pull Reqeust schickst!</p>
-</div>
-
-
-<p>First you need to install the Selenium bindings for your automation project.
-The installation process for libraries depends on the language you choose to use.</p>
+<p>Zu Beginn ist es notwendig das die Selenium Bindings für Dein
+Automationsprojekt installiert werden. Der Installationsprozess ist von der
+gewählten Programmiersprache abhängig.</p>
 
 <h2 id="java"><em>Java</em></h2>
 
-<p>Installation of Selenium libraries for Java can be done using Maven.
-Add the <em>selenium-java</em> dependency in your project pom.xml:</p>
+<p>Die Installation der Selenium Bibliotheken für Java kann mit Hilfe von
+Maven erfolgen. Füge in Deinem Projekt in die pom.xml die <em>selenium-java</em>
+dependecy hinzu.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-java<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p>The <em>selenium-java</em> dependency supports running your automation
-project with all Selenium supported browsers. If you want to run tests
-only in a specific browser, you can add the dependency for that browser
-in your <em>pom.xml</em> file.
-For example, you should add following dependency in your <em>pom.xml</em>
-file to run your tests only in Firefox:</p>
+<p>Mit der <em>selenium-java</em> dependency ist es möglich Tests laufen zu lassen
+in allen von Selenium unterstützen Browsern. Falls Du Test nur in einem
+spezifischen Browser ausführen möchtest, ist es möglich auch nur die
+dependecy für den gewählten Browser in der <em>pom.xml</em> hinzuzufügen.</p>
+
+<p>Wenn Du zum Beispiel Tests nur in Firefox ausführen möchtest, füge folgende
+dependecy in die <em>pom.xml</em> hinzu:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-firefox-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p>In a similar manner, if you want to run tests only in Chrome,
-you should add the following dependency:</p>
+<p>Analog wenn Du die Tests nur in Chrome ausführen möchtest, musst Du folgende
+dependecy hinzufügen:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-chrome-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
@@ -1997,29 +1993,30 @@ you should add the following dependency:</p>
 <span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
 <h2 id="python"><em>Python</em></h2>
 
-<p>Installation of Selenium libraries for Python can be done using pip:</p>
+<p>Die Installation der Selenium Bibliotheken for Phython can mittels <em>pip</em> erfolgen:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install selenium</code></pre></div>
-<p>Alternatively you can download the <a href="https://pypi.org/project/selenium/#files">PyPI source archive</a>
-(selenium-x.x.x.tar.gz) and install it using <em>setup.py</em>:</p>
+<p>Alternativ kannst Du den <a href="https://pypi.org/project/selenium/#files">PyPI Quellcode</a>
+(selenium-x.x.x.tar.gz) downloaden und diesen mittels <em>steup.py</em> installieren:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python setup.py install</code></pre></div>
 <h2 id="c"><em>C#</em></h2>
 
-<p>Installation of Selenium libraries for C# can be done using NuGet:</p>
+<p>Die Installation der Selenium Bibliotheken für C# kann mittels <em>NuGet</em> erfolgen:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#586e75"># Using package manager</span>
 Install-Package Selenium.WebDriver
 <span style="color:#586e75"># or using .Net CLI</span>
 dotnet add package Selenium.WebDriver</code></pre></div>
 <h2 id="ruby"><em>Ruby</em></h2>
 
-<p>Installation of Selenium libraries for Ruby can be done using gem:</p>
+<p>Die Selenium Bibliotheken für Ruby können mittels <em>gem</em> installiert werden:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver</code></pre></div>
 <h2 id="javascript"><em>JavaScript</em></h2>
 
-<p>Installation of Selenium libraries for JavaScript can be done using npm:</p>
+<p>Die Installation der Selenium Bibliotheken für JavaScript kann mit npm durchgeführt werden:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install selenium-webdriver</code></pre></div>
 <h2 id="kotlin"><em>Kotlin</em></h2>
 
-<p>Due to missing native language bindings for Kotlin, you have to use the Java Bindings, e.g. with maven <a href="#java">Java</a></p>
+<p>Da es noch keine Implementierung für Kotlin gibt, müssen die Java Bibliothken verwendet werden,
+diese können analg zu <a href="#java">Java</a> mittels maven eingebunden werden.</p>
 
 
 <footer class=" footline" >
@@ -2029,7 +2026,7 @@ dotnet add package Selenium.WebDriver</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/">
       “Bibliotheken installieren”
-    </a> was last updated on: 05 Feb 2020 15:59:07 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/37ecbd0c3a88974d5340bc17a406894af90aea47">Update installing_selenium_libraries.ko.md (#205) (37ecbd0c3)</a>
+    </a> was last updated on: 19 Feb 2020 11:07:28 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/47f6f0503f2993370e1deac8110b5df3ae820443">german translation for install libaries (#238) [deploy site] (47f6f0503)</a>
 </h5>
         
         </div> 
@@ -3191,19 +3188,19 @@ dotnet add package Selenium.WebDriver</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1581930957"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1582110397"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1581930957"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1581930957"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1582110397"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1582110397"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1581930957" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1581930957"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1582110397" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1582110397"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

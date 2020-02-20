@@ -38,9 +38,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/understanding_the_components/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface.</description>
+      <description>Pour créer une suite de tests à l&amp;rsquo;aide de WebDriver, vous devrez comprendre et utiliser efficacement un certain nombre de composants différents. logiciel, différentes personnes utilisent des termes différents pour la même idée. une ventilation de la façon dont les termes sont utilisés dans cette description.
+Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;rsquo;agit de l&amp;rsquo;ensemble des &amp;ldquo;commandes&amp;rdquo; vous utilisez pour manipuler WebDriver. Bibliothèque: Un module de code qui contient les API et le code nécessaires Les bibliothèques sont spécifiques à chaque liaison de langue, par exemple .</description>
     </item>
     
     <item>
@@ -473,9 +472,8 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
+      <description>WebDriver fournit une API pour travailler avec les trois types de messages contextuels natifs proposés par JavaScript. Ces popups sont stylisés par le navigateur et offrent une personnalisation limitée.
+Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre une message personnalisé, et un seul bouton qui rejette l&amp;rsquo;alerte, étiqueté dans la plupart des navigateurs comme OK. Il peut également être ignoré dans la plupart des navigateurs par en appuyant sur le bouton de fermeture, mais cela fera toujours la même chose que le bouton OK.</description>
     </item>
     
     <item>
