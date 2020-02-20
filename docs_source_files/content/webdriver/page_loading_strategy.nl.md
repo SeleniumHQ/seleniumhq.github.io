@@ -74,7 +74,21 @@ caps.setPageLoadStrategy("normal");
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+    val chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL)
+    val driver = ChromeDriver(chromeOptions)
+    try {
+        driver.get("https://www.google.com")
+    }
+    finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -136,7 +150,21 @@ caps.setPageLoadStrategy("eager");
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+    val chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER)
+    val driver = ChromeDriver(chromeOptions)
+    try {
+        driver.get("https://www.google.com")
+    }
+    finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -193,6 +221,20 @@ caps.setPageLoadStrategy("none");
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+import org.openqa.selenium.PageLoadStrategy
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.chrome.ChromeOptions
+
+fun main() {
+    val chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE)
+    val driver = ChromeDriver(chromeOptions)
+    try {
+        driver.get("https://www.google.com")
+    }
+    finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
