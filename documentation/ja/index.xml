@@ -38,10 +38,22 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
-How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
-RC Components Selenium RC components are:</description>
+      <description>紹介 Selenium RCは長い間メインのSeleniumプロジェクトでしたが、WebDriver/Seleniumを併合したより強力なツールであるSelenium 2が登場しました。 Selenium 1はもうサポートされていないことを強調する価値があります。
+Selenium RCの仕組み はじめに、Selenium RCのコンポーネントがどのように動作するか、およびテストスクリプトの実行でそれぞれが果たす役割について説明します。
+RCコンポーネント SeleniumRCコンポーネントは、以下のとおりです。
+ ブラウザを起動および終了し、テストプログラムから渡されたSeleneseコマンドを解釈および実行し、ブラウザとAUTの間で渡されるHTTPメッセージをインターセプトおよび検証するSeleniumサーバー 各プログラミング言語とSelenium RC Server間のインターフェイスを提供するクライアントライブラリ  これは簡略化されたアーキテクチャ図です。
+この図は、クライアントライブラリが実行される各Seleniumコマンドを渡すサーバーと通信することを示しています。 次に、サーバーはSelenium-Core JavaScriptコマンドを使用してSeleniumコマンドをブラウザーに渡します。 ブラウザは、JavaScriptインタープリターを使用して、Seleniumコマンドを実行します。 これにより、テストスクリプトで指定したSeleneseアクションまたは検証が実行されます。
+Seleniumサーバー Seleniumサーバーは、テストプログラムからSeleniumコマンドを受信して解釈し、それらのテストの実行結果をプログラムに報告します。
+RCサーバーはSelenium Coreをバンドルし、ブラウザーに自動的に挿入します。 これは、テストプログラムがブラウザを開いたときに発生します（クライアントライブラリのAPI関数を使用）。 Selenium-CoreはJavaScriptプログラムです。 実際には、ブラウザの組み込みJavaScriptインタープリターを使用してSeleneseコマンドを解釈および実行するJavaScript関数のセットです。
+サーバーは、単純なHTTP GET/POSTリクエストを使用して、テストプログラムからSeleneseコマンドを受け取ります。 これは、HTTPリクエストを送信できるプログラミング言語を使用して、ブラウザーでのSeleniumテストを自動化できることを意味します。
+クライアントライブラリ クライアントライブラリは、独自の設計のプログラムからSeleniumコマンドを実行できるプログラミングサポートを提供します。 サポートされる言語ごとに異なるクライアントライブラリがあります。 Seleniumクライアントライブラリは、プログラミングインターフェイス（API）、つまり、独自のプログラムからSeleniumコマンドを実行する一連の関数を提供します。 各インターフェイス内には、各Seleneseコマンドをサポートするプログラミング関数があります。
+クライアントライブラリは、Seleneseコマンドを受け取り、それをSeleniumサーバーに渡して、特定のアクションまたはテスト対象アプリケーション（AUT）に対するテストを処理します。 クライアントライブラリは、そのコマンドの結果も受け取り、プログラムに返します。 プログラムは結果を受け取ってプログラム変数に保存し、成功または失敗として報告するか、予期しないエラーの場合は修正アクションを実行できます。
+したがって、テストプログラムを作成するには、クライアントライブラリAPIを使用して一連のSeleniumコマンドを実行するプログラムを作成するだけです。 また、オプションで、Selenium-IDEでSeleneseテストスクリプトを既に作成している場合は、Selenium RCコードを生成できます。 Selenium-IDEは、（エクスポートメニュー項目を使用して）SeleniumコマンドをクライアントドライバーのAPI関数呼び出しに変換できます。 Selenium-IDEからRCコードをエクスポートする詳細については、Selenium-IDEの章を参照してください。
+インストール インストールというのは、Seleniumの誤った呼び名です。 Seleniumには、選択したプログラミング言語で利用可能な一連のライブラリがあります。 ダウンロードページからダウンロードできます。
+使用する言語を選択したら、次のことを行う必要があります。
+ Selenium RCサーバーをインストールします。 言語固有のクライアントドライバーを使用してプログラミングプロジェクトをセットアップします。  Seleniumサーバーのインストール Selenium RCサーバーは単なるJava jarファイル（selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar）であり、特別なインストールは不要です。 zipファイルをダウンロードして、目的のディレクトリにサーバーを展開するだけで十分です。
+Seleniumサーバーを実行する テストを開始する前に、サーバーを起動する必要があります。 Selenium RCのサーバーがあるディレクトリに移動し、コマンドラインコンソールから次を実行します。
+java -jar selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar これは、上記のコマンドを含むバッチまたはシェル実行可能ファイル（Windowsでは.</description>
     </item>
     
     <item>
@@ -695,8 +707,10 @@ public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
+WebDriver pageLoadStrategy supports the following values:
+normal This will make Selenium WebDriver to wait for the entire page is loaded. When set to normal, Selenium WebDriver waits until the load event fire is returned.</description>
     </item>
     
     <item>
