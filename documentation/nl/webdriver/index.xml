@@ -91,8 +91,9 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/nl/webdriver/page_loading_strategy/</guid>
-      <description>  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- </description>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
+WebDriver pageLoadStrategy supports the following values:</description>
     </item>
     
     <item>
