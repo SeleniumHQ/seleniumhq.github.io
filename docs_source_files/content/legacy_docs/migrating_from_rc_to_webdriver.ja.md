@@ -1,120 +1,101 @@
 ---
-title: "Migrating from RC to WebDriver"
+title: "RCからWebDriverへの移行"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+
+## Selenium WebDriverに移行する方法
 
 
-## How to Migrate to Selenium WebDriver
+Selenium 2を採用する際によくある質問は、「既存のテストセットに新しいテストを追加するときに正しいことは何ですか？」ということです。
+フレームワークを初めて使用するユーザーは、新しいWebDriver APIを使用してテストを作成することから始めることができます。
+しかし、既存のテストスイートを既に持っているユーザーはどうでしょうか？
+このガイドは、既存のテストを新しいAPIに移行し、WebDriverが提供する新機能を使用してすべての新しいテストを作成する方法を示すことを目的としています。
+
+ここで紹介する方法は、1回の大規模なプッシュですべてをやり直す必要のない、WebDriver APIへの断片的な移行について説明しています。
+これは、既存のテストの移行により多くの時間を割り当てることができることを意味します。
+これにより、どこに労力を費やすかを決定しやすくなります。
+
+このガイドは、移行を行うための最良のサポートがあるため、Javaを使用して書かれています。
+他の言語用のより優れたツールを提供するため、このガイドはそれらの言語を含むように拡張されます。
+
+## WebDriverに移行する理由
 
 
-A common question when adopting Selenium 2 is what's the correct thing to do 
-when adding new tests to an existing set of tests? Users who are new to the
-framework can begin by using the new WebDriver APIs for writing their tests.
-But what of users who already have suites of existing tests? This guide is 
-designed to demonstrate how to migrate your existing tests to the new APIs, 
-allowing all new tests to be written using the new features offered by WebDriver.
+一連のテストをあるAPIから別のAPIに移動するには、多大な労力が必要です。
+なぜあなたとあなたのチームはこの動きを検討するのですか？
+WebDriverを使用するためにSeleniumテストを移行することを検討する必要があるいくつかの理由を以下に示します。
 
-The method presented here describes a piecemeal migration to the WebDriver 
-APIs without needing to rework everything in one massive push. This means 
-that you can allow more time for migrating your existing tests, which 
-may make it easier for you to decide where to spend your effort.
-
-This guide is written using Java, because this has the best support for 
-making the migration. As we provide better tools for other languages, 
-this guide shall be expanded to include those languages.
-
-
-## Why Migrate to WebDriver
+* 小さくコンパクトなAPI。
+  WebDriverのAPIは、元のSelenium RC APIよりもオブジェクト指向です。
+  これにより、作業が容易になります。
+* ユーザー操作のより良いエミュレーション。
+  可能な場合、WebDriverはWebページと対話するためにネイティブイベントを使用します。
+  これは、ユーザーがサイトやアプリを操作する方法をより厳密に模倣しています。
+  さらに、WebDriverは、サイトとの複雑な相互作用をモデル化できる高度なユーザーインタラクションAPIを提供します。
+* ブラウザーベンダーによるサポート。
+  Opera、Mozilla、GoogleはすべてWebDriverの開発に積極的に参加しており、それぞれにフレームワークの改善に取り組んでいるエンジニアがいます。
+  多くの場合、これはWebDriverのサポートがブラウザー自体に組み込まれていることを意味します。
+  テストは可能な限り高速で安定して実行されます。
 
 
-Moving a suite of tests from one API to another API requires an enormous 
-amount of effort. Why would you and your team consider making this move? 
-Here are some reasons why you should consider migrating your Selenium Tests 
-to use WebDriver.
-
-* Smaller, compact API. WebDriver's API is more Object Oriented than the 
-original Selenium RC API. This can make it easier to work with.
-* Better emulation of user interactions. Where possible, WebDriver makes 
-use of native events in order to interact with a web page. This more closely 
-mimics the way that your users work with your site and apps. In addition, 
-WebDriver offers the advanced user interactions APIs which allow you to 
-model complex interactions with your site.
-* Support by browser vendors. Opera, Mozilla and Google are all active 
-participants in WebDriver's development, and each have engineers working 
-to improve the framework. Often, this means that support for WebDriver 
-is baked into the browser itself: your tests run as fast and as stably as 
-possible.
+## はじめる前に
 
 
-## Before Starting
+移行プロセスを可能な限り簡単にするために、すべてのテストが最新のSeleniumリリースで正しく実行されることを確認してください。
+これは当たり前のように聞こえるかもしれませんが、言ってもらうのが最善です！
 
 
-In order to make the process of migrating as painless as possible, make
-sure that all your tests run properly with the latest Selenium release. 
-This may sound obvious, but it's best to have it said!
+## はじめに
 
 
-## Getting Started
-
-
-The first step when starting the migration is to change how you obtain 
-your instance of Selenium. When using Selenium RC, this is done like so:
+移行を開始する最初の手順は、Seleniumのインスタンスの取得方法を変更することです。
+Selenium RCを使用する場合、これは次のように行われます。
 
 ```java
 Selenium selenium = new DefaultSelenium("localhost", 4444, "*firefox", "http://www.yoursite.com");
 selenium.start();
 ```
 
-This should be replaced like so:
+これは次のように置き換える必要があります。
 
 ```java
 WebDriver driver = new FirefoxDriver();
 Selenium selenium = new WebDriverBackedSelenium(driver, "http://www.yoursite.com");
 ```
 
-## Next Steps
+## 次のステップ
 
 
-Once your tests execute without errors, the next stage is to migrate 
-the actual test code to use the WebDriver APIs. Depending on how well 
-abstracted your code is, this might be a short process or a long one. 
-In either case, the approach is the same and can be summed up simply: 
-modify code to use the new API when you come to edit it.
+テストがエラーなしで実行されたら、次の段階は実際のテストコードを移行してWebDriver APIを使用することです。
+コードがどれだけ適切に抽象化されているかによって、これは短いプロセスまたは長いプロセスになります。
+どちらの場合でも、アプローチは同じであり、簡単に要約できます。
+編集するときに新しいAPIを使用するようにコードを変更します。
 
-If you need to extract the underlying WebDriver implementation from 
-the Selenium instance, you can simply cast it to WrapsDriver:
+基になるWebDriver実装をSeleniumインスタンスから抽出する必要がある場合は、WrapsDriverにキャストするだけです。
 
 ```java
 WebDriver driver = ((WrapsDriver) selenium).getWrappedDriver();
 ```
 
-This allows you to continue passing the Selenium instance around as 
-normal, but to unwrap the WebDriver instance as required.
+これにより、通常どおりSeleniumインスタンスの受け渡しを続けることができますが、必要に応じてWebDriverインスタンスのラップを解除できます。
 
-At some point, you're codebase will mostly be using the newer APIs.
-At this point, you can flip the relationship, using WebDriver throughout 
-and instantiating a Selenium instance on demand:
+ある時点で、コードベースは主に新しいAPIを使用します。
+この時点で、WebDriverを使用して関係を反転し、オンデマンドでSeleniumインスタンスをインスタンス化できます。
 
 ```java
 Selenium selenium = new WebDriverBackedSelenium(driver, baseUrl);
 ```
 
-## Common Problems
+## 一般的な問題
 
 
-Fortunately, you're not the first person to go through this migration, 
-so here are some common problems that others have seen, and how to solve them.
+幸いなことに、この移行を最初に行ったのはあなたではないので、他の人が経験した一般的な問題とその解決方法を以下に示します。
+
+### クリックと入力がより完全に
 
 
-### Clicking and Typing is More Complete
-
-
-A common pattern in a Selenium RC test is to see something like:
+Selenium RCテストの一般的なパターンは、以下のとおりです。
 
 ```java
 selenium.type("name", "exciting tex");
@@ -122,46 +103,37 @@ selenium.keyDown("name", "t");
 selenium.keyPress("name", "t");
 selenium.keyUp("name", "t");
 ```
-    
-This relies on the fact that "type" simply replaces the content of the 
-identified element without also firing all the events that would normally
-be fired if a user interacts with the page. The final direct invocations
-of "key*" cause the JS handlers to fire as expected.
-
-When using the WebDriverBackedSelenium, the result of filling in the form 
-field would be "exciting texttt": not what you'd expect! The reason for this
-is that WebDriver more accurately emulates user behavior, and so will have
-been firing events all along.
-
-This same fact may sometimes cause a page load to fire earlier than it would
-do in a Selenium 1 test. You can tell that this has happened if a 
-"StaleElementException" is thrown by WebDriver.
 
 
-### WaitForPageToLoad Returns Too Soon
+これは、ユーザーがページと対話した場合に通常発生するすべてのイベントも発生せずに、"type"が識別された要素のコンテンツを単に置き換えるという事実に依存しています。
+"key*" の最後の直接呼び出しにより、JSハンドラーが期待どおりに起動します。
 
-Discovering when a page load is complete is a tricky business. Do we mean 
-"when the load event fires", "when all AJAX requests are complete", "when 
-there's no network traffic", "when document.readyState has changed" or something
-else entirely?
+WebDriverBackedSeleniumを使用する場合、フォームフィールドに入力した結果は "exciting texttt" になります。
+期待したものではありません！
+これは、WebDriverがユーザーの動作をより正確にエミュレートするため、ずっとイベントを発火させていたためです。
 
-WebDriver attempts to simulate the original Selenium behavior, but this doesn't
-always work perfectly for various reasons. The most common reason is that it's 
-hard to tell the difference between a page load not having started yet, and a 
-page load having completed between method calls. This sometimes means that 
-control is returned to your test before the page has finished (or even started!)
-loading.
+この同じ事実により、Selenium 1テストよりも早くページの読み込みが発生する場合があります。
+"StaleElementException"がWebDriverによってスローされた場合、これが発生したことを確認できます。
 
-The solution to this is to wait on something specific. Commonly, this might be
-for the element you want to interact with next, or for some Javascript variable
-to be set to a specific value. An example would be:
+### WaitForPageToLoadがすぐに戻る
+
+ページの読み込みが完了したことを発見するのは難しい仕事です。
+"ロードイベントが発生したとき"、"すべてのAJAXリクエストが完了したとき"、"ネットワークトラフィックがないとき"、"document.readyStateが変更されたとき"、または他の全体的な何かを意味しますか？
+
+WebDriverは元のSeleniumの動作をシミュレートしようとしますが、これはさまざまな理由で常に完全に機能するとは限りません。
+最も一般的な理由は、ページの読み込みがまだ開始されていないことと、ページ呼び出しがメソッド呼び出し間で完了したことの違いを見分けることが難しいことです。
+これは、ページの読み込みが完了する前（または開始される前）に制御がテストに返されることを意味する場合があります。
+
+これに対する解決策は、特定の何かを待つことです。
+一般的に、これは次にやり取りしたい要素、または特定の値に設定されるJavascript変数のためのものです。
+例えば、
 
 ```java
 Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement element= wait.until(visibilityOfElementLocated(By.id("some_id")));
 ```
-    
-Where "visibilityOfElementLocated" is implemented as:
+
+"visibilityOfElementLocated" は次のように実装されます。
 
 ```java
 public ExpectedCondition<WebElement> visibilityOfElementLocated(final By locator) {
@@ -177,80 +149,69 @@ public ExpectedCondition<WebElement> visibilityOfElementLocated(final By locator
 }
 ```
  
-This may look complex, but it's almost all boiler-plate code. The only 
-interesting bit is that the "ExpectedCondition" will be evaluated repeatedly
-until the "apply" method returns something that is neither "null" 
-nor Boolean.FALSE.
+これは複雑に見えるかもしれませんが、ほとんどすべての定型コードです。
+唯一の興味深い点は、 "apply" メソッドが "null" でもBoolean.FALSEでもないものを返すまで、 "ExpectedCondition" が繰り返し評価されることです。
 
-Of course, adding all these "wait" calls may clutter up your code. If 
-that's the case, and your needs are simple, consider using the implicit waits:
+もちろん、これらの "wait" 呼び出しをすべて追加すると、コードが混乱する可能性があります。
+その場合で、ニーズが単純な場合は、暗黙的な待機の使用を検討してください。
 
 ```java
 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 ```
 
-By doing this, every time an element is located, if the element is not present,
-the location is retried until either it is present, or until 30 seconds have 
-passed.
+これにより、要素が見つかるたびに、要素が存在しない場合は、存在するか、30秒が経過するまで位置が再試行されます。
 
-### Finding By XPath or CSS Selectors Doesn't Always Work, But It Does In Selenium 1
+### XPathまたはCSSセレクターによる検索は常に機能するとは限りませんが、Selenium1では機能します
 
-In Selenium 1, it was common for xpath to use a bundled library rather than
-the capabilities of the browser itself. WebDriver will always use the native
-browser methods unless there's no alternative. That means that complex xpath
-expressions may break on some browsers.
+Selenium 1では、xpathがブラウザ自体の機能ではなく、バンドルされたライブラリを使用するのが一般的でした。
+代替手段がない限り、WebDriverは常にネイティブブラウザーメソッドを使用します。
+つまり、一部のブラウザでは複雑なxpath式が壊れる場合があります。
 
-CSS Selectors in Selenium 1 were implemented using the Sizzle library. This 
-implements a superset of the CSS Selector spec, and it's not always clear where
-you've crossed the line. If you're using the WebDriverBackedSelenium and use a
-Sizzle locator instead of a CSS Selector for finding elements, a warning will
-be logged to the console. It's worth taking the time to look for these, 
-particularly if tests are failing because of not being able to find elements.
+Selenium 1のCSSセレクターは、Sizzleライブラリを使用して実装されました。
+これにより、CSS Selector仕様のスーパーセットが実装され、どこで境界を越えたかが常に明確になるとは限りません。
+WebDriverBackedSeleniumを使用していて、要素の検索にCSSセレクターの代わりにSizzleロケーターを使用している場合、コンソールに警告が記録されます。
+特に要素を見つけることができないためにテストが失敗する場合、これらを探すのに時間をかける価値があります。
 
-### There is No Browserbot
+### Browserbotはありません
 
-Selenium RC was based on Selenium Core, and therefore when you executed 
-Javascript, you could access bits of Selenium Core to make things easier. 
-As WebDriver is not based on Selenium Core, this is no longer possible. 
-How can you tell if you're using Selenium Core? Simple! Just look to see 
-if your "getEval" or similar calls are using "selenium" or "browserbot" 
-in the evaluated Javascript.
+Selenium RCはSelenium Coreに基づいていたため、Javascriptを実行すると、Selenium Coreの一部にアクセスして作業を簡単にすることができました。
+WebDriverはSelenium Coreに基づいていないため、これは不可能です。
+Selenium Coreを使用しているかどうかをどのように確認できますか？
+シンプル！ "getEval" または同様の呼び出しが、評価されたJavascriptで "selenium" または "browserbot" を使用しているかどうかを確認してください。
 
-You might be using the browserbot to obtain a handle to the current window
-or document of the test. Fortunately, WebDriver always evaluates JS in the
-context of the current window, so you can use "window" or "document" directly.
+browserbotを使用して、テストの現在のウィンドウまたはドキュメントへのハンドルを取得している可能性があります。
+幸いなことに、WebDriverは常に現在のウィンドウのコンテキストでJSを評価するため、"ウィンドウ"または"ドキュメント"を直接使用できます。
 
-Alternatively, you might be using the browserbot to locate elements. 
-In WebDriver, the idiom for doing this is to first locate the element, 
-and then pass that as an argument to the Javascript. Thus:
+または、Browserbotを使用して要素を見つけることもできます。
+WebDriverでは、これを行うためのイディオムは、最初に要素を見つけ、それを引数としてJavascriptに渡すことです。
+従って、
 
 ```java
 String name = selenium.getEval(
     "selenium.browserbot.findElement('id=foo', browserbot.getCurrentWindow()).tagName");
 ```
 
-becomes:
+このようになります。
 
 ```java
 WebElement element = driver.findElement(By.id("foo"));
 String name = (String) ((JavascriptExecutor) driver).executeScript(
     "return arguments[0].tagName", element);
 ```
-        
-Notice how the passed in "element" variable appears as the first item
-in the JS standard "arguments" array.        
 
+渡された "element" 変数が、JS標準の "arguments" 配列の最初の項目としてどのように表示されるかに注目してください。
 
 ### Executing Javascript Doesn't Return Anything
 
 
-WebDriver's JavascriptExecutor will wrap all JS and evaluate it as an anonymous expression. This means that you need to use the "return" keyword:
+WebDriverのJavascriptExecutorは、すべてのJSをラップし、匿名式として評価します。
+これは、 "return" キーワードを使用する必要があることを意味します。
 
 ```java
 String title = selenium.getEval("browserbot.getCurrentWindow().document.title");
 ```
 
-becomes:
+このようになります。
 
 ```java
 ((JavascriptExecutor) driver).executeScript("return document.title;");
