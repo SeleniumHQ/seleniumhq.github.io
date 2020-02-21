@@ -73,7 +73,7 @@ should only merge code they are qualified to review, which might entail pinging
 another committer who has greater ownership over a specific code area.
 * May label and close issues.
 
-To become a Committer:
+#### Becoming a committer
 
 * One must have shown a willingness and ability to participate in the project as
 a team player.
