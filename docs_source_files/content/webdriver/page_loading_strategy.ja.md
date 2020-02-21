@@ -52,7 +52,12 @@ public class pageLoadStrategy {
  // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='normal'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');
@@ -128,7 +133,12 @@ public class pageLoadStrategy {
  // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='eager'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');
@@ -199,7 +209,12 @@ public class pageLoadStrategy {
  // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='none'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');
