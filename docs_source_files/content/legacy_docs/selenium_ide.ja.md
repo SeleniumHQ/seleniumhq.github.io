@@ -1,278 +1,238 @@
 ---
-title: "Legacy Selenium IDE"
+title: "レガシー Selenium IDE"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## 紹介
 
-## Introduction
+Selenium-IDE (統合開発環境) は、Selenium テストケースを開発するためのツールです。
+Selenium-IDE は使いやすい Firefox プラグインで、一般にテストケースを開発するための最も効率的な方法です。
+Selenium-IDE ではコンテキストメニューも使用できます。
+コンテキストメニューを使うと、まず現在ブラウザに表示されているページ上の UI 要素を選択し、次に Selenium コマンドのリストから目的のコマンドを選択できます。
+コマンドのパラメータは、選択された UI 要素のコンテキストに従って、あらかじめ定義されたものが使われます。
+Selenium-IDE を使う方法は、時間の節約になるだけでなく、Selenium スクリプトの構文を学ぶ手段としても優れています。
 
-The Selenium-IDE (Integrated Development Environment) is the tool you use to
-develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is
-generally the most efficient way to develop test cases. It also contains a
-context menu that allows you to first select a UI element from the browser’s
-currently displayed page and then select from a list of Selenium commands with
-parameters pre-defined according to the context of the selected UI element.
-This is not only a time-saver, but also an excellent way of learning Selenium
-script syntax.
+この章では Selenium-IDE について詳しく取り上げ、Selenium-IDE を効果的に使う方法について説明します。
 
-This chapter is all about the Selenium IDE and how to use it effectively.
+## IDEのインストール
 
-## Installing the IDE
+Firefoxを使用して、最初にSeleniumHQ[ダウンロードページ](https://selenium.dev/downloads)からIDEをダウンロードします。
 
-Using Firefox, first, download the IDE from the SeleniumHQ [downloads page](https://selenium.dev/downloads)
-
-Firefox will protect you from installing addons from unfamiliar locations, so
-you will need to click ‘Allow’ to proceed with the installation, as shown in
-the following screenshot.
+Firefoxは、不慣れな場所からアドオンをインストールしないように保護するため、次のスクリーンショットに示すように、インストールを続行するには'許可'をクリックする必要があります。
 
 ![Selenium IDE Installation 1](/images/legacy_docs/selenium_ide_installation_1.png)
 
-When downloading from Firefox, you’ll be presented with the following window.
+Firefoxからダウンロードすると、次のウィンドウが表示されます。
 
 ![Selenium IDE Installation 2](/images/legacy_docs/selenium_ide_installation_2.png)
 
-Select Install Now. The Firefox Add-ons window pops up, first showing a progress bar, 
-and when the download is complete, displays the following.
+「今すぐインストール」を選択します。
+Firefoxの「アドオン」ウィンドウがポップアップし、最初にプログレスバーが表示されます。
+ダウンロードが完了すると、次のような画面になります。
 
 ![Selenium IDE Installation 3](/images/legacy_docs/selenium_ide_installation_3.png)
 
-Restart Firefox. After Firefox reboots you will find the Selenium-IDE listed under 
-the Firefox Tools menu.
+Firefoxを再起動します。
+Firefoxの再起動後、Firefoxの「ツール」メニューには、「Selenium-IDE」が表示されます。
 
 ![Selenium IDE Installation 4](/images/legacy_docs/selenium_ide_installation_4.png)
 
-## Opening the IDE
+## IDEを開く
 
-To run the Selenium-IDE, simply select it from the Firefox Tools menu. It opens
-as follows with an empty script-editing window and a menu for loading, or
-creating new test cases.
+Selenium-IDEを実行するには、Firefoxの「ツール」メニューから「Selenium-IDE」を選択するだけです。
+空のスクリプト編集ウィンドウと、テストケースを読み込んだり新規作成したりするメニューのある Selenium-IDE のウィンドウが表示されます。
 
 ![Selenium IDE Open](/images/legacy_docs/selenium_ide_open.png)
 
-## IDE Features
+## IDEの機能
 
-### Menu Bar
+### メニューバー
 
-The File menu has options for Test Case and Test Suite (suite of Test Cases).
-Using these you can add a new Test Case, open a Test Case, save a Test Case,
-export Test Case in a language of your choice. You can also open the recent
-Test Case. All these options are also available for Test Suite.
+「ファイル」メニューには、テストケースとテストスイート（テストケースのスイート）のオプションがあります。
+これらを使用して、新しいテストケースを追加し、テストケースを開き、テストケースを保存し、選択した言語でテストケースをエクスポートできます。
+最近のテストケースを開くこともできます。
+これらすべてのオプションは、テストスイートでも使用できます。
 
-The Edit menu allows copy, paste, delete, undo, and select all operations for
-editing the commands in your test case. The Options menu allows the changing of
-settings. You can set the timeout value for certain commands, add user-defined
-user extensions to the base set of Selenium commands, and specify the format
-(language) used when saving your test cases. The Help menu is the standard
-Firefox Help menu; only one item on this menu–UI-Element Documentation–pertains
-to Selenium-IDE.
+「編集」メニューでは、テストケースのコマンドを編集するためのすべての操作をコピー、貼り付け、削除、元に戻す、選択できます。
+「オプション」メニューでは、さまざまな設定を変更できます。
+特定のコマンドのタイムアウト値を設定し、Seleniumコマンドの基本セットにユーザー定義のユーザー拡張機能を追加し、テストケースを保存するときに使用する形式（言語）を指定できます。
+「ヘルプ」メニューは Firefox 標準の「ヘルプ」メニューで、この中の 「UI-Element Documentation」 だけが Selenium-IDE に関係のある項目です。
 
-### Toolbar
+### ツールバー
 
-The toolbar contains buttons for controlling the execution of your test cases,
-including a step feature for debugging your test cases. The right-most button,
-the one with the red-dot, is the record button.
+ツールバーには、テストケースをデバッグするためのステップ実行機能をはじめ、テストケースの実行をコントロールするためのさまざまなボタンが並んでいます。
+右端の赤い丸のボタンは、「Record」(記録) ボタンです。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_1.png)
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_2.png)
 
-Speed Control: controls how fast your test case runs.
+「Speed Control」 (速度調節): テストケースの実行速度を調節します。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_3.png)
 
-Run All: Runs the entire test suite when a test suite with multiple test cases is loaded.
+「Run All」 (すべて実行): 複数のテストケースを持つテストスイートが読み込まれているときにテストスイート全体を実行します。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_4.png)
 
-Run: Runs the currently selected test. When only a single test is loaded 
-this button and the Run All button have the same effect.
+「Run」 (実行): 現在選択されているテストを実行します。
+テストが1つしか読み込まれていない場合、このボタンと「Run All」ボタンの動作は同じです。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_5.png)
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_6.png)
 
-Pause/Resume: Allows stopping and re-starting of a running test case.
+「Pause」 / 「Resume」 (一時停止/再開) : 実行中のテストを一時停止または再開します。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_7.png)
 
-Step: Allows you to “step” through a test case by running it one command at a time. 
-Use for debugging test cases.
+「Step」(ステップ実行): コマンドを1つずつ実行し、テストケースの「1ステップ実行」を行います。
+テストケースをデバッグするときに使います。
+
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_8.png)
 
-TestRunner Mode: Allows you to run the test case in a browser loaded with the
-Selenium-Core TestRunner. The TestRunner is not commonly used now and is likely
-to be deprecated. This button is for evaluating test cases for backwards
-compatibility with the TestRunner. Most users will probably not need this
-button.
+「TestRunner Mode」 (TestRunner モード): テストケースを Selenium-Core TestRunner で読み込んでブラウザで実行することができます。
+TestRunner は今はあまり使われておらず、いずれ非推奨となるでしょう。
+このボタンは、テストケースを評価して、TestRunner との後方互換性があるかどうかを調べるために用意されています。
+ほとんどのユーザーは、このボタンを使う必要はないでしょう。
+
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_9.png)
  
-Apply Rollup Rules: This advanced feature allows repetitive sequences of
-Selenium commands to be grouped into a single action. Detailed documentation on
-rollup rules can be found in the UI-Element Documentation on the Help menu.
+「Apply Rollup Rules」(ロールアップルールを適用): この高度な機能を利用すると、一連の Selenium コマンドの繰り返しを 1 つのアクションにまとめることができます。
+ロールアップルールの詳細については、「ヘルプ」 メニューの [UI-Element Documentation] を参照してください。
 
 ![Selenium IDE Features](/images/legacy_docs/selenium_ide_features_10.png)
 
 
-### Test Case Pane
+### テストケース ペイン
 
-Your script is displayed in the test case pane. It has two tabs, one for
-displaying the command and their parameters in a readable “table” format.
+スクリプトは「テストケース」ペインに表示されます。
+ペインには2つのタブがあります。
+次に示すのは、コマンドとそのパラメータを読みやすい「テーブル」形式で表示するための [「テーブル」タブです。
 
 ![Selenium IDE Image Pane](/images/legacy_docs/selenium_ide_image_pane.png)
 
-The other tab - Source displays the test case in the native format in which the
-file will be stored. By default, this is HTML although it can be changed to a
-programming language such as Java or C#, or a scripting language like Python.
-See the Options menu for details. The Source view also allows one to edit the
-test case in its raw form, including copy, cut and paste operations.
+もう 1 つの「ソース」タブには、テストケースがネイティブ形式で表示されます。
+ファイルはこのネイティブ形式で保存されます。
+デフォルトでは HTML ですが、Java や C# などのプログラミング言語、あるいは Python などのスクリプト言語に変更することもできます。
+詳細については、「オプション」 メニューを参照してください。
+「ソース」 タブでは、テストケースを生の形式で編集することができ、操作のコピー、切り取り、貼り付けが可能です。
 
-The Command, Target, and Value entry fields display the currently selected
-command along with its parameters. These are entry fields where you can modify
-the currently selected command. The first parameter specified for a command in
-the Reference tab of the bottom pane always goes in the Target field. If a
-second parameter is specified by the Reference tab, it always goes in the Value
-field.
+「コマンド」、「対象」、および 「値」 入力フィールドには、現在選択されているコマンドとそのパラメータが表示されます。
+これらの入力フィールドでは、現在選択されているコマンドを修正できます。
+一番下のペインの 「リファレンス」 タブで、コマンドに対して指定されている 1 つ目のパラメータは、必ず 「対象」 フィールドに入力します。
+「リファレンス」 タブで 2 つ目のパラメータが指定されている場合、このパラメータは 「値」 フィールドに入力します。
 
 ![Selenium IDE Entry Fields](/images/legacy_docs/selenium_ide_entry_fields.png)
 
-If you start typing in the Command field, a drop-down list will be populated
-based on the first characters you type; you can then select your desired
-command from the drop-down.
+「コマンド」フィールドに文字を入力すると、入力した文字に応じてドロップダウンリストに項目が表示されるので、このリストから目的のコマンドを選択できます。
 
-### Log/Reference/UI-Element/Rollup Pane
+### ログ/参照/UI要素/ロールアップペイン
 
-The bottom pane is used for four different functions–Log, Reference,
-UI-Element, and Rollup–depending on which tab is selected.
+一番下のペインは、さまざまな機能で使われます。
+「ログ」、「リファレンス」、「UI-Element」、および 「Rollup」 の4つのタブがあります。
 
-#### Log
+#### ログ
 
-When you run your test case, error messages and information messages showing
-the progress are displayed in this pane automatically, even if you do not first
-select the Log tab. These messages are often useful for test case debugging.
-Notice the Clear button for clearing the Log. Also notice the Info button is a
-drop-down allowing selection of different levels of information to log.
+テストケースを実行すると、「ログ」 タブを選択していなくても、エラーメッセージとテストの進行状況を示す情報メッセージが自動的にこのペインに表示されます。
+これらのメッセージは、しばしばテストケースのデバッグに役立ちます。
+ログを消去するには 「消去」 ボタンをクリックします。
+「情報」 ボタンをクリックすると、ドロップダウンリストが表示されます。
+リストで目的の項目を選択すれば、画面に表示する情報のレベルを指定できます。
 
 ![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box.png)
 
 
-#### Reference
+#### リファレンス
 
-The Reference tab is the default selection whenever you are entering or
-modifying Selenese commands and parameters in Table mode. In Table mode, the
-Reference pane will display documentation on the current command. When entering
-or modifying commands, whether from Table or Source mode, it is critically
-important to ensure that the parameters specified in the Target and Value
-fields match those specified in the parameter list in the Reference pane. The
-number of parameters provided must match the number specified, the order of
-parameters provided must match the order specified, and the type of parameters
-provided must match the type specified. If there is a mismatch in any of these
-three areas, the command will not run correctly.
+「リファレンス」 タブは、「テーブル」 タブで Selenese コマンドとパラメータを入力したり修正したりする場合にデフォルトで選択されるタブです。
+「テーブル」 タブが表示されている場合、「リファレンス」 ペインには現在のコマンドのリファレンスが表示されます。
+「テーブル」 タブの 「ソース」 タブのどちらで作業している場合も、コマンドを入力または修正するときは、「対象」 フィールドと 「値」 フィールドで指定するパラメータが、「リファレンス」 ペインのパラメータリストに指定されているものと一致していることを確認することが非常に重要です。
+指定するパラメータの数は、「リファレンス」 ペインで指定されている数と一致しなければならず、パラメータの順序も 「リファレンス」 ペインのそれと一致しなければなりません。
+さらに、指定するパラメータの型も、「リファレンス」 ペインで指定されている型と一致していなければなりません。
+これら 3つのうち、1つでも一致しないものがあれば、コマンドは正常に実行されません。
 
 ![Selenium IDE Bottom Box](/images/legacy_docs/selenium_ide_bottom_box_ref.png)
 
-While the Reference tab is invaluable as a quick reference, it is still often
-necessary to consult the Selenium Reference document.
+「リファレンス」 タブはクイックリファレンスとして大いに役立ちますが、Seleniumリファレンスを参照することもしばしば必要になります。
 
-#### UI-Element and Rollup
+#### UI-ElementとRollup
 
-Detailed information on these two panes (which cover advanced features) can be
-found in the UI-Element Documentation on the Help menu of Selenium-IDE.
+これらの2つのペイン (高度な機能を扱うためのペイン) については、Selenium-IDE の 「ヘルプ」 メニューの 「UI-Element Documentation」 を参照してください。
 
-## Building Test Cases
+## テストケースの作成
 
-There are three primary methods for developing test cases. Frequently, a test
-developer will require all three techniques.
+テストケースを開発するための主な方法は3つあります。
+多くの場合、テスト開発者はこれら 3 つのテクニックをすべて使う必要があります。
 
-### Recording
+### 記録
 
-Many first-time users begin by recording a test case from their interactions
-with a website. When Selenium-IDE is first opened, the record button is ON by
-default. If you do not want Selenium-IDE to begin recording automatically you
-can turn this off by going under Options > Options… and deselecting “Start
-recording immediately on open.”
+Selenium を初めて使うユーザーは、Web サイトでの操作を記録してテストケースを作成することが多いようです。Selenium-IDE を最初に開いたとき、「Record」 ボタンはデフォルトでオンになっています。
 
-During recording, Selenium-IDE will automatically insert commands into your
-test case based on your actions. Typically, this will include:
+Selenium-IDEで自動的に記録を開始したくない場合は、Options > Options… に移動し、"Start recording immediately on open."の選択を解除して、これをオフにできます。
 
-* clicking a link - click or clickAndWait commands
-* entering values - type command
-* selecting options from a drop-down listbox - select command
-* clicking checkboxes or radio buttons - click command
+記録中は、ユーザーの操作に基づいて Selenium-IDE がテストケースにコマンドを自動的に挿入します。
+次に示すのは、典型的なユーザーの操作です。
 
-Here are some “gotchas” to be aware of:
+* リンクをクリックする - click または clickAndWait コマンド
+* 値を入力する - type コマンド
+* ドロップダウンリストボックスからオプションを選択する - select コマンド
+* チェックボックスまたはラジオボタンをクリックする - click コマンド
 
-* The type command may require clicking on some other area of the web page for it
-to record.
-* Following a link usually records a click command. You will often need to change
-this to clickAndWait to ensure your test case pauses until the new page is
-completely loaded. Otherwise, your test case will continue running commands
-before the page has loaded all its UI elements. This will cause unexpected test
-case failures.
+いくつか注意すべき点を次に示します。
 
-### Adding Verifications and Asserts With the Context Menu
+* typeコマンドが記録されるようにするには、Web ページ上のどこか別の場所をクリックする操作が必要になる場合があります。
+* リンクをたどる操作は、通常は click コマンドとして記録されます。
+   多くの場合、 click コマンドは clickAndWait に変更して、新しいページが完全に読み込まれるまでテストケースを確実に停止させる必要があります。
+   そうしないと、ページに含まれるすべての UI 要素が読み込まれる前にテストケースの実行が先に進み、予期しない形でテストケースが失敗することになります。
 
-Your test cases will also need to check the properties of a web-page. This
-requires assert and verify commands. We won’t describe the specifics of these
-commands here; that is in the chapter on Selenium Commands – “Selenese”. Here
-we’ll simply describe how to add them to your test case.
+### コンテキストメニューを使った検証とアサートの追加
 
-With Selenium-IDE recording, go to the browser displaying your test application
-and right click anywhere on the page. You will see a context menu showing
-verify and/or assert commands.
+テストケースでは、Web ページのプロパティをチェックする必要もあるでしょう。
+それには、 assert コマンドと verify コマンドを使う必要があります。
+ここでは、これらのコマンドの細かな点には触れません。
+テストケースに追加する方法だけを説明します。
+コマンドの詳細については、 “Selenese” Selenium コマンド に関する章を参照してください。
 
-The first time you use Selenium, there may only be one Selenium command listed.
-As you use the IDE however, you will find additional commands will quickly be
-added to this menu. Selenium-IDE will attempt to predict what command, along
-with the parameters, you will need for a selected UI element on the current
-web-page.
+Selenium-IDE の記録機能がオンの状態で、テスト対象のアプリケーションを表示しているブラウザを選択し、ページ上の任意の場所を右クリックします。
+すると、 verify コマンドや assert コマンドを含むコンテキストメニューが表示されます。
 
-Let’s see how this works. Open a web-page of your choosing and select a block
-of text on the page. A paragraph or a heading will work fine. Now, right-click
-the selected text. The context menu should give you a verifyTextPresent command
-and the suggested parameter should be the text itself.
+初めて Selenium を使う場合には、Selenium コマンドが1つしか表示されないかもしれません。
+しかし、IDE を使っていると、メニューに表示されるコマンドがどんどん増えていきます。
+Selenium-IDE は、現在の Web ページ上で選択されている UI 要素に応じて、必要なコマンドとパラメータの予測を試みます。
 
-Also, notice the Show All Available Commands menu option. This shows many, many
-more commands, again, along with suggested parameters, for testing your
-currently selected UI element.
+実際にこの機能をためしてみましょう。
+適当な Web ページを開き、ページ上のテキストを選択します。
+段落1つか、見出しがいいでしょう。
+次に、選択したテキストを右クリックします。
+コンテキストメニューが表示され、 verifyTextPresent コマンドと、このコマンドにふさわしいパラメータとして、選択されたテキスト自体が表示されるはずです。
 
-Try a few more UI elements. Try right-clicking an image, or a user control like
-a button or a checkbox. You may need to use Show All Available Commands to see
-options other than verifyTextPresent. Once you select these other options, the
-more commonly used ones will show up on the primary context menu. For example,
-selecting verifyElementPresent for an image should later cause that command to
-be available on the primary context menu the next time you select an image and
-right-click.
+また、「利用可能な全てのコマンド」 という項目があることに注目してください。
+この項目を選択すると、非常に多くのコマンドが、現在選択されている UI 要素のテストに適したパラメータ案とともに表示されます。
 
-Again, these commands will be explained in detail in the chapter on Selenium
-commands. For now though, feel free to use the IDE to record and select
-commands into a test case and then run it. You can learn a lot about the
-Selenium commands simply by experimenting with the IDE.
+いくつかほかの UI 要素についても、同じようにためしてみてください。
+たとえば、画像を右クリックしたり、ボタンやチェックボックスなどのユーザーコントロールを右クリックしたりしてみてください。 
+verifyTextPresent 以外のオプションを見るには、「利用可能な全てのコマンド」 を使う必要があるかもしれません。
+いったんほかのオプションを選択すると、よく使われるコマンドがトップレベルのコンテキストメニューに表示されるようになります。
+たとえば、画像に対して verifyElementPresent を選択すると、次に画像を選択して右クリックしたときに、トップレベルのコンテキストメニューにこのコマンドが表示されるようになります。
 
-### Editing
+繰り返しになりますが、これらのコマンドの詳細については、Selenium のコマンドに関する章で説明します。
+とりあえずここでは、IDE を使ってさまざまなコマンドをテストケースに記録、選択し、テストケースを実行してみてください。IDE を使っていうちに、Selenium のコマンドについても自然に多くのことを学べるはずです。
 
-#### Insert Command
+### 編集
 
-##### Table View
+#### コマンドの挿入
 
-Select the point in your test case where you want to insert the command. To do
-this, in the Test Case Pane, left-click on the line where you want to insert a
-new command. Right-click and select Insert Command; the IDE will add a blank
-line just ahead of the line you selected. Now use the command editing text
-fields to enter your new command and its parameters.
+##### テーブル タブ
 
-##### Source View
+テストケース内のコマンドを挿入する場所を選択します。
+右クリックして 「コマンドを挿入」 をクリックします。
+コマンド編集用のテキストフィールドを使って、新しいコマンドとそのパラメータを入力します。
 
-Select the point in your test case where you want to insert the command. To do
-this, in the Test Case Pane, left-click between the commands where you want to
-insert a new command, and enter the HTML tags needed to create a 3-column row
-containing the Command, first parameter (if one is required by the Command),
-and second parameter (again, if one is required to locate an element) and third
-parameter(again, if one is required to have a value). Example:
+##### ソース タブ
+
+テストケース内のコマンドを挿入する場所を選択し、3 列からなる行を 1 つ作成するのに必要な HTML タグを入力します。
+この行の 1 列目にはコマンドを、2 列目には最初のパラメータを (パラメータが必要な場合)、3 列目には 2 つ目のパラメータを (パラメータが必要な場合) 入力します。「テーブル」 タグに戻るときは、その前にテストケースを保存します。
 
 ```html
 <tr>
@@ -282,173 +242,150 @@ parameter(again, if one is required to have a value). Example:
 </tr>
 ```
 
-#### Insert Comment
+#### コメントの挿入
 
-Comments may be added to make your test case more readable. These comments are
-ignored when the test case is run.
+テストケースの可読性を高めるためにコメントを入力できます。
+テストケースの実行時にはコメントは無視されます。
 
-Comments may also be used to add vertical white space (one or more blank lines)
-in your tests; just create empty comments. An empty command will cause an error
-during execution; an empty comment won’t.
+垂直方向の空白 (1 行以上の空白行) をテストに追加するには、空のコメントを作成する必要があります。
+空のコマンドでは実行時にエラーが発生します。
 
-##### Table View
+##### テーブル タブ
 
-Select the line in your test case where you want to insert the comment.
-Right-click and select Insert Comment. Now use the Command field to enter the
-comment. Your comment will appear in purple text.
+テストケース内のコメントを挿入する場所を選択します。
+右クリックして 「コメントを挿入」 をクリックします。
+「コマンド」 フィールドにコメントを入力します。
+入力したコメントは紫色のフォントで表示されます。
 
-##### Source View
+##### ソース タブ
 
-Select the point in your test case where you want to insert the comment. Add an
-HTML-style comment, i.e., `<!-- your comment here -->`.
+テストケース内のコメントを挿入する場所を選択します。
+HTML スタイルのコメント、すなわち `<!--  これはコメントです -–>` を入力します。
 
-#### Edit a Command or Comment
+#### コマンドまたはコメントの編集
 
-##### Table View
+##### テーブル タブ
 
-Simply select the line to be changed and edit it using the Command, Target, 
-and Value fields.
+変更する行を選択し、「コマンド」、「対象」、および 「値」 フィールドを使って内容を編集します。
 
-##### Source View
+##### ソース タブ
 
-Since Source view provides the equivalent of a WYSIWYG (What You See is What 
-You Get) editor, simply modify which line you wish–command, parameter, or comment.
+「ソース」 タブは WYSIWYG エディタに相当する機能を持っているので、目的の行 (コマンド、パラメータ、またはコメント) を編集します。
 
-### Opening and Saving a Test Case
+### テストケースを開く、保存する
 
-Like most programs, there are Save and Open commands under the File menu.
-However, Selenium distinguishes between test cases and test suites. To save
-your Selenium-IDE tests for later use you can either save the individual test
-cases, or save the test suite. If the test cases of your test suite have not
-been saved, you’ll be prompted to save them before saving the test suite.
+ほとんどのプログラムと同様に、「ファイル」メニューには「保存」および「開く」コマンドがあります。
+ただし、Seleniumはテストケースとテストスイートを区別します。
+後で使用するためにSelenium-IDEテストを保存するには、個々のテストケースを保存するか、テストスイートを保存します。
+テストスイートのテストケースが保存されていない場合は、テストスイートを保存する前に保存するよう求められます。
 
-When you open an existing test case or suite, Selenium-IDE displays its
-Selenium commands in the Test Case Pane.
+既存のテストケースまたはスイートを開くと、Selenium-IDEのテストケースペインにSeleniumコマンドが表示されます。
 
-## Running Test Cases
+## テストケースの実行
 
-The IDE allows many options for running your test case. You can run a test case
-all at once, stop and start it, run it one line at a time, run a single command
-you are currently developing, and you can do a batch run of an entire test
-suite. Execution of test cases is very flexible in the IDE.
+Selenium-IDE には、テストケースを実行するためのさまざまなオプションがあり、1つのテストケースの実行、停止と再開、1 行ずつの実行、現在開発中のコマンドだけの実行、テストスイート全体の実行などが可能です。
+Selenium-IDE では、テストケースを非常に柔軟に実行できます。
 
-**Run a Test Case**
+**テストケースの実行**
 
-Click the Run button to run the currently displayed test case.
+「Run」 ボタンをクリックすると、現在表示されているテストケースが実行されます。
 
-**Run a Test Suite**
+**テストスイートの実行**
 
-Click the Run All button to run all the test cases in the currently loaded test
-suite.
+「Run All」 ボタンをクリックすると、現在読み込まれているテストスイートに含まれるすべてのテストケースが実行されます。
 
-**Stop and Start**
+**停止と再開**
 
-The Pause button can be used to stop the test case while it is running. The
-icon of this button then changes to indicate the Resume button. To continue
-click Resume.
+「Pause」 ボタンをクリックすると、実行中のテストケースを停止できます。
+テストケースの実行を停止すると、ボタンのアイコンは 「Resume」 ボタンのアイコンに変わります。実行を再開するには、「Resume」 ボタンをクリックします。
 
-**Stop in the Middle**
+**途中で実行を停止**
 
-You can set a breakpoint in the test case to cause it to stop on a particular
-command. This is useful for debugging your test case. To set a breakpoint,
-select a command, right-click, and from the context menu select Toggle
-Breakpoint.
+テストケース内でブレークポイントを指定すると、特定のコマンドでテストケースを停止することができます。
+この機能は、テストケースをデバッグするときに便利です。
+ブレークポイントを指定するには、コマンドを選択し、右クリックして表示されるコンテキストメニューで 「ブレークポイントの指定/解除」 をクリックします。
 
-**Start from the Middle**
+**途中から実行を開始**
 
-You can tell the IDE to begin running from a specific command in the middle of
-the test case. This also is used for debugging. To set a startpoint, select a
-command, right-click, and from the context menu select Set/Clear Start Point.
+テストケースの途中にある特定のコマンドから実行を開始することができます。
+この機能も、テストケースをデバッグするときに便利です。
+開始位置を指定するには、コマンドを選択し、右クリックして表示されるコンテキストメニューで 「開始位置の指定/解除」 をクリックします。
 
-**Run Any Single Command**
+**任意のコマンドの実行**
 
-Double-click any single command to run it by itself. This is useful when
-writing a single command. It lets you immediately test a command you are
-constructing, when you are not sure if it is correct. You can double-click it
-to see if it runs correctly. This is also available from the context menu.
+1 つのコマンドだけをダブルクリックすると、そのコマンドを実行することができます。
+この機能は、コマンドを 1 つ記述するときに便利です。
+作成中のコマンドが適切かどうかわからないときでも、コマンドを即座にテストできます。
+コマンドをダブルクリックするだけで、適切に実行されるかどうか確認できます。この機能は、コンテキストメニューからも利用できます。
 
-## Using Base URL to Run Test Cases in Different Domains
+## Base URL を使った、異なるドメインでのテストケースの実行
 
-The Base URL field at the top of the Selenium-IDE window is very useful for
-allowing test cases to be run across different domains. Suppose that a site
-named http://news.portal.com had an in-house beta site named
-http://beta.news.portal.com. Any test cases for these sites that begin with an
-open statement should specify a relative URL as the argument to open rather
-than an absolute URL (one starting with a protocol such as http: or https:).
-Selenium-IDE will then create an absolute URL by appending the open command’s
-argument onto the end of the value of Base URL. For example, the test case
-below would be run against http://news.portal.com/about.html:
+Selenium-IDE ウィンドウの上部にある 「Base URL」 フィールドを使うと、テストケースを異なるドメインで実行できるので便利です。
+たとえば、 http://news.portal.com という名前のサイトが http://beta.news.portal.com という名前でインハウスのベータサイトを持っていたとします。
+この場合、これらのサイトが対象で、 open ステートメントで始まるすべてのテストケースについて、 open の引数に 絶対 URL (http: または https: などのプロトコルで始まる URL) ではなく、 相対 URL を指定します。
+すると、Selenium-IDE は、[Base URL] フィールドに入力された値の最後に、 open コマンドの引数を追加して、絶対 URL を作成します。
+たとえば次のテストケースは、 http://news.portal.com/about.html を対象に実行されます。
 
 ![Selenium IDE Prod URL](/images/legacy_docs/selenium_ide_base_url_prod.png)
 
-This same test case with a modified Base URL setting would be run against 
-http://beta.news.portal.com/about.html:
+ここで、「Base URL」 フィールドの設定を変更してテストケースを実行すれば、同じテストケースが今度は http://beta.news.portal.com/about.html を対象に実行されます。
 
 ![Selenium IDE Beta URL](/images/legacy_docs/selenium_ide_base_url_beta.png)
 
-## Selenium Commands – “Selenese”
+## Selenium コマンド- "Selenese"
 
-Selenium commands, often called selenese, are the set of commands that run your
-tests. A sequence of these commands is a test script. Here we explain those
-commands in detail, and we present the many choices you have in testing your
-web application when using Selenium.
+Selenium コマンドは、多くの場合seleneseと呼ばれ、テストを実行するコマンドのセットです。
+これらのコマンドのシーケンスはテストスクリプトです。
+ここでは、これらのコマンドを詳細に説明し、Seleniumを使用するときにWebアプリケーションをテストする際に選択できる多くの選択肢を示します。
 
-Selenium provides a rich set of commands for fully testing your web-app in
-virtually any way you can imagine. The command set is often called selenese.
-These commands essentially create a testing language.
+Seleniumには、想像できるあらゆる方法でWebアプリを完全にテストするための豊富なコマンドセットが用意されています。
+この一連のコマンドは、よくseleneseと呼ばれます。
+これらのコマンドは、基本的にテスト言語を作成します。
 
-In selenese, one can test the existence of UI elements based on their HTML
-tags, test for specific content, test for broken links, input fields, selection
-list options, submitting forms, and table data among other things. In addition
-Selenium commands support testing of window size, mouse position, alerts, Ajax
-functionality, pop up windows, event handling, and many other web-application
-features. The Command Reference lists all the available commands.
+seleneseでは、HTMLタグに基づいてUI要素の存在をテストしたり、特定のコンテンツをテストしたり、壊れたリンクをテストしたり、入力フィールド、選択リストオプション、フォームを送信したり、テーブルデータなどをテストできます。
+さらに、Seleniumコマンドは、ウィンドウサイズ、マウス位置、アラート、Ajax機能、ポップアップウィンドウ、イベント処理、およびその他の多くのWebアプリケーション機能のテストをサポートしています。
+コマンドリファレンスには、使用可能なすべてのコマンドがリストされています。
 
-A command tells Selenium what to do. Selenium commands come in three “flavors”:
-**Actions**, **Accessors**, and **Assertions**.
+コマンドは、Seleniumに何をすべきかを伝えます。 Seleniumコマンドには、 **アクション** 、 **アクセサ** 、**アサーション** という3つの"フレーバー"があります。
 
-* **Actions** are commands that generally manipulate the state of the application.
-They do things like “click this link” and “select that option”. If an Action
-fails, or has an error, the execution of the current test is stopped.
+* **アクション** は、一般的にアプリケーションの状態を操作するコマンドです。
+"このリンクをクリックする" や "そのオプションを選択する" といったことを実行します。
+アクションが失敗するか、エラーがある場合、現在のテストの実行は停止されます。
 
-    Many Actions can be called with the “AndWait” suffix, e.g. “clickAndWait”. This
-    suffix tells Selenium that the action will cause the browser to make a call to
-    the server, and that Selenium should wait for a new page to load.
+    "AndWait" 接尾辞を使用して、多くのアクションを呼び出すことができます。（例 : "clickAndWait"）
+    この接尾辞は、アクションによってブラウザーがサーバーを呼び出すこと、およびSeleniumが新しいページの読み込みを待つことをSeleniumに伝えます。
 
-* **Accessors** examine the state of the application and store the results in
-variables, e.g. “storeTitle”. They are also used to automatically generate
-Assertions.
+* **アクセサー** はアプリケーションの状態を調べ、結果を変数に保存します。（例 : "storeTitle"）
+また、アサーションを自動的に生成するためにも使用されます。
 
-* **Assertions** are like Accessors, but they verify that the state of the
-application conforms to what is expected. Examples include “make sure the page
-title is X” and “verify that this checkbox is checked”.
+* **アサーション** はアクセサーに似ていますが、アプリケーションの状態が期待どおりになっていることを検証します。
+たとえば、"ページタイトルがXであることを確認する" 、"このチェックボックスがオンになっていることを確認する" などです。
 
-All Selenium Assertions can be used in 3 modes: “assert”, “verify”, and ”
-waitFor”. For example, you can “assertText”, “verifyText” and “waitForText”.
-When an “assert” fails, the test is aborted. When a “verify” fails, the test
-will continue execution, logging the failure. This allows a single “assert” to
-ensure that the application is on the correct page, followed by a bunch of
-“verify” assertions to test form field values, labels, etc.
+すべてのSeleniumアサーションは、"assert"、"verify"、および "waitFor"の3つのモードで使用できます。
+たとえば、"assertText"、"verifyText"、"waitForText"を使用できます。
+"assert" が失敗すると、テストは中止されます。
+"verify" が失敗すると、テストは実行を継続し、失敗を記録します。
+これにより、単一の "assert" でアプリケーションが正しいページにあることを確認し、続いてフォームフィールドの値、ラベルなどをテストするための "verify" アサーションが多数行われます。
 
-“waitFor” commands wait for some condition to become true (which can be useful
-for testing Ajax applications). They will succeed immediately if the condition
-is already true. However, they will fail and halt the test if the condition
-does not become true within the current timeout setting (see the setTimeout
-action below).
+"waitFor" コマンドは、何らかの条件が真になるまで待機します（Ajaxアプリケーションのテストに役立ちます）。
+条件がすでに真であれば、すぐに成功します。
+ただし、現在のタイムアウト設定内で条件が真にならない場合、それらは失敗し、テストを停止します（以下のsetTimeoutアクションを参照）。
 
-## Script Syntax
+## スクリプトシンタックス
 
-Selenium commands are simple, they consist of the command and two parameters. 
-For example:
+Seleniumコマンドは単純で、コマンドと2つのパラメーターで構成されています。
+例えば、
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
 | verifyText         | //div//a[2]                   | Login       |
 
-The parameters are not always required; it depends on the command. In some
-cases both are required, in others one parameter is required, and in still
-others the command may take no parameters at all. Here are a couple more
-examples:
+
+パラメーターは必ずしも必要ではありません。
+コマンドに依存します。
+両方のパラメータが必要な場合もあれば、1つのパラメータが必要な場合もあります。
+また、コマンドがパラメータをまったく受け取らない場合もあります。
+ここにいくつかの例があります。
 
 |                    |                               |                               |
 | --------           | ----------------------------  | ----------------------------- |
@@ -457,25 +394,22 @@ examples:
 | type               | id=phone                      | (555) 666-7066                |
 | type               | id=address1                   | ${myVariableAddress}          |
 
-The command reference describes the parameter requirements for each command.
+コマンドリファレンスでは、各コマンドのパラメーター要件について説明しています。
 
-Parameters vary, however they are typically:
+パラメーターは異なりますが、通常は、
 
-* a locator for identifying a UI element within a page.
-* a text pattern for verifying or asserting expected page content
-* a text pattern or a selenium variable for entering text in an input field or
-for selecting an option from an option list.
+* ページ内のUI要素を識別するためのロケーター
+* 予想されるページコンテンツを検証またはアサートするためのテキストパターン
+* 入力フィールドにテキストを入力するため、またはオプションリストからオプションを選択するためのテキストパターンまたはSelenium変数
 
-Locators, text patterns, selenium variables, and the commands themselves are
-described in considerable detail in the section on Selenium Commands.
+ロケーター、テキストパターン、Selenium変数、およびコマンド自体については、Seleniumコマンドの章で詳しく説明します。
 
-Selenium scripts that will be run from Selenium-IDE will be stored in an HTML
-text file format. This consists of an HTML table with three columns. The first
-column identifies the Selenium command, the second is a target, and the final
-column contains a value. The second and third columns may not require values
-depending on the chosen Selenium command, but they should be present. Each
-table row represents a new Selenium command. Here is an example of a test that
-opens a page, asserts the page title and then verifies some content on the page:
+Selenium-IDEから実行されるSeleniumスクリプトは、HTMLテキストファイル形式で保存されます。
+これは、3つの列を持つHTMLテーブルで構成されます。
+最初の列はSeleniumコマンドを示し、2番目の列はターゲットであり、最後の列には値が含まれています。
+2番目と3番目の列は、選択したSeleniumコマンドによっては値を必要としない場合がありますが、存在する必要があります。
+各テーブル行は、新しいSeleniumコマンドを表します。
+以下は、ページを開き、ページタイトルをアサートし、ページ上のコンテンツを検証するテストの例です。
 
 ```html
 <table>
@@ -485,7 +419,7 @@ opens a page, asserts the page title and then verifies some content on the page:
 </table>
 ```
 
-Rendered as a table in a browser this would look like the following:
+ブラウザでテーブルとしてレンダリングされると、次のようになります。
 
 |                    |                               |                               |
 | --------           | ----------------------------  | ----------------------------- |
@@ -497,14 +431,15 @@ The Selenese HTML syntax can be used to write and run tests without requiring
 knowledge of a programming language. With a basic knowledge of selenese and
 Selenium-IDE you can quickly produce and run testcases.
 
-## Test Suites
+## テストスイート
 
-A test suite is a collection of tests. Often one will run all the tests in a
-test suite as one continuous batch-job.
+テストスイートは、テストのコレクションです。
+多くの場合、テストスイート内のすべてのテストを1つの連続バッチジョブとして実行します。
 
-When using Selenium-IDE, test suites also can be defined using a simple HTML
-file. The syntax again is simple. An HTML table defines a list of tests where
-each row defines the filesystem path to each test. An example tells it all.
+Selenium-IDEを使用する場合、テストスイートは単純なHTMLファイルを使用して定義することもできます。
+構文も簡単です。
+HTMLテーブルはテストのリストを定義し、各行は各テストへのファイルシステムパスを定義します。
+例ですべてがわかります。
 
 ```html
 <html>
@@ -522,100 +457,83 @@ each row defines the filesystem path to each test. An example tells it all.
 </html>
 ```
 
-A file similar to this would allow running the tests all at once, one after
-another, from the Selenium-IDE.
+これと似たファイルを使用すると、Selenium-IDEから次々にテストを実行できます。
 
-Test suites can also be maintained when using Selenium-RC. This is done via
-programming and can be done a number of ways. Commonly Junit is used to
-maintain a test suite if one is using Selenium-RC with Java. Additionally, if
-C# is the chosen language, Nunit could be employed. If using an interpreted
-language like Python with Selenium-RC then some simple programming would be
-involved in setting up a test suite. Since the whole reason for using
-Selenium-RC is to make use of programming logic for your testing this usually
-isn’t a problem.
+Selenium-RCを使用している場合、テストスイートも維持できます。
+これはプログラミングによって行われ、いくつかの方法で行うことができます。
+通常、Junitは、JavaでSelenium-RCを使用している場合にテストスイートを維持するために使用されます。
+さらに、C#が選択された言語である場合、Nunitを使用できます。
+Selenium-RCでPythonのようなインタープリター言語を使用する場合、テストスイートのセットアップにいくつかの簡単なプログラミングが含まれます。
+Selenium-RCを使用する理由はすべて、テストにプログラミングロジックを使用することであるため、通常これは問題になりません。
 
-## Commonly Used Selenium Commands
+## 一般的に使用されるSeleniumコマンド
 
-To conclude our introduction of Selenium, we’ll show you a few typical Selenium
-commands. These are probably the most commonly used commands for building
-tests.
+Seleniumの紹介を終了するために、いくつかの典型的なSeleniumコマンドを紹介します。
+これらはおそらく、テストを構築するために最も一般的に使用されるコマンドです。
 
 **open**
 
-opens a page using a URL.
+URLを使用してページを開きます。
 
 **click/clickAndWait**
 
-performs a click operation, and optionally waits for a new page to load.
+クリック操作を実行し、オプションで新しいページがロードされるのを待ちます。
 
 **verifyTitle/assertTitle**
 
-verifies an expected page title.
+期待されるページタイトルを検証します。
 
 **verifyTextPresent**
 
-verifies expected text is somewhere on the page.
+期待されるテキストがページのどこかにあることを確認します。
 
 **verifyElementPresent**
 
-verifies an expected UI element, as defined by its HTML tag, is present on the
-page.
+HTMLタグで定義されている、期待されるUI要素がページに存在することを確認します。
 
 **verifyText**
 
-verifies expected text and its corresponding HTML tag are present on the page.
+期待されるテキストとそれに対応するHTMLタグがページに存在することを確認します。
 
 **verifyTable**
 
-verifies a table’s expected contents.
+テーブルの期待される内容を検証します。
 
 **waitForPageToLoad**
 
-pauses execution until an expected new page loads. Called automatically when
-clickAndWait is used.
+期待される新しいページがロードされるまで実行を一時停止します。
+clickAndWaitが使用されると自動的に呼び出されます。
 
 **waitForElementPresent**
 
-pauses execution until an expected UI element, as defined by its HTML tag, is
-present on the page.
+HTMLタグで定義されているように、期待されるUI要素がページに表示されるまで実行を一時停止します。
 
-## Verifying Page Elements
+## ページ要素の検証
 
-Verifying UI elements on a web page is probably the most common feature of your
-automated tests. Selenese allows multiple ways of checking for UI elements. It
-is important that you understand these different methods because these methods
-define what you are actually testing.
+ページ上の UI 要素の検証は、自動化されたテストではおそらく最もよく使われる機能でしょう。
+Selenese では、UI 要素をさまざまな方法でチェックすることができます。
+実際のテスト対象はどの方法を使うかによって左右されるので、これらの方法の違いを理解することが重要になります。
 
-For example, will you test that…
+たとえば、現在テストしようとしているのは、次のどれでしょうか...。
 
-1. an element is present somewhere on the page?
-1. specific text is somewhere on the page?
-1. specific text is at a specific location on the page?
+1. ある要素がページ上のどこかに存在しているかどうか。
+1. 特定のテキストがページ上のどこかに存在しているかどうか。
+1. 特定のテキストがページ上の特定の場所に存在しているかどうか。
 
-For example, if you are testing a text heading, the text and its position at
-the top of the page are probably relevant for your test. If, however, you are
-testing for the existence of an image on the home page, and the web designers
-frequently change the specific image file along with its position on the page,
-then you only want to test that an image (as opposed to the specific image
-file) exists somewhere on the page.
+テキスト見出しをテストする場合、おそらくテスト対象として適しているのは、ページ先頭のテキストとその位置でしょう。
+一方、画像がホームページ上に存在するかどうかをテストする場合で、Web デザイナーが具体的な画像ファイルとそのページ上の位置を頻繁に変更しているようなケースでは、(具体的な画像ファイルではなく) 画像 が ページ上のどこかに存在しているかどうかをテストする方が適切でしょう。
 
-## Assertion or Verification?
+## アサーションと検証
 
-Choosing between “assert” and “verify” comes down to convenience and management
-of failures. There’s very little point checking that the first paragraph on the
-page is the correct one if your test has already failed when checking that the
-browser is displaying the expected page. If you’re not on the correct page,
-you’ll probably want to abort your test case so that you can investigate the
-cause and fix the issue(s) promptly. On the other hand, you may want to check
-many attributes of a page without aborting the test case on the first failure
-as this will allow you to review all failures on the page and take the
-appropriate action. Effectively an “assert” will fail the test and abort the
-current test case, whereas a “verify” will fail the test and continue to run
-the test case.
+“assert” (アサート) と “verify” (検証) のどちらを使うかは、利便性、そしてエラーの扱いをどうするかによって決まります。
+期待されたページがブラウザに表示されているかどうかをチェックするテストがすでに失敗しているのに、そのページの最初のパラグラフが正しいものかどうかをチェックしても、ほとんど意味はありません。
+目的のページが表示されていなければ、テストケースを中止して、何が原因かすぐ調べて、問題を解決した方がよいでしょう。
+一方、最初のエラーでテストケースを中止せず、ページ上の多くの属性をチェックしたい場合もあります。
+こうすれば、該当するページ上のすべてのエラーをまとめて見直し、適切な対応策を講じることができます。
+Selenium のコマンドを使う場合、”assert” では、テストがエラーになり、現在のテストケースは中止されますが、”verify” では、テストはエラーになるものの、テストケースの実行は続行されます。
 
-The best use of this feature is to logically group your test commands, and
-start each group with an “assert” followed by one or more “verify” test
-commands. An example follows:
+この機能を上手に活用するには、テストのコマンドを論理的にグループ化し、各グループを “assert” で始め、その後に 1 つまたは複数の “verify” コマンドを続けて記述します。
+例を次に示します。
 
 | Command            | Target                        | Value                         |
 | --------           | ----------------------------  | ----------------------------- |
@@ -626,47 +544,43 @@ commands. An example follows:
 | verifyTable        | 1.2.2                         | June 3, 2008                  |
 | verifyTable        | 1.2.3                         | 1.0 beta 2                    |
 
-The above example first opens a page and then “asserts” that the correct page
-is loaded by comparing the title with the expected value. Only if this passes
-will the following command run and “verify” that the text is present in the
-expected location. The test case then “asserts” the first column in the second
-row of the first table contains the expected value, and only if this passed
-will the remaining cells in that row be “verified”.
+上記の例では、最初にページを開き、次にタイトルを期待値と比較することで正しいページがロードされることを“アサート”します。
+これが成功した場合にのみ、次のコマンドが実行され、テキストが予想される場所に存在することを“検証”します。
+テストケースは、最初のテーブルの2行目の最初の列に期待値が含まれていることを“アサート”します。
+これに合格した場合にのみ、その行の残りのセルが“検証”されます。
 
 ### **verifyTextPresent**
 
-The command `verifyTextPresent` is used to verify specific text exists somewhere
-on the page. It takes a single argument–the text pattern to be verified. For
-example:
+`verifyTextPresent` コマンドは、 特定のテキストがページ上のどこかに存在することを検証するのに使います。
+このコマンドは引数を 1 つだけ取ります。
+引数には、検証するテキストのパターンを指定します。
+次に例を示します。
 
 | Command            | Target                        | Value                         |
 | --------           | ----------------------------  | ----------------------------- |
 | verifyTextPresent  | Marketing Analysis            |                               |
 
-This would cause Selenium to search for, and verify, that the text string
-“Marketing Analysis” appears somewhere on the page currently being tested. Use
-verifyTextPresent when you are interested in only the text itself being present
-on the page. Do not use this when you also need to test where the text occurs
-on the page.
+この例では、現在テストの対象になっているページ上で “Marketing Analysis” というテキスト文字列を探し、この文字列がページ上のどこかにあるかどうかを検証します。
+verifyTextPresent コマンドは、テキストそれ自体がページ上に存在するかどうかだけを調べるときに使います。
+テキストがページ上に現れる場所もテストの対象に含める必要がある場合には、このコマンドは使わないでください。
 
 ### **verifyElementPresent**
 
-Use this command when you must test for the presence of a specific UI element,
-rather than its content. This verification does not check the text, only the
-HTML tag. One common use is to check for the presence of an image.
+このコマンドは、特定の UI 要素について、その内容ではなく、要素の存在自体をチェックするのに使います。
+具体的にはテキストはチェックせず、HTML タグだけをチェックします。
+一般的な使い方として、画像が存在するかどうかのチェックなどがあります。
 
 | Command               | Target                        | Value                         |
 | --------              | ----------------------------  | ----------------------------- |
 | verifyElementPresent  | //div/p/img                   |                               |
 
-This command verifies that an image, specified by the existence of an <img>
-HTML tag, is present on the page, and that it follows a <div> tag and a <p>
-tag. The first (and only) parameter is a locator for telling the Selenese
-command how to find the element. Locators are explained in the next section.
+この例では、&lt;img&gt; HTML タグの存在によって指定される画像が、ページ上に存在するかどうか、そして &lt;img&gt; タグが &lt;div&gt; タグと &lt;p&gt; タグに続いて出現するかどうかを検証しています。
+最初の (1 つだけの) パラメータは、要素を探す方法を Selenese コマンドに指示するための ロケータ です。
+ロケータについては、次のセクションで説明します。
 
-`verifyElementPresent` can be used to check the existence of any HTML tag within
-the page. You can check the existence of links, paragraphs, divisions <div>,
-etc. Here are a few more examples.
+`verifyElementPresent`を使用して、ページ内のHTMLタグの存在を確認できます。
+リンク、段落、分割 &lt;div&gt;などの存在を確認できます。
+さらにいくつかの例を示します。
 
 | Command               | Target                        | Value                         |
 | --------              | ----------------------------  | ----------------------------- |
@@ -677,39 +591,34 @@ etc. Here are a few more examples.
 | verifyElementPresent  | //a[2]                        |                               |
 | verifyElementPresent  | //head/title                  |                               |
 
-These examples illustrate the variety of ways a UI element may be tested. Again, 
-locators are explained in the next section.
+これらの例は、UI要素をテストするさまざまな方法を示しています。
+繰り返しになりますが、ロケータについては次のセクションで説明します。
 
 ### **verifyText**
 
-Use `verifyText` when both the text and its UI element must be tested. verifyText
-must use a locator. If you choose an _XPath_ or _DOM_ locator, you can verify that
-specific text appears at a specific location on the page relative to other UI
-components on the page.
+テキストとそのUI要素の両方をテストする必要がある場合は、`verifyText`を使用します。
+verifyTextはロケーターを使用する必要があります。
+_XPath_ ロケーターまたは _DOM_ ロケーターを選択した場合、特定のテキストが、ページ上のほかの UI コンポーネントとの相対位置で指定される特定の場所に出現するかどうかを検証できます。
 
 | Command            | Target                        | Value                                                               |
 | --------           | ----------------------------  | ------------------------------------------------------------------- |
 | verifyText         | //table/tr/td/div/p           | This is my text and it occurs right after the div inside the table. |
 
 
-## Locating Elements
+## 要素の特定
 
-For many Selenium commands, a target is required. This target identifies an
-element in the content of the web application, and consists of the location
-strategy followed by the location in the format `locatorType=location`. The
-locator type can be omitted in many cases. The various locator types are
-explained below with examples for each.
+多くの Selenium コマンドでは、対象を指定する必要があります。
+この対象は、Web アプリケーションのコンテキスト内で要素を特定するためのもので、ロケーションストラテジーに続けて、 `locatorType=location` の形でロケーションを指定します。
+多くの場合、ロケーションのタイプは省略できます。
+ロケーションのタイプについては、以下で例を挙げながら説明します。
 
-### Locating by Identifier
+### 識別子による特定
 
-This is probably the most common method of locating elements and is the 
-catch-all default when no recognized locator type is used. With this strategy,
-the first element with the id attribute value matching the location will be used. If
-no element has a matching id attribute, then the first element with a name 
-attribute matching the location will be used.
+この方法は、要素を特定する方法としておそらく最も一般的で、ロケータタイプとして認識されるものが使われていない場合の汎用デフォルトです。
+このストラテジーでは、id 属性を持つ要素のうち、ロケーションに一致する最初の要素が使われます。
+id 属性に一致する要素がない場合には、name 属性を持つ要素のうち、ロケーションに一致する最初の要素が使われます。
 
-For instance, your page source could have id and name attributes 
-as follows:
+たとえば、ページソースに次のような id 属性と name 属性があったとします。
 
 ```html
   <html>
@@ -723,21 +632,18 @@ as follows:
   <html>
 ```           
 
-The following locator strategies would return the elements from the HTML 
-snippet above indicated by line number:
+この場合、次のロケータストラテジーは、上の HTML 断片のうち、行番号で示される部分の要素を返します。
 
 - ``identifier=loginForm`` (3)
 - ``identifier=password`` (5)
 - ``identifier=continue`` (6)
 - ``continue`` (6)
 
-Since the ``identifier`` type of locator is the default, the ``identifier=``
-in the first three examples above is not necessary.
+``identifier`` タイプのロケーターはデフォルトであるため、上記の最初の3つの例の ``identifier=`` は必要ありません。
 
-### Locating by Id 
+### idによる特定
 
-This type of locator is more limited than the identifier locator type, but 
-also more explicit. Use this when you know an element's id attribute.
+このタイプのロケータは identifier ロケータタイプよりも限定の度合いは高くなりますが、それと同時に、より明示的になります。要素の id 属性がわかっている場合に使用します。
 
 ```html
    <html>
@@ -754,12 +660,11 @@ also more explicit. Use this when you know an element's id attribute.
 
 - ``id=loginForm`` (3)
 
-### Locating by Name
- 
-The name locator type will locate the first element with a matching name 
-attribute. If multiple elements have the same value for a name attribute, then 
-you can use filters to further refine your location strategy. The default 
-filter type is value (matching the value attribute).  
+### Nameによる特定
+
+name ロケータタイプは、nama 属性に一致する最初の要素を特定します。
+1つの name 属性に対して、複数の要素が同じ値を持っている場合には、フィルタを使ってロケーションストラテジーの精度を高めることができます。
+デフォルトのフィルタタイプは value です (value 属性に一致)。
 
 ```html
    <html>
@@ -779,38 +684,26 @@ filter type is value (matching the value attribute).
 - ``name=continue Clear`` (7)
 - ``name=continue type=button`` (7)
 
-Note: Unlike some types of XPath and DOM locators, the three
-   types of locators above allow Selenium to test a UI element independent 
-   of its location on 
-   the page.  So if the page structure and organization is altered, the test 
-   will still pass.  You may or may not want to also test whether the page 
-   structure changes.  In the case where web designers frequently alter the 
-   page, but its functionality must be regression tested, testing via id and 
-   name attributes, or really via any HTML property, becomes very important.
+注 : 一部のタイプの XPath ロケータや DOM ロケータと異なり、これまでに示した 3 つのタイプのロケータを使えば、ページ上の位置に関係なく UI 要素をテストすることができます。
+  したがって、ページの構造や構成が変わっても、テストはパスします。
+  ページの構造が変わったかどうかについては、テストしたい場合もテストしたくない場合もあるでしょう。
+  Web デザイナーが頻繁にページに手を加えていて、ページの機能を回帰テストの対象にする必要がある場合には、id 属性や name 属性、または任意の HTML プロパティによるテストが非常に重要になります。
 
-### Locating by XPath 
+### XPathによる特定 
 
-XPath is the language used for locating nodes in an XML document. As HTML can 
-be an implementation of XML (XHTML), Selenium users can leverage this powerful 
-language to target elements in their web applications. XPath extends beyond (as 
-well as supporting) the simple methods of locating by id or name 
-attributes, and opens up all sorts of new possibilities such as locating the 
-third checkbox on the page.
+XPath は、XML ドキュメント内のノードを特定するために使われる言語です。
+HTML は XML (XHTML) の実装でもありうるので、Selenium ユーザーは XPath という強力な言語を使って、Web アプリケーション内の要素を特定することができます。
+XPath は、id 属性や name 属性による要素の特定という単純な方法を (サポートすると当時に) さらに拡張しており、ページ上の3番目のチェックボックスを特定するなど、あらゆる種類の新しい可能性を開いてくれる言語です。
 
-One of the main reasons for using XPath is when you don't have a suitable id 
-or name attribute for the element you wish to locate. You can use XPath to 
-either locate the element in absolute terms (not advised), or relative to an 
-element that does have an id or name attribute.  XPath locators can also be
-used to specify elements via attributes other than id and name.
+XPathを使う主な理由の1つは、特定したい要素に対応する適切な id 属性や name 属性がない場合があることです。
+XPathを使うと、要素を絶対的に特定したり (ただし、このやり方は推奨されません)、id 属性または name 属性を持つ要素からの相対位置で要素を特定したりできます。
+XPath ロケータを使って、id や name 以外の属性から要素を特定することもできます。
 
-Absolute XPaths contain the location of all elements from the root (html) and 
-as a result are likely to fail with only the slightest adjustment to the 
-application. By finding a nearby element with an id or name attribute (ideally
-a parent element) you can locate your target element based on the relationship.
-This is much less likely to change and can make your tests more robust.
+絶対 XPath には、ルート (html) からのすべての要素の位置が含まれており、したがって 、アプリケーションにわずかな変更を加えただけで、XPath による特定がうまくいかなる可能性があります。
+id 属性または name 属性を持つ近くの要素 (理想的には親要素) を見つけることによって、対象となる要素を相対関係に基づいて特定できるようになります。
+これは、アプリケーションに変更が加えられても変わる可能性は低く、テストをより堅牢にすることができます。
 
-Since only ``xpath`` locators start with "//", it is not necessary to include
-the ``xpath=`` label when specifying an XPath locator.
+``xpath`` ロケーターのみが "//" で始まるため、XPathロケーターを指定するときに ``xpath=`` ラベルを含める必要はありません。
 
 ```html
    <html>
@@ -825,40 +718,29 @@ the ``xpath=`` label when specifying an XPath locator.
    <html>
 ```
 
-- ``xpath=/html/body/form[1]`` (3) - *Absolute path (would break if the HTML was 
-  changed only slightly)*
-- ``//form[1]`` (3) - *First form element in the HTML*
-- ``xpath=//form[@id='loginForm']`` (3) - *The form element with attribute named 'id' and the value 'loginForm'*
-- ``xpath=//form[input/@name='username']`` (3) - *First form element with an input child
-  element with attribute named 'name' and the value 'username'*
-- ``//input[@name='username']`` (4) - *First input element with attribute named 'name' and the value 
-  'username'*
-- ``//form[@id='loginForm']/input[1]`` (4) - *First input child element of the 
-  form element with attribute named 'id' and the value 'loginForm'*
-- ``//input[@name='continue'][@type='button']`` (7) - *Input with attribute named 'name' and the value 'continue'
-  and attribute named 'type' and the value 'button'*
-- ``//form[@id='loginForm']/input[4]`` (7) - *Fourth input child element of the 
-  form element with attribute named 'id' and value 'loginForm'*
+- ``xpath=/html/body/form[1]`` (3) - *絶対パス（HTMLが少しだけ変更された場合に壊れます）*
+- ``//form[1]`` (3) - *HTMLの最初のフォーム要素*
+- ``xpath=//form[@id='loginForm']`` (3) - *'id' という名前の属性と値 'loginForm'を持つフォーム要素*
+- ``xpath=//form[input/@name='username']`` (3) - *'name'という名前の属性と値 'username' を持つ入力子要素を持つ最初のフォーム要素*
+- ``//input[@name='username']`` (4) - *'name'という名前の属性と'username' という値を持つ最初の入力要素*
+- ``//form[@id='loginForm']/input[1]`` (4) - *'id'という名前の属性と'loginForm'という値を持つフォーム要素の最初の入力子要素*
+- ``//input[@name='continue'][@type='button']`` (7) - *'name'という名前の属性と'continue'という値の属性、'type'という名前の属性と'button'という値の入力*
+- ``//form[@id='loginForm']/input[4]`` (7) - *'id'という名前の属性と'loginForm'という値を持つフォーム要素の4番目の入力子要素*
 
-These examples cover some basics, but in order to learn more, the 
-following references are recommended:
+これらの例では、いくつかの基本的な使い方を示しています。XPath の指定方法の詳細については、次の参考資料を読むことをお勧めします。
 
 * [W3Schools XPath Tutorial](http://www.w3schools.com/xml/xpath_intro.asp>) 
 * [W3C XPath Recommendation](http://www.w3.org/TR/xpath)
 
-There are also a couple of very useful Firefox Add-ons that can assist in 
-discovering the XPath of an element:
+また、要素のXPathを検出するのに役立つ非常に便利なFirefoxアドオンがいくつかあります。
 
-* [XPath Checker](https://addons.mozilla.org/en-US/firefox/addon/1095?id=1095) 
-  XPath and can be used to test XPath results. 
-* [Firebug](https://addons.mozilla.org/en-US/firefox/addon/1843 -  XPath 
-  suggestions are just one of the many powerful features of this very useful add-on.
+* [XPath Checker](https://addons.mozilla.org/en-US/firefox/addon/1095?id=1095) XPathおよびXPath結果のテストに使用できます。
+* [Firebug](https://addons.mozilla.org/en-US/firefox/addon/1843 - XPathの提案は、この非常に便利なアドオンの多くの強力な機能の1つにすぎません。
 
-### Locating Hyperlinks by Link Text
+### リンクテキストによるハイパーリンクの特定
  
-This is a simple method of locating a hyperlink in your web page by using the 
-text of the link. If two links with the same text are present, then the first 
-match will be used.
+これは、リンクのテキストを使用してWebページのハイパーリンクを特定する簡単な方法です。
+同じテキストの2つのリンクが存在する場合、最初に一致したものが使われます。
 
 ```html
   <html>
@@ -874,15 +756,13 @@ match will be used.
 - ``link=Cancel`` (5)
 
 
-### Locating by DOM  
+### DOMによる特定 
 
-The Document Object Model represents an HTML document and can be accessed 
-using JavaScript. This location strategy takes JavaScript that evaluates to 
-an element on the page, which can be simply the element's location using the 
-hierarchical dotted notation.
+ドキュメントオブジェクトモデルはHTMLドキュメントを表し、JavaScriptを使用してアクセスできます。
+このロケーションストラテジーでは、ページ上の要素に評価される JavaScript を使用します。
+単に階層型ドット記法を使って要素の位置を特定できます。
 
-Since only ``dom`` locators start with "document", it is not necessary to include
-the ``dom=`` label when specifying a DOM locator.
+"document" で始まるのは ``dom`` ロケーターだけなので、DOMロケーターを指定するときに ``dom=`` ラベルを含める必要はありません。
 
 ```html
    <html>
@@ -905,15 +785,14 @@ the ``dom=`` label when specifying a DOM locator.
 - ``document.forms[0].elements[0]`` (4)
 - ``document.forms[0].elements[3]`` (7)
 
-You can use Selenium itself as well as other sites and extensions to explore
-the DOM of your web application. A good reference exists on [W3Schools](http://www.w3schools.com/js/js_htmldom.asp). 
+Selenium それ自体に加え、ほかのサイトや拡張機能を利用すれば、作成中のアプリケーションの DOM について詳しく知ることができます。
+[W3Schools](http://www.w3schools.com/js/js_htmldom.asp)には適切なリファレンスがあります。
 
-### Locating by CSS
+### CSSによる特定
 
-CSS (Cascading Style Sheets) is a language for describing the rendering of HTML
-and XML documents. CSS uses Selectors for binding style properties to elements
-in the document. These Selectors can be used by Selenium as another locating 
-strategy.
+CSS (Cascading Style Sheets) は、HTML ドキュメントと XML ドキュメントのレンダリングについて記述するための言語です。
+CSS では、セレクタを使って、ドキュメント内の要素にスタイルプロパティをバインドしています。
+Selenium では、これらのセレクタをロケーションストラテジーとして利用できます。
 
 ```html
    <html>
@@ -935,106 +814,81 @@ strategy.
 - ``css=#loginForm input[type="button"]`` (7)
 - ``css=#loginForm input:nth-child(2)`` (5)
 
-For more information about CSS Selectors, the best place to go is [the W3C 
-publication](http://www.w3.org/TR/css3-selectors/).  You'll find additional
-references there.
+CSSセレクターの詳細については、[the W3C 
+publication](http://www.w3.org/TR/css3-selectors/)をご覧ください。
+詳しいリファレンスもここにあります。
 
-### Implicit Locators 
+### 暗黙のロケーター 
 
-You can choose to omit the locator type in the following situations:
+次の状況では、ロケータータイプを省略することができます。
 
- - Locators without an explicitly defined locator strategy will default
-   to using the identifier locator strategy. See `Locating by Identifier`_.
+ - ロケーター戦略が明示的に定義されていないロケーターは、デフォルトで識別子ロケーター戦略を使用します。
+   `idによる特定`　をご覧ください。
    
- - Locators starting with "//" will use the XPath locator strategy. 
-   See `Locating by XPath`_.   
+ - "//" で始まるロケーターは、XPathロケーター戦略を使用します。
+   `XPathによる特定` をご覧ください。
  
- - Locators starting with "document" will use the DOM locator strategy. 
-   See `Locating by DOM`_
+ - "document" で始まるロケーターは、DOMロケーター戦略を使用します。 
+   `DOMによる特定` をご覧ください。
 
 
-## Matching Text Patterns
+## テキストパターンとの一致
 
-Like locators, *patterns* are a type of parameter frequently required by Selenese
-commands.  Examples of commands which require patterns are **verifyTextPresent**,
-**verifyTitle**, **verifyAlert**, **assertConfirmation**, **verifyText**, and 
-**verifyPrompt**.  And as has been mentioned above, link locators can utilize 
-a pattern.  Patterns allow you to *describe*, via the use of special characters,
-what text is expected rather than having to specify that text exactly.
+ロケータ同様、 パターン も Selenese コマンドでしばしば必要になるタイプのパラメータです。パターンを指定する必要があるコマンドとしては、 **verifyTextPresent** 、 **verifyTitle** 、 **verifyAlert** 、 **assertConfirmation** 、 **verifyText** 、 **verifyPrompt** などがあります。
+また、すでに示したリンクロケータでも、パターンを使用できます。
+パターンを使うと、テキストを正確に指定しなくても、期待されるテキストを特殊文字の使用を通じて 記述 することができます。
 
-There are three types of patterns: *globbing*, *regular expressions*, and *exact*.
+パターンには、 *globbing* 、 *regular expressions* 、 *exact* の 3 つの種類があります。
 
-### Globbing Patterns
+### グロビングパターン
 
-Most people are familiar with globbing as it is utilized in
-filename expansion at a DOS or Unix/Linux command line such as ``ls *.c``.
-In this case, globbing is used to display all the files ending with a ``.c`` 
-extension that exist in the current directory.  Globbing is fairly limited.  
-Only two special characters are supported in the Selenium implementation:
+ほとんどのユーザーは、グロビングについてはすでによく知っていることでしょう。
+グロビングは、DOS や Unix/Linux のコマンドラインで ``ls *.c``などとしてファイル名を展開するときに使われています。
+この例では、現在のディレクトリ内に存在する拡張子 ``.c``で終わるすべてのファイルが表示されます。
+グロビングにはかなり制限があります。
+Selenium の実装でサポートされている特殊文字は、次の 2 つだけです。
 
-`*` which translates to "match anything," i.e., nothing, a single character, or many characters.
+`*`「何にでも一致」します。すなわち、何もなし、1 文字だけ、複数の文字のすべてに一致します。
 
-`[ ]` (*character class*) which translates to "match any single character 
-found inside the square brackets." A dash (hyphen) can be used as a shorthand
-to specify a range of characters (which are contiguous in the ASCII character
-set).  A few examples will make the functionality of a character class clear:
+`[ ]` ( *文字クラス* )。"角かっこ内の任意の 1 文字に一致"します。
+ダッシュ文字 (ハイフン。 “-“) を使って文字の範囲 (ASCII 文字セットで連続する文字の範囲) を指定できます。
+文字クラスのはたらきについては、いくつか実例を挙げた方がわかりやすいでしょう。
 
-``[aeiou]`` matches any lowercase vowel
+``[aeiou]`` は任意の小文字の母音に一致します。
 
-``[0-9]`` matches any digit
+``[0-9]`` は任意の数字に一致します。
 
-``[a-zA-Z0-9]`` matches any alphanumeric character
+``[a-zA-Z0-9]`` は任意の英数字に一致します。
 
-In most other contexts, globbing includes a third special character, the **?**.
-However, Selenium globbing patterns only support the asterisk and character
-class.
+グロビングのほとんどの実装では、3 つ目の特殊文字として **?** が含まれています。
+しかし、Selenium のグロビングパターンでサポートされているのは、アスタリスク (*) と文字クラスだけです。
 
-To specify a globbing pattern parameter for a Selenese command, you can
-prefix the pattern with a **glob:** label.  However, because globbing
-patterns are the default, you can also omit the label and specify just the
-pattern itself.
+Selenese コマンドでグロビングパターンを指定するには、指定するパターンの前に **glob:** ラベルを付けます。
+ただし、グロビングパターンはデフォルトなので、このラベルを省略してパターンだけを指定することもできます。
 
-Below is an example of two commands that use globbing patterns.  The
-actual link text on the page being tested
-was "Film/Television Department"; by using a pattern
-rather than the exact text, the **click** command will work even if the
-link text is changed to "Film & Television Department" or "Film and Television
-Department".  The glob pattern's asterisk will match "anything or nothing"
-between the word "Film" and the word "Television".
+次に示すのは、グロビングパターンの使用例です。
+ページ上の実際のリンクテキストは “Film/Television Department” でした。
+正確に一致するテキストではなく、パターンを使うと、リンクのテキストが “Film & Television Department” や “Film and Television Department” に変更された場合でも、 **click** コマンドが動作するようになります。
+グロビングパターンのアスタリスクは、 “Film” という単語と “Television” という単語の間に何もなくても、または何があっても一致します。
 
 | Command            | Target                                 | Value                                                              |
 | --------           | -------------------------------------- | ------------------------------------------------------------------ |
 | click              | link=glob:Film*Television Department   |                                                                    |
 | verifyTitle        | glob:\*Film\*Television\*              |                                                                    |
 
+リンクをクリックして表示されるページの実際のタイトルは “De Anza Film And Television Department - Menu” でした。正確に一致するテキストではなく、パターンを使うと、ページのタイトルに “Film” と “Television” の 2 つの単語が (この順序で) 出現する限り、 ``verifyTitle`` はパスします。
+たとえば、ページのオーナーがタイトルを短縮して “Film & Television Department” としても、テストはパスします。リンクとリンクが動作するかどうかのテスト (上の例では ``verifyTitle``) との両方でパターンを使うことで、こうしたテストケースの保守の手間を大幅に減らすことができます。
 
-The actual title of the page reached by clicking on the link was "De Anza Film And
-Television Department - Menu".  By using a pattern rather than the exact
-text, the ``verifyTitle`` will pass as long as the two words "Film" and "Television" appear
-(in that order) anywhere in the page's title.  For example, if 
-the page's owner should shorten
-the title to just "Film & Television Department," the test would still pass.
-Using a pattern for both a link and a simple test that the link worked (such as
-the ``verifyTitle`` above does) can greatly reduce the maintenance for such
-test cases.
+#### 正規表現パターン
 
-#### Regular Expression Patterns
+*正規表現* パターンは、Selenese がサポートしている 3 種類のパターンの中で最も強力です。
+正規表現はほとんどの高水準プログラミング言語、多くのテキストエディタ、さらに Linux/Unix のコマンドラインユーティリティである **grep** や **sed** 、 **awk** など、さまざまなツールでもサポートされています。
+Selenese では、正規表現パターンを使うと、それ以外の方法では実現が難しい数多くのタスクを実行することができます。
+たとえば、テーブルの特定のセルに入力されているのが数字だけかどうかをテストする必要があるとします。
+この場合、 ``regexp: [0-9]+`` と指定するだけで、任意の長さの数字に一致させることができます。
 
-*Regular expression* patterns are the most powerful of the three types
-of patterns that Selenese supports.  Regular expressions
-are also supported by most high-level programming languages, many text
-editors, and a host of tools, including the Linux/Unix command-line
-utilities **grep**, **sed**, and **awk**.  In Selenese, regular
-expression patterns allow a user to perform many tasks that would
-be very difficult otherwise.  For example, suppose your test needed
-to ensure that a particular table cell contained nothing but a number.
-``regexp: [0-9]+`` is a simple pattern that will match a decimal number of any length.
-
-Whereas Selenese globbing patterns support only the **\*** 
-and **[ ]** (character
-class) features, Selenese regular expression patterns offer the same
-wide array of special characters that exist in JavaScript.  Below 
-are a subset of those special characters:
+Selenese のグロビングパターンでサポートしているのは **\*** と **[ ]** (文字クラス) だけですが、Selenese の正規表現パターンでは JavaScript に存在するものと同じ幅広い特殊文字を使用できます。
+次に示すのは、これらの特殊文字です。
 
 |    PATTERN    |        MATCH                                                                       |
 | ------------- | ---------------------------------------------------------------------------------  |
@@ -1047,16 +901,12 @@ are a subset of those special characters:
 |   \|          |   alternation: the character/group on the left or the character/group on the right |
 |   ( )         |   grouping: often used with alternation and/or quantifier                          |
 
-Regular expression patterns in Selenese need to be prefixed with
-either ``regexp:`` or ``regexpi:``.  The former is case-sensitive; the
-latter is case-insensitive.
+Selenese の正規表現パターンでは、先頭に ``regexp:`` または ``regexpi:`` を付ける必要があります。
+前者は大文字と小文字を区別しますが、後者は大文字と小文字を区別しません。
 
-A few examples will help clarify how regular expression patterns can
-be used with Selenese commands.  The first one uses what is probably
-the most commonly used regular expression pattern--**.\*** ("dot star").  This
-two-character sequence can be translated as "0 or more occurrences of
-any character" or more simply, "anything or nothing."  It is the
-equivalent of the one-character globbing pattern **\*** (a single asterisk).
+Selenese コマンドでの正規表現パターンの使い方については、いくつか実例を挙げた方がわかりやすいでしょう。
+最初の例は、おそらく最もよく使われる正規表現である **.\***  (“ドットスター”) を使ったものです。
+この 2 文字の並びは、「任意の文字の 0 回以上の繰り返し」、もっとかみくだいて言えば、「すべて、または何もない」ものに一致します。1 文字のグロビングパターンで **\*** (アスタリスク 1 つ) と指定するのと等価です。
 
 | Command            | Target                                 | Value                                                              |
 | --------           | -------------------------------------- | ------------------------------------------------------------------ |
@@ -1064,205 +914,161 @@ equivalent of the one-character globbing pattern **\*** (a single asterisk).
 | verifyTitle        | regexp:.\*Film.\*Television.\*         |                                                                    |
 
 
-The example above is functionally equivalent to the earlier example
-that used globbing patterns for this same test.  The only differences
-are the prefix (**regexp:** instead of **glob:**) and the "anything
-or nothing" pattern (**.\*** instead of just **\***).
+上のテスト例は、すでに示したグロビングパターンを使ったテストの例と機能的には同じです。
+違いは、プリフィックス (**glob:** の代わりに **regexp:**  が使われていること) と、「すべて、または何もない」パターンが指定されていること ( **\*** の代わりに **.\*** が使われていること) だけです。
 
-The more complex example below tests that the Yahoo!
-Weather page for Anchorage, Alaska contains info on the sunrise time:
+次に示すのは、アラスカ州アンカレジの日の出時刻に関する情報が掲載されている Yahoo! Weather のページを対象としたもう少し複雑なテスト例です。
 
 | Command            | Target                                            | Value                                             |
 | --------           | ------------------------------------------------- | ------------------------------------------------- |
 | open               | http://weather.yahoo.com/forecast/USAK0012.html   |                                                   |
 | verifyTextPresent  | regexp:Sunrise: \*[0-9]{1,2}:[0-9]{2} [ap]m       |                                                   |
 
-
-Let's examine the regular expression above one part at a time:
+上の例で使われている正規表現を 1 つずつ見てみましょう。
 
 |                            |                                                                                    |
 | -------------------------- | ---------------------------------------------------------------------------------  |
-|   ``Sunrise: *``           |   The string **Sunrise:** followed by 0 or more spaces                             |
-|   ``[0-9]{1,2}``           |   1 or 2 digits (for the hour of the day)                                          |
-|   ``:``                    |   The character **:** (no special characters involved)                             |
-|   ``[0-9]{2}``             |   2 digits (for the minutes) followed by a space                                   |
-|   ``[ap]m``                |   "a" or "p" followed by "m" (am or pm)                                            |
+|   ``Sunrise: *``           |   **Sunrise:** という文字列とそれに続く 0 個以上の空白                              |
+|   ``[0-9]{1,2}``           |   1 個または 2 個の数字 (時間を表す)                                          |
+|   ``:``                    |   文字 : そのもの (特殊文字は使われていない)                              |
+|   ``[0-9]{2}``             |   2 個の数字 (分を表す) とそれに続く 1 個の空白                                   |
+|   ``[ap]m``                |   文字 “a” または “p” とそれに続く “m” (am または pm)                                            |
 
 
-#### Exact Patterns
+#### 完全一致
 
-The **exact** type of Selenium pattern is of marginal usefulness.
-It uses no special characters at all.  So, if you needed to look for
-an actual asterisk character (which is special for both globbing and
-regular expression patterns), the **exact** pattern would be one way
-to do that.  For example, if you wanted to select an item labeled
-"Real \*" from a dropdown, the following code might work or it might not.
-The asterisk in the ``glob:Real *`` pattern will match anything or nothing.
-So, if there was an earlier select option labeled "Real Numbers," it would
-be the option selected rather than the "Real \*" option.
+Selenium の **完全一致** パターンは、それほど使う機会はないでしょう。
+完全一致パターンでは、特殊文字は一切使いません。
+したがって、(グロビングパターンと正規表現パターンでは特別な意味を持つ) アスタリスク文字を検索する必要がある場合には、完全一致パターンを使うのも 1 つの方法です。
+たとえば、ドロップダウンリストで “Real *” というラベルの付いた項目を選択する場合、次のようなコードでは、期待どおりに動作する場合もそうでない場合もあります。
+``glob:Real *``パターンに含まれるアスタリスクは、「すべて、または何もない」ものに一致します。
+したがって、目的の select のオプションより前に “Real Numbers” というラベルの付いたオプションがあれば、それが選択され、目的の “Real \*” というオプションは選択されないことになります。
 
 | Command            | Target                                            | Value                                             |
 | --------           | ------------------------------------------------- | ------------------------------------------------- |
 | select             | //select                                          |  glob:Real \*                                     |
 
-In order to ensure that the "Real \*" item would be selected, the ``exact:``
-prefix could be used to create an **exact** pattern as shown below:
+項目 “Real *” が確実に選択されるようにするには、 ``exact:`` プリフィックスを使って次のように **完全一致** パターンを指定します。
 
 | Command            | Target                                            | Value                                             |
 | --------           | ------------------------------------------------- | ------------------------------------------------- |
 | select             | //select                                          |  exact:Real \*                                    |
 
-But the same effect could be achieved via escaping the asterisk in a
-regular expression pattern:
+ただし、正規表現パターンで次のようにアスタリスクをエスケープしても同じ結果が得られます。
 
 | Command            | Target                                            | Value                                             |
 | --------           | ------------------------------------------------- | ------------------------------------------------- |
 | select             | //select                                          |  regexp:Real \\\*                                 |
  
-It's rather unlikely that most testers will ever need to look for
-an asterisk or a set of square brackets with characters inside them (the
-character class for globbing patterns).  Thus, globbing patterns and
-regular expression patterns are sufficient for the vast majority of us.
+ほとんどのテスターは、アスタリスクや、文字が間に入った角かっこの対 (グロビングパターンの文字クラス指定) を検索する必要はないでしょう。
+したがって、大半のユーザーにとっては、グロビングパターンと正規表現パターンだけで十分なはずです。
 
+## “AndWait” コマンド
 
-## The "AndWait" Commands 
+あるコマンドとそのコマンドに対応する *AndWait* コマンドとの違いは、通常のコマンド (click など) が、操作を実行すると可能な限り速やかに次のコマンドの実行を続けるのに対し、 AndWait コマンド (clickAndWait など) は、操作が実行された後、ページが読み込まれるまで **待機する** よう Selenium に指示する点にあります。
 
-The difference between a command and its *AndWait*
-alternative is that the regular command (e.g. *click*) will do the action and
-continue with the following command as fast as it can, while the *AndWait*
-alternative (e.g. *clickAndWait*) tells Selenium to **wait** for the page to
-load after the action has been done. 
+目的の操作によってブラウザがほかのページに移動したり、現在のページをリロードしたりする場合には、常に *AndWait* コマンドを使います。
 
-The *AndWait* alternative is always used when the action causes the browser to
-navigate to another page or reload the present one. 
+ただし、ほかのページへの移動やページの更新を伴わない操作に対して *AndWait* コマンドを使うと、テストは失敗します。
+テストが失敗する理由は、ほかのページへの移動や更新が行われないまま *AndWait* のタイムアウトに達して、Selenium がタイムアウト例外を発生させるためです。
 
-Be aware, if you use an *AndWait* command for an action that
-does not trigger a navigation/refresh, your test will fail. This happens 
-because Selenium will reach the *AndWait*'s timeout without seeing any 
-navigation or refresh being made, causing Selenium to raise a timeout 
-exception.
+## AJAX アプリケーションにおける waitFor コマンド
+
+AJAX 駆動型 Web アプリケーションでは、ページを更新することなく、サーバーからデータが取得されます。
+この場合、実際にはページが更新されないため、 andWait コマンドは動作しません。
+一定時間、テストの実行を停止するやり方も、優れた対応策とは言えません。
+当該時点でのシステムの応答性能、負荷、その他の制御不可能な要素によって、指定された時間よりも早く、あるいは遅く、目的の Web 要素が表示されることがあり、その場合にはテストが失敗するからです。
+最も適切なアプローチは、動的な期間、必要な要素が表示されるのを待って、要素が見つかり次第、テストの実行を続行するやり方です。
+
+*waitFor* コマンドを使うと、このようなやり方を実現できます。
+*waitForElementPresent* や *waitForVisible* は、動的な期間、待機し、目的の条件が満たされるかどうかを毎秒チェックし、条件が満たされると同時にスクリプトの次のコマンドの実行を続けます。
+
+## 評価順序とフロー制御
+
+スクリプトを実行すると、そのスクリプトに含まれるコマンドが順序に従って実行されます。
+
+Selenese それ自体は、条件判定文 (if-else など) または反復 (for、while など) をサポートしていません。
+フロー制御を使わなくても、多くの有用なテストは実行できます。
+しかし、複数のページが関係することが多い動的コンテンツをきちんとテストするには、プログラミングロジックがしばしば必要になります。
+
+フロー制御が必要になった場合には、次の 3 つの選択肢があります。
+
+a) Selenium-RC と、Java や PHP といったクライアントライブラリを使ってスクリプトを実行し、プログラミング言語の持つフロー制御機能を利用する。
+b) スクリプトの内部から storeEval コマンドを使って小さな JavaScript コードの断片を実行する。
+c) `goto_sel_ide.js extension` 拡張スクリプトをインストールする。
+
+ほとんどのテスターは、テストスクリプトをプログラミング言語ファイルにエクスポートし、Selenium-RC API を利用する方法を選択することになるでしょう (Selenium-RC API については、Selenium-RC に関する章を参照)。
+ただし、組織によっては、可能な限りテストスクリプトを Selenium-IDE から実行した方が都合がよい場合もあります (テストの実行を多数の契約社員に担当させている組織や、十分なプログラミングスキルを期待できないケースなど)。
+このような場合には、JavaScript コードの断片を利用する方法か、goto_sel_ide.js 拡張スクリプトを使う方法を検討するとよいでしょう。
  
-## The waitFor Commands in AJAX applications
+## store コマンド群と Selenium 変数
 
-In AJAX driven web applications, data is retrieved from server without 
-refreshing the page. Using *andWait* commands will not work as the page is not 
-actually refreshed. Pausing the test execution for a certain period of time is 
-also not a good approach as web element might appear later or earlier than the 
-stipulated period depending on the system's responsiveness, load or other 
-uncontrolled factors of the moment, leading to test failures. The best approach 
-would be to wait for the needed element in a dynamic period and then continue 
-the execution as soon as the element is found.
+Selenium 変数を使うと、スクリプトの冒頭で定数を格納することができます。
+また、データ駆動型テスト設計と組み合わせて使う場合には (あとのセクションで取り上げます)、コマンドライン、ほかのプログラム、またはファイルからテストプログラムに渡す値を Selenium 変数に格納することができます。
 
-This is done using *waitFor* commands, as *waitForElementPresent* or
-*waitForVisible*, which wait dynamically, checking for the desired condition
-every second and continuing to the next command in the script as soon as the 
-condition is met.
-
-## Sequence of Evaluation and Flow Control
-
-When a script runs, it simply runs in sequence, one command after another.
-
-Selenese, by itself, does not support condition statements (if-else, etc.) or 
-iteration (for, while, etc.). Many useful tests can be conducted without flow 
-control. However, for a functional test of dynamic content, possibly involving
-multiple pages, programming logic is often needed.
-
-When flow control is needed, there are three options:  
-
-a) Run the script using Selenium-RC and a client library such as Java or
-   PHP to utilize the programming language's flow control features.
-b) Run a small JavaScript snippet from within the script using the storeEval command.
-c) Install the `goto_sel_ide.js extension`.
-
-Most testers will export the test script into a programming language file that uses the
-Selenium-RC API (see the Selenium-IDE chapter).  However, some organizations prefer
-to run their scripts from Selenium-IDE whenever possible (for instance, when they have
-many junior-level people running tests for them, or when programming skills are
-lacking). If this is your case, consider a JavaScript snippet or the goto_sel_ide.js extension.  
-
- 
-## Store Commands and Selenium Variables
-
-You can use Selenium variables to store constants at the 
-beginning of a script.  Also, when combined with a data-driven test design 
-(discussed in a later section), Selenium variables can be used to store values 
-passed to your test program from the command-line, from another program, or from
-a file.
- 
-The plain *store* command is the most basic of the many store commands and can be used 
-to simply store a constant value in a selenium variable.  It takes two 
-parameters, the text value to be stored and a selenium variable.  Use the 
-standard variable naming conventions of only alphanumeric characters when 
-choosing a name for your variable.
+プレーンな store コマンドは、たくさんある store コマンド群の中で最も基本的なコマンドで、Selenium 変数に単純に定数値を格納するのに使用できます。
+store コマンドは、変数に格納するテキスト値と Selenium 変数の 2 つのパラメータを取ります。
+変数の名前を付けるときは、英数文字だけを使う標準的な命名規則に従ってください。
 
 | Command            | Target                                            | Value                              |
 | --------           | ------------------------------------------------- | ---------------------------------- |
 | store              | paul@mysite.org                                   |                                    |
 
 
-Later in your script, you'll want to use the stored value of your 
-variable.  To access the value of a variable, enclose the variable in 
-curly brackets ({}) and precede it with a dollar sign like this.
+上のように記述すると、スクリプトのあとの方で、変数に格納された値を利用できます。
+変数の値にアクセスするには、次に示すように、変数をブレース ({}) で囲み、先頭にドル記号を付けます。
 
 | Command            | Target                                            | Value                              |
 | --------           | ------------------------------------------------- | ---------------------------------- |
 | verifyText         | //div/p                                           | \\${userName}                      |
 
-A common use of variables is for storing input for an input field.
+変数の一般的な使い方の 1 つに、入力フィールドへの入力を格納する操作があります。
 
 | Command            | Target                                            | Value                              |
 | --------           | ------------------------------------------------- | ---------------------------------- |
 | type               | id=login                                          | \\${userName}                      |
 
 
-Selenium variables can be used in either the first or second parameter and 
-are interpreted by Selenium prior to any other operations performed by the 
-command.  A Selenium variable may also be used within a locator expression.
+Selenium 変数は、最初のパラメータにも 2 番目のパラメータにも使用することができます。
+コマンドのパラメータに変数が使われている場合、変数は、このコマンドが実行するほかのあらゆる操作に先立って Selenium によって解釈されます。
+Selenium 変数をロケータ表現の内部で使うこともできます。
 
-An equivalent store command exists for each verify and assert command.  Here 
-are a couple more commonly used store commands.
+verify および assert コマンドのそれぞれに対し、対応する store コマンドが存在します。
+これらのコマンドのうち、よく使われるものを以下に示します。
 
 ### storeElementPresent 
 
-This corresponds to verifyElementPresent.  It simply stores a boolean value--"true" 
-or "false"--depending on whether the UI element is found.
+storeElementPresent は、verifyElementPresent に対応するコマンドです。
+このコマンドは、UI 要素が見つかったかどうかに応じて、ブール値 (“true” または “false” のいずれか) を格納します。
 
 ### storeText 
 
-StoreText corresponds to verifyText.  It uses a locator to identify specific 
-page text.  The text, if found, is stored in the variable.  StoreText can be 
-used to extract text from the page being tested.
+StoreText は、verifyText に対応するコマンドです。
+このコマンドはロケータを使ってページ上の特定のテキストを探します。
+テキストが見つかった場合には、そのテキストが変数に格納されます。
+storeText を使うと、テスト対象のページからテキストを抽出することができます。
 
 ### storeEval 
 
-This command takes a script as its 
-first parameter.  Embedding JavaScript within Selenese is covered in the next section.
-StoreEval allows the test to store the result of running the script in a variable.
+storeEval の最初のパラメータにはスクリプトを指定します。
+JavaScript を Selenese に埋め込む方法については、次のセクションで取り上げます。
+テストの中で storeEval を使うと、スクリプトの実行結果を変数に格納することができます。
 
+## JavaScript と Selenese パラメータ
 
-## JavaScript and Selenese Parameters
+JavaScript は、 スクリプト と非スクリプト (一般には式) の 2 つの種類の Selenese パラメータで使用できます。
+ほとんどの場合は、Selenese パラメータに指定された JavaScript コードの断片の中で、テストケース変数にアクセスしたり操作したりすることが多いでしょう。
+テストケース内で作成されたすべての変数は、JavaScript の 連想配列 に格納されます。連想配列とは、連番の添字ではなく、文字列を添字にもつ配列のことです。
+作成したテストケースの変数が格納される連想配列には、 **storedVars** という名前が付けられます。
+JavaScript コードの断片で変数にアクセスしたり操作したりするには、必ず **storedVars['yourVariableName']** の形で参照する必要があります。
 
-JavaScript can be used with two types of Selenese parameters: script
-and non-script (usually expressions).  In most cases, you'll want to access 
-and/or manipulate a test case variable inside the JavaScript snippet used as 
-a Selenese parameter.  All variables created in your test case are stored in 
-a JavaScript *associative array*.  An associative array has string indexes 
-rather than sequential numeric indexes.  The associative array containing 
-your test case's variables is named **storedVars**.  Whenever you wish to 
-access or manipulate a variable within a JavaScript snippet, you must refer 
-to it as **storedVars['yourVariableName']**.
+### スクリプトパラメータでの JavaScript の使用  
 
-### JavaScript Usage with Script Parameters  
+いくつかの Selenese コマンド、たとえば **assertEval** 、 **verifyEval** 、 **storeEval** 、 **waitForEval** などのコマンドでは、 スクリプト パラメータを指定します。これらのパラメータでは特別な構文は必要ありません。
+Selenium-IDE ユーザーなら、JavaScript コードの断片の適切なフィールドを入力するだけです (通常、入力先のフィールドは **対象** フィールドです。
+**スクリプト** パラメータは一般に、最初のパラメータか唯一のパラメータのいずれかだからです) 。
 
-Several Selenese commands specify a **script** parameter including
-**assertEval**, **verifyEval**, **storeEval**, and **waitForEval**.
-These parameters require no special syntax.  A Selenium-IDE
-user would simply place a snippet of JavaScript code into
-the  appropriate field, normally the **Target** field (because
-a **script** parameter is normally the first or only parameter).
-
-The example below illustrates how a JavaScript snippet
-can be used to perform a simple numerical calculation:
+次に示すのは、JavaScript コードの断片を使って簡単な算術演算を行う例です。
 
 | Command            | Target                                            | Value                              |
 | --------           | ------------------------------------------------- | ---------------------------------- |
@@ -1270,9 +1076,8 @@ can be used to perform a simple numerical calculation:
 | storeXpathCount    | //blockquote                                      | blockquotes                        |
 | storeEval          | storedVars['hits'].storedVars['blockquotes']      | paragraphs                         |
 
-This next example illustrates how a JavaScript snippet can include calls to 
-methods, in this case the JavaScript String object's ``toUpperCase`` method 
-and ``toLowerCase`` method.  
+次に示すのは、JavaScript コードの断片でメソッドを呼び出す例です。
+この例では、JavaScript String オブジェクトの ``toUpperCase`` メソッドと ``toLowerCase`` メソッドを呼び出しています。
 
 | Command            | Target                                            | Value                              |
 | --------           | ------------------------------------------------- | ---------------------------------- |
@@ -1281,15 +1086,12 @@ and ``toLowerCase`` method.
 | storeEval          | storedVars['name'].toUpperCase()                  | lc                                 |
 
 
-#### JavaScript Usage with Non-Script Parameters  
+#### 非スクリプトパラメータでの JavaScript の使用  
 
-JavaScript can also be used to help generate values for parameters, even
-when the parameter is not specified to be of type **script**.  
-However, in this case, special syntax is required--the *entire* parameter 
-value must be prefixed by ``javascript{`` with a trailing ``}``, which encloses the JavaScript
-snippet, as in ``javascript{*yourCodeHere*}``.
-Below is an example in which the ``type`` command's second parameter 
-``value`` is generated via JavaScript code using this special syntax:
+コマンドが取るパラメータの種類が **スクリプト** ではない場合でも、パラメータに使う値を JavaScript を使って生成することができます。
+ただし、この場合には特別な構文が必要になり、JavaScript コードの断片をブレースで囲み、その前にラベル javascript を付ける必要があります。
+具体的には、 ``javascript {*ここにコードを記述*}`` のように指定します。
+次に示すのは、 ``type`` コマンドの 2 番目のパラメータ ``value`` を、特別な構文を使って JavaScript コードから生成する例です。
 
 | Command            | Target                                            | Value                                                |
 | --------           | ------------------------------------------------- | ---------------------------------------------------- |
@@ -1297,16 +1099,12 @@ Below is an example in which the ``type`` command's second parameter
 | type               | q                                                 | javascript{storedVars['searchString'].toUpperCase()} |
 
 
-## *echo* - The Selenese Print Command
+## *echo* - Selenese の Print コマンド
 
-Selenese has a simple command that allows you to print text to your test's 
-output.  This is useful for providing informational progress notes in your 
-test which display on the console as your test is running.  These notes also can be 
-used to provide context within your test result reports, which can be useful 
-for finding where a defect exists on a page in the event your test finds a 
-problem.  Finally, echo statements can be used to print the contents of 
-Selenium variables.
-
+Selenese には、テスト出力にテキストを書き込むことができる簡単なコマンドが用意されています。
+このコマンドを使うと、テストの実行中に進捗状況を示す情報をコンソールに表示できるので便利です。
+これらの情報を使えば、テスト結果のレポートに実行時の状況を埋め込むこともできるので、テストで問題が見つかったときに、ページ上のどこにバグがあるのか探すのに役立ちます。
+また、echo 文を使うと、Selenium 変数の内容を出力できます。次に例を示します。
 
 | Command         | Target                                            | Value                                                |
 | --------        | ------------------------------------------------- | ---------------------------------------------------- |
@@ -1314,9 +1112,9 @@ Selenium variables.
 | echo            | Username is \\${userName}                         |                                                      |
 
 
-## Alerts, Popups, and Multiple Windows
+## 警告、ポップアップ、および複数のウィンドウ
 
-Suppose that you are testing a page that looks like this.
+次のようなページをテストしているとします。
 
 ```html
   <!DOCTYPE HTML>
@@ -1366,38 +1164,34 @@ Suppose that you are testing a page that looks like this.
   </html>
 ```
 
-The user must respond to alert/confirm boxes, as well as moving focus to newly 
-opened popup windows. Fortunately, Selenium can cover JavaScript pop-ups.
+ユーザーは、アラート/確認ボックスに応答するとともに、新しく開いたポップアップウィンドウにフォーカスを移動する必要があります。
+幸いなことに、SeleniumはJavaScriptポップアップをカバーできます。
 
-But before we begin covering alerts/confirms/prompts in individual detail, it is
-helpful to understand the commonality between them. Alerts, confirmation boxes 
-and prompts all have variations of the following 
+ただし、アラート/確認/プロンプトを個別に詳細に説明する前に、それらの共通点を理解しておくと役立ちます。
+アラート、確認ボックス、プロンプトにはすべて次のバリエーションがあります。
 
 |Command|Description|
 |--- |--- |
-|assertFoo(pattern)|throws error if pattern doesn’t match the text of the pop-up|
-|assertFooPresent|throws error if pop-up is not available|
-|assertFooNotPresent|throws error if any pop-up is present|
-|storeFoo(variable)|stores the text of the pop-up in a variable|
-|storeFooPresent(variable)|stores the text of the pop-up in a variable and returns true or false|
+|assertFoo(pattern)|パターンがポップアップのテキストと一致しない場合、エラーをスローします|
+|assertFooPresent|ポップアップが利用できない場合はエラーをスローします|
+|assertFooNotPresent|ポップアップが存在する場合、エラーをスローします|
+|storeFoo(variable)|ポップアップのテキストを変数に保存します|
+|storeFooPresent(variable)|ポップアップのテキストを変数に保存し、trueまたはfalseを返します|
 
+Seleniumで実行している場合、JavaScriptポップアップは表示されません。
+これは、関数呼び出しが実行時に実際にSeleniumのJavaScriptによってオーバーライドされるためです。
+ただし、ポップアップが表示されないからといって、ポップアップを処理する必要はありません。
+ポップアップを処理するには、その ``assertFoo(pattern)`` 関数を呼び出す必要があります。
+ポップアップの存在をアサートしないと、次のコマンドがブロックされ、次のようなエラーが表示されます。 ``[エラー]エラー：予期しない確認がありました！ [オプションを選択してください。]``
 
-When running under Selenium, JavaScript pop-ups will not appear. This is because
-the function calls are actually being overridden at runtime by Selenium's own
-JavaScript. However, just because you cannot see the pop-up doesn't mean you don't
-have to deal with it. To handle a pop-up, you must call its ``assertFoo(pattern)``
-function. If you fail to assert the presence of a pop-up your next command will be 
-blocked and you will get an error similar to the following ``[error] Error: There
-was an unexpected Confirmation! [Chose an option.]``
+### アラート
 
-### Alerts
-
-Let's start with alerts because they are the simplest pop-up to handle. To begin,
-open the HTML sample above in a browser and click on the "Show alert" button. You'll
-notice that after you close the alert the text "Alert is gone." is displayed on the
-page. Now run through the same steps with Selenium IDE recording, and verify
-the text is added after you close the alert. Your test will look something like
-this:
+アラートは処理が最も簡単なポップアップなので、始めましょう。
+まず、ブラウザで上記のHTMLサンプルを開き、"Show alert" ボタンをクリックします。
+アラートを閉じると、"Alert is gone." というテキストが表示されます。
+ページに表示されます。
+次に、Selenium IDE記録で同じ手順を実行し、アラートを閉じた後にテキストが追加されたことを確認します。
+テストは次のようになります。
 
 |Command|Target|Value|
 |--- |--- |--- |
@@ -1406,23 +1200,20 @@ this:
 |assertAlert|I’m blocking!||
 |verifyTextPresent|Alert is gone.||
 
-You may be thinking "That's odd, I never tried to assert that alert." But this is
-Selenium-IDE handling and closing the alert for you. If you remove that step and replay
-the test you will get the following error ``[error] Error: There was an unexpected
-Alert! [I'm blocking!]``. You must include an assertion of the alert to acknowledge 
-its presence.
- 
-If you just want to assert that an alert is present but either don't know or don't care
-what text it contains, you can use ``assertAlertPresent``. This will return true or false,
-with false halting the test.
+あなたは「それはおかしい、私はそのアラートをアサートしようとしたことはない」と考えているかもしれません。
+ただし、これはSelenium-IDEの処理であり、アラートを閉じます。
+そのステップを削除してテストを再生すると、次のエラーが表示されます ``[エラー]エラー：予期しないアラートがありました！ [I'm blocking!]`` 。
+アラートの存在を確認するには、アラートのアサーションを含める必要があります。
 
-### Confirmations
+アラートが存在することをアサートしたいが、アラートに含まれるテキストがわからないか気にする必要がない場合は、``assertAlertPresent``を使うことができます。
+これはtrueまたはfalseを返し、falseはテストを停止します。
 
-Confirmations behave in much the same way as alerts, with ``assertConfirmation`` and
-``assertConfirmationPresent`` offering the same characteristics as their alert counterparts.
-However, by default Selenium will select OK when a confirmation pops up. Try recording
-clicking on the "Show confirm box" button in the sample page, but click on the "Cancel" button
-in the popup, then assert the output text. Your test may look something like this:
+### 確認
+
+確認はアラートとほぼ同じように動作し、 ``assertConfirmation`` と ``assertConfirmationPresent`` は対応するアラートと同じ特性を提供します。
+ただし、デフォルトでは、確認が表示されたときにSeleniumはOKを選択します。
+サンプルページの"確認ダイアログを表示"ボタンをクリックして記録を試みますが、ポップアップの"キャンセル"ボタンをクリックして、出力テキストをアサートします。
+テストは次のようになります。
 
 |Command|Target|Value|
 |--- |--- |--- |
@@ -1432,21 +1223,19 @@ in the popup, then assert the output text. Your test may look something like thi
 |assertConfirmation|Choose an option.||
 |verifyTextPresent|Rejected||
 
-The ``chooseCancelOnNextConfirmation`` function tells Selenium that all following
-confirmation should return false. It can be reset by calling chooseOkOnNextConfirmation.
+``chooseCancelOnNextConfirmation`` 関数は、後続のすべての確認がfalseを返すことをSeleniumに伝えます。
+chooseOkOnNextConfirmationを呼び出すことでリセットできます。
 
-You may notice that you cannot replay this test, because Selenium complains that there
-is an unhandled confirmation. This is because the order of events Selenium-IDE records
-causes the click and chooseCancelOnNextConfirmation to be put in the wrong order (it makes sense 
-if you think about it, Selenium can't know that you're cancelling before you open a confirmation)
-Simply switch these two commands and your test will run fine.
+Seleniumは未処理の確認があると苦情を言うので、このテストを再生できないことに気付くかもしれません。
+これは、Selenium-IDEが記録するイベントの順序により、クリックしてchooseCancelOnNextConfirmationが間違った順序になるためです（考えてみれば、Seleniumは、確認を開く前にキャンセルしていることを知ることができません）。
+これら2つのコマンドを切り替えると、テストは正常に実行されます。
 
-### Prompts
+### プロンプト
 
-Prompts behave in much the same way as alerts, with ``assertPrompt`` and ``assertPromptPresent`` 
-offering the same characteristics as their alert counterparts. By default, Selenium will wait for 
-you to input data when the prompt pops up. Try recording clicking on the "Show prompt" button in 
-the sample page and enter "Selenium" into the prompt. Your test may look something like this:
+プロンプトは、``assertPrompt`` および ``assertPromptPresent`` が対応するアラートと同じ特性を提供することで、アラートとほぼ同じように動作します。
+デフォルトでは、Seleniumはプロンプトがポップアップしたときにデータの入力を待機します。
+サンプルページの "Show prompt" ボタンをクリックして記録を試み、プロンプトに "Selenium" と入力します。
+テストは次のようになります。
 
 |Command|Target|Value|
 |--- |--- |--- |
@@ -1456,123 +1245,91 @@ the sample page and enter "Selenium" into the prompt. Your test may look somethi
 |assertPrompt|What’s the best web QA tool?||
 |verifyTextPresent|Selenium!||
 
-If you choose cancel on the prompt, you may notice that answerOnNextPrompt will simply show a 
-target of blank. Selenium treats cancel and a blank entry on the prompt basically as the same thing.
+プロンプトで"キャンセル"を選択すると、 answerOnNextPrompt が単に空白のターゲットを表示することに気付くかもしれません。
+Seleniumは、プロンプトのキャンセルと空白のエントリを基本的に同じものとして扱います。
 
-## Debugging 
+## デバッグ 
 
-Debugging means finding and fixing errors in your test case.  This is a normal 
-part of test case development. 
+デバッグとはテストケースのエラーを見つけて解決する作業のことです。
+デバッグはテストケース開発に含まれる通常の工程です。
+
+ほとんどの Selenium 初心者もデバッグについてはすでに基礎知識を持っているでしょうから、ここではデバッグそのものについてはふれません。
+デバッグをするのがまったく初めてという場合には、社内や組織内の開発者にアドバイスをもらってください。 
   
-We won't teach debugging here as most new users to Selenium will already have 
-some basic experience with debugging.  If this is new to you, we recommend 
-you ask one of the developers in your organization. 
+### ブレークポイントと開始位置 
+
+Selenium-IDE では、テストケース内の任意の位置でテストケースの実行を開始または停止するためのブレークポイントの指定と開始位置の指定がサポートされています。
+この機能を使うと、テストケースの途中の特定のコマンドでテストケースの実行を停止させ、その時点でのテストケースの動作を調べることができます。
+この場合、具体的には、調べようとするコマンドの直前のコマンドにブレークポイントを指定します。
   
-### Breakpoints and Startpoints 
-
-The Sel-IDE supports the setting of breakpoints and the ability to start and 
-stop the running of a test case, from any point within the test case.  That is, one 
-can run up to a specific command in the middle of the test case and inspect how 
-the test case behaves at that point.  To do this, set a breakpoint on the 
-command just before the one to be examined.  
+ブレークポイントを指定するには、コマンドを選択し、右クリックして表示されるコンテキストメニューで *ブレークポイントの指定/解除* をクリックします。
+テストケースを最初からブレークポイントまで実行するには、"Run" ボタンをクリックします。
   
-To set a breakpoint, select a command, right-click, and from the context menu 
-select *Toggle Breakpoint*.  Then click the Run button to run your test case from 
-the beginning up to the breakpoint. 
-  
-It is also sometimes useful to run a test case from somewhere in the middle to 
-the end of the test case or up to a breakpoint that follows the starting point.  
-For example, suppose your test case first logs into the website and then 
-performs a series of tests and you are trying to debug one of those tests.  
-However, you only need to login once, but you need to keep rerunning your 
-tests as you are developing them.  You can login once, then run your test case
-from a startpoint placed after the login portion of your test case.  That will 
-prevent you from having to manually logout each time you rerun your test case. 
-  
-To set a startpoint, select a command, right-click, and from the context 
-menu select *Set/Clear Start Point*.  Then click the Run button to execute the 
-test case beginning at that startpoint. 
-  
-### Stepping Through a Testcase
+テストケースの途中から最後まで、または最初からブレークポイントまでの部分を実行できると便利なことがあります。
+たとえば、最初に Web サイトにログインし、次に一連のテストを実行するテストケースを作成していて、ログイン後の一連のテストのいずれかをデバッグしたい場合などです。
+この場合、ログインは 1 度すれば不要になりますが、その後のテストは繰り返し実行する必要があります。
+このようなテストケースでは、いったんログインした後、ログイン操作の後に開始位置を指定し、この開始位置からテストケースを実行することができます。
+こうすれば、テストケースを再実行するたびに手動で Web サイトからログアウトする必要はなくなります。
 
-To execute a test case one command at a time ("step through" it), follow these
-steps:
+開始位置を指定するには、コマンドを選択し、右クリックして表示されるコンテキストメニューで *開始位置の指定/解除* をクリックします。テストケースを開始位置から実行するには、"Run" ボタンをクリックします。
 
-1. Start the test case running with the Run button from the toolbar.
+### テストケースのステップ実行
 
-2. Immediately pause the executing test case with the Pause button.
+テストケースのコマンドを 1 つずつ実行 (ステップ実行) するには、次の手順に従います。
 
-3. Repeatedly select the Step button.
+1. ツールバーの "Run" ボタンをクリックしてテストケースの実行を開始します。
 
-### Find Button 
+2. すぐに "Pause" ボタンをクリックして、テストケースの実行を一時停止します。
 
-The Find button is used to see which UI element on the currently displayed 
-webpage (in the browser) is used in the currently selected Selenium command.  
-This is useful when building a locator for a command's first parameter (see the
-section on :ref:`locators <locators-section>` in the Selenium Commands chapter).
-It can be used with any command that identifies a UI element on a webpage, 
-i.e. *click*, *clickAndWait*, *type*, and certain *assert* and *verify* commands, 
-among others. 
-  
-From Table view, select any command that has a locator parameter.
-Click the Find button.  
-Now look on the webpage: There should be a bright green rectangle
-enclosing the element specified by the locator parameter. 
+3. "Step" ボタンを繰り返しクリックします。
 
-### Page Source for Debugging 
+### 検索ボタン 
 
-Often, when debugging a test case, you simply must look at the page source (the 
-HTML for the webpage you're trying to test) to determine a problem.  Firefox 
-makes this easy.  Simply right-click the webpage and select 'View->Page Source.  
-The HTML opens in a separate window.  Use its Search feature (Edit=>Find)
-to search for a keyword to find the HTML for the UI element you're trying 
-to test. 
+検索ボタンを使うと、現在 (ブラウザに) 表示されている Web ページ上の UI 要素のうち、現在選択されている Selenium コマンドで使われているのはどの UI 要素かを知ることができます。
+この機能は、コマンドの最初のパラメータでロケータを使う場合に便利です (Selenium のコマンドに関する章の `要素の特定` を参照)。
+検索ボタンは、Web ページ上の UI 要素を指定する必要があるあらゆるコマンド、すなわち *click* 、 *clickAndWait* 、 *type* 、および一部の *assert* と *verify* コマンドなどで使用できます。
 
-Alternatively, select just that portion of the webpage for which you want to
-see the source.  Then right-click the webpage and select View Selection
-Source.  In this case, the separate HTML window will contain just a small
-amount of source, with highlighting on the portion representing your
-selection.
+テーブルタブで、ロケータパラメータを持ついずれかのコマンドを選択します。
+検索ボタンをクリックします。
+Firebox ブラウザに表示されている Web ページに注目します。
+ロケータパラメータで指定されている要素が、明るい緑の四角で囲んで表示されます。
 
-### Locator Assistance
+### デバッグ時のページソースの参照 
 
-Whenever Selenium-IDE records a locator-type argument, it stores
-additional information which allows the user to view other possible 
-locator-type arguments that could be used instead.  This feature can be
-very useful for learning more about locators, and is often needed to help
-one build a different type of locator than the type that was recorded.  
+テストケースをデバッグするときは、しばしばページソース (テスト対象の Web ページの HTML) を参照して問題を解決しなければなりません。
+Firefox では、ページソースも簡単に参照できます。
+具体的には、目的の Web ページを右クリックし、"ページのソースを表示" を選択するだけです。
+これで、ソースの HTML が別のウィンドウに表示されます。
+テスト対象の UI 要素を HTML から見つけるためのキーワードを検索するには、このウィンドウの "編集" メニューにある "検索" を使ってください。
 
-This locator assistance is presented on the Selenium-IDE window as a drop-down
-list accessible at the right end of the Target field 
-(only when the Target field contains a recorded locator-type argument).  
-Below is a snapshot showing the
-contents of this drop-down for one command.  Note that the first column of
-the drop-down provides alternative locators, whereas the second column
-indicates the type of each alternative.
+また、ソースを見たい Web ページの一部を選択し、右クリックして表示されるメニューから "選択した部分のソースを表示" をクリックする方法もあります。
+この場合は、ソースの一部だけが別のウィンドウに表示され、選択した部分が強調表示されます。
+
+### ロケータアシスタンス
+
+Selenium-IDE は、ロケータ型引数を記録するたびに追加情報を保存し、この追加情報を使って、代わりに使用できるほかのロケータ型引数をユーザーに提示できるようにしています。
+この機能は、ロケータについて詳しく学ぶ上で非常に有益なだけでなく、記録された型とは異なる型のロケータを使う場合にしばしば必要となります。
+
+ロケータアシスタンスは、Selenium-IDE ウィンドウ内の "対象" フィールドの右端にドロップダウンリストとして表示されます (ドロップダウンリストが表示されるのは、"対象" フィールドに入力されている引数が、記録されたロケータ型引数である場合だけです)。
+次に示すのは、あるコマンドのドロップダウンリストの内容です。
+ドロップダウンリストの最初の列には、代わりに使用できるロケータが表示され、2 列目にはそれぞれの型が表示されることに注意してください。
 
 ![Selenium Locator Assistance](/images/legacy_docs/selenium_ide_locator_assistance.png)
 
 
-## Writing a Test Suite 
+## テストスイートの作成
 
-A test suite is a collection of test cases which is displayed in the leftmost
-pane in the IDE.  
-The test suite pane can be manually opened or closed via selecting a small dot
-halfway down the right edge of the pane (which is the left edge of the 
-entire Selenium-IDE window if the pane is closed).
+テストスイートとはテストケースの集合のことで、Selenium-IDE ウィンドウの一番左にある "テストスイート" ペインに表示されます。
+"テストスイート" ペインを手動で開いたり閉じたりするには、"テストケース" ペインの右端 (ペインが閉じている場合は Selenium-IDE ウィンドウ全体の左端になります) の半分ほど下にある小さな点を選択します。
 
-The test suite pane will be automatically opened when an existing test suite 
-is opened *or* when the user selects the New Test Case item from the
-File menu.  In the latter case, the new test case will appear immediately
-below the previous test case.
+"テストスイート" ペインは、既存のテストスイートが開かれるか、 または ユーザーが "ファイル" メニューの "テストケースを新規作成" をクリックすると、自動的に開きます。
+後者の場合、新しいテストケースは直前のテストケースのすぐ下に表示されます。
 
-Selenium-IDE also supports loading pre-existing test cases by using the File 
--> Add Test Case menu option.  This allows you to add existing test cases to 
-a new test suite.
+既存のテストケースをテストスイートに読み込む操作は、Selenium-IDE ではまだサポートされていません。既存のテストケースを追加して、テストスイートを作成または修正するには、ユーザーが手動でテストスイートファイルを編集する必要があります。
 
-A test suite file is an HTML file containing a one-column table.  Each
-cell of each row in the <tbody> section contains a link to a test case.
-The example below is of a test suite containing four test cases:
+テストスイートファイルは、1 列のテーブルを含む HTML ファイルです。
+&lt;tbody&gt; セクション内の各行のセルには、テストケースへのリンクが収められています。
+次に示すのは、4 つのテストケースを含むテストスイートの例です。
 
 ```html
 <html>
@@ -1596,125 +1353,95 @@ The example below is of a test suite containing four test cases:
 </html>
 ```
 	
-Note: Test case files should not have to be co-located with the test suite file
-   that invokes them.  And on Mac OS and Linux systems, that is indeed the
-   case.  However, at the time of this writing, a bug prevents Windows users
-   from being able to place the test cases elsewhere than with the test suite
-   that invokes them.
+注 : テストケースファイルは、呼び出し元のテストスイートファイルと同じ場所に置く必要はありません。
+  実際、Mac OS と Linux システムではそのとおりです。
+  ただし、この項目の執筆時点では、Windows システムで使う場合にはバグがあって、テストケースファイルを呼び出し元のテストスイートファイルと別の場所に置くことはできません。
 
-## User Extensions 
+## ユーザー拡張スクリプト 
 
-User extensions are JavaScript files that allow one to create his or her own 
-customizations and features to add additional functionality.  Often this is in 
-the form of customized commands although this extensibility is not limited to 
-additional commands.  
-  
-There are a number of useful extensions_ created by users.
+ユーザー拡張スクリプトは、ユーザー独自のカスタマイズや機能を作成して Selenium の機能を拡張できる JavaScript ファイルです。
+多くの場合、コマンドのカスタマイズという形を取りますが、ユーザー拡張スクリプトによる機能拡張はコマンドの追加だけに限定されません。
 
-*IMPORTANT:  THIS SECTION IS OUT OF DATE--WE WILL BE REVISING THIS SOON.*
+重要 : このセクションは期限切れです。近日中に改訂します。
+
+ユーザーが作成した多くの有益な 拡張スクリプト があります。
 
 * _extensions: http://wiki.openqa.org/display/SEL/Contributed+User-Extensions
 
 .. _[`goto_sel_ide.js extension`](http://wiki.openqa.org/download/attachments/379/goto_sel_ide.js):
 
-Perhaps the most popular of all Selenium-IDE extensions
-is one which provides flow control in the form of while loops and primitive
-conditionals.  This extension is the goto_sel_ide.js_.  For an example
-of how to use the functionality provided by this extension, look at the
-page_ created by its author.
+おそらく Selenium-IDE のすべての拡張スクリプトの中で最も人気があるのは、while ループとプリミティブな条件判定によってフロー制御を可能にする goto_sel_ide.js でしょう。
+この拡張スクリプトの使用例については、作者が用意した ページ を参照してください。
 
-To install this extension, put the pathname to its location on your
-computer in the **Selenium Core extensions** field of Selenium-IDE's
-Options=>Options=>General tab.
+この拡張スクリプトをインストールするには、Selenium-IDE の "オプション" メニューで "設定" をクリックし、 "一般" タブの **Selenium Core 拡張スクリプト (user-extension.js) のパス** フィールドに、ファイルのパス名を入力します。
 
 ![Selenium IDE Extensions Install](/images/legacy_docs/selenium_ide_extensions_install.png)
 
-After selecting the **OK** button, you must close and reopen Selenium-IDE
-in order for the extensions file to be read.  Any change you make to an
-extension will also require you to close and reopen Selenium-IDE.
+**OK** ボタンをクリックしたら、拡張スクリプトを読み込むために、Selenium-IDE をいったん閉じて開く必要があります。
+また、拡張スクリプトに変更を加えた場合も、Selenium-IDE をいったん閉じて開く必要があります。
 
-Information on writing your own extensions can be found near the
-bottom of the Selenium Reference_ document.
+独自の拡張スクリプトを作成する方法については、Selenium リファレンス ドキュメントの終わりの方に説明があります。
 
-Sometimes it can prove very useful to debug step by step Selenium IDE and your 
-User Extension. The only debugger that appears able to debug 
-XUL/Chrome based extensions is Venkman which is supported in Firefox until version 32 included. 
-The step by step debug has been verified to work with Firefox 32 and Selenium IDE 2.9.0.   
+ステップごとにSelenium IDEとユーザー拡張機能をデバッグすると非常に役立つことがあります。
+XUL/Chromeベースの拡張機能をデバッグできると思われる唯一のデバッガーは、バージョン32が含まれるまでFirefoxでサポートされているVenkmanです。
+段階的なデバッグは、Firefox 32およびSelenium IDE 2.9.0で動作することが確認されています。
 
-## Format 
+## フォーマット (形式) 
 
-Format, under the Options menu, allows you to select a language for saving 
-and displaying the test case.  The default is HTML.
-  
-If you will be using Selenium-RC to run your test cases, this feature is used 
-to translate your test case into a programming language. Select the 
-language, e.g. Java, PHP, you will be using with Selenium-RC for developing 
-your test programs.  Then simply save the test case using File=>Export Test Case As.
-Your test case will be translated into a series of functions in the language you 
-choose. Essentially, program code supporting your test is generated for you 
-by Selenium-IDE. 
-  
-Also, note that if the generated code does not suit your needs, you can alter 
-it by editing a configuration file which defines the generation process.  
-Each supported language has configuration settings which are editable.  This 
-is under the Options=>Options=>Formats tab. 
-  
-## Executing Selenium-IDE Tests on Different Browsers
+"オプション" メニューの "設定" をクリックすると表示される "フォーマット" タブでは、テストケースの保存と表示に使う言語を選択できます。
+デフォルトは "HTML" です。
 
-While Selenium-IDE can only run tests against Firefox, tests
-developed with Selenium-IDE can be run against other browsers, using a
-simple command-line interface that invokes the Selenium-RC server.  This topic
-is covered in the :ref:`Run Selenese tests <html-suite>` section on Selenium-RC
-chapter. The *-htmlSuite* command-line option is the particular feature of interest.
+作成したテストケースを Selenium-RC を使って実行する場合には、作成されたテストケースをプログラミング言語に変換するためにこの機能が使われます。
+テストプログラムの開発用に Selenium-RC で使う言語 ("Java"、"PHP" など) を選択し、次に "ファイル" メニューの "保存" を使ってテストケースを保存します。
+これで、テストケースは、選択した言語の一連の関数に変換されます。
+テストをサポートするプログラムコードは、基本的に、ユーザーに代わって Selenium-IDE によって生成されます。
 
-## Troubleshooting
+生成されたコードが自分のニーズに合わないときは、生成プロセスが定義された設定ファイルを編集することで、生成されるコードを変更できることに注意してください。サポートされている言語ごとに設定があり、これらの設定を編集できます。設定は、"オプション" メニューの "設定" をクリックすると表示される "フォーマット" タブにあります。
 
-Below is a list of image/explanation pairs which describe frequent
-sources of problems with Selenium-IDE:
+## 異なるブラウザでの Selenium-IDE テストの実行
 
-*Table view is not available with this format.* 
+Selenium-IDE 自体は Firefox を対象にしたテストしか実行できませんが、Selenium-IDE で作成したテストは、Selenium-RC サーバーを呼び出すシンプルなコマンドラインインタフェースを使うことで、ほかのブラウザを対象に実行することができます。
+詳細については、Selenium-RC に関する章の `Selenese テストの実行` を参照してください。
+特に関連性が高いのは、 -htmlSuite コマンドラインオプションです。
 
-This message can be occasionally displayed in the Table tab when Selenium IDE is
-launched. The workaround is to close and reopen Selenium IDE. See 
-[issue 1008](http://code.google.com/p/selenium/issues/detail?id=1008).
-for more information. If you are able to reproduce this reliably then please
-provide details so that we can work on a fix.
+## トラブルシューティング
+
+以下は、Selenium-IDE で発生することが多いさまざまな問題について、実際の画面を示しながら説明したものです。
+
+Table view is not available with this format.
+
+このメッセージは、Selenium IDEの起動時に"テーブル"タブに表示されることがあります。
+回避策は、Selenium IDEを閉じて再度開くことです。
+詳細については、 [issue 1008](http://code.google.com/p/selenium/issues/detail?id=1008) を参照してください。
+これを確実に再現できる場合は、修正に取り組むことができるように詳細を提供してください。
 
 ------------------
 
 *error loading test case: no command found*
 
-You've used **File=>Open** to try to open a test suite file. Use **File=>Open
-Test Suite** instead.
+「ファイル」メニューの「開く」を使用して、テストスイートファイルを開こうとしました。
+代わりに「ファイル」メニューの「テストスイートを開く」を使用してください。
 
-An enhancement request has been raised to improve this error message. See
-[issue 1010](http://code.google.com/p/selenium/issues/detail?id=1010).
+このエラーメッセージを改善するために、機能の拡張がリクエストされました。
+詳細は、[issue 1010](http://code.google.com/p/selenium/issues/detail?id=1010)を参照してください。
 
 ------------------
 
 ![Selenium IDE Trouble Timing](/images/legacy_docs/selenium_ide_trouble_timing.png)
 
-This type of **error** may indicate a timing problem, i.e., the element 
-specified by a locator in your command wasn't fully loaded when the command 
-was executed.  Try putting a **pause 5000** before the command to determine 
-whether the problem is indeed related to timing.  If so, investigate using an 
-appropriate **waitFor\*** or **\*AndWait** command before the failing command.
+このタイプの **エラー** は、タイミングの問題を示している可能性があります。
+つまり、コマンドのロケーターによって指定された要素が、コマンドの実行時に完全にロードされていません。
+コマンドの前に **pause 5000** を入れて、問題が本当にタイミングに関連しているかどうかを判断してください。
+その場合、失敗したコマンドの前に適切な **waitFor\*** または **\*AndWait** コマンドを使って調査してください。
 
 ------------------
 
 ![Selenium IDE Trouble Param](/images/legacy_docs/selenium_ide_trouble_param.png)
 
-Whenever your attempt to use variable substitution fails as is the
-case for the **open** command above, it indicates
-that you haven't actually created the variable whose value you're
-trying to access.  This is 
-sometimes due to putting the variable in the **Value** field when it 
-should be in the **Target** field or vice versa.  In the example above,
-the two parameters for the **store** command have been erroneously
-placed in the reverse order of what is required.
-For any Selenese command, the first required parameter must go 
-in the **Target** field, and the second required parameter (if one exists) 
-must go in the **Value** field.  
+上記の **open** コマンドの場合のように変数置換を使用しようとして失敗した場合は、アクセスしようとしている値を持つ変数を実際に作成していないことを示します。
+これは、変数を **Target** フィールドに配置する必要がある場合に **Value** フィールドに配置するか、その逆の場合があります。
+上記の例では、storeコマンドの2つのパラメーターが、必要なものと逆の順序で誤って配置されています。
+Seleneseコマンドの場合、最初の必須パラメーターは **Target** フィールドに入力し、2番目の必須パラメーター（存在する場合）は **Value** フィールドに入力する必要があります。
 
 ----------
 
@@ -1723,22 +1450,17 @@ must go in the **Value** field.
 "0x80520012 (NS_ERROR_FILE_NOT_FOUND)" location: "JS frame ::
 chrome://selenium-ide/content/file-utils.js :: anonymous :: line 48" data: no]*
 
-One of the test cases in your test suite cannot be found.  Make sure that the
-test case is indeed located where the test suite indicates it is located.  Also,
-make sure that your actual test case files have the .html extension both in
-their filenames, and in the test suite file where they are referenced.
+テストスイートのテストケースの1つが見つかりません。
+テストケースが配置されていることを示すテストスイートが実際に配置されていることを確認してください。
+また、実際のテストケースファイルのファイル名と参照先のテストスイートファイルの両方に.html拡張子が付いていることを確認してください。
 
-An enhancement request has been raised to improve this error message. See
-[issue 1011](http://code.google.com/p/selenium/issues/detail?id=1011).
+このエラーメッセージを改善するために、機能の拡張がリクエストされました。
+詳細は、[issue 1011](http://code.google.com/p/selenium/issues/detail?id=1011)を参照してください。
 
 ----------
 
 ![Selenium IDE Trouble Extension](/images/legacy_docs/selenium_ide_trouble_extension.png)
 
-Your extension file's contents have not been read by Selenium-IDE.  Be 
-sure you have specified the proper pathname to the extensions file via 
-**Options=>Options=>General** in the **Selenium Core extensions** field.
-Also, Selenium-IDE must be restarted after any change to either an
-extensions file *or* to the contents of the **Selenium Core extensions**
-field.
-
+拡張ファイルの内容が、Selenium-IDEによって読み取られていません。
+Selenium-IDE の *“オプション” メニューで “設定” をクリックし、 “一般” タブ* の **Selenium Core 拡張スクリプト (user-extension.js) のパス** フィールドに適切なパス名を指定していることを確認してください。
+また、 **Selenium Core 拡張スクリプト (user-extension.js) のパス** フィールドの内容を変更した後は、Selenium-IDEを再起動する必要があります。
