@@ -21,7 +21,7 @@ User; there are no special requirements. Common User contributions include:
 awareness through word-of-mouth)
 * Informing strengths and weaknesses from a new user perspective 
 (e.g., raising a bug as a GitHub issue, proposing a new feature)
-* Providing moral support (a "thank you" goes a long way).
+* Providing moral support (a "thank you" goes a long way)
 
 Users who continue to engage with the project and its community will often
 become more and more involved. Such Users may find themselves becoming
