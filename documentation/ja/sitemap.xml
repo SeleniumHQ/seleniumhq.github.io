@@ -49,7 +49,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -184,7 +184,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_selenium_libraries/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -229,7 +229,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -274,7 +274,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started/quick/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -319,7 +319,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -364,7 +364,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -409,7 +409,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</loc>
-    <lastmod>2020-02-13T21:37:32+09:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -454,7 +454,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_server/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -634,7 +634,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -679,7 +679,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_webdriver_binaries/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -769,7 +769,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -859,7 +859,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -949,7 +949,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1039,7 +1039,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1084,7 +1084,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/introduction/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1264,7 +1264,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1309,7 +1309,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/generating_application_state/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1354,7 +1354,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1444,7 +1444,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1534,7 +1534,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1624,7 +1624,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1714,7 +1714,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1759,7 +1759,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/getting_started_with_webdriver/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -1939,7 +1939,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/mock_external_services/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -1984,7 +1984,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/waits/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2029,7 +2029,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2074,7 +2074,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/support_classes/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2164,7 +2164,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2209,7 +2209,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2344,7 +2344,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/remote_webdriver/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2389,7 +2389,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2434,7 +2434,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/http_proxies/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2479,7 +2479,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2524,7 +2524,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/test_independency/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2614,7 +2614,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/consider_using_a_fluent_api/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"
@@ -2794,7 +2794,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/web_element/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2839,7 +2839,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -2884,7 +2884,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/webdriver/keyboard/</loc>
-    <lastmod>2020-02-12T19:12:24+02:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3064,7 +3064,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/front_matter/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3153,7 +3153,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/contributing/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -3198,7 +3198,7 @@
   
   <url>
     <loc>https://selenium.dev/documentation/ja/</loc>
-    <lastmod>2020-02-12T17:07:16+00:00</lastmod>
+    <lastmod>2020-02-13T12:39:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="de"

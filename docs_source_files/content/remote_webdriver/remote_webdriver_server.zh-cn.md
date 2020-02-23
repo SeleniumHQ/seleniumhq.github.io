@@ -67,8 +67,9 @@ a URL, but it's also possible to host the page in a lightweight
 container, such as Jetty configured entirely in code. Steps to do this
 follow.
 
-Download the `selenium-server.zip` and unpack. Put the JARs on the
-CLASSPATH. Create a new class called `AppServer`. Here, I'm using
+* Download the `selenium-server.zip` and unpack. 
+* Put the JARs on the CLASSPATH. 
+* Create a new class called `AppServer`. Here, I'm using
 Jetty, so you'll need to [download](//www.eclipse.org/jetty/download.html)
 that as well:
 
