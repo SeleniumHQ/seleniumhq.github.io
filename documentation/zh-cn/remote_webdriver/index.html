@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>Remote WebDriver :: Selenium 文档</title>
+    <title>远程 WebDriver :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582479534" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582479534" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582480179" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582480179" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582479534" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582480179" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582479534"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582480179"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582479534"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582479534"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582480179"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582480179"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582479534"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582480179"></script>
 
     
   </div>
@@ -680,13 +680,13 @@
  
   
     
-    <li data-nav-id="/remote_webdriver/" title="Remote WebDriver" class="dd-item 
+    <li data-nav-id="/remote_webdriver/" title="远程 WebDriver" class="dd-item 
         parent
         active
         
         ">
       <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/">
-          Remote WebDriver
+          远程 WebDriver
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1901,7 +1901,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > Remote WebDriver
+            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > 远程 WebDriver
           
          
           
@@ -1929,21 +1929,12 @@
 
 	
 
+<h1 id="远程-webdriver">远程 WebDriver</h1>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
-</div>
+<p>您可以如本地一样, 使用远程WebDriver.
+主要区别在于需要配置远程WebDriver, 以便可以在不同的计算机上运行测试.</p>
 
-
-<h1 id="remote-webdriver">Remote WebDriver</h1>
-
-<p>You can use WebDriver remotely the same way you would use it
-locally. The primary difference is that a remote WebDriver needs to be
-configured so that it can run your tests on a separate machine.</p>
-
-<p>A remote WebDriver is composed of two pieces: a client and a
-server. The client is your WebDriver test and the server is simply a
-Java servlet, which can be hosted in any modern JEE app server.</p>
+<p>远程WebDriver由两部分组成：客户端和服务端. 客户端是您的WebDriver测试，而服务端仅仅是可以被托管于任何现代Java EE应用服务器的Java Servlet.</p>
 
 
 
@@ -1955,8 +1946,8 @@ Java servlet, which can be hosted in any modern JEE app server.</p>
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/">
-      “Remote WebDriver”
-    </a> was last updated on: 13 Feb 2020 12:39:25 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/5029d818955572fad8c351258b728076ceaa20c2">Deploying on Thu Feb 13 12:39:25 UTC 2020, commit 484f2b127e093c8b59e017a4268a892388a95a65, [skip ci] (5029d8189)</a>
+      “远程 WebDriver”
+    </a> was last updated on: 24 Feb 2020 01:47:41 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/75edd991bb89c5e849e065ab9fec0768d311b6f8">Add Chinese translation of &#34;remote_webdriver&#34; (#253) [deploy site] (75edd991b)</a>
 </h5>
         
             </div> 
@@ -3119,19 +3110,19 @@ Java servlet, which can be hosted in any modern JEE app server.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582479534"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582480179"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582479534"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582479534"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582480179"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582480179"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582479534" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582479534"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582480179" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582480179"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

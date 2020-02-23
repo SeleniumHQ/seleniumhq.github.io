@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Remote WebDriver on Selenium 文档</title>
+    <title>远程 WebDriver on Selenium 文档</title>
     <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/</link>
-    <description>Recent content in Remote WebDriver on Selenium 文档</description>
+    <description>Recent content in 远程 WebDriver on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
