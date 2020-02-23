@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
-Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description>
+      <description>Le serveur fonctionnera toujours sur la machine avec le navigateur que vous souhaitez tester. Le serveur peut être utilisé à partir de la ligne de commande ou via du code configuration.
+Démarrage du serveur à partir de la ligne de commande Une fois que vous avez téléchargé selenium-server-standalone-{VERSION}.jar, placez-le sur l&amp;rsquo;ordinateur avec le navigateur que vous souhaitez tester. Ensuite, à partir de le répertoire avec le pot, exécutez ce qui suit:</description>
     </item>
     
     <item>
