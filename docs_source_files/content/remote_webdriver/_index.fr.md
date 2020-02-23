@@ -4,18 +4,12 @@ chapter: true
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Remote WebDriver
 
-You can use WebDriver remotely the same way you would use it
-locally. The primary difference is that a remote WebDriver needs to be
-configured so that it can run your tests on a separate machine.
+Vous pouvez utiliser WebDriver à distance de la même manière que vous l'utiliseriez
+localement. La principale différence est qu’un WebDriver distant doit être
+configuré pour qu'il puisse exécuter vos tests sur une machine distincte.
 
-A remote WebDriver is composed of two pieces: a client and a
-server. The client is your WebDriver test and the server is simply a
-Java servlet, which can be hosted in any modern JEE app server.
+Un WebDriver distant est composé de deux éléments: un client et un
+serveur. Le client est votre test WebDriver et le serveur est simplement un
+Servlet Java, qui peut être hébergé sur n'importe quel serveur d'application JEE moderne.

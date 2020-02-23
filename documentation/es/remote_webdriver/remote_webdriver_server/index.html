@@ -11,20 +11,20 @@
     <title>WebDriver remoto - servidor :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1582216269" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1582216269" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1582480174" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1582480174" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1582216269" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1582480174" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1582216269"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1582480174"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1582216269"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1582216269"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1582480174"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1582480174"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1582216269"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1582480174"></script>
 
     
   </div>
@@ -2019,8 +2019,11 @@ a URL, but it&rsquo;s also possible to host the page in a lightweight
 container, such as Jetty configured entirely in code. Steps to do this
 follow.</p>
 
-<p>Download the <code>selenium-server.zip</code> and unpack. Put the JARs on the
-CLASSPATH. Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
+<ul>
+<li>Download the <code>selenium-server.zip</code> and unpack</li>
+<li>Put the JARs on the CLASSPATH</li>
+
+<li><p>Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
 Jetty, so you&rsquo;ll need to <a href="//www.eclipse.org/jetty/download.html">download</a>
 that as well:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Connector;
@@ -2035,23 +2038,25 @@ that as well:</p>
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.remote.server.DriverServlet;
 
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> AppServer {
-  <span style="color:#268bd2">private</span> <span style="color:#268bd2">Server</span> server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server();
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">Server</span> server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server();
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span>() <span style="color:#268bd2">throws</span> <span style="color:#268bd2">Exception</span> {
-    WebAppContext <span style="color:#268bd2">context</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext();
-    context.setContextPath(<span style="color:#2aa198">&#34;&#34;</span>);
-    context.setWar(<span style="color:#719e07">new</span> File(<span style="color:#2aa198">&#34;.&#34;</span>));
-    server.addHandler(context);
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span>() <span style="color:#268bd2">throws</span> <span style="color:#268bd2">Exception</span> {
+WebAppContext <span style="color:#268bd2">context</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext();
+context.setContextPath(<span style="color:#2aa198">&#34;&#34;</span>);
+context.setWar(<span style="color:#719e07">new</span> File(<span style="color:#2aa198">&#34;.&#34;</span>));
+server.addHandler(context);
 
-    context.addServlet(DriverServlet.class, <span style="color:#2aa198">&#34;/wd/*&#34;</span>);
+context.addServlet(DriverServlet.class, <span style="color:#2aa198">&#34;/wd/*&#34;</span>);
 
-    SelectChannelConnector <span style="color:#268bd2">connector</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector();
-    connector.setPort(3001);
-    server.addConnector(connector);
+SelectChannelConnector <span style="color:#268bd2">connector</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector();
+connector.setPort(3001);
+server.addConnector(connector);
 
-    server.start();
-  }
-}</code></pre></div>
+server.start();
+}
+}</code></pre></div></li>
+</ul>
+
 
 <footer class=" footline" >
 	
@@ -2060,7 +2065,7 @@ that as well:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/">
       “WebDriver remoto - servidor”
-    </a> was last updated on: 10 Feb 2020 15:07:12 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/c292b29c323e2b57ee664e84107ec70b60464fd8">Deploying on Mon Feb 10 15:07:12 UTC 2020, commit 96ab874af8bc02826ff57f7e036e0d31bfc2a677, [skip ci] (c292b29c3)</a>
+    </a> was last updated on: 23 Feb 2020 23:07:06 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/f7d18efbd3bbef846c497d834e50281f78cbb12f">Modify: Translating [EN]-&gt;[FR] Remote webdriver server (#252) [deploy site] (f7d18efbd)</a>
 </h5>
         
         </div> 
@@ -3222,19 +3227,19 @@ that as well:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1582216269"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1582480174"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1582216269"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1582216269"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1582480174"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1582480174"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1582216269" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1582216269"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1582480174" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1582480174"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

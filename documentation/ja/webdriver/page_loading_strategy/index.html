@@ -11,20 +11,20 @@
     <title>Page loading strategy :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1582216280" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1582216280" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1582480184" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1582480184" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1582216280" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1582480184" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1582216280"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1582480184"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1582216280"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1582216280"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1582480184"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1582480184"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1582216280"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1582480184"></script>
 
     
   </div>
@@ -2060,7 +2060,12 @@ When set to <strong>normal</strong>, Selenium WebDriver waits until the
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
+caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;normal&#39;</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2204,7 +2209,12 @@ and discards loading of stylesheets, images and subframes.</p>
 
 <section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
+caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;eager&#39;</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2343,7 +2353,12 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="rubycode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
+caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;none&#39;</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2403,7 +2418,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
       “Page loading strategy”
-    </a> was last updated on: 20 Feb 2020 20:31:00 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/74da35f2fb43cd20fc6186c3d489d74e7e030049">Add: Adding Kotlin sample code for  page load strategy (#244) (74da35f2f)</a>
+    </a> was last updated on: 21 Feb 2020 14:44:52 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/6ab8f1b7dd8c550b204f41bcbc00031c6ca1d0c2">Add: Adding Ruby code sample for page_load_startegy (#248) [deploy site] (6ab8f1b7d)</a>
 </h5>
         
         </div> 
@@ -3568,19 +3583,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1582216280"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1582480184"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1582216280"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1582216280"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1582480184"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1582480184"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1582216280" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1582216280"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1582480184" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1582480184"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

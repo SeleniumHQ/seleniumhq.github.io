@@ -1,20 +1,12 @@
 ---
-title: "Remote WebDriver"
+title: "远程 WebDriver"
 chapter: true
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+# 远程 WebDriver
 
-# Remote WebDriver
+您可以如本地一样, 使用远程WebDriver.
+主要区别在于需要配置远程WebDriver, 以便可以在不同的计算机上运行测试.
 
-You can use WebDriver remotely the same way you would use it
-locally. The primary difference is that a remote WebDriver needs to be
-configured so that it can run your tests on a separate machine.
-
-A remote WebDriver is composed of two pieces: a client and a
-server. The client is your WebDriver test and the server is simply a
-Java servlet, which can be hosted in any modern JEE app server.
+远程WebDriver由两部分组成：客户端和服务端. 客户端是您的WebDriver测试，而服务端仅仅是可以被托管于任何现代Java EE应用服务器的Java Servlet.
