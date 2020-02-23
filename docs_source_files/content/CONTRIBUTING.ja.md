@@ -1,125 +1,88 @@
 ---
-title: Contributing to the Selenium Site & Documentation
+title: Seleniumのサイトとドキュメントに貢献する
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。
 
-Selenium is a big software project, its site and documentation are key
-to understanding how things work and learning effective ways to exploit
-its potential.
+このプロジェクトには、Seleniumのサイトとドキュメントの両方が含まれています。これは、Seleniumを効果的に使用する方法、Seleniumに参加する方法、およびSeleniumに貢献する方法に関する最新情報を提供するための継続的な取り組みです（特定のリリースを対象としていません）。
 
-This project contains both Selenium's site and documentation. This is
-an ongoing effort (not targeted at any specific release) to provide
-updated information on how to use Selenium effectively, how to get
-involved and how to contribute to Selenium.
-
-Contributions toward the site and docs follow the process described in
-the below section about contributions. You should spend some time
-familiarising yourself with the documentation by reading
-[more about it]({{< ref "/introduction/about_this_documentation.ja.md" >}}).
+サイトおよびドキュメントへの貢献は、以下のセクションで説明されているプロセスに従います。
+[このドキュメントについて]({{< ref "/introduction/about_this_documentation.ja.md" >}})をよく読み、本ドキュメントに慣れてください。
 
 ---
 
-The Selenium project welcomes contributions from everyone. There are a
-number of ways you can help:
+Seleniumプロジェクトは、皆様からのコントリビューションを歓迎します。
+お手伝いをいただくには、いくつかの方法があります:
 
-## Report an issue
+## イシュー報告
 
-When reporting a new issues or commenting on existing issues please 
-make sure discussions are related to concrete technical issues with the
-Selenium software, its site and/or documentation.
+新しい問題を報告したり、既存の問題についてコメントしたりするときは、議論がSeleniumソフトウェア、そのサイトおよび/またはドキュメントに関する具体的な技術問題に関連していることを確認してください。
 
-All of the Selenium components change quite fast over time, so this
-might cause the documentation to be out of date. If you find this to
-be the case, as mentioned, don't doubt to create an issue for that.
-It also might be possible that you know how to bring up to date the
-documentation, so please send us a pull request with the related
-changes.
+Seleniumのすべてのコンポーネントは、時間の経過とともに非常に速く変化するため、ドキュメントが古くなる可能性があります。
+このようなケースを見つけた場合には、遠慮なくイシューを作成してください。
+また、ドキュメントを最新の状態に更新する方法をご存知でしたら、関連する変更を含むプルリクエストを送ってしてください。
 
-If you are not sure about what you have found is an issue or not,
-If you are not sure about what you have found is an issue or not,
-please ask through the communication channels described at 
-https://selenium.dev/support.
+見つかったものが問題であるかどうかわからない場合、[https://selenium.dev/support](https://selenium.dev/support)に記載されているコミュニケーション手段にて質問してください。
 
-## Contributions
+## 貢献
 
-The Selenium project welcomes new contributors. Individuals making
-significant and valuable contributions over time are made _Committers_
-and given commit-access to the project.
+Seleniumプロジェクトは新しいコントリビュータを歓迎します。目立った価値ある貢献を継続的に行った個人は _コミッター_
+として認められ、プロジェクトへのコミットアクセス件が与えられます。
 
-This guide will guide you through the contribution process.
+本ガイドでは、貢献のプロセスについて説明します。
 
-### Step 1: Fork
+### ステップ 1: フォーク
 
-Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
-and check out your copy locally.
+[Github](https://github.com/seleniumhq/seleniumhq.github.io)上のプロジェクトをフォークし、コピーをローカルにチェックアウトしてください。
 
 ```shell
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
-#### Dependencies: Hugo
+#### 依存関係: Hugo
 
-We use [Hugo](https://gohugo.io/) to build and render the site and docs.
-To verify everything locally before even committing any changes, please
-[install Hugo](https://gohugo.io/getting-started/installing/), get familiar
-with it and [run the local server](https://gohugo.io/getting-started/usage/#livereload)
-to render the site locally (detailed instructions can be found in the 
-next steps).
+本プロジェクトでは、サイトとドキュメントのビルド及びレンダリングに[Hugo](https://gohugo.io/)を使用しています。
+何らかの変更をコミットする前にローカルで検証を行うには、[Hugoをインストール](https://gohugo.io/getting-started/installing/)し、慣れたうえで、[ローカルサーバーを起動](https://gohugo.io/getting-started/usage/#livereload)してローカルでサイトをレンダリングしてください。（詳細な方法は次の手順で説明します。）
 
-### Step 2: Branch
+### ステップ 2: ブランチの作成
 
-Create a feature branch and start hacking:
+フィーチャーブランチを作成し、ハックを開始します。:
 
 ```shell
 % git checkout -b my-feature-branch
 ```
 
-We practice HEAD-based development, which means all changes are applied
-directly on top of master.
+我々はHEADベースの開発を行っています。つまり、全ての変更はmasterブランチ上に直接適用されます。
 
-### Step 3: Make changes
+### ステップ 3: 変更を加える
 
-The repository contains the site and docs, which are two separate Hugo 
-projects. If you want to make changes to the site, work on the
-`site_source_files` directory. To see a live preview of your changes,
-run `hugo server` on the site's root directory.
+リポジトリには、サイトとドキュメントの２つの異なるHugoプロジェクトが含まれます。
+サイトを変更したい場合は、`site_source_files` ディレクトリで作業します。 変更のライブプレビューを確認したい場合は、サイトのルートディレクトリで`hugo server`を実行します。
 
 ```shell
 % cd site_source_files
 % hugo server
 ```
 
-To make changes to the docs, switch to the `docs_source_files` directory. 
+ドキュメントを変更したい場合は、`docs_source_files` ディレクトリに移動します。
 
 ```shell
 % cd docs_source_files
 % hugo server
 ```
 
-The docs are translated into several languages, and translations are based on
-the English content. When you are changing a file, **be sure** to make your
-changes in all the other translated files as well. This might differ depending
-on the change, for example:
- 
-* If you add a code example to the `browser_manipulation.en.md` file,
-also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md`, and all other translated files.
-* If you find a translation that can be improved, only change the translated
-file.
-* If you are adding a new language translation, add the new files with the
-appropriate suffix. There is no need to have everything translated to submit a
-PR, it can be done iteratively. Don't forget to check some needed configuration
-values in the `config.toml` file.
-* If you make text changes in the English version, replace the same section in
-the translated files with your change (yes, in English), and add the following
-notice at the top of the file. 
+ドキュメントは複数の言語に翻訳されており、翻訳は英語版に基づいて行われます。
+ファイルに変更を加えたときは、他の翻訳済みファイル全てに**必ず**同様の変更を加えてください。
+ただし、変更内容によって異なります。以下に例を示します:
+
+* `browser_manipulation.en.md`ファイルにコード例を加えた場合、`browser_manipulation.es.md`、 `browser_manipulation.ef.md`及びすべての翻訳ファイルに追加してください。
+`browser_manipulation.ja.md`
+* 翻訳の改善を行う場合は、各言語のファイルのみを変更してください。
+* 新しい言語向けの翻訳を追加したい場合、適切な接尾辞を付けてファイルを追加してください。プルリクエストを送信するために全てを翻訳する必要はありません、イテレーティブに行うことができます。`config.toml`ファイルで必要な設定値の確認を忘れないでください。
+* 英語版の文章に変更を加えたい場合は、翻訳されたファイルの同じ箇所をあなたの変更で（英語で）書き換えたうえで、以下の注意書きをファイルの戦闘に追加してください。
+
 
 ```
 {{%/* notice info */%}}
@@ -129,27 +92,23 @@ it by sending us pull requests!
 {{%/* /notice */%}}
 ```
 
-### Step 4: Commit
+### ステップ 4: コミット
 
-First make sure git knows your name and email address:
+まず、gitがあなたの名前とメールアドレスを知っていることを確認してください:
 
 ```shell
 % git config --global user.name 'Santa Claus'
 % git config --global user.email 'santa@example.com'
 ```
 
-**Writing good commit messages is important.** A commit message
-should describe what changed, why, and reference issues fixed (if
-any). Follow these guidelines when writing one:
+**適切なコミットメッセージを書くことは重要です。**コミットメッセージには、変更された内容、理由、修正されたイシューへの参照（ある場合）を記述する必要があります。作成するときは、次のガイドラインに従ってください。:
 
-1. The first line should be around 50 characters or less and contain a
-    short description of the change.
-2. Keep the second line blank.
-3. Wrap all other lines at 72 columns.
-4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+1. 最初の行は約50文字以下で、変更の簡単な説明を含める必要があります。
+2. 2行目は空白のままにします。
+3. 他のすべての行を72列で折り返します。
+4. `Fixes #N`を含めてください。ここでは _N_ がこのコミットで修正したイシュー番号です（存在する場合）。
 
-A good commit message can look like this:
+適切なコミットメッセージは次のようになります:
 
 ```text
 explain commit normatively in one line
@@ -166,46 +125,37 @@ nicely even when it is indented.
 Fixes #141
 ```
 
-The first line must be meaningful as it's what people see when they
-run `git shortlog` or `git log --oneline`.
+最初の行は`git shortlog`や`git log --oneline`を実行した際に他人が最初に目にするため、意味のあるものでなければなりません。
 
-### Step 5: Rebase
+### ステップ 5: リベース
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+あなたの作業を同時するため、(`git merge`ではなく)`git rebase`を時々実行してください。
 
 ```shell
 % git fetch upstream
 % git rebase upstream/master
 ```
 
-### Step 6: Test
+### ステップ 6: テスト
 
-Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
-with this you can be safe that your changes have not broken anything.
+あなたの変更が何も問題を起こしていないことを確認するため、常に忘れずに[ローカルサーバーの実行](https://gohugo.io/getting-started/usage/#livereload)を行ってください。
 
-### Step 7: Push
+### ステップ 7: プッシュ
 
 ```shell
 % git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/seleniumhq.github.io.git and
-press the _Pull Request_ and fill out the form. **Please indicate
-that you've signed the CLA** (see Step 7).
+https://github.com/yourusername/seleniumhq.github.io.git を開き、_Pull Request_を押し、フォームを入力してください。 **CLAに署名したことを示してください** (ステップ7を参照)
 
-Pull requests are usually reviewed within a few days. If there are
-comments to address, apply your changes in new commits (preferably
-[fixups](http://git-scm.com/docs/git-commit)) and push to the same
-branch.
+プルリクエストは通常数日以内にレビューされます。対応すべきコメントがある場合は、新しく(できれば
+[fixups](http://git-scm.com/docs/git-commit)で)コミットし、同じブランチにプッシュしてください。
 
-### Step 8: Integration
+### ステップ 8: 統合
 
-When code review is complete, a committer will take your PR and
-integrate it on the repository's master branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
-your branch history.
+コードレビューが完了すると、コミッターがPRを取得し、リポジトリのmasterブランチに統合します。
+マスターブランチで履歴を線形に保持するのが好きなので、通常はブランチの履歴をスカッシュしてリベースします。
 
-## Communication
+## コミュニケーション
 
-All details on how to communicate with the project contributors
-and the community overall can be found at https://selenium.dev/support
+プロジェクトのコントリビューターおよびコミュニティ全体と交流する方法については、全て https://selenium.dev/support で詳細が記載されています。
