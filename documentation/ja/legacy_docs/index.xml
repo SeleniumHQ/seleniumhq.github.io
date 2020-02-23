@@ -66,13 +66,24 @@ WebDriver driver = ((WrapsDriver) selenium).</description>
     </item>
     
     <item>
-      <title>Legacy Selenium IDE</title>
+      <title>レガシー Selenium IDE</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</guid>
-      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
+      <description>紹介 Selenium-IDE (統合開発環境) は、Selenium テストケースを開発するためのツールです。 Selenium-IDE は使いやすい Firefox プラグインで、一般にテストケースを開発するための最も効率的な方法です。 Selenium-IDE ではコンテキストメニューも使用できます。 コンテキストメニューを使うと、まず現在ブラウザに表示されているページ上の UI 要素を選択し、次に Selenium コマンドのリストから目的のコマンドを選択できます。 コマンドのパラメータは、選択された UI 要素のコンテキストに従って、あらかじめ定義されたものが使われます。 Selenium-IDE を使う方法は、時間の節約になるだけでなく、Selenium スクリプトの構文を学ぶ手段としても優れています。
+この章では Selenium-IDE について詳しく取り上げ、Selenium-IDE を効果的に使う方法について説明します。
+IDEのインストール Firefoxを使用して、最初にSeleniumHQダウンロードページからIDEをダウンロードします。
+Firefoxは、不慣れな場所からアドオンをインストールしないように保護するため、次のスクリーンショットに示すように、インストールを続行するには&amp;rsquo;許可&amp;rsquo;をクリックする必要があります。
+Firefoxからダウンロードすると、次のウィンドウが表示されます。
+「今すぐインストール」を選択します。 Firefoxの「アドオン」ウィンドウがポップアップし、最初にプログレスバーが表示されます。 ダウンロードが完了すると、次のような画面になります。
+Firefoxを再起動します。 Firefoxの再起動後、Firefoxの「ツール」メニューには、「Selenium-IDE」が表示されます。
+IDEを開く Selenium-IDEを実行するには、Firefoxの「ツール」メニューから「Selenium-IDE」を選択するだけです。 空のスクリプト編集ウィンドウと、テストケースを読み込んだり新規作成したりするメニューのある Selenium-IDE のウィンドウが表示されます。
+IDEの機能 メニューバー 「ファイル」メニューには、テストケースとテストスイート（テストケースのスイート）のオプションがあります。 これらを使用して、新しいテストケースを追加し、テストケースを開き、テストケースを保存し、選択した言語でテストケースをエクスポートできます。 最近のテストケースを開くこともできます。 これらすべてのオプションは、テストスイートでも使用できます。
+「編集」メニューでは、テストケースのコマンドを編集するためのすべての操作をコピー、貼り付け、削除、元に戻す、選択できます。 「オプション」メニューでは、さまざまな設定を変更できます。 特定のコマンドのタイムアウト値を設定し、Seleniumコマンドの基本セットにユーザー定義のユーザー拡張機能を追加し、テストケースを保存するときに使用する形式（言語）を指定できます。 「ヘルプ」メニューは Firefox 標準の「ヘルプ」メニューで、この中の 「UI-Element Documentation」 だけが Selenium-IDE に関係のある項目です。
+ツールバー ツールバーには、テストケースをデバッグするためのステップ実行機能をはじめ、テストケースの実行をコントロールするためのさまざまなボタンが並んでいます。 右端の赤い丸のボタンは、「Record」(記録) ボタンです。
+「Speed Control」 (速度調節): テストケースの実行速度を調節します。
+「Run All」 (すべて実行): 複数のテストケースを持つテストスイートが読み込まれているときにテストスイート全体を実行します。</description>
     </item>
     
   </channel>
