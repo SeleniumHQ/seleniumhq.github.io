@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Captchas</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
-    </item>
-    
-    <item>
       <title>Copyright and attributions</title>
       <link>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -153,6 +142,17 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       
       <guid>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
       <description> 为所有的测试提供统一的入口 管理和控制运行着浏览器的节点/环境 扩展 并行测试 跨平台(操作系统)测试 负载测试  </description>
+    </item>
+    
+    <item>
+      <title>验证码</title>
+      <link>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</guid>
+      <description>验证码 (CAPTCHA), 是 全自动区分计算机和人类的图灵测试 (Completely Automated Public Turing test to tell Computers and Humans Apart) 的简称, 是被明确地设计用于阻止自动化的, 所以不要尝试!
+规避验证码的检查, 主要有两个策略:
+ 在测试环境中禁用验证码 添加钩子以允许测试绕过验证码  </description>
     </item>
     
     <item>
