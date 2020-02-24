@@ -123,6 +123,151 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/blog/2010/going-atomic-how/</loc>
+    <lastmod>2010-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-25/</loc>
+    <lastmod>2010-08-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-24/</loc>
+    <lastmod>2010-08-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-23/</loc>
+    <lastmod>2010-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/going-atomic-why/</loc>
+    <lastmod>2010-08-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-at-agile-2010/</loc>
+    <lastmod>2010-08-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/</loc>
+    <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-22/</loc>
+    <lastmod>2010-08-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/</loc>
+    <lastmod>2010-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-21/</loc>
+    <lastmod>2010-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/</loc>
+    <lastmod>2010-07-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-20/</loc>
+    <lastmod>2010-07-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/gsoc-2010-remote%c2%a0storage/</loc>
+    <lastmod>2010-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-2-0a5-released/</loc>
+    <lastmod>2010-07-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-19/</loc>
+    <lastmod>2010-07-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-ide-looking-back-and-looking-forward/</loc>
+    <lastmod>2010-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-18/</loc>
+    <lastmod>2010-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-17/</loc>
+    <lastmod>2010-06-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-16/</loc>
+    <lastmod>2010-06-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/</loc>
+    <lastmod>2010-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/</loc>
+    <lastmod>2010-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/</loc>
+    <lastmod>2010-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/the-future-of-selenium-grid/</loc>
+    <lastmod>2010-04-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-2-0a3-released/</loc>
+    <lastmod>2010-04-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/</loc>
+    <lastmod>2010-04-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-1-0-3-released/</loc>
+    <lastmod>2010-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/selenium-1-0-2-release-firefox-3-6-and-snow-leopard-support/</loc>
+    <lastmod>2010-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/welcome-to-the-official-selenium-blog/</loc>
+    <lastmod>2010-02-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2010/</loc>
+    <lastmod>2010-01-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/</loc>
     <lastmod>1970-01-01T00:00:00+00:00</lastmod>
   </url>
