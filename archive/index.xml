@@ -58,6 +58,24 @@
     
     <item>
       <title>Blog</title>
+      <link>https://selenium.dev/blog/2012/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2011/</link>
+      <pubDate>Sat, 01 Jan 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2011/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
       <link>https://selenium.dev/blog/2010/</link>
       <pubDate>Fri, 01 Jan 2010 00:00:00 +0000</pubDate>
       

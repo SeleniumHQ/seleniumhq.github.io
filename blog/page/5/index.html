@@ -212,108 +212,76 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Thursday, December 9, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/"><h2>Atoms have come to Selenium IDE</h2></a>
-                <p>As mentioned in Simon&#8217;s <a href="http://seleniumhq.wordpress.com/2010/08/16/going-atomic-why/">Going Atomic: Why?</a> and <a href="http://seleniumhq.wordpress.com/2010/09/05/going-atomic-how/">Going Atomic: How</a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &#8216;atoms&#8217; is now included.<br />
-<br />
-Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &#8216;why&#8217; and suggests how to fix them as well.<br />
-<br />
-The HTML spec has the notion of a <i>boolean attribute</i> which is one that does something just by being there rather than by its value; <i>checked</i> and <i>selected</i> are two such examples of this. Optionally, you could give these boolean attributes a value that is the same as their name (checked=&#8221;checked&#8221;) and your page would still validate, but really, the browsers only care that the attribute exist.<br />
-<br />
-Prior to 1.0.10, it was not uncommon for people to do something like<br />
-</p>
-<pre>assertAttribute | checkbox@checked | checked</pre>
-<p>
-which fetches the value of the checked attribute on the checkbox with the id or name of checkbox and fails the script is the value is not checked.<br />
-<br />
-In 1.0.10 though, that will fail <i>even if it is checked</i>. This is because checked is a boolean attribute and will now return either true or throw an exception saying the attribute doesn&#8217;t exist. Redoing the above step check that the boolean attribute is set results in:<br />
-</p>
-<pre>assertAttribute | checkbox@checked | true</pre>
-<p>
-Thankfully, most of the real-world interaction with boolean attributes is focused on checked, disabled, hidden and selected and in these cases using assertAttribute is not really the right thing to do. Instead, the Selenium API provides wrappers for you to use.<br />
-</p>
-<table>
-<tr>
-<td>checked</td>
-<td>assertChecked(locator), assertNotChecked(locator), verifyChecked(locator), verifyNotChecked(locator)</td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>assertEditable(locator), assertNotEditable(locator), verifyEditable(locator), verifyNotEditable(locator)</td>
-</tr>
-<tr>
-<td>hidden</td>
-<td>assertVisible(locator), assertNotVisible(locator), verifyVisible(locator), verifyNotVisible(locator)</td>
-</tr>
-<tr>
-<td>selected</td>
-<td>assertSelected*(locator, pattern), assertNotSelected*(locator, pattern), verifySelected*(locator, pattern), verifyNotSelected*(locator, pattern)</td>
-</tr>
-</table>
-<p>
-Checking for the absence of a boolean attribute that doesn&#8217;t have a nice wrapper is a bit of a pain though. In this example I am checking that the boolean attribute <i>multiple</i> is not on the select element with the name elephants.<br />
-</p>
-<pre>assertEval | this.browserbot.findElement("css=select[name=elephants]").getAttribute("multiple"); | null</pre>
-<p>
-If you find yourself doing this very often, I suggest you wrap it up in a user-extension inside a <a href="http://seleniumhq.org/projects/ide/plugins.html">plugin</a> as something like<br />
-</p>
-<pre>assertBooleanAttribute | css=select[name=elephants]@multiple | false
-assertBooleanAttribute | css=select[name=elephants]@multiple | true</pre>
-<p>
-Hopefully this addresses some of the eventual &#8216;why the heck did my script break!?!?!&#8217; problems that will no double crop up once Selenium IDE 1.0.10 gets wider distribution.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Atoms%20have%20come%20to%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fatoms-have-come-to-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fatoms-have-come-to-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Monday, December 6, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-35/"><h2>A Smattering of Selenium #35</h2></a>
-                <p><p>(If I wasn&#8217;t still recovering from a cold there would be something witty here.)<br />
-</p>
+                Tuesday, June 12, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-85/"><h2>A Smattering of Selenium #85</h2></a>
+                <p><p>Two days in a row! Take that doubters!</p>
 <ul>
-<li>We&#8217;ll start this week with a <a href="http://www.notquitewrong.com/rosscottinc/2010/08/20/the-system-408-bowser-testing">cartoon</a></li>
-<li>So I know I have linked to <a href="http://seleniumexamples.com/blog/examples/play-pacman-with-selenium-2/">playing pacman with se 2</a>, but here is a site that <a href="http://gameinternals.com/post/2072558330/understanding-pac-man-ghost-behavior">explains the ghost behavior</a>. If Google implemented the algorithms properly-ish, then this should be the ticket to crazy high scores. There should be a contest for this&#8230;</li>
-<li><a href="http://terminalvelocity-socal.blogspot.com/2010/11/cucumber-cuke4duke-selenium-webdriver.html">  Cucumber + Cuke4Duke + Selenium (WebDriver) = Enlightenment</a> is step-by-step instructions for using maven to wire all these things together.</li>
-<li><a href="http://code.google.com/p/shellinabox/">shell in a box</a> means you can now use Se to automate a unix shell</li>
-<li><a href="http://mattarcherblog.wordpress.com/2010/11/29/how-test-automation-with-selenium-or-watir-can-fail/">How test automation with Selenium or Watir can fail</a> provides two code smells for automation</li>
-<li><a href="http://chrismcmahonsblog.blogspot.com/2010/11/ui-test-smells-if-and-for-and-files.html">UI test smells: if() and for() and files</a> is a bit of a rebuttal with some additional commentary</li>
-<li><a href="http://rorygibson.wordpress.com/2010/12/02/xpday-2010-surviving-end-to-end-testing-or-using-selenium-for-fun-and-profit/">Surviving end-to-end-testing… or, using Selenium for fun and profit</a> is a write-up of the XP Day session of the same name</li>
-<li><i>The first thing that really became obvious to is that the community has to stop thinking about the tools and step back to look at a wider picture of the processes that have evolved over the last decade. Tools are there to assist us with a process, so focusing on tools and not on the process is just causing problems in adoption for new teams.</i> is from Gojko&#8217;s article in the <a href="http://www.bcs.org/upload/pdf/tester-dec10.pdf">December 2010 issue of The Tester</a>. And is extremely important to remember given that this is a tool focused blog</li>
-<li>Missed Øredev? <a href="http://oredev.org/2010/videos">Watch the videos</a>!</li>
-<li>A post from Sauce Labs shows <a href="http://saucelabs.com/blog/index.php/2010/11/test-videos-fun/">how to put messages</a> in your script runs. Crazy enough, I did <a href="https://github.com/adamgoucher/selenium-hollywood">something similar</a>.</li>
+<li><a href="http://www.informit.com/articles/article.aspx?p=1874863">Automated Software Testing: An Example of a Working Solution</a> is an interesting take on designing an automation system for the US DoD. It sure as heck isn&#8217;t how I would do it, but I can understand how this context might lead to this solution. And it seems like it is Eclipse based which is even worse a decision. 🙂</li>
+<li><a href="http://www.devto.ca/2012/05/5-tips-on-finding-a-mobile-job-in-toronto/">5 Tips on Finding a Mobile Job in Toronto</a> is pretty focused, but also applies to non-mobile jobs outside of Toronto.</li>
+<li><a href="http://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag">Application Cache: Douchebag</a> is another one of those things you need to grok if you are going to automate HTML5 goodies</li>
+<li>Before you run your automation against an Android app, you might want to run <a href="http://tools.android.com/tips/lint">Android Lint</a> against it.</li>
+<li><a href="https://github.com/sebv/node-wd-sync">wd-sync</a> is a synchronous version of the <a href="https://github.com/admc/wd">wd</a> javascript bindings.</li>
+<li><a href="https://github.com/alp82/abmash">Abmash</a> aims to deal with the element location problem only using the visible cues a user could see. In my experience, this leads to scripts that work fine &#8212; until you need to deal with multiple languages at which point it falls on its face. Hard. But&#8230;</li>
+<li><a href="http://python3porting.com/improving.html">Improving your code with modern idioms</a> is Python focused and is something I need to keep open whenever I write new code&#8230;</li>
+<li>More on Jasmine &#8211; <a href="https://speakerdeck.com/u/searls/p/confidencejs">Confidence.js</a></li>
+<li><a href="http://www.clockwise.ee/gasmask/">Gas Mask</a> seems like it would be pretty cool. There are of course some bugs, and the project seems rather dormant. Oh. And writing Objective C is a pain&#8230; but I really want something like this!</li>
+<li><a href="http://blog.carlossanchez.eu/2012/05/03/automatically-download-and-install-virtualbox-guest-additions-in-vagrant/">Automatically download and install VirtualBox guest additions in Vagrant</a>. Yup. That&#8217;s what it does.</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2335&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-35%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-35%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2385&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-85%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-85%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Tuesday, November 30, 2010 by <a href="https://twitter.com/plightbo">plightbo</a>
-                <a href="https://selenium.dev/blog/2010/selenium-conference-survey/"><h2>Selenium Conference Survey</h2></a>
-                <p>Great news! Thanks to the initiative of our friends at <a href="http://saucelabs.com">Sauce Labs</a>, we&#8217;re finally ready to host the first-ever Selenium Conference. We&#8217;re still working out a lot of the details, but so far we&#8217;ve decided this first conference will be sometime in April and hosted in San Francisco.</p>
-<p>In order to figure out the rest of the details, we&#8217;re looking for feedback from the Selenium user community. Please take a moment to fill out the <a href="http://bit.ly/fn8YyS">following survey</a>. Your answers will help us properly plan the best possible conference.</p>
-<p><a href="http://bit.ly/fn8YyS">http://bit.ly/fn8YyS</a></p>
-<p>Thanks!</p>
+                Monday, June 11, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-84/"><h2>A Smattering of Selenium #84</h2></a>
+                <p><p>What? Its only been 3 months since the last one. Sheesh.</p>
+<ul>
+<li>Sorry about being a G+ article, but <a href="https://plus.google.com/116910304844117268718/posts/UkaymyuTzaF">DOM Ready</a> discusses briefly about how to build your page in terms of order of events. Of course, if you read the comments it is very much buyer beware, but&#8230;</li>
+<li>I&#8217;ve been fixating a bit on operational dashboards the last little while and <a href="http://blogs.splunk.com/2012/06/07/splunkx-enterprise-operational-intelligence/">Enterprise Operational Intelligence</a> has a couple good ones</li>
+<li>Looking to use BrowserID? There&#8217;s a <a href="https://github.com/davehunt/bidpom">Page Object</a> for that.</li>
+<li><a href="http://www.slideshare.net/mcdonnps/lessons-from-etsy-avoiding-kitchen-nightmares-chefconf-2012">Lessons from Etsy: Avoiding Kitchen Nightmares</a> starts with an oven belching flame and gets better from there</li>
+<li><a href="http://watirmelon.com/2012/06/04/roll-your-own-page-objects/">Roll your own page objects</a>, is, for the record how I do Page Objects too. Well, aside from using something like Cucumber as <i>just</i> a functional runner</li>
+<li><a href="https://gist.github.com/2735065">Rachmaninov&#8217;s Third Piano Concerto, Played by Selenium</a> is just cool</li>
+<li><a href="http://www.bitrite.fi/johannes/2012/05/11/splitting-robot-framework-tests-into-batches-for-parallel-execution/">Splitting Robot Framework tests into batches for parallel execution</a> is one solution to the &#8216;my batches were balanced but now they are not&#8217; problem</li>
+<li><a href="http://michaelfeathers.typepad.com/michael_feathers_blog/2012/05/the-long-tail-of-technical-debt.html">The Long Tail of Technical Debt</a> shows one way of parsing run information and suggests what do do with this particular outcome pattern</li>
+<li><a href="https://engineering.groupon.com/2012/misc/bugwatch/">Bugwatch</a> is magic, but magic can be fun too! Well, sometimes.</li>
+<li>And lastly,<br />
+<blockquote class="twitter-tweet">
+<p>When test automation is made a goal rather than a tool, quality suffers.</p>
+<p>&mdash; Ben Simo (@QualityFrog) <a href="https://twitter.com/QualityFrog/status/195952852244512768">April 27, 2012</a></p></blockquote>
+</li></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Conference%20Survey&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-conference-survey%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-conference-survey%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2384&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-84%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-84%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Tuesday, May 29, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2012/announcing-selenium-2-22/"><h2>Announcing Selenium 2.22</h2></a>
+                <p>It&#8217;s been a while since the last Selenium release, but I&#8217;m happy to announce that Selenium 2.22 is now <a href="http://seleniumhq.org/download/">available for download</a>. This is a big release for us and features two major changes.</p>
+<p>The first is that<strong> Selenium 2.22 is the first version that requires Java 6</strong> in order to run. This has been the case for the Selenium Server for some time, but this is the first time the client code has required Java 6. Since Java 5 was <a href="http://www.oracle.com/technetwork/java/eol-135779.html">&#8220;end of lifed&#8221; in 2009</a>, we don&#8217;t expect this to impact many users.</p>
+<p>The second major change is that <strong>we are now providing a standalone IE server for use with the WebDriver API</strong>, similar to the one used by the chrome driver. You can get it from the normal download page. This will allow us to update our IE support independently of the rest of the library (again, mirroring how Chrome is supported) For now, there&#8217;s a legacy fallback mode you can use that&#8217;ll use the same DLL we&#8217;ve always used which can be activated by setting the DesiredCapability &#8220;useLegacyInternalServer&#8221; to boolean &#8220;true&#8221; when requesting your IE Driver instance.</p>
+<p>Of course, as well as these major changes, there&#8217;s the usual host of updates and improvements. We&#8217;re continuing to refine the new SafariDriver, and we&#8217;re happy to announce native events for Firefox 12. You can check out the other updates in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG</a>.</p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.22&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

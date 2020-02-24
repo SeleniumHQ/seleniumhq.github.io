@@ -212,82 +212,71 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Thursday, May 27, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/"><h2>Selenium IDE 1.0.7 – Now with Drag-and-Drop!</h2></a>
-                <p><p>So its a month later than planned, but Selenium IDE 1.0.7 is now available. The delay was due to some internal build changes and not code, but one of the code changes that is there more than makes up for the delay.<br />
-<br />
-That&#8217;s right, drag-and-drop has <i>finally</i> arrived to Se-IDE &#8212; though credit lies with Jérémy Hérault for implementing it.<br />
-<br />
-Oh, and if you are Swedish, there is now a localization for you. Yes, a real one. Not just one that makes everything say <i>Bork</i> as was suggested to me. Although a Pirate locale might be arrr-some.<br />
-<br />
-For those with version 1.0.5 or newer, the update will be pushed to you automatically over the next couple days. Those new to Selenium IDE or with 1.0.4 or older will want to <a href="http://release.openqa.org/selenium-ide/1.0.7/selenium-ide-1.0.7.xpi">install it now</a>.<br />
-<br />
-Other things of note around this release</p>
+                Thursday, October 6, 2011 by <a href="https://twitter.com/illicitonion">illicitonion</a>
+                <a href="https://selenium.dev/blog/2011/selenium-2-8-released/"><h2>Selenium 2.8 Released</h2></a>
+                <p>In keeping with our (roughly) weekly releases, Selenium 2.8 was <a href="http://seleniumhq.org/download/">released today</a> (and on Maven too), <a href="https://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">with a *huge* list of bug-fixes</a>!  As well as improved stability, if you&#8217;re using the Java API, this release adds the ability to upload files to a RemoteWebDriver server (see <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/remote/RemoteWebDriver.html#setFileDetector(org.openqa.selenium.remote.FileDetector)">RemoteWebDriver.setFileDetector</a>).</p>
+<p>Particular thanks have to go out to our two newest committers, Alexei Barancev and Ajay Kemparaj, for the copious bug-fixes they&#8217;ve contributed!</p>
+<p>We&#8217;re already hard at work getting 2.9 ready for next week with even more more bug-fixes &#8211; watch this space!</p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.8%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Monday, October 3, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-63/"><h2>A Smattering of Selenium #63</h2></a>
+                <ul>
+<li><a href="https://www.facebook.com/notes/facebook-engineering/watir-to-webdriver-unit-test-frameworks/10150314152278920">Watir to WebDriver: Unit Test Frameworks</a> &#8211; Well, its &#8216;big&#8217; news. Of course, Watir can use WebDriver so they didn&#8217;t <i>have</i> to port their scripts to a different API (I sure hope they have the API well abstracted away from their scripts). And of course the title of the post implies that Facebook thinks that Watir/Selenium scripts are &#8216;Unit&#8217; tests which is suspect at best&#8230;</li>
+<li><a href="https://github.com/rtyler/jenkins-selenium-tests">Selenium tests for Jenkins</a> &#8212; Yup; Jenkins now has a set of Se scripts for it. Fork, modify and sent pull requests.</li>
+<li><a href="http://thucydides-webtests.com/">Thucydides</a> appears to be another full-feature framework built around WebDriver</li>
+<li><a href="http://electronicingenuity.com/nativedriver-ios-first-impressions">NativeDriver and iOS: First Impressions</a> looks to be the first of a series of posts about automating mobile apps</li>
+<li><a href="http://blog.reallysimplethoughts.com/2011/09/30/managing-locator-builders-in-selenium-ide/">Managing Locator Builders in Selenium IDE</a> introduces a new feature that we snuck into the most recent version of Se-IDE. Still needs a bit of polish, but we&#8217;re getting there.</li>
+<li><a href="http://blog.codekills.net/2011/09/29/the-evils-of--except--">The evils of `except:`</a> is a good reminder about naked excepts in your code. Doubly true in automation where you <i>really</i> want to have exceptions bubbling to the top.</li>
+<li><a href="http://blargon7.com/2011/09/adding-mozmill-tests-to-the-selenium-ide-build-system/">Adding Mozmill tests to the Selenium IDE build system</a> walks you through how to add Mozmill tests to a CI environment. A lot of Se-IDE plugins are really only testable through Mozmill.</li>
+<li>So who is going to buy me a <a href="http://www.bengarvey.com/2011/09/23/37signals-sent-me-a-gift-for-pwning-their-leaderboards/">Keep Calm and Continue Testing</a> t-shirt.</li>
+<li>And while we&#8217;re at it, who is going to add Se to the <a href="http://developer.ubuntu.com/">Ubuntu Software Center</a></li>
+<li>This issue&#8217;s debate is <a href="http://www.developsense.com/blog/2011/09/at-least-three-good-reasons-for-testers-to-learn-to-program/">At Least Three Good Reasons for Testers to Learn to Program</a> vs. <a href="http://www.zacharyspencer.com/2011/09/at-least-3-reasons-for-software-testers-not-to-learn-to-code/">At Least 3 Reasons for Software Testers NOT to Learn to Code</a>. Of course, if you are doing Se stuff, that alone is reason to learn to code &#8212; automation <i>is</i> programming.</li>
+</ul>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2363&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-63%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-63%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Thursday, September 29, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-62/"><h2>A Smattering of Selenium #62</h2></a>
+                <p><p>All opinions, all the time&#8230;</p>
 <ul>
-<li><a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">Release Notes</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list?can=2&amp;q=ide&amp;colspec=ID+Stars+Type+Status+Priority+Milestone+Owner+Summary&amp;cells=tiles">Where to log bugs</a></li>
+<li>It all began with <a href="http://angryweasel.com/blog/?p=325">Test Design for Automation</a> which lead to <a href="http://chrismcmahonsblog.blogspot.com/2011/08/automated-test-design-riffingripping.html">Automated Test Design (riffing/ripping off Alan Page)</a></li>
+<li>And then through some weird Jedi mind control there was <a href="http://angryweasel.com/blog/?p=332">Design for <em>GUI</em> Automation</a> which in turn led to <a href="http://chrismcmahonsblog.blogspot.com/2011/09/more-ui-test-design-once-more-from-alan.html">more UI test design (once more from Alan Page)</a></li>
+<li>And heck, why have two articles from the same author when you can have three?! <a href="http://angryweasel.com/blog/?p=342">It’s (probably) a Design Problem</a> &#8212; though I don&#8217;t think Chris has riffed off this one yet&#8230;</li>
+<li>Remember, <a href="http://blogs.telerik.com/jimholmes/posts/11-09-22/not-every-test-should-be-automated.aspx">Not Every Test Should be Automated!</a></li>
+<li><a href="http://lostechies.com/derickbailey/2011/09/22/dependency-injection-is-not-the-same-as-the-dependency-inversion-principle/">Dependency Injection Is NOT The Same As The Dependency Inversion Principle</a> &#8212; not that I really understand either really&#8230;</li>
+<li>Who knew a collection of scrapebookers is called a &#8216;crop&#8217;? Also, a &#8216;scrapbooking consultant&#8217;? &#8212; automation is hard, let&#8217;s go scrapbooking! Anyways, <a href="http://blog.aclairefication.com/2011/09/taking-on-water/">Taking on Water</a> is dead on in terms of which things to prioritize when automating.</li>
+<li><a href="http://www.kaner.com/pdfs/autosqa.pdf">Improving the Maintainability of Automated Test Suites</a> by Cem Kaner is an older paper, but the Strategies for Success on page 3 are important. Especially 1, 2 and 5.</li>
+<li>Also from the vaults is <a href="http://cafe.elharo.com/testing/harolds-corollary-to-knuths-law/">Harold’s Corollary to Knuth’s Law</a> which is aimed at Unit not Functional tests, but still is food for thought.</li>
+<li><a href="http://www.benmgreene.com/post/9295282784/why-continuous-deployment-matters">Why Continuous Deployment Matters</a></li>
+<li><a href="http://thetesteye.com/blog/2011/09/the-little-black-book-on-test-design/">The Little Black Book on Test Design</a> is meant for exploratory testing, but I bet there is stuff one could pull out of it for automation purposes as well.</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%201.0.7%20%e2%80%93%20Now%20with%20Drag-and-Drop%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Tuesday, May 11, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/"><h2>Selenium Grid 1.0.7 Released</h2></a>
-                <p>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&#8217;re pleased to announce the release of Selenium Grid 1.0.7.  This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.7-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The list of changes are:</p>
-<ul>
-<li>Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long</li>
-<li><a href="http://selenium-grid.seleniumhq.org/configuring-and-tuning.html#changing_maximum_wait_time_for_new_session">Added ability to specify timeout period when waiting for remote controls to become available</a>.  Now the client can timeout gracefully and decide what it would like to do next</li>
-<li>Handle common case of session ID not being found, either because it timed out or was already closed; rather than raising a NullPointerException we now raise a NoSuchSessionException</li>
-<li>Truncate long command response bodies to 128 characters</li>
-<li>Retry remote control checks up to three times before deciding that a remote control is unreliable or unresponsive.  This prevents aggressive unregistration of hosts that are busy or suffer from network issues</li>
-</ul>
-<p>As always, patches and bug reports are appreciated:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>Barring any critical issues, the next release of Selenium Grid will be 1.1 and will feature an enhanced Web view as well as a status API.  After that, we will be moving from GitHub to Google Code to live alongside the other Selenium projects.</p>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.7%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Tuesday, April 27, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/the-future-of-selenium-grid/"><h2>The Future of Selenium Grid</h2></a>
-                <p>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new maintainer.</a>  In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.</p>
-<h2>Background</h2>
-<p>I realize many of you may not know who I am.  I&#8217;ve been using Selenium in some capacity for close to five years now.  I love working on open source software and do so primarily through my membership in the Apache Software Foundation and through <a href="http://github.com/nirvdrum/">my GitHub account</a>.  I hang out on the #selenium channel with the handle &#8220;nirvdrum&#8221; and have a <a href="http://nirvdrum.com/">personal page</a> that includes some articles I&#8217;ve written and other things I&#8217;m involved with.  Perhaps more importantly, I also rely on Selenium Grid for <a href="http://mogotest.com/">my latest start-up</a> so I&#8217;m very keen on seeing the project mature and evolve.</p>
-<h2>Project Resources</h2>
-<p>The new canonical project repository on GitHub is the <a href="http://github.com/nirvdrum/selenium-grid/">nirvdrum fork</a>.  However, within in the next month or so the project will be migrated from git and GitHub to subversion and the <a href="http://code.google.com/p/selenium/">Selenium project on Google Code</a>.  As much as I personally prefer GitHub to Google Code, it makes the most sense from a community perspective for all Selenium projects to be hosted in the same location.  The move will be made after Selenium Grid stabilizes a bit more.  The <a href="http://seleniumhq.wordpress.com/2010/04/13/selenium-grid-1-0-6-released/">1.0.6 release</a> was the first step in that process, but there may be one or two more minor patch releases.  After the move, I&#8217;ll try to maintain a synchronized mirror of the code on GitHub so those that prefer to develop patches with git can continue to do so.</p>
-<p>The canonical issue tracker is the <a href="http://code.google.com/p/selenium/issues/list">Selenium issue tracker</a> on Google Code.  We will not be using either JIRA or GitHub Issues.  I&#8217;ll try to migrate what I can over to the new tracker, but if I miss anything, please re-open the issue over there.</p>
-<h2>Project Evolution</h2>
-<p>Selenium Grid currently only works with Selenium 1.x, and consequently the 1.x compatibility interface in Selenium 2.  There is currently no support for WebDriver.  However, I fully intend to steer the product in that direction, while maintaining support for existing Selenium Grid installations (i.e., based on Selenium 1.x).</p>
-<p>Since the project is moving to Google Code, all of the existing Selenium committers will have the ability to commit to the codebase.  This should make the project&#8217;s evolution a much more collaborative effort.  I&#8217;ll kickstart the process and likely lead the development effort, but the role of maintainer will be diminished (in a positive way) by allowing the entire core team equal access to the project.</p>
-<p>Others are welcome to chime as well.  Selenium Grid development discussion will be taking place on the Selenium developers list.  Please continue to use the Selenium users list for usage and support inquiries.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - The%20Future%20of%20Selenium%20Grid&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2362&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-62%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-62%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
