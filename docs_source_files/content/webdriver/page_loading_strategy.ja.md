@@ -7,6 +7,17 @@ weight: 8
 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は _normal_ となります。
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
+`document.readyState` property of a document describes the loading state of current document.
+By default, webdriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
+call until the document ready state is `complete`
+
+### Note: 
+In SPA (Single Page Applications) as once they reach the document ready state of complete, 
+unless you do a `driver.get()` (or) `driver.navigate().to()` call, 
+the ready state will always be complete after initially being set.
+if the website itself is redirecting you from one view to another, 
+the ready state will be complete that entire time.
+
 WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 
 ## normal
@@ -241,3 +252,8 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### Note: 
+For most of the forms that involves testing in a browser, one should always use 
+[_explicit waits_](https://www.selenium.dev/documentation/ja/webdriver/waits/#explicit-wait) 
+to wait for the DOM to settle. 

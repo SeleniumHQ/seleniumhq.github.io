@@ -15,6 +15,17 @@ it follows the _normal_ pageLoadStrategy.
 It is always recommended to stop downloading additional 
 resources (like images, css, js) when the page loading takes lot of time.
 
+`document.readyState` property of a document describes the loading state of current document.
+By default, webdriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
+call until the document ready state is `complete`
+
+### Note: 
+In SPA (Single Page Applications) as once they reach the document ready state of complete, 
+unless you do a `driver.get()` (or) `driver.navigate().to()` call, 
+the ready state will always be complete after initially being set.
+if the website itself is redirecting you from one view to another, 
+the ready state will be complete that entire time.
+
 WebDriver _pageLoadStrategy_ supports the following values:
 
 ## normal
@@ -253,3 +264,8 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### Note: 
+For most of the forms that involves testing in a browser, one should always use 
+[_explicit waits_](https://www.selenium.dev/documentation/es/webdriver/waits/#explicit-wait) 
+to wait for the DOM to settle. 
