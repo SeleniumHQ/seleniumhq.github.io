@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Selenium-IDE – Looking back and looking forward</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+  <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="blog-container">
+  <div class="blog-content">
+    <div class="container dark-background">
+      July 9, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+      <a href="https://selenium.dev/blog/2010/selenium-ide-looking-back-and-looking-forward/"><h2>Selenium-IDE – Looking back and looking forward</h2></a>
+      <p>Its been around six months and three releases since I took the reins of Selenium-IDE. The fundamental change in that time has been the adoption of a plugin model like the fine folks over that Firebug. (We&#8217;re also self-hosting it which is big from a project internals perspective.)<br />
+<br />
+Right now, you can add custom user-extensions and formatters, but in the very near future you will be able to add location strategies as well.<br />
+<br />
+So what does the future look like for Se-IDE?</p>
+<ul>
+<li><i>1.0.8</i> &#8211; A whack of bug fixes, and maybe the location strategies via plugins</li>
+<li><i>1.0.9</i> &#8211; If location strategies doesn&#8217;t get into 1.0.8, it will be here. And likely bug fixes.</li>
+<li><i>1.0.10</i> &#8211; Remove UI-Element from Se-IDE and make it a plugin</li>
+</ul>
+<p>
+There is also work on reworking the internals of Se-IDE from a synchronous model to an asynchronous through Google Summer of Code. If that is successful and we decide to use it, that will trigger a bump to 1.1.0.<br />
+<br />
+Timelines you ask? Well, when I took over Se-IDE the plan was to do it monthly. That was either naive or overly optimistic so they are starting to stretch a bit. 1.0.8 is going to stretch it some more too. Look for a beta of 1.0.8 towards the end of the month with a final version by mid-August.<br />
+<br />
+I know you are likely wondering what cool, superdidooper features will you be seeing in Se-IDE over the next while? Ummm, well, actually none. At least not from the core Se-IDE. There will be significant pushback on any new &#8216;feature&#8217; or change that adds something to Se-IDE. If you cannot accomplish your goal through a plugin, then I would consider than an omission in terms of the API.<br />
+<br />
+Thats where we are from the maintainer perspective, but end-users also have sway over this as well to some degree. We&#8217;re now using the <a href="http://code.google.com/p/selenium/issues/list">Google Code Issue Tracker</a> for managing the project. If you bug is not there, there is a significantly smaller chance of it being addressed. And if an issue has a number of stars on it, that is also an indicator we should be looking at it.<br />
+<br />
+Now to hack on locators&#8230;</p>
+
+
+      <div class="share-container">
+        <h3>Share this: </h3>
+
+        <a href="mailto:?&subject=Selenium Blog - Selenium-IDE%20%e2%80%93%20Looking%20back%20and%20looking%20forward&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-looking-back-and-looking-forward%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-looking-back-and-looking-forward%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="filter-container">
+    <div class="blog-filter">
+    <div class="filter-section">
+        <h3>Search blog</h3>
+        <div class="search-container">
+            <div class="search-bar-container">
+                
+                
+                
+                
+                <script>
+                  (function() {
+                    var cx = '018435082943254453647:ktxsp1-jcb8';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                </script>
+                <gcse:searchbox-only></gcse:searchbox-only>
+            </div>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Archive</h3>
+        <div class="archive-link-container">
+            <a href="/blog/2018">2018</a>
+            <a href="/blog/2017">2017</a>
+            <a href="/blog/2016">2016</a>
+            <a href="/blog/2015">2015</a>
+            <a href="/blog/2014">2014</a>
+            <a href="/blog/2013">2013</a>
+            <a href="/blog/2012">2012</a>
+            <a href="/blog/2011">2011</a>
+            <a href="/blog/2010">2010</a>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Support the Selenium project</h3>
+        <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
+        <div class="learn-more button-container">
+            <a href="/sponsors">
+                <div class="button support-button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+
