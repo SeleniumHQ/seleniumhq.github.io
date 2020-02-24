@@ -104,9 +104,9 @@ It is currently in “alpha” and available for use in both Chrome and Firefox.
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</guid>
-      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work.
+      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. 
 The reasons for this are complex, but boil down to two main causes:
- Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original XPI format, to a newer, more widely adopted Web Extension mechanism.</description>
+ Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.</description>
     </item>
     
     <item>
@@ -115,8 +115,8 @@ The reasons for this are complex, but boil down to two main causes:
       <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2017/hacking-with-intellij/</guid>
-      <description>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they’ve asked us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and state my biases up-front so you’re aware of them.
-I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago.</description>
+      <description>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they&amp;#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&amp;#8217;ll attempt to do that, and I&amp;#8217;ll try and state my biases up-front so you&amp;#8217;re aware of them.
+I&amp;#8217;ve been using Jetbrain&amp;#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago.</description>
     </item>
     
     <item>
@@ -130,33 +130,32 @@ I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I sta
     
     <item>
       <title>Selenium 3.0: Out Now!</title>
-      <link>https://selenium.dev/blog/2016/selenium-3.0/</link>
+      <link>https://selenium.dev/blog/2016/selenium-3-0-out-now/</link>
       <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/blog/2016/selenium-3.0/</guid>
+      <guid>https://selenium.dev/blog/2016/selenium-3-0-out-now/</guid>
       <description>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:
 As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as Chrome and Edge will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability.</description>
     </item>
     
     <item>
-      <title>Selenium 3 Is Coming</title>
+      <title>Selenium 3 is Coming</title>
       <link>https://selenium.dev/blog/2016/selenium-3-is-coming/</link>
       <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2016/selenium-3-is-coming/</guid>
-      <description>Selenium 3 is coming! As I write this, we think that “beta 4” will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.
-TL;DR:
- WebDriver users will just find bug fixes and a drop-in replacement for 2.x. Selenium Grid users will also find bug fixes and a simple update. The WebDriver APIs are now the only APIs actively supported by the Selenium project.</description>
+      <description>Selenium 3 is coming! As I write this, we think that &amp;#8220;beta 4&amp;#8221; will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.
+TL;DR:  WebDriver users will just find bug fixes and a drop-in replacement for 2.x. Selenium Grid users will also find bug fixes and a simple update. The WebDriver APIs are now the only APIs actively supported by the Selenium project.</description>
     </item>
     
     <item>
       <title>Announcing Selenium 3.0-beta1</title>
-      <link>https://selenium.dev/blog/2016/announcing-selenium-3-beta/</link>
+      <link>https://selenium.dev/blog/2016/announcing-selenium-3-0-beta1/</link>
       <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/blog/2016/announcing-selenium-3-beta/</guid>
-      <description>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released “by Christmas”. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We’re excited to announce the release of the first beta — Selenium 3.0.0-beta1.
-We’d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.</description>
+      <guid>https://selenium.dev/blog/2016/announcing-selenium-3-0-beta1/</guid>
+      <description>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released &amp;#8220;by Christmas&amp;#8221;. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We&amp;#8217;re excited to announce the release of the first beta &amp;#8212; Selenium 3.0.0-beta1.
+We&amp;#8217;d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.</description>
     </item>
     
     <item>
@@ -165,8 +164,8 @@ We’d love you to try it out on your projects, and provide us with feedback on 
       <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2016/fall-selenium-conf-save-the-date/</guid>
-      <description>We’re excited to announce that we’ve finally determined where and when Selenium Conf will be happening this Fall.
-Our initial goal was to bring the event to a new country, but for a number of reason that proved more challenging than we&amp;rsquo;d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we’re pleased to be bringing it back there this year!
+      <description>We&amp;#8217;re excited to announce that we&amp;#8217;ve finally determined where and when Selenium Conf will be happening this Fall.
+Our initial goal was to bring the event to a new country, but for a number of reasons that proved more challenging than we&amp;#8217;d hoped. But in 2012 we had the 2nd annual Selenium Conf in London, and we&amp;#8217;re pleased to be bringing it back there this year!
 The conference will be held at The Mermaid in downtown London on November 14-16:</description>
     </item>
     
@@ -178,7 +177,8 @@ The conference will be held at The Mermaid in downtown London on November 14-16:
       <guid>https://selenium.dev/blog/2016/selenium-conf-india-2016-update/</guid>
       <description>Selenium Conf India is happening this June 24-26 in Bangalore, India.
 Tickets, call for speakers, and sponsorship slots are now available!
-http://2016.seleniumconf.in/</description>
+http://2016.seleniumconf.in/
+&amp;nbsp;</description>
     </item>
     
     <item>
@@ -196,21 +196,69 @@ http://2016.seleniumconf.in/</description>
       <pubDate>Mon, 21 Dec 2015 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2015/selenium-conf-india-save-the-date/</guid>
-      <description>In our last update we mentioned there will be 2 Selenium Confs in 2016 — one in India, another somewhere else (TBD).
+      <description>In our last update we mentioned there will be 2 Selenium Confs in 2016 &amp;#8212; one in India, another somewhere else (TBD).
 Well, we are pleased to announce the official dates and location for Selenium Conf India!
 When: June 24th &amp;amp; 25th, 2016
-Where: Bangalore, India (at The Chancery Pavilion Hotel)
-Mark you calendars! We’ll have more details as they become available (e.g., call for speakers, ticket sales, etc.). To get the latest updates, be sure to sign up for the Selenium Conf mailing list.</description>
+Where: Bangalore, India (at The Chancery Pavilion Hotel)
+Mark you calendars! We&amp;#8217;ll have more details as they become available (e.g., call for speakers, ticket sales, etc.). To get the latest updates, be sure to sign up for the Selenium Conf mailing list.</description>
     </item>
     
     <item>
-      <title>Selenium Conf 2016 </title>
+      <title>Selenium Conf 2016</title>
       <link>https://selenium.dev/blog/2015/selenium-conf-2016/</link>
       <pubDate>Fri, 06 Nov 2015 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2015/selenium-conf-2016/</guid>
-      <description>Interested in learning what’s in store for Se Conf 2016? Then be sure to read this write-up from the Conference Organizers.
-Also, if you want to receive email notifications about the conference (e.g., when and where it will be, call for speakers, ticket sales, etc.) then go here and complete the sign-up form.</description>
+      <description>Interested in learning what&amp;#8217;s in store for Se Conf 2016? Then be sure to read this write-up from the Conference Organizers.
+Also, if you want to receive email notifications about the conference (e.g., when and where it will be, call for speakers, ticket sales, etc.) then go here and complete the sign-up form.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Conf 2015 Update</title>
+      <link>https://selenium.dev/blog/2015/selenium-conf-2015-update/</link>
+      <pubDate>Sat, 08 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/selenium-conf-2015-update/</guid>
+      <description>Selenium 2015 is just around the corner (September 8-10). Since our last post we have:
+ confirmed Keynote speakers finalized workshop presenters selected the talks for the conference  You can see keynote &amp;amp; workshop info here, and the selected talks here.
+If you still need a ticket, the last block of tickets are on sale NOW.
+If you want to attend the conference then register ASAP. Tickets will go quick and once they&amp;#8217;re gone, they&amp;#8217;re gone.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Conf 2015 Details</title>
+      <link>https://selenium.dev/blog/2015/selenium-conf-2015-details/</link>
+      <pubDate>Thu, 11 Jun 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/selenium-conf-2015-details/</guid>
+      <description>The Selenium Conf 2015 website is live!
+You can now:
+&amp;#8211; purchase tickets (while supplies last)
+&amp;#8211; find out venue information
+&amp;#8211; submit a talk
+&amp;#8211; learn more about our talk selection process (tl;dr it is a blind review process to encourage diversity)
+What are you waiting for? Go to the conference website already!</description>
+    </item>
+    
+    <item>
+      <title>Selenium Conf 2015 – Save The Date</title>
+      <link>https://selenium.dev/blog/2015/selenium-conf-2015-save-the-date/</link>
+      <pubDate>Wed, 13 May 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/selenium-conf-2015-save-the-date/</guid>
+      <description>Selenium Conf is coming to Portland, Oregon this year!
+It will be happening on September 8, 9, and 10. Mark your calendars.
+Stay tuned for details!</description>
+    </item>
+    
+    <item>
+      <title>IntelliJ</title>
+      <link>https://selenium.dev/blog/2015/intellij/</link>
+      <pubDate>Sun, 08 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/intellij/</guid>
+      <description>Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project. As part of that process, they&amp;#8217;ve asked that we review the product and (kudos to them!) have been clear that they hope we&amp;#8217;re open and honest. So, I&amp;#8217;ll be open and honest.
+When I tell people that I&amp;#8217;m a professional Java developer, people in some circles make sympathetic noises and (sometimes) jokingly refer to how painful my coding life must be.</description>
     </item>
     
     <item>
@@ -219,6 +267,435 @@ Also, if you want to receive email notifications about the conference (e.g., whe
       <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selenium Hangout 6 Recap</title>
+      <link>https://selenium.dev/blog/2014/selenium-hangout-6-recap/</link>
+      <pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2014/selenium-hangout-6-recap/</guid>
+      <description>01:35 &amp;#8211; 9:45 W3C Update
+Notes from most recent W3C Meeting
+Highlights:
+&amp;#8211; changes to the get_attribute method call
+&amp;#8211; screenshots (changing to viewport only, eventually will support whole page)
+&amp;#8211; The WebDriver W3C working group has a GitHub repo now
+&amp;#8211; WebDriver will move from a &amp;#8220;REST-ish&amp;#8221; to a more &amp;#8220;RESTful&amp;#8221; interface
+11:23 &amp;#8211; 16:00 Selenium 3 Status Update
+16:05 &amp;#8211; 17:10 Marionette (FirefoxdDiver rewrite) testing help</description>
+    </item>
+    
+    <item>
+      <title>Selenium Hangout 5 Recap</title>
+      <link>https://selenium.dev/blog/2014/selenium-hangout-5-recap/</link>
+      <pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2014/selenium-hangout-5-recap/</guid>
+      <description>0:00 &amp;#8211; 01:10 Intro
+1:11 &amp;#8211; 13:00 WebDriver W3C Spec &amp;amp; Selenium 3 Update
+ Progress on the spec, still a work in progress No user facing changes to the Selenium API as a result Trying to pair the spec and Selenium 3 together If all goes well, the spec and Selenium 3 could drop during Selenium Conf (fingers crossed)  13:01 &amp;#8211; 24:10 Selenium Conf 2014 Update
+ Check out the new and shiny conference site Dates posted (e.</description>
+    </item>
+    
+    <item>
+      <title>Announcing Selenium Conf ’14: Bangalore, India</title>
+      <link>https://selenium.dev/blog/2014/announcing-selenium-conf-14-bangalore-india/</link>
+      <pubDate>Mon, 24 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2014/announcing-selenium-conf-14-bangalore-india/</guid>
+      <description>It makes me enormously happy and proud to announce that the Selenium Conference 2014 will be held in Bangalore on the 4-6 September. I&amp;#8217;m looking forward to seeing you there!
+One of the plans we&amp;#8217;ve had from the very beginning for SeConf was that it was going to be a conference for the community of people who make Selenium such a fun project to work on. One way to do this was to host the conference where the largest groups of people using Selenium are found.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Hangout 4 Recap</title>
+      <link>https://selenium.dev/blog/2014/selenium-hangout-4-recap/</link>
+      <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2014/selenium-hangout-4-recap/</guid>
+      <description>Here&amp;#8217;s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (@seleniumhangout) or e-mail us (questions@seleniumhangout.com).
+ Panel
+David Burns (@AutomatedTester)
+Kevin Menard (@nirvdrum)
+Dave Haeffner (@TourDeDave)
+Timeline
+1:30-16:51: How to handle screenshots across different drivers
+tl;dr driver specific issues due to a lacking standard and missing API
+ This is getting addressed in World Wide Web Consortium (W3C) spec which is under development E-mail use-cases you would like to see in the spec to automatedtester@mozilla.</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android and iOS Support</title>
+      <link>https://selenium.dev/blog/2013/android-and-ios-support/</link>
+      <pubDate>Tue, 24 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/android-and-ios-support/</guid>
+      <description>TL;DR: We&amp;#8217;re retiring Selenium&amp;#8217;s own AndroidDriver and iPhoneDriver in favour of any of Selendroid, iosdriver and Appium. If you&amp;#8217;re using one of Selenium&amp;#8217;s own mobile drivers, please evaluate one of these alternatives.
+The longer version:
+In 2007, Steve Jobs announced the iPhone and changed the mobile Web from a curiosity to something the mainstream wanted and used. Current trends suggest that mobile Web usage will surpass desktop usage in the not too distant future.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Hangout 3 Recap</title>
+      <link>https://selenium.dev/blog/2013/selenium-hangout-3-recap/</link>
+      <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/selenium-hangout-3-recap/</guid>
+      <description>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.
+Be sure to tune into our Twitter feed to find out details about our next Hangout.
+And if your question didn&amp;#8217;t get answered, we encourage you to hop on IRC and ask it there.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Hangout 2 Recap</title>
+      <link>https://selenium.dev/blog/2013/selenium-hangout-2-recap/</link>
+      <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/selenium-hangout-2-recap/</guid>
+      <description>This is a recap from the most recent Selenium Hangout (a.k.a. The World&amp;#8217;s Best Selenium Meetup). For info on future meetups, follow them on Twitter.
+Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go here.
+Panel
+David Burns (@AutomatedTester)</description>
+    </item>
+    
+    <item>
+      <title>Mobile WebDriver</title>
+      <link>https://selenium.dev/blog/2013/mobile-webdriver/</link>
+      <pubDate>Wed, 28 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/mobile-webdriver/</guid>
+      <description>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&amp;#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome).</description>
+    </item>
+    
+    <item>
+      <title>The Road to Selenium 3</title>
+      <link>https://selenium.dev/blog/2013/the-road-to-selenium-3/</link>
+      <pubDate>Wed, 28 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/the-road-to-selenium-3/</guid>
+      <description>Selenium 2 was released in July 2011. It’s now two years old, and what a couple of years it’s been! The WebDriver APIs, which were the major addition in Selenium 2, are now the basis for a W3C standard, and there are implementations written and supported by Google, Mozilla and Opera. There have been 34 releases, with official support for Java, C#, Python, Ruby and Javascript, and the community has stepped in to provide bindings for Perl, PHP and others.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #157</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-157/</link>
+      <pubDate>Sun, 18 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-157/</guid>
+      <description>Trying to find every excuse not to cut the grass &amp;#8230; including apparently closing some browser tabs.
+ Interoperability – Standardized Test Information Interchange has me so full of &amp;#8216;meh&amp;#8217; as to be hilarious. Commercially driven standards rarely are and/or I am just too much of an open source person to accept this model for standards development Licensing in a Post Copyright World &amp;#8211; important How to Make Async Requests in PHP is php specific in its solution, but has some interesting bits about socket establishment that applies to other ones as well Adding Comments to JSON feels like a hack.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #156</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-156/</link>
+      <pubDate>Mon, 12 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-156/</guid>
+      <description>Brain fried from PyCon Canada 2013 and &amp;#8216;some&amp;#8217; browser tab is misbehaving which means its time to start closing some of these.
+ Patchwork seems like an awesome idea, but at the same time, I&amp;#8217;ve had to work in heavily monkey-patched RoR apps before&amp;#8230; Evolving syntax is PHP specific in its examples, but the ideas transfer Roslyn + Selenium: Scripty C# Powering Browser Automation &amp;#8211; some C# voodoo? It’s like 10000 knives when all you need is a Spoon &amp;#8211; or specifically, this particular spoon which is yet-another-android-automation-tool.</description>
+    </item>
+    
+    <item>
+      <title>The World’s Best Selenium Meetup</title>
+      <link>https://selenium.dev/blog/2013/the-worlds-best-selenium-meetup/</link>
+      <pubDate>Fri, 09 Aug 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/the-worlds-best-selenium-meetup/</guid>
+      <description>Note from Adam: This is a guest post from Dave Haeffner who, along with David Burns hatched this idea at SeConf2013.
+Selenium Meetups are great, but&amp;#8230;
+Have you ever wanted to attend a Selenium Meetup but there&amp;#8217;s not one near you? Or maybe there is but something&amp;#8217;s come up and you can&amp;#8217;t make it out that night? Or maybe the meetup near you struggles to get good speakers and have a consistent schedule?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #155</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-155/</link>
+      <pubDate>Sun, 28 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-155/</guid>
+      <description>A &amp;#8216;should be scripting, but brain stuck in neutral so closing some tabs&amp;#8217; edition of the Smattering.
+ The slippery slope isn&amp;#8217;t automation related, but if your employer does these things I&amp;#8217;d suggest logging a bug and then finding an ethical job Why Package Signing is not the Holy Grail &amp;#8211; crypto / security is hard. Also, I have a signed package for you to install&amp;#8230; PHP and Async requests with file based sessions could be a way to speed up a PHP site.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #153</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-153/</link>
+      <pubDate>Mon, 22 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-153/</guid>
+      <description>A Sunday Smattering? Sure!
+ Solution to the Selenium with Firefox 22 Issues and How to Report Issues &amp;#8211; Open Source is hard. Supporting Open Source&amp;#8217;s infrastructure is harder &amp;#8212; by a large margin frequests &amp;#8211; asyncronous HTTP Requests; not sure where I would use this, but&amp;#8230; why I don&amp;#8217;t touch crypo &amp;#8211; again, don&amp;#8217;t. touch. crypto Five reasons why you should quote attribute values in HTML5 &amp;#8211; for the record, you should do this in HTML 4 as well.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #154</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-154/</link>
+      <pubDate>Mon, 22 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-154/</guid>
+      <description>Apparently today&amp;#8217;s &amp;#8216;wait for an email&amp;#8217; task is to whittle down the smattering queue some more.
+ I won&amp;#8217;t even pretend that FOAAS has to do with automation, but makes me laugh. Also, depending on how crappy your place of work is, it might not be SFW PHP RFC: Importing namespaced functions is interesting if you are writing your scripts in a Functional manner. In PHP. In a future where it gets accepted and implemented.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #152</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-152/</link>
+      <pubDate>Thu, 11 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-152/</guid>
+      <description>40-ish minutes until midnight eastern so that counts as two days in a row, right? Right?
+ Improving jenkins execution times by common sense &amp;#8212; common sense. sadly lacking most days. How to make test automation more effective? is useful up until the pitch at the end. So read until you get to that. Data Structures for PHP Devs: Trees &amp;#8211; non-trivial data structures are non-trivial Writing clean WebDriver test suites for “duplicate” functionality by parameterizing on page objects &amp;#8211; I especially like the usage of &amp;#8216;might&amp;#8217; at the top dalek-internal-webdriver &amp;#8211; what&amp;#8217;s a day without a JS webdriver implementation?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #151</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-151/</link>
+      <pubDate>Wed, 10 Jul 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-151/</guid>
+      <description>Almost a month after the last one. Though it did nice to have it at 150 when people go to the blog &amp;#8230; but a greater number is nicer.
+ So I was trying to find Requests for PHP whilst talking to the grumpy programmer and he pointed me out to Guzzle which looks equally cool Can you optimize list(genexp) is one of those geeky language internals things that could be handy to have in your back pocket Slightly Snarky GWT Debug ID FAQ &amp;#8211; c&amp;#8217;mon, when have you seen a more blatantly &amp;#8216;put this in the smattering&amp;#8217; title than this?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #150</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-150/</link>
+      <pubDate>Fri, 14 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-150/</guid>
+      <description>Yup, this smattering has very little to do with Selenium, but&amp;#8230; 150!
+ Referencing DOM from JS: there must be a DRYer, safer way is a nice &amp;#8216;here is where I started, and here is how I ended up where I am&amp;#8217; post which can be stolen into other languages / frameworks other than in Backbone Hash lookup in Ruby, why is it so fast? is not something I was wondering, but now I know why.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #149</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-149/</link>
+      <pubDate>Wed, 05 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-149/</guid>
+      <description>Too. Many. Tabs.
+Internationalization and Localization Testing &amp;#8212; yup, I agree. 5 HTML5 Features you need to know &amp;#8211; &amp;#8216;download attribute&amp;#8217; and &amp;#8216;datalist element&amp;#8217; might be a pain for us automators. Or at least cause a couple hours annoyance until we figure out the pattern. Death to sleeps! Raise of Conditions! &amp;#8211; expected conditions is likely the next thing to get more marketing this year line_profiler and kernprof &amp;#8211; profiling is black magic voodoo Naught &amp;#8211; &amp;#8216;Naught is a toolkit for building Null Objects in Ruby.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #148</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-148/</link>
+      <pubDate>Mon, 13 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-148/</guid>
+      <description>Gotta start this up again&amp;#8230;
+The Evil Tester Guide To HTTP Proxies appears to be more for using proxies for manual testing, but you should be running your automation through one as well so it helps to understand the magic that takes place. New BrowserMob Proxy release. Bindings should all be updated for the newly exposed methods in a couple days. 5 Things You Should Stop Doing With jQuery &amp;#8211; Not sure whats better, the content, or the Saved By The Bell theme testtools is the latest hotness in the world of Python runners?</description>
+    </item>
+    
+    <item>
+      <title>Curious to know how we picked speakers for the 2013 SeConf? Read on…</title>
+      <link>https://selenium.dev/blog/2013/curious-to-know-how-we-picked-speakers-for-the-2013-seconf-read-on/</link>
+      <pubDate>Mon, 25 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/curious-to-know-how-we-picked-speakers-for-the-2013-seconf-read-on/</guid>
+      <description>This is a guest post by Marcus Merrell, one of the organizers of the 2013 Selenium Conference. 
+Selenium/Webdriver has kept my family fed since 2007. Since I&amp;#8217;ve never committed a line of code to this magical project, I thought the least I could do was spend a few hours helping put SeConf 2013 together. When they asked for a volunteer to put the speaker program together, I was thrilled to step forward!</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #147</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-147/</link>
+      <pubDate>Thu, 14 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-147/</guid>
+      <description>My. Get. Productive. I know! I&amp;#8217;ll push out a smattering. Oh. &amp;#8230;
+ Python for Ruby Programmers is a pretty good deck, with the requisite snark at the end that you can safely ignore. Me @ Selenium Camp 2013 is Ivan&amp;#8217;s mini-experience-report from SeCamp and has his slides on GhostDriver Using pip in production? pip install : Lightspeed and Bulletproof is a useful trick which I know I&amp;#8217;ve done variants of with java and ruby in the past SeConf speakers are up &amp;#8212; and the list looks really good Interfaces or Abstract Classes?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #146</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-146/</link>
+      <pubDate>Mon, 11 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-146/</guid>
+      <description>Happy &amp;#8216;productivity destructive week&amp;#8217; &amp;#8212; otherwise known as March break.
+ How to Accept Self-Signed SSL Certificates in Selenium 2 &amp;#8212; or you could use &amp;#8216;real&amp;#8217; certificates that are trusted by the browser by default. If you are using self-signed certificates to &amp;#8216;save money&amp;#8217; and you spend 3 hours making it work, you are not saving money anymore JockeyJS seems like it could be useful Dear every-js-widget-library-author, You can’t create a button If you are using PHP, then The Grumpy Programmer&amp;#8217;s PHPUnit Cookbook should be added to your reading pile.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #145</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-145/</link>
+      <pubDate>Mon, 04 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-145/</guid>
+      <description>Alice Finch builds massive LEGO Hogwarts from 400,000 bricks starts out at awesome and goes somewhere further down the scale when you get to the photo that shows scale.
+ Models of Automation &amp;#8212; really, who reading this hasn&amp;#8217;t had the conversation described in there in one of its variants Stop Moving So I Can Click You Dammit! &amp;#8211; illustrates the only acceptable place for Thread.sleep() Using Realistic Data in Unit Testing and AngelaSmith: Creating Test Data is a two-for for the C# crowd &amp;#8212; though the ideas resonate with everyone else How to handle common components with Page Object Model?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #144</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-144/</link>
+      <pubDate>Mon, 25 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-144/</guid>
+      <description>Real Canadians watch curling instead of hockey.
+ jsPerf is a performance oriented sandbox The Myth Of Convention Over Configuration &amp;#8211; hint: its curation over configuration. And since this is how frameworks work&amp;#8230; sublimetext_indentxml is a sublime text plugin to indent xml &amp;#8212; yes, originality counts with plugin naming Introducing Boxen &amp;#8211; Boxen feels a lot like Vagrant, but for Macs? Maybe? Checking for Technical Requirements in a Sign-up Process &amp;#8212; woah, this would be a pain to automate office_docs looks like it might help parse and inspect ms office docs your app generates.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #143</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-143/</link>
+      <pubDate>Thu, 14 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-143/</guid>
+      <description>If you had anything interesting last week I should have seen, you&amp;#8217;ll have to resend it to me or @seleniumhq &amp;#8212; things were a bit crashy.
+ So &amp;#8230; Opera switching to WebKit. That doesn&amp;#8217;t mean you can write off automation with Opera though. Tragedy of the WebKit Commons Introducing ChemistryKit — a Ruby version of Saunter is another self-serving link. Automated local accessibility testing using WAVE and WebDriver is a post I had been waiting awhile for How Did the Duck Hunt Gun Work?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #142</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-142/</link>
+      <pubDate>Tue, 05 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-142/</guid>
+      <description>Its a Wiggle your brain kind of morning&amp;#8230;
+ Automated Web Testing Is Hard is the launch announcement of ChemistryKit Watir-WebDriver with GhostDriver on OSX: headless browser testing &amp;#8212; the WebDriver version of this would be very, very similar to this. jQuery 1.9.1 Released isn&amp;#8217;t interesting from a new jQuery perspective, but the migrate plugin is. Likely old news, but was new to me&amp;#8230; GRASP (object-oriented design) &amp;#8216;is really a mental toolset&amp;#8217; How Not to Design Pairwise Software Tests is even more useful when paired (pun intended) with&amp;#8230; Using Data Driving Wisely The Importance of the DOM has a lot of stuff that my not-in-gear brain is capable of processing, but&amp;#8230; Postel’s Principle is a Bad Idea.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #141</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-141/</link>
+      <pubDate>Fri, 01 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-141/</guid>
+      <description>Its -12 Celsius plus windchill out. Why the heck is the office air conditioning on. Feel like I need a Mr. Rogers cardigan or something.
+ Caret Navigation in Web Applications starts slow and then hurts your brain while reminding you that this automation thing isn&amp;#8217;t easy. I don&amp;#8217;t know NUnit or TeamCity so don&amp;#8217;t know if Using TeamCity and NUnit to Start WebServer, Run Selenium Tests and Stop WebServer is useful or just a rehash of common knowledge.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #140</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-140/</link>
+      <pubDate>Fri, 25 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-140/</guid>
+      <description>Buckets!
+ I suspect that scanner-backed-by-selenium belongs in the &amp;#8216;with great power comes great responsibility&amp;#8217; bucket ios-driver is in the &amp;#8216;wouldn&amp;#8217;t it be nice if Apple provided this&amp;#8217; bucket Selenium WebDriver utility for determining when page has finished rendering is in the &amp;#8216;ADF specific&amp;#8217; bucket&amp;#8217; I suspect JSErrorCollector is in the &amp;#8216;already indirectly linked to&amp;#8217; bucket. If not then its in the &amp;#8216;FF only&amp;#8217; bucket Using a business readable language for browser automation is in the &amp;#8216;bdd/atdd hype&amp;#8217; bucket.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #139</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-139/</link>
+      <pubDate>Wed, 23 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-139/</guid>
+      <description>Posting from the past into the future. Or something&amp;#8230; (its a scheduled post).
+ webdriverjs-with-jasmine appears appropriately named since it claims to be A standalone (includes standalone Selenium server (30Mo) + includes Jasmine) working example of a test with WebDriverJS and Jasmine. Similar to the above, but with Drupal and Behat &amp;#8211; Classic How I[he] send notifications to the build breakers. using twillio On Code Review comes from the Food For Thought department Orc is a model driven orchestration tool for the deployment of application clusters.</description>
+    </item>
+    
+    <item>
+      <title>A Plan to Drop Firefox 3.x Support</title>
+      <link>https://selenium.dev/blog/2013/a-plan-to-drop-firefox-3-x-support/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-plan-to-drop-firefox-3-x-support/</guid>
+      <description>The support policy of the selenium project for Firefox browsers is to support the current and previous stables releases, as well as the current and previous ESR releases. At the time of writing, that means the supported versions are &amp;#8220;10&amp;#8221; and &amp;#8220;17&amp;#8221; (ESR) and &amp;#8220;17&amp;#8221; and &amp;#8220;18&amp;#8221; (stable channel). In addition to this, we are currently supporting Firefox 3.x too.  This is an official announcement that we are planning to end support for Firefox 3.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Conf 2013: Call for Papers and Early Bird Tickets</title>
+      <link>https://selenium.dev/blog/2013/selenium-conf-2013-call-for-papers-and-early-bird-tickets/</link>
+      <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/selenium-conf-2013-call-for-papers-and-early-bird-tickets/</guid>
+      <description>This year&amp;#8217;s Selenium Conference is slated for June 10 &amp;#8211; 12 in beautiful Boston, Massachusetts. The conference will be held at the Renaissance Boston Waterfront Hotel. Similar to last year, this year&amp;#8217;s conference will kick off with a full day of Selenium Workshops, followed by a two day, two track conference. If you&amp;#8217;ve always dreamed of speaking at a Selenium Conference there&amp;#8217;s still time to submit a talk to us at http://www.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #138</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-138/</link>
+      <pubDate>Mon, 21 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-138/</guid>
+      <description>&amp;lt;insert snark here&amp;gt;
+ Debugging For Testers &amp;#8212; they don&amp;#8217;t teach this in testing school. Actually, there is a testing school&amp;#8230; A million times this!! That&amp;#8217;s not BDD, that&amp;#8217;s just Cucumber Faster Websites: Crash Course on Web Performance &amp;#8212; all three hours of video Continuous Integration of iOS Projects using Jenkins, CocoaPods, and Kiwi Clearing IE&amp;#8217;s Caches &amp;#8211; Not as simple as it appears is another one of those things that gives Jim headaches.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #137</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-137/</link>
+      <pubDate>Wed, 16 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-137/</guid>
+      <description>Whoops, missed a couple days&amp;#8230; ah well.
+ MOAR ELEMENTS!!! the &amp;lt;main&amp;gt; element Dependency injection != Inversion of Control is useful reading. And the Waffle example is pretty funny. Not sure yet how I feel about this feature in the page-object gem.
+ Waiting for an application to be fully loaded has some more examples of using a &amp;#8216;proper&amp;#8217; [not implicit] waiting strategy. Most of us are not using Se for HVAT, but knowing the terminology, etc.</description>
+    </item>
+    
+    <item>
+      <title>Source Control</title>
+      <link>https://selenium.dev/blog/2013/source-control/</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/source-control/</guid>
+      <description>This short technical note is to announce that the Selenium project is now using git on Google Code in place of subversion.
+The move has been a long time in the making, and it&amp;#8217;s largely thanks to the efforts of Kristian Rosenvold that we&amp;#8217;ve been able to do the migration and retain the project history. The project owes him a huge thank you! We&amp;#8217;re in the process of migrating the last bits and pieces (none of which are user facing), so there may be some last minute turbulence as we settle everything down.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #136</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-136/</link>
+      <pubDate>Mon, 07 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-136/</guid>
+      <description>Someone go back to my past self and punch him for thinking that starting to get in shape was a good idea. OMGCANTMOVE.
+ .NET Goes Immutable seems interesting. But I don&amp;#8217;t really speak C# so it could very well be boring and uninteresting. Shadow DOM 101 is another part of HTML5 that makes me think this web automation stuff has a very limited life span. Between this and Canvas&amp;#8230; ugh.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #135</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-135/</link>
+      <pubDate>Fri, 04 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-135/</guid>
+      <description>Three in a row &amp;#8230; of course, these are the easy three.
+ Build, test and deploy Firefox OS apps for $0 (or any other currency that I don&amp;#8217;t know how to emit) Ruby on Rails &amp;#8230; in Bash. Because they can. Bash on Balls All you need to know about CSS Transitions except how the hell we are going to synchronize on them. Well, kinda does, but this is going to hurt.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #134</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-134/</link>
+      <pubDate>Thu, 03 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-134/</guid>
+      <description>Hrm. Office is closed until Monday, but everyone is in. Very confusing&amp;#8230;
+ One reason I have heard people say they don&amp;#8217;t use cloud instances is they are afraid they will just sit around idle when not needed. Behind the clouds: how RelEng do Firefox builds on AWS has some useful scripts to find and teardown machines. Page Weight Matters is a fun little insight into how/why YouTube shed some of its heft.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #133</title>
+      <link>https://selenium.dev/blog/2013/a-smattering-of-selenium-133/</link>
+      <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/a-smattering-of-selenium-133/</guid>
+      <description>Since today is the start of &amp;#8216;find a new contract&amp;#8217; I guess I don&amp;#8217;t have an excuse to miss these for the next week or so.
+(Oh, and Happy New Year, etc.)
+ This is snark, but just makes me laugh given the hype machine around ATDD/BDD;
+AS an angry userI WANT TO punch the developer in the faceSO THAT I CAN punch the developer in the face.
+&amp;mdash; Kristopher Johnson (@OldManKris) December 4, 2012</description>
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://selenium.dev/blog/2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2013/</guid>
       <description></description>
     </item>
     

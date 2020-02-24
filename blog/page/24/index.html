@@ -212,69 +212,83 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Friday, February 24, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/support-for-ancient-browsers/"><h2>Support for Ancient Browsers</h2></a>
-                <p>The first code checked into the Selenium project&#8217;s public repository was in November, 2004. We&#8217;re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it&#8217;s time to review the list of browsers again.</p>
-<p>We periodically review the list of supported browsers as the more changes there are between the oldest version of a browser that we support and the most recent, the harder it is for us to add new features and maintain those that already exist. Balanced against the cost of maintaining the selenium code base itself are your tests; we know that your users might not be updating their browsers to the latest and greatest, and we know that you&#8217;ve still got to prove your app works on all the browsers that are important to you. That&#8217;s why what&#8217;s below is just our plan, and we&#8217;re talking about it now to let you have your say.</p>
-<p>Looking at the market share of the browsers out there helps us make an informed choice about what it makes sense to support. This will most likely mean:</p>
-<p><strong>Firefox</strong>: the Firefox market appears to be split between those on 3.6 and those on the new rapid release schedule. Given this, we are thinking of officially supporting Firefox 3.6, and the last, latest and next release of Firefox (currently Firefox 9-11) as well as any ESR releases. The market share for Firefox versions 3.0 and 3.5 is tiny, and the effort to keep them working with selenium is disproportionately high.</p>
-<p><strong>Internet Explorer</strong>: <a href="http://www.ie6countdown.com/">Despite Microsoft&#8217;s efforts</a>, IE 6 is still a popular browser, particularly in the workplace. We will continue to support IE versions 6 and up.</p>
-<p><strong>Safari</strong>: Safari 3 is now ancient and has been superseded by newer releases. We plan on only supporting Safari 4 and 5.</p>
-<p><strong>iOS</strong>: We&#8217;ll continue to target the most recent iOS release.</p>
-<p><strong>Android</strong>: Due to some technical limitations in previous Android releases, we are targeting Ice Cream Sandwich and onwards. We will continue to make available the testing framework for Froyo, but will not be making any changes to it.</p>
-<p><strong>These are only our plans</strong>. If you really need those browsers, and (better!) can help us maintain support for them, then please let us know.</p>
-<p>You&#8217;ll notice that Opera and Chrome are not listed above. Since Opera and Google now maintain the drivers for those browsers, they are best placed to decide which are the supported versions, but in summary, Google support the major Chrome release channels (stable, beta, dev and canary) and Opera suggest using Opera 11.6+.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Support%20for%20Ancient%20Browsers&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/"><h2>A Note About the Cybervillains SSL Certificate</h2></a>
-                <p>If you&#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.</p>
-<p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and <a href="http://www.neustar.biz/solutions/website-performance">Neustar</a> for taking providing the new certificate and the patch!</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - A%20Note%20About%20the%20Cybervillains%20SSL%20Certificate&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Wednesday, February 8, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-80/"><h2>A Smattering of Selenium #80</h2></a>
-                <p>I should have learned not to boast about getting caught up with links.</p>
+                Friday, September 7, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-118/"><h2>A Smattering of Selenium #118</h2></a>
+                <p><p>&lt;Insert witty/snarky commentary on something here&gt;</p>
 <ul>
-<li><a href="http://blargon7.com/2012/02/automating-browserid-with-selenium/">Automating BrowserID with Selenium</a> is pretty awesome. (As is BrowserID.) Now if this was only installable via pip or easy_install&#8230;</li>
-<li><a href="http://rubyreloaded.com/trickshots/">Ruby Trick Shots</a> &#8211; heed the disclaimer; <i>not an exercise in Ruby best practices</i></li>
-<li><a href="https://devblog.xing.com/qa/keep-it-functional-iphone-test-automation/">Keep It Functional – iPhone Test Automation</a> talks about another automation framework for mobile. At some point Selenium is going to grow Objective-C bindings I fear.</li>
-<li>Requests for Python is fantastic. <a href="http://requests.ryanmccue.info/">Requests for PHP</a> looks to be equally so. (I suspect my <a href="http://element34.ca/blog/introducing-phpwebdriver">php webdriver bindings</a> are about to become a much larger fork of the Facebook ones.)</li>
-<li><a href="http://test.techwell.com/articles/membersub/test-automation-project">Is Test Automation a “Project”?</a> &#8211; hint: it&#8217;s not.</li>
-<li><a href="http://saucelabs.com/blog/index.php/2012/01/sfse-meetup-video-keeping-selenium-tests-100-blue/">Keeping Selenium Tests 100% Blue</a> is a video of January&#8217;s SFSE. And <a href="http://blog.testyredhead.com/2012/01/31/selenium-meetup-west-coast-style.aspx">Selenium Meetup West Coast Style</a> is a rebuttal.</li>
-<li><a href="http://4cupsr.us/blog/2012/1/8/seleniums-sweet-spot-preventing-catastrophes.html">Selenium&#8217;s Sweet Spot: Preventing Catastrophes</a> shows that there are still people who do not watch for Black Swans. Automation does not prevent catastrophes. Well, at least ones that you are not looking for already.</li>
-<li><a href="http://blog.cloudspokes.com/2012/01/automate-salesforce-administrative.html">Automate Salesforce Administrative Tasks with Selenium</a> has the results of the contest they ran.</li>
-<li><a href="http://robert.arles.us/node/150">ErrorList object for use in TestNG/Selenium testing</a> is a soft-assert implementation</li>
-<li><a href="http://gazit.me/2012/02/01/iterations.html">Iterations</a> has an outstanding time-lapse of how the Pycon US logo was designed. Someone should do this scripting out a website.</li>
-</ul>
-<p>And my post that I&#8217;m going to link against is a bit of a rant around <a href="http://element34.ca/blog/how-to-choose-selenium-training">how to choose selenium training</a>. Though it has also been pointed out that a lot it applies outside the scope of Selenium as well.</p>
+<li>Apparently the TestWatchman thing I linked to is deprecated now in favour of TestWatcher (shows how much I pay attention to JUnit stuff&#8230;). <a href="http://blog.zvestov.cz/item/98/catid/16">Here is an example of TestWatchers and RuleChains</a>. No, I don&#8217;t know what the blurb at the top says.</li>
+<li>Sure, we&#8217;ve all see lorum ipsum text, but do you know what it (ish) says? <a href="https://simple.wikipedia.org/wiki/Lorem_ipsum">now you do</a></li>
+<li>From the &#8216;MEASURE ALL THINGS!!!&#8217; category is Mozilla&#8217;s <a href="https://wiki.mozilla.org/ReleaseEngineering/BuildFaster">BuildFaster</a>. There was a cool graph of build times I saw somewhere too&#8230;</li>
+<li>The kids at Google have released <a href="http://google-opensource.blogspot.co.uk/2012/09/wicked-good-xpath-faster-javascript.html">Wicked Good XPath: a faster JavaScript XPath library</a>. I suspect Se will be growing this appendage fairly soon-ish. And then we get to re-learn all the gotchas of a new library. 🙂</li>
+<li>Provided without comment <br /><img src="https://i0.wp.com/i.imgur.com/jxBZG.jpg" width="400" /></li>
+<li>Discussions about PageFactories can only be a good thing. <a href="http://selenium34.wordpress.com/2012/09/05/optional-elements/">Optional Elements</a>. Black Magic + explanations = Magic.</li>
+<li>Dear Google Code team; <a href="https://github.com/blog/1252-how-we-keep-github-fast">How we keep GitHub fast</a>.</li>
+<li>There seems to be lots of good stuff on <a href="http://darrellgrainger.blogspot.ca">Darrell Grainger&#8217;s blog</a></li>
+<li><a href="http://mjp.github.com/2012/08/29/github-python-analysis.html">An Analysis of the Top Python Repositories Hosted on Github</a> is interesting. I have no idea how to apply this to Se, but still&#8230;</li>
+<li>Read <a href="https://www.facebook.com/notes/kent-beck/naming-from-the-outside-in/464270190272517">Naming From the Outside In</a> before writing another line of code in a page object</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2380&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-80%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-80%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23118&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-118%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-118%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Wednesday, September 5, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-117/"><h2>A Smattering of Selenium #117</h2></a>
+                <ul>
+<li><a href="http://lostechies.com/jimmybogard/2012/08/30/evolutionary-project-structure/">Evolutionary Project Structure</a> talks about a particular project structure, but this is one of those fun developer opinionated things to geek out on</li>
+<li><a href="http://experttesters.com/2012/08/13/testers-caught-sleeping-on-the-job">Testers Caught Sleeping on the Job</a> is not browser-based, but you cannot bash sleeps enough. Also has a pretty amusing photo with it</li>
+<li><a href="http://www.phptherightway.com/">PHP: The Right Way</a> is of course one person&#8217;s understanding of the &#8216;right way&#8217; but still not bad.</li>
+<li>Automation is Code. But are <a href="http://www.carlopescio.com/2011/04/your-coding-conventions-are-hurting-you.html">your code conventions hurting you</a>?</li>
+<li>Hate Eclipse for writing your scripts in? <a href="http://www.jetbrains.com/specials/index.jsp">JetBrains has specials</a>. I&#8217;ve only seen PyCharm, but it looked pretty nice.</li>
+<li>Has anyone tried manipulating tabs with WebDriver the way that is described in <a href="http://www.telerik.com/automated-testing-tools/blog/12-09-04/closing-tabs-in-chrome.aspx">Closing Tabs in Chrome</a></li>
+<li>I haven&#8217;t watched it, but Moodle is now doing a series of videos on how they do automation.<br />
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/J4jWCWpn-Qw?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
+<li>Want to hear Simon rant about how to <a href="https://www4.gotomeeting.com/register/519621639">Stop the rot: Banishing Flakiness from Selenium Tests with Simon Stewart</a>? What are you waiting for then? Register already. Sheesh.</li>
+<li>The W3C has github-ified the <a href="https://github.com/w3c/html">html spec</a></li>
+<li>Looks like the <a href="https://wiki.jenkins-ci.org/display/JENKINS/Selenium+Plugin">Se Plugin for Jenkins</a> has been re-written. Might be worth a look again.</li>
+</ul>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23117&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-117%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-117%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Tuesday, September 4, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-116/"><h2>A Smattering of Selenium #116</h2></a>
+                <p><p>So do people celebrate the day after Labor day as the beginning of summer?</p>
+<ul>
+<li><a href="http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/">Web Performance Power Tool: HTTP Archive (HAR)</a> is worrisome that HARs are being billed as a power tool, but full of good stuff</li>
+<li><a href="http://blog.cloudfour.com/how-do-you-pick-responsive-images-breakpoints/">How do you pick responsive images breakpoints?</a> is another one of those problems I think we&#8217;re going to have to worry about</li>
+<li><a href="http://kentbeck.github.com/junit/javadoc/latest/org/junit/rules/TestWatchman.html">TestWatchman</a> seems like an interesting bit of JUnit4. (At what point do we have to stop saying 3 or 4 when referring to JUnit?)</li>
+<li>I&#8217;ve been headhunted by Google for years now, <a href="http://mike-bland.com/2012/07/10/test-mercenaries.html">Test Mercenaries</a> is the one team that would have made me leap.</li>
+<li>Looking for the patches for last week&#8217;s Sauce announcement? They&#8217;re <a href="https://github.com/saucelabs/mac-osx-on-kvm">here</a>. Holy magic numbers, Batman.</li>
+<li>I finally annotated <a href="http://element34.ca/php-webdriver/a-php-page-object-example">A PHP Page Object Example</a></li>
+<li>I think you should let your database get dirty, but <a href="http://devblog.avdi.org/2012/08/31/configuring-database_cleaner-with-rails-rspec-capybara-and-selenium/">Configuring database_cleaner with Rails, RSpec, Capybara, and Selenium</a> does seem like a useful gem</li>
+<li><a href="http://case.kapsi.fi/blog/?p=185">Robot Framework – Windows Installation The Easy Way</a> is the easy way to install RF on Windows. Shocking, I know.</li>
+<li><a href="http://www.singlefounder.com/2012/08/28/amateurs-study-tactics-professionals-study-logistics/">Amateurs Study Tactics. Professionals Study Logistics</a> seems to resonate with me in how a lot of people approach automation.</li>
+<li><a href="http://www.hskupin.info/2012/08/29/weekly-ask-an-expert-qa-sessions-for-test-automation/">Weekly “Ask an Expert” Q&amp;A sessions for Test Automation</a> with the Mozilla &#8216;A-Team&#8217;</li>
+</li>
+</ul></p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23116&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-116%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-116%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

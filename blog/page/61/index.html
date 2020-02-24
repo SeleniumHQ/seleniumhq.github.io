@@ -212,81 +212,86 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Tuesday, April 27, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/the-future-of-selenium-grid/"><h2>The Future of Selenium Grid</h2></a>
-                <p>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new maintainer.</a>  In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.</p>
-<h2>Background</h2>
-<p>I realize many of you may not know who I am.  I&#8217;ve been using Selenium in some capacity for close to five years now.  I love working on open source software and do so primarily through my membership in the Apache Software Foundation and through <a href="http://github.com/nirvdrum/">my GitHub account</a>.  I hang out on the #selenium channel with the handle &#8220;nirvdrum&#8221; and have a <a href="http://nirvdrum.com/">personal page</a> that includes some articles I&#8217;ve written and other things I&#8217;m involved with.  Perhaps more importantly, I also rely on Selenium Grid for <a href="http://mogotest.com/">my latest start-up</a> so I&#8217;m very keen on seeing the project mature and evolve.</p>
-<h2>Project Resources</h2>
-<p>The new canonical project repository on GitHub is the <a href="http://github.com/nirvdrum/selenium-grid/">nirvdrum fork</a>.  However, within in the next month or so the project will be migrated from git and GitHub to subversion and the <a href="http://code.google.com/p/selenium/">Selenium project on Google Code</a>.  As much as I personally prefer GitHub to Google Code, it makes the most sense from a community perspective for all Selenium projects to be hosted in the same location.  The move will be made after Selenium Grid stabilizes a bit more.  The <a href="http://seleniumhq.wordpress.com/2010/04/13/selenium-grid-1-0-6-released/">1.0.6 release</a> was the first step in that process, but there may be one or two more minor patch releases.  After the move, I&#8217;ll try to maintain a synchronized mirror of the code on GitHub so those that prefer to develop patches with git can continue to do so.</p>
-<p>The canonical issue tracker is the <a href="http://code.google.com/p/selenium/issues/list">Selenium issue tracker</a> on Google Code.  We will not be using either JIRA or GitHub Issues.  I&#8217;ll try to migrate what I can over to the new tracker, but if I miss anything, please re-open the issue over there.</p>
-<h2>Project Evolution</h2>
-<p>Selenium Grid currently only works with Selenium 1.x, and consequently the 1.x compatibility interface in Selenium 2.  There is currently no support for WebDriver.  However, I fully intend to steer the product in that direction, while maintaining support for existing Selenium Grid installations (i.e., based on Selenium 1.x).</p>
-<p>Since the project is moving to Google Code, all of the existing Selenium committers will have the ability to commit to the codebase.  This should make the project&#8217;s evolution a much more collaborative effort.  I&#8217;ll kickstart the process and likely lead the development effort, but the role of maintainer will be diminished (in a positive way) by allowing the entire core team equal access to the project.</p>
-<p>Others are welcome to chime as well.  Selenium Grid development discussion will be taking place on the Selenium developers list.  Please continue to use the Selenium users list for usage and support inquiries.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - The%20Future%20of%20Selenium%20Grid&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Monday, April 19, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2010/selenium-2-0a3-released/"><h2>Selenium 2.0a3 Released</h2></a>
-                <p><p>Selenium 2.0a3 has been released and can be downloaded from the <a href="http://code.google.com/p/selenium/downloads/list">Selenium project site</a>. This is a major update to 2.0 and all users are encouraged to update. The new features include:</p>
+                Monday, January 24, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-38a/"><h2>A Smattering of Selenium #38A</h2></a>
+                <p><p>No. Really. I&#8217;m almost caught up.</p>
 <ul>
-<li>An improved <a href="http://code.google.com/p/selenium/wiki/JsonWireProtocol">remote protocol</a>.</li>
-<li>Updating the version of HtmlUnit used to 2.7.</li>
-<li>Improved support for simulating user interactions with the browser via native events on Linux.</li>
-<li>Better support for Firefox 3.6.</li>
-<li>Bug fixes</li>
-</ul>
-<p>The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</p>
-<p>The next release will be Selenium 2.0a4, and it is planned to include the following when it is released in late May:</p>
-<ul>
-<li>Android support</li>
-<li>A new API to support writing tests involving complex user interactions.</li>
-<li>Far more integration of the underlying architecture.</li>
+<li>Want input in a non-english language but don&#8217;t want to convert your whole machine? <a href="http://inputking.com/">InputKing</a> might be able to help. And the fact it is in a browser means we can use it via Se.</li>
+<li>HAR (HTTP Archive) is the format the cool kids are talking about, and now there is a <a href="http://rubygems.org/gems/har">har gem</a> so you can make use of HAR files in you [Ruby] scripts.</li>
+<li>Organizing scripts by tagging them is one bandwagon I got on last year to great success and while I don&#8217;t really live in the MS toolset, <a href="http://blog.simontimms.com/2011/01/test-categories-for-mstest.html">Test Categories for MSTest</a> is likely how how I would do it MSTest.</li>
+<li>Selenium won an award! Again! See <a href="http://www.youtube.com/watch?v=XY7aQbi2N0g">the video of Se winning &#8216;Best Open Source Functional Automated Test Tool&#8217;</a></li>
+<li>How a script is named is a reflection of the person who wrote it, in <a href="http://stevesmithblog.com/blog/unit-test-naming-convention/">Unit Test Naming Convention</a> one such style is described and the reasoning explained. Just ignore the second half of the summary&#8217;s first sentence though.</li>
+<li>Michael Larson is Working his way though <a href="http://www.packtpub.com/selenium-1-0-testing-tools-beginners-guide/book">Selenium 1.0 Testing Tools Beginners Guide</a> and documenting it in a series of blog posts he is calling <a href="http://mkl-testhead.blogspot.com/search/label/PRACTICUM">a practicum</a></li>
+<li>Most people use Se to create a regression security blanked, but it there are some points to be discussed around <a href="http://investigatingsoftware.blogspot.com/2010/12/arrogance-of-regression-testing.html">the arrogance of regression testing</a></li>
+<li>ATDD continues to mature and the results of two different pattern workshops <a href="http://www.managing-expectations.com/?p=1326">have now been posted</a>. If you are using Cucumber, RobotFramework, Fitnesse, etc. you might want to pay attention.</li>
+<li>It always saddens me a bit when large threads pop up <a href="http://www.linkedin.com/groupItem?view=&amp;srchtype=discussedNews&amp;gid=961927&amp;item=38882290&amp;type=member&amp;trk=EML_anet_ac_pst_ttle">on how to manage Se scripts</a>. It&#8217;s called version control kids. But I realize I&#8217;m an outlier on this.</li>
+<li>I suspect a lot of Se folks have a similar tale to <a href="http://blog.abakas.com/2011/01/how-i-learned-to-code.html">How I Learned To Code</a></li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a3%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2338A&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Tuesday, April 13, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/"><h2>Selenium Grid 1.0.6 Released</h2></a>
-                <p>Following up on the Selenium Grid 1.0.5 release, which added <a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features</a> to ease grid management, we&#8217;re pleased to announce the release of Selenium Grid 1.0.6.  This is a bug fix release for 1.0.5 with some minor new additions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.6-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The summary of changes are:</p>
-<ul>
-<li>Fixed some concurrent modification issues that may have resulted in NullPointerExceptions</li>
-<li>Fixed issue with shutting down workers with Rakefile</li>
-<li>Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit</li>
-</ul>
-<p>In case you missed the announcement, Philippe is <a href="http://ph7spot.com/blog/selenium-grid-needs-a-new-maintainer">no longer maintaining</a> Selenium Grid.  We thank him for his years of effort and helping the project get to where it is today.  This is my first release as the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new Selenium Grid maintainer</a>.  I will be getting out a new post shortly that lays out the future for the project <em>[UPDATE: The <a href="http://seleniumhq.wordpress.com/2010/04/27/the-future-of-selenium-grid/">promised post</a> is live]</em>.  In the meanwhile, please note the new location of several key resources:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.  We look forward to hearing what you think about how we can improve the project.</p>
+                Friday, January 21, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2011/bug-bash/"><h2>Bug Bash: 24-30 January</h2></a>
+                <p>When the <a href="http://selenium.googlecode.com/">Selenium</a> and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a <em>lot</em> of bugs and feature requests.</p>
+<p>In the run up for the 2.0b2 release, we&#8217;ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January. The aim will be to focus on clearing our bug list as much as possible, so that beta2 will be the best release of Selenium yet. We will, of course, be recognizing people who squash the most bugs here on the blog, and we&#8217;re hunting out goodies to mail to the top bug bashers once the week is over.</p>
+<p>If you&#8217;d like to get involved, it&#8217;s easy:</p>
+<ol>
+<li><a href="http://code.google.com/p/selenium/source/checkout">Check out</a> the source code</li>
+<li>Find a bug you&#8217;d like to squash in the <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a></li>
+<li>Fix it, attaching your patch to the issue</li>
+</ol>
+<p>That&#8217;s it. Easy! For help, and to ask questions of the core development team, please hop on to the <a href="http://seleniumhq.org/support/">IRC channel</a> or email the <a href="http://groups.google.com/group/selenium-developers">selenium-developers</a> group.</p>
+<p><strong>Update:</strong> The Bug Bash is now complete. All we have to do is count up the scores!</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Bug%20Bash%3a%2024-30%20January&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Wednesday, January 19, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-37b/"><h2>A Smattering of Selenium #37B</h2></a>
+                <p>Let&#8217;s see how many announcements there were that didn&#8217;t get pushed out in a timely manner today shall we?</p>
+<ul>
+<li>Well, there is of course <a href="https://seleniumhq.wordpress.com/2011/01/17/selenium-conf-is-coming-get-your-proposals-in/">Selenium Conf is coming</a> and you have until Friday to get your proposals in. Last I heard we had 37 which is impressive, but I think 50 should be doable.</li>
+<li>On the meetup side of things there is
+<ul>
+<li><a href="http://www.meetup.com/Greater-Boston-Selenium-Users-Group/calendar/15997626/">Boston on January 25</a></li>
+<li><a href="http://www.meetup.com/NYCSelenium/">NYC on January 26</a> (its not on the site yet, but I&#8217;m speaking, so trust me, it exists)</li>
+<li><a href="http://www.meetup.com/seleniumlondon/calendar/16079171/">London on March 23</a></li>
+</ul>
+</li>
+<li><a href="http://seleniumcamp.com/">SeleniumCamp</a> (<a href="http://translate.google.ca/translate?u=http%3A%2F%2Fseleniumcamp.com%2F&amp;sl=ru&amp;tl=en&amp;hl=&amp;ie=UTF-8">English</a>) is coming to Kiev at the end of February. Suddenly we go from no &#8216;events&#8217; to lots.</li>
+<li>I&#8217;m kinda surprised no one has done this one yet, but a <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-fitnesse-formatte/">FitNesse Formatter</a> plugin for Se-IDE is up on AMO</li>
+<li><a href="http://blog.reallysimplethoughts.com/2010/12/28/the-selenium-expert-is-here/">Selenium Expert</a> is a plugin that <i>brings the wonderful world of inspections, tips, hints, fixes and refactoring to Selenese</i>. Samit is a plug-in making machine.</li>
+<li>Gorilla Logic have <a href="http://blog.gorillalogic.com/2010/12/16/flexmonkium-4-1-4-released/">have released a new version of FlexMonkium</a> &#8212; with with fully synchronized versioning.</li>
+<li><a href="http://seleniumspec.codeplex.com/">SeleniuMspec</a> is a cleverly named formatter for Mspec &#8212; though it isn&#8217;t distributed as an Se-IDE plugin (which would +1 its coolness)</li>
+<li>And I quote, <i>Hewlett-Packard (HP) is announcing the discontinuance of HP WinRunner (WR) 7.5, 7.6, 8.0, 8.2, 9.2 (all editions) products.</i>. Is it wrong to say something like &#8216;Ding, dong, the witch is dead&#8217;?. Of course, we wouldn&#8217;t likely be here without WR, but who doesn&#8217;t love some friendly-ish ribbing? Here is he full <a href="http://support.openview.hp.com/encore/wr.jsp">notice</a>.</li>
+<li><a href="http://www.getkrypton.com/">Krypton</a> appears to be a cloud service for managing your Se scripts and has a &#8216;we need testers&#8217; box on their site if anyone is curious</li>
+<li>And to illustrate that this space seems to have potential, or people think it does at any rate, <a href="http://www.testrunnr.com/">Test Runnr</a> also does cloud based script management with the added feature of running scripts against the <a href="http://saucelabs.com">Sauce Labs</a> OnDemand cloud. So if you have a cloud based app that you script with Selenium stored in the cloud and executed in the cloud are you yourself a meta-cloud company?</li>
+</ul>
+<p>More tomorrow as we dig ourselves out of the hole.</p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2337B&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-37b%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-37b%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

@@ -212,118 +212,63 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Monday, March 28, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-45/"><h2>A Smattering of Selenium #45</h2></a>
-                <p><p>A Smattering of Selenium #45</p>
-<p>So of course by now everyone has seen <a href="https://seleniumhq.wordpress.com/2011/03/21/selenium-2-0b3-the-next-gen-browser-release/">Selenium 2.0b3: The Next Gen Browser Release</a> and upgraded their rigs. Expect Selenium IDE at some point in the next week with support for FF4 &#8212; if you just. can&#8217;t. wait. then you could try the bleeding edge</a> for yourself. <a href="http://code.google.com/p/selenium/issues/list">Logging any bugs</a> you find; of course.</p>
-<p>Oh, and there is the whole <a href="http://www.seleniumconf.com/">Selenium Conference</a> next week.</p>
-<p>But aside from that, here are the things I have collected.</p>
+                Thursday, January 5, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/"><h2>Selenium 2.16 Released: Welcome to 2012!</h2></a>
+                <p>It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing. I think we&#8217;ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.16</a>.</p>
+<p>If you&#8217;re unsure about what&#8217;s been happening since the last time we announced a release here, the best place to look is our <a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">changelog</a>. The most notable feature in 2.16 is better support for Firefox 9, but if it&#8217;s been a while since you&#8217;ve last updated, we&#8217;ve been beavering away on bug fixes and making existing features work as flawlessly as possible. Now&#8217;s a great time to update!</p>
+<p>One of the key tools we use for assessing whether it&#8217;s okay to push a release is our continuous build. This watches for each and every change made to the project&#8217;s source code, and runs an increasingly vast suite of tests to verify that nothing has broken. Our friends at <a href="http://saucelabs.com/">SauceLabs</a> have been extremely generous in providing support for this, and have worked closely with us to make the build as stable and quick as possible. Special kudos and thanks to them!</p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.16%20Released%3a%20Welcome%20to%202012%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-2-16-released-welcome-to-2012%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-2-16-released-welcome-to-2012%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Tuesday, January 3, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-72/"><h2>A Smattering of Selenium #72</h2></a>
+                <p><p>January means its time to escape from under the deadlines I found myself under during December so some of this stuff is a month old (or older!). Hopefully it is still interesting though.</p>
 <ul>
-<li><a href="http://computeristsolutions.com/blog/posts/2011/3/headless-dotnet-browser-testing-with-selenium2">headless dotnet browser testing with selenium2</a> using Jenkins and <a href="https://iain.cx/src/nssm/">NSSM</a> (the Non-Sucking Service Manager)</li>
-<li><a href="http://ecomba.org/blog/2011/03/08/frameworks-are-evil/">Frameworks are evil</a> includes this gem: <i>The problem comes when you are blindly following what a framework gives you and you forget your better design skills (like OO or functional skills) to just follow blindly recipes from a given framework.</i>. Exactly.</li>
-<li><a href="http://jackhq.tumblr.com/post/3728330919/testing-jquery-autocomplete-using-capybara">Testing jQuery Autocomplete using Capybara</a> or more accurately <i>Using Selenium + Capybara + jQuery to select an option from an AutoComplete</i></li>
-<li>If you are wrapping your scripts in Cucumber or RobotFramework (or similar), then you owe it to your team to read <a href="http://antonymarcano.com/blog/2011/03/cucumber-pains/">Putting Cucumber where it’s not supposed to go will hurt!</a>. Especially the 4th adn 5th paragraphs.</li>
-<li>Not new, but <a href="http://docs.codehaus.org/display/FEST/Selenium">FEST</a> appears to open up the Applet space to Se. Not that Applets are really in use much these days. I could have used this in 2007 though.</li>
-<li><a href="https://github.com/idealistdev/alfajor/">Alfajor</a> seems to be a python based metaframework supporting Windmill, WebDriver and a few others.</li>
-<li><a href="http://crawljax.com/">Crawljax</a> is an AJAX capable web crawler</li>
-<li><a href="http://blog.browsermob.com/2011/03/selenium-tips-wait-with-waitforcondition/">Wait with WaitForCondition</a> discusses some advanced synchronization tricks</li>
-<li><a href="http://opinionated-programmer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3/">Capybara (and Selenium) with RSpec &amp; Rails 3: quick tutorial</a> is a quick tutorial</li>
-<li><a href="http://pypi.python.org/pypi/lettuce_webdriver">lettuce_webdriver</a> is, naturally, the Python port of Cucumber</li>
-<li><a href="http://weblogs.mozillazine.org/stephend/archives/2011/03/i_gave_a_talk_a.html">An Update on Our Selenium-Automated AMO Tests (and Automation in General)</a> &#8212; AMO is addons.mozilla.org for the acronym impaired.</li>
-<li><a href="http://trishkhoo.com/?p=298">A website appears before you! Adventures of a clicky thing</a> is not Se, but still interesting.</li>
-<li><a href="http://www.eliasnogueira.info/arquivos_blog/selenium/desafio/">Desafios com o Selenium IDE</a> is in Portuguese, but from what I understand he is trying to build a koans style site for Se-IDE.</li>
-<li>From PyCon is <a href="http://pycon.blip.tv/file/4878793/">API Design anti-patterns</a> and <a href="http://blip.tv/file/4883290">API Design: Lessons Learned</a></li>
-<li><a href="http://avdi.org/devblog/exceptional-ruby/">Exceptional Ruby Notes</a> has some links to how ruby actually handles exceptions</li>
-<li><a href="https://existentialtype.wordpress.com/2011/03/17/parallelism-is-not-concurrency/">Parallelism is not concurrency</a> &#8212; in case you were wondering</li>
-<li>Se committer and IE WebDriver re-writer Jim Evans <a href="http://www.hanselminutes.com/default.aspx?showID=276">was on Hanselminutes</a></li>
-<li><a href="http://blog.zkoss.org/index.php/2011/03/22/vision-test-for-ztl/">Vision Test for ZTL</a> shows how they do image comparison.</li>
-<li><a href="https://github.com/cameronmcefee/Image-Diff-View-Modes/commit/8e95f70c9c47168305970e91021072673d7cdad8">and do does github!</a></li>
-<li><a href="http://www.theautomatedtester.co.uk/blog/2011/selenium-test-day-webqa-29032011.html">Selenium Test Day with Mozilla WebQA</a> is <i>TOMORROW</i> &#8211; join in to learn / share some tricks with Mozilla</li>
-<li><a href="http://blog.softwaretestingclub.com/2011/03/an-introduction-to-selenium-ide/">An Introduction To Selenium IDE</a> is the first in a series of articles that I might not normally link to but I read drafts of and know where they are heading. Either that or I am completely confused</li>
-<li><a href="http://lizkeogh.com/2011/03/04/step-away-from-the-tools/">Step Away from the Tools</a> is an important reminder for those who tend to live in their tools.</li>
-<li><a href="http://logician.free.fr/index.php/2011/03/23/selenium-ide-plugin-for-the-play-framework">Selenium IDE plugin for the Play! framework</a></li>
-<li><a href="http://arstechnica.com/security/news/2011/03/how-the-comodo-certificate-fraud-calls-ca-trust-into-question.ars">How the Comodo certificate fraud calls CA trust into question</a> is interesting in itself, but also has a nice explanation of how SSL works. Again, if you are not using certificate-based authentication in your scripts, you do not need SSL turned on outside of production, but should you persist then you should understand what is happening.</li>
-<li><a href="http://a-sisyphean-task.blogspot.com/2011/03/without-stabilisers-why-writing-your.html">Without stabilisers &#8211; why writing your own test harnesses really is an option</a> is another argument for writing your own harness. Yes, you should do this. (Or at least customize the heck out of an existing one)</li>
+<li>Localizing automation well is something I&#8217;ve seen people struggle with. <a href="http://devzone.zend.com/1859/creating-multi-language-web-applications-with-zend_translate/">Creating Multi-Language Web Applications with Zend_Translate</a> is a possible solution for PHP folks.</li>
+<li><a href="http://wesgibbs.me/post/12036950233/using-spinach-with-selenium">Using Spinach with Selenium</a> and of course Spinach seems to be a different implementation of Cucumber. (And yes, I&#8217;m sure that&#8217;s a great oversimplification.)</li>
+<li><a href="http://android-developers.blogspot.com/2011/10/introducing-android-webdriver.html">Introducing Android WebDriver</a> more or less made the selenium search I have for twitter useless for a day-and-a-half with all the retweets.</li>
+<li><a href="http://deanhume.com/Home/BlogPost/selenium-webdriver---wait-for-an-element-to-load/64">Selenium Webdriver &#8211; Wait for an element to load</a> shows the difference between an explicit and implicit wait</li>
+<li><a href="http://www.javacodegeeks.com/2011/10/testing-gwt-apps-with-selenium-or.html">Testing GWT Apps with Selenium or WebDriver</a> &#8211; take note of problem 3. Friends don&#8217;t let friends use GWT&#8230;</li>
+<li><a href="http://www.netmagazine.com/node/1465">The developer&#8217;s guide to browser adoption rates</a> is the sort of thing anyone doing browser automation needs to know about</li>
+<li><a href="http://exchange.nagios.org/directory/Plugins/Websites%2C-Forms-and-Transactions/check_selenium/details">integrate your selenium test cases into nagios</a> &#8211; this is something I keep thinking I should try out.</li>
+<li><a href="http://jayflowers.com/WordPress/?p=222">Continuous Integration Principles–Task Size Rules</a> has a diagram that seems about right &#8212; even if I haven&#8217;t really thought about it in great depth.</li>
+<li><a href="http://razgulyaev.blogspot.com/2011/11/another-robust-way-of-how-to-locate.html">Another robust way of how to locate ajax elements using Selenium 2 + webdriver</a> kinda looks like a re-implementation of the WebDriverWait stuff</li>
+<li><a href="http://watirmelon.com/2011/12/03/a-tale-of-three-ruby-automated-testing-apis-redux/">A tale of three ruby automated testing APIs (redux)</a> was in an earlier queue, until he pulled it down. Now that its back, its back here too.</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2345&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-45%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-45%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2372&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-72%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-72%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, March 21, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2011/selenium-2-0b3-the-next-gen-browser-release/"><h2>Selenium 2.0b3: The Next Gen Browser Release</h2></a>
-                <p>It&#8217;s been about 5 weeks since the release of beta 2, so we&#8217;re very pleased to announce that Selenium 2.0b3 has just been released simultaneously for Java, .Net, Ruby and Python. You can <a href="http://seleniumhq.org/download/">download it from Selenium HQ</a> or from the <a href="http://code.google.com/p/selenium/downloads/list">Google Code site</a>. This release focused on providing excellent support for the next generation of browsers, particularly IE 9 and Firefox 4, and we think you&#8217;ll like what you&#8217;ll find.</p>
-<ul>
-<li>Restructured documentation at<a href="http://seleniumhq.org/docs/"> Selenium HQ</a></li>
-<li>An improved user interaction API
-<ul>
-<li>Including experimental IME support on Windows.</li>
-</ul>
-</li>
-<li>Alerts and prompts handling for IE.</li>
-<li>Marked the following APIs as obsolete in .Net:
-<ul>
-<li>IRenderedWebElement.Hover()</li>
-<li>IOptions.Speed</li>
-</ul>
-</li>
-<li>Even more improvements to the Java webdriver-backed selenium
-<ul>
-<li>We&#8217;ll document the migration path before 2.0b4 is out!</li>
-</ul>
-</li>
-<li>A significantly faster <a href="http://selenium.googlecode.com/files/android-server-2.0b3.apk">Android Driver</a></li>
-</ul>
-<p>As well as these changes, there&#8217;s also the regular clutch of bug fixes and tweaks. For the number crunchers, there were a total of <a href="http://code.google.com/p/selenium/source/list?num=331&amp;start=11749">331 changes</a> that landed in the 5 weeks since the last release, with the 5 most active contributors working on each of the different languages supported by Selenium.</p>
-<p>In addition to the enormous thanks that go to the developers, I&#8217;d like to add a big thank you to the Mozilla engineers who chipped in on the IRC channel at the last minute to help us work through some issues with Core. We&#8217;d not have been able to get this release out when we did without their help. Thank you Mozilla!</p>
-<p>The next release will be focused on stabilization work, reducing our bug count and adding support for Grid 2.0.</p>
+                Friday, December 9, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2011/announcing-selenium-conf-12/"><h2>Announcing Selenium Conf ’12</h2></a>
+                <p>The community around Selenium is the thing that really makes the Selenium project special. Last year, we held the first official Selenium Conference in San Francisco, and it was both great fun and a huge success. It is therefore with great pleasure that we are announcing <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a>! It&#8217;ll be taking place in <strong>London</strong> from the<strong> 16th to the 18th April</strong>, and we&#8217;re really looking forward to seeing you all there!</p>
+<p>If you&#8217;ve been following <a href="https://twitter.com/#!/seleniumconf">@seleniumconf</a> on Twitter, you probably already know that we have some <a href="http://seconf2012.eventbrite.com/">early bird tickets</a> available and the <a href="http://www.seleniumconf.org/speakers/">Call for Papers</a> is open. We&#8217;re looking for everything from lighting talks, through traditional presentations, to half-day long workshops on anything that uses Selenium in any way, including building on the Selenium WebDriver APIs (so talks about Watir would be welcome too!). It&#8217;ll be a chance to show off what you know and learn from the experts. If you get a quiet moment during the Christmas break, why not put <a href="http://www.seleniumconf.org/speakers/">forward a talk</a>? If you&#8217;re not a talker, but can help us with <a href="http://www.seleniumconf.org/sponsors/">sponsorship</a>, we&#8217;d love to hear from you too!</p>
+<p>Just as last year, the workshops will be happening on the first day of the conference, but places are limited. We plan on running a total of four workshops across two tracks, meaning each workshop is half a day long; a fantastic opportunity to take a deep dive into a particular area of the project. The early bird tickets give you access to them, as well as the conference itself on the 17th and 18th.</p>
+<p>The conference will consist of a main single track with selected speakers, with break out rooms being dedicated to an unconference, the contents of which will be decided by attendees. It&#8217;ll be your conference, help us make it brilliant 🙂</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.0b3%3a%20The%20Next%20Gen%20Browser%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0b3-the-next-gen-browser-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0b3-the-next-gen-browser-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Monday, March 7, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-44/"><h2>A Smattering of Selenium #44</h2></a>
-                <p><p>What started out as the week of Capybara rounded itself out fairly nicely</p>
-<li>I&#8217;m not a fan of using 3rd party abstraction layers (1st party are full win though) but Capybara has a large marketshare so <a href="http://opinionated-programmer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3">Capybara (and Selenium) with RSpec &amp; Rails 3: quick tutorial</a> is likely going to be of interest to people.</li>
-<li>And while on the subject of Capybara, here is a post on <a href="http://testobsessed.com/2011/03/01/checking-invisible-elements/">Checking Invisible Elements</a> in it.</li>
-<li>Keeping with the Capybara theme, we have <a href="http://blog.plataformatec.com.br/2011/03/configuring-user-agents-with-capybara-selenium-webdriver/">Configuring User Agents with Capybara + Selenium Webdriver</a></li>
-<li><a href="http://devlicio.us/blogs/krzysztof_kozmic/archive/2011/02/28/unit-tests-are-overrated.aspx">Unit tests are overrated</a> is a nice reminder to change <i>all</i> the tests in a system for a change &#8212; not just the unit ones. (C&#8217;mon, how many of us haven&#8217;t been burned and/or responsible for this.)</li>
-<li><a href="http://www.stickyminds.com/sitewide.asp?Function=edetail&amp;ObjectType=COL&amp;ObjectId=16692&amp;tth=DYN&amp;tt=siteemail&amp;iDyn=2">People-driven Test Automation</a> includes this nice blurb
-<p><i>Successful test automation uses good tests that provide clear test results. A pass or no-pass result must be confident and trustworthy. By focusing on what the system should do rather than how it does it, this can be achieved easily and without breaking existing test cases whenever the logic of the system is changed.</i></li>
-<li><a href="http://wordpressvideos.tv/wordpress-plugins/automate-kingdoms-camelot-using-selenium">Automate Kingdoms Camelot using Selenium</a> reminds me of the days when I had the MUD we played in fully scripted.</li>
-<li><a href="https://community.dynatrace.com/community/display/PUB/How+to+include+dynaTrace+in+your+Selenium+Tests">How to include dynaTrace in your Selenium Tests</a> is an interesting idea. Would be even better using Page Objects that were controlled externally so you don&#8217;t have to modify working scripts to enable/disable timings. But that&#8217;s an exercise for the reader to do. (Oh, and if their marketing firm wasn&#8217;t tweeting about it every day, that would be keen too.)</li>
-<li><a href="http://saucelabs.com/blog/index.php/2011/03/sfse-video-selenium-problem-solving-sessions/">#SFSE Video: Selenium Problem Solving Sessions</a> has, amung other things, a demo of the dynaTrace thing.</li>
-<li><a href="http://bernardlago.wordpress.com/2011/03/02/user-extensions-with-selenium-rc-using-ruby-client-driver-selenium-client/">User-Extensions With Selenium RC Using Ruby Client Driver (selenium-client)</a> is slightly out of date (use selenium-webdriver, not selenium-client) but aside from that, has an important missing bit of the user-extension documentation &#8212; how to use them from inside a script.</li>
-<li>I haven&#8217;t watched it, but <a href="http://www.anthillpro.com/html/resources/webinars/From_Continuous_Integration_to_DevOps_Co-Evolution_of_Agile_and_Automation.html">From Continuous Integration to DevOps: Co-Evolution of Agile and Automation</a> seems interesting. I actually used the phrase &#8220;Selenium is the gateway drug to DevOps&#8221; the other week.</li>
-<li><a href="http://blog.8thlight.com/articles/2011/3/2/jenkins-rvm-and-selenium">Jenkins, RVM, and Selenium</a> is really about Cucumber, but&#8230;</li>
-<li><a href="http://www.labelmedia.co.uk/blog/posts/setting-up-selenium-server-on-a-headless-jenkins-ci-build-machine.html">Setting up Selenium server on a headless Jenkins CI build machine</a> is similar to the 8th light one, but for Selenese</li>
-<li><a href="http://www.sujitnayak.com/?p=527">Selenium 2 with Firebug run on FF</a> shows how to add an extension to a WebDriver profile. Now to write a script for <a href="http://moolya.com/blog/2011/03/04/addon-mindmap-for-testers-from-moolya/">all these plugins</a></li>
-<li><a href="http://www.bryancook.net/2011/03/building-custom-test-frameworks.html">Building Custom Test Frameworks</a> is a bit of a cautionary tale</a></li>
-<li>The whole where-is-this-binary-hiding-on-this-machine-problem on windows has bit people a number of times, <a href="http://www.testingmentor.com/imtesty/2011/03/03/test-automation-checking-for-bit-ness">Test Automation: Checking for Bit-ness</a> suggests a solution (in C#)</li>
-<li><a href="http://english.valdemarjr.net/2011/03/04/functional-tests-with-selenium-2-0-and-cargo-maven-plugin/">Functional Tests with Selenium 2.0 and cargo-maven-plugin</a> updates some common documentation around launching the Se server and tests from inside Maven</li>
-</ul></p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2344&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-44%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-44%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%20Conf%20%e2%80%9912&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fannouncing-selenium-conf-12%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fannouncing-selenium-conf-12%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

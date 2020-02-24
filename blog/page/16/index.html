@@ -212,82 +212,79 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Friday, July 6, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-99/"><h2>A Smattering of Selenium #99</h2></a>
-                <p><p>With the queue flushed we&#8217;ll go back to our regular random posting schedule</p>
-<ul>
-<li><a href="http://www.livestream.com/etsy/video?clipId=pla_780bfe22-12e8-4c7f-8c7b-06cc6cac9c49">Etsy Code as Craft: The Other Part of Software Architecture with Coda Hale</a> &#8211; Code as Craft talks are generally good</li>
-<li>All the <a href="http://summit.atlassian.com/archives/2012/dev-ops/aligning-continuous-integration-deployment">Atlassian Summit 2012</a> talks. I <i>love</i> this trend.</li>
-<li><a href="http://robert.accettura.com/blog/2012/06/28/perception-of-performance/">Perception Of Performance</a> discusses the whole &#8216;OMG CHOME IS HELLA FAST ON IOS!!!!!!&#8217; madness. As the last line of the article says, <i>I present to you, the power of marketing!</i> Oh. And read Peter Kasting&#8217;s comment as well for a bit of a rebuttal.</li>
-<li><a href="http://sauceio.com/index.php/2012/03/selenium-tips-uploading-files-in-remote-webdriver/">Uploading Files in Remote WebDriver</a> showcases part of the Remote WebDriver stuff that doesn&#8217;t get much written about it.</li>
-<li><a href="http://hackers.mylookout.com/2012/07/puppet-lint-with-jenkins/">Puppet Link With Jenkins</a> &#8211; Heck, why not?</a></li>
-<li><a href="http://www.mehdi-khalili.com/presentations/automated-ui-testing-done-right-at-dddsydney">Automated UI Testing Done Right</a> &#8211; for some definition of right for some person at some time in some context&#8230;</a></li>
-<li><i>Leap Smear</i> is likely an example of internal smart-ass jargon that ended up sticking; <a href="http://googleblog.blogspot.ca/2011/09/time-technology-and-leaping-seconds.html">Time, technology and leaping seconds</a></li>
-<li><a href="http://hugost.com/labnotes/webtiming.html">Use Python + Selenium to Automate Web Timing</a> takes a non-proxy route to getting page information</li>
-<li><a href="http://bendyworks.github.com/bwoken/">bwoken</a> 1.1 can run UIAutomation scripts in the simulator <i>and on the device</i> which is pretty awesome. Know what would be more awesome? If Apple did this themselves rather than the community having to figure it out on their own. But that goes for a lot of vendors with a lot of things.</li>
-<li><a href="http://blog.cloudflare.com/ttfb-time-to-first-byte-considered-meaningles">Stop worrying about Time To First Byte (TTFB)</a> shows that, shocking!, different tools measure the same thing different ways and get different results. Never happens. Oh. and a bit of a rebuttal; <a href="https://plus.google.com/114552443805676710515/posts/GTWYbYWP6xP">TL;DR: Time to First Byte Matters, when you know what to put into those bytes.</a></li>
-</ul></p>
+                Tuesday, January 22, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2013/a-plan-to-drop-firefox-3-x-support/"><h2>A Plan to Drop Firefox 3.x Support</h2></a>
+                <div>The support policy of the <a href="http://seleniumhq.org/">selenium project</a> for <a href="http://www.getfirefox.com/">Firefox</a> browsers is to support the current and previous stables releases, as well as the current and previous <a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> releases. At the time of writing, that means the supported versions are &#8220;10&#8221; and &#8220;17&#8221; (ESR) and &#8220;17&#8221; and &#8220;18&#8221; (stable channel). In addition to this, we are currently supporting Firefox 3.x too.</div>
+<div></div>
+<div>This is an official announcement that we are planning to end support for Firefox 3.x in the near future in RC, WebDriver and Core/IDE, and this is your chance to be involved in that decision. Unless there is a strong reason to do otherwise, I shall shortly be announcing a timeline for the end of the support of 3.x</div>
+<div></div>
+<div>Once support for Firefox 3.x is removed, the earliest supported Firefox version will be the ESR-1 release (currently Firefox 10).</div>
+<div></div>
+<div>Rationale:</div>
+<div>Firefox 3.x is no longer actively supported by <a href="http://www.mozilla.org/">Mozilla</a>, and this has been the case since <a href="https://blog.mozilla.org/futurereleases/2012/03/23/upcoming-firefox-support-changes/">April 24, 2012</a>. Since this time, 3.x has dropped to under 1% of global Web traffic (0.62% at the time of writing according to StatCounter) Continued focus on supporting an effectively dead browser prevents the selenium team from using features in the newer releases for little benefit to you.</div>
+<div></div>
+<div>Continued support of Firefox 3.x by the selenium project gives the impression that that particular version is still a valid option used by the population of the Web. This is simply not the case, and it may mean that testers efforts are being spent fixing problems that almost no users will ever see.</div>
+<div></div>
+<div>What you can do:</div>
+<div>If you agree that this is the right choice, then you do not need to do anything. If you disagree strongly and have the numbers to back up your position, particularly if you can help work on Firefox 3.x support, then please reply to the <a href="https://groups.google.com/forum/?fromgroups=#!topic/selenium-users/3l5ZW-LMC7Y">selenium-user google group</a>.</div>
+<div></div>
+<div>On a personal note, I know that a lot of you may well have firefox 3.x support in your test plans and will be distressed by this plan. Please take the time to look at actual usage logs from your sites and applications to verify that continued support is worth your time and energy before responding. I&#8217;d really appreciate that.</div>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2399&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-99%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-99%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Plan%20to%20Drop%20Firefox%203.x%20Support&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-plan-to-drop-firefox-3-x-support%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-plan-to-drop-firefox-3-x-support%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, July 2, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-98/"><h2>A Smattering of Selenium #98</h2></a>
-                <p><p>Happy day off Canuckistan! I&#8217;ll be in California in two weeks; here is <a href="http://element34.ca/blog/california-tour-summer-2012">my schedule</a> &#8212; come by and chat</a></p>
-<ul>
-<li><a href="http://allianceglobalservices.com/blog/selenium-rc-to-webdriver-migration-–-part2">Selenium Rc to Webdriver Migration – Part2</a> is included mainly for the IE bit. Busted SSL certificate? Don&#8217;t work around the problem &#8212; fix it! Can&#8217;t find an element? Synchronize properly &#8212; don&#8217;t just bap it in the face with the magic implicit wait wand&#8230;</li>
-<li><a href="http://www.youtube.com/user/GoogleDevelopers?feature=watch">Google I/O 2012 Videos</a> won&#8217;t give you the loot attendees got, just the content.</li>
-<li>Does WebDriver support <a href="http://developer.android.com/about/versions/jelly-bean.html">Jelly Bean</a> yet? /me ducks and runs for cover</li>
-<li><a href="http://www.crashlytics.com/blog/scaling-continuous-integration-cutting-test-time-by-77/">Scaling Continuous Integration – Cutting Test Time by 77%</a> &#8211; my Spidey sense says that the next wave of tooling is about dynamic script selection, parallelization and general speediness-ing. In this article <i>since there’s no longer a need to delay arbitrary amounts of time</i> is the killer line.</li>
-<li><a href="http://blog.jquery.com/2012/06/28/jquery-core-version-1-9-and-beyond/">jQuery Core: Version 1.9 and Beyond</a> seems rather optimistic. WebDriver should be immune [I think] though so if your scripts break, its the app! 🙂</li>
-<li>Myth #2 of <a href="https://speakerdeck.com/u/chrismdp/p/cucumber-its-about-talking-not-testing">Cucumber: It&#8217;s about Talking not Testing</a> is outstanding. And sadly, nearly ubiquitous</li>
-<li><a href="http://pythonconquerstheuniverse.wordpress.com/2012/02/01/unicode-for-dummies-encoding/">Unicode for dummies — Encoding</a> &#8211; be afraid of any article that starts with <i>The basic concepts are simple</i>. Then brace yourself and read it anyways. Unicode is important.</li>
-<li><a href="http://www.slideshare.net/AmazonWebServices/cloudpowered-continuous-integration-and-deployment-architectures-jinesh-varia">Cloud-powered Continuous Integration and Deployment architectures</a> is very AWS centric (obviously given the author) but still pretty good.</li>
-<li>Can&#8217;t get enough of Responsive Design? How about <a href="http://www.alistapart.com/articles/responsive-images-how-they-almost-worked-and-what-we-need/">Responsive Images: How they Almost Worked and What We Need</a></li>
-<li>This would have been more relevant last week when it was <a href="http://www.nme.com/filmandtv/news/back-to-the-future-day-hoax-hits-again/272599">Back To The Future day</a>, but <a href="https://github.com/bebanjo/delorean">Delorean</a> lets you muck about with time in your Ruby scripts</a></li>
-</ul></p>
+                Tuesday, January 22, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2013/selenium-conf-2013-call-for-papers-and-early-bird-tickets/"><h2>Selenium Conf 2013: Call for Papers and Early Bird Tickets</h2></a>
+                <div>
+<div>
+<div>
+<div>This year&#8217;s <a href="http://www.seleniumconf.org/">Selenium Conference</a> is slated for June 10 &#8211; 12 in beautiful Boston, Massachusetts. The conference will be held at the <a href="http://www.seleniumconf.org/venue/">Renaissance Boston Waterfront Hotel</a>. Similar to last year, this year&#8217;s conference will kick off with a full day of Selenium Workshops, followed by a two day, two track conference. If you&#8217;ve always dreamed of speaking at a Selenium Conference there&#8217;s still time to submit a talk to us at <a href="http://www.seleniumconf.org/speakers/" target="_blank">http://www.seleniumconf.org/speakers/</a>.</div>
+<div></div>
+<p>As we have done every year, we&#8217;re pleased to announce that a batch of early bird tickets to the Conference is on sale now, even before the talks have been finalized. You can get your ticket(s) by visiting <a href="http://seconf2013.eventbrite.com/" target="_blank">http://seconf2013.eventbrite.com/</a>. There are only 45 early bird tickets available at the special rate of $299, and they are only available until February 4th, so act now! After that the regular price of $350 will be in effect for all tickets. You&#8217;ll also notice that tickets to our workshop day are for sale as well. These cost $75 and entitle you to attend a full day of Selenium workshops on Monday June 10th.</div>
+</div>
+<p>More information on the conference is available at <a href="http://www.seleniumconf.org/" target="_blank">http://www.seleniumconf.org/</a>, and we are still accepting speaker proposals. We&#8217;re looking forward to seeing you in June!<em id="__mceDel"></em></div>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2398&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-98%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-98%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Conf%202013%3a%20Call%20for%20Papers%20and%20Early%20Bird%20Tickets&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-conf-2013-call-for-papers-and-early-bird-tickets%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-conf-2013-call-for-papers-and-early-bird-tickets%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Friday, June 29, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-97/"><h2>A Smattering of Selenium #97</h2></a>
-                <p><p>Yes. I know. I missed a day. But 13 in a row was a good run!</p>
+                Monday, January 21, 2013 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2013/a-smattering-of-selenium-138/"><h2>A Smattering of Selenium #138</h2></a>
+                <p><p>&lt;insert snark here&gt;</p>
 <ul>
-<li><a href="http://blog.parse.com/2012/06/28/free-automated-cross-browser-javascript-testing/">Free Automated Cross-Browser JavaScript Testing</a> is a pretty standard &#8216;here is how you do it&#8217; article &#8212; until you get to the IE section. It has a trick I don&#8217;t think I&#8217;ve seen yet.</a></li>
-<li>If you don&#8217;t want to use a Proxy to generate HAR files, you can use NetExport in your Firefox profile to save things locally, or sent them to a remote server as explained in <a href="http://www.softwareishard.com/blog/firebug/automate-page-load-performance-testing-with-firebug-and-selenium/">Automate Page Load Performance Testing with Firebug and Selenium</a>. (I like the proxy route myself since it is cross browser.)</li>
-<li><a href="http://watirmelon.com/2012/06/27/automatic-firefox-authentication-when-using-selenium-webdriver-with-autoauth/">Automatic Firefox authentication when using Selenium-WebDriver with AutoAuth</a> is Watir-based, but would also work for WebDriver</li>
-<li><a href="http://my.opera.com/ODIN/blog/2012/06/27/introducing-robohydra-operas-open-source-http-client-test-tool">Introducing RoboHydra &#8211; Opera&#8217;s open-source HTTP client test tool</a> seems to take the whole &#8216;take this service and stub it!&#8217; approach</li>
-<li><a href="http://pytest.org/dev/resources.html">Creating and working with parametrized test resources</a> is a peek at what could be coming soon to a Py.Test installation near you. Also makes my brain hurt.</li>
-<li><a href="http://isbullsh.it/2012/06/Rest-api-in-python/">Communicating with RESTful APIs in Python</a> nicely illustrates why you should also be using Requests</li>
-<li><a href="http://jimevansmusic.blogspot.ca/2012/06/whither-nuget-and-webdriver-net.html">Whither NuGet and the WebDriver .NET bindings</a> explains the whole NuGet and WebDriver .NET mess(?). Again I say, packaging is hard.</li>
-<li><a href="http://blog.ivandemarino.me/2012/06/16/Git-rebase-be-a-mother-not-a-plastic-surgeon">Git rebase: be a mother, not a plastic surgeon</a> &#8212; has git taken the place of gdb for top of the arcane knowledge food chain?</li>
-<li><a href="http://hairysun.com/blog/2012/06/28/real-life-generators-and-peeker/">Real-life Generators and a Peeker Too</a> shows that I don&#8217;t know anything about Generators let alone the idea of a Peeker. Though I suspect I have needed this trick in the past.</li>
-<li>Remember the good ol&#8217; days when a browser could take out your OS? They&#8217;re baaaack. <a href="http://googlechromereleases.blogspot.ca/2012/06/beta-and-stable-channel-update.html">Beta and Stable Channel Update</a></li>
+<li><a href="http://angryweasel.com/blog/?p=565">Debugging For Testers</a> &#8212; they don&#8217;t teach this in testing school. Actually, there is a testing school&#8230;</li>
+<li>A million times this!! <a href="http://chrismdp.com/2013/01/bdd-is-not-cucumber/">That&#8217;s not BDD, that&#8217;s just Cucumber</a></li>
+<li><a href="http://www.igvita.com/2013/01/15/faster-websites-crash-course-on-web-performance/">Faster Websites: Crash Course on Web Performance</a> &#8212; all three hours of video</li>
+<li><a href="http://9elements.com/io/index.php/continuous-integration-of-ios-projects-using-jenkins-cocoapods-and-kiwi/">Continuous Integration of iOS Projects using Jenkins, CocoaPods, and Kiwi</a></li>
+<li><a href="http://blog.patrickmeenan.com/2012/11/clearing-ies-caches-not-as-simple-as-it.html">Clearing IE&#8217;s Caches &#8211; Not as simple as it appears</a> is another one of those things that gives Jim headaches.</li>
+<li>Speaking of things that give Jim headaches; <a href="http://jimevansmusic.blogspot.ca/2013/01/revisiting-native-events-in-ie-driver.html">Revisiting Native Events in the IE Driver</a>. Fun, fun, fun.</li>
+<li><a href="http://www.netmeister.org/slides/devopsdays201301/#/42">We&#8217;re Doing It Wrong! What DevOps Needs to Learn in Order to Scale Up.</a> is pretty good, but wow I dislike this slide system.</li>
+<li><a href="http://lists.freebsd.org/pipermail/freebsd-current/2010-August/019310.html">why GNU grep is fast</a> &#8211; <i>The key to making programs fast is to make them do practically nothing</i></li>
+<li><a href="https://github.com/SquareSquash/web">Squash</a> feels kinda like a wrapper about &#8216;git blame&#8217; coupled with a log monitor, but still an interesting concept.</li>
+<li><a href="http://www.ivanfranjic.net/2013/1/writing-faster-webdriver-tests">Writing faster WebDriver tests</a> isn&#8217;t necessary making scripts faster as it is about a clever abuse of the JS Executor</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2397&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-97%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-97%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23138&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-138%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-138%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
