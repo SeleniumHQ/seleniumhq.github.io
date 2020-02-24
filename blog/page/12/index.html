@@ -212,81 +212,121 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Tuesday, April 27, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/the-future-of-selenium-grid/"><h2>The Future of Selenium Grid</h2></a>
-                <p>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new maintainer.</a>  In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.</p>
-<h2>Background</h2>
-<p>I realize many of you may not know who I am.  I&#8217;ve been using Selenium in some capacity for close to five years now.  I love working on open source software and do so primarily through my membership in the Apache Software Foundation and through <a href="http://github.com/nirvdrum/">my GitHub account</a>.  I hang out on the #selenium channel with the handle &#8220;nirvdrum&#8221; and have a <a href="http://nirvdrum.com/">personal page</a> that includes some articles I&#8217;ve written and other things I&#8217;m involved with.  Perhaps more importantly, I also rely on Selenium Grid for <a href="http://mogotest.com/">my latest start-up</a> so I&#8217;m very keen on seeing the project mature and evolve.</p>
-<h2>Project Resources</h2>
-<p>The new canonical project repository on GitHub is the <a href="http://github.com/nirvdrum/selenium-grid/">nirvdrum fork</a>.  However, within in the next month or so the project will be migrated from git and GitHub to subversion and the <a href="http://code.google.com/p/selenium/">Selenium project on Google Code</a>.  As much as I personally prefer GitHub to Google Code, it makes the most sense from a community perspective for all Selenium projects to be hosted in the same location.  The move will be made after Selenium Grid stabilizes a bit more.  The <a href="http://seleniumhq.wordpress.com/2010/04/13/selenium-grid-1-0-6-released/">1.0.6 release</a> was the first step in that process, but there may be one or two more minor patch releases.  After the move, I&#8217;ll try to maintain a synchronized mirror of the code on GitHub so those that prefer to develop patches with git can continue to do so.</p>
-<p>The canonical issue tracker is the <a href="http://code.google.com/p/selenium/issues/list">Selenium issue tracker</a> on Google Code.  We will not be using either JIRA or GitHub Issues.  I&#8217;ll try to migrate what I can over to the new tracker, but if I miss anything, please re-open the issue over there.</p>
-<h2>Project Evolution</h2>
-<p>Selenium Grid currently only works with Selenium 1.x, and consequently the 1.x compatibility interface in Selenium 2.  There is currently no support for WebDriver.  However, I fully intend to steer the product in that direction, while maintaining support for existing Selenium Grid installations (i.e., based on Selenium 1.x).</p>
-<p>Since the project is moving to Google Code, all of the existing Selenium committers will have the ability to commit to the codebase.  This should make the project&#8217;s evolution a much more collaborative effort.  I&#8217;ll kickstart the process and likely lead the development effort, but the role of maintainer will be diminished (in a positive way) by allowing the entire core team equal access to the project.</p>
-<p>Others are welcome to chime as well.  Selenium Grid development discussion will be taking place on the Selenium developers list.  Please continue to use the Selenium users list for usage and support inquiries.</p>
+                Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
+                <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
+                <p>There are several ways to use Selenium 2:</p>
+<ol>
+<li>If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new <tt>WebDriver</tt> implemenations like <tt>ChromeDriver</tt>, <tt>HtmlUnitDriver</tt>, <tt>FirefoxDriver</tt>, or <tt>InternetExplorerDriver</tt> which provide a nice, small and easy to learn API.</li>
+<li>If you have Selenium 1.x legacy code, you can still use the well known <tt>DefaultSelenium</tt> class or the new <tt>WebDriverBackedSelenium</tt>, which extends <tt>DefaultSelenium</tt> but uses one of the <tt>WebDriver</tt> implementations internally.</li>
+</ol>
+<p>Whichever option you prefer, if you have want to use Maven, all you need to do is add the following dependency to your <tt>pom.xml</tt>:</p>
+<pre>    &lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium&lt;/artifactId&gt;
+        &lt;version&gt;2.0a5&lt;/version&gt;
+    &lt;/dependency&gt;</pre>
+<p>If you know, that you will only use a certain <tt>WebDriver</tt> implementation, e.g. the <tt>FirefoxDriver</tt>, you don&#8217;t need to depend on the <tt>selenium</tt> artifact (which has dependencies to all <tt>WebDriver</tt> implementations as well as the support classes). Instead you can add the dependency to just the artifact you need, e.g.</p>
+<pre>    &lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
+        &lt;version&gt;2.0a5&lt;/version&gt;
+    &lt;/dependency&gt;</pre>
+<p>When using a <tt>WebDriver</tt> implementation, there is no need to start a Selenium server &#8211; the browser will be directly started and remote controlled.</p>
+<p>But if you are using <tt>DefaultSelenium</tt> (or the <tt>RemoteWebDriver</tt> implementation), you still need to start a Selenium server.</p>
+<p>The best way is to download the <a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.0a5.jar">standalone Selenium server jar</a> and just use it.</p>
+<p>Furthermore you can also embed the Selenium server into your own project, if you add the following dependency to your <tt>pom.xml</tt>:</p>
+<pre>    &lt;dependency&gt;
+        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
+        &lt;version&gt;2.0a5&lt;/version&gt;
+    &lt;/dependency&gt;</pre>
+<p>Now you can create a <tt>SeleniumServer</tt> instance yourself and start it.</p>
+<p>Be aware, that the <tt>selenium-server</tt> artifact has a dependency to the <tt>servlet-api-2.5</tt> artifact, which you need to exclude, if your project will be run in a web application container.</p>
+<p>Well, I hope that covers everything you need to know on how to use Selenium 2 with Maven.</p>
+<p>Michael</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - The%20Future%20of%20Selenium%20Grid&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - How%20to%20use%20Selenium%202%20with%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, April 19, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2010/selenium-2-0a3-released/"><h2>Selenium 2.0a3 Released</h2></a>
-                <p><p>Selenium 2.0a3 has been released and can be downloaded from the <a href="http://code.google.com/p/selenium/downloads/list">Selenium project site</a>. This is a major update to 2.0 and all users are encouraged to update. The new features include:</p>
+                Monday, July 26, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-21/"><h2>A Smattering of Selenium #21</h2></a>
+                <p><p>I thought it had been a slow week &#8212; until I looked at how many browser windows I had open. I wonder if that was why things were feeling a bit sluggish&#8230;<br />
+</p>
+<li>Some bits of history from Simon Stewart
 <ul>
-<li>An improved <a href="http://code.google.com/p/selenium/wiki/JsonWireProtocol">remote protocol</a>.</li>
-<li>Updating the version of HtmlUnit used to 2.7.</li>
-<li>Improved support for simulating user interactions with the browser via native events on Linux.</li>
-<li>Better support for Firefox 3.6.</li>
-<li>Bug fixes</li>
+<li><a href="http://www.io.com/~wazmo/blog/archives/2004_10.html#000224">First announcement of Selenium</a> (outside of Thoughtworks)</li>
+<li><a href="http://groups.google.com/group/webdriver/browse_thread/thread/f2f44ac9ccb42e66">First announcement of WebDriver</a> (again, outside of Thoughtworks)</li>
+<li><a href="http://groups.google.com/group/webdriver/browse_thread/thread/b089f9a193e4eec9">The &#8216;merger&#8217; announcement</a> (aka Selenium 2)</li>
 </ul>
-<p>The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</p>
-<p>The next release will be Selenium 2.0a4, and it is planned to include the following when it is released in late May:</p>
-<ul>
-<li>Android support</li>
-<li>A new API to support writing tests involving complex user interactions.</li>
-<li>Far more integration of the underlying architecture.</li>
+</li>
+<li>More history lessons on <a href="http://cloudcomputingshow.blogspot.com/2010/07/cloud-computing-show-35.html">Cloud Computing Show #35</a> where Jason recounts the origin of Se (and other stuff)</li>
+<li>I still maintain that Continuous Deployment <i>to production</i> is near unethical, but a lot of the tricks that companies are using to support it are pretty cool. <a href="http://about.digg.com/blog/continuous-deployment-code-review-and-pre-tested-commits-digg4">Continuous Deployment, Code Review and Pre-Tested Commits on Digg4</a> details some that Digg uses. Only cursory mention of Se, but once you have Se running inside a CI server of some sort, these thoughts become interesting-er.</li>
+<li><a href="http://a-sisyphean-task.blogspot.com/2010/05/kitchen-sink-why-not-all-tests-need.html">The Kitchen Sink &#8211; why not all tests need automating</a> has things like <i>Just because we can automate a test doesn&#8217;t mean that we always should</i>. As a consultant, I need to get this point across to clients all the time. Every. Single. Day.</li>
+<li>At the risk of being too meta, there is now <a href="http://code.google.com/p/selendion/">Selendion</a> which looks like it drives Concordian with Se</li>
+<li><a href="http://blog.thepete.net/2010/07/frank-automated-acceptance-tests-for.html">Frank</a> is billing itself as &#8216;Selenium for iOS&#8217;. Except that I believe Se2 already has support for that.</li>
+<li><a href="http://mountaintroll.blogspot.com/2010/07/moving-on-to-second-example.html">Moving on to the second example</a> is part of a series of posts about exploration of Se2 using Ruby. This particular post is the ruby-fication of the second example of the WebDriver tutorial.</li>
+<li><a href="http://blog.codecentric.de/en/2010/07/debugging-xpath-and-css-locators-with-selenium-ide/">Debugging XPath and CSS locators with Selenium IDE</a> originated with a question on the RobotFramework-Users mailing list and ended up being a screencast. We should do more of those.</li>
+<li><a href="http://yahoo.github.com/boomerang/doc/">Boomerang</a> seems like a project that someone should write a tutorial on integrating with Se</li>
+<li><a href="http://odoe.net/blog/?p=87">Review: TDD Screencasts</a> is a review of Kent Beck&#8217;s new TDD Screencast series (I really should buy this). While yes, we typically don&#8217;t do TDD using Se for speed reasons, this paragraph resonated and since I do the list, I&#8217;m including it.<br />
+<br />
+<i>A great message I got from the screencasts is that your tests should tell a story. You compose that narrative in steps, so as to not trip yourself up. Many times you are probably required to develop against a backend service or directly with a database. So that’s how the story starts. Hello Mr. Database, are you there? May I put something in you?</i></li>
+<li>If you are a PHP developer and using NetBeans, then <a href="http://netbeans.org/kb/docs/php/phpunit.html">Testing with PHPUnit and Selenium</a> might be of interest.</li>
+<li><a href="http://multitiered.wordpress.com/2010/07/25/integrating-selenium-tests-into-cruisecontrol-net-via-nunit/">Integrating Selenium Tests into CruiseControl.Net via NUnit</a> is what it claims</li>
+<li><a href="http://www.rapaul.com/2010/07/18/avoiding-brittle-element-selection-with-selenium2/">Avoiding Brittle Element Selection with Selenium2</a> tackles a constant topic using Se2 &#8212; but it can be applied to Se1 as well</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a3%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2321&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-21%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-21%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Tuesday, April 13, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/"><h2>Selenium Grid 1.0.6 Released</h2></a>
-                <p>Following up on the Selenium Grid 1.0.5 release, which added <a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features</a> to ease grid management, we&#8217;re pleased to announce the release of Selenium Grid 1.0.6.  This is a bug fix release for 1.0.5 with some minor new additions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.6-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The summary of changes are:</p>
+                Wednesday, July 21, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/"><h2>The Current Status of Selenium 1 and Selenium 2</h2></a>
+                <p>In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.</p>
+<p>And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.</p>
+<dl>
+<dt><em>There are a couple annoying bugs in Se-RC 1.03; when is the 1.0.4 release?</em></dt>
+<dd>Se-RC 1.0.4 is planned for sometime towards the end of July 2010</dd>
+<dt><em>I&#8217;ve heard rumours that 1.0.4 the to be the final release?</em></dt>
+<dd>Yes. 1.0.4 is <em>planned</em> on being the final 1.x release</dd>
+<dt><em>That&#8217;s crazy talk! I can&#8217;t use a .0 or &#8216;alpha&#8217; release for my mission critical application</em></dt>
+<dd>Actually, its not all <em>that</em> crazy &#8212; and needs a bit more explanation. Se2 is truly a merger of the two projects, in fact 2.0a1 was literally the Se code from the OpenQA repository and the WebDriver code its Google Code repository merged into a <a href="http://code.google.com/p/selenium">new one</a>. This meant that from the first release of the 2.x series, it has contained 100% of the 1.x code which means 100% backwards compatibility. Later releases in the 2.x series have been driven primarily by evolutions of the code that came from WebDriver, <em>not from Se 1.x</em>.</dd>
+<dt><em>OK, so 100% of Se 1.x is in 2.x; I get that. But how are you making sure that fixes to one get into the other?</em></dt>
+<dd>Here is another &#8216;secret&#8217; &#8212; don&#8217;t tell anyone, but there hasn&#8217;t been any pure 1.x development since the merging of the codebases. Every 1.x release since the merger has really been a 2.x release &#8212; but all packaged up to make it look like a 1.x release. This is why observant people have noticed a log message that looks something like <em>11:09:37.507 INFO &#8211; v2.0 [a4], with Core v2.0 [a4]</em> when they start up their 1.x server.</dd>
+<dt><em>So you&#8217;ve been releasing <em>alpha</em> code disguised as a stable release? Jerks!</em></dt>
+<dd>Woah! Relax! Recall what I said above about it being backwards compatible by default. The &#8216;alpha&#8217; tag is there because the API for the new code is still being developed and features flushed out. The 1.x code is however, still stable and still production quality.</dd>
+<dt><em>Alright, I take back calling you folks jerks, but I really don&#8217;t like the alpha tag. When will it be out of &#8216;alpha&#8217;?</em></dt>
+<dd>There is only one or two more features to implement (like handling alerts) in the WebDriver code and some cleanup before the betas start. But hope for a 2.0.0 final by the end of the year. And while we&#8217;re on the topic of &#8216;alpha&#8217; vs. &#8216;beta&#8217;, this the team&#8217;s working definitions of each.</p>
 <ul>
-<li>Fixed some concurrent modification issues that may have resulted in NullPointerExceptions</li>
-<li>Fixed issue with shutting down workers with Rakefile</li>
-<li>Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit</li>
+<li><em>Alpha</em> &#8211; APIs can, and likely will change. Possibly in dramatic ways.</li>
+<li><em>Beta</em> &#8211; With the APIs set, make sure they work with the major browsers</li>
 </ul>
-<p>In case you missed the announcement, Philippe is <a href="http://ph7spot.com/blog/selenium-grid-needs-a-new-maintainer">no longer maintaining</a> Selenium Grid.  We thank him for his years of effort and helping the project get to where it is today.  This is my first release as the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new Selenium Grid maintainer</a>.  I will be getting out a new post shortly that lays out the future for the project <em>[UPDATE: The <a href="http://seleniumhq.wordpress.com/2010/04/27/the-future-of-selenium-grid/">promised post</a> is live]</em>.  In the meanwhile, please note the new location of several key resources:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.  We look forward to hearing what you think about how we can improve the project.</p>
+</dd>
+<dt><em>&#8216;Major Browsers&#8217; eh, what exactly does that mean?</em></dt>
+<dd>Right now it means Firefox, Internet Explorer and at least one WebKit based one (Safari or Chrome)</dd>
+</dl>
+<p>In short&#8230; it is a requirement of Se2 that the server be backwards compatible with Se-RC 1.x and that has already been accomplished by building the code from a common source repository. This means that if you are using Se-RC, you can switch out the server for a 2.x one and have no impact on the execution of the scripts. <em>Plus</em> you can start to experiment with the new stuff that came over from WebDriver.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - The%20Current%20Status%20of%20Selenium%201%20and%20Selenium%202&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-current-status-of-selenium-1-and-selenium-2%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-current-status-of-selenium-1-and-selenium-2%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

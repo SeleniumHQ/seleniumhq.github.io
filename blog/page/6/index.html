@@ -212,89 +212,104 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Monday, August 16, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2010/going-atomic-why/"><h2>Going Atomic: Why?</h2></a>
-                <p>This is the first in a series of technical posts by me about the internals of Selenium WebDriver. If you&#8217;re not interested in technical nitty-gritty, then feel free to step away now.</p>
-<p>Still here? Excellent.</p>
-<p>Let&#8217;s take a step back to just before the Selenium and WebDriver projects merged. There were, very obviously, two separate codebases. Looking closer and with a slightly different perspective, there were more than this. We used the test suites for webdriver to define the behaviour for multiple, largely independent, driver codebases. The <a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/jobbie">IE driver</a> was written in C, the HtmlUnit driver in Java and the <a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/firefox">Firefox driver</a> is largely Javascript, and so on. </p>
-<p>This means that there was a lot of &#8220;congruent code&#8221;: code that performed the same function but was implemented in a different way. The natural result of this was there was the possibility for behaviour to diverge between drivers. Worse, it meant that when a bug was found, we had to check it in every browser, and it wasn&#8217;t certain that an individual could actually fix the code. After all, not everyone is comfortable writing in all the languages we use on the project, or is au fait with all the technologies. For an Open Source project like Selenium, this is a major problem: we rely on a relatively small core of key developers backed up with a far larger team of individuals submitting small changes and fixes. Anything that makes it harder for us to function effectively as a development community is a Bad Thing.</p>
-<p>So, we wanted a way off the island; a mechanism that would make it easy to share code between the various drivers and selenium core, that allowed us to fix a bug in one place only and have that fix ripple out to every driver that made use of this mechanism. More importantly, it had to be easy to use, and for someone not familiar with a raft of languages and technologies to quickly get started with.</p>
-<p>What would this mechanism look like? Well, there&#8217;s a few things that feed into this, but the most important one, was that a majority of the code we&#8217;d think of merging was querying the state of the browser (&#8220;find an element&#8221;, &#8220;get the value of this attribute&#8221;) and, as Jason Huggins would point out to me at the drop of a hat, the natural language for querying the state of a browser is Javascript. One of the nice things with Javascript is that it&#8217;s possible to get a nice, fast development cycle going in it. Just modify a test, save and then hit &#8220;refresh&#8221; in the browser. That&#8217;s kind of attractive. Better still, there are a lot of developers familiar with Javascript.</p>
-<p>So, we decided to use Javascript.</p>
-<p>Because this shared code was to be composed of the smallest useful fragments of functionality required for browser automation we decided to refer to them as &#8220;Browser Automation Atoms&#8221;, or &#8220;atoms&#8221; for short. Rather than write them from scratch, the easiest thing to do was to extract them from the existing code &#8212; this is stuff that&#8217;s been battle-tested, so we know it&#8217;s robust.</p>
-<p>There was one very obvious fly in the ointment: not every driver is written in Javascript. Although we have a <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/JavascriptExecutor.html">mechanism available</a> in every browser for executing JS, it&#8217;s wildly inefficient to dump an enormous lump of code on to the JS engine of the browser whenever you want to query the DOM. After all, most of the code would not be needed, and not all JS engines have been created equal. Some are blazingly fast. Others, not so much.</p>
-<p>It would also be nice to break the code up into manageably-sized modules, rather than being in a single, monolithic file, which implies some clever &#8220;module loading&#8221; capability. Except this code isn&#8217;t always going to be executing inside an environment where writing &#8220;script&#8221; tags to load additional scripts is possible. You can&#8217;t do that in the guts of a firefox extension, though you can load files other ways. However we tie modules together will need to cope with that.</p>
-<p>Ah! These opposing requirements: small modules containing the functions we want to use, no extraneous code, and for everything to be in a single file in order to minimize the pain of loading additional modules. That doesn&#8217;t sound like a very compatible list. How we resolved those differences is the topic of my next post&#8230;.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Going%20Atomic%3a%20Why%3f&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fgoing-atomic-why%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fgoing-atomic-why%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Tuesday, August 10, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2010/selenium-at-agile-2010/"><h2>Selenium at Agile 2010</h2></a>
-                <p>The Selenium project does not have an &#8216;official&#8217; presence here at <a href="http://agile2010.agilealliance.org">Agile</a> as it is seen as a &#8216;test after&#8217; tool rather than &#8216;test first&#8217; &#8212; even though it provides the magic of the &#8216;test first&#8217; frameworks&#8230; But there is a small, unofficial contingent of recognizable faces around that can help people out and some sessions on it.<br />
-<br />
-<b>Sessions</b><br />
-<i>Why your selenium tests are so dang brittle, and what to do about it</i> &#8211; Wednesday, August 11 &#8211; 3:30 &#8211; 5:00<br />
-<br />
-If you are writing automated through-the-GUI tests for a web application, you are in danger of creating tests that are more expensive to maintain than they are worth. With well-factored Selenium RC tests running in Junit or TestNG, you can keep your abstraction layers or &#8220;Lingos&#8221; &#8212; small bounded bits of slang for discrete parts of the object model &#8212; separate, thereby reducing the maintenance costs of your tests, and improving your sanity. Prerequisites include experience with Java or C#, and ideally some *basic* OOD familiarity (inheritance, composition, encapsulation, polymorphism).<br />
-<br />
-<i>Selenium Open Jam</i> &#8211; Tuesday, August 10 &#8211; 11 &#8211; 12<br />
-<br />
-Bring your questions or problems or complaints. We&#8217;ll try to ease / solve them.<br />
-<br />
-<b>People</b></p>
+                Monday, November 29, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-34/"><h2>A Smattering of Selenium #34</h2></a>
+                <p>We&#8217;ll start this week with the <a href="http://www.theautomatedtester.co.uk/blog/2010/selenium-book-published.htm">official announcement of &#8216;Selenium 1.0 Testing Tools: Beginner’s Guide&#8217; being available</a>. Congrats David! (Still waiting for my copy&#8230;)<br />
+</p>
 <ul>
-<li><i>Dawn Cannan</i> &#8211; author of <a href="http://www.passionatetester.com/">Confessions of a Passionate Tester</a> and maintainer of the .NET version of <a href="http://github.com/marisaseal/selenesse">Selenesse</a> which is a bridge between Selenium and Fitnesse.</li>
-<li><i>Adam Goucher (me)</i> &#8211; maintainer of Selenium IDE and Selenium focused consultant</li>
-<li><i>Jason Huggins</i> &#8211; creator of Selenium and co-founder of <a href="http://saucelabs.com">Sauce Labs</a> (Selenium in the cloud)</li>
-<li><i>Patrick Wilson-Welsh</i> &#8211; Agile coach and Selenium power user</li>
+<li>There is now a <a href="http://refcardz.dzone.com/refcardz/getting-started-selenium-20?utm_source=feedburner">DZone &#8216;refcard&#8217; for Selenium 2</a>. Of course, the reason Se2 is alpha is the API isn&#8217;t done with at least one major addition still left so it will be out of date in a month, but still&#8230;</li>
+<li>Here is <a href="http://viewvc.svn.mozilla.org/vc/projects/socorro_qa/">another example of how to do Page Objects in Python</a></li>
+<li><a href="http://www.theautomatedtester.co.uk/blog/2010/client-side-profiling-with-selenium-2.html">Client-Side Profiling with Selenium 2</a> is David&#8217;s post about his recent London Selenium User Group talk</a>
+<li>Someone took the time to make a <a href="http://www.squidoo.com/selenium-web-testing">Selenium lens</a> on Squidoo; which is going to get kinda circular once this post shows up on it.</li>
+<li><a href="http://opineandwhine.blogspot.com/2008/12/why-automated-testing-is-broken.html">Why Automated Testing is Broken</a>. Not much of a commentary here other than A-freaking-men. Ok, that was commentary.</li>
+<li><a href="http://seleniumtoolkit.codeplex.com/">Selenium Toolkit for .NET</a> got a version bump for the first time in a year.</li>
+<li><a href="http://blog.blackpepper.co.uk/driving-a-flex-application-via-selenium-2-webdriver/">Driving a Flex Application via Selenium 2 WebDriver</a> shows how to use FlexSelenium and Web Driver together</li>
+<li>RVM is one of the &#8216;cool kid&#8217; tricks and <a href="http://rvm.beginrescueend.com/integration/hudson/">Continuous Integration with Hudson</a> is one of those things you need to know how to do if you are using it.</li>
+<li><a href="http://vagrantup.com/">Vagrant</a> appears to take RVM one (or more) steps further</li>
+<li>I keep thinking someone needs to create a Selenium koans site. Inspired by <a href="https://github.com/mrdavidlaing/javascript-koans">javascript koans</a> and <a href="https://github.com/mrdavidlaing/javascript-koans">ruby koans</a></li>
+<li><a href="http://www.launchlist.net/">Launchlist</a> appeals to me somehow. Throw in an API for launching scripts and you have a nice TCM system</li>
+<li>I spent some time figuring out how to integrate Robot Framework with Sauce Labs OnDemand and then <a href="http://saucelabs.com/blog/index.php/2010/11/integrating-robot-framework-with-sauce-ondemand/">wrote about it</a></li>
+<li><a href="http://code.google.com/p/webdriver-blackberry/wiki/WebDriverOverview">Web Driver for the BlackBerry</a> &#8211; did not know that even existed.</li>
+<li><a href="http://pypi.python.org/pypi/gocept.selenium/0.3">gocept.selenium</a> is another Zope 2/Plone/ZTK integration</li>
+<li><a href="http://www.wakaleo.com/resources/presentations/306-bdd-atdd-and-page-objects">BDD, ATDD and Page Objects</a> was a talk done at SkillsMatter which was recorded</li>
 </ul>
 <p>
-If you are not succeeding with Selenium, come track down one of us. We might redirect you somewhere else, but eventually we&#8217;ll get you sorted out.</p>
+Oh. and I just noticed that this is the Selenium-iversay edition of these things.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20at%20Agile%202010&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-at-agile-2010%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-at-agile-2010%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2334&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-34%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-34%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, August 9, 2010 by <a href="https://twitter.com/RaynatouD">raynatou</a>
-                <a href="https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/"><h2>Selenium 2.0 backend for running IDE test suite via the Se2 Firefox</h2></a>
-                <p>The  GSoC 2010, it’s a great adventure.<br />
-<br />
-I’m  Raynatou, I come from Burkina and do my internship at  <a href="http://www.serli.com/">SERLI</a>. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with  web pages. Selenium Core has several major limitations, including the  inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in  place of Selenium Core.<br />
-<br />
-I’m  mentored by  Eric Allen from <a href="http://saucelabs.com/">SauceLabs</a>, my lead mentor, and by Jérémy Hérault from SERLI, his second but not least ;).<br />
-<br />
-Eric has already done most of this integration earlier this year. The  goal of his work is mostly to show what&#8217;s possible with  Selenium IDE  and the Selenium 2.0 Firefox driver. It is based on an  asynchronous  communication between the Firefox WebDriver extension and  Selenium IDE,  Se-IDE waiting for that WebDriver says to him that the  current command  has been passed with success (or not) to call the next  command of the  current test case (use of callback function). The goal of my mission is  to finalize this integration.  However, Eric being a crazy man, and he  has done it quickly and together  we though to another way to do this  merge.<br />
-<br />
-Our new  thinking is based on a synchronous communication  between both of them.  To do it, I get the FirefoxDriver instance and  play with it like a  normal object, by calling its methods. But the behaviour of  FirefoxDriver isn’t as simple as I was  thinking. JavaScript being a  powerfull language (yes, it can make you  shiver), I&#8217;ve had just to  replace some objects (like Response object)  and to use a Proxy (and a  bit of IoC-like code) to simplify my life and  the code to do. You can  see my work on <a href="http://github.com/epall/selenium/commits/webdriver-synchronous">GitHub</a> and follow it.<br />
-<br />
-Currently, I think that more than 95% of the Selenium API  commands are usable  with WebDriver as backend in Selenium IDE.  The process was basically to go  through the seleniumemulation package and port all of  the Java classes into JavaScript methods on the WebDriver class.<br />
-<br />
-Now, I’m working on Unit tests to cover any of the 2.0 work  I&#8217;ve done. I managed to get all of the Selenium Core tests to run  through IDE. I’ve  some refactorings to do to optimize the code and add more comments for a bigger comprehension of my work. I have almost finished.<br />
-<br />
-I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this work  can be included in the wave of  Selenium 2.</p>
+                Monday, November 22, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-33/"><h2>A Smattering of Selenium #33</h2></a>
+                <p><p>&#8230;and here&#8217;s the links!<br />
+</p>
+<ul>
+<li>Henrik Skupin was one of the speakers at the London Selenium Meetup and has <a href="http://www.hskupin.info/2010/11/19/mozmill-crowd-talk-at-selenium-meetup-3-in-london/">written about the night and his talk</a></li>
+<li>Speaking of which, <a href="http://www.youtube.com/user/londonselenium/">videos of the talks are now up</a></li>
+<li>Part of good automation is knowing how to code. So here are some sites that crossed my path this week for that
+<ul>
+<li><a href="http://railsforzombies.org/">Rails for Zombies</a></li>
+<li><a href="http://diveintohtml5.org/">Dive into HTML 5</a></li>
+<li><a href="http://www.html5rocks.com/">HTML5 Rocks</a></li>
+</ul>
+</li>
+<li>Cheezy continues his UI series which takes a detour over to WATIR land, but things are transferable. <a href="http://www.cheezyworld.com/2010/11/19/ui-tests-introducing-a-simple-dsl/">Introducing a Simple DSL</a> and <a href="http://www.cheezyworld.com/2010/11/21/ui-tests-default-dat/">Default Data</a></li>
+<li>Functional Automation is an important part of Continuous Delivery. Here is Jez talking about <a href="http://carlfk.blip.tv/file/4397842">Continuous Delivery</a> &#8212; beer in hand. (which to me is the most important concept of the year)</li>
+<li><a href="http://code.google.com/p/robotframework/wiki/ATDDWithRobotFrameworkArticle">Acceptance Test-Driven Development with Robot Framework</a> is an excerpt from Practices for Scaling Lean &amp; Agile Development.</li>
+<li><a href="http://code.google.com/p/bidichecker/">BidiChecker</a> is a tool for checking bidirectional (BiDi) text. So who is going to integrate this into Se?</li>
+<li><a href="http://blog.browsermob.com/2010/11/interaction-with-flash-using-flashselenium-and-javascript-part-1/">Interaction with Flash using FlashSelenium and Javascript – Part 1</a> starts to show how to use FlashSelenium to interact with Flash-y things.</li>
+<li>Looking for a Selenium job? Have a look at <a href="http://www.ultrasaurus.com/sarahblog/2010/11/how-to-get-a-rails-job/">How to get a Rails job</a>. When I have hired, or help people hire, this is very true.</li>
+<li>And finally the whole should-testers-need-to-know-how-to-code conflict bubbled up again somewhat last week. Since this is my list of links: if you are automating, yes; if you are not, then no (but it can&#8217;t hurt).
+<ul>
+<li><a href="http://a-sisyphean-task.blogspot.com/2010/11/dont-call-me-technical.html">Don&#8217;t call me Technical</a></li>
+<li><a href="http://saucelabs.com/blog/index.php/2010/11/the-future-of-testing/">The Future of Testing</a></li>
+<li><a href="http://blog.testyredhead.com/2010/11/18/the-future-of-testing-is-wide-open.aspx">The Future of Testing is Wide Open</a></li>
+</ul>
+</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.0%20backend%20for%20running%20IDE%20test%20suite%20via%20the%20Se2%20Firefox&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2333&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-33%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-33%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Monday, November 15, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-32/"><h2>A Smattering of Selenium #32</h2></a>
+                <p><p>For those people paying attention to the goings-on in the Selenium world, yes, I am skipping something major until some of the details are worked out and announced. Until then, here are the links I accrued over the week.</p>
+<ul>
+<li>Selenium uses Bamboo for its CI infrastructure. This week saw an upgrade to the latest version so if you want bleeding-edge code, <a href="http://xserve.openqa.org:8085">get it here</a></li>
+<li>The only browser Se has no real traction on right now is the BlackBerry one. But if someone wanted to tackle it, here is a post from Atomic Object on <a href="http://spin.atomicobject.com/2010/11/04/our-blackberry-development-environment">their BlackBerry development environment</a> that would help kickstart things maybe.</li>
+<li>Under the category of &#8216;let the language deal with things&#8217; is <a href="http://code.google.com/p/html5lib/">html5lib for python and php</a> which will parse html. Sometimes it is far faster to dump your attribute checks etc. to a native parser than let Se do it.</li>
+<li>Scott Sims has released <a href="http://scottcsims.com/wordpress/?p=251">Selenium Fury</a> upon the Ruby world. Think of it as a Page Factory implementation for Ruby.</li>
+<li>Using Se-IDE and Easyb? Here is a thread on how to <a href="http://groups.google.com/group/easyb-users/browse_thread/thread/0079b48526514a72/3a12e1d253d4b512?show_docid=3a12e1d253d4b512">use the generated code without modification</a></li>
+<li>JRuby is one of the better languages to use to write Se scripts in, and here are <a href="http://www.engineyard.com/videos/JRubyConf%202010">videos from JRubyConf 2010</a></li>
+<li>Cheezy is writing a series on UI tests. So far there is <a href="http://www.cheezyworld.com/2010/11/09/ui-tests-not-brittle/">How do we keep them from being brittle?</a> and <a href="http://www.cheezyworld.com/2010/11/13/ui-tests-part-two/">Part Two</a></li>
+<li>Se2 for JS? Sure, why not. <a href="https://github.com/dmachi/webdriver-js">webdriver-js</a></li>
+<li>Jari release the <a href="http://rubygems.org/gems/selenium-webdriver">selenium-webdriver 0.1.0</a> gem this week. Why the big jump from 0.0.29 to 0.1.0? We&#8217;ve merged in the selenium-client gem into the main selenium codebase and now there is a single gem if you want to do 1.x or 2.x scripting.</li>
+<li><a href="http://mashable.com/2010/11/10/google-refine/">Google Refine</a> is just darn cool. I&#8217;m not really sure how it plays into automation, but I get the sneaky suspicion it could. Somehow.</li>
+<li>The <a href="http://www.yuiblog.com/blog/2010/11/09/introducing-the-new-yui-test/">YUI Test</a> has Se built right in.</li>
+</ul></p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2332&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-32%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-32%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

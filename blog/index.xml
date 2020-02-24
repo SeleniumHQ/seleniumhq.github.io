@@ -133,6 +133,146 @@ Also, if you want to receive email notifications about the conference (e.g., whe
     </item>
     
     <item>
+      <title>Selenium 2.0 beta 1 Release</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</guid>
+      <description>We recently released the first of the betas for Selenium 2. It&amp;#8217;s available for Java, C# and Ruby. If you&amp;#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&amp;#8217;ll see is with the new WebDriver APIs, but there&amp;#8217;s a lot more!
+ A promise of relatively stable APIs For Firefox only right now, an API for dealing with alerts, prompts and confirms. A brand new IE driver.</description>
+    </item>
+    
+    <item>
+      <title>Atoms have come to Selenium IDE</title>
+      <link>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</link>
+      <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</guid>
+      <description>As mentioned in Simon&amp;#8217;s Going Atomic: Why? and Going Atomic: How, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &amp;#8216;atoms&amp;#8217; is now included.
+Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &amp;#8216;why&amp;#8217; and suggests how to fix them as well.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #35</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-35/</link>
+      <pubDate>Mon, 06 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-35/</guid>
+      <description>(If I wasn&amp;#8217;t still recovering from a cold there would be something witty here.)
+ We&amp;#8217;ll start this week with a cartoon So I know I have linked to playing pacman with se 2, but here is a site that explains the ghost behavior. If Google implemented the algorithms properly-ish, then this should be the ticket to crazy high scores. There should be a contest for this&amp;#8230; Cucumber + Cuke4Duke + Selenium (WebDriver) = Enlightenment is step-by-step instructions for using maven to wire all these things together.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Conference Survey</title>
+      <link>https://selenium.dev/blog/2010/selenium-conference-survey/</link>
+      <pubDate>Tue, 30 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-conference-survey/</guid>
+      <description>Great news! Thanks to the initiative of our friends at Sauce Labs, we&amp;#8217;re finally ready to host the first-ever Selenium Conference. We&amp;#8217;re still working out a lot of the details, but so far we&amp;#8217;ve decided this first conference will be sometime in April and hosted in San Francisco.
+In order to figure out the rest of the details, we&amp;#8217;re looking for feedback from the Selenium user community. Please take a moment to fill out the following survey.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #34</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-34/</link>
+      <pubDate>Mon, 29 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-34/</guid>
+      <description>We&amp;#8217;ll start this week with the official announcement of &amp;#8216;Selenium 1.0 Testing Tools: Beginner’s Guide&amp;#8217; being available. Congrats David! (Still waiting for my copy&amp;#8230;)
+ There is now a DZone &amp;#8216;refcard&amp;#8217; for Selenium 2. Of course, the reason Se2 is alpha is the API isn&amp;#8217;t done with at least one major addition still left so it will be out of date in a month, but still&amp;#8230; Here is another example of how to do Page Objects in Python Client-Side Profiling with Selenium 2 is David&amp;#8217;s post about his recent London Selenium User Group talk Someone took the time to make a Selenium lens on Squidoo; which is going to get kinda circular once this post shows up on it.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #33</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-33/</link>
+      <pubDate>Mon, 22 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-33/</guid>
+      <description>&amp;#8230;and here&amp;#8217;s the links!
+ Henrik Skupin was one of the speakers at the London Selenium Meetup and has written about the night and his talk Speaking of which, videos of the talks are now up Part of good automation is knowing how to code. So here are some sites that crossed my path this week for that  Rails for Zombies Dive into HTML 5 HTML5 Rocks   Cheezy continues his UI series which takes a detour over to WATIR land, but things are transferable.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #32</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-32/</link>
+      <pubDate>Mon, 15 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-32/</guid>
+      <description>For those people paying attention to the goings-on in the Selenium world, yes, I am skipping something major until some of the details are worked out and announced. Until then, here are the links I accrued over the week.
+ Selenium uses Bamboo for its CI infrastructure. This week saw an upgrade to the latest version so if you want bleeding-edge code, get it here The only browser Se has no real traction on right now is the BlackBerry one.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #31</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-31/</link>
+      <pubDate>Mon, 08 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-31/</guid>
+      <description>The big news for last week was that I released Se-IDE 1.0.8 to very little fanfare. 1.0.9 should be a week or two and much more important a release.
+ Cheesecake! is isn&amp;#8217;t nearly as impractical as Pacman, but still adds to the Se2 example bucket. The London Se Meetup stuff from last week are starting to appear&amp;#8230;  Client-side profiling with Se2 a summary How Mozilla uses Se Crowd-sourced Automated Firefox UI Testing   Some notes from CITCON last week as well.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #30</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-30/</link>
+      <pubDate>Mon, 01 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-30/</guid>
+      <description>I&amp;#8217;ve missed a couple weeks due to travel and a complete system lock which meant I lost all the links I had open but not saved. So these are the ones I have recovered.
+ I have written a series of posts on how to do parallel execution of tests in JUnit 4 up on the Sauce Labs blog. Part One, Part 2 and Part Three Quick start with FitNesse and Selenium is a beginners guide to wiring Selenium and FitNesse together.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a6 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a6-released/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a6-released/</guid>
+      <description>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the downloads page to get it while it&amp;#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and ruby libraries have been having smaller, more frequent releases all this time.
+You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #29</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-29/</link>
+      <pubDate>Mon, 04 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-29/</guid>
+      <description>A fair number of links this week. The vast majority of which were buried in annoying airport internet advertising frames&amp;#8230;
+ This looks like it is Spanish which would normally mean it doesn&amp;#8217;t get included but it Integração Selenium e Testlink explains how to integrate Se with TestLink. We, as a community, need to document this sort of thing more. JUnit 4 Vs TestNG is a somewhat biased comparison between JUnit 4 and TestNG; but useful none the less.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #28</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-28/</link>
+      <pubDate>Mon, 27 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-28/</guid>
+      <description>So we go from not-enough-stuff-to-do-one to wow-this-will-take-awhile. And we&amp;#8217;re off..
+ Tellurium is one of the many frameworks that absorb Se and has an article on InfoQ called Introducing the Tellurium Automated Testing Framework which, well, introduces the framework. In the first of many Cucumber related posts this week is Sean Grove&amp;#8217;s Cucumber Sauce for doing parallel Cucumber runs on the Sauce infrastructure. Might be general enough to use outside of it as well.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #27</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-27/</link>
+      <pubDate>Mon, 20 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-27/</guid>
+      <description>Seems I skipped a week, but that&amp;#8217;s okay since there hasn&amp;#8217;t been much in terms of volume (or maybe my clever search filter is a bit overly clever&amp;#8230;).
+ The big news I think is that there is now a Se driver for Node.js called Soda. I&amp;#8217;m not sure I like the syntax, but I also don&amp;#8217;t claim to know Node so it could be idiomatically correct which is more important than my blessing.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #26</title>
+      <link>https://selenium.dev/blog/2010/a-smattering-of-selenium-26/</link>
+      <pubDate>Mon, 06 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/a-smattering-of-selenium-26/</guid>
+      <description>It&amp;#8217;s Labour Day here, so this post was written to backdrop of Sponge Bob. In case you were wondering.
+ selenium-java-evidence appears to be another logging framework, this time with an emphasis on auditability. Personally, the reports from a CI server should be all that are required, but to each their own&amp;#8230; taza is an opinionated browser-based test framework webdry is a Python (jquery-inspired) wrapper for DRY:er access to the Selenium WebDriver Self-testing AppEngine apps with Saucelabs seems like a cool little (if very low level) trick to using Se inside AppEngine Sauce Labs released their Getting Started With Selenium guide and is looking for feedback on it Need to interact with a web service during a BrowserMob run?</description>
+    </item>
+    
+    <item>
       <title>Going Atomic: How</title>
       <link>https://selenium.dev/blog/2010/going-atomic-how/</link>
       <pubDate>Sun, 05 Sep 2010 00:00:00 +0000</pubDate>
