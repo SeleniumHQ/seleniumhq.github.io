@@ -212,93 +212,87 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Monday, January 23, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-75/"><h2>A Smattering of Selenium #75</h2></a>
-                <p><p>And home. Which mean 100% more internets! Or at least 98% more.</p>
-<ul>
-<li>As things like native-driver become more prevalent, knowing how to do <a href="http://blog.codecentric.de/en/2012/01/continuous-integration-for-ios-projects-with-jenkins-ci/">Continuous Integration for iOS projects with Jenkins CI</a> will become more important</li>
-<li><a href="http://chocolatey.org/">Chocolatey</a> seems like a nice and big step towards managing Windows build slaves</li>
-<li>SST (Selenium Simple Test) comes out of Ubuntu and has a quick introductory screencast.<br />
-    <span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/qGPostUOAEI?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
-<li><a href="http://www.cloudspokes.com/challenges/1353">Automate Salesforce Config Changes with Selenium</a> is a contest. But only for Java so I have no interest in it. Submissions are due in two days. Could be fun.</li>
-<li><a href="http://cssify.appspot.com/">cssify</a> is a great little app for converting xpath to css. Now to see what sorts of devious xpath we can put in and blow Santi&#8217;s mind with bug reports. 🙂</li>
-<li><a href="http://blogs.atlassian.com/2012/01/continuous-delivery-with-bamboo-stages/">Continuous Delivery with Bamboo Stages</a> &#8211; I normally call these &#8216;chains&#8217; but nicely shows how to chunk the march to production. It also cracks me up that the corporate twitter feed has <a href="http://twitter.com/#!/brittpwalker/status/160520765832314881/photo/1">the upgraded beer cart</a> photo in the sidebar right now.</li>
-<li>One talk I skipped at Codemash the other week was on Apple&#8217;s <a href="http://developer.apple.com/library/ios/#documentation/DeveloperTools/Reference/UIAutomationRef/_index.html#//apple_ref/doc/uid/TP40009771">UI Automation</a> stuff. I suspect this is the low-level implementation of things like native-driver which is valuable to have at ones fingertips.</li>
-<li>While not automation related directly, if you are automating Android stuff you should also be looking at the <a href="http://developer.android.com/design/index.html">Android Design</a> site to understand the idioms and such that the platform thinks you should be using</li>
-<li><a href="http://37signals.com/svn/posts/2742-the-road-to-faster-tests">The road to faster tests</a> is a fantastic write-up of an investigation into why their scripts were so slow. I&#8217;ve been doing this a lot recently. Well, investigating slowness at least.</li>
-<li>I actually got the above link from <a href="http://engineering.socialcast.com/2012/01/how-we-reduced-our-test-runtimes/">How We Reduced Our Rails Test Runtimes By 10x</a> which is an even larger investigation write-up.</li>
+                Monday, August 27, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-114/"><h2>A Smattering of Selenium #114</h2></a>
+                <p><p>Hurray for having fillings done on both sides of my face. Don&#8217;t expect me to speak without drolling for rest of the day.</p>
+<li>I&#8217;ll admit to not knowing what the difference is/was between FluentWait and WebDriverWait, but <a href="http://seleniumsimplified.com/?p=340">FluentWait with WebElement</a> explains it well. With sample code!</li>
+<li><a href="http://www.digbymarksit.com/2012/08/18/phpunit-selenium-php-webdriver-hours-of-entertainment-part-1/">PHPUnit + Selenium + php-webdriver = hours of entertainment (Part 1)</a> shows a nice extension to PHPUnit_Framework_TestCase. Now if only he was using my <a href="https://github.com/Element-34/php-webdriver">active fork</a> of the php-webdriver bindings rather than the original project Facebook seems to have abandoned.</li>
+<li>Speaking of Facebook, <a href="https://www.facebook.com/notes/facebook-engineering/under-the-hood-rebuilding-facebook-for-ios/10151036091753920">Under the hood: Rebuilding Facebook for iOS</a> is going to be oft cited in the whole &#8216;html5 or native&#8217; discussions for the next while I think</li>
+<li>Santi spoke at the recent San Jose Selenium Meetup; <a href="https://my.adobeconnect.com/p3xgh7qcvdn?launcher=false&amp;fcsContent=true&amp;pbMode=normal">video</a>, <a href="https://docs.google.com/presentation/d/1bayh58Xhz8eBjxZvYZoxfvYcWnC9fiAP-h7LklLxGjo/edit?pli=1#slide=id.p">slides</a></li>
+<li><!-- SlideShare error: id is missing or has illegal characters -->
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/mikebrittain/on-failure-and-resilience" title="On Failure and Resilience" target="_blank">On Failure and Resilience</a> </strong> from <strong><a href="http://www.slideshare.net/mikebrittain" target="_blank">Mike Brittain</a></strong> </div>
+</li>
+<li><a href="http://shauninman.com/tmp/retina/">Automatic Conditional Retina Images</a> seems like something we should know how to check if its being loaded properly or not. Guess I need to go buy an iPad to check this out&#8230;</li>
+<li>Puppet Labs updated some of their documentation recently; <a href="http://docs.puppetlabs.com/puppet/2.7/reference/">Puppet 2.7 Reference Manual</a>, <a href="http://docs.puppetlabs.com/facter/1.6/core_facts.html">Factor 1.6 Core Facts</a></li>
+<li>Reddit opensourced <a href="https://github.com/reddit/push">push</a> which is yet another deployment tool. Remember though, you are likely not Reddit.</li>
+<li>Hey lookit! The WhiteHouse <a href="https://github.com/WhiteHouse/petition/tree/7.x-1.x/selenium">uses Selenium</a>. Though the scripts are Selenese. And named .php for some unknown reason. Actually, they look a lot like they were created as part of some sort of scaffolding. Anyone?</li>
+<li>Not sure what to do with it, but <a href="http://blog.streamingmedia.com/the_business_of_online_vi/2012/08/updated-list-of-vendors-in-the-content-delivery-and-transparent-caching-markets.html">Updated List Of Vendors In The Content Delivery and Transparent Caching Markets</a> looks rather useful. Or not.</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2375&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-75%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-75%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23114&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-114%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-114%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Wednesday, January 18, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-74/"><h2>A Smattering of Selenium #74</h2></a>
-                <p><p>It is kinda hard to do these without reliable internet&#8230; dear hotels, fix. your. internet.</p>
+                Wednesday, August 22, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-113/"><h2>A Smattering of Selenium #113</h2></a>
+                <p><p>/me is not looking forward to when the jet lag whallops him</p>
 <ul>
-<li><a href="http://blog.pamelafox.org/2012/01/testing-facebook-login-with-selenium.html">Testing Facebook Login with Selenium</a> has some nice Python helpers to dealing with Facebook auth</li>
-<li><a href="http://htejera.users.sourceforge.net/vbswebdriver/index.html">VBS WebDriver</a> &#8211; ummm, wtf?!</li>
-<li><a href="http://oss.theautomatedtester.co.uk/browsermob-proxy-py/">Python Browsermob Proxy Library</a> &#8211; the best code is code you don&#8217;t have to write yourself. (Thanks David!)</li>
-<li>I saw <a href="http://mike.pirnat.com/2012/01/13/a-few-of-my-favorite-python-things/">A Few of My Favorite (Python) Things</a> at CodeMash last week and learned a few things</li>
-<li><a href="http://www.rajivnarula.com/blog/2012/01/12/def-test-new-bddmadeeasyseleniumeasybgroovy/">def test = new BDDMadeEasy(Selenium,EasyB,Groovy)</a> is a writeup from a recent presenter at the Greater Boston Selenium User Group</li>
-<li><a href="http://blog.testingbot.com/2012/01/11/receive-sms-alerts-when-a-selenium-test-fails">Receive SMS alerts when a Selenium test fails</a> seems like both a good idea and a bad one at the same time</li>
-<li><a href="http://watirmelon.com/2012/01/16/have-you-always-wanted-to-automate-minesweeper/">Have you always wanted to automate minesweeper?</a> is such a good contest. We need more of these.</li>
-<li><a href="http://www.html5rocks.com/en/tutorials/doodles/lem">Case Study: Building the Stanisław Lem Google doodle</a> is interesting. And likely useful for others doing JS heavy stuff</li>
-<li><a href="http://java.dzone.com/articles/neater-way-use-reflection-java">A neater way to use reflection in Java</a> seems trick to me. Or might be utter hackery to someone who actually knows Java</li>
-<li><a href="http://www.theautomatedtester.co.uk/blog/2012/the-beginning-of-a-standard-for-browser-automation.html">The beginning of a standard for browser automation</a> makes me have <a href="http://www.youtube.com/watch?v=F0FBi5Rv1ho">this song</a> in my head</li>
-</li></p>
+<li><a href="https://sites.google.com/a/van-steenbeek.net/archive/php_pcntl_fork?q=php_pcntl_fork">Thorough look at PHP&#8217;s pcntl_fork()</a> is how we have to do parallel tests with phpunit until it grows it proper</li>
+<li><a href="http://filipin.eu/catch-javascript-errors-on-the-page-with-watir-or-selenium/">Catch Javascript Errors on the Page with Watir or Selenium</a> &#8211; This!</li>
+<li><a href="http://seleniumsimplified.com/?p=339">Categorising WebDriver–Navigation, Interrogation, Manipulation</a> walks through the WebDriver API bit by bit. Of course, now the trick is to keep it up to date. 🙂</li>
+<li><a href="https://github.com/montagejs/screening">Screening</a> uses Se deep in its guts to script up Montage apps</li>
+<li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=765645">Millions of web pages use the -moz-opacity:0.7 tag and in javascript. It&#8217;s broken now since FF 13.01. Please can you &#8220;alias&#8221; it back into your main browser code. Thanks.</a> makes Issue 141 look reasonable. Also raises the question whether we should catch prefixed CSS styles in our static analysis checks</li>
+<li>Cheezy is a gem making machines; <a href="https://github.com/cheezy/ADB">Android Debug Bridge</a>, <a href="https://github.com/cheezy/data_magic">DataMagic</a></li>
+<li>Remember last week&#8217;s Olympics doodle automation? Here is how to do <a href="http://www.html5rocks.com/en/tutorials/doodles/gamepad/">Jumping the Hurdles With the Gamepad Api</a>. Paging Mr. Huggins. Your next robot&#8217;s purpose has been discovered</li>
+<li>Using IE? Read <a href="http://jimevansmusic.blogspot.ca/2012/08/youre-doing-it-wrong-protected-mode-and.html">You&#8217;re Doing It Wrong: IE Protected Mode and WebDriver</a>. Not using IE? This is not the post you are looking for.</li>
+<li><a href="http://gridinit.com">Gridinit</a> was relaunched recently. Tim has <a href="http://90kts.com">blogged a whole bunch of documentation</a> about it this week</a>
+<li><a href="http://angryweasel.com/blog/?p=496">Orchestrating Test Automation</a> is essentially why I look for testers who can code rather than coders who [think they] can test</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2374&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-74%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-74%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23113&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-113%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-113%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Thursday, January 5, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-73/"><h2>A Smattering of Selenium #73</h2></a>
-                <ul>
-<li>Two Ruby gems
+                Tuesday, August 21, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-112/"><h2>A Smattering of Selenium #112</h2></a>
+                <p><p>Eyes are gross.</p>
 <ul>
-<li><a href="http://rubygems.org/gems/rwebspec-webdriver">rwebspec-webdriver</a> &#8211; Executable functional specification for web applications in RSpec syntax and Selenium-WebDriver</li>
-<li><a href="http://rubygems.org/gems/loadable_component">loadable_component</a> &#8211; Ruby implementation of <a href="http://code.google.com/p/selenium/wiki/LoadableComponent">LoadableComponent</a></li>
-</ul>
+<li><a href="http://www.thucydides.info">Thucydides</a> has a spiffy new website</li>
+<li><a href="http://marakana.com/s/how_eventbrite_uses_jenkins_and_selenium,1246/index.html">How Eventbrite uses Jenkins and Selenium</a> which I think I&#8217;ve linked to before, but can&#8217;t seem to find reference to.</li>
+<li><a href="http://whatsmyudid.com">What&#8217;s my UDID?</a> is now the new bar for online tutorials</li>
+<li><iframe src='https://www.slideshare.net/slideshow/embed_code/13990429' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/jezhumble/creating-maintainable-automated-acceptance-tests" title="Creating Maintainable Automated Acceptance Tests" target="_blank">Creating Maintainable Automated Acceptance Tests</a> </strong> from <strong><a href="http://www.slideshare.net/jezhumble" target="_blank">Jez Humble</a></strong> </div>
 </li>
-<li>
-<ul>A three-parter on building a framework showing there is more than one way to skin the framework cat.</p>
-<li><a href="http://saucelabs.com/blog/index.php/2011/11/selenium-testing-framework-pt-1-testing-concepts/">Testing Concepts</a></li>
-<li><a href="http://saucelabs.com/blog/index.php/2011/11/selenium-testing-framework-pt-2-base-classes/">Base Classes</a></li>
-<li><a href="http://saucelabs.com/blog/index.php/2011/12/selenium-testing-framework-part-3-putting-it-all-together/">Putting it all together</a></li>
-</ul>
+<li><iframe src='https://www.slideshare.net/slideshow/embed_code/13991698' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/tourdedave/agile-2012-public-13991698" title="Selenium Users Anonymous" target="_blank">Selenium Users Anonymous</a> </strong> from <strong><a href="http://www.slideshare.net/tourdedave" target="_blank">Dave Haeffner</a></strong> </div>
 </li>
-<li>Another three-parter on <i>Is the Cost of Continuous Integration Worth the Value on Your Program?</i> &#8211; <a href="http://www.jrothman.com/blog/mpd/2011/12/is-the-cost-of-continuous-integration-worth-the-value-on-your-program-part-1.html">part 1</a>, <a href="http://www.jrothman.com/blog/mpd/2011/12/is-the-cost-of-continuous-integration-worth-the-value-on-your-program-part-2.html">part 2</a>, <a href="http://www.jrothman.com/blog/mpd/2011/12/is-the-cost-of-continuous-integration-worth-the-value-on-your-program-part-3.html">part 3</a></li>
-<li><a href="http://frazzleddad.blogspot.com/2011/12/31-days-of-testing-kickoff.html">31 Days of Testing</a> &#8211; in 23 parts (though I expect the series will finish after <a href="http://www.codemash.org">CodeMash</a>)</li>
-<li><a href="http://www.jwz.org/blog/2011/12/the-secret-history-of-aboutjwz-aboutmozilla-and-the-netscape-throbbers/">The secret history of &#8220;about:jwz&#8221;, &#8220;about:mozilla&#8221; and the Netscape Throbbers</a> is just a fun browser history read</li>
-<li><a href="http://unethicalblogger.com/2011/12/28/jenkins-with-puppet.html">Pulling Jenkins&#8217; strings with Puppet</a> looks like a way of managing Jenkins instances through puppet &#8212; which is darn cool.</li>
-<li><a href="http://mulabs.io/givenwhenthen">Given When Then</a> is a BDD tool for Node.js which does its post-conversion-magic runs using WebDriver (please stop calling it Selenium 2!) and Sauce Labs</a></li>
-<li><a href="https://gist.github.com/1411564">Selenium Utility Funcs</a> is a list of python helpers (with slightly friendlier names) for WebDriver</li>
-<li><a href="https://github.com/jordansissel/fpm/wiki/ConvertingGems">Converting Gems</a> shows a neat trick for converting ruby gems into .deb files so they can be installed and managed via apt</li>
-<li>Since we all care about the web, <a href="http://movethewebforward.org/">Move the Web Forward</a> &#8211; <i>You love web standards. You want to give back to the community. Curious about where to start?</i></li>
-</ul>
+<li><a href="http://www.stickyminds.com/sitewide.asp?ObjectId=17579&amp;Function=DETAILBROWSE&amp;ObjectType=ART&amp;sqry=*Z(SM)*J(ARTCOL)*R(createdate)*K(articlesandpapers)*F(~)*&amp;sidx=3&amp;sopp=10&amp;sitewide.asp?sid=1&amp;sqry=*Z(SM)*J(ARTCOL)*R(createdate)*K(articlesandpapers)*F(~)*&amp;sidx=3&amp;sopp=10">Capture/Playback: The Vampire that Will Not Die</a> has perhaps the most unfriendly url in the history of the internets, but is a nice little rant anyways.</li>
+<li>Thinking about lint-ing your JS whilst you automate? <a href="http://stackoverflow.com/questions/534601/are-there-any-javascript-static-analysis-tools/12005175#12005175">This SO answer</a> runs down your options.</li>
+<li>The &#8216;Custom Locators&#8217; series (<a href="http://selenium34.wordpress.com/2012/08/08/custom-locators-part-1/">part 1</a>, <a href="http://selenium34.wordpress.com/2012/08/14/custom-locators-part-2/">part 2</a>) talks about developing a custom Page Factory</li>
+<li>Remember kids, the technical term for this is &#8216;3rd party crap&#8217; and you should turn it off in your automation environments for just this reason. <a href="http://www.forbes.com/sites/ericsavitz/2012/06/01/facebook-outage-slowed-1000s-of-retail-content-sites">Facebook Outage Slowed 1000s Of Retail, Content Sites</a></li>
+<li><a href="http://www.verelo.com">Verelo</a> is the latest SeAAS vendor. Their niche seems to be in real-time monitoring.</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2373&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-73%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-73%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23112&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-112%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-112%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

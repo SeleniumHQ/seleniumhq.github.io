@@ -212,76 +212,84 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Tuesday, June 12, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-85/"><h2>A Smattering of Selenium #85</h2></a>
-                <p><p>Two days in a row! Take that doubters!</p>
+                Thursday, November 29, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-131/"><h2>A Smattering of Selenium #131</h2></a>
+                <p><p>Not sure how widely broadcast this has been (cus, you know, we&#8217;re good at communicating and stuff), but if you are using 2.26.0 and Firefox 17 you will get a <a href="http://code.google.com/p/selenium/issues/detail?id=4814">nasty bug</a>. 2.27.0 is in the works to address this (and a couple other things&#8230;) so if you <i>need</i> FF right now, keep your install at the <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/16.0/">latest 16 release</a>.</p>
 <ul>
-<li><a href="http://www.informit.com/articles/article.aspx?p=1874863">Automated Software Testing: An Example of a Working Solution</a> is an interesting take on designing an automation system for the US DoD. It sure as heck isn&#8217;t how I would do it, but I can understand how this context might lead to this solution. And it seems like it is Eclipse based which is even worse a decision. 🙂</li>
-<li><a href="http://www.devto.ca/2012/05/5-tips-on-finding-a-mobile-job-in-toronto/">5 Tips on Finding a Mobile Job in Toronto</a> is pretty focused, but also applies to non-mobile jobs outside of Toronto.</li>
-<li><a href="http://speakerdeck.com/u/jaffathecake/p/application-cache-douchebag">Application Cache: Douchebag</a> is another one of those things you need to grok if you are going to automate HTML5 goodies</li>
-<li>Before you run your automation against an Android app, you might want to run <a href="http://tools.android.com/tips/lint">Android Lint</a> against it.</li>
-<li><a href="https://github.com/sebv/node-wd-sync">wd-sync</a> is a synchronous version of the <a href="https://github.com/admc/wd">wd</a> javascript bindings.</li>
-<li><a href="https://github.com/alp82/abmash">Abmash</a> aims to deal with the element location problem only using the visible cues a user could see. In my experience, this leads to scripts that work fine &#8212; until you need to deal with multiple languages at which point it falls on its face. Hard. But&#8230;</li>
-<li><a href="http://python3porting.com/improving.html">Improving your code with modern idioms</a> is Python focused and is something I need to keep open whenever I write new code&#8230;</li>
-<li>More on Jasmine &#8211; <a href="https://speakerdeck.com/u/searls/p/confidencejs">Confidence.js</a></li>
-<li><a href="http://www.clockwise.ee/gasmask/">Gas Mask</a> seems like it would be pretty cool. There are of course some bugs, and the project seems rather dormant. Oh. And writing Objective C is a pain&#8230; but I really want something like this!</li>
-<li><a href="http://blog.carlossanchez.eu/2012/05/03/automatically-download-and-install-virtualbox-guest-additions-in-vagrant/">Automatically download and install VirtualBox guest additions in Vagrant</a>. Yup. That&#8217;s what it does.</li>
+<li>This is pretty decent. Except the usual &#8220;Feh! We don&#8217;t need humans to test! Automate everything!&#8221; bias you see around. Psst kids! Even the poster children for Continuous Deployment actually do Continuous Delivery (humans! shocking!). Oh, and the usual gloss over &#8216;cluster immune system&#8217; which is the only part of this tend that has an elegant solution.<br />
+<iframe src='https://www.slideshare.net/slideshow/embed_code/5548801' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe> </p>
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/ashmaurya/continuous-deployment-5548801" title="Continuous Deployment - Lean LA" target="_blank">Continuous Deployment &#8211; Lean LA</a> </strong> from <strong><a href="http://www.slideshare.net/ashmaurya" target="_blank">ashmaurya</a></strong> </div>
+</li>
+<li><a href="http://hindsighttesting.com/blog/2012/10/30/running-tests-in-parallel/">Running Automated Tests in Parallel &#8211; Part 1</a>&#8216;s new bit to me was how to run groups of jUnit scripts from maven. Sure, I think I knew there was a way to do it but never had to think about it before. And as a bonus, <a href="http://oredev.org/2012/sessions/cutting-testing-time-with-parallel-automated-functional-tests">here is the video that goes with the post</a></li>
+<li><a href="http://phpsadness.com">PHP Sadness</a> is kinda amusing from a language trolling perspective. But also actually really useful. Now for a Ruby Sadness and a Python Sadness. Of course, a Perl sadness would just be a one of those &#8216;try to click this moving box&#8217; widgets&#8230;</li>
+<li>Following up on not automating GMail (aside through standard low-level protocols like IMAP or POP3) is a <a href="https://gist.github.com/4149804">MailBox class for processing IMAP email (Gmail from Python example</a></li>
+<li>I&#8217;ll admit that <a href="http://gridinit.wordpress.com/2012/11/27/writing-jmeter-test-plans-in-ruby/">Writing JMeter test plans in Ruby</a> has me pretty excited</li>
+<li>But if Ruby/JMeter doesn&#8217;t do it for you, then maybe Funload will &#8211; <a href="http://ziade.org/2011/07/27/how-to-stress-test-your-app-using-funkload-part-1/">How to stress test your app using Funkload &#8212; part 1</a></li>
+<li>Search is one of those things a lot of automation get burned by since things are often going in parallel and not casually waiting for someone else to look for something that was just put in the index half a second ago &#8211; <a href="http://webuild.envato.com/blog/moving-the-marketplaces-to-elasticsearch/">Moving the Marketplaces to Elasticsearch</a></li>
+<li><a href="http://www.thefriendlytester.co.uk/2012/11/i-call-them-controlobjects.html">I Call Them ControlObjects</a>; I call them Elements, or with increasing frequency &#8216;Unnecessary Designer Porn&#8217; for the rash of js-widgets-that-look-like-standard-html</li>
+<li>I&#8217;m kinda amazed I haven&#8217;t had to use the regex part of my brain in awhile, but everyone doing automation really needs to have that section tucked away somewhere &#8211; <a href="http://simplythetest.tumblr.com/post/33474441938/a-practical-example-of-regular-expressions">A Practical Example of Regular Expressions</a></li>
+<li><a href="http://www.triggeredmessaging.com/blog/server-monitoring-with-a-raspberry-pi-and-graphite">Low Power Server Monitoring with a Raspberry</a> is just cool</li>
 </ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2385&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-85%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-85%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23131&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-131%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-131%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, June 11, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-84/"><h2>A Smattering of Selenium #84</h2></a>
-                <p><p>What? Its only been 3 months since the last one. Sheesh.</p>
+                Tuesday, November 27, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-130/"><h2>A Smattering of Selenium #130</h2></a>
+                <p><p>Can&#8217;t get enough Se bloggage? Have a look at <a href="http://itkosmopolit.wordpress.com/2012/11/23/overview-of-selenium-blogs/">Overview of Selenium Blogs</a> &#8212; though I must say there has to be something wrong with the Alexa algorithm if I am that far down the list. And behind both David and Alister. 🙂</p>
+<li><a href="http://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/">Must Have Git Aliases: Advanced Examples</a> reminds me of someone I used to work with who likely couldn&#8217;t function on a clean unix system, but with all his aliases was mind blowing to watch</li>
+<li><a href="http://techblog.safaribooksonline.com/2012/11/23/writing-a-selenium-test-framework-for-a-django-site-part-3/">Writing a Selenium Test Framework for a Django Site (Part 3)</a> has the usual myths and FUD around XPath and embeds locators in the script method but is the first thing I&#8217;ve seen that uses the Color class in Python so I&#8217;ll overlook those things. This time.</li>
+<li><a href="https://makandracards.com/makandra/12661-how-to-solve-selenium-focus-issues">How to solve Selenium focus issues</a> introduced me to jQuery&#8217;s :focus pseudoselector</li>
+<li>I&#8217;m sure there is something to be learned from <a href="http://evan.tiggerpalace.com/articles/2012/11/21/use-rails-until-it-hurts/">Use Rails until it hurts</a>. Especially from the paragraph above the twitter inclusions</li>
+<li><a href="http://watirmelon.com/2012/11/27/checking-an-image-is-actually-visible-using-webdriver/">Checking an image is actually visible using WebDriver</a> is something I plan on stealing.</li>
+<li><a href="http://www.kirsle.net/blog/kirsle/android-4-0-in-virtualbox">Android 4.0 in VirtualBox</a> seems like a cool way to build out an android build farm</li>
+<li><a href="http://phpmaster.com/autoloading-and-the-psr-0-standard/">Autoloading in PHP and the PSR-0 Standard</a> has some Symfony specific bits, but is generally useful</li>
+<li><a href="http://blogs.gnome.org/danni/2012/11/19/extending-selenium-with-jquery/">Extending Selenium with jQuery</a> is something else I intend to steal</li>
+<li>From the same person is <a href="http://blogs.gnome.org/danni/2012/11/15/combining-py-test-and-selenium-to-test-webapps/">Combining py.test and Selenium to test webapps</a> which shows off some of what py.test can do with fixtures. Not how I would do it, but cool none the less.</li>
+<li>Let me say this again; the officially blessed solution for getting response codes is to route your calls through a proxy (like the BrowserMob Proxy) and then ask it what they were. But if you are bound and determined to craft &#8216;solutions&#8217; that only work in a single browser, or a single language, or require changing your application then <a href="http://www.ninthavenue.com.au/how-to-get-the-http-status-code-in-selenium-webdriver">How To Get The HTTP Status Code In Selenium WebDriver</a> will make good breakfast reading. North American time that is&#8230;</li>
+</ul></p>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23130&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-130%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-130%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
+        
+            <div class="container dark-background">
+                Monday, November 26, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-129/"><h2>A Smattering of Selenium #129</h2></a>
+                <p><p>A hardy welcome back to work to our American friends who spent Thursday being thankful for what they had, then getting into fist fights at stores for things they thought they didn&#8217;t need the next day.</p>
 <ul>
-<li>Sorry about being a G+ article, but <a href="https://plus.google.com/116910304844117268718/posts/UkaymyuTzaF">DOM Ready</a> discusses briefly about how to build your page in terms of order of events. Of course, if you read the comments it is very much buyer beware, but&#8230;</li>
-<li>I&#8217;ve been fixating a bit on operational dashboards the last little while and <a href="http://blogs.splunk.com/2012/06/07/splunkx-enterprise-operational-intelligence/">Enterprise Operational Intelligence</a> has a couple good ones</li>
-<li>Looking to use BrowserID? There&#8217;s a <a href="https://github.com/davehunt/bidpom">Page Object</a> for that.</li>
-<li><a href="http://www.slideshare.net/mcdonnps/lessons-from-etsy-avoiding-kitchen-nightmares-chefconf-2012">Lessons from Etsy: Avoiding Kitchen Nightmares</a> starts with an oven belching flame and gets better from there</li>
-<li><a href="http://watirmelon.com/2012/06/04/roll-your-own-page-objects/">Roll your own page objects</a>, is, for the record how I do Page Objects too. Well, aside from using something like Cucumber as <i>just</i> a functional runner</li>
-<li><a href="https://gist.github.com/2735065">Rachmaninov&#8217;s Third Piano Concerto, Played by Selenium</a> is just cool</li>
-<li><a href="http://www.bitrite.fi/johannes/2012/05/11/splitting-robot-framework-tests-into-batches-for-parallel-execution/">Splitting Robot Framework tests into batches for parallel execution</a> is one solution to the &#8216;my batches were balanced but now they are not&#8217; problem</li>
-<li><a href="http://michaelfeathers.typepad.com/michael_feathers_blog/2012/05/the-long-tail-of-technical-debt.html">The Long Tail of Technical Debt</a> shows one way of parsing run information and suggests what do do with this particular outcome pattern</li>
-<li><a href="https://engineering.groupon.com/2012/misc/bugwatch/">Bugwatch</a> is magic, but magic can be fun too! Well, sometimes.</li>
-<li>And lastly,<br />
-<blockquote class="twitter-tweet">
-<p>When test automation is made a goal rather than a tool, quality suffers.</p>
-<p>&mdash; Ben Simo (@QualityFrog) <a href="https://twitter.com/QualityFrog/status/195952852244512768">April 27, 2012</a></p></blockquote>
-</li></p>
+<li>You know what would be grand? If various widget makers would provide automation hooks for their stuff so we, as automators, don&#8217;t have to write them ourselves. Like for High Charts (<a href="https://github.com/Ardesco/Powder-Monkey/tree/master/src/main/java/com/lazerycode/selenium/graphs">in Java</a>)</li>
+<li><a href="http://codeclimber.net.nz/archive/2012/11/19/Why-you-should-never-use-a-boolean-field-use-an.aspx">Why you should never use a boolean field (use an Enum instead)</a> is food for thought when designing your page objects</li>
+<li>Do you work for Google? No? They why do you think you need to automate GMail?!!? Not a new rant of course, but <a href="http://pypi.python.org/pypi/imapIO/0.9.5">imapIO</a> looks like it might not suck too too much if you are solving this problem in Python and must get an email out of GMail</li>
+<li><a href="https://gist.github.com/3361208">windows.h.js</a>. Yes. .js. And no, I have no idea what you would use it for.</li>
+<li>Someday I will find the time to learn <a href="http://blog.tddium.com/2012/11/20/profiling-ruby/">Profiling Ruby, or, How I Made Rails Start Up Faster</a> for Python and/or PHP if just so I <i>really</i> understand what goes on under the hood. (And you should too. Understand that is&#8230;)</li>
+<li>Two more OTA API examples; <a href="http://fijiaaron.wordpress.com/2012/11/20/creating-a-bug-in-quality-center-using-the-ota-api/">Creating a Bug in Quality Center using the OTA API</a>, <a href="http://fijiaaron.wordpress.com/2012/11/20/executing-tests-in-quality-center-using-the-ota-api/">Executing Tests in Quality Center using the OTA API</a></li>
+<li><a href="http://craigkerstiens.com/2012/11/17/how-i-write-sql/">How I Write SQL</a>. Mmmmm pretty. And the killer part is right at the end; <i>While very long, this should ideally be quite legible</i> and legibility trumps length every day.</li>
+<li>Before you whinge, understand <i>why</i> something is. Like say, <a href="http://jimevansmusic.blogspot.ca/2012/11/are-you-kidding-me-ie-driver-another.html">Are you kidding me, IE Driver? Another freaking thing to download?</a></li>
+<li><a href="http://pivotallabs.com/users/patn/blog/articles/717-run-javascript-in-selenium-tests-easily-">Run JavaScript in Selenium tests. Easily</a>. And by Selenium they mean WebDriver and by WebDriver they mean Webrat.</li>
+<li><a href="http://www.youtube.com/MobileTestingSummit">Mobile Testing Summit videos are up!</a> for those of us that couldn&#8217;t make it. Or could have made it were it not for speaking commitments bookending it on the other side of the continent.</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2384&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-84%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-84%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Tuesday, May 29, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/announcing-selenium-2-22/"><h2>Announcing Selenium 2.22</h2></a>
-                <p>It&#8217;s been a while since the last Selenium release, but I&#8217;m happy to announce that Selenium 2.22 is now <a href="http://seleniumhq.org/download/">available for download</a>. This is a big release for us and features two major changes.</p>
-<p>The first is that<strong> Selenium 2.22 is the first version that requires Java 6</strong> in order to run. This has been the case for the Selenium Server for some time, but this is the first time the client code has required Java 6. Since Java 5 was <a href="http://www.oracle.com/technetwork/java/eol-135779.html">&#8220;end of lifed&#8221; in 2009</a>, we don&#8217;t expect this to impact many users.</p>
-<p>The second major change is that <strong>we are now providing a standalone IE server for use with the WebDriver API</strong>, similar to the one used by the chrome driver. You can get it from the normal download page. This will allow us to update our IE support independently of the rest of the library (again, mirroring how Chrome is supported) For now, there&#8217;s a legacy fallback mode you can use that&#8217;ll use the same DLL we&#8217;ve always used which can be activated by setting the DesiredCapability &#8220;useLegacyInternalServer&#8221; to boolean &#8220;true&#8221; when requesting your IE Driver instance.</p>
-<p>Of course, as well as these major changes, there&#8217;s the usual host of updates and improvements. We&#8217;re continuing to refine the new SafariDriver, and we&#8217;re happy to announce native events for Firefox 12. You can check out the other updates in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG</a>.</p>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.22&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23129&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-129%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-129%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

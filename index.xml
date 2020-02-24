@@ -223,6 +223,479 @@ Also, if you want to receive email notifications about the conference (e.g., whe
     </item>
     
     <item>
+      <title>A Smattering of Selenium #132</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-132/</link>
+      <pubDate>Thu, 06 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-132/</guid>
+      <description>2.27.0 is now out which means you can close the browser tab that points to the old Firefox installers.
+ Not Providing an HTML Page? Think of the Kittens! is important to remember. We want to fix your bugs. Help us help you! The HTML5 download attribute is another bit I am not looking forward to have to automate Refactoring to Improve Testability &amp;#8211; what can I say? I like experiential posts Oh how it pains me to suggest that SikuliWebDriver looks mighty cool Page Visibility API Support in Opera 12.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #131</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-131/</link>
+      <pubDate>Thu, 29 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-131/</guid>
+      <description>Not sure how widely broadcast this has been (cus, you know, we&amp;#8217;re good at communicating and stuff), but if you are using 2.26.0 and Firefox 17 you will get a nasty bug. 2.27.0 is in the works to address this (and a couple other things&amp;#8230;) so if you need FF right now, keep your install at the latest 16 release.
+ This is pretty decent. Except the usual &amp;#8220;Feh! We don&amp;#8217;t need humans to test!</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #130</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-130/</link>
+      <pubDate>Tue, 27 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-130/</guid>
+      <description>Can&amp;#8217;t get enough Se bloggage? Have a look at Overview of Selenium Blogs &amp;#8212; though I must say there has to be something wrong with the Alexa algorithm if I am that far down the list. And behind both David and Alister. 🙂
+Must Have Git Aliases: Advanced Examples reminds me of someone I used to work with who likely couldn&amp;#8217;t function on a clean unix system, but with all his aliases was mind blowing to watch Writing a Selenium Test Framework for a Django Site (Part 3) has the usual myths and FUD around XPath and embeds locators in the script method but is the first thing I&amp;#8217;ve seen that uses the Color class in Python so I&amp;#8217;ll overlook those things.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #129</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-129/</link>
+      <pubDate>Mon, 26 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-129/</guid>
+      <description>A hardy welcome back to work to our American friends who spent Thursday being thankful for what they had, then getting into fist fights at stores for things they thought they didn&amp;#8217;t need the next day.
+ You know what would be grand? If various widget makers would provide automation hooks for their stuff so we, as automators, don&amp;#8217;t have to write them ourselves. Like for High Charts (in Java) Why you should never use a boolean field (use an Enum instead) is food for thought when designing your page objects Do you work for Google?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #128</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-128/</link>
+      <pubDate>Mon, 19 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-128/</guid>
+      <description>&amp;#8230;as I avoid writing code that deals with dynamically constructed tables. Without any sort of unique locator. Of course.
+ I would contend that the &amp;#8216;right&amp;#8217; solution to this problem is to use a CI container and have it email you, but if you are using Java and not using CI, then Automatically Email the Reports After Selenium Test Execution could be valuable. I feel like I have already linked to Webdriver StaleElementReferenceException but the archive search is, erm, not great, so here it is again.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #127</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-127/</link>
+      <pubDate>Fri, 16 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-127/</guid>
+      <description>Within an hour I had some more things to add to the last Smattering. Oh well, I&amp;#8217;ll just save them up&amp;#8230;
+ Har-assert looks like something useful to include in your project if you are using Java. And the browsermob-proxy (which of course, you all are) Web Content Accessibility Guidelines (WCAG) 2.0 seems like something more people should care about. Right. Here is another cool part of the nebulous, meaningless thing called HTML5.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #126</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-126/</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-126/</guid>
+      <description>I&amp;#8217;ve been threatening that I was going to do this for awhile&amp;#8230;
+ What it feels like when you are running a long running batch of scripts&amp;#8230;
+ Remember kids, your script cannot adapt to the unexpected&amp;#8230;
+ But on occasion they can do something that&amp;#8230;
+ Oh! Here&amp;#8217;s a useful metric of productivity!
+ And just when you thought you were doing something without anyone paying attention&amp;#8230;
+ Unfortunately what a lot of automation is like&amp;#8230;</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #125</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-125/</link>
+      <pubDate>Mon, 12 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-125/</guid>
+      <description>Right&amp;#8230;
+ Scripting batch 1: waiting for an email Scripting batch 2: waiting for an email Scripting batch 3: waiting for an email Scripting batch 4: waiting for an email  Perhaps I&amp;#8217;ll do something else right now&amp;#8230;
+ Alright kids, its not the Olympics, but Curvy would be a fun app for someone to automate. Wow that was fast. Øredev has started to publish the videos from this year&amp;#8217;s conference.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #124</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-124/</link>
+      <pubDate>Tue, 06 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-124/</guid>
+      <description>Too. Many. Links. Not. Enough. Posts.
+ The important word is strive in 100% Automation Pass Rates. PHP Error could be interesting to turn on in your automation environment. Well, if it is a PHP app at any rate&amp;#8230; Testing mobile? Tap Into Mobile Application Testing by Jonathan Kohl Behavioural testing in .Net with SpecFlow and Selenium &amp;#8211; Part 1, Part 2 cocoa-rest-client could be a useful tool for the toolbox if you are on mac and are testing rest apps.</description>
+    </item>
+    
+    <item>
+      <title>Announcing Selenium 2.26: the “It’s Really Real” Release</title>
+      <link>https://selenium.dev/blog/2012/announcing-selenium-2-26/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/announcing-selenium-2-26/</guid>
+      <description>It&amp;#8217;s been a long time since we announced a new Selenium release on this blog, as we moved to a model of quicker releases, but we&amp;#8217;ve been working on 2.26 for far longer than normal &amp;#8212; it&amp;#8217;s out! Download it now! &amp;#8212; so I thought it best to let you know. We&amp;#8217;re aiming to head back to faster releases, so hopefully you won&amp;#8217;t see another blog post about the release for a while (though I&amp;#8217;m sure they&amp;#8217;ll appear in the &amp;#8220;Smatterings of Selenium&amp;#8221; posts)</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #123</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-123/</link>
+      <pubDate>Wed, 17 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-123/</guid>
+      <description>If you are not using something like Chef or Puppet to keep your grid nodes behaving then you are absolutely doing it wrong. Here are all the PuppetConf 2012 Videos to help you get started. See also this Apple&amp;#8217;s Lightning port dynamically assigns pins to allow for reversible use is just too geeky not to include. Hurray for hardware lock-in? Websockets 101 &amp;#8212; again, if your app uses a technology, you better be damned clueful about it if you are going to automate it Child Elements seems to address the &amp;#8216;is my element where I expect it&amp;#8217; problem though I&amp;#8217;m still not convinced that is a problem that needed solving HTML for Icon Font Usage could be interesting.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #122</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-122/</link>
+      <pubDate>Mon, 15 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-122/</guid>
+      <description>Let&amp;#8217;s try the &amp;#8216;all video&amp;#8217; edition this time.
+   Solving Common Problems with Web UI Automation    Hrm. That didn&amp;#8217;t work &amp;#8230; let&amp;#8217;s add some slide decks.
+   Mobile Test Automation at eBay  from Dominik Dary   PHPUnit Best Practices    A Whirlwind Tour of Test::Class  from Curtis Poe    Simple Log Analysis and Trending  from Mike Brittain</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #121</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-121/</link>
+      <pubDate>Tue, 02 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-121/</guid>
+      <description>Its the &amp;#8216;all github&amp;#8217; edition today!
+ Dave goes a little strange on us with his diy_framework as an emoting robot. Here is the deck that went along with it. Can&amp;#8217;t get enough of the food-based frameworks from the kids at Sauce. If you are using the PHPUnit included WebDriver bindings [and Sauce OnDemand] then Sausage could be of interest. Of course, if you are just using PHPUnit, then paraunit could of interest.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #120</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-120/</link>
+      <pubDate>Tue, 18 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-120/</guid>
+      <description>Here we grow again. Telerik acquires Fiddler. What’s next?. So. When can we look for nice Se integration with Fiddler then? Third-Party Issues and the Performance Ripple Effect is interesting, and something I&amp;#8217;ve harped on consistently. Automated Web Testing with Selenium is 3.5 hours of videos on Se. That has my usual complaints; shouldn&amp;#8217;t have Se-IDE, there is no such thing as &amp;#8216;basic&amp;#8217; and &amp;#8216;advanced&amp;#8217;, etc. But its there. The Oracle Problem and the Teaching of Software Testing is long, but important to understand when doing automation.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #119</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-119/</link>
+      <pubDate>Fri, 14 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-119/</guid>
+      <description>Its that time again, 4th Annual Automation Honors Voting is now open. Vanity contests FTW!
+ Introducing the Sauce Plugin for Selenium Grid from a product perspective is huge. And in a roundabout way proves I am not completely crazy&amp;#8230; Benchmark of Python WSGI Servers has lots of numbers, and graphs and charts. Seleno makes some bold marketing statements (&amp;#8216;the RIGHT way!&amp;#8217;). Looks like a framework in C# that forces people to use Page Objects  Automating an SVG game with Selenium WebDriver from Andreas Tolf Tolfsen on Vimeo.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #118</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-118/</link>
+      <pubDate>Fri, 07 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-118/</guid>
+      <description>&amp;lt;Insert witty/snarky commentary on something here&amp;gt;
+ Apparently the TestWatchman thing I linked to is deprecated now in favour of TestWatcher (shows how much I pay attention to JUnit stuff&amp;#8230;). Here is an example of TestWatchers and RuleChains. No, I don&amp;#8217;t know what the blurb at the top says. Sure, we&amp;#8217;ve all see lorum ipsum text, but do you know what it (ish) says? now you do From the &amp;#8216;MEASURE ALL THINGS!</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #117</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-117/</link>
+      <pubDate>Wed, 05 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-117/</guid>
+      <description>Evolutionary Project Structure talks about a particular project structure, but this is one of those fun developer opinionated things to geek out on Testers Caught Sleeping on the Job is not browser-based, but you cannot bash sleeps enough. Also has a pretty amusing photo with it PHP: The Right Way is of course one person&amp;#8217;s understanding of the &amp;#8216;right way&amp;#8217; but still not bad. Automation is Code. But are your code conventions hurting you?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #116</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-116/</link>
+      <pubDate>Tue, 04 Sep 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-116/</guid>
+      <description>So do people celebrate the day after Labor day as the beginning of summer?
+ Web Performance Power Tool: HTTP Archive (HAR) is worrisome that HARs are being billed as a power tool, but full of good stuff How do you pick responsive images breakpoints? is another one of those problems I think we&amp;#8217;re going to have to worry about TestWatchman seems like an interesting bit of JUnit4. (At what point do we have to stop saying 3 or 4 when referring to JUnit?</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #115</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-115/</link>
+      <pubDate>Wed, 29 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-115/</guid>
+      <description>The big news in the twitter-verse yesterday was the announcement of Apple Sauce and Android Sauce from Sauce Labs. I of course jumped all over that bandwagon with Apple Sauce and Android Sauce .. Yummy! (And Fully Supported) Accessing priviledged Javascript APIs from your web page in Firefox with Selenium lets to pull even more strings of the browser than you were supposed to be able to. Something I suspect Marionette will make redundant, but until then&amp;#8230; Use Xvfb, Selenium and Chrome to drive a web browser in PHP starts with the same-old, same-old, but scroll down to the bottom for squid and iptables and other things Integrating Selenium with ALM &amp;#8211; a simple recipe shows how to do it, but I still say whomever packages this up really well will make a lot of money You Papers Please is something that will start to come up in the Se community soon-ish I fear.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #114</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-114/</link>
+      <pubDate>Mon, 27 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-114/</guid>
+      <description>Hurray for having fillings done on both sides of my face. Don&amp;#8217;t expect me to speak without drolling for rest of the day.
+I&amp;#8217;ll admit to not knowing what the difference is/was between FluentWait and WebDriverWait, but FluentWait with WebElement explains it well. With sample code! PHPUnit + Selenium + php-webdriver = hours of entertainment (Part 1) shows a nice extension to PHPUnit_Framework_TestCase. Now if only he was using my active fork of the php-webdriver bindings rather than the original project Facebook seems to have abandoned.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #113</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-113/</link>
+      <pubDate>Wed, 22 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-113/</guid>
+      <description>/me is not looking forward to when the jet lag whallops him
+ Thorough look at PHP&amp;#8217;s pcntl_fork() is how we have to do parallel tests with phpunit until it grows it proper Catch Javascript Errors on the Page with Watir or Selenium &amp;#8211; This! Categorising WebDriver–Navigation, Interrogation, Manipulation walks through the WebDriver API bit by bit. Of course, now the trick is to keep it up to date. 🙂 Screening uses Se deep in its guts to script up Montage apps Millions of web pages use the -moz-opacity:0.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #112</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-112/</link>
+      <pubDate>Tue, 21 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-112/</guid>
+      <description>Eyes are gross.
+ Thucydides has a spiffy new website How Eventbrite uses Jenkins and Selenium which I think I&amp;#8217;ve linked to before, but can&amp;#8217;t seem to find reference to. What&amp;#8217;s my UDID? is now the new bar for online tutorials   Creating Maintainable Automated Acceptance Tests  from Jez Humble     Selenium Users Anonymous  from Dave Haeffner   Capture/Playback: The Vampire that Will Not Die has perhaps the most unfriendly url in the history of the internets, but is a nice little rant anyways.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #111</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-111/</link>
+      <pubDate>Mon, 20 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-111/</guid>
+      <description>When this gets published, I&amp;#8217;ll be sitting around the Barcelona airport waiting for my connection home. Unless I screwed up the time math. 🙂
+ The dangers of uniformity pours cold water on something that I know I used to preach for automation environments. How to crawl a quarter billion webpages in 40 hours doesn&amp;#8217;t have code listed (he explains why) but it explains how you could write it yourself if you wanted.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #110</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-110/</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-110/</guid>
+      <description>Dear body; what time zone are you in?
+Ah well, until that battle resolves itself, here are some links.
+Firefox the Clear Winner for Automated Testing has a wonderfully SEO friendly title, but really is just some cool usage graphs for their system. Extrapolate beyond that at your own risk. Task Automation FTW! &amp;#8212; make your application installable! I did something like this a decade ago (also using python) but finding something in my own blog seems a harder challenge than it should be.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #109</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-109/</link>
+      <pubDate>Mon, 13 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-109/</guid>
+      <description>Going to be on an airplane for the better part of the next day, so will likely miss some links &amp;#8230; unless I am tagged on twitter with it.
+ Introducing The Driver Binary Downloader Maven Plugin For Selenium solves a problem that has been solved a couple times but this seems the slickest. Normally I would suggest just using Chef/Puppet for this but it makes sense in the Maven context.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #108</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-108/</link>
+      <pubDate>Tue, 07 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-108/</guid>
+      <description>Apparently the links are slowing down for the summer?
+ Ralph Bodenner talks about New Relic’s experiences  at the SF Continuous Delivery meetup Xelenium: Security Testing with Selenium! is kinda an interesting use case Introducing mobile browser automation from/with Opera A minimal WebDriver based DSL is a bit of an experiment Testing Chef Cookbooks is something you didn&amp;#8217;t think you needed to think about NASA&amp;#8217;s github is not Se focused, but could help you build your own Mars rover WordPress Performance is a nice deck with lots of graphs and pictures Principles of Agile Test Automation outlines 4 principles and how they can often compete with each other Cucumber.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #107</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-107/</link>
+      <pubDate>Wed, 01 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-107/</guid>
+      <description>Back on the train again. Wow, the highway is screwed today.
+ The Automation Litmus Test is one that most companies face, but now it has a name Okay, who has more info on the bots mentioned in Meet the &amp;#8216;bots&amp;#8217; that edit Wikipedia? Highly doubt that they are Se powered, but it is a fun mental image Custom PHPUnit Annotations is useful magic if you are building out a framework I&amp;#8217;ve linked to things before about where to put things and how to find them, and purpose-oriented tests continues that trend Moving Towards a Continuous Integration and Deployment Process is a nice explanation of how one team does Continuous Delivery.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #106</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-106/</link>
+      <pubDate>Tue, 31 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-106/</guid>
+      <description>In case you are curious, the train just went past my old neighbourhood.
+ Marionette &amp;#8211; The Future of FirefoxDriver in Selenium is a project that has been hinted at here before I think, but this is its coming out party. Oh. And its the future of the Firefox driver. Now, what I need is an A-Team t-shirt&amp;#8230; FlynnID 0.2 changes its config format. I don&amp;#8217;t play around with Grid much (at all) but I&amp;#8217;ve been told that you need this if you are going to have Android devicii attached to the grid.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #105</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-105/</link>
+      <pubDate>Mon, 30 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-105/</guid>
+      <description>This was supposed to go out Friday, but the flu bug I picked up decided to move the schedule about somewhat.
+ As Se marches towards being a W3C standard, the sort of thing in OAuth and API Providers: Come on guys. scares me more and more. Why WP_Error Sucks. Intelligent error handling is hard. Especially when you have a legacy install base to deal with. A nice little rant. Normally you see lists from people about books individuals want to see written, but Heroku has gone one step further and has released Contribute a Dev Center Article of articles they want to see written about how to use their stuff.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #104</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-104/</link>
+      <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-104/</guid>
+      <description>I think everyone is on holidays right now&amp;#8230;
+ Firefox 15 plugs the add-on leaks &amp;#8212; Hey look! Openness from Mozilla! I&amp;#8217;m not kidding when I say I want to see more of these; from all browser vendors. JUnit Oath &amp;#8212; when geeks collide! Integration Tests With Cucumber-Jvm, Selenium and Maven is nice in that is shows the use of profiles (which is pretty much maven&amp;#8217;s killer feature) but it uses Se-RC.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #103</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-103/</link>
+      <pubDate>Fri, 20 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-103/</guid>
+      <description>Seems I had this all ready to go yesterday&amp;#8230; oh, and Happy Birthday Jim Evans &amp;#8212; maintainer of IE and C# driver. If also a day late.
+ Migrating Unit Tests from Selenium to Watir Webdriver is less about migrating rather than a quick overview of Watir HttpWatch 8.4: Supports Firefox 14 and Selenium appears to be http traffic monitor &amp;#8212; minus a proxy sms is a quick script which will send an sms from the commandline &amp;#8212; using Se as the means of doing it Buster.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #102</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-102/</link>
+      <pubDate>Tue, 17 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-102/</guid>
+      <description>Apparently my body isn&amp;#8217;t quite on left coast time&amp;#8230;
+ Butter Performance is a nice experience report on making a [big] html table behave. All sorts of headaches this would cause for automation. I&amp;#8217;m now starting to think more about caching since some of that information is included in HAR files. So if you are automating against a Rails site, Advanced Caching in Rails: Revised could be of values Scaling lessons learned at Dropbox, part 1 is another fun experience report including a bit of hints at Dropbox&amp;#8217;s own version of Netflix&amp;#8217;s Chaos Monkey Finding the broken links in a webpage using Selenium is Se-RC, but the idea is sound.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #101</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-101/</link>
+      <pubDate>Fri, 13 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-101/</guid>
+      <description>Really? A drought for most of the week and now I&amp;#8217;ve got a queue again in the span of 3 hours?
+ Developing RESTful Web APIs with Python, Flask and MongoDB is toolchain dependent, but likely enough cross-tool-ism to be worth a quick click through The cool part of Jasmine Testing With Sauce Labs isn&amp;#8217;t necessarily the Jasmine part, but the Sauce Connect Puppet part. Though Jasmine is high on my cool list.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #100</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-100/</link>
+      <pubDate>Mon, 09 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-100/</guid>
+      <description>Century!
+ Event 1028 &amp;#8211; Automatic Download Blocking looks like something that could be useful to have tucked away in your head somewhere I think I said I wasn&amp;#8217;t going to link to headless gem posts, but I don&amp;#8217;t think I&amp;#8217;ve linked to one about Cucumber. Cucumber running headless Selenium with Jenkins (the easy way); fixed Errorception, and things like it, are the next wave of infrastructure to come I think now that things like BrowserMob Proxy are becoming mainstream-ish-er I&amp;#8217;m not really sure of the difference between NPageObject.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #99</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-99/</link>
+      <pubDate>Fri, 06 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-99/</guid>
+      <description>With the queue flushed we&amp;#8217;ll go back to our regular random posting schedule
+ Etsy Code as Craft: The Other Part of Software Architecture with Coda Hale &amp;#8211; Code as Craft talks are generally good All the Atlassian Summit 2012 talks. I love this trend. Perception Of Performance discusses the whole &amp;#8216;OMG CHOME IS HELLA FAST ON IOS!!!!!!&amp;#8217; madness. As the last line of the article says, I present to you, the power of marketing!</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #98</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-98/</link>
+      <pubDate>Mon, 02 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-98/</guid>
+      <description>Happy day off Canuckistan! I&amp;#8217;ll be in California in two weeks; here is my schedule &amp;#8212; come by and chat
+ Selenium Rc to Webdriver Migration – Part2 is included mainly for the IE bit. Busted SSL certificate? Don&amp;#8217;t work around the problem &amp;#8212; fix it! Can&amp;#8217;t find an element? Synchronize properly &amp;#8212; don&amp;#8217;t just bap it in the face with the magic implicit wait wand&amp;#8230; Google I/O 2012 Videos won&amp;#8217;t give you the loot attendees got, just the content.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #97</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-97/</link>
+      <pubDate>Fri, 29 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-97/</guid>
+      <description>Yes. I know. I missed a day. But 13 in a row was a good run!
+ Free Automated Cross-Browser JavaScript Testing is a pretty standard &amp;#8216;here is how you do it&amp;#8217; article &amp;#8212; until you get to the IE section. It has a trick I don&amp;#8217;t think I&amp;#8217;ve seen yet. If you don&amp;#8217;t want to use a Proxy to generate HAR files, you can use NetExport in your Firefox profile to save things locally, or sent them to a remote server as explained in Automate Page Load Performance Testing with Firebug and Selenium.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #96</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-96/</link>
+      <pubDate>Wed, 27 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-96/</guid>
+      <description>Blech. Supposed to go car shopping today. Any car brands want to sponsor my wife with a car so I can do something productive? Worth a shot&amp;#8230;
+ jbehave-selenium is a sample project that uses, unsurprisingly, jbehave and selenium. Sample projects are outstanding. Just as samples are good, so are playgrounds. It&amp;#8217;s playtime &amp;#8211; Light Table Playground released And try jasmine! Announcing Joyride is another &amp;#8216;browser automation without programming as a service&amp;#8217; site Announcing pytest-mozwebqa 1.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #95</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-95/</link>
+      <pubDate>Tue, 26 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-95/</guid>
+      <description>Ok twitterverse. After 2 weeks of very few links a day you explode.
+ Testing JSF with Arquillian and Selenium apparently will save the world. GhostDriver: almost 50% is an update on something that got a bit of momentum at SeConf2012 Building and profiling high performance systems with Iago is getting a bump by being released at/during Velocity. Not browser based, but what its being used for doesn&amp;#8217;t need browsers. Testing geolocation with capybara + selenium + firefox is an interesting trick to address something I haven&amp;#8217;t thought of needing yet.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #94</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-94/</link>
+      <pubDate>Mon, 25 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-94/</guid>
+      <description># sudo wget coffee &amp;gt; adam
+ Selenium-RC Commands is a mindmap of all the commands in Se-RC. (Unsurprising really.) I keep meaning to do this for WebDriver. quacken is a script for grabbing OFX files from Quicken it seems What&amp;#8217;s that? You weren&amp;#8217;t happy with one of the six PHP WebDriver clients that were out there already? Have another one &amp;#8212; Nearsoft/PHP-SeleniumClient. It&amp;#8217;d be spooky what would happen if we all got together on this.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #93</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-93/</link>
+      <pubDate>Fri, 22 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-93/</guid>
+      <description>Did I say 8 days in a row yesterday? I meant 9. Good thing programming doesn&amp;#8217;t require counting&amp;#8230;
+ Passing ruby instance variables from Rspec to mix ins is the sort of nonsense you need to do when framework writing. Scared yet? (But it is fun&amp;#8230;) Rspec, page objects and user flows is the experiment that likely led to the link above puppet-sauceconnect is a puppet module for moving Sauce&amp;#8217;s Sauce Connect daemon onto remote nodes.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #92</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-92/</link>
+      <pubDate>Thu, 21 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-92/</guid>
+      <description>What&amp;#8217;s that? Eight days in a row? That&amp;#8217;s right&amp;#8230;
+ lolcommits seems almost funny enough to be a good idea A vision for Cucumber 2.0 is rather interesting Install Firefox on Amazon Linux X86_64 Compiling GTK+ is not something I have had to do. But then again, I haven&amp;#8217;t tried. Nerrvana is yet another Selenium-As-A-Service provider. Looks like they are taking the &amp;#8216;upload to our servers and run as a scheduled job&amp;#8217; approach rather than real-time.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #91</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-91/</link>
+      <pubDate>Wed, 20 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-91/</guid>
+      <description>As you&amp;#8217;ll start to see by the timestamps of things towards the end, I&amp;#8217;m running out of &amp;#8216;new&amp;#8217; stuff and am pulling from the queue now.
+ Fairly certain I&amp;#8217;ve linked to this before, but seleniumwrapper adds some syntacitcal sugar around the Python bindings. Though not sure that it makes it clearer to me. What the heck is an xrange? is today&amp;#8217;s Python internal geekiness post Functional Automated Testing Best Practices with Selenium WebDriver is the video version of these slides (wow I dislike this html slide deck trend&amp;#8230;) All the WWDC 2012 Session Videos are now up.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #90</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-90/</link>
+      <pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-90/</guid>
+      <description>Eventually I&amp;#8217;ll get back on the once-a-week schedule. But not today!
+ Falsehoods Programmers believe about Time. Time is hard; let&amp;#8217;s go shopping! Speaking of hard. Concurrency is not Parallelism (it&amp;#8217;s better) &amp;#8212; also has gophers Did Netflix actually Open Source Army of Cloud Monkeys? I don&amp;#8217;t see anything on their github account (and that is the trendy place to release stuff these days) Need I say more? I&amp;#8217;ve used this trick a couple times Python introspection &amp;#8211; how to check current module / line of call from within function Ah-ha!</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #89</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-89/</link>
+      <pubDate>Mon, 18 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-89/</guid>
+      <description>Figured I would get this out before the computer goes in for surgery.
+Automate Page Load Performance Testing with Firebug and Selenium  is not a new topic, but a timely one for me Speed up your features with a backdoor login route is not a recent post, but something I&amp;#8217;ve had to explain to people at least once a week for the past month, so&amp;#8230; RSpec&amp;#8217;s New Expectation Syntax explains not only the &amp;#8216;what&amp;#8217; of the new syntax but the &amp;#8216;why&amp;#8217; Slides &amp;amp; Videos from LDNSE #6 does not falsely advertise itself Python Timer Class &amp;#8211; Context Manager for Timing Code Blocks reminds me that I need to use Context Managers more often Overloading Python list comprehension is an interesting little experiment.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #88</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-88/</link>
+      <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-88/</guid>
+      <description>Five days and fifty links later&amp;#8230;
+ I&amp;#8217;m working on a larger-ish rant on headless browsers, but until then there is Jasmine Headless WebKit Not 2. Not 4. But Three ways to generate test data for your ruby automated tests Downloading things is a pain, but Waiting for watir-webdriver downloads (and determining the file name) has a solution Use classes in Python? Of course you do! Under the hood of Python class definitions &amp;#8212; but as the warning states, If the prospect of pondering the metaclass of the metaclass of your class makes you feel nauseated, you better stop now.</description>
+    </item>
+    
+    <item>
+      <title>A Smattering of Selenium #87</title>
+      <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-87/</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2012/a-smattering-of-selenium-87/</guid>
+      <description>Avoiding punching things about software packaging by doing the 4th!!!! smattering in row.
+ Python Decorators is an attempt at picking up a stick the right way A lawnchair is sorta like a couch except smaller and outside. And a persistence solution for HTML5 apps. If your apps persist data, checking them in the browser is. Not. Enough. Atlassian is building a performance tool off of WebDriver including Page Objects called soke I wonder if we should fail scripts that use vendor prefixes&amp;#8230;How to Unprefix -Webkit-Device-Pixel-Ratio The last paragraph in Android unittests now have LOLcat is the sort of thing that more projects should do tl;dw: Speedily practical large-scale tests &amp;#8212; of course, browsers are going to slow things in any event, but things to think about&amp;#8230; Continuous Deployment as a Remedy for Burnout &amp;#8212; hadn&amp;#8217;t thought about it this way, but yup.</description>
+    </item>
+    
+    <item>
       <title>A Smattering of Selenium #86</title>
       <link>https://selenium.dev/blog/2012/a-smattering-of-selenium-86/</link>
       <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>

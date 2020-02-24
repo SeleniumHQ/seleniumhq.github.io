@@ -212,58 +212,90 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Friday, February 24, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/selenium-conference-2012/"><h2>Selenium Conference 2012</h2></a>
-                <p>Good news, everybody! <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a> is getting closer! We recently <a href="http://www.seleniumconf.org/speakers/">selected the speakers</a> for the conference, and it&#8217;s going to be a great mix of talks, spanning the full range of subjects from the very practical to the deeply technical. I&#8217;m promised that there will be robots.</p>
-<p>Selenium Conf isn&#8217;t just about the planned talks, it&#8217;s also about the community. On the final day, there will be an unconference, so if there&#8217;s something you feel passionately about and feel the world should know, now&#8217;s your chance. You&#8217;ll not only have a chance to talk to and meet other selenium users, but also many of the core team members.</p>
-<p>The conference runs from the 16-18 April in London. <a href="http://www.seleniumconf.org/tickets/">Tickets are still available</a>! We&#8217;re looking forward to seeing you there.</p>
+                Wednesday, October 17, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-123/"><h2>A Smattering of Selenium #123</h2></a>
+                <ul>
+<li>If you are not using something like Chef or Puppet to keep your grid nodes behaving then you are absolutely doing it wrong. Here are all the <a href="http://puppetlabs.com/community/videos/puppetconf/">PuppetConf 2012 Videos</a> to help you get started. See also <a href="http://memegenerator.net/instance/27887540">this</a></li>
+<li><a href="http://appleinsider.com/articles/12/09/25/apples_lightning_port_dynamically_assigns_pins_to_allow_for_reversible_use">Apple&#8217;s Lightning port dynamically assigns pins to allow for reversible use</a> is just too geeky not to include. Hurray for hardware lock-in?</li>
+<li><a href="http://lucumr.pocoo.org/2012/9/24/websockets-101/">Websockets 101</a> &#8212; again, if your app uses a technology, you better be damned clueful about it if you are going to automate it</li>
+<li><a href="http://selenium34.wordpress.com/2012/09/21/child-elements/">Child Elements</a> seems to address the &#8216;is my element where I expect it&#8217; problem though I&#8217;m still not convinced that is a problem that needed solving</li>
+<li><a href="http://css-tricks.com/html-for-icon-font-usage/">HTML for Icon Font Usage</a> could be interesting. Though introduces me to the notion of &#8216;pseudo elements&#8217;, which in addition to &#8216;shadow dom&#8217; makes me think we may have finally group-think-ed the HTML specs enough.</li>
+<li><a href="http://tips.kaali.co.uk/2012/03/16/expand-or-increase-the-size-of-virtual-box-vdi-dis/">Increase Virtual Box VDI disk size on MAC or Windows</a> &#8212; amazing how much faster a vm runs when you give it enough disk to breathe</li>
+<li>Using ShiningPanda and Django? <a href="http://www.shiningpanda.com/blog/2012/09/27/multi-browser-selenium-tests-django-14-jenkins/">Multi-browser Selenium tests with Django 1.4+ on Jenkins</a> is for you!</li>
+<li>I use TextMate, but <a href="http://stackoverflow.com/questions/11365948/how-to-save-restore-sublime-text-2-configs-plugins-to-migrate-to-another-compute">How to save/restore Sublime Text 2 configs/plugins to migrate to another computer?</a> could be useful for the even cooler segment of people</li>
+<li>Font geek enough that you want, no, demand! a specific font for writing code in? Adobe is here to help; <a href="http://blogs.adobe.com/typblography/2012/09/source-code-pro.html">Announcing Source Code Pro</a></li>
+<li>I&#8217;m kinda amazed that more people don&#8217;t do this; <a href="http://blog.avisi.nl/2012/09/25/calculating-the-code-coverage-of-integration-tests/">Calculating the code coverage of integration tests</a>. Afterall, imaginary numbers FTW!</li>
+</ul>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Conference%202012&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-conference-2012%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-conference-2012%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23123&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-123%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-123%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Friday, February 24, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/support-for-ancient-browsers/"><h2>Support for Ancient Browsers</h2></a>
-                <p>The first code checked into the Selenium project&#8217;s public repository was in November, 2004. We&#8217;re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it&#8217;s time to review the list of browsers again.</p>
-<p>We periodically review the list of supported browsers as the more changes there are between the oldest version of a browser that we support and the most recent, the harder it is for us to add new features and maintain those that already exist. Balanced against the cost of maintaining the selenium code base itself are your tests; we know that your users might not be updating their browsers to the latest and greatest, and we know that you&#8217;ve still got to prove your app works on all the browsers that are important to you. That&#8217;s why what&#8217;s below is just our plan, and we&#8217;re talking about it now to let you have your say.</p>
-<p>Looking at the market share of the browsers out there helps us make an informed choice about what it makes sense to support. This will most likely mean:</p>
-<p><strong>Firefox</strong>: the Firefox market appears to be split between those on 3.6 and those on the new rapid release schedule. Given this, we are thinking of officially supporting Firefox 3.6, and the last, latest and next release of Firefox (currently Firefox 9-11) as well as any ESR releases. The market share for Firefox versions 3.0 and 3.5 is tiny, and the effort to keep them working with selenium is disproportionately high.</p>
-<p><strong>Internet Explorer</strong>: <a href="http://www.ie6countdown.com/">Despite Microsoft&#8217;s efforts</a>, IE 6 is still a popular browser, particularly in the workplace. We will continue to support IE versions 6 and up.</p>
-<p><strong>Safari</strong>: Safari 3 is now ancient and has been superseded by newer releases. We plan on only supporting Safari 4 and 5.</p>
-<p><strong>iOS</strong>: We&#8217;ll continue to target the most recent iOS release.</p>
-<p><strong>Android</strong>: Due to some technical limitations in previous Android releases, we are targeting Ice Cream Sandwich and onwards. We will continue to make available the testing framework for Froyo, but will not be making any changes to it.</p>
-<p><strong>These are only our plans</strong>. If you really need those browsers, and (better!) can help us maintain support for them, then please let us know.</p>
-<p>You&#8217;ll notice that Opera and Chrome are not listed above. Since Opera and Google now maintain the drivers for those browsers, they are best placed to decide which are the supported versions, but in summary, Google support the major Chrome release channels (stable, beta, dev and canary) and Opera suggest using Opera 11.6+.</p>
+                Monday, October 15, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-122/"><h2>A Smattering of Selenium #122</h2></a>
+                <p><p>Let&#8217;s try the &#8216;all video&#8217; edition this time.</p>
+<ul>
+<li><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/ur1d7fYFAYM?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
+<li><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/9_39Vbjx23Y?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
+<li><a href="http://tv.telerik.com/watch/automated-testing-tools/solvingcommonproblemswebinar">Solving Common Problems with Web UI Automation</a></li>
+<li><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/gwP7zLDDdPA?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
+<li><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/ulNSlES1Fds?version=3&#038;rel=0&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span></li>
+</ul>
+<p>Hrm. That didn&#8217;t work &#8230; let&#8217;s add some slide decks.</p>
+<ul>
+<li><iframe src='https://www.slideshare.net/slideshow/embed_code/14450364' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/DominikDary/mobile-test-automation-at-ebay" title="Mobile Test Automation at eBay" target="_blank">Mobile Test Automation at eBay</a> </strong> from <strong><a href="http://www.slideshare.net/DominikDary" target="_blank">Dominik Dary</a></strong> </div>
+</li>
+<li><a href="http://thephp.cc/dates/2012/webexpoprague/phpunit-best-practices">PHPUnit Best Practices</a></li>
+<li></li>
+<li><iframe src='https://www.slideshare.net/slideshow/embed_code/14640035' width='427' height='350' scrolling='no' allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/Ovid/a-whirlwind-tour-of-testclass" title="A Whirlwind Tour of Test::Class" target="_blank">A Whirlwind Tour of Test::Class</a> </strong> from <strong><a href="http://www.slideshare.net/Ovid" target="_blank">Curtis Poe</a></strong> </div>
+</li>
+<li><!-- SlideShare error: id is missing or has illegal characters -->
+<div style="margin-bottom:5px;"> <strong> <a href="http://www.slideshare.net/mikebrittain/simple-log-analysis-and-trending" title="Simple Log Analysis and Trending" target="_blank">Simple Log Analysis and Trending</a> </strong> from <strong><a href="http://www.slideshare.net/mikebrittain" target="_blank">Mike Brittain</a></strong> </div>
+</li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Support%20for%20Ancient%20Browsers&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23122&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-122%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-122%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/"><h2>A Note About the Cybervillains SSL Certificate</h2></a>
-                <p>If you&#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.</p>
-<p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and <a href="http://www.neustar.biz/solutions/website-performance">Neustar</a> for taking providing the new certificate and the patch!</p>
+                Tuesday, October 2, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-121/"><h2>A Smattering of Selenium #121</h2></a>
+                <p><p>Its the &#8216;all github&#8217; edition today!</p>
+<ul>
+<li>Dave goes a little strange on us with his <a href="https://github.com/tourdedave/diy_framework">diy_framework</a> as an <i>emoting robot</i>. Here is <a href="http://www.slideshare.net/tourdedave/selenium-basics/2">the deck</a> that went along with it.</li>
+<li>Can&#8217;t get enough of the food-based frameworks from the kids at Sauce. If you are using the PHPUnit included WebDriver bindings [and Sauce OnDemand] then <a href="https://github.com/jlipps/sausage">Sausage</a> could be of interest.</li>
+<li>Of course, if you are just using PHPUnit, then <a href="https://github.com/jlipps/paraunit">paraunit</a> could of interest. I&#8217;ve written similar before, but this looks cross-platform.</li>
+<li><a href="https://github.com/plone/buster-selenium">buster-selenium</a> is, erm, well, Selenium for buster.js</li>
+<li>Why did I only learn about <a href="https://github.com/xdissent/ievms">ievms</a> now? Oh. Well, one of the requirements is patience. That explains it.</li>
+<li><a href="https://github.com/videlalvaro/gifsockets">gifsockets</a>; I&#8217;ll wait while you pick up the pieces of your exploded brain</li>
+<li><a href="https://gist.github.com/3725732">How to capture a FF profile log</a>. Dunno what gets put in it, but tuck this away in your back pocket</li>
+<li>I don&#8217;t have a use case for <a href="https://github.com/benoitc/flower">flower</a> but <i>collection of modules to build distributed and reliable concurrent systems in Python</i> seems link-worthy</li>
+<li>Again, not sure when you would use it, but <a href="https://github.com/asconix/webdriver-user-agent-randomizer">webdriver-user-agent-randomizer</a> seems darn cool</li>
+<li>You don&#8217;t see too many open-source ios apps, so here is <a href="https://github.com/simonmaddox/GoogleTransit-iOS6">GoogleTransit-iOS6</a></li>
+</ul></p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Note%20About%20the%20Cybervillains%20SSL%20Certificate&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23121&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-121%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-121%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

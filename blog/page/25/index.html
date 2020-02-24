@@ -212,101 +212,81 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Monday, May 9, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-49/"><h2>A Smattering of Selenium #49</h2></a>
-                <p><p>Here is the next 10 links as I play catch-up.</p>
-<ul>
-<li>First up is the <a href="http://www.seleniumconf.com/videos/">Selenium Conf videos</a>. There are only seven up currently, but as they are processed they will be posted</li>
-<li>Silicon Valley Continuous Integration Summit, April 7, 2011<br />
-<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='349' src='https://www.youtube.com/embed/Lk2l6Mw-HLk?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
-    </li>
-<li>Virtual Hudson Build Environments &#8211; <a href="http://www.stickyminds.com/sitewide.asp?ObjectId=16569&amp;Function=DETAILBROWSE&amp;ObjectType=COL&amp;sqry=*Z(SM)*J(MIXED)*R(relevance)*K(simplesite)*F(Tony+Sweets)*&amp;sidx=1&amp;sopp=10&amp;sitewide.asp?sid=1&amp;sqry=*Z(SM)*J(MIXED)*R(relevance)*K(simplesite)*F(Tony+Sweets)*&amp;sidx=1&amp;sopp=10">Part One</a>, <a href="http://www.stickyminds.com/sitewide.asp?ObjectId=16592&amp;Function=DETAILBROWSE&amp;ObjectType=COL&amp;sqry=*Z(SM)*J(MIXED)*R(relevance)*K(simplesite)*F(Tony+Sweets)*&amp;sidx=0&amp;sopp=10&amp;sitewide.asp?sid=1&amp;sqry=*Z(SM)*J(MIXED)*R(relevance)*K(simplesite)*F(Tony+Sweets)*&amp;sidx=0&amp;sopp=10">Part Two</a></li>
-<li>The second last paragraph of <a href="http://perze.blogspot.com/2011/04/so-you-think-you-know-automation-part.html">So you think you know automation? Part One</a> is <i>extremely</i> important if you re doing automation. Which you likely are if you are reading this.</li>
-<li><a href="http://www.hexafoil.com/2011/04/regression-testing-reddit-with-selenium.html">Regression testing Reddit with Selenium Webdriver ruby bindings and Rspec</a> is nice in that it uses a public site, with known behaviour and illustrates how to do stuff beyond just the classic Google search. There is a link to the code and to a video of the execution as well.</li>
-<li>As I mentioned in my &#8216;OMG I just had a complete energy crash&#8217; talk at Selenium Conf, Se-IDE is <a href="http://blargon7.com/2011/04/testing-selenium-ide-with-mozmill/">starting to have a suite of Mozmills scripts</a> thanks to Dave Hunt</li>
-<li>The <a href="http://altentee.com/blogs/2011/watir-webdriver-performance-gem-released/">watir-webdriver-performance gem</a> seems pretty neat. We really need to figure out how how to some sort of compatibility worked out (or at least documented if it exists) between the things that build off of &#8216;selenium&#8217; and those that use &#8216;watir&#8217; &#8212; since they use the same backend these days anyways.</li>
-<li><a href="http://blog.oio.de/2011/04/19/load-testing-gwt-applications-with-selenium-2-and-gradle/">Load testing GWT applications with Selenium 2 and Gradle</a> &#8216;shows how to do a load test on a GWT application that runs in production mode&#8217;</li>
-<li>I get a niggling feeling there has to be a better way to <a href="http://www.brimllc.com/2011/01/extending-selenium-2-0-webdriver-to-support-ajax/">Extending Selenium 2.0 / WebDriver to support Ajax</a> but..</li>
-<li><a href="http://codeascraft.etsy.com/2011/04/20/divide-and-concur/">Divide and Concur</a> explains how Etsy chunk their Selenium scripts</li>
-</ul></p>
+                Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/"><h2>Announcing Selenium 2.19: the Prancing Unicorn release</h2></a>
+                <p>You might be pleased to hear that Selenium 2.19 has been released (<a href="http://seleniumhq.org/download/">download it from here!</a>). There&#8217;s one big user facing changing that we&#8217;d like to tell you about: the webdriver-backed selenium can now be used in supported languages.</p>
+<p>By providing this capability, it&#8217;s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+driver = RemoteWebDriver(desired_capabilities = DesiredCapabilities.FIREFOX)
+selenium = DefaultSelenium('localhost', 4444', '*webdriver', 'http://www.google.com')
+selenium.start(driver = driver)
+</pre>
+<p>Provided you keep a reference to the original webdriver and selenium objects you created you can use the two APIs interchangeably.  You&#8217;ll see that the magic is the &#8220;*webdriver&#8221; browser name passed to the selenium instance, and that we pass the webdriver instance when calling start().</p>
+<p>We hope you like it!</p>
+<p>PS: I have no idea why this is the Prancing Unicorn release, but it&#8217;s been a while since we named one 🙂</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2349&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-49%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-49%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.19%3a%20the%20Prancing%20Unicorn%20release&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-19-the-prancing-unicorn-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-19-the-prancing-unicorn-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Saturday, May 7, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-48/"><h2>A Smattering of Selenium #48</h2></a>
-                <p><p>It&#8217;s catch-up time again! Here is the first 10.</p>
+                Wednesday, February 1, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-78/"><h2>A Smattering of Selenium #78</h2></a>
+                <p>Look! A light at the end of the tunnel!</p>
 <ul>
-<li><a href="http://spin.atomicobject.com/2011/04/29/automated-tests-for-html5-offline-web-applications-with-capybara-and-selenium">Automated tests for HTML5 offline web applications with Capybara and Selenium</a> shows how a custom Firefox profile lets you automate Offline capabilities of HTML5 apps</li>
-<li>Robot Framework&#8217;s <a href="http://code.google.com/p/robotframework-seleniumlibrary/wiki/ReleaseNotes27">SeleniumLibrary 2.7 has been released</a> primarily to pick up 2.0b3 of the Selenium Server.</li>
-<li>There was a series of posts about using Selenium with Drupal recently.
-<ul>
-<li><a href="http://ygerasimov.com/integrating-selenium-to-drupal-simpletest-framework">Selenium testing in Drupal</a></li>
-<li><a href="http://ygerasimov.com/run-selenium-tests-drupal-on-debian-headless">Run Selenium tests in Drupal on Debian headless</a></li>
-<li><a href="http://ygerasimov.com/drupal-selenium-tests-api">Drupal Selenium tests API</a></li>
+<li><a href="http://stephenwalther.com/blog/archive/2011/12/22/asp-net-mvc-selenium-iisexpress.aspx">ASP.NET MVC + Selenium + IISExpress</a> &#8211; You don&#8217;t see too many Windows how-to&#8217;s. Not sure if they just don&#8217;t get tweeted about or is more a sign of that community.</li>
+<li><a href="http://journal.paul.querna.org/articles/2011/12/26/log-for-machines-in-json/">Write Logs for Machines, use JSON</a> is a nice idea. I wonder if (when) the major CI containers will land on a pseudo-standard for consuming JSON</li>
+<li><a href="https://gist.github.com/1508946">Remote File Upload using Selenium 2&#8217;s FileDetectors</a> shows yet another area I need to figure out in WebDriver (not Selenium 2 as Santi so stubbornly referred to it as 🙂 </li>
+<li><a href="https://github.com/github/janky">Janky</a> is GitHub&#8217;s CI server. Seems like this is the current cool route; that is, implementing your own rather than building off of one of the major existing ones. Which I suppose makes sense.</li>
+<li><a href="http://blog.thecodewhisperer.com/2011/12/20/from-dependent-tests-to-independent-tests-to-independent-assertions/">From Dependent Tests to Independent Tests to Independent Assertions</a> has a nice refactoring trick to clean-up your scripts</li>
+<li>I&#8217;ve posted how to inject Sizzle into your WebDriver scripts at least once, and here is another time. <a href="http://selenium.polteq.com/injecting-the-sizzle-css-selector-library/">Injecting the Sizzle CSS selector library</a></li>
+<li>And if Sizzle isn&#8217;t your thing, WebDriver Plus has JQuery-esque DOM <a href="http://webdriverplus.org/en/latest/traversing.html">Traversing</a></li>
+<li><a href="https://lists.ubuntu.com/archives/ubuntu-security-announce/2011-December/001528.html">Important notice regarding Java packages in Partner archive</a> is something to keep in mind if you want to run the Selenium Server on Ubuntu</li>
+<li>Looks like ShingingPanda is the Python equivalent of CloudBees, and has instructions on how to get Selenium running on it in <a href="http://blog.shiningpanda.com/2011/11/shiningpanda-is-selenium-ready.html">ShiningPanda is Selenium ready!</a></li>
+<li>Articles that lead in with <i>Boy.  That was a headache.</i> are usually good ones to link to. <a href="http://shizen008.wordpress.com/2011/12/13/webdriver-webdriver-and-more-web-driver">WebDriver, Webdriver, and more web driver.</a> This one is about the WebDriver iOS driver.</li>
 </ul>
-</li>
-<li><a href="http://unmesh.wordpress.com/2011/04/22/using-xpath-axes-for-locating-elements-in-selenium/">Using XPath Axes for locating elements in Selenium</a> discusses some of the more advanced ways of finding elements via XPath</li>
-<li>I&#8217;ll follow that up with a link to the <a href="https://github.com/santiycr/cssify">cssify</a> project which will attempt to automatically convert XPath locators to CSS</li>
-<li>And since we&#8217;re now onto CSS&#8230; <a href="http://andy.edinborough.org/CSS-Stress-Testing-and-Performance-Profiling">CSS Stress Testing and Performance Profiling</a> discusses the <a href="https://github.com/andyedinborough/stress-css">stress-css</a> bookmarklet. Which you can integrate into your Se scripts using a trick I discuss <a href="http://element34.ca/blog/dom-monster-and-selenium">here</a></li>
-<li><a href="https://github.com/gregretkowski/vmth/">VMTH (Virtual Machine Test Harness)</a> seems like another thing to put into the automated deployment toolkit</li>
-<li><a href="http://googletesting.blogspot.com/2011/04/gtac-2011-cloudy-with-chance-of-tests.html">GTAC 2011</a> has been announced &#8212; seems to be moving away from the hard-core automation geekery that it was when it started.</li>
-<li>WatirGrid <a href="http://altentee.com/blogs/2011/watirgrid-1-0-6-released-can-haz-selenium/">can haz Selenium</a> if you want a different model of browser distribution and are using Ruby. Naturally, <a href="http://gridinit.com/public/examples">Gridinit also supports both now</a></li>
-<li>If you are using Jenkins, <a href="http://blog.cloudbees.com/2011/04/tgif-gift-video-recording-slides-of.html">Video recording, slides of &#8220;Securing Jenkins&#8221; webinar</a> could be useful viewing</li>
-</ul></p>
+<p>And today&#8217;s post of mine is <a href="http://element34.ca/blog/webdriver-and-cookies">WebDriver and Cookies</a> which explains how, well, cookies and webdriver play together.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2348&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-48%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-48%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2378&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-78%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-78%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, April 18, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-47/"><h2>A Smattering of Selenium #47</h2></a>
-                <p><p>Nothing says &#8216;Hello Monday!&#8217; like a batch of links and a wife with a kidney stone.</p>
+                Wednesday, February 1, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-79/"><h2>A Smattering of Selenium #79</h2></a>
+                <p>The only links left now are ones currently open in tabs right now. Hurray!</p>
 <ul>
-<li><a href="http://martinfowler.com/articles/nonDeterminism.html">Eradicating Non-Determinism in Tests</a> is a nice essay by Martin Fowler and applies to Se as <i>Left uncontrolled, non-deterministic tests can completely destroy the value of an automated regression suite.</i></li>
-<li><a href="http://twitpic.com/4kuem8" title="*Not* what you want to see on the fetal monitor when your wif... on Twitpic"><img src="https://i0.wp.com/twitpic.com/show/thumb/4kuem8.jpg" width="200" height="200" alt="*Not* what you want to see on the fetal monitor when your wif... on Twitpic"></a><br /> Reminds us to disable automated updates on your remote machines.</li>
-<li><a href="https://launchpad.net/selenium-simple-test">Selenium Simple Automation Infrastructure</a> is <i>a framework built on top of Selenium using Python to make writing scalable, data driven, functional web tests easier with code</i>.</li>
-<li><a href="http://lightsaberide.com/">Lightsaber IDE</a> is <i>a A rite of passage &#8211; build your own tools just like the Jedi&#8217;s of The Old Republic</i> is all sorts of win. Build your own tools!</li>
-<li>JUnit in a page
-<ul>
-<li><a href="http://blog.thecodewhisperer.com/post/4559559633/classic-junit-3-on-one-page">JUnit 3</a></li>
-<li><a href="http://blog.thecodewhisperer.com/post/4607284031/by-popular-demand-junit-4-on-one-page">JUnit 4</a></li>
+<li>November&#8217;s SFSE was Continuous Deployment At Mozilla: <a href="http://www.slideshare.net/MattBrandt/mozilla-continuous-deploment-on-sumo">slides</a>, <a href="http://www.youtube.com/watch?v=usqxFxsmg4o&amp;feature=youtu.be">video</a></li>
+<li><a href="http://zhimin.com/en/books/pwta">Practical Web Test Automation</a> is a book available in both a free and paid editions. I haven&#8217;t looked at it so can&#8217;t comment how good or bad it is.</li>
+<li><a href="http://www.toolsjournal.com/testing-articles/item/340-the-why-what-and-how-of-software-test-automation">The Why, What and How of Software Test Automation</a> isn&#8217;t too horrible, though I don&#8217;t like the word &#8216;guideline&#8217; and of course the measurement section at the bottom is complete hokum.</li>
+<li><a href="http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/">Internet Explorer for Mac the Easy Way: Run IE 7, IE8, &amp; IE9 Free in a Virtual Machine</a> seems a bit sketchy in terms of license legality, but&#8230;</li>
+<li><a href="https://bitbucket.org/frennky/pagemapper">PageMapper</a> is a bit of template magic to create Page Objects</li>
+<li><a href="http://webconsistencytesting.com/">Web Consistency Testing</a> is starting to push what can [should] be done with Selenium</li>
+<li><a href="https://plus.google.com/u/0/104920553571646483561/posts/fmyZi1MxMgo">Taking Automated Tests Off The Pedestal</a> erm, takes automation off its pedestal</li>
+<li><a href="http://blog.carbonfive.com/2012/01/23/monkey-patching-ios-with-objective-c-categories-part-1-simple-extensions-and-overrides/">Monkey-Patching iOS with Objective-C Categories Part I: Simple Extensions and Overrides</a> is a technique I haven&#8217;t seen before.</li>
+<li><a href="http://sebastian-bergmann.de/archives/919-A-Tools-Tale.html">A Tool&#8217;s Tale</a> would be better with Sebastian in front of it, but is still useful as a standalone deck.</li>
+<li><a href="http://watirmelon.com/2012/01/31/introducing-the-software-testing-ice-cream-cone/">Introducing the software testing ice-cream cone</a> &#8211; Dangit! Now I want ice cream.</li>
 </ul>
-</li>
-<li><a href="http://blog.browsermob.com/2011/04/configuring-the-local-validator-with-eclipse/">Configuring the local validator with Eclipse</a> is pretty useful if you use BrowserMob (and don&#8217;t have a hate-on for all things Eclipse)</li>
-<li><a href="http://blogs.msdn.com/b/ie/archive/2011/04/12/native-html5-first-ie10-platform-preview-available-for-download.aspx">Internet Explorer 10</a> &#8211; 10? WTF? Didn&#8217;t 9 just come out?</a></li>
-<li><a href="http://saucelabs.com/blog/index.php/2011/04/how-to-lose-races-and-win-at-selenium/">How to Lose Races and Win at Selenium</a> has a great trick to reduce duplicate code when creating custom synchronization functions. (Good job Joe!)</li>
-<li>Not that there is such a thing as a &#8216;Best Practice&#8217;, but <a href="http://www.methodsandtools.com/tools/tools.php?rspec">RSpec Best Practices</a> is full of useful Best Practices.</li>
-<li><img src="https://i2.wp.com/i.imgur.com/y7Hm9.jpg" /><br />Selenium &#8211; The Most Interesting Scripts In The World</li>
-<li>If you are scripting in Ruby, then the <a href="http://blog.rubybestpractices.com/">Practicing Ruby</a> Ruby blog looks really good.</li>
-<li>While written for the Entrepeneur-set <a href="http://blog.summation.net/2011/02/entrepreneur.html">The Entrepreneur vs. The Strategy Consultant</a> but could also apply to how one approaches automation.</li>
-<li><a href="http://rubygems.org/gems/tddium-preview">tddium</a> <i>takes the pain out of running Selenium testing in cloud.</i></li>
-<li>Jason Huggins was the guest on <a href="http://twit.tv/floss161">FLOSS Weekly</a> last week.</li>
-<li>Not that using Excel as your data driver is a good idea, but if you did that with Java then <a href="http://weblogs.java.net/blog/johnsmart/archive/2009/11/28/data-driven-tests-junit-4-and-excel">Data-driven tests with JUnit 4 and Excel</a> is going to be useful.</li>
-<li><a href="http://cburgmer.posterous.com/using-selenium-to-validate-xhtml-markup-using">Using Selenium to validate XHTML markup using lettuce</a> is a cool trick to validate your HTML per W3C&#8217;s definition of good.</li>
-</ul></p>
+<p>And my post this edition is <a href="http://element34.ca/blog/webdriver-and-meta-tags">WebDriver and Meta Tags</a>.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2347&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-47%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-47%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2379&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-79%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-79%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>

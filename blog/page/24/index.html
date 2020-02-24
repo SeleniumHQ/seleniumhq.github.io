@@ -212,88 +212,69 @@
     <div class="blog-content">
         
             <div class="container dark-background">
-                Wednesday, June 1, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2011/selenium-2-0rc1-the-grid-release/"><h2>Selenium 2.0rc1: The Grid Release</h2></a>
-                <p>We&#8217;re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! <a href="http://code.google.com/p/selenium/downloads/list">Grab the downloads from the site</a>!</p>
-<p>Highlights:</p>
-<ul>
-<li><a href="http://code.google.com/p/selenium/wiki/Grid2">Grid 2</a>: A major feature of this release is Grid 2, an implementation of the Selenium Grid that supports WebDriver&#8217;s wire protocol, allowing tests using Selenium WebDriver to be distributed through it. There are some <a href="http://code.google.com/p/selenium/wiki/Grid2">docs to help you get started</a> on the wiki.</li>
-<li>New <a href="http://code.google.com/p/selenium/wiki/ChromeDriver">ChromeDriver</a>: Following a complete rewrite of the ChromeDriver, Selenium 2 is now supported natively by the Chrome browser itself. In order to use this, you must download the <a href="http://code.google.com/p/selenium/downloads/list">chromedriver executable</a> from the Selenium project site.</li>
-<li><a href="http://www.opera.com/developer/tools/operadriver/">OperaDriver</a> support: We&#8217;ve bundled the most excellent OperaDriver into the release to make it easy to get started testing with <a href="http://www.opera.com/browser/">Opera</a>.</li>
-<li>Support for native events in Firefox 4.</li>
-<li><a href="http://code.google.com/p/selenium/wiki/AdvancedUserInteractions">Advanced User Interactions</a>: An API that allows you to model complex user interactions, such as clicking on an element, holding the shift key, clicking on three more, and then dragging the four elements to a final destination. The entry point to this API is the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions</a> class.</li>
-</ul>
-<p>We’ve also deleted all methods that were deprecated in 2.0b3 and have marked a number of methods and classes (notably <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/RenderedWebElement.html">RenderedWebElement</a> and <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getValue()">WebElement.getValue</a>) deprecated. These will be deleted in the next release.</p>
-<p>Known issues:</p>
-<ul>
-<li>Native events on Linux may not work properly on tests that include alerts and prompts.</li>
-<li>Mouse actions using the Advanced User Interactions API may not work properly for elements that have to be scrolled into view.</li>
-</ul>
-<p>We plan on making our releases more frequent in the run up to 2.0final and polish off the bugs and issues. Stay tuned! This is going to be fun 🙂</p>
+                Friday, February 24, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2012/support-for-ancient-browsers/"><h2>Support for Ancient Browsers</h2></a>
+                <p>The first code checked into the Selenium project&#8217;s public repository was in November, 2004. We&#8217;re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it&#8217;s time to review the list of browsers again.</p>
+<p>We periodically review the list of supported browsers as the more changes there are between the oldest version of a browser that we support and the most recent, the harder it is for us to add new features and maintain those that already exist. Balanced against the cost of maintaining the selenium code base itself are your tests; we know that your users might not be updating their browsers to the latest and greatest, and we know that you&#8217;ve still got to prove your app works on all the browsers that are important to you. That&#8217;s why what&#8217;s below is just our plan, and we&#8217;re talking about it now to let you have your say.</p>
+<p>Looking at the market share of the browsers out there helps us make an informed choice about what it makes sense to support. This will most likely mean:</p>
+<p><strong>Firefox</strong>: the Firefox market appears to be split between those on 3.6 and those on the new rapid release schedule. Given this, we are thinking of officially supporting Firefox 3.6, and the last, latest and next release of Firefox (currently Firefox 9-11) as well as any ESR releases. The market share for Firefox versions 3.0 and 3.5 is tiny, and the effort to keep them working with selenium is disproportionately high.</p>
+<p><strong>Internet Explorer</strong>: <a href="http://www.ie6countdown.com/">Despite Microsoft&#8217;s efforts</a>, IE 6 is still a popular browser, particularly in the workplace. We will continue to support IE versions 6 and up.</p>
+<p><strong>Safari</strong>: Safari 3 is now ancient and has been superseded by newer releases. We plan on only supporting Safari 4 and 5.</p>
+<p><strong>iOS</strong>: We&#8217;ll continue to target the most recent iOS release.</p>
+<p><strong>Android</strong>: Due to some technical limitations in previous Android releases, we are targeting Ice Cream Sandwich and onwards. We will continue to make available the testing framework for Froyo, but will not be making any changes to it.</p>
+<p><strong>These are only our plans</strong>. If you really need those browsers, and (better!) can help us maintain support for them, then please let us know.</p>
+<p>You&#8217;ll notice that Opera and Chrome are not listed above. Since Opera and Google now maintain the drivers for those browsers, they are best placed to decide which are the supported versions, but in summary, Google support the major Chrome release channels (stable, beta, dev and canary) and Opera suggest using Opera 11.6+.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%202.0rc1%3a%20The%20Grid%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc1-the-grid-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc1-the-grid-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - Support%20for%20Ancient%20Browsers&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fsupport-for-ancient-browsers%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Monday, May 30, 2011 by <a href="https://twitter.com/samitbadle">Samit Badle</a>
-                <a href="https://selenium.dev/blog/2011/selenium-ide-1-0-11-%e2%80%93-now-with-firefox-4-support/"><h2>Selenium IDE 1.0.11 – Now with Firefox 4 Support!</h2></a>
-                <p>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the <a href="http://seleniumhq.org/download/">seleniumhq download site</a>. The update will also be pushed to you automatically over the next couple days.</p>
-<p>Other things of note around this release<br />
-•<a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">Release Notes<br />
-</a>•<a href="http://code.google.com/p/selenium/issues/list">Where to log bugs</a><br />
-•<a href="http://blog.reallysimplethoughts.com/2011/05/30/welcome-selenium-ide-1-0-11-with-firefox-4-support/">Welcome Selenium IDE 1.0.11 (with Firefox 4 support)</a></p>
+                Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/"><h2>A Note About the Cybervillains SSL Certificate</h2></a>
+                <p>If you&#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.</p>
+<p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and <a href="http://www.neustar.biz/solutions/website-performance">Neustar</a> for taking providing the new certificate and the patch!</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%201.0.11%20%e2%80%93%20Now%20with%20Firefox%204%20Support%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-ide-1-0-11-%25e2%2580%2593-now-with-firefox-4-support%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-ide-1-0-11-%25e2%2580%2593-now-with-firefox-4-support%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Note%20About%20the%20Cybervillains%20SSL%20Certificate&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
         
             <div class="container dark-background">
-                Tuesday, May 24, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-                <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-50/"><h2>A Smattering of Selenium #50</h2></a>
-                <p><p>Half a century!</p>
-<p>And because I am late doing this, the <a href="http://www.theautomatedtester.co.uk/blog/2011/selenium-test-day-amo-240511.html">Selenium Test Day for Addons.Mozilla.org</a> &#8212; which is <i>today!</i> gets top billing. Its actually going on Right Now. Looking to practice script writing and/or up your profile? This is a great way.</p>
-<p>And now for the usual stuff.</p>
+                Wednesday, February 8, 2012 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+                <a href="https://selenium.dev/blog/2012/a-smattering-of-selenium-80/"><h2>A Smattering of Selenium #80</h2></a>
+                <p>I should have learned not to boast about getting caught up with links.</p>
 <ul>
-<li><a href="http://testerthoughts.com/2011/05/17/guest-post-net-headless-browser-options/">.NET Headless browser options</a> looks at various options that might be available to you if you want something like HTMLUnit but for .NET.</li>
-<li>CSS vs. XPath is one of the great talking points in the Se community. And until now there hasn&#8217;t been any hard information to support the claims. <a href="http://saucelabs.com/blog/index.php/2011/05/why-css-locators-are-the-way-to-go-vs-xpath/">Why CSS Locators are the way to go vs XPath</a> now solves that problem.</li>
-<li><a href="http://testingpodcast.com/iwst-heuristics-for-creating-automated-regression-tests/">Heuristics For Creating Automated Regression Tests</a> as recorded from a IWST session late last year</li>
-<li><a href="http://mkaz.com/archives/1705/functional-testing-with-selenium-webdriver-and-scala/">Functional Testing with Selenium WebDriver and Scala</a>. Don&#8217;t think I&#8217;ve ever actually seen that language before.</li>
-<li>Here is a useful StackOverflow question &#8211; <a href="http://stackoverflow.com/questions/211487/how-to-add-a-junit-4-test-that-doesnt-extend-from-testcase-to-a-testsuite">How to add a JUnit 4 test that doesn&#8217;t extend from TestCase to a TestSuite?</a></li>
-<li><a href="http://blog.bettersoftwaretesting.com/?attachment_id=24">&#8216;Pushing the boundaries of User Experience Test Automation&#8217; slides</a> from the STEP-AUTO conference. Not that useful without Julian in front of them, but check out slide 17</li>
-<li>The <a href="http://www.slideshare.net/kohsuke/current-state-of-jenkins">Current State of Jenkins</a> deck is interesting, but slide 9 specifically is what the Se community could learn from.</li>
-<li>Need to add automation hooks? Have a look at the <a href="http://ejohn.org/blog/html-5-data-attributes/">data- attributes</a>. Why, oh why don&#8217;t I use these more?</li>
-<li>People should write more spelunking post like <a href="http://rubysource.com/spelunking-selenium-in-search-of-sockets/">Spelunking Selenium in Search of Sockets</a></li>
-<li>I&#8217;m doing a <a href="http://www.pushtotest.com/adam-goucher">webinar for PushToTest</a> on Thursday. Haven&#8217;t done one of those before&#8230;</li>
-<li>A <a href="http://skillsmatter.com/podcast/agile-testing/talk-by-dave-farley">Continuous  Delivery video from the London Test Gathering</a> &#8212; I really wish I had time to watch videos these days.</li>
-<li>If you are using Python&#8217;s unittest module, then <a href="https://launchpad.net/pyjunitxml">PyJUnitXML</a> is going to help prevent you from re-re-rewriting the &#8216;ant junit xml&#8217; format</li>
-<li><a href="http://code.enthought.com/projects/traits/">Traits</a> is a bit of a type system for Python. I think.</li>
-<li>Not that I use any of these, but <a href="http://alexsotob.blogspot.com/2011/04/are-you-locked-up-in-world-thats-been.html">this seems like a nice tutorial on JBehave, Spring MVC and WebDriver</a></li>
-<li>Looking for Snake Oil? I present to you <a href="http://blogs.forbes.com/alexknapp/2011/05/18/researcher-develops-automatic-software-testing/">Snake Oil</a></li>
-<li><a href="http://code.google.com/p/twin/">twin</a> looks rather cool. Now all it needs is the same language support as WebDriver and we might have a tight way to deal with the desktop and browser</li>
-<li>So who is going to add a link to <a href="http://twist4all.wordpress.com/2011/05/21/logging-selenium-2-events-in-twist/">Logging Selenium 2 Events in Twist</a> or similar to the Se Documentation?</li>
-<li>The <a href="https://github.com/cheezy/page-object">page object gem</a> could help with adoption of this pattern. Or could hopelessly confuse the pattern with the gem&#8217;s implementation of the pattern. Based on past experience, my money is on the latter.</li>
-<li><a href="http://www.lulu.com/product/paperback/the-architecture-of-open-source-applications/15819207">The Architecture of Open Source</a> book has been released and includes a chapter on Selenium by Simon Stewart. Buy it from this link, not Amazon &#8212; all royalties are going to Amnesty International and Amazon takes a huge slice</li>
-</ul></p>
+<li><a href="http://blargon7.com/2012/02/automating-browserid-with-selenium/">Automating BrowserID with Selenium</a> is pretty awesome. (As is BrowserID.) Now if this was only installable via pip or easy_install&#8230;</li>
+<li><a href="http://rubyreloaded.com/trickshots/">Ruby Trick Shots</a> &#8211; heed the disclaimer; <i>not an exercise in Ruby best practices</i></li>
+<li><a href="https://devblog.xing.com/qa/keep-it-functional-iphone-test-automation/">Keep It Functional – iPhone Test Automation</a> talks about another automation framework for mobile. At some point Selenium is going to grow Objective-C bindings I fear.</li>
+<li>Requests for Python is fantastic. <a href="http://requests.ryanmccue.info/">Requests for PHP</a> looks to be equally so. (I suspect my <a href="http://element34.ca/blog/introducing-phpwebdriver">php webdriver bindings</a> are about to become a much larger fork of the Facebook ones.)</li>
+<li><a href="http://test.techwell.com/articles/membersub/test-automation-project">Is Test Automation a “Project”?</a> &#8211; hint: it&#8217;s not.</li>
+<li><a href="http://saucelabs.com/blog/index.php/2012/01/sfse-meetup-video-keeping-selenium-tests-100-blue/">Keeping Selenium Tests 100% Blue</a> is a video of January&#8217;s SFSE. And <a href="http://blog.testyredhead.com/2012/01/31/selenium-meetup-west-coast-style.aspx">Selenium Meetup West Coast Style</a> is a rebuttal.</li>
+<li><a href="http://4cupsr.us/blog/2012/1/8/seleniums-sweet-spot-preventing-catastrophes.html">Selenium&#8217;s Sweet Spot: Preventing Catastrophes</a> shows that there are still people who do not watch for Black Swans. Automation does not prevent catastrophes. Well, at least ones that you are not looking for already.</li>
+<li><a href="http://blog.cloudspokes.com/2012/01/automate-salesforce-administrative.html">Automate Salesforce Administrative Tasks with Selenium</a> has the results of the contest they ran.</li>
+<li><a href="http://robert.arles.us/node/150">ErrorList object for use in TestNG/Selenium testing</a> is a soft-assert implementation</li>
+<li><a href="http://gazit.me/2012/02/01/iterations.html">Iterations</a> has an outstanding time-lapse of how the Pycon US logo was designed. Someone should do this scripting out a website.</li>
+</ul>
+<p>And my post that I&#8217;m going to link against is a bit of a rant around <a href="http://element34.ca/blog/how-to-choose-selenium-training">how to choose selenium training</a>. Though it has also been pointed out that a lot it applies outside the scope of Selenium as well.</p>
 
 
                 <div class="share-container">
                     <h3>Share this: </h3>
 
-                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2350&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-50%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-50%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2380&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-80%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-smattering-of-selenium-80%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
