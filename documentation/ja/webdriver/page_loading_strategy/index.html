@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/ja/images/favicon.png" type="image/png">
 
-    <title>Page loading strategy :: Seleniumドキュメント</title>
+    <title>ページ読み込み戦略 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1582541490" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1582541490" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1582560555" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1582560555" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1582541490" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1582560555" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1582541490"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1582560555"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1582541490"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1582541490"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1582560555"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1582560555"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1582541490"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1582560555"></script>
 
     
   </div>
@@ -616,9 +616,9 @@
  
   
     
-      <li data-nav-id="/webdriver/page_loading_strategy/" title="Page loading strategy" class="dd-item active">
+      <li data-nav-id="/webdriver/page_loading_strategy/" title="ページ読み込み戦略" class="dd-item active">
         <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
-        Page loading strategy
+        ページ読み込み戦略
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/ja/'>Seleniumブラウザー自動化プロジェクト</a> > <a href='https://selenium.dev/documentation/ja/webdriver/'>WebDriver</a> > Page loading strategy
+            <a href='https://selenium.dev/documentation/ja/'>Seleniumブラウザー自動化プロジェクト</a> > <a href='https://selenium.dev/documentation/ja/webdriver/'>WebDriver</a> > ページ読み込み戦略
           
          
           
@@ -1945,7 +1945,7 @@
           
             <h1>
               
-              Page loading strategy
+              ページ読み込み戦略
             </h1>
           
 
@@ -1955,27 +1955,164 @@
 
 
 
+<p>現在のセッションのページ読み込み戦略を定義します。
+デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は <em>normal</em> となります。
+ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!</p>
-</div>
-
-
-<p>Defines the current session&rsquo;s page loading strategy.
-By default, when Selenium WebDriver loads a page,
-it follows the <em>normal</em> pageLoadStrategy.
-It is always recommended to stop downloading additional
-resources (like images, css, js) when the page loading takes lot of time.</p>
-
-<p>WebDriver <em>pageLoadStrategy</em> supports the following values:</p>
+<p>WebDriverの <em>pageLoadStrategy</em> は以下の値をサポートします。</p>
 
 <h2 id="normal">normal</h2>
 
-<p>This will make Selenium WebDriver to wait for the entire page is loaded.
-When set to <strong>normal</strong>, Selenium WebDriver waits until the
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">load</a> event fire is returned.</p>
+<p>この値は、Selenium WebDriverはページ全体がロードされるまで待機します。
+<strong>normal</strong> に設定すると、Selenium WebDriverは、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">ロード</a>イベントの発生が返却されるまで待機します。</p>
 
-<p>By default <strong>normal</strong> is set to browser if none is provided.</p>
+<p>何も指定されていない場合、デフォルトでは、 <strong>normal</strong> がブラウザに設定されます。</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.PageLoadStrategy;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeOptions;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> pageLoadStrategy {
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+        ChromeOptions <span style="color:#268bd2">chromeOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+        <span style="color:#719e07">try</span> {
+            <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>            driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+        } <span style="color:#719e07">finally</span> {
+            driver.quit();
+        }
+    }
+}
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="c#code0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
+ <span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
+caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;normal&#39;</span>
+
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> {Builder, Capabilities} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">const</span> caps <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Capabilities();
+caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().
+                withCapabilities(caps).
+                forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).
+                build();
+    <span style="color:#719e07">try</span> {
+        <span style="color:#586e75">// Navigate to Url
+</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
+    }
+    <span style="color:#719e07">finally</span> {
+        await driver.quit();
+    }
+})();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL)
+    <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
+    }
+    <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+}
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h2 id="eager">eager</h2>
+
+<p>この値は、Selenium WebDriverは最初のHTMLドキュメントが完全に読み込まれて解析されるまで待機し、スタイルシート、画像、およびサブフレームの読み込みを破棄します。</p>
+
+<p><strong>eager</strong> に設定すると、Selenium WebDriverは <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> イベントの発生が返却されるまで待機します。</p>
 
 
 
@@ -2026,7 +2163,7 @@ When set to <strong>normal</strong>, Selenium WebDriver waits until the
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> pageLoadStrategy {
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
         ChromeOptions <span style="color:#268bd2">chromeOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
         WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
         <span style="color:#719e07">try</span> {
             <span style="color:#586e75">// Navigate to Url
@@ -2062,7 +2199,7 @@ When set to <strong>normal</strong>, Selenium WebDriver waits until the
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
 caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
-caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;normal&#39;</span>
+caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;eager&#39;</span>
 
 driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
@@ -2075,7 +2212,7 @@ driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;h
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">const</span> {Builder, Capabilities} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 <span style="color:#268bd2">const</span> caps <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Capabilities();
-caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
+caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 (async <span style="color:#268bd2">function</span> example() {
     <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().
                 withCapabilities(caps).
@@ -2103,7 +2240,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
     <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL)
+    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER)
     <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
     <span style="color:#719e07">try</span> {
         driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
@@ -2117,14 +2254,9 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 </div>
 </div>
 
-<h2 id="eager">eager</h2>
+<h2 id="none">none</h2>
 
-<p>This will make Selenium WebDriver to wait until the
-initial HTML document has been completely loaded and parsed,
-and discards loading of stylesheets, images and subframes.</p>
-
-<p>When set to <strong>eager</strong>, Selenium WebDriver waits until
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> event fire is returned.</p>
+<p><strong>none</strong> に設定すると、Selenium WebDriverは最初のページがダウンロードされるまで待機します。</p>
 
 
 
@@ -2175,7 +2307,7 @@ and discards loading of stylesheets, images and subframes.</p>
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> pageLoadStrategy {
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
         ChromeOptions <span style="color:#268bd2">chromeOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER);
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
         WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
         <span style="color:#719e07">try</span> {
             <span style="color:#586e75">// Navigate to Url
@@ -2211,150 +2343,6 @@ and discards loading of stylesheets, images and subframes.</p>
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
 caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
-caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;eager&#39;</span>
-
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
-driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>)
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> {Builder, Capabilities} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-<span style="color:#268bd2">const</span> caps <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Capabilities();
-caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
-(async <span style="color:#268bd2">function</span> example() {
-    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().
-                withCapabilities(caps).
-                forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).
-                build();
-    <span style="color:#719e07">try</span> {
-        <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>        await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
-    }
-    <span style="color:#719e07">finally</span> {
-        await driver.quit();
-    }
-})();
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
-
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-    <span style="color:#719e07">val</span> chromeOptions = ChromeOptions()
-    chromeOptions.setPageLoadStrategy(PageLoadStrategy.EAGER)
-    <span style="color:#719e07">val</span> driver = ChromeDriver(chromeOptions)
-    <span style="color:#719e07">try</span> {
-        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
-    }
-    <span style="color:#719e07">finally</span> {
-        driver.quit()
-    }
-}
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<h2 id="none">none</h2>
-
-<p>When set to <strong>none</strong> Selenium WebDriver only waits until the initial page is downloaded.</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
-    
-    <label for="tab0code3">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
-    
-    <label for="tab1code3">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
-    
-    <label for="tab2code3">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
-    
-    <label for="tab3code3">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
-    
-    <label for="tab4code3">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
-    
-    <label for="tab5code3">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.PageLoadStrategy;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeOptions;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
-
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> pageLoadStrategy {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        ChromeOptions <span style="color:#268bd2">chromeOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
-        <span style="color:#719e07">try</span> {
-            <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>            driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="c#code3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-caps <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Remote</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Capabilities</span><span style="color:#719e07">.</span>chrome
 caps<span style="color:#719e07">.</span>page_load_strategy<span style="color:#719e07">=</span><span style="color:#2aa198">&#39;none&#39;</span>
 
 driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>, <span style="color:#2aa198">:desired_capabilities</span> <span style="color:#719e07">=&gt;</span> caps
@@ -2364,7 +2352,7 @@ driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#39;h
   
 
 
-<section id="javascriptcode3" class="tab-panel">
+<section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#268bd2">const</span> {Builder, Capabilities} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
 <span style="color:#268bd2">const</span> caps <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Capabilities();
@@ -2388,7 +2376,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
   
 
 
-<section id="kotlincode3" class="tab-panel">
+<section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">import</span> org.openqa.selenium.PageLoadStrategy
 <span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
@@ -2417,8 +2405,8 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
-      “Page loading strategy”
-    </a> was last updated on: 21 Feb 2020 14:44:52 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/6ab8f1b7dd8c550b204f41bcbc00031c6ca1d0c2">Add: Adding Ruby code sample for page_load_startegy (#248) [deploy site] (6ab8f1b7d)</a>
+      “ページ読み込み戦略”
+    </a> was last updated on: 25 Feb 2020 00:15:42 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/63ebaec5124a122c1da9ad60d23bcc1736822941">Add Japanese translation of Page loading strategy (#256) [deploy site] (63ebaec51)</a>
 </h5>
         
         </div> 
@@ -3583,19 +3571,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1582541490"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1582560555"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1582541490"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1582541490"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1582560555"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1582560555"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1582541490" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1582541490"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1582560555" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1582560555"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
