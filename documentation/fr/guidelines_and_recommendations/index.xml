@@ -58,8 +58,7 @@ Your users, in general, do not care how your site looks.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
+      <description>Le sélénium n&amp;rsquo;est pas conçu pour rendre compte de l&amp;rsquo;état des cas de test courir. Profitant des capacités de rapport intégrées de l&amp;rsquo;unité les cadres de test sont un bon début. La plupart des cadres de tests unitaires ont rapports pouvant générer des rapports au format xUnit ou HTML. xUnit les rapports sont populaires pour importer des résultats dans une intégration continue (CI) comme Jenkins, Travis, Bamboo, etc. Voici quelques liens pour plus d&amp;rsquo;informations sur les sorties de rapports pour plusieurs langues.</description>
     </item>
     
     <item>
@@ -79,9 +78,9 @@ Your users, in general, do not care how your site looks.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>Écrivez chaque test comme sa propre unité. Écrivez les tests d&amp;rsquo;une manière qui ne sera pas dépendant d&amp;rsquo;autres tests pour effectuer:
+Disons qu&amp;rsquo;il existe un système de gestion de contenu avec lequel vous pouvez créer du contenu personnalisé qui apparaît ensuite sur votre site Web sous forme de module après la publication et la synchronisation entre le CMS et le serveur peut prendre un certain temps. application.
+Une mauvaise façon de tester votre module est que le contenu est créé et publié dans un test, puis vérifier le module dans un autre test.</description>
     </item>
     
     <item>
@@ -100,8 +99,8 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.</description>
+      <description>Commencez chaque test à partir d&amp;rsquo;un état connu propre. Idéalement, faites tourner une nouvelle machine virtuelle pour chaque test. Si la rotation d&amp;rsquo;une nouvelle machine virtuelle n&amp;rsquo;est pas pratique, démarrez au moins un nouveau WebDriver pour chaque test. Pour Firefox, démarrez un WebDriver avec votre profil connu.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
     </item>
     
   </channel>
