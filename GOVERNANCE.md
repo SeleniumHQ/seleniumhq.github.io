@@ -79,9 +79,13 @@ another committer who has greater ownership over a specific code area.
 a team player.
 * Committers are expected to be respectful of every community member and to work
 collaboratively in the spirit of inclusion.
-* Have submitted a minimum of 10 qualifying pull requests. Where significant
-technical weight is present and requires little effort to accept because it is
-well documented and tested.
+* Have submitted sufficient substantive contributions to one or more of the
+different projects (IDE, Docker-Selenium, Selenium, Site & Docs). For
+technical contributions, enough weight is present and requires little effort to
+accept because it is well documented and tested. Normally 10 substantive
+contributions are needed to qualify as a candidate to be a committer, but there
+could be cases where the contributions are substantial enough that a fewer
+amount is also acceptable.  
 
 New Committers can be nominated by any existing Committer or TLC member. Once
 they have been nominated, the TLC members will seek a decision based on a 
@@ -212,7 +216,8 @@ To become a TLC member:
 * Have given good feedback on others' submissions and displayed an overall understanding
 of the code quality standards for the project.
 * Commit to being a part of the community for the long-term.
-* Have submitted a minimum of 20 qualifying pull requests or pushed a minimum of 20 qualifying commits across the different projects (IDE, Docker-Selenium, Selenium, Site & Docs).
+* Have submitted a minimum of 20 substantive pull requests or pushed a minimum of 20
+ substantive commits across the different projects (IDE, Docker-Selenium, Selenium, Site & Docs).
 
 A Committer is invited to become a TLC member by existing TLC members. A nomination
 will result in discussion and then a decision by the TLC.
