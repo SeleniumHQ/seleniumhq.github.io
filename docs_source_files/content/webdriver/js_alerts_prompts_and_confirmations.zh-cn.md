@@ -1,27 +1,15 @@
 ---
-title: "JavaScript alerts, prompts and confirmations"
+title: "JavaScript 警告框,提示框和确认框"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
 
-WebDriver provides an API for working with the three types of native
-popup message offered by JavaScript. These popups are styled by the
-browser and offer limited customisation.
+## Alerts 警告框
 
-## Alerts
+其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为"确定"(OK). 在大多数浏览器中, 也可以通过按"关闭"(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. <a onclick="window.alert('Sample alert')">查看样例警告框</a>.
 
-The simplest of these is referred to as an alert, which shows a
-custom message, and a single button which dismisses the alert, labelled
-in most browsers as OK. It can also be dismissed in most browsers by
-pressing the close button, but this will always do the same thing as
-the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
-
-WebDriver can get the text from the popup and accept or dismiss these
-alerts.
+WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -109,13 +97,11 @@ alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Confirm
+## Confirm 确认框
 
-A confirm box is similar to an alert, except the user can also choose
-to cancel the message. <a onclick="window.confirm('Are you sure?')">See
-a sample confirm</a>.
+确认框类似于警告框, 不同之处在于用户还可以选择取消消息. <a onclick="window.confirm('Are you sure?')">查看样例确认框</a>.
 
-This example also shows a different approach to storing an alert:
+此示例还呈现了警告的另一种实现:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -215,14 +201,11 @@ alert.dismiss()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Prompt
+## Prompt 提示框
 
-Prompts are similar to confirm boxes, except they also include a text
-input. Similar to working with form elements, you can use WebDriver's
-send keys to fill in a response. This will completely replace the placeholder
-text. Pressing the cancel button will not submit any text.
+提示框与确认框相似, 不同之处在于它们还包括文本输入. 与处理表单元素类似, 您可以使用WebDriver的sendKeys来填写响应. 这将完全替换占位符文本. 按下取消按钮将不会提交任何文本.
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
-See a sample prompt</a>.
+查看样例提示框</a>.
 
 
 {{< code-tab >}}
