@@ -8,7 +8,7 @@ but it composes many tools.
 
 ## WebDriver
 
-If you are beginning with desktop website test automation, then you
+If you are beginning with desktop website and mobile website inside the chrome browser for the test automation, then you
 are going to be using WebDriver APIs. _[WebDriver]({{< ref "/webdriver/_index.md" >}})_ 
 uses browser automation APIs provided by browser vendors to control browser and
 run tests. This is as if a real user is operating the browser. Since
