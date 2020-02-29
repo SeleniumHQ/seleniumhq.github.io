@@ -3,21 +3,15 @@ title: "Eviter de partager l'état"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Bien que mentionné à plusieurs endroits, il convient de le mentionner à nouveau. Assurer
+les tests sont isolés les uns des autres.
 
-Although mentioned in several places it is worth mentioning again. Ensure 
-tests are isolated from one another.
+* Ne partagez pas les données de test. Imaginez plusieurs tests qui interrogent chacun la base de données
+pour les commandes valides avant d'en choisir une pour effectuer une action. Devrait deux tests
+prenez la même commande que vous risquez d'obtenir un comportement inattendu.
 
-* Do not share test data. Imagine several tests that each query the database 
-for valid orders before picking one to perform an action on. Should two tests
-pick up the same order you are likely to get unexpected behaviour.
+* Nettoyez les données périmées dans l'application qui pourraient être récupérées par un autre
+test par ex. enregistrements de commande invalides.
 
-* Clean up stale data in the application that might be picked up by another 
-test e.g. invalid order records.
-
-* Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelisation simpler.
+* Créez une nouvelle instance WebDriver par test. Cela permet d'assurer l'isolement des tests
+et rend la parallélisation plus simple.

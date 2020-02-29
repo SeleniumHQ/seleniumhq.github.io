@@ -3,18 +3,11 @@ title: "Keyboard"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
-interface which allows us to provide virtualized device input to the web browser.
+Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -113,7 +106,7 @@ fun main() {
 
 ## keyDown
 
-The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+keyDown用于模拟按下辅助按键(CONTROL, SHIFT, ALT)的动作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -229,7 +222,7 @@ fun main() {
 
 ## keyUp
 
-The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+keyUp用于模拟辅助按键(CONTROL, SHIFT, ALT)弹起或释放的操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -370,9 +363,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## clear
-Clears the content of an editable element. 
-This is only applied for the elements which is editable and interactable, 
-otherwise selenium returns the error (invalid element state (or) Element not interactable)
+清除可编辑元素的内容. 这仅适用于可编辑且可交互的元素, 否则Selenium将返回错误(无效的元素状态或元素不可交互).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
