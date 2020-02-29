@@ -22,14 +22,13 @@
     </item>
     
     <item>
-      <title>Domain specific language</title>
+      <title>Langue spécifique au domaine</title>
       <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks.</description>
+      <description>Une langue spécifique au domaine (DSL) est un système qui fournit à l&amp;rsquo;utilisateur un moyen expressif de résoudre un problème. Il permet à un utilisateur de interagir avec le système à leurs conditions - pas seulement parler de programmeur.
+Vos utilisateurs, en général, ne se soucient pas de l&amp;rsquo;apparence de votre site. Ils ne se soucient de la décoration, des animations ou des graphismes. Ils voulez utiliser votre système pour pousser leurs nouveaux employés à travers le processus avec une difficulté minimale; ils veulent réserver un voyage en Alaska; ils veulent configurer et acheter des licornes à prix réduit.</description>
     </item>
     
     <item>
