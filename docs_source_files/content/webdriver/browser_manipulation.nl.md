@@ -519,7 +519,10 @@ public static void tearDown() {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# We don't have a Python code sample yet -  Help us out and raise a PR  
+# unittest teardown
+# https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
+def tearDown(self):
+    self.driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 /*
