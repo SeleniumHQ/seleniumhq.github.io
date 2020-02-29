@@ -478,7 +478,10 @@ public static void tearDown() {driver.quit();
 }
   {{</ code-panel>}}
   {{<code-panel language="python">}}
-# 我们还没有 python 的示例代码，请帮助我们，并提交一个 PR
+# unittest teardown
+# https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
+def tearDown(self):
+    self.driver.quit()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 /*
