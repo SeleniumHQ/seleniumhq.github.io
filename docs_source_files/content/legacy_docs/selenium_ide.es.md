@@ -463,10 +463,10 @@ Parameters vary, however they are typically:
 
 * a locator for identifying a UI element within a page.
 * a text pattern for verifying or asserting expected page content
-* a text pattern or a selenium variable for entering text in an input field or
+* a text pattern or a Selenium variable for entering text in an input field or
 for selecting an option from an option list.
 
-Locators, text patterns, selenium variables, and the commands themselves are
+Locators, text patterns, Selenium variables, and the commands themselves are
 described in considerable detail in the section on Selenium Commands.
 
 Selenium scripts that will be run from Selenium-IDE will be stored in an HTML
@@ -1190,8 +1190,8 @@ passed to your test program from the command-line, from another program, or from
 a file.
  
 The plain *store* command is the most basic of the many store commands and can be used 
-to simply store a constant value in a selenium variable.  It takes two 
-parameters, the text value to be stored and a selenium variable.  Use the 
+to simply store a constant value in a Selenium variable.  It takes two 
+parameters, the text value to be stored and a Selenium variable.  Use the 
 standard variable naming conventions of only alphanumeric characters when 
 choosing a name for your variable.
 

@@ -629,7 +629,7 @@ them unless you are working with an pre HTML5 webapp.  Iframes allow
 the insertion of a document from an entirely different domain, and are
 still commonly used.
 
-If you need to work with frames or iframes, Webdriver allows you to
+If you need to work with frames or iframes, WebDriver allows you to
 work with them in the same way. Consider a button within an iframe.
 If we inspect the element using the browser development tools, we might
 see the following:

@@ -1016,11 +1016,11 @@ elements are not available on page.
 ### Executing JavaScript from Your Test
 
 JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of selenium API can be used to execute JavaScript from
-selenium RC. 
+by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
+Selenium RC. 
 
 Consider an application having check boxes with no static identifiers. 
-In this case one could evaluate JavaScript from selenium RC to get ids of all 
+In this case one could evaluate JavaScript from Selenium RC to get ids of all 
 check boxes and then exercise them. 
 
 ```java
@@ -1179,7 +1179,7 @@ You cannot run both at the same time.
 
 #### Server-Side Logs
 
-When launching selenium server the **-log** option can be used to record
+When launching Selenium server the **-log** option can be used to record
 valuable debugging information reported by the Selenium Server to a text file.
 
 ```bash   
@@ -1615,7 +1615,7 @@ about the `The Same Origin Policy`_, `Proxy Injection`_ carefully.
 ### Handling Browser Popup Windows
 
 There are several kinds of "Popups" that you can get during a Selenium test.
-You may not be able to close these popups by running selenium commands if 
+You may not be able to close these popups by running Selenium commands if 
 they are initiated by the browser and not your AUT.  You may
 need to know how to manage these.  Each type of popup needs to be addressed differently.
 
