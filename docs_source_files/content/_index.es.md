@@ -1,20 +1,37 @@
 ---
-title: "El Proyecto para Automatización de Navegadores Selenium"
+title: "The Selenium Browser Automation Project"
 ---
 
-# El Proyecto para Automatización de Navegadores Selenium
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Selenium es un proyecto padre que cobija a una gama de herramientas y bibliotecas que permiten y soportan la automatización de los navegadores web.
+# The Selenium Browser Automation Project
 
-Proporciona extensiones para emular la interacción del usuario con los navegadores, un servidor de distribución para escalar la asignación del navegador y la infraestructura para implementaciones de la 
-[Especificación W3C del WebDriver](//www.w3.org/TR/webdriver/) que le permite escribir código intercambiable para todos los principales navegadores web.
+Selenium is an umbrella project for a range of tools and libraries 
+that enable and support the automation of web browsers. 
 
-Este proyecto es posible gracias a los colaboradores voluntarios que han dedicado miles de horas de su propio tiempo y han hecho que el código fuente [esté disponible gratuitamente]({{< ref "/front_matter/copyright_and_attributions.es.md#license" >}}) para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+It provides extensions to emulate user interaction with browsers,
+a distribution server for scaling browser allocation,
+and the infrastructure for implementations of the 
+[W3C WebDriver specification](//www.w3.org/TR/webdriver/)
+that lets you write interchangeable code for all major web browsers.
 
-Selenium reúne a proveedores de navegadores, ingenieros y entusiastas para promover una discusión abierta sobre la automatización de la plataforma web.
-El proyecto organiza [una conferencia anual](//seleniumconf.com/) para enseñar y nutrir a la comunidad.
+This project is made possible by volunteer contributors
+who have put in thousands of hours of their own time,
+and made the source code [freely available]({{< ref "/front_matter/copyright_and_attributions.es.md#license" >}})
+for anyone to use, enjoy, and improve.
 
-En el núcleo de Selenium se encuentra el _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, una interfaz para escribir conjuntos de instrucciones que se pueden ejecutar indistintamente en muchos navegadores. Aquí está una de las instrucciones más simples que puede hacer:
+Selenium brings together browser vendors, engineers, and enthusiasts
+to further an open discussion around automation of the web platform.
+The project organises [an annual conference](//seleniumconf.com/)
+to teach and nurture the community.
+
+At the core of Selenium is _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, 
+an interface to write instruction sets that can be run interchangeably in many 
+browsers. Here is one of the simplest instructions you can make:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -50,7 +67,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-#Este ejemplo requiere Selenium WebDriver 3.13 o posterior
+#This example requires Selenium WebDriver 3.13 or newer
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
@@ -140,17 +157,23 @@ fun main() {
 {{< / code-tab >}}
 
 
-Consulte la _[Guía rápida]({{< ref "/getting_started/quick.es.md" >}})_ para obtener una explicación completa de lo que sucede detrás de escena cuando ejecuta este código.
-Debe continuar con la [documentación narrativa]({{< ref "/introduction/_index.md" >}}) para comprender cómo puede [instalar]({{< ref "/selenium_installation/_index.md" >}}) y utilizar con éxito Selenium como herramienta de automatización de pruebas, y escalar pruebas simples como esta para ejecutar en entornos grandes y distribuidos en múltiples navegadores, en varios sistemas operativos diferentes.
+See the _[Quick Tour]({{< ref "/getting_started/quick.es.md" >}})_ for a full explanation
+of what goes on behind the scenes when you run this code.
+You should continue on to the [narrative documentation]({{< ref "/introduction/_index.md" >}})
+to understand how you can [install]({{< ref "/selenium_installation/_index.md" >}}) and
+successfully use Selenium as a test automation tool,
+and scaling simple tests like this to run
+in large, distributed environments on multiple browsers,
+on several different operating systems.
 
+## Getting started
 
-## Empezando
+If you are new to Selenium,
+we have a few resources that can help you
+get up to speed right away.
 
-Si es nuevo en Selenium, tenemos algunos recursos que pueden ayudarlo a ponerse al día de inmediato.
-
-* [Guía rápida]({{< ref "/getting_started/quick.es.md" >}})
-  * [El WebDriver]({{< ref "/getting_started/quick.es.md#webdriver" >}})
-  * [Control remoto]({{< ref "/getting_started/quick.es.md#remote-control" >}})
+* [Quick tour]({{< ref "/getting_started/quick.es.md" >}})
+  * [WebDriver]({{< ref "/getting_started/quick.es.md#webdriver" >}})
   * [IDE]({{< ref "/getting_started/quick.es.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.es.md#grid" >}})
 

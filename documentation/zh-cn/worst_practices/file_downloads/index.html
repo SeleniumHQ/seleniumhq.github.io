@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>File downloads :: Selenium 文档</title>
+    <title>文件下载 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582541485" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582541485" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1582970297" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1582970297" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582541485" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1582970297" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582541485"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1582970297"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582541485"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582541485"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1582970297"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1582970297"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582541485"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1582970297"></script>
 
     
   </div>
@@ -578,9 +578,9 @@
  
   
     
-      <li data-nav-id="/webdriver/js_alerts_prompts_and_confirmations/" title="JavaScript alerts, prompts and confirmations" class="dd-item ">
+      <li data-nav-id="/webdriver/js_alerts_prompts_and_confirmations/" title="JavaScript 警告框,提示框和确认框" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/">
-        JavaScript alerts, prompts and confirmations
+        JavaScript 警告框,提示框和确认框
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1003,9 +1003,9 @@
  
   
     
-      <li data-nav-id="/worst_practices/file_downloads/" title="File downloads" class="dd-item active">
+      <li data-nav-id="/worst_practices/file_downloads/" title="文件下载" class="dd-item active">
         <a href="https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/">
-        File downloads
+        文件下载
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/worst_practices/'>Worst practices</a> > File downloads
+            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/worst_practices/'>Worst practices</a> > 文件下载
           
          
           
@@ -1936,7 +1936,7 @@
           
             <h1>
               
-              File downloads
+              文件下载
             </h1>
           
 
@@ -1944,22 +1944,8 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
-</div>
-
-
-<p>Whilst it is possible to start a download
-by clicking a link with a browser under Selenium&rsquo;s control,
-the API does not expose download progress,
-making it less than ideal for testing downloaded files.
-This is because downloading files is not considered an important aspect
-of emulating user interaction with the web platform.
-Instead, find the link using Selenium
-(and any required cookies)
-and pass it to a HTTP request library like
-<a href="//curl.haxx.se/libcurl/">libcurl</a>.</p>
+<p>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式.
+因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如<a href="//curl.haxx.se/libcurl/">libcurl</a>这样的HTTP请求库.</p>
 
 
 <footer class=" footline" >
@@ -1968,8 +1954,8 @@ and pass it to a HTTP request library like
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/">
-      “File downloads”
-    </a> was last updated on: 17 Feb 2020 09:16:17 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/577752fd6dbe782e53ce7fbd0638c9869aba5eaa">Deploying on Mon Feb 17 09:16:17 UTC 2020, commit 369fd1e1a2fa203281c108ec8debcf59d9fb22c1, [skip ci] (577752fd6)</a>
+      “文件下载”
+    </a> was last updated on: 29 Feb 2020 16:55:50 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/6a5027c1def3cab72a79e72f73ad06c2a999a090">Add Chinese translation of &#34;file_downloads&#34; (#270) [deploy site] (6a5027c1d)</a>
 </h5>
         
         </div> 
@@ -3134,19 +3120,19 @@ and pass it to a HTTP request library like
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582541485"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1582970297"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582541485"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582541485"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1582970297"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1582970297"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582541485" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582541485"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1582970297" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1582970297"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

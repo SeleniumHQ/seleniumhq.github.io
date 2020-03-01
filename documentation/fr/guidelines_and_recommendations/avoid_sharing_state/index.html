@@ -11,20 +11,20 @@
     <title>Eviter de partager l&#39;état :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582541488" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582970300" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582970300" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582541488" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582970300" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582970300"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582541488"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582541488"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582970300"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582970300"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582541488"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582970300"></script>
 
     
   </div>
@@ -798,9 +798,9 @@
  
   
     
-      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Domain specific language" class="dd-item ">
+      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Langue spécifique au domaine" class="dd-item ">
         <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/">
-        Domain specific language
+        Langue spécifique au domaine
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1944,26 +1944,19 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>Although mentioned in several places it is worth mentioning again. Ensure
-tests are isolated from one another.</p>
+<p>Bien que mentionné à plusieurs endroits, il convient de le mentionner à nouveau. Assurer
+les tests sont isolés les uns des autres.</p>
 
 <ul>
-<li><p>Do not share test data. Imagine several tests that each query the database
-for valid orders before picking one to perform an action on. Should two tests
-pick up the same order you are likely to get unexpected behaviour.</p></li>
+<li><p>Ne partagez pas les données de test. Imaginez plusieurs tests qui interrogent chacun la base de données
+pour les commandes valides avant d&rsquo;en choisir une pour effectuer une action. Devrait deux tests
+prenez la même commande que vous risquez d&rsquo;obtenir un comportement inattendu.</p></li>
 
-<li><p>Clean up stale data in the application that might be picked up by another
-test e.g. invalid order records.</p></li>
+<li><p>Nettoyez les données périmées dans l&rsquo;application qui pourraient être récupérées par un autre
+test par ex. enregistrements de commande invalides.</p></li>
 
-<li><p>Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelisation simpler.</p></li>
+<li><p>Créez une nouvelle instance WebDriver par test. Cela permet d&rsquo;assurer l&rsquo;isolement des tests
+et rend la parallélisation plus simple.</p></li>
 </ul>
 
 
@@ -1974,7 +1967,7 @@ and makes parallelisation simpler.</p></li>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/">
       “Eviter de partager l&#39;état”
-    </a> was last updated on: 17 Feb 2020 09:16:17 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/577752fd6dbe782e53ce7fbd0638c9869aba5eaa">Deploying on Mon Feb 17 09:16:17 UTC 2020, commit 369fd1e1a2fa203281c108ec8debcf59d9fb22c1, [skip ci] (577752fd6)</a>
+    </a> was last updated on: 25 Feb 2020 14:58:57 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/57606b1915a1fcbe75fa5d491fb9c1dd52c7ed1b">Modify:[EN]-&gt;[FR] Translating guidelines and recommendations to french (#258) [deploy site] (57606b191)</a>
 </h5>
         
         </div> 
@@ -3139,19 +3132,19 @@ and makes parallelisation simpler.</p></li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582970300"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582970300"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582970300"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582541488" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582541488"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582970300" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582970300"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

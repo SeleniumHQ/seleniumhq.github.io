@@ -1,28 +1,20 @@
 ---
-title: "Page loading strategy"
+title: "ページ読み込み戦略"
 weight: 8
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+現在のセッションのページ読み込み戦略を定義します。
+デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は _normal_ となります。
+ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
-Defines the current session's page loading strategy. 
-By default, when Selenium WebDriver loads a page, 
-it follows the _normal_ pageLoadStrategy. 
-It is always recommended to stop downloading additional 
-resources (like images, css, js) when the page loading takes lot of time.
-
-WebDriver _pageLoadStrategy_ supports the following values:
+WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 
 ## normal
 
-This will make Selenium WebDriver to wait for the entire page is loaded. 
-When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
+この値は、Selenium WebDriverはページ全体がロードされるまで待機します。
+**normal** に設定すると、Selenium WebDriverは、[ロード](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)イベントの発生が返却されるまで待機します。
 
-By default **normal** is set to browser if none is provided.
+何も指定されていない場合、デフォルトでは、 **normal** がブラウザに設定されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -98,12 +90,9 @@ fun main() {
 
 ## eager
 
-This will make Selenium WebDriver to wait until the 
-initial HTML document has been completely loaded and parsed, 
-and discards loading of stylesheets, images and subframes.
+この値は、Selenium WebDriverは最初のHTMLドキュメントが完全に読み込まれて解析されるまで待機し、スタイルシート、画像、およびサブフレームの読み込みを破棄します。
 
-When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+**eager** に設定すると、Selenium WebDriverは [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) イベントの発生が返却されるまで待機します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -179,7 +168,7 @@ fun main() {
 
 ## none
 
-When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
+**none** に設定すると、Selenium WebDriverは最初のページがダウンロードされるまで待機します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

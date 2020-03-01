@@ -178,16 +178,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>File downloads</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -234,8 +224,7 @@ Line length When editing the documentation’s source, which is written in plain
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- 首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
+      <description>首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
 然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。 此外，它们通常需要大量的基础设施才能有效运行。 经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成， 还是使用较低级的方法完成，这是一个很好的规则。
 一旦确定您正在进行Web浏览器测试业务， 并且您的 Selenium 环境已经准备好开始编写测试， 您通常会执行以下三个步骤的组合：
  设置数据 执行一组离散的操作 评估结果  您需要尽可能缩短这些步骤; 一到两个操作在大多数时间内应该足够了。 浏览器自动化具有“脆弱”的美誉， 但实际上那是因为用户经常对它要求过高。 在后面的章节中，我们将回到您可以使用的技术， 为了缓解测试中明显的间歇性问题， 特别是如何克服 浏览器 和 WebDriver 之间的竞争条件。
@@ -243,7 +232,11 @@ Line length When editing the documentation’s source, which is written in plain
 Selenium测试的一个显著优势是，它能够从用户的角度测试应用程序的所有组件（从后端到前端）。 因此，换句话说，虽然功能测试运行起来可能很昂贵，但它们同时也包含了大量关键业务部分。
 测试要求 如前所述，Selenium 测试运行起来可能很昂贵。 在多大程度上取决于您正在运行测试的浏览器， 但历史上浏览器的行为变化太大，以至于通常是针对多个浏览器进行交叉测试的既定目标。
 Selenium 允许您在多个操作系统上的多个浏览器上运行相同的指令， 但是对所有可能的浏览器、它们的不同版本以及它们所运行的许多操作系统的枚举将很快成为一项繁重的工作。
-让我们从一个例子开始 Larry 写了一个网站，允许用户订购他们自己定制的独角兽。</description>
+让我们从一个例子开始 Larry 写了一个网站，允许用户订购他们自己定制的独角兽。
+一般的工作流程(我们称之为“幸福之路”)是这样的:
+ 创建一个账户 配置他们的独角兽 添加到购物车 检验并付款 给出关于他们独角兽的反馈  编写一个宏大的 Selenium 脚本来执行所有这些操作是很诱人的 — 很多人都会尝试这样做。 抵制诱惑！ 这样做会导致测试: a) 需要很长时间; b) 会受到一些与页面呈现时间问题有关的常见问题的影响; c) 如果失败，它不会给出一个简洁的、“可检查”的方法来诊断出了什么问题。
+测试此场景的首选策略是将其分解为一系列独立的、快速的测试，每个测试都有一个存在的“理由”。
+假设您想测试第二步： 配置您的独角兽。 它将执行以下操作:</description>
     </item>
     
     <item>
@@ -254,6 +247,15 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <guid>https://selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/</guid>
       <description>要执行项目并控制浏览器，需要安装特定于浏览器的 WebDriver 二进制文件。
 下载 WebDriver 二进制文件 并放入 系统 PATH 环境变量 中.</description>
+    </item>
+    
+    <item>
+      <title>文件下载</title>
+      <link>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
+      <description>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式. 因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如libcurl这样的HTTP请求库.</description>
     </item>
     
     <item>
@@ -494,10 +496,9 @@ Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
+      <description>Mouse表示鼠标事件. 鼠标操作是通过使用底层接口执行的, 其允许我们向Web浏览器提供虚拟化的设备输入操作.
+clickAndHold 它将移动到该元素，然后在给定元素的中间单击(不释放).
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.</description>
     </item>
     
     <item>
@@ -544,14 +545,15 @@ ThreadGuard  This class is only available in the Java Binding</description>
     </item>
     
     <item>
-      <title>JavaScript alerts, prompts and confirmations</title>
+      <title>JavaScript 警告框,提示框和确认框</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
+      <description>WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
+Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;rdquo;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;rdquo;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
+WebDriver可以从弹窗获取文本并接受或关闭这些警告.
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.</description>
     </item>
     
     <item>
@@ -659,10 +661,9 @@ Find Element It is used to find an element and returns a first matching single W
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.
+sendKeys 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34;  driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER); } finally { driver.quit(); } } }   from selenium import webdriver from selenium.</description>
     </item>
     
     <item>
