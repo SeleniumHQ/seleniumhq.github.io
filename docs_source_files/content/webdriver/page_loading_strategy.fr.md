@@ -19,12 +19,15 @@ resources (like images, css, js) when the page loading takes lot of time.
 By default, webdriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
 call until the document ready state is `complete`
 
-### Note: 
-In SPA (Single Page Applications) as once they reach the document ready state of complete, 
-unless you do a `driver.get()` (or) `driver.navigate().to()` call, 
-the ready state will always be complete after initially being set.
-if the website itself is redirecting you from one view to another, 
-the ready state will be complete that entire time.
+In SPA applications (like Angular, react, Ember) once the dynamic content 
+is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
+clicking on a link or performing some action within the page will not make a new request 
+to the server as the content is dynamically loaded at the client side without a pull page refresh. 
+
+SPA applications can load many views dynamically 
+without any server requests, So pageLoadStrategy 
+will always show `COMPLETE` status until 
+we do a new `driver.get()` and `driver.naviagte().to()`
 
 WebDriver _pageLoadStrategy_ supports the following values:
 
@@ -264,8 +267,3 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
-
-### Note: 
-For most of the forms that involves testing in a browser, one should always use 
-[_explicit waits_](https://www.selenium.dev/documentation/fr/webdriver/waits/#explicit-wait) 
-to wait for the DOM to settle. 
