@@ -8,7 +8,7 @@ weight: 8
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
 `document.readyState` property of a document describes the loading state of current document.
-By default, webdriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
+By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
 call until the document ready state is `complete`
 
 In SPA applications (like Angular, react, Ember) once the dynamic content 
