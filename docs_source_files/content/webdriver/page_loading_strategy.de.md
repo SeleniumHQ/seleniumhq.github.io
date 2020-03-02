@@ -9,7 +9,7 @@ it follows the _normal_ pageLoadStrategy.
 It is always recommended to stop downloading additional 
 resources (like images, css, js) when the page loading takes lot of time.
 
-`document.readyState` property of a document describes the loading state of current document.
+The `document.readyState` property of a document describes the loading state of the current document.
 By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
 call until the document ready state is `complete`
 

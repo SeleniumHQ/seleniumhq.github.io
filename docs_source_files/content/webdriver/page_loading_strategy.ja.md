@@ -7,7 +7,7 @@ weight: 8
 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は _normal_ となります。
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
-`document.readyState` property of a document describes the loading state of current document.
+The `document.readyState` property of a document describes the loading state of the current document.
 By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
 call until the document ready state is `complete`
 
