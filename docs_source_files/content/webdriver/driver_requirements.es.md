@@ -475,7 +475,7 @@ hizo un informe excelente sobre la implementación del controlador.
 Las versiones actuales de Opera están construidas con el motor de Chromium, y 
 WebDriver ahora es soportado [a través del controlador de código propietario 
 de Opera]((//github.com/operasoftware/operachromiumdriver/releases)) el cual puede 
-ser [añadido al PATH](#adding-executables-to-your-path) o configurado como propiedad del sistema.
+ser [añadido al PATH](#añadiendo-los-ejecutables-al-path-del-sistema) o configurado como propiedad del sistema.
 
 Instanciar una sesión del controlador es similar a como se hace el Firefox y Chromium:
 
