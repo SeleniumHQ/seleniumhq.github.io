@@ -371,7 +371,7 @@ fun main() {
 ## clear
 Clears the content of an editable element. 
 This is only applied for the elements which is editable and interactable, 
-otherwise selenium returns the error (invalid element state (or) Element not interactable)
+otherwise Selenium returns the error (invalid element state (or) Element not interactable)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

@@ -27,9 +27,8 @@ Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrome/Chromium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
+L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>

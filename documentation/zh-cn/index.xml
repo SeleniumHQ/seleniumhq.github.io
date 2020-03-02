@@ -167,17 +167,6 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Driver specific capabilities</title>
-      <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -277,6 +266,16 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <description>可以通过使用插件扩展 Selenium。这里有一些由第三方创建和维护的插件。有关如何创建插件和使用的更多信息，请参考文档。
 请注意，Selenium 项目不支持、维护、托管或认可这些插件。另外，请注意，下面列出的插件不一定是 Apache 2.0 授权的。 其中一些插件在其他的免费和开源软件许可下可用；其他的只能在私有许可下使用。关于插件及其发行许可的任何问题都需要向它的开发人员提出。
    浏览器 最新版 变更记录 问题追踪     Mozilla GeckoDriver 最新版 变更记录 问题追踪   Google Chrome Driver 最新版 变更记录 问题追踪   Opera 最新版 - 问题追踪   Microsoft Edge Driver 最新版 - 问题追踪   SafariDriver 内置 - 问题追踪    </description>
+    </item>
+    
+    <item>
+      <title>驱动特定的功能</title>
+      <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <description>Firefox 使用FirefoxOptions定义功能 FirefoxOptions 是为Firefox浏览器定义功能(Capabilities)的新方法，通常应优先使用预期功能(DesiredCapabilities).
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>
     
     <item>

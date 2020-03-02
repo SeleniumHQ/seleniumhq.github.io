@@ -11,20 +11,20 @@
     <title>Selenium 1 (Selenium RC) :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1582970292" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1582970292" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1583104371" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1583104371" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1582970292" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1583104371" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1582970292"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1583104371"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1582970292"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1582970292"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1583104371"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1583104371"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1582970292"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1583104371"></script>
 
     
   </div>
@@ -3096,11 +3096,11 @@ elements are not available on page.</p>
 <h3 id="executing-javascript-from-your-test">Executing JavaScript from Your Test</h3>
 
 <p>JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The <strong>getEval</strong> method of selenium API can be used to execute JavaScript from
-selenium RC.</p>
+by selenium. The <strong>getEval</strong> method of Selenium API can be used to execute JavaScript from
+Selenium RC.</p>
 
 <p>Consider an application having check boxes with no static identifiers.
-In this case one could evaluate JavaScript from selenium RC to get ids of all
+In this case one could evaluate JavaScript from Selenium RC to get ids of all
 check boxes and then exercise them.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">   <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> String[] <span style="color:#268bd2">getAllCheckboxIds</span> () { 
 		String <span style="color:#268bd2">script</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;var inputId  = new Array();&#34;</span>;<span style="color:#586e75">// Create array in java script.
@@ -3214,7 +3214,7 @@ You cannot run both at the same time.</p>
 
 <h4 id="server-side-logs">Server-Side Logs</h4>
 
-<p>When launching selenium server the <strong>-log</strong> option can be used to record
+<p>When launching Selenium server the <strong>-log</strong> option can be used to record
 valuable debugging information reported by the Selenium Server to a text file.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   java -jar selenium-server-standalone-&lt;version-number&gt;.jar -log selenium.log</code></pre></div>
 <p>This log file is more verbose than the standard console logs (it includes DEBUG
@@ -3598,7 +3598,7 @@ about the <code>The Same Origin Policy</code><em>, <code>Proxy Injection</code><
 <h3 id="handling-browser-popup-windows">Handling Browser Popup Windows</h3>
 
 <p>There are several kinds of &ldquo;Popups&rdquo; that you can get during a Selenium test.
-You may not be able to close these popups by running selenium commands if
+You may not be able to close these popups by running Selenium commands if
 they are initiated by the browser and not your AUT.  You may
 need to know how to manage these.  Each type of popup needs to be addressed differently.</p>
 
@@ -3699,7 +3699,7 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/legacy_docs/selenium_rc/">
       “Selenium 1 (Selenium RC)”
-    </a> was last updated on: 23 Feb 2020 23:07:06 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/f7d18efbd3bbef846c497d834e50281f78cbb12f">Modify: Translating [EN]-&gt;[FR] Remote webdriver server (#252) [deploy site] (f7d18efbd)</a>
+    </a> was last updated on: 02 Mar 2020 04:41:00 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1035b9e11eb2cfb890bca911536ba076935d089d">Modify: Minor chagnes correcting Selenium and WebDriver typos (#274) [deploy site] (1035b9e11)</a>
 </h5>
         
         </div> 
@@ -4861,19 +4861,19 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1582970292"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1583104371"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1582970292"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1582970292"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1583104371"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1583104371"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1582970292" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1582970292"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1583104371" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1583104371"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
