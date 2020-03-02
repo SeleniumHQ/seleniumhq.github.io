@@ -228,9 +228,8 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/webdriver/driver_requirements/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+      <description>A través del WebDriver, Selenium es capaz de soportar los navegadores mas usados en el mercado como Chrom(ium), Firefox, Internet Explorer, Opera y Safari. WebDriver maneja los navegadores, cuando es posible, apoyándose en las propias funciones que el navegador incorpora para la automatización.
+La finalidad del WebDriver es emular las interacciones de los usuarios reales. Esto es posible en diversos niveles en diferentes navegadores. Para mas detalles sobre las diferentes comportamientos de los controladores, ver Comportamientos del controlador.</description>
     </item>
     
     <item>
