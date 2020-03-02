@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/fr/images/favicon.png" type="image/png">
 
-    <title>Domain specific language :: Documentation Selenium</title>
+    <title>Langue spécifique au domaine :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582557464" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582557464" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1583139710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1583139710" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582557464" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1583139710" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582557464"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1583139710"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582557464"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582557464"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1583139710"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1583139710"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582557464"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1583139710"></script>
 
     
   </div>
@@ -798,9 +798,9 @@
  
   
     
-      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Domain specific language" class="dd-item active">
+      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Langue spécifique au domaine" class="dd-item active">
         <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/">
-        Domain specific language
+        Langue spécifique au domaine
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/fr/'>Le Projet d'Automatisation de Navigateur Selenium</a> > <a href='https://selenium.dev/documentation/fr/guidelines_and_recommendations/'>Lignes directrices et recommendations</a> > Domain specific language
+            <a href='https://selenium.dev/documentation/fr/'>Le Projet d'Automatisation de Navigateur Selenium</a> > <a href='https://selenium.dev/documentation/fr/guidelines_and_recommendations/'>Lignes directrices et recommendations</a> > Langue spécifique au domaine
           
          
           
@@ -1944,7 +1944,7 @@
           
             <h1>
               
-              Domain specific language
+              Langue spécifique au domaine
             </h1>
           
 
@@ -1954,48 +1954,41 @@
 
 
 
+<p>Une langue spécifique au domaine (DSL) est un système qui fournit à l&rsquo;utilisateur
+un moyen expressif de résoudre un problème. Il permet à un utilisateur de
+interagir avec le système à leurs conditions - pas seulement parler de programmeur.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>Vos utilisateurs, en général, ne se soucient pas de l&rsquo;apparence de votre site. Ils ne
+se soucient de la décoration, des animations ou des graphismes. Ils
+voulez utiliser votre système pour pousser leurs nouveaux employés à travers le
+processus avec une difficulté minimale; ils veulent réserver un voyage en Alaska;
+ils veulent configurer et acheter des licornes à prix réduit. Votre travail en tant que
+testeur doit se rapprocher le plus possible de la «capture» de cet état d&rsquo;esprit.
+Dans cet esprit, nous avons entrepris de &ldquo;modéliser&rdquo; l&rsquo;application que vous êtes
+travailler, de telle sorte que les scripts de test (la seule version préliminaire de l&rsquo;utilisateur
+proxy) &ldquo;parler&rdquo; et représenter l&rsquo;utilisateur.</p>
 
-
-<p>A domain specific language (DSL) is a system which provides the user with
-an expressive means of solving a problem. It allows a user to
-interact with the system on their terms – not just programmer-speak.</p>
-
-<p>Your users, in general, do not care how your site looks. They do not
-care about the decoration, animations, or graphics. They
-want to use your system to push their new employees through the
-process with minimal difficulty; they want to book travel to Alaska;
-they want to configure and buy unicorns at a discount. Your job as
-tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you are
-working on, such that the test scripts (the user&rsquo;s only pre-release
-proxy) “speak” for, and represent the user.</p>
-
-<p>With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a report between the
-developers and the stakeholders (users, product owners, business
-intelligence specialists, etc.).</p>
+<p>Avec Selenium, DSL est généralement représenté par des méthodes, écrites pour
+l&rsquo;API simple et lisible - ils permettent un rapport entre le
+les développeurs et les parties prenantes (utilisateurs, propriétaires de produits,
+spécialistes du renseignement, etc.).</p>
 
 <h2 id="benefits">Benefits</h2>
 
 <ul>
-<li><strong>Readable:</strong> Business stakeholders can understand it.</li>
-<li><strong>Writable:</strong> Easy to write, avoids unnecessary duplication.</li>
-<li><strong>Extensible:</strong> Functionality can (reasonably) be added
-without breaking contracts and existing functionality.</li>
-<li><strong>Maintainable:</strong> By leaving the implementation details out of test
-cases, you are well-insulated against changes to the AUT*.</li>
+<li><strong>Lisible:</strong> Les parties prenantes commerciales peuvent le comprendre.</li>
+<li><strong>Inscriptible:</strong> Facile à écrire, évite les doublons inutiles.</li>
+<li><strong>Extensible:</strong> La fonctionnalité peut (raisonnablement) être ajoutée
+sans rompre les contrats et les fonctionnalités existantes.</li>
+<li><strong>Maintenable:</strong> En laissant les détails de mise en œuvre hors de test
+cas, vous êtes bien isolé contre les modifications de l&rsquo;AUT*.</li>
 </ul>
 
 <h2 id="java">Java</h2>
 
-<p>Here is an example of a reasonable DSL method in Java.
-For brevity&rsquo;s sake, it assumes the <code>driver</code> object is pre-defined
-and available to the method.</p>
+<p>Voici un exemple d&rsquo;une méthode DSL raisonnable en Java.
+Par souci de concision, il suppose que l&rsquo;objet <code>driver</code> est prédéfini
+et disponible pour la méthode.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * Takes a username and password, fills out the fields, and clicks &#34;login&#34;.
 </span><span style="color:#586e75"> * @return An instance of the AccountPage
@@ -2018,11 +2011,11 @@ and available to the method.</p>
 </span><span style="color:#586e75"></span>  <span style="color:#586e75">// PageFactory).
 </span><span style="color:#586e75"></span>  <span style="color:#719e07">return</span> PageFactory.newInstance(AccountPage.class);
 }</code></pre></div>
-<p>This method completely abstracts the concepts of input fields,
-buttons, clicking, and even pages from your test code. Using this
-approach, all a tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method - not your tests.</p>
+<p>Cette méthode résume complètement les concepts de champs de saisie,
+des boutons, des clics et même des pages de votre code de test. Utiliser ceci
+approche, tout ce qu&rsquo;un testeur doit faire est d&rsquo;appeler cette méthode. Cela donne
+vous un avantage de maintenance: si les champs de connexion ont changé, vous
+n&rsquo;aurait qu&rsquo;à changer cette méthode - pas vos tests.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> loginTest() {
     loginAsUser(<span style="color:#2aa198">&#34;cbrown&#34;</span>, <span style="color:#2aa198">&#34;cl0wn3&#34;</span>);
 
@@ -2035,14 +2028,14 @@ would only ever have to change this method - not your tests.</p>
     <span style="color:#586e75">// Note that we still haven&#39;t referred to a button or web control anywhere in this
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// script...
 </span><span style="color:#586e75"></span>}</code></pre></div>
-<p>It bears repeating: one of your primary goals should be writing an
-API that allows your tests to address <strong>the problem at hand, and NOT
-the problem of the UI</strong>. The UI is a secondary concern for your
-users – they do not care about the UI, they just want to get their job
-done. Your test scripts should read like a laundry list of things
-the user wants to DO, and the things they want to KNOW. The tests
-should not concern themselves with HOW the UI requires you to go
-about it.</p>
+<p>Il faut le répéter: l&rsquo;un de vos principaux objectifs devrait être de rédiger un
+API qui permet à vos tests de répondre <strong>le problème à portée de main, et NON
+le problème de l&rsquo;interface utilisateur</strong>. L&rsquo;interface utilisateur est une préoccupation secondaire pour votre
+utilisateurs - ils ne se soucient pas de l&rsquo;interface utilisateur, ils veulent juste obtenir leur emploi
+terminé. Vos scripts de test doivent se lire comme une liste de choses à laver
+l&rsquo;utilisateur veut FAIRE et ce qu&rsquo;il veut SAVOIR. Les tests
+ne devrait pas se préoccuper de la façon dont l&rsquo;interface utilisateur vous oblige à aller
+à propos de ça.</p>
 
 <p>*<strong>AUT</strong>: Application under test</p>
 
@@ -2053,8 +2046,8 @@ about it.</p>
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/">
-      “Domain specific language”
-    </a> was last updated on: 18 Feb 2020 10:34:45 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/dfa0b35d5bbc828710e6e5169cd68fe33c02644f">Deploying on Tue Feb 18 10:34:45 UTC 2020, commit 6089f6a5cd8d27d5c65847bf57e08cf24714a531, [skip ci] (dfa0b35d5)</a>
+      “Langue spécifique au domaine”
+    </a> was last updated on: 29 Feb 2020 14:13:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/2666e23fdbf6e994adba9c4e432f4edb32ed7e5f">Modify: [EN]-&gt; [FR] translating domain_specific_language doc (#264) [deploy site] (2666e23fd)</a>
 </h5>
         
         </div> 
@@ -3219,19 +3212,19 @@ about it.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582557464"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1583139710"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582557464"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582557464"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1583139710"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1583139710"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582557464" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582557464"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1583139710" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1583139710"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

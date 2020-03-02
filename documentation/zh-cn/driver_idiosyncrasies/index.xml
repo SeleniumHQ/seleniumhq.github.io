@@ -22,14 +22,13 @@
     </item>
     
     <item>
-      <title>Driver specific capabilities</title>
+      <title>驱动特定的功能</title>
       <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.</description>
+      <description>Firefox 使用FirefoxOptions定义功能 FirefoxOptions 是为Firefox浏览器定义功能(Capabilities)的新方法，通常应优先使用预期功能(DesiredCapabilities).
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>
     
   </channel>

@@ -3,84 +3,78 @@ title: "Les pré-requis de WebDriver"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché
+tels que Chrome/Chromium), Firefox, Internet Explorer, Opera et Safari.
+Dans la mesure du possible, WebDriver pilote le navigateur
+en utilisant la prise en charge intégrée du navigateur pour l'automatisation,
+bien que tous les navigateurs n'aient pas de support officiel pour la télécommande.
 
-Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
-Where possible, WebDriver drives the browser
-using the browser's built-in support for automation,
-although not all browsers have official support for remote control.
+L'objectif de WebDriver est d'émuler l'interaction d'un utilisateur réel
+avec le navigateur le plus près possible.
+Cela est possible à différents niveaux dans différents navigateurs.
+Pour plus de détails sur les différentes particularités des pilotes,
+veuillez consulter _[Idiosyncracies des pilotes]({{<ref "/driver_idiosyncrasies/_index.md">}})_.
 
-WebDriver's aim is to emulate a real user's interaction
-with the browser as closely as possible.
-This is possible at varying levels in different browsers.
-For more details on the different driver idiosyncracies,
-please see _[Driver Idiosyncracies]({{< ref "/driver_idiosyncrasies/_index.md" >}})_.
+Même si tous les pilotes partagent une seule interface utilisateur
+pour contrôler le navigateur,
+ils ont des façons légèrement différentes de configurer des sessions de navigateur.
+Étant donné que de nombreuses implémentations de pilotes sont fournies par des tiers,
+ils ne sont pas inclus dans la distribution standard de sélénium.
 
-Even though all the drivers share a single user-facing interface
-for controlling the browser,
-they have slightly different ways of setting up browser sessions.
-Since many of the driver implementations are provided by third parties,
-they are not included in the standard Selenium distribution.
+Instanciation du pilote, gestion des profils et divers paramètres spécifiques au navigateur
+sont des exemples de paramètres qui ont des exigences différentes selon le navigateur.
+Cette section explique les exigences de base
+pour vous familiariser avec les différents navigateurs.
 
-Driver instantiation, profile management, and various browser specific settings
-are examples of parameters that have different requirements depending on the browser.
-This section explains the basic requirements
-for getting you started with the different browsers.
+### Ajout d'exécutables à votre PATH
 
-### Adding Executables to your PATH
-Most drivers require an extra executable for Selenium to communicate
-with the browser. You can manually specify where the executable lives
-before starting WebDriver, but this can make your tests less portable,
-as the executables will need to be in the same place on every machine,
-or included within your test code repository.
+La plupart des pilotes nécessitent un exécutable supplémentaire pour que Selenium puisse communiquer
+avec le navigateur. Vous pouvez spécifier manuellement l'emplacement de l'exécutable
+avant de démarrer WebDriver, mais cela peut rendre vos tests moins portables,
+car les exécutables devront être au même endroit sur chaque machine,
+ou inclus dans votre référentiel de code de test.
 
-By adding a folder containing WebDriver's binaries to your system's
-path, Selenium will be able to locate the additional binaries without
-requiring your test code to locate the exact location of the driver.
+En ajoutant un dossier contenant les binaires de WebDriver à votre système
+chemin d'accès, Selenium pourra localiser les binaires supplémentaires sans
+nécessitant votre code de test pour localiser l'emplacement exact du pilote.
 
-* Create a directory to place the executables in, like 
+* Créez un répertoire dans lequel placer les exécutables, comme 
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
-* Add the directory to your PATH:
-  * On Windows - Open a command prompt as administrator
-     and the run the following command
-     to permanently add the directory to your path
-     for all users on your machine:
+* Ajoutez le répertoire à votre CHEMIN:
+  * Sous Windows - Ouvrez une invite de commande en tant qu'administrateur
+     et exécutez la commande suivante
+     pour ajouter en permanence le répertoire à votre chemin
+     pour tous les utilisateurs de votre machine:
 
-```shell
-setx /m path "%path%;C:\WebDriver\bin\"
-```
-  * Bash users on macOS and Linux - In a terminal:
+    ```shell
+    setx /m path "%path%;C:\WebDriver\bin\"
+    ```
+  * Utilisateurs Bash sur macOS et Linux - Dans un terminal:
 
-```shell
-export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
-```
+    ```shell
+    export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
+    ```
 
-* You are now ready to test your changes.
-  Close all open command prompts and open a new one.
-  Type out the name of one of the binaries
-  in the folder you created in the previous step,
-  e.g: 
+* Vous êtes maintenant prêt à tester vos modifications. Fermez toutes 
+les invites de commande ouvertes et ouvrez-en une nouvelle.
+Tapez le nom de l'un des binaires
+dans le dossier que vous avez créé à l'étape précédente,
+par exemple:
 
   ```shell
   chromedriver
   ```
-* If your `PATH` is configured correctly,
-you will see some output relating to the startup of the driver:
+* Si votre `PATH` est configuré correctement,
+  vous verrez une sortie relative au démarrage du pilote:
 
-```text
-Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
-Only local connections are allowed.
-```
+    ```text
+    Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+    Only local connections are allowed.
+    ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl + C</kbd>
+Vous pouvez reprendre le contrôle de votre invite de commande en appuyant sur <kbd> Ctrl + C </kbd>
 
-
-### Quick reference
+### Référence rapide
 
 | Browser           | Supported OS               | Maintained by    | Download                                                                     | Issue Tracker                                                                                    |
 | ----------------- | -------------------------- | ---------------- | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
@@ -94,33 +88,33 @@ You can regain control of your command prompt by pressing <kbd>Ctrl + C</kbd>
 
 ### Chromium/Chrome
 
-To drive Chrome or Chromium, you have to download
+Pour conduire Chrome ou Chromium, vous devez télécharger
 [chromedriver](//sites.google.com/a/chromium.org/chromedriver/downloads)
-and put it in a folder that is on your system's path.
+et placez-le dans un dossier qui se trouve sur le chemin de votre système.
 
-On Linux or macOS, this means modifying
-the `PATH` environmental variable.
-You can see what directories, separated by a colon,
-make up your system's path by executing the following command:
+Sous Linux ou macOS, cela signifie modifier
+la variable d'environnement `PATH`.
+Vous pouvez voir quels répertoires, séparés par deux points,
+créez le chemin de votre système en exécutant la commande suivante:
 
 ```shell
 $ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-To include chromedriver on the path if it isn't already,
-make sure you include the chromedriver binary's parent directory.
-The following line will set the `PATH` environmental variable
-its current content, plus an additional path added after the colon:
+Pour inclure chromedriver sur le chemin si ce n'est pas déjà fait,
+assurez-vous d'inclure le répertoire parent du binaire chromedriver.
+La ligne suivante définira la variable d'environnement `PATH`
+son contenu actuel, plus un chemin supplémentaire ajouté après les deux points:
 
 ```shell
 $ export PATH="$PATH:/path/to/chromedriver"
 ```
 
-When chromedriver is available on your path,
-you should be able to execute the _chromedriver_ executable from any directory.
+Lorsque chromedriver est disponible sur votre chemin,
+vous devriez pouvoir exécuter l'exécutable _chromedriver_ à partir de n'importe quel répertoire.
 
-To instantiate a Chrome/Chromium session, you can do the following:
+Pour instancier une session Chrome / Chromium, vous pouvez procéder comme suit:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -169,8 +163,8 @@ val driver: WebDriver = ChromeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Remember that you have to set the path to the chromedriver executable.
-This is possible using the following line:
+N'oubliez pas que vous devez définir le chemin d'accès à l'exécutable chromedriver.
+Ceci est possible en utilisant la ligne suivante:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -193,21 +187,21 @@ System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The chromedriver is implemented as a WebDriver remote server
-that by exposing Chrome's internal automation proxy interface
-instructs the browser what to do.
+Le chromedriver est implémenté en tant que serveur distant WebDriver
+qu'en exposant l'interface proxy d'automatisation interne de Chrome
+indique au navigateur quoi faire.
 
 
 ### Firefox
 
-Starting with Selenium 3, Mozilla has taken over implementation of
-Firefox Driver, with [geckodriver](//github.com/mozilla/geckodriver).
-The new driver for Firefox is called geckodriver and works with Firefox
-48 and newer. Since the Firefox WebDriver is under development, the
-newer the Firefox version the better the support.
+Depuis Selenium 3, Mozilla a pris en charge la mise en œuvre de
+Pilote Firefox, avec [geckodriver](//github.com/mozilla/geckodriver).
+Le nouveau pilote pour Firefox s'appelle geckodriver et fonctionne avec Firefox
+48 et plus récent. Étant donné que Firefox WebDriver est en cours de développement, le
+plus la version Firefox est récente, meilleur est le support.
 
-As geckodriver is the new default way of launching Firefox, you can
-instantiate Firefox in the same way as Selenium 2:
+Comme geckodriver est la nouvelle façon par défaut de lancer Firefox, vous pouvez
+instancier Firefox de la même manière que Selenium 2:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -254,8 +248,8 @@ val driver: WebDriver = FirefoxDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you prefer not to set geckodriver's location using PATH,
-set the geckodriver binary location programmatically:
+Si vous préférez ne pas définir l'emplacement du geckodriver à l'aide de PATH,
+définissez l'emplacement binaire de geckodriver par programme:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -281,31 +275,30 @@ System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-It is also possible to set the property at run time:
+Il est également possible de définir la propriété au moment de l'exécution:
 
 ```shell
 mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver
 ```
 
-It is currently possible to revert to the older, more feature complete
-Firefox driver, by installing Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/)
-or [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/)
-and specifying a desired capability of **marionette** as
-**false**. Later releases of Firefox are no longer compatible.
-
+Il est actuellement possible de revenir à l'ancienne, plus de fonctionnalités complètes
+Pilote Firefox, en installant Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/)
+ou [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/)
+et en spécifiant une capacité souhaitée de **marionnette** comme
+**false**. Les versions ultérieures de Firefox ne sont plus compatibles.
 
 ### Edge
 
-Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
-Updates to Edge are bundled with major Windows updates,
-so you'll need to download a binary which matches the build number of your 
-currently installed build of Windows.
-The [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-contains links to all the available binaries. Bugs against the EdgeDriver 
-implementation can be raised with 
-[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver). 
-If you'd like to run tests against Edge, but aren't running Windows 10, Microsoft
-offer free VMs for testers on the [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
+Edge est le plus récent navigateur de Microsoft, inclus avec Windows 10 et Server 2016.
+Les mises à jour d'Edge sont regroupées avec les principales mises à jour Windows,
+vous devrez donc télécharger un fichier binaire qui correspond au numéro de version de votre
+version de Windows actuellement installée.
+Le [site des développeurs Edge](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
+contient des liens vers tous les binaires disponibles. Bugs contre EdgeDriver
+la mise en œuvre peut être augmentée avec
+[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver).
+Si vous souhaitez exécuter des tests sur Edge, mais que vous n'exécutez pas Windows 10, Microsoft
+offrir des machines virtuelles gratuites aux testeurs sur le [site des développeurs Edge](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -352,8 +345,8 @@ val driver: WebDriver = EdgeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Edge driver is not present in your path, you can set the path using 
-the following line:
+Si le pilote Edge n'est pas présent dans votre chemin, vous pouvez définir le chemin à l'aide de
+la ligne suivante:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -377,19 +370,20 @@ System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
 {{< / code-tab >}}
 
 ### Internet Explorer
-Internet Explorer was Microsoft's default browser until Windows 10, although it 
-is still included in Windows 10. Internet Explorer Driver is the only driver 
-The Selenium project aims to support the same releases
-[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
-Older releases may work, but will be unsupported. 
 
-While the Selenium project provides binaries for both the 32-bit and 64-bit 
-versions of Internet Explorer, there are some 
+Internet Explorer était le navigateur par défaut de Microsoft jusqu'à Windows 10, bien qu'il
+est toujours inclus dans Windows 10. Le pilote Internet Explorer est le seul pilote
+Le projet Selenium vise à supporter les mêmes versions
+[Microsoft considère actuel](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
+Les versions plus anciennes peuvent fonctionner, mais ne seront pas prises en charge.
+
+Alors que le projet Selenium fournit des binaires pour les 32 bits et 64 bits
+versions d'Internet Explorer, il y en a
 [limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with Internet Explorer 10 & 11 with the 64-bit driver, but using the 32-bit 
-driver continues to work well. It should be noted that as Internet Explorer
-preferences are saved against the logged in user's account, some 
-[additional setup is required](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
+avec Internet Explorer 10 et 11 avec le pilote 64 bits, mais en utilisant le 32 bits
+le conducteur continue de bien fonctionner. Il convient de noter que, comme Internet Explorer
+les préférences sont enregistrées sur le compte de l'utilisateur connecté, certaines
+[une configuration supplémentaire est requise](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -436,8 +430,8 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Internet Explorer driver is not present in your path, you can set the path 
-using the following line:
+Si le pilote Internet Explorer n'est pas présent dans votre chemin, vous pouvez définir le chemin
+en utilisant la ligne suivante:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -460,22 +454,21 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Microsoft also offer a WebDriver binary for
-[Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069). 
-It has not been updated since 2014 and is based of a draft version of the 
-W3 specification. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
-has an excellent writeup on Microsoft's implementation.
-
+Microsoft propose également un binaire WebDriver pour
+[Internet Explorer 11 sur Windows 7 et 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069).
+Il n'a pas été mis à jour depuis 2014 et est basé sur une version provisoire du
+Spécifications W3. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
+a une excellente synthèse sur la mise en œuvre de Microsoft.
 
 ### Opera
 
-Current releases of Opera are built on top of the Chromium engine,
-and WebDriver is now supported via the closed-source
-[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases),
-which can be [added to your PATH](#adding-executables-to-your-path) or as a 
-system property.
+Les versions actuelles d'Opera sont construites sur le moteur Chromium,
+et WebDriver est désormais pris en charge via la source fermée
+[Pilote Opera Chromium](//github.com/operasoftware/operachromiumdriver/releases),
+qui peut être [ajouté à votre CHEMIN](#ajout-dexécutables-à-votre-path) ou en tant que
+propriété système.
 
-Instantiating a driver session is similar to Firefox and Chromium:
+L'instanciation d'une session de pilote est similaire à Firefox et Chromium:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -519,26 +512,26 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-High Sierra and later:
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+High Sierra et plus tard:
+* Exécutez la commande suivante à partir du terminal pour la première
+l'heure et tapez votre mot de passe à l'invite pour autoriser WebDriver
 ```shell
 safaridriver --enable
 ```
 
 El Capitan and Sierra:
 
-* Enable the Developer menu from Safari preferences
-* Check the _Allow Remote Automation_ option from with 
-the Develop menu
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+* Activer le menu développeur à partir des préférences de Safari
+* Cochez l'option _Allow Remote Automation_ à partir de avec
+le menu Développer
+* Exécutez la commande suivante à partir du terminal pour la première
+l'heure et tapez votre mot de passe à l'invite pour autoriser WebDriver
 
 ```shell
 /usr/bin/safaridriver -p 1337</
 ```
 
-You can then start a driver session using:
+Vous pouvez ensuite démarrer une session de pilote en utilisant:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -586,35 +579,34 @@ val driver: WebDriver = SafariDriver()
 {{< / code-tab >}}
 
 
-Those looking to automate Safari on iOS should look to the 
-[Appium project](//appium.io/). Whilst Safari was previously
-available for Windows, Apple has long since dropped support, making it
-a poor choice of test platform.
+Ceux qui cherchent à automatiser Safari sur iOS devraient regarder
+[Projet Appium](//appium.io/). Alors que Safari était auparavant
+disponible pour Windows, Apple a depuis longtemps abandonné le support, ce qui en fait
+un mauvais choix de plateforme de test.
 
 
-## Mock browsers
+## Navigateur simulé
 
 
 ### HtmlUnit
 
-HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents 
-and provides an API that allows you to invoke pages, fill out forms, click
-links, etc. It has JavaScript support and is able to work with AJAX libraries,
-simulating Chrome, Firefox or Internet Explorer depending on the configuration
-used. It has been moved to a 
-[new location](http://htmlunit.sourceforge.net/gettingStarted.html). 
-The source is maintained on svn.
-
+HtmlUnit est un "navigateur sans interface graphique pour les programmes Java". Il modélise des documents HTML
+et fournit une API qui vous permet d'appeler des pages, de remplir des formulaires, de cliquer sur
+liens, etc. Il prend en charge JavaScript et est capable de travailler avec les bibliothèques AJAX,
+simulation de Chrome, Firefox ou Internet Explorer selon la configuration
+utilisé. Il a été déplacé vers un
+[nouvel emplacement](http://htmlunit.sourceforge.net/gettingStarted.html).
+La source est maintenue sur svn.
 
 ### PhantomJS
 
-PhantomJS is a headless browser based on Webkit, albeit a version much older 
-than that used by Google Chrome or Safari. Whilst historically a popular 
-choice, it would now be wise to avoid PhantomJS. The project has been 
-unmaintained 
-[since the 5th of August](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
-so whilst the web will continue to change, PhantomJS will not be updated. 
-This was after Google announced the ability to run Chrome headlessly, 
-something also now offered by Mozilla's Firefox.
+PhantomJS est un navigateur sans tête basé sur Webkit, bien qu'une version beaucoup plus ancienne
+que celle utilisée par Google Chrome ou Safari. Bien qu'historiquement populaire
+choix, il serait désormais sage d'éviter PhantomJS. Le projet a été
+non entretenu
+[depuis le 5 août](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE),
+Ainsi, même si le Web continuera de changer, PhantomJS ne sera pas mis à jour.
+Ce fut après que Google a annoncé la possibilité d'exécuter Chrome sans tête,
+quelque chose aussi maintenant offert par Firefox de Mozilla.
 
 

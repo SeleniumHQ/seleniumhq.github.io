@@ -57,8 +57,8 @@ to the use of the information contained herein.
 
 | Software | Version | License |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.55.6 | [Apache 2.0](//gohugo.io/about/license/) |
-| [Hugo Learn Theme](//themes.gohugo.io/hugo-theme-learn/) | v2.3.0 | [MIT](//github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md) |
+| [Hugo](//gohugo.io/) | v0.59.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo Learn Theme](//themes.gohugo.io/hugo-theme-learn/) | v2.4.0 | [MIT](//github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md) |
 | [Code Tabs Style](//codepen.io/markcaron/pen/MvGRYV) | --- | [MIT](//blog.codepen.io/legal/licensing/) |
 
 
