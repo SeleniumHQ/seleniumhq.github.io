@@ -3,18 +3,11 @@ title: "鼠标动作详细信息"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-Mouse represents a mouse event. Mouse actions are performed 
-by using low-level interface which allows us to 
-provide virtualized device input action to the web browser.
+Mouse表示鼠标事件. 鼠标操作是通过使用底层接口执行的, 其允许我们向Web浏览器提供虚拟化的设备输入操作.
 
 ## clickAndHold
 
-It will move to the element and clicks (without releasing) in the middle of the given element.
+它将移动到该元素，然后在给定元素的中间单击(不释放).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -142,7 +135,8 @@ fun main() {
 {{< / code-tab >}}
 
 ## contextClick
-This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
+
+此方法首先将鼠标移动到元素的位置, 然后在给定元素执行上下文点击(右键单击).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -270,7 +264,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## doubleClick
-It will move to the element and performs a double-click in the middle of the given element.
+它将移动到该元素, 并在给定元素的中间双击.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -398,7 +392,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## moveToElement
-This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
+此方法将鼠标移到元素的中间. 执行此操作时, 该元素也会滚动到视图中.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -527,7 +521,7 @@ fun main() {
 
 ## moveByOffset:
 
-This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
+此方法将鼠标从其当前位置(或0,0)移动给定的偏移量. 如果坐标在视图窗口之外, 则鼠标最终将在浏览器窗口之外.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -674,8 +668,7 @@ fun main() {
 
 ## dragAndDrop
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+此方法首先在源元素上单击并按住，然后移动到目标元素的位置后释放鼠标.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -814,7 +807,7 @@ fun main() {
 
 ## dragAndDropBy
 
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+此方法首先在源元素上单击并按住, 移至给定的偏移量后释放鼠标.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -967,8 +960,7 @@ fun main() {
 
 ## release
 
-This action releases the depressed left mouse button. If WebElement is passed, 
-it will release depressed left mouse button on the given WebElement
+此操作将释放按下的鼠标左键. 如果WebElement转移了, 它将释放给定WebElement上按下的鼠标左键.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

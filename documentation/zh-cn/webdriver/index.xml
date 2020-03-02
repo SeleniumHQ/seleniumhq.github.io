@@ -84,14 +84,15 @@ ThreadGuard  This class is only available in the Java Binding</description>
     </item>
     
     <item>
-      <title>JavaScript alerts, prompts and confirmations</title>
+      <title>JavaScript 警告框,提示框和确认框</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
+      <description>WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
+Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;rdquo;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;rdquo;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
+WebDriver可以从弹窗获取文本并接受或关闭这些警告.
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.</description>
     </item>
     
     <item>

@@ -1,19 +1,13 @@
 ---
-title: "Driver specific capabilities"
+title: "驱动特定的功能"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### 使用`FirefoxOptions`定义功能
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` 是为Firefox浏览器定义功能(Capabilities)的新方法，通常应优先使用预期功能(DesiredCapabilities).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -56,9 +50,9 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### 设置自定义配置文件
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+可以为Firefox创建自定义配置文件, 如下所示.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -110,9 +104,7 @@ driver = RemoteWebDriver(options)
 
 ### fileUploadDialogTimeout
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+在某些环境中, 当打开文件上传对话框时, Internet Explorer可能会超时. IEDriver的默认超时为1000毫秒, 但您可以使用fileUploadDialogTimeout功能来增加超时时间.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
