@@ -536,8 +536,7 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       
       <guid>https://selenium.dev/documentation/en/webdriver/page_loading_strategy/</guid>
       <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:
-normal This will make Selenium WebDriver to wait for the entire page is loaded. When set to normal, Selenium WebDriver waits until the load event fire is returned.</description>
+The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
     </item>
     
     <item>
