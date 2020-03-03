@@ -7,19 +7,12 @@ weight: 8
 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は _normal_ となります。
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
-The `document.readyState` property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
-call until the document ready state is `complete`
+ドキュメントの `document.readyState` プロパティは、現在のドキュメントの読み込み状態を記述します。
+デフォルトでは、WebDriverは、ドキュメントの準備完了状態が `complete` になるまで、 `driver.get()`（または）`driver.navigate().to()` の呼び出しへの応答を保留します。
 
-In SPA applications (like Angular, react, Ember) once the dynamic content 
-is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
-clicking on a link or performing some action within the page will not make a new request 
-to the server as the content is dynamically loaded at the client side without a pull page refresh. 
+SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
 
-SPA applications can load many views dynamically 
-without any server requests, So pageLoadStrategy 
-will always show `COMPLETE` status until 
-we do a new `driver.get()` and `driver.naviagte().to()`
+SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに `driver.get()` および  `driver.naviagte().to()` を実行するまで、pageLoadStrategyは常に `COMPLETE` ステータスを表示します。
 
 WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 
