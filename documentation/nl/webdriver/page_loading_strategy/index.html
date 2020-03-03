@@ -11,20 +11,20 @@
     <title>Page loading strategy :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1583145658" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1583145658" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1583252733" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1583252733" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1583145658" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1583252733" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1583145658"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1583252733"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1583145658"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1583145658"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1583252733"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1583252733"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1583145658"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1583252733"></script>
 
     
   </div>
@@ -2066,8 +2066,24 @@ When set to <strong>normal</strong>, Selenium WebDriver waits until the
 
 <section id="c#code1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2215,8 +2231,24 @@ and discards loading of stylesheets, images and subframes.</p>
 
 <section id="c#code2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2359,8 +2391,24 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="c#code3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2433,7 +2481,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/webdriver/page_loading_strategy/">
       “Page loading strategy”
-    </a> was last updated on: 02 Mar 2020 16:08:58 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/512c2c7ce991e7a842bec8f682478ad7b46867ed">Add: Adding content to page load strategy (#259) [deploy site] (512c2c7ce)</a>
+    </a> was last updated on: 03 Mar 2020 21:39:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/346599974aabfaeac2658e1f66cf1c551a38191c">Add: Adding C# code samples for page load strategy (#275) [deploy site] (346599974)</a>
 </h5>
         
         </div> 
@@ -3598,19 +3646,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1583145658"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1583252733"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1583145658"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1583145658"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1583252733"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1583252733"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1583145658" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1583145658"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1583252733" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1583252733"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

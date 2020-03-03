@@ -110,8 +110,7 @@ Démarrage du serveur à partir de la ligne de commande Une fois que vous avez t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
+      <description>L&amp;rsquo;objet de page est un modèle de conception qui est devenu populaire dans l&amp;rsquo;automatisation des tests pour améliorer la maintenance des tests et réduire la duplication de code. Un objet page est un classe orientée objet qui sert d&amp;rsquo;interface à une page de votre AUT. le les tests utilisent ensuite les méthodes de cette classe d&amp;rsquo;objets de page chaque fois qu&amp;rsquo;ils ont besoin de interagir avec l&amp;rsquo;interface utilisateur de cette page.</description>
     </item>
     
     <item>
@@ -222,7 +221,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new Firefo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
-      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrome/Chromium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
+      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
 L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
