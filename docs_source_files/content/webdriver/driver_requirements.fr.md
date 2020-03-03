@@ -4,7 +4,7 @@ weight: 2
 ---
 
 Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché
-tels que Chrome/Chromium), Firefox, Internet Explorer, Opera et Safari.
+tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari.
 Dans la mesure du possible, WebDriver pilote le navigateur
 en utilisant la prise en charge intégrée du navigateur pour l'automatisation,
 bien que tous les navigateurs n'aient pas de support officiel pour la télécommande.
@@ -465,7 +465,7 @@ a une excellente synthèse sur la mise en œuvre de Microsoft.
 Les versions actuelles d'Opera sont construites sur le moteur Chromium,
 et WebDriver est désormais pris en charge via la source fermée
 [Pilote Opera Chromium](//github.com/operasoftware/operachromiumdriver/releases),
-qui peut être [ajouté à votre CHEMIN](#ajout-dexécutables-à-votre-path) ou en tant que
+qui peut être [ajouté à votre CHEMIN](#ajout-d-exécutables-à-votre-path) ou en tant que
 propriété système.
 
 L'instanciation d'une session de pilote est similaire à Firefox et Chromium:
