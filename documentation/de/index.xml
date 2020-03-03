@@ -184,7 +184,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       
       <guid>https://selenium.dev/documentation/de/webdriver/driver_requirements/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
     </item>
     
     <item>

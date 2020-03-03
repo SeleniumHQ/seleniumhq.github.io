@@ -29,7 +29,7 @@ Terminology  API: Application Programming Interface.</description>
       
       <guid>https://selenium.dev/documentation/ko/webdriver/driver_requirements/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
     </item>
     
