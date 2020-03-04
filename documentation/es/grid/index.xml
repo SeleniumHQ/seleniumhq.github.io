@@ -12,31 +12,34 @@
     
     
     <item>
-      <title>Propósitos y funcionalidades principales</title>
+      <title>Purposes and main functionalities</title>
       <link>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
-      <description> Punto de entrada central para todas las pruebas Gestión y control de los nodos / entorno donde se ejecutan los navegadores Ejecución de pruebas a gran escala Ejecución de pruebas en paralelo Pruebas de diferentes plataformas (Cross-platform and cross-browser) Balanceo de carga  </description>
+      <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     
     <item>
-      <title>Componentes de un Grid</title>
+      <title>Components of a Grid</title>
       <link>https://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
-      <description>Concentrador o Hub  Intermediario y administrador Acepta solicitudes para ejecutar pruebas Toma instrucciones del cliente y las ejecuta de forma remota en los nodos Administra hilos  Un hub es un punto central al que se envían todas sus pruebas. Cada Selenium Grid consta de un centro exactamente. El concentrador debe ser accesible desde los respectivos clientes (es decir, servidor CI (Continuos Integration), máquina del desarrollador, etc.) El concentrador conectará uno o más nodos a los que se delegarán las pruebas.</description>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
     </item>
     
     <item>
-      <title>Configurando tu propio Grid</title>
+      <title>Setting up your own Grid</title>
       <link>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
-      <description>Para usar Selenium Grid, debe mantener su propia infraestructura para los nodos. Como esto puede ser un esfuerzo demandante e intenso, muchas organizaciones utilizan proveedores de IaaS como Amazon EC2 y Google Compute para proporcionar esta infraestructura.
-Otras opciones incluyen el uso de proveedores como Sauce Labs o Testing Bot que proporcionan un Selenium Grid como servicio en la nube. Ciertamente, también es posible ejecutar nodos en su infraestructura propia.</description>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
     </item>
     
     <item>

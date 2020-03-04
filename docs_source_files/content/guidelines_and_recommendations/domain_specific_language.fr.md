@@ -1,48 +1,41 @@
 ---
-title: "Domain specific language"
+title: "Langue spécifique au domaine"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Une langue spécifique au domaine (DSL) est un système qui fournit à l'utilisateur
+un moyen expressif de résoudre un problème. Il permet à un utilisateur de
+interagir avec le système à leurs conditions - pas seulement parler de programmeur.
 
-A domain specific language (DSL) is a system which provides the user with
-an expressive means of solving a problem. It allows a user to
-interact with the system on their terms – not just programmer-speak.
+Vos utilisateurs, en général, ne se soucient pas de l'apparence de votre site. Ils ne
+se soucient de la décoration, des animations ou des graphismes. Ils
+voulez utiliser votre système pour pousser leurs nouveaux employés à travers le
+processus avec une difficulté minimale; ils veulent réserver un voyage en Alaska;
+ils veulent configurer et acheter des licornes à prix réduit. Votre travail en tant que
+testeur doit se rapprocher le plus possible de la «capture» de cet état d'esprit.
+Dans cet esprit, nous avons entrepris de "modéliser" l'application que vous êtes
+travailler, de telle sorte que les scripts de test (la seule version préliminaire de l'utilisateur
+proxy) "parler" et représenter l'utilisateur.
 
-Your users, in general, do not care how your site looks. They do not
-care about the decoration, animations, or graphics. They
-want to use your system to push their new employees through the
-process with minimal difficulty; they want to book travel to Alaska; 
-they want to configure and buy unicorns at a discount. Your job as
-tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you are
-working on, such that the test scripts (the user's only pre-release
-proxy) “speak” for, and represent the user.
-
-With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a report between the
-developers and the stakeholders (users, product owners, business
-intelligence specialists, etc.).
+Avec Selenium, DSL est généralement représenté par des méthodes, écrites pour
+l'API simple et lisible - ils permettent un rapport entre le
+les développeurs et les parties prenantes (utilisateurs, propriétaires de produits,
+spécialistes du renseignement, etc.).
 
 ## Benefits
 
-* **Readable:** Business stakeholders can understand it.
-* **Writable:** Easy to write, avoids unnecessary duplication.
-* **Extensible:** Functionality can (reasonably) be added
-  without breaking contracts and existing functionality.
-* **Maintainable:** By leaving the implementation details out of test
-  cases, you are well-insulated against changes to the AUT*.
-
+* **Lisible:** Les parties prenantes commerciales peuvent le comprendre.
+* **Inscriptible:** Facile à écrire, évite les doublons inutiles.
+* **Extensible:** La fonctionnalité peut (raisonnablement) être ajoutée 
+sans rompre les contrats et les fonctionnalités existantes.
+* **Maintenable:** En laissant les détails de mise en œuvre hors de test 
+cas, vous êtes bien isolé contre les modifications de l'AUT*.
 
 ## Java
 
-Here is an example of a reasonable DSL method in Java.
-For brevity's sake, it assumes the `driver` object is pre-defined
-and available to the method.
+Voici un exemple d'une méthode DSL raisonnable en Java.
+Par souci de concision, il suppose que l'objet `driver` est prédéfini
+et disponible pour la méthode.
 
 ```java
 /**
@@ -69,11 +62,11 @@ public AccountPage loginAsUser(String username, String password) {
 }
 ```
 
-This method completely abstracts the concepts of input fields,
-buttons, clicking, and even pages from your test code. Using this
-approach, all a tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method - not your tests.
+Cette méthode résume complètement les concepts de champs de saisie,
+des boutons, des clics et même des pages de votre code de test. Utiliser ceci
+approche, tout ce qu'un testeur doit faire est d'appeler cette méthode. Cela donne
+vous un avantage de maintenance: si les champs de connexion ont changé, vous
+n'aurait qu'à changer cette méthode - pas vos tests.
 
 ```java
 public void loginTest() {
@@ -90,14 +83,14 @@ public void loginTest() {
 }
 ```
 
-It bears repeating: one of your primary goals should be writing an
-API that allows your tests to address **the problem at hand, and NOT
-the problem of the UI**. The UI is a secondary concern for your
-users – they do not care about the UI, they just want to get their job
-done. Your test scripts should read like a laundry list of things
-the user wants to DO, and the things they want to KNOW. The tests
-should not concern themselves with HOW the UI requires you to go
-about it.
+Il faut le répéter: l'un de vos principaux objectifs devrait être de rédiger un
+API qui permet à vos tests de répondre **le problème à portée de main, et NON
+le problème de l'interface utilisateur**. L'interface utilisateur est une préoccupation secondaire pour votre
+utilisateurs - ils ne se soucient pas de l'interface utilisateur, ils veulent juste obtenir leur emploi
+terminé. Vos scripts de test doivent se lire comme une liste de choses à laver
+l'utilisateur veut FAIRE et ce qu'il veut SAVOIR. Les tests
+ne devrait pas se préoccuper de la façon dont l'interface utilisateur vous oblige à aller
+à propos de ça.
 
 ***AUT**: Application under test
 

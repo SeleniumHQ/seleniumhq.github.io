@@ -5,30 +5,24 @@ chapter: true
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# Lignes directrices et recommandations
 
-# Guidelines and recommendations
+Une note sur les "meilleures pratiques": nous avons intentionnellement évité l'expression "meilleures
+Pratiques "dans cette documentation. Aucune approche ne fonctionne pour toutes les situations.
+Nous préférons l'idée de "Lignes directrices et recommandations". Nous encourageons
+vous devez les lire et décider de manière réfléchie quelles approches
+travaillera pour vous dans votre environnement particulier.
 
-A note on "Best Practices": We've intentionally avoided the phrase "Best
-Practices" in this documentation. No one approach works for all situations.
-We prefer the idea of "Guidelines and Recommendations". We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.
+Les tests fonctionnels sont difficiles à obtenir correctement pour de nombreuses raisons.
+Comme si l'état, la complexité et les dépendances des applications ne rendent pas les tests assez difficiles,
+gérer les navigateurs (en particulier les incompatibilités entre navigateurs)
+fait de la rédaction de bons tests un défi.
 
-Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.
+Selenium fournit des outils pour faciliter l'interaction fonctionnelle des utilisateurs,
+mais ne vous aide pas à écrire des suites de tests bien conçues.
+Dans ce chapitre, nous proposons des conseils, des directives et des recommandations.
+sur la façon d'aborder l'automatisation fonctionnelle des pages Web.
 
-Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.
-
-This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.
+Ce chapitre enregistre les modèles de conception de logiciels populaires
+parmi de nombreux utilisateurs de sélénium
+qui ont fait leurs preuves au fil des ans.
