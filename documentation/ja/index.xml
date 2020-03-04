@@ -722,15 +722,14 @@ public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&
     </item>
     
     <item>
-      <title>Page loading strategy</title>
+      <title>ページ読み込み戦略</title>
       <link>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:
-normal This will make Selenium WebDriver to wait for the entire page is loaded. When set to normal, Selenium WebDriver waits until the load event fire is returned.</description>
+      <description>現在のセッションのページ読み込み戦略を定義します。 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は normal となります。 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
+The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete
+In SPA applications (like Angular, react, Ember) once the dynamic content is already loaded (I.e once the pageLoadStrategy status is COMPLETE), clicking on a link or performing some action within the page will not make a new request to the server as the content is dynamically loaded at the client side without a pull page refresh.</description>
     </item>
     
     <item>
