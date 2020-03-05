@@ -8,16 +8,25 @@ weight: 7
 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
 {{% /notice %}}
 
-A proxy acts as an intermediary for requests between client and server.In Simple, a proxy 
-lets you go online under different identity masking your original IP. 
+A proxy server acts as an intermediary for 
+requests between a client and a server. In simple, 
+the traffic flows through the proxy server on 
+its way to the address you requested and back.
 
-The HTTP proxy is a high-performance content filter which examines Web traffic to identify suspicious content, 
-malformed content and also protects Web server from attacks.
+A proxy server for automation scripts 
+with Selenium could be helpful for:
 
-Sometimes, When you’re in a corporate environment, browsers fails to connect to a host address.
-this is most likely because the environment is behind HTTP Proxy.
+* Capture network traffic
+* Mock backend calls made by the website
+* Access the requited website under complex network 
+topologies or strict corporate restrictions/policies.
 
-Selenium provide a way to configure browser with the proxy settings
+If you are in a corporate environment, and a 
+browser fails to connect to a URL, this is most 
+likely because the environment needs a proxy to be accessed.
+
+Selenium WebDriver provides a way to proxy settings
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
