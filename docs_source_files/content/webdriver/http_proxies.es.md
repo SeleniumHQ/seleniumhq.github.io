@@ -9,15 +9,23 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server acts as an intermediary for 
+requests between a client and a server. In simple, 
+the traffic flows through the proxy server 
+on its way to the address you requested and back.
 
-A proxy server for automation scripts with Selenium could be helpful for:
+A proxy server for automation scripts with 
+Selenium could be helpful for:
 
 * Capture network traffic
 * Mock backend calls made by the website
-* Access the requited website under complex network topologies or strict corporate restrictions/policies.
+* Access the requited website under complex network 
+topologies or strict corporate restrictions/policies.
 
-If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.
+If you are in a corporate environment, and a 
+browser fails to connect to a URL, this is 
+most likely because the environment needs a 
+proxy to be accessed.
 
 Selenium WebDriver provides a way to proxy settings
 
