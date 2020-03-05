@@ -11,20 +11,20 @@
     <title>Lignes directrices et recommendations :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1582541488" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1582541488" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1583312583" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1583312583" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1582541488" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1583312583" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1583312583"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1582541488"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1582541488"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1583312583"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1583312583"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1582541488"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1583312583"></script>
 
     
   </div>
@@ -798,9 +798,9 @@
  
   
     
-      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Domain specific language" class="dd-item ">
+      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Langue spécifique au domaine" class="dd-item ">
         <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/">
-        Domain specific language
+        Langue spécifique au domaine
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1929,34 +1929,27 @@
 
 	
 
+<h1 id="lignes-directrices-et-recommandations">Lignes directrices et recommandations</h1>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>Une note sur les &ldquo;meilleures pratiques&rdquo;: nous avons intentionnellement évité l&rsquo;expression &ldquo;meilleures
+Pratiques &ldquo;dans cette documentation. Aucune approche ne fonctionne pour toutes les situations.
+Nous préférons l&rsquo;idée de &ldquo;Lignes directrices et recommandations&rdquo;. Nous encourageons
+vous devez les lire et décider de manière réfléchie quelles approches
+travaillera pour vous dans votre environnement particulier.</p>
 
+<p>Les tests fonctionnels sont difficiles à obtenir correctement pour de nombreuses raisons.
+Comme si l&rsquo;état, la complexité et les dépendances des applications ne rendent pas les tests assez difficiles,
+gérer les navigateurs (en particulier les incompatibilités entre navigateurs)
+fait de la rédaction de bons tests un défi.</p>
 
-<h1 id="guidelines-and-recommendations">Guidelines and recommendations</h1>
+<p>Selenium fournit des outils pour faciliter l&rsquo;interaction fonctionnelle des utilisateurs,
+mais ne vous aide pas à écrire des suites de tests bien conçues.
+Dans ce chapitre, nous proposons des conseils, des directives et des recommandations.
+sur la façon d&rsquo;aborder l&rsquo;automatisation fonctionnelle des pages Web.</p>
 
-<p>A note on &ldquo;Best Practices&rdquo;: We&rsquo;ve intentionally avoided the phrase &ldquo;Best
-Practices&rdquo; in this documentation. No one approach works for all situations.
-We prefer the idea of &ldquo;Guidelines and Recommendations&rdquo;. We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.</p>
-
-<p>Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.</p>
-
-<p>Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.</p>
-
-<p>This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.</p>
+<p>Ce chapitre enregistre les modèles de conception de logiciels populaires
+parmi de nombreux utilisateurs de sélénium
+qui ont fait leurs preuves au fil des ans.</p>
 
 
 
@@ -1969,7 +1962,7 @@ that have proven successful over the years.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/">
       “Lignes directrices et recommendations”
-    </a> was last updated on: 17 Feb 2020 09:16:17 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/577752fd6dbe782e53ce7fbd0638c9869aba5eaa">Deploying on Mon Feb 17 09:16:17 UTC 2020, commit 369fd1e1a2fa203281c108ec8debcf59d9fb22c1, [skip ci] (577752fd6)</a>
+    </a> was last updated on: 25 Feb 2020 14:58:57 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/57606b1915a1fcbe75fa5d491fb9c1dd52c7ed1b">Modify:[EN]-&gt;[FR] Translating guidelines and recommendations to french (#258) [deploy site] (57606b191)</a>
 </h5>
         
             </div> 
@@ -3132,19 +3125,19 @@ that have proven successful over the years.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1583312583"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1582541488"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1582541488"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1583312583"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1583312583"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1582541488" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1582541488"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1583312583" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1583312583"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

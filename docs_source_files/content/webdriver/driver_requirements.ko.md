@@ -10,7 +10,7 @@ it by sending us pull requests!
 {{% /notice %}}
 
 Through WebDriver, Selenium supports all major browsers on the market
-such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari.
+such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
 Where possible, WebDriver drives the browser
 using the browser's built-in support for automation,
 although not all browsers have official support for remote control.
