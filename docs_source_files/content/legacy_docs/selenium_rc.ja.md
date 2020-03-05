@@ -922,7 +922,7 @@ JavaScriptは、セレンによって直接サポートされていないアプ�
 Selenium APIの **getEval** メソッドを使用して、Selenium RCからJavaScriptを実行できます。
 
 静的な識別子のないチェックボックスを持つアプリケーションを考えてください。
-この場合、selenium RCからJavaScriptを評価して、すべてのチェックボックスのIDを取得し、それらを実行できます。
+この場合、Selenium RCからJavaScriptを評価して、すべてのチェックボックスのIDを取得し、それらを実行できます。
 
 ```java
    public static String[] getAllCheckboxIds () { 

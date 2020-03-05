@@ -1,20 +1,8 @@
 ---
-title: "File downloads"
+title: "文件下载"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-Whilst it is possible to start a download
-by clicking a link with a browser under Selenium's control,
-the API does not expose download progress,
-making it less than ideal for testing downloaded files.
-This is because downloading files is not considered an important aspect
-of emulating user interaction with the web platform.
-Instead, find the link using Selenium
-(and any required cookies)
-and pass it to a HTTP request library like
-[libcurl](//curl.haxx.se/libcurl/).
+虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式.
+因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如[libcurl](//curl.haxx.se/libcurl/)这样的HTTP请求库.

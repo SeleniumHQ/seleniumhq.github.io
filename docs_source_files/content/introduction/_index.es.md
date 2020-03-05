@@ -1,9 +1,16 @@
 ---
-title: "Introducción"
+title: "Introduction"
 chapter: true
 weight: 2
 ---
 
-# Introducción
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Selenium es un proyecto que cobija una gama de herramientas y bibliotecas que permiten y soportan la automatización de los navegadores web.
+# Introduction
+
+Selenium is an umbrella project for a range of tools and libraries that enable
+and support the automation of web browsers. 

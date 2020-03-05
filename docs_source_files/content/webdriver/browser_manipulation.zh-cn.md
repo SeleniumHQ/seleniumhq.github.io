@@ -478,7 +478,10 @@ public static void tearDown() {driver.quit();
 }
   {{</ code-panel>}}
   {{<code-panel language="python">}}
-# 我们还没有 python 的示例代码，请帮助我们，并提交一个 PR
+# unittest teardown
+# https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
+def tearDown(self):
+    self.driver.quit()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 /*
@@ -563,7 +566,7 @@ with webdriver.Firefox() as driver:
 之前的 webapp，否则你不太可能与他们合作。内嵌框架允许插入来自完全不同领域的文档，并且仍然经常使用。
 
 
-如果您需要使用框架或 iframe, Webdriver 允许您以相同的方式使用它们。考虑 iframe 中的一个按钮。
+如果您需要使用框架或 iframe, WebDriver 允许您以相同的方式使用它们。考虑 iframe 中的一个按钮。
 如果我们使用浏览器开发工具检查元素，我们可能会看到以下内容:
 
 ```html
