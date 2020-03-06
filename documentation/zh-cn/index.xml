@@ -346,14 +346,14 @@ For web applications, the automation of this testing can be done directly with S
     </item>
     
     <item>
-      <title>Working with select elements</title>
+      <title>同选择元素一起工作</title>
       <link>https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+      <description>选择元素可能需要大量样板代码才能自动化. 为了减少这种情况并使您的测试更干净, 在Selenium的support包中有一个 Select 类. 要使用它，您将需要以下导入语句:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.ui.Select     然后，您能够参考 &amp;lt;select&amp;gt; 元素，基于WebElement创建一个Select对象。
+Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement);   select_element = driver.</description>
     </item>
     
     <item>
