@@ -11,20 +11,20 @@
     <title>ページ読み込み戦略 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1583252740" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1583252740" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1583312585" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1583312585" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1583252740" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1583312585" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1583252740"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1583312585"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1583252740"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1583252740"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1583312585"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1583312585"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1583252740"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1583312585"></script>
 
     
   </div>
@@ -1959,19 +1959,12 @@
 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は <em>normal</em> となります。
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。</p>
 
-<p>The <code>document.readyState</code> property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on responding to a <code>driver.get()</code> (or) <code>driver.navigate().to()</code>
-call until the document ready state is <code>complete</code></p>
+<p>ドキュメントの <code>document.readyState</code> プロパティは、現在のドキュメントの読み込み状態を記述します。
+デフォルトでは、WebDriverは、ドキュメントの準備完了状態が <code>complete</code> になるまで、 <code>driver.get()</code>（または）<code>driver.navigate().to()</code> の呼び出しへの応答を保留します。</p>
 
-<p>In SPA applications (like Angular, react, Ember) once the dynamic content
-is already loaded (I.e once the pageLoadStrategy status is COMPLETE),
-clicking on a link or performing some action within the page will not make a new request
-to the server as the content is dynamically loaded at the client side without a pull page refresh.</p>
+<p>SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。</p>
 
-<p>SPA applications can load many views dynamically
-without any server requests, So pageLoadStrategy
-will always show <code>COMPLETE</code> status until
-we do a new <code>driver.get()</code> and <code>driver.naviagte().to()</code></p>
+<p>SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに <code>driver.get()</code> および  <code>driver.naviagte().to()</code> を実行するまで、pageLoadStrategyは常に <code>COMPLETE</code> ステータスを表示します。</p>
 
 <p>WebDriverの <em>pageLoadStrategy</em> は以下の値をサポートします。</p>
 
@@ -2468,7 +2461,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
       “ページ読み込み戦略”
-    </a> was last updated on: 03 Mar 2020 21:39:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/346599974aabfaeac2658e1f66cf1c551a38191c">Add: Adding C# code samples for page load strategy (#275) [deploy site] (346599974)</a>
+    </a> was last updated on: 04 Mar 2020 17:53:22 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/6777f8a2055b8f4b928e76f6adec804ee7d20ece">Add Japanese translation of Page loading strategy (#277) (6777f8a20)</a>
 </h5>
         
         </div> 
@@ -3633,19 +3626,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1583252741"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1583312585"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1583252741"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1583252741"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1583312585"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1583312585"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1583252741" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1583252741"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1583312585" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1583312585"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
