@@ -1,17 +1,12 @@
 ---
-title: "Working with select elements"
+title: "同选择元素一起工作"
 weight: 3
 ---
-
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
-`Select` class in the Selenium support package.
-To use it, you will need the following import statement:
+ 
+选择元素可能需要大量样板代码才能自动化.
+为了减少这种情况并使您的测试更干净, 在Selenium的support包中有一个
+`Select` 类.
+要使用它，您将需要以下导入语句:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -34,8 +29,7 @@ import org.openqa.selenium.support.ui.Select
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You are then able to create a Select object using a WebElement that
-references a `<select>` element.
+然后，您能够参考 `<select>` 元素，基于WebElement创建一个Select对象。 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -63,10 +57,8 @@ val selectObject = new Select(selectElement)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
-First of all, there are different ways of selecting an option
-from the `<select>` element.
+Select对象现在将为您提供一系列命令，使您可以与 `<select>` 元素进行交互.
+首先，有多种方法可以从 `<select>` 元素中选择一个选项.
 
 ```html
 <select>
@@ -76,7 +68,7 @@ from the `<select>` element.
 </select>
 ```
 
-There are three ways to select the first option from the above element:
+有三种方法可以从上述元素中选择第一个选项:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -134,7 +126,7 @@ selectObject.selectByVisibleText("Bread")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then check which options are selected by using:
+然后，您可以检视所有被选择的选项:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -174,8 +166,7 @@ val firstSelectedOption = selectObject.firstSelectedOption
 {{< / code-tab >}}
 
 
-Or you may just be interested in what `<option>` elements
-the `<select>` element contains:
+或者您可能只对 `<select>` 元素包含哪些 `<option>` 元素感兴趣:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -203,7 +194,7 @@ val allAvailableOptions = selectObject.options
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you want to deselect any elements, you now have four options:
+如果要取消选择任何元素，现在有四个选项:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -276,8 +267,8 @@ selectObject.deselectAll()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Finally, some `<select>` elements allow you to select more than one option.
-You can find out if your `<select>` element is one of these by using:
+最后，一些 `<select>` 元素允许您选择多个选项.
+您可以通过使用以下命令确定您的 `<select>` 元素是否允许多选:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
