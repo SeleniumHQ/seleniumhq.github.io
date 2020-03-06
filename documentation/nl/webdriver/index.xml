@@ -81,8 +81,9 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/nl/webdriver/http_proxies/</guid>
-      <description>  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
- </description>
+      <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+ A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server for automation scripts with Selenium could be helpful for:</description>
     </item>
     
     <item>

@@ -110,8 +110,10 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/http_proxies/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
+      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
+ A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server for automation scripts with Selenium could be helpful for:
+ Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.</description>
     </item>
     
     <item>
