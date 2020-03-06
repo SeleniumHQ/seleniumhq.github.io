@@ -1,5 +1,5 @@
 ---
-title: Contribuyendo al sitio y documentación de Selenium
+title: Contributing to the Selenium Site & Documentation
 disableToc: true
 ---
 
@@ -9,78 +9,82 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-Selenium es un proyecto grande de software, su documentación y sitio son
-claves para comprender cómo funcionan las cosas y aprender formas efectivas
-de explotar su potencial.
 
+Selenium is a big software project, its site and documentation are key
+to understanding how things work and learning effective ways to exploit
+its potential.
 
-Este proyecto continene el sitio y la documentación de Selenium. Éste es un
-esfuerzo continuo (no dirigido a ninguna versión específica) para proporcionar
-información actualizada sobre cómo usar Selenium de efectivamente, cómo
-involucrarse y cómo contribuír a Selenium.
+This project contains both Selenium's site and documentation. This is
+an ongoing effort (not targeted at any specific release) to provide
+updated information on how to use Selenium effectively, how to get
+involved and how to contribute to Selenium.
 
-Las contribuciones al sitio o la documentación siguen el proceso descrito en
-la sección a continuación. Debería pasar un tiempo familiarizándose con la
-documentación leyendo [más sobre ella]({{<ref "/introduction/about_this_documentation.es.md">}}).
+Contributions toward the site and docs follow the process described in
+the below section about contributions. You should spend some time
+familiarising yourself with the documentation by reading
+[more about it]({{< ref "/introduction/about_this_documentation.es.md" >}}).
 
 ---
 
-El proyecto Selenium agradece las contribuciones de todos. 
-Hay varias formas de colaborar:
+The Selenium project welcomes contributions from everyone. There are a
+number of ways you can help:
 
-## Reportar un problema
+## Report an issue
 
-Al informar un nuevo problema o al comentar problemas existentes, asegúrese
-de que las discusiones estén relacionadas con temas técnicos concretos con
-el software Selenium o su documentación.
+When reporting a new issues or commenting on existing issues please 
+make sure discussions are related to concrete technical issues with the
+Selenium software, its site and/or documentation.
 
-Todos los componentes de Selenium cambian bastante rápido en el tiempo, por
-lo que esto puede hacer que la documentación esté desactualizada. Si considera
-que este es el caso, como se mencionó, no dude en reportar un problema.
-También es posible que sepa cómo actualizar la documentación, así que envíenos
-un _pull request_ con los cambios relacionados.
+All of the Selenium components change quite fast over time, so this
+might cause the documentation to be out of date. If you find this to
+be the case, as mentioned, don't doubt to create an issue for that.
+It also might be possible that you know how to bring up to date the
+documentation, so please send us a pull request with the related
+changes.
 
-Si no está seguro de si lo que encontró es un problema o no, por favor pregunte
-a través de los canales de comunicación descritos en https://selenium.dev/support. 
+If you are not sure about what you have found is an issue or not,
+please ask through the communication channels described at 
+https://selenium.dev/support.
 
-## Contribuciones
+## Contributions
 
-El proyecto Selenium da la bienvenida a nuevos contribuyentes. Las personas que
-hacen contribuciones significativas y valiosas a lo largo del tiempo se hacen 
-_Committers_ y se les da acceso para realizar _commit_ al proyecto.
+The Selenium project welcomes new contributors. Individuals making
+significant and valuable contributions over time are made _Committers_
+and given commit-access to the project.
 
-Este documento lo guiará a través del proceso de contribución.
+This guide will guide you through the contribution process.
 
-### Paso 1: Bifurcar (_Fork_)
+### Step 1: Fork
 
-Haga _fork_ al proyecto [en Github](https://github.com/seleniumhq/seleniumhq.github.io)
-y verifique su copia localmente.
+Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
+and check out your copy locally.
 
 ```shell
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
-#### Dependencias: Hugo
+#### Dependencies: Hugo
 
-La documentación usa [Hugo](https://gohugo.io/) para construir el sitio y la
-documentación. Verifique todo localmente incluso antes de hacer _commit_ a cualquier 
-cambio, [instale Hugo](https://gohugo.io/getting-started/installing/) y
-[corra el servidor local](https://gohugo.io/getting-started/usage/#livereload)
-para renderizar el sitio localmente.
-s
-### Paso 2: Ramificación (_Branch_)
+We use [Hugo](https://gohugo.io/) to build and render the site and docs.
+To verify everything locally before even committing any changes, please
+[install Hugo](https://gohugo.io/getting-started/installing/), get familiar
+with it and [run the local server](https://gohugo.io/getting-started/usage/#livereload)
+to render the site locally (detailed instructions can be found in the 
+next steps).
 
-Cree una rama nueva (_feature branch_) y comience a hackear:
+### Step 2: Branch
+
+Create a feature branch and start hacking:
 
 ```shell
 % git checkout -b my-feature-branch
 ```
 
-Practicamos el desarrollo basado en HEAD (_HEAD-based development_), lo que
-significa que todos los cambios se aplican directamente sobre la rama maestra (_master_).
+We practice HEAD-based development, which means all changes are applied
+directly on top of master.
 
-### Paso 3: Haga cambios
+### Step 3: Make changes
 
 The repository contains the site and docs, which are two separate Hugo 
 projects. If you want to make changes to the site, work on the
@@ -115,7 +119,8 @@ PR, it can be done iteratively. Don't forget to check some needed configuration
 values in the `config.toml` file.
 * If you make text changes in the English version, replace the same section in
 the translated files with your change (yes, in English), and add the following
-notice at the top of the file. 
+notice at the top of the file.
+ 
 
 ```
 {{%/* notice info */%}}
@@ -125,88 +130,83 @@ it by sending us pull requests!
 {{%/* /notice */%}}
 ```
 
+### Step 4: Commit
 
-### Paso 4: Confirmar (_Commit_)
-
-Primero asegúrese de que git sepa su nombre y dirección de correo electrónico:
+First make sure git knows your name and email address:
 
 ```shell
 % git config --global user.name 'Santa Claus'
 % git config --global user.email 'santa@example.com'
 ```
 
-**Escribir buenos mensajes de confirmación (_commit_) es importante.** Un 
-mensaje de confirmación debe describir qué cambió, por qué y los problemas
-de referencia corregidos (si los hay). Siga estas pautas al escribir uno:
+**Writing good commit messages is important.** A commit message
+should describe what changed, why, and reference issues fixed (if
+any). Follow these guidelines when writing one:
 
-1. Procure que el texto sea en inglés. 
-Se colocan los ejemplos en Español para aumentar la comprensión.
-2. La primera línea debe tener alrededor de 50 caracteres o menos y 
-contener una breve descripción del cambio.
-3. Mantenga la segunda línea en blanco.
-4. Envuelva todas las demás líneas en 72 columnas.
-5. Incluya `Fixes # N`, donde _N_ es el número de problema (_issue_)
-que corrige la confirmación, si corresponde.
+1. The first line should be around 50 characters or less and contain a
+    short description of the change.
+2. Keep the second line blank.
+3. Wrap all other lines at 72 columns.
+4. Include `Fixes #N`, where _N_ is the issue number the commit
+    fixes, if any.
 
-Un buen mensaje de confirmación puede verse así:
+A good commit message can look like this:
 
-```texto
-explicar cometer normativamente en una línea
+```text
+explain commit normatively in one line
 
-El cuerpo del mensaje de confirmación es unas pocas líneas de texto,
-que explican las cosas con más detalle, posiblemente brindando algunos
-antecedentes sobre la resolución del problema, etc.
+Body of commit message is a few lines of text, explaining things
+in more detail, possibly giving some background about the issue
+being fixed, etc.
 
-El cuerpo del mensaje de confirmación puede tener varios párrafos y, 
-por favor, ajuste correctamente las palabras y mantenga las columnas
-con menos de 72 caracteres aproximadamente. De esa manera, 'git log'
-mostrará las cosas muy bien incluso cuando está sangrado.
+The body of the commit message can be several paragraphs, and
+please do proper word-wrap and keep columns shorter than about
+72 characters or so. That way `git log` will show things
+nicely even when it is indented.
 
-Fixes # 141
+Fixes #141
 ```
 
-La primera línea debe ser significativa, ya que es lo que las personas
-ven cuando ejecutan `git shortlog` o` git log --oneline`.
+The first line must be meaningful as it's what people see when they
+run `git shortlog` or `git log --oneline`.
 
 ### Step 5: Rebase
 
-Use `git rebase` (not `git merge`) para sincronizar tu trabajo de vez en cuando.
+Use `git rebase` (not `git merge`) to sync your work from time to time.
 
 ```shell
 % git fetch upstream
 % git rebase upstream/master
 ```
 
-### Paso 6: Prueba
+### Step 6: Test
 
-Recuerde siempre [ejecutar el servidor local](https://gohugo.io/getting-started/usage/#livereload), 
-con esto puede estar seguro de que sus cambios no han roto nada.
+Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
+with this you can be safe that your changes have not broken anything.
 
-### Paso 7: Suba sus cambios (_Push_)
+### Step 7: Push
 
 ```shell
 % git push origin my-feature-branch
 ```
 
-Vaya a https://github.com/yourusername/site.git y presione 
-_Pull Request_ y complete el formulario. 
-**Indique que ha firmado el CLA** (consulte el Paso 7).
+Go to https://github.com/yourusername/seleniumhq.github.io.git and
+press the _Pull Request_ and fill out the form. **Please indicate
+that you've signed the CLA** (see Step 7).
 
-Las solicitudes generalmente se revisan en unos pocos días. 
-Si hay comentarios que abordar, aplique sus cambios en los nuevos 
-commits (preferiblemente [arreglos o _fixups_](http://git-scm.com/docs/git-commit)) 
-y avance a la misma rama (_branch_).
+Pull requests are usually reviewed within a few days. If there are
+comments to address, apply your changes in new commits (preferably
+[fixups](http://git-scm.com/docs/git-commit)) and push to the same
+branch.
 
-### Paso 8: Integración
+### Step 8: Integration
 
-Cuando se completa la revisión del código, un committer tomará su 
-PR (_pull request_) y lo integrará en la rama (_branch_) gh-pages de los
-documentos. Como nos gusta mantener un historial lineal en la rama maestra,
-normalmente resumiremos los cambios (_squash and rebase_) del 
-historial de su rama.
+When code review is complete, a committer will take your PR and
+integrate it on the repository's master branch. Because we like to keep a
+linear history on the master branch, we will normally squash and rebase
+your branch history.
 
-## Comunicación
+## Communication
 
-Todos los detalles sobre cómo comunicarse con los miembros del proyecto y la
-comunidad pueden encontrarse en https://selenium.dev/support.
-
+All details on how to communicate with the project contributors
+and the community overall can be found at https://selenium.dev/support

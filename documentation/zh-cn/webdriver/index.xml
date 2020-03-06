@@ -84,14 +84,15 @@ ThreadGuard  This class is only available in the Java Binding</description>
     </item>
     
     <item>
-      <title>JavaScript alerts, prompts and confirmations</title>
+      <title>JavaScript 警告框,提示框和确认框</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
+      <description>WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
+Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;rdquo;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;rdquo;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
+WebDriver可以从弹窗获取文本并接受或关闭这些警告.
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.</description>
     </item>
     
     <item>
@@ -100,7 +101,9 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
-      <description></description>
+      <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server for automation scripts with Selenium could be helpful for:
+ Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
     </item>
     
     <item>
@@ -110,8 +113,7 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
       <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:
-normal This will make Selenium WebDriver to wait for the entire page is loaded. When set to normal, Selenium WebDriver waits until the load event fire is returned.</description>
+The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
     </item>
     
     <item>
@@ -132,10 +134,9 @@ Find Element It is used to find an element and returns a first matching single W
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.
+sendKeys 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34;  driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER); } finally { driver.quit(); } } }   from selenium import webdriver from selenium.</description>
     </item>
     
   </channel>
