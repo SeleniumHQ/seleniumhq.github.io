@@ -634,7 +634,19 @@ request initiated by third party website.
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+const {Builder} = require('selenium-webdriver');
+(async function example() {
+    let driver = new Builder()
+        .forBrowser('chrome')
+        .build();
+        
+    await driver.get('https://www.example.com');
+    
+    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
+    console.log(await driver.manage().getCookie('key'));
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // We don't have a Kotlin code sample yet -  Help us out and raise a PR  
