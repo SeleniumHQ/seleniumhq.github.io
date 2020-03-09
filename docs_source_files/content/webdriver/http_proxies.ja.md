@@ -1,31 +1,20 @@
 ---
-title: "Http proxies"
+title: "Httpプロキシ"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+プロキシサーバーは、クライアントとサーバー間の要求の仲介役として機能します。
+簡単に言えば、トラフィックはプロキシサーバーを経由して、要求したアドレスに戻り、戻ってきます。
 
-A proxy server acts as an intermediary for 
-requests between a client and a server. In simple, 
-the traffic flows through the proxy server on 
-its way to the address you requested and back.
+Seleniumを使用した自動化スクリプト用のプロキシサーバーは、
 
-A proxy server for automation scripts 
-with Selenium could be helpful for:
+* ネットワークトラフィックをキャプチャする
+* ウェブサイトによって行われた模擬バックエンドを呼び出す
+* 複雑なネットワークトポロジーまたは厳格な企業の制限/ポリシーの下で、必要なWebサイトにアクセスします。
 
-* Capture network traffic
-* Mock backend calls made by the website
-* Access the requited website under complex network 
-topologies or strict corporate restrictions/policies.
+企業環境でブラウザがURLへの接続に失敗した場合、環境にアクセスするにはプロキシが必要であることが原因であることが最も可能性が高いです。
 
-If you are in a corporate environment, and a 
-browser fails to connect to a URL, this is most 
-likely because the environment needs a proxy to be accessed.
-
-Selenium WebDriver provides a way to proxy settings
+Selenium WebDriverは設定をプロキシする方法を提供します。
 
 
 {{< code-tab >}}
