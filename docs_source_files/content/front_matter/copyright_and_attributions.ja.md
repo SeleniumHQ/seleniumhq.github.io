@@ -1,34 +1,22 @@
 ---
-title: "Copyright and attributions"
+title: "著作権と帰属"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+## **Seleniumのドキュメント**
 
-## **The Documentation of Selenium**
+著作権 {{< copyright >}} Software Freedom Conservancy
 
-Copyright {{< copyright >}}, Software Freedom Conservancy.
+このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、保証または適合性は暗示されていません。
+提供される情報は「現状のまま」です。
+著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、いかなる個人または団体に対しても責任も責任も負わないものとします。
+ここに含まれる情報の使用に関して、特許責任は一切負いません。
 
-Every effort has been made to make this documentation
-as complete and as accurate as possible,
-but no warranty or fitness is implied.
-The information provided is on an “as-is” basis.
-The authors and the publisher shall have
-neither liability nor responsibility to any person or entity
-with respect to any loss or damages arising
-from the information contained in this book.
-No patent liability is assumed with respect
-to the use of the information contained herein.
-
-
-## Attributions
+## 帰属
 
 ### Thanks to:
 
-#### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
+#### [Selenium メイン Repository](//github.com/SeleniumHQ/selenium/)
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/selenium/contributors?per_page=100" %}}
 
@@ -62,7 +50,7 @@ to the use of the information contained herein.
 | [Code Tabs Style](//codepen.io/markcaron/pen/MvGRYV) | --- | [MIT](//blog.codepen.io/legal/licensing/) |
 
 
-## License
+## ライセンス
 
 All code and documentation originating from the Selenium project
 is licensed under the Apache 2.0 license,
