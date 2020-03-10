@@ -1,14 +1,10 @@
 ---
-title: "Typographical conventions"
+title: "表記規則"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-## Capitalisation of titles
+## タイトルの大文字化
 
 One should avoid title capitalisation,
 such as _A Very Fine Heading_,
@@ -19,7 +15,7 @@ orthographic conventions.
 We prefer what is known as _sentence case_,
 with a single initial capital to start headers.
 
-## Line length
+## 行の長さ
 
 When editing the documentation’s source,
 which is written in plain HTML,
