@@ -130,8 +130,7 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- 消费级浏览器 当前Selenium框架支持以下浏览器:
+      <description> 消费级浏览器 当前Selenium框架支持以下浏览器:
    浏览器 维护者 支持的版本     Chromium Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
    驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
@@ -637,17 +636,6 @@ The document.readyState property of a document describes the loading state of th
     </item>
     
     <item>
-      <title>Fresh browser per test</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
-    </item>
-    
-    <item>
       <title>Web element</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -657,6 +645,16 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
  WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
 WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
 Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
+    </item>
+    
+    <item>
+      <title>每次测试都刷新浏览器</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <description>每次测试都从一个干净的已知状态开始. 理想情况下, 为每次测试打开一个新的虚拟机. 如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 对于Firefox, 请使用您已知的配置文件去启动WebDriver.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
     </item>
     
     <item>

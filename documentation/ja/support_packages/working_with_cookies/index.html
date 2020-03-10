@@ -11,20 +11,20 @@
     <title>クッキーの使用 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1583485267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1583485267" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1583743727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1583743727" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1583485267" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1583743727" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1583485267"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1583743727"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1583485267"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1583485267"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1583743727"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1583743727"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1583485267"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1583743727"></script>
 
     
   </div>
@@ -597,9 +597,9 @@
  
   
     
-      <li data-nav-id="/webdriver/http_proxies/" title="Http proxies" class="dd-item ">
+      <li data-nav-id="/webdriver/http_proxies/" title="Httpプロキシ" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/webdriver/http_proxies/">
-        Http proxies
+        Httpプロキシ
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1929,6 +1929,9 @@
 <li><a href="#全てのクッキーの取得">全てのクッキーの取得</a></li>
 <li><a href="#クッキーの削除">クッキーの削除</a></li>
 <li><a href="#全てのクッキーの削除">全てのクッキーの削除</a></li>
+<li><a href="#same-site-cookie-attribute">Same-Site Cookie Attribute</a></li>
+<li><a href="#strict">Strict:</a></li>
+<li><a href="#lax">Lax:</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2885,6 +2888,127 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </div>
 </div>
 
+<h2 id="same-site-cookie-attribute">Same-Site Cookie Attribute</h2>
+
+<p>It allows a user to instruct browsers to control whether cookies
+are sent along with the request initiated by third party sites.
+It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.</p>
+
+<p>Same-Site cookie attribute accepts two parameters as instructions</p>
+
+<h2 id="strict">Strict:</h2>
+
+<p>When the sameSite attribute is set as <strong>Strict</strong>,
+the cookie will not be sent along with
+requests initiated by third party websites.</p>
+
+<h2 id="lax">Lax:</h2>
+
+<p>When you set a cookie sameSite attribute to <strong>Lax</strong>,
+the cookie will be sent along with the GET
+request initiated by third party website.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    
+    <label for="tab0code5">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5">
+    
+    <label for="tab1code5">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5">
+    
+    <label for="tab2code5">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5">
+    
+    <label for="tab3code5">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
+    
+    <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Code sample
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+ 
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+ <span style="color:#586e75"># code sample</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+(async <span style="color:#268bd2">function</span> example() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
+        .forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>)
+        .build();
+        
+    await driver.get(<span style="color:#2aa198">&#39;https://www.example.com&#39;</span>);
+    
+    <span style="color:#586e75">// set a cookie on the current domain with sameSite &#39;Strict&#39; (or) &#39;Lax&#39;
+</span><span style="color:#586e75"></span>    await driver.manage().addCookie({name<span style="color:#719e07">:</span><span style="color:#2aa198">&#39;key&#39;</span>, value<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;value&#39;</span>, sameSite<span style="color:#719e07">:</span><span style="color:#2aa198">&#39;Strict&#39;</span>});
+    await driver.manage().addCookie({name<span style="color:#719e07">:</span><span style="color:#2aa198">&#39;key&#39;</span>, value<span style="color:#719e07">:</span> <span style="color:#2aa198">&#39;value&#39;</span>, sameSite<span style="color:#719e07">:</span><span style="color:#2aa198">&#39;Lax&#39;</span>});
+    console.log(await driver.manage().getCookie(<span style="color:#2aa198">&#39;key&#39;</span>));
+})();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2893,7 +3017,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/support_packages/working_with_cookies/">
       “クッキーの使用”
-    </a> was last updated on: 25 Feb 2020 14:58:57 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/57606b1915a1fcbe75fa5d491fb9c1dd52c7ed1b">Modify:[EN]-&gt;[FR] Translating guidelines and recommendations to french (#258) [deploy site] (57606b191)</a>
+    </a> was last updated on: 09 Mar 2020 14:11:01 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/4ccb0080fe722214929d25d56c3c94ece985eaa6">Add: Adding js code sampel for sameSite (#293) [deploy site] (4ccb0080f)</a>
 </h5>
         
         </div> 
@@ -4058,19 +4182,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1583485267"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1583743727"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1583485267"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1583485267"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1583743727"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1583743727"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1583485267" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1583485267"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1583743727" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1583743727"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
