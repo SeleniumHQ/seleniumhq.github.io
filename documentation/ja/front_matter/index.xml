@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Front matter on Seleniumドキュメント</title>
+    <title>奥付け on Seleniumドキュメント</title>
     <link>https://selenium.dev/documentation/ja/front_matter/</link>
-    <description>Recent content in Front matter on Seleniumドキュメント</description>
+    <description>Recent content in 奥付け on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -12,25 +12,29 @@
     
     
     <item>
-      <title>Copyright and attributions</title>
+      <title>著作権と帰属</title>
       <link>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
+      <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
+このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
+帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4442 commits 
+@barancev2815 commits 
+@jimevans2274 commits 
+@jleyba1464 commits</description>
     </item>
     
     <item>
-      <title>Typographical conventions</title>
+      <title>表記規則</title>
       <link>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.
-Line length When editing the documentation’s source, which is written in plain HTML, limit your line lengths to around 72 characters.</description>
+      <description>タイトルの大文字化 A Very Fine Heading などのタイトルの大文字化は避け、代わりに A very fine heading を選択してください。 大げさな大文字表記、またはタイトルケースは、多くの場合、正書法の慣習に対する誤解または無視を示します。 ヘッダーを開始するための最初の大文字を1つ持つセンテンスケースとして知られているものを好みます。
+行の長さ プレーンHTMLで記述されたドキュメントのソースを編集するときは、行の長さを約72文字に制限してください。
+これをさらに一歩進めて、いわゆるセマンティックラインフィード と呼ばれるものを使用します。 これは、一般の人には読まれないHTMLソース行を散文の「自然な区切り」で分割する手法です。 つまり、文は句間の自然な区切りで分割されます。 すべての段落が右マージンの近くで終了するように各段落の行を混乱させるのではなく、 アイデアが途切れる場所であればどこでも改行を追加できます。
+これにより、gitを使用して共同作業するときにdiffを非常に読みやすくすることができますが、 使用するコントリビューターに強制するものではありません。</description>
     </item>
     
   </channel>
