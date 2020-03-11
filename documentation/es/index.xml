@@ -44,6 +44,16 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
+      <title>El proyecto Selenium y sus herramientas</title>
+      <link>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</guid>
+      <description>Selenium controla los navegadores web Selenium significa muchas cosas pero en su núcleo, es un conjunto de herramientas para la automatización de navegadores web que utiliza las mejores técnicas disponibles para controlar remotamente las instancias de los navegadores y emular la interacción del usuario con el navegador.
+Permite a los usuarios simular interacciones básicas realizadas por los usuarios finales; insertando texto en los campos, seleccionando valores de menús desplegables y casillas de verificación, y haciendo clics en los enlaces de los documentos.</description>
+    </item>
+    
+    <item>
       <title>Entendiendo los componentes</title>
       <link>https://selenium.dev/documentation/es/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -113,18 +123,8 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       
       <guid>https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
-    </item>
-    
-    <item>
-      <title>The Selenium project and tools</title>
-      <link>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+ In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description>
     </item>
     
     <item>

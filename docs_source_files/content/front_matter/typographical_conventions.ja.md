@@ -1,43 +1,25 @@
 ---
-title: "Typographical conventions"
+title: "表記規則"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
-## Capitalisation of titles
+## タイトルの大文字化
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratutious capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+_A Very Fine Heading_ などのタイトルの大文字化は避け、代わりに _A very fine heading_ を選択してください。
+大げさな大文字表記、またはタイトルケースは、多くの場合、正書法の慣習に対する誤解または無視を示します。
+ヘッダーを開始するための最初の大文字を1つ持つセンテンスケースとして知られているものを好みます。
 
-## Line length
+## 行の長さ
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 72 characters.
+プレーンHTMLで記述されたドキュメントのソースを編集するときは、行の長さを約72文字に制限してください。
 
-Some of us take this one step further
-and use what is called
-[_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
+これをさらに一歩進めて、いわゆる[セマンティックラインフィード](//rhodesmill.org/brandon/2012/one-sentence-per-line)
+と呼ばれるものを使用します。
+これは、一般の人には読まれないHTMLソース行を散文の「自然な区切り」で分割する手法です。
+つまり、文は句間の自然な区切りで分割されます。
+すべての段落が右マージンの近くで終了するように各段落の行を混乱させるのではなく、
+アイデアが途切れる場所であればどこでも改行を追加できます。
 
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+これにより、gitを使用して共同作業するときにdiffを非常に読みやすくすることができますが、
+使用するコントリビューターに強制するものではありません。

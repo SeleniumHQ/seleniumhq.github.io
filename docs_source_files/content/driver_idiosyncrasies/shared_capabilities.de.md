@@ -8,7 +8,31 @@ weight: 1
 auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
 zu übersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
-### pageLoadStrategy
+ 
+In-order to create a new session by Selenium WebDriver, 
+local end should provide the basic capabilities to remote end. 
+The remote end uses the same set of capabilities to 
+create a session and describes the current session features. 
+
+WebDriver provides capabilities that each remote 
+end will/should support the implementation. 
+Following are the capabilities that WebDriver supports:
+
+## browserName:
+
+This capability is used to set the `browserName` for a given session. 
+If the specified browser is not installed at the 
+remote end, the session creation will fail
+
+## browserVersion: 
+
+This capability is optional, this is used to 
+set the available browser version at remote end. 
+For Example, if ask for Chrome version 75 on a system that 
+only has 80 installed, the session creation will fail
+
+## pageLoadStrategy:
+
 When navigating to a new page via URL, by default Selenium will wait
 until the page has fully loaded before responding. This works well for
 beginners, but can cause long wait times on pages that load a large
