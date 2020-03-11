@@ -615,17 +615,6 @@ Let us say there is a content management system with which you can create some c
     </item>
     
     <item>
-      <title>Consider using a fluent API</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
-driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.</description>
-    </item>
-    
-    <item>
       <title>Page loading strategy</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -633,6 +622,17 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
       <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
 The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
+    </item>
+    
+    <item>
+      <title>考虑使用Fluent API</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
+      <description>Martin Fowler创造了术语 &amp;ldquo;Fluent API&amp;rdquo;. Selenium已经在其 FluentWait 类中实现了类似的东西, 这是对标准 Wait 类的替代. 您可以在页面对象中启用Fluent API设计模式, 然后使用如下代码段查询Google搜索页面:
+driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); Google页面对象类具有这种流畅行为后可能看起来像这样:
+public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&amp;gt; { private final WebDriver driver; private GSPFluentInterface gspfi; public class GSPFluentInterface { private GoogleSearchPage gsp; public GSPFluentInterface(GoogleSearchPage googleSearchPage) { gsp = googleSearchPage; } public GSPFluentInterface clickSearchButton() { gsp.searchButton.click(); return this; } public GSPFluentInterface setSearchString( String sstr ) { clearAndType( gsp.searchField, sstr ); return this; } } @FindBy(id = &amp;#34;gbqfq&amp;#34;) private WebElement searchField; @FindBy(id = &amp;#34;gbqfb&amp;#34;) private WebElement searchButton; public GoogleSearchPage(WebDriver driver) { gspfi = new GSPFluentInterface( this ); this.</description>
     </item>
     
     <item>
