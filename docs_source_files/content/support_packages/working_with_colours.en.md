@@ -147,8 +147,8 @@ and converted into a valid Color object:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");
+Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
+Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 login_button_colour = driver.find_element_by_id('login').value_of_css_property('color')
