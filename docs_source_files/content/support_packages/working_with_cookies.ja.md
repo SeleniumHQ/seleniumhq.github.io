@@ -611,6 +611,8 @@ When you set a cookie sameSite attribute to **Lax**,
 the cookie will be sent along with the GET 
 request initiated by third party website.
 
+**Note**: **As of now this feature is landed in chrome(80+version) and works with Selenium 4 and later versions.**
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 // Code sample
