@@ -18,7 +18,8 @@
       
       <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
+ In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description>
     </item>
     
     <item>
