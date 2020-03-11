@@ -1,29 +1,24 @@
 ---
-title: "共有機能"
+title: "共有Capabilities"
 weight: 1
 ---
 
-In-order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
+Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。
+リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
 
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。
+WebDriverがサポートするCapabilitiesは次のとおりです。
 
 ## browserName:
 
-This capability is used to set the `browserName` for a given session. 
-If the specified browser is not installed at the 
-remote end, the session creation will fail
+このCapabilityは、特定のセッションの `browserName` を設定するために使います。
+指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
 
 ## browserVersion: 
 
-This capability is optional, this is used to 
-set the available browser version at remote end. 
-For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+このCapabilityはオプションです。
+これは、リモートエンドで使用可能なブラウザーバージョンを設定するために使います。
+たとえば、Chromeバージョン80のみがインストールされているシステムでバージョン75を要求すると、セッションの作成は失敗します。
 
 ### ページロード戦略
 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。
