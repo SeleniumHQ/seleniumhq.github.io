@@ -1,123 +1,123 @@
 ---
-title: "The Selenium project and tools"
+title: "El proyecto Selenium y sus herramientas"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### Selenium controla los navegadores web
 
-### Selenium controls web browsers
+_Selenium_ significa muchas cosas pero en su núcleo, es un conjunto
+de herramientas para la automatización de navegadores web que utiliza
+las mejores técnicas disponibles para controlar remotamente las
+instancias de los navegadores y emular la interacción del usuario con
+el navegador.
 
-_Selenium_ is many things 
-but at its core, it is a toolset for web browser automation
-that uses the best techniques available
-to remotely control browser instances
-and emulate a user's interaction with the browser.
+Permite a los usuarios simular interacciones básicas realizadas por
+los usuarios finales; insertando texto en los campos, seleccionando
+valores de menús desplegables y casillas de verificación, y haciendo
+clics en los enlaces de los documentos. También provee muchos otros
+controles tales como el movimiento del mouse, la ejecución arbitraria
+de JavaScript, y mucho más.
 
-It allows users to simulate common activities performed by end-users;
-entering text into fields,
-selecting drop-down values and checking boxes,
-and clicking links in documents.
-It also provides many other controls such as mouse movement,
-arbitrary JavaScript execution, and much more.
-
-Although used primarily for front-end testing of websites,
-Selenium is at its core a browser user agent _library_.
-The interfaces are ubiquitous to their application,
-which encourages composition with other libraries to suit your purpose.
+A pesar de que es usado principalmente para pruebas de front-end de
+sitios webs, Selenium es en esencia una _librería_ de agente de
+usuario para el navegador. Las interfaces son ubicuas a su
+aplicación, lo que fomenta la composición con otras librerías para
+adaptarse a su propósito.
 
 
-### One interface to rule them all
+### Una interfaz para gobernarlos a todos
 
-One of the project's guiding principles
-is to support a common interface for all (major) browser technologies.
-Web browsers are incredibly complex, highly engineered applications,
-performing their operations in completely different ways
-but which frequently look the same while doing so.
-Even though the text is rendered in the same fonts,
-the images are displayed in the same place
-and the links take you to the same destination.
-What is happening underneath is as different as night and day.
-Selenium “abstracts” these differences,
-hiding their details and intricacies from the person writing the code.
-This allows you to write several lines of code to perform a complicated workflow,
-but these same lines will execute on Firefox,
-Internet Explorer, Chrome, and all other supported browsers.
-
-
-### Tools and support
-
-Selenium's minimalist design approach gives it the 
-versatility to be included as a component in bigger applications.
-The surrounding infrastructure provided under the Selenium umbrella
-gives you the tools to put together
-your [grid of browsers]({{< ref "/grid/_index.md" >}})
-so tests can be run on different browsers and multiple operating systems
-across a range of machines.
-
-Imagine a bank of computers in your server room or data center 
-all firing up browsers at the same time
-hitting your site's links, forms,
-and tables&mdash;testing your application 24 hours a day.
-Through the simple programming interface
-provided for the most common languages,
-these tests will run tirelessly in parallel,
-reporting back to you when errors occur.
-
-It is an aim to help make this a reality for you,
-by providing users with tools and documentation to not only control browsers 
-but to make it easy to scale and deploy such grids.
+Uno de los principios fundamentales del proyecto es permitir una
+interfaz común para todas las tecnologías de los (principales)
+navegadores. Los navegadores web son aplicaciones increíblemente
+complejas y de mucha ingeniería, realizando operaciones completamente
+diferentes pero que usualmente se ven iguales al hacerlo. Aunque el
+texto se presente con las mismas fuentes, las imágenes se muestren en
+el mismo lugar y los enlaces te llevan al mismo destino. Lo que
+sucede por debajo es tan diferente como la noche y el día. Selenium
+abstrae estas diferencias, ocultando sus detalles y complejidades a
+la persona que escribe el código. Esto le permite escribir varias
+líneas de código para realizar un flujo de trabajo complicado, pero
+estas mismas líneas se ejecutarán en Firefox, Internet Explorer,
+Chrome y los demás navegadores compatibles.
 
 
-### Who uses Selenium
+### Herramientas y soporte
 
-Many of the most important companies in the world
-have adopted Selenium for their browser-based testing,
-often replacing years-long efforts involving other proprietary tools.
-As it has grown in popularity, so have its requirements and challenges multiplied.
+El diseño minimalista de Selenium le da la versatilidad para que se
+pueda incluir como un componente en otras aplicaciones. La
+infraestructura proporcionada debajo del catálogo de Selenium te da
+las herramientas para que puedas ensamblar tu [grid de
+navegadores]({{< ref "/grid/_index.md" >}}) de modo que tus pruebas
+se puedan ejecutar en diferentes navegadores a través de diferente
+sistemas operativos y plataformas.
 
-As the web becomes more complicated
-and new technologies are added to websites,
-it's the mission of this project to keep up with them where possible.
-Being an open source project,
-this support is provided through the generous donation of time from many volunteers,
-every one of which has a “day job”.
+Imagina un banco de computadores en tu sala de servidores o en un
+centro de datos, todos ejecutando navegadores al mismo tiempo e
+interactuando con los enlaces en tu sitio web, formularios, y
+tablas&mdash;probando tu aplicación 24 horas al día. A través de la
+sencilla interfaz de programación proporcionada para los lenguajes
+más comunes, estas pruebas se ejecutarán incansablemente en paralelo,
+reportando cuando ocurran errores.
 
-Another mission of the project is to encourage
-more volunteers to partake in this effort,
-and build a strong community
-so that the project can continue to keep up with emerging technologies
-and remain a dominant platform for functional test automation.
+Es un objetivo ayudar a que esto sea una realidad para ti,
+proporcionando a los usuarios herramientas y documentación para
+controlar no solo los navegadores pero también para facilitar la
+escalabilidad e implementación de tales grids.
 
 
-### History
+### Quien utiliza Selenium
 
-When Selenium 1 was released in 2004,
-it was out of the necessity to reduce time spent
-manually verifying consistent behaviour in the front-end of a web application.
-It made use of what tools were available at the time 
-and relied heavily on the injection of JavaScript to the web page under test
-to emulate a user's interaction.
+Muchas de las empresas más importantes del mundo han adoptado
+Selenium para sus pruebas basadas en navegador, a menudo reemplazando
+esfuerzos de años que involucran otras herramientas propietarias. A
+medida que ha crecido en popularidad, también se han multiplicado sus
+requisitos y desafíos.
 
-Whilst JavaScript is a good tool to let you introspect the properties of the DOM
-and to do certain client-side observations that you would otherwise not be able to do,
-it falls short on the ability to naturally replicate a user's interactions
-as if the mouse and keyboard are being used.
+A medida que la web se vuelve más complicada y se agregan nuevas
+tecnologías a los sitios web, la misión de este proyecto es
+mantenerse al día con ellos siempre que sea posible. Siendo un
+proyecto de código abierto, este apoyo se sustenta a través de la
+donación generosa de tiempo de muchos voluntarios, cada uno de los
+cuales tiene un "trabajo diurno".
 
-Since then, Selenium has grown and matured a lot,
-into a tool widely used by many&mdash;if not most&mdash;of
-the largest organisations around the world.
-Selenium has gone from a homebrewed test automation toolkit developed at Thoughtworks
-for a niché audience and a specific use case,
-to the world's _de facto_ browser automation library.
+Otra misión del proyecto es alentar a más voluntarios a participar en
+este esfuerzo, y construir una comunidad fuerte para que el proyecto
+pueda seguir el ritmo de las tecnologías emergentes y seguir siendo
+una plataforma dominante para la automatización de pruebas
+funcionales.
 
-Just as Selenium RC made use of the tools of the trade available at the time,
-[Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) drives that tradition on by taking
-the browser interaction part to the browser vendor's home turf 
-and asking them to take responsibility of the backend, browser-facing implementations.
-Recently this work has evolved into a W3C standardisation process
-where the goal is to turn the WebDriver component in Selenium
-into the _du jour_ remote control library for user agents.
+
+### Historia
+
+Cuando Selenium 1 fue lanzado en el año 2004, surgió por la necesidad
+de reducir el tiempo dedicado a verificar manualmente el
+comportamiento consistente en el front-end de una aplicación web.
+Hizo uso de las herramientas disponibles en ese momento y confió en
+gran medida en la inyección de JavaScript en la página web bajo
+prueba para emular la interacción de un usuario.
+
+Si bien JavaScript es una buena herramienta para permitirte la
+introspección de las propiedades del DOM y para hacer ciertas
+observaciones del lado del cliente que de otro modo no se podría
+hacer, se queda corto en la capacidad de replicar naturalmente las
+interacciones de un usuario como usar el mouse y el teclado.
+
+Desde entonces, Selenium ha crecido y ha madurado bastante,
+convirtiéndose en una herramienta ampliamente utilizada por
+muchas&mdash;o sino por la mayoría&mdash; de las organizaciones más
+grandes del mundo. Selenium ha pasado de ser de un kit de
+herramientas de automatización de pruebas de fabricación casera
+desarrollado en Thoughtworks para un público específico y un caso de
+uso específico, a la librería _de facto_ de automatización de
+navegadores del mundo.
+
+Así como Selenium RC hizo uso de las herramientas de oficio
+disponibles en ese momento, [Selenium WebDriver]({{< ref
+"/webdriver/_index.md" >}}) impulsa esta tradición al llevar la parte
+de la interacción del navegador al territorio del proveedor del mismo
+y pedirles que se responsabilicen de las implementaciones de back-end
+orientadas al navegador. Recientemente este esfuerzo se ha convertido
+en un proceso de estandarización del W3C donde el objetivo es
+convertir el componente WebDriver en Selenium en la librería de
+control remoto _du jour_ para agentes de usuario.
