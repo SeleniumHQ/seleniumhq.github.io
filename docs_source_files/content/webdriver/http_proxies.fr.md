@@ -3,31 +3,25 @@ title: "Proxys HTTP"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Un serveur proxy sert d'intermédiaire pour les demandes entre
+un client et un serveur. En toute simplicité, le trafic circule
+via le serveur proxy en route vers l'adresse
+vous avez demandé et retour.
 
-A proxy server acts as an intermediary for requests between
-a client and a server. In simple, the traffic flows 
-through the proxy server on its way to the address 
-you requested and back.
+Un serveur proxy pour les scripts d'automatisation avec
+Le sélénium pourrait être utile pour:
 
-A proxy server for automation scripts with 
-Selenium could be helpful for:
-
-* Capture network traffic
+* Capturez le trafic réseau
 * Mock backend calls made by the website
-* Access the requited website under complex network 
-topologies or strict corporate restrictions/policies.
+* Accéder au site Web demandé sous un réseau complexe
+topologies ou restrictions / politiques d'entreprise strictes.
 
-If you are in a corporate environment, and a 
-browser fails to connect to a URL, this is 
-most likely because the environment needs a 
-proxy to be accessed.
+Si vous êtes dans un environnement d'entreprise et
+le navigateur ne parvient pas à se connecter à une URL, c'est
+très probablement parce que l'environnement a besoin d'un
+proxy à accéder.
 
-Selenium WebDriver provides a way to proxy settings
+Selenium WebDriver permet d'accéder aux paramètres du proxy
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
