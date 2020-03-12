@@ -9,7 +9,7 @@ via le serveur proxy en route vers l'adresse
 vous avez demandé et retour.
 
 Un serveur proxy pour les scripts d'automatisation avec
-Le sélénium pourrait être utile pour:
+Le Selenium pourrait être utile pour:
 
 * Capturez le trafic réseau
 * Mock backend calls made by the website
