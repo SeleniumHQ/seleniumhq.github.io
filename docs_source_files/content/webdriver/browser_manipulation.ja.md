@@ -1011,6 +1011,24 @@ driver.manage().window().position = Point(0,0)
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
+### Minimize window
+Minimizes the window of current browsing context. 
+The exact behavior of this command is specific to 
+individual window managers. 
+ 
+Minimize Window typically hides the window in the system tray.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+  {{< code-panel language="csharp" >}}// Please raise a PR{{< / code-panel >}}
+  {{< code-panel language="ruby" >}} # Please raise a PR{{< / code-panel >}}
+  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
+{{< / code-tab >}}
+
 ### 全画面ウィンドウ
 
 ほとんどのブラウザーでF11を押すのと同じように、画面全体に表示されます。
