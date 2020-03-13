@@ -92,9 +92,9 @@ RC Components Selenium RC components are:</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description> 页面加载策略 通过URL导航到新页面时，默认情况下，Selenium将等待页面完全加载后再进行响应。这对于初学者来说效果很好，但是在加载大量第三方资源的页面上可能会导致较长的等待时间。在这种情况下，使用非默认策略可以使测试的执行速度更快，但是也可能导致不稳定，即页面上的元素随元素加载和大小变化而改变位置.
-页面加载策略可以参考链接 document.readyState 如下述表格的描述:
-   策略 准备完成的状态 备注     normal complete 默认情况下使用，等待所有资源下载完成   eager interactive DOM访问已准备就绪，但其他资源（如图像）可能仍在加载中   none Any 完全不阻塞WebDriver    </description>
+      <description>In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation. Following are the capabilities that WebDriver supports:
+browserName: This capability is used to set the browserName for a given session. If the specified browser is not installed at the remote end, the session creation will fail</description>
     </item>
     
     <item>
@@ -130,8 +130,7 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- 消费级浏览器 当前Selenium框架支持以下浏览器:
+      <description> 消费级浏览器 当前Selenium框架支持以下浏览器:
    浏览器 维护者 支持的版本     Chromium Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
    驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
@@ -616,17 +615,6 @@ Let us say there is a content management system with which you can create some c
     </item>
     
     <item>
-      <title>Consider using a fluent API</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:
-driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.</description>
-    </item>
-    
-    <item>
       <title>Page loading strategy</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -637,14 +625,14 @@ The document.readyState property of a document describes the loading state of th
     </item>
     
     <item>
-      <title>Fresh browser per test</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <title>考虑使用Fluent API</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
+      <description>Martin Fowler创造了术语 &amp;ldquo;Fluent API&amp;rdquo;. Selenium已经在其 FluentWait 类中实现了类似的东西, 这是对标准 Wait 类的替代. 您可以在页面对象中启用Fluent API设计模式, 然后使用如下代码段查询Google搜索页面:
+driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); Google页面对象类具有这种流畅行为后可能看起来像这样:
+public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&amp;gt; { private final WebDriver driver; private GSPFluentInterface gspfi; public class GSPFluentInterface { private GoogleSearchPage gsp; public GSPFluentInterface(GoogleSearchPage googleSearchPage) { gsp = googleSearchPage; } public GSPFluentInterface clickSearchButton() { gsp.searchButton.click(); return this; } public GSPFluentInterface setSearchString( String sstr ) { clearAndType( gsp.searchField, sstr ); return this; } } @FindBy(id = &amp;#34;gbqfq&amp;#34;) private WebElement searchField; @FindBy(id = &amp;#34;gbqfb&amp;#34;) private WebElement searchButton; public GoogleSearchPage(WebDriver driver) { gspfi = new GSPFluentInterface( this ); this.</description>
     </item>
     
     <item>
@@ -657,6 +645,16 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
  WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
 WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
 Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
+    </item>
+    
+    <item>
+      <title>每次测试都刷新浏览器</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <description>每次测试都从一个干净的已知状态开始. 理想情况下, 为每次测试打开一个新的虚拟机. 如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 对于Firefox, 请使用您已知的配置文件去启动WebDriver.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
     </item>
     
     <item>
