@@ -11,20 +11,20 @@
     <title>Manipulación de Navegadores :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1584091861" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584091861" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1584092277" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584092277" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584091861" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584092277" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584091861"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584092277"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584091861"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584091861"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584092277"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584092277"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584091861"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584092277"></script>
 
     
   </div>
@@ -1959,6 +1959,7 @@
 <li><a href="#set-window-position">Set window position</a>
 <ul>
 <li><a href="#maximise-window">Maximise window</a></li>
+<li><a href="#minimize-window">Minimize window</a></li>
 <li><a href="#fullscreen-window">Fullscreen window</a></li>
 </ul></li>
 </ul></li>
@@ -4601,9 +4602,15 @@ toolbars.</p>
 </div>
 </div>
 
-<h3 id="fullscreen-window">Fullscreen window</h3>
+<h3 id="minimize-window">Minimize window</h3>
 
-<p>Fills the entire screen, similar to pressing F11 in most browsers.</p>
+<p>Minimizes the window of current browsing context.
+The exact behavior of this command is specific to
+individual window managers.</p>
+
+<p>Minimize Window typically hides the window in the system tray.</p>
+
+<p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p>
 
 
 
@@ -4645,38 +4652,119 @@ toolbars.</p>
 
 
 <section id="javacode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().minimize();</code></pre></div>
 </section>
   
 
 
 <section id="pythoncode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>fullscreen_window()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>minimize_window()</code></pre></div>
 </section>
   
 
 
 <section id="csharpcode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.FullScreen();
-</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#586e75">// Please raise a PR
+</span></code></pre></div>
 </section>
   
 
 
 <section id="rubycode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>full_screen</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"> <span style="color:#586e75"># Please raise a PR</span></code></pre></div>
 </section>
   
 
 
 <section id="javascriptcode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().minimize();
 </code></pre></div>
 </section>
   
 
 
 <section id="kotlincode24" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().minimize()</code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="fullscreen-window">Fullscreen window</h3>
+
+<p>Fills the entire screen, similar to pressing F11 in most browsers.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode25" id="tab0code25" aria-controls="javacode25" checked>
+    
+    <label for="tab0code25">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode25" id="tab1code25" aria-controls="pythoncode25">
+    
+    <label for="tab1code25">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode25" id="tab2code25" aria-controls="cscode25">
+    
+    <label for="tab2code25">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode25" id="tab3code25" aria-controls="rubycode25">
+    
+    <label for="tab3code25">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode25" id="tab4code25" aria-controls="javascriptcode25">
+    
+    <label for="tab4code25">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode25" id="tab5code25" aria-controls="kotlincode25">
+    
+    <label for="tab5code25">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode25" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode25" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">driver<span style="color:#719e07">.</span>fullscreen_window()</code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode25" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.FullScreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode25" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>full_screen</code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode25" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">await driver.manage().<span style="color:#b58900">window</span>().fullscreen();
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode25" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().fullscreen()</code></pre></div>
 </section>
 </div>
@@ -4690,7 +4778,7 @@ toolbars.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/browser_manipulation/">
       “Manipulación de Navegadores”
-    </a> was last updated on: 13 Mar 2020 13:51:34 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/4e3c6a89ae490a5020a1ce9e5d3a8d85b7c6e44a">Add: adding ruby code sample for getWindowPosition (#307) [deploy site] (4e3c6a89a)</a>
+    </a> was last updated on: 13 Mar 2020 15:06:05 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/0998be13ed35ba9785d94369e1f91b171fa17b2c">Add: Adding minimize_window command in docs (#311) [deploy site] (0998be13e)</a>
 </h5>
         
         </div> 
@@ -5855,19 +5943,19 @@ toolbars.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584091861"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584092277"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1584091861"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584091861"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1584092277"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584092277"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584091861" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584091861"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584092277" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584092277"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
