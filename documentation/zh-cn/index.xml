@@ -675,9 +675,19 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/contributing/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
-This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
+      <description>Selenium是一个大型软件项目, 其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.
+该项目包含Selenium的网站和文档. 这是一项持续的工作(不针对任何特定版本), 用于提供有效使用Selenium、 如何参与以及如何为Selenium做出贡献的更新信息.
+对网站和文档的贡献遵循以下部分中有关贡献的描述. 您应该花一些时间来熟悉以下文档 查看更多.
+Selenium项目欢迎每一个人的贡献. 您可以通过多种方式提供帮助:
+上报问题 在报告新问题或评论现有问题时, 请确保讨论与Selenium的软件、 其站点与文档的具体技术问题相关.
+随着时间的推移, 所有Selenium组件的变化都非常快, 因此这可能会导致文档过时. 如前所述, 如果您确实遇到这种情况, 请不要为此担心. 您也可能知道如何更新文档, 因此请向我们发送包含相关更改的Pull Request.
+如果不确定所发现的问题是否存在, 请通过以下沟通渠道进行描述 https://selenium.dev/support.
+贡献 Selenium项目欢迎新的贡献者. 随时间做出重大贡献的个人将成为 提交者 , 并获得对该项目的提交权限.
+本指南将指导您完成贡献的过程.
+步骤 1: Fork 在 Github上Fork本项目, 并check out到您的本地
+% git clone git@github.com:seleniumhq/seleniumhq.github.io.git % cd seleniumhq.github.io 依赖: Hugo 我们使用 Hugo 来构建和渲染网站和文档. 需要在提交任何更改之前, 在本地验证所有内容, 请安装 Hugo, 熟悉它并运行本地服务器 以在本地呈现该网站(详细说明可在后续步骤中找到).
+步骤 2: 分支 创建一个功能分支并开始工作:
+% git checkout -b my-feature-branch 我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.</description>
     </item>
     
   </channel>
