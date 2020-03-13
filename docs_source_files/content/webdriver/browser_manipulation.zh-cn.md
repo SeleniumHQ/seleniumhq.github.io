@@ -924,7 +924,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 Ruby 的示例代码，帮我们实现并提交一个 PR
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 // 分别获取每个尺寸

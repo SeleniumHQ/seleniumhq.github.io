@@ -995,7 +995,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
