@@ -11,20 +11,20 @@
     <title>クッキーの使用 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584092287" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584092287" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584140075" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584140075" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584092287" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584140075" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584092287"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584140075"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584092287"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584092287"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584140075"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584140075"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584092287"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584140075"></script>
 
     
   </div>
@@ -1929,7 +1929,7 @@
 <li><a href="#全てのクッキーの取得">全てのクッキーの取得</a></li>
 <li><a href="#クッキーの削除">クッキーの削除</a></li>
 <li><a href="#全てのクッキーの削除">全てのクッキーの削除</a></li>
-<li><a href="#same-site-cookie-attribute">Same-Site Cookie Attribute</a></li>
+<li><a href="#samesite-cookie属性">SameSite Cookie属性</a></li>
 <li><a href="#strict">Strict:</a></li>
 <li><a href="#lax">Lax:</a></li>
 </ul></li>
@@ -2888,27 +2888,26 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </div>
 </div>
 
-<h2 id="same-site-cookie-attribute">Same-Site Cookie Attribute</h2>
+<h2 id="samesite-cookie属性">SameSite Cookie属性</h2>
 
-<p>It allows a user to instruct browsers to control whether cookies
-are sent along with the request initiated by third party sites.
-It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.</p>
+<p>これにより、ユーザーは、サードパーティのサイトによって開始されたリクエストとともに
+Cookieを送信するかどうかをブラウザに指示できます。
+CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐために導入されました。</p>
 
-<p>Same-Site cookie attribute accepts two parameters as instructions</p>
+<p>SameSite Cookie属性は、2つのパラメーターを命令として受け入れます。</p>
 
 <h2 id="strict">Strict:</h2>
 
-<p>When the sameSite attribute is set as <strong>Strict</strong>,
-the cookie will not be sent along with
-requests initiated by third party websites.</p>
+<p>SameSite属性が <strong>Strict</strong> に設定されている場合、CookieはサードパーティのWebサイトによって
+開始されたリクエストとともに送信されません。</p>
 
 <h2 id="lax">Lax:</h2>
 
-<p>When you set a cookie sameSite attribute to <strong>Lax</strong>,
-the cookie will be sent along with the GET
-request initiated by third party website.</p>
+<p>CookieのSameSite属性を <strong>Lax</strong> に設定すると、CookieはサードパーティのWebサイトによって
+開始されたGETリクエストとともに送信されます。</p>
 
-<p><strong>Note</strong>: <strong>As of now this feature is landed in chrome(80+version) and works with Selenium 4 and later versions.</strong></p>
+<p><strong>注</strong>: <strong>現在、この機能はchrome（80 + version）に組み込まれており、</strong>
+<strong>Selenium 4以降のバージョンで動作します。</strong></p>
 
 
 
@@ -3019,7 +3018,7 @@ request initiated by third party website.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/support_packages/working_with_cookies/">
       “クッキーの使用”
-    </a> was last updated on: 10 Mar 2020 12:58:00 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/247fe17901948c31bd9189fff3aebc79bb1a2aae">Add: Adding note for cookies (#296) [deploy site] (247fe1790)</a>
+    </a> was last updated on: 14 Mar 2020 07:24:46 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/f3c4b319137dc9778f929a5f010ee784d5014711">Japanese translation of Same-Site Cookie Attribute (#313) [deploy site] (f3c4b3191)</a>
 </h5>
         
         </div> 
@@ -4184,19 +4183,19 @@ request initiated by third party website.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584092287"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584140075"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584092287"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584092287"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584140075"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584140075"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584092287" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584092287"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584140075" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584140075"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
