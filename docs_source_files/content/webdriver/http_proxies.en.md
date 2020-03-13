@@ -55,14 +55,15 @@ public class proxyTest {
 // need PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-  import org.openqa.selenium.Proxy
+import org.openqa.selenium.Proxy
 import org.openqa.selenium.WebDriver
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.chrome.ChromeOptions
 
 class proxyTest {
     fun main() {
-        System.setProperty("webdriver.chrome.driver", "/Users/kapilyadav/codebase/Kelenium/chromedriver")
+
+        System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
         val proxy = Proxy()
         proxy.setHttpProxy("<HOST:PORT>")
         val options = ChromeOptions()
@@ -73,6 +74,7 @@ class proxyTest {
         driver.quit()
     }
 }
+  
 
   {{< / code-panel >}}
 {{< / code-tab >}}
