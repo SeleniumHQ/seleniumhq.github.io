@@ -43,7 +43,21 @@ public class proxyTest {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Need PR
+from selenium import webdriver
+
+PROXY = "<HOST:PORT>"
+webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
+    "httpProxy": PROXY,
+    "ftpProxy": PROXY,
+    "sslProxy": PROXY,
+    "proxyType": "MANUAL",
+
+}
+
+with webdriver.Firefox(executable_path= '/Users/kapilyadav/Documents/workspace/selenium/geekodriver_mac/geckodriver') as driver:
+    # Open URL
+    driver.get("https://selenium.dev")
+
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Need pr
