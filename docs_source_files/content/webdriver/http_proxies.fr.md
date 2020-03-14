@@ -55,7 +55,7 @@ webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
 
 }
 
-with webdriver.Firefox(executable_path= '/Users/kapilyadav/Documents/workspace/selenium/geekodriver_mac/geckodriver') as driver:
+with webdriver.Firefox() as driver:
     # Open URL
     driver.get("https://selenium.dev")
 
