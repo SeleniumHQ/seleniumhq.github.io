@@ -1,5 +1,5 @@
 +++
-Description = "<p>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. The reasons for this are complex, but boil down to two main causes: Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease […]</p>"
+Description = "The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. The reasons for this are complex, but boil down to two main causes: Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease […]"
 Title = "Firefox 55 and Selenium IDE"
 Date = 2017-08-09
 Author = "shs96c"
