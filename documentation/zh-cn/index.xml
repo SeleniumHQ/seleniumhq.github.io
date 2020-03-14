@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Copyright and attributions</title>
-      <link>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
-    </item>
-    
-    <item>
       <title>Page object models</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -136,6 +125,20 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
     </item>
     
     <item>
+      <title>版权和归属</title>
+      <link>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
+      <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
+我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
+归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
+@barancev2817 commits 
+@jimevans2274 commits 
+@jleyba1464 commits</description>
+    </item>
+    
+    <item>
       <title>目的和主要功能</title>
       <link>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -187,17 +190,6 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Typographical conventions</title>
-      <link>https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.
-Line length When editing the documentation’s source, which is written in plain HTML, limit your line lengths to around 72 characters.</description>
-    </item>
-    
-    <item>
       <title>关于测试自动化</title>
       <link>https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -238,6 +230,18 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
       <guid>https://selenium.dev/documentation/zh-cn/selenium_installation/installing_webdriver_binaries/</guid>
       <description>要执行项目并控制浏览器，需要安装特定于浏览器的 WebDriver 二进制文件。
 下载 WebDriver 二进制文件 并放入 系统 PATH 环境变量 中.</description>
+    </item>
+    
+    <item>
+      <title>排版协议</title>
+      <link>https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/</guid>
+      <description>标题大写 应该避免标题完全大写, 例如 A Very Fine Heading, 应该书写为 A very fine heading . 没有意义的大写字母或者无视拼写协议的标题, 通常会带来误解. 我们更倾向于使用句子首字母大写的 sentence case 的方式.
+行的长度 在编辑以plain HTML格式编写的文档来源时, 请将行的长度限制在72个字符以内.
+部分先进的贡献者, 使用了 semantic linefeeds, 这是一种不以HTML源码换行为基础的技术, 通过这种技术, 公众看到的内容将会在文章中以“自然断开”的方式进行分割. 换句话说, 句子之间在更符合语义的地方被分割. 不必多虑每个段落的行, 强迫它们都以明确的边距结尾, 而是可以将换行符添加到语义有断开的任何地方. (译者注：具体区别，对比本网页与原始md后，即可了解本段想表达的意思)
+通过git进行协作时, 这种技术会使提交的差异更显而易见, 但这不是我们强制贡献者使用的内容.</description>
     </item>
     
     <item>
