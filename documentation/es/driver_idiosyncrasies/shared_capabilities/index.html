@@ -11,20 +11,20 @@
     <title>Shared capabilities :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1583485257" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1583485257" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1584140064" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584140064" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1583485257" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584140064" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1583485257"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584140064"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1583485257"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1583485257"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584140064"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584140064"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1583485257"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584140064"></script>
 
     
   </div>
@@ -92,13 +92,13 @@
  
   
     
-    <li data-nav-id="/getting_started/" title="Getting started" class="dd-item 
+    <li data-nav-id="/getting_started/" title="Empezando" class="dd-item 
         
         
         
         ">
       <a href="https://selenium.dev/documentation/es/getting_started/">
-          Getting started
+          Empezando
           
             <i class="fas fa-check read-icon"></i>
           
@@ -145,13 +145,13 @@
  
   
     
-    <li data-nav-id="/introduction/" title="Introduction" class="dd-item 
+    <li data-nav-id="/introduction/" title="Introducción" class="dd-item 
         
         
         
         ">
       <a href="https://selenium.dev/documentation/es/introduction/">
-          Introduction
+          Introducción
           
             <i class="fas fa-check read-icon"></i>
           
@@ -172,9 +172,9 @@
  
   
     
-      <li data-nav-id="/introduction/the_selenium_project_and_tools/" title="The Selenium project and tools" class="dd-item ">
+      <li data-nav-id="/introduction/the_selenium_project_and_tools/" title="El proyecto Selenium y sus herramientas" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/">
-        The Selenium project and tools
+        El proyecto Selenium y sus herramientas
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/es/'>The Selenium Browser Automation Project</a> > <a href='https://selenium.dev/documentation/es/driver_idiosyncrasies/'>Comportamientos del controlador</a> > Shared capabilities
+            <a href='https://selenium.dev/documentation/es/'>Selenium, el proyecto para automatizar navegadores</a> > <a href='https://selenium.dev/documentation/es/driver_idiosyncrasies/'>Comportamientos del controlador</a> > Shared capabilities
           
          
           
@@ -1924,10 +1924,9 @@
 <ul>
 <li>
 <ul>
-<li>
-<ul>
-<li><a href="#pageloadstrategy">pageLoadStrategy</a></li>
-</ul></li>
+<li><a href="#browsername">browserName:</a></li>
+<li><a href="#browserversion">browserVersion:</a></li>
+<li><a href="#pageloadstrategy">pageLoadStrategy:</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1963,7 +1962,29 @@ it by sending us pull requests!</p>
 </div>
 
 
-<h3 id="pageloadstrategy">pageLoadStrategy</h3>
+<p>In-order to create a new session by Selenium WebDriver,
+local end should provide the basic capabilities to remote end.
+The remote end uses the same set of capabilities to
+create a session and describes the current session features.</p>
+
+<p>WebDriver provides capabilities that each remote
+end will/should support the implementation.
+Following are the capabilities that WebDriver supports:</p>
+
+<h2 id="browsername">browserName:</h2>
+
+<p>This capability is used to set the <code>browserName</code> for a given session.
+If the specified browser is not installed at the
+remote end, the session creation will fail</p>
+
+<h2 id="browserversion">browserVersion:</h2>
+
+<p>This capability is optional, this is used to
+set the available browser version at remote end.
+For Example, if ask for Chrome version 75 on a system that
+only has 80 installed, the session creation will fail</p>
+
+<h2 id="pageloadstrategy">pageLoadStrategy:</h2>
 
 <p>When navigating to a new page via URL, by default Selenium will wait
 until the page has fully loaded before responding. This works well for
@@ -2015,7 +2036,7 @@ as described in the table below:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/">
       “Shared capabilities”
-    </a> was last updated on: 29 Feb 2020 09:25:51 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/0bcac70b3c418917304ccd61fbb4b300d567f1fa">[Driver Idiosyncrasies] Defaulting Spanish translation to English (0bcac70b3)</a>
+    </a> was last updated on: 11 Mar 2020 13:19:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/2660ada1d16e8670081f6e1e5bf47bf3f3a1d6a7">Add: Adding shared capabilities browserName and browserVersion info (#299) [deploy site] (2660ada1d)</a>
 </h5>
         
         </div> 
@@ -3177,19 +3198,19 @@ as described in the table below:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1583485257"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584140064"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1583485257"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1583485257"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1584140064"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584140064"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1583485257" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1583485257"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584140064" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584140064"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

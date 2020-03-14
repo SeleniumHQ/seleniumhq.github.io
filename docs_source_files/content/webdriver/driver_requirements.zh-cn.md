@@ -410,7 +410,7 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
 
 Opera 的当前版本是建立在 Chromium 引擎之上的，而 WebDriver 现在是通过闭源的 
 [Opera Chromium 驱动程序](//github.com/operasoftware/operachromiumdriver/releases)来支持的，
-它可以被[添加到您的路径](#可执行文件添加到-PATH-中)或作为系统属性。
+它可以被[添加到您的路径](#将可执行文件添加到-path-中)或作为系统属性。
 
 实例化一个驱动程序会话类似于 Firefox 和 Chromium：
 

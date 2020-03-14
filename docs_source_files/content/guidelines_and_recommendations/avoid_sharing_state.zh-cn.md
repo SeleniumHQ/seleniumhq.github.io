@@ -1,22 +1,16 @@
 ---
-title: "Avoid sharing state"
+title: "避免共享状态"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+尽管在多个地方都提到过, 但这点仍值得被再次提及. 确保测试相互隔离.
 
-Although mentioned in several places it is worth mentioning again. Ensure 
-tests are isolated from one another.
+* 不要共享测试数据. 
+想象一下有几个测试, 每个测试都会在选择操作执行之前查询数据库中的有效订单. 
+如果两个测试采用相同的顺序, 则很可能会出现意外行为.
 
-* Do not share test data. Imagine several tests that each query the database 
-for valid orders before picking one to perform an action on. Should two tests
-pick up the same order you are likely to get unexpected behaviour.
+* 清理应用程序中过时的数据, 这些数据可能会被其他测试. 
+例如无效的订单记录.
 
-* Clean up stale data in the application that might be picked up by another 
-test e.g. invalid order records.
-
-* Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelisation simpler.
+* 每次测试都创建一个新的WebDriver实例. 
+这在确保测试隔离的同时可以保障并行化更为简单.

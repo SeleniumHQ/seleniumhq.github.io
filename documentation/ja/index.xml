@@ -22,17 +22,6 @@
     </item>
     
     <item>
-      <title>Copyright and attributions</title>
-      <link>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
-    </item>
-    
-    <item>
       <title>Selenium 1 (Selenium RC)</title>
       <link>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -169,12 +158,16 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
     </item>
     
     <item>
-      <title>共有機能</title>
+      <title>共有Capabilities</title>
       <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description> ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
+      <description> Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
+WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。 WebDriverがサポートするCapabilitiesは次のとおりです。
+browserName: このCapabilityは、特定のセッションの browserName を設定するために使います。 指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
+browserVersion: このCapabilityはオプションです。 これは、リモートエンドで使用可能なブラウザーバージョンを設定するために使います。 たとえば、Chromeバージョン80のみがインストールされているシステムでバージョン75を要求すると、セッションの作成は失敗します。
+ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
 次の表で説明するように、ページロード戦略は document.readyState を問い合わせます。
    戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    </description>
     </item>
@@ -186,6 +179,20 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
       
       <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
       <description> すべてのテストの中央エントリポイント ブラウザーが実行されるノード・環境の管理と制御 スケーリング テストを並列実行 クロスプラットフォームでのテスト 負荷分散  </description>
+    </item>
+    
+    <item>
+      <title>著作権と帰属</title>
+      <link>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
+      <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
+このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
+帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
+@barancev2817 commits 
+@jimevans2274 commits 
+@jleyba1464 commits</description>
     </item>
     
     <item>
@@ -204,17 +211,6 @@ Selenium selenium = new DefaultSelenium(&amp;#34;localhost&amp;#34;, 4444, &amp;
 WebDriver driver = new FirefoxDriver(); Selenium selenium = new WebDriverBackedSelenium(driver, &amp;#34;http://www.yoursite.com&amp;#34;); 次のステップ テストがエラーなしで実行されたら、次の段階は実際のテストコードを移行してWebDriver APIを使用することです。 コードがどれだけ適切に抽象化されているかによって、これは短いプロセスまたは長いプロセスになります。 どちらの場合でも、アプローチは同じであり、簡単に要約できます。 編集するときに新しいAPIを使用するようにコードを変更します。
 基になるWebDriver実装をSeleniumインスタンスから抽出する必要がある場合は、WrapsDriverにキャストするだけです。
 WebDriver driver = ((WrapsDriver) selenium).</description>
-    </item>
-    
-    <item>
-      <title>Typographical conventions</title>
-      <link>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.
-Line length When editing the documentation’s source, which is written in plain HTML, limit your line lengths to around 72 characters.</description>
     </item>
     
     <item>
@@ -352,6 +348,18 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new Firefo
 心配しないでください。解決策があります。: Color クラスです！
 まず、クラスをインポートする必要があります。
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.Color    これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。</description>
+    </item>
+    
+    <item>
+      <title>表記規則</title>
+      <link>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/front_matter/typographical_conventions/</guid>
+      <description>タイトルの大文字化 A Very Fine Heading などのタイトルの大文字化は避け、代わりに A very fine heading を選択してください。 大げさな大文字表記、またはタイトルケースは、多くの場合、正書法の慣習に対する誤解または無視を示します。 ヘッダーを開始するための最初の大文字を1つ持つセンテンスケースとして知られているものを好みます。
+行の長さ プレーンHTMLで記述されたドキュメントのソースを編集するときは、行の長さを約72文字に制限してください。
+これをさらに一歩進めて、いわゆるセマンティックラインフィード と呼ばれるものを使用します。 これは、一般の人には読まれないHTMLソース行を散文の「自然な区切り」で分割する手法です。 つまり、文は句間の自然な区切りで分割されます。 すべての段落が右マージンの近くで終了するように各段落の行を混乱させるのではなく、 アイデアが途切れる場所であればどこでも改行を追加できます。
+これにより、gitを使用して共同作業するときにdiffを非常に読みやすくすることができますが、 使用するコントリビューターに強制するものではありません。</description>
     </item>
     
     <item>
@@ -679,15 +687,16 @@ Webサイトのパフォーマンスを改善するには、改善すべき点�
     </item>
     
     <item>
-      <title>Http proxies</title>
+      <title>Httpプロキシ</title>
       <link>https://selenium.dev/documentation/ja/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/http_proxies/</guid>
-      <description>ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
-A proxy server for automation scripts with Selenium could be helpful for:
- Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.</description>
+      <description>プロキシサーバーは、クライアントとサーバー間の要求の仲介役として機能します。 簡単に言えば、トラフィックはプロキシサーバーを経由して、要求したアドレスに戻り、戻ってきます。
+Seleniumを使用した自動化スクリプト用のプロキシサーバーは、
+ ネットワークトラフィックをキャプチャする ウェブサイトによって行われた模擬バックエンドを呼び出す 複雑なネットワークトポロジーまたは厳格な企業の制限/ポリシーの下で、必要なWebサイトにアクセスします。  企業環境でブラウザがURLへの接続に失敗した場合、環境にアクセスするにはプロキシが必要であることが原因であることが最も可能性が高いです。
+Selenium WebDriverは設定をプロキシする方法を提供します。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   # Need PR   // Need pr    # Need PR   // need PR    // need PR      </description>
     </item>
     
     <item>
