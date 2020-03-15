@@ -6,10 +6,10 @@ weight: 1
 
 # 시작하기
 
-만약 여러분이 Selenium이 처음이라면,
-빠르게 시작할 수 있도록 도와줄 몇 가지 문서가 있습니다.
+Selenium이 처음이신가요?
+빠르게 시작할 수 있도록 돕기 위해서 몇 가지 자료를 준비했습니다.
 
-* [퀵 투어]({{< ref "/getting_started/quick.ko.md" >}})
-  * [WebDriver]({{< ref "/getting_started/quick.ko.md#webdriver" >}})
-  * [IDE]({{< ref "/getting_started/quick.ko.md#ide" >}})
-  * [Grid]({{< ref "/getting_started/quick.ko.md#grid" >}})
+* [빠르게 살펴보기]({{< ref "/getting_started/quick.ko.md" >}})
+  * [웹 드라이버WebDriver]({{< ref "/getting_started/quick.ko.md#webdriver" >}})
+  * [통합개발환경 IDE]({{< ref "/getting_started/quick.ko.md#ide" >}})
+  * [격자 Grid]({{< ref "/getting_started/quick.ko.md#grid" >}})
