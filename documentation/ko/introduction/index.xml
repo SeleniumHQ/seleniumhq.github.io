@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on Selenium 문서</title>
+    <title>소개 on Selenium 문서</title>
     <link>https://selenium.dev/documentation/ko/introduction/</link>
-    <description>Recent content in Introduction on Selenium 문서</description>
+    <description>Recent content in 소개 on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
