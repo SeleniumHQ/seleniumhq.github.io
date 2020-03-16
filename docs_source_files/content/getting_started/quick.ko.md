@@ -24,4 +24,5 @@ _[IDE](https://selenium.dev/selenium-ide)_ (통합개발환경 Integrated Develo
 
 ## 조합 격자 (Grid)
 
-웹 드라이버 테스트를 개발한 후에, 여러 브라우저와 OS 조합에서 테스트를 구동해봐야 할지도 모릅니다. 여기서 조합 격자 _[Grid]({{< ref "/grid/_index.md" >}})_ 가 여러분을 구하러 등장합니다.
+웹 드라이버 테스트를 개발한 후에, 여러 브라우저와 OS 조합에서 테스트를 구동해봐야 할지도 모릅니다.
+여기서 조합 격자 _[Grid]({{< ref "/grid/_index.md" >}})_ 가 여러분을 구하러 등장합니다.
