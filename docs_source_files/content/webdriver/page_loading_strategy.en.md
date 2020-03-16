@@ -244,7 +244,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
+
+chrome_capabilities = DesiredCapabilities().CHROME
+chrome_capabilities["pageLoadStrategy"] = "normal"
+driver = webdriver.Chrome(desired_capabilities=chrome_capabilities)
+driver.get("http://www.google.com")
+
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
