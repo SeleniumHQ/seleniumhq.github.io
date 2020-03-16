@@ -11,20 +11,20 @@
     <title>Http proxies :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1584140063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1584140063" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1584281111" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1584281111" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1584140063" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1584281111" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1584140063"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1584281111"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1584140063"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1584140063"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1584281111"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1584281111"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1584140063"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1584281111"></script>
 
     
   </div>
@@ -2064,8 +2064,26 @@ likely because the environment needs a proxy to be accessed.</p>
 
 <section id="kotlincode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// need PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Proxy
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions
+
+<span style="color:#719e07">class</span> <span style="color:#268bd2">proxyTest</span> {
+    <span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+
+        System.setProperty(<span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span>)
+        <span style="color:#719e07">val</span> proxy = Proxy()
+        proxy.setHttpProxy(<span style="color:#2aa198">&#34;&lt;HOST:PORT&gt;&#34;</span>)
+        <span style="color:#719e07">val</span> options = ChromeOptions()
+        options.setCapability(<span style="color:#2aa198">&#34;proxy&#34;</span>, proxy)
+        <span style="color:#719e07">val</span> driver: WebDriver = ChromeDriver(options)
+        driver[<span style="color:#2aa198">&#34;https://www.google.com/&#34;</span>]
+        driver.manage().window().maximize()
+        driver.quit()
+    }
+}
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -2078,7 +2096,7 @@ likely because the environment needs a proxy to be accessed.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/webdriver/http_proxies/">
       “Http proxies”
-    </a> was last updated on: 06 Mar 2020 14:20:27 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/c51c2e54bbf96a69995dae0640a46c6500c08c30">Add: Adding Http proxies initial document (#281) [deploy site] (c51c2e54b)</a>
+    </a> was last updated on: 14 Mar 2020 21:21:55 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/b1e0a36b015a5c4b92643687861a8e99722de93e">selenium proxy code (#316) [deploy site] (b1e0a36b0)</a>
 </h5>
         
         </div> 
@@ -3243,19 +3261,19 @@ likely because the environment needs a proxy to be accessed.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1584140063"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1584281111"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1584140063"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1584140063"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1584281111"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1584281111"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1584140063" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1584140063"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1584281111" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1584281111"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
