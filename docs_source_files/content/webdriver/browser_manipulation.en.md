@@ -1080,8 +1080,8 @@ __Note: This feature works with Selenium 4 and later versions.__
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}// Please raise a PR{{< / code-panel >}}
-  {{< code-panel language="ruby" >}} # Please raise a PR{{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
   {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
 {{< / code-tab >}}
