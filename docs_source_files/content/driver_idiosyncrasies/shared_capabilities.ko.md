@@ -42,7 +42,7 @@ where elements on the page change position as elements load in and change
 size.
 
 The page load strategy queries the
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
+[document.readyState](//developer.mozilla.org/ko/docs/Web/API/Document/readyState)
 as described in the table below:
 
 | Strategy | Ready State | Notes |

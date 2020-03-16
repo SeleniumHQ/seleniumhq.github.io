@@ -494,7 +494,11 @@ public void TearDown()
 }
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 ruby 的示例代码，请帮助我们，并提交一个 PR
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 /**
