@@ -30,7 +30,7 @@ only has 80 installed, the session creation will fail
 Bij het navigeren naar een nieuwe pagina, zal Selenium standaard wachten totdat de pagina volledig geladen is. Deze strategie werkt goed voor beginners maar kan snel resulteren in lange wachttijden op paginas die veel externe resources moeten ophalen. Het gebruik van niet-standaard laadstrategieen kan de doorlooptijd aanzienlijk versnellen maar kan eveneens flakiness introduceren doordat elementen van grootte en/of positie veranderen tijdens het laden.
 
 The page load strategy bevraagt
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
+[document.readyState](//developer.mozilla.org/nl/docs/Web/API/Document/readyState)
 zoals hieronder beschreven:
 
 | Strategie | Ready State | Opmerkingen |

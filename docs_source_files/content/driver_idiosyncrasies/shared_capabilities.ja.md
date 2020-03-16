@@ -25,7 +25,7 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。
 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
 
-次の表で説明するように、ページロード戦略は [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState) を問い合わせます。
+次の表で説明するように、ページロード戦略は [document.readyState](//developer.mozilla.org/ja/docs/Web/API/Document/readyState) を問い合わせます。
 
 | 戦略 | Ready State | 注釈 |
 | -------- | ----------- | ----- |
