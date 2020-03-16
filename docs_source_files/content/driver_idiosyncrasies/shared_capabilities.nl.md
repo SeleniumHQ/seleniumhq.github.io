@@ -38,3 +38,26 @@ zoals hieronder beschreven:
 | normal | complete | Standaard, wacht tot alle resources gedownload zijn |
 | eager | interactive | DOM access is gereed, maar andere resources, zoals grafische elementen, zijn mogelijks nog niet volledig ingeladen. |
 | none | Any | WebDriver houdt geen rekening met wachttijden |
+
+## platformName
+
+This identifies the operating system at the remote-end, 
+fetching the `platformName` returns the OS name. 
+
+In could-based testing(SauceLabs or BrowserStack), 
+setting `platformName` sets the os at the remote-end 
+
+## acceptInsecureCerts
+
+This capability checks whether expired (or) 
+invalid `TLS Certificate` are used while navigating 
+during a session.
+
+If the capability is set to `false`, an 
+[insecure certificate error](//developer.mozilla.org/nl/docs/Web/WebDriver/Errors/InsecureCertificate) 
+will be returned as navigation encounters any domain 
+certificate problems. If set to `ture`, invalid certificate will be 
+trusted by the browser.
+
+All self-signed certificates will be trusted by this capability by default. 
+Onc set, `acceptInsecureCerts` capability will have effect for entire session

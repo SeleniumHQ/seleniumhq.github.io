@@ -37,3 +37,26 @@ only has 80 installed, the session creation will fail
 | normal | complete | 默认情况下使用，等待所有资源下载完成 |
 | eager | interactive | DOM访问已准备就绪，但其他资源（如图像）可能仍在加载中 |
 | none | Any | 完全不阻塞WebDriver|
+
+## platformName
+
+This identifies the operating system at the remote-end, 
+fetching the `platformName` returns the OS name. 
+
+In could-based testing(SauceLabs or BrowserStack), 
+setting `platformName` sets the os at the remote-end 
+
+## acceptInsecureCerts
+
+This capability checks whether expired (or) 
+invalid `TLS Certificate` are used while navigating 
+during a session.
+
+If the capability is set to `false`, an 
+[insecure certificate error](//developer.mozilla.org/zh-CN/docs/Web/WebDriver/Errors/InsecureCertificate) 
+will be returned as navigation encounters any domain 
+certificate problems. If set to `ture`, invalid certificate will be 
+trusted by the browser.
+
+All self-signed certificates will be trusted by this capability by default. 
+Onc set, `acceptInsecureCerts` capability will have effect for entire session

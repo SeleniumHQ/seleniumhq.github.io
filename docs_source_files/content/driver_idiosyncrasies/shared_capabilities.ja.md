@@ -32,3 +32,26 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 | normal | complete | デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します |
 | eager | interactive | DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります |
 | none | Any | WebDriverをまったくブロックしません |
+
+## platformName
+
+This identifies the operating system at the remote-end, 
+fetching the `platformName` returns the OS name. 
+
+In could-based testing(SauceLabs or BrowserStack), 
+setting `platformName` sets the os at the remote-end 
+
+## acceptInsecureCerts
+
+This capability checks whether expired (or) 
+invalid `TLS Certificate` are used while navigating 
+during a session.
+
+If the capability is set to `false`, an 
+[insecure certificate error](//developer.mozilla.org/ja/docs/Web/WebDriver/Errors/InsecureCertificate) 
+will be returned as navigation encounters any domain 
+certificate problems. If set to `ture`, invalid certificate will be 
+trusted by the browser.
+
+All self-signed certificates will be trusted by this capability by default. 
+Onc set, `acceptInsecureCerts` capability will have effect for entire session
