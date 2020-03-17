@@ -38,7 +38,7 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 This identifies the operating system at the remote-end, 
 fetching the `platformName` returns the OS name. 
 
-In could-based testing(SauceLabs or BrowserStack), 
+In could-based providers,  
 setting `platformName` sets the os at the remote-end 
 
 ## acceptInsecureCerts
