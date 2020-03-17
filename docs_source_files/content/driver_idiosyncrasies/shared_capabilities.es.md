@@ -56,20 +56,21 @@ as described in the table below:
 This identifies the operating system at the remote-end, 
 fetching the `platformName` returns the OS name. 
 
-In could-based providers, 
-setting `platformName` sets the os at the remote-end 
+In cloud-based providers, 
+setting `platformName` sets the OS at the remote-end. 
 
 ## acceptInsecureCerts
 
-This capability checks whether expired (or) 
-invalid `TLS Certificate` are used while navigating 
+This capability checks whether an expired (or) 
+invalid `TLS Certificate` is used while navigating 
 during a session.
 
 If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/es/docs/Web/WebDriver/Errors/InsecureCertificate) 
+[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
 will be returned as navigation encounters any domain 
-certificate problems. If set to `ture`, invalid certificate will be 
+certificate problems. If set to `true`, invalid certificate will be 
 trusted by the browser.
 
 All self-signed certificates will be trusted by this capability by default. 
-Onc set, `acceptInsecureCerts` capability will have effect for entire session
+Once set, `acceptInsecureCerts` capability will have an 
+effect for the entire session.
