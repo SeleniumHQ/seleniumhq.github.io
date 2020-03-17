@@ -2,10 +2,14 @@
 title: "Types of testing"
 weight: 3
 ---
-## Acceptance testing
-This type of test is done to determine if a product's
-feature matches its requirements. 
-This generally involves the customer's feedback or specification.
+
+### Acceptance testing
+This type of testing is done to determine if a feature or system
+meets the customer expectations and requirements. 
+This type of testing generally involves the customer's c
+ooperation or feedback, being a validation activity that
+answers the question:
+>Are we building the **_right_** product?.
 
 For web applications, the automation of this testing can be done
 directly with Selenium by simulating user expected behaviour.
@@ -15,8 +19,13 @@ Note: Acceptance testing is a subtype of **_functional testing_**,
 which some people might also refer to.
             
 ### Functional testing
-This type of test is done to determine if a product's
-feature functions properly, without issues.
+This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does _what's_ 
+supposed to do. It's a verification activity that
+answers the question:
+>Are we building the product **_right?_**.
              
 This generally includes: the tests work without errors 
 (404, exceptions...), in a usable way (correct redirections),   
