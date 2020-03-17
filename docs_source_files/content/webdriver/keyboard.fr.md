@@ -3,18 +3,12 @@ title: "Clavier"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
-interface which allows us to provide virtualized device input to the web browser.
+Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l'aide de bas niveau
+interface qui nous permet de fournir une entrée d'appareil virtualisé au navigateur Web.
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+SendKeys tape une séquence de touches dans l'élément DOM même si une séquence de touches de modification est rencontrée.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -113,7 +107,7 @@ fun main() {
 
 ## keyDown
 
-The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+Le keyDown est utilisé pour simuler l'action d'appuyer sur une touche de modification (CONTROL, SHIFT, ALT)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -229,7 +223,7 @@ fun main() {
 
 ## keyUp
 
-The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+Le keyUp est utilisé pour simuler l'action de relâchement (ou) de relâchement de touche d'une touche de modification (CONTROL, SHIFT, ALT)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -370,9 +364,10 @@ fun main() {
 {{< / code-tab >}}
 
 ## clear
-Clears the content of an editable element. 
-This is only applied for the elements which is editable and interactable, 
-otherwise selenium returns the error (invalid element state (or) Element not interactable)
+
+Efface le contenu d'un élément modifiable.
+Ceci n'est appliqué qu'aux éléments modifiables et interactifs,
+sinon le sélénium renvoie l'erreur (état d'élément invalide (ou) élément non interactif)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

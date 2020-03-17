@@ -3,28 +3,23 @@ title: "Waits"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+WebDriver peut généralement être considéré comme ayant une API de blocage.
+Parce que c'est une bibliothèque hors processus qui
+_instruit_ le navigateur à faire,
+et parce que la plate-forme Web a une nature intrinsèquement asynchrone,
+WebDriver ne suit pas l'état actif en temps réel du DOM.
+Cela s'accompagne de quelques défis que nous aborderons ici.
 
-WebDriver can generally be said to have a blocking API.
-Because it is an out-of-process library that
-_instructs_ the browser what to do,
-and because the web platform has an intrinsically asynchronous nature,
-WebDriver doesn't track the active, real-time state of the DOM.
-This comes with some challenges that we will discuss here.
+De l'expérience,
+la plupart des intermittents résultant de l'utilisation de Selenium et de WebDriver
+sont liés aux conditions de concurrence qui se produisent entre
+le navigateur et les instructions de l'utilisateur.
+Un exemple pourrait être que l'utilisateur demande 
+au navigateur de naviguer vers une page,
+obtient alors une erreur **no such element**
+lorsque vous essayez de trouver un élément.
 
-From experience,
-most intermittents that arise from use of Selenium and WebDriver
-are connected to _race conditions_ that occur between
-the browser and the user's instructions.
-An example could be that the user instructs the browser to navigate to a page,
-then gets a **no such element** error
-when trying to find an element.
-
-Consider the following document:
+Considérez le document suivant:
 
 ```html
 <!doctype html>
@@ -42,7 +37,7 @@ Consider the following document:
 </script>
 ```
 
-The WebDriver instructions might look innocent enough:
+Les instructions WebDriver peuvent sembler assez innocentes:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -87,61 +82,62 @@ assert(element.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.fr.md" >}})
-used in WebDriver listens for the `document.readyState`
-to change to `"complete"` before returning from the call to _navigate_.
-Because the `p` element is
-added _after_ the document has completed loading,
-this WebDriver script _might_ be intermittent.
-It “might” be intermittent because no guarantees can be made
-about elements or events that trigger asynchronously
-without explicitly waiting—or blocking—on those events.
+Le problème ici est que la valeur par défaut
+[stratégie de chargement de page]({{<ref "/webdriver/page_loading_strategy.fr.md">}})
+utilisé dans WebDriver écoute le `document.readyState`
+pour passer à `"complete"` avant de revenir de l'appel à _navigate_.
+Parce que l'élément `p` est
+ajouté après le chargement du document,
+ce script WebDriver _peut_ être intermittent.
+Elle "pourrait" être intermittente car aucune garantie ne peut être apportée
+sur les éléments ou événements qui se déclenchent de manière asynchrone
+sans attendre ou bloquer explicitement ces événements.
 
-Fortunately, using the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.fr.md" >}}) interface—such
- as _WebElement.click_ and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls won't return
- (or the callback won't trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.fr.md" >}}) 
- and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.fr.md" >}}),
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.
+Heureusement, en utilisant le jeu d'instructions normal disponible sur
+l'interface [_WebElement_] ({{<ref "/webdriver/web_element.fr.md">}}) - telle
+comme _WebElement.click_ et _WebElement.sendKeys_ — sont
+garantie d'être synchrone,
+en ce que les appels de fonction ne reviendront pas
+(ou le rappel ne se déclenchera pas dans les langues de style rappel)
+jusqu'à ce que la commande soit terminée dans le navigateur.
+Les API d'interaction utilisateur avancées,
+[_Keyboard_]({{<ref "/webdriver/keyboard.fr.md">}})
+et [_Mouse_]({{<ref "/support_packages/mouse_and_keyboard_actions_in_detail.fr.md">}}),
+sont des exceptions car ils sont explicitement destinés à
+"Faire ce que je dis", commandes asynchrones.
 
-Waiting is having the automated task execution
-elapse a certain amount of time before continuing with the next step.
+L'attente, c'est l'exécution automatisée des tâches
+s'est écoulé un certain temps avant de passer à l'étape suivante.
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
-
+Pour surmonter le problème des conditions de course
+entre le navigateur et votre script WebDriver,
+la plupart des clients Selenium sont livrés avec un package _wait_.
+Lorsque vous utilisez une attente,
+vous utilisez ce qui est communément appelé
+en tant que [_explicit wait_](#explicit-wait).
 
 ## Explicit wait
 
-_Explicit waits_ are available to Selenium clients
-for imperative, procedural languages.
-They allow your code to halt program execution,
-or freeze the thread,
-until the _condition_ you pass it resolves.
-The condition is called with a certain frequency
-until the timeout of the wait is elapsed.
-This means that for as long as the condition returns a falsy value,
-it will keep trying and waiting.
+_Explicit Wait_ sont disponibles pour les clients Selenium
+pour les langages procéduraux impératifs.
+Ils permettent à votre code d'arrêter l'exécution du programme,
+ou geler le fil,
+jusqu'à ce que le _condition_ que vous passez, il résout.
+La condition est appelée avec une certaine fréquence
+jusqu'à ce que le délai d'attente soit écoulé.
+Cela signifie que tant que la condition renvoie une valeur fausse,
+il continuera d'essayer et d'attendre.
 
-Since explicit waits allow you to wait for a condition to occur,
-they make a good fit for synchronising the state between the browser and its DOM,
-and your WebDriver script.
+Étant donné que les attentes explicites vous permettent 
+d'attendre qu'une condition se produise,
+ils font un bon ajustement pour synchroniser 
+l'état entre le navigateur et son DOM,
+et votre script WebDriver.
 
-To remedy our buggy instruction set from earlier,
-we could employ a wait to have the _findElement_ call
-wait until the dynamically added element from the script
-has been added to the DOM:
+Pour remédier à notre jeu d'instructions de buggy antérieur,
+nous pourrions utiliser une attente pour avoir l'appel _findElement_
+attendre que l'élément ajouté dynamiquement du script
+a été ajouté au DOM:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -212,19 +208,26 @@ println(firstResult.text)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-We pass in the _condition_ as a function reference
-that the _wait_ will run repeatedly until its return value is truthy.
-A “truthful” return value is anything that evaluates to boolean true
-in the language at hand, such as a string, number, a boolean,
-an object (including a _WebElement_),
-or a populated (non-empty) sequence or list.
-That means an _empty list_ evaluates to false.
-When the condition is truthful and the blocking wait is aborted,
-the return value from the condition becomes the return value of the wait.
+On passe la condition comme référence de fonction
+que le _wait_ s'exécutera à plusieurs reprises jusqu'à ce 
+que sa valeur de retour soit véridique.
+Une valeur de retour "véridique" est tout 
+ce qui est évalué comme booléen true
+dans la langue utilisée, comme une chaîne, 
+un nombre, un booléen,
+un objet (dont un _WebElement_),
+ou une séquence ou une liste remplie (non vide).
+Cela signifie qu'une liste vide est 
+évaluée comme fausse. Lorsque la condition 
+est vraie et que l'attente de blocage est abandonnée,
+la valeur de retour de la condition 
+devient la valeur de retour de l'attente.
 
-With this knowledge,
-and because the wait utility ignores _no such element_ errors by default,
-we can refactor our instructions to be more concise:
+Avec cette connaissance,
+et parce que l'utilitaire d'attente n'ignore
+pas une telle erreur d'élément par défaut,
+nous pouvons refactoriser nos 
+instructions pour être plus concis:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -261,39 +264,40 @@ assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
+val ele = WebDriverWait(driver, Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-In that example, we pass in an anonymous function
-(but we could also define it explicitly as we did earlier so it may be reused).
-The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_
-(called `d` in the example).
-In a multi-threaded environment, you should be careful
-to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.
+Dans cet exemple, nous passons une fonction anonyme
+(mais nous pourrions également le définir explicitement
+comme nous l'avons fait précédemment afin qu'il puisse être réutilisé).
+Le premier et le seul argument qui est passé à notre condition
+est toujours une référence à notre objet pilote, _WebDriver_
+(appelé `d` dans l'exemple).
+Dans un environnement multi-thread, vous devez être prudent
+pour opérer sur la référence du conducteur transmise à la condition
+plutôt que la référence au pilote dans la portée externe.
 
-Because the wait will swallow _no such element_ errors
-that are raised when the element isn't found,
-the condition will retry until the element is found.
-Then it will take the return value, a _WebElement_,
-and pass it back through to our script.
+Parce que l'attente n'avalera pas de telles erreurs d'élément
+qui sont levées lorsque l'élément n'est pas trouvé,
+la condition réessayera jusqu'à ce que l'élément soit trouvé.
+Ensuite, il prendra la valeur de retour, en tant qu'élément Web,
+et le transmettre à notre script.
 
-If the condition fails,
-e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a _timeout error_.
-
+Si la condition échoue,
+par exemple. une valeur de retour véridique de la condition n'est jamais atteinte,
+l'attente générera / déclenchera une erreur / exception appelée erreur de temporisation.
 
 ### Options
 
-The wait condition can be customised to match your needs.
-Sometimes it's unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.
+La condition d'attente peut être personnalisée 
+pour répondre à vos besoins. Parfois, il n'est pas 
+nécessaire d'attendre toute l'étendue du délai d'expiration par défaut,
+car la pénalité pour ne pas avoir réussi peut être chère.
 
-The wait lets you pass in an argument to override the timeout:
+L'attente vous permet de passer un argument pour remplacer le délai:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -303,7 +307,8 @@ new WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elemen
 WebDriverWait(driver, timeout=3).until(some_condition)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  {{< / code-panel >}}
+new WebDriverWait(driver, TimeSpan.FromSeconds(3)).Until(ExpectedConditions.ElementToBeClickable(By.XPath("//a/h3")));  
+{{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 wait = Selenium::WebDriver::Wait.new(:timeout => 10)
 
@@ -319,14 +324,16 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
 
 ### Expected conditions
 
-Because it's quite a common occurrence
-to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined _expected conditions_.
-As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.
+Parce que c'est assez courant
+d'avoir à synchroniser le DOM et vos instructions,
+la plupart des clients sont également livrés avec 
+un ensemble de _expected conditions_ prédéfinies.
+Comme son nom l'indique, ce sont des conditions 
+prédéfinies pour les opérations d'attente fréquentes.
 
-The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:
+Les conditions disponibles dans les différentes 
+liaisons linguistiques varient, mais ceci est une 
+liste non exhaustive de quelques-uns:
 
 <!-- TODO(ato): Fill in -->
 * alert is present
@@ -337,41 +344,49 @@ but this is a non-exhaustive list of a few:
 * element staleness
 * visible text
 
-You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:
+Vous pouvez vous référer à la documentation 
+de l'API pour chaque liaison client
+pour trouver une liste exhaustive 
+des conditions attendues:
 
 * Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
 * Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
 * .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
 
-
 ## Implicit wait
 
-There is a second type of wait that is distinct from
-[explicit wait](#explicit-wait) called _implicit wait_.
-By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find _any_ element.
-This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.
+Il existe un deuxième type d'attente distinct de
+[attente explicite](#explicit-wait) appelée _implicit wait_.
+En attendant implicitement, WebDriver interroge le DOM
+pendant une certaine durée lors de la recherche de l'élément _any_.
+Cela peut être utile lorsque certains éléments de la page Web
+ne sont pas disponibles immédiatement et nécessitent un 
+certain temps de chargement.
 
-Implicit waiting for elements to appear is disabled by default
-and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit-wait) and implicit waits
-will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.
+Attendre implicitement que les éléments apparaissent 
+est désactivé par défaut et devra être 
+activé manuellement sur une base par session.
+Mélange [attentes explicites](#explicit-wait) et attentes implicites
+entraînera des conséquences inattendues, à 
+savoir les attentes de sommeil pour le maximum
+même si l'élément est disponible ou 
+si la condition est vraie.
 
-*Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
+*avertissement:*
+Ne mélangez pas les attentes implicites et explicites.
+Cela peut entraîner des temps d'attente imprévisibles.
+Par exemple, définir une attente implicite de 10 secondes
+et une attente explicite de 15 secondes
+pourrait entraîner un délai d'attente après 20 secondes.
 
-An implicit wait is to tell WebDriver to poll the DOM
-for a certain amount of time when trying to find an element or elements
-if they are not immediately available.
-The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.
+Une attente implicite consiste à dire à 
+WebDriver d'interroger le DOM
+pendant un certain temps lorsque vous 
+essayez de trouver un élément ou des éléments
+s'ils ne sont pas immédiatement disponibles.
+Le paramètre par défaut est 0, ce qui signifie désactivé.
+Une fois définie, l'attente implicite est 
+définie pour la durée de vie de la session.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -427,11 +442,15 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
 
 ## FluentWait
 
-FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.
+L'instance FluentWait définit la durée 
+maximale d'attente d'une condition,
+ainsi que la fréquence à laquelle vérifier l'état.
 
-Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as `NoSuchElementException` when searching for an element on the page.
+Les utilisateurs peuvent configurer 
+l'attente pour ignorer des types spécifiques 
+d'exceptions en attendant,
+comme `NoSuchElementException` lors 
+de la recherche d'un élément sur la page.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -491,7 +510,7 @@ const {Builder, until} = require('selenium-webdriver');
 })(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val wait = FluentWait<WebDriver>(getWebDriver())
+val wait = FluentWait<WebDriver>(driver)
         .withTimeout(Duration.ofSeconds(30))
         .pollingEvery(Duration.ofSeconds(3))
         .ignoring(NoSuchElementException::class.java)

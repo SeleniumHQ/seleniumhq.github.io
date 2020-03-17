@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/introduction/the_selenium_project_and_tools/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium steuert Webbrowsers Selenium , ist Vieles, aber im Kern ist eine Sammlung von Werkzeugen um Webbrowser zu automatisieren. Es nutzt die besten Mechanismen die verfügbar sind um Browsersinstanzen zu steuern und Benutzereingaben zu simulieren.
+Es ermöglicht Aktionen von Benutzern zu simulieren; Texteingaben, Auswahl von Optionen in Drop-Downs, aktivieren von Checkboxen und anklicken von Links auf Webseiten. Es ermöglicht auch viele andere Möglichkeiten wie zum Beispiel Mausbewegungen, beliebige JavaScript Codeausführungen und vieles mehr.</description>
     </item>
     
     <item>

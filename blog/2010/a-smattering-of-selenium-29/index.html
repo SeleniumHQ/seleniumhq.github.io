@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>A Smattering of Selenium #29</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            
+                
+                
+            
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+  <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="blog-container">
+  <div class="blog-content">
+    <div class="container dark-background">
+      October 4, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+      <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-29/"><h2>A Smattering of Selenium #29</h2></a>
+      <p><p>A fair number of links this week. The vast majority of which were buried in annoying airport internet advertising frames&#8230;<br />
+</p>
+<ul>
+<li>This looks like it is Spanish which would normally mean it doesn&#8217;t get included but it <a href="http://sembugs.blogspot.com/2010/10/integracao-selenium-e-testlink.html">Integração Selenium e Testlink</a> explains how to integrate Se with TestLink. We, as a community, need to document this sort of thing more.</li>
+<li><a href="http://www.mkyong.com/unittest/junit-4-vs-testng-comparison/">JUnit 4 Vs TestNG</a> is a somewhat biased comparison between JUnit 4 and TestNG; but useful none the less.</li>
+<li>Hot on the heels of last week&#8217;s SFSE is the announcment of <a href="http://www.meetup.com/seleniumsanfrancisco/calendar/14966653/">Learn to Test Your SproutCore Apps with Lebowski Framework</a> for the month of October.</li>
+<li><a href="http://siark.wordpress.com/2010/10/01/behaviour-driven-development-with-jbehave-web-3-selenium-and-maven-2-on-os-x-snow-leopard">Behaviour Driven Development With JBehave Web 3, Selenium and Maven 2 on OS X Snow Leopard</a> is, aside from very buzzword compliant, the first thing I&#8217;ve seen using Se and JBehave.</li>
+<li><a href="http://marlenacompton.com/?p=1877">Bi-Testual: Coming out of the Software Closet</a> is something a lot of people in automation grapple with. Am I a tester who programs? A programmer who tests? Something entirely new?</li>
+<li>Using Selenese and want to use Sauce OnDemand? <a href="http://saucelabs.com/blog/index.php/2010/09/absolute-beginners-guide-to-running-sauce-rc-with-html-scripts/">Absolute Beginners Guide to Running Sauce RC with HTML Scripts</a> is for you.</li>
+<li>While combing the Sauce Labs blog, I noticed my <a href="http://saucelabs.com/blog/index.php/2010/09/how-to-minimize-the-pain-of-locator-breakage/">How To Minimize The Pain Of Locator Breakage</a> has been published.</li>
+<li>Page Objects are &#8216;in&#8217; to say the least these days. <a href="http://fijiaaron.wordpress.com/2010/09/29/writing-page-based-tests-with-selenium-in-ruby/">Writing page based tests with selenium in ruby</a> is just enough to get you down the path of page objects in ruby.</li>
+<li>And because we can&#8217;t have only one post on Page Objects, <a href="http://luizfar.wordpress.com/2010/09/29/page-objects/">Step-by-step selenium tests with page objects, dsl and fun!</a> is in Groovy</li>
+<li><a href="http://www.oliverklee.de/temp/mocking-cheatsheet.pdf">Cheatsheet: Creating mocks in PHPUnit</a> could be useful for those who write Se scripts in PHP</li>
+<li>The talks for GTAC 2010 <a href="http://www.gtac.biz/selected-talks">have been announced</a>. I don&#8217;t know what the pool of talks they pulled from was like, but I&#8217;m underwhelmed</li>
+<li>I have no idea where <a href="http://www.seleniumwiki.com/">SeleniumWiki</a> came from, but there is a fair bit of content there. Not sure how much is original and how much is lifted from other places on the internets &#8212; the spidey sense tingles when the title says &#8216;VB Code&#8217; which seems to imply it is an SEO hunting site.</li>
+<li>Martin Fowler&#8217;s DSL book is out Real Soon Now and the <a href="http://www.informit.com/articles/printerfriendly.aspx?p=1592379">first chapter is available online</a>. Most people have been saying &#8216;build a DSL for your scripts&#8217; for awhile &#8212; now we&#8217;ll see just how off all our definitions of that were.</li>
+<li>getXpathCount is one of the more powerful commands in Se, but the bulk of people use it &#8216;wrong&#8217;. <a href="http://blog.browsermob.com/2010/09/effectively-using-seleniums-getxpathcount-function/">Effectively using Selenium’s getXpathCount function</a> starts to address that problem.</li>
+</ul></p>
+
+
+      <div class="share-container">
+        <h3>Share this: </h3>
+
+        <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2329&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-29%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-29%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="filter-container">
+    <div class="blog-filter">
+    <div class="filter-section">
+        <h3>Search blog</h3>
+        <div class="search-container">
+            <div class="search-bar-container">
+                
+                
+                
+                
+                <script>
+                  (function() {
+                    var cx = '018435082943254453647:ktxsp1-jcb8';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                </script>
+                <gcse:searchbox-only></gcse:searchbox-only>
+            </div>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Archive</h3>
+        <div class="archive-link-container">
+            <a href="/blog/2019">2019</a>
+            <a href="/blog/2018">2018</a>
+            <a href="/blog/2017">2017</a>
+            <a href="/blog/2016">2016</a>
+            <a href="/blog/2015">2015</a>
+            <a href="/blog/2014">2014</a>
+            <a href="/blog/2013">2013</a>
+            <a href="/blog/2012">2012</a>
+            <a href="/blog/2011">2011</a>
+            <a href="/blog/2010">2010</a>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Support the Selenium project</h3>
+        <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
+        <div class="learn-more button-container">
+            <a href="/sponsors">
+                <div class="button support-button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="/thirdparty">Third Party</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

@@ -478,7 +478,10 @@ public static void tearDown() {driver.quit();
 }
   {{</ code-panel>}}
   {{<code-panel language="python">}}
-# 我们还没有 python 的示例代码，请帮助我们，并提交一个 PR
+# unittest teardown
+# https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
+def tearDown(self):
+    self.driver.quit()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 /*
@@ -491,7 +494,11 @@ public void TearDown()
 }
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 ruby 的示例代码，请帮助我们，并提交一个 PR
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 /**
@@ -563,7 +570,7 @@ with webdriver.Firefox() as driver:
 之前的 webapp，否则你不太可能与他们合作。内嵌框架允许插入来自完全不同领域的文档，并且仍然经常使用。
 
 
-如果您需要使用框架或 iframe, Webdriver 允许您以相同的方式使用它们。考虑 iframe 中的一个按钮。
+如果您需要使用框架或 iframe, WebDriver 允许您以相同的方式使用它们。考虑 iframe 中的一个按钮。
 如果我们使用浏览器开发工具检查元素，我们可能会看到以下内容:
 
 ```html
@@ -921,7 +928,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 Ruby 的示例代码，帮我们实现并提交一个 PR
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 // 分别获取每个尺寸
@@ -987,6 +1001,24 @@ driver.manage().window().position = Point(0,0)
   {{<code-panel language="javascript">}}await driver.manage().window().maximize();{{< / code-panel>}}
   {{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
 {{</ code-tab>}}
+
+### Minimize window
+Minimizes the window of current browsing context. 
+The exact behavior of this command is specific to 
+individual window managers. 
+ 
+Minimize Window typically hides the window in the system tray.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
+  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
+{{< / code-tab >}}
 
 ### 全屏窗口
 

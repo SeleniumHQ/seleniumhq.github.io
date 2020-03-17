@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Support packages on Selenium 文档</title>
+    <title>支持的包 on Selenium 文档</title>
     <link>https://selenium.dev/documentation/zh-cn/support_packages/</link>
-    <description>Recent content in Support packages on Selenium 文档</description>
+    <description>Recent content in 支持的包 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -12,35 +12,26 @@
     
     
     <item>
-      <title>Browser navigation</title>
-      <link>https://selenium.dev/documentation/zh-cn/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/support_packages/browser_navigation/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed). driver.navigate().forward(); // Go back one page in the browser (if you&amp;#39;re not on the // first page that was viewed).</description>
-    </item>
-    
-    <item>
-      <title>Working with colours</title>
+      <title>同颜色一起工作</title>
       <link>https://selenium.dev/documentation/zh-cn/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_colours/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>在测试中, 您偶尔会需要验证某事物的颜色；问题是网络上的颜色定义不是个常量. 如果有一种简单的方法可以比较颜色的十六进制与RGB呈现, 或者颜色的RGBA与HSLA呈现, 岂不美哉?
+不用担心有一个解决方案：Color 类!
+首先, 您需要导入该类:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
     </item>
     
     <item>
-      <title>Working with select elements</title>
+      <title>同选择元素一起工作</title>
       <link>https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_select_elements/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+      <description>选择元素可能需要大量样板代码才能自动化. 为了减少这种情况并使您的测试更干净, 在Selenium的support包中有一个 Select 类. 要使用它，您将需要以下导入语句:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.ui.Select     然后，您能够参考 &amp;lt;select&amp;gt; 元素，基于WebElement创建一个Select对象。
+Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement);   select_element = driver.</description>
     </item>
     
     <item>
@@ -49,32 +40,22 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
+      <description>Mouse表示鼠标事件. 鼠标操作是通过使用底层接口执行的, 其允许我们向Web浏览器提供虚拟化的设备输入操作.
+clickAndHold 它将移动到该元素，然后在给定元素的中间单击(不释放).
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.</description>
     </item>
     
     <item>
-      <title>Working with web elements</title>
-      <link>https://selenium.dev/documentation/zh-cn/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_web_elements/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- </description>
-    </item>
-    
-    <item>
-      <title>Working with cookies</title>
+      <title>同cookies一起工作</title>
       <link>https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
-WebDriver API provides a way to interact with cookies with built-in methods:
-Add Cookie It is used to add a cookie to the current browsing context.</description>
+      <description>Cookie是从网站发送并存储在您的计算机中的一小段数据. Cookies主要用于识别用户并加载存储的信息.
+WebDriver API提供了一种使用内置的方法与Cookie进行交互:
+添加 Cookie 这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. 这里  是一个链接, 用于描述可接受的JSON键值的列表
+首先, 您需要位于有效Cookie的域上. 如果您在开始与网站进行交互之前尝试预设cookie, 并且您的首页很大或需要一段时间才能加载完毕, 则可以选择在网站上找到一个较小的页面 (通常404页很小, 例如 http://example.com/some404page)
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context  driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } }   from selenium import webdriver driver = webdriver.</description>
     </item>
     
   </channel>

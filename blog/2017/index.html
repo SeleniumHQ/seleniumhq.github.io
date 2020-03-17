@@ -162,41 +162,17 @@
         <div class="container dark-background">
             August 9, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/"><h2>Firefox 55 and Selenium IDE</h2></a>
-            <p>The bad news: <strong>from Firefox 55 onwards, Selenium IDE will no longer work</strong>.</p>
-
-<p>The reasons for this are complex, but boil down to two main causes:</p>
-
-<ul>
-<li>Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard
-to make Firefox <a href="https://blog.mozilla.org/blog/2017/06/13/faster-better-firefox/">faster and more stable</a>,
-while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of
-that process, Firefox is switching extensions from the original <a href="https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/">XPI</a>
-format, to a newer, more widely adopted <a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Web Extension</a> mechanism.<br /></li>
-<li>The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</li>
-</ul>
-
-<p><a href="https://selenium.dev">Selenium</a> is one of the most widely used pieces of testing software there is. Despite this,
-the team of people regularly contributing is small: since the start of the year, there are only 11 people who have
-made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person
-has been maintaining the IDE.</p>
-
-<p>Selenium is an Open Source project. None of the core contributors — not the IDE maintainer, not the language binding
-owners — are paid to work on work on it. They do it because they love working on the code, and they typically do it
-in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking
-that committer for his time and effort. Thank you, Samit!</p>
-
-<p>So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to
-fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE
-using modern APIs, to be usable across more than just Firefox.
-The fine people at <a href="https://applitools.com/">Applitools</a> are helping with this effort.</p>
-
-<p>The third thing? That’s you. <strong>You could help us</strong>.</p>
-
-<p>If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool,
-then please come and join us! The main technical discussions are happening on the #selenium IRC channel.
-If you’d prefer <a href="https://selenium.dev/support/">Slack</a>, you can join us on that too. Or there’s the ever
-useful <a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers</a> mailing list.
-Come on board. We’d love your help, and IDE is a wonderful thing to contribute to!</p>
+            <p><span style="font-weight:400;">The bad news:<strong> from Firefox 55 onwards, Selenium IDE will no longer work</strong>. </span></p>
+<p><span style="font-weight:400;">The reasons for this are complex, but boil down to two main causes:</span></p>
+<ol>
+<li style="font-weight:400;"><span style="font-weight:400;">Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox <a href="https://blog.mozilla.org/blog/2017/06/13/faster-better-firefox/">faster and more stable</a>, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “<a href="https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/">XPI</a>” format, to a newer, more widely adopted “<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Web Extension</a>” mechanism.  </span></li>
+<li style="font-weight:400;"><span style="font-weight:400;">The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</span></li>
+</ol>
+<p><span style="font-weight:400;"><a href="http://www.seleniumhq.org/">Selenium</a> is one of the most widely used pieces of testing software there is. Despite this, the team of people regularly contributing is small: since the start of the year, there are only 11 people who have made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person has been maintaining the IDE. </span></p>
+<p><span style="font-weight:400;">Selenium is an Open Source project. None of the core contributors &#8212; not the IDE maintainer, not the language binding owners &#8212; are paid to work on work on it. They do it because they love working on the code, and they typically do it in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking that committer for his time and effort. Thank you, Samit!</span></p>
+<p><span style="font-weight:400;">So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE using modern APIs, to be usable across more than just Firefox. The fine people at <a href="https://applitools.com/">Applitools</a> are helping with this effort.</span></p>
+<p><span style="font-weight:400;">The third thing? That’s you. <strong>You could help us</strong>.</span></p>
+<p><span style="font-weight:400;">If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer <a href="https://seleniumhq.herokuapp.com/">Slack</a>, you can join us on that too. Or there’s the ever useful <a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers</a> mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!</span></p>
 
 
             <div class="share-container">
@@ -213,73 +189,21 @@ Come on board. We’d love your help, and IDE is a wonderful thing to contribute
         <div class="container dark-background">
             February 8, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2017/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
-            <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a>
-which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part
-of that programme, which the Selenium project has participated in for many years, they’ve asked
-us to provide a fair and balanced review of IntelliJ. I’ll attempt to do that, and I’ll try and
-state my biases up-front so you’re aware of them.</p>
-
-<p>I’ve been using Jetbrain’s IntelliJ to hack on the Selenium code since I started working on it
-slightly over ten years ago. It’s still my favourite IDE for my Java work, and it’s plenty of
-fun to use. For some time, I’ve been using the (free) Community Edition, which is ample for many
-coding needs.</p>
-
-<p>Most of my work is in Java, and that’s where I know IDEA best. I dabble in Ruby and Python, and
-I’ve written a reasonably large amount of Javascript, all in IDEA.</p>
-
+            <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a> which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part of that programme, which the Selenium project has participated in for many years, they&#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&#8217;ll attempt to do that, and I&#8217;ll try and state my biases up-front so you&#8217;re aware of them.</p>
+<p>I&#8217;ve been using Jetbrain&#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It&#8217;s still my favourite IDE for my Java work, and it&#8217;s plenty of fun to use. For some time, I&#8217;ve been using the (free) Community Edition, which is ample for many coding needs.</p>
+<p>Most of my work is in Java, and that&#8217;s where I know IDEA best. I dabble in Ruby and Python, and I&#8217;ve written a reasonably large amount of Javascript, all in IDEA.</p>
 <p>The Pros:</p>
-
-<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages.
-If you’re a polyglot programmer, being able to stay in the same tool for much of your work makes life
-a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively.
-I don’t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely
-and seems to work well. The built in type detection and code navigation features are impressive
-(particularly for untyped languages such as JS)</p>
-
-<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring
-options it offers. These are great, and always have been. One nice feature I’ve noticed as we move
-to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where
-they make sense (and, I’ll be honest, sometimes when they don’t). It’s made making use of lambdas
-a lot easier.</p>
-
-<p>For a while, IDEA was becoming slower and more bloated, but I’m pleased to see that, partly thanks
-to the work of developers from <a href="http://facebook.com/">Facebook</a>, the latest releases feel snappier
-and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to
-receiving patches to their core product: it displays a level of respect for external contributors
-that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
-
-<p>There’s a nice wide range of plugins available for IDEA. I’ve hooked up the Buck plugin and made
-use of it. Without an extensions API, this plugin would’t have been possible, but having them
-there is incredibly useful and makes the IDE even more capable.</p>
-
-<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively
-closely — it’s fun to see what new language features we’ll be able to use in the future!</p>
-
+<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you&#8217;re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don&#8217;t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)</p>
+<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I&#8217;ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I&#8217;ll be honest, sometimes when they don&#8217;t). It&#8217;s made making use of lambdas a lot easier.</p>
+<p>For a while, IDEA was becoming slower and more bloated, but I&#8217;m pleased to see that, partly thanks to the work of developers from <a href="http://facebook.com/">Facebook</a>, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
+<p>There&#8217;s a nice wide range of plugins available for IDEA. I&#8217;ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn&#8217;t have been possible, but having them there is incredibly useful and makes the IDE even more capable.</p>
+<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely &#8212; it&#8217;s fun to see what new language features we&#8217;ll be able to use in the future!</p>
 <p>The Cons:</p>
-
-<p>Although it’s a fine product, there are some niggles to be had.</p>
-
-<p>Most annoyingly, the built in code analysis doesn&rsquo;t always warn that some Java classes won’t compile.
-The most recent example was where IDEA didn&rsquo;t flag that some lambdas couldn&rsquo;t be used since the
-choice of method to use was ambiguous. This may be because the Java language continues its slothful
-way forward, and the compiler improves with each release — certainly these same files compiled just
-fine with older Java releases.</p>
-
-<p>When an error does happen, I’ve yet to find the magic setting to allow IDEA to keep going as far
-as possible. One of the features I like about Eclipse is that it’ll compile as much as it can,
-even if there are invalid source files. When doing TDD, this allows you to move just a little bit
-faster as unit tests can run and pass so long as they don’t touch faulty code. I dearly wish this
-same capability was present in IDEA!</p>
-
-<p>On the Selenium project, we use <a href="http://buckbuild.com/">Buck</a> for our builds. The Buck plugin
-doesn&rsquo;t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that
-can’t be repeated by the IDE that are required for a successful build. IDEA offers the ability
-to run an <a href="http://ant.apache.org/">Ant</a> step before a build is run, and it would be extremely
-useful if this was generalised to “any shell command”. Most of the time, it’s fine, but it’s
-irksome to forget to run things!</p>
-
-<p>On the whole, I love IntelliJ an awful lot. It’s a fast and capable IDE, and the company behind
-it supports OSS. What’s not to love?</p>
+<p>Although it&#8217;s a fine product, there are some niggles to be had.</p>
+<p>Most annoyingly, the built in code analysis doesn&#8217;t always warn that some Java classes won&#8217;t compile. The most recent example was where IDEA didn&#8217;t flag that some lambdas couldn&#8217;t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release &#8212; certainly these same files compiled just fine with older Java releases.</p>
+<p>When an error does happen, I&#8217;ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it&#8217;ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don&#8217;t touch faulty code. I dearly wish this same capability was present in IDEA!</p>
+<p>On the Selenium project, we use <a href="http://buckbuild.com/">Buck</a> for our builds. The Buck plugin doesn&#8217;t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can&#8217;t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an <a href="http://ant.apache.org/">Ant</a> step before a build is run, and it would be extremely useful if this was generalised to &#8220;any shell command&#8221;. Most of the time, it&#8217;s fine, but it&#8217;s irksome to forget to run things!</p>
+<p>On the whole, I love IntelliJ an awful lot. It&#8217;s a fast and capable IDE, and the company behind it supports OSS. What&#8217;s not to love?</p>
 
 
             <div class="share-container">
@@ -290,6 +214,442 @@ it supports OSS. What’s not to love?</p>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         

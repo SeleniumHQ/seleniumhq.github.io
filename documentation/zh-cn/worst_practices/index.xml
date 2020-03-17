@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Worst practices on Selenium 文档</title>
+    <title>反模式 on Selenium 文档</title>
     <link>https://selenium.dev/documentation/zh-cn/worst_practices/</link>
-    <description>Recent content in Worst practices on Selenium 文档</description>
+    <description>Recent content in 反模式 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -12,24 +12,23 @@
     
     
     <item>
-      <title>Captchas</title>
+      <title>验证码</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</guid>
-      <description>  页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
+      <description>验证码 (CAPTCHA), 是 全自动区分计算机和人类的图灵测试 (Completely Automated Public Turing test to tell Computers and Humans Apart) 的简称, 是被明确地设计用于阻止自动化的, 所以不要尝试!
+规避验证码的检查, 主要有两个策略:
+ 在测试环境中禁用验证码 添加钩子以允许测试绕过验证码  </description>
     </item>
     
     <item>
-      <title>File downloads</title>
+      <title>文件下载</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform. Instead, find the link using Selenium (and any required cookies) and pass it to a HTTP request library like libcurl.</description>
+      <description>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式. 因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如libcurl这样的HTTP请求库.</description>
     </item>
     
     <item>
@@ -55,13 +54,12 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Test dependency</title>
+      <title>测试依赖</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
+      <description>关于自动化测试的一个常见想法和误解是关于特定的测试顺序. 您的测试应该能够以任何顺序运行，而不是依赖于完成其他测试才能成功.</description>
     </item>
     
     <item>

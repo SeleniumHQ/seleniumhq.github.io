@@ -105,23 +105,32 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
     </item>
     
     <item>
-      <title>Http proxies</title>
+      <title>Httpプロキシ</title>
       <link>https://selenium.dev/documentation/ja/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/http_proxies/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
+      <description>プロキシサーバーは、クライアントとサーバー間の要求の仲介役として機能します。 簡単に言えば、トラフィックはプロキシサーバーを経由して、要求したアドレスに戻り、戻ってきます。
+Seleniumを使用した自動化スクリプト用のプロキシサーバーは、
+ ネットワークトラフィックをキャプチャする ウェブサイトによって行われた模擬バックエンドを呼び出す 複雑なネットワークトポロジーまたは厳格な企業の制限/ポリシーの下で、必要なWebサイトにアクセスします。  企業環境でブラウザがURLへの接続に失敗した場合、環境にアクセスするにはプロキシが必要であることが原因であることが最も可能性が高いです。
+Selenium WebDriverは設定をプロキシする方法を提供します。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   from selenium import webdriver PROXY = &amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34; webdriver.DesiredCapabilities.FIREFOX[&amp;#39;proxy&amp;#39;] = { &amp;#34;httpProxy&amp;#34;: PROXY, &amp;#34;ftpProxy&amp;#34;: PROXY, &amp;#34;sslProxy&amp;#34;: PROXY, &amp;#34;proxyType&amp;#34;: &amp;#34;MANUAL&amp;#34;, } with webdriver.</description>
     </item>
     
     <item>
-      <title>Page loading strategy</title>
+      <title>ページ読み込み戦略</title>
       <link>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</guid>
-      <description>  ページは英語から日本語へ訳されています。 日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
- </description>
+      <description>現在のセッションのページ読み込み戦略を定義します。 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は normal となります。 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
+ドキュメントの document.readyState プロパティは、現在のドキュメントの読み込み状態を記述します。 デフォルトでは、WebDriverは、ドキュメントの準備完了状態が complete になるまで、 driver.get()（または）driver.navigate().to() の呼び出しへの応答を保留します。
+SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
+SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに driver.get() および driver.naviagte().to() を実行するまで、pageLoadStrategyは常に COMPLETE ステータスを表示します。
+WebDriverの pageLoadStrategy は以下の値をサポートします。
+normal この値は、Selenium WebDriverはページ全体がロードされるまで待機します。 normal に設定すると、Selenium WebDriverは、ロードイベントの発生が返却されるまで待機します。
+何も指定されていない場合、デフォルトでは、 normal がブラウザに設定されます。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.PageLoadStrategy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeOptions; import org.openqa.selenium.chrome.ChromeDriver; public class pageLoadStrategy { public static void main(String[] args) { ChromeOptions chromeOptions = new ChromeOptions(); chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL); WebDriver driver = new ChromeDriver(chromeOptions); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>

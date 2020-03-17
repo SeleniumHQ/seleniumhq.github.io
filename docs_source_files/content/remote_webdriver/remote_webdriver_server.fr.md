@@ -3,75 +3,67 @@ title: "Le serveur Remote WebDriver"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-The server will always run on the machine with the browser you want to
-test. The server can be used either from the command line or through code
+Le serveur fonctionnera toujours sur la machine avec le navigateur que vous souhaitez
+tester. Le serveur peut être utilisé à partir de la ligne de commande ou via du code
 configuration.
 
+## Démarrage du serveur à partir de la ligne de commande
 
-## Starting the server from the command line
-
-Once you have downloaded `selenium-server-standalone-{VERSION}.jar`,
-place it on the computer with the browser you want to test. Then, from
-the directory with the jar, run the following:
+Une fois que vous avez téléchargé `selenium-server-standalone-{VERSION}.jar`,
+placez-le sur l'ordinateur avec le navigateur que vous souhaitez tester. Ensuite, à partir de
+le répertoire avec le pot, exécutez ce qui suit:
 
 ```shell
 java -jar selenium-server-standalone-{VERSION}.jar
 ```
 
-## Considerations for running the server
+## Considérations pour exécuter le serveur
 
-The caller is expected to terminate each session properly, calling
-either `Selenium#stop()` or `WebDriver#quit`.
+L’appelant doit terminer correctement chaque session, appelant
+soit `Selenium#stop()` ou `WebDriver#quit`.
 
-The selenium-server keeps in-memory logs for each ongoing session,
-which are cleared when `Selenium#stop()` or `WebDriver#quit` is called. If
-you forget to terminate these sessions, your server may leak memory. If
-you keep extremely long-running sessions, you will probably need to
-stop/quit every now and then (or increase memory with -Xmx jvm option).
+Le 'Selenium-Server' conserve des journaux en mémoire pour chaque session en cours,
+qui sont effacés lorsque `Selenium#stop()` ou `WebDriver#quit` est appelé. Si
+vous oubliez de mettre fin à ces sessions, votre serveur peut perdre de la mémoire. Si
+vous gardez des sessions extrêmement longues, vous devrez probablement
+arrêtez/quittez de temps en temps (ou augmentez la mémoire avec l'option -Xmx jvm).
 
+## Timeouts (à partir de la version 2.21)
 
-## Timeouts (from version 2.21)
-
-The server has two different timeouts, which can be set as follows:
+Le serveur a deux délais d'expiration différents, qui peuvent être définis comme suit:
 
 ```shell
 java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60
 ```
 
 * browserTimeout
-  * Controls how long the browser is allowed to hang (value in seconds).
+  * Contrôle la durée pendant laquelle le navigateur est autorisé à se bloquer (valeur en secondes).
 * timeout
-  * Controls how long the client is allowed to be gone
-  before the session is reclaimed (value in seconds).
+  * Contrôle la durée pendant laquelle le client est autorisé à partir
+      avant la récupération de la session (valeur en secondes).
 
-The system property `selenium.server.session.timeout`
-is no longer supported as of 2.21.
+La propriété système `selenium.server.session.timeout`
+n'est plus pris en charge à partir de la version 2.21.
 
-Please note that the `browserTimeout`
-is intended as a backup timeout mechanism
-when the ordinary timeout mechanism fails,
-which should be used mostly in grid/server environments
-to ensure that crashed/lost processes do not stay around for too long,
-polluting the runtime environment.
+Veuillez noter que le `browserTimeout`
+est conçu comme un mécanisme de temporisation de sauvegarde
+lorsque le mécanisme de temporisation ordinaire échoue,
+qui devrait être utilisé principalement dans des environnements de grille/serveur
+pour garantir que les processus bloqués/perdus ne restent pas trop longtemps,
+polluant l'environnement d'exécution.
 
+## Configuration du serveur par programmation
 
-## Configuring the server programmatically
+En théorie, le processus est aussi simple que de mapper le `DriverServlet` à
+une URL, mais il est également possible d'héberger la page dans un format léger
+conteneur, tel que Jetty configuré entièrement en code. Étapes à suivre pour ce faire
+suivre.
 
-In theory, the process is as simple as mapping the `DriverServlet` to
-a URL, but it's also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.
-
-Download the `selenium-server.zip` and unpack. Put the JARs on the
-CLASSPATH. Create a new class called `AppServer`. Here, I'm using
-Jetty, so you'll need to [download](//www.eclipse.org/jetty/download.html) 
-that as well:
+* Téléchargez `selenium-server.zip` et décompressez. 
+* Placez les JAR sur le CLASSPATH. 
+* Créez une nouvelle classe appelée `AppServer`. Ici, j'utilise
+Jetty, vous devrez donc [télécharger](//www.eclipse.org/jetty/download.html)
+cela aussi:
 
 ```java
 import org.mortbay.jetty.Connector;

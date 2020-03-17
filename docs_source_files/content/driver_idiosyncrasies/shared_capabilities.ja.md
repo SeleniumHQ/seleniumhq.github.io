@@ -1,28 +1,34 @@
 ---
-title: "Shared capabilities"
+title: "共有Capabilities"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。
+リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
 
-### pageLoadStrategy
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
+WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。
+WebDriverがサポートするCapabilitiesは次のとおりです。
 
-The page load strategy queries the
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
+## browserName:
 
-| Strategy | Ready State | Notes |
+このCapabilityは、特定のセッションの `browserName` を設定するために使います。
+指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
+
+## browserVersion: 
+
+このCapabilityはオプションです。
+これは、リモートエンドで使用可能なブラウザーバージョンを設定するために使います。
+たとえば、Chromeバージョン80のみがインストールされているシステムでバージョン75を要求すると、セッションの作成は失敗します。
+
+### ページロード戦略
+URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。
+これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。
+デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
+
+次の表で説明するように、ページロード戦略は [document.readyState](//developer.mozilla.org/ja/docs/Web/API/Document/readyState) を問い合わせます。
+
+| 戦略 | Ready State | 注釈 |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | complete | デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します |
+| eager | interactive | DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります |
+| none | Any | WebDriverをまったくブロックしません |

@@ -27,20 +27,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.</description>
-    </item>
-    
-    <item>
-      <title>Browser Navigation</title>
-      <link>https://selenium.dev/documentation/de/support_packages/browser_navigation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/de/support_packages/browser_navigation/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- There are commands for various webpage loading actions:
-Java Python C# Ruby JavaScript Kotlin // Navigate to a URL (both of the statements below are // functionally equivalent). driver.get(&amp;#34;https://www.google.com&amp;#34;); driver.navigate().to(&amp;#34;https://www.google.com&amp;#34;); // Go forward one page in the browser (if you&amp;#39;re not on the // last page that was viewed).</description>
+      <description>Zu Beginn ist es notwendig das die Selenium Bindings für Dein Automationsprojekt installiert werden. Der Installationsprozess ist von der gewählten Programmiersprache abhängig.
+Java Die Installation der Selenium Bibliotheken für Java kann mit Hilfe von Maven erfolgen. Füge in Deinem Projekt in die pom.xml die selenium-java dependecy hinzu.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Mit der selenium-java dependency ist es möglich Tests laufen zu lassen in allen von Selenium unterstützen Browsern. Falls Du Test nur in einem spezifischen Browser ausführen möchtest, ist es möglich auch nur die dependecy für den gewählten Browser in der pom.</description>
     </item>
     
     <item>
@@ -80,9 +69,8 @@ Diese Dokumentation wurde mit größter Sorgfalt erstellt, so vollständig und g
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/introduction/the_selenium_project_and_tools/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Selenium controls web browsers Selenium is many things but at its core, it is a toolset for web browser automation that uses the best techniques available to remotely control browser instances and emulate a user&amp;rsquo;s interaction with the browser.
-It allows users to simulate common activities performed by end-users; entering text into fields, selecting drop-down values and checking boxes, and clicking links in documents.</description>
+      <description>Selenium steuert Webbrowsers Selenium , ist Vieles, aber im Kern ist eine Sammlung von Werkzeugen um Webbrowser zu automatisieren. Es nutzt die besten Mechanismen die verfügbar sind um Browsersinstanzen zu steuern und Benutzereingaben zu simulieren.
+Es ermöglicht Aktionen von Benutzern zu simulieren; Texteingaben, Auswahl von Optionen in Drop-Downs, aktivieren von Checkboxen und anklicken von Links auf Webseiten. Es ermöglicht auch viele andere Möglichkeiten wie zum Beispiel Mausbewegungen, beliebige JavaScript Codeausführungen und vieles mehr.</description>
     </item>
     
     <item>
@@ -102,7 +90,8 @@ It allows users to simulate common activities performed by end-users; entering t
       
       <guid>https://selenium.dev/documentation/de/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources.</description>
+ In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description>
     </item>
     
     <item>
@@ -196,7 +185,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       
       <guid>https://selenium.dev/documentation/de/webdriver/driver_requirements/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
     </item>
     
     <item>
@@ -266,9 +255,8 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.
+Downloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.</description>
     </item>
     
     <item>
@@ -351,8 +339,8 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+      <description>Wenn Du vorhast Grid zu verwenden, dann solltest Du Dir selenium-server-standalone JAR downloaden. Alle benötigten Komponenten sind via selenium-server verfügbar. Die standalone JAR beinhaltet den Remote Selenium Server als auch die Client-side Implementierungen. Das bedeutet wenn die selenium-server-standalone JAR in Deinem Projekt verwendet wird, dann ist es nicht notwendig selenium-java oder browserspezifische JAR hinzuzufügen.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
@@ -451,15 +439,6 @@ Falls Du einen Fehler in der Dokumentation entdeckst, freuen wir uns wenn Du uns
     </item>
     
     <item>
-      <title>Arbeiten mit Webelementen</title>
-      <link>https://selenium.dev/documentation/de/support_packages/working_with_web_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/de/support_packages/working_with_web_elements/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Detailiertes Reporting</title>
       <link>https://selenium.dev/documentation/de/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -540,7 +519,8 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/webdriver/http_proxies/</guid>
-      <description></description>
+      <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server for automation scripts with Selenium could be helpful for: - Capture network traffic - Mock backend calls made by the website - Access the requited website under complex network topologies or strict corporate restrictions/policies.</description>
     </item>
     
     <item>
@@ -580,7 +560,8 @@ Let us say there is a content management system with which you can create some c
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/webdriver/page_loading_strategy/</guid>
-      <description></description>
+      <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
+The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
     </item>
     
     <item>

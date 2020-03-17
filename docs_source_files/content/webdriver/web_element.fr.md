@@ -3,23 +3,17 @@ title: "Web element"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant
+racine du document à l'aide d'une instance WebDriver ou en recherchant sous une autre
+WebElement
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
-
-WebDriver API provides built-in methods to find the WebElements which are
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+L'API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont
+basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
 
 ## Find Element
 
-It is used to find an element and returns a first matching single WebElement reference,
-that can be used for future element actions
+Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante,
+qui peut être utilisé pour de futures actions d'élément
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -99,8 +93,8 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
-you need to loop over the list of elements to perform action on selected element.
+Similaire à "Rechercher un élément", mais renvoie une liste de WebElements correspondants. Pour utiliser un WebElement particulier de la liste,
+vous devez parcourir la liste des éléments pour effectuer une action sur l'élément sélectionné.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -224,8 +218,8 @@ fun main() {
 
 ## Find Element From Element
 
-It is used to find a child element within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+Il est utilisé pour rechercher un élément enfant dans le contexte de l'élément parent.
+Pour ce faire, le WebElement parent est chaîné avec 'findElement' pour accéder aux éléments enfants
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -299,8 +293,8 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements From Element
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+Il est utilisé pour rechercher la liste des WebElements enfants correspondants dans le contexte de l'élément parent.
+Pour ce faire, le WebElement parent est chaîné avec "findElements" pour accéder aux éléments enfants
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -437,7 +431,7 @@ namespace FindElementsFromElement {
 
 ## Get Active Element
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le contexte de navigation actuel.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

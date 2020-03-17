@@ -3,199 +3,161 @@ title: "Selenium 1 (Selenium RC)"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
 
+## 紹介
+Selenium RCは長い間メインのSeleniumプロジェクトでしたが、WebDriver/Seleniumを併合したより強力なツールであるSelenium 2が登場しました。
+Selenium 1はもうサポートされていないことを強調する価値があります。
 
-## Introduction
-Selenium RC was the main Selenium project for a long time, before the
-WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.
-It is worth to highlight that Selenium 1 is not supported anymore.
+## Selenium RCの仕組み
+はじめに、Selenium RCのコンポーネントがどのように動作するか、およびテストスクリプトの実行でそれぞれが果たす役割について説明します。
 
-## How Selenium RC Works
-First, we will describe how the components of Selenium RC operate and the role each plays in running 
-your test scripts.
+### RCコンポーネント
 
-### RC Components
+SeleniumRCコンポーネントは、以下のとおりです。
 
-Selenium RC components are:
+* ブラウザを起動および終了し、テストプログラムから渡されたSeleneseコマンドを解釈および実行し、ブラウザとAUTの間で渡されるHTTPメッセージをインターセプトおよび検証するSeleniumサーバー
+* 各プログラミング言語とSelenium RC Server間のインターフェイスを提供するクライアントライブラリ
 
-* The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an *HTTP proxy*, intercepting and verifying HTTP messages passed between the browser and the AUT.
-* Client libraries which provide the interface between each programming language and the Selenium RC Server.
+これは簡略化されたアーキテクチャ図です。
 
-Here is a simplified architecture diagram:
+![簡略化されたアーキテクチャ図](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+この図は、クライアントライブラリが実行される各Seleniumコマンドを渡すサーバーと通信することを示しています。
+次に、サーバーはSelenium-Core JavaScriptコマンドを使用してSeleniumコマンドをブラウザーに渡します。
+ブラウザは、JavaScriptインタープリターを使用して、Seleniumコマンドを実行します。
+これにより、テストスクリプトで指定したSeleneseアクションまたは検証が実行されます。
 
-The diagram shows the client libraries communicate with the
-Server passing each Selenium command for execution. Then the server passes the 
-Selenium command to the browser using Selenium-Core JavaScript commands. The 
-browser, using its JavaScript interpreter, executes the Selenium command. This
-runs the Selenese action or verification you specified in your test script.
+### Seleniumサーバー
 
-### Selenium Server
+Seleniumサーバーは、テストプログラムからSeleniumコマンドを受信して解釈し、それらのテストの実行結果をプログラムに報告します。
 
-Selenium Server receives Selenium commands from your test program,
-interprets them, and reports back to your program the results of
-running those tests.
+RCサーバーはSelenium Coreをバンドルし、ブラウザーに自動的に挿入します。
+これは、テストプログラムがブラウザを開いたときに発生します（クライアントライブラリのAPI関数を使用）。
+Selenium-CoreはJavaScriptプログラムです。
+実際には、ブラウザの組み込みJavaScriptインタープリターを使用してSeleneseコマンドを解釈および実行するJavaScript関数のセットです。
 
-The RC server bundles Selenium Core and automatically injects
-it into the browser. This occurs when your test program opens the
-browser (using a client library API function).
-Selenium-Core is a JavaScript program, actually a set of JavaScript
-functions which interprets and executes Selenese commands using the
-browser's built-in JavaScript interpreter.
+サーバーは、単純なHTTP GET/POSTリクエストを使用して、テストプログラムからSeleneseコマンドを受け取ります。
+これは、HTTPリクエストを送信できるプログラミング言語を使用して、ブラウザーでのSeleniumテストを自動化できることを意味します。
 
-The Server receives the Selenese commands from your test program
-using simple HTTP GET/POST requests. This means you can use any
-programming language that can send HTTP requests to automate
-Selenium tests on the browser.
+### クライアントライブラリ
 
-### Client Libraries
+クライアントライブラリは、独自の設計のプログラムからSeleniumコマンドを実行できるプログラミングサポートを提供します。
+サポートされる言語ごとに異なるクライアントライブラリがあります。
+Seleniumクライアントライブラリは、プログラミングインターフェイス（API）、つまり、独自のプログラムからSeleniumコマンドを実行する一連の関数を提供します。
+各インターフェイス内には、各Seleneseコマンドをサポートするプログラミング関数があります。
 
-The client libraries provide the programming support that allows you to
-run Selenium commands from a program of your own design.  There is a 
-different client library for each supported language.  A Selenium client 
-library provides a programming interface (API), i.e., a set of functions,
-which run Selenium commands from your own program. Within each interface,
-there is a programming function that supports each Selenese command.
+クライアントライブラリは、Seleneseコマンドを受け取り、それをSeleniumサーバーに渡して、特定のアクションまたはテスト対象アプリケーション（AUT）に対するテストを処理します。
+クライアントライブラリは、そのコマンドの結果も受け取り、プログラムに返します。
+プログラムは結果を受け取ってプログラム変数に保存し、成功または失敗として報告するか、予期しないエラーの場合は修正アクションを実行できます。
 
-The client library takes a Selenese command and passes it to the Selenium Server
-for processing a specific action or test against the application under test 
-(AUT).  The client library
-also receives the result of that command and passes it back to your program.
-Your program can receive the result and store it into a program variable and
-report it as a success or failure, 
-or possibly take corrective action if it was an unexpected error. 
+したがって、テストプログラムを作成するには、クライアントライブラリAPIを使用して一連のSeleniumコマンドを実行するプログラムを作成するだけです。
+また、オプションで、Selenium-IDEでSeleneseテストスクリプトを既に作成している場合は、Selenium RCコードを生成できます。
+Selenium-IDEは、（エクスポートメニュー項目を使用して）SeleniumコマンドをクライアントドライバーのAPI関数呼び出しに変換できます。
+Selenium-IDEからRCコードをエクスポートする詳細については、Selenium-IDEの章を参照してください。
 
-So to create a test program, you simply write a program that runs 
-a set of Selenium commands using a client library API.  And, optionally, if 
-you already have a Selenese test script created in the Selenium-IDE, you can 
-*generate the Selenium RC code*. The Selenium-IDE can translate (using its 
-Export menu item) its Selenium commands into a client-driver's API function 
-calls.  See the Selenium-IDE chapter for specifics on exporting RC code from 
-Selenium-IDE.
+## インストール
 
-## Installation
+インストールというのは、Seleniumの誤った呼び名です。
+Seleniumには、選択したプログラミング言語で利用可能な一連のライブラリがあります。
+[ダウンロードページ](https://selenium.dev/downloads/)からダウンロードできます。
 
-Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the [downloads page](https://selenium.dev/downloads/).
+使用する言語を選択したら、次のことを行う必要があります。
 
-Once you've chosen a language to work with, you simply need to:
+* Selenium RCサーバーをインストールします。
+* 言語固有のクライアントドライバーを使用してプログラミングプロジェクトをセットアップします。
 
-* Install the Selenium RC Server.
-* Set up a programming project using a language specific client driver.
+### Seleniumサーバーのインストール
 
-### Installing Selenium Server
+Selenium RCサーバーは単なるJava jarファイル（selenium-server-standalone-&lt;version-number&gt;.jar）であり、特別なインストールは不要です。
+zipファイルをダウンロードして、目的のディレクトリにサーバーを展開するだけで十分です。
 
-The Selenium RC server is simply a Java *jar* file (*selenium-server-standalone-<version-number>.jar*), which doesn't
-require any special installation. Just downloading the zip file and extracting the 
-server in the desired directory is sufficient. 
+### Seleniumサーバーを実行する
 
-### Running Selenium Server
-
-Before starting any tests you must start the server.  Go to the directory
-where Selenium RC's server is located and run the following from a command-line 
-console.
+テストを開始する前に、サーバーを起動する必要があります。
+Selenium RCのサーバーがあるディレクトリに移動し、コマンドラインコンソールから次を実行します。
 
 ```shell
     java -jar selenium-server-standalone-<version-number>.jar
 ```
 
-This can be simplified by creating
-a batch or shell executable file (.bat on Windows and .sh on Linux) containing the command
-above. Then make a shortcut to that executable on your
-desktop and simply double-click the icon to start the server.
+これは、上記のコマンドを含むバッチまたはシェル実行可能ファイル（Windowsでは.bat、Linuxでは.sh）を作成することで簡素化できます。
+次に、デスクトップ上でその実行可能ファイルへのショートカットを作成し、アイコンをダブルクリックしてサーバーを起動します。
 
-For the server to run you'll need Java installed 
-and the PATH environment variable correctly configured to run it from the console.
-You can check that you have Java correctly installed by running the following
-on a console.
+サーバーを実行するには、Javaをインストールし、PATH環境変数をコンソールから実行するように正しく構成する必要があります。
+コンソールで次を実行すると、Javaが正しくインストールされていることを確認できます。
 
 ```shell
        java -version
 ```
 
-If you get a version number (which needs to be 1.5 or later), you're ready to start using Selenium RC.
+バージョン番号（1.5以降である必要があります）を取得したら、Selenium RCの使用を開始できます。
 
-### Using the Java Client Driver
+### Javaクライアントドライバーの使用
 
-* Download Selenium java client driver zip from the SeleniumHQ [downloads page](https://selenium.dev/downloads/).
-* Extract selenium-java-<version-number>.jar file
+* SeleniumHQ[ダウンロードページ](https://selenium.dev/downloads/)からSelenium Javaクライアントドライバーのzipファイルをダウンロードします。
+* selenium-java-&lt;version-number&gt; .jarファイルを解凍します。
 * Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
-* Create a java project.
-* Add the selenium-java-<version-number>.jar files to your project as references.
-* Add to your project classpath the file selenium-java-<version-number>.jar.
-* From Selenium-IDE, export a script to a Java file and include it in your Java
-  project, or write your Selenium test in Java using the selenium-java-client API.
-  The API is presented later in this chapter.  You can either use JUnit, or TestNg
-  to run your test, or you can write your own simple main() program.  These concepts are
-  explained later in this section.
-* Run Selenium server from the console.
-* Execute your test from the Java IDE or from the command-line.
+* 希望するJava IDE（Eclipse、NetBeans、IntelliJ、Netweaverなど）を開きます。
+* Javaプロジェクトを作成します。
+* selenium-java-&lt;version-number&gt;.jarファイルをプロジェクトの参照先に追加します。
+* selenium-java-&lt;version-number&gt;.jarファイルをプロジェクトのクラスパスに追加します。
+* Selenium-IDEから、スクリプトをJavaファイルにエクスポートしてJavaプロジェクトに含めるか、selenium-java-client APIを使用してJavaでSeleniumテストを記述します。
+APIについては、この章の後半で説明します。
+JUnitまたはTestNgを使用してテストを実行するか、独自の単純なmain()プログラムを作成できます。
+これらの概念については、このセクションの後半で説明します。
+* コンソールからSeleniumサーバーを実行します。
+* Java IDEまたはコマンドラインからテストを実行します。
 
-For details on Java test project configuration, see the Appendix sections
-Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.
+Javaテストプロジェクトの設定詳細については、付録セクションの「EclipseでのSelenium RCの設定」および「IntellijでのSelenium RCの設定」を参照してください。
 
-### Using the Python Client Driver 
+### Pythonクライアントドライバーの使用 
 
-* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](https://selenium.dev/downloads/) 
-* Either write your Selenium test in Python or export
-  a script from Selenium-IDE to a python file.
-* Run Selenium server from the console
-* Execute your test from a console or your Python IDE 
+* SeleniumをPIP経由でインストールします。手順はSeleniumHQ[ダウンロードページ](https://selenium.dev/downloads/)にリンクされています。
+* SeleniumテストをPythonで作成するか、Selenium-IDEからPythonファイルにスクリプトをエクスポートします。
+* コンソールからSeleniumサーバーを実行します。
+* コンソールまたはPython IDEからテストを実行します。
 
-For details on Python client driver configuration, see the appendix Python Client Driver Configuration.
+Pythonクライアントドライバーの設定詳細については、付録「Pythonクライアントドライバーの設定」を参照してください。
 
-### Using the .NET Client Driver
+### .NETクライアントドライバーの使用
 
-* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
-* Extract the folder
-* Download and install [NUnit](https://nunit.org/download/) (
-  Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
-  NUnit, you can also write a simple main() function to run your tests; 
-  however NUnit is very useful as a test engine.)
-* Open your desired .Net IDE (Visual Studio, SharpDevelop, MonoDevelop)
-* Create a class library (.dll)
-* Add references to the following DLLs: nmock.dll, nunit.core.dll, nunit.
-  framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll
-  and ThoughtWorks.Selenium.UnitTests.dll
-* Write your Selenium test in a .Net language (C#, VB.Net), or export
-  a script from Selenium-IDE to a C# file and copy this code into the class file 
-  you just created.
-* Write your own simple main() program or you can include NUnit in your project 
-  for running your test.  These concepts are explained later in this chapter.
-* Run Selenium server from console
-* Run your test either from the IDE, from the NUnit GUI or from the command line
+* SeleniumHQ[ダウンロードページ](https://selenium.dev/downloads/)からSelenium RCをダウンロードします。
+* フォルダーを解凍します。
+* [NUnit](https://nunit.org/download/)をダウンロードしてインストールします。
+（注：テストエンジンとしてNUnitを使用できます。
+NUnitにまだ慣れていない場合は、簡単なmain()関数を作成してテストを実行することもできますが、NUnitはテストエンジンとして非常に便利です。）
+* 希望した.Net IDE（Visual Studio、SharpDevelop、MonoDevelop）を開きます。
+* クラスライブラリ(.dll)を作成します。
+* 次のDLLへの参照を追加します。
+nmock.dll、nunit.core.dll、nunit、framework.dll、ThoughtWorks.Selenium.Core.dll、ThoughtWorks.Selenium.IntegrationTests.dll、ThoughtWorks.Selenium.UnitTests.dll
+* Seleniumテストを.Net言語(C#、VB.Net)で記述するか、Selenium-IDEからC#ファイルにスクリプトをエクスポートし、このコードを作成したクラスファイルにコピーします。
+* 独自の単純なmain()プログラムを作成するか、テストを実行するためにプロジェクトにNUnitを含めることができます。
+これらの概念については、この章の後半で説明します。
+* コンソールからSeleniumサーバーを実行します。
+* IDE、NUnit GUI、またはコマンドラインからテストを実行します。
 
-For specific details on .NET client driver configuration with Visual Studio, see the appendix 
-.NET client driver configuration. 
+Visual Studioを使用した.NETクライアントドライバーの設定詳細については、付録の.NETクライアントドライバー設定を参照してください。
 
-### Using the Ruby Client Driver
+### Rubyクライアントドライバーの使用
 
-* If you do not already have RubyGems, install it from RubyForge.
-* Run ``gem install selenium-client``
-* At the top of your test script, add ``require "selenium/client"``
-* Write your test script using any Ruby test harness (eg Test::Unit,
-  Mini::Test or RSpec).
-* Run Selenium RC server from the console.
-* Execute your test in the same way you would run any other Ruby
-  script.
+* RubyGemsがまだない場合は、RubyForgeからインストールします。
+* 次のコマンドを実行します。 ``gem install selenium-client``
+* テストスクリプトの上部に次の行を追加します。 ``require "selenium/client"``
+* Rubyテストハーネス(Test :: Unit、Mini :: Test、RSpecなど)を使用してテストスクリプトを記述します。
+* コンソールからSeleniumサーバーを実行します。
+* 他のRubyスクリプトを実行するのと同じ方法でテストを実行します。
 
+Rubyクライアントドライバーの構成の詳細については、`Selenium-Clientのドキュメント` を参照してください。
 
-For details on Ruby client driver configuration, see the `Selenium-Client documentation`_
+## Seleneseからプログラムへ
 
-## From Selenese to a Program
+Selenium RCを使用する主なタスクは、Seleneseをプログラミング言語に変換することです。
+このセクションでは、言語固有の例をいくつか示します。
 
-The primary task for using Selenium RC is to convert your Selenese into a programming 
-language. In this section, we provide several different language-specific examples.
+### サンプルテストスクリプト
 
-### Sample Test Script
-
-Let's start with an example Selenese test script.  Imagine recording
-the following test with Selenium-IDE.
+Seleneseテストスクリプトの例から始めましょう。
+Selenium-IDEで次のテストを記録することを想像してください。
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
@@ -204,16 +166,13 @@ the following test with Selenium-IDE.
 | clickAndWait       | btnG                          |             |
 | assertTextPresent  | Results * for selenium rc     |             |
 
+注：この例は、Google検索ページ http://www.google.com で機能します。
 
-Note: This example would work with the Google search page http://www.google.com
+### プログラミングコードとしてのSelenese
 
-### Selenese as Programming Code
-
-Here is the test script exported (via Selenium-IDE) to each of the supported
-programming languages.  If you have at least basic knowledge of an object-
-oriented programming language, you will understand how Selenium 
-runs Selenese commands by reading one of these 
-examples.  To see an example in a specific language, select one of these buttons.
+サポートされている各プログラミング言語に(Selenium-IDE経由で)エクスポートされたテストスクリプトを次に示します。
+オブジェクト指向プログラミング言語の少なくとも基本的な知識がある場合は、これらの例のいずれかを読むことで、SeleniumがSeleneseコマンドを実行する方法を理解できます。
+特定の言語の例を表示するには、これらのボタンのいずれかを選択します。
 
 #### CSharp
 ``` csharp
@@ -387,23 +346,20 @@ examples.  To see an example in a specific language, select one of these buttons
 
 ```
 
-In the next section we'll explain how to build a test program using the generated code.
+次のセクションでは、生成されたコードを使用してテストプログラムを構築する方法を説明します。
 
-## Programming Your Test
+## テストをプログラミングする
 
-Now we'll illustrate how to program your own tests using examples in each of the
-supported programming languages.
-There are essentially two tasks:
+次に、サポートされている各プログラミング言語の例を使用して、独自のテストをプログラミングする方法を説明します。
+基本的に2つのタスクがあります。
 
-* Generate your script into a programming 
-  language from Selenium-IDE, optionally modifying the result.  
-* Write a very simple main program that executes the generated code.  
+* Selenium-IDEからスクリプトをプログラミング言語に生成し、必要に応じて結果を変更します。 
+* 生成されたコードを実行する非常に単純なmainプログラムを記述します。
 
-Optionally, you can adopt a test engine platform like JUnit or TestNG for Java, 
-or NUnit for .NET if you are using one of those languages.
+必要に応じて、JUnitまたはJava用のTestNG、またはこれらの言語のいずれかを使用している場合は.NET用のNUnitなどのテストエンジンプラットフォームを採用できます。
 
-Here, we show language-specific examples.  The language-specific APIs tend to 
-differ from one to another, so you'll find a separate explanation for each.  
+ここでは、言語固有の例を示します。
+言語固有のAPIはそれぞれ異なっている傾向があるため、それぞれに個別の説明があります。
 
 * Java
 * C#
@@ -414,23 +370,21 @@ differ from one to another, so you'll find a separate explanation for each.
 
 ### Java
 
-For Java, people use either JUnit or TestNG as the test engine.  
-Some development environments like Eclipse have direct support for these via 
-plug-ins.  This makes it even easier. Teaching JUnit or TestNG is beyond the scope of 
-this document however materials may be found online and there are publications
-available.  If you are already a "java-shop" chances are your developers will 
-already have some experience with one of these test frameworks.
+Javaの場合、テストエンジンとしてJUnitまたはTestNGを使用します。
+Eclipseは、プラグインを介してこれらを直接サポートしています。
+これにより、さらに簡単になります。
+JUnitまたはTestNGの指導はこのドキュメントの範囲外ですが、資料はオンラインで入手でき、利用可能な出版物があります。
+すでに"java-shop"であれば、開発者がこれらのテストフレームワークのいずれかで既にある程度の経験を持っている可能性があります。
 
-You will probably want to rename the test class from "NewTest" to something 
-of your own choosing.  Also, you will need to change the browser-open 
-parameters in the statement:
+おそらく、テストクラスの名前を"NewTest"から独自の名前に変更する必要があります。
+また、ステートメント内のブラウザを開くパラメーターを変更する必要があります。
 
 ```java
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ``` 
 
-The Selenium-IDE generated code will look like this.  This example 
-has comments added manually for additional clarity.
+Selenium-IDEで生成されたコードは次のようになります。
+この例では、わかりやすくするためにコメントを手動で追加しています。
 
 ```java
    package com.example.tests;
@@ -467,24 +421,21 @@ has comments added manually for additional clarity.
 
 ### `C#`
 
-The .NET Client Driver works with Microsoft.NET.
-It can be used with any .NET testing framework 
-like NUnit or the Visual Studio 2005 Team System.
+.NETクライアントドライバーはMicrosoft.NETで動作します。
+NUnitやVisual Studio 2005 Team Systemなどの.NETテストフレームワークで利用できます。
 
-Selenium-IDE assumes you will use NUnit as your testing framework.
-You can see this in the generated code below.  It includes the *using* statement
-for NUnit along with corresponding NUnit attributes identifying 
-the role for each member function of the test class.  
+Selenium-IDEは、テストフレームワークとしてNUnitを使用することを想定しています。
+以下の生成コードでこれを確認できます。
+NUnitの *using* ステートメントと、テストクラスの各メンバー関数の役割を識別する対応するNUnit属性が含まれています。
 
-You will probably have to rename the test class from "NewTest" to 
-something of your own choosing.  Also, you will need to change the browser-open
-parameters in the statement:
+おそらく、テストクラスの名前を"NewTest"から独自の選択に変更する必要があります。
+また、ステートメントのブラウザで開くパラメーターを変更する必要があります。
 
 ```csharp
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ```
 
-The generated code will look similar to this.
+生成されたコードは次のようになります。
 
 ```csharp
 
@@ -569,17 +520,14 @@ The generated code will look similar to this.
     }
 ```
 
-You can allow NUnit to manage the execution 
-of your tests. Or alternatively, you can write a simple `main()` program that 
-instantiates the test object and runs each of the three methods, `SetupTest()`, 
-`TheNewTest()`, and `TeardownTest()` in turn.
-
+NUnitにテストの実行を管理させることができます。
+または、テストオブジェクトをインスタンス化し、`SetupTest()`、`TheNewTest()`、`TeardownTest()` の各メソッドを順番に実行する単純な `main()` プログラムを作成することもできます。
 
 ### Python
 
-Pyunit is the test framework to use for Python.
+Pyunitは、Pythonで使用するテストフレームワークです。
 
-The basic test structure is:
+基本的なテスト構造は次のとおりです。
 
 ```python
 
@@ -631,23 +579,16 @@ The basic test structure is:
 
 ### Ruby
 
+Selenium-IDEの古い（2.0より前の）バージョンは、古いSelenium gemを必要とするRubyコードを生成します。
+したがって、IDEによって生成されたRubyスクリプトを次のように更新することをお勧めします。
 
-Old (pre 2.0) versions of Selenium-IDE generate Ruby code that requires the old Selenium
-gem. Therefore, it is advisable to update any Ruby scripts generated by the
-IDE as follows:
+1. １行目を ``require "selenium"`` から ``require "selenium/client"`` に変更
 
-1. On line 1, change ``require "selenium"`` to ``require
-"selenium/client"``
+2. 11行目を ``Selenium::SeleniumDriver.new`` から ``Selenium::Client::Driver.new`` に変更
 
-2. On line 11, change ``Selenium::SeleniumDriver.new`` to
-``Selenium::Client::Driver.new``
+クラス名を"Untitled"よりもわかりやすい名前に変更し、テストメソッドの名前を"test_untitled"以外の名前に変更することもできます。
 
-You probably also want to change the class name to something more
-informative than "Untitled," and change the test method's name to
-something other than "test_untitled."
-
-Here is a simple example created by modifying the Ruby code generated
-by Selenium IDE, as described above.
+上記のように、Selenium IDEによって生成されたRubyコードを変更して作成された簡単な例を次に示します。
 
 ```ruby
 
@@ -733,20 +674,16 @@ by Selenium IDE, as described above.
 
 ### Perl, PHP
 
-The members of the documentation team
-have not used Selenium RC with Perl or PHP. If you are using Selenium RC with either of
-these two languages please contact the Documentation Team (see the chapter on contributing).
-We would love to include some examples from you and your experiences, to support Perl and PHP users.
+ドキュメントチームのメンバーは、PerlまたはPHPでSelenium RCを使用していません。
+これらの2つの言語のいずれかでSelenium RCを使用している場合は、ドキュメントチームに連絡してください（貢献に関する章を参照）。
+PerlおよびPHPユーザーをサポートするために、あなたとあなたの経験からいくつかの例を含めたいと思います。
 
+## APIを学ぶ
 
-## Learning the API
+Selenium RC APIは、Seleneseを理解していると仮定すると、インターフェイスのほとんどが自明である命名規則を使用します。
+ただし、ここでは、最も重要で、おそらくそれほど明白ではない側面について説明します。
 
-The Selenium RC API uses naming conventions 
-that, assuming you understand Selenese, much of the interface  
-will be self-explanatory. Here, however, we explain the most critical and 
-possibly less obvious aspects.
-
-### Starting the Browser 
+### ブラウザーを起動する
 
 #### CSharp
 ```csharp
@@ -787,156 +724,129 @@ possibly less obvious aspects.
       @selenium.start
 ```
 
-Each of these examples opens the browser and represents that browser 
-by assigning a "browser instance" to a program variable.  This 
-program variable is then used to call methods from the browser. 
-These methods execute the Selenium commands, i.e. like *open* or *type* or the *verify* 
-commands.
+これらの各例はブラウザを開き、"ブラウザーインスタンス"をプログラム変数に割り当てることでそのブラウザを表します。
+このプログラム変数は、ブラウザからメソッドを呼び出すために使用されます。
+これらのメソッドは、Seleniumコマンドを実行します。
+つまり、 *open* コマンドや *type* コマンド、 *verify* コマンドなどです。
 
-The parameters required when creating the browser instance
-are: 
+ブラウザーインスタンスの作成時に必要なパラメーターは次のとおりです。
 
 * **host**
-    Specifies the IP address of the computer where the server is located. Usually, this is
-    the same machine as where the client is running, so in this case *localhost* is passed.  In some clients this is an optional parameter.
-	
+    サーバーが配置されているコンピューターのIPアドレスを指定します。
+    通常、これはクライアントが実行されているマシンと同じマシンであるため、この場合は *localhost* が渡されます。
+    一部のクライアントでは、これは任意のパラメーターです。
+
 * **port**
-    Specifies the TCP/IP socket where the server is listening waiting
-    for the client to establish a connection.  This also is optional in some
-    client drivers.
+    サーバーがクライアントが接続を確立するのを待機しているTCP/IPソケットを指定します。
+    これは、一部のクライアントドライバーでは任意です。
 	
 * **browser**
-    The browser in which you want to run the tests. This is a required 
-    parameter.
+    テストを実行するブラウザー。
+    これは必須パラメーターです。
 	
 * **url**
-    The base url of the application under test. This is required by all the
-    client libs and is integral information for starting up the browser-proxy-AUT communication.
+    テスト対象のアプリケーションのベースURL。
+    これは、すべてのクライアントライブラリに必要であり、ブラウザプロキシAUT通信を開始するための不可欠な情報です。
 
-Note that some of the client libraries require the browser to be started explicitly by calling
-its `start()` method.
+一部のクライアントライブラリでは、 `start()` メソッドを呼び出してブラウザーを明示的に起動する必要があります。
 
-### Running Commands 
+### コマンドを実行する 
 
-Once you have the browser initialized and assigned to a variable (generally
-named "selenium") you can make it run Selenese commands by calling the respective 
-methods from the browser variable. For example, to call the *type* method
-of the selenium object:
+ブラウザを初期化して変数（一般的に"selenium"という名前）に割り当てたら、ブラウザ変数からそれぞれのメソッドを呼び出してSeleneseコマンドを実行させることができます。
+たとえば、Seleniumオブジェクトの *type* メソッドを呼び出すには、以下のように記述します。
 
 ```
     selenium.type("field-id","string to type")
 ```
 
-In the background the browser will actually perform a *type* operation, 
-essentially identical to a user typing input into the browser, by  
-using the locator and the string you specified during the method call.
+バックグラウンドで、ブラウザは、メソッド呼び出し中に指定したロケーターと文字列を使用して、ユーザーがブラウザーに入力を入力するのと本質的に同じタイプ操作を実際に実行します。
 
-## Reporting Results
+## 結果を報告する
 
-Selenium RC does not have its own mechanism for reporting results. Rather, it allows
-you to build your reporting customized to your needs using features of your
-chosen programming language.  That's great, but what if you simply want something
-quick that's already done for you?  Often an existing library or test framework can 
-meet your needs faster than developing your own test reporting code.
+Selenium RCには、結果を報告するための独自のメカニズムがありません。
+むしろ、選択したプログラミング言語の機能を使用して、ニーズに合わせてカスタマイズしたレポートを作成できます。
+それは素晴らしいことですが、すでにあなたのために行われている何かを簡単にしたい場合はどうでしょうか？
+多くの場合、既存のライブラリまたはテストフレームワークは、独自のテストレポートコードを開発するよりも早くニーズを満たすことができます。
 
-### Test Framework Reporting Tools 
+### テストフレームワークのレポートツール 
 
-Test frameworks are available for many programming languages. These, along with
-their primary function of providing a flexible test engine for executing your tests, 
-include library code for reporting results.  For example, Java has two 
-commonly used test frameworks, JUnit and TestNG.  .NET also has its own, NUnit.
+テストフレームワークは、多くのプログラミング言語で使用できます。
+これらは、テストを実行するための柔軟なテストエンジンを提供する主な機能とともに、結果を報告するためのライブラリコードを含んでいます。
+たとえば、Javaには一般的に使用される2つのテストフレームワーク、JUnitとTestNGがあります。
+.NETには独自のNUnitもあります。
 
-We won't teach the frameworks themselves here; that's beyond the scope of this
-user guide.  We will simply introduce the framework features that relate to Selenium
-along with some techniques you can apply.  There are good books available on these
-test frameworks however along with information on the internet.
+ここではフレームワーク自体を教えません。
+これはこのユーザーガイドの範囲外です。
+Seleniumに関連するフレームワーク機能と、適用可能ないくつかのテクニックを簡単に紹介します。
+ただし、これらのテストフレームワークに関する優れた書籍は、インターネット上の情報とともに入手できます。
 
-### Test Report Libraries 
+### テストレポートライブラリ 
 
-Also available are third-party libraries specifically created for reporting
-test results in your chosen programming language.  These often support a 
-variety of formats such as HTML or PDF.
+選択したプログラミング言語でテスト結果を報告するために特別に作成されたサードパーティライブラリも利用できます。
+これらは多くの場合、HTMLやPDFなどのさまざまな形式をサポートします。
 
-### What's The Best Approach? 
+### 最良のアプローチは何ですか？ 
 
-Most people new to the testing frameworks will begin with the framework's
-built-in reporting features.  From there most will examine any available libraries
-as that's less time consuming than developing your own.  As you begin to use
-Selenium no doubt you will start putting in your own "print statements" for 
-reporting progress.  That may gradually lead to you developing your own 
-reporting, possibly in parallel to using a library or test framework.  Regardless,
-after the initial, but short, learning curve you will naturally develop what works
-best for your own situation.
+テストフレームワークを初めて使用するほとんどの人は、フレームワークに組み込まれているレポート機能から始めます。
+独自のライブラリを開発するよりも時間がかかりません。
+Seleniumを使用し始めたら、進捗を報告するための独自の"印刷したステートメント"を入力し始めることは間違いありません。
+それにより、ライブラリまたはテストフレームワークの使用と並行して、独自のレポートの開発に徐々につながる可能性があります。
+とにかく、最初の、しかし短い学習曲線の後、あなたは自分の状況に最適なものを自然に開発します。
 
-### Test Reporting Examples
+### テストレポートの例
 
-To illustrate, we'll direct you to some specific tools in some of the other languages 
-supported by Selenium.  The ones listed here are commonly used and have been used 
-extensively (and therefore recommended) by the authors of this guide.
+説明のために、Seleniumでサポートされている他の言語のいくつかの特定のツールを紹介します。
+ここにリストされているものは一般的に使用されており、このガイドの著者によって広く使用されています（したがって、推奨されています）。
 
-#### Test Reports in Java
+#### Javaのテストレポート
 
-* If Selenium Test cases are developed using JUnit then JUnit Report can be used
-  to generate test reports. 
+* SeleniumテストケースがJUnitを使用して開発されている場合、JUnitレポートを使用してテストレポートを生成できます。
 
-* If Selenium Test cases are developed using TestNG then no external task 
-  is required to generate test reports. The TestNG framework generates an 
-  HTML report which list details of tests. 
+* TestNGを使用してSeleniumテストケースを開発する場合、テストレポートを生成するために外部タスクは必要ありません。
+TestNGフレームワークは、テストの詳細をリストするHTMLレポートを生成します。
 
-* ReportNG is a HTML reporting plug-in for the TestNG framework. 
-  It is intended as a replacement for the default TestNG HTML report. 
-  ReportNG provides a simple, colour-coded view of the test results. 
-  
-##### Logging the Selenese Commands
+* ReportNGは、TestNGフレームワーク用のHTMLレポートプラグインです。
+これは、デフォルトのTestNG HTMLレポートの代替として意図されています。
+ReportNGは、テスト結果の色分けされたシンプルなビューを提供します。
 
-* Logging Selenium can be used to generate a report of all the Selenese commands
-  in your test along with the success or failure of each. Logging Selenium extends
-  the Java client driver to add this Selenese logging ability.
+##### Seleneseコマンドのロギング
 
-#### Test Reports for Python
+* Seleniumのロギングを使用して、テスト内のすべてのSeleneseコマンドのレポートを、それぞれの成功または失敗とともに生成できます。
+ロギングSeleniumはJavaクライアントドライバーを拡張して、このSeleneseロギング機能を追加します。
 
-* When using Python Client Driver then HTMLTestRunner can be used to
-  generate a Test Report.
+#### Pythonのテストレポート
 
-#### Test Reports for Ruby
+* Pythonクライアントドライバーを使用する場合、HTMLTestRunnerを使用してテストレポートを生成できます。
 
-* If RSpec framework is used for writing Selenium Test Cases in Ruby
-  then its HTML report can be used to generate a test report.
+#### Rubyのテストレポート
 
+* RSpecフレームワークをRubyでのSeleniumテストケースの作成に使用する場合、そのHTMLレポートを使用してテストレポートを生成できます。
 
-## Adding Some Spice to Your Tests
+## テストにスパイスを追加する
 
-Now we'll get to the whole reason for using Selenium RC, adding programming logic to your tests.
-It's the same as for any program.  Program flow is controlled using condition statements
-and iteration.  In addition you can report progress information using I/O.  In this section
-we'll show some examples of how programming language constructs can be combined with 
-Selenium to solve common testing problems. 
+次に、テストにプログラミングロジックを追加して、Selenium RCを使用するすべての理由を説明します。
+他のプログラムと同じです。
+プログラムフローは、条件ステートメントと反復を使用して制御されます。
+さらに、I/Oを使用して進捗情報を報告できます。
+このセクションでは、プログラミング言語の構成要素をSeleniumと組み合わせて、一般的なテストの問題を解決する方法の例をいくつか示します。
 
-You will find as you transition from the simple tests of the existence of 
-page elements to tests of dynamic functionality involving multiple web-pages and 
-varying data that you will require programming logic for verifying expected 
-results.  Basically, the Selenium-IDE does not support iteration and 
-standard condition statements.  You can do some conditions by embedding javascript
-in Selenese parameters, however 
-iteration is impossible, and most conditions will be much easier in a  
-programming language.  In addition, you may need exception handling for
-error recovery.  For these reasons and others, we have written this section
-to illustrate the use of common programming techniques to
-give you greater 'verification power' in your automated testing.
+ページ要素の存在の単純なテストから、予想される結果を検証するためにプログラミングロジックを必要とする複数のWebページとさまざまなデータを含む動的機能のテストに移行するときにわかります。
+基本的に、Selenium-IDEは反復および標準条件ステートメントをサポートしていません。
+Seleneseパラメーターにjavascriptを埋め込むことでいくつかの条件を実行できますが、反復は不可能であり、プログラミング言語ではほとんどの条件がはるかに簡単になります。
+さらに、エラー回復のために例外処理が必要になる場合があります。
+これらの理由およびその他の理由により、自動テストでの"検証力"を高めるための一般的なプログラミング手法の使用を説明するために、このセクションを作成しました。
 
-The examples in this section are written
-in C# and Java, although the code is simple and can be easily adapted to the other supported
-languages.  If you have some basic knowledge
-of an object-oriented programming language you shouldn't have difficulty understanding this section.
+このセクションの例はC#とJavaで記述されていますが、コードはシンプルであり、サポートされている他の言語に簡単に適合させることができます。
+オブジェクト指向プログラミング言語の基本的な知識があれば、このセクションを理解するのに困難はないはずです。
 
-### Iteration
+### 反復
 
-Iteration is one of the most common things people need to do in their tests.
-For example, you may want to to execute a search multiple times.  Or, perhaps for
-verifying your test results you need to process a "result set" returned from a database.
+反復は、テストで行う必要がある最も一般的なことの1つです。
+たとえば、検索を複数回実行したい場合があります。
+または、おそらくテスト結果を検証するために、データベースから返された"結果セット"を処理する必要があります。
 
-Using the same Google search example we used earlier, let's 
-check the Selenium search results. This test could use the Selenese:
+前に使用したのと同じGoogle検索の例を使用して、Seleniumの検索結果を確認しましょう。
+このテストではSeleneseを使用できます。
 
 |                    |                               |               |
 | --------           | ----------------------------  | ------------- |
@@ -951,13 +861,11 @@ check the Selenium search results. This test could use the Selenese:
 | clickAndWait       | btnG                          |               |
 | assertTextPresent  | Results * for selenium grid   |               |
 
+同じ手順を3回実行するためにコードが繰り返されています。
+ただし、同じコードのコピーを複数作成することは、維持する作業が増えるため、プログラムとしては適切ではありません。
+プログラミング言語を使用することで、検索結果を反復処理して、より柔軟で保守可能なソリューションを実現できます。
 
-The code has been repeated to run the same steps 3 times.  But multiple
-copies of the same code is not good program practice because it's more
-work to maintain.  By using a programming language, we can iterate
-over the search results for a more flexible and maintainable solution. 
-
-#### In `C#`   
+#### `C#` の場合
    
 ```csharp
    // Collection of String values.
@@ -974,30 +882,28 @@ over the search results for a more flexible and maintainable solution.
     }
 ```
 
-### Condition Statements
+### 条件ステートメント
 
-To illustrate using conditions in tests we'll start with an example.
-A common problem encountered while running Selenium tests occurs when an 
-expected element is not available on page.  For example, when running the 
-following line:
+テストでの条件の使用を説明するために、例から始めます。
+Seleniumテストの実行中に発生する一般的な問題は、ページで予期される要素が利用できない場合に発生します。
+たとえば、次の行を実行する場合です。
 
 ```
    selenium.type("q", "selenium " +s);
 ```
-   
-If element 'q' is not on the page then an exception is
-thrown:
+
+要素 'q'がページにない場合、例外がスローされます。
 
 ```java
    com.thoughtworks.selenium.SeleniumException: ERROR: Element q not found
 ```
 
-This can cause your test to abort.  For some tests that's what you want.  But
-often that is not desirable as your test script has many other subsequent tests
-to perform.
+これにより、テストが中断する可能性があります。
+いくつかのテストでは、それがあなたの望むものです。
+しかし、多くの場合、テストスクリプトには実行する他の多くのテストがあるため、これは望ましくありません。
 
-A better approach is to first validate whether the element is really present
-and then take alternatives when it it is not.  Let's look at this using Java.
+より良いアプローチは、まず要素が実際に存在するかどうかを検証し、次に存在しない場合に代替手段を取ることです。
+Javaを使用してこれを見てみましょう。
 
 ```java
    // If element is available on page then perform type operation.
@@ -1008,19 +914,15 @@ and then take alternatives when it it is not.  Let's look at this using Java.
    }
 ```
    
-The advantage of this approach is to continue with test execution even if some UI 
-elements are not available on page.
+このアプローチの利点は、ページで一部のUI要素が利用できない場合でも、テストの実行を続行できることです。
 
+### テストからJavaScriptを実行する
 
-### Executing JavaScript from Your Test
+JavaScriptは、セレンによって直接サポートされていないアプリケーションを実行する際に非常に便利です。
+Selenium APIの **getEval** メソッドを使用して、Selenium RCからJavaScriptを実行できます。
 
-JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of selenium API can be used to execute JavaScript from
-selenium RC. 
-
-Consider an application having check boxes with no static identifiers. 
-In this case one could evaluate JavaScript from selenium RC to get ids of all 
-check boxes and then exercise them. 
+静的な識別子のないチェックボックスを持つアプリケーションを考えてください。
+この場合、Selenium RCからJavaScriptを評価して、すべてのチェックボックスのIDを取得し、それらを実行できます。
 
 ```java
    public static String[] getAllCheckboxIds () { 
@@ -1042,90 +944,72 @@ check boxes and then exercise them.
     }
 ```
 
-To count number of images on a page:
+ページ上の画像の数を数えるには、以下のとおりです。
 
 ```java   
    selenium.getEval("window.document.images.length;");
 ```
 
-Remember to use window object in case of DOM expressions as by default selenium
-window is referred to, not the test window.
+デフォルトでは、テストウィンドウではなくSeleniumウィンドウが参照されるため、DOM式の場合は必ずウィンドウオブジェクトを使用してください。
 
-## Server Options
+## サーバーオプション
 
-When the server is launched, command line options can be used to change the
-default server behaviour.
+サーバーの起動時に、コマンドラインオプションを使用してデフォルトのサーバーの動作を変更できます。
 
-Recall, the server is started by running the following.
+サーバーを起動するには、次を実行してください。
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar
 ``` 
 
-To see the list of options, run the server with the ``-h`` option.
+オプションのリストを表示するには、 ``-h`` オプションを指定してサーバーを実行します。
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -h
 ``` 
 
-You'll see a list of all the options you can use with the server and a brief
-description of each. The provided descriptions will not always be enough, so we've
-provided explanations for some of the more important options.
+サーバーで使用できるすべてのオプションのリストとそれぞれの簡単な説明が表示されます。
+提供された説明では必ずしも十分ではないため、いくつかのより重要なオプションについて説明しました。
 
+### プロキシ設定
 
-### Proxy Configuration
-
-If your AUT is behind an HTTP proxy which requires authentication then you should 
-configure http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
-using the following command. 
+AUTが認証を必要とするHTTPプロキシの後ろにある場合、次のコマンドを使用してhttp.proxyHost、http.proxyPort、http.proxyUserおよびhttp.proxyPasswordを設定する必要があります。
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -Dhttp.proxyHost=proxy.com -Dhttp.proxyPort=8080 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ``` 
 
-### Multi-Window Mode
+### マルチウィンドウモード
 
-If you are using Selenium 1.0 you can probably skip this section, since multiwindow mode is 
-the default behavior.  However, prior to version 1.0, Selenium by default ran the 
-application under test in a sub frame as shown here.
+Selenium 1.0を使用している場合は、マルチウィンドウモードがデフォルトの動作であるため、おそらくこのセクションをスキップできます。
+ただし、バージョン1.0より前は、Seleniumはデフォルトで、ここに示すようにサブフレームでテスト対象のアプリケーションを実行していました。
 
-![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![シングルウィンドウモード](/images/legacy_docs/selenium_rc_single_window_mode.png)
 
-Some applications didn't run correctly in a sub frame, and needed to be 
-loaded into the top frame of the window. The multi-window mode option allowed
-the AUT to run in a separate window rather than in the default 
-frame where it could then have the top frame it required.
+一部のアプリケーションはサブフレームで正しく実行されず、ウィンドウの上部フレームにロードする必要がありました。
+マルチウィンドウモードオプションにより、AUTはデフォルトフレームではなく別のウィンドウで実行でき、そこで必要なトップフレームを取得できました。
 
-![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![マルチウィンドウモード](/images/legacy_docs/selenium_rc_multi_window_mode.png)
 
-For older versions of Selenium you must specify multiwindow mode explicitly
-with the following option:
+Seleniumの古いバージョンでは、次のオプションで明示的にマルチウィンドウモードを指定する必要があります。
 
 ```bash   
    -multiwindow 
 ``` 
 
-As of Selenium RC 1.0, if you want to run your test within a
-single frame (i.e. using the standard for earlier Selenium versions) 
-you can state this to the Selenium Server using the option
+Selenium RC 1.0の時点で、単一のフレーム内でテストを実行する場合（つまり、以前のSeleniumバージョンの標準を使用する場合）、オプションを使用してこれをSelenium Serverに指定できます。
 
 ```bash   
    -singlewindow 
 ``` 
 
-### Specifying the Firefox Profile
+### Firefoxプロファイルの指定
 
-Firefox will not run two instances simultaneously unless you specify a 
-separate profile for each instance. Selenium RC 1.0 and later runs in a 
-separate profile automatically, so if you are using Selenium 1.0, you can 
-probably skip this section.  However, if you're using an older version of 
-Selenium or if you need to use a specific profile for your tests
-(such as adding an https certificate or having some addons installed), you will 
-need to explicitly specify the profile. 
+Firefoxは、インスタンスごとに個別のプロファイルを指定しない限り、2つのインスタンスを同時に実行しません。
+Selenium RC 1.0以降は個別のプロファイルで自動的に実行されるため、Selenium 1.0を使用している場合は、このセクションをスキップできます。
+ただし、Seleniumの古いバージョンを使用している場合、またはテストに特定のプロファイルを使用する必要がある場合（https証明書の追加やアドオンのインストールなど）、プロファイルを明示的に指定する必要があります。
 
-First, to create a separate Firefox profile, follow this procedure.
-Open the Windows Start menu, select "Run", then type and enter one of the 
-following:
+最初に、別のFirefoxプロファイルを作成するには、次の手順に従います。 Windowsのスタートメニューを開き、"実行"を選択して、次のいずれかを入力します。
 
 ```bash   
    firefox.exe -profilemanager 
@@ -1135,25 +1019,22 @@ following:
    firefox.exe -P 
 ``` 
 
-Create the new profile using the dialog. Then when you run Selenium Server, 
-tell it to use this new Firefox profile with the server command-line option 
-*\-firefoxProfileTemplate* and specify the path to the profile using its filename 
-and directory path.
+ダイアログを使用して新しいプロファイルを作成します。
+次に、Seleniumサーバーを実行するときに、サーバーのコマンドラインオプション *\-firefoxProfileTemplate* でこの新しいFirefoxプロファイルを使用し、ファイル名とディレクトリパスを使用してプロファイルへのパスを指定するように指示します。
 
 ```bash   
    -firefoxProfileTemplate "path to the profile" 
 ``` 
 
-**Warning**:  Be sure to put your profile in a new folder separate from the default!!! 
-   The Firefox profile manager tool will delete all files in a folder if you 
-   delete a profile, regardless of whether they are profile files or not. 
-   
-More information about Firefox profiles can be found in [Mozilla's Knowledge Base](http://support.mozilla.com/en/kb/Managing+profiles)
+**警告**:  必ずデフォルトとは別の新しいフォルダーにプロファイルを入れてください!!!
+Firefoxプロファイルマネージャーツールは、プロファイルを削除すると、プロファイルファイルであるかどうかに関係なく、フォルダー内のすべてのファイルを削除します。
 
-### Run Selenese Directly Within the Server Using -htmlSuite
+Firefoxプロファイルの詳細については、[Mozillaのナレッジベース](http://support.mozilla.com/en/kb/Managing+profiles)をご覧ください。
 
-You can run Selenese html files directly within the Selenium Server
-by passing the html file to the server's command line.  For instance:
+### -htmlSuiteを使用してサーバー内でSeleneseを直接実行する
+
+HTMLファイルをサーバーのコマンドラインに渡すことで、Selenese HTMLファイルをSelenium Server内で直接実行できます。 
+例えば、
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -htmlSuite "*firefox" 
@@ -1161,280 +1042,222 @@ by passing the html file to the server's command line.  For instance:
    "c:\absolute\path\to\my\results.html"
 ``` 
 
-This will automatically launch your HTML suite, run all the tests and save a
-nice HTML report with the results.
+これにより、HTMLスイートが自動的に起動され、すべてのテストが実行され、結果とともにHTMLレポートが保存されます。
 
-*Note:*  When using this option, the server will start the tests and wait for a
-   specified number of seconds for the test to complete; if the test doesn't 
-   complete within that amount of time, the command will exit with a non-zero 
-   exit code and no results file will be generated.
+*注意:*  このオプションを使用すると、サーバーはテストを開始し、テストが完了するまで指定された秒数待機します。 その時間内にテストが完了しない場合、コマンドはゼロ以外の終了コードで終了し、結果ファイルは生成されません。
 
-This command line is very long so be careful when 
-you type it. Note this requires you to pass in an HTML 
-Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with ``-interactive``
-You cannot run both at the same time.
+このコマンドラインは非常に長いため、入力するときは注意してください。
+これには、単一のテストではなく、HTML Seleneseスイートを渡す必要があることに注意してください。
+また、 -htmlSuite オプションは``-interactive``と互換性がないことに注意してください。
+両方を同時に実行することはできません。
 
-### Selenium Server Logging
+### Seleniumサーバーのログ
 
-#### Server-Side Logs
+#### サーバー側のログ
 
-When launching selenium server the **-log** option can be used to record
-valuable debugging information reported by the Selenium Server to a text file.
+Seleniumサーバーを起動するときに、 **-log** オプションを使用して、Seleniumサーバーによってレポートされた貴重なデバッグ情報をテキストファイルに記録できます。
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -log selenium.log
 ``` 
    
-This log file is more verbose than the standard console logs (it includes DEBUG 
-level logging messages). The log file also includes the logger name, and the ID
-number of the thread that logged the message. For example:   
+このログファイルは、標準のコンソールログよりも詳細です（DEBUGレベルのログメッセージが含まれます）。
+ログファイルには、ロガー名、およびメッセージを記録したスレッドのID番号も含まれます。
+例えば、
 
 ```bash   
    20:44:25 DEBUG [12] org.openqa.selenium.server.SeleniumDriverResourceHandler - 
    Browser 465828/:top frame1 posted START NEW
 ``` 
    
-The message format is 
+メッセージの形式は、以下のとおりです。
 
 ```bash   
    TIMESTAMP(HH:mm:ss) LEVEL [THREAD] LOGGER - MESSAGE
 ``` 
    
-This message may be multiline.
+このメッセージは複数行の場合があります。
 
-#### Browser-Side Logs
+#### ブラウザ側のログ
 
-JavaScript on the browser side (Selenium Core) also logs important messages; 
-in many cases, these can be more useful to the end-user than the regular Selenium 
-Server logs. To access browser-side logs, pass the **-browserSideLog**
-argument to the Selenium Server.
+ブラウザ側のJavaScript（Selenium Core）も重要なメッセージを記録します。
+多くの場合、これらは通常のSeleniumサーバーログよりもエンドユーザーにとって有用です。
+ブラウザ側のログにアクセスするには、 **-browserSideLog** 引数をSeleniumサーバーに渡します。
 
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -browserSideLog
 ``` 
-   
-**-browserSideLog** must be combined with the **-log** argument, to log 
-browserSideLogs (as well as all other DEBUG level logging messages) to a file.
+
+**-browserSideLog** を **-log** 引数と組み合わせて、browserSideLogs（および他のすべてのDEBUGレベルのログメッセージ）をファイルに記録する必要があります。
 
 
-## Specifying the Path to a Specific Browser 
+## 特定のブラウザへのパスを指定する
 
-You can specify to Selenium RC a path to a specific browser. This is useful if 
-you have different versions of the same browser and you wish to use a specific
-one. Also, this is used to allow your tests to run against a browser not 
-directly supported by Selenium RC. When specifying the run mode, use the 
-\*custom specifier followed by the full path to the browser's executable:
+特定のブラウザーへのパスをSelenium RCに指定できます。
+これは、同じブラウザーの異なるバージョンがあり、特定のブラウザーを使用する場合に便利です。
+また、これは、Selenium RCで直接サポートされていないブラウザーに対してテストを実行できるようにするために使用されます。
+実行モードを指定するときは、ブラウザの実行可能ファイルへのフルパスが後に続く \*custom 指定子を使用します。
 
 ```bash   
    *custom <path to browser> 
 ``` 
 
    
-## Selenium RC Architecture
-
-*Note:* This topic tries to explain the technical implementation behind 
-   Selenium RC. It's not fundamental for a Selenium user to know this, but 
-   could be useful for understanding some of the problems you might find in the
-   future.
+## Selenium RCアーキテクチャ
    
-To understand in detail how Selenium RC Server works  and why it uses proxy injection
-and heightened privilege modes you must first understand `the same origin policy`_.
+*注意:* このトピックでは、Selenium RCの背後にある技術的な実装について説明します。
+        Seleniumユーザーがこれを知ることは基本的なことではありませんが、将来発生する可能性のある問題の一部を理解するのに役立ちます。
+
+Selenium RC Serverがどのように機能し、プロキシインジェクションと高度な特権モードを使用する理由を詳細に理解するには、最初に `同一オリジンポリシー` を理解する必要があります。
+
+### 同一オリジンポリシー
+
+Seleniumが直面する主な制限は、同一オリジンポリシーです。
+このセキュリティ制限は、市場のすべてのブラウザーによって適用され、その目的は、サイトのコンテンツが別のサイトのスクリプトによってアクセスされないようにすることです。
+同一オリジンポリシーでは、ブラウザ内にロードされたコードはすべて、そのウェブサイトのドメイン内でのみ動作することが規定されています。
+別のWebサイトで関数を実行することはできません。
+たとえば、ブラウザが www.mysite.com を読み込むときにJavaScriptコードを読み込むと、それが別のサイトであっても、読み込まれたコードを www.mysite2.com に対して実行できません。
+これが可能な場合、他のタブで口座ページを開いていれば、開いているウェブサイトに配置されたスクリプトは銀行口座の情報を読み取ることができます。
+これはXSS（クロスサイトスクリプティング）と呼ばれます。
+
+このポリシー内で機能するには、Selenium-Core（およびすべての魔法を発生させるJavaScriptコマンド）をテスト対象アプリケーション（同じURL）と同一オリジンに配置する必要があります。
+
+歴史的に、Selenium-CoreはJavaScriptで実装されていたため、この問題によって制限されていました。
+ただし、Selenium RCは同一オリジンポリシーによって制限されていません。
+Seleniumサーバーをプロキシとして使用すると、この問題を回避できます。
+基本的に、ブラウザがサーバーが提供する単一の"なりすまし"ウェブサイトで動作していることをブラウザに伝えます。
+
+*注意:* このトピックに関する追加情報は、同一オリジンポリシーおよびXSSに関するWikipediaページで見つけることができます。
+
+### プロキシインジェクション
+
+同一オリジンポリシーを回避するためにSeleniumが使用した最初の方法は、プロキシインジェクションでした。
+プロキシインジェクションモードでは、Selenium Serverはブラウザと テスト対象アプリケーション[^1] の間にあるクライアント設定の **HTTPプロキシ**[^2]として機能します。
+次に、架空のURLでテスト対象アプリケーションをマスクします（Selenium-Coreと一連のテストを埋め込み、同一オリジンから来ているかのように配信します）。
+
+[^1]: ブラウザーは、 localhost:4444 をHTTPプロキシーとして設定した構成プロファイルで起動されます。
+これが、ブラウザーが行うHTTP要求がSeleniumサーバーを通過し、レスポンスが実サーバーからではなく通過する理由です。
+
+[^2]: プロキシは、2つの部分の間でボールを渡す中間の第三者です。
+AUTをブラウザに配信する"Webサーバー"として機能します。
+プロキシであるため、Seleniumサーバーはテスト対象アプリケーションの実際のURLについて"嘘をつく"機能を提供します。
+
+これがアーキテクチャ図です。
+
+![これがアーキテクチャ図 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+
+お気に入りの言語でテストスイートが開始されると、次のようになります。
+
+1. クライアント/ドライバーは、selenium-RCサーバーとの接続を確立します。
+2. Selenium RCサーバーは、Selenium-CoreのJavaScriptをブラウザーがロードしたWebページに挿入するURLを使用してブラウザーを起動します（または古いブラウザーを再利用します）。 
+3. クライアントドライバーはSeleneseコマンドをサーバーに渡します。
+4. サーバーはコマンドを解釈し、対応するJavaScript実行をトリガーして、ブラウザー内でそのコマンドを実行します。 Selenium-Coreは、ブラウザーに最初の命令に基づいて動作するよう指示し、通常はテスト対象アプリケーションのページを開きます。
+5. ブラウザーはオープンリクエストを受信し、Selenium RCサーバー（使用するブラウザーのHTTPプロキシとして設定）からWebサイトのコンテンツを要求します。
+6. Selenium RCサーバーはWebサーバーと通信してページを要求し、ページを受信すると、ブラウザーにページを送信し、オリジンをマスクしてページがSelenium-Coreと同じサーバーからのものであるように見えます（これにより、Selenium-Coreは 同一オリジンポリシーを使用）。
+7. ブラウザーはWebページを受信し、そのページ用に予約されているフレーム/ウィンドウにレンダリングします。
    
-### The Same Origin Policy
+### Heightened Privileges でブラウザーを起動する
 
-The main restriction that Selenium faces is the 
-Same Origin Policy. This security restriction is applied by every browser
-in the market and its objective is to ensure that a site's content will never
-be accessible by a script from another site.  The Same Origin Policy dictates that
-any code loaded within the browser can only operate within that website's domain.
-It cannot perform functions on another website.  So for example, if the browser
-loads JavaScript code when it loads www.mysite.com, it cannot run that loaded code
-against www.mysite2.com--even if that's another of your sites. If this were possible, 
-a script placed on any website you open would be able to read information on 
-your bank account if you had the account page
-opened on other tab. This is called XSS (Cross-site Scripting).
+この方法のこのワークフローは、プロキシインジェクションに非常に似ていますが、主な違いは、ブラウザが *Heightened Privileges* と呼ばれる特別なモードで起動されることです。
+これにより、Webサイトは一般に許可されていないこと（SeleniumにXSSを実行したり、ファイルのアップロード入力を入力したり）を許可します。
+これらのブラウザーモードを使用することで、Selenium CoreはAUT全体をSelenium RCサーバーに渡すことなく、テスト対象アプリケーションを直接開き、コンテンツを読み取り/操作できます。
 
-To work within this policy, Selenium-Core (and its JavaScript commands that
-make all the magic happen) must be placed in the same origin as the Application
-Under Test (same URL). 
+これがアーキテクチャ図です。 
 
-Historically, Selenium-Core was limited by this problem since it was implemented in
-JavaScript.  Selenium RC is not, however, restricted by the Same Origin Policy.  Its 
-use of the Selenium Server as a proxy avoids this problem.  It, essentially, tells the 
-browser that the browser is working on a single "spoofed" website that the Server
-provides. 
+![アーキテクチャ図 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
 
-*Note:* You can find additional information about this topic on Wikipedia
-   pages about Same Origin Policy and XSS. 
+お気に入りの言語でテストスイートが開始されると、次のようになります。
 
+1. クライアント/ドライバーは、selenium-RCサーバーとの接続を確立します。
+2. Selenium RCサーバーは、WebページにSelenium-CoreをロードするURLを使用してブラウザーを起動します（または古いブラウザーを再利用します）。
+3. Selenium-Coreは、クライアント/ドライバーから最初の命令を取得します（Selenium RCサーバーへの別のHTTP要求を介して）。
+4. Selenium-Coreはその最初の命令に基づいて動作し、通常はテスト対象アプリケーションのページを開きます。
+5. ブラウザはオープン要求を受信し、Webサーバーにページを要求します。
+ブラウザがWebページを受信すると、そのページ用に予約されたフレーム/ウィンドウにレンダリングします。
 
-### Proxy Injection
+## HTTPSおよびセキュリティポップアップの処理
 
-The first method Selenium used to avoid the The Same Origin Policy was Proxy Injection.
-In Proxy Injection Mode, the Selenium Server acts as a client-configured **HTTP 
-proxy**[^1], that sits between the browser and the Application Under Test[^2].
-It then masks the AUT under a fictional URL (embedding
-Selenium-Core and the set of tests and delivering them as if they were coming
-from the same origin). 
+多くのアプリケーションは、パスワードやクレジットカード情報などの暗号化された情報を送信する必要がある場合、HTTPからHTTPSに切り替えます。
+これは、今日の多くのWebアプリケーションに共通しています。
+Selenium RCはこれをサポートしています。
 
-[^1]: The proxy is a third person in the middle that passes the ball between the two parts. It acts as a "web server" that delivers the AUT to the browser. Being a proxy gives Selenium Server the capability of "lying" about the AUT's real URL.  
-   
-[^2]: The browser is launched with a configuration profile that has set localhost:4444 as the HTTP proxy, this is why any HTTP request that the browser does will pass through Selenium server and the response will pass through it and not from the real server.
+HTTPSサイトが本物であることを確認するには、ブラウザにセキュリティ証明書が必要です。
+そうでない場合、ブラウザがHTTPSを使用してテスト対象アプリケーションにアクセスすると、アプリケーションが'信頼されていない'と見なされます。
+これが発生すると、ブラウザにセキュリティポップアップが表示され、Selenium RCを使用してこれらのポップアップを閉じることはできません。
 
-Here is an architectural diagram. 
+Selenium RCテストでHTTPSを扱う場合、これをサポートし、セキュリティ証明書を処理する実行モードを使用する必要があります。
+テストプログラムでSeleniumを初期化するときに、実行モードを指定します。
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+Selenium RC 1.0ベータ2以降では、実行モードに* firefoxまたは* iexploreを使用します。
+Selenium RC 1.0 beta 1を含む以前のバージョンでは、実行モードに\*chromeまたは \*iehtaを使用します。
+これらの実行モードを使用すると、特別なセキュリティ証明書をインストールする必要はありません。
+Selenium RCがそれを処理します。
 
-As a test suite starts in your favorite language, the following happens:
+バージョン1.0では、実行モード\*firefoxまたは\*iexploreが推奨されます。
+ただし、\*iexploreproxyおよび\*firefoxproxyの追加の実行モードがあります。
+これらは後方互換性のためにのみ提供されており、レガシーテストプログラムで必要でない限り使用しないでください。
+アプリケーションが追加のブラウザウィンドウを開く場合、セキュリティ証明書の処理と複数のウィンドウの実行に制限があります。
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that injects Selenium-Core's JavaScript into the browser-loaded web page.
-3. The client-driver passes a Selenese command to the server.
-4. The Server interprets the command and then triggers the corresponding 
-   JavaScript execution to execute that command within the browser.
-   Selenium-Core instructs the browser to act on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks for the website's content from
-   the Selenium RC server (set as the HTTP proxy for the browser to use).
-6. Selenium RC server communicates with the Web server asking for the page and once
-   it receives it, it sends the page to the browser masking the origin to look
-   like the page comes from the same server as Selenium-Core (this allows 
-   Selenium-Core to comply with the Same Origin Policy).
-7. The browser receives the web page and renders it in the frame/window reserved
-   for it.
-   
-### Heightened Privileges Browsers
+Selenium RCの以前のバージョンでは、 \*chromeまたは\*iehtaは、HTTPSおよびセキュリティポップアップの処理をサポートする実行モードでした。
+これらは'実験モード'と見なされましたが、非常に安定し、多くの人が使用していました。
+Selenium 1.0を使用している場合、これらの古い実行モードは不要であり、使用すべきではありません。
 
-This workflow in this method is very similar to Proxy Injection but the main
-difference is that the browsers are launched in a special mode called *Heightened
-Privileges*, which allows websites to do things that are not commonly permitted
-(as doing XSS_, or filling file upload inputs and pretty useful stuff for 
-Selenium). By using these browser modes, Selenium Core is able to directly open
-the AUT and read/interact with its content without having to pass the whole AUT
-through the Selenium RC server.
+### セキュリティ証明書の説明
 
-Here is the architectural diagram. 
+通常、ブラウザは、既に所有しているセキュリティ証明書をインストールすることで、テストしているアプリケーションを信頼します。
+ブラウザのオプションまたはインターネットのプロパティでこれを確認できます（テスト対象アプリケーションのセキュリティ証明書がわからない場合は、システム管理者に問い合わせてください）。
+Seleniumがブラウザーをロードすると、ブラウザーとサーバー間のメッセージをインターセプトするコードを挿入します。
+ブラウザーは、信頼されていないソフトウェアがアプリケーションのように見えると解釈するようになりました。
+ポップアップメッセージで警告することで応答します。
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+これを回避するために、Selenium RC（これをサポートする実行モードを使用する場合）は、ブラウザーがアクセスできる場所でクライアントコンピューターに独自のセキュリティ証明書を一時的にインストールします。
+これにより、ブラウザはテスト対象アプリケーションとは異なるサイトにアクセスしていると思わせ、ポップアップを効果的に抑制します。
 
-As a test suite starts in your favorite language, the following happens:
+Seleniumの以前のバージョンで使用された別の方法は、Seleniumのインストールで提供されるCybervilliansセキュリティ証明書をインストールすることでした。
+ただし、ほとんどのユーザーはこれを行う必要がなくなります。
+Selenium RCをプロキシインジェクションモードで実行している場合、このセキュリティ証明書を明示的にインストールする必要があるかもしれません。
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that will load Selenium-Core in the web page.
-3. Selenium-Core gets the first instruction from the client/driver (via another 
-   HTTP request made to the Selenium RC Server).
-4. Selenium-Core acts on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks the Web Server for the page.
-   Once the browser receives the web page, renders it in the frame/window reserved
-   for it.
+## 追加のブラウザーとブラウザー構成のサポート
 
-## Handling HTTPS and Security Popups 
-
-Many applications switch from using HTTP to HTTPS when they need to send 
-encrypted information such as passwords or credit card information. This is 
-common with many of today's web applications. Selenium RC supports this. 
-
-To ensure the HTTPS site is genuine, the browser will need a security 
-certificate. Otherwise, when the browser accesses the AUT using HTTPS, it will
-assume that application is not 'trusted'. When this occurs the browser
-displays security popups, and these popups cannot be closed using Selenium RC. 
-
-When dealing with HTTPS in a Selenium RC test, you must use a run mode that supports this and handles
-the security certificate for you. You specify the run mode when your test program
-initializes Selenium. 
-
-In Selenium RC 1.0 beta 2 and later use \*firefox or \*iexplore for the run 
-mode. In earlier versions, including Selenium RC 1.0 beta 1, use \*chrome or 
-\*iehta, for the run mode. Using these run modes, you will not need to install
-any special security certificates; Selenium RC will handle it for you.
-
-In version 1.0 the run modes \*firefox or \*iexplore are 
-recommended. However, there are additional run modes of \*iexploreproxy and 
-\*firefoxproxy. These are provided for backwards compatibility only, and 
-should not be used unless required by legacy test programs. Their use will 
-present limitations with security certificate handling and with the running 
-of multiple windows if your application opens additional browser windows. 
-
-In earlier versions of Selenium RC, \*chrome or \*iehta were the run modes that 
-supported HTTPS and the handling of security popups. These were considered ‘experimental
-modes although they became quite stable and many people used them.  If you are using
-Selenium 1.0 you do not need, and should not use, these older run modes.
-
-### Security Certificates Explained
-
-Normally, your browser will trust the application you are testing
-by installing a security certificate which you already own. You can 
-check this in your browser's options or Internet properties (if you don't 
-know your AUT's security certificate ask your system administrator). 
-When Selenium loads your browser it injects code to intercept 
-messages between the browser and the server. The browser now thinks 
-untrusted software is trying to look like your application.  It responds by alerting you with popup messages. 
-
-To get around this, Selenium RC, (again when using a run mode that support 
-this) will install its own security certificate, temporarily, to your 
-client machine in a place where the browser can access it. This tricks the 
-browser into thinking it's accessing a site different from your AUT and effectively suppresses the popups.  
-
-Another method used with earlier versions of Selenium was to 
-install the Cybervillians security certificate provided with your Selenium 
-installation. Most users should no longer need to do this however; if you are
-running Selenium RC in proxy injection mode, you may need to explicitly install this
-security certificate. 
-
-
-## Supporting Additional Browsers and Browser Configurations
-
-The Selenium API supports running against multiple browsers in addition to 
-Internet Explorer and Mozilla Firefox.  See the https://selenium.dev website for
-supported browsers.  In addition, when a browser is not directly supported,
-you may still run your Selenium tests against a browser of your choosing by
-using the "\*custom" run-mode (i.e. in place of \*firefox or \*iexplore) when 
-your test application starts the browser.  With this, you pass in the path to
-the browsers executable within the API call. This can also be done from the 
-Server in interactive mode.
+Selenium APIは、Internet ExplorerとMozilla Firefoxに加えて、複数のブラウザーに対する実行をサポートしています。
+サポートされるブラウザーについては、 https://selenium.dev Webサイトを参照してください。
+さらに、ブラウザーが直接サポートされていない場合でも、テストアプリケーションがブラウザーを起動する時に"\*custom"実行モード（すなわち、\*firefoxまたは\*iexploreの代わり）を使用して、選択したブラウザーに対してSeleniumテストを実行できます。
+これにより、API呼び出し内で実行可能なブラウザーへのパスを渡します。
+これは、対話モードのサーバーからも実行できます。
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\MyBrowser.exe&2=http://www.google.com
 ```
 
+### 異なるブラウザー設定でテストを実行する
 
-### Running Tests with Different Browser Configurations
+通常、Selenium RCはブラウザーを自動的に設定しますが、"\*custom" 実行モードを使用してブラウザーを起動する場合、自動設定を使用せずにSelenium RCにブラウザーをそのまま強制的に起動させることができます。
 
-Normally Selenium RC automatically configures the browser, but if you launch 
-the browser using the "\*custom" run mode, you can force Selenium RC
-to launch the browser as-is, without using an automatic configuration.
-
-For example, you can launch Firefox with a custom configuration like this:
+たとえば、次のようなカスタム設定でFirefoxを起動できます。
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\firefox.exe&2=http://www.google.com
 ```
 
-Note that when launching the browser this way, you must manually 
-configure the browser to use the Selenium Server as a proxy. Normally this just 
-means opening your browser preferences and specifying "localhost:4444" as 
-an HTTP proxy, but instructions for this can differ radically from browser to 
-browser.  Consult your browser's documentation for details.
+この方法でブラウザーを起動する場合、Selenium Serverをプロキシとして使用するようにブラウザーを手動で設定する必要があることに注意してください。
+通常、これはブラウザーの設定を開き、"localhost:4444"をHTTPプロキシとして指定することを意味しますが、この手順はブラウザーごとに根本的に異なる場合があります。
+詳細については、ブラウザーのドキュメントを参照してください。
 
-Be aware that Mozilla browsers can vary in how they start and stop. 
-One may need to set the MOZ_NO_REMOTE environment variable to make Mozilla browsers 
-behave a little more predictably. Unix users should avoid launching the browser using 
-a shell script; it's generally better to use the binary executable (e.g. firefox-bin) directly.
-
+Mozillaブラウザは、起動と停止の方法が異なる場合があることに注意してください。
+Mozillaブラウザの動作をもう少し予測可能にするために、MOZ_NO_REMOTE環境変数を設定する必要があるかもしれません。 
+Unixユーザーは、シェルスクリプトを使用してブラウザを起動しないでください。
+一般に、バイナリ実行可能ファイル（firefox-binなど）を直接使用することをお勧めします。
    
-## Troubleshooting Common Problems
+## 一般的な問題のトラブルシューティング
 
-When getting started with Selenium RC there's a few potential problems
-that are commonly encountered.  We present them along with their solutions here.
+Selenium RCの使用を開始すると、一般的に発生する可能性のある問題がいくつかあります。
+ここでそれらとその解決策を紹介します。
 
-### Unable to Connect to Server 
+### サーバーに接続できません
 
-When your test program cannot connect to the Selenium Server, Selenium throws an exception in your test program. 
-It should display this message or a similar one:
+テストプログラムがSeleniumサーバーに接続できない場合、Seleniumはテストプログラムで例外をスローします。
+このメッセージまたは同様のメッセージが表示されるはずです。
 
 ```bash
     "Unable to connect to remote server (Inner Exception Message: 
@@ -1444,68 +1267,58 @@ It should display this message or a similar one:
 	(using .NET and XP Service Pack 2) 
 ```
 
-If you see a message like this, be sure you started the Selenium Server. If 
-so, then there is a problem with the connectivity between the Selenium Client 
-Library and the Selenium Server. 
+このようなメッセージが表示された場合は、必ずSeleniumサーバーを起動してください。
+その場合、SeleniumクライアントライブラリとSeleniumサーバー間の接続に問題があります。
 
-When starting with Selenium RC, most people begin by running their test program
-(with a Selenium Client Library) and the Selenium Server on the same machine.  To
-do this use "localhost" as your connection parameter.
-We recommend beginning this way since it reduces the influence of potential networking problems
-which you're getting started.  Assuming your operating system has typical networking
-and TCP/IP settings you should have little difficulty.  In truth, many people
-choose to run the tests this way.  
+Selenium RCを使用する場合、ほとんどの人は、同じマシンでテストプログラム（Seleniumクライアントライブラリを使用）とSeleniumサーバーを実行することから始めます。
+これを行うには、接続パラメーターとして"localhost"を使用します。
+開始する潜在的なネットワークの問題の影響を軽減するため、この方法で開始することをお勧めします。
+オペレーティングシステムに一般的なネットワーク設定とTCP/IP設定があると仮定すると、ほとんど問題はありません。
+実際、多くの人がこの方法でテストを実行することを選択します。
 
-If, however, you do want to run Selenium Server
-on a remote machine, the connectivity should be fine assuming you have valid TCP/IP
-connectivity between the two machines.    
+ただし、リモートマシンでSeleniumサーバーを実行する場合は、2台のマシン間に有効なTCP/IP接続があると仮定すると、接続は良好です。
 
-If you have difficulty connecting, you can use common networking tools like *ping*,
-*telnet*, *ifconfig(Unix)/ipconfig* (Windows), etc to ensure you have a valid 
-network connection.  If unfamilar with these, your system administrator can assist you.
- 
-### Unable to Load the Browser 
+接続に問題がある場合は、 *ping* 、*telnet* 、 *ifconfig(Unix)/ipconfig(Windows)* などの一般的なネットワークツールを使用して、有効なネットワーク接続を確保できます。
+これらに不慣れな場合は、システム管理者が支援できます。
 
-Ok, not a friendly error message, sorry, but if the Selenium Server cannot load the browser 
-you will likely see this error.
+### ブラウザをロードできません 
+
+わかりやすいエラーメッセージではありません。
+申し訳ありませんが、Seleniumサーバーがブラウザをロードできない場合、このエラーが表示される可能性があります。
 
 ```bash
     (500) Internal Server Error
 ```
 
-This could be caused by
+これは、下記が原因の可能性があります。
 
-* Firefox (prior to Selenium 1.0) cannot start because the browser is already open and you did 
-  not specify a separate profile.   See the section on Firefox profiles under Server Options.
-* The run mode you're using doesn't match any browser on your machine.  Check the parameters you 
-  passed to Selenium when you program opens the browser. 
-* You specified the path to the browser explicitly (using "\*custom"--see above) but the path is 
-  incorrect.  Check to be sure the path is correct.  Also check the user group to be sure there are
-  no known issues with your browser and the "\*custom" parameters.
+* Firefox（Selenium 1.0より前）は、ブラウザーが既に開いており、別のプロファイルを指定していないため、起動できません。
+  サーバーオプションのFirefoxプロファイルのセクションを参照してください。
+* 使用している実行モードは、マシン上のどのブラウザとも一致しません。
+  プログラムでブラウザーを開いたときに、Seleniumに渡したパラメーターを確認してください。
+* ブラウザーへのパスを明示的に指定しました（ "\*custom" を使用 - 上記を参照）が、パスが正しくありません。
+  パスが正しいことを確認してください。
+  また、ユーザーグループをチェックして、ブラウザーと "\*custom" パラメーターに既知の問題がないことを確認します。
 
-### Selenium Cannot Find the AUT 
+### SeleniumはAUTを見つけることができません 
 
-If your test program starts the browser successfully, but the browser doesn't
-display the website you're testing, the most likely cause is your test 
-program is not using the correct URL. 
+テストプログラムがブラウザを正常に起動したが、テストしているWebサイトがブラウザに表示されない場合、最も可能性の高い原因は、テストプログラムが正しいURLを使用していないことです。
 
-This can easily happen. When you use Selenium-IDE to export your script,
-it inserts a dummy URL. You must manually change the URL to the correct one
-for your application to be tested. 
+これは簡単に起きます。
+Selenium-IDEを使用してスクリプトをエクスポートすると、ダミーのURLが挿入されます。
+アプリケーションをテストするには、URLを手動で正しいものに変更する必要があります。
 
-### Firefox Refused Shutdown While Preparing a Profile 
+### Firefoxはプロファイルの準備中にシャットダウンを拒否しました
 
-This most often occurs when you run your Selenium RC test program against Firefox,
-but you already have a Firefox browser session running and, you didn't specify
-a separate profile when you started the Selenium Server. The error from the 
-test program looks like this:
+これはほとんどの場合、Selenium RCテストプログラムをFirefoxに対して実行しますが、Firefoxブラウザーセッションが既に実行されており、Selenium Serverの起動時に別のプロファイルを指定しなかった場合に発生します。
+テストプログラムからのエラーは次のようになります。
 
 ```bash
     Error:  java.lang.RuntimeException: Firefox refused shutdown while 
     preparing a profile 
 ```
 
-Here's the complete error message from the server:
+サーバーからの完全なエラーメッセージを次に示します。
 
 ```bash
     16:20:03.919 INFO - Preparing Firefox profile... 
@@ -1520,29 +1333,28 @@ Here's the complete error message from the server:
     ~1\Temp\customProfileDir203138\parent.lock 
 ```
 
-To resolve this, see the section on Specifying a Separate Firefox Profile
+これを解決するには、個別のFirefoxプロファイルの指定に関するセクションを参照してください。
 
-### Versioning Problems 
+### バージョン管理の問題 
 
-Make sure your version of Selenium supports the version of your browser. For
-example, Selenium RC 0.92 does not support Firefox 3. At times you may be lucky
-(I was). But don't forget to check which
-browser versions are supported by the version of Selenium you are using. When in
-doubt, use the latest release version of Selenium with the most widely used version
-of your browser.
+Seleniumのバージョンがブラウザのバージョンをサポートしていることを確認してください。
+たとえば、Selenium RC 0.92はFirefox 3をサポートしていません。
+時には幸運かもしれません（私はそうでした）。
+ただし、使用しているSeleniumのバージョンでサポートされているブラウザのバージョンを確認することを忘れないでください。
+疑わしい場合は、ブラウザの最も広く使用されているバージョンでSeleniumの最新リリースバージョンを使用してください。
 
-### Error message: "(Unsupported major.minor version 49.0)" while starting server
+### サーバーの起動中のエラーメッセージ： "(Unsupported major.minor version 49.0)"
 
-This error says you're not using a correct version of Java. 
-The Selenium Server requires Java 1.5 or higher. 
+このエラーは、正しいバージョンのJavaを使用していないことを示しています。
+Selenium ServerにはJava 1.5以降が必要です。
 
-To check double-check your java version, run this from the command line.
+Javaバージョンを再確認するには、コマンドラインからこれを実行します。
 
 ```bash
    java -version
 ```
 
-You should see a message showing the Java version.
+Javaバージョンを示すメッセージが表示されます。
 
 ```bash
    java version "1.5.0_07"
@@ -1550,177 +1362,142 @@ You should see a message showing the Java version.
    Java HotSpot(TM) Client VM (build 1.5.0_07-b03, mixed mode)
 ```
 
-If you see a lower version number, you may need to update the JRE,
-or you may simply need to add it to your PATH environment variable.
+低いバージョン番号が表示される場合は、JREを更新するか、単に更新したJREをPATH環境変数に追加する必要があります。
 
+### getNewBrowserSessionコマンドの実行時の404エラー
 
-### 404 error when running the getNewBrowserSession command
+"http://www.google.com/selenium-server/" でページを開こうとしているときに404エラーが表示される場合は、Seleniumサーバーがプロキシとして正しく構成されていないことが原因である必要があります。
+"selenium-server" ディレクトリはgoogle.comには存在しません。
+プロキシが適切に設定されている場合にのみ存在します。
+プロキシ設定は、Firefox、iexplore、opera、またはカスタムでブラウザを起動する方法に大きく依存します。
 
-If you're getting a 404 error while attempting to open a page on 
-"http://www.google.com/selenium-server/", then it must be because the Selenium
-Server was not correctly configured as a proxy. The "selenium-server" directory 
-doesn't exist on google.com; it only appears to exist when the proxy is 
-properly configured. Proxy Configuration highly depends on how the browser is 
-launched with firefox, iexplore, opera, or custom.
+* iexplore: \*iexplore を使用してブラウザを起動した場合、Internet Explorerのプロキシ設定に問題がある可能性があります。
+Seleniumサーバーは、インターネットオプションコントロールパネルでグローバルプロキシ設定を構成しようとします。
+Seleniumサーバーがブラウザーを起動するときに、これらが正しく構成されていることを確認する必要があります。
+インターネットオプションコントロールパネルを見てみてください。
+"接続"タブをクリックし、"LAN設定"をクリックします。
+  * プロキシを使用してテストするアプリケーションにアクセスする必要がある場合は、"-Dhttp.proxyHost"でSeleniumサーバーを起動する必要があります。
+    詳細については、`Proxy Configuration`_ を参照してください。
+  * プロキシを手動で設定してから、 \*custom または \*iehta ブラウザーランチャーでブラウザーを起動することもできます。
 
-* iexplore: If the browser is launched using \*iexplore, you could be 
-  having a problem with Internet Explorer's proxy settings.  Selenium
-  Server attempts To configure the global proxy settings in the Internet
-  Options Control Panel. You must make sure that those are correctly
-  configured when Selenium Server launches the browser. Try looking at
-  your Internet Options control panel. Click on the "Connections" tab
-  and click on "LAN Settings".     
-  * If you need to use a proxy to access the application you want to test,
-    you'll need to start Selenium Server with "-Dhttp.proxyHost"; 
-    see the `Proxy Configuration`_ for more details.
-  * You may also try configuring your proxy manually and then launching
-    the browser with \*custom, or with \*iehta browser launcher.
-      	   
-* custom: When using \*custom you must configure the proxy correctly(manually),
-  otherwise you'll get a 404 error. Double-check that you've configured your proxy
-  settings correctly. To check whether you've configured the proxy correctly is to
-  attempt to intentionally configure the browser incorrectly. Try configuring the
-  browser to use the wrong proxy server hostname, or the wrong port.  If you had
-  successfully configured the browser's proxy settings incorrectly, then the
-  browser will be unable to connect to the Internet, which is one way to make
-  sure that one is adjusting the relevant settings.
-  
-* For other browsers (\*firefox, \*opera) we automatically hard-code
-  the proxy for you, and so there are no known issues with this functionality.
-  If you're encountering 404 errors and have followed this user guide carefully 
-  post your results to user group for some help from the user community.
+* custom: \*customを使用する場合、プロキシを正しく（手動で）設定する必要があります。
+  そうしないと、404エラーが発生します。
+  プロキシ設定が正しく構成されていることを再確認してください。
+  プロキシを正しく設定したかどうかを確認するには、意図的にブラウザを誤って設定しようとします。
+  間違ったプロキシサーバーのホスト名または間違ったポートを使用するようにブラウザーを構成してください。
+  ブラウザのプロキシ設定を正しく構成しなかった場合、ブラウザーはインターネットに接続できなくなります。
+  これは、関連する設定を調整していることを確認する1つの方法です。
+
+* 他のブラウザ（\*firefox、\*opera）では、プロキシが自動的にハードコード化されるため、この機能に関する既知の問題はありません。
+  404エラーが発生し、このユーザーガイドに従っている場合は、ユーザーコミュニティからの助けを得るために、ユーザーグループに結果を慎重に投稿してください。
       
-### Permission Denied Error
+### パーミッション拒否エラー
 
-The most common reason for this error is that your session is attempting to violate
-the same-origin policy by crossing domain boundaries (e.g., accesses a page from 
-http://domain1 and then accesses a page from http://domain2) or switching protocols 
-(moving from http://domainX to https://domainX).
+このエラーの最も一般的な理由は、セッションがドメインの境界を越える（たとえば、
+http://domain1 から、http://domain2 のページにアクセスします）かプロトコルを切り替える（http://domainX から https://domainX に移動する）ことで同一オリジンポリシーに違反しようとしていることです。
 
-This error can also occur when JavaScript attempts to find UI objects 
-which are not yet available (before the page has completely loaded), or 
-are no longer available (after the page has started 
-to be unloaded). This is most typically encountered with AJAX pages
-which are working with sections of a page or subframes that load and/or reload 
-independently of the larger page. 
+このエラーは、JavaScriptがまだ使用可能でないUIページ（ページが完全にロードされる前）または使用できなくなった（ページのアンロードが開始された後）UIオブジェクトを見つけようとした場合にも発生します。
+これは、AJAXページで最も一般的に発生します。
+AJAXページは、大きなページとは独立してロードおよび/またはリロードするページまたはサブフレームのセクションで動作します。
 
-This error can be intermittent. Often it is impossible to reproduce the problem 
-with a debugger because the trouble stems from race conditions which 
-are not reproducible when the debugger's overhead is added to the system.
-Permission issues are covered in some detail in the tutorial. Read the section 
-about the `The Same Origin Policy`_, `Proxy Injection`_ carefully. 
+このエラーは断続的に発生する場合があります。
+問題はデバッガーのオーバーヘッドがシステムに追加されたときに再現できない競合状態に起因するため、デバッガーで問題を再現することはできません。
+パーミッションの問題については、チュートリアルで詳しく説明します。
+`The Same Origin Policy`、`Proxy Injection`に関する章を注意深くお読みください。
 
+### ブラウザーポップアップウィンドウの処理
 
-### Handling Browser Popup Windows
+Seleniumテスト中に取得できる"ポップアップ"にはいくつかの種類があります。
+テスト対象アプリケーションではなくブラウザによって開始されたSeleniumコマンドを実行しても、これらのポップアップを閉じることができない場合があります。
+これらの管理方法を知る必要があるかもしれません。
+ポップアップの種類ごとに異なる方法で対処する必要があります。
 
-There are several kinds of "Popups" that you can get during a Selenium test.
-You may not be able to close these popups by running selenium commands if 
-they are initiated by the browser and not your AUT.  You may
-need to know how to manage these.  Each type of popup needs to be addressed differently.
+* HTTP基本認証ダイアログ：これらのダイアログは、サイトにログインするためのユーザー名/パスワードの入力を求めます。
+  HTTP基本認証を必要とするサイトにログインするには、次のように、`RFC 1738`で説明されているように、URLでユーザー名とパスワードを使用します。 open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
 
-* HTTP basic authentication dialogs: These dialogs prompt for a 
-  username/password to login to the site. To login to a site that requires 
-  HTTP basic authentication, use a username and password in the URL, as 
-  described in `RFC 1738`_, like this: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
+* SSL証明書の警告：Selenium RCは、SSL証明書がプロキシとして有効になっている場合、自動的になりすまそうとします。
+  詳細については、HTTPSの章を参照してください。
+  ブラウザーが正しく設定されている場合、SSL証明書の警告は表示されませんが、危険な"CyberVillains"SSL認証局を信頼するようにブラウザーを設定する必要があります。
+  繰り返しますが、これを行う方法についてはHTTPSセクションを参照してください。
 
-* SSL certificate warnings: Selenium RC automatically attempts to spoof SSL 
-  certificates when it is enabled as a proxy; see more on this 
-  in the section on HTTPS. If your browser is configured correctly,
-  you should never see SSL certificate warnings, but you may need to 
-  configure your browser to trust our dangerous "CyberVillains" SSL certificate 
-  authority. Again, refer to the HTTPS section for how to do this.
-
-* modal JavaScript alert/confirmation/prompt dialogs: Selenium tries to conceal
-  those dialogs from you (by replacing window.alert, window.confirm and 
-  window.prompt) so they won't stop the execution of your page. If you're 
-  seeing an alert pop-up, it's probably because it fired during the page load process,
-  which is usually too early for us to protect the page.  Selenese contains commands
-  for asserting or verifying alert and confirmation popups. See the sections on these
-  topics in Chapter 4.
-
+* モーダルJavaScriptアラート/確認/プロンプトダイアログ：Seleniumはそれらのダイアログを（window.alert、window.confirm、window.promptを置き換えることで）隠そうとするため、ページの実行が停止されません。
+  アラートポップアップが表示されている場合は、ページの読み込みプロセス中に発生した可能性があります。
+  通常、ページを保護するには早すぎます。
+  Seleneseには、アラートと確認のポップアップをアサートまたは検証するためのコマンドが含まれています。
+  第4章のこれらのトピックに関する章を参照してください。
       
-### On Linux, why isn't my Firefox browser session closing?
+### Linuxで、Firefoxブラウザーセッションが閉じないのはなぜですか？
 
-On Unix/Linux you must invoke "firefox-bin" directly, so make sure that
-executable is on the path. If executing Firefox through a 
-shell script, when it comes time to kill the browser Selenium RC will kill
-the shell script, leaving the browser running.   You can specify the path
-to firefox-bin directly, like this.
-      
+Unix/Linuxでは、"firefox-bin"を直接呼び出す必要があるため、実行可能ファイルがパス上にあることを確認してください。
+シェルスクリプトを介してFirefoxを実行している場合、ブラウザーを終了するときが来ると、Selenium RCはシェルスクリプトを終了し、ブラウザーを実行したままにします。
+このように、firefox-binへのパスを直接指定できます。
+
 ```bash
    cmd=getNewBrowserSession&1=*firefox /usr/local/firefox/firefox-bin&2=http://www.google.com
 ```
 
-### Firefox \*chrome doesn't work with custom profile
+### Firefox \*chrome はカスタムプロファイルでは機能しません
 
-Check Firefox profile folder -> prefs.js -> user_pref("browser.startup.page", 0);
-Comment this line like this: "//user_pref("browser.startup.page", 0);" and try again.
+Firefoxプロファイルのフォルダー -> prefs.js -> user_pref("browser.startup.page", 0); を確認してください。
+次の行を "//user_pref("browser.startup.page", 0);" のようにコメントアウトして、再度試してください。
 
+### 親ページの読み込み中にカスタムポップアップを読み込むことはできますか（つまり、親ページのjavascript window.onload()関数が実行される前）？
 
-### Is it ok to load a custom pop-up as the parent page is loading (i.e., before the parent page's javascript window.onload() function runs)?
+いいえ。Seleniumはインターセプターに依存しており、ロード中のウィンドウ名を決定します。
+これらのインターセプターは、ウィンドウがonload()関数の後にロードされた場合、新しいウィンドウをキャッチするのに最適に機能します。
+Seleniumは、onload関数の前にロードされたウィンドウを認識しない場合があります。
 
-No. Selenium relies on interceptors to determine window names as they are being loaded.
-These interceptors work best in catching new windows if the windows are loaded AFTER 
-the onload() function. Selenium may not recognize windows loaded before the onload function.
-  
-### Firefox on Linux 
+### Linux上のFirefox 
 
-On Unix/Linux, versions of Selenium before 1.0 needed to invoke "firefox-bin" 
-directly, so if you are using a previous version, make sure that the real 
-executable is on the path. 
+Unix/Linuxでは、1.0より前のSeleniumのバージョンは "firefox-bin" を直接呼び出す必要があったため、以前のバージョンを使用している場合は、実際の実行可能ファイルがパス上にあることを確認してください。
 
-On most Linux distributions, the real *firefox-bin* is located on:
+ほとんどのLinuxディストリビューションでは、実際の *firefox-bin* は次の場所にあります。
 
 ```bash
    /usr/lib/firefox-x.x.x/ 
 ```
 
-Where the x.x.x is the version number you currently have. So, to add that path 
-to the user's path. you will have to add the following to your .bashrc file:
+x.x.xは現在使用しているバージョン番号です。
+そのため、そのパスをユーザーのパスに追加します。
+以下を.bashrcファイルに追加する必要があります。
 
 ```bash
    export PATH="$PATH:/usr/lib/firefox-x.x.x/"
 ```
 
-If necessary, you can specify the path to firefox-bin directly in your test,
-like this:
+必要に応じて、次のようにテストで直接firefox-binへのパスを指定できます。
 
 ```bash
    "*firefox /usr/lib/firefox-x.x.x/firefox-bin"
 ```
 
-### IE and Style Attributes
+### IEおよびスタイル属性
 
-If you are running your tests on Internet Explorer and you cannot locate
-elements using their `style` attribute.
-For example:
+Internet Explorerでテストを実行していて、style属性を使用して要素を見つけられない場合、例えば、次のような場合があります。
 
 ```bash
     //td[@style="background-color:yellow"]
 ```
 
-This would work perfectly in Firefox, Opera or Safari but not with IE. 
-IE interprets the keys in  `@style` as uppercase. So, even if the
-source code is in lowercase, you should use:
+これはFirefox、Opera、またはSafariで完全に機能しますが、IEでは機能しません。
+IEは `@style` のキーを大文字として解釈します。
+したがって、ソースコードが小文字であっても、下記のように使用したほうがよいです。
 
 ```bash
     //td[@style="BACKGROUND-COLOR:yellow"]
 ```
 
-This is a problem if your test is intended to work on multiple browsers, but
-you can easily code your test to detect the situation and try the alternative
-locator that only works in IE.
+テストが複数のブラウザーで動作することを意図している場合、これは問題ですが、簡単にテストをコーディングして状況を検出し、IEでのみ動作する代替ロケーターを試すことができます。
 
-### Error encountered - "Cannot convert object to primitive value" with shut down of  \*googlechrome  browser
+### エラーが発生しました-\*googlechromeブラウザーのシャットダウン時に"Cannot convert object to primitive value"
 
-To avoid this error you have to start browser with an option that disables same origin policy checks: 
+このエラーを回避するには、同一オリジンポリシーチェックを無効にするオプションでブラウザを起動する必要があります。
 
 ```bash
    selenium.start("commandLineFlags=--disable-web-security");
 ```
-   
 
-### Error encountered in IE - "Couldn't open app window; is the pop-up blocker enabled?"
+### IEでエラーが発生しました - "Couldn't open app window; is the pop-up blocker enabled?"
 
-To avoid this error you have to configure the browser: disable the popup blocker 
-AND uncheck 'Enable Protected Mode' option in Tools >> Options >> Security.
+このエラーを回避するには、ブラウザを設定する必要があります。
+ポップアップブロッカーを無効にし、ツール >> オプション >>セキュリティで'保護モードを有効にする'オプションをオフにします。
