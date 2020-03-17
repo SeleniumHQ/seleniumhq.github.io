@@ -6,8 +6,8 @@ weight: 3
 ### Acceptance testing
 This type of testing is done to determine if a feature or system
 meets the customer expectations and requirements. 
-This type of testing generally involves the customer's c
-ooperation or feedback, being a validation activity that
+This type of testing generally involves the customer's 
+cooperation or feedback, being a validation activity that
 answers the question:
 >Are we building the **_right_** product?.
 

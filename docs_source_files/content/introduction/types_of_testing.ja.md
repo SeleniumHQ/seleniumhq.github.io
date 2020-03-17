@@ -9,18 +9,34 @@ English to Japanese. Do you speak Japanese? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-## 受入テスト
-このタイプのテストは、製品の機能が要件に一致するかどうかを判断するために行われます。
-これには通常、顧客のフィードバックまたは仕様が含まれます。
+### Acceptance testing
+This type of testing is done to determine if a feature or system
+meets the customer expectations and requirements. 
+This type of testing generally involves the customer's 
+cooperation or feedback, being a validation activity that
+answers the question:
+>Are we building the **_right_** product?.
 
-Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、このテストの自動化をSeleniumで直接実行できます。
-このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、またはサポートされているさまざまな言語によって実行できます。
-注：受入テストは **機能テスト** のサブタイプであり、一部の人はこれも参照する場合があります。
-
-### 機能テスト
-このタイプのテストは、製品の機能が問題なく正常に機能するかどうかを判断するために行われます。
-
-これには通常、エラーなし（404、例外…）、使用可能な方法（正しいリダイレクト）、アクセス可能な方法、およびその仕様に一致するテスト（上記の **受入テスト** を参照）が含まれます。
+For web applications, the automation of this testing can be done
+directly with Selenium by simulating user expected behaviour.
+This simulation could be done by record/playback or through the
+different supported languages as explained in this documentation.
+Note: Acceptance testing is a subtype of **_functional testing_**,
+which some people might also refer to.
+            
+### Functional testing
+This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does _what's_ 
+supposed to do. It's a verification activity that
+answers the question:
+>Are we building the product **_right?_**.
+             
+This generally includes: the tests work without errors 
+(404, exceptions...), in a usable way (correct redirections),   
+in an accessible way and matching its specifications 
+(see **_acceptance testing_** above).
 
 Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。
 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。

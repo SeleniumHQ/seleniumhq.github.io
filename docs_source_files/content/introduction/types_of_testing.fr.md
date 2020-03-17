@@ -8,28 +8,34 @@ weight: 3
 English to French. Do you speak French? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
+### Acceptance testing
+This type of testing is done to determine if a feature or system
+meets the customer expectations and requirements. 
+This type of testing generally involves the customer's 
+cooperation or feedback, being a validation activity that
+answers the question:
+>Are we building the **_right_** product?.
 
-## Test d'acceptation
-Ce type de test est effectué pour déterminer si un produit
-fonction correspond à ses besoins.
-Cela implique généralement les commentaires ou les spécifications du client.
-
-Pour les applications web, l'automatisation de ces tests peut se faire
-directement avec Selenium en simulant le comportement attendu de l'utilisateur.
-Cette simulation peut être effectuée par enregistrement / lecture ou par
-différentes langues prises en charge comme expliqué dans cette documentation.
-Remarque: les tests d'acceptation sont un sous-type de **_tests fonctionnels_**,
-auquel certaines personnes pourraient également se référer.
+For web applications, the automation of this testing can be done
+directly with Selenium by simulating user expected behaviour.
+This simulation could be done by record/playback or through the
+different supported languages as explained in this documentation.
+Note: Acceptance testing is a subtype of **_functional testing_**,
+which some people might also refer to.
             
-### Test fonctionel
-
-Ce type de test est effectué pour déterminer si un produit est
-la fonctionnalité fonctionne bien, sans problèmes.
+### Functional testing
+This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does _what's_ 
+supposed to do. It's a verification activity that
+answers the question:
+>Are we building the product **_right?_**.
              
-Cela comprend généralement: les tests fonctionnent sans erreur
-(404, exceptions ...), de manière utilisable (redirection droite),
-de manière accessible et correspondant à ses spécifications
-(voir **_test d'acceptation_** ci-dessus).
+This generally includes: the tests work without errors 
+(404, exceptions...), in a usable way (correct redirections),   
+in an accessible way and matching its specifications 
+(see **_acceptance testing_** above).
 
 Pour les applications Web, l'automatisation de ces tests peut être
 fait directement avec Selenium en simulant les rendements attendus.
