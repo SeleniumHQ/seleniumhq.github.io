@@ -3,40 +3,28 @@ title: "テストの種類"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### 受け入れテスト
+このタイプのテストは、機能またはシステムが顧客の期待と要件を満たしているかどうかを判断するために行われます。
+このタイプのテストには通常、顧客の協力またはフィードバックが関与します。
+下記質問に答えることで確認することができます。
+> **_正しい_** 製品を作っていますか？
 
-### Acceptance testing
-This type of testing is done to determine if a feature or system
-meets the customer expectations and requirements. 
-This type of testing generally involves the customer's 
-cooperation or feedback, being a validation activity that
-answers the question:
->Are we building the **_right_** product?.
+Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、
+このテストの自動化をSeleniumで直接実行できます。
+このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、
+またはサポートされているさまざまな言語によって実行できます。
+注：受け入れテストは **_機能テスト_** のサブタイプであり、一部の人はこれにも言及する場合があります。
 
-For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behaviour.
-This simulation could be done by record/playback or through the
-different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
-            
-### Functional testing
-This type of testing is done to determine if a
-feature or system functions properly without issues. It checks
-the system at different levels to ensure that all scenarios
-are covered and that the system does _what's_ 
-supposed to do. It's a verification activity that
-answers the question:
->Are we building the product **_right?_**.
-             
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
-(see **_acceptance testing_** above).
+### 機能テスト
+このタイプのテストは、機能またはシステムが問題なく正常に機能するかどうかを判断するために行われます。
+システムをさまざまなレベルでチェックして、すべてのシナリオがカバーされていること、
+およびシステムが実行すべきことを実行していることを確認します。
+下記質問に答えることで確認することができます。
+>製品を **_正しく_** 作っていますか？
+
+これは通常以下を含みます。
+テストがエラーなし（404、例外...）、使用可能な方法（正しいリダイレクト）で機能する、
+利用しやすく、仕様に一致します（上記の **_受け入れテスト_** を参照）。
 
 Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。
 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
