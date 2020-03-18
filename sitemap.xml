@@ -1243,87 +1243,87 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/chromedriver/</loc>
+    <loc>https://selenium.dev/ecosystem/chromedriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/edgedriver/</loc>
+    <loc>https://selenium.dev/ecosystem/edgedriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-capybara/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-capybara/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-codeceptjs/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-codeceptjs/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-fluentlenium/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-fluentlenium/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-nerodia/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-nerodia/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-qaf/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-qaf/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-selenide/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-selenide/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-seleniumbase/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-seleniumbase/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-watir/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-watir/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/framwework-webdriverio/</loc>
+    <loc>https://selenium.dev/ecosystem/framwework-webdriverio/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/geckodriver/</loc>
+    <loc>https://selenium.dev/ecosystem/geckodriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/go-selenium/</loc>
+    <loc>https://selenium.dev/ecosystem/go-selenium/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/hs-webdriver/</loc>
+    <loc>https://selenium.dev/ecosystem/hs-webdriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/javascript-wd/</loc>
+    <loc>https://selenium.dev/ecosystem/javascript-wd/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/operadriver/</loc>
+    <loc>https://selenium.dev/ecosystem/operadriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/perl-selenium-remote-driver/</loc>
+    <loc>https://selenium.dev/ecosystem/perl-selenium-remote-driver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/php-webdriver/</loc>
+    <loc>https://selenium.dev/ecosystem/php-webdriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/r-selenium/</loc>
+    <loc>https://selenium.dev/ecosystem/r-selenium/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/safaridriver/</loc>
+    <loc>https://selenium.dev/ecosystem/safaridriver/</loc>
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/webdriver.dart/</loc>
+    <loc>https://selenium.dev/ecosystem/webdriver.dart/</loc>
   </url>
   
   <url>
@@ -1332,10 +1332,6 @@
   
   <url>
     <loc>https://selenium.dev/documentation/</loc>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/ecosystem/</loc>
   </url>
   
   <url>
@@ -1375,7 +1371,7 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/thirdparty/</loc>
+    <loc>https://selenium.dev/ecosystem/</loc>
   </url>
   
   <url>
