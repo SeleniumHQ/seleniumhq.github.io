@@ -146,26 +146,28 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed:400,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans:300,700" rel="stylesheet">
 
-<!DOCTYPE html>
+
+<body>
+    <!DOCTYPE html>
 <link rel="stylesheet" href="/css/main.css"/>
 
 <div class="banner-notification">
     <section class="banner-message">
             <div class= "banner-message-container" id="banner-conservancy">
-        
+
                Tickets for <b>[SeleniumConf India]</b> are on sale Now! Go <a target='_blank' href="https://confengine.com/selenium-conf-2020/register/selection">HERE</a>!
-                <p> The Call for Proposals is now OPEN for <b>[SeleniumConf Chicago]</b> Submit <a target='_blank' href="https://bit.ly/2tHX4RG">HERE</a>!   </p>    
-        
+                <p> The Call for Proposals is now OPEN for <b>[SeleniumConf Chicago]</b> Submit <a target='_blank' href="https://bit.ly/2tHX4RG">HERE</a>!   </p>
+
             <button type="button" class="dismiss" aria-controls="banner-conservancy" aria-label="dismiss-this-banner">X</button>
-        
-            <script>          
+
+            <script>
             (function(config) {
                 var banner = document.getElementById(config.id);
                 var button = banner.querySelector('.dismiss');
-        
+
                 var dismissed = parseInt(localStorage.getItem(config.id),10);
                 var duration  = config.duration;
-        
+
                 if (dismissed && (!duration || (dismissed > Date.now() - duration))) {
                 return banner.parentElement.removeChild(banner);
                 }
@@ -175,13 +177,12 @@
                 return banner.parentElement.removeChild(banner);
                 });
             })({ "id": "banner-conservancy", "duration": "" });
-                
+
                 </script>
             </div>
-        </section>    
+        </section>
     </div>
 
-<body>
     <section class="hero homepage" style="background-image: url(/images/green-bg-opt.jpg)">
         <h1>Selenium automates browsers. That's it!</h1>
         <h1 class="sub-header">What you do with that power is entirely up to you.</h1>
