@@ -11,20 +11,20 @@
     <title>共享的功能 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1584140069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1584140069" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1584514943" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1584514943" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1584140069" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1584514943" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1584140069"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1584514943"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1584140069"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1584140069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1584514943"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1584514943"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1584140069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1584514943"></script>
 
     
   </div>
@@ -855,9 +855,9 @@
  
   
     
-      <li data-nav-id="/guidelines_and_recommendations/improved_reporting/" title="Improved reporting" class="dd-item ">
+      <li data-nav-id="/guidelines_and_recommendations/improved_reporting/" title="改善报告" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/">
-        Improved reporting
+        改善报告
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1553,9 +1553,9 @@
  
   
     
-      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Copyright and attributions" class="dd-item ">
+      <li data-nav-id="/front_matter/copyright_and_attributions/" title="版权和归属" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/">
-        Copyright and attributions
+        版权和归属
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1572,9 +1572,9 @@
  
   
     
-      <li data-nav-id="/front_matter/typographical_conventions/" title="Typographical conventions" class="dd-item ">
+      <li data-nav-id="/front_matter/typographical_conventions/" title="排版协议" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/front_matter/typographical_conventions/">
-        Typographical conventions
+        排版协议
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1929,6 +1929,8 @@
 <ul>
 <li><a href="#页面加载策略">页面加载策略</a></li>
 </ul></li>
+<li><a href="#platformname">platformName</a></li>
+<li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2017,6 +2019,30 @@ only has 80 installed, the session creation will fail</p>
 </tbody>
 </table>
 
+<h2 id="platformname">platformName</h2>
+
+<p>This identifies the operating system at the remote-end,
+fetching the <code>platformName</code> returns the OS name.</p>
+
+<p>In cloud-based providers,
+setting <code>platformName</code> sets the OS at the remote-end.</p>
+
+<h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
+
+<p>This capability checks whether an expired (or)
+invalid <code>TLS Certificate</code> is used while navigating
+during a session.</p>
+
+<p>If the capability is set to <code>false</code>, an
+<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
+will be returned as navigation encounters any domain
+certificate problems. If set to <code>true</code>, invalid certificate will be
+trusted by the browser.</p>
+
+<p>All self-signed certificates will be trusted by this capability by default.
+Once set, <code>acceptInsecureCerts</code> capability will have an
+effect for the entire session.</p>
+
 
 <footer class=" footline" >
 	
@@ -2025,7 +2051,7 @@ only has 80 installed, the session creation will fail</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/">
       “共享的功能”
-    </a> was last updated on: 11 Mar 2020 13:19:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/2660ada1d16e8670081f6e1e5bf47bf3f3a1d6a7">Add: Adding shared capabilities browserName and browserVersion info (#299) [deploy site] (2660ada1d)</a>
+    </a> was last updated on: 18 Mar 2020 12:13:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3ca14506a4f5bfd891efb90652edecfc6f8e6b0c">Add: Adding shared capabilities platformName and acceptInsecureCerts (#326) [deploy site] (3ca14506)</a>
 </h5>
         
         </div> 
@@ -3187,19 +3213,19 @@ only has 80 installed, the session creation will fail</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1584140069"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1584514943"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1584140069"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1584140069"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1584514943"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1584514943"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1584140069" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1584140069"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1584514943" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1584514943"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

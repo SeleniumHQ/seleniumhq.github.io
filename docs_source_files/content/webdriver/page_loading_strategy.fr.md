@@ -29,7 +29,7 @@ WebDriver _pageLoadStrategy_ prend en charge les valeurs suivantes:
 
 Cela obligera Selenium WebDriver à attendre que la page entière soit chargée.
 Lorsqu'il est réglé sur **normal**, Selenium WebDriver attend que le
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) le feu d'événement est renvoyé.
+[load](https://developer.mozilla.org/fr/docs/Web/Events/load) le feu d'événement est renvoyé.
 
 Par défaut, **normal** est défini sur le navigateur si aucun n'est fourni.
 
@@ -128,7 +128,7 @@ le document HTML initial a été complètement chargé et analysé,
 et supprime le chargement des feuilles de style, des images et des sous-trames.
 
 Lorsqu'il est réglé sur **eager**, Selenium WebDriver attend jusqu'à
-Le feu d'événement [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) est renvoyé.
+Le feu d'événement [DOMContentLoaded](https://developer.mozilla.org/fr/docs/Web/API/Document/DOMContentLoaded_event) est renvoyé.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

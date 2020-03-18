@@ -35,7 +35,7 @@ WebDriver _pageLoadStrategy_ supports the following values:
 
 This will make Selenium WebDriver to wait for the entire page is loaded. 
 When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
+[load](https://developer.mozilla.org/nl/docs/Web/API/Window/load_event) event fire is returned.
 
 By default **normal** is set to browser if none is provided.
 
@@ -134,7 +134,7 @@ initial HTML document has been completely loaded and parsed,
 and discards loading of stylesheets, images and subframes.
 
 When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+[DOMContentLoaded](https://developer.mozilla.org/nl/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

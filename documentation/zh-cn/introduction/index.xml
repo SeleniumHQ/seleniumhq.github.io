@@ -57,8 +57,8 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour.</description>
     </item>
     
     <item>
