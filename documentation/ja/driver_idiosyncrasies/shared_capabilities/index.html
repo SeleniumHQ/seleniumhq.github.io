@@ -11,20 +11,20 @@
     <title>共有Capabilities :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584351346" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584351346" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584513928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584513928" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584351346" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584513928" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584351346"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584513928"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584351346"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584351346"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584513928"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584513928"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584351346"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584513928"></script>
 
     
   </div>
@@ -1929,6 +1929,8 @@
 <ul>
 <li><a href="#ページロード戦略">ページロード戦略</a></li>
 </ul></li>
+<li><a href="#platformname">platformName</a></li>
+<li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2012,6 +2014,30 @@ WebDriverがサポートするCapabilitiesは次のとおりです。</p>
 </tbody>
 </table>
 
+<h2 id="platformname">platformName</h2>
+
+<p>This identifies the operating system at the remote-end,
+fetching the <code>platformName</code> returns the OS name.</p>
+
+<p>In cloud-based providers,
+setting <code>platformName</code> sets the OS at the remote-end.</p>
+
+<h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
+
+<p>This capability checks whether an expired (or)
+invalid <code>TLS Certificate</code> is used while navigating
+during a session.</p>
+
+<p>If the capability is set to <code>false</code>, an
+<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
+will be returned as navigation encounters any domain
+certificate problems. If set to <code>true</code>, invalid certificate will be
+trusted by the browser.</p>
+
+<p>All self-signed certificates will be trusted by this capability by default.
+Once set, <code>acceptInsecureCerts</code> capability will have an
+effect for the entire session.</p>
+
 
 <footer class=" footline" >
 	
@@ -2020,7 +2046,7 @@ WebDriverがサポートするCapabilitiesは次のとおりです。</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/">
       “共有Capabilities”
-    </a> was last updated on: 16 Mar 2020 15:03:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/b36f6e139733d7b8931946ef940b21c5fa2cfa5a">Update: Adding ruby unit test teardown and url updates (#324) [deploy site] (b36f6e139)</a>
+    </a> was last updated on: 18 Mar 2020 12:13:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3ca14506a4f5bfd891efb90652edecfc6f8e6b0c">Add: Adding shared capabilities platformName and acceptInsecureCerts (#326) [deploy site] (3ca14506)</a>
 </h5>
         
         </div> 
@@ -3182,19 +3208,19 @@ WebDriverがサポートするCapabilitiesは次のとおりです。</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584351346"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584513928"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584351346"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584351346"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584513928"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584513928"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584351346" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584351346"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584513928" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584513928"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
