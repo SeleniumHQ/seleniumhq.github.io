@@ -35,24 +35,17 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 
 ## platformName
 
-This identifies the operating system at the remote-end, 
-fetching the `platformName` returns the OS name. 
+これにより、リモートエンドのオペレーティングシステムが識別され、 `platformName` を取得するとOS名が返されます。
 
-In cloud-based providers, 
-setting `platformName` sets the OS at the remote-end. 
+クラウドベースのプロバイダーでは、 `platformName` を設定すると、リモートエンドのOSが設定されます。
 
 ## acceptInsecureCerts
 
-This capability checks whether an expired (or) 
-invalid `TLS Certificate` is used while navigating 
-during a session.
+この機能は、セッション中のナビゲーション中に、期限切れ（または）無効な `TLS証明書` が使用されているかどうかを確認します。
 
-If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
-will be returned as navigation encounters any domain 
-certificate problems. If set to `true`, invalid certificate will be 
-trusted by the browser.
+機能が `false` に設定されている場合、ナビゲーションでドメイン証明書の問題が発生すると、 
+[insecure certificate error](//developer.mozilla.org/ja/docs/Web/WebDriver/Errors/InsecureCertificate)  が返されます。
+`true` に設定すると、無効な証明書はブラウザーによって信頼されます。
 
-All self-signed certificates will be trusted by this capability by default. 
-Once set, `acceptInsecureCerts` capability will have an 
-effect for the entire session.
+すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。
+一度設定すると、 `acceptInsecureCerts` Capabilityはセッション全体に影響します。
