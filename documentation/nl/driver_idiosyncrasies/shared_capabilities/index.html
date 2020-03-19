@@ -11,20 +11,20 @@
     <title>Gedeelde capabilities :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1584140067" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1584140067" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1584626818" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1584626818" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1584140067" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1584626818" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1584140067"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1584626818"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1584140067"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1584140067"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1584626818"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1584626818"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1584140067"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1584626818"></script>
 
     
   </div>
@@ -1927,6 +1927,8 @@
 <li><a href="#browsername">browserName:</a></li>
 <li><a href="#browserversion">browserVersion:</a></li>
 <li><a href="#pageloadstrategy">pageLoadStrategy:</a></li>
+<li><a href="#platformname">platformName</a></li>
+<li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1982,7 +1984,7 @@ only has 80 installed, the session creation will fail</p>
 <p>Bij het navigeren naar een nieuwe pagina, zal Selenium standaard wachten totdat de pagina volledig geladen is. Deze strategie werkt goed voor beginners maar kan snel resulteren in lange wachttijden op paginas die veel externe resources moeten ophalen. Het gebruik van niet-standaard laadstrategieen kan de doorlooptijd aanzienlijk versnellen maar kan eveneens flakiness introduceren doordat elementen van grootte en/of positie veranderen tijdens het laden.</p>
 
 <p>The page load strategy bevraagt
-<a href="//developer.mozilla.org/en-US/docs/Web/API/Document/readyState">document.readyState</a>
+<a href="//developer.mozilla.org/nl/docs/Web/API/Document/readyState">document.readyState</a>
 zoals hieronder beschreven:</p>
 
 <table>
@@ -2015,6 +2017,30 @@ zoals hieronder beschreven:</p>
 </tbody>
 </table>
 
+<h2 id="platformname">platformName</h2>
+
+<p>This identifies the operating system at the remote-end,
+fetching the <code>platformName</code> returns the OS name.</p>
+
+<p>In cloud-based providers,
+setting <code>platformName</code> sets the OS at the remote-end.</p>
+
+<h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
+
+<p>This capability checks whether an expired (or)
+invalid <code>TLS Certificate</code> is used while navigating
+during a session.</p>
+
+<p>If the capability is set to <code>false</code>, an
+<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
+will be returned as navigation encounters any domain
+certificate problems. If set to <code>true</code>, invalid certificate will be
+trusted by the browser.</p>
+
+<p>All self-signed certificates will be trusted by this capability by default.
+Once set, <code>acceptInsecureCerts</code> capability will have an
+effect for the entire session.</p>
+
 
 <footer class=" footline" >
 	
@@ -2023,7 +2049,7 @@ zoals hieronder beschreven:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/shared_capabilities/">
       “Gedeelde capabilities”
-    </a> was last updated on: 11 Mar 2020 13:19:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/2660ada1d16e8670081f6e1e5bf47bf3f3a1d6a7">Add: Adding shared capabilities browserName and browserVersion info (#299) [deploy site] (2660ada1d)</a>
+    </a> was last updated on: 18 Mar 2020 12:13:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3ca14506a4f5bfd891efb90652edecfc6f8e6b0c">Add: Adding shared capabilities platformName and acceptInsecureCerts (#326) [deploy site] (3ca14506)</a>
 </h5>
         
         </div> 
@@ -3185,19 +3211,19 @@ zoals hieronder beschreven:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1584140067"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1584626818"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1584140067"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1584140067"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1584626818"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1584626818"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1584140067" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1584140067"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1584626818" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1584626818"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

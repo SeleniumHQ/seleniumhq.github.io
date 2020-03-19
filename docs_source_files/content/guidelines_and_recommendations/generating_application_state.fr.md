@@ -3,20 +3,15 @@ title: "Generer l'état de l'application"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Selenium should not be used to prepare a test case.  All repetitive
-actions and preparations for a test case, should be done through other
-methods.  For example, most web UIs have authentication (e.g. a login
-form). Eliminating logging in via web browser before every test will
-improve both the speed and stability of the test. A method should be
-created to gain access to the AUT* (e.g. using an API to login and set a
-cookie).  Also, creating methods to pre-load data for
-testing should not be done using Selenium.  As mentioned previously,
-existing APIs should be leveraged to create data for the AUT*.
+Le sélénium ne doit pas être utilisé pour préparer un cas de test. Tous répétitifs
+les actions et les préparatifs pour un test élémentaire devraient être effectués par
+méthodes. Par exemple, la plupart des interfaces utilisateur 
+Web ont une authentification (par exemple, une connexion
+forme). Éliminer la connexion via un navigateur Web avant chaque test
+améliorer à la fois la vitesse et la stabilité du test. Une méthode devrait être
+créé pour accéder à l'AUT * (par exemple, en utilisant une API pour vous connecter et définir un
+biscuit). En outre, la création de méthodes de préchargement des données pour
+les tests ne doivent pas être effectués avec du sélénium. Comme mentionné précédemment,
+les API existantes doivent être exploitées pour créer des données pour l'AUT *.
 
 ***AUT**: Application under test
