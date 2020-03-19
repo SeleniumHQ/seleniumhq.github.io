@@ -494,7 +494,11 @@ public void TearDown()
 }
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 ruby 的示例代码，请帮助我们，并提交一个 PR
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 /**
@@ -1010,8 +1014,8 @@ __Note: This feature works with Selenium 4 and later versions.__
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}// Please raise a PR{{< / code-panel >}}
-  {{< code-panel language="ruby" >}} # Please raise a PR{{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
   {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
 {{< / code-tab >}}

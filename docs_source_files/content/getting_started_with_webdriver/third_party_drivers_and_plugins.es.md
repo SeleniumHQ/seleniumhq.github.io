@@ -1,30 +1,27 @@
 ---
-title: "Third party drivers and plugins"
+title: "Navegadores de terceros y plugins"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium se puede extender mediante el uso de plugins. 
+Aquí hay una serie de plugins creados y mantenidos por terceros. 
+Para más información sobre cómo crear tu propio plugin o tenerlo
+en la lista, consulta la documentación.
 
-Selenium can be extended through the use of plugins. Here are a number of 
-plugins created and maintained by third parties. For more information on how 
-to create your own plugin or have it listed, consult the docs.
+Ten en cuenta que estos plugins no son compatibles, mantenidos, alojados o
+avalados por el proyecto Selenium. Además, ten en cuenta que los plugins
+enumerados a continuación no necesariamente están licenciados bajo la licencia
+de Apache v.2.0.
+Algunos de los plugins están disponibles bajo otra licencia de software
+libre y de código abierto.
+Otros solo están disponibles bajo una licencia patentada. Cualquier pregunta
+acerca de los plugins y su licencia de distribución deben plantearse con sus
+respectivo(s) desarrollador(es).
 
-Please note that these plugins are not supported, maintained, hosted, or 
-endorsed by the Selenium project. In addition, be advised that the plugins 
-listed below are not necessarily licensed under the Apache License v.2.0. 
-Some of the plugins are available under another free and open source software 
-license; others are only available under a proprietary license. Any questions 
-about plugins and their license of distribution need to be raised with their 
-respective developer(s).
-
-|Browser|Latest|Change log|Issue Tracker|
+|Navegador|Más reciente|Registro de cambios|Seguimiento de Incidentes|
 |--- |--- |--- |--- |
-|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[latest](https://github.com/mozilla/geckodriver/releases)|[change log](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[issue tracker](https://github.com/mozilla/geckodriver/issues)|
-|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[latest](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[change log](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[issue tracker](https://bugs.chromium.org/p/chromedriver/issues/list)|
-|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[latest](https://github.com/operasoftware/operachromiumdriver/releases)|-|[issue tracker](https://github.com/operasoftware/operachromiumdriver/issues)|
-|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[latest](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
-|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Built in|-|[issue tracker](https://bugreport.apple.com/)|
+|[Mozilla GeckoDriver](https://github.com/mozilla/geckodriver/)|[más reciente](https://github.com/mozilla/geckodriver/releases)|[registro de cambios](https://github.com/mozilla/geckodriver/blob/release/CHANGES.md)|[seguimiento de incidentes](https://github.com/mozilla/geckodriver/issues)|
+|[Google Chrome Driver](https://sites.google.com/a/chromium.org/chromedriver/)|[más reciente](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[registro de cambios](https://sites.google.com/a/chromium.org/chromedriver/downloads)|[seguimiento de incidentes](https://bugs.chromium.org/p/chromedriver/issues/list)|
+|[Opera](http://choice.opera.com/developer/tools/operadriver/)|[más reciente](https://github.com/operasoftware/operachromiumdriver/releases)|-|[seguimiento de incidentes](https://github.com/operasoftware/operachromiumdriver/issues)|
+|[Microsoft Edge Driver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)|[más reciente](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/#downloads)|-|[seguimiento de incidentes](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)|
+|[SafariDriver](https://webkit.org/blog/6900/webdriver-support-in-safari-10/)|Incorporado|-|[seguimiento de incidentes](https://bugreport.apple.com/)|
