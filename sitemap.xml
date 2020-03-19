@@ -1335,6 +1335,10 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/ecosystem/</loc>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/exceptions/</loc>
   </url>
   
@@ -1355,6 +1359,18 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/governance/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/structure/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/project/</loc>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/projects/</loc>
   </url>
   
@@ -1368,10 +1384,6 @@
   
   <url>
     <loc>https://selenium.dev/sponsors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/ecosystem/</loc>
   </url>
   
   <url>
