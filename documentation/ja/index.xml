@@ -163,13 +163,14 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description> Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
+      <description>Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
 WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。 WebDriverがサポートするCapabilitiesは次のとおりです。
 browserName: このCapabilityは、特定のセッションの browserName を設定するために使います。 指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
 browserVersion: このCapabilityはオプションです。 これは、リモートエンドで使用可能なブラウザーバージョンを設定するために使います。 たとえば、Chromeバージョン80のみがインストールされているシステムでバージョン75を要求すると、セッションの作成は失敗します。
 ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
 次の表で説明するように、ページロード戦略は document.readyState を問い合わせます。
-   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    </description>
+   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    platformName This identifies the operating system at the remote-end, fetching the platformName returns the OS name.
+In cloud-based providers, setting platformName sets the OS at the remote-end.</description>
     </item>
     
     <item>
@@ -190,8 +191,8 @@ browserVersion: このCapabilityはオプションです。 これは、リモ�
       <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
 このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
 帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
-@barancev2817 commits 
-@jimevans2274 commits 
+@barancev2820 commits 
+@jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
     
@@ -413,34 +414,8 @@ HTTPステータスコードをキャプチャするための高度なソリュ�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
-      <description>受入テスト このタイプのテストは、製品の機能が要件に一致するかどうかを判断するために行われます。 これには通常、顧客のフィードバックまたは仕様が含まれます。
-Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、またはサポートされているさまざまな言語によって実行できます。 注：受入テストは 機能テスト のサブタイプであり、一部の人はこれも参照する場合があります。
-機能テスト このタイプのテストは、製品の機能が問題なく正常に機能するかどうかを判断するために行われます。
-これには通常、エラーなし（404、例外…）、使用可能な方法（正しいリダイレクト）、アクセス可能な方法、およびその仕様に一致するテスト（上記の 受入テスト を参照）が含まれます。
-Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
-パフォーマンステスト その名前が示すように、パフォーマンステストは、アプリケーションのパフォーマンスを測定するために行われます。
-パフォーマンステストには2つの主なサブタイプがあります。
-ロードテスト ロードテストは、定義されたさまざまな負荷（通常、特定の数のユーザーが同時に接続されている場合）でアプリケーションがどの程度機能するかを確認するために行われます。
-ストレステスト ストレステストは、ストレス下（またはサポートされている最大負荷以上）でアプリケーションがどの程度機能するかを確認するために行われます。
-一般に、パフォーマンステストは、Seleniumで書かれたテストを実行して、さまざまなユーザーがWebアプリの特定の機能を押して、意味のある測定値を取得することをシミュレートして実行されます。
-これは通常、メトリックを取得する他のツールによって行われます。 そのようなツールの1つが JMeter です。
-Webアプリケーションの場合、測定する詳細には、スループット、待ち時間、データ損失、個々のコンポーネントの読み込み時間などが含まれます…
-注1：すべてのブラウザには、開発者のツールセクションにパフォーマンスタブがあります（F12キーを押すとアクセス可能）
-注2：これは一般に機能/機能ごとではなくシステムごとに測定されるため、 非機能テスト のサブタイプです。
-回帰テスト このテストは通常、変更、修正、または機能の追加後に行われます。
-変更によって既存の機能が破壊されないようにするために、すでに実行されたいくつかのテストが再度実行されます。
-再実行されるテストのセットは、完全または部分的なものにすることができ、アプリケーションおよび開発チームに応じて、いくつかの異なるタイプを含めることができます。
-テスト駆動開発 (TDD) テストタイプそのものではなく、TDDはテストが機能の設計を推進する反復的な開発方法論です。
-各サイクルは、機能がパスする単体テストのセットを作成することから始まります（最初に実行すると失敗します）。
-この後、テストに合格するための開発が行われます。 別のサイクルを開始してテストが再度実行され、すべてのテストに合格するまでこのプロセスが続行されます。
-これは、欠陥が発見されるほどコストが安くなるという事実に基づいて、アプリケーションの開発をスピードアップすることを目的としています。
-ビヘイビア駆動開発 (BDD) BDDは、上記に基づいた反復開発方法論（TDD）でもあり、その目的は、アプリケーションの開発にすべての関係者を関与させることです。
-各サイクルは、いくつかの仕様を作成することから始まります（これは失敗するはずです）。 次に、失敗する単体テスト（これも失敗するはずです）を作成し、開発を作成します。
-このサイクルは、すべてのタイプのテストに合格するまで繰り返されます。
-そのためには、仕様言語が使用されます。 すべての関係者が理解でき、単純で、標準的かつ明示的でなければなりません。 ほとんどのツールは、この言語として Gherkin を使用します。
-目標は、潜在的な受入エラーも対象とすることでTDDよりも多くのエラーを検出し、当事者間のコミュニケーションを円滑にすることです。
-現在、仕様を記述し、 Cucumber や SpecFlow などのコード関数と一致させるための一連のツールが利用可能です。
-Selenium上に一連のツールが構築されており、BDD仕様を実行可能コードに直接変換することにより、このプロセスをさらに高速化しています。 これらのいくつかは、 JBehave、Capybara、およびRobot Framework です。</description>
+      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
     </item>
     
     <item>

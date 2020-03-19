@@ -11,20 +11,20 @@
     <title>Types  de test :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1584351344" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1584351344" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1584626823" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1584626823" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1584351344" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1584626823" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1584351344"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1584626823"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1584351344"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1584351344"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1584626823"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1584626823"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1584351344"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1584626823"></script>
 
     
   </div>
@@ -1924,9 +1924,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#test-d-acceptation">Test d&rsquo;acceptation</a>
+<li>
 <ul>
-<li><a href="#test-fonctionel">Test fonctionel</a></li>
+<li><a href="#acceptance-testing">Acceptance testing</a></li>
+<li><a href="#functional-testing">Functional testing</a></li>
 <li><a href="#test-de-performance">Test de performance</a>
 <ul>
 <li><a href="#load-testing">Load testing</a></li>
@@ -1964,28 +1965,43 @@
 
 
 
-<h2 id="test-d-acceptation">Test d&rsquo;acceptation</h2>
 
-<p>Ce type de test est effectué pour déterminer si un produit
-fonction correspond à ses besoins.
-Cela implique généralement les commentaires ou les spécifications du client.</p>
+<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+English to French. Do you speak French? Help us to translate
+it by sending us pull requests!</p>
+</div>
 
-<p>Pour les applications web, l&rsquo;automatisation de ces tests peut se faire
-directement avec Selenium en simulant le comportement attendu de l&rsquo;utilisateur.
-Cette simulation peut être effectuée par enregistrement / lecture ou par
-différentes langues prises en charge comme expliqué dans cette documentation.
-Remarque: les tests d&rsquo;acceptation sont un sous-type de <strong><em>tests fonctionnels</em></strong>,
-auquel certaines personnes pourraient également se référer.</p>
 
-<h3 id="test-fonctionel">Test fonctionel</h3>
+<h3 id="acceptance-testing">Acceptance testing</h3>
 
-<p>Ce type de test est effectué pour déterminer si un produit est
-la fonctionnalité fonctionne bien, sans problèmes.</p>
+<p>This type of testing is done to determine if a feature or system
+meets the customer expectations and requirements.
+This type of testing generally involves the customer&rsquo;s
+cooperation or feedback, being a validation activity that
+answers the question:
+&gt;Are we building the <strong><em>right</em></strong> product?.</p>
 
-<p>Cela comprend généralement: les tests fonctionnent sans erreur
-(404, exceptions &hellip;), de manière utilisable (redirection droite),
-de manière accessible et correspondant à ses spécifications
-(voir <strong><em>test d&rsquo;acceptation</em></strong> ci-dessus).</p>
+<p>For web applications, the automation of this testing can be done
+directly with Selenium by simulating user expected behaviour.
+This simulation could be done by record/playback or through the
+different supported languages as explained in this documentation.
+Note: Acceptance testing is a subtype of <strong><em>functional testing</em></strong>,
+which some people might also refer to.</p>
+
+<h3 id="functional-testing">Functional testing</h3>
+
+<p>This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does <em>what&rsquo;s</em>
+supposed to do. It&rsquo;s a verification activity that
+answers the question:
+&gt;Are we building the product <strong><em>right?</em></strong>.</p>
+
+<p>This generally includes: the tests work without errors
+(404, exceptions&hellip;), in a usable way (correct redirections),<br />
+in an accessible way and matching its specifications
+(see <strong><em>acceptance testing</em></strong> above).</p>
 
 <p>Pour les applications Web, l&rsquo;automatisation de ces tests peut être
 fait directement avec Selenium en simulant les rendements attendus.
@@ -2091,7 +2107,7 @@ Certains d&rsquo;entre eux sont <strong><em>JBehave, Capybara et Robot Framework
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/introduction/types_of_testing/">
       “Types  de test”
-    </a> was last updated on: 08 Mar 2020 05:28:30 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/779d9858ff8be546c955be9e429f3af1dd257caf">Add Chinese translation of &#34;fresh_browser_per_test&#34; (#288) [deploy site] (779d9858f)</a>
+    </a> was last updated on: 18 Mar 2020 07:54:27 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/a67664861a4715844959897047917fee7709531f">Add Spanish translation to sites and fix #237 (#327) [deploy site] (a6766486)</a>
 </h5>
         
         </div> 
@@ -3256,19 +3272,19 @@ Certains d&rsquo;entre eux sont <strong><em>JBehave, Capybara et Robot Framework
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1584351344"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1584626823"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1584351344"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1584351344"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1584626823"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1584626823"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1584351344" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1584351344"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1584626823" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1584626823"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

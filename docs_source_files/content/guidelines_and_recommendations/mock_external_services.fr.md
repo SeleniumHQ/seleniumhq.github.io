@@ -3,11 +3,6 @@ title: "Bouchonner les appels externes"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Eliminating the dependencies on external services will greatly improve
-the speed and stability of your tests.
+L'élimination des dépendances sur les services 
+externes s'améliorera considérablement
+la vitesse et la stabilité de vos tests.
