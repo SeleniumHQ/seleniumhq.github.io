@@ -1,26 +1,16 @@
 ---
-title: "Link spidering"
+title: "爬取链接"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+建议您不要使用WebDriver来通过链接进行爬网，
+并非因为无法完成，而是因为它绝对不是最理想的工具。
+WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间，
+具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.
 
-Using WebDriver to spider through links
-is not a recommended practice not because it cannot be done,
-but because it’s definitely not the most ideal tool.
-WebDriver needs time to start up,
-and can take several seconds up to a minute
-depending on how your test is written,
-just to get to the page and traverse through the DOM.
-
-Instead of using WebDriver for this,
-you could save a ton of time
-by executing a [curl](//curl.haxx.se/) command,
-or using a library such as BeautifulSoup
-since these methods don’t rely
-on creating a browser and navigating to a page.
-You are saving tonnes of time by not using WebDriver for this task.
+除了使用WebDriver之外，
+您还可以通过执行 [curl](//curl.haxx.se/) 命令或
+使用诸如BeautifulSoup之类的库来节省大量时间，
+因为这些方法不依赖于创建浏览器和导航至页面.
+通过不使用WebDriver可以节省大量时间.
 
