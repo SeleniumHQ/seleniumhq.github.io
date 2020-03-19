@@ -394,7 +394,7 @@ nada de controles del navegador. Este método de _modelar_ la
 aplicación te permite mantener estos comandos de nivel-de-prueba en 
 su lugar y sin cambios, incluso si Larry decide la próxima semana que 
 ya no le gusta Ruby-on-Rails y decide volver a implementar todo el 
-sitio en las últimas ataduras de Haskell con un front-end de Fortran. 
+sitio en las últimas librerías de enlace de Haskell con un front-end de Fortran. 
 
 Los objetos de tu página requerirán un pequeño mantenimiento para 
 poder cumplir con el rediseño del sitio, pero estas pruebas seguirán 
