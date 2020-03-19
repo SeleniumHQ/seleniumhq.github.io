@@ -304,16 +304,6 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
     </item>
     
     <item>
-      <title>Generating application state</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
-    </item>
-    
-    <item>
       <title>HTML runner</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -396,6 +386,17 @@ bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不�
 $ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
 这将打开一个新的 IE 浏览器窗口:
 require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
+    </item>
+    
+    <item>
+      <title>生成应用程序状态</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
+      <description>Selenium不应用于准备测试用例. 测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.
+例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 此外, 不应使用Selenium创建预加载数据来进行测试的方法.
+如前所述, 应利用现有的API为 AUT* 创建数据. *AUT: 待测系统</description>
     </item>
     
     <item>
