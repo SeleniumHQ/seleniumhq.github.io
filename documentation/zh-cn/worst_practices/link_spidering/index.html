@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>Link spidering :: Selenium 文档</title>
+    <title>爬取链接 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1584626821" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1584626821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1584629857" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1584629857" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1584626821" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1584629857" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1584626821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1584629857"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1584626821"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1584626821"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1584629857"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1584629857"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1584626821"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1584629857"></script>
 
     
   </div>
@@ -1022,9 +1022,9 @@
  
   
     
-      <li data-nav-id="/worst_practices/http_response_codes/" title="HTTP response codes" class="dd-item ">
+      <li data-nav-id="/worst_practices/http_response_codes/" title="HTTP响应码" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/">
-        HTTP response codes
+        HTTP响应码
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1098,9 +1098,9 @@
  
   
     
-      <li data-nav-id="/worst_practices/link_spidering/" title="Link spidering" class="dd-item active">
+      <li data-nav-id="/worst_practices/link_spidering/" title="爬取链接" class="dd-item active">
         <a href="https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/">
-        Link spidering
+        爬取链接
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/worst_practices/'>反模式</a> > Link spidering
+            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/worst_practices/'>反模式</a> > 爬取链接
           
          
           
@@ -1936,7 +1936,7 @@
           
             <h1>
               
-              Link spidering
+              爬取链接
             </h1>
           
 
@@ -1944,27 +1944,16 @@
 
 
 
+<p>建议您不要使用WebDriver来通过链接进行爬网，
+并非因为无法完成，而是因为它绝对不是最理想的工具。
+WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间，
+具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
-</div>
-
-
-<p>Using WebDriver to spider through links
-is not a recommended practice not because it cannot be done,
-but because it’s definitely not the most ideal tool.
-WebDriver needs time to start up,
-and can take several seconds up to a minute
-depending on how your test is written,
-just to get to the page and traverse through the DOM.</p>
-
-<p>Instead of using WebDriver for this,
-you could save a ton of time
-by executing a <a href="//curl.haxx.se/">curl</a> command,
-or using a library such as BeautifulSoup
-since these methods don’t rely
-on creating a browser and navigating to a page.
-You are saving tonnes of time by not using WebDriver for this task.</p>
+<p>除了使用WebDriver之外，
+您还可以通过执行 <a href="//curl.haxx.se/">curl</a> 命令或
+使用诸如BeautifulSoup之类的库来节省大量时间，
+因为这些方法不依赖于创建浏览器和导航至页面.
+通过不使用WebDriver可以节省大量时间.</p>
 
 
 <footer class=" footline" >
@@ -1973,8 +1962,8 @@ You are saving tonnes of time by not using WebDriver for this task.</p>
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/">
-      “Link spidering”
-    </a> was last updated on: 11 Mar 2020 12:05:53 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/e1b7f9e31b5c0e20197053b8c0eca0a5596f6431">Deploying on Wed Mar 11 12:05:53 UTC 2020, commit e15c32fceae98fb40f845a394557247a1b5fc88c, [skip ci] (e1b7f9e3)</a>
+      “爬取链接”
+    </a> was last updated on: 19 Mar 2020 22:56:10 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/7339af3b8ffd9dcaccdca16afdfb2c7f95a7dc9e">Add Chinese translation of &#34;link_spidering&#34; (#339) [deploy site] (7339af3b)</a>
 </h5>
         
         </div> 
@@ -3139,19 +3128,19 @@ You are saving tonnes of time by not using WebDriver for this task.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1584626821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1584629857"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1584626821"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1584626821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1584629857"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1584629857"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1584626821" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1584626821"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1584629857" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1584629857"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
