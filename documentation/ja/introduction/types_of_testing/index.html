@@ -11,20 +11,20 @@
     <title>テストの種類 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584140074" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584140074" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584626825" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584626825" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584140074" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584626825" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584140074"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584626825"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584140074"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584140074"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584626825"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584626825"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584140074"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584626825"></script>
 
     
   </div>
@@ -1924,9 +1924,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#受入テスト">受入テスト</a>
+<li>
 <ul>
-<li><a href="#機能テスト">機能テスト</a></li>
+<li><a href="#acceptance-testing">Acceptance testing</a></li>
+<li><a href="#functional-testing">Functional testing</a></li>
 <li><a href="#パフォーマンステスト">パフォーマンステスト</a>
 <ul>
 <li><a href="#ロードテスト">ロードテスト</a></li>
@@ -1964,20 +1965,43 @@
 
 
 
-<h2 id="受入テスト">受入テスト</h2>
 
-<p>このタイプのテストは、製品の機能が要件に一致するかどうかを判断するために行われます。
-これには通常、顧客のフィードバックまたは仕様が含まれます。</p>
+<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!</p>
+</div>
 
-<p>Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、このテストの自動化をSeleniumで直接実行できます。
-このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、またはサポートされているさまざまな言語によって実行できます。
-注：受入テストは <strong>機能テスト</strong> のサブタイプであり、一部の人はこれも参照する場合があります。</p>
 
-<h3 id="機能テスト">機能テスト</h3>
+<h3 id="acceptance-testing">Acceptance testing</h3>
 
-<p>このタイプのテストは、製品の機能が問題なく正常に機能するかどうかを判断するために行われます。</p>
+<p>This type of testing is done to determine if a feature or system
+meets the customer expectations and requirements.
+This type of testing generally involves the customer&rsquo;s
+cooperation or feedback, being a validation activity that
+answers the question:
+&gt;Are we building the <strong><em>right</em></strong> product?.</p>
 
-<p>これには通常、エラーなし（404、例外…）、使用可能な方法（正しいリダイレクト）、アクセス可能な方法、およびその仕様に一致するテスト（上記の <strong>受入テスト</strong> を参照）が含まれます。</p>
+<p>For web applications, the automation of this testing can be done
+directly with Selenium by simulating user expected behaviour.
+This simulation could be done by record/playback or through the
+different supported languages as explained in this documentation.
+Note: Acceptance testing is a subtype of <strong><em>functional testing</em></strong>,
+which some people might also refer to.</p>
+
+<h3 id="functional-testing">Functional testing</h3>
+
+<p>This type of testing is done to determine if a
+feature or system functions properly without issues. It checks
+the system at different levels to ensure that all scenarios
+are covered and that the system does <em>what&rsquo;s</em>
+supposed to do. It&rsquo;s a verification activity that
+answers the question:
+&gt;Are we building the product <strong><em>right?</em></strong>.</p>
+
+<p>This generally includes: the tests work without errors
+(404, exceptions&hellip;), in a usable way (correct redirections),<br />
+in an accessible way and matching its specifications
+(see <strong><em>acceptance testing</em></strong> above).</p>
 
 <p>Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。
 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。</p>
@@ -2053,7 +2077,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/introduction/types_of_testing/">
       “テストの種類”
-    </a> was last updated on: 04 Mar 2020 17:53:22 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/6777f8a2055b8f4b928e76f6adec804ee7d20ece">Add Japanese translation of Page loading strategy (#277) (6777f8a20)</a>
+    </a> was last updated on: 18 Mar 2020 07:54:27 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/a67664861a4715844959897047917fee7709531f">Add Spanish translation to sites and fix #237 (#327) [deploy site] (a6766486)</a>
 </h5>
         
         </div> 
@@ -3218,19 +3242,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584140074"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584626825"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584140074"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584140074"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584626825"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584626825"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584140074" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584140074"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584626825" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584626825"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
