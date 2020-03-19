@@ -612,7 +612,25 @@ request initiated by third party website.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Code sample
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class cookieTest {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      driver.get("http://www.example.com");
+      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
+      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
+      driver.manage().addCookie(cookie);
+      driver.manage().addCookie(cookie1);
+      System.out.println(cookie.getSameSite());
+      System.out.println(cookie1.getSameSite());
+    } finally {
+      driver.quit();
+    }
+  }
+}
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
  # code sample
@@ -639,6 +657,22 @@ const {Builder} = require('selenium-webdriver');
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// We don't have a Kotlin code sample yet -  Help us out and raise a PR  
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("http://www.example.com")
+        val cookie = Cookie.Builder("key", "value").sameSite("Strict").build()
+        val cookie1 = Cookie.Builder("key", "value").sameSite("Lax").build()
+        driver.manage().addCookie(cookie)
+        driver.manage().addCookie(cookie1)
+        println(cookie.getSameSite())
+        println(cookie1.getSameSite())
+    } finally {
+        driver.quit()
+    }
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}
