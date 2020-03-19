@@ -1,21 +1,14 @@
 ---
-title: "Generating application state"
+title: "生成应用程序状态"
 weight: 3
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-Selenium should not be used to prepare a test case.  All repetitive
-actions and preparations for a test case, should be done through other
-methods.  For example, most web UIs have authentication (e.g. a login
-form). Eliminating logging in via web browser before every test will
-improve both the speed and stability of the test. A method should be
-created to gain access to the AUT* (e.g. using an API to login and set a
-cookie).  Also, creating methods to pre-load data for
-testing should not be done using Selenium.  As mentioned previously,
-existing APIs should be leveraged to create data for the AUT*.
-
-***AUT**: Application under test
+Selenium不应用于准备测试用例.
+测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.  
+例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 
+在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 
+应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 
+此外, 不应使用Selenium创建预加载数据来进行测试的方法.  
+如前所述, 应利用现有的API为 AUT* 创建数据. 
+***AUT**: 待测系统
