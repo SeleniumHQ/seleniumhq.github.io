@@ -44,7 +44,7 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 この機能は、セッション中のナビゲーション中に、期限切れ（または）無効な `TLS証明書` が使用されているかどうかを確認します。
 
 機能が `false` に設定されている場合、ナビゲーションでドメイン証明書の問題が発生すると、 
-[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate)  が返されます。
+[insecure certificate error](//developer.mozilla.org/ja/docs/Web/WebDriver/Errors/InsecureCertificate)  が返されます。
 `true` に設定すると、無効な証明書はブラウザーによって信頼されます。
 
 すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。
