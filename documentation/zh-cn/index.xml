@@ -133,8 +133,8 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
-@barancev2817 commits 
-@jimevans2274 commits 
+@barancev2820 commits 
+@jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
     
@@ -344,8 +344,8 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour.</description>
     </item>
     
     <item>
@@ -609,14 +609,15 @@ Instead of using WebDriver for this, you could save a ton of time by executing a
     </item>
     
     <item>
-      <title>Test independency</title>
+      <title>测试的独立性</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>将每个测试编写为独立的单元. 以不依赖于其他测试完成的方式编写测试:
+例如有一个内容管理系统, 您可以借助其创建一些自定义内容, 这些内容在发布后作为模块显示在您的网站上, 并且CMS和应用程序之间的同步可能需要一些时间.
+测试模块的一种错误方法是在测试中创建并发布内容, 然后在另一测试中检查该模块. 这是不可取的, 因为发布后内容可能无法立即用于其他测试.
+与之相反的事, 您可以创建在受影响的测试中打开和关闭的打桩内容, 并将其用于验证模块. 而且, 对于内容的创建, 您仍然可以进行单独的测试.</description>
     </item>
     
     <item>
