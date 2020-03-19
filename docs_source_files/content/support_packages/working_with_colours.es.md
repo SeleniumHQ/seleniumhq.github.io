@@ -3,21 +3,17 @@ title: "Trabajando con colores"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-You will occasionally want to validate the colour of something as part of your tests;
-the problem is that colour definitions on the web are not constant.
-Would it not be nice if there was an easy way to compare
-a HEX representation of a colour with a RGB representation of a colour,
-or a RGBA representation of a colour with a HSLA representation of a colour?
+En algunas ocasiones es posible que sea necesario querer validar el color de algo
+como parte de tus tests; el problema es que las definiciones de color en la web 
+no son constantes.
+¿No estaría bien que existiese una forma sencilla de comparar una
+representación de color HEX con una representación de color RGB, o una 
+representación de color RGBA con una representación de color HSLA?
 
-Worry not. There is a solution: the _Color_ class!
+No te preocupes. Hay una solución para esto, la clase _Color_
 
-First of all, you will need to import the class:
+Lo primero de todo, necesitaras importar la clase:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -27,21 +23,22 @@ import org.openqa.selenium.support.Color;
 from selenium.webdriver.support.color import Color
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now start creating colour objects.
-Every colour object will need to be created from a string representation of 
-your colour.
-Supported colour representations are:
+Ahora puedes empezar a crear objetos de la clase _Color_.
+Cada objeto necesita ser creado a partir de la representación de una cadena de 
+texto de tu color.
+
+Las representaciones de colores soportadas son:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -63,7 +60,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 HEX_COLOUR = Color.from_string('#2F7ED8')
@@ -75,7 +72,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -88,8 +85,8 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Color class also supports all of the base colour definitions
-specified in 
+La clase _Color_ también soporta todas las definiciones base de colores 
+especificadas en 
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< code-tab >}}
@@ -104,7 +101,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 BLACK = Color.from_string('black')
@@ -112,7 +109,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -121,9 +118,9 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Sometimes browsers will return a colour value of "transparent"
-if no colour has been set on an element.
-The Color class also supports this:
+En muchas ocasiones los navegadores devolverán un valor de color de transparente
+si no se ha establecido color en el elemento.
+La clase _Color_ también soporta esto:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -133,23 +130,22 @@ private final Color TRANSPARENT = Color.fromString("transparent");
 TRANSPARENT = Color.from_string('transparent')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 TRANSPARENT = Color.from_string('transparent')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now safely query an element
-to get its colour/background colour knowing that
-any response will be correctly parsed
-and converted into a valid Color object:
+Ahora puedes consultar de forma segura un elemento para obtener su color/color
+de fondo sabiendo que cualquier  respuesta sera correctamente parseada y 
+convertida en un objeto _Color_ valido.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -161,14 +157,14 @@ login_button_colour = driver.find_element_by_id('login').value_of_css_property('
 login_button_background_colour = driver.find_element_by_id('login').value_of_css_property('background-color');
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 login_button_colour = driver.find_element(id: 'login').css_value('color')
 login_button_background_colour = driver.find_element(id: 'login').css_value('background-color');
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val loginButtonColour = driver.findElement(By.id("login")).getCssValue("color")
@@ -176,8 +172,7 @@ val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then directly compare colour objects:
-
+Puedes comparar objetos de _Color_ directamente:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -187,21 +182,21 @@ assert loginButtonBackgroundColour.equals(HOTPINK);
 assert login_button_background_colour == HOTPINK
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 assert(login_button_background_colour == HOTPINK)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Or you can convert the colour into one of the following formats
-and perform a static validation:
+También puedes convertir un color en uno de los siguientes formatos y después
+realizar una validación estática:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -215,7 +210,7 @@ assert login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)'
 assert login_button_background_colour.rgb == 'rgb(255, 105, 180)'
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 assert(login_button_background_colour.hex == '#ff69b4')
@@ -223,7 +218,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
@@ -232,4 +227,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Colours are no longer a problem.
+Con todo esto los colores ya no serán un problema.
