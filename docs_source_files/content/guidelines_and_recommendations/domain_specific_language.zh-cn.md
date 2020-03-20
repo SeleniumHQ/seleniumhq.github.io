@@ -1,47 +1,39 @@
 ---
-title: "Domain specific language"
+title: "领域特定语言"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-A domain specific language (DSL) is a system which provides the user with
-an expressive means of solving a problem. It allows a user to
-interact with the system on their terms – not just programmer-speak.
+领域特定语言 (DSL) 是一种为用户提供解决问题的表达方式的系统.
+它使用户可以按照自己的术语与系统进行交互, 而不仅仅是通过程序员的语言.
 
-Your users, in general, do not care how your site looks. They do not
-care about the decoration, animations, or graphics. They
-want to use your system to push their new employees through the
-process with minimal difficulty; they want to book travel to Alaska; 
-they want to configure and buy unicorns at a discount. Your job as
-tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you are
-working on, such that the test scripts (the user's only pre-release
-proxy) “speak” for, and represent the user.
+您的用户通常并不关心您网站的外观. 
+他们不在乎装饰, 动画或图形. 
+他们希望借助于您的系统, 以最小的难度使新员工融入整个流程；
+他们想预订去阿拉斯加的旅行；
+他们想以折扣价配置和购买独角兽. 
+您作为测试人员的工作应尽可能接近"捕捉”这种思维定势. 
+考虑到这一点, 我们开始着手"建模”您正在工作的应用程序, 
+以使测试脚本 (发布前用户仅有的代理) "说话”并代表用户.
 
-With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a report between the
-developers and the stakeholders (users, product owners, business
-intelligence specialists, etc.).
 
-## Benefits
+在Selenium中, DSL通常由方法表示, 
+其编写方式使API简单易读-它们使开发人员和干系人
+ (用户, 产品负责人, 商业智能专家等) 之间能够产生汇报. 
+ 
+ 
+## 好处
 
-* **Readable:** Business stakeholders can understand it.
-* **Writable:** Easy to write, avoids unnecessary duplication.
-* **Extensible:** Functionality can (reasonably) be added
-  without breaking contracts and existing functionality.
-* **Maintainable:** By leaving the implementation details out of test
-  cases, you are well-insulated against changes to the AUT*.
+* **可读:** 业务关系人可以理解.
+* **可写:** 易于编写, 避免不必要的重复.
+* **可扩展:** 可以 (合理地) 添加功能而无需打破约定以及现有功能.
+* **可维护:** 通过将实现细节排除在测试用例之外, 您可以很好地隔离 AUT* 的修改.
 
 
 ## Java
 
-Here is an example of a reasonable DSL method in Java.
-For brevity's sake, it assumes the `driver` object is pre-defined
-and available to the method.
+以下是Java中合理的DSL方法的示例. 
+为简便起见, 假定 `driver` 对象是预定义的并且可用于该方法.
 
 ```java
 /**
@@ -68,11 +60,10 @@ public AccountPage loginAsUser(String username, String password) {
 }
 ```
 
-This method completely abstracts the concepts of input fields,
-buttons, clicking, and even pages from your test code. Using this
-approach, all a tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method - not your tests.
+此方法完全从测试代码中抽象出输入字段, 按钮, 单击甚至页面的概念. 
+使用这种方法, 测试人员要做的就是调用此方法. 
+这给您带来了维护方面的优势: 如果登录字段曾经更改过, 
+则只需更改此方法-而非您的测试.
 
 ```java
 public void loginTest() {
@@ -89,14 +80,12 @@ public void loginTest() {
 }
 ```
 
-It bears repeating: one of your primary goals should be writing an
-API that allows your tests to address **the problem at hand, and NOT
-the problem of the UI**. The UI is a secondary concern for your
-users – they do not care about the UI, they just want to get their job
-done. Your test scripts should read like a laundry list of things
-the user wants to DO, and the things they want to KNOW. The tests
-should not concern themselves with HOW the UI requires you to go
-about it.
 
-***AUT**: Application under test
+郑重强调: 您的主要目标之一应该是编写一个API, 
+该API允许您的测试解决 **当前的问题, 而不是UI的问题**. 
+用户界面是用户的次要问题–用户并不关心用户界面, 他们只是想完成工作. 
+您的测试脚本应该像用户希望做的事情以及他们想知道的事情的完整清单那样易于阅读. 
+测试不应该考虑UI如何要求您去做.
+
+***AUT**: 待测系统
 
