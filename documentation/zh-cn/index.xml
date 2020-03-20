@@ -12,13 +12,18 @@
     
     
     <item>
-      <title>Page object models</title>
+      <title>PO设计模式</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
+      <description>PO（page object）设计模式是在自动化中已经流行起来的一种易于维护和减少代码的设计模式. 在自动化测试中, PO对象作为一个与页面交互的接口. 测试中需要与页面的UI进行交互时, 便调用PO的方法. 这样做的好处是, 如果页面的UI发生了更改,那么测试用例本身不需要更改, 只需更改PO中的代码即可.
+PO设计模式具有以下优点:
+ 测试代码与页面的定位代码（如定位器或者其他的映射）相分离. 该页面提供的方法或元素在一个独立的类中, 而不是将这些方法或元素分散在整个测试中.  这允许在一个地方修改由于UI变化所带来的所有修改. 随着这种&amp;rdquo;测试设计模式&amp;rdquo;的广泛使用, 可以在众多博客中找到有关此技术的有用信息. 我们鼓励希望了解更多信息的读者在互联网上搜索有关此主题的博客. 许多人已经写过这种设计模式, 并且可以提供超出本用户指南范围的有用提示. 不过, 为了让您入门, 我们将通过一个简单的示例来说明页面对象.
+首先, 思考一个不使用PO模式的自动化测试的典型案例:
+/*** * Tests login feature */ public class Login { public void testLogin() { // 在登录页面上填写登录数据  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign-in&amp;#34;)).click(); // 登录后验证h1标签是否为Hello userName  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } 这种方法有两个问题.
+ 测试方法与定位器 (在此实例中为By.name)耦合过于严重. 如果测试的用户界面更改了其定位器或登录名的输入和处理方式, 则测试本身必须进行更改. 在对登录页面的所有测试中, 同一个定位器会散布在其中.  可以在以下登录页面的示例中应用PO设计模式重写此示例.
+import org.openqa.selenium.By; import org.</description>
     </item>
     
     <item>
