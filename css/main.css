@@ -93,9 +93,6 @@ h1.sub-header {
     flex-direction: column;
     align-items: center;
     margin: 20px;
-    background-color: #f7f8f8;
-    border-color: #43B02A;
-    border-style: solid;
 }
 
 .banner-message-container {
@@ -105,6 +102,9 @@ h1.sub-header {
     font-size: 100%;
     font-family: "Encode Sans", sans-serif;
     color: #363636;
+    background-color: #f7f8f8;
+    border-color: #43B02A;
+    border-style: solid;
   }
 
 .banner-message-container a {

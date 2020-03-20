@@ -11,20 +11,20 @@
     <title>Shared capabilities :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1584635089" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1584635089" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1584700441" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1584700441" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1584635089" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1584700441" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1584635089"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1584700441"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1584635089"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1584635089"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1584700441"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1584700441"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1584635089"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1584700441"></script>
 
     
   </div>
@@ -1929,6 +1929,12 @@
 <li><a href="#pageloadstrategy">pageLoadStrategy:</a></li>
 <li><a href="#platformname">platformName</a></li>
 <li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
+<li><a href="#session-timeouts">Session timeouts</a>
+<ul>
+<li><a href="#script-timeout">Script Timeout:</a></li>
+<li><a href="#page-load-timeout">Page Load Timeout:</a></li>
+<li><a href="#implicit-wait-timeout">Implicit Wait Timeout</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2054,6 +2060,37 @@ trusted by the browser.</p>
 Once set, <code>acceptInsecureCerts</code> capability will have an
 effect for the entire session.</p>
 
+<h2 id="session-timeouts">Session timeouts</h2>
+
+<p>A WebDriver <code>session</code> is imposed with a certain <code>session timeout</code>
+interval, during which the user can control the behaviour
+of executing scripts or retrieving information from the browser.</p>
+
+<p>Each session timeout is configured with
+combination of different <code>timeouts</code> as described below:</p>
+
+<h3 id="script-timeout">Script Timeout:</h3>
+
+<p>Specifies when to interrupt an executing script in
+a current browsing context. The default timeout <strong>30,000</strong>
+is imposed when a new session is created by WebDriver.</p>
+
+<h3 id="page-load-timeout">Page Load Timeout:</h3>
+
+<p>Specifies the time interval in which web page
+needs to be loaded in a current browsing context.
+The default timeout <strong>300,000</strong> is imposed when a
+new session is created by WebDriver. If page load limits
+a given/default time frame, the script will be stopped by
+<em>TimeoutException</em>.</p>
+
+<h3 id="implicit-wait-timeout">Implicit Wait Timeout</h3>
+
+<p>This specifies the time to wait for the
+implicit element location strategy when
+locating elements. The default timeout <strong>0</strong>
+is imposed when a new session is created by WebDriver.</p>
+
 
 <footer class=" footline" >
 	
@@ -2062,7 +2099,7 @@ effect for the entire session.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/">
       “Shared capabilities”
-    </a> was last updated on: 19 Mar 2020 23:50:58 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/13b79c078bfa0f3d0a94724544044766718968ca">Add Japanese translation of the PRs below (#336) (13b79c07)</a>
+    </a> was last updated on: 20 Mar 2020 14:49:17 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1ad2f313302fd5a8cb91f7515f4622ce644f9e8b">Add: Adding session timeouts in doc-&gt; shared_capabilities (#345) [deploy site] (1ad2f313)</a>
 </h5>
         
         </div> 
@@ -3224,19 +3261,19 @@ effect for the entire session.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1584635089"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1584700441"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1584635089"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1584635089"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1584700441"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1584700441"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1584635089" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1584635089"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1584700441" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1584700441"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
