@@ -633,7 +633,18 @@ public class cookieTest {
 }
   {{< / code-panel >}}
  {{< code-panel language="python" >}}
- # code sample
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("http://www.example.com")
+# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
+driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
+cookie1 = driver.get_cookie('foo')
+cookie2 = driver.get_cookie('foo1')
+print cookie1
+print cookie2
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR
