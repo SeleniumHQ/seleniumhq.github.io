@@ -347,9 +347,8 @@ Para aplicaciones web, la automatización de esta prueba se puede hacer directam
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>A la hora de seleccionar elementos puede ser necesario código repetitivo para poder ser automatizado. Para reducir esto y hacer tus test mas limpios, existe un clase Select en los paquetes de soporte de Selenium. Para usarla, necesitarás importarla de la siguiente forma:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR    import org.</description>
     </item>
     
     <item>
