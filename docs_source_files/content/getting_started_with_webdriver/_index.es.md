@@ -1,36 +1,32 @@
 ---
-title: "Getting started with WebDriver"
+title: "Iniciando con WebDriver"
 chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# Iniciando con WebDriver
 
+Selenium permite la automatización de todos los principales
+navegadores del mercado mediante el uso de _WebDriver_.
+WebDriver es una API y un protocolo que define una interfaz de idioma neutral
+para controlar el comportamiento de los navegadores web.
+Cada navegador está respaldado por una implementación
+específica de WebDriver, llamada *controlador*.
+El controlador es el componente responsable de delegar en el navegador,
+y maneja la comunicación hacia y desde Selenium y el navegador.
 
-# Getting started with WebDriver
+Esta separación es parte de un esfuerzo consciente para hacer
+que los proveedores de navegadores asuman la responsabilidad de la
+implementación para sus navegadores.
+Selenium utiliza estos controladores de terceros cuando es posible,
+pero también proporciona sus propios controladores mantenidos por el proyecto
+para los casos en que esto no es una realidad.
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+El framework de Selenium unifica todas estas piezas
+a través de una interfaz orientada al usuario que habilita que
+los diferentes backends de los navegadores sean utilizados de forma 
+transparente, permitiendo la automatización cruzada entre navegadores
+y plataformas diferentes.
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
-
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
-
-More details about drivers can be found in 
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+Se pueden encontrar más detalles sobre los controladores en
+[Idiosincrasias del controlador]({{< ref "/driver_idiosyncrasies/_index.md" >}}).

@@ -133,7 +133,7 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
-@barancev2817 commits 
+@barancev2820 commits 
 @jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
@@ -304,16 +304,6 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
     </item>
     
     <item>
-      <title>Generating application state</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
-    </item>
-    
-    <item>
       <title>HTML runner</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -327,14 +317,16 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
     </item>
     
     <item>
-      <title>HTTP response codes</title>
+      <title>HTTP响应码</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
-Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
+      <description>对于Selenium RC中的某些浏览器配置， Selenium充当了浏览器和自动化站点之间的代理. 这意味着可以捕获或操纵通过Selenium传递的所有浏览器流量. captureNetworkTraffic() 方法旨在捕获浏览器和自动化站点之间的所有网络流量，包括HTTP响应码.
+Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜欢表现得像用户一样，这种方式来自于基于WebDriver编写测试的方式. 在自动化功能测试中，检查状态码并不是测试失败的特别重要的细节, 之前的步骤更重要.
+浏览器将始终呈现HTTP状态代码，例如404或500错误页面. 遇到这些错误页面时，一种“快速失败”的简单方法是 在每次加载页面后检查页面标题或可信赖点的内容（例如 &amp;lt;h1&amp;gt; 标签）. 如果使用的是页面对象模型，则可以将此检查置于类构造函数中或类似于期望的页面加载的位置. 有时，HTTP代码甚至可能出现在浏览器的错误页面中， 您可以使用WebDriver读取此信息并改善调试输出.
+检查网页本身的一种理想实践是符合WebDriver的呈现以及用户的视角.
+如果您坚持，捕获HTTP状态代码的高级解决方案是复刻Selenium RC的行为去使用代理. WebDriver API提供了为浏览器设置代理的功能， 并且有许多代理可以通过编程方式来操纵发送到Web服务器和从Web服务器接收的请求的内容. 使用代理可以决定如何响应重定向响应代码. 此外，并非每个浏览器都将响应代码提供给WebDriver， 因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.</description>
     </item>
     
     <item>
@@ -394,6 +386,17 @@ bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不�
 $ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
 这将打开一个新的 IE 浏览器窗口:
 require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
+    </item>
+    
+    <item>
+      <title>生成应用程序状态</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
+      <description>Selenium不应用于准备测试用例. 测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.
+例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 此外, 不应使用Selenium创建预加载数据来进行测试的方法.
+如前所述, 应利用现有的API为 AUT* 创建数据. *AUT: 待测系统</description>
     </item>
     
     <item>
@@ -598,17 +601,6 @@ A proxy server for automation scripts with Selenium could be helpful for:
     </item>
     
     <item>
-      <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
-Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods don’t rely on creating a browser and navigating to a page.</description>
-    </item>
-    
-    <item>
       <title>测试的独立性</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -618,6 +610,16 @@ Instead of using WebDriver for this, you could save a ton of time by executing a
 例如有一个内容管理系统, 您可以借助其创建一些自定义内容, 这些内容在发布后作为模块显示在您的网站上, 并且CMS和应用程序之间的同步可能需要一些时间.
 测试模块的一种错误方法是在测试中创建并发布内容, 然后在另一测试中检查该模块. 这是不可取的, 因为发布后内容可能无法立即用于其他测试.
 与之相反的事, 您可以创建在受影响的测试中打开和关闭的打桩内容, 并将其用于验证模块. 而且, 对于内容的创建, 您仍然可以进行单独的测试.</description>
+    </item>
+    
+    <item>
+      <title>爬取链接</title>
+      <link>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
+      <description>建议您不要使用WebDriver来通过链接进行爬网， 并非因为无法完成，而是因为它绝对不是最理想的工具。 WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间， 具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.
+除了使用WebDriver之外， 您还可以通过执行 curl 命令或 使用诸如BeautifulSoup之类的库来节省大量时间， 因为这些方法不依赖于创建浏览器和导航至页面. 通过不使用WebDriver可以节省大量时间.</description>
     </item>
     
     <item>

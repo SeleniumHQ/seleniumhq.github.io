@@ -17,8 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>En algunas ocasiones es posible que sea necesario querer validar el color de algo como parte de tus tests; el problema es que las definiciones de color en la web no son constantes. ¿No estaría bien que existiese una forma sencilla de comparar una representación de color HEX con una representación de color RGB, o una representación de color RGBA con una representación de color HSLA?
+No te preocupes. Hay una solución para esto, la clase Color</description>
     </item>
     
     <item>
