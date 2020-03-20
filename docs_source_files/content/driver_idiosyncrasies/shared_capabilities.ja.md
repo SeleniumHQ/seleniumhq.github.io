@@ -49,3 +49,31 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 
 すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。
 一度設定すると、 `acceptInsecureCerts` Capabilityはセッション全体に影響します。
+
+## Session timeouts
+
+A WebDriver `session` is imposed with a certain `session timeout`
+interval, during which the user can control the behaviour
+of executing scripts or retrieving information from the browser.
+
+Each session timeout is configured with
+combination of different `timeouts` as described below:
+
+### Script Timeout:
+Specifies when to interrupt an executing script in
+a current browsing context. The default timeout **30,000**
+is imposed when a new session is created by WebDriver.
+
+### Page Load Timeout:
+Specifies the time interval in which web page
+needs to be loaded in a current browsing context.
+The default timeout **300,000** is imposed when a
+new session is created by WebDriver. If page load limits
+a given/default time frame, the script will be stopped by
+_TimeoutException_.
+
+### Implicit Wait Timeout
+This specifies the time to wait for the
+implicit element location strategy when
+locating elements. The default timeout **0**
+is imposed when a new session is created by WebDriver.
