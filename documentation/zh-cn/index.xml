@@ -446,16 +446,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Mock external services</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
       <title>什么时候应该使用服务网格</title>
       <link>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -488,6 +478,15 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <description>使用 sendKeys 方法设置元素的文本，如下所示:
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
 Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
+    </item>
+    
+    <item>
+      <title>模拟外部服务</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</guid>
+      <description>消除对外部服务的依赖性将大大提高测试的速度和稳定性.</description>
     </item>
     
     <item>

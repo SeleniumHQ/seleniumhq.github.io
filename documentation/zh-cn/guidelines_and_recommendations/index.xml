@@ -49,13 +49,12 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Mock external services</title>
+      <title>模拟外部服务</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
+      <description>消除对外部服务的依赖性将大大提高测试的速度和稳定性.</description>
     </item>
     
     <item>
