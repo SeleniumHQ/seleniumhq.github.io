@@ -11,20 +11,20 @@
     <title>Manipulation du navigateur :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1584140072" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1584140072" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1584704216" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1584704216" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1584140072" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1584704216" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1584140072"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1584704216"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1584140072"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1584140072"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1584704216"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1584704216"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1584140072"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1584704216"></script>
 
     
   </div>
@@ -3311,7 +3311,11 @@ into to tear down at the end of a test.</p>
 
 <section id="rubycode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># We don&#39;t have a Ruby code sample yet -  Help us out and raise a PR  </span>
+<span style="color:#586e75"># UnitTest Teardown</span>
+<span style="color:#586e75"># https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase</span>
+<span style="color:#719e07">def</span> <span style="color:#268bd2">teardown</span>
+    @driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -4661,14 +4665,14 @@ individual window managers.</p>
 
 
 <section id="csharpcode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#586e75">// Please raise a PR
-</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">driver.Manage().Window.Minimize();
+</code></pre></div>
 </section>
   
 
 
 <section id="rubycode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"> <span style="color:#586e75"># Please raise a PR</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</span>window<span style="color:#719e07">.</span>minimize</code></pre></div>
 </section>
   
 
@@ -4775,7 +4779,7 @@ individual window managers.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/webdriver/browser_manipulation/">
       “Manipulation du navigateur”
-    </a> was last updated on: 13 Mar 2020 15:06:05 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/0998be13ed35ba9785d94369e1f91b171fa17b2c">Add: Adding minimize_window command in docs (#311) [deploy site] (0998be13e)</a>
+    </a> was last updated on: 16 Mar 2020 15:03:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/b36f6e139733d7b8931946ef940b21c5fa2cfa5a">Update: Adding ruby unit test teardown and url updates (#324) [deploy site] (b36f6e13)</a>
 </h5>
         
         </div> 
@@ -5940,19 +5944,19 @@ individual window managers.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1584140072"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1584704216"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1584140072"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1584140072"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1584704216"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1584704216"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1584140072" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1584140072"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1584704216" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1584704216"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

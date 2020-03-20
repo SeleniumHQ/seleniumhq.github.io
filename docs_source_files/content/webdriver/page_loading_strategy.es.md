@@ -35,7 +35,7 @@ WebDriver _pageLoadStrategy_ supports the following values:
 
 This will make Selenium WebDriver to wait for the entire page is loaded. 
 When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
+[load](https://developer.mozilla.org/es/docs/Web/Events/load) event fire is returned.
 
 By default **normal** is set to browser if none is provided.
 
@@ -134,7 +134,7 @@ initial HTML document has been completely loaded and parsed,
 and discards loading of stylesheets, images and subframes.
 
 When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+[DOMContentLoaded](https://developer.mozilla.org/es/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -158,7 +158,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'eager'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -250,7 +257,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'none'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;

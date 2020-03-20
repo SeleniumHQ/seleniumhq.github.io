@@ -12,13 +12,18 @@
     
     
     <item>
-      <title>Page object models</title>
+      <title>PO设计模式</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
+      <description>PO（page object）设计模式是在自动化中已经流行起来的一种易于维护和减少代码的设计模式. 在自动化测试中, PO对象作为一个与页面交互的接口. 测试中需要与页面的UI进行交互时, 便调用PO的方法. 这样做的好处是, 如果页面的UI发生了更改,那么测试用例本身不需要更改, 只需更改PO中的代码即可.
+PO设计模式具有以下优点:
+ 测试代码与页面的定位代码（如定位器或者其他的映射）相分离. 该页面提供的方法或元素在一个独立的类中, 而不是将这些方法或元素分散在整个测试中.  这允许在一个地方修改由于UI变化所带来的所有修改. 随着这种&amp;rdquo;测试设计模式&amp;rdquo;的广泛使用, 可以在众多博客中找到有关此技术的有用信息. 我们鼓励希望了解更多信息的读者在互联网上搜索有关此主题的博客. 许多人已经写过这种设计模式, 并且可以提供超出本用户指南范围的有用提示. 不过, 为了让您入门, 我们将通过一个简单的示例来说明页面对象.
+首先, 思考一个不使用PO模式的自动化测试的典型案例:
+/*** * Tests login feature */ public class Login { public void testLogin() { // 在登录页面上填写登录数据  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign-in&amp;#34;)).click(); // 登录后验证h1标签是否为Hello userName  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } 这种方法有两个问题.
+ 测试方法与定位器 (在此实例中为By.name)耦合过于严重. 如果测试的用户界面更改了其定位器或登录名的输入和处理方式, 则测试本身必须进行更改. 在对登录页面的所有测试中, 同一个定位器会散布在其中.  可以在以下登录页面的示例中应用PO设计模式重写此示例.
+import org.openqa.selenium.By; import org.</description>
     </item>
     
     <item>
@@ -33,13 +38,14 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Generating application state</title>
+      <title>生成应用程序状态</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
+      <description>Selenium不应用于准备测试用例. 测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.
+例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 此外, 不应使用Selenium创建预加载数据来进行测试的方法.
+如前所述, 应利用现有的API为 AUT* 创建数据. *AUT: 待测系统</description>
     </item>
     
     <item>
@@ -53,13 +59,13 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Improved reporting</title>
+      <title>改善报告</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc. Here are some links for more information regarding report outputs for several languages.</description>
+      <description>Selenium并非旨在报告测试用例的运行状态. 利用单元测试框架的内置报告功能是一个好的开始. 大多数单元测试框架都有可以生成xUnit或HTML格式的报告. xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务器, 例如Jenkins、Travis、Bamboo等. 以下是一些链接, 可获取关于几种语言报表输出的更多信息.
+NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>
@@ -76,14 +82,15 @@ Your users, in general, do not care how your site looks. They do not care about 
     </item>
     
     <item>
-      <title>Test independency</title>
+      <title>测试的独立性</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>将每个测试编写为独立的单元. 以不依赖于其他测试完成的方式编写测试:
+例如有一个内容管理系统, 您可以借助其创建一些自定义内容, 这些内容在发布后作为模块显示在您的网站上, 并且CMS和应用程序之间的同步可能需要一些时间.
+测试模块的一种错误方法是在测试中创建并发布内容, 然后在另一测试中检查该模块. 这是不可取的, 因为发布后内容可能无法立即用于其他测试.
+与之相反的事, 您可以创建在受影响的测试中打开和关闭的打桩内容, 并将其用于验证模块. 而且, 对于内容的创建, 您仍然可以进行单独的测试.</description>
     </item>
     
     <item>
