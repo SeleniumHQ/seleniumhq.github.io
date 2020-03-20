@@ -164,17 +164,6 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
     </item>
     
     <item>
-      <title>Domain specific language</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
-    </item>
-    
-    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -277,6 +266,19 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
       <description>可以通过使用插件扩展 Selenium。这里有一些由第三方创建和维护的插件。有关如何创建插件和使用的更多信息，请参考文档。
 请注意，Selenium 项目不支持、维护、托管或认可这些插件。另外，请注意，下面列出的插件不一定是 Apache 2.0 授权的。 其中一些插件在其他的免费和开源软件许可下可用；其他的只能在私有许可下使用。关于插件及其发行许可的任何问题都需要向它的开发人员提出。
    浏览器 最新版 变更记录 问题追踪     Mozilla GeckoDriver 最新版 变更记录 问题追踪   Google Chrome Driver 最新版 变更记录 问题追踪   Opera 最新版 - 问题追踪   Microsoft Edge Driver 最新版 - 问题追踪   SafariDriver 内置 - 问题追踪    </description>
+    </item>
+    
+    <item>
+      <title>领域特定语言</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
+      <description>领域特定语言 (DSL) 是一种为用户提供解决问题的表达方式的系统. 它使用户可以按照自己的术语与系统进行交互, 而不仅仅是通过程序员的语言.
+您的用户通常并不关心您网站的外观. 他们不在乎装饰, 动画或图形. 他们希望借助于您的系统, 以最小的难度使新员工融入整个流程； 他们想预订去阿拉斯加的旅行； 他们想以折扣价配置和购买独角兽. 您作为测试人员的工作应尽可能接近&amp;rdquo;捕捉”这种思维定势. 考虑到这一点, 我们开始着手&amp;rdquo;建模”您正在工作的应用程序, 以使测试脚本 (发布前用户仅有的代理) &amp;ldquo;说话”并代表用户.
+在Selenium中, DSL通常由方法表示, 其编写方式使API简单易读-它们使开发人员和干系人 (用户, 产品负责人, 商业智能专家等) 之间能够产生汇报.
+好处  可读: 业务关系人可以理解. 可写: 易于编写, 避免不必要的重复. 可扩展: 可以 (合理地) 添加功能而无需打破约定以及现有功能. 可维护: 通过将实现细节排除在测试用例之外, 您可以很好地隔离 AUT* 的修改.  Java 以下是Java中合理的DSL方法的示例. 为简便起见, 假定 driver 对象是预定义的并且可用于该方法.
+/** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.</description>
     </item>
     
     <item>
