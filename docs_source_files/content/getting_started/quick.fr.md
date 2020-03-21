@@ -26,7 +26,6 @@ commandes Selenium existantes, avec des paramètres définis par le contexte de
 cet élément. Ce n'est pas seulement un gain de temps, mais aussi un excellent moyen
 d'apprentissage de la syntaxe du script Selenium.
 
-
 ## Grid
 
 Selenium Grid allows you to run test cases in different 

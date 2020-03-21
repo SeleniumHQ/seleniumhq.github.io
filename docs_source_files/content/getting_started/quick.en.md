@@ -16,7 +16,6 @@ WebDriver does not require its API to be compiled with application
 code, it is not intrusive. Hence, you are testing the
 same application which you push live.
 
-
 ## IDE
 
 _[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment) 

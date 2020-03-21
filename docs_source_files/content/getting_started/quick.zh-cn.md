@@ -20,7 +20,6 @@ _[Selenium IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Envi
 浏览器扩展，通常是开发测试用例最有效率的方式。它使用现有的 Selenium 命令记录用户在浏览器中的操作,
 参数由元素的上下文确定。这不仅节省了开发时间，而且是学习 Selenium 脚本语法的一种很好的方法。
 
-
 ## Grid
 
 Selenium Grid allows you to run test cases in different 

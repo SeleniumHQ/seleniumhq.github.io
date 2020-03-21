@@ -19,7 +19,6 @@ _[IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Environment: 
 IDEはあなたのブラウザ上で、その要素で定義されたパラメーターと共にSeleniumのコマンドを使いユーザーの動作を記録します。
 これは時間の節約だけでなく、Seleniumスクリプトのシンタックスを学ぶための優れた方法です。
 
-
 ## Grid
 
 Selenium Grid allows you to run test cases in different 
