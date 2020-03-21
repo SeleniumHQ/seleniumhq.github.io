@@ -1,26 +1,23 @@
 ---
-title: "Http proxies"
+title: "Http 代理"
 weight: 7
 ---
 
-A proxy server acts as an intermediary for 
-requests between a client and a server. In simple, 
-the traffic flows through the proxy server 
-on its way to the address you requested and back.
+代理服务器充当客户端和服务器之间的请求中介.
+简述而言, 流量将通过代理服务器流向您请求的地址, 然后返回.
 
-A proxy server for automation scripts 
-with Selenium could be helpful for:
+使用代理服务器用于Selenium的自动化脚本, 
+可能对以下方面有益:
 
-* Capture network traffic
-* Mock backend calls made by the website
-* Access the requited website under complex network 
-topologies or strict corporate restrictions/policies.
+* 捕获网络流量
+* 模拟网站后端响应
+* 在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.
 
-If you are in a corporate environment, and a 
-browser fails to connect to a URL, this is most 
-likely because the environment needs a proxy to be accessed.
+如果您在公司环境中, 
+并且浏览器无法连接到URL, 
+则最有可能是因为环境, 需要借助代理进行访问.
 
-Selenium WebDriver provides a way to proxy settings
+Selenium WebDriver提供了如下设置代理的方法
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
