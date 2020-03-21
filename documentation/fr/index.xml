@@ -18,7 +18,8 @@
       
       <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
+ In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description>
     </item>
     
     <item>
@@ -110,8 +111,7 @@ Démarrage du serveur à partir de la ligne de commande Une fois que vous avez t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
+      <description>L&amp;rsquo;objet de page est un modèle de conception qui est devenu populaire dans l&amp;rsquo;automatisation des tests pour améliorer la maintenance des tests et réduire la duplication de code. Un objet page est un classe orientée objet qui sert d&amp;rsquo;interface à une page de votre AUT. le les tests utilisent ensuite les méthodes de cette classe d&amp;rsquo;objets de page chaque fois qu&amp;rsquo;ils ont besoin de interagir avec l&amp;rsquo;interface utilisateur de cette page.</description>
     </item>
     
     <item>
@@ -177,17 +177,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Domain specific language</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks.</description>
-    </item>
-    
-    <item>
       <title>Driver tiers et plugins</title>
       <link>https://selenium.dev/documentation/fr/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -208,6 +197,16 @@ Téléchargez le binaire WebDriver pris en charge par votre navigateur et placez
     </item>
     
     <item>
+      <title>Langue spécifique au domaine</title>
+      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</guid>
+      <description>Une langue spécifique au domaine (DSL) est un système qui fournit à l&amp;rsquo;utilisateur un moyen expressif de résoudre un problème. Il permet à un utilisateur de interagir avec le système à leurs conditions - pas seulement parler de programmeur.
+Vos utilisateurs, en général, ne se soucient pas de l&amp;rsquo;apparence de votre site. Ils ne se soucient de la décoration, des animations ou des graphismes. Ils voulez utiliser votre système pour pousser leurs nouveaux employés à travers le processus avec une difficulté minimale; ils veulent réserver un voyage en Alaska; ils veulent configurer et acheter des licornes à prix réduit.</description>
+    </item>
+    
+    <item>
       <title>Le client Remote WebDriver</title>
       <link>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -223,9 +222,8 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new Firefo
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
+L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>
@@ -274,8 +272,7 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+      <description>Le sélénium ne doit pas être utilisé pour préparer un cas de test. Tous répétitifs les actions et les préparatifs pour un test élémentaire devraient être effectués par méthodes. Par exemple, la plupart des interfaces utilisateur Web ont une authentification (par exemple, une connexion forme). Éliminer la connexion via un navigateur Web avant chaque test améliorer à la fois la vitesse et la stabilité du test. Une méthode devrait être créé pour accéder à l&amp;rsquo;AUT * (par exemple, en utilisant une API pour vous connecter et définir un biscuit).</description>
     </item>
     
     <item>
@@ -346,8 +343,8 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
-      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si un produit fonction correspond à ses besoins. Cela implique généralement les commentaires ou les spécifications du client.
-Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur. Cette simulation peut être effectuée par enregistrement / lecture ou par différentes langues prises en charge comme expliqué dans cette documentation.</description>
+      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
     </item>
     
     <item>
@@ -366,10 +363,9 @@ Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>La souris représente un événement de souris. Les actions de la souris sont effectuées en utilisant une interface de bas niveau qui nous permet de fournir une action de saisie de périphérique virtualisé au navigateur Web.
+clickAndHold Il se déplacera vers l&amp;rsquo;élément et cliquera (sans le relâcher) au milieu de l&amp;rsquo;élément donné.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>
@@ -378,8 +374,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
+      <description>L&amp;rsquo;élimination des dépendances sur les services externes s&amp;rsquo;améliorera considérablement la vitesse et la stabilité de vos tests.</description>
     </item>
     
     <item>
@@ -419,8 +414,8 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&amp;rsquo;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
+De l&amp;rsquo;expérience, la plupart des intermittents résultant de l&amp;rsquo;utilisation de Selenium et de WebDriver sont liés aux conditions de concurrence qui se produisent entre le navigateur et les instructions de l&amp;rsquo;utilisateur.</description>
     </item>
     
     <item>
@@ -536,8 +531,9 @@ Une mauvaise façon de tester votre module est que le contenu est créé et publ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/http_proxies/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- </description>
+      <description>Un serveur proxy sert d&amp;rsquo;intermédiaire pour les demandes entre un client et un serveur. En toute simplicité, le trafic circule via le serveur proxy en route vers l&amp;rsquo;adresse vous avez demandé et retour.
+Un serveur proxy pour les scripts d&amp;rsquo;automatisation avec Le Selenium pourrait être utile pour:
+ Capturez le trafic réseau Mock backend calls made by the website Accéder au site Web demandé sous un réseau complexe topologies ou restrictions / politiques d&amp;rsquo;entreprise strictes.</description>
     </item>
     
     <item>
@@ -556,9 +552,8 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:</description>
+      <description>Définit la stratégie de chargement des pages de la session en cours. Par défaut, lorsque Selenium WebDriver charge une page, il suit le normal pageLoadStrategy. Il est toujours recommandé d&amp;rsquo;arrêter le téléchargement de ressources (comme les images, css, js) lorsque le chargement de la page prend beaucoup de temps.
+La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.</description>
     </item>
     
     <item>

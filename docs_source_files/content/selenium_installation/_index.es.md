@@ -6,5 +6,9 @@ weight: 3
 
 # Instalación de Selenium
 
-La configuración de Selenium es bastante diferente de la configuración de otras herramientas comerciales. Para usar Selenium en su proyecto de automatización, necesita instalar las librerías para el lenguaje de programación de su elección. Además, necesitará los binarios del WebDriver para los navegadores en los que desea automatizar y ejecutar la prueba.
-
+La configuración de Selenium es bastante diferente de la configuración
+de otras herramientas comerciales.
+Para usar Selenium en tu proyecto de automatización,
+necesitas instalar las librerías de enlace de tu lenguaje de preferencia.
+Además necesitarás los binarios de WebDriver para los navegadores 
+en los que deseas automatizar y ejecutar pruebas.

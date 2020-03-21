@@ -1,31 +1,21 @@
 ---
-title: "Copyright and attributions"
+title: "版权和归属"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-## **The Documentation of Selenium**
+## **Selenium文档**
 
 Copyright {{< copyright >}}, Software Freedom Conservancy.
 
-Every effort has been made to make this documentation
-as complete and as accurate as possible,
-but no warranty or fitness is implied.
-The information provided is on an “as-is” basis.
-The authors and the publisher shall have
-neither liability nor responsibility to any person or entity
-with respect to any loss or damages arising
-from the information contained in this book.
-No patent liability is assumed with respect
-to the use of the information contained herein.
+我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用.
+信息提供是基于“as-is”的.
+若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任.
+不承担任何与使用本文信息相关的专利责任.
 
-## Attributions
+## 归属
 
-### Thanks to:
+### 感谢:
 
 #### [Selenium Main Repository](//github.com/SeleniumHQ/selenium/)
 
@@ -51,24 +41,23 @@ to the use of the information contained herein.
 
 {{% ghcontributors "https://api.github.com/repos/seleniumhq/docs/contributors?per_page=100" %}}
 
-## Third-Party software used by Selenium documentation project:
+## Selenium文档项目使用的第三方软件:
 
-| Software | Version | License |
+| 软件 | 版本 | 许可 |
 | -------- | ------- | ------- |
-| [Hugo](//gohugo.io/) | v0.55.6 | [Apache 2.0](//gohugo.io/about/license/) |
-| [Hugo Learn Theme](//themes.gohugo.io/hugo-theme-learn/) | v2.3.0 | [MIT](//github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md) |
+| [Hugo](//gohugo.io/) | v0.59.0 | [Apache 2.0](//gohugo.io/about/license/) |
+| [Hugo Learn Theme](//themes.gohugo.io/hugo-theme-learn/) | v2.4.0 | [MIT](//github.com/matcornic/hugo-theme-learn/blob/master/LICENSE.md) |
 | [Code Tabs Style](//codepen.io/markcaron/pen/MvGRYV) | --- | [MIT](//blog.codepen.io/legal/licensing/) |
 
-## License
+## 许可
 
-All code and documentation originating from the Selenium project
-is licensed under the Apache 2.0 license,
-with the [Software Freedom Conservancy](//sfconservancy.org/)
-as the copyright holder.
+源自Selenium项目的所有代码和文档均基于Apache2.0的许可,
+由 [Software Freedom Conservancy](//sfconservancy.org/)
+作为版权所有者.
 
-The license is included here for convenience,
-but you can also find it on the
-[Apache Foundation's websites](//apache.org/licenses/LICENSE-2.0.html):
+为方便起见, 此处包含许可证,
+您也可以在此查看
+[Apache 基金会站点](//apache.org/licenses/LICENSE-2.0.html):
 
 ```markdown
                                  Apache License

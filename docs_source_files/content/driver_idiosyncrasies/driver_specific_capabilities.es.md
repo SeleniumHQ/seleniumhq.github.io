@@ -1,13 +1,20 @@
 ---
-title: "Capacidades especificas de los controladores"
+title: "Driver specific capabilities"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ## Firefox
 
-### Definir Capacidades (_Capabilities_) usando `FirefoxOptions`
+### Define Capabilities using `FirefoxOptions`
 
-`FirefoxOptions` es la nueva forma de definir capacidades para el navegador Firefox y, por lo general, debe usarse con preferencia a las capacidades deseadas.
+`FirefoxOptions` is the new way to define capabilities for the Firefox 
+browser and should generally be used in preference to DesiredCapabilities.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -50,9 +57,9 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Configuración de un perfil personalizado
+### Setting a custom profile
 
-Es posible crear un perfil personalizado para Firefox como se muestra a continuación.
+It is possible to create a custom profile for Firefox as demonstrated below.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -104,7 +111,9 @@ driver = RemoteWebDriver(options)
 
 ### fileUploadDialogTimeout
 
-En algunos entornos, Internet Explorer puede agotar el tiempo de espera al abrir el cuadro de diálogo Cargar archivo. IEDriver tiene un tiempo de espera predeterminado de 1000 ms, pero puede aumentar el tiempo de espera usando la _capability_ fileUploadDialogTimeout.
+In some environments, Internet Explorer may timeout when opening the
+File Upload dialog. IEDriver has a default timeout of 1000ms, but you
+can increase the timeout using the fileUploadDialogTimeout capability.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

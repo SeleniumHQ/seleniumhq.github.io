@@ -592,3 +592,100 @@ fun main() {
 }  
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## SameSite Cookie属性
+
+これにより、ユーザーは、サードパーティのサイトによって開始されたリクエストとともに
+Cookieを送信するかどうかをブラウザに指示できます。
+CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐために導入されました。
+
+SameSite Cookie属性は、2つのパラメーターを命令として受け入れます。
+
+## Strict:
+SameSite属性が **Strict** に設定されている場合、CookieはサードパーティのWebサイトによって
+開始されたリクエストとともに送信されません。
+
+## Lax:
+CookieのSameSite属性を **Lax** に設定すると、CookieはサードパーティのWebサイトによって
+開始されたGETリクエストとともに送信されます。
+
+**注**: **現在、この機能はchrome（80 + version）に組み込まれており、**
+**Selenium 4以降のバージョンで動作します。**
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class cookieTest {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      driver.get("http://www.example.com");
+      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
+      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
+      driver.manage().addCookie(cookie);
+      driver.manage().addCookie(cookie1);
+      System.out.println(cookie.getSameSite());
+      System.out.println(cookie1.getSameSite());
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+ {{< code-panel language="python" >}}
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("http://www.example.com")
+# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
+driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
+cookie1 = driver.get_cookie('foo')
+cookie2 = driver.get_cookie('foo1')
+print cookie1
+print cookie2
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder} = require('selenium-webdriver');
+(async function example() {
+    let driver = new Builder()
+        .forBrowser('chrome')
+        .build();
+        
+    await driver.get('https://www.example.com');
+    
+    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
+    console.log(await driver.manage().getCookie('key'));
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("http://www.example.com")
+        val cookie = Cookie.Builder("key", "value").sameSite("Strict").build()
+        val cookie1 = Cookie.Builder("key", "value").sameSite("Lax").build()
+        driver.manage().addCookie(cookie)
+        driver.manage().addCookie(cookie1)
+        println(cookie.getSameSite())
+        println(cookie1.getSameSite())
+    } finally {
+        driver.quit()
+    }
+} 
+  {{< / code-panel >}}
+{{< / code-tab >}}

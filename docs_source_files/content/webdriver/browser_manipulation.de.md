@@ -540,7 +540,11 @@ public void TearDown()
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 /**
@@ -630,7 +634,7 @@ them unless you are working with an pre HTML5 webapp.  Iframes allow
 the insertion of a document from an entirely different domain, and are
 still commonly used.
 
-If you need to work with frames or iframes, Webdriver allows you to
+If you need to work with frames or iframes, WebDriver allows you to
 work with them in the same way. Consider a button within an iframe.
 If we inspect the element using the browser development tools, we might
 see the following:
@@ -996,7 +1000,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
@@ -1062,6 +1073,24 @@ toolbars.
   {{< code-panel language="ruby" >}}driver.manage.window.maximize{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().maximize();{{< / code-panel >}}
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
+{{< / code-tab >}}
+
+### Minimize window
+Minimizes the window of current browsing context. 
+The exact behavior of this command is specific to 
+individual window managers. 
+ 
+Minimize Window typically hides the window in the system tray.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
+  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Fullscreen window

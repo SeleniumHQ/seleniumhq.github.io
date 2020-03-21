@@ -11,20 +11,20 @@
     <title>ページ読み込み戦略 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1582655622" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1582655622" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584803575" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584803575" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1582655622" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584803575" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1582655622"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584803575"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1582655622"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1582655622"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584803575"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584803575"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1582655622"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584803575"></script>
 
     
   </div>
@@ -597,9 +597,9 @@
  
   
     
-      <li data-nav-id="/webdriver/http_proxies/" title="Http proxies" class="dd-item ">
+      <li data-nav-id="/webdriver/http_proxies/" title="Httpプロキシ" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/webdriver/http_proxies/">
-        Http proxies
+        Httpプロキシ
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1261,9 +1261,9 @@
  
   
     
-      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="共有機能" class="dd-item ">
+      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="共有Capabilities" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/">
-        共有機能
+        共有Capabilities
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1526,13 +1526,13 @@
  
   
     
-    <li data-nav-id="/front_matter/" title="Front matter" class="dd-item 
+    <li data-nav-id="/front_matter/" title="奥付け" class="dd-item 
         
         
         
         ">
       <a href="https://selenium.dev/documentation/ja/front_matter/">
-          Front matter
+          奥付け
           
             <i class="fas fa-check read-icon"></i>
           
@@ -1553,9 +1553,9 @@
  
   
     
-      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Copyright and attributions" class="dd-item ">
+      <li data-nav-id="/front_matter/copyright_and_attributions/" title="著作権と帰属" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/">
-        Copyright and attributions
+        著作権と帰属
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1572,9 +1572,9 @@
  
   
     
-      <li data-nav-id="/front_matter/typographical_conventions/" title="Typographical conventions" class="dd-item ">
+      <li data-nav-id="/front_matter/typographical_conventions/" title="表記規則" class="dd-item ">
         <a href="https://selenium.dev/documentation/ja/front_matter/typographical_conventions/">
-        Typographical conventions
+        表記規則
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1959,12 +1959,19 @@
 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は <em>normal</em> となります。
 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。</p>
 
+<p>ドキュメントの <code>document.readyState</code> プロパティは、現在のドキュメントの読み込み状態を記述します。
+デフォルトでは、WebDriverは、ドキュメントの準備完了状態が <code>complete</code> になるまで、 <code>driver.get()</code>（または）<code>driver.navigate().to()</code> の呼び出しへの応答を保留します。</p>
+
+<p>SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。</p>
+
+<p>SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに <code>driver.get()</code> および  <code>driver.naviagte().to()</code> を実行するまで、pageLoadStrategyは常に <code>COMPLETE</code> ステータスを表示します。</p>
+
 <p>WebDriverの <em>pageLoadStrategy</em> は以下の値をサポートします。</p>
 
 <h2 id="normal">normal</h2>
 
 <p>この値は、Selenium WebDriverはページ全体がロードされるまで待機します。
-<strong>normal</strong> に設定すると、Selenium WebDriverは、<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">ロード</a>イベントの発生が返却されるまで待機します。</p>
+<strong>normal</strong> に設定すると、Selenium WebDriverは、<a href="https://developer.mozilla.org/ja/docs/Web/API/Window/load_event">ロード</a>イベントの発生が返却されるまで待機します。</p>
 
 <p>何も指定されていない場合、デフォルトでは、 <strong>normal</strong> がブラウザに設定されます。</p>
 
@@ -2042,8 +2049,24 @@
 
 <section id="c#code0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2112,7 +2135,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <p>この値は、Selenium WebDriverは最初のHTMLドキュメントが完全に読み込まれて解析されるまで待機し、スタイルシート、画像、およびサブフレームの読み込みを破棄します。</p>
 
-<p><strong>eager</strong> に設定すると、Selenium WebDriverは <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> イベントの発生が返却されるまで待機します。</p>
+<p><strong>eager</strong> に設定すると、Selenium WebDriverは <a href="https://developer.mozilla.org/ja/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> イベントの発生が返却されるまで待機します。</p>
 
 
 
@@ -2180,7 +2203,14 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.chrome.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>page_load_strategy <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;eager&#39;</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome(options<span style="color:#719e07">=</span>options)
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()
   </code></pre></div>
 </section>
   
@@ -2188,8 +2218,24 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <section id="c#code1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2324,7 +2370,14 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.chrome.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>page_load_strategy <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;none&#39;</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome(options<span style="color:#719e07">=</span>options)
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()
   </code></pre></div>
 </section>
   
@@ -2332,8 +2385,24 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="c#code2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">
- <span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#719e07">using</span> OpenQA.Selenium;
+<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
+
+<span style="color:#719e07">namespace</span> pageLoadStrategy {
+  <span style="color:#719e07">class</span> <span style="color:#268bd2">pageLoadStrategy</span> {
+    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args) {
+      <span style="color:#dc322f">var</span> chromeOptions = <span style="color:#719e07">new</span> ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
+      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver(chromeOptions);
+      <span style="color:#719e07">try</span> {
+        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+      } <span style="color:#719e07">finally</span> {
+        driver.Quit();
+      }
+    }
+  }
+}
+  
 </code></pre></div>
 </section>
   
@@ -2406,7 +2475,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/">
       “ページ読み込み戦略”
-    </a> was last updated on: 25 Feb 2020 00:15:42 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/63ebaec5124a122c1da9ad60d23bcc1736822941">Add Japanese translation of Page loading strategy (#256) [deploy site] (63ebaec51)</a>
+    </a> was last updated on: 20 Mar 2020 13:46:13 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/97e2b39d4d4f0c473f15628b2899603465224e5d">Add: Adding py code sample for pageLoadStrategy[eager, none] (#344) [deploy site] (97e2b39d)</a>
 </h5>
         
         </div> 
@@ -3558,7 +3627,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 	 
 	 
 		
-			<a class="nav nav-prev" href="https://selenium.dev/documentation/ja/webdriver/http_proxies/" title="Http proxies"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="https://selenium.dev/documentation/ja/webdriver/http_proxies/" title="Httpプロキシ"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="https://selenium.dev/documentation/ja/webdriver/web_element/" title="Web要素" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -3571,19 +3640,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1582655622"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584803576"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1582655622"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1582655622"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584803576"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584803576"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1582655622" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1582655622"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584803576" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584803576"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,20 +1,31 @@
 ---
-title: "El Proyecto para Automatización de Navegadores Selenium"
+title: "Selenium, el proyecto para automatizar navegadores"
 ---
 
-# El Proyecto para Automatización de Navegadores Selenium
+# Selenium, el proyecto para automatizar navegadores
 
-Selenium es un proyecto padre que cobija a una gama de herramientas y bibliotecas que permiten y soportan la automatización de los navegadores web.
+Selenium es un proyecto que alberga un abanico de herramientas y librerías que
+permiten y apoyan la automatización de navegadores web.
 
-Proporciona extensiones para emular la interacción del usuario con los navegadores, un servidor de distribución para escalar la asignación del navegador y la infraestructura para implementaciones de la 
-[Especificación W3C del WebDriver](//www.w3.org/TR/webdriver/) que le permite escribir código intercambiable para todos los principales navegadores web.
+Proporciona extensiones que permiten emular las interacciones que realizan los
+usuarios con los navegadores, un servidor que permite distribuir la asignación
+de navegadores de forma escalable, y la infraestructura necesaria para las 
+implementaciones de la [especificación del WebDriver del W3C](//www.w3.org/TR/webdriver/), 
+el cual permite escribir código intercambiable para los navegadores web mas usados.
 
-Este proyecto es posible gracias a los colaboradores voluntarios que han dedicado miles de horas de su propio tiempo y han hecho que el código fuente [esté disponible gratuitamente]({{< ref "/front_matter/copyright_and_attributions.es.md#license" >}}) para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
+Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
+han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
+esté [disponible de manera gratuita]({{< ref "/front_matter/copyright_and_attributions.es.md#license" >}})
+para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.
 
-Selenium reúne a proveedores de navegadores, ingenieros y entusiastas para promover una discusión abierta sobre la automatización de la plataforma web.
-El proyecto organiza [una conferencia anual](//seleniumconf.com/) para enseñar y nutrir a la comunidad.
+Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para 
+promover un debate abierto sobre la automatización de plataformas web.
+El proyecto organiza [una conferencia anual](//seleniumconf.com/) con el fin de
+enseñar y nutrir a la comunidad.
 
-En el núcleo de Selenium se encuentra el _[WebDriver]({{< ref "/webdriver/_index.md" >}})_, una interfaz para escribir conjuntos de instrucciones que se pueden ejecutar indistintamente en muchos navegadores. Aquí está una de las instrucciones más simples que puede hacer:
+El corazón de Selenium es el [WebDriver]({{< ref "/webdriver/_index.md" >}}), una
+interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
+manera indistinta en muchos navegadores.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -50,7 +61,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
-#Este ejemplo requiere Selenium WebDriver 3.13 o posterior
+#Este ejemplo necesita una versión de Selenium WebDriver igual o mayor a la 3.13
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
@@ -104,7 +115,7 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('https://www.google.com');
 
-        // Enter text "cheese" and perform keyboard action "Enter"
+        // Añade el texto "cheese" y efectúa la acción de la tecla "Enter"
         await driver.findElement(By.name('q')).sendKeys('cheese', Key.ENTER);
 
         let firstResult = await driver.wait(until.elementLocated(By.css('h3>div')), 10000);
@@ -140,17 +151,22 @@ fun main() {
 {{< / code-tab >}}
 
 
-Consulte la _[Guía rápida]({{< ref "/getting_started/quick.es.md" >}})_ para obtener una explicación completa de lo que sucede detrás de escena cuando ejecuta este código.
-Debe continuar con la [documentación narrativa]({{< ref "/introduction/_index.md" >}}) para comprender cómo puede [instalar]({{< ref "/selenium_installation/_index.md" >}}) y utilizar con éxito Selenium como herramienta de automatización de pruebas, y escalar pruebas simples como esta para ejecutar en entornos grandes y distribuidos en múltiples navegadores, en varios sistemas operativos diferentes.
-
+Puedes ver este [tour rápido]({{< ref "/getting_started/quick.es.md" >}}) para una 
+explicación completa de lo que sucede entre bastidores cuando se ejecuta el código.
+Es recomendable continuar con el 
+[planteamiento que ofrece esta documentación]({{< ref "/introduction/_index.md" >}})
+para entender como se puede [instalar]({{< ref "/selenium_installation/_index.md" >}})
+y usar correctamente Selenium como herramienta de automatización de pruebas, y como se
+puede escalar pruebas simples como el ejemplo anterior, en grandes entornos con múltiples
+navegadores en diferentes sistemas operativos.
 
 ## Empezando
 
-Si es nuevo en Selenium, tenemos algunos recursos que pueden ayudarlo a ponerse al día de inmediato.
+Si eres nuevo con Selenium, tenemos una serie de
+recursos que te pueden ayudar a ponerte al día de inmediato
 
-* [Guía rápida]({{< ref "/getting_started/quick.es.md" >}})
-  * [El WebDriver]({{< ref "/getting_started/quick.es.md#webdriver" >}})
-  * [Control remoto]({{< ref "/getting_started/quick.es.md#remote-control" >}})
+* [Tour rápido]({{< ref "/getting_started/quick.es.md" >}})
+  * [WebDriver]({{< ref "/getting_started/quick.es.md#webdriver" >}})
   * [IDE]({{< ref "/getting_started/quick.es.md#ide" >}})
   * [Grid]({{< ref "/getting_started/quick.es.md#grid" >}})
 

@@ -11,20 +11,20 @@
     <title>Geteilte capabilities :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1582655607" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1582655607" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1584803560" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1584803560" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1582655607" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1584803560" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1582655607"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1584803560"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1582655607"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1582655607"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1584803560"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1584803560"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1582655607"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1584803560"></script>
 
     
   </div>
@@ -1924,9 +1924,16 @@
 <ul>
 <li>
 <ul>
-<li>
+<li><a href="#browsername">browserName:</a></li>
+<li><a href="#browserversion">browserVersion:</a></li>
+<li><a href="#pageloadstrategy">pageLoadStrategy:</a></li>
+<li><a href="#platformname">platformName</a></li>
+<li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
+<li><a href="#session-timeouts">Session timeouts</a>
 <ul>
-<li><a href="#pageloadstrategy">pageLoadStrategy</a></li>
+<li><a href="#script-timeout">Script Timeout:</a></li>
+<li><a href="#page-load-timeout">Page Load Timeout:</a></li>
+<li><a href="#implicit-wait-timeout">Implicit Wait Timeout</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1963,7 +1970,29 @@ zu übersetzen indem Du uns einen Pull Reqeust schickst!</p>
 </div>
 
 
-<h3 id="pageloadstrategy">pageLoadStrategy</h3>
+<p>In-order to create a new session by Selenium WebDriver,
+local end should provide the basic capabilities to remote end.
+The remote end uses the same set of capabilities to
+create a session and describes the current session features.</p>
+
+<p>WebDriver provides capabilities that each remote
+end will/should support the implementation.
+Following are the capabilities that WebDriver supports:</p>
+
+<h2 id="browsername">browserName:</h2>
+
+<p>This capability is used to set the <code>browserName</code> for a given session.
+If the specified browser is not installed at the
+remote end, the session creation will fail</p>
+
+<h2 id="browserversion">browserVersion:</h2>
+
+<p>This capability is optional, this is used to
+set the available browser version at remote end.
+For Example, if ask for Chrome version 75 on a system that
+only has 80 installed, the session creation will fail</p>
+
+<h2 id="pageloadstrategy">pageLoadStrategy:</h2>
 
 <p>When navigating to a new page via URL, by default Selenium will wait
 until the page has fully loaded before responding. This works well for
@@ -1974,7 +2003,7 @@ where elements on the page change position as elements load in and change
 size.</p>
 
 <p>The page load strategy queries the
-<a href="//developer.mozilla.org/en-US/docs/Web/API/Document/readyState">document.readyState</a>
+<a href="//developer.mozilla.org/de/docs/Web/API/Document/readyState">document.readyState</a>
 as described in the table below:</p>
 
 <table>
@@ -2007,6 +2036,61 @@ as described in the table below:</p>
 </tbody>
 </table>
 
+<h2 id="platformname">platformName</h2>
+
+<p>This identifies the operating system at the remote-end,
+fetching the <code>platformName</code> returns the OS name.</p>
+
+<p>In cloud-based providers,
+setting <code>platformName</code> sets the OS at the remote-end.</p>
+
+<h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
+
+<p>This capability checks whether an expired (or)
+invalid <code>TLS Certificate</code> is used while navigating
+during a session.</p>
+
+<p>If the capability is set to <code>false</code>, an
+<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
+will be returned as navigation encounters any domain
+certificate problems. If set to <code>true</code>, invalid certificate will be
+trusted by the browser.</p>
+
+<p>All self-signed certificates will be trusted by this capability by default.
+Once set, <code>acceptInsecureCerts</code> capability will have an
+effect for the entire session.</p>
+
+<h2 id="session-timeouts">Session timeouts</h2>
+
+<p>A WebDriver <code>session</code> is imposed with a certain <code>session timeout</code>
+interval, during which the user can control the behaviour
+of executing scripts or retrieving information from the browser.</p>
+
+<p>Each session timeout is configured with
+combination of different <code>timeouts</code> as described below:</p>
+
+<h3 id="script-timeout">Script Timeout:</h3>
+
+<p>Specifies when to interrupt an executing script in
+a current browsing context. The default timeout <strong>30,000</strong>
+is imposed when a new session is created by WebDriver.</p>
+
+<h3 id="page-load-timeout">Page Load Timeout:</h3>
+
+<p>Specifies the time interval in which web page
+needs to be loaded in a current browsing context.
+The default timeout <strong>300,000</strong> is imposed when a
+new session is created by WebDriver. If page load limits
+a given/default time frame, the script will be stopped by
+<em>TimeoutException</em>.</p>
+
+<h3 id="implicit-wait-timeout">Implicit Wait Timeout</h3>
+
+<p>This specifies the time to wait for the
+implicit element location strategy when
+locating elements. The default timeout <strong>0</strong>
+is imposed when a new session is created by WebDriver.</p>
+
 
 <footer class=" footline" >
 	
@@ -2015,7 +2099,7 @@ as described in the table below:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/driver_idiosyncrasies/shared_capabilities/">
       “Geteilte capabilities”
-    </a> was last updated on: 19 Feb 2020 11:06:56 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/6c3b6cfd3d5d00aa50f9a90401a29dde8d9ca08d">Deploying on Wed Feb 19 11:06:56 UTC 2020, commit 74b067292dd844578bf28cc52da824d789b3b80f, [skip ci] (6c3b6cfd3)</a>
+    </a> was last updated on: 20 Mar 2020 14:49:17 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1ad2f313302fd5a8cb91f7515f4622ce644f9e8b">Add: Adding session timeouts in doc-&gt; shared_capabilities (#345) [deploy site] (1ad2f313)</a>
 </h5>
         
         </div> 
@@ -3177,19 +3261,19 @@ as described in the table below:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1582655607"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1584803560"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1582655607"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1582655607"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1584803560"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1584803560"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1582655607" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1582655607"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1584803560" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1584803560"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

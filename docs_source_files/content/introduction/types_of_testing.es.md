@@ -3,63 +3,124 @@ title: "Tipos de pruebas"
 weight: 3
 ---
 
+### Pruebas de aceptación 
+Este tipo de prueba se realiza para determinar si una funcionalidad
+o un sistema cumple con las expectativas y requerimientos del cliente.
+Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente,
+siendo una actividad de validación que responde la pregunta: 
+>¿Estamos construyendo el producto **_correcto_**?.
 
-## Prueba de aceptación
-Este tipo de prueba se realiza para determinar si la característica de un producto cumple con sus requisitos. Esto generalmente implica la retroalimentación o especificación del cliente.
+Para aplicaciones web, la automatización de esta prueba se puede 
+hacer directamente con Selenium simulando el comportamiento esperado 
+del usuario. Esta simulación podría hacerse mediante grabación/
+reproducción o mediante los diferentes lenguajes soportados como se explica 
+en esta documentación. Nota: Las pruebas de aceptación son un subtipo 
+de **_pruebas funcionales_**, a lo que algunas personas también 
+podrían referirse.  
 
-Para aplicaciones web, la automatización de este tipo de prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario. Esta simulación se puede realizar mediante grabación / reproducción o mediante los diferentes lenguajes de programación admitidos, tal como se explica en esta documentación.
-Nota: Las pruebas de aceptación son un subtipo de **_pruebas funcionales_**, a las que algunas personas también pueden referirse.
+### Pruebas funcionales
+Este tipo de prueba se realiza para determinar si una
+funcionalidad o sistema funciona correctamente y sin problemas. 
+Se comprueba el sistema en diferentes niveles para garantizar que
+todos los escenarios están cubiertos y que el sistema hace _lo que_
+se supone que debe de hacer. Es una actividad de verificación que
+responde la pregunta:
+>¿Estamos construyendo el producto **_correctamente?_**.
 
-### Prueba funcional
-Este tipo de prueba se realiza para determinar si la característica de un producto funciona correctamente, sin problemas.
-             
-Esto generalmente incluye: que las pruebas funcionen sin errores (páginas 404, excepciones ...), de manera utilizable (redirecciones correctas), de manera accesible y con sus especificaciones (ver **_pruebas de aceptación_** más arriba).
+Para aplicaciones web, la automatización de esta prueba puede ser 
+hecha directamente con Selenium simulando los retornos esperados. 
+Esta simulación podría hacerse mediante grabación/reproducción o 
+mediante los diferentes lenguajes soportados como se explica en esta 
+documentación. 
 
-Para aplicaciones web, la automatización de estas pruebas se puede hacer directamente con Selenium simulando los retornos esperados. Esta simulación podría realizarse mediante grabación / reproducción o mediante los diferentes lenguajes admitidos, tal como se explica en esta documentación.
+### Pruebas de rendimiento 
+Como su nombre indica, se realizan pruebas 
+de rendimiento para medir qué tan bien está funcionando una 
+aplicación. 
 
-### Pruebas de rendimiento o desempeño
-Como su nombre lo indica, se realizan pruebas de rendimiento para medir el rendimiento de una aplicación.
+Hay dos subtipos principales para las pruebas de rendimiento: 
 
-Hay dos subtipos principales para las pruebas de rendimiento:
+#### Pruebas de carga 
+La prueba de carga se realiza para verificar qué 
+tan bien la aplicación funciona bajo diferentes cargas definidas (
+generalmente un número particular de usuarios conectados a la vez). 
 
-#### Prueba de carga
-La prueba de carga se realiza para verificar qué tan bien funciona la aplicación bajo diferentes cargas definidas (generalmente un número particular de usuarios conectados a la vez).
+#### Pruebas de estrés 
+Se realizan pruebas de estrés para verificar 
+qué tan bien la aplicación funciona bajo estrés (o por encima de la 
+carga máxima soportada). 
 
-#### Pruebas de estrés o esfuerzo
-La prueba de esfuerzo se realiza para verificar qué tan bien funciona la aplicación bajo estrés (o por encima de la carga máxima soportada).
+En general, las pruebas de rendimiento se realizan ejecutando algunas 
+pruebas de Selenium que simulan diferentes usuarios golpeando
+una función particular en la aplicación web y obteniendo algunas 
+medidas significativas. 
 
-En general, las pruebas de rendimiento se realizan mediante la ejecución de una serie de pruebas escritas de Selenium que simulan a diferentes usuarios que acceden a una función particular en la aplicación web y recuperan algunas mediciones significativas.
+En general, esto lo hacen otras herramientas que obtienen las 
+métricas. Una de esas herramientas es **_JMeter_**. 
 
-En general, esto lo hacen otras herramientas que recuperan las métricas. Una de esas herramientas es **_JMeter_**.
+Para una aplicación web, los detalles a medir incluyen rendimiento, 
+latencia, pérdida de datos, tiempos de carga de componentes 
+individuales... 
 
-Para una aplicación web, los detalles a medir incluyen: rendimiento (_throughput_), latencia, pérdida de datos, tiempos de carga de componentes individuales ...
+Nota 1: Todos los navegadores tienen una pestaña de rendimiento en su 
+sección de herramientas para desarrolladores (accesible presionando 
+F12) 
 
-Nota 1: Todos los navegadores tienen una pestaña de rendimiento en la sección de herramientas de desarrolladores (accesible presionando F12).
+Nota 2: es un subtipo de **_pruebas no funcionales_** ya que esto 
+generalmente se mide por sistema y no por función/funcionalidad. 
 
-Nota 2: es un subtipo de **_pruebas no funcionales_** ya que generalmente se mide por sistema y no por función / característica.
+### Pruebas de regresión 
+Esta prueba generalmente se realiza después 
+de un cambio, corrección o adición de funcionalidad. 
 
-### Pruebas de regresión
-Esta prueba generalmente se realiza después de un cambio, corrección o adición de características.
+Para garantizar que el cambio no ha roto ninguna de las funcionalidades 
+existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.  
+El conjunto de pruebas ejecutadas nuevamente puede ser total o 
+parcial, y puede incluir varios tipos diferentes, dependiendo del 
+equipo de desarrollo y la aplicación.  
 
-Para garantizar que el cambio no haya roto ninguna de las funciones existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.
-            
-El conjunto de pruebas ejecutadas de nuevo puede ser completo o parcial y puede incluir varios tipos diferentes, según la aplicación y el equipo de desarrollo.
+### Desarrollo guiado por pruebas (TDD) 
+En lugar de un tipo de prueba _per se_, TDD es una
+metodología iterativa de desarrollo en la que las pruebas guían el 
+diseño de una funcionalidad. 
 
-### Desarrollo guiado por pruebas (TDD)
-En lugar de un tipo de prueba per se, TDD es una metodología de desarrollo iterativa en la que las pruebas guían el diseño de una característica. Cada ciclo comienza creando un conjunto de pruebas unitarias que la característica debe pasar (que debe fallar la primera vez que se ejecuta).Después de esto, se lleva a cabo el desarrollo para que las pruebas pasen. Las pruebas se ejecutan nuevamente comenzando otro ciclo y este proceso continúa hasta que todas las pruebas hayan pasado.
+Cada ciclo comienza creando un conjunto de pruebas unitarias que la 
+funcionalidad debería pasar finalmente (deberían fallar la primera 
+vez que se ejecuta). 
 
-El objetivo es acelerar el desarrollo de una aplicación basada en el hecho de que los defectos son menos costosos cuanto antes se encuentran.
+Después de esto, se lleva a cabo el desarrollo para pasar las 
+pruebas. Las pruebas se ejecutan nuevamente, comenzando otro ciclo y 
+este proceso continúa hasta que todas las pruebas pasen. 
 
-### Desarrollo impulsado por el comportamiento (BDD)
-BDD es también una metodología de desarrollo iterativa basada en el anterior (TDD) en la que el objetivo es involucrar a todas las partes en el desarrollo de una aplicación.
+El objetivo es acelerar el desarrollo de una aplicación basado en el 
+hecho de que los defectos son menos costosos cuanto más antes se 
+encuentran. 
 
-Cada ciclo comienza creando alguna especificación (que debería fallar). Luego se crean las pruebas unitarias fallidas (que también deberían fallar) y luego se crea el desarrollo. Este ciclo se repite hasta que pase todo tipo de pruebas.
+### Desarrollo guiado por comportamiento (BDD) 
+BDD es también una metodología de desarrollo iterativo basado en 
+el TDD anterior, en el que el objetivo es involucrar todas las 
+partes en el desarrollo de una aplicación. 
 
-Para hacerlo, se utiliza un lenguaje de especificación. Debe ser entendible por todas las partes y simple, estándar y explícito. La mayoría de las herramientas usan **_Gherkin_** como este lenguaje.
+Cada ciclo comienza creando algunas especificaciones (que deberían 
+fallar). Luego creando las pruebas unitarias fallidas (que también deberían 
+fallar) y luego hacer el desarrollo. 
 
-El objetivo es ser capaz de detectar incluso más errores que TDD al enfocarse también en posibles errores de aceptación y hacer que la comunicación entre las partes sea más fluida.
+Este ciclo se repite hasta que pasan todos los tipos de pruebas. 
 
-Actualmente hay un conjunto de herramientas disponibles para escribir las especificaciones y combinarlas con funciones de código, como **_Cucumber_** o **_SpecFlow_**.
+Para realizar esto, se usa un lenguaje de especificación. Debe ser 
+simple y entendible por todas las partes, estándar y explícito. La 
+mayoría de las herramientas usan **_Gherkin_** como este 
+lenguaje. 
 
-Se ha creado un conjunto de herramientas sobre Selenium para que este proceso sea aún más rápido al transformar directamente las especificaciones de BDD en código ejecutable. Algunos de estos son: **_JBehave, Capybara y Robot Framework_**.
+El objetivo es poder detectar aún más errores que TDD, apuntando 
+también a posibles errores de aceptación y a facilitar la comunicación 
+entre las partes. 
 
+Actualmente hay un conjunto de herramientas disponibles para 
+escribir las especificaciones y relacionarlas con funciones de 
+código, como **Cucumber** o **_SpecFlow._** 
+
+Un conjunto de herramientas se han construido encima de Selenium para realizar 
+este proceso aún más rápido al transformar directamente las 
+especificaciones de BDD en código ejecutable. Algunas de estas son
+ **_JBehave, Capybara y Robot Framework_**.

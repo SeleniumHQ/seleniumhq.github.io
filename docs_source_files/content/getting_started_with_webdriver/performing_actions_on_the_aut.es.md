@@ -1,10 +1,10 @@
 ---
-title: "Ejecutando acciones en la AUT*"
+title: "Ejecutando acciones en el AUT*"
 weight: 4
 ---
 
-
-Puede establecer el texto de un elemento utilizando el método sendKeys de la siguiente manera:
+Puede especificar el texto de un elemento utilizando el método 
+sendKeys de la siguiente manera:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -33,7 +33,9 @@ driver.findElement(By.name("name")).sendKeys(name)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Algunas aplicaciones web usan bibliotecas JavaScript para agregar la funcionalidad de arrastrar y soltar. El siguiente es un ejemplo básico de arrastrar un elemento a otro elemento:
+Algunas aplicaciones web utilizan librerías de JavaScript para agregar
+la funcionalidad de arrastrar y soltar. El siguiente es un ejemplo 
+básico de arrastrar un elemento hacia otro elemento:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -69,9 +71,9 @@ Actions(driver).dragAndDrop(source, target).build().perform()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Al hacer clic en un elemento
+### Haciendo clic en un elemento
 
-Puede hacer clic en un elemento utilizando el método de clic:
+Puedes hacer clic en un elemento utilizando el método click:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -94,4 +96,4 @@ driver.findElement(By.cssSelector("input[type='submit']")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-***AUT**: Aplicación bajo pruebas (Application under test en inglés)
+***AUT**: Application Under Test (Aplicación bajo prueba)

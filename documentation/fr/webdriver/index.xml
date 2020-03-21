@@ -27,9 +27,8 @@ Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
+L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>
@@ -48,8 +47,8 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&amp;rsquo;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
+De l&amp;rsquo;expérience, la plupart des intermittents résultant de l&amp;rsquo;utilisation de Selenium et de WebDriver sont liés aux conditions de concurrence qui se produisent entre le navigateur et les instructions de l&amp;rsquo;utilisateur.</description>
     </item>
     
     <item>
@@ -80,8 +79,9 @@ Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/http_proxies/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- </description>
+      <description>Un serveur proxy sert d&amp;rsquo;intermédiaire pour les demandes entre un client et un serveur. En toute simplicité, le trafic circule via le serveur proxy en route vers l&amp;rsquo;adresse vous avez demandé et retour.
+Un serveur proxy pour les scripts d&amp;rsquo;automatisation avec Le Selenium pourrait être utile pour:
+ Capturez le trafic réseau Mock backend calls made by the website Accéder au site Web demandé sous un réseau complexe topologies ou restrictions / politiques d&amp;rsquo;entreprise strictes.</description>
     </item>
     
     <item>
@@ -90,9 +90,8 @@ Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:</description>
+      <description>Définit la stratégie de chargement des pages de la session en cours. Par défaut, lorsque Selenium WebDriver charge une page, il suit le normal pageLoadStrategy. Il est toujours recommandé d&amp;rsquo;arrêter le téléchargement de ressources (comme les images, css, js) lorsque le chargement de la page prend beaucoup de temps.
+La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.</description>
     </item>
     
     <item>

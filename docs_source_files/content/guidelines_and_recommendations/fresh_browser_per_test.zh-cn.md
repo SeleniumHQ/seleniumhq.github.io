@@ -1,18 +1,13 @@
 ---
-title: "Fresh browser per test"
+title: "每次测试都刷新浏览器"
 weight: 9
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-Start each test from a clean known state.
-Ideally, spin up a new virtual machine for each test.
-If spinning up a new virtual machine is not practical,
-at least start a new WebDriver for each test.
-For Firefox, start a WebDriver with your known profile.
+每次测试都从一个干净的已知状态开始. 
+理想情况下, 为每次测试打开一个新的虚拟机. 
+如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 
+对于Firefox, 请使用您已知的配置文件去启动WebDriver.
 
 ```java
 FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));

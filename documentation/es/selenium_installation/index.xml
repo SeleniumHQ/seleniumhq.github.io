@@ -12,24 +12,24 @@
     
     
     <item>
-      <title>Instalación de las librerías Selenium</title>
+      <title>Instalando las librerías de Selenium</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.
-Java La instalación de las bibliotecas Selenium para Java se puede hacer usando Maven. Agregue la dependencia selenium-java en el archivo pom.xml de su proyecto:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dependencia de selenium-java admite la ejecución de su proyecto de automatización con todos los navegadores compatibles con Selenium.</description>
+      <description>Primero debes instalar las librerías de enlace Selenium para tu proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elijas usar.
+Java La instalación de las librerías Selenium para Java se puede hacer usando Maven. Agrega la dependencia de selenium-java en el pom.xml de tu proyecto:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dependencia selenium-java permite la ejecución de tu proyecto de automatización en todos los navegadores compatibles con Selenium.</description>
     </item>
     
     <item>
-      <title>Instalación de las librerías WebDriver</title>
+      <title>Instalando los binarios de WebDriver</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Para ejecutar su proyecto y controlar el navegador, debe tener instalados los binarios de WebDriver específicos del navegador.
-Descargue el binario del WebDriver compatible con su navegador y colóquelo en el RUTA o PATH del sistema.</description>
+      <description>Para ejecutar tu proyecto y controlar el navegador, debes tener instalados los binarios de WebDriver específicos para el navegador.
+Descarga el binario de WebDriver soportado por tu navegador y colócalo en el PATH del sistema.</description>
     </item>
     
     <item>

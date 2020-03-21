@@ -17,8 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>En algunas ocasiones es posible que sea necesario querer validar el color de algo como parte de tus tests; el problema es que las definiciones de color en la web no son constantes. ¿No estaría bien que existiese una forma sencilla de comparar una representación de color HEX con una representación de color RGB, o una representación de color RGBA con una representación de color HSLA?
+No te preocupes. Hay una solución para esto, la clase Color</description>
     </item>
     
     <item>
@@ -27,21 +27,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>A la hora de seleccionar elementos puede ser necesario código repetitivo para poder ser automatizado. Para reducir esto y hacer tus test mas limpios, existe un clase Select en los paquetes de soporte de Selenium. Para usarla, necesitarás importarla de la siguiente forma:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR    import org.</description>
     </item>
     
     <item>
-      <title>Acciones del mouse en detalle</title>
+      <title>Acciones del ratón en detalle</title>
       <link>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>El ratón representa eventos del ratón. Las acciones del ratón son realizadas a través de una interfaz de bajo nivel la cual nos permite introducir acciones de dispositivos virtualizados al navegador web.
+clickAndHold Moverá el ratón al elemento y hará clic (sin soltar) en medio del elemento dado.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navega a la URL  driver.</description>
     </item>
     
     <item>

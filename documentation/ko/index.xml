@@ -93,7 +93,8 @@ Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로
       
       <guid>https://selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- pageLoadStrategy When navigating to a new page via URL, by default Selenium will wait until the page has fully loaded before responding. This works well for beginners, but can cause long wait times on pages that load a large number of third party resources. Using a non default strategy can make test execution faster in cases like this, but can also introduce flakiness where elements on the page change position as elements load in and change size.</description>
+ In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description>
     </item>
     
     <item>
@@ -119,6 +120,17 @@ Terminology  API: Application Programming Interface.</description>
     </item>
     
     <item>
+      <title>빠르게 살펴보기</title>
+      <link>https://selenium.dev/documentation/ko/getting_started/quick/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/getting_started/quick/</guid>
+      <description>셀레니움은 그저 하나의 도구(tool)나 API가 아니라, 여러 도구들로 구성되어 있습니다.
+웹 드라이버(WebDriver) 컴퓨터나 모바일 웹사이트 테스트를 자동화하는 것부터 시작하신다면, 아마 웹 드라이버 APIs부터 쓰게 될 겁니다. 웹 드라이버WebDriver 는 브라우저를 조종하고 테스트를 진행할 수 있도록 제작사에서 제공하는 브라우저 자동화 API들을 사용합니다. 이는 진짜 사용자가 브라우저를 이용하는 것과 비슷합니다. 웹 드라이버 API를 애플리케이션의 코드로 컴파일할 필요가 없기 때문에, 뒤섞이지 않습니다(not intrusive). 더 나아가, 실시간으로 사용하는 것과 같은 애플리케이션을 테스트합니다.
+통합개발환경 (IDE) IDE (통합개발환경 Integrated Development Environment) 은 자신만의 셀레니움 테스트 케이스를 개발하기 위해 사용할 도구입니다.</description>
+    </item>
+    
+    <item>
       <title>자동화 튜링 테스트</title>
       <link>https://selenium.dev/documentation/ko/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -126,17 +138,6 @@ Terminology  API: Application Programming Interface.</description>
       <guid>https://selenium.dev/documentation/ko/worst_practices/captchas/</guid>
       <description>캡차(CAPTCHA)는 컴퓨터와 인간을 구분하기 위한 완전 자동화된 공공 튜링 테스트(Completely Automated Public Turing Test to telling Computer and Humans addition)의 줄임말로, 자동화를 방지하도록 명시되어 있으므로 시도하지 마시오! CAPTCHA 검사를 수행하기 위한 두 가지 주요 전략이 있다.
  테스트 환경에서 CAPTCHA 비활성화 테스트가 CAPTCHA를 우회할 수 있도록 후크 추가  </description>
-    </item>
-    
-    <item>
-      <title>퀵 투어</title>
-      <link>https://selenium.dev/documentation/ko/getting_started/quick/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/ko/getting_started/quick/</guid>
-      <description>Selenium는 하나의 툴이나 API가 아닌 여러 툴로 구성되어있습니다.
-WebDriver 만약 여러분이 데스크탑 웹사이트 테스트 자동화를 통해 시작한다면 WebDriver API들을 사용하게 될 것입니다. WebDriver 는 브라우저 공급자가 제공하는 브라우저 자동화 API를 사용하여 브라우저를 제어하고 테스트합니다. 이는 실제 사용자가 브라우저를 작동하는 것과 같습니다. WebDriver는 API를 애플리케이션 코드로 컴파일할 필요가 없기 때문에, 기존의 것을 거스르지 않습니다. 따라서, 실시간으로 진행하는 것과 동일한 애플리케이션을 테스트하는 것입니다.
-IDE IDE (Integrated Development Environment) 는 Selenium 여러분의 테스트 케이스를 개발하기 위한 도구입니다.</description>
     </item>
     
     <item>
@@ -167,7 +168,7 @@ Your users, in general, do not care how your site looks.</description>
       
       <guid>https://selenium.dev/documentation/ko/webdriver/driver_requirements/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
     </item>
     
@@ -343,8 +344,7 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       
       <guid>https://selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
     </item>
     
     <item>
@@ -523,8 +523,9 @@ Add Cookie It is used to add a cookie to the current browsing context.</descript
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/webdriver/http_proxies/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- </description>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+A proxy server for automation scripts with Selenium could be helpful for:</description>
     </item>
     
     <item>
@@ -566,7 +567,7 @@ curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사
       <guid>https://selenium.dev/documentation/ko/webdriver/page_loading_strategy/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:</description>
+The document.readyState property of a document describes the loading state of the current document.</description>
     </item>
     
     <item>

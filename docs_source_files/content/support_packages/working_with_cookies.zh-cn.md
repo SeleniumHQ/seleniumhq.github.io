@@ -1,29 +1,19 @@
 ---
-title: "Working with cookies"
+title: "同cookies一起工作"
 weight: 6
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Cookie是从网站发送并存储在您的计算机中的一小段数据. Cookies主要用于识别用户并加载存储的信息. 
 
-A cookie is a small piece of data that is sent from a website and stored in your computer. 
-Cookies are mostly used to recognise the user and load the stored information. 
+WebDriver API提供了一种使用内置的方法与Cookie进行交互: 
 
-WebDriver API provides a way to interact with cookies with built-in methods: 
+## 添加 Cookie
+这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. <a href="https://www.w3.org/TR/webdriver1/#cookies"> 这里 </a>
+是一个链接, 用于描述可接受的JSON键值的列表
 
-## Add Cookie
-It is used to add a cookie to the current browsing context. 
-Add Cookie only accepts a set of defined serializable JSON object. <a href="https://www.w3.org/TR/webdriver1/#cookies"> Here </a>
-is the link to the list of accepted JSON key values
-
-First of all, you need to be on the domain that the cookie will be
-valid for. If you are trying to preset cookies before
-you start interacting with a site and your homepage is large / takes a while to load
-an alternative is to find a smaller page on the site (typically the 404 page is small, 
-e.g. http://example.com/some404page)
+首先, 您需要位于有效Cookie的域上. 如果您在开始与网站进行交互之前尝试预设cookie, 并且您的首页很大或需要一段时间才能加载完毕, 则可以选择在网站上找到一个较小的页面 (通常404页很小, 
+例如 http://example.com/some404page)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -119,9 +109,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Named Cookie
+## 获取命名的 Cookie
 
-It returns the serialized cookie data matching with the cookie name among all associated cookies.
+此方法返回与cookie名称匹配的序列化cookie数据中所有关联的cookie.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -233,10 +223,9 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get All Cookies
+## 获取全部 Cookies
 
-It returns a ‘successful serialized cookie data’ for current browsing context. 
-If browser is no longer available it returns error. 
+此方法会针对当前访问上下文返回“成功的序列化cookie数据”. 如果浏览器不再可用, 则返回错误. 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -355,9 +344,9 @@ fun main() {
 {{< / code-tab >}}
 
 
-## Delete Cookie
+## 删除 Cookie
 
-It deletes the cookie data matching with the provided cookie name.
+此方法删除与提供的cookie名称匹配的cookie数据.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -489,9 +478,9 @@ fun main() {
 {{< / code-tab >}}
 
 
-## Delete All Cookies
+## 删除所有 Cookies
 
-It deletes all the cookies of the current browsing context.
+此方法删除当前访问上下文的所有cookie.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -598,5 +587,103 @@ fun main() {
         driver.quit()
     }
 }
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Same-Site Cookie Attribute
+
+It allows a user to instruct browsers to control whether cookies 
+are sent along with the request initiated by third party sites. 
+It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.
+
+Same-Site cookie attribute accepts two parameters as instructions
+
+## Strict:
+When the sameSite attribute is set as **Strict**, 
+the cookie will not be sent along with 
+requests initiated by third party websites.
+
+## Lax:
+When you set a cookie sameSite attribute to **Lax**, 
+the cookie will be sent along with the GET 
+request initiated by third party website.
+
+**Note**: **As of now this feature is landed in chrome(80+version) and works with Selenium 4 and later versions.**
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class cookieTest {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      driver.get("http://www.example.com");
+      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
+      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
+      driver.manage().addCookie(cookie);
+      driver.manage().addCookie(cookie1);
+      System.out.println(cookie.getSameSite());
+      System.out.println(cookie1.getSameSite());
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+ {{< code-panel language="python" >}}
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("http://www.example.com")
+# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
+driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
+cookie1 = driver.get_cookie('foo')
+cookie2 = driver.get_cookie('foo1')
+print cookie1
+print cookie2
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder} = require('selenium-webdriver');
+(async function example() {
+    let driver = new Builder()
+        .forBrowser('chrome')
+        .build();
+        
+    await driver.get('https://www.example.com');
+    
+    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
+    console.log(await driver.manage().getCookie('key'));
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("http://www.example.com")
+        val cookie = Cookie.Builder("key", "value").sameSite("Strict").build()
+        val cookie1 = Cookie.Builder("key", "value").sameSite("Lax").build()
+        driver.manage().addCookie(cookie)
+        driver.manage().addCookie(cookie1)
+        println(cookie.getSameSite())
+        println(cookie1.getSameSite())
+    } finally {
+        driver.quit()
+    }
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}

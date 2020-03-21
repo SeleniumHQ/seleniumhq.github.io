@@ -3,425 +3,432 @@ title: "Sobre automatización de pruebas"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Primero, pregúntate si realmente necesitas o no usar un navegador. Lo 
+más probable es que, en algún momento, si estás trabajando en una 
+aplicación web compleja, necesitarás abrir un navegador y realmente 
+probarlo. 
 
+Sin embargo, las pruebas funcionales de usuario final, como las 
+pruebas de Selenium son caras de ejecutar. Además, normalmente 
+requieren que una infraestructura considerable este disponible para 
+estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre 
+si lo que se quiere probar se puede hacer usando enfoques de prueba 
+más livianos como las pruebas unitarias o con un enfoque de bajo 
+nivel. 
 
-Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las
-probabilidades son buenas de que, en algún momento, si está trabajando en una
-aplicación web compleja, necesitará abrir un navegador y probarla.
+Una vez que hayas tomado la determinación de que estás en el negocio 
+de hacer pruebas en el navegador, y que tengas tu ambiente de 
+Selenium listo para empezar a escribir pruebas, generalmente 
+realizaras alguna combinación de estos tres pasos:
 
-Sin embargo, las pruebas funcionales de usuario final, como las pruebas de
-Selenium, son caras de ejecutar. Además, por lo general requieren una
-infraestructura sustancial para poder funcionar de manera efectiva. Es una
-buena regla preguntarse siempre si lo que desea probar se puede hacer
-utilizando enfoques de prueba más livianos, como pruebas unitarias o con un
-enfoque de nivel inferior.
-
-Una vez que haya tomado la determinación de que está en el negocio de las
-pruebas con un navegador web, y tenga su entorno Selenium listo para comenzar a
-escribir las pruebas, generalmente realizará una combinación de tres pasos:
-
-* Configurar los datos
+* Preparar los datos
 * Realizar un conjunto discreto de acciones
 * Evaluar los resultados
 
-Deberá mantener estos pasos lo más cortos posible; una o dos operaciones
-deberían ser suficientes la mayor parte del tiempo. La automatización del
-navegador tiene la reputación de ser "inestable", pero en realidad eso se debe
-a que los usuarios suelen exigir demasiado. En capítulos posteriores,
-volveremos a las técnicas que puede usar para mitigar aparentes problemas
-intermitentes en las pruebas, en particular sobre cómo [superar las condiciones
-de carrera]({{<ref "/webdriver/waits.es.md">}}) entre el navegador y
-WebDriver.
+Querrás mantener estos pasos tan cortos como sea posible; una o dos 
+operaciones deberían ser suficientes la mayor parte del tiempo. La 
+automatización del navegador tiene la reputación de ser "frágil", 
+pero en realidad, esto se debe a que los usuarios suelen exigirle 
+demasiado. En capítulos posteriores, volveremos a las técnicas que 
+puedes utilizar para mitigar problemas aparentemente intermitentes en 
+las pruebas, en particular como
+[superar race conditions]({{< ref "/webdriver/waits.es.md" >}}) entre el navegador y WebDriver.
 
-Al mantener sus pruebas cortas y usar el navegador web solo cuando no tiene
-absolutamente ninguna alternativa, puede realizar muchas pruebas con un minimo
-desgaste.
+Manteniendo tus pruebas cortas y usando el navegador web solo cuando
+no tienes absolutamente ninguna alternativa,
+Puedes tener muchas pruebas con fragilidades muy mínimas.
 
-Una ventaja distintiva de las pruebas de Selenium es su capacidad inherente
-para probar todos los componentes de la aplicación, desde el backend hasta el
-frontend, desde la perspectiva del usuario. En otras palabras, si bien las
-pruebas funcionales pueden ser costosas de ejecutar, también abarcan grandes
-porciones críticas para el negocio al mismo tiempo.
-
-
-### Requisitos de prueba
-
-Como se mencionó anteriormente, las pruebas de Selenium pueden ser costosas de
-ejecutar. Incluso depende del navegador con el que esté ejecutando las pruebas,
-pero históricamente el comportamiento de los navegadores ha variado tanto que a
-menudo ha sido un objetivo declarado realizar pruebas con múltiples navegadores
-(_cross browser_).
-
-Selenium le permite ejecutar las mismas instrucciones en múltiples navegadores
-y en múltiples sistemas operativos, pero la enumeración de todos los
-navegadores posibles, sus diferentes versiones y los muchos sistemas operativos
-en los que se ejecutan se le convertirá rápidamente en una tarea compleja.
+Una clara ventaja de las pruebas de Selenium es su capacidad 
+inherente para probar todos los componentes de la aplicación, desde 
+el backend hasta el frontend, desde la perspectiva del usuario. En 
+otras palabras, aunque las pruebas funcionales pueden ser caras de 
+ejecutar, también abarcan a la vez grandes porciones críticas para el 
+negocio.
 
 
-### Comencemos con un ejemplo
+### Requisitos de pruebas
 
-Larry ha escrito un sitio web que permite a los usuarios ordenar sus propios 
-unicornios personalizados.
+Como se mencionó anteriormente, las pruebas de Selenium pueden ser 
+costosas de ejecutar. Hasta qué punto, dependerá del navegador en el 
+que estás ejecutando las pruebas, pero históricamente el 
+comportamiento de los navegadores ha variado tanto que a menudo ha 
+sido un objetivo claro realizar pruebas cruzadas contra múltiples 
+navegadores. 
 
-El flujo de trabajo general (lo que llamaremos el "camino feliz") es algo como esto:
+Selenium te permite ejecutar las mismas instrucciones en múltiples 
+navegadores en múltiples sistemas operativos, pero la enumeración de 
+todos los navegadores posibles, sus diferentes versiones y los muchos 
+sistemas operativos en los que se ejecutan se convertirá rápidamente 
+en una misión no trivial.
+
+
+### Iniciemos con un ejemplo
+
+Larry ha escrito un sitio web que le permite a los usuarios ordenar 
+unicornios personalizados. 
+
+El flujo de trabajo principal (que llamaremos el "camino feliz") es 
+algo como esto: 
 
 * Crea una cuenta
-* Configurar tu unicornio
+* Configura el unicornio
 * Agrégalo al carrito de compras
-* Echa un vistazo y paga
-* Dar comentarios sobre tu unicornio
+* Envialo a caja y realiza el pago
+* Dar feedback sobre el unicornio
 
+Sería tentador escribir un gran script de Selenium para realizar 
+todas estas operaciones, muchos lo intentarán. **¡Resiste la 
+tentación!** Hacerlo dará como resultado una prueba que a) toma mucho 
+tiempo, b) estará sujeta a algunos problemas comunes relacionados con 
+los problemas de tiempo de representación de la página, y c) es tal 
+que si falla, no te dará un método conciso y "fácil de ver" para 
+diagnosticar lo que salió mal.
 
-Sería tentador escribir un gran script Selenium para realizar todas estas operaciones, 
-muchos lo intentarán.
-**¡Resista la tentación!**
-Hacerlo dará como resultado una prueba que
-a) lleva mucho tiempo,
-b) estará sujeto a algunos problemas comunes relacionados con los problemas de tiempo de renderizado de la página, y
-c) es tal que si falla, no le dará un método conciso y "fácil de ver" para diagnosticar lo que salió mal.
+La estrategia preferida para probar este escenario sería dividirlo en 
+una serie de pruebas rápidas e independientes, cada una de las cuales 
+tenga una "razón" para existir. 
 
-La estrategia preferida para probar este escenario sería dividirlo en una serie
-de pruebas rápidas e independientes, cada una de las cuales tiene una "razón"
-para existir.
-
-Supongamos que quieres probar el segundo paso:
-Configurando tu unicornio.
-Deberá realizar las siguientes acciones:
+Supongamos que deseas probar el segundo paso: Configurando tu 
+unicornio. Realizará las siguientes acciones:
 
 * Crea una cuenta
-* Configurar un unicornio
+* Configura el unicornio
 
-Tenga en cuenta que estamos omitiendo el resto de estos pasos, probaremos el
-resto del flujo de trabajo en otros casos de prueba pequeños y discretos, una
-vez que hayamos terminado con este.
+Ten en cuenta que nos estamos saltando el resto de los pasos, 
+probaremos el resto del flujo en otros casos de prueba pequeños y 
+discretos, después de que hayamos terminado con este. 
 
-Para comenzar, debe crear una cuenta. Aquí tienes algunas opciones a resolver:
+Para comenzar, debes crear una cuenta. Aquí tienes que tomar algunas 
+decisiones:
 
 * ¿Quieres usar una cuenta existente?
 * ¿Quieres crear una nueva cuenta?
-* ¿Hay alguna propiedad especial de dicho usuario que deba tenerse en cuenta antes de que comience la configuración?
+* ¿Hay alguna propiedad especial de dicho usuario que deba ser
+  tomado en cuenta antes de que comience la configuración?
 
-Independientemente de cómo responda estas preguntas, la solución es hacer que
-forme parte del flujo de "configurar los datos" de la prueba –si Larry ha
-expuesto una API que le permite a usted (o cualquier persona) crear y
-actualizar cuentas de usuario, asegúrese de usarla para responder esta
-situación– si es posible, lo deseable es iniciar el navegador solo después de
-tener un usuario disponible, cuyas credenciales le permitan iniciar sesión.
+Independientemente de cómo respondas esta pregunta, la solución es 
+hacer que forme parte del paso de "preparar los datos" de la prueba. Si 
+Larry ha expuesto una API que te permite a ti (o cualquier persona) crear 
+y actualizar cuentas de usuario, asegúrate de usar eso para responder 
+esta pregunta. Si es posible, debes iniciar el navegador solo después 
+de tener un usuario "en la mano", cuyas credenciales pueden iniciar 
+sesión. 
 
-Si cada prueba para cada flujo de trabajo comienza con la creación de una
-cuenta de usuario, se agregarán muchos segundos a la ejecución de cada prueba.
-Llamar a una API y hablar con una base de datos son operaciones rápidas y sin
-interfaz gráfica (_headless_) que no requieren el costoso proceso de abrir un
-navegador, navegar a las páginas correctas, hacer clic y esperar a que se
-envíen los formularios, etc.
+Si cada prueba para cada flujo de trabajo comienza con la creación de 
+una cuenta de usuario, se agregarán muchos segundos a la ejecución de 
+cada prueba. Llamar a una API y hablar con una base de datos son 
+operaciones "sin cabeza" rápidas, que no requieren el costoso proceso 
+de abrir un navegador, navegar a las páginas correctas, hacer clic y 
+esperar que se envíen los formularios, etc. 
 
-Idealmente, puede abordar esta fase de configuración en una línea de código,
-que se ejecutará antes de que se inicie cualquier navegador:
-
-
+Idealmente, puedes abordar esta fase de configuración en una sola 
+línea de código, que se ejecutará antes de que se inicie cualquier 
+navegador: 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Cree un usuario que tenga permisos de solo lectura: puede configurar un unicornio,
+// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
 // pero no tienen configurada la información de pago, ni tienen
-// privilegios administrativos. En el momento en que se cree el usuario, su correo electrónico
-// la dirección y la contraseña se generan aleatoriamente; ni siquiera necesita
+// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
 // conocerlos.
-User user = UserFactory.createCommonUser(); // Este método se define en otra parte.
+User user = UserFactory.createCommonUser(); //Este método se define en otro lugar.
 
-// Inicie sesión como este usuario.
-// Iniciar sesión en este sitio lo lleva a su página personal "Mi cuenta", por lo que
-// El método loginAs devuelve el objeto AccountPage, lo que le permite
-// realiza acciones desde AccountPage.
+// Inicia sesión como este usuario.
+// Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+// el método loginAs devuelve el objeto AccountPage, lo que le permite
+// realizar acciones de AccountPage.
 AccountPage accountPage = loginAs(user.getEmail(), user.getPassword());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Cree un usuario que tenga permisos de solo lectura: puede configurar un unicornio,
+# Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
 # pero no tienen configurada la información de pago, ni tienen
-# Privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
-# la dirección y la contraseña se generan aleatoriamente; ni siquiera necesita
+# privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+# la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
 # conocerlos.
-user = user_factory.create_common_user() #Este método se define en otra parte.
+user = user_factory.create_common_user() #Este método se define en otro lugar.
 
-# Inicie sesión como este usuario.
-# Iniciar sesión en este sitio lo lleva a su página personal "Mi cuenta", por lo que
-# El objeto loginAs devuelve el objeto AccountPage, lo que le permite
-# realizar acciones desde la página de cuenta.
+# Inicia sesión como este usuario.
+# Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+# el método loginAs devuelve el objeto AccountPage, lo que le permite
+# realizar acciones de AccountPage
 account_page = login_as(user.get_email(), user.get_password())
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Create a user who has read-only permissions--they can configure a unicorn,
-// but they do not have payment information set up, nor do they have
-// administrative privileges. At the time the user is created, its email
-// address and password are randomly generated--you don't even need to
-// know them.
-User user = UserFactory.CreateCommonUser(); //This method is defined elsewhere.
+// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+// pero no tienen configurada la información de pago, ni tienen
+// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+// conocerlos.
+User user = UserFactory.CreateCommonUser(); //Este método se define en otro lugar.
 
-// Log in as this user.
-// Logging in on this site takes you to your personal "My Account" page, so the
-// AccountPage object is returned by the loginAs method, allowing you to then
-// perform actions from the AccountPage.
+// Inicia sesión como este usuario.
+// Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+// el método loginAs devuelve el objeto AccountPage, lo que le permite
+// realizar acciones de AccountPage.
 AccountPage accountPage = LoginAs(user.Email, user.Password);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Cree un usuario que tenga permisos de solo lectura: puede configurar un unicornio,
+# Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
 # pero no tienen configurada la información de pago, ni tienen
-# Privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
-# la dirección y la contraseña se generan aleatoriamente; ni siquiera necesita
+# privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+# la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
 # conocerlos.
-user = UserFactory.create_common_user #Este método se define en otra parte.
+user = UserFactory.create_common_user #Este método se define en otro lugar.
 
-# Inicie sesión como este usuario.
-# Iniciar sesión en este sitio lo lleva a su página personal "Mi cuenta", por lo que
-# El objeto loginAs devuelve el objeto AccountPage, lo que le permite
-# realizar acciones desde la página de cuenta.
+# Inicia sesión como este usuario.
+# Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+# el método loginAs devuelve el objeto AccountPage, lo que le permite
+# realizar acciones de AccountPage
 account_page = login_as(user.email, user.password)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Create a user who has read-only permissions--they can configure a unicorn,
-// but they do not have payment information set up, nor do they have
-// administrative privileges. At the time the user is created, its email
-// address and password are randomly generated--you don't even need to
-// know them.
-var user = userFactory.createCommonUser(); //This method is defined elsewhere.
+// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+// pero no tienen configurada la información de pago, ni tienen
+// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+// conocerlos.
+var user = userFactory.createCommonUser(); //Este método se define en otro lugar.
 
-// Log in as this user.
-// Logging in on this site takes you to your personal "My Account" page, so the
-// AccountPage object is returned by the loginAs method, allowing you to then
-// perform actions from the AccountPage.
+// Inicia sesión como este usuario.
+// Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+// el método loginAs devuelve el objeto AccountPage, lo que le permite
+// realizar acciones de AccountPage.
 var accountPage = loginAs(user.email, user.password);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Create a user who has read-only permissions--they can configure a unicorn,
-// but they do not have payment information set up, nor do they have
-// administrative privileges. At the time the user is created, its email
-// address and password are randomly generated--you don't even need to
-// know them.
-val user = UserFactory.createCommonUser() //This method is defined elsewhere.
+// Crea un usuario que tenga permisos de solo lectura--ellos pueden configurar un unicornio,
+// pero no tienen configurada la información de pago, ni tienen
+// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
+// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
+// conocerlos.
+val user = UserFactory.createCommonUser() //Este método se define en otro lugar.
 
-// Log in as this user.
-// Logging in on this site takes you to your personal "My Account" page, so the
-// AccountPage object is returned by the loginAs method, allowing you to then
-// perform actions from the AccountPage.
+// Inicia sesión como este usuario.
+// Iniciar sesión en este sitio te lleva a tu página personal "Mi cuenta", por lo que
+// el método loginAs devuelve el objeto AccountPage, lo que le permite
+// realizar acciones de AccountPage.
 val accountPage = loginAs(user.getEmail(), user.getPassword())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Como se puede imaginar, la `UserFactory` se puede ampliar para proporcionar
-métodos como `createAdminUser()` y `createUserWithPayment()`. El punto es que
-estas dos líneas de código no le distraigan del objetivo final de esta prueba:
-configurar un unicornio.
+Como puedes imaginar, la `UserFactory` puede ampliarse para 
+proporcionar métodos como `createAdminUser()` y `createUserWithPayment()`. 
+El punto es, que estas dos líneas de código 
+no te distraigan del propósito final de esta prueba: configurar un 
+unicornio. 
 
-Las complejidades del [Modelo de objeto de página (_Page Object Model_)]({{<ref
-"/guidelines_and_recommendations/page_object_models.es.md">}}) se analizarán en
-capítulos posteriores, pero presentaremos el concepto aquí:
+Las complejidades del 
+[Modelo Page Object]({{< ref "/guidelines_and_recommendations/page_object_models.es.md" >}})
+serán discutidas en capítulos posteriores, pero introduciremos el concepto aquí:
 
-Sus pruebas deben estar compuestas de acciones, realizadas desde el punto de
-vista del usuario, dentro del contexto de las páginas del sitio. Estas páginas
-se almacenan como objetos, que contendrán información específica sobre cómo se
-compone la página web y cómo se realizan las acciones, muy poco de lo que
-debería preocuparte como _tester_.
+Tus pruebas deben estar compuestas de acciones, realizadas desde el 
+punto de vista del usuario, dentro del contexto de las páginas en el 
+sitio web. Estas páginas se almacenan como objetos, que contendrán 
+información específica sobre cómo está compuesta la página web y cómo 
+se realizan las acciones– muy poco de lo que cual debería preocuparte 
+como probador. 
 
-¿Qué tipo de unicornio quieres? Es posible que desee rosa, pero no
-necesariamente. El morado ha sido muy popular últimamente. ¿El necesita gafas
-de sol? ¿Tatuajes de estrellas? Estas elecciones, si bien son difíciles, son su
-principal preocupación como probador: debe asegurarse de que su centro de
-cumplimiento de pedidos envíe el unicornio correcto a la persona adecuada, y
-eso comienza con estas elecciones.
+¿Qué tipo de unicornio quieres? Es posible que desees rosa, pero no 
+necesariamente. El morado es muy popular últimamente. ¿Ella necesita 
+gafas de sol? ¿Tatuajes de estrellas? Estas elecciones, aunque 
+difíciles, son tu principal preocupación como probador: debes 
+asegurarte de que tu centro de distribución de pedidos envíe el 
+unicornio correcto a la persona correcta, y eso comienza con estas 
+elecciones. 
 
-Observe que en ninguna parte de ese párrafo hablamos de botones, campos, menús
-desplegables, botones de opción o formularios web.
-**¡Tampoco debería hacerlo sus pruebas!**
-Lo deseable es escribir el código como el usuario que intenta resolver su
-problema. Aquí hay una forma de hacerlo (continuando con el ejemplo anterior):
+Observa que en ninguna parte de este párrafo hablamos de botones, 
+campos, menús desplegables, botones de opción o formularios web. 
+**¡Tampoco deberían tus pruebas!** Debes escribir tu código como el 
+usuario que intenta resolver su problema. Aquí hay una forma de 
+hacerlo (continuando con el ejemplo anterior): 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// El Unicornio es un Objeto de nivel superior: tiene atributos, que se establecen aquí.
+// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
 // Esto solo almacena los valores; no llena ningún formulario web ni interactúa
-// con el navegador de cualquier manera.
+// con el navegador de ninguna manera.
 Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-// Como ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
-// lugar real donde configuras unicornios. Llamando al método "addUnicorn"
-// nos lleva allí.
+// Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+// lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+// nos llevará allí.
 AddUnicornPage addUnicornPage = accountPage.addUnicorn();
 
-// Ahora que estamos en AddUnicornPage, pasaremos el objeto "sparkles"
-// al método createUnicorn(). Este método tomará los atributos de Sparkles,
-// llena el formulario y hace clic en el botón enviar.
+// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+// completara el formulario y hará clic en enviar.
 UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# El Unicornio es un Objeto de nivel superior: tiene atributos, que se establecen aquí.
+# El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
 # Esto solo almacena los valores; no llena ningún formulario web ni interactúa
-# con el navegador de cualquier manera.
+# con el navegador de ninguna manera.
 sparkles = Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
 
-# Como ya estamos "en" la página de la cuenta, tenemos que usarla para acceder a
-# lugar real donde se configuran los unicornios. Llamando al método "addUnicorn"
-# nos lleva allí.
+# Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+# lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+# nos llevará allí.
 add_unicorn_page = account_page.add_unicorn()
 
-# Ahora que estamos en AddUnicornPage, pasaremos el objeto "sparkles" a
-# su método createUnicorn(). Este método tomará los atributos de Sparkles,
-# completará el formulario y haga clic en enviar.
+# Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+# su método createUnicorn(). Este método tomará los atributos de Sparkles
+# completara el formulario y hará clic en enviar.
 unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// The Unicorn is a top-level Object--it has attributes, which are set here. 
-// This only stores the values; it does not fill out any web forms or interact
-// with the browser in any way.
+// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+// con el navegador de ninguna manera.
 Unicorn sparkles = new Unicorn("Sparkles", UnicornColors.Purple, UnicornAccessories.Sunglasses, UnicornAdornments.StarTattoos);
 
-// Since we are already "on" the account page, we have to use it to get to the
-// actual place where you configure unicorns. Calling the "Add Unicorn" method
-// takes us there.
+// Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+// lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+// nos llevará allí.
 AddUnicornPage addUnicornPage = accountPage.AddUnicorn();
 
-// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
-// its createUnicorn() method. This method will take Sparkles' attributes,
-// fill out the form, and click submit.
+// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+// completara el formulario y hará clic en enviar.
 UnicornConfirmationPage unicornConfirmationPage = addUnicornPage.CreateUnicorn(sparkles);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# El Unicornio es un Objeto de nivel superior: tiene atributos, que se establecen aquí.
+# El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
 # Esto solo almacena los valores; no llena ningún formulario web ni interactúa
-# con el navegador de cualquier manera.
+# con el navegador de ninguna manera.
+sparkles = Unicorn("Sparkles", Unicor
 sparkles = Unicorn.new('Sparkles', UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
 
-# Como ya estamos "en" la página de la cuenta, tenemos que usarla para acceder a
-# lugar real donde se configuran los unicornios. Llamando al método "addUnicorn"
-# nos lleva allí.
+# Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+# lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+# nos llevará allí.
 add_unicorn_page = account_page.add_unicorn
 
-# Ahora que estamos en AddUnicornPage, pasaremos el objeto "sparkles" a
-# su método createUnicorn(). Este método tomará los atributos de Sparkles,
-# completará el formulario y haga clic en enviar.
+# Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+# su método createUnicorn(). Este método tomará los atributos de Sparkles
+# completara el formulario y hará clic en enviar.
 unicorn_confirmation_page = add_unicorn_page.create_unicorn(sparkles)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// The Unicorn is a top-level Object--it has attributes, which are set here.
-// This only stores the values; it does not fill out any web forms or interact
-// with the browser in any way.
+// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+// con el navegador de ninguna manera.
 var sparkles = new Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
 
-// Since we are already "on" the account page, we have to use it to get to the
-// actual place where you configure unicorns. Calling the "Add Unicorn" method
-// takes us there.
-
+// Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+// lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+// nos llevará allí.
 var addUnicornPage = accountPage.addUnicorn();
 
-// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
-// its createUnicorn() method. This method will take Sparkles' attributes,
-// fill out the form, and click submit.
+// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+// completara el formulario y hará clic en enviar..
 var unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles);
 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// The Unicorn is a top-level Object--it has attributes, which are set here. 
-// This only stores the values; it does not fill out any web forms or interact
-// with the browser in any way.
+// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
+// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
+// con el navegador de ninguna manera.
 val sparkles = Unicorn("Sparkles", UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS)
 
-// Since we are already "on" the account page, we have to use it to get to the
-// actual place where you configure unicorns. Calling the "Add Unicorn" method
-// takes us there.
+// Dado que ya estamos "en" la página de la cuenta, tenemos que usarla para acceder al
+// lugar especifico donde configuras unicornios. Llamar al método "Agregar unicornio"
+// nos llevará allí..
 val addUnicornPage = accountPage.addUnicorn()
 
-// Now that we're on the AddUnicornPage, we will pass the "sparkles" object to
-// its createUnicorn() method. This method will take Sparkles' attributes,
-// fill out the form, and click submit.
+// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto "sparkles" a
+// su método createUnicorn(). Este método tomará los atributos de Sparkles,
+// completara el formulario y hará clic en enviar.
 unicornConfirmationPage = addUnicornPage.createUnicorn(sparkles)
 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Ahora que ha configurado su unicornio, debe continuar al paso 3: asegurarse de que realmente funcionó.
+Ahora que has configurado tu unicornio,
+debes avanzar al paso 3: asegurarte de que realmente funcionó.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// El método exist() de UnicornConfirmationPage tomará Sparkles
-// objeto: una especificación de los atributos que desea ver y compararlos
+// El método exist() de UnicornConfirmationPage tomará el objeto
+// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
 // con los campos en la página.
-Assert.assertTrue("Deben haberse creado Sparkles, con todos los atributos intactos.", unicornConfirmationPage.exists(sparkles));
+Assert.assertTrue("Sparkles debe haberse creado, con todos los atributos intactos", unicornConfirmationPage.exists(sparkles));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# El método exist() de UnicornConfirmationPage tomará Sparkles
-# objeto: una especificación de los atributos que desea ver y compararlos
+# El método exist() de UnicornConfirmationPage tomará el objeto
+# Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
 # con los campos en la página.
-assert unicorn_confirmation_page.exists(sparkles), "Sparkles should have been created, with all attributes intact"
+assert unicorn_confirmation_page.exists(sparkles), "Sparkles debe haberse creado, con todos los atributos intactos"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// The exists() method from UnicornConfirmationPage will take the Sparkles 
-// object--a specification of the attributes you want to see, and compare
-// them with the fields on the page.
-Assert.True(unicornConfirmationPage.Exists(sparkles), "Sparkles should have been created, with all attributes intact");
+// El método exist() de UnicornConfirmationPage tomará el objeto
+// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+// con los campos en la página.
+Assert.True(unicornConfirmationPage.Exists(sparkles), "Sparkles debe haberse creado, con todos los atributos intactos");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# El método exist() de UnicornConfirmationPage tomará Sparkles
-# objeto: una especificación de los atributos que desea ver y compararlos
+# El método exist() de UnicornConfirmationPage tomará el objeto
+# Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
 # con los campos en la página.
-expect(unicorn_confirmation_page.exists?(sparkles)).to be, 'Sparkles should have been created, with all attributes intact'
+expect(unicorn_confirmation_page.exists?(sparkles)).to be, 'Sparkles debe haberse creado, con todos los atributos intactos'
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// The exists() method from UnicornConfirmationPage will take the Sparkles
-// object--a specification of the attributes you want to see, and compare
-// them with the fields on the page.
-assert(unicornConfirmationPage.exists(sparkles), "Sparkles should have been created, with all attributes intact");
+// El método exist() de UnicornConfirmationPage tomará el objeto
+// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+// con los campos en la página.
+assert(unicornConfirmationPage.exists(sparkles), "Sparkles debe haberse creado, con todos los atributos intactos");
 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// The exists() method from UnicornConfirmationPage will take the Sparkles 
-// object--a specification of the attributes you want to see, and compare
-// them with the fields on the page.
-assertTrue("Sparkles should have been created, with all attributes intact", unicornConfirmationPage.exists(sparkles))
+// El método exist() de UnicornConfirmationPage tomará el objeto
+// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
+// con los campos en la página.
+assertTrue("Sparkles debe haberse creado, con todos los atributos intactos", unicornConfirmationPage.exists(sparkles))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Tenga en cuenta que el _tester_ aún no ha hecho nada más que hablar de
-unicornios en este código, sin botones, sin localizadores, sin controles del
-navegador.
-Este método de "modelado" de la aplicación le permite mantener estos comandos
-de nivel de prueba en su lugar y sin cambios, incluso si Larry decide la
-próxima semana que ya no le gusta Ruby-on-Rails y decide volver a implementar
-todo el sitio con las librerías más recientes de Haskell y con un front-end en
-Fortran.
+Ten en cuenta que el probador aún no ha hecho nada más que hablar de 
+unicornios en este código-- nada de botones, nada de localizadores, 
+nada de controles del navegador. Este método de _modelar_ la 
+aplicación te permite mantener estos comandos de nivel-de-prueba en 
+su lugar y sin cambios, incluso si Larry decide la próxima semana que 
+ya no le gusta Ruby-on-Rails y decide volver a implementar todo el 
+sitio en las últimas librerías de enlace de Haskell con un front-end de Fortran. 
 
-Los objetos de su página requerirán un pequeño mantenimiento para cumplir con
-el rediseño del sitio, pero estas pruebas seguirán siendo las mismas. Tomando
-este diseño básico, querrá continuar con sus flujos de trabajo con la menor
-cantidad posible de pasos orientados hacia el navegador. Su próximo flujo de
-trabajo implicará agregar un unicornio al carrito de compras. Probablemente
-requeriá muchas iteraciones de esta prueba para asegurarse de que el carrito
-mantenga su estado correctamente:
-¿Hay más de un unicornio en el carrito antes de comenzar?
-¿Cuántos pueden caber en el carrito de compras?
-Si crea más de uno con el mismo nombre o características, ¿se romperá?
-¿Conservará solo el existente o agregará otro?
+Los objetos de tu página requerirán un pequeño mantenimiento para 
+poder cumplir con el rediseño del sitio, pero estas pruebas seguirán 
+siendo iguales. Tomando este diseño básico, querrás continuar con tus 
+flujos de trabajo con la menor cantidad posible de pasos orientados 
+al navegador. Tu próximo flujo de trabajo implicará agregar un 
+unicornio al carrito de compras. Probablemente querrás muchas 
+iteraciones de esta prueba para asegurarte de que el carrito mantiene 
+su estado correctamente: ¿Hay más de un unicornio en el carrito antes 
+de comenzar? ¿Cuántos pueden caber en el carrito de compras? Si crea 
+más de uno con el mismo nombre y/o características, ¿se romperá? 
+¿Conservará solo el existente o agregará otro? 
 
-Cada vez que se mueva por el flujo de trabajo, debe intentar evitar tener que
-crear una cuenta, iniciar sesión como usuario y configurar el unicornio.
-Idealmente, podrá crear una cuenta y preconfigurar un unicornio a través de la
-API o la base de datos. Luego, todo lo que tiene que hacer es iniciar sesión
-como usuario, localizar Sparkles y agregarla al carrito.
+Cada vez que te mueves por el flujo de trabajo, deseas evitar tener 
+que crear una cuenta, iniciar sesión como usuario y configurar el 
+unicornio. Idealmente, podrás crear una cuenta y preconfigurar un 
+unicornio a través de la API o de la base de datos. Luego, todo lo 
+que tienes que hacer es iniciar sesión como usuario, ubicar Sparkles, 
+y agrégarla al carrito. 
 
 
-### To automate or not to automate?
+### ¿Automatizar o no automatizar?
 
-Is automation always advantageous? When should one decide to automate test
-cases?
+Es la automatización siempre ventajosa? Cuando uno debería decidir 
+automatizar casos de prueba? 
 
-It is not always advantageous to automate test cases. There are times when
-manual testing may be more appropriate. For instance, if the application’s user
-interface will change considerably in the near future, then any automation
-might need to be rewritten anyway. Also, sometimes there simply is not enough
-time to build test automation. For the short term, manual testing may be more
-effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing get done within
-that time frame, then manual testing is the best solution.
+No siempre es ventajoso automatizar casos de prueba. Hay veces que 
+las pruebas manuales pueden ser mas apropiadas. Por ejemplo, si la 
+interface de usuario de la aplicación va a cambiar considerablemente 
+en el futuro, entonces no habria que reescribir ninguna 
+automatizacion. Tambien, algunas veces simplemente no hay tiempo 
+suficiente para construir la automatización de las pruebas. A corto 
+plazo, las pruebas manuales pueden ser mas efectivas. Si una 
+aplicación tiene una fecha limite muy ajustada, actualmente no hay 
+ningún tipo de automatización de pruebas, y es imperativo que las 
+pruebas se realicen dentro de la fecha limite, entonces las pruebas es la 
+mejor solución.

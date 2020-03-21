@@ -12,13 +12,13 @@
     
     
     <item>
-      <title>El proyecto Selenium y herramientas</title>
+      <title>El proyecto Selenium y sus herramientas</title>
       <link>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/</guid>
-      <description>Selenium controla navegadores web Selenium es muchas cosas, pero en esencia es un conjunto de herramientas para la automatización del navegador web que utiliza las mejores técnicas disponibles para controlar de forma remota las instancias del navegador y emular la interacción de un usuario con el navegador.
-Permite a los testers simular actividades comunes realizadas por los usuarios finales; ingresar texto en los campos, seleccionar valores desplegables y casillas de verificación, y hacer clic en los enlaces de los documentos.</description>
+      <description>Selenium controla los navegadores web Selenium significa muchas cosas pero en su núcleo, es un conjunto de herramientas para la automatización de navegadores web que utiliza las mejores técnicas disponibles para controlar remotamente las instancias de los navegadores y emular la interacción del usuario con el navegador.
+Permite a los usuarios simular interacciones básicas realizadas por los usuarios finales; insertando texto en los campos, seleccionando valores de menús desplegables y casillas de verificación, y haciendo clics en los enlaces de los documentos.</description>
     </item>
     
     <item>
@@ -27,9 +27,8 @@ Permite a los testers simular actividades comunes realizadas por los usuarios fi
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Antes que nada, pregúntese si realmente necesita o no usar un navegador. Las probabilidades son buenas de que, en algún momento, si está trabajando en una aplicación web compleja, necesitará abrir un navegador y probarla.
-Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium, son caras de ejecutar.</description>
+      <description>Primero, pregúntate si realmente necesitas o no usar un navegador. Lo más probable es que, en algún momento, si estás trabajando en una aplicación web compleja, necesitarás abrir un navegador y realmente probarlo.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium son caras de ejecutar. Además, normalmente requieren que una infraestructura considerable este disponible para estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre si lo que se quiere probar se puede hacer usando enfoques de prueba más livianos como las pruebas unitarias o con un enfoque de bajo nivel.</description>
     </item>
     
     <item>
@@ -38,8 +37,8 @@ Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
-      <description>Prueba de aceptación Este tipo de prueba se realiza para determinar si la característica de un producto cumple con sus requisitos. Esto generalmente implica la retroalimentación o especificación del cliente.
-Para aplicaciones web, la automatización de este tipo de prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario. Esta simulación se puede realizar mediante grabación / reproducción o mediante los diferentes lenguajes de programación admitidos, tal como se explica en esta documentación.</description>
+      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta: &amp;gt;¿Estamos construyendo el producto correcto?.
+Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
     </item>
     
     <item>
