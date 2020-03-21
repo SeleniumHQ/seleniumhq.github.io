@@ -1,122 +1,126 @@
 ---
-title: "Types of testing"
+title: "Tipos de pruebas"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### Pruebas de aceptación 
+Este tipo de prueba se realiza para determinar si una funcionalidad
+o un sistema cumple con las expectativas y requerimientos del cliente.
+Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente,
+siendo una actividad de validación que responde la pregunta: 
+>¿Estamos construyendo el producto **_correcto_**?.
 
-## Acceptance testing
-This type of test is done to determine if a product's
-feature matches its requirements. 
-This generally involves the customer's feedback or specification.
+Para aplicaciones web, la automatización de esta prueba se puede 
+hacer directamente con Selenium simulando el comportamiento esperado 
+del usuario. Esta simulación podría hacerse mediante grabación/
+reproducción o mediante los diferentes lenguajes soportados como se explica 
+en esta documentación. Nota: Las pruebas de aceptación son un subtipo 
+de **_pruebas funcionales_**, a lo que algunas personas también 
+podrían referirse.  
 
-For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behaviour.
-This simulation could be done by record/playback or through the
-different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
-            
-### Functional testing
-This type of test is done to determine if a product's
-feature functions properly, without issues.
-             
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
-(see **_acceptance testing_** above).
+### Pruebas funcionales
+Este tipo de prueba se realiza para determinar si una
+funcionalidad o sistema funciona correctamente y sin problemas. 
+Se comprueba el sistema en diferentes niveles para garantizar que
+todos los escenarios están cubiertos y que el sistema hace _lo que_
+se supone que debe de hacer. Es una actividad de verificación que
+responde la pregunta:
+>¿Estamos construyendo el producto **_correctamente?_**.
 
-For web applications, the automation of this testing can be
-done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through 
-the different supported languages as explained in this documentation.
+Para aplicaciones web, la automatización de esta prueba puede ser 
+hecha directamente con Selenium simulando los retornos esperados. 
+Esta simulación podría hacerse mediante grabación/reproducción o 
+mediante los diferentes lenguajes soportados como se explica en esta 
+documentación. 
 
-### Performance testing
-As its name indicates, performance tests are done 
-to measure how well an application is performing.
+### Pruebas de rendimiento 
+Como su nombre indica, se realizan pruebas 
+de rendimiento para medir qué tan bien está funcionando una 
+aplicación. 
 
-There are two main sub-types for performance testing:
+Hay dos subtipos principales para las pruebas de rendimiento: 
 
-#### Load testing
-Load testing is done to verify how well the 
-application works under different defined loads 
-(usually a particular number of users connected at once).
+#### Pruebas de carga 
+La prueba de carga se realiza para verificar qué 
+tan bien la aplicación funciona bajo diferentes cargas definidas (
+generalmente un número particular de usuarios conectados a la vez). 
 
-#### Stress testing
-Stress testing is done to verify how well the
-application works under stress (or above the maximum supported load).
+#### Pruebas de estrés 
+Se realizan pruebas de estrés para verificar 
+qué tan bien la aplicación funciona bajo estrés (o por encima de la 
+carga máxima soportada). 
 
-Generally, performance tests are done by executing some 
-Selenium written tests simulating different users 
-hitting a particular function on the web app and 
-retrieving some meaningful measurements. 
+En general, las pruebas de rendimiento se realizan ejecutando algunas 
+pruebas de Selenium que simulan diferentes usuarios golpeando
+una función particular en la aplicación web y obteniendo algunas 
+medidas significativas. 
 
-This is generally done by other tools that retrieve the metrics.
-One such tool is **_JMeter_**.
+En general, esto lo hacen otras herramientas que obtienen las 
+métricas. Una de esas herramientas es **_JMeter_**. 
 
-For a web application, details to measure include 
-throughput, latency, data loss, individual component loading times...
+Para una aplicación web, los detalles a medir incluyen rendimiento, 
+latencia, pérdida de datos, tiempos de carga de componentes 
+individuales... 
 
-Note 1: All browsers have a performance tab in their
-developers' tools section (accessible by pressing F12)
+Nota 1: Todos los navegadores tienen una pestaña de rendimiento en su 
+sección de herramientas para desarrolladores (accesible presionando 
+F12) 
 
-Note 2: is a subtype of **_non-functional testing_**
-as this is generally measured per system and not per function/feature.
-            
-### Regression testing
-This testing is generally done after a change, fix or feature addition. 
+Nota 2: es un subtipo de **_pruebas no funcionales_** ya que esto 
+generalmente se mide por sistema y no por función/funcionalidad. 
 
-To ensure that the change has not broken any of the existing 
-functionality, some already executed tests are executed again. 
-            
-The set of re-executed tests can be full or partial
-and can include several different types, depending
-on the application and development team.
-            
-### Test driven development (TDD)
-Rather than a test type _per se_, TDD is an iterative
-development methodology in which tests drive the design of a feature.
+### Pruebas de regresión 
+Esta prueba generalmente se realiza después 
+de un cambio, corrección o adición de funcionalidad. 
 
-Each cycle starts by creating a set of unit tests that
-the feature should eventually pass (they should fail their first time executed).
+Para garantizar que el cambio no ha roto ninguna de las funcionalidades 
+existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.  
+El conjunto de pruebas ejecutadas nuevamente puede ser total o 
+parcial, y puede incluir varios tipos diferentes, dependiendo del 
+equipo de desarrollo y la aplicación.  
 
-After this, development takes place to make the tests pass. 
-The tests are executed again, starting another cycle 
-and this process continues until all tests are passing.
+### Desarrollo guiado por pruebas (TDD) 
+En lugar de un tipo de prueba _per se_, TDD es una
+metodología iterativa de desarrollo en la que las pruebas guían el 
+diseño de una funcionalidad. 
 
-This aims to speed up the development of an application
-based on the fact that defects are less costly the earlier they are found.
+Cada ciclo comienza creando un conjunto de pruebas unitarias que la 
+funcionalidad debería pasar finalmente (deberían fallar la primera 
+vez que se ejecuta). 
 
-### Behavior-driven development (BDD)
-BDD is also an iterative development methodology
-based on the above TDD, in which the goal is to involve
-all the parties in the development of an application.
+Después de esto, se lleva a cabo el desarrollo para pasar las 
+pruebas. Las pruebas se ejecutan nuevamente, comenzando otro ciclo y 
+este proceso continúa hasta que todas las pruebas pasen. 
 
-Each cycle starts by creating some specifications 
-(which should fail). Then create the failing unit 
-tests (which should also fail) and then do the development. 
+El objetivo es acelerar el desarrollo de una aplicación basado en el 
+hecho de que los defectos son menos costosos cuanto más antes se 
+encuentran. 
 
-This cycle is repeated until all types of tests are passing.
+### Desarrollo guiado por comportamiento (BDD) 
+BDD es también una metodología de desarrollo iterativo basado en 
+el TDD anterior, en el que el objetivo es involucrar todas las 
+partes en el desarrollo de una aplicación. 
 
-In order to do so, a specification language is 
-used. It should be understandable by all parties and 
-simple, standard and explicit. 
-Most tools use **_Gherkin_** as this language.
+Cada ciclo comienza creando algunas especificaciones (que deberían 
+fallar). Luego creando las pruebas unitarias fallidas (que también deberían 
+fallar) y luego hacer el desarrollo. 
 
-The goal is to be able to detect even more errors
-than TDD, by targeting potential acceptance errors
-too and make communication between parties smoother.
+Este ciclo se repite hasta que pasan todos los tipos de pruebas. 
 
-A set of tools are currently available 
-to write the specifications and match them with code functions,
-such as **_Cucumber_** or **_SpecFlow._**
+Para realizar esto, se usa un lenguaje de especificación. Debe ser 
+simple y entendible por todas las partes, estándar y explícito. La 
+mayoría de las herramientas usan **_Gherkin_** como este 
+lenguaje. 
 
-A set of tools are built on top of Selenium to make this process
-even faster by directly transforming the BDD specifications into 
-executable code.
-Some of these are **_JBehave, Capybara and Robot Framework_**.
-            
+El objetivo es poder detectar aún más errores que TDD, apuntando 
+también a posibles errores de aceptación y a facilitar la comunicación 
+entre las partes. 
+
+Actualmente hay un conjunto de herramientas disponibles para 
+escribir las especificaciones y relacionarlas con funciones de 
+código, como **Cucumber** o **_SpecFlow._** 
+
+Un conjunto de herramientas se han construido encima de Selenium para realizar 
+este proceso aún más rápido al transformar directamente las 
+especificaciones de BDD en código ejecutable. Algunas de estas son
+ **_JBehave, Capybara y Robot Framework_**.

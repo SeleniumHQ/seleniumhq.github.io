@@ -1,33 +1,27 @@
 ---
-title: "Browsers"
+title: "Navegadores"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## Navegadores para el consumidor
 
-## Consumer browsers
+El framework de Selenium soporta oficialmente los siguientes navegadores:
 
-The Selenium framework officially supports the following browsers:
-
-| Browser | Maintainer | Versions Supported |
+| Navegador | Mantenedor | Versiones Soportadas |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | All versions |
-| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 and newer |
-| Internet Explorer | Selenium | 6 and newer |
-| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 and newer |
-| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 and newer |
+| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Todas las Versiones |
+| Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 y más recientes |
+| Internet Explorer | Selenium | 6 y más recientes |
+| Opera | Opera [Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 y más recientes |
+| Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 y más recientes |
 
-## Specialized browsers
+## Navegadores especializados
 
-There is also a set of specialized browsers out there
-typically used in development environments.
-We can make use of some of these browsers for automation purposes also,
-and Selenium ties in support for the following specialized drivers:
+También hay un conjunto de navegadores especializados
+utilizados típicamente en entornos de desarrollo.
+Podemos utilizar algunos de estos navegadores para fines de automatización,
+y Selenium proporciona apoyo a los siguientes controladores especializados:
 
-| Driver Name | Purpose | Maintainer |
+| Nombre del Controlador | Prepósito | Mantenedor |
 | -------- | ---------- | ------------------ |
-| HtmlUnitDriver | Headless browser emulator backed by Rhino | Selenium project |
+| HtmlUnitDriver | Emulador de navegador headless respaldado por Rhino | Proyecto Selenium |

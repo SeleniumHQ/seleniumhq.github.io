@@ -163,13 +163,17 @@ import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description> Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
+      <description>Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
 WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。 WebDriverがサポートするCapabilitiesは次のとおりです。
 browserName: このCapabilityは、特定のセッションの browserName を設定するために使います。 指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
 browserVersion: このCapabilityはオプションです。 これは、リモートエンドで使用可能なブラウザーバージョンを設定するために使います。 たとえば、Chromeバージョン80のみがインストールされているシステムでバージョン75を要求すると、セッションの作成は失敗します。
 ページロード戦略 URLを介して新しいページに移動する場合、デフォルトでは、Seleniumは応答する前にページが完全にロードされるまで待機します。 これは初心者には効果的ですが、多数のサードパーティリソースをロードするページで長い待ち時間を引き起こす可能性があります。 デフォルト以外の戦略を使用すると、このような場合にテストの実行を高速化できますが、ページの要素がロードされてサイズが変更されると、ページ上の要素の位置が変化する不安定さを引き起こします。
 次の表で説明するように、ページロード戦略は document.readyState を問い合わせます。
-   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    </description>
+   戦略 Ready State 注釈     normal complete デフォルトで使用され、すべてのリソースがダウンロードされるまで待機します   eager interactive DOMアクセスの準備はできていますが、画像などの他のリソースがまだ読み込まれている可能性があります   none Any WebDriverをまったくブロックしません    platformName これにより、リモートエンドのオペレーティングシステムが識別され、 platformName を取得するとOS名が返されます。
+クラウドベースのプロバイダーでは、 platformName を設定すると、リモートエンドのOSが設定されます。
+acceptInsecureCerts この機能は、セッション中のナビゲーション中に、期限切れ（または）無効な TLS証明書 が使用されているかどうかを確認します。
+機能が false に設定されている場合、ナビゲーションでドメイン証明書の問題が発生すると、 insecure certificate error が返されます。 true に設定すると、無効な証明書はブラウザーによって信頼されます。
+すべての自己署名証明書は、デフォルトでこの機能によって信頼されます。 一度設定すると、 acceptInsecureCerts Capabilityはセッション全体に影響します。</description>
     </item>
     
     <item>
@@ -189,9 +193,9 @@ browserVersion: このCapabilityはオプションです。 これは、リモ�
       <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
       <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
 このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
-帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
-@barancev2817 commits 
-@jimevans2274 commits 
+帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4455 commits 
+@barancev2822 commits 
+@jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
     
@@ -413,10 +417,10 @@ HTTPステータスコードをキャプチャするための高度なソリュ�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
-      <description>受入テスト このタイプのテストは、製品の機能が要件に一致するかどうかを判断するために行われます。 これには通常、顧客のフィードバックまたは仕様が含まれます。
-Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、またはサポートされているさまざまな言語によって実行できます。 注：受入テストは 機能テスト のサブタイプであり、一部の人はこれも参照する場合があります。
-機能テスト このタイプのテストは、製品の機能が問題なく正常に機能するかどうかを判断するために行われます。
-これには通常、エラーなし（404、例外…）、使用可能な方法（正しいリダイレクト）、アクセス可能な方法、およびその仕様に一致するテスト（上記の 受入テスト を参照）が含まれます。
+      <description>受け入れテスト このタイプのテストは、機能またはシステムが顧客の期待と要件を満たしているかどうかを判断するために行われます。 このタイプのテストには通常、顧客の協力またはフィードバックが関与します。 下記質問に答えることで確認することができます。 &amp;gt; 正しい 製品を作っていますか？
+Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、 このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、 またはサポートされているさまざまな言語によって実行できます。 注：受け入れテストは 機能テスト のサブタイプであり、一部の人はこれにも言及する場合があります。
+機能テスト このタイプのテストは、機能またはシステムが問題なく正常に機能するかどうかを判断するために行われます。 システムをさまざまなレベルでチェックして、すべてのシナリオがカバーされていること、 およびシステムが実行すべきことを実行していることを確認します。 下記質問に答えることで確認することができます。 &amp;gt;製品を 正しく 作っていますか？
+これは通常以下を含みます。 テストがエラーなし（404、例外&amp;hellip;）、使用可能な方法（正しいリダイレクト）で機能する、 利用しやすく、仕様に一致します（上記の 受け入れテスト を参照）。
 Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
 パフォーマンステスト その名前が示すように、パフォーマンステストは、アプリケーションのパフォーマンスを測定するために行われます。
 パフォーマンステストには2つの主なサブタイプがあります。
@@ -438,9 +442,7 @@ Webアプリケーションの場合、測定する詳細には、スループ�
 各サイクルは、いくつかの仕様を作成することから始まります（これは失敗するはずです）。 次に、失敗する単体テスト（これも失敗するはずです）を作成し、開発を作成します。
 このサイクルは、すべてのタイプのテストに合格するまで繰り返されます。
 そのためには、仕様言語が使用されます。 すべての関係者が理解でき、単純で、標準的かつ明示的でなければなりません。 ほとんどのツールは、この言語として Gherkin を使用します。
-目標は、潜在的な受入エラーも対象とすることでTDDよりも多くのエラーを検出し、当事者間のコミュニケーションを円滑にすることです。
-現在、仕様を記述し、 Cucumber や SpecFlow などのコード関数と一致させるための一連のツールが利用可能です。
-Selenium上に一連のツールが構築されており、BDD仕様を実行可能コードに直接変換することにより、このプロセスをさらに高速化しています。 これらのいくつかは、 JBehave、Capybara、およびRobot Framework です。</description>
+目標は、潜在的な受入エラーも対象とすることでTDDよりも多くのエラーを検出し、当事者間のコミュニケーションを円滑にすることです。</description>
     </item>
     
     <item>
@@ -696,7 +698,7 @@ Webサイトのパフォーマンスを改善するには、改善すべき点�
 Seleniumを使用した自動化スクリプト用のプロキシサーバーは、
  ネットワークトラフィックをキャプチャする ウェブサイトによって行われた模擬バックエンドを呼び出す 複雑なネットワークトポロジーまたは厳格な企業の制限/ポリシーの下で、必要なWebサイトにアクセスします。  企業環境でブラウザがURLへの接続に失敗した場合、環境にアクセスするにはプロキシが必要であることが原因であることが最も可能性が高いです。
 Selenium WebDriverは設定をプロキシする方法を提供します。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   # Need PR   // Need pr    # Need PR   // need PR    // need PR      </description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   from selenium import webdriver PROXY = &amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34; webdriver.DesiredCapabilities.FIREFOX[&amp;#39;proxy&amp;#39;] = { &amp;#34;httpProxy&amp;#34;: PROXY, &amp;#34;ftpProxy&amp;#34;: PROXY, &amp;#34;sslProxy&amp;#34;: PROXY, &amp;#34;proxyType&amp;#34;: &amp;#34;MANUAL&amp;#34;, } with webdriver.</description>
     </item>
     
     <item>
