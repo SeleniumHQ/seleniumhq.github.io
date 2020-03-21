@@ -23,6 +23,13 @@ _[Selenium IDE](https://selenium.dev/selenium-ide)_ (Integrated Development Envi
 
 ## Grid
 
-在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。
-这就是 _[Grid]({{< ref "/grid/_index.md" >}})_ 应用的地方。
+Selenium Grid allows you to run test cases in different 
+machines across different platforms. The control of 
+triggering the test cases is on the local end, and 
+when the test cases are triggered, they are automatically 
+executed by the remote end.
 
+After the development of the WebDriver tests, you may face 
+the need of running your tests on multiple browser and 
+operating system combinations.
+This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.

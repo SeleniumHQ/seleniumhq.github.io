@@ -28,12 +28,15 @@ existing Selenium commands, with parameters defined by the context of
 that element. This is not only a time-saver, but also an excellent way 
 of learning Selenium script syntax.
 
-
-
 ## Grid
 
-Poco después del desarrollo de las pruebas de WebDriver, es posible que deba ejecutar sus 
-pruebas en múltiples combinaciones de navegador y sistema operativo. Aquí es donde 
-_[Grid]({{< ref "/grid/_index.md" >}})_ viene al rescate.
+Selenium Grid allows you to run test cases in different 
+machines across different platforms. The control of 
+triggering the test cases is on the local end, and 
+when the test cases are triggered, they are automatically 
+executed by the remote end.
 
-
+After the development of the WebDriver tests, you may face 
+the need of running your tests on multiple browser and 
+operating system combinations.
+This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.
