@@ -24,5 +24,13 @@ _[IDE](https://selenium.dev/selenium-ide)_ (통합개발환경 Integrated Develo
 
 ## 조합 격자 (Grid)
 
-웹 드라이버 테스트를 개발한 후에, 여러 브라우저와 OS 조합에서 테스트를 구동해봐야 할지도 모릅니다.
-여기서 조합 격자 _[Grid]({{< ref "/grid/_index.md" >}})_ 가 여러분을 구하러 등장합니다.
+Selenium Grid allows you to run test cases in different 
+machines across different platforms. The control of 
+triggering the test cases is on the local end, and 
+when the test cases are triggered, they are automatically 
+executed by the remote end.
+
+After the development of the WebDriver tests, you may face 
+the need of running your tests on multiple browser and 
+operating system combinations.
+This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.
