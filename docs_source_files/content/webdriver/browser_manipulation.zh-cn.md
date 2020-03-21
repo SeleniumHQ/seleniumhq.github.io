@@ -494,7 +494,11 @@ public void TearDown()
 }
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 ruby 的示例代码，请帮助我们，并提交一个 PR
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 /**
@@ -924,7 +928,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{</ code-panel>}}
   {{<code-panel language="ruby">}}
-# 我们还没有 Ruby 的示例代码，帮我们实现并提交一个 PR
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 // 分别获取每个尺寸
@@ -990,6 +1001,24 @@ driver.manage().window().position = Point(0,0)
   {{<code-panel language="javascript">}}await driver.manage().window().maximize();{{< / code-panel>}}
   {{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
 {{</ code-tab>}}
+
+### Minimize window
+Minimizes the window of current browsing context. 
+The exact behavior of this command is specific to 
+individual window managers. 
+ 
+Minimize Window typically hides the window in the system tray.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
+  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
+{{< / code-tab >}}
 
 ### 全屏窗口
 
