@@ -1,43 +1,29 @@
 ---
-title: "Typographical conventions"
+title: "排版协议"
 weight: 2
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+## 标题大写
 
-## Capitalisation of titles
+应该避免标题完全大写, 例如 _A Very Fine Heading_, 
+应该书写为 _A very fine heading_ .
+没有意义的大写字母或者无视拼写协议的标题, 通常会带来误解.
+我们更倾向于使用句子首字母大写的 _sentence case_ 的方式.
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratutious capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+## 行的长度
 
-## Line length
+在编辑以plain HTML格式编写的文档来源时, 请将行的长度限制在72个字符以内.
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 72 characters.
-
-Some of us take this one step further
-and use what is called
+部分先进的贡献者, 使用了
 [_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
+这是一种不以HTML源码换行为基础的技术, 通过这种技术, 
+公众看到的内容将会在文章中以“自然断开”的方式进行分割.
+换句话说, 句子之间在更符合语义的地方被分割.
+不必多虑每个段落的行, 强迫它们都以明确的边距结尾, 
+而是可以将换行符添加到语义有断开的任何地方. 
+(译者注：具体区别，对比本网页与原始md后，即可了解本段想表达的意思) 
 
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+通过git进行协作时, 
+这种技术会使提交的差异更显而易见, 
+但这不是我们强制贡献者使用的内容.

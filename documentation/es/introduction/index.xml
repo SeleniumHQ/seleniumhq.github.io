@@ -22,25 +22,23 @@ Permite a los usuarios simular interacciones básicas realizadas por los usuario
     </item>
     
     <item>
-      <title>On test automation</title>
+      <title>Sobre automatización de pruebas</title>
       <link>https://selenium.dev/documentation/es/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <description>Primero, pregúntate si realmente necesitas o no usar un navegador. Lo más probable es que, en algún momento, si estás trabajando en una aplicación web compleja, necesitarás abrir un navegador y realmente probarlo.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium son caras de ejecutar. Además, normalmente requieren que una infraestructura considerable este disponible para estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre si lo que se quiere probar se puede hacer usando enfoques de prueba más livianos como las pruebas unitarias o con un enfoque de bajo nivel.</description>
     </item>
     
     <item>
-      <title>Types of testing</title>
+      <title>Tipos de pruebas</title>
       <link>https://selenium.dev/documentation/es/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
+      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta: &amp;gt;¿Estamos construyendo el producto correcto?.
+Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
     </item>
     
     <item>

@@ -19,7 +19,7 @@ WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 ## normal
 
 この値は、Selenium WebDriverはページ全体がロードされるまで待機します。
-**normal** に設定すると、Selenium WebDriverは、[ロード](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)イベントの発生が返却されるまで待機します。
+**normal** に設定すると、Selenium WebDriverは、[ロード](https://developer.mozilla.org/ja/docs/Web/API/Window/load_event)イベントの発生が返却されるまで待機します。
 
 何も指定されていない場合、デフォルトでは、 **normal** がブラウザに設定されます。
 
@@ -115,7 +115,7 @@ fun main() {
 
 この値は、Selenium WebDriverは最初のHTMLドキュメントが完全に読み込まれて解析されるまで待機し、スタイルシート、画像、およびサブフレームの読み込みを破棄します。
 
-**eager** に設定すると、Selenium WebDriverは [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) イベントの発生が返却されるまで待機します。
+**eager** に設定すると、Selenium WebDriverは [DOMContentLoaded](https://developer.mozilla.org/ja/docs/Web/API/Document/DOMContentLoaded_event) イベントの発生が返却されるまで待機します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -139,7 +139,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'eager'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -231,7 +238,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'none'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;

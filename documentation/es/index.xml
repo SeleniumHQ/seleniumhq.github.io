@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Browsers</title>
-      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
-    </item>
-    
-    <item>
       <title>Captchas</title>
       <link>https://selenium.dev/documentation/es/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -74,15 +63,14 @@ WebDriver Si está comenzando con la automatización de pruebas de sitios web de
     </item>
     
     <item>
-      <title>Installing Selenium libraries</title>
+      <title>Instalando las librerías de Selenium</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First you need to install the Selenium bindings for your automation project. The installation process for libraries depends on the language you choose to use.
-Java Installation of Selenium libraries for Java can be done using Maven. Add the selenium-java dependency in your project pom.xml:
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.</description>
+      <description>Primero debes instalar las librerías de enlace Selenium para tu proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elijas usar.
+Java La instalación de las librerías Selenium para Java se puede hacer usando Maven. Agrega la dependencia de selenium-java en el pom.xml de tu proyecto:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dependencia selenium-java permite la ejecución de tu proyecto de automatización en todos los navegadores compatibles con Selenium.</description>
     </item>
     
     <item>
@@ -93,6 +81,16 @@ Java Installation of Selenium libraries for Java can be done using Maven. Add th
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
+    </item>
+    
+    <item>
+      <title>Navegadores</title>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
+      <description>Navegadores para el consumidor El framework de Selenium soporta oficialmente los siguientes navegadores:
+   Navegador Mantenedor Versiones Soportadas     Chromium Chromium Todas las Versiones   Firefox Mozilla 54 y más recientes   Internet Explorer Selenium 6 y más recientes   Opera Opera Chromium / Presto 10.5 y más recientes   Safari Apple 10 y más recientes    Navegadores especializados También hay un conjunto de navegadores especializados utilizados típicamente en entornos de desarrollo.</description>
     </item>
     
     <item>
@@ -180,14 +178,13 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Installing WebDriver binaries</title>
+      <title>Instalando los binarios de WebDriver</title>
       <link>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- To execute your project and control the browser you need to have browser-specific WebDriver binaries installed.
-Download the WebDriver binary supported by your browser and place it in the System PATH.</description>
+      <description>Para ejecutar tu proyecto y controlar el navegador, debes tener instalados los binarios de WebDriver específicos para el navegador.
+Descarga el binario de WebDriver soportado por tu navegador y colócalo en el PATH del sistema.</description>
     </item>
     
     <item>
@@ -212,14 +209,13 @@ Your users, in general, do not care how your site looks.</description>
     </item>
     
     <item>
-      <title>On test automation</title>
-      <link>https://selenium.dev/documentation/es/introduction/on_test_automation/</link>
+      <title>Navegadores de terceros y plugins</title>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <description>Selenium se puede extender mediante el uso de plugins. Aquí hay una serie de plugins creados y mantenidos por terceros. Para más información sobre cómo crear tu propio plugin o tenerlo en la lista, consulta la documentación.
+Ten en cuenta que estos plugins no son compatibles, mantenidos, alojados o avalados por el proyecto Selenium. Además, ten en cuenta que los plugins enumerados a continuación no necesariamente están licenciados bajo la licencia de Apache v.</description>
     </item>
     
     <item>
@@ -233,14 +229,13 @@ La finalidad del WebDriver es emular las interacciones de los usuarios reales. E
     </item>
     
     <item>
-      <title>Third party drivers and plugins</title>
-      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <title>Sobre automatización de pruebas</title>
+      <link>https://selenium.dev/documentation/es/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
-Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project.</description>
+      <guid>https://selenium.dev/documentation/es/introduction/on_test_automation/</guid>
+      <description>Primero, pregúntate si realmente necesitas o no usar un navegador. Lo más probable es que, en algún momento, si estás trabajando en una aplicación web compleja, necesitarás abrir un navegador y realmente probarlo.
+Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selenium son caras de ejecutar. Además, normalmente requieren que una infraestructura considerable este disponible para estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre si lo que se quiere probar se puede hacer usando enfoques de prueba más livianos como las pruebas unitarias o con un enfoque de bajo nivel.</description>
     </item>
     
     <item>
@@ -249,8 +244,8 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>En algunas ocasiones es posible que sea necesario querer validar el color de algo como parte de tus tests; el problema es que las definiciones de color en la web no son constantes. ¿No estaría bien que existiese una forma sencilla de comparar una representación de color HEX con una representación de color RGB, o una representación de color RGBA con una representación de color HSLA?
+No te preocupes. Hay una solución para esto, la clase Color</description>
     </item>
     
     <item>
@@ -337,37 +332,34 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
     </item>
     
     <item>
+      <title>Tipos de pruebas</title>
+      <link>https://selenium.dev/documentation/es/introduction/types_of_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
+      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta: &amp;gt;¿Estamos construyendo el producto correcto?.
+Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
+    </item>
+    
+    <item>
       <title>Trabajando con elementos select</title>
       <link>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>A la hora de seleccionar elementos puede ser necesario código repetitivo para poder ser automatizado. Para reducir esto y hacer tus test mas limpios, existe un clase Select en los paquetes de soporte de Selenium. Para usarla, necesitarás importarla de la siguiente forma:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR    import org.</description>
     </item>
     
     <item>
-      <title>Types of testing</title>
-      <link>https://selenium.dev/documentation/es/introduction/types_of_testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour. This simulation could be done by record/playback or through the different supported languages as explained in this documentation.</description>
-    </item>
-    
-    <item>
-      <title>Acciones del mouse en detalle</title>
+      <title>Acciones del ratón en detalle</title>
       <link>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>El ratón representa eventos del ratón. Las acciones del ratón son realizadas a través de una interfaz de bajo nivel la cual nos permite introducir acciones de dispositivos virtualizados al navegador web.
+clickAndHold Moverá el ratón al elemento y hará clic (sin soltar) en medio del elemento dado.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navega a la URL  driver.</description>
     </item>
     
     <item>
@@ -378,6 +370,16 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <guid>https://selenium.dev/documentation/es/introduction/about_this_documentation/</guid>
       <description>Estos documentos, como el código en sí, son mantenidos al 100% por voluntarios dentro de la comunidad de Selenium. Muchos lo han estado usando desde su inicio, pero muchos más lo han estado usando desde hace poco y han dado su tiempo para ayudar a mejorar la experiencia de iniciación para los nuevos usuarios.
 Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de comunicar un problema es visitar https://github.</description>
+    </item>
+    
+    <item>
+      <title>Ejecutando acciones en el AUT*</title>
+      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <description>Puede especificar el texto de un elemento utilizando el método sendKeys de la siguiente manera:
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Algunas aplicaciones web utilizan librerías de JavaScript para agregar la funcionalidad de arrastrar y soltar.</description>
     </item>
     
     <item>
@@ -419,17 +421,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
-      <title>Performing actions on the AUT*</title>
-      <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- You can set an element&amp;rsquo;s text using the sendKeys method as follows:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.</description>
     </item>
     
     <item>
