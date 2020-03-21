@@ -96,14 +96,16 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
     </item>
     
     <item>
-      <title>Http proxies</title>
+      <title>Http 代理</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
-      <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
-A proxy server for automation scripts with Selenium could be helpful for:
- Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
+      <description>代理服务器充当客户端和服务器之间的请求中介. 简述而言, 流量将通过代理服务器流向您请求的地址, 然后返回.
+使用代理服务器用于Selenium的自动化脚本, 可能对以下方面有益:
+ 捕获网络流量 模拟网站后端响应 在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.  如果您在公司环境中, 并且浏览器无法连接到URL, 则最有可能是因为环境, 需要借助代理进行访问.
+Selenium WebDriver提供了如下设置代理的方法
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   from selenium import webdriver PROXY = &amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34; webdriver.</description>
     </item>
     
     <item>
@@ -117,15 +119,15 @@ The document.readyState property of a document describes the loading state of th
     </item>
     
     <item>
-      <title>Web element</title>
+      <title>网络元素</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
-WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
-Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
+      <description>WebElement表示DOM元素. 可以通过使用WebDriver实例从文档根节点进行搜索, 或者在另一个WebElement下进行搜索来找到WebElement.
+WebDriver API提供了内置方法来查找基于不同属性的WebElement (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
+Find Element 此方法用于查找元素并返回第一个匹配的单个WebElement引用, 该元素可用于进一步的元素操作.
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
     </item>
     
     <item>
