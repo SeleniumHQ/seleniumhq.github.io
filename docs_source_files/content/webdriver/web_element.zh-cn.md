@@ -1,24 +1,20 @@
 ---
-title: "Web element"
+title: "网络元素"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
+WebElement表示DOM元素.
+可以通过使用WebDriver实例从文档根节点进行搜索, 
+或者在另一个WebElement下进行搜索来找到WebElement.
 
-WebDriver API provides built-in methods to find the WebElements which are
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+WebDriver API提供了内置方法来查找基于不同属性的WebElement
+(例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
 
 ## Find Element
 
-It is used to find an element and returns a first matching single WebElement reference,
-that can be used for future element actions
+此方法用于查找元素并返回第一个匹配的单个WebElement引用,
+该元素可用于进一步的元素操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -98,8 +94,9 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
-you need to loop over the list of elements to perform action on selected element.
+与"Find Element"相似, 但返回的是匹配WebElement列表.
+要使用列表中的特定WebElement, 
+您需要遍历元素列表以对选定元素执行操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -223,8 +220,9 @@ fun main() {
 
 ## Find Element From Element
 
-It is used to find a child element within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+此方法用于在父元素的上下文中查找子元素.
+为此, 父WebElement与"findElement"链接并访问子元素.
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -298,8 +296,8 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements From Element
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+此方法用于在父元素的上下文中查找匹配子WebElement的列表.
+为此, 父WebElement与"findElements"链接并访问子元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -436,7 +434,7 @@ namespace FindElementsFromElement {
 
 ## Get Active Element
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+此方法用于追溯或查找当前页面上下文中具有焦点的DOM元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
