@@ -153,12 +153,14 @@ and converted into a valid Color object:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");
+Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
+
+Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-login_button_colour = driver.find_element_by_id('login').value_of_css_property('color')
-login_button_background_colour = driver.find_element_by_id('login').value_of_css_property('background-color');
+login_button_colour = Color.from_string(driver.find_element_by_id('login').value_of_css_property('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element_by_id('login').value_of_css_property('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
