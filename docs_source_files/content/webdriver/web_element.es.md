@@ -3,23 +3,19 @@ title: "Elemento web"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+WebElement representa un elemento del DOM. Los WebElements se pueden
+encontrar buscando desde la raíz del documento utilizando una instancia de 
+WebDriver o buscando en otra WebElement. 
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
-
-WebDriver API provides built-in methods to find the WebElements which are
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+El API WebDriver proporciona métodos integrados para encontrar los 
+elementos web que son basados en diferentes propiedades como ID, 
+Nombre, Clase, XPath, Selectores CSS, Texto de enlace, etc.
 
 ## Find Element
 
-It is used to find an element and returns a first matching single WebElement reference,
-that can be used for future element actions
+Se utiliza para encontrar un elemento y devuelve la primera
+referencia única de WebElement que coincide, que puede usarse para 
+acciones futuras con el elemento
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -27,7 +23,7 @@ WebDriver driver = new FirefoxDriver();
 
 driver.get("http://www.google.com");
 
-// Get search box element from webElement 'q' using Find Element
+// Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
 WebElement searchBox = driver.findElement(By.name("q"));
 
 searchBox.sendKeys("webdriver");
@@ -37,7 +33,7 @@ driver = Firefox()
 
 driver.get("http://www.google.com")
 
-# Get search box element from webElement 'q' using Find Element
+# Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
 search_box = driver.find_element_by_name("q")
 
 search_box.send_keys("webdriver")
@@ -47,7 +43,7 @@ IWebDriver driver = new FirefoxDriver();
 
 driver.Url = "http://www.google.com";
 
-// Get search box element from webElement 'q' using Find Element
+// Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
 IWebElement searchbox = driver.FindElement(By.Name("q"));
 
 searchbox.SendKeys("webdriver");
@@ -56,13 +52,13 @@ searchbox.SendKeys("webdriver");
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
-  # Navigate to URL
+  # Navega a la URL
   driver.get 'https://google.com'
 
-  # Get search box element from webElement 'q' using Find Element
+  # Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
   search_bar = driver.find_element(name: 'q')
 
-  # Perform action using WebElement
+  # Ejecuta una acción utilizando WebElement
   search_bar.send_keys 'Webdriver'
 ensure
   driver.quit
@@ -74,13 +70,13 @@ driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
-//Navigate to url
+// Navega a la URL
 await driver.get('http://www.google.com');
 
-// Get search box element from webElement 'q' using Find Element
+// Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
 let searchBar = driver.findElement(By.name('q'));
 
-//Perform action using WebElement
+// Ejecuta una acción utilizando WebElemen
 await searchBar.sendKeys('Webdriver');
 
 })();
@@ -90,7 +86,7 @@ val driver = FirefoxDriver()
 
 driver.get("http://www.google.com")
 
-// Get search box element from webElement 'q' using Find Element
+// Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
 val searchBox = driver.findElement(By.name("q"))
 
 searchBox.sendKeys("webdriver")
@@ -99,8 +95,11 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
-you need to loop over the list of elements to perform action on selected element.
+Similar a 'Find Element', pero devuelve una lista 
+de elementos web coincidentes. 
+Para usar un WebElement particular de la lista, 
+debes recorrerla lista de elementos para realizar 
+acciones con el elemento seleccionado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -115,7 +114,7 @@ public class findElementsExample {
         WebDriver driver = new FirefoxDriver();
         try {
             driver.get("https://example.com");
-            // Get all the elements available with tag name 'p'
+            // Obtén todos los elementos con el nombre de etiqueta 'p'
             List<WebElement> elements = driver.findElements(By.tagName("p"));
             for (WebElement element : elements) {
                 System.out.println("Paragraph text:" + element.getText());
@@ -131,10 +130,10 @@ from selenium import webdriver
 
 driver = webdriver.Firefox()
 
-# Navigate to Url
+# Navega a la Url
 driver.get("https://www.example.com")
 
-# Get all the elements available with tag name 'p'
+# Obtén todos los elementos con el nombre de etiqueta 'p'
 elements = driver.find_elements_by_tag_name('p')
 
 for e in elements:
@@ -150,10 +149,10 @@ namespace FindElementsExample {
   public static void Main(string[] args) {
    IWebDriver driver = new FirefoxDriver();
    try {
-    // Navigate to Url
+    // Navega a la Url
     driver.Navigate().GoToUrl("https://example.com");
 
-    // Get all the elements available with tag name 'p'
+    // Obtén todos los elementos con el nombre de etiqueta 'p'
     IList < IWebElement > elements = driver.FindElements(By.TagName("p"));
     foreach(IWebElement e in elements) {
      System.Console.WriteLine(e.Text);
@@ -170,10 +169,10 @@ namespace FindElementsExample {
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
-  # Navigate to URL
+  # Navega a la Url
   driver.get 'https://www.example.com'
 
-  # Get all the elements available with tag name 'p'
+  # Obtén todos los elementos con el nombre de etiqueta 'p'
   elements = driver.find_elements(:tag_name,'p')
 
   elements.each { |e|
@@ -188,10 +187,10 @@ const {Builder, By} = require('selenium-webdriver');
 (async function example() {
     let driver = await new Builder().forBrowser('firefox').build();
     try {
-        // Navigate to Url
+        // Navega a la URL
         await driver.get('https://www.example.com');
 
-        // Get all the elements available with tag name 'p'
+        // Obtén todos los elementos con el nombre de etiqueta 'p'
         let elements = await driver.findElements(By.tagName('p'));
         for(let e of elements) {
             console.log(await e.getText());
@@ -210,7 +209,7 @@ fun main() {
     val driver = FirefoxDriver()
     try {
         driver.get("https://example.com")
-        // Get all the elements available with tag name 'p'
+        // Obtén todos los elementos con el nombre de etiqueta 'p'
         val elements = driver.findElements(By.tagName("p"))
         for (element in elements) {
             println("Paragraph text:" + element.text)
@@ -222,10 +221,12 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Element From Element
+## Find Element desde Element
 
-It is used to find a child element within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+Se utiliza para encontrar un elemento hijo dentro
+del contexto del elemento padre.
+Para lograr esto, el WebElement primario se encadena
+con 'findElement' para acceder a elementos secundarios.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -253,16 +254,16 @@ searchbox.SendKeys("webdriver");
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 begin
-  # Navigate to URL
+  # Navega a la URL
   driver.get 'https://google.com'
 
-  # Get and store DOM element '<form>'
+  # Obtén y almacena el elemento DOM `<form>`
   search_form = driver.find_element(name: 'f')
 
-  # Get search box element from webElement 'form'
+  # Obtén el elemento de caja de búsqueda del elemento `form`
   search_bar = search_form.find_element(name: 'q')
 
-  # Perform action using WebElement
+  # Ejecuta una acción usando WebElement
   search_bar.send_keys 'Webdriver'
 ensure
   driver.quit
@@ -274,16 +275,16 @@ driver = new Builder().forBrowser('firefox').build();
 
 (async function test(){
 
-//Navigate to url
+//Navega a la URL
 await driver.get('http://www.google.com');
 
-//Get and store DOM element '<form>'
+//Obtén y alamacena el elemento DOM `<form>`
 let searchForm = driver.findElement(By.name('f'));
 
-//Get search box element from webElement 'form'
+//Obtén el elemento de caja de búsqueda del elemento `form`
 let searchBar = searchForm.findElement(By.name('q'));
 
-//Perform action using WebElement
+//Ejecuta una acción usando WebElement
 await searchBar.sendKeys('Webdriver');
 
 })();
@@ -297,10 +298,12 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Find Elements From Element
+## Find Elements desde Element
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+Se utiliza para encontrar una lista de elementos 
+hijos dentro del contexto del elemento padre.
+Para lograr esto, el WebElement primario se encadena 
+con 'findElements'para acceder a elementos secundarios.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -316,10 +319,10 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
           try {
               driver.get("https://example.com");
 
-              // Get element with tag name 'div'
+              // Obten el elemento con el nombre de etiqueta 'div'
               WebElement element = driver.findElement(By.tagName("div"));
 
-              // Get all the elements available with tag name 'p'
+              // Obtén todos los elementos con el nombre de etiqueta 'p'
               List<WebElement> elements = element.findElements(By.tagName("p"));
               for (WebElement e : elements) {
                   System.out.println(e.getText());
@@ -336,10 +339,10 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
 
-  # Get element with tag name 'div'
+  # Obten el elemento con el nombre de etiqueta 'div'
   element = driver.find_element_by_tag_name('div')
 
-  # Get all the elements available with tag name 'p'
+  # Obtén todos los elementos con el nombre de etiqueta 'p'
   elements = element.find_elements_by_tag_name('p')
   for e in elements:
       print e.text
@@ -356,10 +359,10 @@ namespace FindElementsFromElement {
    try {
     driver.Navigate().GoToUrl("https://example.com");
 
-    // Get element with tag name 'div'
+    // Obten el elemento con el nombre de etiqueta 'div'
     IWebElement element = driver.FindElement(By.TagName("div"));
 
-    // Get all the elements available with tag name 'p'
+    // Obtén todos los elementos con el nombre de etiqueta 'p'
     IList < IWebElement > elements = element.FindElements(By.TagName("p"));
     foreach(IWebElement e in elements) {
      System.Console.WriteLine(e.Text);
@@ -375,13 +378,13 @@ namespace FindElementsFromElement {
   require 'selenium-webdriver'
   driver = Selenium::WebDriver.for :chrome
   begin
-    # Navigate to URL
+    # Navega a la URL
     driver.get 'https://www.example.com'
 
-    # Get element with tag name 'div'
+    # Obten el elemento con el nombre de etiqueta 'div'
     element = driver.find_element(:tag_name,'div')
 
-    # Get all the elements available with tag name 'p'
+    # Obtén todos los elementos con el nombre de etiqueta 'p'
     elements = element.find_elements(:tag_name,'p')
 
     elements.each { |e|
@@ -401,10 +404,10 @@ namespace FindElementsFromElement {
 
       await driver.get('https://www.example.com');
 
-      // Get element with tag name 'div'
+      // Obten el elemento con el nombre de etiqueta 'div'
       let element = driver.findElement(By.tagName("div"));
 
-      // Get all the elements available with tag name 'p'
+      // Obtén todos los elementos con el nombre de etiqueta 'p'
       let elements = await element.findElements(By.tagName("p"));
       for(let e of elements) {
           console.log(await e.getText());
@@ -420,10 +423,10 @@ namespace FindElementsFromElement {
       try {
           driver.get("https://example.com")
 
-          // Get element with tag name 'div'
+          // Obten el elemento con el nombre de etiqueta 'div'
           val element = driver.findElement(By.tagName("div"))
 
-          // Get all the elements available with tag name 'p'
+          // Obtén todos los elementos con el nombre de etiqueta 'p'
           val elements = element.findElements(By.tagName("p"))
           for (e in elements) {
               println(e.text)
@@ -435,9 +438,10 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Active Element
+## Active Element
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+Se utiliza para rastrear (o) encontrar el elemento DOM 
+que tiene el foco en el contexto de navegación actual.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -451,7 +455,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
         driver.get("http://www.google.com");
         driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement");
 
-        // Get attribute of current active element
+        // Obtener el atributo del elemento activo actual
         String attr = driver.switchTo().activeElement().getAttribute("title");
         System.out.println(attr);
       } finally {
@@ -467,7 +471,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   driver.get("https://www.google.com")
   driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
 
-  # Get attribute of current active element
+  # Obtener el atributo del elemento activo actual
   attr = driver.switch_to.active_element.get_attribute("title")
   print attr
   {{< / code-panel >}}
@@ -480,11 +484,11 @@ It is used to track (or) find DOM element which has the focus in the current bro
       public static void Main(string[] args) {
        IWebDriver driver = new ChromeDriver();
        try {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://www.google.com");
         driver.FindElement(By.CssSelector("[name='q']")).SendKeys("webElement");
 
-        // Get attribute of current active element
+        // Obtener el atributo del elemento activo actual
         string attr = driver.SwitchTo().ActiveElement().GetAttribute("title");
         System.Console.WriteLine(attr);
        } finally {
@@ -501,7 +505,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
     driver.get 'https://www.google.com'
     driver.find_element(css: '[name="q"]').send_keys('webElement')
 
-    # Get attribute of current active element
+    # Obtener el atributo del elemento activo actual
     attr = driver.switch_to.active_element.attribute('title')
     puts attr
   ensure
@@ -516,7 +520,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
       await driver.get('https://www.google.com');
       await  driver.findElement(By.css('[name="q"]')).sendKeys("webElement");
 
-      // Get attribute of current active element
+      // Obtener el atributo del elemento activo actual
       let attr = await driver.switchTo().activeElement().getAttribute("title");
       console.log(`${attr}`)
   })();
@@ -531,7 +535,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
           driver.get("https://www.google.com")
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
-          // Get attribute of current active element
+          // Obtener el atributo del elemento activo actual
           val attr = driver.switchTo().activeElement().getAttribute("title");
           print(attr);
       } finally {
