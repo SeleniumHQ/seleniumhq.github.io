@@ -61,7 +61,7 @@ Esta capacidad comprueba si un certificado TLS ha vencido o es invalido esta
 siendo usado para navegar durante una sesión.
 
 Si esta capacidad esta fijada a `false`, un 
-[error de certificado inseguro](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate)
+[error de certificado inseguro](//developer.mozilla.org/es/docs/Web/WebDriver/Errors/InsecureCertificate)
 sera devuelto cuando la navegación encuentre cualquier dominio con problemas
 de certificado. Si se fija a `true`, los certificados inválidos serán confiados
 por el navegador
