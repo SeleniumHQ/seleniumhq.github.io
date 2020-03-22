@@ -102,3 +102,20 @@ This specifies the time to wait for the
 implicit element location strategy when
 locating elements. The default timeout **0**
 is imposed when a new session is created by WebDriver.
+
+## unhandledPromptBehavior
+
+Specifies the state of current session's `user prompt handler`. 
+Defaults to **dismiss and notify state**
+
+### User Prompt Handler
+
+This defines what action must take when a 
+user prompt encounters at remote-end. This is defined by 
+`unhandledPromptBehavior` capability and has the following states:
+
+* dismiss
+* accept
+* dismiss and notify
+* accept and notify
+* ignore
