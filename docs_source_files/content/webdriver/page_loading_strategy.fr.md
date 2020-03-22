@@ -63,6 +63,7 @@ driver = webdriver.Chrome(options=options)
 # Navigate to url
 driver.get("http://www.google.com")
 driver.quit()
+
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
