@@ -3,41 +3,37 @@ title: "Estrategia de carga de página"
 weight: 8
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Define la estrategia de carga de la página en la sesión actual. Por 
+defecto, cuando Selenium WebDriver carga una página, sigue la 
+pageLoadStrategy _normal_. Siempre se recomienda detener la descarga 
+de más recursos adicionales (como imágenes, css, js) cuando la carga 
+de la página lleva mucho tiempo. 
 
-Defines the current session's page loading strategy. 
-By default, when Selenium WebDriver loads a page, 
-it follows the _normal_ pageLoadStrategy. 
-It is always recommended to stop downloading additional 
-resources (like images, css, js) when the page loading takes lot of time.
+La propiedad `document.readyState` de un documento describe el estado 
+de carga del documento actual. Por defecto, WebDriver esperará responder 
+a una llamada `driver.get()` (o) `driver.navigate().to()` hasta que el 
+estado de documento listo esté `completo` 
 
-The `document.readyState` property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
-call until the document ready state is `complete`
+En aplicaciones SPA (como Angular, react, Ember) una vez que el 
+contenido dinámico ya está cargado (es decir, una vez que el estado 
+de pageLoadStrategy es COMPLETO), hacer clic en un enlace o realizar 
+alguna acción dentro de la página no hará una nueva solicitud al 
+servidor ya que el contenido se carga dinámicamente en el lado del 
+cliente sin una actualización de la página. 
 
-In SPA applications (like Angular, react, Ember) once the dynamic content 
-is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
-clicking on a link or performing some action within the page will not make a new request 
-to the server as the content is dynamically loaded at the client side without a pull page refresh. 
+Las aplicaciones de SPA pueden cargar muchas vistas dinámicamente sin 
+ninguna solicitud del servidor, por lo que pageLoadStrategy siempre mostrará 
+el estado 'COMPLETO' hasta que hagamos un nuevo `driver.get()` y `driver.naviagte().to()` 
 
-SPA applications can load many views dynamically 
-without any server requests, So pageLoadStrategy 
-will always show `COMPLETE` status until 
-we do a new `driver.get()` and `driver.naviagte().to()`
-
-WebDriver _pageLoadStrategy_ supports the following values:
+WebDriver _pageLoadStrategy_ permite los siguientes valores:
 
 ## normal
 
-This will make Selenium WebDriver to wait for the entire page is loaded. 
-When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/es/docs/Web/Events/load) event fire is returned.
+Esto hará que Selenium WebDriver espere a que se cargue toda la página.
+Cuando se establece en **normal**, Selenium WebDriver espera hasta que se 
+dispare el evento [load](https://developer.mozilla.org/es/docs/Web/Events/load) y sea retornado.
 
-By default **normal** is set to browser if none is provided.
+Por defecto **normal** se establece en el navegador si no se proporciona ninguno.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -129,12 +125,13 @@ fun main() {
 
 ## eager
 
-This will make Selenium WebDriver to wait until the 
-initial HTML document has been completely loaded and parsed, 
-and discards loading of stylesheets, images and subframes.
+Esto hará que Selenium WebDriver espere hasta que
+el documento HTML inicial se haya cargado y analizado por completo,
+y descarta la carga de hojas de estilo, imágenes y sub marcos.
 
-When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/es/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+Cuando se establece en **eager**, Selenium WebDriver espera
+hasta que se dispare el evento
+[DOMContentLoaded](https://developer.mozilla.org/es/docs/Web/API/Document/DOMContentLoaded_event) y sea retornado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -233,7 +230,7 @@ fun main() {
 
 ## none
 
-When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
+Cuando se establece en **none** Selenium WebDriver solo espera hasta que se descargue la página inicial.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

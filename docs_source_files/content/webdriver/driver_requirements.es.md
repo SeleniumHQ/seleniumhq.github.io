@@ -81,12 +81,12 @@ Puedes recuperar el control de la consola de comandos pulsando <kbd>Ctrl + C</kb
 
 Navegador | SO Soportados | Mantenido por | Descargas | Issues |
 | ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Descargas](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Descargas](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows 10 | Microsoft | [Descargas](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Proyecto de Selenium | [Descargas](//selenium-release.storage.googleapis.com/index.html) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
-| Safari | macOS El Capitan and newer | Apple | Integrado | [Issues](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [Descargas](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Descargas](//chromedriver.storage.googleapis.com/index.html) | [Incidentes](//bugs.chromium.org/p/chromedriver/issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [Descargas](//github.com/mozilla/geckodriver/releases) | [Incidentes](//github.com/mozilla/geckodriver/issues) |
+| Edge | Windows 10 | Microsoft | [Descargas](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Incidentes](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
+| Internet Explorer | Windows | Proyecto de Selenium | [Descargas](//selenium-release.storage.googleapis.com/index.html) | [Incidentes](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Safari | macOS El Capitan and newer | Apple | Integrado | [Incidentes](//bugreport.apple.com/logon) |
+| Opera | Windows/macOS/Linux | Opera | [Descargas](//github.com/operasoftware/operachromiumdriver/releases) | [Incidentes](//github.com/operasoftware/operachromiumdriver/issues) |
 
 
 ### Chromium/Chrome
