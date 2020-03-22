@@ -11,20 +11,20 @@
     <title>Proxies Http :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584830069" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584857516" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584830069" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584857516" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584857516"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584830069"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584830069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584857516"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584857516"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584830069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584857516"></script>
 
     
   </div>
@@ -411,9 +411,9 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Locating elements" class="dd-item ">
+      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Localizando elementos" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/">
-        Locating elements
+        Localizando elementos
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1944,34 +1944,27 @@
 
 
 
+<p>Un servidor proxy actúa como intermediario para
+solicitudes entre un cliente y un servidor. En forma simple,
+el tráfico fluye a través del servidor proxy
+en camino a la dirección solicitada y de regreso.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>A proxy server acts as an intermediary for
-requests between a client and a server. In simple,
-the traffic flows through the proxy server
-on its way to the address you requested and back.</p>
-
-<p>A proxy server for automation scripts with
-Selenium could be helpful for:</p>
+<p>Un servidor proxy para scripts de automatización con
+Selenium podría ser útil para:</p>
 
 <ul>
-<li>Capture network traffic</li>
-<li>Mock backend calls made by the website</li>
-<li>Access the requited website under complex network
-topologies or strict corporate restrictions/policies.</li>
+<li>Captura el tráfico de la red</li>
+<li>Simular llamadas de backend realizadas por el sitio web</li>
+<li>Accede al sitio web requerido bajo topologías de red complejas
+o restricciones/políticas corporativas estrictas.</li>
 </ul>
 
-<p>If you are in a corporate environment, and a
-browser fails to connect to a URL, this is
-most likely because the environment needs a
-proxy to be accessed.</p>
+<p>Si te encuentras en un entorno corporativo, y un
+navegador no puede conectarse a una URL, esto es
+muy probablemente porque el ambiente necesita un
+proxy para acceder.</p>
 
-<p>Selenium WebDriver provides a way to proxy settings</p>
+<p>Selenium WebDriver proporciona una via para configurar el proxy:</p>
 
 
 
@@ -1979,40 +1972,40 @@ proxy to be accessed.</p>
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
     
-    <label for="tab0code1">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1">
-    
-    <label for="tab1code1">Python</label>
+    <label for="tab0code0">Java</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1">
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
     
-    <label for="tab2code1">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1">
-    
-    <label for="tab3code1">Ruby</label>
+    <label for="tab1code0">Python</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
     
-    <label for="tab4code1">JavaScript</label>
+    <label for="tab2code0">C#</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
     
-    <label for="tab5code1">Kotlin</label>
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode1" class="tab-panel">
+<section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Proxy;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
@@ -2036,7 +2029,7 @@ proxy to be accessed.</p>
   
 
 
-<section id="pythoncode1" class="tab-panel">
+<section id="pythoncode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
 
@@ -2058,7 +2051,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
   
 
 
-<section id="csharpcode1" class="tab-panel">
+<section id="csharpcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#586e75">// Need pr
 </span><span style="color:#586e75"></span>  
@@ -2067,7 +2060,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
   
 
 
-<section id="rubycode1" class="tab-panel">
+<section id="rubycode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
  <span style="color:#586e75"># Need PR</span>
   </code></pre></div>
@@ -2075,7 +2068,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
   
 
 
-<section id="javascriptcode1" class="tab-panel">
+<section id="javascriptcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// need PR
 </span><span style="color:#586e75"></span>  
@@ -2084,7 +2077,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
   
 
 
-<section id="kotlincode1" class="tab-panel">
+<section id="kotlincode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">import</span> org.openqa.selenium.Proxy
 <span style="color:#719e07">import</span> org.openqa.selenium.WebDriver
@@ -2117,7 +2110,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/http_proxies/">
       “Proxies Http”
-    </a> was last updated on: 18 Mar 2020 12:30:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5b58012871aa5808283ad8d0a2715d58d1cb6c6f">Modify: Translating doc to FR and minor code changes (#328) [deploy site] (5b580128)</a>
+    </a> was last updated on: 22 Mar 2020 07:10:30 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/bf55413037c3819c3de5dfe529da5358115febf7">Add spanish translation to sites (#357) [deploy site] (bf554130)</a>
 </h5>
         
         </div> 
@@ -3282,19 +3275,19 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584857516"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584857516"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584830069" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584830069"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584857516" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584857516"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

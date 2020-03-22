@@ -11,20 +11,20 @@
     <title>Clases de apoyo :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1584830069" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584830069" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1584857516" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584857516" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584830069" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584857516" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584857516"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584830069"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584830069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584857516"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584857516"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584830069"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584857516"></script>
 
     
   </div>
@@ -411,9 +411,9 @@
  
   
     
-      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Locating elements" class="dd-item ">
+      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Localizando elementos" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/">
-        Locating elements
+        Localizando elementos
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1928,7 +1928,7 @@
 <ul>
 <li>
 <ul>
-<li><a href="#note">Note:</a></li>
+<li><a href="#nota">Nota:</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -1959,49 +1959,44 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>WebDriver support classes are provided to simplify maintaining your code.
-They provide a nice abstraction to make modeling HTML element(s) as domain
-objects easier, also providing helper methods to make using such objects easy to
-reason about. We will learn about:</p>
+<p>Las clases de soporte de WebDriver son proporcionadas para
+simplificar el mantenimiento de tu código. Proporcionan una buena
+abstracción para modelar  mas fácilmente elementos HTML como objetos
+de dominio, también proporcionando métodos de ayuda para hacer que el
+uso de tales objetos sea fácil de razonar. Aprenderemos acerca de:</p>
 
 <ul>
-<li>Locator Strategies</li>
-<li>Events</li>
+<li>Estrategias de localizacion</li>
+<li>Eventos</li>
 <li>LoadableComponent</li>
 <li>ThreadGuard</li>
 <li>etc.</li>
 </ul>
 
-<p>Let&rsquo;s Start:</p>
+<p>Iniciemos:</p>
 
 <h2 id="threadguard"><strong>ThreadGuard</strong></h2>
 
 <p>
-<div class="notices info" ><p>This class is only available in the Java Binding</p>
+<div class="notices info" ><p>Esta clase solo esta disponible en la librería de enlace de Java</p>
 </div>
 
-ThreadGuard checks that a driver is called only from the same thread that created it.
-Threading issues especially when running tests in Parallel may have mysterious
-and hard to diagnose errors. Using this wrapper prevents this category of errors
-and will raise an exception when it happens.</p>
+ThreadGuard comprueba que se llama a un controlador solo desde el
+mismo hilo que lo creó. Los problemas de subprocesos, especialmente
+cuando se ejecutan pruebas en paralelo, pueden tener errores misteriosos y
+difícil de diagnosticar. El uso de este contenedor evita esta
+categoría de errores y generará una excepción cuando ocurran.</p>
 
-<p>The following example simulate a clash of threads:</p>
+<p>El siguiente ejemplo simula un choque de hilos:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> DriverClash {
-  <span style="color:#586e75">//thread main (id 1) created this driver
+  <span style="color:#586e75">//El hilo (thread) main (id 1) creó este controlador
 </span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">WebDriver</span> protectedDriver <span style="color:#719e07">=</span> ThreadGuard.protect(<span style="color:#719e07">new</span> ChromeDriver());
 
   <span style="color:#268bd2">static</span> {
     System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;&lt;Set path to your Chromedriver&gt;&#34;</span>);
   }
 
-  <span style="color:#586e75">//Thread-1 (id 24) is calling the same driver causing the clash to happen
+  <span style="color:#586e75">//Thread-1 (id 24) llama al mismo controlador causando el choque
 </span><span style="color:#586e75"></span>  Runnable <span style="color:#268bd2">r1</span> <span style="color:#719e07">=</span> () <span style="color:#719e07">-&gt;</span> {protectedDriver.get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);};
   Thread <span style="color:#268bd2">thr1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Thread(r1);
 
@@ -2013,23 +2008,23 @@ and will raise an exception when it happens.</p>
     <span style="color:#719e07">new</span> DriverClash().runThreads();
   }
 }</code></pre></div>
-<p>The result shown below:</p>
+<p>El resultado se muestra a continuación:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Exception in thread &#34;Thread-1&#34; org.openqa.selenium.WebDriverException:
 Thread safety error; this instance of WebDriver was constructed
 on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
 This is not permitted and *will* cause undefined behaviour</code></pre></div>
-<p>As seen in the example:</p>
+<p>Como puede verse en el ejemplo:</p>
 
 <ul>
-<li><code>protectedDriver</code> Will be created in Main thread</li>
-<li>We use Java <code>Runnable</code> to spin up a new process and a new <code>Thread</code> to run the process</li>
-<li>Both <code>Thread</code> will clash because the Main Thread does not have <code>protectedDriver</code> in it&rsquo;s memory.</li>
-<li><code>ThreadGuard.protect</code> will throw an exception.</li>
+<li><code>protectedDriver</code> Será creado en el hilo Main.</li>
+<li>Utilizamos Java <code>Runnable</code> para iniciar un nuevo proceso y un nuevo <code>Thread</code> para ejecutar el proceso.</li>
+<li>Ambos <code>Thread</code> chocarán porque el Thread principal no tiene <code>protectedDriver</code> en su memoria.</li>
+<li><code>ThreadGuard.protect</code> lanzará una excepción.</li>
 </ul>
 
-<h4 id="note">Note:</h4>
+<h4 id="nota">Nota:</h4>
 
-<p>This does not replace the need for using <code>ThreadLocal</code> to manage drivers when running parallel.</p>
+<p>Esto no reemplaza la necesidad de usar <code>ThreadLocal</code> para administrar los controladores cuando se ejecutan en paralelo.</p>
 
 
 <footer class=" footline" >
@@ -2039,7 +2034,7 @@ This is not permitted and *will* cause undefined behaviour</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/support_classes/">
       “Clases de apoyo”
-    </a> was last updated on: 18 Mar 2020 12:30:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5b58012871aa5808283ad8d0a2715d58d1cb6c6f">Modify: Translating doc to FR and minor code changes (#328) [deploy site] (5b580128)</a>
+    </a> was last updated on: 22 Mar 2020 07:10:30 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/bf55413037c3819c3de5dfe529da5358115febf7">Add spanish translation to sites (#357) [deploy site] (bf554130)</a>
 </h5>
         
         </div> 
@@ -3204,19 +3199,19 @@ This is not permitted and *will* cause undefined behaviour</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584857516"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1584830069"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584830069"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1584857516"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584857516"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584830069" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584830069"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584857516" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584857516"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
