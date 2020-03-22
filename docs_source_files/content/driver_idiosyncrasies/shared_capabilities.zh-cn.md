@@ -37,3 +37,55 @@ only has 80 installed, the session creation will fail
 | normal | complete | 默认情况下使用，等待所有资源下载完成 |
 | eager | interactive | DOM访问已准备就绪，但其他资源（如图像）可能仍在加载中 |
 | none | Any | 完全不阻塞WebDriver|
+
+## platformName
+
+This identifies the operating system at the remote-end, 
+fetching the `platformName` returns the OS name. 
+
+In cloud-based providers, 
+setting `platformName` sets the OS at the remote-end.
+
+## acceptInsecureCerts
+
+This capability checks whether an expired (or) 
+invalid `TLS Certificate` is used while navigating 
+during a session.
+
+If the capability is set to `false`, an 
+[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
+will be returned as navigation encounters any domain 
+certificate problems. If set to `true`, invalid certificate will be 
+trusted by the browser.
+
+All self-signed certificates will be trusted by this capability by default. 
+Once set, `acceptInsecureCerts` capability will have an 
+effect for the entire session.
+
+## Session timeouts
+
+A WebDriver `session` is imposed with a certain `session timeout`
+interval, during which the user can control the behaviour
+of executing scripts or retrieving information from the browser.
+
+Each session timeout is configured with
+combination of different `timeouts` as described below:
+
+### Script Timeout:
+Specifies when to interrupt an executing script in
+a current browsing context. The default timeout **30,000**
+is imposed when a new session is created by WebDriver.
+
+### Page Load Timeout:
+Specifies the time interval in which web page
+needs to be loaded in a current browsing context.
+The default timeout **300,000** is imposed when a
+new session is created by WebDriver. If page load limits
+a given/default time frame, the script will be stopped by
+_TimeoutException_.
+
+### Implicit Wait Timeout
+This specifies the time to wait for the
+implicit element location strategy when
+locating elements. The default timeout **0**
+is imposed when a new session is created by WebDriver.

@@ -11,20 +11,20 @@
     <title>Page loading strategy :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1584281125" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1584281125" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1584861207" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1584861207" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1584281125" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1584861207" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1584281125"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1584861207"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1584281125"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1584281125"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1584861207"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1584861207"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1584281125"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1584861207"></script>
 
     
   </div>
@@ -119,9 +119,9 @@
  
   
     
-      <li data-nav-id="/getting_started/quick/" title="퀵 투어" class="dd-item ">
+      <li data-nav-id="/getting_started/quick/" title="빠르게 살펴보기" class="dd-item ">
         <a href="https://selenium.dev/documentation/ko/getting_started/quick/">
-        퀵 투어
+        빠르게 살펴보기
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1988,7 +1988,7 @@ we do a new <code>driver.get()</code> and <code>driver.naviagte().to()</code></p
 
 <p>This will make Selenium WebDriver to wait for the entire page is loaded.
 When set to <strong>normal</strong>, Selenium WebDriver waits until the
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">load</a> event fire is returned.</p>
+<a href="https://developer.mozilla.org/ko/docs/Web/Events/load">load</a> event fire is returned.</p>
 
 <p>By default <strong>normal</strong> is set to browser if none is provided.</p>
 
@@ -2155,7 +2155,7 @@ initial HTML document has been completely loaded and parsed,
 and discards loading of stylesheets, images and subframes.</p>
 
 <p>When set to <strong>eager</strong>, Selenium WebDriver waits until
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> event fire is returned.</p>
+<a href="https://developer.mozilla.org/ko/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> event fire is returned.</p>
 
 
 
@@ -2223,7 +2223,14 @@ and discards loading of stylesheets, images and subframes.</p>
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.chrome.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>page_load_strategy <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;eager&#39;</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome(options<span style="color:#719e07">=</span>options)
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()
   </code></pre></div>
 </section>
   
@@ -2383,7 +2390,14 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.chrome.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>page_load_strategy <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;none&#39;</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome(options<span style="color:#719e07">=</span>options)
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()
   </code></pre></div>
 </section>
   
@@ -2481,7 +2495,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/page_loading_strategy/">
       “Page loading strategy”
-    </a> was last updated on: 06 Mar 2020 16:59:03 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/55f9a010b10f81ea6ff3920f27179438055a5952">Add Chinese translation of &#34;working_with_select_elements&#34; (#284) [deploy site] (55f9a010b)</a>
+    </a> was last updated on: 20 Mar 2020 13:46:13 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/97e2b39d4d4f0c473f15628b2899603465224e5d">Add: Adding py code sample for pageLoadStrategy[eager, none] (#344) [deploy site] (97e2b39d)</a>
 </h5>
         
         </div> 
@@ -3646,19 +3660,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1584281125"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1584861207"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1584281125"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1584281125"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1584861207"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1584861207"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1584281125" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1584281125"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1584861207" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1584861207"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

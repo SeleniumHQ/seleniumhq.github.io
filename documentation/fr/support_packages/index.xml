@@ -17,8 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>Vous voudrez parfois valider la couleur de quelque chose dans le cadre de vos tests; le problème est que les définitions de couleurs sur le Web ne sont pas constantes. Ne serait-ce pas bien s&amp;rsquo;il y avait un moyen facile de comparer une représentation HEX d&amp;rsquo;une couleur avec une représentation RGB d&amp;rsquo;une couleur, ou une représentation RGBA d&amp;rsquo;une couleur avec une représentation HSLA d&amp;rsquo;une couleur?
+Ne t&amp;rsquo;inquiètes pas. Il y a une solution: la classe Color!</description>
     </item>
     
     <item>
@@ -38,10 +38,9 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
-clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>La souris représente un événement de souris. Les actions de la souris sont effectuées en utilisant une interface de bas niveau qui nous permet de fournir une action de saisie de périphérique virtualisé au navigateur Web.
+clickAndHold Il se déplacera vers l&amp;rsquo;élément et cliquera (sans le relâcher) au milieu de l&amp;rsquo;élément donné.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
     <item>

@@ -160,7 +160,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'eager'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -253,13 +260,13 @@ public class pageLoadStrategy {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
-
-chrome_capabilities = DesiredCapabilities().CHROME
-chrome_capabilities["pageLoadStrategy"] = "normal"
-driver = webdriver.Chrome(desired_capabilities=chrome_capabilities)
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'normal'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
 driver.get("http://www.google.com")
-
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;

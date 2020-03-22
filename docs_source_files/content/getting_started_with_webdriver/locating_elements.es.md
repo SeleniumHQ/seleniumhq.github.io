@@ -1,19 +1,14 @@
 ---
-title: "Locating elements"
+title: "Localizando elementos"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### Localizando un elemento
 
-### Locating one element
-
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
+Una de las técnicas más fundamentales para aprender al usar WebDriver 
+es cómo encontrar elementos en la página. WebDriver ofrece varios 
+tipos de selectores integrados, entre ellos encontrar un elemento por 
+su atributo ID:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -36,17 +31,19 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
+Como se ve en el ejemplo, localizar elementos en WebDriver 
+se realiza en la instancia del objeto `WebDriver`. El método
+`findElement(By)` devuelve otro tipo de objeto fundamental, 
+el `WebElement`. 
 
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
+* `WebDriver` representa el navegador 
+* `WebElement` representa un 
+nodo particular del DOM (un control, por ejemplo un enlace o campo de 
+entrada, etc.) 
 
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+Una vez que tengas una referencia a un elemento web que se ha 
+"encontrado", puedes reducir el alcance de tu búsqueda utilizando la 
+misma llamada en la instancia de ese objeto:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -75,28 +72,25 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
-interface. In WebDriver, this is known as a _role-based interface_.
-Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are
-clearly defined and try to adhere to having only a single role of
-responsibility.  You can read more about WebDriver's design and what
-roles are supported in which drivers in the [Some Other Section Which
-Must Be Named](#).
+Puedes hacer esto porque los tipos _WebDriver_ y _WebElement_
+implementan la interfaz  [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html).
+En WebDriver, esto se conoce como _interfaz basada en roles_.
+Las interfaces basadas en roles te permiten determinar si
+la implementación del controlador admite una característica dada. 
+Estas interfaces están claramente definidas y tratan de cumplir con
+tener un solo rol de responsabilidad. Puede leer más sobre el diseño
+de WebDriver y qué roles son compatibles con qué controladores en [Otra sección](#).
 <!-- TODO: A new section needs to be created for the above.-->
 
-Consequently, the _By_ interface used above also supports a
-number of additional locator strategies.  A nested lookup might not be
-the most effective cheese location strategy since it requires two
-separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
-narrowed context.
+En consecuencia, la interfaz _By_ utilizada anteriormente también permite una serie de
+estrategias adicionales de localización. Una búsqueda anidada podría no ser la 
+estrategia mas efectiva para localizar _cheese_ ya que requiere dos
+comandos que se emitirán al navegador; primero buscando en el DOM un
+elemento con ID "cheese", luego una búsqueda de "cheddar" en un contexto reducido.
 
-To improve the performance slightly, we should try to use a more
-specific locator: WebDriver supports looking up elements
-by CSS locators, allowing us to combine the two previous locators into
-one search:
+Para mejorar ligeramente el rendimiento, deberíamos intentar utilizar un
+localizador más específico: WebDriver permite buscar elementos por localizadores CSS,
+lo que nos permite combinar los dos localizadores anteriores en una sola búsqueda:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -119,10 +113,10 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Locating multiple elements
+### Localizando múltiples elementos
 
-It is possible that the document we are working with may turn out to have an
-ordered list of the cheese we like the best:
+Es posible que el documento con el que estamos trabajando contenga
+una lista ordenada del queso que más nos gusta:
 
 ```html
 <ol id=cheese>
@@ -132,15 +126,13 @@ ordered list of the cheese we like the best:
  <li id=camembert>…
 </ul>
 ```
-
-Since more cheese is undisputably better, and it would be cumbersome
-to have to retrieve each of the items individually, a superior
-technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
-elements. If only one element is found, it will still return a
-collection (of one element). If no element matches the locator, an
-empty list will be returned.
-
+Dado que más queso es indiscutiblemente mejor, y sería engorroso
+tener que recuperar cada uno de los elementos individualmente, 
+una técnica superior para recuperar _cheese_ es hacer uso de la 
+versión pluralizada `findElements(By)`. Este método devuelve una 
+colección de elementos web. Si solo se encuentra un elemento, aún devolverá una
+colección (de un elemento). Si ningún elemento coincide con el localizador,
+se devolverá la lista vacía.
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"));
@@ -162,44 +154,47 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element selection strategies
+### Estrategias de localización de elementos
 
-There are eight different built-in element location strategies in WebDriver:
+Hay ocho estrategias diferentes de ubicación de elementos integradas en WebDriver:
 
-| Locator | Description |
+| Localizador | Descripción |
 | -------- | ---------- |
-| class name | Locates elements whose class name contains the search value (compound class names are not permitted) |
-| css selector | Locates elements matching a CSS selector |
-| id | Locates elements whose ID attribute matches the search value |
-| name | Locates elements whose NAME attribute matches the search value |
-| link text | Locates anchor elements whose visible text matches the search value |
-| partial link text | Locates anchor elements whose visible text contains the search value. If multiple elements are matching, only the first one will be selected. |
-| tag name | Locates elements whose tag name matches the search value |
-| xpath | Locates elements matching an XPath expression |
+| class name | Localiza elementos en el que el nombre de su clase contiene el valor de la búsqueda (no se permiten nombres de clase compuestos) |
+| css selector | Localiza elementos que coinciden con un selector CSS |
+| id | Localiza elementos cuyo atributo ID coincide con el valor de la búsqueda |
+| name | Localiza elementos cuyo atributo NAME coincide con el valor de la búsqueda |
+| link text | Localiza elementos de anclaje cuyo texto visible coincide con el valor de búsqueda |
+| partial link text | Localiza elementos de anclaje cuyo texto visible coincide con el valor de búsqueda. Si varios elementos coinciden, solo se seleccionará el primero. |
+| tag name | Localiza elementos cuyo nombre de etiqueta (tagName) coincide con el valor de búsqueda |
+| xpath | Localiza elementos que coinciden con una expresión XPath |
 
-### Tips on using selectors
+### Consejos sobre el uso de selectores
 
-In general, if HTML IDs are available, unique, and consistently
-predictable, they are the preferred method for locating an element on
-a page. They tend to work very quickly, and forego much processing
-that comes with complicated DOM traversals.
+En general, si los ID del HTML están disponibles, son únicos y 
+consistentemente predecibles, son el método preferido para ubicar un 
+elemento en una página. Tienden a trabajar muy rápido y renuncian al 
+mucho procesamiento que viene con recorridos DOM complicados. 
 
-If unique IDs are unavailable, a well-written CSS selector is the
-preferred method of locating an element. XPath works as well as CSS
-selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they are typically
-not performance tested by browser vendors and tend to be quite slow.
+Si las ID únicas no están disponibles, un selector CSS bien escrito 
+es el método preferido para localizar un elemento. XPath funciona tan 
+bien como los selectores CSS, pero la sintaxis es complicada y con 
+frecuencia difícil de depurar. Aunque los selectores XPath son muy 
+flexibles, generalmente su desempeño no es probado por lo proveedores 
+de navegadores y tienden a ser bastante lentos. 
 
-Selection strategies based on link text and partial link text have
-drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+Las estrategias de selección basadas en enlaces de texto y enlaces de 
+texto parciales tienen el inconveniente en que solo funcionan en 
+elementos de enlace. Además, internamente en WebDriver llaman a los 
+selectores XPath. 
 
-Tag name can be a dangerous way to locate elements. There are
-frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the _findElements(By)_ method which
-returns a collection of elements.
+El nombre de la etiqueta puede ser una forma peligrosa de localizar 
+elementos. Existen frecuentemente múltiples elementos con la misma 
+etiqueta presentes en la página. Esto es mayormente útil cuando se 
+llama al método _findElements(By)_ que devuelve una colección de 
+elementos. 
 
-The recommendation is to keep your locators as compact and
-readable as possible. Asking WebDriver to traverse the DOM structure
-is an expensive operation, and the more you can narrow the scope of
-your search, the better.
+La recomendación es mantener tus localizadores tan compactos y 
+legibles como sea posible. Pedirle a WebDriver que atraviese la 
+estructura del DOM es una operación costosa, y cuanto más se pueda 
+reducir el alcance de tu búsqueda, mejor.

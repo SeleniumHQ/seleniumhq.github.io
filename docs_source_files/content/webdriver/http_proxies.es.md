@@ -3,31 +3,25 @@ title: "Proxies Http"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Un servidor proxy actúa como intermediario para
+solicitudes entre un cliente y un servidor. En forma simple,
+el tráfico fluye a través del servidor proxy
+en camino a la dirección solicitada y de regreso.
 
-A proxy server acts as an intermediary for 
-requests between a client and a server. In simple, 
-the traffic flows through the proxy server 
-on its way to the address you requested and back.
+Un servidor proxy para scripts de automatización con
+Selenium podría ser útil para:
 
-A proxy server for automation scripts with 
-Selenium could be helpful for:
+* Captura el tráfico de la red
+* Simular llamadas de backend realizadas por el sitio web
+* Accede al sitio web requerido bajo topologías de red complejas
+o restricciones/políticas corporativas estrictas.
 
-* Capture network traffic
-* Mock backend calls made by the website
-* Access the requited website under complex network 
-topologies or strict corporate restrictions/policies.
+Si te encuentras en un entorno corporativo, y un
+navegador no puede conectarse a una URL, esto es
+muy probablemente porque el ambiente necesita un
+proxy para acceder.
 
-If you are in a corporate environment, and a 
-browser fails to connect to a URL, this is 
-most likely because the environment needs a 
-proxy to be accessed.
-
-Selenium WebDriver provides a way to proxy settings
+Selenium WebDriver proporciona una via para configurar el proxy:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -50,7 +44,21 @@ public class proxyTest {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Need PR
+from selenium import webdriver
+
+PROXY = "<HOST:PORT>"
+webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
+    "httpProxy": PROXY,
+    "ftpProxy": PROXY,
+    "sslProxy": PROXY,
+    "proxyType": "MANUAL",
+
+}
+
+with webdriver.Firefox() as driver:
+    # Open URL
+    driver.get("https://selenium.dev")
+
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Need pr
@@ -70,7 +78,6 @@ import org.openqa.selenium.chrome.ChromeOptions
 class proxyTest {
     fun main() {
 
-        System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
         val proxy = Proxy()
         proxy.setHttpProxy("<HOST:PORT>")
         val options = ChromeOptions()

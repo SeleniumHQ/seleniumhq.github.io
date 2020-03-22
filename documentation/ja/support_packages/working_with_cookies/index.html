@@ -11,20 +11,20 @@
     <title>クッキーの使用 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584281123" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584281123" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1584861205" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1584861205" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584281123" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1584861205" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584281123"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1584861205"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584281123"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584281123"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1584861205"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1584861205"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584281123"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1584861205"></script>
 
     
   </div>
@@ -2950,15 +2950,44 @@ CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐた�
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Code sample
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> cookieTest {
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
+    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
+    <span style="color:#719e07">try</span> {
+      driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
+      Cookie <span style="color:#268bd2">cookie</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Strict&#34;</span>).build();
+      Cookie <span style="color:#268bd2">cookie1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Lax&#34;</span>).build();
+      driver.manage().addCookie(cookie);
+      driver.manage().addCookie(cookie1);
+      System.out.println(cookie.getSameSite());
+      System.out.println(cookie1.getSameSite());
+    } <span style="color:#719e07">finally</span> {
+      driver.quit();
+    }
+  }
+}
+  </code></pre></div>
 </section>
  
 
 
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
- <span style="color:#586e75"># code sample</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
+
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>)
+<span style="color:#586e75"># Adds the cookie into current browser context with sameSite &#39;Strict&#39; (or) &#39;Lax&#39;</span>
+driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;foo&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>: <span style="color:#2aa198">&#34;value&#34;</span>, <span style="color:#2aa198">&#39;sameSite&#39;</span>: <span style="color:#2aa198">&#39;Strict&#39;</span>})
+driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;foo1&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>: <span style="color:#2aa198">&#34;value&#34;</span>, <span style="color:#2aa198">&#39;sameSite&#39;</span>: <span style="color:#2aa198">&#39;Lax&#39;</span>})
+cookie1 <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#39;foo&#39;</span>)
+cookie2 <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#39;foo1&#39;</span>)
+<span style="color:#719e07">print</span> cookie1
+<span style="color:#719e07">print</span> cookie2
   </code></pre></div>
 </section>
   
@@ -3004,8 +3033,24 @@ CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐた�
 
 <section id="kotlincode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// We don&#39;t have a Kotlin code sample yet -  Help us out and raise a PR  
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">import</span> org.openqa.selenium.Cookie
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
+
+<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
+    <span style="color:#719e07">val</span> driver = ChromeDriver()
+    <span style="color:#719e07">try</span> {
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>)
+        <span style="color:#719e07">val</span> cookie = Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Strict&#34;</span>).build()
+        <span style="color:#719e07">val</span> cookie1 = Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Lax&#34;</span>).build()
+        driver.manage().addCookie(cookie)
+        driver.manage().addCookie(cookie1)
+        println(cookie.getSameSite())
+        println(cookie1.getSameSite())
+    } <span style="color:#719e07">finally</span> {
+        driver.quit()
+    }
+} 
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -3018,7 +3063,7 @@ CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐた�
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/support_packages/working_with_cookies/">
       “クッキーの使用”
-    </a> was last updated on: 14 Mar 2020 07:24:46 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/f3c4b319137dc9778f929a5f010ee784d5014711">Japanese translation of Same-Site Cookie Attribute (#313) [deploy site] (f3c4b3191)</a>
+    </a> was last updated on: 20 Mar 2020 22:59:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/946d0c097bcb6b3c5dbd6e204dab4a6b383d562a">Add: Adding py code sample for sameSite cookie attribute (946d0c09)</a>
 </h5>
         
         </div> 
@@ -4183,19 +4228,19 @@ CSRF（クロスサイトリクエストフォージェリ）攻撃を防ぐた�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584281123"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1584861205"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584281123"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584281123"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1584861205"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1584861205"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584281123" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584281123"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1584861205" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1584861205"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

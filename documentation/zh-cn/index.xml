@@ -12,13 +12,18 @@
     
     
     <item>
-      <title>Page object models</title>
+      <title>PO设计模式</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change.</description>
+      <description>PO（page object）设计模式是在自动化中已经流行起来的一种易于维护和减少代码的设计模式. 在自动化测试中, PO对象作为一个与页面交互的接口. 测试中需要与页面的UI进行交互时, 便调用PO的方法. 这样做的好处是, 如果页面的UI发生了更改,那么测试用例本身不需要更改, 只需更改PO中的代码即可.
+PO设计模式具有以下优点:
+ 测试代码与页面的定位代码（如定位器或者其他的映射）相分离. 该页面提供的方法或元素在一个独立的类中, 而不是将这些方法或元素分散在整个测试中.  这允许在一个地方修改由于UI变化所带来的所有修改. 随着这种&amp;rdquo;测试设计模式&amp;rdquo;的广泛使用, 可以在众多博客中找到有关此技术的有用信息. 我们鼓励希望了解更多信息的读者在互联网上搜索有关此主题的博客. 许多人已经写过这种设计模式, 并且可以提供超出本用户指南范围的有用提示. 不过, 为了让您入门, 我们将通过一个简单的示例来说明页面对象.
+首先, 思考一个不使用PO模式的自动化测试的典型案例:
+/*** * Tests login feature */ public class Login { public void testLogin() { // 在登录页面上填写登录数据  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign-in&amp;#34;)).click(); // 登录后验证h1标签是否为Hello userName  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } 这种方法有两个问题.
+ 测试方法与定位器 (在此实例中为By.name)耦合过于严重. 如果测试的用户界面更改了其定位器或登录名的输入和处理方式, 则测试本身必须进行更改. 在对登录页面的所有测试中, 同一个定位器会散布在其中.  可以在以下登录页面的示例中应用PO设计模式重写此示例.
+import org.openqa.selenium.By; import org.</description>
     </item>
     
     <item>
@@ -110,7 +115,7 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
 WebDriver 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
 Selenium IDE Selenium IDE (Integrated Development Environment 集成开发环境) 是用来开发 Selenium 测试用例的工具。这是一个易于使用的 Chrome 和 Firefox 浏览器扩展，通常是开发测试用例最有效率的方式。它使用现有的 Selenium 命令记录用户在浏览器中的操作, 参数由元素的上下文确定。这不仅节省了开发时间，而且是学习 Selenium 脚本语法的一种很好的方法。
-Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和操作系统组合上运行测试。 这就是 Grid 应用的地方。</description>
+Grid Selenium Grid allows you to run test cases in different machines across different platforms. The control of triggering the test cases is on the local end, and when the test cases are triggered, they are automatically executed by the remote end.</description>
     </item>
     
     <item>
@@ -132,9 +137,9 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
-归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4450 commits 
-@barancev2817 commits 
-@jimevans2274 commits 
+归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4455 commits 
+@barancev2824 commits 
+@jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
     
@@ -156,17 +161,6 @@ Grid 在 WebDriver 测试开发后不久，您可能需要在多个浏览器和�
       <description>验证码 (CAPTCHA), 是 全自动区分计算机和人类的图灵测试 (Completely Automated Public Turing test to tell Computers and Humans Apart) 的简称, 是被明确地设计用于阻止自动化的, 所以不要尝试!
 规避验证码的检查, 主要有两个策略:
  在测试环境中禁用验证码 添加钩子以允许测试绕过验证码  </description>
-    </item>
-    
-    <item>
-      <title>Domain specific language</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics. They want to use your system to push their new employees through the process with minimal difficulty; they want to book travel to Alaska; they want to configure and buy unicorns at a discount.</description>
     </item>
     
     <item>
@@ -275,6 +269,19 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
     </item>
     
     <item>
+      <title>领域特定语言</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
+      <description>领域特定语言 (DSL) 是一种为用户提供解决问题的表达方式的系统. 它使用户可以按照自己的术语与系统进行交互, 而不仅仅是通过程序员的语言.
+您的用户通常并不关心您网站的外观. 他们不在乎装饰, 动画或图形. 他们希望借助于您的系统, 以最小的难度使新员工融入整个流程； 他们想预订去阿拉斯加的旅行； 他们想以折扣价配置和购买独角兽. 您作为测试人员的工作应尽可能接近&amp;rdquo;捕捉”这种思维定势. 考虑到这一点, 我们开始着手&amp;rdquo;建模”您正在工作的应用程序, 以使测试脚本 (发布前用户仅有的代理) &amp;ldquo;说话”并代表用户.
+在Selenium中, DSL通常由方法表示, 其编写方式使API简单易读-它们使开发人员和干系人 (用户, 产品负责人, 商业智能专家等) 之间能够产生汇报.
+好处  可读: 业务关系人可以理解. 可写: 易于编写, 避免不必要的重复. 可扩展: 可以 (合理地) 添加功能而无需打破约定以及现有功能. 可维护: 通过将实现细节排除在测试用例之外, 您可以很好地隔离 AUT* 的修改.  Java 以下是Java中合理的DSL方法的示例. 为简便起见, 假定 driver 对象是预定义的并且可用于该方法.
+/** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.</description>
+    </item>
+    
+    <item>
       <title>驱动特定的功能</title>
       <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -304,16 +311,6 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
     </item>
     
     <item>
-      <title>Generating application state</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test. A method should be created to gain access to the AUT* (e.</description>
-    </item>
-    
-    <item>
       <title>HTML runner</title>
       <link>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -327,14 +324,16 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
     </item>
     
     <item>
-      <title>HTTP response codes</title>
+      <title>HTTP响应码</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.
-Selenium WebDriver is a completely different approach to browser automation, preferring to act more like a user and this is represented in the way you write tests with WebDriver.</description>
+      <description>对于Selenium RC中的某些浏览器配置， Selenium充当了浏览器和自动化站点之间的代理. 这意味着可以捕获或操纵通过Selenium传递的所有浏览器流量. captureNetworkTraffic() 方法旨在捕获浏览器和自动化站点之间的所有网络流量，包括HTTP响应码.
+Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜欢表现得像用户一样，这种方式来自于基于WebDriver编写测试的方式. 在自动化功能测试中，检查状态码并不是测试失败的特别重要的细节, 之前的步骤更重要.
+浏览器将始终呈现HTTP状态代码，例如404或500错误页面. 遇到这些错误页面时，一种“快速失败”的简单方法是 在每次加载页面后检查页面标题或可信赖点的内容（例如 &amp;lt;h1&amp;gt; 标签）. 如果使用的是页面对象模型，则可以将此检查置于类构造函数中或类似于期望的页面加载的位置. 有时，HTTP代码甚至可能出现在浏览器的错误页面中， 您可以使用WebDriver读取此信息并改善调试输出.
+检查网页本身的一种理想实践是符合WebDriver的呈现以及用户的视角.
+如果您坚持，捕获HTTP状态代码的高级解决方案是复刻Selenium RC的行为去使用代理. WebDriver API提供了为浏览器设置代理的功能， 并且有许多代理可以通过编程方式来操纵发送到Web服务器和从Web服务器接收的请求的内容. 使用代理可以决定如何响应重定向响应代码. 此外，并非每个浏览器都将响应代码提供给WebDriver， 因此选择使用代理可以使您拥有适用于每个浏览器的解决方案.</description>
     </item>
     
     <item>
@@ -344,8 +343,8 @@ Selenium WebDriver is a completely different approach to browser automation, pre
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Acceptance testing This type of test is done to determine if a product&amp;rsquo;s feature matches its requirements. This generally involves the customer&amp;rsquo;s feedback or specification.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behavior. This simulation could be done by record/playback or through the different supported languages as explained in this documentation. Note: Acceptance testing is a subtype of functional testing, which some people might also refer to.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.
+For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour.</description>
     </item>
     
     <item>
@@ -397,6 +396,17 @@ require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :i
     </item>
     
     <item>
+      <title>生成应用程序状态</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
+      <description>Selenium不应用于准备测试用例. 测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.
+例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 此外, 不应使用Selenium创建预加载数据来进行测试的方法.
+如前所述, 应利用现有的API为 AUT* 创建数据. *AUT: 待测系统</description>
+    </item>
+    
+    <item>
       <title>配置自己的服务网格</title>
       <link>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -438,16 +448,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Mock external services</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
       <title>什么时候应该使用服务网格</title>
       <link>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -483,6 +483,15 @@ Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.
     </item>
     
     <item>
+      <title>模拟外部服务</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/mock_external_services/</guid>
+      <description>消除对外部服务的依赖性将大大提高测试的速度和稳定性.</description>
+    </item>
+    
+    <item>
       <title>等待</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -507,16 +516,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     </item>
     
     <item>
-      <title>Improved reporting</title>
-      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc. Here are some links for more information regarding report outputs for several languages.</description>
-    </item>
-    
-    <item>
       <title>Support classes</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/support_classes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -526,6 +525,16 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
  WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
  Locator Strategies Events LoadableComponent ThreadGuard etc.  Let&amp;rsquo;s Start:
 ThreadGuard  This class is only available in the Java Binding</description>
+    </item>
+    
+    <item>
+      <title>改善报告</title>
+      <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</guid>
+      <description>Selenium并非旨在报告测试用例的运行状态. 利用单元测试框架的内置报告功能是一个好的开始. 大多数单元测试框架都有可以生成xUnit或HTML格式的报告. xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务器, 例如Jenkins、Travis、Bamboo等. 以下是一些链接, 可获取关于几种语言报表输出的更多信息.
+NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>
@@ -587,36 +596,38 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.o
     </item>
     
     <item>
-      <title>Http proxies</title>
+      <title>Http 代理</title>
       <link>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
-      <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
-A proxy server for automation scripts with Selenium could be helpful for:
- Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
+      <description>代理服务器充当客户端和服务器之间的请求中介. 简述而言, 流量将通过代理服务器流向您请求的地址, 然后返回.
+使用代理服务器用于Selenium的自动化脚本, 可能对以下方面有益:
+ 捕获网络流量 模拟网站后端响应 在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.  如果您在公司环境中, 并且浏览器无法连接到URL, 则最有可能是因为环境, 需要借助代理进行访问.
+Selenium WebDriver提供了如下设置代理的方法
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   from selenium import webdriver PROXY = &amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34; webdriver.</description>
     </item>
     
     <item>
-      <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.
-Instead of using WebDriver for this, you could save a ton of time by executing a curl command, or using a library such as BeautifulSoup since these methods don’t rely on creating a browser and navigating to a page.</description>
-    </item>
-    
-    <item>
-      <title>Test independency</title>
+      <title>测试的独立性</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/test_independency/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>将每个测试编写为独立的单元. 以不依赖于其他测试完成的方式编写测试:
+例如有一个内容管理系统, 您可以借助其创建一些自定义内容, 这些内容在发布后作为模块显示在您的网站上, 并且CMS和应用程序之间的同步可能需要一些时间.
+测试模块的一种错误方法是在测试中创建并发布内容, 然后在另一测试中检查该模块. 这是不可取的, 因为发布后内容可能无法立即用于其他测试.
+与之相反的事, 您可以创建在受影响的测试中打开和关闭的打桩内容, 并将其用于验证模块. 而且, 对于内容的创建, 您仍然可以进行单独的测试.</description>
+    </item>
+    
+    <item>
+      <title>爬取链接</title>
+      <link>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
+      <description>建议您不要使用WebDriver来通过链接进行爬网， 并非因为无法完成，而是因为它绝对不是最理想的工具。 WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间， 具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.
+除了使用WebDriver之外， 您还可以通过执行 curl 命令或 使用诸如BeautifulSoup之类的库来节省大量时间， 因为这些方法不依赖于创建浏览器和导航至页面. 通过不使用WebDriver可以节省大量时间.</description>
     </item>
     
     <item>
@@ -641,18 +652,6 @@ public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&
     </item>
     
     <item>
-      <title>Web element</title>
-      <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
-WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
-Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
-    </item>
-    
-    <item>
       <title>每次测试都刷新浏览器</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -660,6 +659,18 @@ Find Element It is used to find an element and returns a first matching single W
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>每次测试都从一个干净的已知状态开始. 理想情况下, 为每次测试打开一个新的虚拟机. 如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 对于Firefox, 请使用您已知的配置文件去启动WebDriver.
 FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+    </item>
+    
+    <item>
+      <title>网络元素</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
+      <description>WebElement表示DOM元素. 可以通过使用WebDriver实例从文档根节点进行搜索, 或者在另一个WebElement下进行搜索来找到WebElement.
+WebDriver API提供了内置方法来查找基于不同属性的WebElement (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
+Find Element 此方法用于查找元素并返回第一个匹配的单个WebElement引用, 该元素可用于进一步的元素操作.
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
     </item>
     
     <item>

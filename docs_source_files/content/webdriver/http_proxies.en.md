@@ -43,7 +43,21 @@ public class proxyTest {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Need PR
+from selenium import webdriver
+
+PROXY = "<HOST:PORT>"
+webdriver.DesiredCapabilities.FIREFOX['proxy'] = {
+    "httpProxy": PROXY,
+    "ftpProxy": PROXY,
+    "sslProxy": PROXY,
+    "proxyType": "MANUAL",
+
+}
+
+with webdriver.Firefox() as driver:
+    # Open URL
+    driver.get("https://selenium.dev")
+
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Need pr
@@ -63,7 +77,6 @@ import org.openqa.selenium.chrome.ChromeOptions
 class proxyTest {
     fun main() {
 
-        System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
         val proxy = Proxy()
         proxy.setHttpProxy("<HOST:PORT>")
         val options = ChromeOptions()

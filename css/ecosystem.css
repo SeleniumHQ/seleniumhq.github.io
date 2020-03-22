@@ -22,6 +22,11 @@
   padding-left:60px;
 }
 
+.container a {
+    color: #43B02A;
+    font-weight: bold;
+}
+
 /***/
 
 /*Tables & Rows*/
