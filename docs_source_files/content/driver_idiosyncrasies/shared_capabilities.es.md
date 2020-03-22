@@ -97,22 +97,17 @@ excepción del tipo _TimeoutException_.
 Esto especifica el tiempo de espera para la estrategia de localización de 
 elementos implicita. Por defecto el _timeout_ es de **0**, este es impuesto cuando
 se crea una nueva sesión a través del WebDriver.
-### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
 
-## unhandledPromptBehavior
+## Gestionar el comportamiento de las popups Prompt (unhandledPromptBehavior)
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+Especifica la forma en la que el usuario puede manejar las popups `prompt` 
+(`user prompt handler`) en la sesión actual.
+El valor predeterminado es **dismiss and notify state**
 
-### User Prompt Handler
-
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+### Manejo de las popups Prompt (User Prompt Handler)
+Esto define que acción se debe tomar cuando aparece una ventana `prompt` en la
+parte remota. Es definida por la capacidad `unhandledPromptBehavior` y tiene
+los siguientes estados:
 
 * dismiss
 * accept
