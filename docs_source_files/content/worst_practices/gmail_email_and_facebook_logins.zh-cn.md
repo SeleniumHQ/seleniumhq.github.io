@@ -25,5 +25,5 @@ API不会频繁更改, 但是网页和HTML定位符经常变化,
 
 符合[W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
 的WebDriver实现, 
-也会使用 `webdriver` 的属性对 `navigator` 对象进行注释, 
+也会使用 `WebDriver` 的属性对 `navigator` 对象进行注释, 
 用于缓解拒绝服务的攻击.
