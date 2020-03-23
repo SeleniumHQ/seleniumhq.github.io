@@ -3,116 +3,111 @@ title: "Shared capabilities"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Con el fin de crear una nueva sesión del _WebDriver_ de _Selenium_,
+la parte local debe proveer las capacidades(_capabilities_) básicas a la parte remota.
+La parte remota usa el mismo conjunto de capacidades para crear una sesión y
+describir las funcionalidades de la sesión actual.
 
-In-order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
-
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+El _WebDriver_ proporciona unas capacidades que cada parte remota debe apoyar en 
+su implementación.
+Las siguientes capacidades son las que el _WebDriver_ soporta:
 
 ## browserName:
 
-This capability is used to set the `browserName` for a given session. 
-If the specified browser is not installed at the 
-remote end, the session creation will fail
+Esta capacidad es usada para fijar el `browserName`(nombre del navegador) para 
+una sesión dada.
+Si el navegador especificado no esta instado en la parte remota, la creación
+la sesión fallará.
 
 ## browserVersion: 
 
-This capability is optional, this is used to 
-set the available browser version at remote end. 
-For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+Esta capacidad es opcional, es usada para fijar la versión disponible del
+navegador en la parte remota.
+Por ejemplo, si preguntamos por una versión 75 de Chrome en un sistema que solo
+tiene instalada la versión 80 instalada, la creación de la sesión fallará.
 
 ## pageLoadStrategy:
 
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
+Cuando navegamos a una nueva pagina vía URL, por defecto _Selenium_ esperará
+hasta que la pagina este cargada completamente antes de responder.
+Esto funciona bien para principiantes, pero puede causar largos tiempos de espera
+en paginas que cargan una gran cantidad de recursos externos. Usando alguna de 
+las estrategias que no están especificadas por defecto puedes hacer que tus tests
+se ejecuten mas rápidamente pero también podrías llegar a introducir problemas 
+de fiabilidad donde los elementos de la pagina cambian de posición según
+estos elementos van cargando.
 
-The page load strategy queries the
-[document.readyState](//developer.mozilla.org/es/docs/Web/API/Document/readyState)
-as described in the table below:
+La estrategia de carga de las paginas consulta el atributo 
+[document.readyState](//developer.mozilla.org/es/docs/Web/API/Document/readyState) 
+como se describe en la tabla siguiente:
 
-| Strategy | Ready State | Notes |
+|  Estrategia | Estado Atributo Ready | Notas |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | complete | Usado por defecto, espera a que todos los recursos se descarguen |
+| eager | interactive | Acceso al DOM esta listo, pero los otros recursos como imágenes pueden estar cargando |
+| none | Any | No bloquea al WebDriver en absoluto |
 
 ## platformName
 
-This identifies the operating system at the remote-end, 
-fetching the `platformName` returns the OS name. 
-
-In cloud-based providers, 
-setting `platformName` sets the OS at the remote-end. 
+Esto es usado para identificar el sistema operativo en la parte
+remota, buscar la capacidad `platformName` devuelve el sistema operativo.
+ 
+En proveedores basados en la nube, fijar la capacidad `platformName` permite
+definir el sistema operativo de la parte remota. 
 
 ## acceptInsecureCerts
 
-This capability checks whether an expired (or) 
-invalid `TLS Certificate` is used while navigating 
-during a session.
+Esta capacidad comprueba si un certificado TLS ha vencido o es invalido esta
+siendo usado para navegar durante una sesión.
 
-If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
-will be returned as navigation encounters any domain 
-certificate problems. If set to `true`, invalid certificate will be 
-trusted by the browser.
+Si esta capacidad esta fijada a `false`, un 
+[error de certificado inseguro](//developer.mozilla.org/es/docs/Web/WebDriver/Errors/InsecureCertificate)
+sera devuelto cuando la navegación encuentre cualquier dominio con problemas
+de certificado. Si se fija a `true`, los certificados inválidos serán confiados
+por el navegador
 
-All self-signed certificates will be trusted by this capability by default. 
-Once set, `acceptInsecureCerts` capability will have an 
-effect for the entire session.
+Todos los certificados auto-firmados serán confiables por esta capacidad por defecto.
+Una vez.
+Una vez fijado la capacidad `acceptInsecureCerts` tendrá efecto durante la sesión
+entera.
 
-## Session timeouts
+## Timeouts de sesión
 
-A WebDriver `session` is imposed with a certain `session timeout`
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.
+Una sesión del WebDriver es impuesta con un cierto intervalo de _timeout_ de sesión
+durante el cual el usuario puede controlar el comportamiento de ejecutar scripts
+o recuperar información del navegador.
 
-Each session timeout is configured with
-combination of different `timeouts` as described below:
+Cada _timeout_ de sesión es configurado con una combinación diferente de timeouts
+como se describe a continuación:
 
-### Script Timeout:
-Specifies when to interrupt an executing script in
-a current browsing context. The default timeout **30,000**
-is imposed when a new session is created by WebDriver.
+### Timeout de script (Script Timeout):
+Especifica cuando interrumpir un script en ejecución en el contexto actual del
+navegador. Por defecto esta configurado a **30,000** cuando una nueva sesión es
+creada por el WebDriver.
 
-### Page Load Timeout:
-Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout **300,000** is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-_TimeoutException_.
+### Timeout de tiempo de carga (Page Load Timeout):
+Especifica el intervalo de tiempo en el cual una pagina de web necesita ser 
+cargada en el contexto actual del navegador.
+El _timeout_ por defecto es de **300,000** para las nuevas sesiones creadas por 
+el WebDriver.
+Si el tiempo de carga excede el limite marcado, el script será parado por una 
+excepción del tipo _TimeoutException_.
 
-### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
+### Timeout de esperas implicitas (Implicit Wait Timeout):
+Esto especifica el tiempo de espera para la estrategia de localización de 
+elementos implicita. Por defecto el _timeout_ es de **0**, este es impuesto cuando
+se crea una nueva sesión a través del WebDriver.
 
-## unhandledPromptBehavior
+## Gestionar el comportamiento de las popups Prompt (unhandledPromptBehavior)
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+Especifica la forma en la que el usuario puede manejar las popups `prompt` 
+(`user prompt handler`) en la sesión actual.
+El valor predeterminado es **dismiss and notify state**
 
-### User Prompt Handler
-
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+### Manejo de las popups Prompt (User Prompt Handler)
+Esto define que acción se debe tomar cuando aparece una ventana `prompt` en la
+parte remota. Es definida por la capacidad `unhandledPromptBehavior` y tiene
+los siguientes estados:
 
 * dismiss
 * accept
