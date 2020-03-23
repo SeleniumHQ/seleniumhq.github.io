@@ -1,37 +1,29 @@
 ---
-title: "Gmail, email and Facebook logins"
+title: "Gmail, email 和 Facebook 登录"
 menuTitle: "Gmail, email and Facebook"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.
+由于多种原因, 不建议使用WebDriver登录Gmail和Facebook等网站. 
+除了违反这些网站的使用条款之外 (您可能会面临帐户被关闭的风险) , 
+还有其运行速度缓慢且不可靠的因素.
 
-The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.
 
-Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.
+理想的做法是使用电子邮件供应商提供的API, 
+或者对于Facebook, 使用开发者工具的服务, 
+该服务是被用于创建测试帐户、朋友等内容的API. 
+尽管使用API可能看起来有些额外的工作量, 
+但是您将获得基于速度、可靠性和稳定性的回报. 
+API不会频繁更改, 但是网页和HTML定位符经常变化, 
+并且需要您更新测试框架的代码.
 
-WebDriver implementations that are
-[W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
-also annotate the `navigator` object
-with a `webdriver` property
-so that Denial of Service attacks can be mitigated.
+在任何时候测试使用WebDriver登录第三方站点, 
+都会增加测试失败的风险, 
+因为这会使您的测试时间更长. 
+通常的经验是, 执行时间较长的测试会更加脆弱和不可靠.
+
+符合[W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
+的WebDriver实现, 
+也会使用 `webdriver` 的属性对 `navigator` 对象进行注释, 
+用于缓解拒绝服务的攻击.
