@@ -52,45 +52,36 @@ URLを介して新しいページに移動する場合、デフォルトでは�
 
 ## Session timeouts
 
-A WebDriver `session` is imposed with a certain `session timeout`
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.
+WebDriverの `セッション` には特定の `セッションタイムアウト` 間隔が設定されており、
+その間、ユーザーはスクリプトの実行またはブラウザーからの情報の取得の動作を制御できます。
 
-Each session timeout is configured with
-combination of different `timeouts` as described below:
+各セッションタイムアウトは、以下で説明するように、異なる `タイムアウト` の組み合わせで構成されます。
 
 ### Script Timeout:
-Specifies when to interrupt an executing script in
-a current browsing context. The default timeout **30,000**
-is imposed when a new session is created by WebDriver.
+現在のブラウジングコンテキストで実行中のスクリプトをいつ中断するかを指定します。
+新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **30,000** が課されます。
 
 ### Page Load Timeout:
-Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout **300,000** is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-_TimeoutException_.
+現在のブラウジングコンテキストでWebページをロードする必要がある時間間隔を指定します。
+新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **300,000** が課されます。
+ページの読み込みが指定/デフォルトの時間枠を制限する場合、スクリプトは　_TimeoutException_　によって停止されます。
 
 ### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
+これは、要素を検索するときに暗黙的な要素の検索戦略を待つ時間を指定します。
+新しいセッションがWebDriverによって作成されると、デフォルトのタイムアウト **0** が課されます。
 
 ## unhandledPromptBehavior
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+現在のセッションの `ユーザープロンプトハンドラー` の状態を指定します。
+デフォルトでは、 **dismiss and notify (却下して通知する) 状態** となります。
 
 ### User Prompt Handler
 
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+これは、リモートエンドでユーザープロンプトが表示されたときに実行する必要があるアクションを定義します。
+これは、 `unhandledPromptBehavior` Capabilityによって定義され、次の状態があります。
 
-* dismiss
-* accept
-* dismiss and notify
-* accept and notify
-* ignore
+* dismiss (却下)
+* accept (受入)
+* dismiss and notify (却下して通知)
+* accept and notify (受け入れて通知)
+* ignore (無視)
