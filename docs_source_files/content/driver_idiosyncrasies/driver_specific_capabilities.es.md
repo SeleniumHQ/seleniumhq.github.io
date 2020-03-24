@@ -132,7 +132,7 @@ options.file_upload_dialog_timeout = 2000
 driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = InternetExplorerOptions()
