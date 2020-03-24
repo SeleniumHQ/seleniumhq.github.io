@@ -1,5 +1,5 @@
 ---
-title: "Capacidades especificas de los Drivers"
+title: "Capacidades específicas de los Drivers"
 weight: 2
 ---
 
