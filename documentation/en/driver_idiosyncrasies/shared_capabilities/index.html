@@ -11,20 +11,20 @@
     <title>Shared capabilities :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1584857513" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1584857513" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1584966028" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1584966028" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1584857513" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1584966028" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1584857513"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1584966028"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1584857513"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1584857513"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1584966028"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1584966028"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1584857513"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1584966028"></script>
 
     
   </div>
@@ -1935,6 +1935,10 @@
 <li><a href="#page-load-timeout">Page Load Timeout:</a></li>
 <li><a href="#implicit-wait-timeout">Implicit Wait Timeout</a></li>
 </ul></li>
+<li><a href="#unhandledpromptbehavior">unhandledPromptBehavior</a>
+<ul>
+<li><a href="#user-prompt-handler">User Prompt Handler</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2084,6 +2088,25 @@ implicit element location strategy when
 locating elements. The default timeout <strong>0</strong>
 is imposed when a new session is created by WebDriver.</p>
 
+<h2 id="unhandledpromptbehavior">unhandledPromptBehavior</h2>
+
+<p>Specifies the state of current session&rsquo;s <code>user prompt handler</code>.
+Defaults to <strong>dismiss and notify state</strong></p>
+
+<h3 id="user-prompt-handler">User Prompt Handler</h3>
+
+<p>This defines what action must take when a
+user prompt encounters at remote-end. This is defined by
+<code>unhandledPromptBehavior</code> capability and has the following states:</p>
+
+<ul>
+<li>dismiss</li>
+<li>accept</li>
+<li>dismiss and notify</li>
+<li>accept and notify</li>
+<li>ignore</li>
+</ul>
+
 
 <footer class=" footline" >
 	
@@ -2092,7 +2115,7 @@ is imposed when a new session is created by WebDriver.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/driver_idiosyncrasies/shared_capabilities/">
       “Shared capabilities”
-    </a> was last updated on: 20 Mar 2020 14:49:17 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1ad2f313302fd5a8cb91f7515f4622ce644f9e8b">Add: Adding session timeouts in doc-&gt; shared_capabilities (#345) [deploy site] (1ad2f313)</a>
+    </a> was last updated on: 22 Mar 2020 17:46:06 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3666d599034742350e3ff42072d9df0f5a410d7a">Add: Adding unhandledPromptBehaviour to shared capabilities doc [deploy site] (3666d599)</a>
 </h5>
         
         </div> 
@@ -3254,19 +3277,19 @@ is imposed when a new session is created by WebDriver.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1584857513"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1584966028"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1584857513"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1584857513"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1584966028"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1584966028"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1584857513" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1584857513"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1584966028" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1584966028"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

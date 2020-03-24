@@ -120,9 +120,9 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
-WebDriver provides capabilities that each remote end will/should support the implementation.</description>
+      <description>Con el fin de crear una nueva sesión del WebDriver de Selenium, la parte local debe proveer las capacidades(capabilities) básicas a la parte remota. La parte remota usa el mismo conjunto de capacidades para crear una sesión y describir las funcionalidades de la sesión actual.
+El WebDriver proporciona unas capacidades que cada parte remota debe apoyar en su implementación. Las siguientes capacidades son las que el WebDriver soporta:
+browserName: Esta capacidad es usada para fijar el browserName(nombre del navegador) para una sesión dada.</description>
     </item>
     
     <item>

@@ -11,20 +11,20 @@
     <title>Shared capabilities :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584857515" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1584966030" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584966030" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584857515" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584966030" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584966030"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584857515"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584857515"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584966030"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584966030"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584857515"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584966030"></script>
 
     
   </div>
@@ -1929,11 +1929,15 @@
 <li><a href="#pageloadstrategy">pageLoadStrategy:</a></li>
 <li><a href="#platformname">platformName</a></li>
 <li><a href="#acceptinsecurecerts">acceptInsecureCerts</a></li>
-<li><a href="#session-timeouts">Session timeouts</a>
+<li><a href="#timeouts-de-sesión">Timeouts de sesión</a>
 <ul>
-<li><a href="#script-timeout">Script Timeout:</a></li>
-<li><a href="#page-load-timeout">Page Load Timeout:</a></li>
-<li><a href="#implicit-wait-timeout">Implicit Wait Timeout</a></li>
+<li><a href="#timeout-de-script-script-timeout">Timeout de script (Script Timeout):</a></li>
+<li><a href="#timeout-de-tiempo-de-carga-page-load-timeout">Timeout de tiempo de carga (Page Load Timeout):</a></li>
+<li><a href="#timeout-de-esperas-implicitas-implicit-wait-timeout">Timeout de esperas implicitas (Implicit Wait Timeout):</a></li>
+</ul></li>
+<li><a href="#gestionar-el-comportamiento-de-las-popups-prompt-unhandledpromptbehavior">Gestionar el comportamiento de las popups Prompt (unhandledPromptBehavior)</a>
+<ul>
+<li><a href="#manejo-de-las-popups-prompt-user-prompt-handler">Manejo de las popups Prompt (User Prompt Handler)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1963,55 +1967,50 @@
 
 
 
+<p>Con el fin de crear una nueva sesión del <em>WebDriver</em> de <em>Selenium</em>,
+la parte local debe proveer las capacidades(<em>capabilities</em>) básicas a la parte remota.
+La parte remota usa el mismo conjunto de capacidades para crear una sesión y
+describir las funcionalidades de la sesión actual.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>In-order to create a new session by Selenium WebDriver,
-local end should provide the basic capabilities to remote end.
-The remote end uses the same set of capabilities to
-create a session and describes the current session features.</p>
-
-<p>WebDriver provides capabilities that each remote
-end will/should support the implementation.
-Following are the capabilities that WebDriver supports:</p>
+<p>El <em>WebDriver</em> proporciona unas capacidades que cada parte remota debe apoyar en
+su implementación.
+Las siguientes capacidades son las que el <em>WebDriver</em> soporta:</p>
 
 <h2 id="browsername">browserName:</h2>
 
-<p>This capability is used to set the <code>browserName</code> for a given session.
-If the specified browser is not installed at the
-remote end, the session creation will fail</p>
+<p>Esta capacidad es usada para fijar el <code>browserName</code>(nombre del navegador) para
+una sesión dada.
+Si el navegador especificado no esta instado en la parte remota, la creación
+la sesión fallará.</p>
 
 <h2 id="browserversion">browserVersion:</h2>
 
-<p>This capability is optional, this is used to
-set the available browser version at remote end.
-For Example, if ask for Chrome version 75 on a system that
-only has 80 installed, the session creation will fail</p>
+<p>Esta capacidad es opcional, es usada para fijar la versión disponible del
+navegador en la parte remota.
+Por ejemplo, si preguntamos por una versión 75 de Chrome en un sistema que solo
+tiene instalada la versión 80 instalada, la creación de la sesión fallará.</p>
 
 <h2 id="pageloadstrategy">pageLoadStrategy:</h2>
 
-<p>When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.</p>
+<p>Cuando navegamos a una nueva pagina vía URL, por defecto <em>Selenium</em> esperará
+hasta que la pagina este cargada completamente antes de responder.
+Esto funciona bien para principiantes, pero puede causar largos tiempos de espera
+en paginas que cargan una gran cantidad de recursos externos. Usando alguna de
+las estrategias que no están especificadas por defecto puedes hacer que tus tests
+se ejecuten mas rápidamente pero también podrías llegar a introducir problemas
+de fiabilidad donde los elementos de la pagina cambian de posición según
+estos elementos van cargando.</p>
 
-<p>The page load strategy queries the
+<p>La estrategia de carga de las paginas consulta el atributo
 <a href="//developer.mozilla.org/es/docs/Web/API/Document/readyState">document.readyState</a>
-as described in the table below:</p>
+como se describe en la tabla siguiente:</p>
 
 <table>
 <thead>
 <tr>
-<th>Strategy</th>
-<th>Ready State</th>
-<th>Notes</th>
+<th>Estrategia</th>
+<th>Estado Atributo Ready</th>
+<th>Notas</th>
 </tr>
 </thead>
 
@@ -2019,77 +2018,96 @@ as described in the table below:</p>
 <tr>
 <td>normal</td>
 <td>complete</td>
-<td>Used by default, waits for all resources to download</td>
+<td>Usado por defecto, espera a que todos los recursos se descarguen</td>
 </tr>
 
 <tr>
 <td>eager</td>
 <td>interactive</td>
-<td>DOM access is ready, but other resources like images may still be loading</td>
+<td>Acceso al DOM esta listo, pero los otros recursos como imágenes pueden estar cargando</td>
 </tr>
 
 <tr>
 <td>none</td>
 <td>Any</td>
-<td>Does not block WebDriver at all</td>
+<td>No bloquea al WebDriver en absoluto</td>
 </tr>
 </tbody>
 </table>
 
 <h2 id="platformname">platformName</h2>
 
-<p>This identifies the operating system at the remote-end,
-fetching the <code>platformName</code> returns the OS name.</p>
+<p>Esto es usado para identificar el sistema operativo en la parte
+remota, buscar la capacidad <code>platformName</code> devuelve el sistema operativo.</p>
 
-<p>In cloud-based providers,
-setting <code>platformName</code> sets the OS at the remote-end.</p>
+<p>En proveedores basados en la nube, fijar la capacidad <code>platformName</code> permite
+definir el sistema operativo de la parte remota.</p>
 
 <h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
 
-<p>This capability checks whether an expired (or)
-invalid <code>TLS Certificate</code> is used while navigating
-during a session.</p>
+<p>Esta capacidad comprueba si un certificado TLS ha vencido o es invalido esta
+siendo usado para navegar durante una sesión.</p>
 
-<p>If the capability is set to <code>false</code>, an
-<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
-will be returned as navigation encounters any domain
-certificate problems. If set to <code>true</code>, invalid certificate will be
-trusted by the browser.</p>
+<p>Si esta capacidad esta fijada a <code>false</code>, un
+<a href="//developer.mozilla.org/es/docs/Web/WebDriver/Errors/InsecureCertificate">error de certificado inseguro</a>
+sera devuelto cuando la navegación encuentre cualquier dominio con problemas
+de certificado. Si se fija a <code>true</code>, los certificados inválidos serán confiados
+por el navegador</p>
 
-<p>All self-signed certificates will be trusted by this capability by default.
-Once set, <code>acceptInsecureCerts</code> capability will have an
-effect for the entire session.</p>
+<p>Todos los certificados auto-firmados serán confiables por esta capacidad por defecto.
+Una vez.
+Una vez fijado la capacidad <code>acceptInsecureCerts</code> tendrá efecto durante la sesión
+entera.</p>
 
-<h2 id="session-timeouts">Session timeouts</h2>
+<h2 id="timeouts-de-sesión">Timeouts de sesión</h2>
 
-<p>A WebDriver <code>session</code> is imposed with a certain <code>session timeout</code>
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.</p>
+<p>Una sesión del WebDriver es impuesta con un cierto intervalo de <em>timeout</em> de sesión
+durante el cual el usuario puede controlar el comportamiento de ejecutar scripts
+o recuperar información del navegador.</p>
 
-<p>Each session timeout is configured with
-combination of different <code>timeouts</code> as described below:</p>
+<p>Cada <em>timeout</em> de sesión es configurado con una combinación diferente de timeouts
+como se describe a continuación:</p>
 
-<h3 id="script-timeout">Script Timeout:</h3>
+<h3 id="timeout-de-script-script-timeout">Timeout de script (Script Timeout):</h3>
 
-<p>Specifies when to interrupt an executing script in
-a current browsing context. The default timeout <strong>30,000</strong>
-is imposed when a new session is created by WebDriver.</p>
+<p>Especifica cuando interrumpir un script en ejecución en el contexto actual del
+navegador. Por defecto esta configurado a <strong>30,000</strong> cuando una nueva sesión es
+creada por el WebDriver.</p>
 
-<h3 id="page-load-timeout">Page Load Timeout:</h3>
+<h3 id="timeout-de-tiempo-de-carga-page-load-timeout">Timeout de tiempo de carga (Page Load Timeout):</h3>
 
-<p>Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout <strong>300,000</strong> is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-<em>TimeoutException</em>.</p>
+<p>Especifica el intervalo de tiempo en el cual una pagina de web necesita ser
+cargada en el contexto actual del navegador.
+El <em>timeout</em> por defecto es de <strong>300,000</strong> para las nuevas sesiones creadas por
+el WebDriver.
+Si el tiempo de carga excede el limite marcado, el script será parado por una
+excepción del tipo <em>TimeoutException</em>.</p>
 
-<h3 id="implicit-wait-timeout">Implicit Wait Timeout</h3>
+<h3 id="timeout-de-esperas-implicitas-implicit-wait-timeout">Timeout de esperas implicitas (Implicit Wait Timeout):</h3>
 
-<p>This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout <strong>0</strong>
-is imposed when a new session is created by WebDriver.</p>
+<p>Esto especifica el tiempo de espera para la estrategia de localización de
+elementos implicita. Por defecto el <em>timeout</em> es de <strong>0</strong>, este es impuesto cuando
+se crea una nueva sesión a través del WebDriver.</p>
+
+<h2 id="gestionar-el-comportamiento-de-las-popups-prompt-unhandledpromptbehavior">Gestionar el comportamiento de las popups Prompt (unhandledPromptBehavior)</h2>
+
+<p>Especifica la forma en la que el usuario puede manejar las popups <code>prompt</code>
+(<code>user prompt handler</code>) en la sesión actual.
+El valor predeterminado es <strong>dismiss and notify state</strong></p>
+
+<h3 id="manejo-de-las-popups-prompt-user-prompt-handler">Manejo de las popups Prompt (User Prompt Handler)</h3>
+
+<p>Esto define que acción se debe tomar cuando aparece una ventana <code>prompt</code> en la
+parte remota. Es definida por la capacidad <code>unhandledPromptBehavior</code> y tiene
+los siguientes estados:</p>
+
+<ul>
+<li>dismiss</li>
+<li>accept</li>
+<li>dismiss and notify</li>
+<li>accept and notify</li>
+<li>ignore</li>
+</ul>
 
 
 <footer class=" footline" >
@@ -2099,7 +2117,7 @@ is imposed when a new session is created by WebDriver.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/">
       “Shared capabilities”
-    </a> was last updated on: 20 Mar 2020 14:49:17 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1ad2f313302fd5a8cb91f7515f4622ce644f9e8b">Add: Adding session timeouts in doc-&gt; shared_capabilities (#345) [deploy site] (1ad2f313)</a>
+    </a> was last updated on: 23 Mar 2020 03:03:35 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/f8698ba2b70c0ad4918e7024210cc5b18bcec71c">Shared capabilities spanish (#367) (f8698ba2)</a>
 </h5>
         
         </div> 
@@ -3261,19 +3279,19 @@ is imposed when a new session is created by WebDriver.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584966030"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1584966030"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584966030"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584857515" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584857515"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584966030" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584966030"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

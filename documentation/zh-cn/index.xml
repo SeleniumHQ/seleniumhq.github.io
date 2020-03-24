@@ -112,10 +112,11 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
-      <description>Selenium 不仅仅是一个工具或 API，它还包含许多工具。
-WebDriver 如果您开始使用桌面网站测试自动化，那么您将使用 WebDriver APIs。 WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试。 这就像真正的用户正在操作浏览器一样。 由于 WebDriver 不要求使用应用程序代码编译其 API，因此它本质上不具有侵入性。 因此，您测试的应用程序与实时推送的应用程序相同。
-Selenium IDE Selenium IDE (Integrated Development Environment 集成开发环境) 是用来开发 Selenium 测试用例的工具。这是一个易于使用的 Chrome 和 Firefox 浏览器扩展，通常是开发测试用例最有效率的方式。它使用现有的 Selenium 命令记录用户在浏览器中的操作, 参数由元素的上下文确定。这不仅节省了开发时间，而且是学习 Selenium 脚本语法的一种很好的方法。
-Grid Selenium Grid allows you to run test cases in different machines across different platforms. The control of triggering the test cases is on the local end, and when the test cases are triggered, they are automatically executed by the remote end.</description>
+      <description>Selenium 不仅仅是一个工具或 API, 它还包含许多工具.
+WebDriver 如果您开始使用桌面网站测试自动化, 那么您将使用 WebDriver APIs. WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试. 这就像真正的用户正在操作浏览器一样. 由于 WebDriver 不要求使用应用程序代码编译其 API, 因此它本质上不具有侵入性. 因此, 您测试的应用程序与实时推送的应用程序相同.
+Selenium IDE Selenium IDE (Integrated Development Environment 集成开发环境) 是用来开发 Selenium 测试用例的工具. 这是一个易于使用的 Chrome 和 Firefox 浏览器扩展, 通常是开发测试用例最有效率的方式. 它使用现有的 Selenium 命令记录用户在浏览器中的操作, 参数由元素的上下文确定. 这不仅节省了开发时间, 而且是学习 Selenium 脚本语法的一种很好的方法.
+Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 可以本地控制测试用例的操作, 当测试用例被触发时, 它们由远端自动执行.
+当开发完WebDriver测试之后, 您可能需要在多个浏览器和操作系统的组合上运行测试. 这就是 Grid 的用途所在.</description>
     </item>
     
     <item>
@@ -138,7 +139,7 @@ Grid Selenium Grid allows you to run test cases in different machines across dif
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4455 commits 
-@barancev2824 commits 
+@barancev2833 commits 
 @jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
@@ -631,16 +632,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import o
     </item>
     
     <item>
-      <title>Page loading strategy</title>
-      <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
-      <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
-    </item>
-    
-    <item>
       <title>考虑使用Fluent API</title>
       <link>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -649,6 +640,22 @@ The document.readyState property of a document describes the loading state of th
       <description>Martin Fowler创造了术语 &amp;ldquo;Fluent API&amp;rdquo;. Selenium已经在其 FluentWait 类中实现了类似的东西, 这是对标准 Wait 类的替代. 您可以在页面对象中启用Fluent API设计模式, 然后使用如下代码段查询Google搜索页面:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); Google页面对象类具有这种流畅行为后可能看起来像这样:
 public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&amp;gt; { private final WebDriver driver; private GSPFluentInterface gspfi; public class GSPFluentInterface { private GoogleSearchPage gsp; public GSPFluentInterface(GoogleSearchPage googleSearchPage) { gsp = googleSearchPage; } public GSPFluentInterface clickSearchButton() { gsp.searchButton.click(); return this; } public GSPFluentInterface setSearchString( String sstr ) { clearAndType( gsp.searchField, sstr ); return this; } } @FindBy(id = &amp;#34;gbqfq&amp;#34;) private WebElement searchField; @FindBy(id = &amp;#34;gbqfb&amp;#34;) private WebElement searchButton; public GoogleSearchPage(WebDriver driver) { gspfi = new GSPFluentInterface( this ); this.</description>
+    </item>
+    
+    <item>
+      <title>页面加载策略</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
+      <description>定义当前会话的页面加载策略. 默认情况下, 当Selenium WebDriver加载页面时, 遵循 normal 的页面加载策略. 始终建议您在页面加载缓慢时, 停止下载其他资源 (例如图片, css, js) .
+document.readyState 属性描述当前页面的加载状态. 默认情况下, 在页面就绪状态是 complete 之前, WebDriver都将延迟 driver.get() 的响应或 driver.navigate().to() 的调用.
+在单页应用程序中 (例如Angular, react, Ember) , 一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) , 则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求, 因为内容在客户端动态加载, 无需刷新页面.
+单页应用程序可以动态加载许多视图, 而无需任何服务器请求, 因此页面加载策略将始终显示为 COMPLETE 的状态, 直到我们执行新的 driver.get() 或 driver.naviagte().to() 为止.
+WebDriver的 页面加载策略 支持以下内容:
+normal 此配置使Selenium WebDriver等待整个页面的加载. 设置为 normal 时, Selenium WebDriver将保持等待, 直到 返回 load 事件
+默认情况下, 如果未设置页面加载策略, 则设置 normal 为初始策略.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>
