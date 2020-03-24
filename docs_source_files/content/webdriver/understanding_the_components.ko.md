@@ -1,5 +1,5 @@
 ---
-title: "Understanding the components"
+title: "구성요소이해하기"
 weight: 1
 ---
 
@@ -16,8 +16,7 @@ a breakdown of how terms are used in this description.
 
 ### Terminology
 
-* **API:** Application Programming Interface. This is the set of "commands" 
-you use to manipulate WebDriver.
+* **API:** Application Programming Interface. 이는 당신이 Webdriver를 조종하기 위한 "commands"로 구성되어있습니다.
 * **Library:** A code module which contains the APIs and the code necessary
 to implement them. Libraries are specific to each language binding, eg .jar 
 files for Java, .dll files for .NET, etc.
