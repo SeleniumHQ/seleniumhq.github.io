@@ -671,7 +671,19 @@ print cookie2
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  # Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+  driver.manage.add_cookie(name: "foo", value: "bar", same_site: "Strict")
+  driver.manage.add_cookie(name: "foo1", value: "bar", same_site: "Lax")
+  puts driver.manage.cookie_named('foo')
+  puts driver.manage.cookie_named('foo1')
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
