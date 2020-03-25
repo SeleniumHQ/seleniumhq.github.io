@@ -1,37 +1,46 @@
 ---
-title: "Page loading strategy"
+title: "页面加载策略"
 weight: 8
 ---
 
-Defines the current session's page loading strategy. 
-By default, when Selenium WebDriver loads a page, 
-it follows the _normal_ pageLoadStrategy. 
-It is always recommended to stop downloading additional 
-resources (like images, css, js) when the page loading takes lot of time.
+定义当前会话的页面加载策略. 
+默认情况下, 当Selenium WebDriver加载页面时, 
+遵循 _normal_ 的页面加载策略. 
+始终建议您在页面加载缓慢时, 
+停止下载其他资源 (例如图片, css, js) .
 
-The `document.readyState` property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
-call until the document ready state is `complete`
 
-In SPA applications (like Angular, react, Ember) once the dynamic content 
-is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
-clicking on a link or performing some action within the page will not make a new request 
-to the server as the content is dynamically loaded at the client side without a pull page refresh. 
+`document.readyState` 属性描述当前页面的加载状态. 
+默认情况下, 在页面就绪状态是 `complete` 之前, 
+WebDriver都将延迟 `driver.get()` 的响应或
+ `driver.navigate().to()` 的调用.
 
-SPA applications can load many views dynamically 
-without any server requests, So pageLoadStrategy 
-will always show `COMPLETE` status until 
-we do a new `driver.get()` and `driver.naviagte().to()`
 
-WebDriver _pageLoadStrategy_ supports the following values:
+在单页应用程序中 (例如Angular, react, Ember) , 
+一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) , 
+则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求, 
+因为内容在客户端动态加载, 
+无需刷新页面.
+
+
+单页应用程序可以动态加载许多视图, 
+而无需任何服务器请求, 
+因此页面加载策略将始终显示为 `COMPLETE` 的状态, 
+直到我们执行新的 `driver.get()` 或 `driver.naviagte().to()` 为止.
+
+
+WebDriver的 _页面加载策略_ 支持以下内容:
 
 ## normal
 
-This will make Selenium WebDriver to wait for the entire page is loaded. 
-When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/zh-CN/docs/Web/Events/load) event fire is returned.
+此配置使Selenium WebDriver等待整个页面的加载. 
+设置为 **normal** 时, 
+Selenium WebDriver将保持等待, 直到
+返回 [load](https://developer.mozilla.org/zh-CN/docs/Web/Events/load) 事件
 
-By default **normal** is set to browser if none is provided.
+
+默认情况下, 如果未设置页面加载策略, 
+则设置 **normal** 为初始策略.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -55,7 +64,15 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'normal'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
+
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -123,12 +140,16 @@ fun main() {
 
 ## eager
 
-This will make Selenium WebDriver to wait until the 
-initial HTML document has been completely loaded and parsed, 
-and discards loading of stylesheets, images and subframes.
+这将使Selenium WebDriver保持等待, 
+直到完全加载并解析了HTML文档, 
+该策略无关样式表, 图片和subframes的加载.
 
-When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+设置为 **eager** 时, 
+Selenium WebDriver保持等待, 
+直至返回 
+[DOMContentLoaded](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 
+事件. 
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -227,7 +248,7 @@ fun main() {
 
 ## none
 
-When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
+设置为 **none** 时, Selenium WebDriver仅等待至初始页面下载完成.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

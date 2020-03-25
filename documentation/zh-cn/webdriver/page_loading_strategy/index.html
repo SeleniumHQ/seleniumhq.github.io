@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>Page loading strategy :: Selenium 文档</title>
+    <title>页面加载策略 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1584857520" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1584857520" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585129698" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585129698" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1584857520" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585129698" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1584857520"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585129698"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1584857520"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1584857520"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585129698"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585129698"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1584857520"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585129698"></script>
 
     
   </div>
@@ -616,9 +616,9 @@
  
   
     
-      <li data-nav-id="/webdriver/page_loading_strategy/" title="Page loading strategy" class="dd-item active">
+      <li data-nav-id="/webdriver/page_loading_strategy/" title="页面加载策略" class="dd-item active">
         <a href="https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/">
-        Page loading strategy
+        页面加载策略
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/webdriver/'>WebDriver</a> > Page loading strategy
+            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/webdriver/'>WebDriver</a> > 页面加载策略
           
          
           
@@ -1945,7 +1945,7 @@
           
             <h1>
               
-              Page loading strategy
+              页面加载策略
             </h1>
           
 
@@ -1955,35 +1955,39 @@
 
 
 
-<p>Defines the current session&rsquo;s page loading strategy.
-By default, when Selenium WebDriver loads a page,
-it follows the <em>normal</em> pageLoadStrategy.
-It is always recommended to stop downloading additional
-resources (like images, css, js) when the page loading takes lot of time.</p>
+<p>定义当前会话的页面加载策略.
+默认情况下, 当Selenium WebDriver加载页面时,
+遵循 <em>normal</em> 的页面加载策略.
+始终建议您在页面加载缓慢时,
+停止下载其他资源 (例如图片, css, js) .</p>
 
-<p>The <code>document.readyState</code> property of a document describes the loading state of the current document.
-By default, WebDriver will hold off on responding to a <code>driver.get()</code> (or) <code>driver.navigate().to()</code>
-call until the document ready state is <code>complete</code></p>
+<p><code>document.readyState</code> 属性描述当前页面的加载状态.
+默认情况下, 在页面就绪状态是 <code>complete</code> 之前,
+WebDriver都将延迟 <code>driver.get()</code> 的响应或
+ <code>driver.navigate().to()</code> 的调用.</p>
 
-<p>In SPA applications (like Angular, react, Ember) once the dynamic content
-is already loaded (I.e once the pageLoadStrategy status is COMPLETE),
-clicking on a link or performing some action within the page will not make a new request
-to the server as the content is dynamically loaded at the client side without a pull page refresh.</p>
+<p>在单页应用程序中 (例如Angular, react, Ember) ,
+一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) ,
+则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求,
+因为内容在客户端动态加载,
+无需刷新页面.</p>
 
-<p>SPA applications can load many views dynamically
-without any server requests, So pageLoadStrategy
-will always show <code>COMPLETE</code> status until
-we do a new <code>driver.get()</code> and <code>driver.naviagte().to()</code></p>
+<p>单页应用程序可以动态加载许多视图,
+而无需任何服务器请求,
+因此页面加载策略将始终显示为 <code>COMPLETE</code> 的状态,
+直到我们执行新的 <code>driver.get()</code> 或 <code>driver.naviagte().to()</code> 为止.</p>
 
-<p>WebDriver <em>pageLoadStrategy</em> supports the following values:</p>
+<p>WebDriver的 <em>页面加载策略</em> 支持以下内容:</p>
 
 <h2 id="normal">normal</h2>
 
-<p>This will make Selenium WebDriver to wait for the entire page is loaded.
-When set to <strong>normal</strong>, Selenium WebDriver waits until the
-<a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/load">load</a> event fire is returned.</p>
+<p>此配置使Selenium WebDriver等待整个页面的加载.
+设置为 <strong>normal</strong> 时,
+Selenium WebDriver将保持等待, 直到
+返回 <a href="https://developer.mozilla.org/zh-CN/docs/Web/Events/load">load</a> 事件</p>
 
-<p>By default <strong>normal</strong> is set to browser if none is provided.</p>
+<p>默认情况下, 如果未设置页面加载策略,
+则设置 <strong>normal</strong> 为初始策略.</p>
 
 
 
@@ -2051,7 +2055,15 @@ When set to <strong>normal</strong>, Selenium WebDriver waits until the
 
 <section id="pythoncode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.chrome.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>page_load_strategy <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;normal&#39;</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome(options<span style="color:#719e07">=</span>options)
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+driver<span style="color:#719e07">.</span>quit()
+
   </code></pre></div>
 </section>
   
@@ -2143,12 +2155,15 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;normal&#34;</span>);
 
 <h2 id="eager">eager</h2>
 
-<p>This will make Selenium WebDriver to wait until the
-initial HTML document has been completely loaded and parsed,
-and discards loading of stylesheets, images and subframes.</p>
+<p>这将使Selenium WebDriver保持等待,
+直到完全加载并解析了HTML文档,
+该策略无关样式表, 图片和subframes的加载.</p>
 
-<p>When set to <strong>eager</strong>, Selenium WebDriver waits until
-<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a> event fire is returned.</p>
+<p>设置为 <strong>eager</strong> 时,
+Selenium WebDriver保持等待,
+直至返回
+<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded</a>
+事件.</p>
 
 
 
@@ -2315,7 +2330,7 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;eager&#34;</span>);
 
 <h2 id="none">none</h2>
 
-<p>When set to <strong>none</strong> Selenium WebDriver only waits until the initial page is downloaded.</p>
+<p>设置为 <strong>none</strong> 时, Selenium WebDriver仅等待至初始页面下载完成.</p>
 
 
 
@@ -2487,8 +2502,8 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/">
-      “Page loading strategy”
-    </a> was last updated on: 20 Mar 2020 13:46:13 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/97e2b39d4d4f0c473f15628b2899603465224e5d">Add: Adding py code sample for pageLoadStrategy[eager, none] (#344) [deploy site] (97e2b39d)</a>
+      “页面加载策略”
+    </a> was last updated on: 22 Mar 2020 22:05:03 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/2c1c60d64faebb6cc94b349c7ebc962d02bdaa6c">Replacing pr #325 #361 #362 #363 #364 #365 #366 to minimize build triggers [deploy site] (2c1c60d6)</a>
 </h5>
         
         </div> 
@@ -3653,19 +3668,19 @@ caps.setPageLoadStrategy(<span style="color:#2aa198">&#34;none&#34;</span>);
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1584857520"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585129698"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1584857520"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1584857520"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585129698"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585129698"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1584857520" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1584857520"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585129698" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585129698"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,20 +1,14 @@
 ---
-title: "Driver specific capabilities"
+title: "Capacidades específicas de los Drivers"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### Define las capacidades usando `FirefoxOptions`
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` es la nueva forma de definir capacidades para el navegador 
+Firefox y debe de ser usado de manera general antes que DesriredCapabilities.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -57,9 +51,9 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### Fijando un perfil a medida
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+Es posible crear perfiles a medida para Firefox, como se puede ver a continuación.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -109,11 +103,12 @@ driver = RemoteWebDriver(options)
 
 ## Internet Explorer
 
-### fileUploadDialogTimeout
+### Timeout ventana de selección de archivos (fileUploadDialogTimeout)
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+En algunos entornos, Internet Explorer puede devolver un timeout cuando se abra
+una ventana de selección de archivos (_file upload dialog_). Por defecto el IEDriver
+tiene un timeout de 1000ms, pero puedes incrementarlo usando la capacidad
+_fileUploadDialogTimeout_.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -137,7 +132,7 @@ options.file_upload_dialog_timeout = 2000
 driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = InternetExplorerOptions()

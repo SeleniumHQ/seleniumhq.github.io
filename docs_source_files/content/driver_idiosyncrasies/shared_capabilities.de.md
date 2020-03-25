@@ -102,3 +102,42 @@ This specifies the time to wait for the
 implicit element location strategy when
 locating elements. The default timeout **0**
 is imposed when a new session is created by WebDriver.
+
+## unhandledPromptBehavior
+
+Specifies the state of current session's `user prompt handler`. 
+Defaults to **dismiss and notify state**
+
+### User Prompt Handler
+
+This defines what action must take when a 
+user prompt encounters at remote-end. This is defined by 
+`unhandledPromptBehavior` capability and has the following states:
+
+* dismiss
+* accept
+* dismiss and notify
+* accept and notify
+* ignore
+ 
+## setWindowRect
+
+This command alters the size and position of the current 
+browsing context window. This command acts as setter 
+to `getWindowRect` command which accepts **width**, **height**,
+**x**, **y** as _optional_ arguments.
+
+During automation, the current browsing context will be associated 
+with window states, that describe visibility 
+state of the browser window. The window states are
+
+* maximized
+* minimized
+* normal
+* fullscreen
+
+Setting _Width_ or _Height_ does not guaranteed that the resulting 
+window size will exactly match that which was quested. This is because 
+some drivers may not be able to resize in single-pixel increments.
+Due to this, fetching the window state/details by `getWindowRect` 
+may not equally match the values set to the browser.

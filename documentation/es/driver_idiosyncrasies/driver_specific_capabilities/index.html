@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/es/images/favicon.png" type="image/png">
 
-    <title>Driver specific capabilities :: Documentación de Selenium</title>
+    <title>Capacidades específicas de los Drivers :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1584857515" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1584857515" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1585129692" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585129692" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1584857515" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585129692" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585129692"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1584857515"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1584857515"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585129692"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585129692"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1584857515"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585129692"></script>
 
     
   </div>
@@ -1280,9 +1280,9 @@
  
   
     
-      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Driver specific capabilities" class="dd-item active">
+      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Capacidades específicas de los Drivers" class="dd-item active">
         <a href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/">
-        Driver specific capabilities
+        Capacidades específicas de los Drivers
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/es/'>Selenium, el proyecto para automatizar navegadores</a> > <a href='https://selenium.dev/documentation/es/driver_idiosyncrasies/'>Comportamientos del controlador</a> > Driver specific capabilities
+            <a href='https://selenium.dev/documentation/es/'>Selenium, el proyecto para automatizar navegadores</a> > <a href='https://selenium.dev/documentation/es/driver_idiosyncrasies/'>Comportamientos del controlador</a> > Capacidades específicas de los Drivers
           
          
           
@@ -1926,12 +1926,12 @@
 <ul>
 <li><a href="#firefox">Firefox</a>
 <ul>
-<li><a href="#define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></a></li>
-<li><a href="#setting-a-custom-profile">Setting a custom profile</a></li>
+<li><a href="#define-las-capacidades-usando-firefoxoptions">Define las capacidades usando <code>FirefoxOptions</code></a></li>
+<li><a href="#fijando-un-perfil-a-medida">Fijando un perfil a medida</a></li>
 </ul></li>
 <li><a href="#internet-explorer">Internet Explorer</a>
 <ul>
-<li><a href="#fileuploaddialogtimeout">fileUploadDialogTimeout</a></li>
+<li><a href="#timeout-ventana-de-selección-de-archivos-fileuploaddialogtimeout">Timeout ventana de selección de archivos (fileUploadDialogTimeout)</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -1951,7 +1951,7 @@
           
             <h1>
               
-              Driver specific capabilities
+              Capacidades específicas de los Drivers
             </h1>
           
 
@@ -1961,19 +1961,124 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
 <h2 id="firefox">Firefox</h2>
 
-<h3 id="define-capabilities-using-firefoxoptions">Define Capabilities using <code>FirefoxOptions</code></h3>
+<h3 id="define-las-capacidades-usando-firefoxoptions">Define las capacidades usando <code>FirefoxOptions</code></h3>
 
-<p><code>FirefoxOptions</code> is the new way to define capabilities for the Firefox
-browser and should generally be used in preference to DesiredCapabilities.</p>
+<p><code>FirefoxOptions</code> es la nueva forma de definir capacidades para el navegador
+Firefox y debe de ser usado de manera general antes que DesriredCapabilities.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
+options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, 0);
+driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
+options <span style="color:#719e07">=</span> Options()
+options<span style="color:#719e07">.</span>headless <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox(options<span style="color:#719e07">=</span>options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
+options.Proxy.Kind = ProxyKind.Direct;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver(options);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+opts <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">args</span>: <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;-headless&#39;</span><span style="color:#719e07">]</span>)
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: opts)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> { Builder } <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
+<span style="color:#268bd2">const</span> firefox <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/firefox&#39;</span>);
+
+<span style="color:#268bd2">const</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> firefox.Options();
+options.headless();
+<span style="color:#268bd2">const</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
+    .forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>)
+    .setFirefoxOptions(options)
+    .build();
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> options = new FirefoxOptions()
+options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, <span style="color:#2aa198">0</span>)
+driver = RemoteWebDriver(options)
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="fijando-un-perfil-a-medida">Fijando un perfil a medida</h3>
+
+<p>Es posible crear perfiles a medida para Firefox, como se puede ver a continuación.</p>
 
 
 
@@ -2016,8 +2121,9 @@ browser and should generally be used in preference to DesiredCapabilities.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+FirefoxProfile <span style="color:#268bd2">profile</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxProfile();
 FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
-options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, 0);
+options.setProfile(profile);
 driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
   </code></pre></div>
 </section>
@@ -2027,9 +2133,11 @@ driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</spa
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
-options <span style="color:#719e07">=</span> Options()
-options<span style="color:#719e07">.</span>headless <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox(options<span style="color:#719e07">=</span>options)
+<span style="color:#719e07">from</span> selenium.webdriver.firefox.firefox_profile <span style="color:#719e07">import</span> FirefoxProfile
+options<span style="color:#719e07">=</span>Options()
+firefox_profile <span style="color:#719e07">=</span> FirefoxProfile()
+firefox_profile<span style="color:#719e07">.</span>set_preference(<span style="color:#2aa198">&#34;javascript.enabled&#34;</span>, <span style="color:#268bd2">False</span>)
+options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=</span> firefox_profile
   </code></pre></div>
 </section>
   
@@ -2038,8 +2146,9 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
-options.Proxy.Kind = ProxyKind.Direct;
-<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver(options);
+<span style="color:#dc322f">var</span> profile = <span style="color:#719e07">new</span> FirefoxProfile();
+options.Profile = profile;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
   
 </code></pre></div>
 </section>
@@ -2048,9 +2157,10 @@ options.Proxy.Kind = ProxyKind.Direct;
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-opts <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">args</span>: <span style="color:#719e07">[</span><span style="color:#2aa198">&#39;-headless&#39;</span><span style="color:#719e07">]</span>)
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: opts)
+profile <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Profile</span><span style="color:#719e07">.</span>new
+profile<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;browser.download.dir&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;/tmp/webdriver-downloads&#34;</span>
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">profile</span>: profile)
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: options
   </code></pre></div>
 </section>
   
@@ -2062,7 +2172,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <span style="color:#268bd2">const</span> firefox <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/firefox&#39;</span>);
 
 <span style="color:#268bd2">const</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> firefox.Options();
-options.headless();
+<span style="color:#268bd2">let</span> profile <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;/path to custom profile&#39;</span>;
+options.setProfile(profile);
 <span style="color:#268bd2">const</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
     .forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>)
     .setFirefoxOptions(options)
@@ -2075,17 +2186,22 @@ options.headless();
 
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">val</span> options = new FirefoxOptions()
-options.addPreference(<span style="color:#2aa198">&#34;network.proxy.type&#34;</span>, <span style="color:#2aa198">0</span>)
+<span style="color:#719e07">val</span> options = FirefoxOptions()
+options.profile = FirefoxProfile()
 driver = RemoteWebDriver(options)
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<h3 id="setting-a-custom-profile">Setting a custom profile</h3>
+<h2 id="internet-explorer">Internet Explorer</h2>
 
-<p>It is possible to create a custom profile for Firefox as demonstrated below.</p>
+<h3 id="timeout-ventana-de-selección-de-archivos-fileuploaddialogtimeout">Timeout ventana de selección de archivos (fileUploadDialogTimeout)</h3>
+
+<p>En algunos entornos, Internet Explorer puede devolver un timeout cuando se abra
+una ventana de selección de archivos (<em>file upload dialog</em>). Por defecto el IEDriver
+tiene un timeout de 1000ms, pero puedes incrementarlo usando la capacidad
+<em>fileUploadDialogTimeout</em>.</p>
 
 
 
@@ -2128,128 +2244,6 @@ driver = RemoteWebDriver(options)
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-FirefoxProfile <span style="color:#268bd2">profile</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxProfile();
-FirefoxOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
-options.setProfile(profile);
-driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium.webdriver.firefox.options <span style="color:#719e07">import</span> Options
-<span style="color:#719e07">from</span> selenium.webdriver.firefox.firefox_profile <span style="color:#719e07">import</span> FirefoxProfile
-options<span style="color:#719e07">=</span>Options()
-firefox_profile <span style="color:#719e07">=</span> FirefoxProfile()
-firefox_profile<span style="color:#719e07">.</span>set_preference(<span style="color:#2aa198">&#34;javascript.enabled&#34;</span>, <span style="color:#268bd2">False</span>)
-options<span style="color:#719e07">.</span>profile <span style="color:#719e07">=</span> firefox_profile
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> FirefoxOptions();
-<span style="color:#dc322f">var</span> profile = <span style="color:#719e07">new</span> FirefoxProfile();
-options.Profile = profile;
-<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-profile <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Profile</span><span style="color:#719e07">.</span>new
-profile<span style="color:#719e07">[</span><span style="color:#2aa198">&#39;browser.download.dir&#39;</span><span style="color:#719e07">]</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;/tmp/webdriver-downloads&#34;</span>
-options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Firefox</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new(<span style="color:#2aa198">profile</span>: profile)
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>, <span style="color:#2aa198">options</span>: options
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> { Builder } <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
-<span style="color:#268bd2">const</span> firefox <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/firefox&#39;</span>);
-
-<span style="color:#268bd2">const</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> firefox.Options();
-<span style="color:#268bd2">let</span> profile <span style="color:#719e07">=</span> <span style="color:#2aa198">&#39;/path to custom profile&#39;</span>;
-options.setProfile(profile);
-<span style="color:#268bd2">const</span> driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Builder()
-    .forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>)
-    .setFirefoxOptions(options)
-    .build();
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">val</span> options = FirefoxOptions()
-options.profile = FirefoxProfile()
-driver = RemoteWebDriver(options)
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<h2 id="internet-explorer">Internet Explorer</h2>
-
-<h3 id="fileuploaddialogtimeout">fileUploadDialogTimeout</h3>
-
-<p>In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
-    
-    <label for="tab0code3">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
-    
-    <label for="tab1code3">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
-    
-    <label for="tab2code3">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
-    
-    <label for="tab3code3">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
-    
-    <label for="tab4code3">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
-    
-    <label for="tab5code3">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 InternetExplorerOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerOptions();
 options.waitForUploadDialogUpTo(Duration.ofSeconds(2));
 WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
@@ -2258,7 +2252,7 @@ WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">
   
 
 
-<section id="pythoncode3" class="tab-panel">
+<section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions
 options<span style="color:#719e07">.</span>file_upload_dialog_timeout(<span style="color:#2aa198">2000</span>)
@@ -2268,7 +2262,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
   
 
 
-<section id="csharpcode3" class="tab-panel">
+<section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> InternetExplorerOptions();
 options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#2aa198">2000</span>);
@@ -2279,7 +2273,7 @@ options.FileUploadDialogTimeout = TimeSpan.FromMilliseconds(<span style="color:#
   
 
 
-<section id="rubycode3" class="tab-panel">
+<section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">IE</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new
 options<span style="color:#719e07">.</span>file_upload_dialog_timeout <span style="color:#719e07">=</span> <span style="color:#2aa198">2000</span>
@@ -2289,16 +2283,16 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
   
 
 
-<section id="javascriptcode3" class="tab-panel">
+<section id="javascriptcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
   
 
 
-<section id="kotlincode3" class="tab-panel">
+<section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">val</span> options = InternetExplorerOptions()
 options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2</span>))
@@ -2315,8 +2309,8 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/">
-      “Driver specific capabilities”
-    </a> was last updated on: 18 Mar 2020 15:04:20 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/582649c902c74afb91334fed908ac83a46095d77">Add Chinese translation of &#34;test_independency&#34; (#329) [deploy site] (582649c9)</a>
+      “Capacidades específicas de los Drivers”
+    </a> was last updated on: 25 Mar 2020 10:46:47 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/c207f9f399f92557a0de49753058c0733dcf8d6d">Driver specific capabilities spanish (#373) [deploy site] (c207f9f3)</a>
 </h5>
         
         </div> 
@@ -3481,19 +3475,19 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585129692"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1584857515"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1584857515"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1585129692"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585129692"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1584857515" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1584857515"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585129692" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585129692"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

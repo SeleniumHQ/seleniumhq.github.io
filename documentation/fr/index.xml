@@ -242,8 +242,8 @@ L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interactio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
+      <description>Vous voudrez parfois valider la couleur de quelque chose dans le cadre de vos tests; le problème est que les définitions de couleurs sur le Web ne sont pas constantes. Ne serait-ce pas bien s&amp;rsquo;il y avait un moyen facile de comparer une représentation HEX d&amp;rsquo;une couleur avec une représentation RGB d&amp;rsquo;une couleur, ou une représentation RGBA d&amp;rsquo;une couleur avec une représentation HSLA d&amp;rsquo;une couleur?
+Ne t&amp;rsquo;inquiètes pas. Il y a une solution: la classe Color!</description>
     </item>
     
     <item>
@@ -493,15 +493,14 @@ It may seem ideal to performance test in the context of the user but a suite of 
     </item>
     
     <item>
-      <title>Working with cookies</title>
+      <title>Travailler avec des cookies</title>
       <link>https://selenium.dev/documentation/fr/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/support_packages/working_with_cookies/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
-WebDriver API provides a way to interact with cookies with built-in methods:
-Add Cookie It is used to add a cookie to the current browsing context.</description>
+      <description>Un cookie est un petit morceau de données qui est envoyé à partir d&amp;rsquo;un site Web et stocké dans votre ordinateur. Les cookies sont principalement utilisés pour reconnaître l&amp;rsquo;utilisateur et charger les informations stockées.
+L&amp;rsquo;API WebDriver fournit un moyen d&amp;rsquo;interagir avec les cookies avec des méthodes intégrées:
+Add Cookie Il est utilisé pour ajouter un cookie au contexte de navigation actuel. Ajouter un cookie accepte uniquement un ensemble d&amp;rsquo;objets JSON sérialisables définis.</description>
     </item>
     
     <item>
