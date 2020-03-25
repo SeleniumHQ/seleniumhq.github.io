@@ -152,15 +152,17 @@ login_button_background_colour = Color.from_string(driver.find_element_by_id('lo
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-login_button_colour = driver.find_element(id: 'login').css_value('color')
-login_button_background_colour = driver.find_element(id: 'login').css_value('background-color');
+login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // We don't have a JavaScript code sample yet -  Help us out and raise a PR  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val loginButtonColour = driver.findElement(By.id("login")).getCssValue("color")
-val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color")
+val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
+
+val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
