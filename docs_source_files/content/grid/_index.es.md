@@ -4,30 +4,27 @@ chapter: true
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Grid
 
-_Selenium Grid_ is a smart proxy server
-that allows Selenium tests to route commands to remote web browser instances.
-Its aim is to provide an easy way to run tests in parallel on multiple machines.
+_Selenium Grid_ es un servidor inteligente que efectúa de proxy que permite a los
+tests de Selenium enrutar sus comandos hacia instancias remotas de navegadores
+web.
+La intención de esto es proporcionar una forma sencilla de ejecutar los tests en
+paralelo en múltiple maquinas.
 
-With Selenium Grid,
-one server acts as the hub that routes JSON formatted test commands
-to one or more registered Grid nodes.
-Tests contact the hub to obtain access to remote browser instances.
-The hub has a list of registered servers that it provides access to,
-and allows control of these instances.
 
-Selenium Grid allows us to run tests in parallel on multiple machines,
-and to manage different browser versions and browser configurations centrally
-(instead of in each individual test).
+Con _Selenium Grid_ un servidor actúa como el centro de actividad (_hub_) 
+encargado de enrutar los comandos de los tests en formato JSON hacia uno o mas
+nodos registrados en el _Grid_.
+Los tests contactan con el hub para obtener acceso a las instancias remotas de
+los navegadores.
 
-Selenium Grid is not a silver bullet.
-It solves a subset of common delegation and distribution problems,
-but will for example not manage your infrastructure,
-and might not suit your specific needs.
+_Selenium Grid_ te permite ejecutar los tests en paralelo en múltiples maquinas
+y también te permite gestionar diferentes versiones de navegadores y diferentes
+configuraciones de navegadores de manera centralizada (en lugar de hacerlo de
+manera individual en cada test)
+
+_Selenium Grid_ no es una solución mágica para todos tus problemas.
+Permite resolver un subconjunto de problemas comunes de delegación y distribución,
+pero, por ejemplo, no administrará su infraestructura y podría no satisfacer sus
+necesidades personales.
