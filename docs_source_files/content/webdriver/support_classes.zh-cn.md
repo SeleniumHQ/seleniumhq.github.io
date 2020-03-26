@@ -1,17 +1,14 @@
 ---
-title: "Support classes"
+title: "支持的类"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-WebDriver support classes are provided to simplify maintaining your code.
-They provide a nice abstraction to make modeling HTML element(s) as domain
-objects easier, also providing helper methods to make using such objects easy to
-reason about. We will learn about:
+WebDriver提供了一些用于简化代码维护的类. 
+其提供了一种不错的抽象,
+使得将HTML元素建模为域对象的操作, 变得更加容易,
+还提供了一些更有帮助的方法, 使用此类对象时更容易操作. 
+我们将学到以下方法:
 
 * Locator Strategies
 * Events
@@ -19,19 +16,21 @@ reason about. We will learn about:
 * ThreadGuard
 * etc.
 
-Let's Start:
+我们开始吧:
 
 
 ## **ThreadGuard**
 {{% notice info %}}
-This class is only available in the Java Binding
+此类仅在Java中可用
 {{% /notice %}}
-ThreadGuard checks that a driver is called only from the same thread that created it.
-Threading issues especially when running tests in Parallel may have mysterious
-and hard to diagnose errors. Using this wrapper prevents this category of errors
-and will raise an exception when it happens.
 
-The following example simulate a clash of threads:
+ThreadGuard检查是否仅从创建驱动程序的同一线程中调用了驱动程序. 
+线程问题 (尤其是在Parallel中运行测试时)
+可能遇到神秘并且难以诊断错误. 
+使用此包装器可以防止此类错误,  
+并且在发生此类情况时会抛出异常.
+
+以下的示例模拟一种线程冲突的情况:
 
 ```java
 public class DriverClash {
@@ -56,7 +55,8 @@ public class DriverClash {
 }
 ```
 
-The result shown below:
+结果如下所示:
+
 ```text
 Exception in thread "Thread-1" org.openqa.selenium.WebDriverException:
 Thread safety error; this instance of WebDriver was constructed
@@ -64,14 +64,14 @@ on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
 This is not permitted and *will* cause undefined behaviour
 
 ```
-As seen in the example:
+正如示例所示:
 
- * `protectedDriver` Will be created in Main thread
- *  We use Java `Runnable` to spin up a new process and a new `Thread` to run the process
- *  Both `Thread` will clash because the Main Thread does not have `protectedDriver` in it's memory.
- * `ThreadGuard.protect` will throw an exception.
+ * `protectedDriver` 将在主线程中创建
+ *  我们使用Java的 `Runnable` 启动一个新进程,  并使用一个新的 `Thread` 运行该进程
+ *  这两个 `Thread` 都会发生冲突,  因为主线程的内存中没有 `protectedDriver`
+ * `ThreadGuard.protect` 会抛出异常
  
-#### Note:
+#### 注意:
 
-This does not replace the need for using `ThreadLocal` to manage drivers when running parallel.
+这不能代替并发运行时使用 `ThreadLocal` 管理驱动程序的需求.
 
