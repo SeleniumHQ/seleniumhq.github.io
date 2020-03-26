@@ -3,118 +3,123 @@ title: "Migrating from RC to WebDriver"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-## How to Migrate to Selenium WebDriver
+## Comment migrer vers Selenium WebDriver
 
 
-A common question when adopting Selenium 2 is what's the correct thing to do 
-when adding new tests to an existing set of tests? Users who are new to the
-framework can begin by using the new WebDriver APIs for writing their tests.
-But what of users who already have suites of existing tests? This guide is 
-designed to demonstrate how to migrate your existing tests to the new APIs, 
-allowing all new tests to be written using the new features offered by WebDriver.
+Une question fréquente lors de l'adoption de Selenium 2 est 
+la bonne chose à faire lors de l'ajout de nouveaux tests à un 
+ensemble de tests existant? Utilisateurs nouveaux dans le 
+Le framework peut commencer par utiliser les nouvelles API 
+WebDriver pour écrire leurs tests. Mais qu'en est-il des utilisateurs 
+qui ont déjà des suites de tests existants? Ce guide est conçu pour 
+montrer comment migrer vos tests existants vers les nouvelles API,
+permettant à tous les nouveaux tests d'être écrits en utilisant 
+les nouvelles fonctionnalités offertes par WebDriver.
 
-The method presented here describes a piecemeal migration to the WebDriver 
-APIs without needing to rework everything in one massive push. This means 
-that you can allow more time for migrating your existing tests, which 
-may make it easier for you to decide where to spend your effort.
+La méthode présentée ici décrit une migration fragmentaire 
+vers le WebDriver API sans avoir à tout retravailler en 
+une seule poussée massive. Ça signifie que vous pouvez 
+accorder plus de temps pour la migration de vos tests 
+existants, qui peut vous aider à décider où dépenser vos efforts. 
 
-This guide is written using Java, because this has the best support for 
-making the migration. As we provide better tools for other languages, 
-this guide shall be expanded to include those languages.
-
-
-## Why Migrate to WebDriver
-
-
-Moving a suite of tests from one API to another API requires an enormous 
-amount of effort. Why would you and your team consider making this move? 
-Here are some reasons why you should consider migrating your Selenium Tests 
-to use WebDriver.
-
-* Smaller, compact API. WebDriver's API is more Object Oriented than the 
-original Selenium RC API. This can make it easier to work with.
-* Better emulation of user interactions. Where possible, WebDriver makes 
-use of native events in order to interact with a web page. This more closely 
-mimics the way that your users work with your site and apps. In addition, 
-WebDriver offers the advanced user interactions APIs which allow you to 
-model complex interactions with your site.
-* Support by browser vendors. Opera, Mozilla and Google are all active 
-participants in WebDriver's development, and each have engineers working 
-to improve the framework. Often, this means that support for WebDriver 
-is baked into the browser itself: your tests run as fast and as stably as 
-possible.
+Ce guide est écrit en utilisant Java, car il a le meilleur support pour
+faire la migration. Comme nous fournissons de meilleurs outils pour d'autres langues,
+ce guide sera élargi pour inclure ces langues.
 
 
-## Before Starting
+## Pourquoi migrer vers WebDriver
 
 
-In order to make the process of migrating as painless as possible, make
-sure that all your tests run properly with the latest Selenium release. 
-This may sound obvious, but it's best to have it said!
+Le déplacement d'une suite de tests d'une API à une autre 
+API nécessite une énorme quantité d'effort. Pourquoi voudriez-vous, 
+vous et votre équipe, envisager cette démarche? Voici quelques 
+raisons pour lesquelles vous devriez envisager de migrer vos 
+tests de Selenium pour utiliser WebDriver.
+
+* API plus petite et compacte. L'API de WebDriver est plus orientée objet que le
+API d'origine Selenium RC. Cela peut faciliter le travail avec.
+* Meilleure émulation des interactions utilisateur. Dans la mesure du possible, WebDriver fait
+utilisation d'événements natifs pour interagir avec une page Web. Cela de plus près
+imite la façon dont vos utilisateurs travaillent avec votre site et vos applications. En plus,
+WebDriver propose les API d'interaction utilisateur avancées qui vous permettent de
+modélisez des interactions complexes avec votre site.
+* Prise en charge par les fournisseurs de navigateurs. 
+Opera, Mozilla et Google sont tous actifs  participants au développement 
+de WebDriver, et chacun a des ingénieurs travaillant pour 
+améliorer le cadre. Souvent, cela signifie que la prise en charge de WebDriver 
+est intégré dans le navigateur lui-même: vos tests 
+s'exécutent aussi rapidement et aussi stable que possible.
 
 
-## Getting Started
+## Avant de commencer
 
 
-The first step when starting the migration is to change how you obtain 
-your instance of Selenium. When using Selenium RC, this is done like so:
+Afin de rendre le processus de migration aussi indolore que possible, faites
+assurez-vous que tous vos tests fonctionnent correctement avec 
+la dernière version de Selenium. Cela peut sembler évident, 
+mais il vaut mieux le dire!
+
+
+## Commencer
+
+
+La première étape lors du démarrage de la migration 
+consiste à modifier la façon dont vous obtenez votre 
+instance de Selenium. Lorsque vous utilisez Selenium RC, 
+cela se fait comme suit:
 
 ```java
 Selenium selenium = new DefaultSelenium("localhost", 4444, "*firefox", "http://www.yoursite.com");
 selenium.start();
 ```
 
-This should be replaced like so:
+Cela devrait être remplacé comme suit:
 
 ```java
 WebDriver driver = new FirefoxDriver();
 Selenium selenium = new WebDriverBackedSelenium(driver, "http://www.yoursite.com");
 ```
 
-## Next Steps
+## Prochaines étapes
 
 
-Once your tests execute without errors, the next stage is to migrate 
-the actual test code to use the WebDriver APIs. Depending on how well 
-abstracted your code is, this might be a short process or a long one. 
-In either case, the approach is the same and can be summed up simply: 
-modify code to use the new API when you come to edit it.
+Une fois vos tests exécutés sans erreur, la prochaine étape consiste à migrer
+le code de test réel pour utiliser les API WebDriver. Selon la façon dont bien
+abstrait votre code est, cela peut être un processus court ou long.
+Dans les deux cas, l'approche est la même et peut se résumer simplement:
+modifier le code pour utiliser la nouvelle API lorsque vous venez de le modifier.
 
-If you need to extract the underlying WebDriver implementation from 
-the Selenium instance, you can simply cast it to WrapsDriver:
+Si vous devez extraire l'implémentation WebDriver sous-jacente de
+l'instance de Selenium, vous pouvez simplement la lancer sur WrapsDriver:
 
 ```java
 WebDriver driver = ((WrapsDriver) selenium).getWrappedDriver();
 ```
 
-This allows you to continue passing the Selenium instance around as 
-normal, but to unwrap the WebDriver instance as required.
+Cela vous permet de continuer à transmettre l'instance Selenium comme
+normal, mais pour déballer l'instance WebDriver comme requis.
 
-At some point, you're codebase will mostly be using the newer APIs.
-At this point, you can flip the relationship, using WebDriver throughout 
-and instantiating a Selenium instance on demand:
+À un moment donné, votre base de code utilisera principalement les nouvelles API.
+À ce stade, vous pouvez inverser la relation en utilisant WebDriver
+et instancier une instance de Selenium à la demande:
 
 ```java
 Selenium selenium = new WebDriverBackedSelenium(driver, baseUrl);
 ```
 
-## Common Problems
+## Problèmes communs
 
 
-Fortunately, you're not the first person to go through this migration, 
-so here are some common problems that others have seen, and how to solve them.
+Heureusement, vous n'êtes pas la première personne 
+à traverser cette migration, voici donc quelques problèmes 
+communs que d'autres ont vus, et comment les résoudre.
 
 
-### Clicking and Typing is More Complete
+### Cliquer et taper est plus complet
 
 
-A common pattern in a Selenium RC test is to see something like:
+Un schéma courant dans un test Selenium RC 
+est de voir quelque chose comme:
 
 ```java
 selenium.type("name", "exciting tex");
@@ -123,45 +128,49 @@ selenium.keyPress("name", "t");
 selenium.keyUp("name", "t");
 ```
     
-This relies on the fact that "type" simply replaces the content of the 
-identified element without also firing all the events that would normally
-be fired if a user interacts with the page. The final direct invocations
-of "key*" cause the JS handlers to fire as expected.
+Cela repose sur le fait que "type" remplace simplement le contenu du
+élément identifié sans déclencher également tous les événements qui normalement
+être renvoyé si un utilisateur interagit avec la page. Les invocations directes finales
+de "clé*" provoque le déclenchement des gestionnaires JS comme prévu.
 
-When using the WebDriverBackedSelenium, the result of filling in the form 
-field would be "exciting texttt": not what you'd expect! The reason for this
-is that WebDriver more accurately emulates user behavior, and so will have
-been firing events all along.
+Lors de l'utilisation de WebDriverBackedSelenium, le résultat du remplissage du formulaire
+serait "texttt excitant": pas ce que vous attendez! La raison de cela
+est que WebDriver émule plus précisément le comportement des utilisateurs, et aura donc
+a tiré des événements tout au long.
 
-This same fact may sometimes cause a page load to fire earlier than it would
-do in a Selenium 1 test. You can tell that this has happened if a 
-"StaleElementException" is thrown by WebDriver.
+Ce même fait peut parfois déclencher un chargement de page plus tôt qu'il ne le ferait
+faire dans un test de sélénium 1. Vous pouvez dire que cela s'est produit si un
+"StaleElementException" est levé par WebDriver.
 
 
-### WaitForPageToLoad Returns Too Soon
+### WaitForPageToLoad revient trop tôt
 
-Discovering when a page load is complete is a tricky business. Do we mean 
-"when the load event fires", "when all AJAX requests are complete", "when 
-there's no network traffic", "when document.readyState has changed" or something
-else entirely?
+Découvrir quand un chargement de page est terminé est 
+une entreprise délicate. Voulons-nous "lorsque l'événement de 
+chargement se déclenche", "lorsque toutes les requêtes AJAX 
+sont terminées", "lorsque il n'y a pas de trafic réseau "," 
+lorsque document.readyState a changé "ou quelque chose
+sinon entièrement?
 
-WebDriver attempts to simulate the original Selenium behavior, but this doesn't
-always work perfectly for various reasons. The most common reason is that it's 
-hard to tell the difference between a page load not having started yet, and a 
-page load having completed between method calls. This sometimes means that 
-control is returned to your test before the page has finished (or even started!)
-loading.
+WebDriver tente de simuler le comportement d'origine de Selenium, 
+mais cela ne fonctionnent toujours parfaitement pour diverses raisons. 
+La raison la plus courante est que c'est difficile de faire la 
+différence entre un chargement de page n'ayant pas encore commencé et un 
+chargement de page terminé entre les appels de méthode. Cela signifie parfois que
+le contrôle revient à votre test avant que la page ne soit 
+terminée (ou même commencée!) chargement.
 
-The solution to this is to wait on something specific. Commonly, this might be
-for the element you want to interact with next, or for some Javascript variable
-to be set to a specific value. An example would be:
+La solution est d'attendre quelque chose de spécifique. 
+Généralement, cela pourrait être pour l'élément avec lequel 
+vous souhaitez interagir ensuite, ou pour une variable 
+Javascript à définir sur une valeur spécifique. Un exemple serait:
 
 ```java
 Wait<WebDriver> wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement element= wait.until(visibilityOfElementLocated(By.id("some_id")));
 ```
-    
-Where "visibilityOfElementLocated" is implemented as:
+
+Où "visibilityOfElementLocated" est implémenté comme:
 
 ```java
 public ExpectedCondition<WebElement> visibilityOfElementLocated(final By locator) {
@@ -176,60 +185,66 @@ public ExpectedCondition<WebElement> visibilityOfElementLocated(final By locator
   };
 }
 ```
- 
-This may look complex, but it's almost all boiler-plate code. The only 
-interesting bit is that the "ExpectedCondition" will be evaluated repeatedly
-until the "apply" method returns something that is neither "null" 
-nor Boolean.FALSE.
 
-Of course, adding all these "wait" calls may clutter up your code. If 
-that's the case, and your needs are simple, consider using the implicit waits:
+Cela peut sembler complexe, mais c'est presque tout le code de la plaque de la chaudière. Le seul
+bit intéressant est que le "ExpectedCondition" sera évalué à plusieurs reprises
+jusqu'à ce que la méthode "apply" renvoie quelque chose qui n'est ni "null"
+ni Boolean.FALSE.
+
+Bien sûr, l'ajout de tous ces appels "d'attente" peut 
+encombrer votre code. Si c'est le cas, et vos besoins 
+sont simples, pensez à utiliser les attentes implicites:
 
 ```java
 driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 ```
 
-By doing this, every time an element is located, if the element is not present,
-the location is retried until either it is present, or until 30 seconds have 
-passed.
+En faisant cela, chaque fois qu'un élément est localisé, 
+si l'élément n'est pas présent, l'emplacement est réessayé jusqu'à 
+ce qu'il soit présent ou jusqu'à 30 secondes
+passé.
 
-### Finding By XPath or CSS Selectors Doesn't Always Work, But It Does In Selenium 1
+### Trouver par XPath ou sélecteurs CSS ne fonctionne pas toujours, mais cela fonctionne avec Selenium 1
 
-In Selenium 1, it was common for xpath to use a bundled library rather than
-the capabilities of the browser itself. WebDriver will always use the native
-browser methods unless there's no alternative. That means that complex xpath
-expressions may break on some browsers.
+Dans Selenium 1, il était courant que xpath utilise une 
+bibliothèque groupée plutôt que les capacités du navigateur 
+lui-même. WebDriver utilisera toujours le natif méthodes de 
+navigateur, sauf s'il n'y a pas d'autre alternative. Cela signifie 
+que xpath complexe les expressions peuvent se briser sur certains navigateurs.
 
-CSS Selectors in Selenium 1 were implemented using the Sizzle library. This 
-implements a superset of the CSS Selector spec, and it's not always clear where
-you've crossed the line. If you're using the WebDriverBackedSelenium and use a
-Sizzle locator instead of a CSS Selector for finding elements, a warning will
-be logged to the console. It's worth taking the time to look for these, 
-particularly if tests are failing because of not being able to find elements.
+Les sélecteurs CSS dans Selenium 1 ont été implémentés à l'aide de 
+la bibliothèque Sizzle. Cette implémente un surensemble de la 
+spécification CSS Selector, et il n'est pas toujours clair où vous 
+avez franchi la ligne. Si vous utilisez WebDriverBackedSelenium et 
+utilisez un Sizzle locator au lieu d'un CSS Selector pour trouver des 
+éléments, un avertissement être connecté à la console. Cela vaut la 
+peine de prendre le temps de les chercher, en particulier si les tests 
+échouent faute de pouvoir trouver des éléments.
 
-### There is No Browserbot
+### Il n'y a pas de Browserbot
 
-Selenium RC was based on Selenium Core, and therefore when you executed 
-Javascript, you could access bits of Selenium Core to make things easier. 
-As WebDriver is not based on Selenium Core, this is no longer possible. 
-How can you tell if you're using Selenium Core? Simple! Just look to see 
-if your "getEval" or similar calls are using "selenium" or "browserbot" 
-in the evaluated Javascript.
+Selenium RC était basé sur Selenium Core, et donc lorsque vous avez exécuté
+JavaScript, vous pouvez accéder à des morceaux de Selenium Core pour faciliter les choses.
+Comme WebDriver n'est pas basé sur Selenium Core, cela n'est plus possible.
+Comment savoir si vous utilisez Selenium Core? Facile! Regardez juste pour voir
+si vos appels "getEval" ou similaires utilisent "Selenium" ou "browserbot"
+dans le Javascript évalué.
 
-You might be using the browserbot to obtain a handle to the current window
-or document of the test. Fortunately, WebDriver always evaluates JS in the
-context of the current window, so you can use "window" or "document" directly.
+Vous utilisez peut-être le navigateur pour obtenir un descripteur 
+de la fenêtre actuelle ou document du test. Heureusement, WebDriver 
+évalue toujours JS dans le contexte de la fenêtre en cours, vous pouvez 
+donc utiliser directement "fenêtre" ou "document".
 
-Alternatively, you might be using the browserbot to locate elements. 
-In WebDriver, the idiom for doing this is to first locate the element, 
-and then pass that as an argument to the Javascript. Thus:
+Vous pouvez également utiliser le navigateur pour localiser des éléments.
+Dans WebDriver, l'idiome pour ce faire est de localiser d'abord l'élément,
+puis passez cela comme argument au Javascript. Donc:
 
 ```java
 String name = selenium.getEval(
     "selenium.browserbot.findElement('id=foo', browserbot.getCurrentWindow()).tagName");
 ```
 
-becomes:
+devient:
 
 ```java
 WebElement element = driver.findElement(By.id("foo"));
@@ -237,20 +252,23 @@ String name = (String) ((JavascriptExecutor) driver).executeScript(
     "return arguments[0].tagName", element);
 ```
         
-Notice how the passed in "element" variable appears as the first item
-in the JS standard "arguments" array.        
+Remarquez comment la variable "element" passée 
+apparaît comme premier élément dans le tableau 
+"arguments" standard de JS.       
 
 
 ### Executing Javascript Doesn't Return Anything
 
 
-WebDriver's JavascriptExecutor will wrap all JS and evaluate it as an anonymous expression. This means that you need to use the "return" keyword:
+JavascriptExecutor de WebDriver encapsulera tous les 
+JS et l'évaluera comme une expression anonyme. Cela 
+signifie que vous devez utiliser le mot-clé "retour":
 
 ```java
 String title = selenium.getEval("browserbot.getCurrentWindow().document.title");
 ```
 
-becomes:
+devient:
 
 ```java
 ((JavascriptExecutor) driver).executeScript("return document.title;");
