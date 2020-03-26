@@ -45,14 +45,15 @@ Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜�
     </item>
     
     <item>
-      <title>Gmail, email and Facebook logins</title>
+      <title>Gmail, email 和 Facebook 登录</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
+      <description>由于多种原因, 不建议使用WebDriver登录Gmail和Facebook等网站. 除了违反这些网站的使用条款之外 (您可能会面临帐户被关闭的风险) , 还有其运行速度缓慢且不可靠的因素.
+理想的做法是使用电子邮件供应商提供的API, 或者对于Facebook, 使用开发者工具的服务, 该服务是被用于创建测试帐户、朋友等内容的API. 尽管使用API可能看起来有些额外的工作量, 但是您将获得基于速度、可靠性和稳定性的回报. API不会频繁更改, 但是网页和HTML定位符经常变化, 并且需要您更新测试框架的代码.
+在任何时候测试使用WebDriver登录第三方站点, 都会增加测试失败的风险, 因为这会使您的测试时间更长. 通常的经验是, 执行时间较长的测试会更加脆弱和不可靠.
+符合W3C conformant 的WebDriver实现, 也会使用 WebDriver 的属性对 navigator 对象进行注释, 用于缓解拒绝服务的攻击.</description>
     </item>
     
     <item>
@@ -65,14 +66,16 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     </item>
     
     <item>
-      <title>Performance testing</title>
+      <title>性能测试</title>
       <link>https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
+      <description>通常不建议使用Selenium和WebDriver进行性能测试. 并非因为不能做, 只是缺乏针对此类工作的优化, 因而难以得到乐观的结果.
+对于用户而言, 在用户上下文中执行性能测试似乎是自然而然的选择, 但是WebDriver的测试会受到许多外部和内部的影响而变得脆弱, 这是您无法控制的. 例如, 浏览器的启动速度, HTTP服务器的速度, 托管JavaScript或CSS的第三方服务器的响应 以及WebDriver实现本身检测的损失. 这些因素的变化会影响结果. 很难区分网站自身与外部资源之间的性能差异, 并且也很难明确浏览器中使用WebDriver对性能的影响, 尤其是在注入脚本时.
+另一个潜在的吸引点是&amp;rdquo;节省时间&amp;rdquo;-同时执行功能和性能测试. 但是, 功能和性能测试分别具有截然不同的目标. 要测试功能, 测试人员可能需要耐心等待加载, 但这会使性能测试结果蒙上阴影, 反之亦然.
+为了提高网站的性能, 您需要不依赖于环境的差异来分析整体性能, 识别不良代码的实践, 对单个资源 (即CSS或JavaScript) 的性能进行细分 以了解需要改进的地方. 有很多性能测试工具已经可以完成这项工作, 并且提供了报告和分析结果, 甚至可以提出改进建议.
+例如一种易于使用的 (开源) 软件包是: JMeter</description>
     </item>
     
     <item>

@@ -94,13 +94,12 @@ Java La instalación de las librerías Selenium para Java se puede hacer usando 
     </item>
     
     <item>
-      <title>Purposes and main functionalities</title>
+      <title>Objetivos y funcionalidades principales</title>
       <link>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
-      <description>  Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+      <description> Punto de entrada centralizado para todos los tests Gestión y control de los nodos / entornos donde se ejecutan los navegadores Escalado Ejecución de los tests en paralelo Testing cruzado entre diferentes sistemas operativos Balanceo de carga  </description>
     </item>
     
     <item>
