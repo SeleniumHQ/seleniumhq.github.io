@@ -28,8 +28,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests.</description>
+      <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&amp;rsquo;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
     </item>
     
     <item>
