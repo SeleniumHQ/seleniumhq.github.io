@@ -1,40 +1,33 @@
 ---
-title: "Components of a Grid"
+title: "Componentes de un Grid"
 weight: 2
 ---
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 ![Grid](/images/grid.png)
 
 ## Hub
-* Intermediary and manager
-* Accepts requests to run tests
-* Takes instructions from client and executes them remotely on the nodes
-* Manages threads
+* Ejerce como mediador y administrador
+* Acepta peticiones para ejecutar los tests
+* Recoge instrucciones de los clientes y las ejecuta de forma remota en los nodos
+* Gestiona los hilos
 
-A _Hub_ is a central point where all your tests are sent.
-Each Selenium Grid consists of exactly one hub. The hub needs to be reachable
-from the respective clients (i.e. CI server, Developer machine etc.)
-The hub will connect one or more nodes
-that tests will be delegated to.
+El _Hub_ es un punto central donde se envian todos tus tests.
+Cada _Selenium Grid_ consiste en exactamente un _hub_. El hub necesita ser 
+accesible desde la perspectiva de los clientes (ej. Servidor de la CI, maquina 
+del desarrollador)
+El hub se conectará a uno o mas nodos a los que los tests serán delegados.
 
-## Nodes
+## Nodos
 
-* Where the browsers live
-* Registers itself to the hub and communicates its capabilities
-* Receives requests from the hub and executes them
+* Donde se ubican los navegadores
+* Se registra a si mismo en el hub y le comunica sus capacidades
+* Recibe las peticiones desde el hub las ejecuta
 
-_Nodes_ are different Selenium instances
-that will execute tests on individual computer systems.
-There can be many nodes in a grid.
-The machines which are nodes do not need to be the same platform
-or have the same browser selection as that of the hub or the other nodes.
-A node on Windows might have the capability of
-offering Internet Explorer as a browser option,
-whereas this wouldn't be possible on Linux or Mac.
-
+Los nodos son diferentes instancias de Selenium que ejecutarán los tests en
+sistemas informáticos individuales.
+Puedes haber muchos nodos en un grid.
+Las maquinas que contienen los nodos no necesitan estar bajo el mismo sistema 
+operativo o disponer de la misma selección de navegadores que el hub u otros 
+nodos.
+Un nodo en Windows podría tener la capacidad de ofrecer Internet Explorer como 
+opción del navegador mientras que esto no podría ser posible en Linux o Mac.
