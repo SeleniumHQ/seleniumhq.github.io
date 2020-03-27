@@ -17,9 +17,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/captchas/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- CAPTCHA, short for Completely Automated Public Turing test to tell Computers and Humans Apart, is explicitly designed to prevent automation, so don’t try! There are two primary strategies to get around CAPTCHA checks:
- Disable CAPTCHAs in your test environment Add a hook to allow tests to bypass the CAPTCHA  </description>
+      <description>CAPTCHA, abréviation de Completely Automated Public Turing test to tell Computers and Humans Apart, est explicitement conçu pour empêcher l&amp;rsquo;automatisation, alors n&amp;rsquo;essayez pas! Il existe deux stratégies principales pour contourner les chèques CAPTCHA:
+ Désactivez CAPTCHA dans votre environnement de test Ajoutez un crochet pour permettre aux tests de contourner le CAPTCHA  </description>
     </item>
     
     <item>

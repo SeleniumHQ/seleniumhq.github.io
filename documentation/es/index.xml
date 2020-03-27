@@ -146,13 +146,12 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Components of a Grid</title>
+      <title>Componentes de un Grid</title>
       <link>https://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+      <description>Hub  Ejerce como mediador y administrador Acepta peticiones para ejecutar los tests Recoge instrucciones de los clientes y las ejecuta de forma remota en los nodos Gestiona los hilos  El Hub es un punto central donde se envian todos tus tests. Cada Selenium Grid consiste en exactamente un hub. El hub necesita ser accesible desde la perspectiva de los clientes (ej. Servidor de la CI, maquina del desarrollador) El hub se conectará a uno o mas nodos a los que los tests serán delegados.</description>
     </item>
     
     <item>

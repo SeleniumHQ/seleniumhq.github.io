@@ -11,20 +11,20 @@
     <title>Travailler avec les éléments select :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585227424" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585330606" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585227424" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585330606" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585330606"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585227424"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585227424"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585330606"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585330606"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585227424"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585330606"></script>
 
     
   </div>
@@ -1944,17 +1944,105 @@
 
 
 
+<p>Certains éléments peuvent nécessiter un peu de
+code de plaque de chaudière pour automatiser.
+Pour réduire cela et rendre vos tests plus propres,
+il existe un Classe <code>Select</code> dans le package de support Selenium.
+Pour l&rsquo;utiliser, vous aurez besoin de
+l&rsquo;instruction d&rsquo;importation suivante:</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
+    
+    <label for="tab0code0">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
+    
+    <label for="tab1code0">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
+    
+    <label for="tab2code0">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
+    
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.ui.Select;
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#719e07">from</span> selenium.webdriver.support.select <span style="color:#719e07">import</span> Select
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#719e07">using</span> OpenQA.Selenium.Support.UI
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#719e07">include</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Support</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode0" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.Select
+  </code></pre></div>
+</section>
+</div>
 </div>
 
-
-<p>Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
-<code>Select</code> class in the Selenium support package.
-To use it, you will need the following import statement:</p>
+<p>Vous pouvez ensuite créer un objet
+Select à l&rsquo;aide d&rsquo;un WebElement qui
+référence un élément <code>&lt;select&gt;</code>.</p>
 
 
 
@@ -1997,7 +2085,8 @@ To use it, you will need the following import statement:</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.ui.Select;
+WebElement <span style="color:#268bd2">selectElement</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
+Select <span style="color:#268bd2">selectObject</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Select(selectElement);
   </code></pre></div>
 </section>
   
@@ -2005,7 +2094,8 @@ To use it, you will need the following import statement:</p>
 
 <section id="pythoncode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium.webdriver.support.select <span style="color:#719e07">import</span> Select
+select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;selectElementID&#39;</span>)
+select_object <span style="color:#719e07">=</span> Select(select_element)
   </code></pre></div>
 </section>
   
@@ -2013,7 +2103,8 @@ To use it, you will need the following import statement:</p>
 
 <section id="csharpcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#719e07">using</span> OpenQA.Selenium.Support.UI
+IWebElement selectElement = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
+<span style="color:#dc322f">var</span> selectObject = <span style="color:#719e07">new</span> SelectElement(selectElement);
   
 </code></pre></div>
 </section>
@@ -2022,7 +2113,8 @@ To use it, you will need the following import statement:</p>
 
 <section id="rubycode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#719e07">include</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Support</span>
+select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;selectElementID&#39;</span>)
+select_object <span style="color:#719e07">=</span> <span style="color:#cb4b16">Select</span>(select_element)
   </code></pre></div>
 </section>
   
@@ -2030,7 +2122,7 @@ To use it, you will need the following import statement:</p>
 
 <section id="javascriptcode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR  
+<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
 </span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
@@ -2039,14 +2131,24 @@ To use it, you will need the following import statement:</p>
 
 <section id="kotlincode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.Select
+<span style="color:#719e07">val</span> selectElement = driver.findElement(By.id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>))
+<span style="color:#719e07">val</span> selectObject = new Select(selectElement)
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>You are then able to create a Select object using a WebElement that
-references a <code>&lt;select&gt;</code> element.</p>
+<p>L&rsquo;objet Select va maintenant vous donner une série de commandes
+qui vous permettent d&rsquo;interagir avec un élément <code>&lt;select&gt;</code>.
+Tout d&rsquo;abord, il existe différentes façons de sélectionner une option
+de l&rsquo;élément <code>&lt;select&gt;</code>.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">select</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value1</span>&gt;Bread&lt;/<span style="color:#268bd2">option</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value2</span> selected&gt;Milk&lt;/<span style="color:#268bd2">option</span>&gt;
+ &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value3</span>&gt;Cheese&lt;/<span style="color:#268bd2">option</span>&gt;
+&lt;/<span style="color:#268bd2">select</span>&gt;</code></pre></div>
+<p>Il existe trois façons de sélectionner la
+première option dans l&rsquo;élément ci-dessus:</p>
 
 
 
@@ -2089,8 +2191,14 @@ references a <code>&lt;select&gt;</code> element.</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">selectElement</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
-Select <span style="color:#268bd2">selectObject</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Select(selectElement);
+<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.selectByIndex(1);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.selectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.selectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
   </code></pre></div>
 </section>
   
@@ -2098,8 +2206,14 @@ Select <span style="color:#268bd2">selectObject</span> <span style="color:#719e0
 
 <section id="pythoncode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;selectElementID&#39;</span>)
-select_object <span style="color:#719e07">=</span> Select(select_element)
+<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>select_by_index(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>select_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>select_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2107,8 +2221,14 @@ select_object <span style="color:#719e07">=</span> Select(select_element)
 
 <section id="csharpcode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-IWebElement selectElement = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
-<span style="color:#dc322f">var</span> selectObject = <span style="color:#719e07">new</span> SelectElement(selectElement);
+<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.SelectByIndex(<span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.SelectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span> selectObject.SelectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
   
 </code></pre></div>
 </section>
@@ -2117,8 +2237,14 @@ IWebElement selectElement = driver.FindElement(By.Id(<span style="color:#2aa198"
 
 <section id="rubycode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-select_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">id</span>: <span style="color:#2aa198">&#39;selectElementID&#39;</span>)
-select_object <span style="color:#719e07">=</span> <span style="color:#cb4b16">Select</span>(select_element)
+<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
   </code></pre></div>
 </section>
   
@@ -2135,23 +2261,21 @@ select_object <span style="color:#719e07">=</span> <span style="color:#cb4b16">S
 
 <section id="kotlincode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">val</span> selectElement = driver.findElement(By.id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>))
-<span style="color:#719e07">val</span> selectObject = new Select(selectElement)
+<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.selectByIndex(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.selectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>)
+
+<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.selectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>)
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>The Select object will now give you a series of commands
-that allow you to interact with a <code>&lt;select&gt;</code> element.
-First of all, there are different ways of selecting an option
-from the <code>&lt;select&gt;</code> element.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">select</span>&gt;
- &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value1</span>&gt;Bread&lt;/<span style="color:#268bd2">option</span>&gt;
- &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value2</span> selected&gt;Milk&lt;/<span style="color:#268bd2">option</span>&gt;
- &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value3</span>&gt;Cheese&lt;/<span style="color:#268bd2">option</span>&gt;
-&lt;/<span style="color:#268bd2">select</span>&gt;</code></pre></div>
-<p>There are three ways to select the first option from the above element:</p>
+<p>Vous pouvez ensuite vérifier les
+options sélectionnées en utilisant:</p>
 
 
 
@@ -2194,14 +2318,11 @@ from the <code>&lt;select&gt;</code> element.</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.selectByIndex(1);
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allSelectedOptions</span> <span style="color:#719e07">=</span> selectObject.getAllSelectedOptions();
 
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.selectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
-
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.selectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+<span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">firstSelectedOption</span> <span style="color:#719e07">=</span> selectObject.getFirstSelectedOption();
   </code></pre></div>
 </section>
   
@@ -2209,14 +2330,11 @@ from the <code>&lt;select&gt;</code> element.</p>
 
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
-select_object<span style="color:#719e07">.</span>select_by_index(<span style="color:#2aa198">1</span>)
+<span style="color:#586e75"># Return a list[WebElement] of options that have been selected</span>
+all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>all_selected_options
 
-<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
-select_object<span style="color:#719e07">.</span>select_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
-
-<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
-select_object<span style="color:#719e07">.</span>select_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
+<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
+first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
   </code></pre></div>
 </section>
   
@@ -2224,15 +2342,8 @@ select_object<span style="color:#719e07">.</span>select_by_visible_text(<span st
 
 <section id="csharpcode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.SelectByIndex(<span style="color:#2aa198">1</span>);
-
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.SelectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
-
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span> selectObject.SelectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
-  
+<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
+</span><span style="color:#586e75"></span>  
 </code></pre></div>
 </section>
   
@@ -2240,14 +2351,11 @@ select_object<span style="color:#719e07">.</span>select_by_visible_text(<span st
 
 <section id="rubycode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
-select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
+<span style="color:#586e75"># Return an Array[Element] of options that have been selected</span>
+all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>selected_options
 
-<span style="color:#586e75"># Select an &lt;option&gt; based upon its value attribute</span>
-select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
-
-<span style="color:#586e75"># Select an &lt;option&gt; based upon its text</span>
-select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
+<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
+first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
   </code></pre></div>
 </section>
   
@@ -2264,20 +2372,18 @@ select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2
 
 <section id="kotlincode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.selectByIndex(<span style="color:#2aa198">1</span>)
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> allSelectedOptions = selectObject.allSelectedOptions
 
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.selectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>)
-
-<span style="color:#586e75">// Select an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.selectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>)
+<span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> firstSelectedOption = selectObject.firstSelectedOption
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>You can then check which options are selected by using:</p>
+<p>Ou vous pouvez simplement être intéressé par les éléments <option>
+l&rsquo;élément <code>&lt;select&gt;</code> contient:</p>
 
 
 
@@ -2320,11 +2426,8 @@ select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
-</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allSelectedOptions</span> <span style="color:#719e07">=</span> selectObject.getAllSelectedOptions();
-
-<span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">firstSelectedOption</span> <span style="color:#719e07">=</span> selectObject.getFirstSelectedOption();
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allAvailableOptions</span> <span style="color:#719e07">=</span> selectObject.getOptions();
   </code></pre></div>
 </section>
   
@@ -2332,11 +2435,8 @@ select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Return a list[WebElement] of options that have been selected</span>
-all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>all_selected_options
-
-<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
-first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
+<span style="color:#586e75"># Return a list[WebElement] of options that the &amp;lt;select&amp;gt; element contains</span>
+all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
   </code></pre></div>
 </section>
   
@@ -2344,8 +2444,9 @@ first_selected_option <span style="color:#719e07">=</span> select_object<span st
 
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// We don&#39;t have a C# code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Return a IList&lt;IWebElement&gt; of options that the &lt;select&gt; element contains
+</span><span style="color:#586e75"></span>IList&lt;IWebElement&gt; allAvailableOptions = selectObject.Options;
+  
 </code></pre></div>
 </section>
   
@@ -2353,11 +2454,8 @@ first_selected_option <span style="color:#719e07">=</span> select_object<span st
 
 <section id="rubycode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Return an Array[Element] of options that have been selected</span>
-all_selected_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>selected_options
-
-<span style="color:#586e75"># Return a WebElement referencing the first selection option found by walking down the DOM</span>
-first_selected_option <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>first_selected_option
+<span style="color:#586e75"># Return an Array[Element] of options that the &amp;lt;select&amp;gt; element contains</span>
+all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
   </code></pre></div>
 </section>
   
@@ -2374,18 +2472,15 @@ first_selected_option <span style="color:#719e07">=</span> select_object<span st
 
 <section id="kotlincode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> allSelectedOptions = selectObject.allSelectedOptions
-
-<span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> firstSelectedOption = selectObject.firstSelectedOption
+<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> allAvailableOptions = selectObject.options
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>Or you may just be interested in what <code>&lt;option&gt;</code> elements
-the <code>&lt;select&gt;</code> element contains:</p>
+<p>Si vous souhaitez désélectionner des éléments,
+vous avez maintenant quatre options:</p>
 
 
 
@@ -2428,8 +2523,17 @@ the <code>&lt;select&gt;</code> element contains:</p>
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
-</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allAvailableOptions</span> <span style="color:#719e07">=</span> selectObject.getOptions();
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.deselectByIndex(1);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.deselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.deselectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+
+<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
+</span><span style="color:#586e75"></span>selectObject.deselectAll();
   </code></pre></div>
 </section>
   
@@ -2437,8 +2541,17 @@ the <code>&lt;select&gt;</code> element contains:</p>
 
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Return a list[WebElement] of options that the &amp;lt;select&amp;gt; element contains</span>
-all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>deselect_by_index(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>deselect_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>deselect_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
+
+<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
+select_object<span style="color:#719e07">.</span>deselect_all()
   </code></pre></div>
 </section>
   
@@ -2446,8 +2559,17 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Return a IList&lt;IWebElement&gt; of options that the &lt;select&gt; element contains
-</span><span style="color:#586e75"></span>IList&lt;IWebElement&gt; allAvailableOptions = selectObject.Options;
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.DeselectByIndex(<span style="color:#2aa198">1</span>);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.DeselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.DeselectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+
+<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
+</span><span style="color:#586e75"></span>selectObject.DeselectAll();
   
 </code></pre></div>
 </section>
@@ -2456,8 +2578,17 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="rubycode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Return an Array[Element] of options that the &amp;lt;select&amp;gt; element contains</span>
-all_available_options <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>options
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
+
+<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
+select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
+
+<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
+select_object<span style="color:#719e07">.</span>deselect_all
   </code></pre></div>
 </section>
   
@@ -2474,14 +2605,26 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="kotlincode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> allAvailableOptions = selectObject.options
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
+</span><span style="color:#586e75"></span>selectObject.deselectByIndex(<span style="color:#2aa198">1</span>)
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
+</span><span style="color:#586e75"></span>selectObject.deselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>)
+
+<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
+</span><span style="color:#586e75"></span>selectObject.deselectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>)
+
+<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
+</span><span style="color:#586e75"></span>selectObject.deselectAll()
   </code></pre></div>
 </section>
 </div>
 </div>
 
-<p>If you want to deselect any elements, you now have four options:</p>
+<p>Enfin, certains éléments <code>&lt;select&gt;</code> vous permettent
+de sélectionner plusieurs options.
+Vous pouvez savoir si votre
+élément <code>&lt;select&gt;</code> en fait partie en utilisant:</p>
 
 
 
@@ -2524,17 +2667,7 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.deselectByIndex(1);
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.deselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.deselectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
-
-<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
-</span><span style="color:#586e75"></span>selectObject.deselectAll();
+Boolean <span style="color:#268bd2">doesThisAllowMultipleSelections</span> <span style="color:#719e07">=</span> selectObject.isMultiple();
   </code></pre></div>
 </section>
   
@@ -2542,17 +2675,7 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 
 <section id="pythoncode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
-select_object<span style="color:#719e07">.</span>deselect_by_index(<span style="color:#2aa198">1</span>)
-
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
-select_object<span style="color:#719e07">.</span>deselect_by_value(<span style="color:#2aa198">&#39;value1&#39;</span>)
-
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
-select_object<span style="color:#719e07">.</span>deselect_by_visible_text(<span style="color:#2aa198">&#39;Bread&#39;</span>)
-
-<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
-select_object<span style="color:#719e07">.</span>deselect_all()
+does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>is_multiple
   </code></pre></div>
 </section>
   
@@ -2560,17 +2683,7 @@ select_object<span style="color:#719e07">.</span>deselect_all()
 
 <section id="csharpcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.DeselectByIndex(<span style="color:#2aa198">1</span>);
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.DeselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.DeselectByText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
-
-<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
-</span><span style="color:#586e75"></span>selectObject.DeselectAll();
+<span style="color:#dc322f">bool</span> doesThisAllowMultipleSelections = selectObject.IsMultiple;
   
 </code></pre></div>
 </section>
@@ -2579,17 +2692,7 @@ select_object<span style="color:#719e07">.</span>deselect_all()
 
 <section id="rubycode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index</span>
-select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:index</span>, <span style="color:#2aa198">1</span>)
-
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its value attribute</span>
-select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:value</span>, <span style="color:#2aa198">&#39;value1&#39;</span>)
-
-<span style="color:#586e75"># Deselect an &lt;option&gt; based upon its text</span>
-select_object<span style="color:#719e07">.</span>deselect_by(<span style="color:#2aa198">:text</span>, <span style="color:#2aa198">&#39;Bread&#39;</span>)
-
-<span style="color:#586e75"># Deselect all selected &lt;option&gt; elements</span>
-select_object<span style="color:#719e07">.</span>deselect_all
+does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>multiple?
   </code></pre></div>
 </section>
   
@@ -2606,108 +2709,6 @@ select_object<span style="color:#719e07">.</span>deselect_all
 
 <section id="kotlincode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.deselectByIndex(<span style="color:#2aa198">1</span>)
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.deselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>)
-
-<span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.deselectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>)
-
-<span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
-</span><span style="color:#586e75"></span>selectObject.deselectAll()
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-<p>Finally, some <code>&lt;select&gt;</code> elements allow you to select more than one option.
-You can find out if your <code>&lt;select&gt;</code> element is one of these by using:</p>
-
-
-
-
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode7" id="tab0code7" aria-controls="javacode7" checked>
-    
-    <label for="tab0code7">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode7" id="tab1code7" aria-controls="pythoncode7">
-    
-    <label for="tab1code7">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode7" id="tab2code7" aria-controls="cscode7">
-    
-    <label for="tab2code7">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode7" id="tab3code7" aria-controls="rubycode7">
-    
-    <label for="tab3code7">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
-    
-    <label for="tab4code7">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
-    
-    <label for="tab5code7">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-Boolean <span style="color:#268bd2">doesThisAllowMultipleSelections</span> <span style="color:#719e07">=</span> selectObject.isMultiple();
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>is_multiple
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#dc322f">bool</span> doesThisAllowMultipleSelections = selectObject.IsMultiple;
-  
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_object<span style="color:#719e07">.</span>multiple?
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode7" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">val</span> doesThisAllowMultipleSelections = selectObject.isMultiple
   </code></pre></div>
 </section>
@@ -2722,7 +2723,7 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/support_packages/working_with_select_elements/">
       “Travailler avec les éléments select”
-    </a> was last updated on: 20 Mar 2020 09:20:53 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/858d689d41e479dfeb1ceb5be52a5c0c89087a36">Deploying on Fri Mar 20 09:20:53 UTC 2020, commit 1ad2f313302fd5a8cb91f7515f4622ce644f9e8b, [skip ci] (858d689d)</a>
+    </a> was last updated on: 26 Mar 2020 19:32:31 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/71c68984a50a060d6bae99cb674c0de5df45bf6a">Modify: [EN]-&gt;[FR] Translating docs(working with select elemnts, CAPTCHAS) to french (71c68984)</a>
 </h5>
         
         </div> 
@@ -3887,19 +3888,19 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585330607"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585330607"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585330607"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585227424" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585227424"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585330607" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585330607"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

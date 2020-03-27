@@ -11,20 +11,20 @@
     <title>Migrating from RC to WebDriver :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585227424" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585227424" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585330606" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585330606" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585227424" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585330606" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585330606"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585227424"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585227424"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585330606"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585330606"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585227424"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585330606"></script>
 
     
   </div>
@@ -1924,17 +1924,17 @@
 <ul>
 <li>
 <ul>
-<li><a href="#how-to-migrate-to-selenium-webdriver">How to Migrate to Selenium WebDriver</a></li>
-<li><a href="#why-migrate-to-webdriver">Why Migrate to WebDriver</a></li>
-<li><a href="#before-starting">Before Starting</a></li>
-<li><a href="#getting-started">Getting Started</a></li>
-<li><a href="#next-steps">Next Steps</a></li>
-<li><a href="#common-problems">Common Problems</a>
+<li><a href="#comment-migrer-vers-selenium-webdriver">Comment migrer vers Selenium WebDriver</a></li>
+<li><a href="#pourquoi-migrer-vers-webdriver">Pourquoi migrer vers WebDriver</a></li>
+<li><a href="#avant-de-commencer">Avant de commencer</a></li>
+<li><a href="#commencer">Commencer</a></li>
+<li><a href="#prochaines-étapes">Prochaines étapes</a></li>
+<li><a href="#problèmes-communs">Problèmes communs</a>
 <ul>
-<li><a href="#clicking-and-typing-is-more-complete">Clicking and Typing is More Complete</a></li>
-<li><a href="#waitforpagetoload-returns-too-soon">WaitForPageToLoad Returns Too Soon</a></li>
-<li><a href="#finding-by-xpath-or-css-selectors-doesn-t-always-work-but-it-does-in-selenium-1">Finding By XPath or CSS Selectors Doesn&rsquo;t Always Work, But It Does In Selenium 1</a></li>
-<li><a href="#there-is-no-browserbot">There is No Browserbot</a></li>
+<li><a href="#cliquer-et-taper-est-plus-complet">Cliquer et taper est plus complet</a></li>
+<li><a href="#waitforpagetoload-revient-trop-tôt">WaitForPageToLoad revient trop tôt</a></li>
+<li><a href="#trouver-par-xpath-ou-sélecteurs-css-ne-fonctionne-pas-toujours-mais-cela-fonctionne-avec-selenium-1">Trouver par XPath ou sélecteurs CSS ne fonctionne pas toujours, mais cela fonctionne avec Selenium 1</a></li>
+<li><a href="#il-n-y-a-pas-de-browserbot">Il n&rsquo;y a pas de Browserbot</a></li>
 <li><a href="#executing-javascript-doesn-t-return-anything">Executing Javascript Doesn&rsquo;t Return Anything</a></li>
 </ul></li>
 </ul></li>
@@ -1965,132 +1965,140 @@
 
 
 
+<h2 id="comment-migrer-vers-selenium-webdriver">Comment migrer vers Selenium WebDriver</h2>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>Une question fréquente lors de l&rsquo;adoption de Selenium 2 est
+la bonne chose à faire lors de l&rsquo;ajout de nouveaux tests à un
+ensemble de tests existant? Utilisateurs nouveaux dans le
+Le framework peut commencer par utiliser les nouvelles API
+WebDriver pour écrire leurs tests. Mais qu&rsquo;en est-il des utilisateurs
+qui ont déjà des suites de tests existants? Ce guide est conçu pour
+montrer comment migrer vos tests existants vers les nouvelles API,
+permettant à tous les nouveaux tests d&rsquo;être écrits en utilisant
+les nouvelles fonctionnalités offertes par WebDriver.</p>
 
+<p>La méthode présentée ici décrit une migration fragmentaire
+vers le WebDriver API sans avoir à tout retravailler en
+une seule poussée massive. Ça signifie que vous pouvez
+accorder plus de temps pour la migration de vos tests
+existants, qui peut vous aider à décider où dépenser vos efforts.</p>
 
-<h2 id="how-to-migrate-to-selenium-webdriver">How to Migrate to Selenium WebDriver</h2>
+<p>Ce guide est écrit en utilisant Java, car il a le meilleur support pour
+faire la migration. Comme nous fournissons de meilleurs outils pour d&rsquo;autres langues,
+ce guide sera élargi pour inclure ces langues.</p>
 
-<p>A common question when adopting Selenium 2 is what&rsquo;s the correct thing to do
-when adding new tests to an existing set of tests? Users who are new to the
-framework can begin by using the new WebDriver APIs for writing their tests.
-But what of users who already have suites of existing tests? This guide is
-designed to demonstrate how to migrate your existing tests to the new APIs,
-allowing all new tests to be written using the new features offered by WebDriver.</p>
+<h2 id="pourquoi-migrer-vers-webdriver">Pourquoi migrer vers WebDriver</h2>
 
-<p>The method presented here describes a piecemeal migration to the WebDriver
-APIs without needing to rework everything in one massive push. This means
-that you can allow more time for migrating your existing tests, which
-may make it easier for you to decide where to spend your effort.</p>
-
-<p>This guide is written using Java, because this has the best support for
-making the migration. As we provide better tools for other languages,
-this guide shall be expanded to include those languages.</p>
-
-<h2 id="why-migrate-to-webdriver">Why Migrate to WebDriver</h2>
-
-<p>Moving a suite of tests from one API to another API requires an enormous
-amount of effort. Why would you and your team consider making this move?
-Here are some reasons why you should consider migrating your Selenium Tests
-to use WebDriver.</p>
+<p>Le déplacement d&rsquo;une suite de tests d&rsquo;une API à une autre
+API nécessite une énorme quantité d&rsquo;effort. Pourquoi voudriez-vous,
+vous et votre équipe, envisager cette démarche? Voici quelques
+raisons pour lesquelles vous devriez envisager de migrer vos
+tests de Selenium pour utiliser WebDriver.</p>
 
 <ul>
-<li>Smaller, compact API. WebDriver&rsquo;s API is more Object Oriented than the
-original Selenium RC API. This can make it easier to work with.</li>
-<li>Better emulation of user interactions. Where possible, WebDriver makes
-use of native events in order to interact with a web page. This more closely
-mimics the way that your users work with your site and apps. In addition,
-WebDriver offers the advanced user interactions APIs which allow you to
-model complex interactions with your site.</li>
-<li>Support by browser vendors. Opera, Mozilla and Google are all active
-participants in WebDriver&rsquo;s development, and each have engineers working
-to improve the framework. Often, this means that support for WebDriver
-is baked into the browser itself: your tests run as fast and as stably as
-possible.</li>
+<li>API plus petite et compacte. L&rsquo;API de WebDriver est plus orientée objet que le
+API d&rsquo;origine Selenium RC. Cela peut faciliter le travail avec.</li>
+<li>Meilleure émulation des interactions utilisateur. Dans la mesure du possible, WebDriver fait
+utilisation d&rsquo;événements natifs pour interagir avec une page Web. Cela de plus près
+imite la façon dont vos utilisateurs travaillent avec votre site et vos applications. En plus,
+WebDriver propose les API d&rsquo;interaction utilisateur avancées qui vous permettent de
+modélisez des interactions complexes avec votre site.</li>
+<li>Prise en charge par les fournisseurs de navigateurs.
+Opera, Mozilla et Google sont tous actifs  participants au développement
+de WebDriver, et chacun a des ingénieurs travaillant pour
+améliorer le cadre. Souvent, cela signifie que la prise en charge de WebDriver
+est intégré dans le navigateur lui-même: vos tests
+s&rsquo;exécutent aussi rapidement et aussi stable que possible.</li>
 </ul>
 
-<h2 id="before-starting">Before Starting</h2>
+<h2 id="avant-de-commencer">Avant de commencer</h2>
 
-<p>In order to make the process of migrating as painless as possible, make
-sure that all your tests run properly with the latest Selenium release.
-This may sound obvious, but it&rsquo;s best to have it said!</p>
+<p>Afin de rendre le processus de migration aussi indolore que possible, faites
+assurez-vous que tous vos tests fonctionnent correctement avec
+la dernière version de Selenium. Cela peut sembler évident,
+mais il vaut mieux le dire!</p>
 
-<h2 id="getting-started">Getting Started</h2>
+<h2 id="commencer">Commencer</h2>
 
-<p>The first step when starting the migration is to change how you obtain
-your instance of Selenium. When using Selenium RC, this is done like so:</p>
+<p>La première étape lors du démarrage de la migration
+consiste à modifier la façon dont vous obtenez votre
+instance de Selenium. Lorsque vous utilisez Selenium RC,
+cela se fait comme suit:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> DefaultSelenium(<span style="color:#2aa198">&#34;localhost&#34;</span>, 4444, <span style="color:#2aa198">&#34;*firefox&#34;</span>, <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span>);
 selenium.start();</code></pre></div>
-<p>This should be replaced like so:</p>
+<p>Cela devrait être remplacé comme suit:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
 Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium(driver, <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span>);</code></pre></div>
-<h2 id="next-steps">Next Steps</h2>
+<h2 id="prochaines-étapes">Prochaines étapes</h2>
 
-<p>Once your tests execute without errors, the next stage is to migrate
-the actual test code to use the WebDriver APIs. Depending on how well
-abstracted your code is, this might be a short process or a long one.
-In either case, the approach is the same and can be summed up simply:
-modify code to use the new API when you come to edit it.</p>
+<p>Une fois vos tests exécutés sans erreur, la prochaine étape consiste à migrer
+le code de test réel pour utiliser les API WebDriver. Selon la façon dont bien
+abstrait votre code est, cela peut être un processus court ou long.
+Dans les deux cas, l&rsquo;approche est la même et peut se résumer simplement:
+modifier le code pour utiliser la nouvelle API lorsque vous venez de le modifier.</p>
 
-<p>If you need to extract the underlying WebDriver implementation from
-the Selenium instance, you can simply cast it to WrapsDriver:</p>
+<p>Si vous devez extraire l&rsquo;implémentation WebDriver sous-jacente de
+l&rsquo;instance de Selenium, vous pouvez simplement la lancer sur WrapsDriver:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> ((WrapsDriver) selenium).getWrappedDriver();</code></pre></div>
-<p>This allows you to continue passing the Selenium instance around as
-normal, but to unwrap the WebDriver instance as required.</p>
+<p>Cela vous permet de continuer à transmettre l&rsquo;instance Selenium comme
+normal, mais pour déballer l&rsquo;instance WebDriver comme requis.</p>
 
-<p>At some point, you&rsquo;re codebase will mostly be using the newer APIs.
-At this point, you can flip the relationship, using WebDriver throughout
-and instantiating a Selenium instance on demand:</p>
+<p>À un moment donné, votre base de code utilisera principalement les nouvelles API.
+À ce stade, vous pouvez inverser la relation en utilisant WebDriver
+et instancier une instance de Selenium à la demande:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium(driver, baseUrl);</code></pre></div>
-<h2 id="common-problems">Common Problems</h2>
+<h2 id="problèmes-communs">Problèmes communs</h2>
 
-<p>Fortunately, you&rsquo;re not the first person to go through this migration,
-so here are some common problems that others have seen, and how to solve them.</p>
+<p>Heureusement, vous n&rsquo;êtes pas la première personne
+à traverser cette migration, voici donc quelques problèmes
+communs que d&rsquo;autres ont vus, et comment les résoudre.</p>
 
-<h3 id="clicking-and-typing-is-more-complete">Clicking and Typing is More Complete</h3>
+<h3 id="cliquer-et-taper-est-plus-complet">Cliquer et taper est plus complet</h3>
 
-<p>A common pattern in a Selenium RC test is to see something like:</p>
+<p>Un schéma courant dans un test Selenium RC
+est de voir quelque chose comme:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">selenium.type(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;exciting tex&#34;</span>);
 selenium.keyDown(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);
 selenium.keyPress(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);
 selenium.keyUp(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);</code></pre></div>
-<p>This relies on the fact that &ldquo;type&rdquo; simply replaces the content of the
-identified element without also firing all the events that would normally
-be fired if a user interacts with the page. The final direct invocations
-of &ldquo;key*&rdquo; cause the JS handlers to fire as expected.</p>
+<p>Cela repose sur le fait que &ldquo;type&rdquo; remplace simplement le contenu du
+élément identifié sans déclencher également tous les événements qui normalement
+être renvoyé si un utilisateur interagit avec la page. Les invocations directes finales
+de &ldquo;clé*&rdquo; provoque le déclenchement des gestionnaires JS comme prévu.</p>
 
-<p>When using the WebDriverBackedSelenium, the result of filling in the form
-field would be &ldquo;exciting texttt&rdquo;: not what you&rsquo;d expect! The reason for this
-is that WebDriver more accurately emulates user behavior, and so will have
-been firing events all along.</p>
+<p>Lors de l&rsquo;utilisation de WebDriverBackedSelenium, le résultat du remplissage du formulaire
+serait &ldquo;texttt excitant&rdquo;: pas ce que vous attendez! La raison de cela
+est que WebDriver émule plus précisément le comportement des utilisateurs, et aura donc
+a tiré des événements tout au long.</p>
 
-<p>This same fact may sometimes cause a page load to fire earlier than it would
-do in a Selenium 1 test. You can tell that this has happened if a
-&ldquo;StaleElementException&rdquo; is thrown by WebDriver.</p>
+<p>Ce même fait peut parfois déclencher un chargement de page plus tôt qu&rsquo;il ne le ferait
+faire dans un test de sélénium 1. Vous pouvez dire que cela s&rsquo;est produit si un
+&ldquo;StaleElementException&rdquo; est levé par WebDriver.</p>
 
-<h3 id="waitforpagetoload-returns-too-soon">WaitForPageToLoad Returns Too Soon</h3>
+<h3 id="waitforpagetoload-revient-trop-tôt">WaitForPageToLoad revient trop tôt</h3>
 
-<p>Discovering when a page load is complete is a tricky business. Do we mean
-&ldquo;when the load event fires&rdquo;, &ldquo;when all AJAX requests are complete&rdquo;, &ldquo;when
-there&rsquo;s no network traffic&rdquo;, &ldquo;when document.readyState has changed&rdquo; or something
-else entirely?</p>
+<p>Découvrir quand un chargement de page est terminé est
+une entreprise délicate. Voulons-nous &ldquo;lorsque l&rsquo;événement de
+chargement se déclenche&rdquo;, &ldquo;lorsque toutes les requêtes AJAX
+sont terminées&rdquo;, &ldquo;lorsque il n&rsquo;y a pas de trafic réseau &ldquo;,&rdquo;
+lorsque document.readyState a changé &ldquo;ou quelque chose
+sinon entièrement?</p>
 
-<p>WebDriver attempts to simulate the original Selenium behavior, but this doesn&rsquo;t
-always work perfectly for various reasons. The most common reason is that it&rsquo;s
-hard to tell the difference between a page load not having started yet, and a
-page load having completed between method calls. This sometimes means that
-control is returned to your test before the page has finished (or even started!)
-loading.</p>
+<p>WebDriver tente de simuler le comportement d&rsquo;origine de Selenium,
+mais cela ne fonctionnent toujours parfaitement pour diverses raisons.
+La raison la plus courante est que c&rsquo;est difficile de faire la
+différence entre un chargement de page n&rsquo;ayant pas encore commencé et un
+chargement de page terminé entre les appels de méthode. Cela signifie parfois que
+le contrôle revient à votre test avant que la page ne soit
+terminée (ou même commencée!) chargement.</p>
 
-<p>The solution to this is to wait on something specific. Commonly, this might be
-for the element you want to interact with next, or for some Javascript variable
-to be set to a specific value. An example would be:</p>
+<p>La solution est d&rsquo;attendre quelque chose de spécifique.
+Généralement, cela pourrait être pour l&rsquo;élément avec lequel
+vous souhaitez interagir ensuite, ou pour une variable
+Javascript à définir sur une valeur spécifique. Un exemple serait:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement <span style="color:#268bd2">element</span><span style="color:#719e07">=</span> wait.until(visibilityOfElementLocated(By.id(<span style="color:#2aa198">&#34;some_id&#34;</span>)));</code></pre></div>
-<p>Where &ldquo;visibilityOfElementLocated&rdquo; is implemented as:</p>
+<p>Où &ldquo;visibilityOfElementLocated&rdquo; est implémenté comme:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">ExpectedCondition</span><span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">visibilityOfElementLocated</span>(<span style="color:#268bd2">final</span> <span style="color:#268bd2">By</span> locator) {
   <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> ExpectedCondition<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span>() {
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">WebElement</span> apply(WebDriver <span style="color:#268bd2">driver</span>) {
@@ -2102,62 +2110,71 @@ WebElement <span style="color:#268bd2">element</span><span style="color:#719e07"
     }
   };
 }</code></pre></div>
-<p>This may look complex, but it&rsquo;s almost all boiler-plate code. The only
-interesting bit is that the &ldquo;ExpectedCondition&rdquo; will be evaluated repeatedly
-until the &ldquo;apply&rdquo; method returns something that is neither &ldquo;null&rdquo;
-nor Boolean.FALSE.</p>
+<p>Cela peut sembler complexe, mais c&rsquo;est presque tout le code de la plaque de la chaudière. Le seul
+bit intéressant est que le &ldquo;ExpectedCondition&rdquo; sera évalué à plusieurs reprises
+jusqu&rsquo;à ce que la méthode &ldquo;apply&rdquo; renvoie quelque chose qui n&rsquo;est ni &ldquo;null&rdquo;
+ni Boolean.FALSE.</p>
 
-<p>Of course, adding all these &ldquo;wait&rdquo; calls may clutter up your code. If
-that&rsquo;s the case, and your needs are simple, consider using the implicit waits:</p>
+<p>Bien sûr, l&rsquo;ajout de tous ces appels &ldquo;d&rsquo;attente&rdquo; peut
+encombrer votre code. Si c&rsquo;est le cas, et vos besoins
+sont simples, pensez à utiliser les attentes implicites:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);</code></pre></div>
-<p>By doing this, every time an element is located, if the element is not present,
-the location is retried until either it is present, or until 30 seconds have
-passed.</p>
+<p>En faisant cela, chaque fois qu&rsquo;un élément est localisé,
+si l&rsquo;élément n&rsquo;est pas présent, l&rsquo;emplacement est réessayé jusqu&rsquo;à
+ce qu&rsquo;il soit présent ou jusqu&rsquo;à 30 secondes
+passé.</p>
 
-<h3 id="finding-by-xpath-or-css-selectors-doesn-t-always-work-but-it-does-in-selenium-1">Finding By XPath or CSS Selectors Doesn&rsquo;t Always Work, But It Does In Selenium 1</h3>
+<h3 id="trouver-par-xpath-ou-sélecteurs-css-ne-fonctionne-pas-toujours-mais-cela-fonctionne-avec-selenium-1">Trouver par XPath ou sélecteurs CSS ne fonctionne pas toujours, mais cela fonctionne avec Selenium 1</h3>
 
-<p>In Selenium 1, it was common for xpath to use a bundled library rather than
-the capabilities of the browser itself. WebDriver will always use the native
-browser methods unless there&rsquo;s no alternative. That means that complex xpath
-expressions may break on some browsers.</p>
+<p>Dans Selenium 1, il était courant que xpath utilise une
+bibliothèque groupée plutôt que les capacités du navigateur
+lui-même. WebDriver utilisera toujours le natif méthodes de
+navigateur, sauf s&rsquo;il n&rsquo;y a pas d&rsquo;autre alternative. Cela signifie
+que xpath complexe les expressions peuvent se briser sur certains navigateurs.</p>
 
-<p>CSS Selectors in Selenium 1 were implemented using the Sizzle library. This
-implements a superset of the CSS Selector spec, and it&rsquo;s not always clear where
-you&rsquo;ve crossed the line. If you&rsquo;re using the WebDriverBackedSelenium and use a
-Sizzle locator instead of a CSS Selector for finding elements, a warning will
-be logged to the console. It&rsquo;s worth taking the time to look for these,
-particularly if tests are failing because of not being able to find elements.</p>
+<p>Les sélecteurs CSS dans Selenium 1 ont été implémentés à l&rsquo;aide de
+la bibliothèque Sizzle. Cette implémente un surensemble de la
+spécification CSS Selector, et il n&rsquo;est pas toujours clair où vous
+avez franchi la ligne. Si vous utilisez WebDriverBackedSelenium et
+utilisez un Sizzle locator au lieu d&rsquo;un CSS Selector pour trouver des
+éléments, un avertissement être connecté à la console. Cela vaut la
+peine de prendre le temps de les chercher, en particulier si les tests
+échouent faute de pouvoir trouver des éléments.</p>
 
-<h3 id="there-is-no-browserbot">There is No Browserbot</h3>
+<h3 id="il-n-y-a-pas-de-browserbot">Il n&rsquo;y a pas de Browserbot</h3>
 
-<p>Selenium RC was based on Selenium Core, and therefore when you executed
-Javascript, you could access bits of Selenium Core to make things easier.
-As WebDriver is not based on Selenium Core, this is no longer possible.
-How can you tell if you&rsquo;re using Selenium Core? Simple! Just look to see
-if your &ldquo;getEval&rdquo; or similar calls are using &ldquo;selenium&rdquo; or &ldquo;browserbot&rdquo;
-in the evaluated Javascript.</p>
+<p>Selenium RC était basé sur Selenium Core, et donc lorsque vous avez exécuté
+JavaScript, vous pouvez accéder à des morceaux de Selenium Core pour faciliter les choses.
+Comme WebDriver n&rsquo;est pas basé sur Selenium Core, cela n&rsquo;est plus possible.
+Comment savoir si vous utilisez Selenium Core? Facile! Regardez juste pour voir
+si vos appels &ldquo;getEval&rdquo; ou similaires utilisent &ldquo;Selenium&rdquo; ou &ldquo;browserbot&rdquo;
+dans le Javascript évalué.</p>
 
-<p>You might be using the browserbot to obtain a handle to the current window
-or document of the test. Fortunately, WebDriver always evaluates JS in the
-context of the current window, so you can use &ldquo;window&rdquo; or &ldquo;document&rdquo; directly.</p>
+<p>Vous utilisez peut-être le navigateur pour obtenir un descripteur
+de la fenêtre actuelle ou document du test. Heureusement, WebDriver
+évalue toujours JS dans le contexte de la fenêtre en cours, vous pouvez
+donc utiliser directement &ldquo;fenêtre&rdquo; ou &ldquo;document&rdquo;.</p>
 
-<p>Alternatively, you might be using the browserbot to locate elements.
-In WebDriver, the idiom for doing this is to first locate the element,
-and then pass that as an argument to the Javascript. Thus:</p>
+<p>Vous pouvez également utiliser le navigateur pour localiser des éléments.
+Dans WebDriver, l&rsquo;idiome pour ce faire est de localiser d&rsquo;abord l&rsquo;élément,
+puis passez cela comme argument au Javascript. Donc:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</span> selenium.getEval(
     <span style="color:#2aa198">&#34;selenium.browserbot.findElement(&#39;id=foo&#39;, browserbot.getCurrentWindow()).tagName&#34;</span>);</code></pre></div>
-<p>becomes:</p>
+<p>devient:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;foo&#34;</span>));
 String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</span> (String) ((JavascriptExecutor) driver).executeScript(
     <span style="color:#2aa198">&#34;return arguments[0].tagName&#34;</span>, element);</code></pre></div>
-<p>Notice how the passed in &ldquo;element&rdquo; variable appears as the first item
-in the JS standard &ldquo;arguments&rdquo; array.</p>
+<p>Remarquez comment la variable &ldquo;element&rdquo; passée
+apparaît comme premier élément dans le tableau
+&ldquo;arguments&rdquo; standard de JS.</p>
 
 <h3 id="executing-javascript-doesn-t-return-anything">Executing Javascript Doesn&rsquo;t Return Anything</h3>
 
-<p>WebDriver&rsquo;s JavascriptExecutor will wrap all JS and evaluate it as an anonymous expression. This means that you need to use the &ldquo;return&rdquo; keyword:</p>
+<p>JavascriptExecutor de WebDriver encapsulera tous les
+JS et l&rsquo;évaluera comme une expression anonyme. Cela
+signifie que vous devez utiliser le mot-clé &ldquo;retour&rdquo;:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#268bd2">title</span> <span style="color:#719e07">=</span> selenium.getEval(<span style="color:#2aa198">&#34;browserbot.getCurrentWindow().document.title&#34;</span>);</code></pre></div>
-<p>becomes:</p>
+<p>devient:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">((JavascriptExecutor) driver).executeScript(<span style="color:#2aa198">&#34;return document.title;&#34;</span>);</code></pre></div>
 
 <footer class=" footline" >
@@ -2167,7 +2184,7 @@ in the JS standard &ldquo;arguments&rdquo; array.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/">
       “Migrating from RC to WebDriver”
-    </a> was last updated on: 20 Mar 2020 09:20:53 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/858d689d41e479dfeb1ceb5be52a5c0c89087a36">Deploying on Fri Mar 20 09:20:53 UTC 2020, commit 1ad2f313302fd5a8cb91f7515f4622ce644f9e8b, [skip ci] (858d689d)</a>
+    </a> was last updated on: 27 Mar 2020 00:06:28 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5b8ae9ad8186feec55166f3ac0e3edb9afcd7283">Modify: [EN]-&gt;[FR] Translating docs(migrating rc to WebDriver) to French [deploy site] (5b8ae9ad)</a>
 </h5>
         
         </div> 
@@ -3332,19 +3349,19 @@ in the JS standard &ldquo;arguments&rdquo; array.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585330606"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585227424"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585227424"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585330606"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585330606"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585227424" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585227424"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585330606" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585330606"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
