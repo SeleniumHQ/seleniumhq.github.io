@@ -590,9 +590,8 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/contributing/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Selenium is a big software project, its site and documentation are key to understanding how things work and learning effective ways to exploit its potential.
-This project contains both Selenium&amp;rsquo;s site and documentation. This is an ongoing effort (not targeted at any specific release) to provide updated information on how to use Selenium effectively, how to get involved and how to contribute to Selenium.</description>
+      <description>Selenium est un gros projet logiciel, son site et sa documentation sont essentiels comprendre comment les choses fonctionnent et apprendre des moyens efficaces d&amp;rsquo;exploiter son potentiel.
+Ce projet contient à la fois le site et la documentation de Selenium. C&amp;rsquo;est un effort continu (qui ne vise aucune version spécifique) pour fournir des informations mises à jour sur la façon d&amp;rsquo;utiliser efficacement le sélénium, impliqués et comment contribuer au sélénium.</description>
     </item>
     
   </channel>
