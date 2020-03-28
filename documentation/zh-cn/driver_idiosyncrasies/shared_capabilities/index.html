@@ -11,20 +11,20 @@
     <title>共享的功能 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585338598" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585338598" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585403363" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585403363" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585338598" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585403363" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585338598"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585403363"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585338598"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585338598"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585403363"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585403363"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585338598"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585403363"></script>
 
     
   </div>
@@ -1968,31 +1968,31 @@
 
 
 
-<p>In-order to create a new session by Selenium WebDriver,
-local end should provide the basic capabilities to remote end.
-The remote end uses the same set of capabilities to
-create a session and describes the current session features.</p>
+<p>为了通过Selenium WebDriver创建新会话,
+本地端应向远程端提供基本功能.
+远端使用相同的功能集来创建会话并描述当前会话功能.</p>
 
-<p>WebDriver provides capabilities that each remote
-end will/should support the implementation.
-Following are the capabilities that WebDriver supports:</p>
+<p>WebDriver提供了每个远程端将 (或应该) 支持实现的功能.
+以下是WebDriver支持的功能:</p>
 
 <h2 id="browsername">browserName:</h2>
 
-<p>This capability is used to set the <code>browserName</code> for a given session.
+<p>此功能用于设置既定会话的 <code>browserName</code> .
+如果未在远端安装指定的浏览器,
+则会话创建将失败
+This capability is used to set the <code>browserName</code> for a given session.
 If the specified browser is not installed at the
 remote end, the session creation will fail</p>
 
 <h2 id="browserversion">browserVersion:</h2>
 
-<p>This capability is optional, this is used to
-set the available browser version at remote end.
-For Example, if ask for Chrome version 75 on a system that
-only has 80 installed, the session creation will fail</p>
+<p>此功能是可选的, 用于在远程端设置可用的浏览器版本.
+例如, 如果在仅安装80版本的系统上询问75版本的Chrome,
+则会话创建将失败</p>
 
 <h2 id="页面加载策略">页面加载策略</h2>
 
-<p>通过URL导航到新页面时，默认情况下，Selenium将等待页面完全加载后再进行响应。这对于初学者来说效果很好，但是在加载大量第三方资源的页面上可能会导致较长的等待时间。在这种情况下，使用非默认策略可以使测试的执行速度更快，但是也可能导致不稳定，即页面上的元素随元素加载和大小变化而改变位置.</p>
+<p>通过URL导航到新页面时, 默认情况下, Selenium将等待页面完全加载后再进行响应. 这对于初学者来说效果很好, 但是在加载大量第三方资源的页面上可能会导致较长的等待时间. 在这种情况下, 使用非默认策略可以使测试的执行速度更快, 但是也可能导致不稳定, 即页面上的元素随元素加载和大小变化而改变位置.</p>
 
 <p>页面加载策略可以参考链接
 <a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Document/readyState">document.readyState</a>
@@ -2011,13 +2011,13 @@ only has 80 installed, the session creation will fail</p>
 <tr>
 <td>normal</td>
 <td>complete</td>
-<td>默认情况下使用，等待所有资源下载完成</td>
+<td>默认情况下使用, 等待所有资源下载完成</td>
 </tr>
 
 <tr>
 <td>eager</td>
 <td>interactive</td>
-<td>DOM访问已准备就绪，但其他资源（如图像）可能仍在加载中</td>
+<td>DOM访问已准备就绪, 但其他资源 (如图像) 可能仍在加载中</td>
 </tr>
 
 <tr>
@@ -2030,69 +2030,63 @@ only has 80 installed, the session creation will fail</p>
 
 <h2 id="platformname">platformName</h2>
 
-<p>This identifies the operating system at the remote-end,
-fetching the <code>platformName</code> returns the OS name.</p>
+<p>这标识了远端的操作系统,
+获取 <code>platformName</code> 将返回操作系统的名称.</p>
 
-<p>In cloud-based providers,
-setting <code>platformName</code> sets the OS at the remote-end.</p>
+<p>在基于云的供应者中,
+设置 <code>platformName</code> 将在远程端设置操作系统.</p>
 
 <h2 id="acceptinsecurecerts">acceptInsecureCerts</h2>
 
-<p>This capability checks whether an expired (or)
-invalid <code>TLS Certificate</code> is used while navigating
-during a session.</p>
+<p>此功能检查在会话期间导航时
+是否使用了过期的 (或) 无效的 <code>TLS Certificate</code> .</p>
 
-<p>If the capability is set to <code>false</code>, an
-<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a>
-will be returned as navigation encounters any domain
-certificate problems. If set to <code>true</code>, invalid certificate will be
-trusted by the browser.</p>
+<p>如果将功能设置为 <code>false</code>,
+则页面浏览遇到任何域证书问题时,
+将返回<a href="//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate">insecure certificate error</a> .
+如果设置为 <code>true</code>, 则浏览器将信任无效证书.</p>
 
-<p>All self-signed certificates will be trusted by this capability by default.
-Once set, <code>acceptInsecureCerts</code> capability will have an
-effect for the entire session.</p>
+<p>默认情况下, 此功能将信任所有自签名证书.
+设置后,  <code>acceptInsecureCerts</code> 功能将在整个会话中生效.</p>
 
 <h2 id="session-timeouts">Session timeouts</h2>
 
-<p>A WebDriver <code>session</code> is imposed with a certain <code>session timeout</code>
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.</p>
+<p>WebDriver <code>session</code> 具有一定的 <code>session timeout</code> 间隔,
+在此间隔内, 用户可以控制执行脚本或从浏览器检索信息的行为.</p>
 
-<p>Each session timeout is configured with
-combination of different <code>timeouts</code> as described below:</p>
+<p>每个会话超时都配置有不同 <code>timeouts</code> 的组合,
+如下所述:</p>
 
 <h3 id="script-timeout">Script Timeout:</h3>
 
-<p>Specifies when to interrupt an executing script in
-a current browsing context. The default timeout <strong>30,000</strong>
-is imposed when a new session is created by WebDriver.</p>
+<p>指定在当前浏览上下文中, 中断正在执行脚本的时机.
+WebDriver创建新会话时,
+将设置默认的超时时间为 <strong>30,000</strong> .</p>
 
 <h3 id="page-load-timeout">Page Load Timeout:</h3>
 
-<p>Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout <strong>300,000</strong> is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-<em>TimeoutException</em>.</p>
+<p>指定在当前浏览上下文中, 加载网页的时间间隔.
+WebDriver创建新会话时,
+默认设置超时时间为 <strong>300,000</strong> .
+如果页面加载限制了给定 (或默认) 的时间范围,
+则该脚本将被 <em>TimeoutException</em> 停止.</p>
 
 <h3 id="implicit-wait-timeout">Implicit Wait Timeout</h3>
 
-<p>This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout <strong>0</strong>
-is imposed when a new session is created by WebDriver.</p>
+<p>指定在定位元素时, 等待隐式元素定位策略的时间.
+WebDriver创建新会话时,
+将设置默认超时时间为 <strong>0</strong> .</p>
 
 <h2 id="unhandledpromptbehavior">unhandledPromptBehavior</h2>
 
-<p>Specifies the state of current session&rsquo;s <code>user prompt handler</code>.
-Defaults to <strong>dismiss and notify state</strong></p>
+<p>指定当前会话 <code>user prompt handler</code> 的状态.
+默认为 <strong>dismiss and notify state</strong> .</p>
 
 <h3 id="user-prompt-handler">User Prompt Handler</h3>
 
-<p>This defines what action must take when a
-user prompt encounters at remote-end. This is defined by
-<code>unhandledPromptBehavior</code> capability and has the following states:</p>
+<p>这定义了在远端出现用户提示时必须采取的措施.
+该行为由<code>unhandledPromptBehavior</code> 功能定义,
+具有以下状态:</p>
 
 <ul>
 <li>dismiss</li>
@@ -2104,14 +2098,14 @@ user prompt encounters at remote-end. This is defined by
 
 <h2 id="setwindowrect">setWindowRect</h2>
 
-<p>This command alters the size and position of the current
-browsing context window. This command acts as setter
-to <code>getWindowRect</code> command which accepts <strong>width</strong>, <strong>height</strong>,
-<strong>x</strong>, <strong>y</strong> as <em>optional</em> arguments.</p>
+<p>此命令更改当前浏览上下文中窗口的大小和位置.
+此命令作为 <code>getWindowRect</code> 对应的设置方法,
+该命令接受 <strong>width</strong>, <strong>height</strong>,
+<strong>x</strong>, <strong>y</strong> 作为 <em>可选</em> 参数.</p>
 
-<p>During automation, the current browsing context will be associated
-with window states, that describe visibility
-state of the browser window. The window states are</p>
+<p>在自动化期间,
+当前浏览上下文将与描述浏览器窗口可见性状态的窗口状态相关联.
+窗口状态为</p>
 
 <ul>
 <li>maximized</li>
@@ -2120,11 +2114,10 @@ state of the browser window. The window states are</p>
 <li>fullscreen</li>
 </ul>
 
-<p>Setting <em>Width</em> or <em>Height</em> does not guaranteed that the resulting
-window size will exactly match that which was quested. This is because
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by <code>getWindowRect</code>
-may not equally match the values set to the browser.</p>
+<p>设置 <em>Width</em> 或 <em>Height</em> 不能保证结果窗口的大小一定完全匹配所请求的窗口大小.
+这是因为某些驱动程序可能无法以单像素为单位调整大小.
+因此, 通过 <code>getWindowRect</code> 获取窗口状态 (或详细信息)
+可能与浏览器设置的值不匹配.</p>
 
 
 <footer class=" footline" >
@@ -2134,7 +2127,7 @@ may not equally match the values set to the browser.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/">
       “共享的功能”
-    </a> was last updated on: 25 Mar 2020 22:55:58 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/e49e7252572b37b872b0ce1296bd31de72d90b68">Add: Adding setWindowRect capability to shared capabilities document (e49e7252)</a>
+    </a> was last updated on: 28 Mar 2020 21:47:40 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/c13ea4e7c628d574398c6c1177d601bf1a98bc60">Add Chinese translation of &#34;shared_capabilities&#34; (#379) [deploy site] (c13ea4e7)</a>
 </h5>
         
         </div> 
@@ -3296,19 +3289,19 @@ may not equally match the values set to the browser.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585338598"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585403363"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585338598"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585338598"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585403363"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585403363"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585338598" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585338598"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585403363" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585403363"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
