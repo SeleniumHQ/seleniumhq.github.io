@@ -30,7 +30,7 @@ múltiples entornos, especialmente, contra diferentes navegadores al mismo tiemp
 Por ejemplo, un Grid de maquinas virtuales puede ser configurado con cada una
 soportando un navegador diferente, estos navegadores pueden ser aquellos que
 la aplicación deba soportar. Así, la maquina uno tiene Internet Explorer 8, la 
-maquina dos Internet Explorer 9, la maquina tres la ultima versión de chrome 
+maquina dos Internet Explorer 9, la maquina tres la ultima versión de Chrome
 y la maquina cuatro la ultima versión de Firefox. Cuando la suite de test es
 ejecutada, el Grid de Selenium recibe cada combinación de test-navegador y 
 asigna la ejecución al navegador requerido.
