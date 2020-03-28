@@ -394,7 +394,15 @@ new InternetExplorerDriver("C:/path/to/IEDriver.exe");
 Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
-//我们还没有JavaScript代码，帮助我们并且提交一个PR
+const {Builder} = require("selenium-webdriver");
+const ie = require('selenium-webdriver/ie');
+let service = new ie.ServiceBuilder("/path/to/IEDriverServer.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setIeService(service)
+                .forBrowser('internet explorer')
+                .build();
+})();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
