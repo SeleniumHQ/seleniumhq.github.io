@@ -3,314 +3,317 @@ title: "Alertas, avisos y confirmaciones de JavaScript"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+WebDriver proporciona una API para trabajar con los tres tipos
+nativos de mensajes emergentes ofrecidos por JavaScript. 
+Estas ventanas emergentes están diseñadas por el
+navegador y ofrecen personalización limitada.
 
-WebDriver provides an API for working with the three types of native
-popup message offered by JavaScript. These popups are styled by the
-browser and offer limited customisation.
+## Alertas
 
-## Alerts
+El más simple de estos se conoce como alerta, 
+que muestra unmensaje personalizado y un solo botón
+que descarta la alerta, etiquetado
+en la mayoría de los navegadores como OK. 
+También se puede descartar en la mayoría de los navegadores
+presionando el botón de cerrar, pero esto siempre hará lo mismo que
+el presionar botón OK.
+<a onclick="window.alert('Sample alert')">See an example alert</a>.
 
-The simplest of these is referred to as an alert, which shows a
-custom message, and a single button which dismisses the alert, labelled
-in most browsers as OK. It can also be dismissed in most browsers by
-pressing the close button, but this will always do the same thing as
-the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
-
-WebDriver can get the text from the popup and accept or dismiss these
-alerts.
+WebDriver puede obtener el texto de la ventana emergente
+y aceptar o descartar estas alertas.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta 
 driver.findElement(By.linkText("See an example alert")).click();
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
-//Store the alert text in a variable
+// Almacena el texto de la alerta en una variable
 String text = alert.getText();
 
-//Press the OK button
+// Presiona el botón OK
 alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Click the link to activate the alert
+# Haz clic en el enlace para activar la alerta
 driver.find_element_by_link_text("See an example alert").click()
 
-# Wait for the alert to be displayed and store it in a variable
+# Espera a que se muestre la alerta y almacenala en una variable
 alert = wait.until(expected_conditions.alert_is_present())
 
-# Store the alert text in a variable
+# Almacena el texto de la alerta en una variable
 text = alert.text
 
-# Press the OK button
+# Presiona el botón OK
 alert.accept()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.FindElement(By.LinkText("See an example alert")).Click();
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
 
-//Store the alert text in a variable
+// Almacena el texto de la alerta en una variable
 string text = alert.Text;
 
-//Press the OK button
+// Presiona el botón OK
 alert.Accept();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Click the link to activate the alert
+#  Haz clic en el enlace para activar la aler
 driver.find_element(:link_text, 'See an example alert').click
 
-# Store the alert reference in a variable
+# Almacena la referencia de la alertta en una variable
 alert = driver.switch_to.alert
 
-# Store the alert text in a variable
+# Almacena el texto de la alerta en una variable
 alert_text = alert.text
 
-# Press on OK button
+# Presiona el botón OK
 alert.accept
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 await driver.findElement(By.linkText('See an example alert')).click();
 
-// Wait for the alert to be displayed
+// Espera a que se muestre la alerta
 await driver.wait(until.alertIsPresent());
 
-// Store the alert in a variable
+// Almacena la alerta en una variable
 let alert = await driver.switchTo().alert();
 
-//Store the alert text in a variable
+// Almacena el texto de la alerta en una variable
 let alertText = await alert.getText();
 
-//Press the OK button
+// Presiona el botón OK
 await alert.accept();
 
-// Note: To use await, the above code should be inside an async function
+// Nota: Para usar await, el código mostrado arriba debe estar en una función async
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.findElement(By.linkText("See an example alert")).click()
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 val alert = wait.until(ExpectedConditions.alertIsPresent())
 
-//Store the alert text in a variable
+// Almacena el texto de la alerta en una variable
 val text = alert.getText()
 
-//Press the OK button
+// Presiona el botón OK
 alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Confirm
 
-A confirm box is similar to an alert, except the user can also choose
-to cancel the message. <a onclick="window.confirm('Are you sure?')">See
+Un cuadro de confirmación es similar a una alerta, 
+excepto que el usuario también puede elegir
+cancelar el mensaje. <a onclick="window.confirm('Are you sure?')">See
 a sample confirm</a>.
 
-This example also shows a different approach to storing an alert:
+Este ejemplo también muestra un enfoque diferente para 
+almacenar una alerta:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.findElement(By.linkText("See a sample confirm")).click();
 
-//Wait for the alert to be displayed
+// Espera a que se muestre la alerta
 wait.until(ExpectedConditions.alertIsPresent());
 
-//Store the alert in a variable
+// Almacena la alerta en una variable
 Alert alert = driver.switchTo().alert();
 
-//Store the alert in a variable for reuse
+// Almacena la alerta en una variable para poder reusarla
 String text = alert.getText();
 
-//Press the Cancel button
+// Presiona el botón cancelar
 alert.dismiss();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Click the link to activate the alert
+#  Haz clic en el enlace para activar la alerta
 driver.find_element_by_link_text("See a sample confirm").click()
 
-# Wait for the alert to be displayed
+# Espera a que se muestre la alerta
 wait.until(expected_conditions.alert_is_present())
 
-# Store the alert in a variable for reuse
+# Almacena la alerta en una variable para poder reusarla
 alert = driver.switch_to.alert
 
-# Store the alert text in a variable
+# Almacena el texto de la alerta en una variable
 text = alert.text
 
-# Press the Cancel button
+# Presiona el botón cancelar
 alert.dismiss()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.FindElement(By.LinkText("See a sample confirm")).Click();
 
-//Wait for the alert to be displayed
+//Espera a que se muestre la alerta
 wait.Until(ExpectedConditions.AlertIsPresent());
 
-//Store the alert in a variable
+// Almacena la alerta en una variable
 IAlert alert = driver.SwitchTo().Alert();
 
-//Store the alert in a variable for reuse
+// Almacena la alerta en una variable para poder reusarla
 string text = alert.Text;
 
-//Press the Cancel button
+// Presiona el botón cancelar
 alert.Dismiss();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Click the link to activate the alert
+#  Haz clic en el enlace para activar la alerta
 driver.find_element(:link_text, 'See a sample confirm').click
 
-# Store the alert reference in a variable
+# Almacena la referencia de la alertta en una variable
 alert = driver.switch_to.alert
 
-# Store the alert text in a variable
+# Almacena el texto de la alerta en una variable
 alert_text = alert.text
 
-# Press on Cancel button
+# Presiona el botón cancelar
 alert.dismiss
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 await driver.findElement(By.linkText('See a sample confirm')).click();
 
-// Wait for the alert to be displayed
+// Espera a que se muestre la alerta
 await driver.wait(until.alertIsPresent());
 
-// Store the alert in a variable
+// Almacena la alerta en una variable
 let alert = await driver.switchTo().alert();
 
-//Store the alert text in a variable
+// Almacena el texto de la alerta en una variable
 let alertText = await alert.getText();
 
-//Press the Cancel button
+// Presiona el botón cancelar
 await alert.dismiss();
 
-// Note: To use await, the above code should be inside an async function
+// Nota: Para usar await, el código mostrado arriba debe estar en una función async
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.findElement(By.linkText("See a sample confirm")).click()
 
-//Wait for the alert to be displayed
+//Espera a que se muestre la alerta
 wait.until(ExpectedConditions.alertIsPresent())
 
-//Store the alert in a variable
+// Almacena la alerta en una variable
 val alert = driver.switchTo().alert()
 
-//Store the alert in a variable for reuse
+// Almacena la alerta en una variable para poder reusarla
 val text = alert.text
 
-//Press the Cancel button
+//Presiona el botón cancelar
 alert.dismiss()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 ## Prompt
 
-Prompts are similar to confirm boxes, except they also include a text
-input. Similar to working with form elements, you can use WebDriver's
-send keys to fill in a response. This will completely replace the placeholder
-text. Pressing the cancel button will not submit any text.
+Los prompts son similares a los cuadros de confirmación, 
+excepto que también incluyen una entrada de texto. 
+Similar a trabajar con elementos de los formularios, puedes usar
+el _sendKeys_ de WebDriver para completar una respuesta. 
+Esto reemplazará completamente el texto por defecto. 
+Al presionar el botón cancelar
+esto hará que no se envie ningún texto.
 <a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
 See a sample prompt</a>.
 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.findElement(By.linkText("See a sample prompt")).click();
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 
-//Type your message
+// Inserta tu mensaje
 alert.sendKeys("Selenium");
 
-//Press the OK button
+// Presiona el botón OK
 alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Click the link to activate the alert
+#  Haz clic en el enlace para activar la alerta
 driver.find_element_by_link_text("See a sample prompt").click()
 
-# Wait for the alert to be displayed
+# Espera a que se muestre la alerta
 wait.until(expected_conditions.alert_is_present())
 
-# Store the alert in a variable for reuse
+# Almacena la alerta en una variable para poder reusarla
 alert = Alert(driver)
 
-# Type your message
+# Inserta tu mensaje
 alert.send_keys("Selenium")
 
-# Press the OK button
+# Presiona el botón OK
 alert.accept()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.FindElement(By.LinkText("See a sample prompt")).Click();
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 IAlert alert = wait.Until(ExpectedConditions.AlertIsPresent());
 
-//Type your message
+// Inserta tu mensaje
 alert.SendKeys("Selenium");
 
-//Press the OK button
+// Presiona el botón OK
 alert.Accept();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Click the link to activate the alert
+#  Haz clic en el enlace para activar la alerta
 driver.find_element(:link_text, 'See a sample prompt').click
 
-# Store the alert reference in a variable
+# Almacena la referencia de la alerta en una variable
 alert = driver.switch_to.alert
 
-# Type a message
+# Inserta tu mensaje
 alert.send_keys("selenium")
 
-# Press on Ok button
+# Presiona el botón OK
 alert.accept
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 await driver.findElement(By.linkText('See a sample prompt')).click();
 
-// Wait for the alert to be displayed
+// Espera a que se muestre la alerta
 await driver.wait(until.alertIsPresent());
 
-// Store the alert in a variable
+// Almacena la alerta en una variable
 let alert = await driver.switchTo().alert();
 
-//Type your message
+// Inserta tu mensaje
 await alert.sendKeys("Selenium");
 
-//Press the OK button
+// Presiona el botón OK
 await alert.accept();
 
-//Note: To use await, the above code should be inside an async function
+// Nota: Para usar await, el código mostrado arriba debe estar en una función async
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-//Click the link to activate the alert
+// Haz clic en el enlace para activar la alerta
 driver.findElement(By.linkText("See a sample prompt")).click()
 
-//Wait for the alert to be displayed and store it in a variable
+// Espera a que se muestre la alerta y almacenala en una variable
 val alert = wait.until(ExpectedConditions.alertIsPresent())
 
-//Type your message
+// Inserta tu mensaje
 alert.sendKeys("Selenium")
 
-//Press the OK button
+// Presiona el botón OK
 alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
