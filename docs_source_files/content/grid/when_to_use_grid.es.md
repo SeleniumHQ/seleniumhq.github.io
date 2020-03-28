@@ -1,52 +1,51 @@
 ---
-title: "When to use Grid"
+title: "Cuando usar el Grid"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Generalmente hablando, hay dos razones por las cuales podrías querer usar el Grid.
 
 
-Generally speaking, there’s two reasons why you might want to use Grid.
+* Para ejecutar tus tests contra múltiples navegadores, múltiples versiones de
+navegadores y múltiples navegadores bajo diferentes sistemas operativos.
+* Para reducir el tiempo que tarda en completarse la ejecución de tu suite de test.
 
-* To run your tests against multiple browsers, multiple versions of browser,
-and browsers running on different operating systems.
-* To reduce the time it takes for the test suite to complete a test pass.
+El Grid se usa para acelerar la ejecución de los test usando múltiples maquinas
+para ejecutarlos en paralelo. Por ejemplo, si tienes una suite con 100 
+tests, pero configuras el Grid para soportar cuatro maquinas diferentes (ya sean 
+maquinas virtuales o maquinas separadas físicamente) para ejecutar los tests, tu
+suite completará la ejecución en aproximadamente una cuarta parte del tiempo que
+habría tardado si se hubiesen ejecutado de manera secuencial en una sola maquina.
+Para suites de test grandes y suites de larga duración, como aquellas que realizan
+gran cantidad de validaciones de datos, puede suponer un gran ahorro de tiempo.
+Algunas suites de test pueden llegar tardar horas en ejecutarse. Otra razón puede
+ser acortar el tiempo de espera para recibir los resultados de los tests cuando los 
+desarrolladores suben el código de su aplicación a los entornos de pruebas . Cada 
+vez mas equipos de software practican metodologías de desarrollo software Agile
+ en las cuales es necesario tener feedback tan rápido como sea posible en lugar 
+de esperar durante toda la noche para que los tests finalicen su ejecución.
 
-Grid is used to speed up the execution of a test pass by using
-multiple machines to run tests in parallel. For example, if you have a suite of
-100 tests, but you set up Grid to support 4 different machines (VMs or
-separate physical machines) to run those tests, your test suite will complete
-in (roughly) one-fourth the time as it would if you ran your tests sequentially
-on a single machine. For large test suites, and long-running test suite such as
-those performing large amounts of data-validation, this can be a significant
-time-saver. Some test suites can take hours to run. Another reason to boost the
-time spent running the suite is to shorten the turnaround time for test results
-after developers check-in code for the AUT. Increasingly software teams
-practicing Agile software development want test feedback as immediately as
-possible as opposed to wait overnight for an overnight test pass.
+El Grid también es usado para soportar múltiples ejecuciones de test contra
+múltiples entornos, especialmente, contra diferentes navegadores al mismo tiempo.
+Por ejemplo, un Grid de maquinas virtuales puede ser configurado con cada una
+soportando un navegador diferente, estos navegadores pueden ser aquellos que
+la aplicación deba soportar. Así, la maquina uno tiene Internet Explorer 8, la 
+maquina dos Internet Explorer 9, la maquina tres la ultima versión de Chrome
+y la maquina cuatro la ultima versión de Firefox. Cuando la suite de test es
+ejecutada, el Grid de Selenium recibe cada combinación de test-navegador y 
+asigna la ejecución al navegador requerido.
 
-Grid is also used to support running tests against multiple runtime
-environments, specifically, against different browsers at the same time. For
-example, a ‘grid’ of virtual machines can be setup with each supporting a
-different browser that the application to be tested must support. So, machine 1
-has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
-Chrome, and machine 4 the latest Firefox. When the test suite is run,
-Selenium-Grid receives each test-browser combination and assigns each test to
-run against its required browser.
+Adicionalmente, uno puede tener en el Grid los mismos navegadores, tipos y 
+versiones. Por ejemplo podría tener en el Grid cuatro maquinas cada una ejecutando
+tres instancias de Firefox 70, permitiendo así tener una granja de servidores 
+(en cierto sentido) de instancias de Firefox. De esta manera cuando se ejecute 
+la suite, cada test es pasado al Grid el cual lo asignará a la siguiente instancia
+de Firefox disponible. De esta forma se obtendrían los resultados en los cuales 
+doce tests se habrán estado ejecutando todos a mismo tiempo en paralelo, 
+reduciendo así significativamente el tiempo que se requiere en completar la 
+ejecución de la suite.
 
-In addition, one can have a grid of all the same browser, type and version. For
-instance, one could have a grid of 4 machines each running 3 instances of
-Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
-instances. When the suite runs, each test is passed to Grid which
-assigns the test to the next available Firefox instance. In this manner one
-gets test pass where conceivably 12 tests are all running at the same time in
-parallel, significantly reducing the time required to complete a test pass.
-
-Grid is very flexible. These two examples can be combined to allow
-multiple instances of each browser type and version. A configuration such as
-this would provide both, parallel execution for fast test pass completion and
-support for multiple browser types and versions simultaneously.
+El Grid es muy flexible. Estos dos ejemplos pueden ser combinados para permitir
+múltiples instancias de cada tipo de navegador y versión. Configuraciones de este
+tipo permiten proveer una paralelización para completar las ejecuciones mas
+rápidamente y soportar múltiples tipos de navegadores y versiones simultáneamente.
