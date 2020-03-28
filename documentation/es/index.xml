@@ -368,6 +368,16 @@ Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de
     </item>
     
     <item>
+      <title>Cuando usar el Grid</title>
+      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
+      <description>Generalmente hablando, hay dos razones por las cuales podrías querer usar el Grid.
+ Para ejecutar tus tests contra múltiples navegadores, múltiples versiones de navegadores y múltiples navegadores bajo diferentes sistemas operativos. Para reducir el tiempo que tarda en completarse la ejecución de tu suite de test.  El Grid se usa para acelerar la ejecución de los test usando múltiples maquinas para ejecutarlos en paralelo. Por ejemplo, si tienes una suite con 100 tests, pero configuras el Grid para soportar cuatro maquinas diferentes (ya sean maquinas virtuales o maquinas separadas físicamente) para ejecutar los tests, tu suite completará la ejecución en aproximadamente una cuarta parte del tiempo que habría tardado si se hubiesen ejecutado de manera secuencial en una sola maquina.</description>
+    </item>
+    
+    <item>
       <title>Ejecutando acciones en el AUT*</title>
       <link>https://selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -416,17 +426,6 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
  Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
-      <title>When to use Grid</title>
-      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>
