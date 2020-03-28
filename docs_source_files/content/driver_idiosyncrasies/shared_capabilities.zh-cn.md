@@ -53,7 +53,7 @@ remote end, the session creation will fail
 
 如果将功能设置为 `false`, 
 则页面浏览遇到任何域证书问题时, 
-将返回[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) . 
+将返回[insecure certificate error](//developer.mozilla.org/zh-CN/docs/Web/WebDriver/Errors/InsecureCertificate) . 
 如果设置为 `true`, 则浏览器将信任无效证书.
 
 默认情况下, 此功能将信任所有自签名证书. 

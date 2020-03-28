@@ -54,7 +54,7 @@ invalid `TLS Certificate` is used while navigating
 during a session.
 
 If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
+[insecure certificate error](//developer.mozilla.org/nl/docs/Web/WebDriver/Errors/InsecureCertificate) 
 will be returned as navigation encounters any domain 
 certificate problems. If set to `true`, invalid certificate will be 
 trusted by the browser.
