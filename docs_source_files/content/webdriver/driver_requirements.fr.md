@@ -481,7 +481,7 @@ a une excellente synthèse sur la mise en œuvre de Microsoft.
 Les versions actuelles d'Opera sont construites sur le moteur Chromium,
 et WebDriver est désormais pris en charge via la source fermée
 [Pilote Opera Chromium](//github.com/operasoftware/operachromiumdriver/releases),
-qui peut être [ajouté à votre CHEMIN](#ajout-d-exécutables-à-votre-path) ou en tant que
+qui peut être [ajouté à votre CHEMIN](#ajout-dexécutables-à-votre-path) ou en tant que
 propriété système.
 
 L'instanciation d'une session de pilote est similaire à Firefox et Chromium:
@@ -516,7 +516,14 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// Opera support is deprecated from Selenium 4. See changelog for more details
+const {Builder} = require("selenium-webdriver");
+const opera = require('selenium-webdriver/opera');
+(async function test() {
+    let driver = await new Builder()
+        .forBrowser('opera')
+        .build();
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.WebDriver
