@@ -315,7 +315,15 @@ new EdgeDriver("/path/to/MicrosoftWebDriver.exe");
 Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
-//我们还没有JavaScript代码，帮助我们并且提交一个PR
+const {Builder} = require("selenium-webdriver");
+const edge = require('selenium-webdriver/edge');
+let service = new edge.ServiceBuilder("/path/to/msedgedriver.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setEdgeService(service)
+                .forBrowser('MicrosoftEdge')
+                .build();
+})();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
