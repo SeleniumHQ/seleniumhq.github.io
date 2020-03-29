@@ -11,20 +11,20 @@
     <title>Les pré-requis de WebDriver :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585470213" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585470213" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585500021" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585500021" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585470213" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585500021" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585470213"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585500021"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585470213"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585470213"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585500021"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585500021"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585470213"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585500021"></script>
 
     
   </div>
@@ -2762,8 +2762,16 @@ Edge(executable_path<span style="color:#719e07">=</span><span style="color:#2aa1
 
 <section id="javascriptcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
+<span style="color:#268bd2">const</span> edge <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/edge&#39;</span>);
+<span style="color:#268bd2">let</span> service <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> edge.ServiceBuilder(<span style="color:#2aa198">&#34;/path/to/msedgedriver.exe&#34;</span>);
+(async <span style="color:#268bd2">function</span> test() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder()
+                .setEdgeService(service)
+                .forBrowser(<span style="color:#2aa198">&#39;MicrosoftEdge&#39;</span>)
+                .build();
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3017,7 +3025,7 @@ a une excellente synthèse sur la mise en œuvre de Microsoft.</p>
 <p>Les versions actuelles d&rsquo;Opera sont construites sur le moteur Chromium,
 et WebDriver est désormais pris en charge via la source fermée
 <a href="//github.com/operasoftware/operachromiumdriver/releases">Pilote Opera Chromium</a>,
-qui peut être <a href="#ajout-d-exécutables-à-votre-path">ajouté à votre CHEMIN</a> ou en tant que
+qui peut être <a href="#ajout-dexécutables-à-votre-path">ajouté à votre CHEMIN</a> ou en tant que
 propriété système.</p>
 
 <p>L&rsquo;instanciation d&rsquo;une session de pilote est similaire à Firefox et Chromium:</p>
@@ -3112,8 +3120,15 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javascriptcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">// Opera support is deprecated from Selenium 4. See changelog for more details
+</span><span style="color:#586e75"></span><span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
+<span style="color:#268bd2">const</span> opera <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/opera&#39;</span>);
+(async <span style="color:#268bd2">function</span> test() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder()
+        .forBrowser(<span style="color:#2aa198">&#39;opera&#39;</span>)
+        .build();
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3299,7 +3314,7 @@ quelque chose aussi maintenant offert par Firefox de Mozilla.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/webdriver/driver_requirements/">
       “Les pré-requis de WebDriver”
-    </a> was last updated on: 28 Mar 2020 21:02:55 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/09104c61e1dc4f23916fbdba6c501efd8f72e188">Add: Adding JS code sample to set custom IePath [deploy site] (09104c61)</a>
+    </a> was last updated on: 29 Mar 2020 22:08:43 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/210c37ce39cac15c14ed64443491d87687b46fd1">Add: Adding JS code sample for Opera browser [deploy site] (210c37ce)</a>
 </h5>
         
         </div> 
@@ -4464,19 +4479,19 @@ quelque chose aussi maintenant offert par Firefox de Mozilla.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585470213"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585500021"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585470213"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585470213"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585500021"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585500021"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585470213" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585470213"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585500021" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585500021"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
