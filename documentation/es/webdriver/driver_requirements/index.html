@@ -11,20 +11,20 @@
     <title>Requerimientos de los controladores :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1585247890" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585247890" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1585423482" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585423482" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585247890" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585423482" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585247890"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585423482"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585247890"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585247890"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585423482"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585423482"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585247890"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585423482"></script>
 
     
   </div>
@@ -1189,9 +1189,9 @@
  
   
     
-      <li data-nav-id="/grid/setting_up_your_own_grid/" title="Setting up your own Grid" class="dd-item ">
+      <li data-nav-id="/grid/setting_up_your_own_grid/" title="Configurando tu propio Grid" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/">
-        Setting up your own Grid
+        Configurando tu propio Grid
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1208,9 +1208,9 @@
  
   
     
-      <li data-nav-id="/grid/when_to_use_grid/" title="When to use Grid" class="dd-item ">
+      <li data-nav-id="/grid/when_to_use_grid/" title="Cuando usar el Grid" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/grid/when_to_use_grid/">
-        When to use Grid
+        Cuando usar el Grid
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -2988,8 +2988,16 @@ Ie(executable_path<span style="color:#719e07">=</span><span style="color:#2aa198
 
 <section id="javascriptcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// We don&#39;t have a JavaScript code sample yet -  Help us out and raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> {Builder} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>);
+<span style="color:#268bd2">const</span> ie <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/ie&#39;</span>);
+<span style="color:#268bd2">let</span> service <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ie.ServiceBuilder(<span style="color:#2aa198">&#34;/path/to/IEDriverServer.exe&#34;</span>);
+(async <span style="color:#268bd2">function</span> test() {
+    <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder()
+                .setIeService(service)
+                .forBrowser(<span style="color:#2aa198">&#39;internet explorer&#39;</span>)
+                .build();
+})();
+  
 </code></pre></div>
 </section>
   
@@ -3296,7 +3304,7 @@ algo que también ha ofrecido Firefox.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/driver_requirements/">
       “Requerimientos de los controladores”
-    </a> was last updated on: 22 Mar 2020 07:10:30 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/bf55413037c3819c3de5dfe529da5358115febf7">Add spanish translation to sites (#357) [deploy site] (bf554130)</a>
+    </a> was last updated on: 28 Mar 2020 21:02:55 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/09104c61e1dc4f23916fbdba6c501efd8f72e188">Add: Adding JS code sample to set custom IePath [deploy site] (09104c61)</a>
 </h5>
         
         </div> 
@@ -4461,19 +4469,19 @@ algo que también ha ofrecido Firefox.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585247890"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585423482"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1585247890"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585247890"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1585423482"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585423482"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585247890" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585247890"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585423482" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585423482"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

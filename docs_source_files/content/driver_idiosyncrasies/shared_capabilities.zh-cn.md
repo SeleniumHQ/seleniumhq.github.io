@@ -3,30 +3,30 @@ title: "共享的功能"
 weight: 1
 ---
  
-In-order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
+为了通过Selenium WebDriver创建新会话, 
+本地端应向远程端提供基本功能. 
+远端使用相同的功能集来创建会话并描述当前会话功能. 
  
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+WebDriver提供了每个远程端将 (或应该) 支持实现的功能. 
+以下是WebDriver支持的功能:
  
 ## browserName:
  
+此功能用于设置既定会话的 `browserName` . 
+如果未在远端安装指定的浏览器, 
+则会话创建将失败
 This capability is used to set the `browserName` for a given session. 
 If the specified browser is not installed at the 
 remote end, the session creation will fail
  
 ## browserVersion: 
  
-This capability is optional, this is used to 
-set the available browser version at remote end. 
-For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+此功能是可选的, 用于在远程端设置可用的浏览器版本. 
+例如, 如果在仅安装80版本的系统上询问75版本的Chrome, 
+则会话创建将失败
  
 ## 页面加载策略
-通过URL导航到新页面时，默认情况下，Selenium将等待页面完全加载后再进行响应。这对于初学者来说效果很好，但是在加载大量第三方资源的页面上可能会导致较长的等待时间。在这种情况下，使用非默认策略可以使测试的执行速度更快，但是也可能导致不稳定，即页面上的元素随元素加载和大小变化而改变位置.
+通过URL导航到新页面时, 默认情况下, Selenium将等待页面完全加载后再进行响应. 这对于初学者来说效果很好, 但是在加载大量第三方资源的页面上可能会导致较长的等待时间. 在这种情况下, 使用非默认策略可以使测试的执行速度更快, 但是也可能导致不稳定, 即页面上的元素随元素加载和大小变化而改变位置.
 
 页面加载策略可以参考链接
 [document.readyState](https://developer.mozilla.org/zh-CN/docs/Web/API/Document/readyState)
@@ -34,72 +34,66 @@ only has 80 installed, the session creation will fail
 
 | 策略 | 准备完成的状态 | 备注 |
 | -------- | ----------- | ----- |
-| normal | complete | 默认情况下使用，等待所有资源下载完成 |
-| eager | interactive | DOM访问已准备就绪，但其他资源（如图像）可能仍在加载中 |
+| normal | complete | 默认情况下使用, 等待所有资源下载完成 |
+| eager | interactive | DOM访问已准备就绪, 但其他资源 (如图像) 可能仍在加载中 |
 | none | Any | 完全不阻塞WebDriver|
 
 ## platformName
 
-This identifies the operating system at the remote-end, 
-fetching the `platformName` returns the OS name. 
+这标识了远端的操作系统, 
+获取 `platformName` 将返回操作系统的名称. 
 
-In cloud-based providers, 
-setting `platformName` sets the OS at the remote-end.
+在基于云的供应者中, 
+设置 `platformName` 将在远程端设置操作系统.
 
 ## acceptInsecureCerts
 
-This capability checks whether an expired (or) 
-invalid `TLS Certificate` is used while navigating 
-during a session.
+此功能检查在会话期间导航时
+是否使用了过期的 (或) 无效的 `TLS Certificate` .
 
-If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
-will be returned as navigation encounters any domain 
-certificate problems. If set to `true`, invalid certificate will be 
-trusted by the browser.
+如果将功能设置为 `false`, 
+则页面浏览遇到任何域证书问题时, 
+将返回[insecure certificate error](//developer.mozilla.org/zh-CN/docs/Web/WebDriver/Errors/InsecureCertificate) . 
+如果设置为 `true`, 则浏览器将信任无效证书.
 
-All self-signed certificates will be trusted by this capability by default. 
-Once set, `acceptInsecureCerts` capability will have an 
-effect for the entire session.
+默认情况下, 此功能将信任所有自签名证书. 
+设置后,  `acceptInsecureCerts` 功能将在整个会话中生效.
 
 ## Session timeouts
 
-A WebDriver `session` is imposed with a certain `session timeout`
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.
+WebDriver `session` 具有一定的 `session timeout` 间隔, 
+在此间隔内, 用户可以控制执行脚本或从浏览器检索信息的行为.
 
-Each session timeout is configured with
-combination of different `timeouts` as described below:
+每个会话超时都配置有不同 `timeouts` 的组合, 
+如下所述:
 
 ### Script Timeout:
-Specifies when to interrupt an executing script in
-a current browsing context. The default timeout **30,000**
-is imposed when a new session is created by WebDriver.
+指定在当前浏览上下文中, 中断正在执行脚本的时机. 
+WebDriver创建新会话时, 
+将设置默认的超时时间为 **30,000** .
 
 ### Page Load Timeout:
-Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout **300,000** is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-_TimeoutException_.
+指定在当前浏览上下文中, 加载网页的时间间隔. 
+WebDriver创建新会话时, 
+默认设置超时时间为 **300,000** . 
+如果页面加载限制了给定 (或默认) 的时间范围, 
+则该脚本将被 _TimeoutException_ 停止.
 
 ### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
+指定在定位元素时, 等待隐式元素定位策略的时间. 
+WebDriver创建新会话时, 
+将设置默认超时时间为 **0** .
 
 ## unhandledPromptBehavior
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+指定当前会话 `user prompt handler` 的状态. 
+默认为 **dismiss and notify state** . 
 
 ### User Prompt Handler
 
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+这定义了在远端出现用户提示时必须采取的措施. 
+该行为由`unhandledPromptBehavior` 功能定义, 
+具有以下状态:
 
 * dismiss
 * accept
@@ -109,22 +103,21 @@ user prompt encounters at remote-end. This is defined by
 
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
+此命令更改当前浏览上下文中窗口的大小和位置. 
+此命令作为 `getWindowRect` 对应的设置方法, 
+该命令接受 **width**, **height**,
+**x**, **y** 作为 _可选_ 参数.
 
-During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
+在自动化期间, 
+当前浏览上下文将与描述浏览器窗口可见性状态的窗口状态相关联. 
+窗口状态为
 
 * maximized
 * minimized
 * normal
 * fullscreen
 
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+设置 _Width_ 或 _Height_ 不能保证结果窗口的大小一定完全匹配所请求的窗口大小. 
+这是因为某些驱动程序可能无法以单像素为单位调整大小. 
+因此, 通过 `getWindowRect` 获取窗口状态 (或详细信息) 
+可能与浏览器设置的值不匹配.

@@ -1,87 +1,77 @@
 ---
-title: "Setting up your own Grid"
+title: "Configurando tu propio Grid"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Para usar Selenium Grid, necesitas mantener tu propia infraestructura para los
+nodos.
+Como esto puede suponer un engorro y suponer un gran esfuerzo de tiempo,
+muchas organizaciones usan proveedores de IaaS (Infraestructura como servicio) 
+como Amazon EC2 y Google Compute para proveer esta infraestructura.
 
-To use Selenium Grid,
-you need to maintain your own infrastructure for the nodes.
-As this can be a cumbersome and time intense effort,
-many organizations use IaaS providers
-such as Amazon EC2 and Google Compute
-to provide this infrastructure.
+Otras opciones incluyen usar proveedores como Sauce Labs or Testing Bot los 
+cuales proveen Selenium Grid como servicio en la nueve.
+Ciertamente, también es posible ejecutar los nodos en tu propio hardware.
+Esta capitulo abordara en detalle la opción de ejecutar tu propio Grid completo 
+con su propia infraestructura de nodos.
 
-Other options include using providers such as Sauce Labs or Testing Bot
-who provide a Selenium Grid as a service in the cloud.
-It is certainly possible to also run nodes on your own hardware.
-This chapter will go into detail about the option of running your own grid,
-complete with its own node infrastructure.
+## Inicio rápido
+
+Este ejemplo te enseñará como poner en marcha el Grid Hub de Selenium 2 y registrar
+un nodo WebDriver y un nodo heredado de Selenium 1 RC.
+También te enseñaremos como llamar al Grid desde Java.
+El hub y los nodos se muestran aquí ejecutándose en la misma maquina, pero por
+supuesto puedes copiar `selenium-server-standalone` en múltiples maquinas.
 
 
-## Quick start
-
-This example will show you how to start the Selenium 2 Grid Hub,
-and register both a WebDriver node and a Selenium 1 RC legacy node.
-We will also show you how to call the grid from Java.
-The hub and nodes are shown here running on the same machine,
-but of course you can copy the selenium-server-standalone to multiple machines.
-
-The `selenium-server-standalone` package includes the hub,
-WebDriver, and legacy RC needed to run the Grid, 
-_ant_ is not required anymore.
-You can download the `selenium-server-standalone-.jar` from
+El paquete de `selenium-server-standalone` incluye el hub, el WebDriver y el servidor
+RC heredado necesarios para ejecutar el Grid, _ant_ ya no es necesario.
+Puedes descargar `selenium-server-standalone-.jar` desde
 [https://selenium.dev/downloads/](https://selenium.dev/downloads/).
 
+### Paso 1: Iniciar el Hub
 
-### Step 1: Start the Hub
+El Hub es el punto central que recibirá las peticiones de los tests y las 
+distribuirá a los nodos adecuados.
+La distribución se hace en función capacidades, esto significa que un test que
+necesite un conjunto de capacidades solo sera distribuido a los nodos que 
+ofrezcan ese conjunto o subconjunto de capacidades.
 
-The Hub is the central point that will receive test requests
-and distribute them to the right nodes.
-The distribution is done on a capabilities basis,
-meaning a test requiring a set of capabilities
-will only be distributed to nodes offering that set or subset of capabilities.
+Debido a que las capacidades deseadas de una prueba son justo lo que el nombre
+implica deseadas, el hub no garantiza que se localice un nodo que coincida
+completamente con el conjunto de capacidades deseadas.
 
-Because a test's desired capabilities are just what the name implies, _desired_,
-the hub cannot guarantee that it will locate a node
-fully matching the requested desired capabilities set.
 
-Open a command prompt
-and navigate to the directory where you copied
-the `selenium-server-standalone.jar` file.
-You start the hub by passing the `-role hub` flag
-to the standalone server:
+Abre una ventana de navegación y navega hasta el directorio donde tienes copiado
+el archivo `selenium-server-standalone.jar`.
+Puedes iniciar el hub pasandole el parámetro `-role hub` al servidor standalone.
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub
 ```
 
-The Hub will listen to port 4444 by default.
-You can view the status of the hub by opening a browser window and navigating to
+El hub escuchará al puerto 4444 por defecto.
+Puedes ver el estado del hub abriendo una ventana del navegador y navegando a 
 [http://localhost:4444/grid/console](http://localhost:4444/grid/console).
 
-To change the default port,
-you can add the optional `-port` flag
-with an integer representing the port to listen to when you run the command.
-Also, all of the other options you see in the JSON config file (seen below)
-are possible command-line flags.
+Para cambiar el puerto por defecto, puedes añadir el parámetro opcional `-port`
+asignándole un valor entero que representará el puerto a escuchar cuando se 
+ejecute el comando.
+Ademas todas las otras opciones que puedes observar en el archivo de configuración
+JSON (mostrado a continuación) son posibles parámetros vía linea de comandos.
 
-You certainly can get by with only the simple command shown above,
-but if you need more advanced configuration,
-you can also specify a JSON format config file, for convenience,
-to configure the hub when you start it.
-You can do it like so:
+Ciertamente puedes trabajar solo con el comando simple que se muestra arriba,
+pero si necesitases una configuración mas avanzada podrías especificarla en un
+archivo de configuración JSON para configurar  el hub con su arranque.
+Puedes hacerlo tal que así.
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug
 ```
 
-Below you will see an example of a `hubConfig.json` file.
-We will go into more detail on how to provide node configuration files in step 2.
+A continuación puedes ver un ejemplo de un archivo `hubConfig.json`.
+Iremos mas en detalle sobre como proveer archivos de configuración a los nodos en
+el paso 2.
 
 ```json
 {
@@ -101,48 +91,46 @@ We will go into more detail on how to provide node configuration files in step 2
 ```
 
 
-### Step 2: Start the Nodes
+### Paso 2: Iniciar los nodos
 
-Regardless of whether you want to run a grid with new WebDriver functionality,
-or a grid with Selenium 1 RC functionality,
-or both at the same time,
-you use the same `selenium-server-standalone.jar` file to start the nodes:
+Independientemente de si quieres ejecutar un Grid con una nueva funcionalidad del
+WebDriver, un Grid con funcionalidades de Selenium 1 RC, o ambas al 
+mismo tiempo se usa el mismo archivo `selenium-server-standalone.jar` para arrancar
+los nodos.
 
 ```shell
 java -jar selenium-server-standalone.jar -role node -hub http://localhost:4444
 ```
 
-If a port is not specified through the `-port` flag,
-a free port will be chosen. You can run multiple nodes on one machine
-but if you do so, you need to be aware of your systems memory resources
-and problems with screenshots if your tests take them.
+Si no se especifica un puerto a través del parámetro `-port` se elegirá un puerto
+libre. Puedes ejecutar múltiples nodos en una maquina pero si lo haces tienes que
+tener en cuenta los recursos de memoria de tus sistemas y de los problemas con
+las capturas de pantalla si tus tests las realizan.
+
+#### Configuración de un nodo con opciones
+
+Como hemos mencionado, para disponer de compatibilidad con las versiones anteriores
+los roles "wd" y "rc" todavía son un subconjunto valido del rol en los "node".
+Pero estos roles limitan el tipo de conexiones remotas a sus correspondientes APIs,
+mientras que el rol "node" permite conexiones remotas a ambos el RC y al WebDriver.
 
 
-#### Configuration of Node with options
-
-As mentioned, for backwards compatibility
-“wd” and “rc” roles are still a valid subset of the “node” role.
-But those roles limit the types of remote connections to their corresponding API,
-while “node” allows both RC and WebDriver remote connections.
-
-Passing JVM properties (using the `-D` flag
-_before the -jar argument_)
-on the command line as well,
-and these will be picked up and propagated to the nodes:
+Pasar propiedades de la JVM (como usar el parámetro `-D` antes del argumento -jar)
+vía linea de comando permitirá a las nodos recoger y propagar estos parámetros.
 
 `-Dwebdriver.chrome.driver=chromedriver.exe`
 
 
-#### Configuration of Node with JSON
+#### Configurando un nodo via JSON
 
-You can also start grid nodes that are configured
-with a JSON configuration file
+Tambien se pueden ejecutar nodos que hayan sido configurados via archivos de 
+configuración JSON.
 
 ```shell
 java -Dwebdriver.chrome.driver=chromedriver.exe -jar selenium-server-standalone.jar -role node -nodeConfig node1Config.json
 ```
 
-And here is an example of a `nodeConfig.json` file:
+Este es un ejemplo de archivo `nodeConfig.json`:
 
 ```json
 {
@@ -186,72 +174,75 @@ And here is an example of a `nodeConfig.json` file:
 }
 ```
 
-A note about the `-host` flag
+Una nota sobre el parametro `-host`:
 
-For both hub and node, if the `-host` flag is not specified,
-`0.0.0.0` will be used by default. This will bind to all the
-public (non-loopback) IPv4 interfaces of the machine. If you have a special
-network configuration or any component that creates extra network interfaces,
-it is advised to set the `-host` flag with a value that allows the
-hub/node to be reachable from a different machine.
+Para ambos el hub y el nodo, si no se especifica el parámetro `-host` se usará
+por defecto la IP `0.0.0.0`.  Este se unirá a todos los interfaces IPv4 públicos 
+(sin loopback) de la maquina. Si tienes alguna configuración de red especial o
+algún componente que utilice interfaces de red extra es recomendado fijar el
+parámetro `-host` con un valor que permita que el hub o los nodos sean accesibles
+desde maquinas diferentes.
 
-#### Specifying the port
+#### Especificando el puerto
 
-The default TCP/IP port used by the hub is 4444. If you need to change the port 
-please use above mentioned configurations.
+El puerto TCP/IP por defecto usado por el hub es el 4444. Si necesitas cambiar 
+el puerto por favor usa las configuraciones mencionadas arriba.
 
-## Troubleshooting
+## Solución de problemas
 
-### Using Log file
-For advanced troubleshooting you can specify a log file to log system messages.
-Start Selenium GRID hub or node with -log argument. Please see the below example:
+### Usando un archivo log
+Para resolución de problemas avanzados puedes especificar un archivo de log que
+almacene los mensajes del sistema.
+Lanza el Grid de Selenium o el nodo con el argumento -log. A continuación dispone
+de un ejemplo:
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -log log.txt
 ```
 
-Use your favorite text editor to open log file (log.txt in the example above) to find 
-"ERROR" logs if you get issues.
+Usa tu editor de texto favorito para abrir el archivo de log (log.txt en el ejemplo)
+para encontrar los logs de "ERROR" si tienes problemas.
+### Usando el argumento `-debug`
 
-### Using `-debug` argument
-
-Also you can use `-debug` argument to print debug logs to console.
-Start Selenium Grid Hub or Node with `-debug` argument. Please see 
-the below example:
+También puedes usar el argumento `-debug` para imprimir los logs de debug en la
+consola. Lanza el Grid de Selenium o el nodo con el argumento `-debug`.
+A continuación dispone de un ejemplo:
 
 ```shell
 java -jar selenium-server-standalone.jar -role hub -debug
 ```
 
-## Warning
+## Advertencia
 
-The Selenium Grid must be protected from external access using appropriate
-firewall permissions.
+El Grid de Selenium debe estar protegido contra accesos externos mediante el uso
+apropiado de permisos de firewall.
 
-Failure to protect your Grid could result in one or more of the following occurring:
+Fallar a la hora de proteger el Grid puede resultar en uno o mas de los siguientes
+problemas:
 
-* You provide open access to your Grid infrastructure
-* You allow third parties to access internal web applications and files
-* You allow third parties to run custom binaries
+* Proveer acceso abierto a tu infraestructura del Grid.
+* Permitir a terceros el acceso a aplicaciones web y archivos interno.
+* Permitir a terceros ejecutar tus ejecutables.
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good 
-overview of how a publicly exposed Grid could be misused: 
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
+Puedes visitar el blog [Detectify](//labs.detectify.com) el cual te puede aportar
+mas información sobre los peligros de exponer tu grid públicamente.
+Aquí puedes visitar el articulo 
+[_Don't Leave your Grid Wide Open_](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
 
+## Selenium Docker
 
-## Docker Selenium
-[Docker](//www.docker.com/) provides a convenient way to
-provision and scale Selenium Grid infrastructure in a unit known as a container.
-Containers are standardised units of software that contain everything required
-to run the desired application, including all dependencies, in a reliable and repeatable
-way on different machines.
+[Docker](//www.docker.com/) provee una forma conveniente de aprovisionar y escalar
+la infraestructura de Selenium Grid en unidades conocidas como contenedores.
+Los contenedores son unidades estandarizadas de software que contienen todo lo 
+necesario para ejecutar la aplicación deseada, incluidas todas las dependencias,
+en un entorno confiable y regenerable en diferentes sistemas.
 
-The Selenium project maintains a set of Docker images which you can download
-and run to get a working grid up and running quickly. Nodes are available for
-both Firefox and Chrome. Full details of how to provision a grid can be found
-within the [Docker Selenium](//github.com/SeleniumHQ/docker-selenium) 
-repository.
+El proyecto de Selenium mantiene un conjunto de imágenes Docker las cuales puedes
+descargar y ejecutar para tener un Grid funcionando rápidamente. Los nodos están
+disponibles para los navegadores Firefox y Chrome. Todos los detalles de como
+abastecer un Grid se encuentran en 
+[Docker Selenium](//github.com/SeleniumHQ/docker-selenium).
 
-### Prerequisite
-The only requirement to run a Grid is to have Docker installed and working.
-[Install Docker](//www.docker.com/products/docker-desktop).
+### Prerequisitos
+El único requisito para ejecutar el Grid es tener Docker instalado y funcionando.
+Puedes descargar Docker [en este enlace](//www.docker.com/products/docker-desktop).
