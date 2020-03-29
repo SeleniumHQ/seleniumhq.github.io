@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>Remote WebDriver server :: Selenium 文档</title>
+    <title>远程WebDriver服务器 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585423486" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585423486" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585470211" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585470211" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585423486" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585470211" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585423486"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585470211"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585423487"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585423487"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585470211"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585470211"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585423487"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585470211"></script>
 
     
   </div>
@@ -707,9 +707,9 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="Remote WebDriver server" class="dd-item active">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="远程WebDriver服务器" class="dd-item active">
         <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/">
-        Remote WebDriver server
+        远程WebDriver服务器
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/remote_webdriver/'>远程 WebDriver</a> > Remote WebDriver server
+            <a href='https://selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://selenium.dev/documentation/zh-cn/remote_webdriver/'>远程 WebDriver</a> > 远程WebDriver服务器
           
          
           
@@ -1924,10 +1924,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#starting-the-server-from-the-command-line">Starting the server from the command line</a></li>
-<li><a href="#considerations-for-running-the-server">Considerations for running the server</a></li>
-<li><a href="#timeouts-from-version-2-21">Timeouts (from version 2.21)</a></li>
-<li><a href="#configuring-the-server-programmatically">Configuring the server programmatically</a></li>
+<li><a href="#从命令行启动服务器">从命令行启动服务器</a></li>
+<li><a href="#运行服务器的注意事项">运行服务器的注意事项</a></li>
+<li><a href="#超时-自2-21版本">超时 (自2.21版本)</a></li>
+<li><a href="#以编程方式配置服务器">以编程方式配置服务器</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1946,7 +1946,7 @@
           
             <h1>
               
-              Remote WebDriver server
+              远程WebDriver服务器
             </h1>
           
 
@@ -1956,75 +1956,67 @@
 
 
 
+<p>服务器将始终在安装了待测浏览器的机器上运行.
+可以从命令行或通过代码配置来使用服务器.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！</p>
-</div>
+<h2 id="从命令行启动服务器">从命令行启动服务器</h2>
 
-
-<p>The server will always run on the machine with the browser you want to
-test. The server can be used either from the command line or through code
-configuration.</p>
-
-<h2 id="starting-the-server-from-the-command-line">Starting the server from the command line</h2>
-
-<p>Once you have downloaded <code>selenium-server-standalone-{VERSION}.jar</code>,
-place it on the computer with the browser you want to test. Then, from
-the directory with the jar, run the following:</p>
+<p>下载 <code>selenium-server-standalone-{VERSION}.jar</code> 后,
+将其传到具有待测浏览器的电脑上.
+然后, 切换到包含此jar文件的目录中, 运行以下命令:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar</code></pre></div>
-<h2 id="considerations-for-running-the-server">Considerations for running the server</h2>
+<h2 id="运行服务器的注意事项">运行服务器的注意事项</h2>
 
-<p>The caller is expected to terminate each session properly, calling
-either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.</p>
+<p>调用者应调用 <code>Selenium#stop()</code> 或 <code>WebDriver#quit</code> 以结束每次会话.</p>
 
-<p>The selenium-server keeps in-memory logs for each ongoing session,
-which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
-you forget to terminate these sessions, your server may leak memory. If
-you keep extremely long-running sessions, you will probably need to
-stop/quit every now and then (or increase memory with -Xmx jvm option).</p>
+<p>Selenium服务器在内存中保留每个运行会话的日志,
+这些日志将在调用 <code>Selenium#stop()</code> 或 <code>WebDriver#quit</code> 时清除.
+如果您忘记终止这些会话, 则可能会造成服务器内存泄漏.
+如果您保持运行时间非常长的会话,
+则可能需要不时执行停止或退出的操作 (或使用-Xmx jvm选项增加内存) .</p>
 
-<h2 id="timeouts-from-version-2-21">Timeouts (from version 2.21)</h2>
+<h2 id="超时-自2-21版本">超时 (自2.21版本)</h2>
 
-<p>The server has two different timeouts, which can be set as follows:</p>
+<p>服务器有两种不同的超时, 可以按如下设置:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar -timeout<span style="color:#719e07">=</span><span style="color:#2aa198">20</span> -browserTimeout<span style="color:#719e07">=</span><span style="color:#2aa198">60</span></code></pre></div>
 <ul>
 <li>browserTimeout
 
 <ul>
-<li>Controls how long the browser is allowed to hang (value in seconds).</li>
+<li>控制允许浏览器挂起的时间
+(以秒为单位的值) .</li>
 </ul></li>
 <li>timeout
 
 <ul>
-<li>Controls how long the client is allowed to be gone
-before the session is reclaimed (value in seconds).</li>
+<li>控制在回收会话之前允许客户端离开的时间
+(以秒为单位的值) .</li>
 </ul></li>
 </ul>
 
-<p>The system property <code>selenium.server.session.timeout</code>
-is no longer supported as of 2.21.</p>
+<p>从2.21版本开始不再支持系统属性
+ <code>selenium.server.session.timeout</code>.</p>
 
-<p>Please note that the <code>browserTimeout</code>
-is intended as a backup timeout mechanism
-when the ordinary timeout mechanism fails,
-which should be used mostly in grid/server environments
-to ensure that crashed/lost processes do not stay around for too long,
-polluting the runtime environment.</p>
+<p>请注意, 当常规超时机制发生故障时,
+<code>browserTimeout</code>旨在用作备份超时机制,
+该机制应主要在网格和服务器的环境中使用,
+以确保崩溃或丢失的进程不会驻留太长时间,
+从而干扰了运行时环境.</p>
 
-<h2 id="configuring-the-server-programmatically">Configuring the server programmatically</h2>
+<h2 id="以编程方式配置服务器">以编程方式配置服务器</h2>
 
-<p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
-a URL, but it&rsquo;s also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.</p>
+<p>从理论上讲, 此过程就像将 <code>DriverServlet</code>映射到URL一样简单,
+但是也可以将页面托管在轻量级容器中,
+例如完全用代码配置的Jetty.
+步骤如下.</p>
 
 <ul>
-<li>Download the <code>selenium-server.zip</code> and unpack.</li>
-<li>Put the JARs on the CLASSPATH.</li>
+<li>下载并解压 <code>selenium-server.zip</code>.</li>
+<li>将这些Jar设置在CLASSPATH中.</li>
 
-<li><p>Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
-Jetty, so you&rsquo;ll need to <a href="//www.eclipse.org/jetty/download.html">download</a>
-that as well:</p>
+<li><p>创建一个名为 <code>AppServer</code>的新类.
+在这里, 我使用Jetty,
+因此您也需要<a href="//www.eclipse.org/jetty/download.html">download</a>:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Connector;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Server;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.nio.SelectChannelConnector;
@@ -2063,8 +2055,8 @@ server.start();
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/">
-      “Remote WebDriver server”
-    </a> was last updated on: 21 Mar 2020 23:10:10 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/4e1cbba272e476c70677d2f6a8b259edbabe3844">Translate working with cookies to spanish (#356) [deploy site] (4e1cbba2)</a>
+      “远程WebDriver服务器”
+    </a> was last updated on: 29 Mar 2020 16:22:06 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/0bf93acd46d5c8ba091918414202be18bff04cae">Add Chinese translation of &#34;remote_webdriver_server&#34; (#384) [deploy site] (0bf93acd)</a>
 </h5>
         
         </div> 
@@ -3226,19 +3218,19 @@ server.start();
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585423487"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585470211"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585423487"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585423487"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585470211"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585470211"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585423487" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585423487"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585470211" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585470211"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

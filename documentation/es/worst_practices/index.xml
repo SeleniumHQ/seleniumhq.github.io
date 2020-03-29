@@ -17,8 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/worst_practices/captchas/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- CAPTCHA (Completely Automated Public Turing test to tell Computers and Humans Apart, Prueba de Turing Completamente Automática y Pública para diferenciar Ordenadores de Humanos), está explícitamente diseñado para prevenir automatización, ¡así que no intentes automatizarlo! Existen dos estrategias principales para evitar los chequeos de los CAPTCHAs</description>
+      <description>CAPTCHA es la abreviatura de Completely Automated Public Turing test to tell Computers and Humans Apart o en español Prueba de Turing Completamente Automática y Pública para diferenciar Ordenadores de Humanos, está explícitamente diseñado para prevenir la automatización, ¡así que no intentes automatizarlo!
+Existen dos estrategias principales para evitar los CAPTCHAs:
+ Deshabilitar los CAPTCHAs en tus entornos de pruebas. Agrega un parámetro que permita que las pruebas hagan un baipás.</description>
     </item>
     
     <item>
@@ -27,8 +28,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/worst_practices/file_downloads/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform.</description>
+      <description>Mientras que es posible empezar una descarga haciendo clic en el enlace, con el navegador que este siendo controlado por Selenium, el API no expone el progreso de la descarga, haciéndolo poco ideal para probar la descarga de archivos. Esto es debido a que descargar archivos no es considerado un aspecto importante de la emulación de las interacciones de los usuarios con las plataformas web. En lugar de ello, se recomienda encontrar el enlace con Selenium (y cualquier Cookie requerida) y pasarselo a una librería que permita hacer peticiones HTTP como libcurl.</description>
     </item>
     
     <item>

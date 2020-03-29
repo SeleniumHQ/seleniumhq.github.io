@@ -47,8 +47,8 @@ La finalidad del WebDriver es emular las interacciones de los usuarios reales. E
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/webdriver/waits/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver doesn&amp;rsquo;t track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
+      <description>Generalmente se puede decir que WebDriver posee una API de bloqueo. Porque es una biblioteca fuera-de-proceso que instruye al navegador qué hacer, y debido a que la plataforma web tiene una naturaleza intrínsecamente asíncrona, WebDriver no rastrea el estado activo y en tiempo real del DOM. Esto viene con algunos desafíos que discutiremos aquí.
+Por experiencia la mayoría de las intermitencias que surgen del uso de Selenium y WebDriver están conectadas a condiciones de carrera que ocurren entre el navegador y las instrucciones del usuario.</description>
     </item>
     
     <item>
@@ -68,9 +68,8 @@ ThreadGuard  Esta clase solo esta disponible en la librería de enlace de Java</
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- WebDriver provides an API for working with the three types of native popup message offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
+      <description>WebDriver proporciona una API para trabajar con los tres tipos nativos de mensajes emergentes ofrecidos por JavaScript. Estas ventanas emergentes están diseñadas por el navegador y ofrecen personalización limitada.
+Alertas El más simple de estos se conoce como alerta, que muestra unmensaje personalizado y un solo botón que descarta la alerta, etiquetado en la mayoría de los navegadores como OK. También se puede descartar en la mayoría de los navegadores presionando el botón de cerrar, pero esto siempre hará lo mismo que el presionar botón OK.</description>
     </item>
     
     <item>
