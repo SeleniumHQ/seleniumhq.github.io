@@ -525,7 +525,6 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Opera support is deprecated from Selenium 4. See changelog for more details
 const {Builder} = require("selenium-webdriver");
 const opera = require('selenium-webdriver/opera');
 (async function test() {
