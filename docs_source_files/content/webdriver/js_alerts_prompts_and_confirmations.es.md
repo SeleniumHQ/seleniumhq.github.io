@@ -17,7 +17,7 @@ en la mayoría de los navegadores como OK.
 También se puede descartar en la mayoría de los navegadores
 presionando el botón de cerrar, pero esto siempre hará lo mismo que
 el presionar botón OK.
-<a onclick="window.alert('Sample alert')">See an example alert</a>.
+<a onclick="window.alert('Sample alert')">Esto es una alerta de ejemplo</a>.
 
 WebDriver puede obtener el texto de la ventana emergente
 y aceptar o descartar estas alertas.
@@ -112,8 +112,7 @@ alert.accept()
 
 Un cuadro de confirmación es similar a una alerta, 
 excepto que el usuario también puede elegir
-cancelar el mensaje. <a onclick="window.confirm('Are you sure?')">See
-a sample confirm</a>.
+cancelar el mensaje. <a onclick="window.confirm('Estas seguro?')">Esto es un confirm de ejemplo</a>.
 
 Este ejemplo también muestra un enfoque diferente para 
 almacenar una alerta:
@@ -225,8 +224,8 @@ el _sendKeys_ de WebDriver para completar una respuesta.
 Esto reemplazará completamente el texto por defecto. 
 Al presionar el botón cancelar
 esto hará que no se envie ningún texto.
-<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
-See a sample prompt</a>.
+<a onclick="window.prompt('Cual es tu herramienta preferida?',navigator.appName)">
+Esto es un prompt de ejemplo</a>.
 
 
 {{< code-tab >}}
