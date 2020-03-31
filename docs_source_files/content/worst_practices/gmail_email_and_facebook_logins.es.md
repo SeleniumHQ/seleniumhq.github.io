@@ -27,4 +27,4 @@ son.
 Las implementaciones del WebDriver que son 
 [conformes al W3C](//w3c.github.io/webdriver/webdriver-spec.html)
 también marcan el objecto `navigator` con la propiedad `WebDriver` para que los
-ataques de Denegación de Servicio puedan ser mitigados.
+ataques de denegación de servicio (_DoS_) puedan ser mitigados.
