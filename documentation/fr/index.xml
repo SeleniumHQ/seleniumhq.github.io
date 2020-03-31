@@ -380,9 +380,8 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
+      <description>Pour plusieurs raisons, vous connecter à des sites comme Gmail et Facebook l&amp;rsquo;utilisation de WebDriver n&amp;rsquo;est pas recommandée. En plus d&amp;rsquo;être contre les conditions d&amp;rsquo;utilisation de ces sites (où vous risquez de fermer le compte), c&amp;rsquo;est lent et peu fiable.
+La pratique idéale consiste à utiliser les API proposées par les fournisseurs de messagerie, ou dans le cas de Facebook le service des outils de développement qui expose une API pour créer des comptes de test, des amis, etc.</description>
     </item>
     
     <item>

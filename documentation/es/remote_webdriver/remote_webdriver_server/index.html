@@ -11,20 +11,20 @@
     <title>WebDriver remoto - servidor :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1585575288" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585575288" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1585632845" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585632845" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585575288" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585632845" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585575288"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585632845"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585575288"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585575288"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585632845"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585632845"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585575288"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585632845"></script>
 
     
   </div>
@@ -1924,10 +1924,10 @@
 <ul>
 <li>
 <ul>
-<li><a href="#starting-the-server-from-the-command-line">Starting the server from the command line</a></li>
-<li><a href="#considerations-for-running-the-server">Considerations for running the server</a></li>
-<li><a href="#timeouts-from-version-2-21">Timeouts (from version 2.21)</a></li>
-<li><a href="#configuring-the-server-programmatically">Configuring the server programmatically</a></li>
+<li><a href="#iniciar-el-servidor-desde-la-línea-de-comando">Iniciar el servidor desde la línea de comando</a></li>
+<li><a href="#consideraciones-para-ejecutar-el-servidor">Consideraciones para ejecutar el servidor</a></li>
+<li><a href="#timeouts-desde-la-version-2-21">Timeouts (desde la version 2.21)</a></li>
+<li><a href="#configuración-del-servidor-de-manera-programática">Configuración del servidor de manera programática</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1956,76 +1956,72 @@
 
 
 
+<p>El servidor siempre se ejecutará en la máquina con el navegador que deseas
+probar. El servidor se puede usar desde la línea de comandos o mediante
+configuración de código.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<h2 id="iniciar-el-servidor-desde-la-línea-de-comando">Iniciar el servidor desde la línea de comando</h2>
 
-
-<p>The server will always run on the machine with the browser you want to
-test. The server can be used either from the command line or through code
-configuration.</p>
-
-<h2 id="starting-the-server-from-the-command-line">Starting the server from the command line</h2>
-
-<p>Once you have downloaded <code>selenium-server-standalone-{VERSION}.jar</code>,
-place it on the computer with the browser you want to test. Then, from
-the directory with the jar, run the following:</p>
+<p>Una vez que hayas descargado <code>selenium-server-standalone-{VERSION}.jar</code>,
+colócalo en la computadora con el navegador que deseas probar. Entonces,
+desde el directorio con el jar, ejecuta lo siguiente:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar</code></pre></div>
-<h2 id="considerations-for-running-the-server">Considerations for running the server</h2>
+<h2 id="consideraciones-para-ejecutar-el-servidor">Consideraciones para ejecutar el servidor</h2>
 
-<p>The caller is expected to terminate each session properly, calling
-either <code>Selenium#stop()</code> or <code>WebDriver#quit</code>.</p>
+<p>Se espera que quien inicie la sesión termine cada sesión correctamente, llamando
+ya sea <code>Selenium#stop()</code> o <code>WebDriver#quit</code>.</p>
 
-<p>The selenium-server keeps in-memory logs for each ongoing session,
-which are cleared when <code>Selenium#stop()</code> or <code>WebDriver#quit</code> is called. If
-you forget to terminate these sessions, your server may leak memory. If
-you keep extremely long-running sessions, you will probably need to
-stop/quit every now and then (or increase memory with -Xmx jvm option).</p>
+<p>El servidor de Selenium mantiene registros en memoria
+para cada sesión en curso, que se borran cuando se invoca
+<code>Selenium#stop()</code> o <code>WebDriver#quit</code>.
+Si olvidas finalizar estas sesiones, tu servidor puede perder memoria.
+Si mantienes sesiones extremadamente largas,
+probablemente necesitarás detener/salir de vez en cuando
+(o también aumentar la memoria con la opción -Xmx jvm).</p>
 
-<h2 id="timeouts-from-version-2-21">Timeouts (from version 2.21)</h2>
+<h2 id="timeouts-desde-la-version-2-21">Timeouts (desde la version 2.21)</h2>
 
-<p>The server has two different timeouts, which can be set as follows:</p>
+<p>El servidor tiene dos timeouts diferentes,
+que se pueden configurar de la siguiente manera:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar -timeout<span style="color:#719e07">=</span><span style="color:#2aa198">20</span> -browserTimeout<span style="color:#719e07">=</span><span style="color:#2aa198">60</span></code></pre></div>
 <ul>
 <li>browserTimeout
 
 <ul>
-<li>Controls how long the browser is allowed to hang (value in seconds).</li>
+<li>Controla cuánto tiempo se permite colgar el navegador (valor en segundos).</li>
 </ul></li>
 <li>timeout
 
 <ul>
-<li>Controls how long the client is allowed to be gone
-before the session is reclaimed (value in seconds).</li>
+<li>Controla cuánto tiempo se permite que el cliente se vaya
+   antes de reclamar la sesión (valor en segundos).</li>
 </ul></li>
 </ul>
 
-<p>The system property <code>selenium.server.session.timeout</code>
-is no longer supported as of 2.21.</p>
+<p>La propiedad del sistema <code>selenium.server.session.timeout</code>
+ya no es compatible a partir de 2.21.</p>
 
-<p>Please note that the <code>browserTimeout</code>
-is intended as a backup timeout mechanism
-when the ordinary timeout mechanism fails,
-which should be used mostly in grid/server environments
-to ensure that crashed/lost processes do not stay around for too long,
-polluting the runtime environment.</p>
+<p>Ten en cuenta que el <code>browserTimeout</code>
+está pensado como un mecanismo de timeout de respaldo
+cuando falla el mecanismo de timeout ordinario,
+que debe usarse principalmente en entornos de red/servidor
+para garantizar que los procesos bloqueados/perdidos no permanezcan
+por mucho tiempo,contaminando el entorno de ejecución.</p>
 
-<h2 id="configuring-the-server-programmatically">Configuring the server programmatically</h2>
+<h2 id="configuración-del-servidor-de-manera-programática">Configuración del servidor de manera programática</h2>
 
-<p>In theory, the process is as simple as mapping the <code>DriverServlet</code> to
-a URL, but it&rsquo;s also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.</p>
+<p>En teoría, el proceso es tan simple como mapear el <code>DriverServlet</code> a
+una URL, pero también es posible alojar la página desde en un contenedor ligero,
+como Jetty configurado completamente en código. Pasos para hacer esto
+a continuación.</p>
 
 <ul>
-<li>Download the <code>selenium-server.zip</code> and unpack</li>
-<li>Put the JARs on the CLASSPATH</li>
+<li>Descargar <code>selenium-server.zip</code> y descomprimirlos</li>
+<li>Poner los JAR en el CLASSPATH</li>
 
-<li><p>Create a new class called <code>AppServer</code>. Here, I&rsquo;m using
-Jetty, so you&rsquo;ll need to <a href="//www.eclipse.org/jetty/download.html">download</a>
-that as well:</p>
+<li><p>Crear una nueva clase llamada <code>AppServer</code>. Estoy usando
+Jetty, por lo que deberás <a href="//www.eclipse.org/jetty/download.html">descargar</a>
+eso también:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Connector;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Server;
 <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.nio.SelectChannelConnector;
@@ -2065,7 +2061,7 @@ server.start();
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/">
       “WebDriver remoto - servidor”
-    </a> was last updated on: 22 Mar 2020 12:17:52 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/c01aa53bf39a56b9365c4d7c9a7a9f506291f3a6">Deploying on Sun Mar 22 12:17:52 UTC 2020, commit 3666d599034742350e3ff42072d9df0f5a410d7a, [skip ci] (c01aa53b)</a>
+    </a> was last updated on: 31 Mar 2020 07:32:36 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ccf6cbfcec22e47e3f8996b843a8fc45971fd1d2">Add spanish translations (#386)[deploy site] (ccf6cbfc)</a>
 </h5>
         
         </div> 
@@ -3227,19 +3223,19 @@ server.start();
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585575288"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585632845"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1585575288"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585575288"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1585632845"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585632845"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585575288" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585575288"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585632845" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585632845"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

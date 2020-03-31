@@ -110,10 +110,9 @@ Find Element Se utiliza para encontrar un elemento y devuelve la primera referen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/webdriver/keyboard/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
+      <description>Keyboard representa un evento del teclado. Las acciones del teclado se realizan mediante el uso de una interfaz de bajo nivel que nos permite proporcionar entradas de un dispositivo virtualizado al navegador web.
+sendKeys El sendKeys escribe una secuencia de teclas en el elemento del DOM incluso si se encuentra una secuencia de teclas modificadoras.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navega a la URL driver.</description>
     </item>
     
   </channel>

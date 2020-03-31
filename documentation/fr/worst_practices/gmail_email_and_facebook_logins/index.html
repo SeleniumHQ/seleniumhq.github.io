@@ -11,20 +11,20 @@
     <title>Gmail, email and logins Facebook :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585575296" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585575296" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1585632854" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1585632854" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585575296" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1585632854" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585575296"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1585632854"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585575296"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585575296"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1585632854"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1585632854"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585575296"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1585632854"></script>
 
     
   </div>
@@ -1944,39 +1944,37 @@
 
 
 
+<p>Pour plusieurs raisons, vous connecter à des
+sites comme Gmail et Facebook
+l&rsquo;utilisation de WebDriver n&rsquo;est pas recommandée.
+En plus d&rsquo;être contre les conditions d&rsquo;utilisation de ces sites
+(où vous risquez de fermer le compte),
+c&rsquo;est lent et peu fiable.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>La pratique idéale consiste à utiliser les API
+proposées par les fournisseurs de messagerie,
+ou dans le cas de Facebook le service des outils de développement
+qui expose une API pour créer des comptes de test, des amis, etc.
+Bien que l&rsquo;utilisation d&rsquo;une API puisse
+sembler un peu plus difficile,
+vous serez récompensé en vitesse, fiabilité et stabilité.
+L&rsquo;API est également peu susceptible de changer
+alors que les pages Web et les localisateurs
+HTML changent souvent et vous obliger à mettre
+à jour votre framework de test.</p>
 
+<p>Se connecter à des sites tiers à l&rsquo;aide de WebDriver
+à tout moment de votre test augmente le risque
+de l&rsquo;échec de votre test car cela rallonge votre test.
+Une règle générale est que des tests plus longs
+sont plus fragiles et peu fiables.</p>
 
-<p>For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.</p>
-
-<p>The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.</p>
-
-<p>Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.</p>
-
-<p>WebDriver implementations that are
+<p>Les implémentations WebDriver qui sont
 <a href="//w3c.github.io/webdriver/webdriver-spec.html">W3C conformant</a>
-also annotate the <code>navigator</code> object
-with a <code>WebDriver</code> property
-so that Denial of Service attacks can be mitigated.</p>
+annoter également l&rsquo;objet <code>navigator</code>
+avec une propriété <code>WebDriver</code>
+afin que les attaques par déni de service
+puissent être atténuées.</p>
 
 
 <footer class=" footline" >
@@ -1986,7 +1984,7 @@ so that Denial of Service attacks can be mitigated.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/">
       “Gmail, email and logins Facebook”
-    </a> was last updated on: 26 Mar 2020 20:42:46 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/37bcb93ac1484be7105edbc3a1ad9fedbe749796">Add Chinese translation of &#34;gmail_email_and_facebook_logins&#34; (#369) (37bcb93a)</a>
+    </a> was last updated on: 30 Mar 2020 23:24:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/ea6310ff02785b3cf9c64a95a9459da9b2cf5fdd">Modify: [EN]-&gt;[FR] Translating doc to French (ea6310ff)</a>
 </h5>
         
         </div> 
@@ -3151,19 +3149,19 @@ so that Denial of Service attacks can be mitigated.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585575296"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1585632854"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585575296"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585575296"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1585632854"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1585632854"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585575296" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585575296"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1585632854" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1585632854"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
