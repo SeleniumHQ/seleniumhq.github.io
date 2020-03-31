@@ -11,7 +11,11 @@ xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグ�
 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。
 <!-- TODO: Add links.-->
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
+
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)
+
 [xUnit getting test results in TeamCity](//xunit.net/docs/getting-test-results-in-teamcity)
+
 [xUnit getting test results in CruiseControl.NET](//xunit.net/docs/getting-test-results-in-ccnet)
+
 [xUnit getting test results in Azure DevOps](//xunit.net/docs/getting-test-results-in-azure-devops)

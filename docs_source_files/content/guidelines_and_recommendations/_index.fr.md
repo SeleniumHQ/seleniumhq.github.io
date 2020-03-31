@@ -20,7 +20,7 @@ fait de la rédaction de bons tests un défi.
 
 Selenium fournit des outils pour faciliter l'interaction fonctionnelle des utilisateurs,
 mais ne vous aide pas à écrire des suites de tests bien conçues.
-Dans ce chapitre, nous proposons des conseils, des directives et des recommandations.
+Dans ce chapitre, nous proposons des conseils, des directives et des recommandations
 sur la façon d'aborder l'automatisation fonctionnelle des pages Web.
 
 Ce chapitre enregistre les modèles de conception de logiciels populaires
