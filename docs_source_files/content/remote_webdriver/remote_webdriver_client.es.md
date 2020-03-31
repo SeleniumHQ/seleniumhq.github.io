@@ -3,18 +3,14 @@ title: "WebDriver remoto - cliente"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
-We do this by pointing the URL to the address of the server running our tests.
-In order to customize our configuration, we set desired capabilities.
-Below is an example of instantiating a remote WebDriver object
-pointing to our remote web server, _www.example.com_,
-running our tests on Firefox.
+Para ejecutar un cliente de WebDriver remoto, primero debemos 
+conectarnos a RemoteWebDriver. Hacemos esto apuntando la URL a la 
+dirección del servidor que ejecuta nuestras pruebas. Para 
+personalizar nuestra configuración, establecemos las _capabilities_
+deseadas. A continuación se muestra un ejemplo de 
+la, instanciación de un objeto WebDriver remoto apuntando
+a nuestro servidor web remoto, _www.example.com_, 
+ejecutando nuestras pruebas en Firefox. 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -71,13 +67,14 @@ driver.quit()
 {{< / code-tab >}}
 
 
-To further customize our test configuration, we can add other desired capabilities.
+Para personalizar aún más nuestra configuración de prueba, 
+podemos agregar otras _capabilities_ deseadas.
 
 
-## Browser options
+## Opciones del navegador
 
-For example, suppose you wanted to run Chrome on Windows XP,
-using Chrome version 67:
+Por ejemplo, supón que deseas ejecutar Chrome en Windows XP,
+usando Chrome versión 67:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -148,15 +145,16 @@ driver.quit();
 {{< / code-tab >}}
 
 
-## Local file detector
+## Detector de archivos local
 
-The Local File Detector allows the transfer of files from the client
-machine to the remote server.  For example, if a test needs to upload a
-file to a web application, a remote WebDriver can automatically transfer
-the file from the local machine to the remote web server during
-runtime. This allows the file to be uploaded from the remote machine
-running the test. It is not enabled by default and can be enabled in
-the following way:
+El Local File Detector permite la transferencia de archivos
+desde la máquina del cliente al servidor remoto. Por ejemplo, 
+si una prueba necesita cargar un archivo a una aplicación web, 
+un WebDriver remoto puede transferir automáticamente
+el archivo de la máquina local al servidor web remoto durante
+tiempo de ejecución. Esto permite que el archivo se cargue desde
+la máquina remota ejecutando la prueba. No está habilitado de forma
+predeterminada y puede habilitarse en de la siguiente manera:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -190,7 +188,8 @@ driver.fileDetector = LocalFileDetector()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Once the above code is defined, you can upload a file in your test in the following way:
+Una vez que se definido el código anterior, 
+puedes cargar un archivo en tu prueba de la siguiente manera:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
