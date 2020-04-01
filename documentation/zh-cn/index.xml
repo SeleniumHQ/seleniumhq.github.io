@@ -131,8 +131,8 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
-归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4465 commits 
-@barancev2835 commits 
+归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4479 commits 
+@barancev2847 commits 
 @jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
@@ -548,7 +548,11 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Selenium并非旨在报告测试用例的运行状态. 利用单元测试框架的内置报告功能是一个好的开始. 大多数单元测试框架都有可以生成xUnit或HTML格式的报告. xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务器, 例如Jenkins、Travis、Bamboo等. 以下是一些链接, 可获取关于几种语言报表输出的更多信息.
-NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
+NUnit 3 Console Runner
+NUnit 3 Console Command Line
+xUnit getting test results in TeamCity
+xUnit getting test results in CruiseControl.NET
+xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>

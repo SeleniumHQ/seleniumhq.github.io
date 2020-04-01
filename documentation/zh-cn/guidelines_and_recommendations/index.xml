@@ -66,7 +66,11 @@ import org.openqa.selenium.By; import org.</description>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Selenium并非旨在报告测试用例的运行状态. 利用单元测试框架的内置报告功能是一个好的开始. 大多数单元测试框架都有可以生成xUnit或HTML格式的报告. xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务器, 例如Jenkins、Travis、Bamboo等. 以下是一些链接, 可获取关于几种语言报表输出的更多信息.
-NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
+NUnit 3 Console Runner
+NUnit 3 Console Command Line
+xUnit getting test results in TeamCity
+xUnit getting test results in CruiseControl.NET
+xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>

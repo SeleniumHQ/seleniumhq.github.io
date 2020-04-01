@@ -11,20 +11,20 @@
     <title>Generar el estado de la aplicación :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585632846" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585727085" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585632846" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585727085" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585727085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585632846"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585632846"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585727085"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585727085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585632846"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585727085"></script>
 
     
   </div>
@@ -1041,7 +1041,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email y Facebook logins" class="dd-item ">
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Autenticarse con Gmail, email y Facebook" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/">
         Gmail, email y Facebook
         <i class="fas fa-check read-icon"></i>
@@ -1944,24 +1944,20 @@
 
 
 
+<p>Selenium no debe usarse para preparar un caso de prueba. Todas
+las acciones repetitivas y los preparativos para un caso de
+prueba deben realizarse a través de otros métodos. Por ejemplo,
+la mayoría de las IU web tienen autenticación (por ejemplo, un
+formulario de inicio de sesión). Eliminar el inicio de sesión a través
+del navegador web antes de cada prueba mejora tanto la
+velocidad como la estabilidad de la prueba. Un método debe ser
+creado para obtener acceso al AUT* (por ejemplo, usando una API
+para iniciar sesión y establecer un cookie). Además, crear
+métodos para precargar datos para las pruebas no deben
+realizarse con Selenium. Como se mencionó previamente, las API
+existentes se deben aprovechar para crear datos para el AUT*.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>Selenium should not be used to prepare a test case.  All repetitive
-actions and preparations for a test case, should be done through other
-methods.  For example, most web UIs have authentication (e.g. a login
-form). Eliminating logging in via web browser before every test will
-improve both the speed and stability of the test. A method should be
-created to gain access to the AUT* (e.g. using an API to login and set a
-cookie).  Also, creating methods to pre-load data for
-testing should not be done using Selenium.  As mentioned previously,
-existing APIs should be leveraged to create data for the AUT*.</p>
-
-<p>*<strong>AUT</strong>: Application under test</p>
+<p>*<strong>AUT</strong>: Application Under Test (aplicación bajo prueba)</p>
 
 
 <footer class=" footline" >
@@ -1971,7 +1967,7 @@ existing APIs should be leveraged to create data for the AUT*.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/">
       “Generar el estado de la aplicación”
-    </a> was last updated on: 22 Mar 2020 21:26:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/ccde21a1bf8092d27e489c5f87a7906adbc3bd45">Updating page_loading_strategy.es.md (#360) (ccde21a1)</a>
+    </a> was last updated on: 01 Apr 2020 09:43:19 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/44c574f7eaffd374230fdde592994c641fbd731f">Add spanish translation and update some terms (#388) [deploy site] (44c574f7)</a>
 </h5>
         
         </div> 
@@ -3136,19 +3132,19 @@ existing APIs should be leveraged to create data for the AUT*.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585727085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585727085"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585632846" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585632846"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585727085" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585727085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

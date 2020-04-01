@@ -80,8 +80,7 @@ Java La instalación de las librerías Selenium para Java se puede hacer usando 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
+      <description>Page Object (objeto de página) es un patrón de diseño que se ha vuelto popular en la automatización de pruebas para mejorar el mantenimiento de las pruebas y reducir la duplicación de código. Un objeto de página es un clase orientada a objetos que sirve como interfaz para una página de tu AUT. Las pruebas luego usan los métodos de esta clase de objeto de página cuando lo necesitan para interactuar con la interfaz de usuario de esa página.</description>
     </item>
     
     <item>
@@ -281,8 +280,7 @@ El WebDriver de Selenium parte de una aproximación completamente diferente resp
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
+      <description>Selenium no debe usarse para preparar un caso de prueba. Todas las acciones repetitivas y los preparativos para un caso de prueba deben realizarse a través de otros métodos. Por ejemplo, la mayoría de las IU web tienen autenticación (por ejemplo, un formulario de inicio de sesión). Eliminar el inicio de sesión a través del navegador web antes de cada prueba mejora tanto la velocidad como la estabilidad de la prueba.</description>
     </item>
     
     <item>
@@ -368,6 +366,16 @@ Si hay un problema con la documentación, ¡queremos saberlo! La mejor manera de
     </item>
     
     <item>
+      <title>Autenticarse con Gmail, email y Facebook</title>
+      <link>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <description>Por múltiples razones, autenticarse en sitios como Gmail y Facebook usando el WebDriver no esta recomendado. Aparte de estar en contra de los términos y condiciones de estos sitios (te expones a que te cierren la cuenta), es un proceso lento y poco fiable.
+La practica ideal respecto a estos los sitios de emails es usar las APIs que ofrecen, en el caso de Facebook usar las herramientas para desarrolladores las cuales exponen un API para crear cuentas de prueba, amigos, etc.</description>
+    </item>
+    
+    <item>
       <title>Cuando usar el Grid</title>
       <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -398,17 +406,6 @@ Por experiencia la mayoría de las intermitencias que surgen del uso de Selenium
     </item>
     
     <item>
-      <title>Gmail, email y Facebook logins</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
-The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
-    </item>
-    
-    <item>
       <title>Legacy Selenium IDE</title>
       <link>https://selenium.dev/documentation/es/legacy_docs/selenium_ide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -424,8 +421,7 @@ The ideal practice is to use the APIs that email providers offer, or in the case
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
+      <description>Eliminar las dependencias de servicios externos mejorará en gran medida la velocidad y la estabilidad de tus pruebas.</description>
     </item>
     
     <item>
@@ -455,8 +451,7 @@ ThreadGuard  Esta clase solo esta disponible en la librería de enlace de Java</
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
+      <description>Selenium no está diseñado para informar sobre el estado de los casos de prueba ejecutados. Aprovechando las capacidades de reporte incorporadas en la mayoría de los frameworks de pruebas unitarias es un buen comienzo. La mayoría de los frameworks de pruebas unitarias tienen utilidades que pueden generar reportes con formato xUnit o HTML. Los reportes xUnit son populares para importar resultados a una integración continua (CI) como Jenkins, Travis, Bamboo, etc.</description>
     </item>
     
     <item>
@@ -475,9 +470,9 @@ Alertas El más simple de estos se conoce como alerta, que muestra unmensaje per
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
- Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
+      <description>Aunque se menciona en varios lugares, vale la pena mencionarlo nuevamente. Asegurate de que las pruebas estén aisladas unas de otras.
+ No compartas datos de prueba. Imagina varias pruebas en la que cada una consulta a la base de datos para pedidos válidos antes de elegir uno para realizar una acción. Si dos pruebas eligen el mismo pedido es probable que obtengas un comportamiento inesperado.
+ Limpia los datos obsoletos en la aplicación que podrían ser recogidos por otra prueba p.</description>
     </item>
     
     <item>
@@ -508,9 +503,9 @@ Añadir una Cookie Este método es usado para añadir una cookie al contexto act
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
+      <description>Escribe cada prueba como su propia unidad. Escribe las pruebas de una manera que no dependan de otras pruebas para completarse:
+Digamos que hay un sistema de gestión de contenido con el que puedes crear algún contenido personalizado que luego después publicar aparece en tu sitio web como un módulo, y puede llevar algún tiempo sincronizar entre el CMS y y la aplicación.
+Una forma incorrecta de probar tu módulo es que el contenido está creado y publicado en una prueba y luego verificando el módulo en otra prueba.</description>
     </item>
     
     <item>
@@ -540,8 +535,8 @@ Un servidor proxy para scripts de automatización con Selenium podría ser útil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
+      <description>Martin Fowler acuñó el término &amp;ldquo;API fluido&amp;rdquo;. Selenium ya implementa algo como esto en su clase FluentWait, que se entiende como una alternativa a la clase estándar Wait. Puedes habilitar el patrón de diseño Fluent API en tu objeto de página y luego consulta la página de búsqueda de Google con un fragmento de código como este:
+driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); La clase de objeto de página de Google con este comportamiento fluido podría verse así:</description>
     </item>
     
     <item>
@@ -571,8 +566,8 @@ Find Element Se utiliza para encontrar un elemento y devuelve la primera referen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.</description>
+      <description>Comienza cada prueba desde un estado limpio conocido. Idealmente, ejecuta una nueva máquina virtual para cada prueba. Si ejecutar una nueva máquina virtual no es práctico, al menos inicia un nuevo WebDriver para cada prueba. Para Firefox, inicia un WebDriver con su perfil conocido.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
     </item>
     
     <item>
