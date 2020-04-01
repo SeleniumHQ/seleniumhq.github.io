@@ -3,76 +3,83 @@ title: "Modelos de objetos de página"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Page Object (objeto de página) es un patrón de diseño que se ha vuelto popular en 
+la automatización de pruebas para mejorar el mantenimiento de 
+las pruebas y reducir la duplicación de código. Un objeto de 
+página es un clase orientada a objetos que sirve como interfaz 
+para una página de tu AUT. Las pruebas luego usan los 
+métodos de esta clase de objeto de página cuando lo necesitan 
+para interactuar con la interfaz de usuario de esa página. El 
+beneficio es que si la interfaz de usuario cambia para la 
+página, las pruebas en sí mismas no necesitan cambiar, solo el 
+código dentro del objeto de página necesita cambiar. 
+Posteriormente, todos los cambios para soportar esa nueva 
+interfaz de usuario están ubicados en un solo lugar. 
 
-Page Object is a Design Pattern which has become popular in test automation for
-enhancing test maintenance and reducing code duplication. A page object is an
-object-oriented class that serves as an interface to a page of your AUT. The
-tests then use the methods of this page object class whenever they need to
-interact with the UI of that page. The benefit is that if the UI changes for
-the page, the tests themselves don’t need to change, only the code within the
-page object needs to change. Subsequently all changes to support that new UI
-are located in one place.
+El patrón de diseño de objetos de página ofrece las siguientes 
+ventajas: 
 
-The Page Object Design Pattern provides the following advantages:
+* Existe una separación clara entre el código de prueba y el 
+código específico de la página, como localizadores (o su uso si 
+está utilizando un mapa de interfaz de usuario) y diseño. 
+* Existe un único repositorio para los servicios u operaciones que 
+ofrece la página en lugar de tener estos servicios dispersos a 
+lo largo de las pruebas. 
 
-* There is a clean separation between test code and page specific code such as
-  locators (or their use if you’re using a UI Map) and layout.
-* There is a single repository for the services or operations offered by the page
-  rather than having these services scattered throughout the tests.
+En ambos casos, esto permite cualquier modificación requerida 
+debido a cambios en la interfaz de usuario puedan hacerse en 
+un solo lugar. Puedes encontrar buena información sobre esta 
+técnica en numerosos blogs, ya que este "patrón de diseño de 
+prueba" se está utilizando ampliamente. Nosotros animamos al 
+lector que desea saber más a buscar blogs en Internet al respecto.  
+Muchos han escrito sobre este patrón de diseño y 
+pueden proporcionar consejos útiles más allá del alcance de esta 
+guía del usuario. Para empezar, sin embargo, ilustraremos 
+objetos de página con un ejemplo simple. 
 
-In both cases this allows any modifications required due to UI changes to all
-be made in one place. Useful information on this technique can be found on
-numerous blogs as this ‘test design pattern’ is becoming widely used. We
-encourage the reader who wishes to know more to search the internet for blogs
-on this subject. Many have written on this design pattern and can provide
-useful tips beyond the scope of this user guide. To get you started, though,
-we’ll illustrate page objects with a simple example.
-
-First, consider an example, typical of test automation, that does not use a
-page object:
+Primero, considere un ejemplo, típico de la automatización de 
+pruebas, que no utiliza un objeto de página:
 
 ```java
 /***
- * Tests login feature
+ * Prueba de la funcionalidad de inicio de sesión
  */
 public class Login {
 
   public void testLogin() {
-    // fill login data on sign-in page
+    // ingresa los datos de inicio de sesión en la página de inicio de sesión
     driver.findElement(By.name("user_name")).sendKeys("testUser");
     driver.findElement(By.name("password")).sendKeys("my supersecret password");
     driver.findElement(By.name("sign-in")).click();
 
-    // verify h1 tag is "Hello userName" after login
+    // verifica que la etiqueta h1 tiene el valor "Hello userName" después de iniciar sesión
     driver.findElement(By.tagName("h1")).isDisplayed();
     assertThat(driver.findElement(By.tagName("h1")).getText(), is("Hello userName"));
   }
 }
 ```
 
-There are two problems with this approach.
+Hay dos problemas con este enfoque. 
 
-* There is no separation between the test method and the AUT’s locators (IDs in 
-this example); both are intertwined in a single method. If the AUT’s UI changes 
-its identifiers, layout, or how a login is input and processed, the test itself 
-must change.
-* The ID-locators would be spread in multiple tests, in all tests that had to 
-use this login page.
+* No hay separación entre el método de prueba y los 
+localizadores del AUT (ID en este ejemplo); ambos están 
+entrelazados en un solo método. Si la UI del AUT cambia sus 
+identificadores, diseño o cómo se ingresa y procesa un inicio de 
+sesión, la prueba en sí debe cambiar. 
+* Los localizadores de ID 
+se distribuirían en múltiples pruebas, en todas las pruebas que 
+debían usar esta página de inicio de sesión. 
 
-Applying the page object techniques, this example could be rewritten like this
-in the following example of a page object for a Sign-in page.
+Aplicando las técnicas de objeto de página, este ejemplo podría 
+reescribirse como en el siguiente ejemplo de un objeto de página 
+para una página de inicio de sesión.
 
 ```java
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Page Object encapsulates the Sign-in page.
+ * El objeto de página encapsula la página de inicio de sesión.
  */
 public class SignInPage {
   protected static WebDriver driver;
@@ -89,7 +96,7 @@ public class SignInPage {
   }
 
   /**
-    * Login as valid user
+    * Inicia sesión como un usuario válido
     *
     * @param userName
     * @param password
@@ -104,19 +111,19 @@ public class SignInPage {
 }
 ```
 
-and page object for a Home page could look like this.
+y el objeto de página para una página de inicio podría verse así.
 
 ```java
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 /**
- * Page Object encapsulates the Home Page
+ * El objeto de página encapsula la página de inicio
  */
 public class HomePage {
   protected static WebDriver driver;
 
-  // <h1>Hello userName</h1>
+  // <h1>Hola userName</h1>
   private By messageBy = By.tagName("h1");
 
   public HomePage(WebDriver driver){
@@ -137,20 +144,20 @@ public class HomePage {
   }
 
   public HomePage manageProfile() {
-    // Page encapsulation to manage profile functionality
+    // Encapsulación de página para administrar la funcionalidad del perfil
     return new HomePage(driver);
   }
-  /* More methods offering the services represented by Home Page
-  of Logged User. These methods in turn might return more Page Objects
-  for example click on Compose mail button could return ComposeMail class object */
+  /* Mas métodos que ofrecen los servicios representados por la página de inicio
+   del usuario registrado. Estos métodos a su vez podrían devolver más objetos de página,
+   por ejemplo hacer clic en el botón Redactar correo podría devolver el objeto de clase ComposeMail */
 }
 ```
 
-So now, the login test would use these two page objects as follows.
+Entonces, la prueba de inicio de sesión usaría estos dos objetos de página de la siguiente manera.
 
 ```java
 /***
- * Tests login feature
+ * Prueba de la funcionalidad de inicio de sesión de pruebas
  */
 public class TestLogin {
 
@@ -164,31 +171,39 @@ public class TestLogin {
 }
 ```
 
-There is a lot of flexibility in how the page objects may be designed, but
-there are a few basic rules for getting the desired maintainability of your
-test code.
+Hay mucha flexibilidad en cómo se pueden diseñar los objetos de 
+página, pero hay algunas reglas básicas para obtener la 
+mantenibilidad deseada de tu código de prueba.
 
-Page objects themselves should never make verifications or assertions. This is
-part of your test and should always be within the test’s code, never in an page
-object. The page object will contain the representation of the page, and the
-services the page provides via methods but no code related to what is being
-tested should be within the page object.
+Los objetos de página en sí mismos nunca deben hacer 
+verificaciones o afirmaciones. Esto es parte de tu prueba y 
+siempre debe estar dentro del código de la prueba, nunca en una 
+página objeto. El objeto de página contendrá la representación 
+de la página, y el servicios que proporciona la página a través 
+de métodos, pero ningún código relacionado con lo que se está 
+probado debe estar dentro del objeto de la página. 
 
-There is one, single, verification which can, and should, be within the page
-object and that is to verify that the page, and possibly critical elements on
-the page, were loaded correctly. This verification should be done while
-instantiating the page object. In the examples above, both the SignInPage and
-HomePage constructors check that the expected page is available and ready for
-requests from the test.
+Hay una verificación única que puede y debe estar dentro del
+objeto de página y eso es para verificar que la página, y 
+posiblemente elementos críticos en la página, se cargaron 
+correctamente. Esta verificación debe hacerse mientras 
+se instancia el objeto de la página. En los ejemplos anteriores, 
+tanto SignInPage como los constructores de HomePage verifican 
+que la página esperada esté disponible y lista para las solicitudes 
+de la prueba. 
 
-A page object does not necessarily need to represent an entire page. The Page
-Object design pattern could be used to represent components on a page. If a
-page in the AUT has multiple components, it may improve maintainability if
-there is a separate page object for each component.
+Un objeto de página no necesariamente necesita representar una 
+página completa. El patrón de diseño de objetos de pagina podría 
+usarse para representar componentes en una página. Si la 
+página en el AUT tiene múltiples componentes, puede mejorar la 
+mantenibilidad si hay un objeto de página separado para cada 
+componente. 
 
-There are other design patterns that also may be used in testing. Some use a
-Page Factory for instantiating their page objects. Discussing all of these is
-beyond the scope of this user guide. Here, we merely want to introduce the
-concepts to make the reader aware of some of the things that can be done. As
-was mentioned earlier, many have blogged on this topic and we encourage the
-reader to search for blogs on these topics.
+Existen otros patrones de diseño que también pueden usarse en 
+las pruebas. Algunos usan un Page Factory para crear instancias 
+de sus objetos de página. Discutir todo esto es más allá del 
+alcance de esta guía del usuario. Aquí, simplemente queremos 
+presentar los conceptos para que el lector tome conciencia de 
+algunas de las cosas que se pueden hacer. Como fue mencionado 
+anteriormente, muchos han blogueado sobre este tema y alentamos 
+lector para buscar blogs sobre estos temas.

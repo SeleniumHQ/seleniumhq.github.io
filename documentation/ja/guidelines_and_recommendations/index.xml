@@ -64,7 +64,11 @@ Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。 単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。 ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。 NUnit 3 Console Runner NUnit 3 Console Command Line xUnit getting test results in TeamCity xUnit getting test results in CruiseControl.NET xUnit getting test results in Azure DevOps</description>
+      <description>Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。 単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。 ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。 NUnit 3 Console Runner
+NUnit 3 Console Command Line
+xUnit getting test results in TeamCity
+xUnit getting test results in CruiseControl.NET
+xUnit getting test results in Azure DevOps</description>
     </item>
     
     <item>

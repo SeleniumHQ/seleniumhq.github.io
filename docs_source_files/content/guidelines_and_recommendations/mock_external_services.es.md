@@ -3,11 +3,6 @@ title: "Mock de servicios externos"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Eliminating the dependencies on external services will greatly improve
-the speed and stability of your tests.
+Eliminar las dependencias de servicios externos 
+mejorará en gran medida la velocidad y la estabilidad 
+de tus pruebas.

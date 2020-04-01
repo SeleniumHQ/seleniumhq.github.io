@@ -483,9 +483,8 @@ Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/performance_testing/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
+      <description>Test de performances avec Selenium et WebDriver n&amp;rsquo;est généralement pas conseillé. Pas parce qu&amp;rsquo;il est incapable mais parce qu&amp;rsquo;il n&amp;rsquo;est pas optimisé pour le travail et il est peu probable que vous obteniez de bons résultats.
+Cela peut sembler idéal pour tester les performances dans le contexte de l&amp;rsquo;utilisateur mais une suite de tests WebDriver sont soumis à de nombreux points de fragilité externe et interne qui échappent à votre contrôle; par exemple la vitesse de démarrage du navigateur, vitesse des serveurs HTTP, réponse des serveurs tiers qui hébergent JavaScript ou CSS, et la pénalité d&amp;rsquo;instrumentation de l&amp;rsquo;implémentation WebDriver elle-même.</description>
     </item>
     
     <item>
@@ -516,8 +515,8 @@ Une mauvaise façon de tester votre module est que le contenu est créé et publ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/link_spidering/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.</description>
+      <description>Utilisation de WebDriver pour parcourir des liens n&amp;rsquo;est pas une pratique recommandée non pas parce que cela ne peut pas être fait, mais parce que ce n&amp;rsquo;est certainement pas l&amp;rsquo;outil le plus idéal. WebDriver a besoin de temps pour démarrer, et peut prendre plusieurs secondes jusqu&amp;rsquo;à une minute en fonction de la façon dont votre test est écrit, juste pour accéder à la page et parcourir le DOM.
+Au lieu d&amp;rsquo;utiliser WebDriver pour cela, vous pourriez économiser une tonne de temps en exécutant une commande curl, ou en utilisant une bibliothèque telle que BeautifulSoup puisque ces méthodes ne reposent pas sur la création d&amp;rsquo;un navigateur et la navigation vers une page.</description>
     </item>
     
     <item>

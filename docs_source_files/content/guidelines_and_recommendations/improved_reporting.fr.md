@@ -12,7 +12,11 @@ les rapports sont populaires pour importer des résultats dans une intégration 
 pour plus d'informations sur les sorties de rapports pour plusieurs langues.
 <!-- TODO: Add links.-->
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
+
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)
+
 [xUnit getting test results in TeamCity](//xunit.net/docs/getting-test-results-in-teamcity)
+
 [xUnit getting test results in CruiseControl.NET](//xunit.net/docs/getting-test-results-in-ccnet)
+
 [xUnit getting test results in Azure DevOps](//xunit.net/docs/getting-test-results-in-azure-devops)

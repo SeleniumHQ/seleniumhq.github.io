@@ -3,17 +3,11 @@ title: "Nueva instancia del navegador por prueba"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Start each test from a clean known state.
-Ideally, spin up a new virtual machine for each test.
-If spinning up a new virtual machine is not practical,
-at least start a new WebDriver for each test.
-For Firefox, start a WebDriver with your known profile.
+Comienza cada prueba desde un estado limpio conocido.
+Idealmente, ejecuta una nueva máquina virtual para cada prueba.
+Si ejecutar una nueva máquina virtual no es práctico,
+al menos inicia un nuevo WebDriver para cada prueba.
+Para Firefox, inicia un WebDriver con su perfil conocido.
 
 ```java
 FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));

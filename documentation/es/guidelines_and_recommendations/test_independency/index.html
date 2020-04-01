@@ -11,20 +11,20 @@
     <title>Independencia en las pruebas :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1585632846" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585632846" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1585727085" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1585727085" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585632846" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1585727085" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1585727085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585632846"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585632846"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1585727085"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1585727085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585632846"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1585727085"></script>
 
     
   </div>
@@ -1041,7 +1041,7 @@
  
   
     
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Gmail, email y Facebook logins" class="dd-item ">
+      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Autenticarse con Gmail, email y Facebook" class="dd-item ">
         <a href="https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/">
         Gmail, email y Facebook
         <i class="fas fa-check read-icon"></i>
@@ -1944,29 +1944,25 @@
 
 
 
+<p>Escribe cada prueba como su propia unidad. Escribe las pruebas
+de una manera que no dependan de otras pruebas para
+completarse:</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>Digamos que hay un sistema de gestión de contenido con el que
+puedes crear algún contenido personalizado que luego después
+publicar aparece en tu sitio web como un módulo, y puede llevar
+algún tiempo sincronizar entre el CMS y y la aplicación.</p>
 
+<p>Una forma incorrecta de probar tu módulo es que el contenido
+está creado y publicado en una prueba y luego verificando el
+módulo en otra prueba. Esta no es factible ya que el contenido
+puede no estar disponible de inmediato para otra prueba después
+de la publicación.</p>
 
-<p>Write each test as its own unit. Write the tests in a way that will not be
-reliant on other tests to complete:</p>
-
-<p>Let us say there is a content management system with which you can create
-some custom content which then appears on your website as a module after
-publishing, and it may take some time to sync between the CMS and the
-application.</p>
-
-<p>A wrong way of testing your module is that the content is created and
-published in one test, and then checking the module in another test. This
-is not feasible as the content may not be available immediately for the
-other test after publishing.</p>
-
-<p>Instead, you can create a stub content which can be turned on and off
-within the affected test, and use that for validating the module. However,
-for content creation, you can still have a separate test.</p>
+<p>En cambio, puedes crear un contenido auxiliar que se puede
+activar y desactivar dentro de la prueba afectada y úsarla para
+validar el módulo. Sin embargo, para la creación de contenido,
+aún puedes tener una prueba por separado.</p>
 
 
 <footer class=" footline" >
@@ -1976,7 +1972,7 @@ for content creation, you can still have a separate test.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/">
       “Independencia en las pruebas”
-    </a> was last updated on: 22 Mar 2020 21:26:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/ccde21a1bf8092d27e489c5f87a7906adbc3bd45">Updating page_loading_strategy.es.md (#360) (ccde21a1)</a>
+    </a> was last updated on: 01 Apr 2020 09:43:19 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/44c574f7eaffd374230fdde592994c641fbd731f">Add spanish translation and update some terms (#388) [deploy site] (44c574f7)</a>
 </h5>
         
         </div> 
@@ -3141,19 +3137,19 @@ for content creation, you can still have a separate test.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1585727085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1585632846"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585632846"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1585727085"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1585727085"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585632846" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585632846"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1585727085" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1585727085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
