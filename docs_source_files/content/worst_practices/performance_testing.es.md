@@ -13,7 +13,7 @@ usuario pero una suite de tests del WebDriver esta sujeta a demasiados puntos
 fragiles tanto internamente como externamente los cuales están fuera de nuestro
 control.
 Por ejemplo, la velocidad de puesta en marcha de los navegadores, la velocidad de
-los servidores HTTP, las respuestas servidores externos que alojan Javascript o 
+los servidores HTTP, las respuestas servidores externos que alojan JavaScript o 
 CSS, y la propia penalización debida a la instrumentación de la propia 
 implementación del WebDriver.
 Cualquier cambio en alguno de estos puntos causará una variación en los 
