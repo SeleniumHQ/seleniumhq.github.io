@@ -6,7 +6,7 @@ weight: 6
 
 # WebDriver remoto
 
-Puede usar WebDriver de forma remota de la misma manera que lo usarías
+Puedes usar WebDriver de forma remota de la misma manera que lo usarías
 localmente. La principal diferencia es que un WebDriver remoto debe ser
 configurado para que pueda ejecutar tus pruebas en una máquina diferente.
 
