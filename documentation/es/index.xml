@@ -441,8 +441,7 @@ ThreadGuard  Esta clase solo esta disponible en la librería de enlace de Java</
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/worst_practices/test_dependency/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
+      <description>Una idea muy común y equivocada sobre la automatización de pruebas es en lo que respecta al orden de los tests. Tus tests deberían ser capaces de ejecutarse sin tener en cuenta el orden y no depender los unos de los otros para poder finalizarse satisfactoriamente.</description>
     </item>
     
     <item>
@@ -476,14 +475,13 @@ Alertas El más simple de estos se conoce como alerta, que muestra unmensaje per
     </item>
     
     <item>
-      <title>Pruebas de desempeño</title>
+      <title>Pruebas de rendimiento</title>
       <link>https://selenium.dev/documentation/es/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/worst_practices/performance_testing/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
-It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
+      <description>Las pruebas de rendimiento usando Selenium y el WebDriver generalmente no son aconsejables. No porque Selenium sea incapaz de ello si no porque no esta optimizado para ello y es poco probable que se obtengan buenos resultados.
+Puede parecer ideal realizar pruebas de rendimiento desde el contexto de un usuario pero una suite de tests del WebDriver esta sujeta a demasiados puntos fragiles tanto internamente como externamente los cuales están fuera de nuestro control.</description>
     </item>
     
     <item>

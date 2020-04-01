@@ -109,14 +109,13 @@ It allows users to simulate common activities performed by end-users; entering t
     </item>
     
     <item>
-      <title>Understanding the components</title>
+      <title>구성 요소 이해</title>
       <link>https://selenium.dev/documentation/ko/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/webdriver/understanding_the_components/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
-Terminology  API: Application Programming Interface.</description>
+      <description>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다. 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는 이 설명에서 용어가 사용되는 방식에 대한 분석.
+술어  API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;rdquo;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description>
     </item>
     
     <item>
