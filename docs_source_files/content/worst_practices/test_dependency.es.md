@@ -3,13 +3,7 @@ title: "Dependencia entre pruebas"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-A common idea and misconception about automated testing is regarding a
-specific test order. Your tests should be able to run in **any** order,
-and not rely on other tests to complete in order to be successful.
-
+Una idea muy común y equivocada sobre la automatización de pruebas es en lo
+que respecta al orden de los tests. Tus tests deberían ser capaces de ejecutarse
+sin tener en cuenta el orden y no depender los unos de los otros para poder finalizarse
+satisfactoriamente.
