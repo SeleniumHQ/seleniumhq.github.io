@@ -8,10 +8,12 @@ Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许�
 ## sendKeys
 
 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
+[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
+possible keystrokes that WebDriver Supports.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import org.openqa.selenium.By;
+import org.openqa.selenium.By;  
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

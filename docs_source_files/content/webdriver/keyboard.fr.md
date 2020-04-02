@@ -8,7 +8,10 @@ interface qui nous permet de fournir une entrée d'appareil virtualisé au navig
 
 ## sendKeys
 
-SendKeys tape une séquence de touches dans l'élément DOM même si une séquence de touches de modification est rencontrée.
+SendKeys tape une séquence de touches dans l'élément DOM même 
+si une séquence de touches de modification est rencontrée.
+[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
+possible keystrokes that WebDriver Supports.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

@@ -12,6 +12,8 @@ al navegador web.
 
 El sendKeys escribe una secuencia de teclas en el elemento del DOM
 incluso si se encuentra una secuencia de teclas modificadoras.
+[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
+possible keystrokes that WebDriver Supports.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

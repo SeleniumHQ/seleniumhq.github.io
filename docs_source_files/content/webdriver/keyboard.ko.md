@@ -14,7 +14,10 @@ interface which allows us to provide virtualized device input to the web browser
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
+The sendKeys types a key sequence in DOM element even 
+if modifier key sequence is encountered.
+[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
+possible keystrokes that WebDriver Supports.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
