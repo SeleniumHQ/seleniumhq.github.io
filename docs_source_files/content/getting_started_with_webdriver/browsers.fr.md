@@ -9,7 +9,7 @@ Le framework Selenium supporte officiellement les navigateurs suivants:
 
 | Navigateur        | Mainteneur                                                                                                                 | Versions supportées   |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------- | --------------------- |
-| Chromium          | [Chromium](//sites.google.com/a/chromium.org/chromedriver/)                                                                | Toutes versions       |
+| Chrome          | [Chromium](//sites.google.com/a/chromium.org/chromedriver/)                                                                | Toutes versions       |
 | Firefox           | [Mozilla](//github.com/mozilla/geckodriver/)                                                                               | 54 and plus récentes  |
 | Internet Explorer | Selenium                                                                                                                   | 6 et plus récentes    |
 | Opera             | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 et plus récentes |

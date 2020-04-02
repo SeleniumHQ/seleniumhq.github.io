@@ -9,7 +9,7 @@ Selenium ondersteunt officieel volgende browsers:
 
 | Browser | Beheerder | Ondersteunde versies |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Alle versies |
+| Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Alle versies |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 en nieuwer |
 | Internet Explorer | Selenium | 6 en nieuwer |
 | Opera | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 en nieuwer |

@@ -9,7 +9,7 @@ weight: 1
 
 | 浏览器 | 维护者 | 支持的版本 |
 | -------- | ---------- | ------------------ |
-| Chromium | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 所有版本 |
+| Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 所有版本 |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54及以上版本 |
 | Internet Explorer | Selenium | 6及以上版本 |
 | Opera | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5及以上版本 |
