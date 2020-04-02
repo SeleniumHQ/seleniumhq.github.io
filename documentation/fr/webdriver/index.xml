@@ -112,8 +112,8 @@ Find Element Il est utilisé pour rechercher un élément et renvoie une premiè
       
       <guid>https://selenium.dev/documentation/fr/webdriver/keyboard/</guid>
       <description>Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l&amp;rsquo;aide de bas niveau interface qui nous permet de fournir une entrée d&amp;rsquo;appareil virtualisé au navigateur Web.
-sendKeys SendKeys tape une séquence de touches dans l&amp;rsquo;élément DOM même si une séquence de touches de modification est rencontrée.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>
+sendKeys SendKeys tape une séquence de touches dans l&amp;rsquo;élément DOM même si une séquence de touches de modification est rencontrée. Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.</description>
     </item>
     
   </channel>

@@ -112,7 +112,7 @@ WebDriver API provides built-in methods to find the WebElements which are based 
       <guid>https://selenium.dev/documentation/de/webdriver/keyboard/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
  Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.</description>
+sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered. Here are the list of possible keystrokes that WebDriver Supports.</description>
     </item>
     
   </channel>

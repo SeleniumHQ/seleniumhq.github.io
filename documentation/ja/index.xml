@@ -121,7 +121,7 @@ After the development of the WebDriver tests, you may face the need of running y
       
       <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
       <description> 一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
-   ブラウザ メンテナ サポートバージョン     Chromium Chromium 全てのバージョン   Firefox Mozilla 54 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
+   ブラウザ メンテナ サポートバージョン     Chrome Chromium 全てのバージョン   Firefox Mozilla 54 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
    ドライバー名 用途 メンテナ     HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト    </description>
     </item>
     
@@ -195,7 +195,7 @@ acceptInsecureCerts この機能は、セッション中のナビゲーション
       <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
 このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
 帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4479 commits 
-@barancev2852 commits 
+@barancev2853 commits 
 @jimevans2286 commits 
 @jleyba1464 commits</description>
     </item>
@@ -784,8 +784,8 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       
       <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
       <description>キーボードはキーボードイベントを表します。 キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
-sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.webdriver.common.keys import Keysdriver = webdriver.</description>
+sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。 Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.</description>
     </item>
     
     <item>

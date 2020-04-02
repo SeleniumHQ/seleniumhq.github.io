@@ -18,7 +18,7 @@
       
       <guid>https://selenium.dev/documentation/de/getting_started_with_webdriver/browsers/</guid>
       <description>Endverbraucher Browser Folgende Browser werden offiziell vom Selenium Framework unterstützt:
-   Browser Wartungsverantwortlich Unterstützte Versionen     Chromium Chromium Alle Versionen   Firefox Mozilla 54 und neuer   Internet Explorer Selenium 6 und neuer   Opera Opera Chromium / Presto 10.5 und neuer   Safari Apple 10 und neuer    Spezielle Browser Es gibt einige spezielle Browsers die üblicherweise nur im Zuge von Projektentwicklungen eingesetzt werden.</description>
+   Browser Wartungsverantwortlich Unterstützte Versionen     Chrome Chromium Alle Versionen   Firefox Mozilla 54 und neuer   Internet Explorer Selenium 6 und neuer   Opera Opera Chromium / Presto 10.5 und neuer   Safari Apple 10 und neuer    Spezielle Browser Es gibt einige spezielle Browsers die üblicherweise nur im Zuge von Projektentwicklungen eingesetzt werden.</description>
     </item>
     
     <item>

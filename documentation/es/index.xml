@@ -90,7 +90,7 @@ Java La instalación de las librerías Selenium para Java se puede hacer usando 
       
       <guid>https://selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
       <description>Navegadores para el consumidor El framework de Selenium soporta oficialmente los siguientes navegadores:
-   Navegador Mantenedor Versiones Soportadas     Chromium Chromium Todas las Versiones   Firefox Mozilla 54 y más recientes   Internet Explorer Selenium 6 y más recientes   Opera Opera Chromium / Presto 10.5 y más recientes   Safari Apple 10 y más recientes    Navegadores especializados También hay un conjunto de navegadores especializados utilizados típicamente en entornos de desarrollo.</description>
+   Navegador Mantenedor Versiones Soportadas     Chrome Chromium Todas las Versiones   Firefox Mozilla 54 y más recientes   Internet Explorer Selenium 6 y más recientes   Opera Opera Chromium / Presto 10.5 y más recientes   Safari Apple 10 y más recientes    Navegadores especializados También hay un conjunto de navegadores especializados utilizados típicamente en entornos de desarrollo.</description>
     </item>
     
     <item>
@@ -575,8 +575,8 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       
       <guid>https://selenium.dev/documentation/es/webdriver/keyboard/</guid>
       <description>Keyboard representa un evento del teclado. Las acciones del teclado se realizan mediante el uso de una interfaz de bajo nivel que nos permite proporcionar entradas de un dispositivo virtualizado al navegador web.
-sendKeys El sendKeys escribe una secuencia de teclas en el elemento del DOM incluso si se encuentra una secuencia de teclas modificadoras.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navega a la URL driver.</description>
+sendKeys El sendKeys escribe una secuencia de teclas en el elemento del DOM incluso si se encuentra una secuencia de teclas modificadoras. Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
     </item>
     
     <item>

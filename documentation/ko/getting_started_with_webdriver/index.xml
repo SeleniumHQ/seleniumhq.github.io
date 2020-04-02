@@ -19,7 +19,7 @@
       <guid>https://selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Consumer browsers The Selenium framework officially supports the following browsers:
-   Browser Maintainer Versions Supported     Chromium Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
+   Browser Maintainer Versions Supported     Chrome Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.</description>
     </item>
     
     <item>
