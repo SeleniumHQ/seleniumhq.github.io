@@ -132,7 +132,11 @@ options.file_upload_dialog_timeout = 2000
 driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options().fileUploadDialogTimeout(2000);
+let driver = await Builder()
+          .setIeOptions(options)
+          .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = InternetExplorerOptions()

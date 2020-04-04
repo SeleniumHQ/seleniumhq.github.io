@@ -189,9 +189,8 @@ Descarga el binario de WebDriver soportado por tu navegador y colócalo en el PA
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks.</description>
+      <description>Un lenguaje de dominio específico (DSL) es un sistema que proporciona al usuario un medio expresivo para resolver un problema. Permite a un usuario interactuar con el sistema en sus términos, no solo en jerga del programador.
+A tus usuarios, en general, no les importa cómo se ve su sitio. Ellos no se preocupan por la decoración, animaciones o gráficos. Ellos desean utilizar tu sistema para impulsar a sus nuevos empleados a través del proceso con mínima dificultad; quieren reservar un viaje a Alaska; quieren configurar y comprar unicornios con descuento.</description>
     </item>
     
     <item>
@@ -523,8 +522,8 @@ Un servidor proxy para scripts de automatización con Selenium podría ser útil
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/worst_practices/link_spidering/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.</description>
+      <description>Usando WebDriver para arañar una web a través de enlaces no es una práctica recomendada, no porque no se pueda hacer, pero porque definitivamente no es la herramienta más ideal. WebDriver necesita tiempo para iniciarse, y puede tomar varios de segundos hasta un minuto dependiendo de cómo se escriba tu prueba, solo para llegar a la página y atravesar el DOM.
+En lugar de usar WebDriver para esto, podrías ahorrar un montón de tiempo ejecutando un comando curl, o usando una librería como BeautifulSoup ya que estos métodos no se basan en crear un navegador y navegar a una página.</description>
     </item>
     
     <item>
