@@ -590,25 +590,24 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Same-Site Cookie Attribute
+## Same-Site Cookie属性
 
-It allows a user to instruct browsers to control whether cookies 
-are sent along with the request initiated by third party sites. 
-It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.
+此属性允许用户引导浏览器控制cookie, 是否与第三方站点发起的请求一起发送.
+引入其是为了防止CSRF（跨站请求伪造）攻击.
 
-Same-Site cookie attribute accepts two parameters as instructions
+Same-Site Cookie属性接受以下两种参数作为指令
 
 ## Strict:
-When the sameSite attribute is set as **Strict**, 
-the cookie will not be sent along with 
-requests initiated by third party websites.
+当sameSite属性设置为 **Strict**, 
+Cookie不会与来自第三方网站的请求一起发送.
 
 ## Lax:
-When you set a cookie sameSite attribute to **Lax**, 
-the cookie will be sent along with the GET 
-request initiated by third party website.
+当您将cookie sameSite属性设置为 **Lax**,
+Cookie将与第三方网站发起的GET请求一起发送.
 
-**Note**: **As of now this feature is landed in chrome(80+version) and works with Selenium 4 and later versions.**
+**注意**: **到目前为止, 
+此功能已适配于chrome (80+ version) 中, 
+并适用于Selenium 4以及更高版本.**
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
