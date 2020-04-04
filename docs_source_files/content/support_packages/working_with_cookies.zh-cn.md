@@ -595,15 +595,15 @@ fun main() {
 此属性允许用户引导浏览器控制cookie, 是否与第三方站点发起的请求一起发送.
 引入其是为了防止CSRF（跨站请求伪造）攻击.
 
-Same-Site Cookie属性接受以下两种参数作为指令
+Same-Site cookie属性接受以下两种参数作为指令
 
 ## Strict:
 当sameSite属性设置为 **Strict**, 
-Cookie不会与来自第三方网站的请求一起发送.
+cookie不会与来自第三方网站的请求一起发送.
 
 ## Lax:
 当您将cookie sameSite属性设置为 **Lax**,
-Cookie将与第三方网站发起的GET请求一起发送.
+cookie将与第三方网站发起的GET请求一起发送.
 
 **注意**: **到目前为止, 
 此功能已适配于chrome (80+ version) 中, 
