@@ -148,3 +148,4 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(2))
 val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
+

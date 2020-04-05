@@ -182,7 +182,7 @@ plus compliquée à débugguer. Même si les sélecteur XPath sont très flexibl
 ils sont rarement testés d'un point de vue performance par les fournisseurs de navigateur
 et ont donc tendance à être assez lents.
 
-Les stratégies basés sur link text et partial link text sont
+Les stratégies basés sur _linkText_ et _partialLinkText_ sont
 contraingnantes du fait qu'elles ne fonctionnent 
 que sur des éléments de type lien hypertexte. De plus, elles
 sont implémentées au sein de WebDriver via des sélecteurs XPath.

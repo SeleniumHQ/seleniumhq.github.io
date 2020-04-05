@@ -190,7 +190,7 @@ selectors, but the syntax is complicated and frequently difficult to
 debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.
 
-Selection strategies based on link text and partial link text have
+Selection strategies based on _linkText_ and _partialLinkText_ have
 drawbacks in that they only work on link elements. Additionally, they
 call down to XPath selectors internally in WebDriver.
 
