@@ -171,3 +171,14 @@ link textセレクタとpartial _linkText_ セレクタはa要素でしか動作
 ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
 WebDriverでDOM構造のトラバースを行うのは重い処理となります。
 検索の範囲を狭めた方がより良い結果を得られます。
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*

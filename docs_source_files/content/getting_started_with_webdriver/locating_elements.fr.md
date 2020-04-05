@@ -195,3 +195,14 @@ _findElements(By)_, renvoyant une collection des élements.
 Au final, la recommendation est de garder ses sélecteurs aussi compacts et lisibles que possible.
 Demander à WebDriver de traverser la structure du DOM est une opération très coûteuse,
 de fait plus le scope de recherche sera restreint, meilleures seront les performances.
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*
