@@ -51,14 +51,24 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
     </item>
     
     <item>
-      <title>Types of testing</title>
+      <title>测试的类型</title>
       <link>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.
-For web applications, the automation of this testing can be done directly with Selenium by simulating user expected behaviour.</description>
+      <description>验收测试 进行这种类型的测试以确定功能或系统是否满足客户的期望和要求. 这种测试通常涉及客户的合作或反馈, 是一种验证活动, 可以用于回答以下问题： &amp;gt;我们是否在制造 正确的 产品?
+对于Web应用程序, 可以通过模拟用户期望的行为 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟. 注意：有些人可能还会提到, 验收测试是 功能测试 的子类型.
+功能测试 进行这种类型的测试是为了确定功能或系统是否正常运行而没有问题. 它会在不同级别检查系统, 以确保涵盖所有方案并且系统能够执行预期的 工作 . 这是一个验证活动, 它回答了以下问题： &amp;gt;我们是否在 正确地 制造产品？
+这通常包括： 测试没有错误 (404, 异常…) , 以可用的方式 (正确的重定向) 正常运行, 以可访问的方式并匹配其规格 (请参见前述的 验收测试 ) .
+对于Web应用程序, 可以通过模拟预期的结果, 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放或通过本文档中说明的各种支持的语言来完成此模拟.
+性能测试 顾名思义, 进行性能测试是为了衡量应用程序的性能.
+性能测试主要有两种类型:
+负载测试 进行了负载测试, 以验证应用程序在各种特定的负载 (通常是同时连接一定数量的用户) 下的运行状况
+压力测试 进行压力测试, 以验证应用程序在压力 (或高于最大支持负载) 下的运行状况.
+通常, 性能测试是通过执行一些Selenium书写的测试来完成的, 这些测试模拟了不同的用户 使用Web应用程序的特定功能 并检索了一些有意义的指标.
+通常, 这是由其他检索指标的工具完成的.
+JMeter 就是这样一种工具.
+对于Web应用程序, 要测量的详细信息包括 吞吐量、 延迟、数据丢失、单个组件加载时间&amp;hellip;</description>
     </item>
     
     <item>
