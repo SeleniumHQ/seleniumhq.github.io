@@ -26,9 +26,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks.</description>
+      <description>Un lenguaje de dominio específico (DSL) es un sistema que proporciona al usuario un medio expresivo para resolver un problema. Permite a un usuario interactuar con el sistema en sus términos, no solo en jerga del programador.
+A tus usuarios, en general, no les importa cómo se ve su sitio. Ellos no se preocupan por la decoración, animaciones o gráficos. Ellos desean utilizar tu sistema para impulsar a sus nuevos empleados a través del proceso con mínima dificultad; quieren reservar un viaje a Alaska; quieren configurar y comprar unicornios con descuento.</description>
     </item>
     
     <item>

@@ -11,20 +11,20 @@
     <title>操控浏览器 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585837727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585990188" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585990188" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585837727" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585990188" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585990188"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585837727"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585837727"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585990188"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585990188"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585837727"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585990188"></script>
 
     
   </div>
@@ -1958,7 +1958,7 @@
 <li><a href="#设置窗口位置">设置窗口位置</a>
 <ul>
 <li><a href="#最大化窗口">最大化窗口</a></li>
-<li><a href="#minimize-window">Minimize window</a></li>
+<li><a href="#最小化窗口">最小化窗口</a></li>
 <li><a href="#全屏窗口">全屏窗口</a></li>
 </ul></li>
 </ul></li>
@@ -3792,9 +3792,9 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 
 <h3 id="使用索引">使用索引</h3>
 
-<p>It is also possible to use the index of the frame, such as can be
-queried using <em>window.frames</em> in JavaScript.
-还可以使用框架的索引，比如可以使用 JavaScript 中的 _window.frames_查询。</p>
+<p>还可以使用frame的索引，
+例如可以使用JavaScript中的
+ <em>window.frames</em> 进行查询.</p>
 
 
 
@@ -4525,15 +4525,14 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 </div>
 </div>
 
-<h3 id="minimize-window">Minimize window</h3>
+<h3 id="最小化窗口">最小化窗口</h3>
 
-<p>Minimizes the window of current browsing context.
-The exact behavior of this command is specific to
-individual window managers.</p>
+<p>最小化当前浏览上下文的窗口.
+这种命令的精准行为将作用于各个特定的窗口管理器.</p>
 
-<p>Minimize Window typically hides the window in the system tray.</p>
+<p>最小化窗口通常将窗口隐藏在系统托盘中.</p>
 
-<p><strong>Note: This feature works with Selenium 4 and later versions.</strong></p>
+<p><strong>注意: 此功能适用于Selenium 4以及更高版本.</strong></p>
 
 
 
@@ -4701,7 +4700,7 @@ individual window managers.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/">
       “操控浏览器”
-    </a> was last updated on: 25 Mar 2020 09:48:28 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/8cd4a25574d57f212b9e9fec70eab88d0934e6dd">Deploying on Wed Mar 25 09:48:28 UTC 2020, commit c207f9f399f92557a0de49753058c0733dcf8d6d, [skip ci] (8cd4a255)</a>
+    </a> was last updated on: 04 Apr 2020 16:48:21 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/94487ecd5d5ff2fc4817c737b7f8e7a5e9872bbf">Update Chinese translation of &#34;browser_manipulation&#34; (#395) [deploy site] (94487ecd)</a>
 </h5>
         
         </div> 
@@ -5866,19 +5865,19 @@ individual window managers.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585990188"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585990188"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585990188"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585837727" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585837727"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585990188" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585990188"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
