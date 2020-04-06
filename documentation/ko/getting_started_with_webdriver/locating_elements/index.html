@@ -11,20 +11,20 @@
     <title>Locating elements :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1585990195" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1585990195" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1586110928" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1586110928" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1585990195" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1586110928" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1585990195"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1586110928"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1585990195"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1585990195"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1586110928"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1586110928"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1585990195"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1586110928"></script>
 
     
   </div>
@@ -2457,7 +2457,7 @@ selectors, but the syntax is complicated and frequently difficult to
 debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.</p>
 
-<p>Selection strategies based on link text and partial link text have
+<p>Selection strategies based on <em>linkText</em> and <em>partialLinkText</em> have
 drawbacks in that they only work on link elements. Additionally, they
 call down to XPath selectors internally in WebDriver.</p>
 
@@ -2471,6 +2471,19 @@ readable as possible. Asking WebDriver to traverse the DOM structure
 is an expensive operation, and the more you can narrow the scope of
 your search, the better.</p>
 
+<p><strong>Selenium 4</strong> brings Relative Locators which are previously
+called as <em>Friendly Locators</em>. This functionality was
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:</p>
+
+<ul>
+<li><em>above</em></li>
+<li><em>below</em></li>
+<li><em>toLeftOf</em></li>
+<li><em>toRightOf</em></li>
+<li><em>near</em></li>
+</ul>
+
 
 <footer class=" footline" >
 	
@@ -2479,7 +2492,7 @@ your search, the better.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/">
       “Locating elements”
-    </a> was last updated on: 26 Mar 2020 20:49:32 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/571459f036ad80254db6e34fdabc0b050316b9f4">Add Chinese translation of &#34;support_classes&#34; (#372) (571459f0)</a>
+    </a> was last updated on: 05 Apr 2020 23:50:27 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a74c81a233e47bcc029d171cdcc8188360eb2845">Add: Adding Relative Locators concept in doc [deploy site] (a74c81a2)</a>
 </h5>
         
         </div> 
@@ -3644,19 +3657,19 @@ your search, the better.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1585990195"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1586110928"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1585990195"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1585990195"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1586110928"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1586110928"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1585990195" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1585990195"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1586110928" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1586110928"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

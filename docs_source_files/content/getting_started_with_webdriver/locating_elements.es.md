@@ -198,3 +198,14 @@ La recomendación es mantener tus localizadores tan compactos y
 legibles como sea posible. Pedirle a WebDriver que atraviese la 
 estructura del DOM es una operación costosa, y cuanto más se pueda 
 reducir el alcance de tu búsqueda, mejor.
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*

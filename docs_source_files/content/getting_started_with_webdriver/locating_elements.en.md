@@ -184,7 +184,7 @@ selectors, but the syntax is complicated and frequently difficult to
 debug. Though XPath selectors are very flexible, they are typically
 not performance tested by browser vendors and tend to be quite slow.
 
-Selection strategies based on link text and partial link text have
+Selection strategies based on _linkText_ and _partialLinkText_ have
 drawbacks in that they only work on link elements. Additionally, they
 call down to XPath selectors internally in WebDriver.
 
@@ -197,3 +197,14 @@ The recommendation is to keep your locators as compact and
 readable as possible. Asking WebDriver to traverse the DOM structure
 is an expensive operation, and the more you can narrow the scope of
 your search, the better.
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*
