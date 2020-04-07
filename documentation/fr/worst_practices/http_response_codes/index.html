@@ -11,20 +11,20 @@
     <title>Codes réponse HTTP :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1586213990" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1586213990" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1586279999" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1586279999" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1586213990" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1586279999" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1586213990"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1586279999"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1586213990"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1586213990"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1586279999"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1586279999"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1586213990"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1586279999"></script>
 
     
   </div>
@@ -1944,61 +1944,62 @@
 
 
 
+<p>Pour certaines configurations de navigateur dans Selenium RC,
+Selenium a agi comme un proxy entre le navigateur
+et le site étant automatisé.
+Cela signifiait que tout le trafic du navigateur passait par Selenium
+pourrait être capturé ou manipulé.
+La méthode <code>captureNetworkTraffic()</code>
+censé capturer tout le trafic réseau entre le navigateur
+et le site étant automatisé,
+y compris les codes de réponse HTTP.</p>
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
+<p>Selenium WebDriver est une approche complètement différente
+à l&rsquo;automatisation du navigateur,
+préférant agir plus comme un utilisateur
+et cela est représenté dans la façon dont
+vous écrivez des tests avec WebDriver.
+Dans les tests fonctionnels automatisés,
+vérification du code d&rsquo;état
+n&rsquo;est pas un détail particulièrement important de l&rsquo;échec d&rsquo;un test;
+les étapes qui l&rsquo;ont précédé sont plus importantes.</p>
 
+<p>Le navigateur représentera toujours le code d&rsquo;état HTTP,
+imaginez par exemple une page d&rsquo;erreur 404 ou 500.
+Un moyen simple de &ldquo;échouer rapidement&rdquo; lorsque
+vous rencontrez l&rsquo;une de ces pages d&rsquo;erreur
+est de vérifier le titre de la page ou le contenu d&rsquo;un point fiable
+(par exemple, la balise <code>&lt;h1&gt;</code>) après chaque chargement de page.
+Si vous utilisez le modèle d&rsquo;objet de page,
+vous pouvez inclure cette vérification dans votre constructeur de classe
+ou un point similaire où le chargement de la page est prévu.
+Parfois, le code HTTP peut même être représenté
+dans la page d&rsquo;erreur du navigateur
+et vous pouvez utiliser WebDriver pour lire ceci
+et améliorez votre sortie de débogage.</p>
 
-<p>For some browser configurations in Selenium RC,
-Selenium acted as a proxy between the browser
-and the site being automated.
-This meant that all browser traffic passed through Selenium
-could be captured or manipulated.
-The <code>captureNetworkTraffic()</code> method
-purported to capture all of the network traffic between the browser
-and the site being automated,
-including HTTP response codes.</p>
+<p>La vérification de la page Web
+elle-même est en ligne
+avec la pratique idéale de WebDriver
+de représenter et d&rsquo;affirmer la
+vision de l&rsquo;utilisateur du site Web.</p>
 
-<p>Selenium WebDriver is a completely different approach
-to browser automation,
-preferring to act more like a user
-and this is represented in the way you write tests with WebDriver.
-In automated functional testing,
-checking the status code
-is not a particularly important detail of a test&rsquo;s failure;
-the steps that preceded it are more important.</p>
-
-<p>The browser will always represent the HTTP status code,
-imagine for example a 404 or a 500 error page.
-A simple way to “fail fast” when you encounter one of these error pages
-is to check the page title or content of a reliable point
-(e.g. the <code>&lt;h1&gt;</code> tag) after every page load.
-If you are using the page object model,
-you can include this check in your class constructor
-or similar point where the page load is expected.
-Occasionally, the HTTP code may even be represented
-in the browser&rsquo;s error page
-and you could use WebDriver to read this
-and improve your debugging output.</p>
-
-<p>Checking the webpage itself is in line
-with WebDriver&rsquo;s ideal practice
-of representing and asserting upon the user’s view of the website.</p>
-
-<p>If you insist, an advanced solution to capturing HTTP status codes
-is to replicate the behaviour of Selenium RC by using a proxy.
-WebDriver API provides the ability to set a proxy for the browser,
-and there are a number of proxies that will
-programmatically allow you to manipulate
-the contents of requests sent to and received from the web server.
-Using a proxy lets you decide how you want to respond
-to redirection response codes.
-Additionally, not every browser
-makes the response codes available to WebDriver,
-so opting to use a proxy
-allows you to have a solution that works for every browser.</p>
+<p>Si vous insistez, une solution avancée pour
+capturer les codes d&rsquo;état HTTP
+consiste à reproduire le comportement de
+Selenium RC à l&rsquo;aide d&rsquo;un proxy.
+L&rsquo;API WebDriver permet de définir un proxy pour le navigateur,
+et il existe un certain nombre de procurations qui
+vous permet de manipuler par programme
+le contenu des demandes envoyées et reçues du serveur Web.
+L&rsquo;utilisation d&rsquo;un proxy vous permet de
+décider comment vous souhaitez répondre
+aux codes de réponse de redirection.
+De plus, tous les navigateurs ne sont pas
+met les codes de réponse à la disposition de WebDriver,
+donc choisir d&rsquo;utiliser un proxy
+vous permet d&rsquo;avoir une solution qui
+fonctionne pour chaque navigateur.</p>
 
 
 <footer class=" footline" >
@@ -2008,7 +2009,7 @@ allows you to have a solution that works for every browser.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/worst_practices/http_response_codes/">
       “Codes réponse HTTP”
-    </a> was last updated on: 26 Mar 2020 17:31:01 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/86075251f92f0196599eeb085d1247fc12dc3922">Deploying on Thu Mar 26 17:31:01 UTC 2020, commit 411d842557ae1e5881400d18603b5601465b2398, [skip ci] (86075251)</a>
+    </a> was last updated on: 07 Apr 2020 22:48:09 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/eb7eb3d20bf6823dc39c0c08123f1054813ebc37">Modify: [EN]-&gt;[FR] Translating document to French [deploy site] (eb7eb3d2)</a>
 </h5>
         
         </div> 
@@ -3173,19 +3174,19 @@ allows you to have a solution that works for every browser.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1586213990"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1586279999"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1586213990"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1586213990"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1586279999"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1586279999"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1586213990" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1586213990"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1586279999" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1586279999"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
