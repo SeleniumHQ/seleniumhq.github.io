@@ -56,8 +56,7 @@ La pratique idéale consiste à utiliser les API proposées par les fournisseurs
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/test_dependency/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
+      <description>Une idée courante et une idée fausse concernant les tests automatisés concernent ordre de test spécifique. Vos tests devraient pouvoir s&amp;rsquo;exécuter dans n&amp;rsquo;importe quel ordre, et ne pas compter sur d&amp;rsquo;autres tests pour réussir pour réussir.</description>
     </item>
     
     <item>
