@@ -28,8 +28,8 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/front_matter/typographical_conventions/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+      <description>Capitalisation des titres Il faut éviter la capitalisation du titre, comme A Very Fine Heading, et optez plutôt pour un titre très fin. Capitalisation gratuite ou casse de titre, montrent souvent un malentendu - ou un mépris pour - conventions orthographiques. Nous préférons ce que l&amp;rsquo;on appelle le &amp;ldquo;cas de peine&amp;rdquo;, avec un seul capital initial pour démarrer les en-têtes.
+Longueur de la ligne Lors de la modification de la source de la documentation, qui est écrit en HTML simple, limitez la longueur de vos lignes à environ 72 caractères.</description>
     </item>
     
   </channel>

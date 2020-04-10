@@ -150,9 +150,8 @@ Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.</description>
+      <description>Firefox Définir les Capabilities à l&amp;rsquo;aide de &amp;ldquo;FirefoxOptions&amp;rdquo; FirefoxOptions est la nouvelle façon de définir les capacités de Firefox navigateur et doit généralement être utilisé de préférence à DesiredCapabilities.
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.</description>
     </item>
     
     <item>
@@ -171,8 +170,8 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/front_matter/typographical_conventions/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+      <description>Capitalisation des titres Il faut éviter la capitalisation du titre, comme A Very Fine Heading, et optez plutôt pour un titre très fin. Capitalisation gratuite ou casse de titre, montrent souvent un malentendu - ou un mépris pour - conventions orthographiques. Nous préférons ce que l&amp;rsquo;on appelle le &amp;ldquo;cas de peine&amp;rdquo;, avec un seul capital initial pour démarrer les en-têtes.
+Longueur de la ligne Lors de la modification de la source de la documentation, qui est écrit en HTML simple, limitez la longueur de vos lignes à environ 72 caractères.</description>
     </item>
     
     <item>
