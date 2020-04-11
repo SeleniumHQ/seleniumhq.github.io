@@ -9,146 +9,164 @@ English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
+## Introducción
 
-## Introduction
-Selenium RC was the main Selenium project for a long time, before the
-WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.
-It is worth to highlight that Selenium 1 is not supported anymore.
+Selenium RC fue el principal proyecto de Selenium durante mucho tiempo,
+antes de que la union de WebDriver/Selenium resultaran en Selenium 2,
+una herramienta más poderosa.
+Vale la pena resaltar que Selenium 1 ya no es soportado.
 
-## How Selenium RC Works
-First, we will describe how the components of Selenium RC operate and the role each plays in running 
-your test scripts.
+## Como funciona Selenium RC
 
-### RC Components
+Primero, describiremos cómo funcionan los componentes de Selenium RC
+y el papel que desempeña cada uno en la ejecución tus scripts de prueba.
 
-Selenium RC components are:
+### Componentes de RC
 
-* The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an *HTTP proxy*, intercepting and verifying HTTP messages passed between the browser and the AUT.
-* Client libraries which provide the interface between each programming language and the Selenium RC Server.
+Los componentes de Selenium RC son:
 
-Here is a simplified architecture diagram:
+* El servidor Selenium que inicia y finaliza navegadores,
+interpreta y ejecuta los comandos Selenese pasados del programa
+de prueba, y actúa como un *proxy HTTP*, interceptando y verificando
+los mensajes HTTP pasados entre el navegador y el AUT.
+* Librerías de clientes que proporcionan la interfaz entre cada lenguaje de programación y Selenium RC Server.
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+Aquí hay un diagrama simplificado de la arquitectura:
 
-The diagram shows the client libraries communicate with the
-Server passing each Selenium command for execution. Then the server passes the 
-Selenium command to the browser using Selenium-Core JavaScript commands. The 
-browser, using its JavaScript interpreter, executes the Selenium command. This
-runs the Selenese action or verification you specified in your test script.
+![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png)
+
+El diagrama muestra que las librerías del cliente se comunican con el
+el servidor pasando cada comando Selenium para su ejecución.
+Entonces el servidor pasa el comando Selenium al navegador utilizando
+los comandos JavaScript de Selenium-Core.
+El navegador, utilizando su intérprete de JavaScript, ejecuta el comando Selenium. Esta ejecuta la acción o verificación de Selenese que
+especificas en tu script de prueba.
 
 ### Selenium Server
 
-Selenium Server receives Selenium commands from your test program,
-interprets them, and reports back to your program the results of
-running those tests.
+Selenium Server recibe comandos de Selenium de tu programa
+de prueba, los interpreta e informa a tu programa los
+resultados de ejecutar esas pruebas.
 
-The RC server bundles Selenium Core and automatically injects
-it into the browser. This occurs when your test program opens the
-browser (using a client library API function).
-Selenium-Core is a JavaScript program, actually a set of JavaScript
-functions which interprets and executes Selenese commands using the
-browser's built-in JavaScript interpreter.
+El servidor RC agrupa Selenium Core y automáticamente
+lo inyecta en el navegador. Esto ocurre cuando tu
+programa de prueba abre el navegador (utilizando una
+función del API de la librería del cliente). Selenium-Core es un
+programa de JavaScript, en realidad un conjunto de funciones
+JavaScript que interpretan y ejecutan comandos
+Selenese utilizando el intérprete de JavaScript incorporado
+en el navegador.
 
-The Server receives the Selenese commands from your test program
-using simple HTTP GET/POST requests. This means you can use any
-programming language that can send HTTP requests to automate
-Selenium tests on the browser.
+El servidor recibe los comandos Selenese de tu programa de
+prueba utilizando simples solicitudes HTTP GET/POST.
+Esto significa que puedes usar cualquier lenguaje de programación
+que pueda enviar solicitudes HTTP para automatizar pruebas
+de Selenium en el navegador.
 
-### Client Libraries
+### Librerías de Clientes
 
-The client libraries provide the programming support that allows you to
-run Selenium commands from a program of your own design.  There is a 
-different client library for each supported language.  A Selenium client 
-library provides a programming interface (API), i.e., a set of functions,
-which run Selenium commands from your own program. Within each interface,
-there is a programming function that supports each Selenese command.
+Las librerías del cliente proporcionan el soporte de
+programación que te permiten ejecutar comandos Selenium desde
+un programa de tu propio diseño. Hay una librería cliente
+diferente para cada lenguaje compatible. Una librería
+cliente de Selenium proporciona una interfaz de
+programación (API), es decir, un conjunto de funciones,
+que ejecuta comandos de Selenium desde tu propio programa.
+Dentro de cada interfaz, hay una función de programación
+que soporta cada comando de Selenese.
 
-The client library takes a Selenese command and passes it to the Selenium Server
-for processing a specific action or test against the application under test 
-(AUT).  The client library
-also receives the result of that command and passes it back to your program.
-Your program can receive the result and store it into a program variable and
-report it as a success or failure, 
-or possibly take corrective action if it was an unexpected error. 
+La librería del cliente toma un comando Selenese y lo
+pasa al servidor Selenium para procesar una acción o prueba
+específica contra la aplicación bajo prueba (AUT). La
+librería del cliente también recibe el resultado de ese
+comando y lo devuelve a tu programa. Tu programa puede
+recibir el resultado y almacenarlo en una variable del
+programa e informarlo como un éxito o un fracaso, o
+posiblemente tomar medidas correctivas si fue un error
+inesperado.
 
-So to create a test program, you simply write a program that runs 
-a set of Selenium commands using a client library API.  And, optionally, if 
-you already have a Selenese test script created in the Selenium-IDE, you can 
-*generate the Selenium RC code*. The Selenium-IDE can translate (using its 
-Export menu item) its Selenium commands into a client-driver's API function 
-calls.  See the Selenium-IDE chapter for specifics on exporting RC code from 
-Selenium-IDE.
+Entonces, para crear un programa de prueba, simplemente
+escribe un programa que ejecute un conjunto de comandos
+de Selenium utilizando una API de la librería del cliente.
+Y, opcionalmente, si ya tienes un script de prueba Selenese
+creado en Selenium-IDE, puedes *generar el código Selenium RC*.
+Selenium-IDE puede traducir (utilizando los elementos del
+menú  Exportar) tus comandos Selenium en las llamadas
+a la función API de un cliente-controlador. Consulta el capítulo
+Selenium-IDE para obtener información específica sobre la
+exportación de código RC de Selenium-IDE.
 
-## Installation
+## Instalación
 
-Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the [downloads page](https://selenium.dev/downloads/).
+La instalación es más bien un nombre inapropiado para Selenium.
+Selenium tiene un conjunto de librerías disponibles
+en el lenguaje de programación que elijas. Puedes descargarlos desde la
+[pagina de descarga](https://selenium.dev/downloads/).
 
-Once you've chosen a language to work with, you simply need to:
+Una vez que hayas elegido un lenguaje para trabajar, simplemente necesitas:
 
-* Install the Selenium RC Server.
-* Set up a programming project using a language specific client driver.
+* Instalar el servidor Selenium RC.
+* Configurar un proyecto de programación utilizando un controlador de cliente específico del lenguaje.
 
-### Installing Selenium Server
+### Instalando Selenium Server
 
-The Selenium RC server is simply a Java *jar* file (*selenium-server-standalone-<version-number>.jar*), which doesn't
-require any special installation. Just downloading the zip file and extracting the 
-server in the desired directory is sufficient. 
+El servidor Selenium RC es simplemente un archivo Java *jar*
+(*selenium-server-standalone-<version-number>.jar*), que no
+requiere una instalación especial. Simplemente descargando el archivo zip y extrayendo el servidor en el directorio deseado es suficiente.
 
-### Running Selenium Server
+### Ejecutando Selenium Server
 
-Before starting any tests you must start the server.  Go to the directory
-where Selenium RC's server is located and run the following from a command-line 
-console.
+Antes de comenzar cualquier prueba, debes iniciar el servidor.
+Ve al directorio donde se encuentra el servidor de Selenium RC 
+y ejecuta lo siguiente desde una consola línea de comandos.
 
 ```shell
     java -jar selenium-server-standalone-<version-number>.jar
 ```
 
-This can be simplified by creating
-a batch or shell executable file (.bat on Windows and .sh on Linux) containing the command
-above. Then make a shortcut to that executable on your
-desktop and simply double-click the icon to start the server.
+Esto se puede simplificar creando un archivo ejecutable
+batch o shell (.bat en Windows y .sh en Linux) que contiene el comando
+anterior. Luego haz un acceso directo a ese ejecutable en tu
+escritorio y simplemente haz doble clic en el icono para iniciar el servidor.
 
-For the server to run you'll need Java installed 
-and the PATH environment variable correctly configured to run it from the console.
-You can check that you have Java correctly installed by running the following
-on a console.
+Para que el servidor se ejecute, necesitarás Java instalado
+y la variable de entorno PATH configurada correctamente para ejecutarla desde la consola.
+Puedes verificar que tienes Java instalado correctamente ejecutando lo siguiente
+en una consola
 
 ```shell
        java -version
 ```
 
-If you get a version number (which needs to be 1.5 or later), you're ready to start using Selenium RC.
+Si obtienes un número de versión (que debe ser 1.5 o posterior), estás listo para comenzar a usar Selenium RC.
 
-### Using the Java Client Driver
+### Utilizando el controlador de cliente Java
 
-* Download Selenium java client driver zip from the SeleniumHQ [downloads page](https://selenium.dev/downloads/).
-* Extract selenium-java-<version-number>.jar file
-* Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
-* Create a java project.
-* Add the selenium-java-<version-number>.jar files to your project as references.
-* Add to your project classpath the file selenium-java-<version-number>.jar.
-* From Selenium-IDE, export a script to a Java file and include it in your Java
-  project, or write your Selenium test in Java using the selenium-java-client API.
-  The API is presented later in this chapter.  You can either use JUnit, or TestNg
-  to run your test, or you can write your own simple main() program.  These concepts are
-  explained later in this section.
-* Run Selenium server from the console.
-* Execute your test from the Java IDE or from the command-line.
+* Descarga el zip del controlador del cliente Java de Selenium desde
+SeleniumHQ [página de descargas](https://selenium.dev/downloads/).
+* Extrae el archivo selenium-java-<version-number>.jar
+* Abra tu IDE de Java deseado (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
+* Crea un proyecto java.
+* Agregaa los archivos selenium-java-<version-number>.jar a tu proyecto como referencias.
+* Agrega a tu classpath de proyecto el archivo selenium-java-<version-number>jar.
+* Desde Selenium-IDE, exporta un script a un archivo Java e inclúyelo en tu
+proyecto Java, o escribe tu prueba de Selenium en Java usando la API selenium-java-client. La API se presenta más adelante en este capítulo.
+Puedes usar JUnit o TestNg para ejecutar tu prueba, o puedes escribir tu propio programa main() simple. Estos conceptos son explicados más adelante en esta sección.
+* Ejecuta el servidor Selenium desde la consola.
+* Ejecuta tu prueba desde el IDE de Java o desde la línea de comandos.
 
-For details on Java test project configuration, see the Appendix sections
-Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.
+Para obtener detalles sobre la configuración del proyecto de prueba Java, consulta las secciones del Apéndice: Configuración de Selenium RC con Eclipse y Configuración de Selenium RC con IntelliJ.
 
-### Using the Python Client Driver 
+### Utilizando el controlador de cliente Python
 
-* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](https://selenium.dev/downloads/) 
-* Either write your Selenium test in Python or export
-  a script from Selenium-IDE to a python file.
-* Run Selenium server from the console
-* Execute your test from a console or your Python IDE 
+* Instala Selenium via PIP, las instrucciones están en SeleniumHQ
+[pagina de descargas](https://selenium.dev/downloads/) 
+* Escribe tu prueba de Selenium en Python o exporta
+un script de Selenium-IDE a un archivo de Python.
+* Ejecuta el servidor Selenium desde la consola.
+* Ejecuta tu prueba desde una consola o tu IDE de Python.
 
-For details on Python client driver configuration, see the appendix Python Client Driver Configuration.
+Para obtener detalles sobre la configuración del controlador del cliente Python, consulte el Apéndice: Configuración del controlador del cliente Python.
 
 ### Using the .NET Client Driver
 
