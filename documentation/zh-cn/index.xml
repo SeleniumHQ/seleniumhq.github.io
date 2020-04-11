@@ -132,7 +132,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4482 commits 
-@barancev2884 commits 
+@barancev2891 commits 
 @jimevans2292 commits 
 @jleyba1464 commits</description>
     </item>
@@ -181,16 +181,6 @@ java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=6
       <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/</guid>
       <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
  How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests. But what of users who already have suites of existing tests? This guide is designed to demonstrate how to migrate your existing tests to the new APIs, allowing all new tests to be written using the new features offered by WebDriver.</description>
-    </item>
-    
-    <item>
-      <title>Remote WebDriver client</title>
-      <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.example.com, running our tests on Firefox.</description>
     </item>
     
     <item>
@@ -276,6 +266,16 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
       <description>可以通过使用插件扩展 Selenium。这里有一些由第三方创建和维护的插件。有关如何创建插件和使用的更多信息，请参考文档。
 请注意，Selenium 项目不支持、维护、托管或认可这些插件。另外，请注意，下面列出的插件不一定是 Apache 2.0 授权的。 其中一些插件在其他的免费和开源软件许可下可用；其他的只能在私有许可下使用。关于插件及其发行许可的任何问题都需要向它的开发人员提出。
    浏览器 最新版 变更记录 问题追踪     Mozilla GeckoDriver 最新版 变更记录 问题追踪   Google Chrome Driver 最新版 变更记录 问题追踪   Opera 最新版 - 问题追踪   Microsoft Edge Driver 最新版 - 问题追踪   SafariDriver 内置 - 问题追踪    </description>
+    </item>
+    
+    <item>
+      <title>远程WebDriver客户端</title>
+      <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</guid>
+      <description>要运行远程WebDriver客户端, 我们首先需要连接到RemoteWebDriver. 为此, 我们将URL指向运行测试的服务器的地址. 为了自定义我们的配置, 我们设置了既定的功能. 下面是一个实例化样例, 其指向我们的远程Web服务器 www.example.com 的远程WebDriver对象, 并在Firefox上运行测试.
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.</description>
     </item>
     
     <item>
