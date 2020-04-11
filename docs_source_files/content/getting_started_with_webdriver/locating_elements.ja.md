@@ -162,7 +162,7 @@ idは動作がとても速い傾向があり、複雑なDOMトラバースに伴
 XPathはCSSセレクタと同様に動作しますが、シンタックスは複雑で大抵の場合デバッグが困難です。
 XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。
 
-link textセレクタとpartial link textセレクタはa要素でしか動作しないという欠点があります。
+link textセレクタとpartial _linkText_ セレクタはa要素でしか動作しないという欠点があります。
 加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。
 
 タグ名によるロケータは危険な方法になり得ます。
@@ -171,3 +171,161 @@ link textセレクタとpartial link textセレクタはa要素でしか動作�
 ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
 WebDriverでDOM構造のトラバースを行うのは重い処理となります。
 検索の範囲を狭めた方がより良い結果を得られます。
+
+## Relative Locators
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*
+
+_findElement_ method now accepts a new method `withTagName()` 
+which returns a RelativeLocator. 
+
+### How does it work
+
+Selenium uses the JavaScript function 
+[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+to find the relative elements. This function returns 
+properties of an element such as 
+right, left, bottom, and top.
+
+
+### above()
+
+Returns the WebElement, which appears 
+above to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### below()
+
+Returns the WebElement, which appears 
+below to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toLeftOf()
+
+Returns the WebElement, which appears 
+to left of specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toRightOf()
+
+Returns the WebElement, which appears 
+to right of the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### near()
+
+Returns the WebElement, which is
+at most `50px` away from the specified element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}

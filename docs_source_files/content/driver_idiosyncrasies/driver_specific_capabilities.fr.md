@@ -3,18 +3,14 @@ title: "Capabilities spécifiques du Driver"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### Définir les Capabilities à l'aide de "FirefoxOptions"
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` est la nouvelle façon 
+de définir les capacités de Firefox
+navigateur et doit généralement être 
+utilisé de préférence à DesiredCapabilities.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -57,9 +53,10 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### Définition d'un profil personnalisé
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+Il est possible de créer un profil 
+personnalisé pour Firefox comme illustré ci-dessous.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -111,9 +108,13 @@ driver = RemoteWebDriver(options)
 
 ### fileUploadDialogTimeout
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+Dans certains environnements, Internet Explorer 
+peut expirer lors de l'ouverture du
+Boîte de dialogue Téléchargement de fichier. 
+IEDriver a un délai d'expiration par 
+défaut de 1000 ms, mais vous
+peut augmenter le délai d'expiration 
+à l'aide de la fonction fileUploadDialogTimeout.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -137,7 +138,11 @@ options.file_upload_dialog_timeout = 2000
 driver = Selenium::WebDriver.for(:ie, options: options)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options().fileUploadDialogTimeout(2000);
+let driver = await Builder()
+          .setIeOptions(options)
+          .build(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val options = InternetExplorerOptions()

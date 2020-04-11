@@ -745,9 +745,9 @@ driver.findElement(By.tagName("button")).click()
 
 ### 使用索引
 
-It is also possible to use the index of the frame, such as can be
-queried using _window.frames_ in JavaScript.
-还可以使用框架的索引，比如可以使用 JavaScript 中的 _window.frames_查询。
+还可以使用frame的索引，
+例如可以使用JavaScript中的
+ _window.frames_ 进行查询.
 
 {{<code-tab>}}
   {{<code-panel language="java">}}
@@ -1002,14 +1002,13 @@ driver.manage().window().position = Point(0,0)
   {{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
 {{</ code-tab>}}
 
-### Minimize window
-Minimizes the window of current browsing context. 
-The exact behavior of this command is specific to 
-individual window managers. 
+### 最小化窗口
+最小化当前浏览上下文的窗口.
+这种命令的精准行为将作用于各个特定的窗口管理器. 
  
-Minimize Window typically hides the window in the system tray.
+最小化窗口通常将窗口隐藏在系统托盘中.
 
-__Note: This feature works with Selenium 4 and later versions.__
+__注意: 此功能适用于Selenium 4以及更高版本.__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}

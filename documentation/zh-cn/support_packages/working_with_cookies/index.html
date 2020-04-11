@@ -11,20 +11,20 @@
     <title>同cookies一起工作 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1585837727" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1585837727" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1586540821" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1586540821" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1585837727" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1586540821" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1586540821"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1585837727"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1585837727"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1586540821"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1586540821"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1585837727"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1586540821"></script>
 
     
   </div>
@@ -210,9 +210,9 @@
  
   
     
-      <li data-nav-id="/introduction/types_of_testing/" title="Types of testing" class="dd-item ">
+      <li data-nav-id="/introduction/types_of_testing/" title="测试的类型" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/">
-        Types of testing
+        测试的类型
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1929,7 +1929,7 @@
 <li><a href="#获取全部-cookies">获取全部 Cookies</a></li>
 <li><a href="#删除-cookie">删除 Cookie</a></li>
 <li><a href="#删除所有-cookies">删除所有 Cookies</a></li>
-<li><a href="#same-site-cookie-attribute">Same-Site Cookie Attribute</a></li>
+<li><a href="#same-site-cookie属性">Same-Site Cookie属性</a></li>
 <li><a href="#strict">Strict:</a></li>
 <li><a href="#lax">Lax:</a></li>
 </ul></li>
@@ -2885,27 +2885,26 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </div>
 </div>
 
-<h2 id="same-site-cookie-attribute">Same-Site Cookie Attribute</h2>
+<h2 id="same-site-cookie属性">Same-Site Cookie属性</h2>
 
-<p>It allows a user to instruct browsers to control whether cookies
-are sent along with the request initiated by third party sites.
-It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.</p>
+<p>此属性允许用户引导浏览器控制cookie, 是否与第三方站点发起的请求一起发送.
+引入其是为了防止CSRF（跨站请求伪造）攻击.</p>
 
-<p>Same-Site cookie attribute accepts two parameters as instructions</p>
+<p>Same-Site cookie属性接受以下两种参数作为指令</p>
 
 <h2 id="strict">Strict:</h2>
 
-<p>When the sameSite attribute is set as <strong>Strict</strong>,
-the cookie will not be sent along with
-requests initiated by third party websites.</p>
+<p>当sameSite属性设置为 <strong>Strict</strong>,
+cookie不会与来自第三方网站的请求一起发送.</p>
 
 <h2 id="lax">Lax:</h2>
 
-<p>When you set a cookie sameSite attribute to <strong>Lax</strong>,
-the cookie will be sent along with the GET
-request initiated by third party website.</p>
+<p>当您将cookie sameSite属性设置为 <strong>Lax</strong>,
+cookie将与第三方网站发起的GET请求一起发送.</p>
 
-<p><strong>Note</strong>: <strong>As of now this feature is landed in chrome(80+version) and works with Selenium 4 and later versions.</strong></p>
+<p><strong>注意</strong>: <strong>到目前为止,
+此功能已适配于chrome (80+ version) 中,
+并适用于Selenium 4以及更高版本.</strong></p>
 
 
 
@@ -3073,7 +3072,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/">
       “同cookies一起工作”
-    </a> was last updated on: 26 Mar 2020 00:00:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/8c77b04e9c6b2952f7d3bf577cd2acb26a5d815a">Add: Adding Ruby code sample for same_site cookie attribute [deploy site] (8c77b04e)</a>
+    </a> was last updated on: 04 Apr 2020 16:43:23 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/e804749b4ff2c68f2809ed72d2b0239c7c2b89a2">Update Chinese translation of &#34;working_with_cookies&#34; (#394) (e804749b)</a>
 </h5>
         
         </div> 
@@ -4238,19 +4237,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1586540821"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1585837727"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1585837727"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1586540821"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1586540821"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1585837727" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1585837727"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1586540821" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1586540821"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

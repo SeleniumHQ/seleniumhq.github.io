@@ -182,7 +182,7 @@ plus compliquée à débugguer. Même si les sélecteur XPath sont très flexibl
 ils sont rarement testés d'un point de vue performance par les fournisseurs de navigateur
 et ont donc tendance à être assez lents.
 
-Les stratégies basés sur link text et partial link text sont
+Les stratégies basés sur _linkText_ et _partialLinkText_ sont
 contraingnantes du fait qu'elles ne fonctionnent 
 que sur des éléments de type lien hypertexte. De plus, elles
 sont implémentées au sein de WebDriver via des sélecteurs XPath.
@@ -195,3 +195,161 @@ _findElements(By)_, renvoyant une collection des élements.
 Au final, la recommendation est de garder ses sélecteurs aussi compacts et lisibles que possible.
 Demander à WebDriver de traverser la structure du DOM est une opération très coûteuse,
 de fait plus le scope de recherche sera restreint, meilleures seront les performances.
+
+## Relative Locators
+
+**Selenium 4** brings Relative Locators which are previously 
+called as _Friendly Locators_. This functionality was 
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*
+
+_findElement_ method now accepts a new method `withTagName()` 
+which returns a RelativeLocator. 
+
+### How does it work
+
+Selenium uses the JavaScript function 
+[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+to find the relative elements. This function returns 
+properties of an element such as 
+right, left, bottom, and top.
+
+
+### above()
+
+Returns the WebElement, which appears 
+above to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### below()
+
+Returns the WebElement, which appears 
+below to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toLeftOf()
+
+Returns the WebElement, which appears 
+to left of specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toRightOf()
+
+Returns the WebElement, which appears 
+to right of the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### near()
+
+Returns the WebElement, which is
+at most `50px` away from the specified element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
