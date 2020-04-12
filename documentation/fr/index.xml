@@ -338,8 +338,8 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
+      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si une fonctionnalité ou un système répond aux attentes et exigences du client. Ce type de test implique généralement le client la coopération ou la rétroaction, étant une activité de validation qui répond à la question: &amp;gt; Construisons-nous le produit non?.
+Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur.</description>
     </item>
     
     <item>
