@@ -3,39 +3,37 @@ title: "Types  de test"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-### Acceptance testing
-This type of testing is done to determine if a feature or system
-meets the customer expectations and requirements. 
-This type of testing generally involves the customer's 
-cooperation or feedback, being a validation activity that
-answers the question:
->Are we building the **_right_** product?.
+### Test d'acceptation
 
-For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behaviour.
-This simulation could be done by record/playback or through the
-different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
+Ce type de test est effectué pour déterminer si 
+une fonctionnalité ou un système
+répond aux attentes et exigences du client.
+Ce type de test implique généralement le client
+la coopération ou la rétroaction, étant une activité de validation qui
+répond à la question:
+> Construisons-nous le produit **_non?_**.
+
+Pour les applications web, l'automatisation de ces tests peut se faire
+directement avec Selenium en simulant le comportement attendu de l'utilisateur.
+Cette simulation peut être effectuée par enregistrement / lecture ou par
+différentes langues prises en charge comme expliqué dans cette documentation.
+Remarque: Les tests d'acceptation sont un sous-type de **_tests fonctionnels_**,
+auquel certaines personnes pourraient également se référer.
             
-### Functional testing
-This type of testing is done to determine if a
-feature or system functions properly without issues. It checks
-the system at different levels to ensure that all scenarios
-are covered and that the system does _what's_ 
-supposed to do. It's a verification activity that
-answers the question:
->Are we building the product **_right?_**.
+### Test fonctionel
+
+Ce type de test est effectué pour déterminer si un
+fonction ou le système fonctionne correctement sans problèmes. Il vérifie
+le système à différents niveaux pour garantir que tous les scénarios
+sont couverts et que le système fait
+censé faire. C'est une activité de vérification qui
+répond à la question:
+> Construisons-nous le produit **_non?_**.
              
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
-(see **_acceptance testing_** above).
+Cela comprend généralement: les tests fonctionnent sans erreur
+(404, exceptions ...), de manière utilisable (redirections correctes),
+de manière accessible et correspondant à ses spécifications
+(voir **_test d'acceptation_** ci-dessus).
 
 Pour les applications Web, l'automatisation de ces tests peut être
 fait directement avec Selenium en simulant les rendements attendus.
