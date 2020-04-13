@@ -318,8 +318,7 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/webdriver/browser_manipulation/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem.</description>
+      <description>Ruby Ruby no esta instalado por defecto en Windows. Puedes descargar la ultima versión y ejecutar el instalador. Puedes dejar todos los parámetros de configuración con los valores por defecto excepto el parámetro Add Ruby executables to your PATH de la pantalla de Installation Destination and Optional Tasks. Para manejar cualquier navegador tienes que instalar la gema de Ruby selenium-webdriver. Para instalarla abre una consola de comando y ejecuta el siguiente comando.</description>
     </item>
     
     <item>

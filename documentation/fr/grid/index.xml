@@ -17,8 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/</guid>
-      <description>  Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+      <description> Point d&amp;rsquo;entrée central pour tous les tests Gestion et contrôle des nœuds / environnement où s&amp;rsquo;exécutent les navigateurs Mise à l&amp;rsquo;échelle Exécution de tests en parallèle Test multiplateforme L&amp;rsquo;équilibrage de charge  </description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/grid/components_of_a_grid/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+      <description>Hub  Intermédiaire et gestionnaire Accepte les demandes d&amp;rsquo;exécution de tests Prend les instructions du client et les exécute à distance sur les nœuds Gère les threads  Un Hub est un point central où tous vos tests sont envoyés. Chaque grille de sélénium se compose exactement d&amp;rsquo;un concentrateur. Le hub doit être accessible des clients respectifs (c.-à-d. serveur CI, machine développeur, etc.) Le concentrateur connectera un ou plusieurs nœuds auquel les tests seront délégués.</description>
     </item>
     
     <item>
