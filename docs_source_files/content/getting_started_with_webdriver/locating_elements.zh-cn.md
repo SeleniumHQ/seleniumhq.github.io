@@ -155,6 +155,8 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 建议您尽可能保持定位器的紧凑性和可读性。使用 WebDriver 遍历 DOM 结构是一项性能花销很大的操作，搜索范围越小越好。
 
+## Relative Locators
+
 **Selenium 4** brings Relative Locators which are previously 
 called as _Friendly Locators_. This functionality was 
 added to help you locate elements that are nearby other elements.
@@ -165,3 +167,148 @@ The Available Relative Locators are:
 * *toLeftOf*
 * *toRightOf*
 * *near*
+
+_findElement_ method now accepts a new method `withTagName()` 
+which returns a RelativeLocator. 
+
+### How does it work
+
+Selenium uses the JavaScript function 
+[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+to find the relative elements. This function returns 
+properties of an element such as 
+right, left, bottom, and top.
+
+
+### above()
+
+Returns the WebElement, which appears 
+above to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### below()
+
+Returns the WebElement, which appears 
+below to the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toLeftOf()
+
+Returns the WebElement, which appears 
+to left of specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toRightOf()
+
+Returns the WebElement, which appears 
+to right of the specified element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### near()
+
+Returns the WebElement, which is
+at most `50px` away from the specified element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}

@@ -11,20 +11,20 @@
     <title>定位元素 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1586110921" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1586110921" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1586703529" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1586703529" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1586110921" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1586703529" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1586110921"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1586703529"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1586110921"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1586110921"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1586703529"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1586703529"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1586110921"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1586703529"></script>
 
     
   </div>
@@ -726,9 +726,9 @@
  
   
     
-      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="Remote WebDriver client" class="dd-item ">
+      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="远程WebDriver客户端" class="dd-item ">
         <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/">
-        Remote WebDriver client
+        远程WebDriver客户端
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1931,6 +1931,15 @@
 <li><a href="#元素选择策略">元素选择策略</a></li>
 <li><a href="#使用选择器的提示">使用选择器的提示</a></li>
 </ul></li>
+<li><a href="#relative-locators">Relative Locators</a>
+<ul>
+<li><a href="#how-does-it-work">How does it work</a></li>
+<li><a href="#above">above()</a></li>
+<li><a href="#below">below()</a></li>
+<li><a href="#toleftof">toLeftOf()</a></li>
+<li><a href="#torightof">toRightOf()</a></li>
+<li><a href="#near">near()</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -2421,6 +2430,8 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 
 <p>建议您尽可能保持定位器的紧凑性和可读性。使用 WebDriver 遍历 DOM 结构是一项性能花销很大的操作，搜索范围越小越好。</p>
 
+<h2 id="relative-locators">Relative Locators</h2>
+
 <p><strong>Selenium 4</strong> brings Relative Locators which are previously
 called as <em>Friendly Locators</em>. This functionality was
 added to help you locate elements that are nearby other elements.
@@ -2434,6 +2445,487 @@ The Available Relative Locators are:</p>
 <li><em>near</em></li>
 </ul>
 
+<p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
+which returns a RelativeLocator.</p>
+
+<h3 id="how-does-it-work">How does it work</h3>
+
+<p>Selenium uses the JavaScript function
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a>
+to find the relative elements. This function returns
+properties of an element such as
+right, left, bottom, and top.</p>
+
+<h3 id="above">above()</h3>
+
+<p>Returns the WebElement, which appears
+above to the specified element</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    
+    <label for="tab0code4">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4">
+    
+    <label for="tab1code4">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4">
+    
+    <label for="tab2code4">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4">
+    
+    <label for="tab3code4">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
+    
+    <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a pr
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="below">below()</h3>
+
+<p>Returns the WebElement, which appears
+below to the specified element</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    
+    <label for="tab0code5">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5">
+    
+    <label for="tab1code5">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5">
+    
+    <label for="tab2code5">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5">
+    
+    <label for="tab3code5">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
+    
+    <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a pr
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="toleftof">toLeftOf()</h3>
+
+<p>Returns the WebElement, which appears
+to left of specified element</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode6" id="tab0code6" aria-controls="javacode6" checked>
+    
+    <label for="tab0code6">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab1code6" aria-controls="pythoncode6">
+    
+    <label for="tab1code6">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab2code6" aria-controls="cscode6">
+    
+    <label for="tab2code6">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab3code6" aria-controls="rubycode6">
+    
+    <label for="tab3code6">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab4code6" aria-controls="javascriptcode6">
+    
+    <label for="tab4code6">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode6" id="tab5code6" aria-controls="kotlincode6">
+    
+    <label for="tab5code6">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a pr
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode6" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="torightof">toRightOf()</h3>
+
+<p>Returns the WebElement, which appears
+to right of the specified element</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode7" id="tab0code7" aria-controls="javacode7" checked>
+    
+    <label for="tab0code7">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab1code7" aria-controls="pythoncode7">
+    
+    <label for="tab1code7">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab2code7" aria-controls="cscode7">
+    
+    <label for="tab2code7">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab3code7" aria-controls="rubycode7">
+    
+    <label for="tab3code7">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
+    
+    <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a pr
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="near">near()</h3>
+
+<p>Returns the WebElement, which is
+at most <code>50px</code> away from the specified element.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode8" id="tab0code8" aria-controls="javacode8" checked>
+    
+    <label for="tab0code8">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab1code8" aria-controls="pythoncode8">
+    
+    <label for="tab1code8">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab2code8" aria-controls="cscode8">
+    
+    <label for="tab2code8">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab3code8" aria-controls="rubycode8">
+    
+    <label for="tab3code8">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
+    
+    <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a pr
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2442,7 +2934,7 @@ The Available Relative Locators are:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/locating_elements/">
       “定位元素”
-    </a> was last updated on: 05 Apr 2020 23:50:27 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a74c81a233e47bcc029d171cdcc8188360eb2845">Add: Adding Relative Locators concept in doc [deploy site] (a74c81a2)</a>
+    </a> was last updated on: 07 Apr 2020 23:25:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/bb8a0149edf1f4e310a2c15b2346abcf90846bc0">Modify:Updating doc on Relative Locators[deploy site] (bb8a0149)</a>
 </h5>
         
         </div> 
@@ -3607,19 +4099,19 @@ The Available Relative Locators are:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1586110921"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1586703529"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1586110921"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1586110921"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1586703529"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1586703529"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1586110921" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1586110921"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1586703529" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1586703529"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

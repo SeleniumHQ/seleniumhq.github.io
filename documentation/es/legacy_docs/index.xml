@@ -18,8 +18,8 @@
       
       <guid>https://selenium.dev/documentation/es/legacy_docs/selenium_rc/</guid>
       <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
-How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
+ Introducción Selenium RC fue el principal proyecto de Selenium durante mucho tiempo, antes de que la union de WebDriver/Selenium resultaran en Selenium 2, una herramienta más poderosa. Vale la pena resaltar que Selenium 1 ya no es soportado.
+Como funciona Selenium RC Primero, describiremos cómo funcionan los componentes de Selenium RC y el papel que desempeña cada uno en la ejecución tus scripts de prueba.</description>
     </item>
     
     <item>
@@ -38,9 +38,8 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/legacy_docs/html-runner/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
-Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor).</description>
+      <description>Selenium HTML-runner te permite ejecutar Test Suites desde una línea de comando. Las suites de prueba son exportaciones HTML de Selenium IDE o herramientas de compatibles.
+Información común  Combinaciónes de versiones de geckodriver / firefox / selenium-html-runner importan. Puede haber una matriz de compatibilidad de software en alguna parte. selenium-html-runner solo ejecuta Test Suites (no Test Cases - por ejemplo, una exportación desde Monitis Transaction Monitor). Asegurate que cumples con esto.</description>
     </item>
     
     <item>

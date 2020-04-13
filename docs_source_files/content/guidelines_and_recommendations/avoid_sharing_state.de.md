@@ -19,4 +19,4 @@ pick up the same order you are likely to get unexpected behaviour.
 test e.g. invalid order records.
 
 * Create a new WebDriver instance per test. This helps ensure test isolation
-and makes parallelisation simpler.
+and makes parallelization simpler.

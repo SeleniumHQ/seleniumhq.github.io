@@ -11,20 +11,20 @@
     <title>Selenium 1 (Selenium RC) :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1586110916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1586110916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1586703524" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1586703524" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1586110916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1586703524" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1586110916"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1586703524"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1586110916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1586110916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1586703524"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1586703524"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1586110916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1586703524"></script>
 
     
   </div>
@@ -1924,19 +1924,19 @@
 <ul>
 <li>
 <ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#how-selenium-rc-works">How Selenium RC Works</a>
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#como-funciona-selenium-rc">Como funciona Selenium RC</a>
 <ul>
-<li><a href="#rc-components">RC Components</a></li>
+<li><a href="#componentes-de-rc">Componentes de RC</a></li>
 <li><a href="#selenium-server">Selenium Server</a></li>
-<li><a href="#client-libraries">Client Libraries</a></li>
+<li><a href="#librerías-de-clientes">Librerías de Clientes</a></li>
 </ul></li>
-<li><a href="#installation">Installation</a>
+<li><a href="#instalación">Instalación</a>
 <ul>
-<li><a href="#installing-selenium-server">Installing Selenium Server</a></li>
-<li><a href="#running-selenium-server">Running Selenium Server</a></li>
-<li><a href="#using-the-java-client-driver">Using the Java Client Driver</a></li>
-<li><a href="#using-the-python-client-driver">Using the Python Client Driver</a></li>
+<li><a href="#instalando-selenium-server">Instalando Selenium Server</a></li>
+<li><a href="#ejecutando-selenium-server">Ejecutando Selenium Server</a></li>
+<li><a href="#utilizando-el-controlador-de-cliente-java">Utilizando el controlador de cliente Java</a></li>
+<li><a href="#utilizando-el-controlador-de-cliente-python">Utilizando el controlador de cliente Python</a></li>
 <li><a href="#using-the-net-client-driver">Using the .NET Client Driver</a></li>
 <li><a href="#using-the-ruby-client-driver">Using the Ruby Client Driver</a></li>
 </ul></li>
@@ -2078,147 +2078,164 @@ it by sending us pull requests!</p>
 </div>
 
 
-<h2 id="introduction">Introduction</h2>
+<h2 id="introducción">Introducción</h2>
 
-<p>Selenium RC was the main Selenium project for a long time, before the
-WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.
-It is worth to highlight that Selenium 1 is not supported anymore.</p>
+<p>Selenium RC fue el principal proyecto de Selenium durante mucho tiempo,
+antes de que la union de WebDriver/Selenium resultaran en Selenium 2,
+una herramienta más poderosa.
+Vale la pena resaltar que Selenium 1 ya no es soportado.</p>
 
-<h2 id="how-selenium-rc-works">How Selenium RC Works</h2>
+<h2 id="como-funciona-selenium-rc">Como funciona Selenium RC</h2>
 
-<p>First, we will describe how the components of Selenium RC operate and the role each plays in running
-your test scripts.</p>
+<p>Primero, describiremos cómo funcionan los componentes de Selenium RC
+y el papel que desempeña cada uno en la ejecución tus scripts de prueba.</p>
 
-<h3 id="rc-components">RC Components</h3>
+<h3 id="componentes-de-rc">Componentes de RC</h3>
 
-<p>Selenium RC components are:</p>
+<p>Los componentes de Selenium RC son:</p>
 
 <ul>
-<li>The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an <em>HTTP proxy</em>, intercepting and verifying HTTP messages passed between the browser and the AUT.</li>
-<li>Client libraries which provide the interface between each programming language and the Selenium RC Server.</li>
+<li>El servidor Selenium que inicia y finaliza navegadores,
+interpreta y ejecuta los comandos Selenese pasados del programa
+de prueba, y actúa como un <em>proxy HTTP</em>, interceptando y verificando
+los mensajes HTTP pasados entre el navegador y el AUT.</li>
+<li>Librerías de clientes que proporcionan la interfaz entre cada lenguaje de programación y Selenium RC Server.</li>
 </ul>
 
-<p>Here is a simplified architecture diagram:</p>
+<p>Aquí hay un diagrama simplificado de la arquitectura:</p>
 
 <p><img src="https://selenium.dev/documentation/es/images/legacy_docs/selenium_rc_architecture_diagram_simple.png" alt="Architecture Diagram Simple" /></p>
 
-<p>The diagram shows the client libraries communicate with the
-Server passing each Selenium command for execution. Then the server passes the
-Selenium command to the browser using Selenium-Core JavaScript commands. The
-browser, using its JavaScript interpreter, executes the Selenium command. This
-runs the Selenese action or verification you specified in your test script.</p>
+<p>El diagrama muestra que las librerías del cliente se comunican con el
+el servidor pasando cada comando Selenium para su ejecución.
+Entonces el servidor pasa el comando Selenium al navegador utilizando
+los comandos JavaScript de Selenium-Core.
+El navegador, utilizando su intérprete de JavaScript, ejecuta el comando Selenium. Esta ejecuta la acción o verificación de Selenese que
+especificas en tu script de prueba.</p>
 
 <h3 id="selenium-server">Selenium Server</h3>
 
-<p>Selenium Server receives Selenium commands from your test program,
-interprets them, and reports back to your program the results of
-running those tests.</p>
+<p>Selenium Server recibe comandos de Selenium de tu programa
+de prueba, los interpreta e informa a tu programa los
+resultados de ejecutar esas pruebas.</p>
 
-<p>The RC server bundles Selenium Core and automatically injects
-it into the browser. This occurs when your test program opens the
-browser (using a client library API function).
-Selenium-Core is a JavaScript program, actually a set of JavaScript
-functions which interprets and executes Selenese commands using the
-browser&rsquo;s built-in JavaScript interpreter.</p>
+<p>El servidor RC agrupa Selenium Core y automáticamente
+lo inyecta en el navegador. Esto ocurre cuando tu
+programa de prueba abre el navegador (utilizando una
+función del API de la librería del cliente). Selenium-Core es un
+programa de JavaScript, en realidad un conjunto de funciones
+JavaScript que interpretan y ejecutan comandos
+Selenese utilizando el intérprete de JavaScript incorporado
+en el navegador.</p>
 
-<p>The Server receives the Selenese commands from your test program
-using simple HTTP GET/POST requests. This means you can use any
-programming language that can send HTTP requests to automate
-Selenium tests on the browser.</p>
+<p>El servidor recibe los comandos Selenese de tu programa de
+prueba utilizando simples solicitudes HTTP GET/POST.
+Esto significa que puedes usar cualquier lenguaje de programación
+que pueda enviar solicitudes HTTP para automatizar pruebas
+de Selenium en el navegador.</p>
 
-<h3 id="client-libraries">Client Libraries</h3>
+<h3 id="librerías-de-clientes">Librerías de Clientes</h3>
 
-<p>The client libraries provide the programming support that allows you to
-run Selenium commands from a program of your own design.  There is a
-different client library for each supported language.  A Selenium client
-library provides a programming interface (API), i.e., a set of functions,
-which run Selenium commands from your own program. Within each interface,
-there is a programming function that supports each Selenese command.</p>
+<p>Las librerías del cliente proporcionan el soporte de
+programación que te permiten ejecutar comandos Selenium desde
+un programa de tu propio diseño. Hay una librería cliente
+diferente para cada lenguaje compatible. Una librería
+cliente de Selenium proporciona una interfaz de
+programación (API), es decir, un conjunto de funciones,
+que ejecuta comandos de Selenium desde tu propio programa.
+Dentro de cada interfaz, hay una función de programación
+que soporta cada comando de Selenese.</p>
 
-<p>The client library takes a Selenese command and passes it to the Selenium Server
-for processing a specific action or test against the application under test
-(AUT).  The client library
-also receives the result of that command and passes it back to your program.
-Your program can receive the result and store it into a program variable and
-report it as a success or failure,
-or possibly take corrective action if it was an unexpected error.</p>
+<p>La librería del cliente toma un comando Selenese y lo
+pasa al servidor Selenium para procesar una acción o prueba
+específica contra la aplicación bajo prueba (AUT). La
+librería del cliente también recibe el resultado de ese
+comando y lo devuelve a tu programa. Tu programa puede
+recibir el resultado y almacenarlo en una variable del
+programa e informarlo como un éxito o un fracaso, o
+posiblemente tomar medidas correctivas si fue un error
+inesperado.</p>
 
-<p>So to create a test program, you simply write a program that runs
-a set of Selenium commands using a client library API.  And, optionally, if
-you already have a Selenese test script created in the Selenium-IDE, you can
-<em>generate the Selenium RC code</em>. The Selenium-IDE can translate (using its
-Export menu item) its Selenium commands into a client-driver&rsquo;s API function
-calls.  See the Selenium-IDE chapter for specifics on exporting RC code from
-Selenium-IDE.</p>
+<p>Entonces, para crear un programa de prueba, simplemente
+escribe un programa que ejecute un conjunto de comandos
+de Selenium utilizando una API de la librería del cliente.
+Y, opcionalmente, si ya tienes un script de prueba Selenese
+creado en Selenium-IDE, puedes <em>generar el código Selenium RC</em>.
+Selenium-IDE puede traducir (utilizando los elementos del
+menú  Exportar) tus comandos Selenium en las llamadas
+a la función API de un cliente-controlador. Consulta el capítulo
+Selenium-IDE para obtener información específica sobre la
+exportación de código RC de Selenium-IDE.</p>
 
-<h2 id="installation">Installation</h2>
+<h2 id="instalación">Instalación</h2>
 
-<p>Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the <a href="https://selenium.dev/downloads/">downloads page</a>.</p>
+<p>La instalación es más bien un nombre inapropiado para Selenium.
+Selenium tiene un conjunto de librerías disponibles
+en el lenguaje de programación que elijas. Puedes descargarlos desde la
+<a href="https://selenium.dev/downloads/">pagina de descarga</a>.</p>
 
-<p>Once you&rsquo;ve chosen a language to work with, you simply need to:</p>
+<p>Una vez que hayas elegido un lenguaje para trabajar, simplemente necesitas:</p>
 
 <ul>
-<li>Install the Selenium RC Server.</li>
-<li>Set up a programming project using a language specific client driver.</li>
+<li>Instalar el servidor Selenium RC.</li>
+<li>Configurar un proyecto de programación utilizando un controlador de cliente específico del lenguaje.</li>
 </ul>
 
-<h3 id="installing-selenium-server">Installing Selenium Server</h3>
+<h3 id="instalando-selenium-server">Instalando Selenium Server</h3>
 
-<p>The Selenium RC server is simply a Java <em>jar</em> file (<em>selenium-server-standalone-<version-number>.jar</em>), which doesn&rsquo;t
-require any special installation. Just downloading the zip file and extracting the
-server in the desired directory is sufficient.</p>
+<p>El servidor Selenium RC es simplemente un archivo Java <em>jar</em>
+(<em>selenium-server-standalone-<version-number>.jar</em>), que no
+requiere una instalación especial. Simplemente descargando el archivo zip y extrayendo el servidor en el directorio deseado es suficiente.</p>
 
-<h3 id="running-selenium-server">Running Selenium Server</h3>
+<h3 id="ejecutando-selenium-server">Ejecutando Selenium Server</h3>
 
-<p>Before starting any tests you must start the server.  Go to the directory
-where Selenium RC&rsquo;s server is located and run the following from a command-line
-console.</p>
+<p>Antes de comenzar cualquier prueba, debes iniciar el servidor.
+Ve al directorio donde se encuentra el servidor de Selenium RC
+y ejecuta lo siguiente desde una consola línea de comandos.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">    java -jar selenium-server-standalone-&lt;version-number&gt;.jar</code></pre></div>
-<p>This can be simplified by creating
-a batch or shell executable file (.bat on Windows and .sh on Linux) containing the command
-above. Then make a shortcut to that executable on your
-desktop and simply double-click the icon to start the server.</p>
+<p>Esto se puede simplificar creando un archivo ejecutable
+batch o shell (.bat en Windows y .sh en Linux) que contiene el comando
+anterior. Luego haz un acceso directo a ese ejecutable en tu
+escritorio y simplemente haz doble clic en el icono para iniciar el servidor.</p>
 
-<p>For the server to run you&rsquo;ll need Java installed
-and the PATH environment variable correctly configured to run it from the console.
-You can check that you have Java correctly installed by running the following
-on a console.</p>
+<p>Para que el servidor se ejecute, necesitarás Java instalado
+y la variable de entorno PATH configurada correctamente para ejecutarla desde la consola.
+Puedes verificar que tienes Java instalado correctamente ejecutando lo siguiente
+en una consola</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">       java -version</code></pre></div>
-<p>If you get a version number (which needs to be 1.5 or later), you&rsquo;re ready to start using Selenium RC.</p>
+<p>Si obtienes un número de versión (que debe ser 1.5 o posterior), estás listo para comenzar a usar Selenium RC.</p>
 
-<h3 id="using-the-java-client-driver">Using the Java Client Driver</h3>
-
-<ul>
-<li>Download Selenium java client driver zip from the SeleniumHQ <a href="https://selenium.dev/downloads/">downloads page</a>.</li>
-<li>Extract selenium-java-<version-number>.jar file</li>
-<li>Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)</li>
-<li>Create a java project.</li>
-<li>Add the selenium-java-<version-number>.jar files to your project as references.</li>
-<li>Add to your project classpath the file selenium-java-<version-number>.jar.</li>
-<li>From Selenium-IDE, export a script to a Java file and include it in your Java
-project, or write your Selenium test in Java using the selenium-java-client API.
-The API is presented later in this chapter.  You can either use JUnit, or TestNg
-to run your test, or you can write your own simple main() program.  These concepts are
-explained later in this section.</li>
-<li>Run Selenium server from the console.</li>
-<li>Execute your test from the Java IDE or from the command-line.</li>
-</ul>
-
-<p>For details on Java test project configuration, see the Appendix sections
-Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.</p>
-
-<h3 id="using-the-python-client-driver">Using the Python Client Driver</h3>
+<h3 id="utilizando-el-controlador-de-cliente-java">Utilizando el controlador de cliente Java</h3>
 
 <ul>
-<li>Install Selenium via PIP, instructions linked at SeleniumHQ <a href="https://selenium.dev/downloads/">downloads page</a></li>
-<li>Either write your Selenium test in Python or export
-a script from Selenium-IDE to a python file.</li>
-<li>Run Selenium server from the console</li>
-<li>Execute your test from a console or your Python IDE</li>
+<li>Descarga el zip del controlador del cliente Java de Selenium desde
+SeleniumHQ <a href="https://selenium.dev/downloads/">página de descargas</a>.</li>
+<li>Extrae el archivo selenium-java-<version-number>.jar</li>
+<li>Abra tu IDE de Java deseado (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)</li>
+<li>Crea un proyecto java.</li>
+<li>Agregaa los archivos selenium-java-<version-number>.jar a tu proyecto como referencias.</li>
+<li>Agrega a tu classpath de proyecto el archivo selenium-java-<version-number>jar.</li>
+<li>Desde Selenium-IDE, exporta un script a un archivo Java e inclúyelo en tu
+proyecto Java, o escribe tu prueba de Selenium en Java usando la API selenium-java-client. La API se presenta más adelante en este capítulo.
+Puedes usar JUnit o TestNg para ejecutar tu prueba, o puedes escribir tu propio programa main() simple. Estos conceptos son explicados más adelante en esta sección.</li>
+<li>Ejecuta el servidor Selenium desde la consola.</li>
+<li>Ejecuta tu prueba desde el IDE de Java o desde la línea de comandos.</li>
 </ul>
 
-<p>For details on Python client driver configuration, see the appendix Python Client Driver Configuration.</p>
+<p>Para obtener detalles sobre la configuración del proyecto de prueba Java, consulta las secciones del Apéndice: Configuración de Selenium RC con Eclipse y Configuración de Selenium RC con IntelliJ.</p>
+
+<h3 id="utilizando-el-controlador-de-cliente-python">Utilizando el controlador de cliente Python</h3>
+
+<ul>
+<li>Instala Selenium via PIP, las instrucciones están en SeleniumHQ
+<a href="https://selenium.dev/downloads/">pagina de descargas</a></li>
+<li>Escribe tu prueba de Selenium en Python o exporta
+un script de Selenium-IDE a un archivo de Python.</li>
+<li>Ejecuta el servidor Selenium desde la consola.</li>
+<li>Ejecuta tu prueba desde una consola o tu IDE de Python.</li>
+</ul>
+
+<p>Para obtener detalles sobre la configuración del controlador del cliente Python, consulte el Apéndice: Configuración del controlador del cliente Python.</p>
 
 <h3 id="using-the-net-client-driver">Using the .NET Client Driver</h3>
 
@@ -3699,7 +3716,7 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/legacy_docs/selenium_rc/">
       “Selenium 1 (Selenium RC)”
-    </a> was last updated on: 26 Mar 2020 19:32:31 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/71c68984a50a060d6bae99cb674c0de5df45bf6a">Modify: [EN]-&gt;[FR] Translating docs(working with select elemnts, CAPTCHAS) to french (71c68984)</a>
+    </a> was last updated on: 11 Apr 2020 23:19:12 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/2704e72bfa605e800258a2dffbe79f3ef084f304">Add spanish trnaslation in legacy sites (#399)[deploy site] (2704e72b)</a>
 </h5>
         
         </div> 
@@ -4861,19 +4878,19 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1586110916"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1586703524"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1586110916"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1586110916"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1586703524"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1586703524"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1586110916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1586110916"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1586703524" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1586703524"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
