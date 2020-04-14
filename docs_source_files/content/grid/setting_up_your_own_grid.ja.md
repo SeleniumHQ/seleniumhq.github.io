@@ -17,7 +17,7 @@ Selenium Gridを使用するには、ノード用の独自のインフラスト�
 ここでは、ハブとノードが同じマシンで実行されていますが、もちろん、selenium-server-standaloneを複数のマシンにコピーできます。
 
 `selenium-server-standalone`パッケージには、グリッドの実行に必要なハブ、WebDriver、およびレガシーRCが含まれています。 _ant_ はもう必要ありません。
-`selenium-server-standalone-.jar`は [https://selenium.dev/downloads/](https://selenium.dev/downloads/) からダウンロードできます。
+`selenium-server-standalone.jar`は [https://selenium.dev/downloads/](https://selenium.dev/downloads/) からダウンロードできます。
 
 ### ステップ1：ハブを開始する
 

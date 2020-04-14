@@ -26,7 +26,7 @@ supuesto puedes copiar `selenium-server-standalone` en múltiples maquinas.
 
 El paquete de `selenium-server-standalone` incluye el hub, el WebDriver y el servidor
 RC heredado necesarios para ejecutar el Grid, _ant_ ya no es necesario.
-Puedes descargar `selenium-server-standalone-.jar` desde
+Puedes descargar `selenium-server-standalone.jar` desde
 [https://selenium.dev/downloads/](https://selenium.dev/downloads/).
 
 ### Paso 1: Iniciar el Hub

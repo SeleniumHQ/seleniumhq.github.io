@@ -33,7 +33,7 @@ but of course you can copy the selenium-server-standalone to multiple machines.
 The `selenium-server-standalone` package includes the hub,
 WebDriver, and legacy RC needed to run the Grid, 
 _ant_ is not required anymore.
-You can download the `selenium-server-standalone-.jar` from
+You can download the `selenium-server-standalone.jar` from
 [https://selenium.dev/downloads/](https://selenium.dev/downloads/).
 
 

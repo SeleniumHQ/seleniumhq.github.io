@@ -21,7 +21,7 @@ weight: 3
 
 `selenium-server-standalone` 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了.
 你可以在[https://selenium.dev/downloads/](https://selenium.dev/downloads/).下载
-`selenium-server-standalone-.jar`
+`selenium-server-standalone.jar`
 
 ### 第一步: 启动转发器(hub)
 
