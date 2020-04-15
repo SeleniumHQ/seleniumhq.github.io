@@ -39,7 +39,7 @@
       <description>Selenium Gridを使用するには、ノード用の独自のインフラストラクチャを維持する必要があります。 これは面倒で時間のかかる作業になる可能性があるため、多くの組織はこのインフラストラクチャを提供するためにAmazon EC2やGoogle ComputeなどのIaaSプロバイダーを使用しています。
 他の選択肢として、クラウドのサービスとしてSelenium Gridを提供するSauce LabsやTesting Botなどのプロバイダーの使うこともできます。 独自のハードウェアでノードを実行することも確かに可能です。 この章では、独自のノードインフラストラクチャを備えた独自のグリッドを実行するオプションについて詳しく説明します。
 クイックスタート この例では、Selenium 2グリッドハブを起動し、WebDriverノードとSelenium 1 RCレガシーノードの両方を登録する方法を示します。 また、Javaからグリッドを呼び出す方法も示します。 ここでは、ハブとノードが同じマシンで実行されていますが、もちろん、selenium-server-standaloneを複数のマシンにコピーできます。
-selenium-server-standaloneパッケージには、グリッドの実行に必要なハブ、WebDriver、およびレガシーRCが含まれています。 ant はもう必要ありません。 selenium-server-standalone-.jarは https://selenium.dev/downloads/ からダウンロードできます。
+selenium-server-standaloneパッケージには、グリッドの実行に必要なハブ、WebDriver、およびレガシーRCが含まれています。 ant はもう必要ありません。 selenium-server-standalone.jarは https://selenium.dev/downloads/ からダウンロードできます。
 ステップ1：ハブを開始する ハブは、テストリクエストを受信し、それらを適切なノードに配布する中心点です。 配布は機能ベースで行われます。 つまり、一連の機能を必要とするテストは、その機能セットまたは機能のサブセットを提供するノードにのみ配布されます。
 テストのDesiredCapabilitiesは、 任意の を意味するため、ハブはDesiredCapabilitiesの設定に完全に一致するノードを見つけることを保証できません。
 コマンドプロンプトを開き、selenium-server-standalone.jarファイルをコピーしたディレクトリに移動します。 ハブを起動するには、-role hubフラグをスタンドアロンサーバーに渡します。

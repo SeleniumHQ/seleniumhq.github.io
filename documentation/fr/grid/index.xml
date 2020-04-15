@@ -35,9 +35,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/grid/setting_up_your_own_grid/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+      <description>Pour utiliser la grille de Selenium, vous devez maintenir votre propre infrastructure pour les nœuds. Comme cela peut être un effort lourd et intense en temps, de nombreuses organisations utilisent des fournisseurs IaaS comme Amazon EC2 et Google Compute pour fournir cette infrastructure.
+D&amp;rsquo;autres options incluent l&amp;rsquo;utilisation de fournisseurs tels que Sauce Labs ou Testing Bot qui fournissent un Selenium Grid en tant que service dans le cloud. Il est certainement possible d&amp;rsquo;exécuter également des nœuds sur votre propre matériel.</description>
     </item>
     
     <item>

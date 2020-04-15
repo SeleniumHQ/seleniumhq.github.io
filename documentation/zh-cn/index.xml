@@ -132,7 +132,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4482 commits 
-@barancev2908 commits 
+@barancev2922 commits 
 @jimevans2292 commits 
 @jleyba1464 commits</description>
     </item>
@@ -435,7 +435,7 @@ JMeter 就是这样一种工具.
       <description>使用Selenium网格， 你需要维护你自己的基础设置来作为节点使用， 这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
 使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。 当然，在你自己的硬件群运行节点也是可行的。 这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
 快速开始 这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub), 然后注册WebDriver节点和Selenium 1 RC节点。 我们也会向你展示如何使用Java来使用Selenium服务网格。 这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到 多台终端机。
-selenium-server-standalone 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了. 你可以在https://selenium.dev/downloads/.下载 selenium-server-standalone-.jar
+selenium-server-standalone 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了. 你可以在https://selenium.dev/downloads/.下载 selenium-server-standalone.jar
 第一步: 启动转发器(hub) 转发器(hub)是接受测试请求并分发到合适的节点的中心点。 分发是基于节点的能力的，这就意味着一个有特定需求的测试仅会被分发到能提供这个需求的节点上。
 因为一个测试所期望的能力，就如字面意思，期望，并不代表转发器(hub)能够找到一个真正满足所有期望的节点。
 打开命令行窗口，来到存放selenium-server-standalone.jar文件的地方。 启动转发器(hub)并传入-role hub作为参数来启动一个独立的服务：
