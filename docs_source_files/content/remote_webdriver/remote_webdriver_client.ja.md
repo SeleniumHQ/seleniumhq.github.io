@@ -149,9 +149,9 @@ driver.quit();
 driver.setFileDetector(new LocalFileDetector());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-from selenium.webdriver.remote.file_detector import UselessFileDetector
+from selenium.webdriver.remote.file_detector import LocalFileDetector
 
-driver.file_detector = UselessFileDetector()
+driver.file_detector = LocalFileDetector()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var allowsDetection = this.driver as IAllowsFileDetection;
