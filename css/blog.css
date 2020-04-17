@@ -27,6 +27,10 @@ h1 {
     flex: 3;
 }
 
+.filter-container {
+    flex: 3;
+}
+
 .container.dark-background {
     padding-top: 50px;
     margin-top: 0;

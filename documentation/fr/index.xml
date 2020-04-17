@@ -390,6 +390,16 @@ La pratique idéale consiste à utiliser les API proposées par les fournisseurs
     </item>
     
     <item>
+      <title>Quand utiliser Grid</title>
+      <link>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
+      <description>De manière générale, il existe deux raisons pour lesquelles vous souhaiterez peut-être utiliser Grid.
+ Pour exécuter vos tests sur plusieurs navigateurs, plusieurs versions de navigateur, et les navigateurs fonctionnant sur différents systèmes d&amp;rsquo;exploitation. Pour réduire le temps nécessaire à la suite de tests pour terminer une passe de test.  La grille est utilisée pour accélérer l&amp;rsquo;exécution d&amp;rsquo;un test réussi en utilisant plusieurs machines pour exécuter des tests en parallèle.</description>
+    </item>
+    
+    <item>
       <title>Réaliser des action sur l&#39;AUT*</title>
       <link>https://selenium.dev/documentation/fr/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -407,17 +417,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
       <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&amp;rsquo;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
 De l&amp;rsquo;expérience, la plupart des intermittents résultant de l&amp;rsquo;utilisation de Selenium et de WebDriver sont liés aux conditions de concurrence qui se produisent entre le navigateur et les instructions de l&amp;rsquo;utilisateur.</description>
-    </item>
-    
-    <item>
-      <title>When to use Grid</title>
-      <link>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

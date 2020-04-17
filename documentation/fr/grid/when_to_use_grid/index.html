@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://selenium.dev/documentation/fr/images/favicon.png" type="image/png">
 
-    <title>When to use Grid :: Documentation Selenium</title>
+    <title>Quand utiliser Grid :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1586933169" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1586933169" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1587110865" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1587110865" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1586933169" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1587110865" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1586933169"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1587110865"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1586933169"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1586933169"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1587110865"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1587110865"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1586933169"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1587110865"></script>
 
     
   </div>
@@ -1208,9 +1208,9 @@
  
   
     
-      <li data-nav-id="/grid/when_to_use_grid/" title="When to use Grid" class="dd-item active">
+      <li data-nav-id="/grid/when_to_use_grid/" title="Quand utiliser Grid" class="dd-item active">
         <a href="https://selenium.dev/documentation/fr/grid/when_to_use_grid/">
-        When to use Grid
+        Quand utiliser Grid
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1907,7 +1907,7 @@
             
           
           
-            <a href='https://selenium.dev/documentation/fr/'>Le Projet d'Automatisation de Navigateur Selenium</a> > <a href='https://selenium.dev/documentation/fr/grid/'>Grid</a> > When to use Grid
+            <a href='https://selenium.dev/documentation/fr/'>Le Projet d'Automatisation de Navigateur Selenium</a> > <a href='https://selenium.dev/documentation/fr/grid/'>Grid</a> > Quand utiliser Grid
           
          
           
@@ -1936,7 +1936,7 @@
           
             <h1>
               
-              When to use Grid
+              Quand utiliser Grid
             </h1>
           
 
@@ -1944,55 +1944,64 @@
 
 
 
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-
-<p>Generally speaking, there’s two reasons why you might want to use Grid.</p>
+<p>De manière générale, il existe deux raisons pour
+lesquelles vous souhaiterez peut-être utiliser Grid.</p>
 
 <ul>
-<li>To run your tests against multiple browsers, multiple versions of browser,
-and browsers running on different operating systems.</li>
-<li>To reduce the time it takes for the test suite to complete a test pass.</li>
+<li>Pour exécuter vos tests sur plusieurs navigateurs, plusieurs versions de navigateur,
+et les navigateurs fonctionnant sur différents systèmes d&rsquo;exploitation.</li>
+<li>Pour réduire le temps nécessaire à la suite de tests pour terminer une passe de test.</li>
 </ul>
 
-<p>Grid is used to speed up the execution of a test pass by using
-multiple machines to run tests in parallel. For example, if you have a suite of
-100 tests, but you set up Grid to support 4 different machines (VMs or
-separate physical machines) to run those tests, your test suite will complete
-in (roughly) one-fourth the time as it would if you ran your tests sequentially
-on a single machine. For large test suites, and long-running test suite such as
-those performing large amounts of data-validation, this can be a significant
-time-saver. Some test suites can take hours to run. Another reason to boost the
-time spent running the suite is to shorten the turnaround time for test results
-after developers check-in code for the AUT. Increasingly software teams
-practicing Agile software development want test feedback as immediately as
-possible as opposed to wait overnight for an overnight test pass.</p>
+<p>La grille est utilisée pour accélérer l&rsquo;exécution d&rsquo;un test
+réussi en utilisant plusieurs machines pour exécuter des
+tests en parallèle. Par exemple, si vous avez une suite de
+100 tests, mais vous avez configuré Grid pour prendre en
+charge 4 machines différentes (VM ou machines physiques distinctes)
+pour exécuter ces tests, votre suite de tests se terminera en (environ)
+un quart du temps comme si vous exécutiez vos tests de manière séquentielle
+sur une seule machine. Pour les grandes suites de tests
+et les suites de tests de longue durée telles que ceux qui
+effectuent de grandes quantités de validation des données, cela
+peut être un gagne-temps. Certaines suites de tests peuvent prendre
+des heures à s&rsquo;exécuter. Une autre raison de booster la
+le temps passé à exécuter la suite est de raccourcir le délai
+d&rsquo;exécution des résultats des tests après le code d&rsquo;enregistrement
+des développeurs pour l&rsquo;AUT. De plus en plus d&rsquo;équipes logicielles
+pratiquant le développement logiciel Agile veulent des
+commentaires sur les tests aussi possible par opposition
+à attendre la nuit pour un passage de test de nuit.</p>
 
-<p>Grid is also used to support running tests against multiple runtime
-environments, specifically, against different browsers at the same time. For
-example, a ‘grid’ of virtual machines can be setup with each supporting a
-different browser that the application to be tested must support. So, machine 1
-has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
-Chrome, and machine 4 the latest Firefox. When the test suite is run,
-Selenium-Grid receives each test-browser combination and assigns each test to
-run against its required browser.</p>
+<p>La grille est également utilisée pour prendre en charge
+l&rsquo;exécution de tests sur plusieurs environnements d&rsquo;exécution
+environnements, en particulier, contre différents
+navigateurs en même temps. Pour Par exemple, une &ldquo;grille&rdquo; de
+machines virtuelles peut être configurée, chacune prenant en charge un
+navigateur différent que l&rsquo;application à tester doit prendre en charge. Donc, la machine 1
+a Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 la dernière
+Chrome et la machine 4 la dernière version de Firefox.
+Lorsque la suite de tests est exécutée, Selenium-Grid reçoit
+chaque combinaison de navigateur de test et attribue chaque test à
+exécuter sur son navigateur requis.</p>
 
-<p>In addition, one can have a grid of all the same browser, type and version. For
-instance, one could have a grid of 4 machines each running 3 instances of
-Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
-instances. When the suite runs, each test is passed to Grid which
-assigns the test to the next available Firefox instance. In this manner one
-gets test pass where conceivably 12 tests are all running at the same time in
-parallel, significantly reducing the time required to complete a test pass.</p>
+<p>De plus, on peut avoir une grille de tous les mêmes
+navigateur, type et version. Pour par exemple, on
+pourrait avoir une grille de 4 machines exécutant chacune 3
+instances de Firefox 70, permettant une &ldquo;batterie de serveurs&rdquo;
+(dans un sens) de Firefox disponible instances.
+Lorsque la suite s&rsquo;exécute, chaque test est passé à Grid qui attribue
+le test à la prochaine instance de Firefox disponible.
+De cette manière, on obtient la réussite du test où,
+en théorie, 12 tests sont tous en cours d&rsquo;exécution en
+même temps dans parallèle, ce qui réduit
+considérablement le temps nécessaire pour réussir un test.</p>
 
-<p>Grid is very flexible. These two examples can be combined to allow
-multiple instances of each browser type and version. A configuration such as
-this would provide both, parallel execution for fast test pass completion and
-support for multiple browser types and versions simultaneously.</p>
+<p>La grille est très flexible. Ces deux exemples peuvent
+être combinés pour permettre plusieurs instances de chaque
+type et version de navigateur. Une configuration telle que cela
+fournirait à la fois une exécution parallèle pour un achèvement
+rapide des tests et prise en charge simultanée de
+plusieurs types et versions de navigateur.</p>
 
 
 <footer class=" footline" >
@@ -2001,8 +2010,8 @@ support for multiple browser types and versions simultaneously.</p>
 
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/grid/when_to_use_grid/">
-      “When to use Grid”
-    </a> was last updated on: 29 Mar 2020 08:23:41 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/1fc0556552f291e489b80ec6b3fceda6412ee325">Deploying on Sun Mar 29 08:23:41 UTC 2020, commit 0bf93acd46d5c8ba091918414202be18bff04cae, [skip ci] (1fc05565)</a>
+      “Quand utiliser Grid”
+    </a> was last updated on: 16 Apr 2020 22:45:35 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/d79b236594a6c2729165b161d4c941b9ed2badf7">Modify: [EN]-&gt;[FR] Translating docs to French (d79b2365)</a>
 </h5>
         
         </div> 
@@ -3167,19 +3176,19 @@ support for multiple browser types and versions simultaneously.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1586933169"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1587110865"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1586933169"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1586933169"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1587110865"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1587110865"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1586933169" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1586933169"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1587110865" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1587110865"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
