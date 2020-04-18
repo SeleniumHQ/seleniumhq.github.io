@@ -4,6 +4,8 @@ Title = "Selenium Conference Survey"
 Date = 2010-11-30
 Author = "plightbo"
 AuthorLink = "https://twitter.com/plightbo"
+tags = ["conference"]
+categories = ["conference","general"]
 +++
 
 <p>Great news! Thanks to the initiative of our friends at <a href="http://saucelabs.com">Sauce Labs</a>, we&#8217;re finally ready to host the first-ever Selenium Conference. We&#8217;re still working out a lot of the details, but so far we&#8217;ve decided this first conference will be sometime in April and hosted in San Francisco.</p>

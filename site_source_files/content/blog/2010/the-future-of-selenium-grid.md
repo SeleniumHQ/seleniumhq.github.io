@@ -4,6 +4,8 @@ Title = "The Future of Selenium Grid"
 Date = 2010-04-27
 Author = "Kevin Menard"
 AuthorLink = "https://twitter.com/nirvdrum"
+tags = ["selenium","future","grid"]
+categories = ["general"]
 +++
 
 <p>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new maintainer.</a>  In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.</p>

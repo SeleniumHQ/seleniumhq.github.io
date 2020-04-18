@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #31"
 Date = 2010-11-08
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>The big news for last week was that I released Se-IDE 1.0.8 to very little fanfare. 1.0.9 should be a week or two and much more important a release.<br />

@@ -4,6 +4,8 @@ Title = "Going Atomic: How"
 Date = 2010-09-05
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["technical","decisions"]
+categories = ["technical"]
 +++
 
 <p>This is the second of my technical posts. Again, if you&#8217;re interested in the internal workings of Selenium 2, then please skip straight to something else. If you&#8217;re interested in how and why we made some of the technical decisions on the project, keep reading&#8230;.</p>

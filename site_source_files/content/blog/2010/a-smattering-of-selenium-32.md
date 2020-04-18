@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #32"
 Date = 2010-11-15
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>For those people paying attention to the goings-on in the Selenium world, yes, I am skipping something major until some of the details are worked out and announced. Until then, here are the links I accrued over the week.</p>
 <ul>
 <li>Selenium uses Bamboo for its CI infrastructure. This week saw an upgrade to the latest version so if you want bleeding-edge code, <a href="http://xserve.openqa.org:8085">get it here</a></li>

@@ -4,6 +4,8 @@ Title = "Going Atomic: Why?"
 Date = 2010-08-16
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["technical","decisions"]
+categories = ["technical"]
 +++
 
 <p>This is the first in a series of technical posts by me about the internals of Selenium WebDriver. If you&#8217;re not interested in technical nitty-gritty, then feel free to step away now.</p>

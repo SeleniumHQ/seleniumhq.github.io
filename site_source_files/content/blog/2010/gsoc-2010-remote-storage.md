@@ -4,6 +4,8 @@ Title = "GSoC 2010 – Remote Storage"
 Date = 2010-07-15
 Author = "jeremyherault"
 AuthorLink = "https://twitter.com/jeremyherault"
+tags = ["stories"]
+categories = ["general"]
 +++
 
 <p>What’s new for Selenium this summer ? The GSoC of course !!!!</p>

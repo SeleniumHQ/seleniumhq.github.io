@@ -4,6 +4,8 @@ Title = "How to use Selenium 2 with Maven"
 Date = 2010-07-30
 Author = "Michael Tamm"
 AuthorLink = "https://twitter.com/MichaelTamm"
+tags = ["maven","selenium"]
+categories = ["technical"]
 +++
 
 <p>There are several ways to use Selenium 2:</p>
