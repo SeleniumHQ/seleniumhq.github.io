@@ -1331,6 +1331,10 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/categories/</loc>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/documentation/</loc>
   </url>
   
@@ -1384,6 +1388,10 @@
   
   <url>
     <loc>https://selenium.dev/sponsors/</loc>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/</loc>
   </url>
   
   <url>
