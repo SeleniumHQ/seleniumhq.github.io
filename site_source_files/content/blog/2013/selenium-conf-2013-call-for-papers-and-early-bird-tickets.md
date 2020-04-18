@@ -6,7 +6,7 @@ Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
 tags = ["conference"]
 categories = ["general","conference"]
-s+++
++++
 
 <div>
 <div>

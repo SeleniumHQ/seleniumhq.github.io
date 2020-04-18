@@ -4,6 +4,8 @@ Title = "Announcing Selenium 3.0-beta1"
 Date = 2016-07-29
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["general","releases"]
 +++
 
 <p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released &#8220;by Christmas&#8221;. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We&#8217;re excited to announce the release of the first beta &#8212; Selenium 3.0.0-beta1.</p>

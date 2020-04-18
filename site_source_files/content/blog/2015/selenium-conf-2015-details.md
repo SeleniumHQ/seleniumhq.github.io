@@ -4,6 +4,8 @@ Title = "Selenium Conf 2015 Details"
 Date = 2015-06-11
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p><a href="http://seleniumconf.org" target="_blank">The Selenium Conf 2015 website</a> is live!</p>
