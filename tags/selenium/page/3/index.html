@@ -150,20 +150,11 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Thursday, June 10, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-            <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/"><h2>Selenium Grid 1.0.8 Released</h2></a>
-            <p>We&#8217;re pleased to announce the release of Selenium Grid 1.0.8.  This release fixes multithreaded issues with the Selenium Grid hub that appeared randomly under heavy load.  If you&#8217;ve ever seen a log message about HttpClient being accessed by multiple threads, you definitely want to upgrade.  Even if you haven&#8217;t, this release is highly recommended for all.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.8-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The list of changes is:</p>
-<ul>
-<li>Multi-threaded issue with access to HttpClient has been resolved, fixing random crashes on a heavily loaded grids</li>
-</ul>
-<p>Many thanks go out to Chris Gulley for identifying and fixing the problem.  As always, patches and bug reports are appreciated:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>I mentioned in the release notes for 1.0.7 that barring any major issues, 1.1 would be the next release.  This fix was major enough to warrant an intermediate release.  We are still planning to put out 1.1 as the next feature release.</p>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.</p>
+            Friday, November 2, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2012/announcing-selenium-2-26/"><h2>Announcing Selenium 2.26: the “It’s Really Real” Release</h2></a>
+            <p>It&#8217;s been a long time since we announced a new Selenium release on this blog, as we moved to a model of quicker releases, but we&#8217;ve been working on 2.26 for far longer than normal &#8212; it&#8217;s out! <a href="http://seleniumhq.org/download/">Download</a> it now! &#8212; so I thought it best to let you know. We&#8217;re aiming to head back to faster releases, so hopefully you won&#8217;t see another blog post about the release for a while (though I&#8217;m sure they&#8217;ll appear in the &#8220;Smatterings of Selenium&#8221; posts)</p>
+<p>Some highlights that you might be interested in, include support for the latest and greatest versions of the popular browsers out there (including native events on Firefox 16!), the deletion of deprecated methods from the language bindings, better emulation of user input on IE when dealing with &#8220;<a href="http://www.alistapart.com/articles/dropdowns">sucker fish</a>&#8221; style menus, and a slew of bug fixes. There&#8217;s more in the <a href="https://code.google.com/p/selenium/source/browse/tags/selenium-2.26.0/java/CHANGELOG">changelog</a>!</p>
+<p>The inimitable <a href="https://twitter.com/jimevansmusic">Jim Evans</a> held the Release Bacon for what has become one of our most challenging releases to do, so a big &#8220;thank you!&#8221; to him. A &#8220;thank you&#8221;, also, to the rest of the core developers and <a href="https://saucelabs.com/">Sauce Labs</a> team members who worked on fixing so many bugs and getting our continuous build green, especially Alexei Barantsev who did some amazingly detailed and painstaking work to help the release through. And a final &#8220;thank you&#8221; to our users: thanks for your feedback and support. 🙂</p>
 
             
 
@@ -171,9 +162,6 @@
     
     <li>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/grid/">grid</a>
     </li></ul>
 
 
@@ -189,28 +177,19 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.8%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-8-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-8-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.26%3a%20the%20%e2%80%9cIt%e2%80%99s%20Really%20Real%e2%80%9d%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-26%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-26%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Thursday, May 27, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/"><h2>Selenium IDE 1.0.7 – Now with Drag-and-Drop!</h2></a>
-            <p><p>So its a month later than planned, but Selenium IDE 1.0.7 is now available. The delay was due to some internal build changes and not code, but one of the code changes that is there more than makes up for the delay.<br />
-<br />
-That&#8217;s right, drag-and-drop has <i>finally</i> arrived to Se-IDE &#8212; though credit lies with Jérémy Hérault for implementing it.<br />
-<br />
-Oh, and if you are Swedish, there is now a localization for you. Yes, a real one. Not just one that makes everything say <i>Bork</i> as was suggested to me. Although a Pirate locale might be arrr-some.<br />
-<br />
-For those with version 1.0.5 or newer, the update will be pushed to you automatically over the next couple days. Those new to Selenium IDE or with 1.0.4 or older will want to <a href="http://release.openqa.org/selenium-ide/1.0.7/selenium-ide-1.0.7.xpi">install it now</a>.<br />
-<br />
-Other things of note around this release</p>
-<ul>
-<li><a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">Release Notes</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list?can=2&amp;q=ide&amp;colspec=ID+Stars+Type+Status+Priority+Milestone+Owner+Summary&amp;cells=tiles">Where to log bugs</a></li>
-</ul></p>
+            Tuesday, May 29, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2012/announcing-selenium-2-22/"><h2>Announcing Selenium 2.22</h2></a>
+            <p>It&#8217;s been a while since the last Selenium release, but I&#8217;m happy to announce that Selenium 2.22 is now <a href="http://seleniumhq.org/download/">available for download</a>. This is a big release for us and features two major changes.</p>
+<p>The first is that<strong> Selenium 2.22 is the first version that requires Java 6</strong> in order to run. This has been the case for the Selenium Server for some time, but this is the first time the client code has required Java 6. Since Java 5 was <a href="http://www.oracle.com/technetwork/java/eol-135779.html">&#8220;end of lifed&#8221; in 2009</a>, we don&#8217;t expect this to impact many users.</p>
+<p>The second major change is that <strong>we are now providing a standalone IE server for use with the WebDriver API</strong>, similar to the one used by the chrome driver. You can get it from the normal download page. This will allow us to update our IE support independently of the rest of the library (again, mirroring how Chrome is supported) For now, there&#8217;s a legacy fallback mode you can use that&#8217;ll use the same DLL we&#8217;ve always used which can be activated by setting the DesiredCapability &#8220;useLegacyInternalServer&#8221; to boolean &#8220;true&#8221; when requesting your IE Driver instance.</p>
+<p>Of course, as well as these major changes, there&#8217;s the usual host of updates and improvements. We&#8217;re continuing to refine the new SafariDriver, and we&#8217;re happy to announce native events for Firefox 12. You can check out the other updates in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG</a>.</p>
 
             
 
@@ -218,9 +197,6 @@ Other things of note around this release</p>
     
     <li>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/ide/">ide</a>
     </li></ul>
 
 
@@ -236,31 +212,17 @@ Other things of note around this release</p>
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%201.0.7%20%e2%80%93%20Now%20with%20Drag-and-Drop%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-ide-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.22&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Tuesday, May 11, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-            <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/"><h2>Selenium Grid 1.0.7 Released</h2></a>
-            <p>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&#8217;re pleased to announce the release of Selenium Grid 1.0.7.  This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.7-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The list of changes are:</p>
-<ul>
-<li>Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long</li>
-<li><a href="http://selenium-grid.seleniumhq.org/configuring-and-tuning.html#changing_maximum_wait_time_for_new_session">Added ability to specify timeout period when waiting for remote controls to become available</a>.  Now the client can timeout gracefully and decide what it would like to do next</li>
-<li>Handle common case of session ID not being found, either because it timed out or was already closed; rather than raising a NullPointerException we now raise a NoSuchSessionException</li>
-<li>Truncate long command response bodies to 128 characters</li>
-<li>Retry remote control checks up to three times before deciding that a remote control is unreliable or unresponsive.  This prevents aggressive unregistration of hosts that are busy or suffer from network issues</li>
-</ul>
-<p>As always, patches and bug reports are appreciated:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>Barring any critical issues, the next release of Selenium Grid will be 1.1 and will feature an enhanced Web view as well as a status API.  After that, we will be moving from GitHub to Google Code to live alongside the other Selenium projects.</p>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.</p>
+            Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/"><h2>A Note About the Cybervillains SSL Certificate</h2></a>
+            <p>If you&#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.</p>
+<p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and <a href="http://www.neustar.biz/solutions/website-performance">Neustar</a> for taking providing the new certificate and the patch!</p>
 
             
 
@@ -270,7 +232,7 @@ Other things of note around this release</p>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
     </li>
     <li>
-        <a href="https://selenium.dev/tags/grid/">grid</a>
+        <a href="https://selenium.dev/tags/rc/">rc</a>
     </li></ul>
 
 
@@ -279,15 +241,15 @@ Other things of note around this release</p>
 <ul>
     
     <li>
-        <a href="https://selenium.dev/categories/releases/">releases</a>
+        <a href="https://selenium.dev/categories/general/">general</a>
     </li></ul>
 
 
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.7%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - A%20Note%20About%20the%20Cybervillains%20SSL%20Certificate&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

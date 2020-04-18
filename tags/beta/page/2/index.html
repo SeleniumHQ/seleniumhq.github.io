@@ -150,23 +150,10 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Monday, April 19, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0a3-released/"><h2>Selenium 2.0a3 Released</h2></a>
-            <p><p>Selenium 2.0a3 has been released and can be downloaded from the <a href="http://code.google.com/p/selenium/downloads/list">Selenium project site</a>. This is a major update to 2.0 and all users are encouraged to update. The new features include:</p>
-<ul>
-<li>An improved <a href="http://code.google.com/p/selenium/wiki/JsonWireProtocol">remote protocol</a>.</li>
-<li>Updating the version of HtmlUnit used to 2.7.</li>
-<li>Improved support for simulating user interactions with the browser via native events on Linux.</li>
-<li>Better support for Firefox 3.6.</li>
-<li>Bug fixes</li>
-</ul>
-<p>The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</p>
-<p>The next release will be Selenium 2.0a4, and it is planned to include the following when it is released in late May:</p>
-<ul>
-<li>Android support</li>
-<li>A new API to support writing tests involving complex user interactions.</li>
-<li>Far more integration of the underlying architecture.</li>
-</ul></p>
+            Thursday, June 2, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-0rc2-the-better-working-release/"><h2>Selenium 2.0rc2: The Better Working Release</h2></a>
+            <p>You win some and you lose some. We&#8217;d been really pleased to get Selenium 2.0rc1 out, so we were pretty disappointed to hear that some of you were running into problems with the Java version of the IE driver not launching IE sometimes. That&#8217;s definitely not good, so we fixed the problems and have<a href="http://code.google.com/p/selenium/downloads/list"> released Selenium 2.0rc2</a>. It&#8217;s the same as rc1, but with fewer problems 🙂</p>
+<p>We&#8217;re still very keen to hear your feedback! Let us know what you think!</p>
 
             
 
@@ -192,8 +179,117 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a3%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0rc2%3a%20The%20Better%20Working%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc2-the-better-working-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc2-the-better-working-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Wednesday, June 1, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-0rc1-the-grid-release/"><h2>Selenium 2.0rc1: The Grid Release</h2></a>
+            <p>We&#8217;re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! <a href="http://code.google.com/p/selenium/downloads/list">Grab the downloads from the site</a>!</p>
+<p>Highlights:</p>
+<ul>
+<li><a href="http://code.google.com/p/selenium/wiki/Grid2">Grid 2</a>: A major feature of this release is Grid 2, an implementation of the Selenium Grid that supports WebDriver&#8217;s wire protocol, allowing tests using Selenium WebDriver to be distributed through it. There are some <a href="http://code.google.com/p/selenium/wiki/Grid2">docs to help you get started</a> on the wiki.</li>
+<li>New <a href="http://code.google.com/p/selenium/wiki/ChromeDriver">ChromeDriver</a>: Following a complete rewrite of the ChromeDriver, Selenium 2 is now supported natively by the Chrome browser itself. In order to use this, you must download the <a href="http://code.google.com/p/selenium/downloads/list">chromedriver executable</a> from the Selenium project site.</li>
+<li><a href="http://www.opera.com/developer/tools/operadriver/">OperaDriver</a> support: We&#8217;ve bundled the most excellent OperaDriver into the release to make it easy to get started testing with <a href="http://www.opera.com/browser/">Opera</a>.</li>
+<li>Support for native events in Firefox 4.</li>
+<li><a href="http://code.google.com/p/selenium/wiki/AdvancedUserInteractions">Advanced User Interactions</a>: An API that allows you to model complex user interactions, such as clicking on an element, holding the shift key, clicking on three more, and then dragging the four elements to a final destination. The entry point to this API is the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions</a> class.</li>
+</ul>
+<p>We’ve also deleted all methods that were deprecated in 2.0b3 and have marked a number of methods and classes (notably <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/RenderedWebElement.html">RenderedWebElement</a> and <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getValue()">WebElement.getValue</a>) deprecated. These will be deleted in the next release.</p>
+<p>Known issues:</p>
+<ul>
+<li>Native events on Linux may not work properly on tests that include alerts and prompts.</li>
+<li>Mouse actions using the Advanced User Interactions API may not work properly for elements that have to be scrolled into view.</li>
+</ul>
+<p>We plan on making our releases more frequent in the run up to 2.0final and polish off the bugs and issues. Stay tuned! This is going to be fun 🙂</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/beta/">beta</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/releases/">releases</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0rc1%3a%20The%20Grid%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc1-the-grid-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc1-the-grid-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Monday, March 21, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-0b3-the-next-gen-browser-release/"><h2>Selenium 2.0b3: The Next Gen Browser Release</h2></a>
+            <p>It&#8217;s been about 5 weeks since the release of beta 2, so we&#8217;re very pleased to announce that Selenium 2.0b3 has just been released simultaneously for Java, .Net, Ruby and Python. You can <a href="http://seleniumhq.org/download/">download it from Selenium HQ</a> or from the <a href="http://code.google.com/p/selenium/downloads/list">Google Code site</a>. This release focused on providing excellent support for the next generation of browsers, particularly IE 9 and Firefox 4, and we think you&#8217;ll like what you&#8217;ll find.</p>
+<ul>
+<li>Restructured documentation at<a href="http://seleniumhq.org/docs/"> Selenium HQ</a></li>
+<li>An improved user interaction API
+<ul>
+<li>Including experimental IME support on Windows.</li>
+</ul>
+</li>
+<li>Alerts and prompts handling for IE.</li>
+<li>Marked the following APIs as obsolete in .Net:
+<ul>
+<li>IRenderedWebElement.Hover()</li>
+<li>IOptions.Speed</li>
+</ul>
+</li>
+<li>Even more improvements to the Java webdriver-backed selenium
+<ul>
+<li>We&#8217;ll document the migration path before 2.0b4 is out!</li>
+</ul>
+</li>
+<li>A significantly faster <a href="http://selenium.googlecode.com/files/android-server-2.0b3.apk">Android Driver</a></li>
+</ul>
+<p>As well as these changes, there&#8217;s also the regular clutch of bug fixes and tweaks. For the number crunchers, there were a total of <a href="http://code.google.com/p/selenium/source/list?num=331&amp;start=11749">331 changes</a> that landed in the 5 weeks since the last release, with the 5 most active contributors working on each of the different languages supported by Selenium.</p>
+<p>In addition to the enormous thanks that go to the developers, I&#8217;d like to add a big thank you to the Mozilla engineers who chipped in on the IRC channel at the last minute to help us work through some issues with Core. We&#8217;d not have been able to get this release out when we did without their help. Thank you Mozilla!</p>
+<p>The next release will be focused on stabilization work, reducing our bug count and adding support for Grid 2.0.</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/beta/">beta</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/releases/">releases</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0b3%3a%20The%20Next%20Gen%20Browser%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0b3-the-next-gen-browser-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0b3-the-next-gen-browser-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
@@ -202,6 +298,12 @@
         
 
         <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/tags/beta/page/3/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
             
 
             

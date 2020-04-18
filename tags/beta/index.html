@@ -150,31 +150,26 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Friday, December 24, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/"><h2>Selenium 2.0 beta 1 Release</h2></a>
-            <p>We recently released the first of the betas for Selenium 2. It&#8217;s available for Java, C# and Ruby. If you&#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&#8217;ll see is with the new WebDriver APIs, but there&#8217;s a lot more!</p>
+            Tuesday, October 4, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2016/selenium-3-is-coming/"><h2>Selenium 3 is Coming</h2></a>
+            <p><a href="http://www.seleniumhq.org/download/">Selenium 3</a> is coming! As I write this, we think that &#8220;beta 4&#8221; will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.</p>
+<h3>TL;DR:</h3>
 <ul>
-<li>A promise of relatively stable APIs</li>
-<li>For Firefox only right now, an API for dealing with <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.TargetLocator.html#alert()">alerts, prompts and confirms</a>.</li>
-<li>A brand new IE driver.</li>
-<li>Better <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriverBackedSelenium.html">selenium emulation</a> when using webdriver</li>
-<li>And a better implementation of webdriver&#8217;s API backed by the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/SeleneseCommandExecutor.html">traditional Selenium technology</a>.</li>
-<li>Ubiquitous use of <a href="http://sizzlejs.com/">Sizzle</a> for emulating CSS selectors where native CSS selectors aren&#8217;t supported</li>
-<li>The <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/package-frame.html">advanced user interactions</a> API</li>
-<li>An update to the AndroidDriver&#8217;s Android app.</li>
+<li>WebDriver users will just find bug fixes and a drop-in replacement for 2.x.</li>
+<li>Selenium Grid users will also find bug fixes and a simple update.</li>
+<li>The WebDriver APIs are now the only APIs actively supported by the Selenium project.</li>
+<li>The Selenium RC APIs have been moved to a “legacy” package.</li>
+<li>The original code powering Selenium RC has been replaced with something backed by WebDriver, which is also contained in the “legacy” package.</li>
+<li>By a quirk of timing, Mozilla have made changes to Firefox that mean that from Firefox 48 you must use their geckodriver to use that browser, regardless of whether you’re using Selenium 2 or 3.</li>
 </ul>
-<p>Of course, we&#8217;d love this release to be completely bug free, but this is, after all, a beta, so there are some known issues:</p>
-<ul>
-<li>The selenium 1.x emulation using IE is a little flaky.</li>
-<li>The ChromeDriver is not as capable as the others.</li>
-<li>Anything in our <a href="http://code.google.com/p/selenium/issues/list">bug list</a>.</li>
-</ul>
-<p>You can download it from here:</p>
-<p><a href="http://code.google.com/p/selenium/downloads/list" target="_blank">http://code.google.com/p/selenium/downloads/list</a></p>
-<p>You can read the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/index.html">javadocs</a> and the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/rb/index.html">ruby docs</a>.</p>
-<p>An obvious question is &#8220;When will the beta end?&#8221; The short answer is when we&#8217;ve implemented the alerts and prompts and advanced user interactions APIs in all supported browsers. We expect there to be some flex in some APIs (removing deprecated methods, and within the advanced user interactions API) but what you have here is basically what you&#8217;re going to get when we hit 2.0 final. I have no idea how long this will take, but if you&#8217;re interested in helping out, <a href="http://groups.google.com/group/selenium-developers">let us know!</a></p>
-<p>Thanks are due to all the committers who have worked so hard to get this code into shape. Thanks are also due to all the people who have taken the time to file bugs, ask for features and participated on the mailing lists. Thank you to you too, for going out and trying this new beta of Selenium 2.</p>
-<p>You rock. 🙂</p>
+<h3>In more depth:</h3>
+<p>When we <a href="https://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released Selenium 2.0</a> in 2011, we introduced the new WebDriver APIs, and encouraged everyone to start moving to them. If you’re using the WebDriver APIs, then Selenium 3.0 is a simple drop-in upgrade. We’ve not changed any of the public WebDriver APIs, and the code is essentially the same as the last 2.x release. If you’re using Selenium Grid, the same applies: in most cases, you can just drop in the new JAR (or update your maven dependency to 3.0.0), and you’re done.</p>
+<p>If the update to Selenium 3 is such a non-event, why did we call this Selenium 3.0? To answer this question, I first need to provide some history, and tell you a little about how Selenium works under the hood. The very first version of Selenium was “just” a very complicated Javascript framework, running in the browser and interpreting the table-based tests you may be familiar with if you use Selenium IDE. We call this “Selenium Core”. This Javascript framework formed the basis of the original implementation of Selenium RC (the oldest set of Selenium APIs, where all the method and functions were on the “<a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium</a>” interface, and which have been deprecated for some time now). Over time, the needs of modern web testing have grown ever more complicated and sophisticated, and Selenium Core is now less capable of meeting these needs than it was before.</p>
+<p>With Selenium 3.0, we are deleting the original Selenium Core implementation. If you use the old RC interfaces, we provide an alternative implementation that’s backed by WebDriver. This is the same “webdriver-backed selenium” that has been available as part of Selenium 2 since its release. Because the underlying technology has changed from Selenium Core to WebDriver, you may find some places where your existing tests using RC run into issues. Our experience with migrating suites is that it’s normally a systemic issue that can be fixed with a minimal engineering effort (that is, the problem is normally isolated to a few places, and these can be rewritten to avoid problems)</p>
+<p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or later!). It’s strongly recommended that you do not do this unless you absolutely need to.<br />
+If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project has made available for you to use that can be <a href="http://www.seleniumhq.org/download/">downloaded</a> from the project’s website. It takes the same arguments as the old runner, and we’ve done our best to ensure the output of tests remains the same too.</p>
+<p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As such, if you use Firefox for your testing, you’ll need to use the <a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>, which is an executable similar to the <a href="https://sites.google.com/a/chromium.org/chromedriver/">chromedriver</a> and the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft WebDriver</a> for Edge. You’ll need to start using geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone&#8217;s working flat out to give you the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with Firefox.</p>
+<p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.</p>
 
             
 
@@ -193,6 +188,9 @@
 <ul>
     
     <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li>
+    <li>
         <a href="https://selenium.dev/categories/releases/">releases</a>
     </li></ul>
 
@@ -200,29 +198,27 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0%20beta%201%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-beta-1-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-beta-1-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%203%20is%20Coming&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Friday, October 8, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0a6-released/"><h2>Selenium 2.0a6 Released</h2></a>
-            <p>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the <a href="http://code.google.com/p/selenium/downloads/list">downloads page</a> to get it while it&#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and <a href="http://rubygems.org/gems/selenium-webdriver">ruby libraries</a> have been having smaller, more frequent releases all this time.</p>
-<p>You&#8217;ll be pleased to hear that the Selenium 1.0 APIs have remained constant, so what&#8217;s changed? Here, in no particular order are the major changes you&#8217;ll find in 2.0a6:</p>
+            Friday, July 29, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2016/announcing-selenium-3-0-beta1/"><h2>Announcing Selenium 3.0-beta1</h2></a>
+            <p>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released &#8220;by Christmas&#8221;. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We&#8217;re excited to announce the release of the first beta &#8212; Selenium 3.0.0-beta1.</p>
+<p>We&#8217;d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.0 itself! Please remember that this is a beta release, so your feedback is incredibly helpful and valuable in order to help us smooth any rough edges.</p>
+<p>For the last six years we&#8217;ve been advising users to switch to the newer WebDriver APIs and to stop using the original RC APIs. With Selenium 3.0, the original implementation of RC has been removed, replaced by one that sits on top of WebDriver. For many users, this change will go completely unnoticed, as they&#8217;re no longer using the RC APIs. For those of you who still are, we&#8217;ve done our best to make the change as smooth as possible, but <a href="https://github.com/seleniumhq/selenium/issues">we welcome high quality bug reports</a> to help us fix any problems that occur. Maven users will need to add a dependency on the new &#8220;<a href="http://docs.seleniumhq.org/download/maven.jsp">leg-rc</a>&#8221; package to access the old RC APIs.</p>
+<p>There are some other changes that you might need to be aware of:</p>
 <ul>
-<li>Android support: you can now <a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk">download the APK</a> and run webdriver tests using Android 1.6 to 2.2.</li>
-<li>Firefox 4 support.</li>
-<li>Experimental IE9 support</li>
-<li>New APIs for dealing with <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html">HTML5 elements</a> (best implemented, for now, by the mobile webdrivers)</li>
-<li>A richer .Net API</li>
-<li>A move to <a href="http://sizzlejs.com/">Sizzle</a> for locating elements using CSS in browsers that don&#8217;t have a native API for that.</li>
-<li>Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.</li>
+<li><strong>You&#8217;ll need to be running Java 8</strong> to use the Java pieces of Selenium. This is the oldest version of Java officially supported by Oracle, so hopefully you&#8217;re using it already!</li>
+<li>Support for Firefox is via Mozilla&#8217;s <a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>.</li>
+<li>Support for Safari is provided on macOS (Sierra or later) via Apple&#8217;s own <a href="https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewInSafari/Articles/Safari_10_0.html">safaridriver</a>.</li>
+<li>Support for Edge is provided by MS through their <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">webdriver server</a>.</li>
+<li>Only versions 9 or above of IE are supported. Earlier versions may work, but are no longer supported as <a href="https://www.microsoft.com/en-gb/WindowsForBusiness/End-of-IE-support">MS no longer supports them</a>.</li>
 </ul>
-<p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html">FirefoxProfiles</a>, better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.</p>
-<p>Thank you to everyone who has taken the time to report a bug on our <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a>, or raised problems on one of our <a href="https://groups.google.com/group/webdriver">mailing</a> <a href="http://www.google.com/url?q=http://groups.google.com/group/selenium-users">lists</a>, or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn&#8217;t be half as much fun, and wouldn&#8217;t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)</p>
-<p>Hope you like it!</p>
+<p>We&#8217;ll be posting more information about Selenium 3.0 to this blog soon, but until then if you&#8217;re interested in learning more then <a href="https://www.youtube.com/watch?v=bistojJPR98">a recent webinar by Simon</a> is a great place to start.</p>
 
             
 
@@ -241,6 +237,9 @@
 <ul>
     
     <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li>
+    <li>
         <a href="https://selenium.dev/categories/releases/">releases</a>
     </li></ul>
 
@@ -248,27 +247,26 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%203.0-beta1&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fannouncing-selenium-3-0-beta1%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fannouncing-selenium-3-0-beta1%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Wednesday, July 14, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0a5-released/"><h2>Selenium 2.0a5 Released</h2></a>
-            <p>I&#8217;m pleased to announce the release of Selenium 2.0a5, available for <a href="http://code.google.com/p/selenium/downloads/list">immediate download</a>. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:</p>
+            Monday, June 27, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/"><h2>Selenium 2.0rc3: The “Next One’s The Big One” Release</h2></a>
+            <p>When we pushed the 2.0rc1 live, we really hoped that the next release would be 2.0 final. We very quickly got some feedback that encouraged us to push a 2.0rc2. Now, after just under three weeks, we&#8217;re launching a third and final release candidate. You can download it from the <a href="http://seleniumhq.org/download/">Selenium HQ</a> site or directly from <a href="http://code.google.com/p/selenium/downloads/list">Google Code.</a></p>
+<p>We think we&#8217;ve addressed many of the common issues, added some polish and added a host of bug fixes and minor changes, and we hope to hear your feedback! The following headline changes have been made in Selenium 2rc3:</p>
 <ul>
-<li>New<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-frame.html"> interfaces</a> for dealing with HTML 5 elements.</li>
-<li>An API for &#8220;<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebDriver.Timeouts.html">implicit waits</a>&#8220;: quietly waiting until an element is present before continuing with a test. You can use them like this: <code>driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS)</code></li>
-<li>A revamped Firefox driver.</li>
-<li>More shared code between Selenium and WebDriver.</li>
-<li>You can now pass firefox profiles to the remote webdriver (this includes extensions and proxy settings!)</li>
-<li>Improved .Net bindings: lots of updates to help bring them more in-line with the Java equivalents.</li>
+<li>The deprecated RenderedWebElement interface has now been removed. Most of the functionality has been moved to either <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html">WebElement</a> or to the <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/interactions/Actions.html">Actions</a> class.</li>
+<li>The deprecated WebElement.getValue() method has been removed. Use <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getAttribute(java.lang.String)">WebElement.getAttribute(&#8220;value&#8221;)</a> instead.</li>
+<li>After some debate in the team, &#8220;<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#setSelected()">WebElement.setSelected</a>&#8221; and &#8220;<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#toggle()">WebElement.toggle</a>&#8221; have been deprecated. They will be removed in the final release.</li>
+<li>Thanks to the hard work of Mozilla engineers, we now offer Firefox 5 support.</li>
+<li>The <a href="http://www.opera.com/developer/tools/operadriver/">Opera driver</a>, developed by the lovely chaps at Opera Software, is bundled with this release.</li>
+<li>Improvements in the way that mouse interactions are simulated, particularly when elements are outside the visible area of the page.</li>
 </ul>
-<p>Waiting in the wings for release soon is an AndroidDriver, which opens up the world of testing webapps on Android devices through the Selenium WebDriver API.</p>
-<p>If you&#8217;re a pythonista or rubyist, you&#8217;ve not been left out of this bonaza of new hotness. There have been regular updates for these languages, which can be installed via &#8220;easy_install -U selenium&#8221; or &#8220;gem install selenium-webdriver&#8221; depending on your language of choice.</p>
-<p>Hopefully the next alpha will be the last before we plunge bravely into the betas. Exciting times are ahead!</p>
+<p>As with almost all releases, there are still some issues left to resolve, but we&#8217;re working hard to make Selenium 2.0 as good as it can be.</p>
 
             
 
@@ -294,8 +292,8 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a5%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a5-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a5-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0rc3%3a%20The%20%e2%80%9cNext%20One%e2%80%99s%20The%20Big%20One%e2%80%9d%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc3-the-next-ones-the-big-one-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-0rc3-the-next-ones-the-big-one-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

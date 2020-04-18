@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>intellij on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/intellij/</link>
+    <description>Recent content in intellij on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 08 Feb 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/intellij/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>IntelliJ</title>
+      <link>https://selenium.dev/blog/2015/intellij/</link>
+      <pubDate>Sun, 08 Feb 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2015/intellij/</guid>
+      <description>Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project. As part of that process, they&amp;#8217;ve asked that we review the product and (kudos to them!) have been clear that they hope we&amp;#8217;re open and honest. So, I&amp;#8217;ll be open and honest.
+When I tell people that I&amp;#8217;m a professional Java developer, people in some circles make sympathetic noises and (sometimes) jokingly refer to how painful my coding life must be.</description>
+    </item>
+    
+  </channel>
+</rss>

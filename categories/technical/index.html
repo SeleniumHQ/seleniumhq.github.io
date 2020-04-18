@@ -150,6 +150,46 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Monday, January 14, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/source-control/"><h2>Source Control</h2></a>
+            <p>This short technical note is to announce that the Selenium project is now using <a href="https://code.google.com/p/selenium/source/checkout">git on Google Code</a> in place of subversion.</p>
+<p>The move has been a long time in the making, and it&#8217;s largely thanks to the efforts of <a href="https://twitter.com/krosenvold">Kristian Rosenvold</a> that we&#8217;ve been able to do the migration and retain the project history. The project owes him a huge thank you! We&#8217;re in the process of migrating the last bits and pieces (none of which are user facing), so there may be some last minute turbulence as we settle everything down.</p>
+<p>Although the canonical source will be on <a href="http://selenium.googlecode.com/">Google Code</a>, we&#8217;re working on setting up a github mirror. We&#8217;ll announce the location of that once it&#8217;s set up.</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/source-control/">source-control</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/decisions/">decisions</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/categories/technical/">technical</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Source%20Control&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fsource-control%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fsource-control%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Sunday, September 5, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2010/going-atomic-how/"><h2>Going Atomic: How</h2></a>
             <p>This is the second of my technical posts. Again, if you&#8217;re interested in the internal workings of Selenium 2, then please skip straight to something else. If you&#8217;re interested in how and why we made some of the technical decisions on the project, keep reading&#8230;.</p>
@@ -239,74 +279,16 @@
             </div>
         </div>
         
-        <div class="container dark-background">
-            Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
-            <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
-            <p>There are several ways to use Selenium 2:</p>
-<ol>
-<li>If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new <tt>WebDriver</tt> implemenations like <tt>ChromeDriver</tt>, <tt>HtmlUnitDriver</tt>, <tt>FirefoxDriver</tt>, or <tt>InternetExplorerDriver</tt> which provide a nice, small and easy to learn API.</li>
-<li>If you have Selenium 1.x legacy code, you can still use the well known <tt>DefaultSelenium</tt> class or the new <tt>WebDriverBackedSelenium</tt>, which extends <tt>DefaultSelenium</tt> but uses one of the <tt>WebDriver</tt> implementations internally.</li>
-</ol>
-<p>Whichever option you prefer, if you have want to use Maven, all you need to do is add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>If you know, that you will only use a certain <tt>WebDriver</tt> implementation, e.g. the <tt>FirefoxDriver</tt>, you don&#8217;t need to depend on the <tt>selenium</tt> artifact (which has dependencies to all <tt>WebDriver</tt> implementations as well as the support classes). Instead you can add the dependency to just the artifact you need, e.g.</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>When using a <tt>WebDriver</tt> implementation, there is no need to start a Selenium server &#8211; the browser will be directly started and remote controlled.</p>
-<p>But if you are using <tt>DefaultSelenium</tt> (or the <tt>RemoteWebDriver</tt> implementation), you still need to start a Selenium server.</p>
-<p>The best way is to download the <a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.0a5.jar">standalone Selenium server jar</a> and just use it.</p>
-<p>Furthermore you can also embed the Selenium server into your own project, if you add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>Now you can create a <tt>SeleniumServer</tt> instance yourself and start it.</p>
-<p>Be aware, that the <tt>selenium-server</tt> artifact has a dependency to the <tt>servlet-api-2.5</tt> artifact, which you need to exclude, if your project will be run in a web application container.</p>
-<p>Well, I hope that covers everything you need to know on how to use Selenium 2 with Maven.</p>
-<p>Michael</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/maven/">maven</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/technical/">technical</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - How%20to%20use%20Selenium%202%20with%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
 
         
 
         <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/categories/technical/page/2/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
             
 
             

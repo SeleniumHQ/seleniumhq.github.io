@@ -6,10 +6,33 @@
     <description>Recent content in ide on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Dec 2010 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 04 Jul 2011 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/tags/ide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selenium IDE 1.0.12 – now with Firefox 5 support</title>
+      <link>https://selenium.dev/blog/2011/selenium-ide-1-0-12-firefox-5/</link>
+      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2011/selenium-ide-1-0-12-firefox-5/</guid>
+      <description>Last week we quietly released Selenium IDE 1.0.12 on the website. It has Firefox 5 support along with other improvements. See the release notes and unofficial announcement. Download it here or ask Firefox to check for plugins updates.
+And for those who did not download 1.0.11 (it was not pushed through the update system) you will want to read about the formatter change that landed. </description>
+    </item>
+    
+    <item>
+      <title>Selenium IDE 1.0.11 – Now with Firefox 4 Support!</title>
+      <link>https://selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</link>
+      <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</guid>
+      <description>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the seleniumhq download site. The update will also be pushed to you automatically over the next couple days.
+Other things of note around this release
+•Release Notes
+•Where to log bugs
+•Welcome Selenium IDE 1.0.11 (with Firefox 4 support)</description>
+    </item>
     
     <item>
       <title>Atoms have come to Selenium IDE</title>

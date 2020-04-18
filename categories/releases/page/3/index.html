@@ -150,24 +150,11 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Tuesday, May 11, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-            <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/"><h2>Selenium Grid 1.0.7 Released</h2></a>
-            <p>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&#8217;re pleased to announce the release of Selenium Grid 1.0.7.  This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.7-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The list of changes are:</p>
-<ul>
-<li>Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long</li>
-<li><a href="http://selenium-grid.seleniumhq.org/configuring-and-tuning.html#changing_maximum_wait_time_for_new_session">Added ability to specify timeout period when waiting for remote controls to become available</a>.  Now the client can timeout gracefully and decide what it would like to do next</li>
-<li>Handle common case of session ID not being found, either because it timed out or was already closed; rather than raising a NullPointerException we now raise a NoSuchSessionException</li>
-<li>Truncate long command response bodies to 128 characters</li>
-<li>Retry remote control checks up to three times before deciding that a remote control is unreliable or unresponsive.  This prevents aggressive unregistration of hosts that are busy or suffer from network issues</li>
-</ul>
-<p>As always, patches and bug reports are appreciated:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>Barring any critical issues, the next release of Selenium Grid will be 1.1 and will feature an enhanced Web view as well as a status API.  After that, we will be moving from GitHub to Google Code to live alongside the other Selenium projects.</p>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.</p>
+            Thursday, January 5, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/"><h2>Selenium 2.16 Released: Welcome to 2012!</h2></a>
+            <p>It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing. I think we&#8217;ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.16</a>.</p>
+<p>If you&#8217;re unsure about what&#8217;s been happening since the last time we announced a release here, the best place to look is our <a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">changelog</a>. The most notable feature in 2.16 is better support for Firefox 9, but if it&#8217;s been a while since you&#8217;ve last updated, we&#8217;ve been beavering away on bug fixes and making existing features work as flawlessly as possible. Now&#8217;s a great time to update!</p>
+<p>One of the key tools we use for assessing whether it&#8217;s okay to push a release is our continuous build. This watches for each and every change made to the project&#8217;s source code, and runs an increasingly vast suite of tests to verify that nothing has broken. Our friends at <a href="http://saucelabs.com/">SauceLabs</a> have been extremely generous in providing support for this, and have worked closely with us to make the build as stable and quick as possible. Special kudos and thanks to them!</p>
 
             
 
@@ -175,9 +162,6 @@
     
     <li>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/grid/">grid</a>
     </li></ul>
 
 
@@ -193,30 +177,17 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.7%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.16%20Released%3a%20Welcome%20to%202012%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-2-16-released-welcome-to-2012%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fselenium-2-16-released-welcome-to-2012%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Monday, April 19, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0a3-released/"><h2>Selenium 2.0a3 Released</h2></a>
-            <p><p>Selenium 2.0a3 has been released and can be downloaded from the <a href="http://code.google.com/p/selenium/downloads/list">Selenium project site</a>. This is a major update to 2.0 and all users are encouraged to update. The new features include:</p>
-<ul>
-<li>An improved <a href="http://code.google.com/p/selenium/wiki/JsonWireProtocol">remote protocol</a>.</li>
-<li>Updating the version of HtmlUnit used to 2.7.</li>
-<li>Improved support for simulating user interactions with the browser via native events on Linux.</li>
-<li>Better support for Firefox 3.6.</li>
-<li>Bug fixes</li>
-</ul>
-<p>The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</p>
-<p>The next release will be Selenium 2.0a4, and it is planned to include the following when it is released in late May:</p>
-<ul>
-<li>Android support</li>
-<li>A new API to support writing tests involving complex user interactions.</li>
-<li>Far more integration of the underlying architecture.</li>
-</ul></p>
+            Thursday, October 20, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-9-released/"><h2>Selenium 2.9 Released</h2></a>
+            <p>We&#8217;re pleased to announce the release of <a href="http://seleniumhq.org/download/">Selenium 2.9</a>. As well as improving the stability of Grid under high loads, we&#8217;ve added an experimental (and temporary!) feature that allows the Firefox driver to use a different mechanism for determining when a page is loaded. This is designed to handle the case where the driver appears to hang, as it&#8217;s waiting for all incoming requests to complete before continuing. How to enable this mode is listed in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">changelog</a>.</p>
+<p>This release also includes an updated <a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.9.apk">Android driver</a>, allowing your tests to run on Ice Cream Sandwich devices.</p>
 
             
 
@@ -224,9 +195,6 @@
     
     <li>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/beta/">beta</a>
     </li></ul>
 
 
@@ -242,28 +210,18 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a3%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.9%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-9-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-9-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Tuesday, April 13, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-            <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/"><h2>Selenium Grid 1.0.6 Released</h2></a>
-            <p>Following up on the Selenium Grid 1.0.5 release, which added <a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features</a> to ease grid management, we&#8217;re pleased to announce the release of Selenium Grid 1.0.6.  This is a bug fix release for 1.0.5 with some minor new additions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.6-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The summary of changes are:</p>
-<ul>
-<li>Fixed some concurrent modification issues that may have resulted in NullPointerExceptions</li>
-<li>Fixed issue with shutting down workers with Rakefile</li>
-<li>Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit</li>
-</ul>
-<p>In case you missed the announcement, Philippe is <a href="http://ph7spot.com/blog/selenium-grid-needs-a-new-maintainer">no longer maintaining</a> Selenium Grid.  We thank him for his years of effort and helping the project get to where it is today.  This is my first release as the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new Selenium Grid maintainer</a>.  I will be getting out a new post shortly that lays out the future for the project <em>[UPDATE: The <a href="http://seleniumhq.wordpress.com/2010/04/27/the-future-of-selenium-grid/">promised post</a> is live]</em>.  In the meanwhile, please note the new location of several key resources:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.  We look forward to hearing what you think about how we can improve the project.</p>
+            Thursday, October 6, 2011 by <a href="https://twitter.com/illicitonion">illicitonion</a>
+            <a href="https://selenium.dev/blog/2011/selenium-2-8-released/"><h2>Selenium 2.8 Released</h2></a>
+            <p>In keeping with our (roughly) weekly releases, Selenium 2.8 was <a href="http://seleniumhq.org/download/">released today</a> (and on Maven too), <a href="https://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">with a *huge* list of bug-fixes</a>!  As well as improved stability, if you&#8217;re using the Java API, this release adds the ability to upload files to a RemoteWebDriver server (see <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/remote/RemoteWebDriver.html#setFileDetector(org.openqa.selenium.remote.FileDetector)">RemoteWebDriver.setFileDetector</a>).</p>
+<p>Particular thanks have to go out to our two newest committers, Alexei Barancev and Ajay Kemparaj, for the copious bug-fixes they&#8217;ve contributed!</p>
+<p>We&#8217;re already hard at work getting 2.9 ready for next week with even more more bug-fixes &#8211; watch this space!</p>
 
             
 
@@ -271,9 +229,6 @@
     
     <li>
         <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/grid/">grid</a>
     </li></ul>
 
 
@@ -289,8 +244,8 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.8%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

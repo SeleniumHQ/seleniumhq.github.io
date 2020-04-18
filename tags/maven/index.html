@@ -150,6 +150,52 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
+            <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
+  &lt;version&gt;2.0b1&lt;/version&gt;
+  &lt;exclusions&gt;
+    &lt;exclusion&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+    &lt;/exclusion&gt;
+  &lt;/exclusions&gt;
+&lt;/dependency&gt;</pre></p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/maven/">maven</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - 2.0b1%20and%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
             <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
             <p>There are several ways to use Selenium 2:</p>
