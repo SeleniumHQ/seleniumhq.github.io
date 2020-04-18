@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>conference on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/conference/</link>
+    <description>Recent content in conference on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 30 Nov 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium Conference Survey</title>
+      <link>https://selenium.dev/blog/2010/selenium-conference-survey/</link>
+      <pubDate>Tue, 30 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-conference-survey/</guid>
+      <description>Great news! Thanks to the initiative of our friends at Sauce Labs, we&amp;#8217;re finally ready to host the first-ever Selenium Conference. We&amp;#8217;re still working out a lot of the details, but so far we&amp;#8217;ve decided this first conference will be sometime in April and hosted in San Francisco.
+In order to figure out the rest of the details, we&amp;#8217;re looking for feedback from the Selenium user community. Please take a moment to fill out the following survey.</description>
+    </item>
+    
+    <item>
+      <title>Selenium at Agile 2010</title>
+      <link>https://selenium.dev/blog/2010/selenium-at-agile-2010/</link>
+      <pubDate>Tue, 10 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-at-agile-2010/</guid>
+      <description>The Selenium project does not have an &amp;#8216;official&amp;#8217; presence here at Agile as it is seen as a &amp;#8216;test after&amp;#8217; tool rather than &amp;#8216;test first&amp;#8217; &amp;#8212; even though it provides the magic of the &amp;#8216;test first&amp;#8217; frameworks&amp;#8230; But there is a small, unofficial contingent of recognizable faces around that can help people out and some sessions on it.
+Sessions
+Why your selenium tests are so dang brittle, and what to do about it &amp;#8211; Wednesday, August 11 &amp;#8211; 3:30 &amp;#8211; 5:00</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>beta on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/beta/</link>
+    <description>Recent content in beta on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Dec 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/beta/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium 2.0 beta 1 Release</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</guid>
+      <description>We recently released the first of the betas for Selenium 2. It&amp;#8217;s available for Java, C# and Ruby. If you&amp;#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&amp;#8217;ll see is with the new WebDriver APIs, but there&amp;#8217;s a lot more!
+ A promise of relatively stable APIs For Firefox only right now, an API for dealing with alerts, prompts and confirms. A brand new IE driver.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a6 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a6-released/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a6-released/</guid>
+      <description>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the downloads page to get it while it&amp;#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and ruby libraries have been having smaller, more frequent releases all this time.
+You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a5 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a5-released/</link>
+      <pubDate>Wed, 14 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a5-released/</guid>
+      <description>I&amp;#8217;m pleased to announce the release of Selenium 2.0a5, available for immediate download. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:
+ Newinterfaces for dealing with HTML 5 elements. An API for &amp;#8220;implicit waits&amp;#8220;: quietly waiting until an element is present before continuing with a test. You can use them like this: driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS) A revamped Firefox driver. More shared code between Selenium and WebDriver.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a3 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a3-released/</link>
+      <pubDate>Mon, 19 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a3-released/</guid>
+      <description>Selenium 2.0a3 has been released and can be downloaded from the Selenium project site. This is a major update to 2.0 and all users are encouraged to update. The new features include:
+ An improved remote protocol. Updating the version of HtmlUnit used to 2.7. Improved support for simulating user interactions with the browser via native events on Linux. Better support for Firefox 3.6. Bug fixes  The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</description>
+    </item>
+    
+  </channel>
+</rss>

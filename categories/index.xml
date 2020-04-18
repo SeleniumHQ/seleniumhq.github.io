@@ -6,9 +6,46 @@
     <description>Recent content in Categories on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 24 Dec 2010 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>releases</title>
+      <link>https://selenium.dev/categories/releases/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/releases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>general</title>
+      <link>https://selenium.dev/categories/general/</link>
+      <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>conference</title>
+      <link>https://selenium.dev/categories/conference/</link>
+      <pubDate>Tue, 30 Nov 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>technical</title>
+      <link>https://selenium.dev/categories/technical/</link>
+      <pubDate>Sun, 05 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/technical/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

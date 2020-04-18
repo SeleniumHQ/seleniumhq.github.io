@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technical on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/technical/</link>
+    <description>Recent content in technical on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Sep 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/technical/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Going Atomic: How</title>
+      <link>https://selenium.dev/blog/2010/going-atomic-how/</link>
+      <pubDate>Sun, 05 Sep 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/going-atomic-how/</guid>
+      <description>This is the second of my technical posts. Again, if you&amp;#8217;re interested in the internal workings of Selenium 2, then please skip straight to something else. If you&amp;#8217;re interested in how and why we made some of the technical decisions on the project, keep reading&amp;#8230;.
+We left our intrepid heroes in a tight spot: they&amp;#8217;d decided to write a shared library of code, to be used by the various webdriver implementations and selenium core, but the requirements for doing this seemed to be at odds with it actually happening.</description>
+    </item>
+    
+    <item>
+      <title>Going Atomic: Why?</title>
+      <link>https://selenium.dev/blog/2010/going-atomic-why/</link>
+      <pubDate>Mon, 16 Aug 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/going-atomic-why/</guid>
+      <description>This is the first in a series of technical posts by me about the internals of Selenium WebDriver. If you&amp;#8217;re not interested in technical nitty-gritty, then feel free to step away now.
+Still here? Excellent.
+Let&amp;#8217;s take a step back to just before the Selenium and WebDriver projects merged. There were, very obviously, two separate codebases. Looking closer and with a slightly different perspective, there were more than this. We used the test suites for webdriver to define the behaviour for multiple, largely independent, driver codebases.</description>
+    </item>
+    
+  </channel>
+</rss>

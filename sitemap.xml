@@ -1023,7 +1023,32 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/tags/beta/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/categories/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/categories/releases/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/selenium/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</loc>
+    <lastmod>2010-12-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/</loc>
     <lastmod>2010-12-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -1033,8 +1058,38 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/categories/general/</loc>
+    <lastmod>2010-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/ide/</loc>
+    <lastmod>2010-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/webdriver/</loc>
+    <lastmod>2010-12-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-35/</loc>
     <lastmod>2010-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/smattering/</loc>
+    <lastmod>2010-12-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/categories/conference/</loc>
+    <lastmod>2010-11-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/conference/</loc>
+    <lastmod>2010-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1093,7 +1148,22 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/tags/decisions/</loc>
+    <lastmod>2010-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/going-atomic-how/</loc>
+    <lastmod>2010-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/technical/</loc>
+    <lastmod>2010-09-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/categories/technical/</loc>
     <lastmod>2010-09-05T00:00:00+00:00</lastmod>
   </url>
   
@@ -1128,6 +1198,11 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/tags/stories/</loc>
+    <lastmod>2010-08-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-22/</loc>
     <lastmod>2010-08-02T00:00:00+00:00</lastmod>
   </url>
@@ -1138,8 +1213,18 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/tags/maven/</loc>
+    <lastmod>2010-07-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/a-smattering-of-selenium-21/</loc>
     <lastmod>2010-07-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/status/</loc>
+    <lastmod>2010-07-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1153,7 +1238,7 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/blog/2010/gsoc-2010-remote%c2%a0storage/</loc>
+    <loc>https://selenium.dev/blog/2010/gsoc-2010-remote-storage/</loc>
     <lastmod>2010-07-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -1188,6 +1273,11 @@
   </url>
   
   <url>
+    <loc>https://selenium.dev/tags/grid/</loc>
+    <lastmod>2010-06-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/</loc>
     <lastmod>2010-06-10T00:00:00+00:00</lastmod>
   </url>
@@ -1200,6 +1290,11 @@
   <url>
     <loc>https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/</loc>
     <lastmod>2010-05-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/future/</loc>
+    <lastmod>2010-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -1219,6 +1314,11 @@
   
   <url>
     <loc>https://selenium.dev/blog/2010/selenium-1-0-3-released/</loc>
+    <lastmod>2010-02-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/tags/selenium-rc/</loc>
     <lastmod>2010-02-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -1331,10 +1431,6 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://selenium.dev/documentation/</loc>
   </url>
   
@@ -1388,10 +1484,6 @@
   
   <url>
     <loc>https://selenium.dev/sponsors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://selenium.dev/tags/</loc>
   </url>
   
   <url>

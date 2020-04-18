@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>releases on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/categories/releases/</link>
+    <description>Recent content in releases on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 24 Dec 2010 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium 2.0 beta 1 Release</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</link>
+      <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</guid>
+      <description>We recently released the first of the betas for Selenium 2. It&amp;#8217;s available for Java, C# and Ruby. If you&amp;#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&amp;#8217;ll see is with the new WebDriver APIs, but there&amp;#8217;s a lot more!
+ A promise of relatively stable APIs For Firefox only right now, an API for dealing with alerts, prompts and confirms. A brand new IE driver.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a6 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a6-released/</link>
+      <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a6-released/</guid>
+      <description>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the downloads page to get it while it&amp;#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and ruby libraries have been having smaller, more frequent releases all this time.
+You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a5 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a5-released/</link>
+      <pubDate>Wed, 14 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a5-released/</guid>
+      <description>I&amp;#8217;m pleased to announce the release of Selenium 2.0a5, available for immediate download. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:
+ Newinterfaces for dealing with HTML 5 elements. An API for &amp;#8220;implicit waits&amp;#8220;: quietly waiting until an element is present before continuing with a test. You can use them like this: driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS) A revamped Firefox driver. More shared code between Selenium and WebDriver.</description>
+    </item>
+    
+    <item>
+      <title>Selenium-IDE – Looking back and looking forward</title>
+      <link>https://selenium.dev/blog/2010/selenium-ide-looking-back-and-looking-forward/</link>
+      <pubDate>Fri, 09 Jul 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-ide-looking-back-and-looking-forward/</guid>
+      <description>Its been around six months and three releases since I took the reins of Selenium-IDE. The fundamental change in that time has been the adoption of a plugin model like the fine folks over that Firebug. (We&amp;#8217;re also self-hosting it which is big from a project internals perspective.)
+Right now, you can add custom user-extensions and formatters, but in the very near future you will be able to add location strategies as well.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Grid 1.0.8 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/</link>
+      <pubDate>Thu, 10 Jun 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/</guid>
+      <description>We&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.8. This release fixes multithreaded issues with the Selenium Grid hub that appeared randomly under heavy load. If you&amp;#8217;ve ever seen a log message about HttpClient being accessed by multiple threads, you definitely want to upgrade. Even if you haven&amp;#8217;t, this release is highly recommended for all.
+You can download it now or view the changelog. The list of changes is:</description>
+    </item>
+    
+    <item>
+      <title>Selenium IDE 1.0.7 – Now with Drag-and-Drop!</title>
+      <link>https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/</link>
+      <pubDate>Thu, 27 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/</guid>
+      <description>So its a month later than planned, but Selenium IDE 1.0.7 is now available. The delay was due to some internal build changes and not code, but one of the code changes that is there more than makes up for the delay.
+That&amp;#8217;s right, drag-and-drop has finally arrived to Se-IDE &amp;#8212; though credit lies with Jérémy Hérault for implementing it.
+Oh, and if you are Swedish, there is now a localization for you.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Grid 1.0.7 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/</link>
+      <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/</guid>
+      <description>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.7. This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.
+You can download it now or view the changelog. The list of changes are:
+ Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long Added ability to specify timeout period when waiting for remote controls to become available.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 2.0a3 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-2-0a3-released/</link>
+      <pubDate>Mon, 19 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-2-0a3-released/</guid>
+      <description>Selenium 2.0a3 has been released and can be downloaded from the Selenium project site. This is a major update to 2.0 and all users are encouraged to update. The new features include:
+ An improved remote protocol. Updating the version of HtmlUnit used to 2.7. Improved support for simulating user interactions with the browser via native events on Linux. Better support for Firefox 3.6. Bug fixes  The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</description>
+    </item>
+    
+    <item>
+      <title>Selenium Grid 1.0.6 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/</link>
+      <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/</guid>
+      <description>Following up on the Selenium Grid 1.0.5 release, which added self-healing features to ease grid management, we&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.6. This is a bug fix release for 1.0.5 with some minor new additions.
+You can download it now or view the changelog. The summary of changes are:
+ Fixed some concurrent modification issues that may have resulted in NullPointerExceptions Fixed issue with shutting down workers with Rakefile Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit  In case you missed the announcement, Philippe is no longer maintaining Selenium Grid.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 1.0.3 Released</title>
+      <link>https://selenium.dev/blog/2010/selenium-1-0-3-released/</link>
+      <pubDate>Tue, 23 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-1-0-3-released/</guid>
+      <description>Hot off the heals of 1.0.2, we&amp;#8217;re releasing Selenium Remote Control 1.0.3. You can download it now.
+There is no functional difference between this version and 1.0.2, other than it is packaged up a little nicer and we&amp;#8217;ve clarified the relationship between selenium-server and the client drivers. That is: we are not releasing new client drivers with future 1.x releases. The reason is that we locked down the API in version 1.</description>
+    </item>
+    
+    <item>
+      <title>Selenium 1.0.2 Released: Firefox 3.6 and Snow Leopard Support</title>
+      <link>https://selenium.dev/blog/2010/selenium-1-0-2-release-firefox-3-6-and-snow-leopard-support/</link>
+      <pubDate>Mon, 22 Feb 2010 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2010/selenium-1-0-2-release-firefox-3-6-and-snow-leopard-support/</guid>
+      <description>Today we&amp;#8217;re happy to announce that Selenium Remote Control 1.0.2 has been released. While most of our efforts are on Selenium 2.0, we understand that there are millions of Selenium users that still need the 1.x line supported. That&amp;#8217;s why we&amp;#8217;ve said from the start that our goal is make 2.x 100% backwards compatible with 1.x. And that&amp;#8217;s why we&amp;#8217;re releasing a new version of Selenium RC today.
+Download it here.</description>
+    </item>
+    
+  </channel>
+</rss>
