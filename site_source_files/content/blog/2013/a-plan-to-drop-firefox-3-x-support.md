@@ -4,6 +4,8 @@ Title = "A Plan to Drop Firefox 3.x Support"
 Date = 2013-01-22
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["support"]
+categories = ["general"]
 +++
 
 <div>The support policy of the <a href="http://seleniumhq.org/">selenium project</a> for <a href="http://www.getfirefox.com/">Firefox</a> browsers is to support the current and previous stables releases, as well as the current and previous <a href="http://www.mozilla.org/en-US/firefox/organizations/">ESR</a> releases. At the time of writing, that means the supported versions are &#8220;10&#8221; and &#8220;17&#8221; (ESR) and &#8220;17&#8221; and &#8220;18&#8221; (stable channel). In addition to this, we are currently supporting Firefox 3.x too.</div>

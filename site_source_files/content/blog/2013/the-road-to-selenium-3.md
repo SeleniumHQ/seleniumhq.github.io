@@ -4,6 +4,8 @@ Title = "The Road to Selenium 3"
 Date = 2013-08-28
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["general"]
 +++
 
 <p dir="ltr">Selenium 2 was <a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released in July 2011</a>. It’s now two years old, and what a couple of years it’s been! The WebDriver APIs, which were the major addition in Selenium 2, are now the basis for a <a href="http://www.w3.org/TR/webdriver/">W3C standard</a>, and there are implementations written and supported by Google, Mozilla and Opera. There have been 34 releases, with official support for Java, C#, Python, Ruby and Javascript, and the community has stepped in to provide bindings for Perl, PHP and others. There have been 57 different people authoring changes in the code base, and countless more participating in the online forums, offering help and advice.</p>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #148"
 Date = 2013-05-13
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Gotta start this up again&#8230;</p>
 <li><a href="https://docs.google.com/presentation/d/1zImieKjgfF2mvTEfLhkKnJpBrsq-shMWz1DMb-fxOoQ/edit#slide=id.gc15489c2_3_0">The Evil Tester Guide To HTTP Proxies</a> appears to be more for using proxies for manual testing, but you <i>should</i> be running your automation through one as well so it helps to understand the magic that takes place.</li>
 <li>New <a href="http://bmp.lightbody.net/">BrowserMob Proxy</a> release. Bindings should all be updated for the newly exposed methods in a couple days.</li>

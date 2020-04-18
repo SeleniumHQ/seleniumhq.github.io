@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #146"
 Date = 2013-03-11
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Happy &#8216;productivity destructive week&#8217; &#8212; otherwise known as March break.</p>
 <ul>
 <li><a href="http://blog.mogotest.com/2013/03/05/how-to-accept-self-signed-ssl-certificates-in-selenium2/">How to Accept Self-Signed SSL Certificates in Selenium 2</a> &#8212; or you could use &#8216;real&#8217; certificates that are trusted by the browser by default. If you are using self-signed certificates to &#8216;save money&#8217; and you spend 3 hours making it work, you are not saving money anymore</li>

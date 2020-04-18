@@ -4,6 +4,8 @@ Title = "Selenium Hangout 3 Recap"
 Date = 2013-11-01
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["hangout"]
+categories = ["general","governance"]
 +++
 
 <p>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.</p>

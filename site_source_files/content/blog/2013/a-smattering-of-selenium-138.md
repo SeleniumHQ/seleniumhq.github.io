@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #138"
 Date = 2013-01-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>&lt;insert snark here&gt;</p>
 <ul>
 <li><a href="http://angryweasel.com/blog/?p=565">Debugging For Testers</a> &#8212; they don&#8217;t teach this in testing school. Actually, there is a testing school&#8230;</li>
