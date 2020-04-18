@@ -6,6 +6,8 @@ MetaDataFormat = "toml"
 paginate = 3
 [taxonomies]
   year = "year"
+  tag = "tags"
+  category = "categories"
 [permalinks]
 	page = "/:title/"
 	about = "/:filename/"
