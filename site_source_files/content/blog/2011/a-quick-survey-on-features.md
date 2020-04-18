@@ -4,6 +4,8 @@ Title = "A Quick Survey on Features"
 Date = 2011-08-03
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["survey"]
+categories = ["general"]
 +++
 
 <p>Rather than surprising the general community in ways that we have become somewhat known for, I figured I would try something new. Actually asking about usage of things before changing them in fundamental ways.</p>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #57"
 Date = 2011-08-08
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Phew. The links made it through the Lion installation.</p>
 <ul>
 <li><a href="http://brian-oneill.com/2011/08/02/distributing-the-same-test-to-multiple-processes/">Distributing the Same Test to Multiple Processes</a> shows a technique for debugging flaky scripts</li>

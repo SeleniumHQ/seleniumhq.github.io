@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #53"
 Date = 2011-07-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Well, since the last Smattering there hasn&#8217;t been much in the community. Oh. Well, except for hitting the 2.0.0 milestone. Which seems like a good time to remind people that:</p>
 <ul>
 <li><i>Selenium</i> is the project <i>name</i></li>

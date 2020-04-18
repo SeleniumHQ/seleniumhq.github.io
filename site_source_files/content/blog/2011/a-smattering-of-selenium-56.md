@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #56"
 Date = 2011-07-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Safari is starting to whinge about how many tabs I have open which means it is time for another post.</p>
 <ul>
 <li><a href="https://github.com/blackberry/ripple-ui">Ripple-UI</a> is a cross-platform, mobile web application emulation environment. From RIM. Could be something interesting.</li>

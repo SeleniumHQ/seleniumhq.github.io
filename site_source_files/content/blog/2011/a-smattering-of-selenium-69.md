@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #69"
 Date = 2011-11-22
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>In honor of this edition I provide&#8230;<br />
 <img src="https://i2.wp.com/a3.l3-images.myspacecdn.com/images02/141/cb5d9b17391c47e49335fbde9be8e6a2/m.jpg" /><br />
 &#8230;in which I also date myself.</p>

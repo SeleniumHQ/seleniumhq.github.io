@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #41"
 Date = 2011-02-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>There isn&#8217;t an official announcement anywhere (yet) but Selenium 2.0b2 was released a couple hours ago. Time to upgrade all your servers. Beta 3 is going to focus on IE9 and FF4 support.</p>
 <p>Meanwhile&#8230;</p>
 <ul>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #38A"
 Date = 2011-01-24
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>No. Really. I&#8217;m almost caught up.</p>
 <ul>
 <li>Want input in a non-english language but don&#8217;t want to convert your whole machine? <a href="http://inputking.com/">InputKing</a> might be able to help. And the fact it is in a browser means we can use it via Se.</li>

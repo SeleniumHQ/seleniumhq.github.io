@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #39"
 Date = 2011-01-31
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Hey look! All caught up &#8212; only took a month&#8230;</p>
 <ul>
 <li>My opinions on Continuous Deployment are pretty widely known, but the IMVU folks certainly have a lot of neat tricks to &#8216;borrow&#8217;. Such as <a href="http://engineering.imvu.com/2011/01/19/buildbot-and-intermittent-tests/">Buildbot and Intermittent Tests</a></li>

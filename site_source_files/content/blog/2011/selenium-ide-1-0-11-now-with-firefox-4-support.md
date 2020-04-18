@@ -4,6 +4,8 @@ Title = "Selenium IDE 1.0.11 – Now with Firefox 4 Support!"
 Date = 2011-05-30
 Author = "Samit Badle"
 AuthorLink = "https://twitter.com/samitbadle"
+tags = ["selenium","ide"]
+categories = ["releases"]
 +++
 
 <p>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the <a href="http://seleniumhq.org/download/">seleniumhq download site</a>. The update will also be pushed to you automatically over the next couple days.</p>

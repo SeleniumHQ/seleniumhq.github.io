@@ -4,6 +4,8 @@ Title = "Selenium 2.1 Released"
 Date = 2011-07-18
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>Now that Selenium 2 has <a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">been released</a>, one of the goals of the project is to provide regular updates to our users and the community. The aim is for these updates to be small and manageable, incrementally addressing issues and problems raised by you. Selenium 2.1, which is <a href="http://seleniumhq.org/download/">launched today</a>, marks the first of these regular, small releases.</p>

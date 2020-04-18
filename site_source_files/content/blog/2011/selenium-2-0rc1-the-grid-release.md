@@ -4,6 +4,8 @@ Title = "Selenium 2.0rc1: The Grid Release"
 Date = 2011-06-01
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>We&#8217;re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! <a href="http://code.google.com/p/selenium/downloads/list">Grab the downloads from the site</a>!</p>
