@@ -4,6 +4,8 @@ Title = "Selenium IDE Is Dead, Long Live Selenium IDE! "
 Date = 2018-08-06
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["ide","selenium"]
+categories = ["general","releases"]
 +++
 
 In August of 2017 Simon shared the bleak, hard news that as of Firefox 55 Selenium IDE would no longer work.

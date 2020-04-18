@@ -4,6 +4,8 @@ Title = "SeleniumConf London 2019 Videos and Pictures"
 Date = 2019-11-09
 Author = "diemol"
 AuthorLink = "https://twitter.com/diegofmolina"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 
