@@ -150,12 +150,105 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2013/mobile-webdriver/"><h2>Mobile WebDriver</h2></a>
-            <p>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome). It&#8217;d be nice to have a similar option for mobile, switching from one automation framework for Android to another.</p>
-<p>As part of the Selenium 3 work, we have started working on a test suite to help ensure this level of interop between <a href="http://appium.io/">appium</a> and <a href="http://ios-driver.github.io/ios-driver/">iosdriver</a>, and appium and <a href="http://selendroid.io/">selendroid</a>. To kick start the process, the primary authors of each of those tools, as well as others including David Burns representing the <a href="https://developer.mozilla.org/en-US/docs/Marionette">Marionette</a> project (Mozilla&#8217;s implementation of WebDriver for Firefox and Firefox OS) and Simon Stewart, the lead of the <a href="http://seleniumhq.org/">Selenium</a> project, have spent the past two days locked in a small room in Mozilla HQ, London. They&#8217;ve taken this time to work out the areas where each of their projects didn&#8217;t align and agreed on a way to ensure a level of interoperability. There was only a minimal quantity of blood and tears, but plenty of hard work.</p>
-<p>The <a href="https://docs.google.com/document/d/1rnE13aGCaRiri01hti7j1jWDuPvQHT8aao4bHhEGz8Y/edit">agenda</a> for the past two days can be found here, and the <a href="https://docs.google.com/document/d/1yXXsQo3z7lUVl3ZthAx39h4xBlF62x7q_NZd3NA9jnU/edit">minutes</a> are also available.</p>
-<p>As we speak, work has started on a shared test suite, hosted in a <a href="https://code.google.com/p/selenium/source/checkout?repo=mobile">repo</a> in the selenium project&#8217;s Google Code page. Please, feel free to come along and join in!</p>
+            Friday, February 7, 2014 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2014/selenium-hangout-4-recap/"><h2>Selenium Hangout 4 Recap</h2></a>
+            <p>Here&#8217;s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (<a href="https://twitter.com/seleniumhangout">@seleniumhangout</a>) or e-mail us (<a href="mailto:questions@seleniumhangout.com">questions@seleniumhangout.com</a>).</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='640' height='360' src='https://www.youtube.com/embed/3IEqh7NmaEo?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
+<p><strong>Panel</strong><br />
+David Burns (<a href="https://twitter.com/AutomatedTester">@AutomatedTester</a>)<br />
+Kevin Menard (<a href="https://twitter.com/nirvdrum">@nirvdrum</a>)<br />
+Dave Haeffner (<a href="https://twitter.com/TourDeDave">@TourDeDave</a>)</p>
+<p><strong>Timeline</strong></p>
+<p>1:30-16:51: <span style="text-decoration:underline;">How to handle screenshots across different drivers</span><br />
+<em>tl;dr driver specific issues due to a lacking standard and missing API</em></p>
+<ul>
+<li>This is getting addressed in World Wide Web Consortium (W3C) spec which is under development</li>
+<li>E-mail use-cases you would like to see in the spec to <a href="mailto:automatedtester@mozilla.com">automatedtester@mozilla.com</a></li>
+</ul>
+<p>17:30-22:40 : <span style="text-decoration:underline;">Internet Explorer (IE) 9 pitfalls and how to avoid them</span><br />
+<em>tl;dr use 32-bit IE (if you&#8217;re not) and report issues to Selenium Issues</em></p>
+<ul>
+<li><a href="https://code.google.com/p/selenium/issues/list">Selenium Issue tracker</a></li>
+<li><a href="http://jimevansmusic.blogspot.com/2012/12/not-providing-html-page-is-bogus.html">A good blog post on how to submit an acceptable Selenium issue</a></li>
+</ul>
+<p>22:50-28:30 <span style="text-decoration:underline;">How do you do image and video comparison testing?</span><br />
+<em>tl;dr straight image comparison is a flawed strategy, but there&#8217;s a better way &#8212; also, Selenium&#8217;s not the best tool for the job</em></p>
+<p>Resources mentioned:</p>
+<ul>
+<li><a href="http://webconsistencytesting.com/">webconsistencytesting.com</a></li>
+<li><a href="http://www.youtube.com/watch?v=_6fV-6eMSUM">Kevin Menard&#8217;s GTAC talk</a></li>
+<li><a href="http://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm&#8217;s GTAC video</a></li>
+<li>Image capture library from Mozilla (<a href="https://github.com/mozilla/eideticker">the library</a> and <a href="https://blog.mozilla.org/futurereleases/2012/06/26/mobile-firefox-measuring-how-a-browser-feels/">a blog post about it</a>)</li>
+</ul>
+<p>28:58-38:15 <span style="text-decoration:underline;">How do you get started with Selenium?</span><br />
+<em>tl;dr pick a language you feel comfortable with, choose an editor that makes you productive, and dig into the available resources</em></p>
+<p>Recommended resources:</p>
+<ul>
+<li><a href="http://www.amazon.com/Selenium-Testing-Tools-Beginners-Guide/dp/1849518300">Selenium 2 Testing Tools (David Burns&#8217; book)</a></li>
+<li><a href="http://seleniumguidebook.com">The Selenium Guidebook (Dave Haeffner&#8217;s new book)</a></li>
+<li><a href="http://elementalselenium.com">Free, weekly tip newsletter on how to use Selenium</a> (also by Dave Haeffner)</li>
+<li><a href="http://seleniumhq.org/">Selenium HQ</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/selenium-users">Selenium Users Group</a></li>
+<li>Selenium IRC chat channel (<a href="http://elementalselenium.com/tips/20-irc-chat">here&#8217;s a write-up on what it is and how to access it</a>)</li>
+</ul>
+<p>38:23-42:50 <span style="text-decoration:underline;">Selenium 3 Update</span><br />
+<em>tl;dr still a work in progress, steadily moving forward, a big update will likely be required</em></p>
+<p>43:15-44:00 <span style="text-decoration:underline;">Conference Update</span><br />
+<em>tl;dr nothing finalized, hoping to do it internationally, but US is a fallback; still working on options (will know soon)</em></p>
+<p>44:10-45:20 <span style="text-decoration:underline;">Mobile Changes to the Selenium project</span><br />
+<em>tl;dr Android and iPhone Selenium drivers deprecated in favor of other compatible libraries</em></p>
+<p>Compatible libraries:</p>
+<ul>
+<li><a href="http://appium.io/">Appium</a></li>
+<li><a href="http://ios-driver.github.io/ios-driver/">ios-driver</a></li>
+<li><a href="http://selendroid.io/">Selendroid</a></li>
+</ul>
+<p>45:20-47:30 <span style="text-decoration:underline;">New Mobile Selenium Drivers</span><br />
+<em>tl;dr RIM (BlackBerry Smartphones) and Microsoft (Windows phones)</em></p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/hangout/">hangout</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/categories/governance/">governance</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%204%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-4-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-4-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Tuesday, December 24, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/android-and-ios-support/"><h2>Android and iOS Support</h2></a>
+            <p>TL;DR: We&#8217;re retiring Selenium&#8217;s own AndroidDriver and iPhoneDriver in favour of any of <a href="http://selendroid.io/">Selendroid</a>, <a href="http://ios-driver.github.io/ios-driver/">iosdriver</a> and <a href="http://appium.io/">Appium</a>. If you&#8217;re using one of Selenium&#8217;s own mobile drivers, please evaluate one of these alternatives.</p>
+<p>The longer version:</p>
+<p>In 2007, Steve Jobs <a href="http://www.apple.com/pr/library/2007/01/09Apple-Reinvents-the-Phone-with-iPhone.html">announced the iPhone</a> and changed the mobile Web from a curiosity to something the mainstream wanted and used. Current trends suggest that mobile Web usage will surpass desktop usage in the not too distant future. Which is a long way of saying the mobile Web is going to be a big part of the future of your sites and that it&#8217;d be an extremely wise idea to test them on mobile devices.</p>
+<p>The Selenium project responded to the rise of the mobile web by working to produce WebDriver implementations for both iOS and Android. The first lines of the iPhoneDriver (which also worked on the iPad) were added to the project early in 2009. The AndroidDriver was added in June 2010, and was primarily developed by engineers at Google. To this day you can download the official Android SDK and find &#8220;<a href="http://android-developers.blogspot.com/2011/10/introducing-android-webdriver.html">Google WebDriver</a>&#8221; as one of the optional extras you can download.</p>
+<p>After the initial work on the mobile drivers, something interesting happened. Experimental extensions and modifications to the drivers were made outside of the selenium project. The first one of these that I was involved with was &#8220;<a href="https://code.google.com/p/nativedriver/">nativedriver</a>&#8220;. This took the novel approach of allowing users to interact with the native UI of the phone, be it Android or iOS, using the familiar WebDriver APIs. The first time I saw it, I thought it was madness, but the engineers working on it soon convinced me that it made sense. And guess what? They were right.</p>
+<p>Sadly, after proving the idea was viable and workable, the NativeDriver project ran out of steam, but it set the scene for three projects that have taken the idea and run with it to create remarkably capable pieces of mobile testing software: Selendroid, iosdriver and Appium. All three of these allow a tester familiar with the WebDriver APIs to test mobile apps on iOS and Android. Not only native ones, but also hybrid or pure web-based ones too. They&#8217;ve recently been joined by the <a href="http://winphonewebdriver.codeplex.com/">Windows Phone WebDriver</a>, which allows testing of mobile web apps on WinPhone 8.</p>
+<p>All of these projects have something in common: they&#8217;re far more active, more capable and have pushed further than the equivalent code in the main selenium project. In fact, some of the members of the selenium team that contributed to both AndroidDriver and iPhoneDriver are now also working on those other projects. There&#8217;s <a href="http://sauceio.com/index.php/2013/09/the-mobile-json-wire-protocol-workshop/">work being done</a> to <a href="https://code.google.com/p/selenium/source/browse?repo=mobile">maintain interoperability</a> between the different drivers, allowing users to chose which framework is most appropriate for their needs without fear of their tests needing major rework.</p>
+<p>This means that keeping the existing Android and iPhone drivers within the Selenium project isn&#8217;t helping our users. The alternatives are better, and keeping &#8220;official&#8221; drivers within the project muddies the water. Worse, the selenium developers are slow at making fixes to those drivers, which is incredibly frustrating for everyone involved. Because of this, the Selenium project has deleted the code for those drivers from its repository and we recommend you evaluate and use one of the alternatives.</p>
+<p>Of course, the code will still live in our repo&#8217;s history, so if you&#8217;d like to build them yourself, then it&#8217;s still possible. The last version with the iPhoneDriver is <a href="https://code.google.com/p/selenium/source/detail?r=ef9d5787e5e136ecb4a31b0cf53a1fd17e252cf3">ef9d578</a>, and the last one with the Android source is <a href="https://code.google.com/p/selenium/source/detail?r=00a3c7df9fb4109e1f99b5f7bee5f5df74fb876a">00a3c7d</a>. We&#8217;ve uploaded a version of the AndroidDriver built from that revision to the downloads page to save you having to do so yourself.</p>
+<p>These changes do not mean that we don&#8217;t support mobile as a project. It just means that we support the best implementations of mobile WebDriver, and those aren&#8217;t written as part of the Selenium project.</p>
 
             
 
@@ -181,29 +274,52 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Mobile%20WebDriver&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Android%20and%20iOS%20Support&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fandroid-and-ios-support%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fandroid-and-ios-support%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2013/the-road-to-selenium-3/"><h2>The Road to Selenium 3</h2></a>
-            <p dir="ltr">Selenium 2 was <a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released in July 2011</a>. It’s now two years old, and what a couple of years it’s been! The WebDriver APIs, which were the major addition in Selenium 2, are now the basis for a <a href="http://www.w3.org/TR/webdriver/">W3C standard</a>, and there are implementations written and supported by Google, Mozilla and Opera. There have been 34 releases, with official support for Java, C#, Python, Ruby and Javascript, and the community has stepped in to provide bindings for Perl, PHP and others. There have been 57 different people authoring changes in the code base, and countless more participating in the online forums, offering help and advice.</p>
-<p>While all this has been happening, the world has moved on, and now it’s time for the Selenium project to look to the future. It’s with great pleasure that I can now say that we’re working towards Selenium 3.</p>
-<p>We aim for Selenium 3 to be “a tool for user-focused automation of mobile and web apps”.</p>
-<p>What does this mean? For mobile users, the Selenium project will be hosting a suite of tests to facilitate interoperability between the many different projects available that are extending the WebDriver API to also cope with mobile. Developers from projects such as <a href="http://appium.io/">Appium</a>, <a href="http://ios-driver.github.io/ios-driver/">ios-driver</a> and <a href="http://selendroid.io/">selendroid</a> will be working on the suite of tests to enable this.</p>
-<p>We’ll also be working on making the technology behind Selenium as stable and capable as possible. For this reason, Selenium 3 will see the removal of the original Selenium Core implementations, and consequently we’ll be deprecating the RC APIs too. The old versions will still be available as a separate download, but active development will cease, except for very urgent fixes. We will still be providing an implementation of the RC APIs backed by WebDriver, so you can continue running your existing tests, but now would be a great time to make the move to using the WebDriver APIs directly.</p>
-<p dir="ltr">For those of you exporting your tests from IDE and running the HTML suites, we’ll provide an alternative runner that allows you to continue running those tests too, though it’ll be backed by the same “WebDriver-backed” RC implementation as offered by the main download. Again, the original implementation will be available as a download, but it will no longer be actively developed once we release 3.0.</p>
-<p>Our current plan is to start shipping 3.0 by Christmas this year: it’s going to be a lot of fun!</p>
+            Friday, November 1, 2013 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2013/selenium-hangout-3-recap/"><h2>Selenium Hangout 3 Recap</h2></a>
+            <p>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.</p>
+<p>Be sure to tune into <a href="https://twitter.com/seleniumhangout">our Twitter feed</a> to find out details about our next Hangout.</p>
+<p>And if your question didn&#8217;t get answered, we encourage you to hop on IRC and ask it there. Not sure what that means or how to do it? Then <a href="http://elementalselenium.com/tips/20-irc-chat">read this</a>.</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/qS67YxxREME?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
+<p><strong>Panel</strong></p>
+<p>David Burns (<a href="https://twitter.com/AutomatedTester">@AutomatedTester</a>)</p>
+<p>Dave Haeffner (<a href="https://twitter.com/tourdedave">@TourDeDave</a>)</p>
+<p>Jim Evans (@<a href="https://twitter.com/jimevansmusic">jimevansmusic</a>)</p>
+<p>Kevin Menard (<a href="https://twitter.com/nirvdrum">@nirvdrum</a>)</p>
+<p><strong>Timeline</strong></p>
+<p><em>00:00 &#8211; 05:50</em></p>
+<p>Preamble and Introductions</p>
+<p><em>05:51 &#8211; 18:09</em></p>
+<p>Question 1 &#8211; For a team getting started with Selenium what are some typical workflows for how product code is built, and Selenium tests built, as well as for when product code is modified and Selenium test modified?</p>
+<p><em>18:10 &#8211; 34:15</em></p>
+<p>Question 2 &#8211; Recommendations for testing responsive design?</p>
+<p><em>34:15 &#8211; 37:44</em></p>
+<p>Question 3 &#8211; Was VerifyText removed?</p>
+<p><em>37:45 &#8211; 46:20</em></p>
+<p>Question 4 &#8211; Why is IE9 slow and hard to use and recommendations for alleviate this?</p>
+<p><em>46:21 &#8211; 50:11</em></p>
+<p>Question 5 &#8211; ChromeDriver2 seems less robust than it&#8217;s predecessor, thoughts on this?</p>
+<p><em>50:12 &#8211; 53:39</em></p>
+<p>Question 6 &#8211; The Selenium documentation is out of date, how can I contribute a fix for this?</p>
+<p><em>53:40 &#8211; 54:31</em></p>
+<p>How to help out with the Selenium Conference?</p>
+<p><strong>Links mentioned</strong></p>
+<p><a href="http://elementalselenium.com/tips/18-what-to-test">Figuring Out What To Test</a></p>
+<p><a href="https://groups.google.com/forum/#!topic/selenium-developers/94UM1CYysbo">How to get involved with the Selenium Conference</a></p>
+<p><a href="https://github.com/SeleniumHQ/selenium-docs">Where to contribute to Selenium Documentation</a></p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+        <a href="https://selenium.dev/tags/hangout/">hangout</a>
     </li></ul>
 
 
@@ -213,58 +329,17 @@
     
     <li>
         <a href="https://selenium.dev/categories/general/">general</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/categories/governance/">governance</a>
     </li></ul>
 
 
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - The%20Road%20to%20Selenium%203&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Sunday, August 18, 2013 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2013/a-smattering-of-selenium-157/"><h2>A Smattering of Selenium #157</h2></a>
-            <p><p>Trying to find every excuse not to cut the grass &#8230; including apparently closing some browser tabs.</p>
-<ul>
-<li><a href="http://idtus.com/blog/interoperability-standardized-test-information-interchange/">Interoperability – Standardized Test Information Interchange</a> has me so full of &#8216;meh&#8217; as to be hilarious. Commercially driven standards rarely are and/or I am just too much of an open source person to accept this model for standards development</li>
-<li><a href="http://lucumr.pocoo.org/2013/7/23/licensing/">Licensing in a Post Copyright World</a> &#8211; important</li>
-<li><a href="https://segment.io/blog/how-to-make-async-requests-in-php/">How to Make Async Requests in PHP</a> is php specific in its solution, but has some interesting bits about socket establishment that applies to other ones as well</li>
-<li><a href="http://fadefade.com/json-comments.html">Adding Comments to JSON</a> feels like a hack. Buts a clever hack.</li>
-<li><a href="http://axelfontaine.com/blog/final-nail.html">Maven Release Plugin: The Final Nail in the Coffin</a> takes great joy in removing part of the maven environment from their workflow. And really, who doesn&#8217;t?</li>
-<li><a href="http://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/">Open Sourcing a Python Project the Right Way</a> is nice &#8230; though of course, as with everything else these days, it has some Github specific isms. You <i>can</i> do it the right way with hg and bitbucket of course&#8230; and that is disclaimed in the article</li>
-<li><a href="http://ihaztehcodez.michael-lloyd-lee.me.uk/2013/07/headless-watir.html">Headless Watir</a> using both HTTPUnit and PhantomJS</li>
-<li><a href="http://jimevansmusic.blogspot.ca/2013/08/implementing-http-status-codes-in.html">Implementing HTTP Status Codes in WebDriver, Part 2: Achievement Unlocked</a> &#8211; umm, part 2?</li>
-<li><a href="http://selenium34.wordpress.com/2013/08/14/phantomjs-plugins-aws-browsermob-proxy/">PhantomJS + Plugins + AWS + BrowserMob Proxy</a> &#8211; proxy all the things! Including headless things.</li>
-<li><a href="http://teddziuba.com/post/58003369831/mastering-the-craft">Mastering the Craft</a> is a good reminder, but also, eBay has its own customized version of eclipse? Guessing this is one of those &#8216;at scale&#8217; solutions</li>
-</ul></p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/smattering/">smattering</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/general/">general</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23157&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-157%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-157%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%203%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-hangout-3-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-hangout-3-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

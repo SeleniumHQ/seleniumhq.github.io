@@ -150,6 +150,82 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/mobile-webdriver/"><h2>Mobile WebDriver</h2></a>
+            <p>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome). It&#8217;d be nice to have a similar option for mobile, switching from one automation framework for Android to another.</p>
+<p>As part of the Selenium 3 work, we have started working on a test suite to help ensure this level of interop between <a href="http://appium.io/">appium</a> and <a href="http://ios-driver.github.io/ios-driver/">iosdriver</a>, and appium and <a href="http://selendroid.io/">selendroid</a>. To kick start the process, the primary authors of each of those tools, as well as others including David Burns representing the <a href="https://developer.mozilla.org/en-US/docs/Marionette">Marionette</a> project (Mozilla&#8217;s implementation of WebDriver for Firefox and Firefox OS) and Simon Stewart, the lead of the <a href="http://seleniumhq.org/">Selenium</a> project, have spent the past two days locked in a small room in Mozilla HQ, London. They&#8217;ve taken this time to work out the areas where each of their projects didn&#8217;t align and agreed on a way to ensure a level of interoperability. There was only a minimal quantity of blood and tears, but plenty of hard work.</p>
+<p>The <a href="https://docs.google.com/document/d/1rnE13aGCaRiri01hti7j1jWDuPvQHT8aao4bHhEGz8Y/edit">agenda</a> for the past two days can be found here, and the <a href="https://docs.google.com/document/d/1yXXsQo3z7lUVl3ZthAx39h4xBlF62x7q_NZd3NA9jnU/edit">minutes</a> are also available.</p>
+<p>As we speak, work has started on a shared test suite, hosted in a <a href="https://code.google.com/p/selenium/source/checkout?repo=mobile">repo</a> in the selenium project&#8217;s Google Code page. Please, feel free to come along and join in!</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/mobile/">mobile</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Mobile%20WebDriver&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/the-road-to-selenium-3/"><h2>The Road to Selenium 3</h2></a>
+            <p dir="ltr">Selenium 2 was <a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released in July 2011</a>. It’s now two years old, and what a couple of years it’s been! The WebDriver APIs, which were the major addition in Selenium 2, are now the basis for a <a href="http://www.w3.org/TR/webdriver/">W3C standard</a>, and there are implementations written and supported by Google, Mozilla and Opera. There have been 34 releases, with official support for Java, C#, Python, Ruby and Javascript, and the community has stepped in to provide bindings for Perl, PHP and others. There have been 57 different people authoring changes in the code base, and countless more participating in the online forums, offering help and advice.</p>
+<p>While all this has been happening, the world has moved on, and now it’s time for the Selenium project to look to the future. It’s with great pleasure that I can now say that we’re working towards Selenium 3.</p>
+<p>We aim for Selenium 3 to be “a tool for user-focused automation of mobile and web apps”.</p>
+<p>What does this mean? For mobile users, the Selenium project will be hosting a suite of tests to facilitate interoperability between the many different projects available that are extending the WebDriver API to also cope with mobile. Developers from projects such as <a href="http://appium.io/">Appium</a>, <a href="http://ios-driver.github.io/ios-driver/">ios-driver</a> and <a href="http://selendroid.io/">selendroid</a> will be working on the suite of tests to enable this.</p>
+<p>We’ll also be working on making the technology behind Selenium as stable and capable as possible. For this reason, Selenium 3 will see the removal of the original Selenium Core implementations, and consequently we’ll be deprecating the RC APIs too. The old versions will still be available as a separate download, but active development will cease, except for very urgent fixes. We will still be providing an implementation of the RC APIs backed by WebDriver, so you can continue running your existing tests, but now would be a great time to make the move to using the WebDriver APIs directly.</p>
+<p dir="ltr">For those of you exporting your tests from IDE and running the HTML suites, we’ll provide an alternative runner that allows you to continue running those tests too, though it’ll be backed by the same “WebDriver-backed” RC implementation as offered by the main download. Again, the original implementation will be available as a download, but it will no longer be actively developed once we release 3.0.</p>
+<p>Our current plan is to start shipping 3.0 by Christmas this year: it’s going to be a lot of fun!</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - The%20Road%20to%20Selenium%203&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Friday, November 2, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2012/announcing-selenium-2-26/"><h2>Announcing Selenium 2.26: the “It’s Really Real” Release</h2></a>
             <p>It&#8217;s been a long time since we announced a new Selenium release on this blog, as we moved to a model of quicker releases, but we&#8217;ve been working on 2.26 for far longer than normal &#8212; it&#8217;s out! <a href="http://seleniumhq.org/download/">Download</a> it now! &#8212; so I thought it best to let you know. We&#8217;re aiming to head back to faster releases, so hopefully you won&#8217;t see another blog post about the release for a while (though I&#8217;m sure they&#8217;ll appear in the &#8220;Smatterings of Selenium&#8221; posts)</p>
@@ -179,77 +255,6 @@
 
                 <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.26%3a%20the%20%e2%80%9cIt%e2%80%99s%20Really%20Real%e2%80%9d%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-26%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-26%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Tuesday, May 29, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2012/announcing-selenium-2-22/"><h2>Announcing Selenium 2.22</h2></a>
-            <p>It&#8217;s been a while since the last Selenium release, but I&#8217;m happy to announce that Selenium 2.22 is now <a href="http://seleniumhq.org/download/">available for download</a>. This is a big release for us and features two major changes.</p>
-<p>The first is that<strong> Selenium 2.22 is the first version that requires Java 6</strong> in order to run. This has been the case for the Selenium Server for some time, but this is the first time the client code has required Java 6. Since Java 5 was <a href="http://www.oracle.com/technetwork/java/eol-135779.html">&#8220;end of lifed&#8221; in 2009</a>, we don&#8217;t expect this to impact many users.</p>
-<p>The second major change is that <strong>we are now providing a standalone IE server for use with the WebDriver API</strong>, similar to the one used by the chrome driver. You can get it from the normal download page. This will allow us to update our IE support independently of the rest of the library (again, mirroring how Chrome is supported) For now, there&#8217;s a legacy fallback mode you can use that&#8217;ll use the same DLL we&#8217;ve always used which can be activated by setting the DesiredCapability &#8220;useLegacyInternalServer&#8221; to boolean &#8220;true&#8221; when requesting your IE Driver instance.</p>
-<p>Of course, as well as these major changes, there&#8217;s the usual host of updates and improvements. We&#8217;re continuing to refine the new SafariDriver, and we&#8217;re happy to announce native events for Firefox 12. You can check out the other updates in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">CHANGELOG</a>.</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/releases/">releases</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.22&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-22%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/"><h2>A Note About the Cybervillains SSL Certificate</h2></a>
-            <p>If you&#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.</p>
-<p>Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and <a href="http://www.neustar.biz/solutions/website-performance">Neustar</a> for taking providing the new certificate and the patch!</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/rc/">rc</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/general/">general</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - A%20Note%20About%20the%20Cybervillains%20SSL%20Certificate&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fa-note-about-the-cybervillains-ssl-certificate%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

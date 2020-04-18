@@ -6,17 +6,53 @@
     <description>Recent content in Tags on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>conference</title>
+      <link>https://selenium.dev/tags/conference/</link>
+      <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ide</title>
+      <link>https://selenium.dev/tags/ide/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/tags/ide/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>selenium</title>
       <link>https://selenium.dev/tags/selenium/</link>
-      <pubDate>Thu, 13 Oct 2016 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intellij</title>
+      <link>https://selenium.dev/tags/intellij/</link>
+      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/tags/intellij/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jetbrains</title>
+      <link>https://selenium.dev/tags/jetbrains/</link>
+      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/tags/jetbrains/</guid>
       <description></description>
     </item>
     
@@ -26,33 +62,6 @@
       <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/beta/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>conference</title>
-      <link>https://selenium.dev/tags/conference/</link>
-      <pubDate>Thu, 23 Jun 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/tags/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>intellij</title>
-      <link>https://selenium.dev/tags/intellij/</link>
-      <pubDate>Sun, 08 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/tags/intellij/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jetbrains</title>
-      <link>https://selenium.dev/tags/jetbrains/</link>
-      <pubDate>Sun, 08 Feb 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/tags/jetbrains/</guid>
       <description></description>
     </item>
     
@@ -143,15 +152,6 @@
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/chromedriver/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ide</title>
-      <link>https://selenium.dev/tags/ide/</link>
-      <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/tags/ide/</guid>
       <description></description>
     </item>
     

@@ -6,10 +6,23 @@
     <description>Recent content in conference on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/conference/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SeleniumConf London 2019 Videos and Pictures</title>
+      <link>https://selenium.dev/blog/2019/seleniumconf-london-2019/</link>
+      <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2019/seleniumconf-london-2019/</guid>
+      <description>Check out all the SeleniumConf London 2019 videos and photos!
+SeleniumConf London 2019 Speakers
+You can find all the videos here, and all the pictures here.
+If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &amp;ldquo;State of the Union&amp;rdquo; keynote!
+  </description>
+    </item>
     
     <item>
       <title>Fall Selenium Conf, Save the Date &amp; Call for Speakers!</title>

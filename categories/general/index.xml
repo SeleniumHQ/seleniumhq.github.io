@@ -6,10 +6,55 @@
     <description>Recent content in general on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 13 Oct 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SeleniumConf London 2019 Videos and Pictures</title>
+      <link>https://selenium.dev/blog/2019/seleniumconf-london-2019/</link>
+      <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2019/seleniumconf-london-2019/</guid>
+      <description>Check out all the SeleniumConf London 2019 videos and photos!
+SeleniumConf London 2019 Speakers
+You can find all the videos here, and all the pictures here.
+If you cannot wait to get started, feel free to watch below Simon&amp;rsquo;s &amp;ldquo;State of the Union&amp;rdquo; keynote!
+  </description>
+    </item>
+    
+    <item>
+      <title>Selenium IDE Is Dead, Long Live Selenium IDE! </title>
+      <link>https://selenium.dev/blog/2018/long-live-selenium-ide/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2018/long-live-selenium-ide/</guid>
+      <description>In August of 2017 Simon shared the bleak, hard news that as of Firefox 55 Selenium IDE would no longer work. Selenium IDE (or as we’ll refer to it from here on out – the Legacy IDE) was, and is, dead.
+Since then quite a lot has happened with the IDE. We have a new version of it which we are referring to as… Selenium IDE!
+It is currently in “alpha” and available for use in both Chrome and Firefox.</description>
+    </item>
+    
+    <item>
+      <title>Firefox 55 and Selenium IDE</title>
+      <link>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</guid>
+      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. 
+The reasons for this are complex, but boil down to two main causes:
+ Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.</description>
+    </item>
+    
+    <item>
+      <title>Hacking with IntelliJ</title>
+      <link>https://selenium.dev/blog/2017/hacking-with-intellij/</link>
+      <pubDate>Wed, 08 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2017/hacking-with-intellij/</guid>
+      <description>Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they&amp;#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&amp;#8217;ll attempt to do that, and I&amp;#8217;ll try and state my biases up-front so you&amp;#8217;re aware of them.
+I&amp;#8217;ve been using Jetbrain&amp;#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago.</description>
+    </item>
     
     <item>
       <title>Selenium 3.0: Out Now!</title>

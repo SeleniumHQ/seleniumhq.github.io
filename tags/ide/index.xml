@@ -6,10 +6,32 @@
     <description>Recent content in ide on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 04 Jul 2011 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Aug 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/tags/ide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selenium IDE Is Dead, Long Live Selenium IDE! </title>
+      <link>https://selenium.dev/blog/2018/long-live-selenium-ide/</link>
+      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2018/long-live-selenium-ide/</guid>
+      <description>In August of 2017 Simon shared the bleak, hard news that as of Firefox 55 Selenium IDE would no longer work. Selenium IDE (or as we’ll refer to it from here on out – the Legacy IDE) was, and is, dead.
+Since then quite a lot has happened with the IDE. We have a new version of it which we are referring to as… Selenium IDE!
+It is currently in “alpha” and available for use in both Chrome and Firefox.</description>
+    </item>
+    
+    <item>
+      <title>Firefox 55 and Selenium IDE</title>
+      <link>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</link>
+      <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</guid>
+      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. 
+The reasons for this are complex, but boil down to two main causes:
+ Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.</description>
+    </item>
     
     <item>
       <title>Selenium IDE 1.0.12 – now with Firefox 5 support</title>

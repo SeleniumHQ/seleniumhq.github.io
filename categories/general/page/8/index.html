@@ -150,72 +150,77 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Monday, August 12, 2013 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2013/a-smattering-of-selenium-156/"><h2>A Smattering of Selenium #156</h2></a>
-            <p><p>Brain fried from PyCon Canada 2013 and &#8216;some&#8217; browser tab is misbehaving which means its time to start closing some of these.</p>
-<ul>
-<li><a href="http://antecedent.github.io/patchwork/">Patchwork</a> seems like an awesome idea, but at the same time, I&#8217;ve had to work in heavily monkey-patched RoR apps before&#8230;</li>
-<li><a href="https://igor.io/2013/07/26/evolving-syntax.html">Evolving syntax</a> is PHP specific in its examples, but the ideas transfer</li>
-<li><a href="http://adaptengine.com/blog/2013/07/24/roslyn-plus-selenium-scripty-csharp-powering-browser-automation/">Roslyn + Selenium: Scripty C# Powering Browser Automation</a> &#8211; some C# voodoo?</li>
-<li><a href="http://dnlkntt.wordpress.com/2013/08/07/its-like-10000-knives-when-all-you-need-is-a-spoon/">It’s like 10000 knives when all you need is a Spoon</a> &#8211; or specifically, this particular spoon which is yet-another-android-automation-tool. See comments for a bit of discussion re Appium which seems to be the currently best marketed solution in this space</li>
-<li><a href="http://www.diku.dk/hjemmesider/ansatte/torbenm/Planet/">Planet generator</a> has absolutely nothing to do with automation, but is just cool</li>
-<li><a href="http://www.testspicer.com/">TestSpicer</a> could be cool if it is massively flushed out</li>
-<li><a href="http://msdn.microsoft.com/en-us/library/ie/bg182625(v=vs.110).aspx">Compatibility changes in IE11 Preview</a> is going to break things I fear, for instance the readyState stuff?</li>
-<li><a href="https://speakerdeck.com/pyconca">PyCon Canada 2013 decks</a> are now up</li>
-<li><a href="http://jimevansmusic.blogspot.ca/2013/08/implementing-webdriver-http-status.html">Implementing WebDriver HTTP Status Codes, Part 1: Challenge Accepted</a> &#8211; is interesting in that it uses Fiddler</li>
-<li><a href="http://www.karlgroves.com/2013/05/14/links-are-not-buttons-neither-are-divs-and-spans/">Links are not buttons. Neither are DIVs and SPANs</a> &#8211; this, a million times.</li>
-</ul></p>
+            Wednesday, October 9, 2013 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2013/selenium-hangout-2-recap/"><h2>Selenium Hangout 2 Recap</h2></a>
+            <p>This is a recap from the most recent Selenium Hangout (a.k.a. <a href="seleniumhq.wordpress.com/2013/08/09/the-worlds-best-selenium-meetup/">The World&#8217;s Best Selenium Meetup</a>). For info on future meetups, <a href="https://twitter.com/SeleniumHangout">follow them on Twitter</a>.</p>
+<p>Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go <a href="http://bit.ly/sehovideos">here</a>.</p>
+<p><strong>Panel</strong></p>
+<p>David Burns (<a href="https://twitter.com/AutomatedTester">@AutomatedTester</a>)<br />
+Dave Haeffner (<a href="https://twitter.com/TourDeDave">@TourDeDave</a>)<br />
+Kevin Menard (<a href="https://twitter.com/nirvdrum">@nirvdrum</a>)<br />
+Simon Stewart (<a href="https://twitter.com/shs96c">@shs96c</a>)</p>
+<p><strong>Video</strong></p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/Li6xeYnjyUQ?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
+<p><strong>Minutes</strong></p>
+<p>00:00 &#8211; 05:04</p>
+<p>Goal and items for today&#8217;s conversation<br />
+Feedback review from last meetup<br />
+Intros</p>
+<p>05:05 &#8211; 07:34</p>
+<p>API changes<br />
+Packaging<br />
+Gradual approach to phasing out Selenium RC<br />
+Support for Selenium IDE HTML Suite running</p>
+<p>07:35 &#8211; 09:55</p>
+<p>Selenium Builder, how it will replace Selenium IDE, and when</p>
+<p>09:56 &#8211; 11:30</p>
+<p>Firefox Driver 2 release (a.k.a. &#8220;M day&#8221;)</p>
+<p>11:31 &#8211; 12:00</p>
+<p>Tasks required to complete WebDriver W3C standard</p>
+<p>12:01 &#8211; 14:30</p>
+<p>Upgrade concerns for enterprise users of Selenium<br />
+Recommended watching: <a href="http://www.youtube.com/watch?v=cSLmfegT36A">Jason Leyba&#8217;s talk at SeConf about upgrading Selenium at Google</a><br />
+Reasons why companies should make the jump</p>
+<p>14:31 &#8211; 14:55</p>
+<p>Why we need browser vendors to help<br />
+Why the W3C standard makes sense</p>
+<p>14:56 &#8211; 21:40</p>
+<p>Lessons learned and challenges found when a large scale practitioner upgraded from RC to WebDriver<br />
+Things they would like to see cleaned in Selenium 3<br />
+A nod in support of Selenium RC as a separate download<br />
+Simon attempts a joke</p>
+<p>21:41 &#8211; 25:15</p>
+<p>Other changes in Selenium 3<br />
+&#8211; all or nothing upgrade<br />
+&#8211; exception handling (changing from status codes to status strings)<br />
+&#8211; how commands are getting sent across the wire<br />
+&#8211; philosophy behind approach to Selenium RC approach</p>
+<p>25:16 &#8211; 27:29</p>
+<p>Mobile support in Selenium 3</p>
+<p>27:30 &#8211; 37:05</p>
+<p>Firefox Driver and Firefox OS<br />
+Recommended watching: <a href="http://www.youtube.com/watch?v=cU6GML70cR4">Jonathan Griffin &amp; David Burns&#8217; talk at SeConf on Firefox Driver/Marionette</a><br />
+Creating a common set of Desired Capabilities<br />
+Recommended watching: <a href="http://www.youtube.com/watch?v=Ro0k-btUZDM">David Burns&#8217; talk at SeConf on adding mobile gestures to WebDriver</a></p>
+<p>37:06 &#8211; 38:20</p>
+<p>Documentation</p>
+<p>38:21 &#8211; 49:40</p>
+<p>Brief history of Selenium project<br />
+Recommendation for RC users to look at the stable and brilliant new and shiny<br />
+Plan for Selenium RC in depth and rough timeline<br />
+Another recommendation to watch <a href="http://www.youtube.com/watch?v=cSLmfegT36A">Jason Leyba&#8217;s talk at SeConf about upgrading Selenium at Google</a></p>
+<p>49:41 &#8211; 50:45</p>
+<p>Encouragement for folks to hop on Selenium IRC chat channel (especially if your question wasn&#8217;t asked/answered)<br />
+Recommended reading: <a href="http://elementalselenium.com/tips/20-irc-chat">Elemental Selenium&#8217;s write-up on what IRC is, how to use it, and how to connect to the Selenium IRC chat channel</a></p>
+<p>50:46 &#8211; 51:45</p>
+<p>Where to <a href="http://bit.ly/sehofeedback">submit feedback and request topics for future meetups</a></p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/smattering/">smattering</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/general/">general</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23156&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-156%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-156%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Friday, August 9, 2013 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
-            <a href="https://selenium.dev/blog/2013/the-worlds-best-selenium-meetup/"><h2>The World’s Best Selenium Meetup</h2></a>
-            <p>Note from Adam: This is a guest post from <a href="http://twitter.com/tourdedave">Dave Haeffner</a> who, along with <a href="http://www.theautomatedtester.co.uk/">David Burns</a> hatched this idea at SeConf2013.</p>
-<p><strong>Selenium Meetups are great, but&#8230;</strong></p>
-<p>Have you ever wanted to attend a Selenium Meetup but there&#8217;s not one near you? Or maybe there is but something&#8217;s come up and you can&#8217;t make it out that night? Or maybe the meetup near you struggles to get good speakers and have a consistent schedule? [Note from Adam; like, say, the Toronto one&#8230;]</p>
-<p><strong>We can do better</strong></p>
-<p>Well, what if there were a way to attend a meetup regardless of location?</p>
-<p>And what if each meetup you attended was lined with core maintainers of the Selenium project?</p>
-<p>And if you missed it, what if the whole thing was recorded and available for you to review at your leisure?</p>
-<p>Well, now you can.</p>
-<p><strong>The World&#8217;s Best Selenium Meetup</strong></p>
-<p>Introducing Selenium Hangout &#8212; the world&#8217;s best and most accessible Selenium meetup. An entirely online meetup that leverages Google Hangouts and live streaming to YouTube. All meetups will be recorded and posted online afterwards.</p>
-<p>Each meetup will contain a small panel of people from the Selenium Community (e.g. core committers, automation practitioners, etc.) and they will discuss various topics (TBD).</p>
-<p><strong>How to attend</strong></p>
-<p>Simply follow <a href="https://twitter.com/SeleniumHangout">the SeleniumHangout Twitter account</a> to find out more.</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/meetup/">meetup</a>
+        <a href="https://selenium.dev/tags/hangout/">hangout</a>
     </li></ul>
 
 
@@ -227,42 +232,36 @@
         <a href="https://selenium.dev/categories/general/">general</a>
     </li>
     <li>
-        <a href="https://selenium.dev/categories/meetup/">meetup</a>
+        <a href="https://selenium.dev/categories/governance/">governance</a>
     </li></ul>
 
 
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - The%20World%e2%80%99s%20Best%20Selenium%20Meetup&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-worlds-best-selenium-meetup%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-worlds-best-selenium-meetup%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%202%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-hangout-2-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fselenium-hangout-2-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Sunday, July 28, 2013 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2013/a-smattering-of-selenium-155/"><h2>A Smattering of Selenium #155</h2></a>
-            <p><p>A &#8216;should be scripting, but brain stuck in neutral so closing some tabs&#8217; edition of the Smattering.</p>
-<ul>
-<li><a href="http://www.90percentofeverything.com/2013/07/23/the-slippery-slope/">The slippery slope</a> isn&#8217;t automation related, but if your employer does these things I&#8217;d suggest logging a bug and then finding an ethical job</li>
-<li><a href="https://caremad.io/blog/packaging-signing-not-holy-grail/">Why Package Signing is not the Holy Grail</a> &#8211; crypto / security is hard. Also, I have a signed package for you to install&#8230;</li>
-<li><a href="http://blog.preinheimer.com/index.php?/archives/416-PHP-and-Async-requests-with-file-based-sessions.html">PHP and Async requests with file based sessions</a> could be a way to speed up a PHP site. Which in turn reduces the amount of time your scripts take to run</li>
-<li><a href="http://canadipsum.com/">Canadipsum, eh?</a> just because. (eh)</li>
-<li><a href="http://blogs.infosupport.com/using-codedui-testautomation-without-uimap-files/">Using CodedUI testautomation without UIMap files</a> brings Page Objects to CodedUI</li>
-<li><a href="http://blog.matthewskelton.net/2013/07/22/continuous-delivery-workshop-with-neal-ford-neal4d-a-retrospective/">Continuous Delivery Workshop With Neal Ford (@Neal4D) – a Retrospective</a> &#8211; yup, the hard part is not the technical bit, but the people parts</li>
-<li><a href="http://librarian-puppet.com/">librarian-puppet</a> says <i>You can all stop using git submodules now</i> which is good enough for me</li>
-<li><a href="http://swdandruby.wordpress.com/2013/07/26/highlighting-the-element-before-any-clicks-a-foray-into-the-abstracteventlistener/">Highlighting the element before any clicks: A foray into the AbstractEventListener</a> &#8212; the event listener stuff is something I need to sort out.</li>
-<li><a href="http://www.phptesting.org/">phpci</a> is built specifically for php apps, and doesn&#8217;t pretend to have the features something like jenkins does</li>
-<li><a href="http://words.steveklabnik.com/beware-subclassing-ruby-core-classes">Beware subclassing Ruby core classes</a> &#8211; there are likely parallels in other languages as well.</li>
-</ul></p>
+            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/mobile-webdriver/"><h2>Mobile WebDriver</h2></a>
+            <p>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome). It&#8217;d be nice to have a similar option for mobile, switching from one automation framework for Android to another.</p>
+<p>As part of the Selenium 3 work, we have started working on a test suite to help ensure this level of interop between <a href="http://appium.io/">appium</a> and <a href="http://ios-driver.github.io/ios-driver/">iosdriver</a>, and appium and <a href="http://selendroid.io/">selendroid</a>. To kick start the process, the primary authors of each of those tools, as well as others including David Burns representing the <a href="https://developer.mozilla.org/en-US/docs/Marionette">Marionette</a> project (Mozilla&#8217;s implementation of WebDriver for Firefox and Firefox OS) and Simon Stewart, the lead of the <a href="http://seleniumhq.org/">Selenium</a> project, have spent the past two days locked in a small room in Mozilla HQ, London. They&#8217;ve taken this time to work out the areas where each of their projects didn&#8217;t align and agreed on a way to ensure a level of interoperability. There was only a minimal quantity of blood and tears, but plenty of hard work.</p>
+<p>The <a href="https://docs.google.com/document/d/1rnE13aGCaRiri01hti7j1jWDuPvQHT8aao4bHhEGz8Y/edit">agenda</a> for the past two days can be found here, and the <a href="https://docs.google.com/document/d/1yXXsQo3z7lUVl3ZthAx39h4xBlF62x7q_NZd3NA9jnU/edit">minutes</a> are also available.</p>
+<p>As we speak, work has started on a shared test suite, hosted in a <a href="https://code.google.com/p/selenium/source/checkout?repo=mobile">repo</a> in the selenium project&#8217;s Google Code page. Please, feel free to come along and join in!</p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/smattering/">smattering</a>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/mobile/">mobile</a>
     </li></ul>
 
 
@@ -278,8 +277,46 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%23155&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-155%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fa-smattering-of-selenium-155%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Mobile%20WebDriver&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fmobile-webdriver%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Wednesday, August 28, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2013/the-road-to-selenium-3/"><h2>The Road to Selenium 3</h2></a>
+            <p dir="ltr">Selenium 2 was <a href="http://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released in July 2011</a>. It’s now two years old, and what a couple of years it’s been! The WebDriver APIs, which were the major addition in Selenium 2, are now the basis for a <a href="http://www.w3.org/TR/webdriver/">W3C standard</a>, and there are implementations written and supported by Google, Mozilla and Opera. There have been 34 releases, with official support for Java, C#, Python, Ruby and Javascript, and the community has stepped in to provide bindings for Perl, PHP and others. There have been 57 different people authoring changes in the code base, and countless more participating in the online forums, offering help and advice.</p>
+<p>While all this has been happening, the world has moved on, and now it’s time for the Selenium project to look to the future. It’s with great pleasure that I can now say that we’re working towards Selenium 3.</p>
+<p>We aim for Selenium 3 to be “a tool for user-focused automation of mobile and web apps”.</p>
+<p>What does this mean? For mobile users, the Selenium project will be hosting a suite of tests to facilitate interoperability between the many different projects available that are extending the WebDriver API to also cope with mobile. Developers from projects such as <a href="http://appium.io/">Appium</a>, <a href="http://ios-driver.github.io/ios-driver/">ios-driver</a> and <a href="http://selendroid.io/">selendroid</a> will be working on the suite of tests to enable this.</p>
+<p>We’ll also be working on making the technology behind Selenium as stable and capable as possible. For this reason, Selenium 3 will see the removal of the original Selenium Core implementations, and consequently we’ll be deprecating the RC APIs too. The old versions will still be available as a separate download, but active development will cease, except for very urgent fixes. We will still be providing an implementation of the RC APIs backed by WebDriver, so you can continue running your existing tests, but now would be a great time to make the move to using the WebDriver APIs directly.</p>
+<p dir="ltr">For those of you exporting your tests from IDE and running the HTML suites, we’ll provide an alternative runner that allows you to continue running those tests too, though it’ll be backed by the same “WebDriver-backed” RC implementation as offered by the main download. Again, the original implementation will be available as a download, but it will no longer be actively developed once we release 3.0.</p>
+<p>Our current plan is to start shipping 3.0 by Christmas this year: it’s going to be a lot of fun!</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - The%20Road%20to%20Selenium%203&body=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2013%2fthe-road-to-selenium-3%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

@@ -150,6 +150,47 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/"><h2>Announcing Selenium 2.19: the Prancing Unicorn release</h2></a>
+            <p>You might be pleased to hear that Selenium 2.19 has been released (<a href="http://seleniumhq.org/download/">download it from here!</a>). There&#8217;s one big user facing changing that we&#8217;d like to tell you about: the webdriver-backed selenium can now be used in supported languages.</p>
+<p>By providing this capability, it&#8217;s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:</p>
+<pre class="brush: python; title: ; notranslate" title="">
+driver = RemoteWebDriver(desired_capabilities = DesiredCapabilities.FIREFOX)
+selenium = DefaultSelenium('localhost', 4444', '*webdriver', 'http://www.google.com')
+selenium.start(driver = driver)
+</pre>
+<p>Provided you keep a reference to the original webdriver and selenium objects you created you can use the two APIs interchangeably.  You&#8217;ll see that the magic is the &#8220;*webdriver&#8221; browser name passed to the selenium instance, and that we pass the webdriver instance when calling start().</p>
+<p>We hope you like it!</p>
+<p>PS: I have no idea why this is the Prancing Unicorn release, but it&#8217;s been a while since we named one 🙂</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/releases/">releases</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Announcing%20Selenium%202.19%3a%20the%20Prancing%20Unicorn%20release&body=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-19-the-prancing-unicorn-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2012%2fannouncing-selenium-2-19-the-prancing-unicorn-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Thursday, January 5, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/"><h2>Selenium 2.16 Released: Welcome to 2012!</h2></a>
             <p>It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing. I think we&#8217;ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.16</a>.</p>
@@ -212,40 +253,6 @@
 
                 <a href="mailto:?&subject=Selenium Blog - Selenium%202.9%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-9-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-9-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Thursday, October 6, 2011 by <a href="https://twitter.com/illicitonion">illicitonion</a>
-            <a href="https://selenium.dev/blog/2011/selenium-2-8-released/"><h2>Selenium 2.8 Released</h2></a>
-            <p>In keeping with our (roughly) weekly releases, Selenium 2.8 was <a href="http://seleniumhq.org/download/">released today</a> (and on Maven too), <a href="https://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">with a *huge* list of bug-fixes</a>!  As well as improved stability, if you&#8217;re using the Java API, this release adds the ability to upload files to a RemoteWebDriver server (see <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/remote/RemoteWebDriver.html#setFileDetector(org.openqa.selenium.remote.FileDetector)">RemoteWebDriver.setFileDetector</a>).</p>
-<p>Particular thanks have to go out to our two newest committers, Alexei Barancev and Ajay Kemparaj, for the copious bug-fixes they&#8217;ve contributed!</p>
-<p>We&#8217;re already hard at work getting 2.9 ready for next week with even more more bug-fixes &#8211; watch this space!</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/releases/">releases</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.8%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-2-8-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

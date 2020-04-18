@@ -150,6 +150,89 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Wednesday, February 2, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-joins-the-software-freedom-conservancy/"><h2>Selenium Joins the Software Freedom Conservancy</h2></a>
+            <p>It doesn&#8217;t seem that long ago that we announced on the mailing list that the Selenium project planned to join the <a href="http://sfconservancy.org/">Software Freedom Conservancy</a>. I&#8217;m very pleased to announce that as of Friday, 21st January, our application was approved. We&#8217;re now under the aegis of the SFC.</p>
+<p>From most people&#8217;s perspective, this won&#8217;t make much difference: you&#8217;ll still be able to view the documentation and download the latest versions of Selenium from <a href="http://seleniumhq.org">Selenium HQ</a>. Development will continue to use <a href="http://selenium.googlecode.com/">Google Code&#8217;s</a> code hosting and issue tracking. We are now, however, part of a formal non-profit organization, which means that a number of issues, such as how to handle revenues from adverts on our sites, become clearer and more transparent.</p>
+<p>There are more details about what this means in the <a title="Selenium Joins the Software Freedom Conservancy" href="http://sfconservancy.org/news/2011/feb/02/selenium-joins/">SFC&#8217;s announcement</a> and their list of <a title="SFC Member Project Services" href="http://sfconservancy.org/members/services/">membership benefits</a>. The bottom line is that this is a major milestone in Selenium&#8217;s growth and ensures that as we continue to grow our user base and introduce new features and projects, we&#8217;ll have strong support and backing from a well-respected Open Source organization.</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/sfc/">sfc</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Joins%20the%20Software%20Freedom%20Conservancy&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-joins-the-software-freedom-conservancy%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-joins-the-software-freedom-conservancy%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
+            <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
+  &lt;version&gt;2.0b1&lt;/version&gt;
+  &lt;exclusions&gt;
+    &lt;exclusion&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+    &lt;/exclusion&gt;
+  &lt;/exclusions&gt;
+&lt;/dependency&gt;</pre></p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/maven/">maven</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - 2.0b1%20and%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Friday, December 24, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/"><h2>Selenium 2.0 beta 1 Release</h2></a>
             <p>We recently released the first of the betas for Selenium 2. It&#8217;s available for Java, C# and Ruby. If you&#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&#8217;ll see is with the new WebDriver APIs, but there&#8217;s a lot more!</p>
@@ -202,118 +285,6 @@
 
                 <a href="mailto:?&subject=Selenium Blog - Selenium%202.0%20beta%201%20Release&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-beta-1-release%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-beta-1-release%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Friday, October 8, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2010/selenium-2-0a6-released/"><h2>Selenium 2.0a6 Released</h2></a>
-            <p>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the <a href="http://code.google.com/p/selenium/downloads/list">downloads page</a> to get it while it&#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and <a href="http://rubygems.org/gems/selenium-webdriver">ruby libraries</a> have been having smaller, more frequent releases all this time.</p>
-<p>You&#8217;ll be pleased to hear that the Selenium 1.0 APIs have remained constant, so what&#8217;s changed? Here, in no particular order are the major changes you&#8217;ll find in 2.0a6:</p>
-<ul>
-<li>Android support: you can now <a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk">download the APK</a> and run webdriver tests using Android 1.6 to 2.2.</li>
-<li>Firefox 4 support.</li>
-<li>Experimental IE9 support</li>
-<li>New APIs for dealing with <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html">HTML5 elements</a> (best implemented, for now, by the mobile webdrivers)</li>
-<li>A richer .Net API</li>
-<li>A move to <a href="http://sizzlejs.com/">Sizzle</a> for locating elements using CSS in browsers that don&#8217;t have a native API for that.</li>
-<li>Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.</li>
-</ul>
-<p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html">FirefoxProfiles</a>, better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.</p>
-<p>Thank you to everyone who has taken the time to report a bug on our <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a>, or raised problems on one of our <a href="https://groups.google.com/group/webdriver">mailing</a> <a href="http://www.google.com/url?q=http://groups.google.com/group/selenium-users">lists</a>, or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn&#8217;t be half as much fun, and wouldn&#8217;t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)</p>
-<p>Hope you like it!</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/beta/">beta</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/releases/">releases</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
-            <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
-            <p>There are several ways to use Selenium 2:</p>
-<ol>
-<li>If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new <tt>WebDriver</tt> implemenations like <tt>ChromeDriver</tt>, <tt>HtmlUnitDriver</tt>, <tt>FirefoxDriver</tt>, or <tt>InternetExplorerDriver</tt> which provide a nice, small and easy to learn API.</li>
-<li>If you have Selenium 1.x legacy code, you can still use the well known <tt>DefaultSelenium</tt> class or the new <tt>WebDriverBackedSelenium</tt>, which extends <tt>DefaultSelenium</tt> but uses one of the <tt>WebDriver</tt> implementations internally.</li>
-</ol>
-<p>Whichever option you prefer, if you have want to use Maven, all you need to do is add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>If you know, that you will only use a certain <tt>WebDriver</tt> implementation, e.g. the <tt>FirefoxDriver</tt>, you don&#8217;t need to depend on the <tt>selenium</tt> artifact (which has dependencies to all <tt>WebDriver</tt> implementations as well as the support classes). Instead you can add the dependency to just the artifact you need, e.g.</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>When using a <tt>WebDriver</tt> implementation, there is no need to start a Selenium server &#8211; the browser will be directly started and remote controlled.</p>
-<p>But if you are using <tt>DefaultSelenium</tt> (or the <tt>RemoteWebDriver</tt> implementation), you still need to start a Selenium server.</p>
-<p>The best way is to download the <a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.0a5.jar">standalone Selenium server jar</a> and just use it.</p>
-<p>Furthermore you can also embed the Selenium server into your own project, if you add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>Now you can create a <tt>SeleniumServer</tt> instance yourself and start it.</p>
-<p>Be aware, that the <tt>selenium-server</tt> artifact has a dependency to the <tt>servlet-api-2.5</tt> artifact, which you need to exclude, if your project will be run in a web application container.</p>
-<p>Well, I hope that covers everything you need to know on how to use Selenium 2 with Maven.</p>
-<p>Michael</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/maven/">maven</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/technical/">technical</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - How%20to%20use%20Selenium%202%20with%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fhow-to-use-selenium-2-with-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

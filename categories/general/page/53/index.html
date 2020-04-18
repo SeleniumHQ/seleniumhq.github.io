@@ -150,20 +150,26 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Monday, January 24, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-38a/"><h2>A Smattering of Selenium #38A</h2></a>
-            <p><p>No. Really. I&#8217;m almost caught up.</p>
+            Monday, January 31, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-39/"><h2>A Smattering of Selenium #39</h2></a>
+            <p><p>Hey look! All caught up &#8212; only took a month&#8230;</p>
 <ul>
-<li>Want input in a non-english language but don&#8217;t want to convert your whole machine? <a href="http://inputking.com/">InputKing</a> might be able to help. And the fact it is in a browser means we can use it via Se.</li>
-<li>HAR (HTTP Archive) is the format the cool kids are talking about, and now there is a <a href="http://rubygems.org/gems/har">har gem</a> so you can make use of HAR files in you [Ruby] scripts.</li>
-<li>Organizing scripts by tagging them is one bandwagon I got on last year to great success and while I don&#8217;t really live in the MS toolset, <a href="http://blog.simontimms.com/2011/01/test-categories-for-mstest.html">Test Categories for MSTest</a> is likely how how I would do it MSTest.</li>
-<li>Selenium won an award! Again! See <a href="http://www.youtube.com/watch?v=XY7aQbi2N0g">the video of Se winning &#8216;Best Open Source Functional Automated Test Tool&#8217;</a></li>
-<li>How a script is named is a reflection of the person who wrote it, in <a href="http://stevesmithblog.com/blog/unit-test-naming-convention/">Unit Test Naming Convention</a> one such style is described and the reasoning explained. Just ignore the second half of the summary&#8217;s first sentence though.</li>
-<li>Michael Larson is Working his way though <a href="http://www.packtpub.com/selenium-1-0-testing-tools-beginners-guide/book">Selenium 1.0 Testing Tools Beginners Guide</a> and documenting it in a series of blog posts he is calling <a href="http://mkl-testhead.blogspot.com/search/label/PRACTICUM">a practicum</a></li>
-<li>Most people use Se to create a regression security blanked, but it there are some points to be discussed around <a href="http://investigatingsoftware.blogspot.com/2010/12/arrogance-of-regression-testing.html">the arrogance of regression testing</a></li>
-<li>ATDD continues to mature and the results of two different pattern workshops <a href="http://www.managing-expectations.com/?p=1326">have now been posted</a>. If you are using Cucumber, RobotFramework, Fitnesse, etc. you might want to pay attention.</li>
-<li>It always saddens me a bit when large threads pop up <a href="http://www.linkedin.com/groupItem?view=&amp;srchtype=discussedNews&amp;gid=961927&amp;item=38882290&amp;type=member&amp;trk=EML_anet_ac_pst_ttle">on how to manage Se scripts</a>. It&#8217;s called version control kids. But I realize I&#8217;m an outlier on this.</li>
-<li>I suspect a lot of Se folks have a similar tale to <a href="http://blog.abakas.com/2011/01/how-i-learned-to-code.html">How I Learned To Code</a></li>
+<li>My opinions on Continuous Deployment are pretty widely known, but the IMVU folks certainly have a lot of neat tricks to &#8216;borrow&#8217;. Such as <a href="http://engineering.imvu.com/2011/01/19/buildbot-and-intermittent-tests/">Buildbot and Intermittent Tests</a></li>
+<li>Dealing with an API that returns XML? Your scripts don&#8217;t care about the readibility, but it helps you as the human if it is formatted pretty. <a href="http://www.shell-tools.net/index.php?op=xml%5Fformat">xml formatter</a> is a glorious time save in that case.</li>
+<li>Who would have predicted this&#8230; Perl stuff
+<ul>
+<li><a href="http://onyxneon.com/books/modern_perl/">Modern Perl</a> is a free Creative Commons book on Perl (with a dead-tree version also available)</li>
+<li>I had thought the <a href="http://search.cpan.org/dist/Test-WWW-Selenium/">Se-RC style bindings</a> had been abandoned, but heard <a href="http://twitter.com/davehodg/statuses/30312545696878592">second hand</a>, they are alive and well.</li>
+<li><a href="https://github.com/aivaturi/Selenium-Remote-Driver">Webdriver Remote Driver</a> is the start of work on a Se2 driver. Now to get the two projects working together.</li>
+<li>And the reason for the Perl stuff is <a href="http://www.davehodgkinson.com/blog/2011/01/hudson-and-selenium/">Hudson and Selenium</a></li>
+</ul>
+<li>Since Se is using Sizzle now for locators, comes <a href="http://twitter.com/envatowebdev/statuses/30833435383701504">a tip</a> &#8211; <i>never do things like $(&#8216;form *&#8217;). This is crazy costly, because Sizzle works from right to left. Will grab all elems first.</i>. Not sure of the accuracy, but it makes sense.</li>
+<li>Part of the debate when doing BDD and TDD is the overlap that [naturally] occurs; <a href="http://gojko.net/2011/01/28/duplication-between-bdd-and-unit-tests/">Duplication between BDD and Unit tests</a> addresses it, partly be reframing the question.</li>
+<li><a href="http://code.google.com/p/webkitdriver/">webkitdriver</a> is a project that <i>aims to provide a WebDriver implementation for a light-weight in memory Web Browser</i></li>
+<li>This week&#8217;s Selenium <i>killer</i> is <a href="http://ariya.blogspot.com/2011/01/phantomjs-minimalistic-headless-webkit.html">PhantomJS</a></li>
+<li>Achievement parodies are always amusing; here is on for <a href="http://blog.whiletrue.com/2011/01/what-if-visual-studio-had-achievements/">Visual Studio</a> &#8212; what would the Selenium ones look like?</li>
+<li>Koans are a trendy way to learn / practice a language. Here is a <a href="http://www.rubygeek.com/2011/01/22/koan-a-copia/">Koan-a-copia of them</a></li>
+<li>Want onto the speaking circuit? The 2011 <a href="http://www.verifyati.com/index.php?option=com_jforms&amp;view=form&amp;id=1&amp;Itemid=85">Verify/ATI Conference is asking for presentations</a>
 </ul></p>
 
             
@@ -187,25 +193,32 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2338A&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2339&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-39%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-39%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Friday, January 21, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2011/bug-bash/"><h2>Bug Bash: 24-30 January</h2></a>
-            <p>When the <a href="http://selenium.googlecode.com/">Selenium</a> and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a <em>lot</em> of bugs and feature requests.</p>
-<p>In the run up for the 2.0b2 release, we&#8217;ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January. The aim will be to focus on clearing our bug list as much as possible, so that beta2 will be the best release of Selenium yet. We will, of course, be recognizing people who squash the most bugs here on the blog, and we&#8217;re hunting out goodies to mail to the top bug bashers once the week is over.</p>
-<p>If you&#8217;d like to get involved, it&#8217;s easy:</p>
+            Monday, January 31, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/bug-bash-aftermath/"><h2>Bug Bash Aftermath</h2></a>
+            <p>What a week! I&#8217;m almost (almost!) sorry that the Bug Bash is over. I&#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?</p>
 <ol>
-<li><a href="http://code.google.com/p/selenium/source/checkout">Check out</a> the source code</li>
-<li>Find a bug you&#8217;d like to squash in the <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a></li>
-<li>Fix it, attaching your patch to the issue</li>
+<li>Jari Bakken (24 issues)</li>
+<li>Simon Stewart (21 issues)</li>
+<li>David Burns, aka: AutomatedTester (11 issues)</li>
+<li>Jim Evans (10 issues)</li>
+<li>Michael Tamm (6 issues)</li>
 </ol>
-<p>That&#8217;s it. Easy! For help, and to ask questions of the core development team, please hop on to the <a href="http://seleniumhq.org/support/">IRC channel</a> or email the <a href="http://groups.google.com/group/selenium-developers">selenium-developers</a> group.</p>
-<p><strong>Update:</strong> The Bug Bash is now complete. All we have to do is count up the scores!</p>
+<p>Some interesting nuggets of information:</p>
+<ul>
+<li>We closed 85 issues over the course of the week (that&#8217;s about 20% of all open Selenium issues)</li>
+<li>There were 111 checkins last week alone</li>
+<li>All of the major languages supported by Selenium 2 are represented here.</li>
+<li>Jari Bakken needs to be bought a <a href="http://twitter.com/#!/chris_mcmahon/status/30372577704681473">steak as big as his head.</a></li>
+</ul>
+<p>What does this mean? It means that the next release of Selenium is set to be very solid. We&#8217;re going to be spending another week or so making sure that everything is stable after the influx of changes, but you can expect 2.0b2 to be out &#8220;real soon now&#8221;</p>
+<p>If you missed the Bug Bash but still want to contribute, it&#8217;s never too late. Feel free to drop by the IRC channel, or <a href="http://code.google.com/p/selenium/source/checkout">checkout the source</a>, <a href="http://code.google.com/p/selenium/issues/list">find a bug</a> and start building!</p>
 
             
 
@@ -228,42 +241,37 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Bug%20Bash%3a%2024-30%20January&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - Bug%20Bash%20Aftermath&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash-aftermath%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash-aftermath%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Wednesday, January 19, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-37b/"><h2>A Smattering of Selenium #37B</h2></a>
-            <p>Let&#8217;s see how many announcements there were that didn&#8217;t get pushed out in a timely manner today shall we?</p>
-<ul>
-<li>Well, there is of course <a href="https://seleniumhq.wordpress.com/2011/01/17/selenium-conf-is-coming-get-your-proposals-in/">Selenium Conf is coming</a> and you have until Friday to get your proposals in. Last I heard we had 37 which is impressive, but I think 50 should be doable.</li>
-<li>On the meetup side of things there is
-<ul>
-<li><a href="http://www.meetup.com/Greater-Boston-Selenium-Users-Group/calendar/15997626/">Boston on January 25</a></li>
-<li><a href="http://www.meetup.com/NYCSelenium/">NYC on January 26</a> (its not on the site yet, but I&#8217;m speaking, so trust me, it exists)</li>
-<li><a href="http://www.meetup.com/seleniumlondon/calendar/16079171/">London on March 23</a></li>
-</ul>
-</li>
-<li><a href="http://seleniumcamp.com/">SeleniumCamp</a> (<a href="http://translate.google.ca/translate?u=http%3A%2F%2Fseleniumcamp.com%2F&amp;sl=ru&amp;tl=en&amp;hl=&amp;ie=UTF-8">English</a>) is coming to Kiev at the end of February. Suddenly we go from no &#8216;events&#8217; to lots.</li>
-<li>I&#8217;m kinda surprised no one has done this one yet, but a <a href="https://addons.mozilla.org/en-US/firefox/addon/selenium-ide-fitnesse-formatte/">FitNesse Formatter</a> plugin for Se-IDE is up on AMO</li>
-<li><a href="http://blog.reallysimplethoughts.com/2010/12/28/the-selenium-expert-is-here/">Selenium Expert</a> is a plugin that <i>brings the wonderful world of inspections, tips, hints, fixes and refactoring to Selenese</i>. Samit is a plug-in making machine.</li>
-<li>Gorilla Logic have <a href="http://blog.gorillalogic.com/2010/12/16/flexmonkium-4-1-4-released/">have released a new version of FlexMonkium</a> &#8212; with with fully synchronized versioning.</li>
-<li><a href="http://seleniumspec.codeplex.com/">SeleniuMspec</a> is a cleverly named formatter for Mspec &#8212; though it isn&#8217;t distributed as an Se-IDE plugin (which would +1 its coolness)</li>
-<li>And I quote, <i>Hewlett-Packard (HP) is announcing the discontinuance of HP WinRunner (WR) 7.5, 7.6, 8.0, 8.2, 9.2 (all editions) products.</i>. Is it wrong to say something like &#8216;Ding, dong, the witch is dead&#8217;?. Of course, we wouldn&#8217;t likely be here without WR, but who doesn&#8217;t love some friendly-ish ribbing? Here is he full <a href="http://support.openview.hp.com/encore/wr.jsp">notice</a>.</li>
-<li><a href="http://www.getkrypton.com/">Krypton</a> appears to be a cloud service for managing your Se scripts and has a &#8216;we need testers&#8217; box on their site if anyone is curious</li>
-<li>And to illustrate that this space seems to have potential, or people think it does at any rate, <a href="http://www.testrunnr.com/">Test Runnr</a> also does cloud based script management with the added feature of running scripts against the <a href="http://saucelabs.com">Sauce Labs</a> OnDemand cloud. So if you have a cloud based app that you script with Selenium stored in the cloud and executed in the cloud are you yourself a meta-cloud company?</li>
-</ul>
-<p>More tomorrow as we dig ourselves out of the hole.</p>
+            Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
+            <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
+  &lt;version&gt;2.0b1&lt;/version&gt;
+  &lt;exclusions&gt;
+    &lt;exclusion&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+    &lt;/exclusion&gt;
+  &lt;/exclusions&gt;
+&lt;/dependency&gt;</pre></p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/smattering/">smattering</a>
+        <a href="https://selenium.dev/tags/maven/">maven</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
     </li></ul>
 
 
@@ -279,8 +287,8 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2337B&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-37b%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-37b%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - 2.0b1%20and%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

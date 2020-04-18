@@ -150,117 +150,22 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Monday, January 31, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2011/bug-bash-aftermath/"><h2>Bug Bash Aftermath</h2></a>
-            <p>What a week! I&#8217;m almost (almost!) sorry that the Bug Bash is over. I&#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?</p>
-<ol>
-<li>Jari Bakken (24 issues)</li>
-<li>Simon Stewart (21 issues)</li>
-<li>David Burns, aka: AutomatedTester (11 issues)</li>
-<li>Jim Evans (10 issues)</li>
-<li>Michael Tamm (6 issues)</li>
-</ol>
-<p>Some interesting nuggets of information:</p>
+            Monday, February 14, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-41/"><h2>A Smattering of Selenium #41</h2></a>
+            <p><p>There isn&#8217;t an official announcement anywhere (yet) but Selenium 2.0b2 was released a couple hours ago. Time to upgrade all your servers. Beta 3 is going to focus on IE9 and FF4 support.</p>
+<p>Meanwhile&#8230;</p>
 <ul>
-<li>We closed 85 issues over the course of the week (that&#8217;s about 20% of all open Selenium issues)</li>
-<li>There were 111 checkins last week alone</li>
-<li>All of the major languages supported by Selenium 2 are represented here.</li>
-<li>Jari Bakken needs to be bought a <a href="http://twitter.com/#!/chris_mcmahon/status/30372577704681473">steak as big as his head.</a></li>
-</ul>
-<p>What does this mean? It means that the next release of Selenium is set to be very solid. We&#8217;re going to be spending another week or so making sure that everything is stable after the influx of changes, but you can expect 2.0b2 to be out &#8220;real soon now&#8221;</p>
-<p>If you missed the Bug Bash but still want to contribute, it&#8217;s never too late. Feel free to drop by the IRC channel, or <a href="http://code.google.com/p/selenium/source/checkout">checkout the source</a>, <a href="http://code.google.com/p/selenium/issues/list">find a bug</a> and start building!</p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/bug-bash/">bug-bash</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/general/">general</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - Bug%20Bash%20Aftermath&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash-aftermath%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash-aftermath%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
-            <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-  &lt;version&gt;2.0b1&lt;/version&gt;
-  &lt;exclusions&gt;
-    &lt;exclusion&gt;
-      &lt;groupId&gt;org.testng&lt;/groupId&gt;
-      &lt;artifactId&gt;testng&lt;/artifactId&gt;
-    &lt;/exclusion&gt;
-  &lt;/exclusions&gt;
-&lt;/dependency&gt;</pre></p>
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/tags/maven/">maven</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li></ul>
-
-
-            
-
-<ul>
-    
-    <li>
-        <a href="https://selenium.dev/categories/general/">general</a>
-    </li></ul>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - 2.0b1%20and%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Tuesday, January 25, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-38b/"><h2>A Smattering of Selenium #38B</h2></a>
-            <p><p>Will today be the day I finish three weeks of catch-up? Well, no..</p>
-<ul>
-<li><a href="http://www.cheezyworld.com/2010/12/16/ui-tests-putting-it-all-together/">UI Tests – putting it all together</a> summarizes the series of posts using Watir and Cucumber, but the ideas could be converted to Se pretty easily.</li>
-<li>I haven&#8217;t read it, but <a href="http://www.ryber.se/?p=213">Essential Software Testdesign</a> is now available for free [legitimately] as a pdf</a>. Test Design is something I expect to see more discussion around in 2011 when it comes to Se automation. The rules really are different here.</li>
-<li>Missed GTAC 2011 but want to be there vicariously? Now you can! <a href="http://googletesting.blogspot.com/2010/12/gtac-5-videos-slides-abstracts.html">GTAC #5: videos, slides, abstracts</a></li>
-<li>Removing -htmlSuite from the Selenium Server and replacing it with a &#8216;real&#8217; runner is something I&#8217;ve been thinking about recently after seeing <a href="http://code.google.com/p/selenium/issues/detail?id=175">  [PROPOSAL] Webdriver Selenese HTML Runner</a>. Who else has done this? Let&#8217;s see/share the code.</li>
-<li>I was babbling on about Page Objects on Twitter and was sent a video on &#8216;BDD, ATDD and Page Object&#8217;. Haven&#8217;t had time to see it yet, but you might.<br />
-<div class="embed-vimeo" style="text-align: center;"><iframe src="https://player.vimeo.com/video/18223672" width="400" height="371" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></p>
-<p><a href="http://vimeo.com/18223672">John Ferguson Smart</a> from <a href="http://vimeo.com/user4352894">Mohinder Khosla</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-</li>
-<li><a href="https://launchpad.net/selenium-zoetrope">Selenium Zoetrope</a> is a PHP Se runner that will also record a video of your script&#8217;s run.</li>
-<li><a href="http://codebaboon.com/economist-testing-drupal-using-selenium">The Economist: Testing Drupal using Selenium</a> is an experience report about the project that zoetrope originated in.</li>
-<li><a href="http://testingwithvision.com/2011/01/04/the-elements-of-cucumber-style/">The elements of (cucumber) style</a> is a nice &#8216;style guide&#8217; you could consider adopting for your Cucumber scripts.</li>
-<li>Another <a href="http://agilesoftwaretesting.com/?p=143">Selenium Auto Accept Self Signed SSL Certificates and Basic Authentication</a> post, but this time with a Ruby bias for those who insist on having SSL turned on in environments other than production. (WHY?)</li>
-<li>And from the same person, <a href="http://agilesoftwaretesting.com/?p=166">Testing PDF files with (and without) Selenium</a> which is outstandingly cool. I know of at least one client who needed this a year ago.</li>
+<li>
+<a href="http://www.maestrodev.com/events/webinar/a-webinar-on-automated-selenium-testing-with-maestro-3">A Webinar on Automated Selenium Testing with Maestro 3</a> could be interesting if you are considering the Maestro platform.</li>
+<li>And sticking with the webinar idea, Sauce Labs is hosting <a href="http://saucelabs.com/blog/index.php/2011/02/selenium-2-webinar-the-next-generation-of-web-and-mobile-application-testing/">Selenium 2 Webinar: The Next Generation of Web and Mobile Application Testing</a></li>
+<li>After a bit of stagnation, the <a href="http://pypi.python.org/pypi/selenium/">official Python drivers</a> are starting to get updated again.</li>
+<li>After almost a year, a new version of <A href="http://code.google.com/p/js-test-driver/">js-test-driver</a> is out.</li>
+<li><a href="http://www.simple-talk.com/dotnet/.net-tools/web-testing-with-selenium-sushi-a-practical-guide-and-toolset/">Selenium Sushi</a> is a support library / package for .NET</li>
+<li><a href="http://www.typo3-media.com/blog/window-driver-page-object-selenium-tests.html">Window Driver Pattern for Acceptance Tests</a> illustrates Page Objects for PHP (though I don&#8217;t think it goes as far as it should in terms of abstractions).</li>
+<li>Aside from locators, the next biggest pain point is synchronization. <a href="http://saucelabs.com/blog/index.php/2011/02/advanced-selenium-synchronization-with-latches/">Advanced Selenium Synchronization with ‘Latches’</a> is how I address that.</li>
+<li>Need an easy way to communicate Selenese steps on something like Stack Overflow? The <a href="https://addons.mozilla.org/en-US/firefox/addon/separated-values-formatter/">Separated Values Formatter</a> could be just the trick.</li>
+<li>Selenesse is a mash-up of Fitnesse and Selenium. If you are going to StarEast and want to learn it from one of the maintainers then <a href="http://www.passionatetester.com/2011/02/want-to-learn-selenesse-hands-on.html">Want to learn SeleNesse hands-on?</a> is for you.</li>
+<li><a href="http://watirmelon.com/2011/02/07/your-automated-acceptance-tests-neednt-be-written-in-the-same-language-as-your-system-being-tested/">Your automated acceptance tests needn’t be written in the same language as your system being tested</a> explains a trap that too many teams fall into</li>
 </ul></p>
 
             
@@ -284,8 +189,101 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2338B&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38b%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38b%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2341&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-41%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-41%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Monday, February 7, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-40/"><h2>A Smattering of Selenium #40</h2></a>
+            <p><p>You would think by now that I wouldn&#8217;t be surprised by the number of links I collect in a week.</p>
+<ul>
+<li>The big news last week is that we (Selenium) have successfully avoided the whole Hudson/Jenkins drama by joining the <a href="http://sfconservancy.org/">Software Freedom Conservancy</a>.
+<ul>
+<li><a href="https://seleniumhq.wordpress.com/2011/02/02/selenium-joins-the-software-freedom-conservancy/">Se Announcement</a></li>
+<li><a href="http://sfconservancy.org/news/2011/feb/02/selenium-joins">Conservancy Announcement</a></li>
+</ul>
+</li>
+<li>Speaking of Hudson/Jenkins, here is how <a href="http://wiki.jenkins-ci.org/display/JENKINS/Upgrading+from+Hudson+to+Jenkins">to upgrade a Hudson install to Jenkinss</a></li>
+<li>I don&#8217;t like a lot of the messaging of the whole &#8216;Lean Startup&#8217; scene, but they have some things to steal though. <a href="http://www.thehackerchickblog.com/2011/02/continuous-deployment-for-continuous-learning.html">Is Deploying to Production 50x/Day a GOOD Idea?</a> lists some
+<ul>
+<li>Immune Systems</li>
+<li>Visibility of Changes</li>
+<li>Release is a Marketing Term</li>
+</ul>
+</li>
+<li><a href="http://queue.acm.org/detail.cfm?id=1925091">Finding Usability Bugs with Automated Tests</a> covers automation to discover Layout and Navigation accessibility and usability problems through automation</li>
+<li><a href="http://watir.com/watir-day/">Watir Day</a> it the day before Selenium Conf; come hang out and learn about our Ruby sibling</li>
+<li><a href="http://stackoverflow.com/questions/2536652/how-to-use-javascript-xpath">How to use javascript-xpath</a> is one of those rare SO questions I stumble on that actually provides insight to a rare corner of the API</li>
+<li>The <a href="http://www.phpunit.de/manual/current/en/writing-tests-for-phpunit.html#writing-tests-for-phpunit.data-providers">PHPUnit docs</a> have been updated to include an example of a Data Provider that returns an Iterator object. This caused me a half day of pain so is getting a link. (Data Providers are awesome btw. Not just in PHPUnit, but in xUnit frameworks.)</li>
+<li>The first half of <a href="http://blog.browsermob.com/2011/02/regular-expressions-and-pattern-matching-with-browsermob-and-selenium/">Regular Expressions and Pattern Matching with BrowserMob and Selenium</a> is only going to be useful to you if you are a BrowserMob VU user, but the second half is interesting or <i>very</i> important depending on how crazy your site is to automate. If you are using XPath and not doing starts-with, ends-with or contains you <i>are</i> writing brittle locators.</li>
+<li><a href="http://www.infoq.com/news/2011/01/testing-legacy-application">Starting Test Automation for a Legacy Project</a> is a summary of a thread on the Agile Testing mailing list</li>
+<li>The demo code in <a href="http://www.theautomatedtester.co.uk/blog/2011/ddd9-slides-and-thoughts.html">DDD9 &#8211; Slides and thoughts</a> has examples of using Page Objects for C#</li>
+<li><a href="http://splinter.cobrateam.info/">splinter</a> seems to be one of the first projects to wrap around / build upon Se2</li>
+</ul></p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/smattering/">smattering</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2340&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-40%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-40%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Wednesday, February 2, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2011/selenium-joins-the-software-freedom-conservancy/"><h2>Selenium Joins the Software Freedom Conservancy</h2></a>
+            <p>It doesn&#8217;t seem that long ago that we announced on the mailing list that the Selenium project planned to join the <a href="http://sfconservancy.org/">Software Freedom Conservancy</a>. I&#8217;m very pleased to announce that as of Friday, 21st January, our application was approved. We&#8217;re now under the aegis of the SFC.</p>
+<p>From most people&#8217;s perspective, this won&#8217;t make much difference: you&#8217;ll still be able to view the documentation and download the latest versions of Selenium from <a href="http://seleniumhq.org">Selenium HQ</a>. Development will continue to use <a href="http://selenium.googlecode.com/">Google Code&#8217;s</a> code hosting and issue tracking. We are now, however, part of a formal non-profit organization, which means that a number of issues, such as how to handle revenues from adverts on our sites, become clearer and more transparent.</p>
+<p>There are more details about what this means in the <a title="Selenium Joins the Software Freedom Conservancy" href="http://sfconservancy.org/news/2011/feb/02/selenium-joins/">SFC&#8217;s announcement</a> and their list of <a title="SFC Member Project Services" href="http://sfconservancy.org/members/services/">membership benefits</a>. The bottom line is that this is a major milestone in Selenium&#8217;s growth and ensures that as we continue to grow our user base and introduce new features and projects, we&#8217;ll have strong support and backing from a well-respected Open Source organization.</p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    </li>
+    <li>
+        <a href="https://selenium.dev/tags/sfc/">sfc</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Joins%20the%20Software%20Freedom%20Conservancy&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-joins-the-software-freedom-conservancy%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fselenium-joins-the-software-freedom-conservancy%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

@@ -150,31 +150,35 @@
     <div class="blog-content">
         
         <div class="container dark-background">
-            Tuesday, April 27, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-            <a href="https://selenium.dev/blog/2010/the-future-of-selenium-grid/"><h2>The Future of Selenium Grid</h2></a>
-            <p>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new maintainer.</a>  In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.</p>
-<h2>Background</h2>
-<p>I realize many of you may not know who I am.  I&#8217;ve been using Selenium in some capacity for close to five years now.  I love working on open source software and do so primarily through my membership in the Apache Software Foundation and through <a href="http://github.com/nirvdrum/">my GitHub account</a>.  I hang out on the #selenium channel with the handle &#8220;nirvdrum&#8221; and have a <a href="http://nirvdrum.com/">personal page</a> that includes some articles I&#8217;ve written and other things I&#8217;m involved with.  Perhaps more importantly, I also rely on Selenium Grid for <a href="http://mogotest.com/">my latest start-up</a> so I&#8217;m very keen on seeing the project mature and evolve.</p>
-<h2>Project Resources</h2>
-<p>The new canonical project repository on GitHub is the <a href="http://github.com/nirvdrum/selenium-grid/">nirvdrum fork</a>.  However, within in the next month or so the project will be migrated from git and GitHub to subversion and the <a href="http://code.google.com/p/selenium/">Selenium project on Google Code</a>.  As much as I personally prefer GitHub to Google Code, it makes the most sense from a community perspective for all Selenium projects to be hosted in the same location.  The move will be made after Selenium Grid stabilizes a bit more.  The <a href="http://seleniumhq.wordpress.com/2010/04/13/selenium-grid-1-0-6-released/">1.0.6 release</a> was the first step in that process, but there may be one or two more minor patch releases.  After the move, I&#8217;ll try to maintain a synchronized mirror of the code on GitHub so those that prefer to develop patches with git can continue to do so.</p>
-<p>The canonical issue tracker is the <a href="http://code.google.com/p/selenium/issues/list">Selenium issue tracker</a> on Google Code.  We will not be using either JIRA or GitHub Issues.  I&#8217;ll try to migrate what I can over to the new tracker, but if I miss anything, please re-open the issue over there.</p>
-<h2>Project Evolution</h2>
-<p>Selenium Grid currently only works with Selenium 1.x, and consequently the 1.x compatibility interface in Selenium 2.  There is currently no support for WebDriver.  However, I fully intend to steer the product in that direction, while maintaining support for existing Selenium Grid installations (i.e., based on Selenium 1.x).</p>
-<p>Since the project is moving to Google Code, all of the existing Selenium committers will have the ability to commit to the codebase.  This should make the project&#8217;s evolution a much more collaborative effort.  I&#8217;ll kickstart the process and likely lead the development effort, but the role of maintainer will be diminished (in a positive way) by allowing the entire core team equal access to the project.</p>
-<p>Others are welcome to chime as well.  Selenium Grid development discussion will be taking place on the Selenium developers list.  Please continue to use the Selenium users list for usage and support inquiries.</p>
+            Monday, July 12, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-19/"><h2>A Smattering of Selenium #19</h2></a>
+            <p>I&#8217;ve got a full day of driving ahead of me to go to a client so this is the early-morning (for me) edition of the Smattering post. That of course means there will be an absolute link explosion in about 20 minutes.<br />
+</p>
+<li><a href="http://seleniumexamples.com">Dave</a> talks about some of the stuff he is doing with Se-IDE in the post <a href="http://seleniumexamples.com/blog/improvements/improving-selenium-ide/">Improving Selenium IDE</a></li>
+<li>Another post on how to deal with <a href="http://blog.codecentric.de/en/2010/07/file-downloads-with-selenium-mission-impossible/">file downloads in Se</a>. Mission Impossible no more</li>
+<li><a href="http://code.google.com/p/hue/">Hue Doj</a> got some tweet love as another possible locator strategy for Se. So who wants to write the integration?</li>
+<li>I&#8217;m really starting to enjoy JUnit 4. <a href="http://www.testjutsu.com">Ben</a> has been learning about it too and shares <a href="http://www.testjutsu.com/data-driven-selenium-in-junit-via-parameters">Data driven Selenium in JUnit via @Parameters</a></li>
+<li><a href="http://fakeapp.com/">Fake.app</a> also got some twitter love. It looks nice, but drag-and-drop script creation and Mac only will ultimately limit its growth capability</li>
+<li>There was a contest around the test management system, TestRail. What is cool though is the <a href="http://code.gurock.com/p/testrail-miniapi/">API</a> that they have for it that allows external script engines report into it. It&#8217;s all about the integrations&#8230;</li>
+<li>The Bromine project has released <a href="http://brominefoundation.org/cast/Bromine.html">new screencast</a> which showcases Sauce OnDemand and Hudson integration. And it is a really slick integration at that.</li>
+<li><a href="http://passionatetester.com">Dawn</a> is <a href="http://java.dzone.com/videos/video-agile-testing-and">interviewed on DZone</a> about Agile testing and SeleNesse (the Se / Fitnesse bridge)</li>
+<li><a href="http://www.franciscosouza.net/2010/07/high-level-acceptance-testing-in-your.html?spref=tw">High level acceptance testing in your PHP applications using Python, Lettuce and Selenium</a> is a mini tutorial on umm, well, High level acceptance testing in your PHP applications using Python, Lettuce and Selenium</li>
+<li><a href="http://markgandolfo.com/2010/07/01/hudson-ci-server-running-cucumber-in-headless-mode-xvfb">Hudson Ci Server Running Selenium/Webdriver Cucumber In Headless Mode Xvfb</a> is another well named post</li>
+<li>If you are using FarCry, <a href="http://farcry.posterous.com/testmxunit-farcry-testing-framework-supports">testMXUnit</a> will take a Selenese script and convert it to a format it needs</li>
+<li><a href="http://www.javauc.com/java/2625">Programmatic testing with Selenium and TestNG</a> is a nice post that discusses TestNG, DbUnit, and Cargo</li>
+<li>Se-IDE Plugin: <a href="https://addons.mozilla.org/en-US/firefox/addon/189780/">Stored Variables Viewer</a> &#8211; <i>This plugin allows you to view these variables when the test is running.</i></li>
+<li>Another post from Markus Gärtner on a European Weekend Testing session on automation with RobotFramework; this time titled <a href="http://blog.shino.de/2010/07/05/parkcalc-automation-a-short-reflection/">ParkCalc automation – A short reflection</a></li>
+<li><a href="http://github.com/pinhook/funcunit/tree/master/synthetic">Syn JS</a> claims to provide proper click events for Se 1.x scripts. It was only <a href="http://groups.google.com/group/javascriptmvc/browse_thread/thread/ccd73cf4bcd65c5">soft launched</a> but expect more from these folks in the near future</li>
+</ul>
+<p>
+And lastly, BrowserMob, which was started by Se Core member Patrick Lightbody announced that <a href="http://blog.browsermob.com/2010/07/browsermob-joins-neustar-webmetrics-family-of-services/">it has been acquired by Neustar Webmetrics</a>. Congrats! Now stop drinking the champagne and get back to work! 🙂</p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/future/">future</a>
-    </li>
-    <li>
-        <a href="https://selenium.dev/tags/grid/">grid</a>
+        <a href="https://selenium.dev/tags/smattering/">smattering</a>
     </li></ul>
 
 
@@ -190,25 +194,32 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - The%20Future%20of%20Selenium%20Grid&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-future-of-selenium-grid%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2319&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-19%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-19%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
         
         <div class="container dark-background">
-            Monday, February 22, 2010 by <a href="https://twitter.com/plightbo">plightbo</a>
-            <a href="https://selenium.dev/blog/2010/welcome-to-the-official-selenium-blog/"><h2>Welcome to the official Selenium blog!</h2></a>
-            <p>Since we moved away from Clearspace for our forums, it&#8217;s time we also did the same for our blogging platform. As such, the new location for the official Selenium blog will now be:</p>
-<p><a href="http://seleniumhq.wordpress.com">http://seleniumhq.wordpress.com</a></p>
-<p>We hope to be much better about posting news, tips, and tricks here going forward.</p>
+            Monday, July 5, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-18/"><h2>A Smattering of Selenium #18</h2></a>
+            <p>Not too much this week with various holidays around the world, but still managed to dig some things up.<br />
+</p>
+<ul>
+<li>Sauce Labs has started <a href="http://saucelabs.com./about/webinars">a webinar series</a> and recently had one on <a href="http://saucelabs.com/blog/index.php/2010/06/live-video-demo-using-cucumber-to-test-apps-in-the-cloud/">using Cucumber and OnDemand</a>. Cucumber and Robot Framework like tools are the coming wave of testing tools.</li>
+<li>Another bit of Sauce-ish news is the folks at Rally put up <a href="http://www.rallydev.com/engblog/2010/06/29/sauce-ondemand-with-selenium-2-0-and-webdriver/">a post on how to get Se 2 scripts in their OnDemand cloud</a></li>
+<li>If writing Se scripts is &#8216;programming&#8217;, then writing the controlling frameworks is <i>real</i> programming. That means that proper development practices should be followed; such as TDD. If you are new to TDD, then The Prags have <a href="http://pragprog.com/screencasts/v-kbtdd/test-driven-development">released a screencast series by Kent Beck</a> would be helpful. I&#8217;ll be getting this one as soon as my to-watch backlog gets under control.</li>
+<li><a href="http://blog.ernster.co.uk/?p=15">Re-usable Selenium Testing with GWT</a> has lots of tricks to dealing with GWT widgets &#8212; something which comes up a lot on the Se-Users mailing list</li>
+</ul>
+<p>
+And lastly, the <a href="http://area51.stackexchange.com/proposals/4693">Selenium Stack Exchange proposal</a> has progressed to the next level which is getting people to commit to using it. The number of commits is a convoluted formula, but every one counts. If you think the Se-Users mailing list is too crazy, this format might be better for you.</p>
 
             
 
 <ul>
     
     <li>
-        <a href="https://selenium.dev/tags/selenium/">selenium</a>
+        <a href="https://selenium.dev/tags/smattering/">smattering</a>
     </li></ul>
 
 
@@ -224,8 +235,56 @@
             <div class="share-container">
                 <h3>Share this: </h3>
 
-                <a href="mailto:?&subject=Selenium Blog - Welcome%20to%20the%20official%20Selenium%20blog%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fwelcome-to-the-official-selenium-blog%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fwelcome-to-the-official-selenium-blog%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2318&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-18%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-18%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Monday, June 28, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-17/"><h2>A Smattering of Selenium #17</h2></a>
+            <p><p>Here are the posts dealing with Se, and/or automation in general that caught my eye and interest.<br />
+</p>
+<ul>
+<li><a href="http://www.codekoala.com/blog/2010/selenium-unit-test-reuse/">Selenium Unit Test Reuse</a> illustrates one way of iterating through environments and browsers in a script without using Se-Grid. I&#8217;ve done similar tricks to this to some success &#8212; the problem is usually reporting though, but you are all clever folks so I&#8217;m sure you could add it in.</li>
+<li>Adding a custom header is sometimes required when writing a script, but its not really that documented so Kevin wrote <a href="http://mogotest.com/blog/2010/06/23/how-to-perform-basic-auth-in-selenium">How to Perform Basic Authentication in Selenium</a> which combines how to do basic auth <i>and</i> header injection.</li>
+<li>Not running your scripts inside CI yet? Shame on you! Hudson creator Kohsuke Kawaguchi <a href="http://about.digg.com/blog/digg-technical-talks-kohsuke-kawaguchi">gave a talk at Digg</a> which they recorded. I haven&#8217;t watched it yet, but Se gets a mention according to the notes at the bottom.</li>
+<li>Haven&#8217;t heard of the HAR (HTTP ARchive) format? Don&#8217;t worry, I hadn&#8217;t either until <a href="http://groups.google.com/group/selenium-developers/browse_thread/thread/aafbe61c46ffa0df">a bit of a discussion about the captureNetworkTraffic</a> was had and its future in Se</li>
+<li>The Faker/Sham combination is established in the Ruby (and Perl) world as the way to generate random data of a prescribed format. Anthony has release a similar module for Python with some pythonic twists called <a href="http://github.com/antlong/Picka">Picka</a> (as in &#8216;Pick a card, any card&#8217; erm, well, name or address actually)</li>
+<li>Looking for an example of Page Objects in C#? I was last week and Dave convienently enough posted a <a href="http://www.theautomatedtester.co.uk/tutorials/selenium/page-object-pattern.htm">page object pattern tutorial</a></li>
+<li><a href="http://www.testjutsu.com/adieu-to-qtp-now-for-a-closer-look-at-selenium">Adieu to QTP. Now for a closer look at Selenium</a> makes the list just because it uses &#8216;QTP&#8217; and &#8216;Chinese bile farm&#8217; in the same sentence.</li>
+<li>Browsermob opensourced <a href="http://github.com/lightbody/browsermob-sep4j">sep4j</a> (which I think stands for &#8216;Se Parallel for Java&#8217;) which is a <i>Collection of utilities for Java-based projects to enable Selenium test parallelization using Selenium Grid or Sauce<br />
+Labs.</i></li>
+<li>Richard presented at the LJC Unconference on &#8216;Agile Acceptance Testing with Cucumber, Cuke4Duke, Groovy &amp; Selenium&#8217; and has <a href="http://www.rapaul.com/2010/06/26/agile-acceptance-testing-slides/">posted his slides</a></li>
+<li>Speaking of acceptance tests, Gojko has a post on the <a href="http://gojko.net/2010/06/16/anatomy-of-a-good-acceptance-test/">Anatomy of a good acceptance test</a></li>
+<li>Last thing on acceptance tests for this week is actually multiple things. Markus recently did a Weekend Testers event using RobotFramework and ParkCalc and has started a series of posts about it: <a href="http://blog.shino.de/2010/06/20/parkcalc-automation-getting-started/">Getting Started</a>, <a href="http://blog.shino.de/2010/06/24/parkcalc-automation-refactoring-a-data-driven-test/">ParkCalc automation – Refactoring a data-driven test</a> and <a href="http://blog.shino.de/2010/06/26/parkcalc-automation-refactoring-a-keyword-driven-test/">ParkCalc automation – Refactoring a keyword-driven test</a> are the first three posts in it. Hopefully there will be more too.</li>
+<li>And I&#8217;ll finish with one of my posts from this week which was on how to <a href="http://element34.ca/blog/dealing-with-file-downloads-with-selenium">deal with pesky file downloads in Se</a>. (hint: don&#8217;t use Se for downloading files)</li>
+</ul></p>
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/tags/smattering/">smattering</a>
+    </li></ul>
+
+
+            
+
+<ul>
+    
+    <li>
+        <a href="https://selenium.dev/categories/general/">general</a>
+    </li></ul>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2317&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-17%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-17%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
@@ -234,6 +293,12 @@
         
 
         <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/categories/general/page/65/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
             
 
             
