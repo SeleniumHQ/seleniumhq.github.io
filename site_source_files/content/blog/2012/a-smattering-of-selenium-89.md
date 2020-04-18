@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #89"
 Date = 2012-06-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Figured I would get this out before the computer goes in for surgery.</p>
 <li><a href="http://www.softwareishard.com/blog/firebug/automate-page-load-performance-testing-with-firebug-and-selenium/">Automate Page Load Performance Testing with Firebug and Selenium </a> is not a new topic, but a timely one for me</li>
 <li><a href="http://itshouldbeuseful.wordpress.com/2010/11/11/speed-up-your-features-with-a-backdoor-login-route/">Speed up your features with a backdoor login route</a> is not a recent post, but something I&#8217;ve had to explain to people at least once a week for the past month, so&#8230;</li>

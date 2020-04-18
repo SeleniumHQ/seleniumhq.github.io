@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #75"
 Date = 2012-01-23
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>And home. Which mean 100% more internets! Or at least 98% more.</p>
 <ul>
 <li>As things like native-driver become more prevalent, knowing how to do <a href="http://blog.codecentric.de/en/2012/01/continuous-integration-for-ios-projects-with-jenkins-ci/">Continuous Integration for iOS projects with Jenkins CI</a> will become more important</li>

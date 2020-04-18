@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #92"
 Date = 2012-06-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>What&#8217;s that? Eight days in a row? That&#8217;s right&#8230;</p>
 <ul>
 <li><a href="https://github.com/mroth/lolcommits">lolcommits</a> seems almost funny enough to be a good idea</li>

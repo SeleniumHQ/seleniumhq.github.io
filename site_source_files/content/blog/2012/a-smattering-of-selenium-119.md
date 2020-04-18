@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #119"
 Date = 2012-09-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Its that time again, <a href="http://www.automatedtestinginstitute.com/home/index.php?option=com_jforms&amp;view=form&amp;id=22&amp;Itemid=183">4th Annual Automation Honors Voting</a> is now open. Vanity contests FTW!</p>

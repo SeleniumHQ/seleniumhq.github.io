@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #128"
 Date = 2012-11-19
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>&#8230;as I avoid writing code that deals with dynamically constructed tables. Without any sort of unique locator. Of course.</p>
 <ul>
 <li>I would contend that the &#8216;right&#8217; solution to this problem is to use a CI container and have it email you, but if you are using Java and not using CI, then <a href="http://assertselenium.com/2012/11/13/emailable-reports-for-selenium-scripts/">Automatically Email the Reports After Selenium Test Execution</a> could be valuable.</li>

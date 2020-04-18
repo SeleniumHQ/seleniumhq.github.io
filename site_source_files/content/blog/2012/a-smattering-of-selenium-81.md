@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #81"
 Date = 2012-03-12
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Its March Break (at least here) which means its also Catch Up Week. An extra long Smattering every day!</p>
 <ul>
 <li>Generally I reccomend to people not to automate file uploads, but sometimes they are unavoidable. <a href="http://saucelabs.com/blog/index.php/2012/03/selenium-tips-uploading-files-in-remote-webdriver/">Selenium Tips: Uploading Files in Remote WebDriver</a> explains how one might go about things in WebDriver</li>

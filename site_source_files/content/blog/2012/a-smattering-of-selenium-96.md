@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #96"
 Date = 2012-06-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Blech. Supposed to go car shopping today. Any car brands want to sponsor my wife with a car so I can do something productive? Worth a shot&#8230;</p>
 <ul>
 <li><a href="https://github.com/pnakhat/jbehave-selenium">jbehave-selenium</a> is a sample project that uses, unsurprisingly, jbehave and selenium. Sample projects are outstanding.</li>

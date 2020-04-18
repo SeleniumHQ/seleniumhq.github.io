@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #85"
 Date = 2012-06-12
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Two days in a row! Take that doubters!</p>
 <ul>
 <li><a href="http://www.informit.com/articles/article.aspx?p=1874863">Automated Software Testing: An Example of a Working Solution</a> is an interesting take on designing an automation system for the US DoD. It sure as heck isn&#8217;t how I would do it, but I can understand how this context might lead to this solution. And it seems like it is Eclipse based which is even worse a decision. 🙂</li>

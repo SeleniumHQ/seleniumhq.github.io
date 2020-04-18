@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #118"
 Date = 2012-09-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>&lt;Insert witty/snarky commentary on something here&gt;</p>
 <ul>
 <li>Apparently the TestWatchman thing I linked to is deprecated now in favour of TestWatcher (shows how much I pay attention to JUnit stuff&#8230;). <a href="http://blog.zvestov.cz/item/98/catid/16">Here is an example of TestWatchers and RuleChains</a>. No, I don&#8217;t know what the blurb at the top says.</li>

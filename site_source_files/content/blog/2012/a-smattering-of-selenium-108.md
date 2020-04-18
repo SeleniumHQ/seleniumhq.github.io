@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #108"
 Date = 2012-08-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Apparently the links are slowing down for the summer?</p>
 <ul>
 <li><a href="https://air.mozilla.org/continuous-delivery-san-francisco/">Ralph Bodenner talks about New Relic’s experiences </a> at the SF Continuous Delivery meetup</li>

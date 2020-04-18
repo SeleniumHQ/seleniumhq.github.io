@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #127"
 Date = 2012-11-16
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Within an hour I had some more things to add to the last Smattering. Oh well, I&#8217;ll just save them up&#8230;</p>
 <ul>
 <li><a href="http://roydekleijn.github.com/har-assert/">Har-assert</a> looks like something useful to include in your project if you are using Java. And the browsermob-proxy (which of course, you all are)</li>

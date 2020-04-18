@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #107"
 Date = 2012-08-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Back on the train again. Wow, the highway is screwed today.</p>
 <ul>
 <li><a href="http://element34.ca/blog/the-automation-litmus-test">The Automation Litmus Test</a> is one that most companies face, but now it has a name</li>
