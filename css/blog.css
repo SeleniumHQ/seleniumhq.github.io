@@ -113,6 +113,7 @@ a {
   justify-content: space-around;
   text-decoration: underline;
   color: white;
+  display: flex;
 }
 
 .archive-link-container a {
@@ -120,10 +121,6 @@ a {
 }
 
 .search-container {
-  display: flex;
-}
-
-.archive-link-container {
   display: flex;
 }
 
@@ -138,6 +135,12 @@ a {
 
 .filter-section:last-child {
   border-bottom: none;
+}
+
+.links-container {
+    justify-content: space-around;
+    text-decoration: underline;
+    display: flex;
 }
 
 /***/
