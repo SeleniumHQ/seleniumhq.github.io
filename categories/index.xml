@@ -6,10 +6,28 @@
     <description>Recent content in Categories on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 19 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>general</title>
+      <link>https://selenium.dev/categories/general/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>governance</title>
+      <link>https://selenium.dev/categories/governance/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/governance/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>conference</title>
@@ -21,29 +39,11 @@
     </item>
     
     <item>
-      <title>general</title>
-      <link>https://selenium.dev/categories/general/</link>
-      <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/categories/general/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>releases</title>
       <link>https://selenium.dev/categories/releases/</link>
       <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/categories/releases/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>governance</title>
-      <link>https://selenium.dev/categories/governance/</link>
-      <pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/categories/governance/</guid>
       <description></description>
     </item>
     

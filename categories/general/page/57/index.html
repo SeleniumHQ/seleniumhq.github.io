@@ -150,6 +150,83 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Thursday, December 9, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
+            <a href="https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/"><h2>Atoms have come to Selenium IDE</h2></a>
+            <p>As mentioned in Simon&#8217;s <a href="http://seleniumhq.wordpress.com/2010/08/16/going-atomic-why/">Going Atomic: Why?</a> and <a href="http://seleniumhq.wordpress.com/2010/09/05/going-atomic-how/">Going Atomic: How</a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &#8216;atoms&#8217; is now included.<br />
+<br />
+Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &#8216;why&#8217; and suggests how to fix them as well.<br />
+<br />
+The HTML spec has the notion of a <i>boolean attribute</i> which is one that does something just by being there rather than by its value; <i>checked</i> and <i>selected</i> are two such examples of this. Optionally, you could give these boolean attributes a value that is the same as their name (checked=&#8221;checked&#8221;) and your page would still validate, but really, the browsers only care that the attribute exist.<br />
+<br />
+Prior to 1.0.10, it was not uncommon for people to do something like<br />
+</p>
+<pre>assertAttribute | checkbox@checked | checked</pre>
+<p>
+which fetches the value of the checked attribute on the checkbox with the id or name of checkbox and fails the script is the value is not checked.<br />
+<br />
+In 1.0.10 though, that will fail <i>even if it is checked</i>. This is because checked is a boolean attribute and will now return either true or throw an exception saying the attribute doesn&#8217;t exist. Redoing the above step check that the boolean attribute is set results in:<br />
+</p>
+<pre>assertAttribute | checkbox@checked | true</pre>
+<p>
+Thankfully, most of the real-world interaction with boolean attributes is focused on checked, disabled, hidden and selected and in these cases using assertAttribute is not really the right thing to do. Instead, the Selenium API provides wrappers for you to use.<br />
+</p>
+<table>
+<tr>
+<td>checked</td>
+<td>assertChecked(locator), assertNotChecked(locator), verifyChecked(locator), verifyNotChecked(locator)</td>
+</tr>
+<tr>
+<td>disabled</td>
+<td>assertEditable(locator), assertNotEditable(locator), verifyEditable(locator), verifyNotEditable(locator)</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>assertVisible(locator), assertNotVisible(locator), verifyVisible(locator), verifyNotVisible(locator)</td>
+</tr>
+<tr>
+<td>selected</td>
+<td>assertSelected*(locator, pattern), assertNotSelected*(locator, pattern), verifySelected*(locator, pattern), verifyNotSelected*(locator, pattern)</td>
+</tr>
+</table>
+<p>
+Checking for the absence of a boolean attribute that doesn&#8217;t have a nice wrapper is a bit of a pain though. In this example I am checking that the boolean attribute <i>multiple</i> is not on the select element with the name elephants.<br />
+</p>
+<pre>assertEval | this.browserbot.findElement("css=select[name=elephants]").getAttribute("multiple"); | null</pre>
+<p>
+If you find yourself doing this very often, I suggest you wrap it up in a user-extension inside a <a href="http://seleniumhq.org/projects/ide/plugins.html">plugin</a> as something like<br />
+</p>
+<pre>assertBooleanAttribute | css=select[name=elephants]@multiple | false
+assertBooleanAttribute | css=select[name=elephants]@multiple | true</pre>
+<p>
+Hopefully this addresses some of the eventual &#8216;why the heck did my script break!?!?!&#8217; problems that will no double crop up once Selenium IDE 1.0.10 gets wider distribution.</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/ide/">ide</a>
+    <a href="https://selenium.dev/tags/webdriver/">webdriver</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Atoms%20have%20come%20to%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fatoms-have-come-to-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fatoms-have-come-to-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Monday, December 6, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-35/"><h2>A Smattering of Selenium #35</h2></a>
             <p><p>(If I wasn&#8217;t still recovering from a cold there would be something witty here.)<br />
@@ -222,56 +299,6 @@
 
                 <a href="mailto:?&subject=Selenium Blog - Selenium%20Conference%20Survey&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-conference-survey%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-conference-survey%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Monday, November 29, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-34/"><h2>A Smattering of Selenium #34</h2></a>
-            <p>We&#8217;ll start this week with the <a href="http://www.theautomatedtester.co.uk/blog/2010/selenium-book-published.htm">official announcement of &#8216;Selenium 1.0 Testing Tools: Beginner’s Guide&#8217; being available</a>. Congrats David! (Still waiting for my copy&#8230;)<br />
-</p>
-<ul>
-<li>There is now a <a href="http://refcardz.dzone.com/refcardz/getting-started-selenium-20?utm_source=feedburner">DZone &#8216;refcard&#8217; for Selenium 2</a>. Of course, the reason Se2 is alpha is the API isn&#8217;t done with at least one major addition still left so it will be out of date in a month, but still&#8230;</li>
-<li>Here is <a href="http://viewvc.svn.mozilla.org/vc/projects/socorro_qa/">another example of how to do Page Objects in Python</a></li>
-<li><a href="http://www.theautomatedtester.co.uk/blog/2010/client-side-profiling-with-selenium-2.html">Client-Side Profiling with Selenium 2</a> is David&#8217;s post about his recent London Selenium User Group talk</a>
-<li>Someone took the time to make a <a href="http://www.squidoo.com/selenium-web-testing">Selenium lens</a> on Squidoo; which is going to get kinda circular once this post shows up on it.</li>
-<li><a href="http://opineandwhine.blogspot.com/2008/12/why-automated-testing-is-broken.html">Why Automated Testing is Broken</a>. Not much of a commentary here other than A-freaking-men. Ok, that was commentary.</li>
-<li><a href="http://seleniumtoolkit.codeplex.com/">Selenium Toolkit for .NET</a> got a version bump for the first time in a year.</li>
-<li><a href="http://blog.blackpepper.co.uk/driving-a-flex-application-via-selenium-2-webdriver/">Driving a Flex Application via Selenium 2 WebDriver</a> shows how to use FlexSelenium and Web Driver together</li>
-<li>RVM is one of the &#8216;cool kid&#8217; tricks and <a href="http://rvm.beginrescueend.com/integration/hudson/">Continuous Integration with Hudson</a> is one of those things you need to know how to do if you are using it.</li>
-<li><a href="http://vagrantup.com/">Vagrant</a> appears to take RVM one (or more) steps further</li>
-<li>I keep thinking someone needs to create a Selenium koans site. Inspired by <a href="https://github.com/mrdavidlaing/javascript-koans">javascript koans</a> and <a href="https://github.com/mrdavidlaing/javascript-koans">ruby koans</a></li>
-<li><a href="http://www.launchlist.net/">Launchlist</a> appeals to me somehow. Throw in an API for launching scripts and you have a nice TCM system</li>
-<li>I spent some time figuring out how to integrate Robot Framework with Sauce Labs OnDemand and then <a href="http://saucelabs.com/blog/index.php/2010/11/integrating-robot-framework-with-sauce-ondemand/">wrote about it</a></li>
-<li><a href="http://code.google.com/p/webdriver-blackberry/wiki/WebDriverOverview">Web Driver for the BlackBerry</a> &#8211; did not know that even existed.</li>
-<li><a href="http://pypi.python.org/pypi/gocept.selenium/0.3">gocept.selenium</a> is another Zope 2/Plone/ZTK integration</li>
-<li><a href="http://www.wakaleo.com/resources/presentations/306-bdd-atdd-and-page-objects">BDD, ATDD and Page Objects</a> was a talk done at SkillsMatter which was recorded</li>
-</ul>
-<p>
-Oh. and I just noticed that this is the Selenium-iversay edition of these things.</p>
-
-            
-
-<b>Tags</b>
-<div class="links-container">
-    
-    <a href="https://selenium.dev/tags/smattering/">smattering</a></div>
-
-
-            
-
-<b>Categories</b>
-<div class="links-container">
-    
-    <a href="https://selenium.dev/categories/general/">general</a></div>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2334&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-34%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-34%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

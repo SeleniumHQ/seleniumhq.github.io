@@ -150,6 +150,398 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Sunday, April 19, 2020 by <a href="https://twitter.com/diegofmolina">diemol</a>
+            <a href="https://selenium.dev/blog/2020/public-project-meeting-20200409/"><h2>Public Project Meeting - April 9, 2020</h2></a>
+            <p>As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project
+meetings. These are written meetings which are held on the <code>#selenium-tlc</code> channels on <a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack</a>.</p>
+
+<p>Here is the timeline of the meeting held on April 9, 2020 (times are on CET).</p>
+
+<p>The next meeting will be on April 23, 2020.</p>
+
+<hr />
+
+<p>Simon Stewart  4:31 PM
+@adamgoucher there needs to be a calendar invite for these things</p>
+
+<p>adamgoucher  4:32 PM
+well, originally the idea was that people could manage their own calendars but if you send me which email you want it attached to i can add you to the one ive been putting people on who wanted an invite</p>
+
+<p>4:35 anyhow; here’s the rough approximation of an agenda. we’ll see how it goes;</p>
+
+<ul>
+<li>anything governance-y that needs to be discussed in public (not limited to, but including public announcement of people getting the commit bit, etc.)</li>
+<li>status of prs</li>
+<li>status of issues</li>
+<li>status of se project related events (india, chicago are the big ones)</li>
+<li>next release status and/or timeline</li>
+<li>go around the metaphorical table on how people are doing against things they signed up for</li>
+<li>anything that needs to get sussed out in public (from reading the channel, the main thing that came up is the js discussion)</li>
+<li>open the floor for other discussions either instigated by ’project people</li>
+</ul>
+
+<p>4:38
+anything governance-y that needs to be discussed in public (not limited to, but including public announcement of people getting the commit bit, etc.)</p>
+
+<p>Diego Molina  4:38 PM
+if there is time, let&rsquo;s add the recent topic of adding go bindings</p>
+
+<p>adamgoucher  4:38 PM
+has there been an sfc call recently? (i cant remember when they are)</p>
+
+<p>Diego Molina  4:40 PM
+governance related, I&rsquo;d say:
+we need to define where we put these meetings minutes, how we announce them widely (do we need?), and that we still need a code of conduct</p>
+
+<p>adamgoucher  4:41 PM
+ok. @diemol pester my monday morning if i haven&rsquo;t figured out how to get them onto the blog by then</p>
+
+<p>Diego Molina  4:41 PM
+So, meetings minutes&hellip; we can put them in the same format as a blog entry, and we can tag/label them so they are publicly accessible
+I can do that, I would just need the contents of the previous meetings, and also add small instructions on how to add new ones</p>
+
+<p>adamgoucher  4:43 PM
+i think we just start with this one. i didnt take the most excellent notes the last couple and they might have expired out the channel (havent scrolled up to check)</p>
+
+<p>Diego Molina  4:43 PM
+ok, so I will start doing that with this onee</p>
+
+<p>adamgoucher  4:44 PM
+who is the point person for the code of conduct</p>
+
+<p>Diego Molina  4:44 PM
+@AutomatedTester said something about being working on it?
+4:44
+but we currently have a draft, why don&rsquo;t we use that draft and iterate on it?</p>
+
+<p>adamgoucher  4:45 PM
+makes sense. as we did with the other doc</p>
+
+<p>4:46
+ok. next thing on the list is status of prs. which @AutomatedTester has been culling like a mad man over the last week and we’re down the 62</p>
+
+<p>4:47
+followed closely by status of issues and there is now 402 which i think he is also attacking (but i dont have a number from 2 weeks ago)</p>
+
+<p>Diego Molina  4:48 PM
+perhaps we should set up a project health status dashboard
+I saw a couple of OSS projects that could do that</p>
+
+<p>adamgoucher  4:49 PM
+could be interesting. of course we could also then get into wild semantic discussions around ‘what’ healthy is.  :smile:</p>
+
+<p>4:50
+next; status of se project related events (india, chicago are the big ones)</p>
+
+<p>4:51
+i saw that seconf india has been moved to september. how is chicago looking?</p>
+
+<p>Diego Molina  4:51 PM
+I think no one is around who could reply that question</p>
+
+<p>David Burns  4:52 PM
+I also think it&rsquo;s too early to comment. Chicago is in lockdown at the moment for the foreseeable</p>
+
+<p>4:52
+we also need to be see how many venues are still around when we come out of our homes</p>
+
+<p>Isaul Vargas  4:53 PM
+As for big cities in the US, only by End of May can we know if restrictions will be lifted due to testing and lowering the curve.</p>
+
+<p>adamgoucher  4:53 PM
+(it has more of a recurring agenda item more than me seeing someone who can answer)</p>
+
+<p>4:54
+and restrictions will be lifted in june and clamped back down in july. as is the way in a pandemic. (and really, will be until we get a vaccine)</p>
+
+<p>4:55
+next item; next release status and/or timeline. @simonstewart?</p>
+
+<p>Simon Stewart  4:55 PM
+India has been moved to later in the year</p>
+
+<p>4:56
+We’re running the 4.0 release in the open: <a href="https://github.com/SeleniumHQ/selenium/projects/2">https://github.com/SeleniumHQ/selenium/projects/2</a></p>
+
+<p>4:56
+The config stuff won’t be too horrible. I’m quite liking the fact that TOML opens up some options</p>
+
+<p>adamgoucher  4:56 PM
+yup. so is your plan still ‘push the button on stage to do the release and retire for your daily beverage’ or are we aiming for a same-ish part of the calender</p>
+
+<p>Simon Stewart  4:56 PM
+When we ship, I stand down</p>
+
+<p>4:57
+I’d still like to get the betas out soon</p>
+
+<p>4:57
+But there are some big pieces missing before we can get to that point</p>
+
+<p>4:58
+The big one being the CDP stuff across Grid, which I’ve many of the moving parts for in various branches on my machine</p>
+
+<p>Diego Molina  4:58 PM
+when I look at the things on the &ldquo;to do&rdquo; column, maybe 80% is Grid, right?</p>
+
+<p>5:00
+if so, it is something that calms me down because at least (from my side), I am having slowly more time to work on the code</p>
+
+<p>5:00
+but there are a couple of things on that list which concern me: IDE to the monorepo (and build it with bazel) + implement CDP and relative locators in JS</p>
+
+<p>David Burns  5:01 PM
+I am doing the IDE to mono repo now</p>
+
+<p>5:01
+relative locators in JS should be easy, I can do it or talk @harsha509 through it</p>
+
+<p>Diego Molina  5:02 PM
+but in the IDE, what is our approach in terms of browser extension vs. electron</p>
+
+<p>5:02
+right now we could only do the browser extension, right?</p>
+
+<p>David Burns  5:02 PM
+that is separate from the mono repo work</p>
+
+<p>5:03
+these are questions for @tourdedave and @corevo</p>
+
+<p>Simon Stewart  5:03 PM
+Right now, there’s just the browser extension, but @tourdedave and @corevo did start work on the electron port</p>
+
+<p>5:03
+I’m not sure what kind of progress they’re making, if any</p>
+
+<p>Diego Molina  5:04 PM
+ok, so it seems we will only focus on the browser extension for now</p>
+
+<p>adamgoucher  5:07 PM
+ok, so to summarize;
+all the known to-dos are in the github project
+india has been shifted, but dont want to just move the target to september
+aiming for betas to start soon, grid cdp is really the last big hurdle until those can start</p>
+
+<p>Diego Molina  5:08 PM
+and the JS stuff, right?</p>
+
+<p>5:08
+(CDP + relative locators)</p>
+
+<p>adamgoucher  5:09 PM
+i think we can skip the next thing which is ‘how are people progressing on the stuff they signed up for’ with a ‘see the github project’</p>
+
+<p>5:11
+because the next thing on the list i prepared was <code>- anything that needs to get sussed out in public</code> which, for today, means ‘what to do about javascript’. not sure that anything got resolved the other day but i think the core of it is ‘webdriver.js is the official binding but not under the auspices of the project’ or something?</p>
+
+<p>Simon Stewart  5:11 PM
+To reiterate feedback from other people, and my own reflections:</p>
+
+<p>5:12
+There is a general feeling that the selenium project should own the core of its own bindings
+We’ve gone from having basically no-one interested in JS to having Sri on board (@harsha509)
+We’ve not nailed down the overall strategy yet</p>
+
+<p>5:14
+Which kind of suggests not using webdriver.io’s webdriver module, but continuing to work with our own stuff</p>
+
+<p>5:14
+Unless that module moves under the aegis of the project</p>
+
+<p>Diego Molina  5:15 PM
+oh, actually I was talking to @christian-bromann about it, and he manifested again his interest to help move the JS bindings to use the webdriver package, and leave things ready for someone who wants to maintain the bindings</p>
+
+<p>Simon Stewart  5:15 PM
+And if the code for the webdriver package was in our repo, I think that’s probably what we’d do</p>
+
+<p>Diego Molina  5:16 PM
+I am not a 100% sure that he is ok with moving the code from that package to our repo
+but in the worst case, would a copy/fork of the code work?</p>
+
+<p>Simon Stewart  5:17 PM
+That seems like a bad idea</p>
+
+<p>Christian Bromann  5:17 PM
+What is the problem of not having the webdriver binding in the Selenium repo?</p>
+
+<p>Simon Stewart  5:18 PM
+The feedback I’ve had from several people has been that they’re deeply uncomfortable with it, and won’t approve of it</p>
+
+<p>5:18
+It’s not just a technical thing</p>
+
+<p>5:18
+There are the social aspects to consider too</p>
+
+<p>Christian Bromann  5:19 PM
+I understand.</p>
+
+<p>Diego Molina  5:20 PM
+well, the idea of the committees is to reach consensus in these cases, and it looks like we would never reach it for this situation</p>
+
+<p>Christian Bromann  5:20 PM
+Well the idea of generating raw bindings based of some json files is pretty easy to reimplement and I am happy to support how it can be done.</p>
+
+<p>5:22
+copying over the code form WebdriverIO to Selenium is rather difficult as it depends on some other wdio utilities (logging and utility functions)</p>
+
+<p>Simon Stewart  5:22 PM
+I do wonder how far adrift the JS bindings are</p>
+
+<p>5:23
+The obvious missing 4.0 features are relative locators and the CDP integration</p>
+
+<p>5:23
+The CDP integration isn’t nailed down properly anywhere. We’ve got access to the raw protocol, but we’ve yet to build the abstractions people would actually write against</p>
+
+<p>Christian Bromann  5:23 PM
+Given the situation I am would be also happy to invite the Selenium JS contributor to the WebdriverIO org to ensure code access and ability to merge/review code changes.</p>
+
+<p>Simon Stewart  5:24 PM
+Thank you</p>
+
+<p>Diego Molina  5:25 PM
+well, then it seems JS bindings stay as they are
+hopefully we all find a way to make them fit for the 4.0 release</p>
+
+<p>5:25
+should we talk about the go bindings?</p>
+
+<p>adamgoucher  5:26 PM
+thats the only other thing on my list</p>
+
+<p>Simon Stewart  5:26 PM
+We can talk about Go bindings</p>
+
+<p>5:27
+Miki offered to donate <a href="https://github.com/tebeka/selenium">https://github.com/tebeka/selenium</a> to the project a while ago</p>
+
+<p>5:27
+I got busy and had health issues, so dropped things on the floor</p>
+
+<p>5:27
+Should we pick that back up again?</p>
+
+<p>adamgoucher  5:28 PM
+is he also intending to maintain it (dunno the status of them) or is it a ‘i did a thing and dont need it anymore so someone can pick it up if they want’</p>
+
+<p>Simon Stewart  5:28 PM
+I dunno</p>
+
+<p>5:28
+That would be part of the conversation</p>
+
+<p>David Burns  5:29 PM
+if it&rsquo;s the latter then I am not sure we would want them. It&rsquo;s amazingly nice but the maintenance burden, potentially, doesnt feel worth it</p>
+
+<p>Simon Stewart  5:30 PM
+Indeed</p>
+
+<p>5:30
+But it would be nice to have some “official” Go bindings.</p>
+
+<p>adamgoucher  5:30 PM
+i know nothing about go, but i feel like the bar for any binding to be included in the main project;
+is it maintained?
+is it idomatically correct for the language?
+is there not a competing, more obvious one to incorporate?</p>
+
+<p>Simon Stewart  5:30 PM
+Turns out that people like them</p>
+
+<p>5:30
+s/them/the language/</p>
+
+<p>Diego Molina  5:30 PM
+seems it is worthy to give the conversation a go</p>
+
+<p>5:30
+who would like to drive that conversation with Miki?</p>
+
+<p>Simon Stewart  5:31 PM
+It’s pretty dormant right now, but is that due to being complete?
+My understanding is “yes”
+Nothing that I’m aware of</p>
+
+<p>5:31
+puts finger on nose</p>
+
+<p>adamgoucher  5:31 PM
+sounds like ‘you are a go’ for the conversation about go. as it were</p>
+
+<p>Simon Stewart  5:31 PM
+Not me</p>
+
+<p>5:31
+Yeah, I think it’s a conversation that’s well worth having</p>
+
+<p>Diego Molina  5:32 PM
+I can see from a quick look that the go bindings have vendor stuff in it, for example it has the ability to use Sauce Labs out of the box</p>
+
+<p>5:33
+even if I work for Sauce, we need to see all those things in case we want to merge them</p>
+
+<p>Simon Stewart  5:34 PM
+Aye</p>
+
+<p>Diego Molina  5:36 PM
+I know how the Grid works (in general), but I still have black spots in my head when talking about bindings
+we need someone who knows how bindings should work and do a check on the go bindings</p>
+
+<p>adamgoucher  5:37 PM
+sounds like ‘we think having the go bindings in the main project is cool, but currently the people in the channel right now dont have enough interest (or knowledge) to drive the conversation’</p>
+
+<p>5:38
+likely also have to talk to sfc about rights transfer and such. though the existing licensing could cover it</p>
+
+<p>Diego Molina  5:39 PM
+maybe we bring the topic back in 2 weeks and see how people feel?</p>
+
+<p>Simon Stewart  5:40 PM
+SGTM</p>
+
+<p>adamgoucher  5:41 PM
+ok. i didnt have anything else? did anyone else?</p>
+
+<p>Simon Stewart  5:42 PM
+I’ve got other meetings to attend, so nowt from me</p>
+
+<p>adamgoucher  5:43 PM
+taking silence from the rest as a no. thanks everyone!</p>
+
+<p>Diego Molina  5:43 PM
+Thank you all!</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/slack/">slack</a>
+    <a href="https://selenium.dev/tags/meeting/">meeting</a>
+    <a href="https://selenium.dev/tags/tlc/">tlc</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/governance/">governance</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Public%20Project%20Meeting%20-%20April%209%2c%202020&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fpublic-project-meeting-20200409%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fpublic-project-meeting-20200409%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Saturday, November 9, 2019 by <a href="https://twitter.com/diegofmolina">diemol</a>
             <a href="https://selenium.dev/blog/2019/seleniumconf-london-2019/"><h2>SeleniumConf London 2019 Videos and Pictures</h2></a>
             <p>Check out all the SeleniumConf London 2019 videos and photos!</p>
@@ -245,47 +637,6 @@ Take a look at the project on <a href="https://github.com/SeleniumHQ/selenium-id
 
                 <a href="mailto:?&subject=Selenium Blog - Selenium%20IDE%20Is%20Dead%2c%20Long%20Live%20Selenium%20IDE%21%20&body=https%3a%2f%2fselenium.dev%2fblog%2f2018%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2018%2flong-live-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Wednesday, August 9, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
-            <a href="https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/"><h2>Firefox 55 and Selenium IDE</h2></a>
-            <p><span style="font-weight:400;">The bad news:<strong> from Firefox 55 onwards, Selenium IDE will no longer work</strong>. </span></p>
-<p><span style="font-weight:400;">The reasons for this are complex, but boil down to two main causes:</span></p>
-<ol>
-<li style="font-weight:400;"><span style="font-weight:400;">Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox <a href="https://blog.mozilla.org/blog/2017/06/13/faster-better-firefox/">faster and more stable</a>, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “<a href="https://blog.mozilla.org/addons/2016/11/23/add-ons-in-2017/">XPI</a>” format, to a newer, more widely adopted “<a href="https://developer.mozilla.org/en-US/Add-ons/WebExtensions">Web Extension</a>” mechanism.  </span></li>
-<li style="font-weight:400;"><span style="font-weight:400;">The Selenium project lacks someone with the time and energy to move the IDE forwards to take advantage of the new technologies.</span></li>
-</ol>
-<p><span style="font-weight:400;"><a href="http://www.seleniumhq.org/">Selenium</a> is one of the most widely used pieces of testing software there is. Despite this, the team of people regularly contributing is small: since the start of the year, there are only 11 people who have made more than 10 commits, with two people accounting for more than half of those. Since 2016, only one person has been maintaining the IDE. </span></p>
-<p><span style="font-weight:400;">Selenium is an Open Source project. None of the core contributors &#8212; not the IDE maintainer, not the language binding owners &#8212; are paid to work on work on it. They do it because they love working on the code, and they typically do it in their “copious free time”. The IDE maintainer has had almost none of that to spare. We should all be thanking that committer for his time and effort. Thank you, Samit!</span></p>
-<p><span style="font-weight:400;">So what can we do to move forward? The first thing is that there are now a wealth of tools that are stepping up to fill the gap. You should go and have a look at them. The second thing is that there is an effort to rebuild IDE using modern APIs, to be usable across more than just Firefox. The fine people at <a href="https://applitools.com/">Applitools</a> are helping with this effort.</span></p>
-<p><span style="font-weight:400;">The third thing? That’s you. <strong>You could help us</strong>.</span></p>
-<p><span style="font-weight:400;">If you believe that a friendly UI for quickly recording and playing back tests is a useful Open Source tool, then please come and join us! The main technical discussions are happening on the #selenium IRC channel. If you’d prefer <a href="https://seleniumhq.herokuapp.com/">Slack</a>, you can join us on that too. Or there’s the ever useful <a href="https://groups.google.com/forum/#!forum/selenium-developers">selenium-developers</a> mailing list. Come onboard. We’d love your help, and IDE is a wonderful thing to contribute to!</span></p>
-
-            
-
-<b>Tags</b>
-<div class="links-container">
-    
-    <a href="https://selenium.dev/tags/ide/">ide</a>
-    <a href="https://selenium.dev/tags/selenium/">selenium</a></div>
-
-
-            
-
-<b>Categories</b>
-<div class="links-container">
-    
-    <a href="https://selenium.dev/categories/general/">general</a></div>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - Firefox%2055%20and%20Selenium%20IDE&body=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2017%2ffirefox-55-and-selenium-ide%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>
