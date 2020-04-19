@@ -168,53 +168,45 @@ un script de Selenium-IDE a un archivo de Python.
 
 Para obtener detalles sobre la configuración del controlador del cliente Python, consulte el Apéndice: Configuración del controlador del cliente Python.
 
-### Using the .NET Client Driver
+### Utlizando el Controlador de Cliente .NET
 
-* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
-* Extract the folder
-* Download and install [NUnit](https://nunit.org/download/) (
-  Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
-  NUnit, you can also write a simple main() function to run your tests; 
-  however NUnit is very useful as a test engine.)
-* Open your desired .Net IDE (Visual Studio, SharpDevelop, MonoDevelop)
-* Create a class library (.dll)
-* Add references to the following DLLs: nmock.dll, nunit.core.dll, nunit.
-  framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll
-  and ThoughtWorks.Selenium.UnitTests.dll
-* Write your Selenium test in a .Net language (C#, VB.Net), or export
-  a script from Selenium-IDE to a C# file and copy this code into the class file 
-  you just created.
-* Write your own simple main() program or you can include NUnit in your project 
-  for running your test.  These concepts are explained later in this chapter.
-* Run Selenium server from console
-* Run your test either from the IDE, from the NUnit GUI or from the command line
+* Descarga Selenium RC desde SeleniumHQ [página de descargas](https://selenium.dev/downloads/)
+* Extrae la carpeta
+* Descargua e instala [NUnit](https://nunit.org/download/) 
+(Nota: Puedes usar NUnit como tu motor de prueba. Si aún no estás familiarizado con NUnit, también puedes escribir una función main() simple para ejecutar tus pruebas; sin embargo, NUnit es muy útil como motor de prueba).
+* Abre tu IDE .Net deseado (Visual Studio, SharpDevelop, MonoDevelop)
+* Crea una biblioteca de clases (.dll)
+* Agrega referencias a las siguientes DLL: nmock.dll, nunit.core.dll, nunit.
+framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll y ThoughtWorks.Selenium.UnitTests.dll
+* Escribe tu prueba de Selenium en un lenguaje .Net (C #, VB.Net), o exporta
+un script de Selenium-IDE a un archivo C# y copia este código en el archivo de clase acabas de crear.
+* Escribe tu  propio programa main() simple o puedes incluir NUnit en tu proyecto para ejecutar tu prueba. Estos conceptos se explican más adelante en este capítulo.
+* Ejecuta el servidor Selenium desde la consola
+* Ejecuta tu prueba desde el IDE, desde la GUI de NUnit o desde la línea de comandos.
 
-For specific details on .NET client driver configuration with Visual Studio, see the appendix 
-.NET client driver configuration. 
+Para obtener detalles específicos sobre la configuración del controlador del cliente .NET con Visual Studio, consulte el apéndice
+Configuración del controlador del cliente .NET
 
-### Using the Ruby Client Driver
+### Utilizando el Controlador de Cliente Ruby
 
-* If you do not already have RubyGems, install it from RubyForge.
-* Run ``gem install selenium-client``
-* At the top of your test script, add ``require "selenium/client"``
-* Write your test script using any Ruby test harness (eg Test::Unit,
-  Mini::Test or RSpec).
-* Run Selenium RC server from the console.
-* Execute your test in the same way you would run any other Ruby
-  script.
+* Si aún no tiene RubyGems, instálalo desde RubyForge.
+* Ejecuta ``gem install selenium-client``
+* En la parte superior de tu script de prueba, agrega ``require "selenium/client"``
+* Escribe tu script de prueba usando cualquier arnés de prueba Ruby (por ejemplo, Test::Unit Mini::Test o RSpec).
+* Ejecuta el servidor Selenium RC desde la consola.
+* Ejecuta tu prueba de la misma manera que ejecutarías cualquier otro script de Ruby.
 
+Para obtener detalles sobre la configuración del controlador del cliente Ruby, consulta la `Documentación de Selenium-Client`_
 
-For details on Ruby client driver configuration, see the `Selenium-Client documentation`_
+## De Selenese a un Programa
 
-## From Selenese to a Program
+La tarea principal para usar Selenium RC es convertir tu Selenese en un lenguaje de programación. En esta sección, proporcionamos varios ejemplos
+lenguaje-específico diferentes.
 
-The primary task for using Selenium RC is to convert your Selenese into a programming 
-language. In this section, we provide several different language-specific examples.
+### Muestra de un Script de prueba
 
-### Sample Test Script
-
-Let's start with an example Selenese test script.  Imagine recording
-the following test with Selenium-IDE.
+Comencemos con un ejemplo de un script de prueba de Selenese. Imagina grabar
+la siguiente prueba con Selenium-IDE.
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
@@ -223,16 +215,11 @@ the following test with Selenium-IDE.
 | clickAndWait       | btnG                          |             |
 | assertTextPresent  | Results * for selenium rc     |             |
 
+Nota: este ejemplo funcionaría con la página de búsqueda de Google <http://www.google.com>
 
-Note: This example would work with the Google search page http://www.google.com
+### Selenese como código de programación
 
-### Selenese as Programming Code
-
-Here is the test script exported (via Selenium-IDE) to each of the supported
-programming languages.  If you have at least basic knowledge of an object-
-oriented programming language, you will understand how Selenium 
-runs Selenese commands by reading one of these 
-examples.  To see an example in a specific language, select one of these buttons.
+Aquí está el script de prueba exportado (a través de Selenium-IDE) a cada uno de los lenguajes de programación soportados. Si tienes al menos un conocimiento básico de un lenguaje de programación orientado a objetos, comprenderás cómo Selenium ejecuta comandos Selenese leyendo uno de estos ejemplos. Para ver un ejemplo en un lenguaje específico, seleccione uno de estos botones.
 
 #### CSharp
 ``` csharp
@@ -406,7 +393,7 @@ examples.  To see an example in a specific language, select one of these buttons
 
 ```
 
-In the next section we'll explain how to build a test program using the generated code.
+En la siguiente sección explicaremos cómo construir un programa de prueba usando el código generado.
 
 ## Programming Your Test
 
