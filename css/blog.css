@@ -114,13 +114,13 @@ a {
 }
 
 .archive-link-container {
-  justify-content: space-around;
-  text-decoration: underline;
-  color: white;
+    justify-content: space-around;
 }
 
 .archive-link-container a {
-  color: white;
+    color: white;
+    text-decoration: underline;
+    padding: 3px;
 }
 
 .links-container {
@@ -130,6 +130,17 @@ a {
 
 .links-container a {
     color: white;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+.links-container-taxonomy {
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.links-container-taxonomy a {
+    color: #6f757a;
     text-decoration: underline;
     padding: 3px;
 }
