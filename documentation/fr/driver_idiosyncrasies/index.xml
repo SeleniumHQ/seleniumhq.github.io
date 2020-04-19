@@ -17,9 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
-WebDriver provides capabilities that each remote end will/should support the implementation.</description>
+      <description>Afin de créer une nouvelle session par Selenium WebDriver, l&amp;rsquo;extrémité locale doit fournir les capacités de base à l&amp;rsquo;extrémité distante. L&amp;rsquo;extrémité distante utilise le même ensemble de capacités pour créer une session et décrit les fonctionnalités de la session actuelle.
+WebDriver offre des capacités que chaque télécommande fin soutiendra/devrait soutenir la mise en œuvre. Voici les fonctionnalités prises en charge par WebDriver:
+browserName: Cette capacité est utilisée pour définir le browserName pour une session donnée.</description>
     </item>
     
     <item>

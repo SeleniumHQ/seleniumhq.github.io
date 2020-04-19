@@ -32,10 +32,15 @@ import org.openqa.selenium.By; import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/selenium_rc/</guid>
-      <description>页面需要从英语翻译为简体中文。 您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
- Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
-How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.
-RC Components Selenium RC components are:</description>
+      <description>介绍 在WebDriver / Selenium合并产生功能更强大的Selenium 2之前, Selenium RC一直是Selenium的主要项目. 再次特意强调的是, Selenium 1不再享有技术支持.
+Selenium RC 的工作原理 首先, 我们将描述Selenium RC的组件如何运行 以及每个组件在运行测试脚本中所扮演的角色.
+RC 组件 Selenium RC 组件包括:
+ Selenium 服务器, 用于启动并关闭浏览器, 解释运行从测试程序传递来的Selenese命令, 并充当 HTTP代理 , 拦截和验证在浏览器和AUT之间传递的HTTP消息. 客户端库, 提供每种编程语言和 Selenium RC 服务器之间的接口.  以下是一个简化的架构图:
+该图显示了客户端库与服务器通信, 并传递了用来执行的每个Selenium命令. 然后, 服务器使用Selenium-Core的JavaScript命令 将Selenium命令传递到浏览器. 浏览器使用其JavaScript解释器执行Selenium命令. 这将运行您在测试脚本中指定的Selenese操作或验证行为.
+Selenium 服务器 Selenium 服务器从您的测试程序接收Selenium命令, 对其进行解释, 然后将运行这些测试的结果报告给您的程序.
+RC服务器捆绑了Selenium Core并将其自动注入浏览器. 当您的测试程序打开浏览器(使用客户端库API函数)时, 会发生这种情况. Selenium-Core是一个JavaScript程序, 实际上是一组JavaScript函数, 这些函数使用浏览器的内置JavaScript解释器来解释 和执行Selenese命令.
+服务器使用简单的HTTP GET / POST请求从您的测试程序接收Selenese命令. 这意味着您可以使用任何可以发送HTTP请求的编程语言 来自动执行浏览器中的Selenium测试.
+客户端库 客户端库提供了编程支持, 使您可以从自己设计的程序中运行Selenium命令. 每种受支持的语言都有一个不同的客户端库. Selenium客户端库提供了一个编程接口(API), 即一组函数, 可从您自己的程序中运行Selenium命令.</description>
     </item>
     
     <item>
