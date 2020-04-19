@@ -19,6 +19,9 @@
     </div>
 </div>
 
+<div class="filter-container">
+    {{ partial "blog-filter.html" . }}
+</div>
 <div class="blog-container">
     <div class="blog-content">
         {{ range where .Paginator.Pages "Type" "blog" }}
@@ -57,10 +60,6 @@
             </div>
             {{ end }}
         </div>
-    </div>
-
-    <div class="filter-container">
-        {{ partial "blog-filter.html" . }}
     </div>
 </div>
 

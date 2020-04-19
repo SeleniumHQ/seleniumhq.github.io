@@ -63,8 +63,8 @@ a {
 .blog-filter {
     flex: 1;
     background-color: #6f757a;
-    margin: 0 20px 20px 0px;
-    padding: 20px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     color: white;
     line-height: 30px;
     height: 100%;
@@ -101,7 +101,11 @@ a {
   border-bottom: solid;
   border-bottom-width: 1px;
   border-bottom-color: #939bA1;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.filter-section h3 {
+    margin: 5px;
 }
 
 .filter-section .gsc-input {
