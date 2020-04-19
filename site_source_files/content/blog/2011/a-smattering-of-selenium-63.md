@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #63"
 Date = 2011-10-03
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li><a href="https://www.facebook.com/notes/facebook-engineering/watir-to-webdriver-unit-test-frameworks/10150314152278920">Watir to WebDriver: Unit Test Frameworks</a> &#8211; Well, its &#8216;big&#8217; news. Of course, Watir can use WebDriver so they didn&#8217;t <i>have</i> to port their scripts to a different API (I sure hope they have the API well abstracted away from their scripts). And of course the title of the post implies that Facebook thinks that Watir/Selenium scripts are &#8216;Unit&#8217; tests which is suspect at best&#8230;</li>
 <li><a href="https://github.com/rtyler/jenkins-selenium-tests">Selenium tests for Jenkins</a> &#8212; Yup; Jenkins now has a set of Se scripts for it. Fork, modify and sent pull requests.</li>

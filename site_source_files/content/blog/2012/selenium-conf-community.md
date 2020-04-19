@@ -4,6 +4,8 @@ Title = "Selenium Conf: Community"
 Date = 2012-03-27
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>In this series of blog posts we&#8217;ve introduced one of the keynotes and talked about some of the great presentations you&#8217;ll see at Selenium Conf &#8217;12, but so far we&#8217;ve missed the most important aspect of the entire event: you.</p>

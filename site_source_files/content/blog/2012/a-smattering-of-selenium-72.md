@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #72"
 Date = 2012-01-03
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>January means its time to escape from under the deadlines I found myself under during December so some of this stuff is a month old (or older!). Hopefully it is still interesting though.</p>
 <ul>
 <li>Localizing automation well is something I&#8217;ve seen people struggle with. <a href="http://devzone.zend.com/1859/creating-multi-language-web-applications-with-zend_translate/">Creating Multi-Language Web Applications with Zend_Translate</a> is a possible solution for PHP folks.</li>

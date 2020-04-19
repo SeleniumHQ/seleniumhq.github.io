@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #23"
 Date = 2010-08-16
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>I was at Agile 2010 in Orlando last week so missed doing the Smattering, so here is two weeks worth of links.<br />

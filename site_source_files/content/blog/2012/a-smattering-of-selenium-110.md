@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #110"
 Date = 2012-08-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Dear body; what time zone are you in?</p>
 <p>Ah well, until that battle resolves itself, here are some links.</p>
 <li><a href="http://sauceio.com/index.php/2012/08/firefox-the-clear-winner-for-automated-testing/">Firefox the Clear Winner for Automated Testing</a> has a wonderfully SEO friendly title, but really is just some cool usage graphs for their system. Extrapolate beyond that at your own risk.</li>

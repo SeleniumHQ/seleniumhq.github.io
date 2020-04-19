@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #112"
 Date = 2012-08-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Eyes are gross.</p>
 <ul>
 <li><a href="http://www.thucydides.info">Thucydides</a> has a spiffy new website</li>

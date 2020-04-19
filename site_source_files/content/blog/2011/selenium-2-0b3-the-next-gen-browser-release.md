@@ -4,6 +4,8 @@ Title = "Selenium 2.0b3: The Next Gen Browser Release"
 Date = 2011-03-21
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>It&#8217;s been about 5 weeks since the release of beta 2, so we&#8217;re very pleased to announce that Selenium 2.0b3 has just been released simultaneously for Java, .Net, Ruby and Python. You can <a href="http://seleniumhq.org/download/">download it from Selenium HQ</a> or from the <a href="http://code.google.com/p/selenium/downloads/list">Google Code site</a>. This release focused on providing excellent support for the next generation of browsers, particularly IE 9 and Firefox 4, and we think you&#8217;ll like what you&#8217;ll find.</p>

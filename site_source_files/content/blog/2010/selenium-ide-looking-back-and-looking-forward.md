@@ -4,6 +4,8 @@ Title = "Selenium-IDE – Looking back and looking forward"
 Date = 2010-07-09
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["selenium","ide"]
+categories = ["releases"]
 +++
 
 <p>Its been around six months and three releases since I took the reins of Selenium-IDE. The fundamental change in that time has been the adoption of a plugin model like the fine folks over that Firebug. (We&#8217;re also self-hosting it which is big from a project internals perspective.)<br />

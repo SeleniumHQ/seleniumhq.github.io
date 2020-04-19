@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #103"
 Date = 2012-07-20
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Seems I had this all ready to go yesterday&#8230; oh, and Happy Birthday Jim Evans &#8212; maintainer of IE and C# driver. If also a day late.</p>
 <ul>
 <li><a href="http://www.hiretheworld.com/blog/tech-blog/migrating-unit-tests-from-selenium-to-watir-webdriver">Migrating Unit Tests from Selenium to Watir Webdriver</a> is less about migrating rather than a quick overview of Watir</li>

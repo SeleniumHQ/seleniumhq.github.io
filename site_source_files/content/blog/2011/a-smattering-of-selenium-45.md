@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #45"
 Date = 2011-03-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>A Smattering of Selenium #45</p>
 <p>So of course by now everyone has seen <a href="https://seleniumhq.wordpress.com/2011/03/21/selenium-2-0b3-the-next-gen-browser-release/">Selenium 2.0b3: The Next Gen Browser Release</a> and upgraded their rigs. Expect Selenium IDE at some point in the next week with support for FF4 &#8212; if you just. can&#8217;t. wait. then you could try the bleeding edge</a> for yourself. <a href="http://code.google.com/p/selenium/issues/list">Logging any bugs</a> you find; of course.</p>
 <p>Oh, and there is the whole <a href="http://www.seleniumconf.com/">Selenium Conference</a> next week.</p>

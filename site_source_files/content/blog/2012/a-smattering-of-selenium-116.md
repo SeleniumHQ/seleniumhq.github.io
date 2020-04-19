@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #116"
 Date = 2012-09-04
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>So do people celebrate the day after Labor day as the beginning of summer?</p>
 <ul>
 <li><a href="http://www.igvita.com/2012/08/28/web-performance-power-tool-http-archive-har/">Web Performance Power Tool: HTTP Archive (HAR)</a> is worrisome that HARs are being billed as a power tool, but full of good stuff</li>

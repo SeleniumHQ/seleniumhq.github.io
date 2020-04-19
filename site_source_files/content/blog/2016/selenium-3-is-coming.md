@@ -4,6 +4,8 @@ Title = "Selenium 3 is Coming"
 Date = 2016-10-04
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["general","releases"]
 +++
 
 <p><a href="http://www.seleniumhq.org/download/">Selenium 3</a> is coming! As I write this, we think that &#8220;beta 4&#8221; will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.</p>

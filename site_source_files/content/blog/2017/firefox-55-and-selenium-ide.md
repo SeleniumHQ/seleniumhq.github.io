@@ -4,6 +4,8 @@ Title = "Firefox 55 and Selenium IDE"
 Date = 2017-08-09
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["ide","selenium"]
+categories = ["general"]
 +++
 
 <p><span style="font-weight:400;">The bad news:<strong> from Firefox 55 onwards, Selenium IDE will no longer work</strong>. </span></p>

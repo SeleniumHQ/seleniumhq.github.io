@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>hangout</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/project">Governance</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+<div class="blog-container">
+    <div class="blog-content">
+        
+        <div class="container dark-background">
+            Tuesday, December 23, 2014 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2014/selenium-hangout-6-recap/"><h2>Selenium Hangout 6 Recap</h2></a>
+            <p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/ASVqZPN3j7k?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
+<p><strong>01:35 &#8211; 9:45 W3C Update</strong><br />
+<a href="http://www.theautomatedtester.co.uk/blog/2014/webdriver-face-to-face-tpac-2014.html">Notes from most recent W3C Meeting</a><br />
+Highlights:<br />
+&#8211; changes to the get_attribute method call<br />
+&#8211; screenshots (changing to viewport only, eventually will support whole page)<br />
+&#8211; <a href="https://github.com/w3c/webdriver">The WebDriver W3C working group has a GitHub repo now</a><br />
+&#8211; WebDriver will move from a &#8220;REST-ish&#8221; to a more &#8220;RESTful&#8221; interface</p>
+<p><strong>11:23 &#8211; 16:00 Selenium 3 Status Update</strong></p>
+<p><strong>16:05 &#8211; 17:10 Marionette (FirefoxdDiver rewrite) testing help </strong><br />
+<a href="https://wiki.mozilla.org/Auto-tools/Projects/Marionette/Auto-tools/Projects/Marionette/Roadmap#Roadmap">Marionette Roadmap</a></p>
+<p><strong>17:20 &#8211; 19:27 ChemistryKit rewrite</strong><br />
+<a href="http://davehaeffner.com/open-source/2014/12/21/chemistry-rewrite.html">Announcement blog post</a></p>
+<p><strong>17:28 &#8211; 20:24 Visual Testing Part 1</strong><br />
+<a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing</a><br />
+<a href="http://applitools.com">Applitools</a> (visual testing cloud solution built on top of WebDriver)</p>
+<p><strong>20:25 &#8211; 23:47 Selenium Guidebook in Java!</strong><br />
+<a href="http://davehaeffner.com/selenium-guidebook">The Selenium Guidebook</a></p>
+<p><strong>23:52 &#8211; 29:51 Visual Testing Part 2</strong><br />
+<a href="http://webconsistencytesting.com/how-it-works.html">Web Consistency Testing</a><br />
+<a href="http://nirvdrum.com/2014/11/20/open-sourcing-mogotest.html">Why MogoTest won&#8217;t be open sourcing it&#8217;s code after shutting down</a><br />
+<a href="https://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm&#8217;s GTAC talk on Fighting Layout Bugs</a><br />
+<a href="http://testautomation.applitools.com/post/105435804567/how-to-do-visual-testing-with-selenium">Getting Started with Visual Testing</a></p></p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/hangout/">hangout</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/governance/">governance</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%206%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-6-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-6-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Monday, May 19, 2014 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2014/selenium-hangout-5-recap/"><h2>Selenium Hangout 5 Recap</h2></a>
+            <p><p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='640' height='360' src='https://www.youtube.com/embed/6TMIIw0NT44?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span><br />
+<strong>0:00 &#8211; 01:10</strong> Intro</p>
+<p><strong>1:11 &#8211; 13:00</strong> <a href="http://www.w3.org/TR/webdriver/">WebDriver W3C Spec</a> &amp; Selenium 3 Update</p>
+<ul>
+<li>Progress on the spec, still a work in progress</li>
+<li>No user facing changes to the Selenium API as a result</li>
+<li>Trying to pair the spec and Selenium 3 together</li>
+<li>If all goes well, the spec and Selenium 3 could drop during Selenium Conf (fingers crossed)</li>
+</ul>
+<p><strong>13:01 &#8211; 24:10</strong> <a href="http://seleniumconf.org/">Selenium Conf 2014</a> Update</p>
+<ul>
+<li>Check out <a href="http://seleniumconf.org">the new and shiny conference site</a></li>
+<li>Dates posted (e.g., call for talk submissions, early bird tickets going on sale, etc.)</li>
+</ul>
+<p><strong>24:11 &#8211; 39:00</strong> Discussion about 5 Hidden Costs Of Selenium Whitepaper from Telerik</p>
+<ul>
+<li><a href="http://www.theautomatedtester.co.uk/blog/2014/dont-write-five-hidden-costs-of-x-but-when-you-do-i-will-reply.html">David Burns&#8217; blog post rebuttal</a></li>
+</ul></p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/hangout/">hangout</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/governance/">governance</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%205%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-5-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-5-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Friday, February 7, 2014 by <a href="https://twitter.com/TourDeDave">Tour de Dave</a>
+            <a href="https://selenium.dev/blog/2014/selenium-hangout-4-recap/"><h2>Selenium Hangout 4 Recap</h2></a>
+            <p>Here&#8217;s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (<a href="https://twitter.com/seleniumhangout">@seleniumhangout</a>) or e-mail us (<a href="mailto:questions@seleniumhangout.com">questions@seleniumhangout.com</a>).</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='640' height='360' src='https://www.youtube.com/embed/3IEqh7NmaEo?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>
+<p><strong>Panel</strong><br />
+David Burns (<a href="https://twitter.com/AutomatedTester">@AutomatedTester</a>)<br />
+Kevin Menard (<a href="https://twitter.com/nirvdrum">@nirvdrum</a>)<br />
+Dave Haeffner (<a href="https://twitter.com/TourDeDave">@TourDeDave</a>)</p>
+<p><strong>Timeline</strong></p>
+<p>1:30-16:51: <span style="text-decoration:underline;">How to handle screenshots across different drivers</span><br />
+<em>tl;dr driver specific issues due to a lacking standard and missing API</em></p>
+<ul>
+<li>This is getting addressed in World Wide Web Consortium (W3C) spec which is under development</li>
+<li>E-mail use-cases you would like to see in the spec to <a href="mailto:automatedtester@mozilla.com">automatedtester@mozilla.com</a></li>
+</ul>
+<p>17:30-22:40 : <span style="text-decoration:underline;">Internet Explorer (IE) 9 pitfalls and how to avoid them</span><br />
+<em>tl;dr use 32-bit IE (if you&#8217;re not) and report issues to Selenium Issues</em></p>
+<ul>
+<li><a href="https://code.google.com/p/selenium/issues/list">Selenium Issue tracker</a></li>
+<li><a href="http://jimevansmusic.blogspot.com/2012/12/not-providing-html-page-is-bogus.html">A good blog post on how to submit an acceptable Selenium issue</a></li>
+</ul>
+<p>22:50-28:30 <span style="text-decoration:underline;">How do you do image and video comparison testing?</span><br />
+<em>tl;dr straight image comparison is a flawed strategy, but there&#8217;s a better way &#8212; also, Selenium&#8217;s not the best tool for the job</em></p>
+<p>Resources mentioned:</p>
+<ul>
+<li><a href="http://webconsistencytesting.com/">webconsistencytesting.com</a></li>
+<li><a href="http://www.youtube.com/watch?v=_6fV-6eMSUM">Kevin Menard&#8217;s GTAC talk</a></li>
+<li><a href="http://www.youtube.com/watch?v=WY3C6FHqSqQ">Michael Tamm&#8217;s GTAC video</a></li>
+<li>Image capture library from Mozilla (<a href="https://github.com/mozilla/eideticker">the library</a> and <a href="https://blog.mozilla.org/futurereleases/2012/06/26/mobile-firefox-measuring-how-a-browser-feels/">a blog post about it</a>)</li>
+</ul>
+<p>28:58-38:15 <span style="text-decoration:underline;">How do you get started with Selenium?</span><br />
+<em>tl;dr pick a language you feel comfortable with, choose an editor that makes you productive, and dig into the available resources</em></p>
+<p>Recommended resources:</p>
+<ul>
+<li><a href="http://www.amazon.com/Selenium-Testing-Tools-Beginners-Guide/dp/1849518300">Selenium 2 Testing Tools (David Burns&#8217; book)</a></li>
+<li><a href="http://seleniumguidebook.com">The Selenium Guidebook (Dave Haeffner&#8217;s new book)</a></li>
+<li><a href="http://elementalselenium.com">Free, weekly tip newsletter on how to use Selenium</a> (also by Dave Haeffner)</li>
+<li><a href="http://seleniumhq.org/">Selenium HQ</a></li>
+<li><a href="https://groups.google.com/forum/#!forum/selenium-users">Selenium Users Group</a></li>
+<li>Selenium IRC chat channel (<a href="http://elementalselenium.com/tips/20-irc-chat">here&#8217;s a write-up on what it is and how to access it</a>)</li>
+</ul>
+<p>38:23-42:50 <span style="text-decoration:underline;">Selenium 3 Update</span><br />
+<em>tl;dr still a work in progress, steadily moving forward, a big update will likely be required</em></p>
+<p>43:15-44:00 <span style="text-decoration:underline;">Conference Update</span><br />
+<em>tl;dr nothing finalized, hoping to do it internationally, but US is a fallback; still working on options (will know soon)</em></p>
+<p>44:10-45:20 <span style="text-decoration:underline;">Mobile Changes to the Selenium project</span><br />
+<em>tl;dr Android and iPhone Selenium drivers deprecated in favor of other compatible libraries</em></p>
+<p>Compatible libraries:</p>
+<ul>
+<li><a href="http://appium.io/">Appium</a></li>
+<li><a href="http://ios-driver.github.io/ios-driver/">ios-driver</a></li>
+<li><a href="http://selendroid.io/">Selendroid</a></li>
+</ul>
+<p>45:20-47:30 <span style="text-decoration:underline;">New Mobile Selenium Drivers</span><br />
+<em>tl;dr RIM (BlackBerry Smartphones) and Microsoft (Windows phones)</em></p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/hangout/">hangout</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/governance/">governance</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%20Hangout%204%20Recap&body=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-4-recap%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2014%2fselenium-hangout-4-recap%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/tags/hangout/page/2/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
+            
+
+            
+        </div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="/sponsors">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/project">Governance</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

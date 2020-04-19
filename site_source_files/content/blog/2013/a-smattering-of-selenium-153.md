@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #153"
 Date = 2013-07-22
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>A Sunday Smattering? Sure!</p>
 <ul>
 <li><a href="http://blog.reallysimplethoughts.com/2013/07/14/solution-to-the-selenium-with-firefox-22-issues-and-how-to-report-issues/">Solution to the Selenium with Firefox 22 Issues and How to Report Issues</a> &#8211; Open Source is hard. Supporting Open Source&#8217;s infrastructure is harder &#8212; by a large margin</li>

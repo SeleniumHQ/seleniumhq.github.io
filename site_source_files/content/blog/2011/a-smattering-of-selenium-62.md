@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #62"
 Date = 2011-09-29
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>All opinions, all the time&#8230;</p>
 <ul>
 <li>It all began with <a href="http://angryweasel.com/blog/?p=325">Test Design for Automation</a> which lead to <a href="http://chrismcmahonsblog.blogspot.com/2011/08/automated-test-design-riffingripping.html">Automated Test Design (riffing/ripping off Alan Page)</a></li>

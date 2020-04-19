@@ -4,6 +4,8 @@ Title = "Support for Ancient Browsers"
 Date = 2012-02-24
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["support"]
+categories = ["general"]
 +++
 
 <p>The first code checked into the Selenium project&#8217;s public repository was in November, 2004. We&#8217;re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it&#8217;s time to review the list of browsers again.</p>

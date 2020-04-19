@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #79"
 Date = 2012-02-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>The only links left now are ones currently open in tabs right now. Hurray!</p>
 <ul>
 <li>November&#8217;s SFSE was Continuous Deployment At Mozilla: <a href="http://www.slideshare.net/MattBrandt/mozilla-continuous-deploment-on-sumo">slides</a>, <a href="http://www.youtube.com/watch?v=usqxFxsmg4o&amp;feature=youtu.be">video</a></li>

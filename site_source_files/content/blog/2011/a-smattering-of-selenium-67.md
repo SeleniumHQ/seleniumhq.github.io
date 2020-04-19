@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #67"
 Date = 2011-10-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li><a href="http://codegram.github.com/spinach/">Spinach</a> is a Cucumber-esque BDD framework that was advertised on twitter as having &#8216;less regex magic&#8217;. Not sure if it has grown Se support yet, but I have no doubt that it will soon.</li>
 <li><a href="http://jamesbetteley.wordpress.com/2011/10/20/coping-with-big-c-i/">Coping With Big C.I.</a> is full of stuff that is useful for even Small C.I.</li>

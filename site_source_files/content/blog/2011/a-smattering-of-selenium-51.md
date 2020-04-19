@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #51"
 Date = 2011-06-06
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Two big releases last week..</p>
 <ul>
 <li>Selenium IDE 1.0.11 was released &#8212; with Firefox 4 support. Finally. And just in time for people to start agitating for Firefox 5 support. <a href="http://seleniumhq.wordpress.com/2011/05/30/selenium-ide-1-0-11-%E2%80%93-now-with-firefox-4-support/">official announcement</a>, <a href="http://blog.reallysimplethoughts.com/2011/05/30/welcome-selenium-ide-1-0-11-with-firefox-4-support/">unofficial announcement</a></li>

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>stories</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/project">Governance</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+<div class="blog-container">
+    <div class="blog-content">
+        
+        <div class="container dark-background">
+            Monday, August 9, 2010 by <a href="https://twitter.com/RaynatouD">raynatou</a>
+            <a href="https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/"><h2>Selenium 2.0 backend for running IDE test suite via the Se2 Firefox</h2></a>
+            <p>The  GSoC 2010, it’s a great adventure.<br />
+<br />
+I’m  Raynatou, I come from Burkina and do my internship at  <a href="http://www.serli.com/">SERLI</a>. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with  web pages. Selenium Core has several major limitations, including the  inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in  place of Selenium Core.<br />
+<br />
+I’m  mentored by  Eric Allen from <a href="http://saucelabs.com/">SauceLabs</a>, my lead mentor, and by Jérémy Hérault from SERLI, his second but not least ;).<br />
+<br />
+Eric has already done most of this integration earlier this year. The  goal of his work is mostly to show what&#8217;s possible with  Selenium IDE  and the Selenium 2.0 Firefox driver. It is based on an  asynchronous  communication between the Firefox WebDriver extension and  Selenium IDE,  Se-IDE waiting for that WebDriver says to him that the  current command  has been passed with success (or not) to call the next  command of the  current test case (use of callback function). The goal of my mission is  to finalize this integration.  However, Eric being a crazy man, and he  has done it quickly and together  we though to another way to do this  merge.<br />
+<br />
+Our new  thinking is based on a synchronous communication  between both of them.  To do it, I get the FirefoxDriver instance and  play with it like a  normal object, by calling its methods. But the behaviour of  FirefoxDriver isn’t as simple as I was  thinking. JavaScript being a  powerfull language (yes, it can make you  shiver), I&#8217;ve had just to  replace some objects (like Response object)  and to use a Proxy (and a  bit of IoC-like code) to simplify my life and  the code to do. You can  see my work on <a href="http://github.com/epall/selenium/commits/webdriver-synchronous">GitHub</a> and follow it.<br />
+<br />
+Currently, I think that more than 95% of the Selenium API  commands are usable  with WebDriver as backend in Selenium IDE.  The process was basically to go  through the seleniumemulation package and port all of  the Java classes into JavaScript methods on the WebDriver class.<br />
+<br />
+Now, I’m working on Unit tests to cover any of the 2.0 work  I&#8217;ve done. I managed to get all of the Selenium Core tests to run  through IDE. I’ve  some refactorings to do to optimize the code and add more comments for a bigger comprehension of my work. I have almost finished.<br />
+<br />
+I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this work  can be included in the wave of  Selenium 2.</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/stories/">stories</a>
+    <a href="https://selenium.dev/tags/ide/">ide</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0%20backend%20for%20running%20IDE%20test%20suite%20via%20the%20Se2%20Firefox&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Thursday, July 15, 2010 by <a href="https://twitter.com/jeremyherault">jeremyherault</a>
+            <a href="https://selenium.dev/blog/2010/gsoc-2010-remote-storage/"><h2>GSoC 2010 – Remote Storage</h2></a>
+            <p>What’s new for Selenium this summer ? The GSoC of course !!!!</p>
+<p>I’m Jérémy, a french engineer and I  work at <a href="http://www.serli.com/">SERLI</a>, a services company  based in France.<br />
+I’m working on Selenium since a year and this summer I’m  mentoring Aleksejs for the GSoC 2010. I’m helped by <a href="http://www.theautomatedtester.co.uk/">David Burns</a> when I’m on vacation  or offline. His experience is really useful to me, and David is  involved on student supervising regularly.</p>
+<p>Aleksejs comes from  Latvia in Europe (yes I know you know but perhaps Geography wasn’t your  favorite subject at school ;)). His work was initiated by Patrick and myself.  We thought to a remote system that allows Selenium users to save and  get remote test cases, directly with Selenium, without any other  installations like SVN.</p>
+<p>What’s better than record a test case with  Selenium IDE and save it on your remote storage? what’s better than  share your test cases with colleagues without any other installations,  just by using Selenium IDE or a Selenium Remote Storage client?</p>
+<p>For myself I don’t  know what’s better 🙂</p>
+<p>Aleksejs has already coded the server side of  the remote storage mechanism with all the necessary unit tests. He has  also created a web interface to use it directly through the browser.  With his work, you can put, get and delete a test case, and you can also  browse the directory where test cases are stored. His work has been  done in Java, and he used JSON, for data representation for the  communication protocol. This system is really simply to use, based on  REST technology, you only have to call URLs with the good parameters.</p>
+<p>The next step of his  work is to create a Se-IDE plugin based on the API done by Adam (thanks  to him). This part has to be done in less than a month and I think it’s a  hard task, but it’s so cool to write your own plugin. In this case,  Aleksejs will use JavaScript, AJAX and XUL technologies. It’s really  good to learn a lot of technologies for its own culture, it’s so  trainer.</p>
+<p>I hope you’re  enthousiastic to get this new feature, but wait until October, when the  work will be finalized 🙂</p>
+<p>Enjoy guys, Aleksejs, David and I are ready  to discuss on it if you have any questions. And good luck with the end  of this adventure Aleksejs.</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/stories/">stories</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - GSoC%202010%20%e2%80%93%20Remote%c2%a0Storage&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fgsoc-2010-remote-storage%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fgsoc-2010-remote-storage%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="pagination-container">
+            
+
+            
+        </div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="/sponsors">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/project">Governance</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

@@ -4,6 +4,8 @@ Title = "Bug Bash Aftermath"
 Date = 2011-01-31
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["bug-bash"]
+categories = ["general"]
 +++
 
 <p>What a week! I&#8217;m almost (almost!) sorry that the Bug Bash is over. I&#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?</p>

@@ -4,6 +4,8 @@ Title = "Selenium 2.0 beta 1 Release"
 Date = 2010-12-24
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>We recently released the first of the betas for Selenium 2. It&#8217;s available for Java, C# and Ruby. If you&#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&#8217;ll see is with the new WebDriver APIs, but there&#8217;s a lot more!</p>

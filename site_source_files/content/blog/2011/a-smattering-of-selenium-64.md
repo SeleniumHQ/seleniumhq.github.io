@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #64"
 Date = 2011-10-17
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>How did I fall behind again already?!?!</p>
 <ul>
 <li>This is a pretty good deck. <a href="http://speakerdeck.com/u/jimholmes/p/automation-isnt-all-shiny-toys">Automation Isn&#8217;t All Shiny Toys</a></li>

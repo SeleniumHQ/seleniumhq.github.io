@@ -4,6 +4,8 @@ Title = "Selenium Conf 2013: Call for Papers and Early Bird Tickets"
 Date = 2013-01-22
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <div>

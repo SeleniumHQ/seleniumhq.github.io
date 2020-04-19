@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #16"
 Date = 2010-06-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I&#8217;m going to start posting the Smattering posts here on the main Selenium blog, hopefully each Monday. For past ones see <a href="http://adam.goucher.ca/?s=a+smattering">my personal blog&#8217;s archive</a><br />
 </p>
 <ul>

@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #101"
 Date = 2012-07-13
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Really? A drought for most of the week and now I&#8217;ve got a queue again in the span of 3 hours?</p>

@@ -4,6 +4,8 @@ Title = "Announcing Selenium Conf ’14: Bangalore, India"
 Date = 2014-02-24
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>It makes me enormously happy and proud to announce that the Selenium Conference 2014 will be held in Bangalore on the 4-6 September. I&#8217;m looking forward to seeing you there!</p>

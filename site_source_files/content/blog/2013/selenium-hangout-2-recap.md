@@ -4,6 +4,8 @@ Title = "Selenium Hangout 2 Recap"
 Date = 2013-10-09
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["hangout"]
+categories = ["general","governance"]
 +++
 
 <p>This is a recap from the most recent Selenium Hangout (a.k.a. <a href="seleniumhq.wordpress.com/2013/08/09/the-worlds-best-selenium-meetup/">The World&#8217;s Best Selenium Meetup</a>). For info on future meetups, <a href="https://twitter.com/SeleniumHangout">follow them on Twitter</a>.</p>

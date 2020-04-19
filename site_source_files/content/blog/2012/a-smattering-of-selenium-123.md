@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #123"
 Date = 2012-10-17
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li>If you are not using something like Chef or Puppet to keep your grid nodes behaving then you are absolutely doing it wrong. Here are all the <a href="http://puppetlabs.com/community/videos/puppetconf/">PuppetConf 2012 Videos</a> to help you get started. See also <a href="http://memegenerator.net/instance/27887540">this</a></li>
 <li><a href="http://appleinsider.com/articles/12/09/25/apples_lightning_port_dynamically_assigns_pins_to_allow_for_reversible_use">Apple&#8217;s Lightning port dynamically assigns pins to allow for reversible use</a> is just too geeky not to include. Hurray for hardware lock-in?</li>

@@ -4,6 +4,8 @@ Title = "Selenium Hangout 6 Recap"
 Date = 2014-12-23
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["hangout"]
+categories = ["general","governance"]
 +++
 
 <span class="embed-youtube" style="text-align:center; display: block;"><iframe class='youtube-player' type='text/html' width='560' height='315' src='https://www.youtube.com/embed/ASVqZPN3j7k?version=3&#038;rel=1&#038;fs=1&#038;autohide=2&#038;showsearch=0&#038;showinfo=1&#038;iv_load_policy=1&#038;wmode=transparent' allowfullscreen='true' style='border:0;'></iframe></span>

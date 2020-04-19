@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #71"
 Date = 2011-11-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Looking like there might also be one later in the week too&#8230;</p>
 <ul>
 <li>As we start to transistion the web over the HTML5, I keep thinking about incorporating some &#8216;static&#8217; checks into Se scripts. <a href="http://www.paciellogroup.com/blog/2011/11/html5-accessibility-chops-using-nested-figure-elements/">HTML5 Accessibility Chops: using nested figure elements</a> explains some good (and bad) ways to use &lt;figure&gt;</li>

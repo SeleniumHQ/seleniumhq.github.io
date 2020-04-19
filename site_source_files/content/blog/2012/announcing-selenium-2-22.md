@@ -4,6 +4,8 @@ Title = "Announcing Selenium 2.22"
 Date = 2012-05-29
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>It&#8217;s been a while since the last Selenium release, but I&#8217;m happy to announce that Selenium 2.22 is now <a href="http://seleniumhq.org/download/">available for download</a>. This is a big release for us and features two major changes.</p>

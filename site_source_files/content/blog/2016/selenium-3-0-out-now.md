@@ -4,6 +4,8 @@ Title = "Selenium 3.0: Out Now!"
 Date = 2016-10-13
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["general","releases"]
 +++
 
 <p><span style="font-weight:400;">We are very pleased to announce the release of <a href="http://www.seleniumhq.org/download/">Selenium 3.0</a>. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:</span></p>

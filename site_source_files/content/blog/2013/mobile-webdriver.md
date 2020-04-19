@@ -4,6 +4,8 @@ Title = "Mobile WebDriver"
 Date = 2013-08-28
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","mobile"]
+categories = ["general"]
 +++
 
 <p>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome). It&#8217;d be nice to have a similar option for mobile, switching from one automation framework for Android to another.</p>

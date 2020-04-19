@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #115"
 Date = 2012-08-29
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li>The big news in the twitter-verse yesterday was the announcement of <a href="http://sauceio.com/index.php/2012/08/apple-sauce-android-sauce/">Apple Sauce and Android Sauce</a> from Sauce Labs. I of course jumped all over that bandwagon with <a href="http://element34.ca/blog/apple-sauce-and-android-sauce-yummy-and-fully-supported">Apple Sauce and Android Sauce .. Yummy! (And Fully Supported)</li>
 <li><a href="http://opensourcehacker.com/2012/08/22/accessing-priviledged-javascript-apis-from-your-web-page-in-firefox-with-selenium">Accessing priviledged Javascript APIs from your web page in Firefox with Selenium</a> lets to pull even more strings of the browser than you were supposed to be able to. Something I suspect Marionette will make redundant, but until then&#8230;</li>

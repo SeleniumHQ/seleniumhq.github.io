@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #47"
 Date = 2011-04-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Nothing says &#8216;Hello Monday!&#8217; like a batch of links and a wife with a kidney stone.</p>
 <ul>
 <li><a href="http://martinfowler.com/articles/nonDeterminism.html">Eradicating Non-Determinism in Tests</a> is a nice essay by Martin Fowler and applies to Se as <i>Left uncontrolled, non-deterministic tests can completely destroy the value of an automated regression suite.</i></li>

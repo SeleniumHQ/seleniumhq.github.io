@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>general</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/project">Governance</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+<body>
+<section class="hero">
+    <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+<div class="blog-container">
+    <div class="blog-content">
+        
+        <div class="container dark-background">
+            Wednesday, February 8, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2017/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
+            <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a> which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part of that programme, which the Selenium project has participated in for many years, they&#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&#8217;ll attempt to do that, and I&#8217;ll try and state my biases up-front so you&#8217;re aware of them.</p>
+<p>I&#8217;ve been using Jetbrain&#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It&#8217;s still my favourite IDE for my Java work, and it&#8217;s plenty of fun to use. For some time, I&#8217;ve been using the (free) Community Edition, which is ample for many coding needs.</p>
+<p>Most of my work is in Java, and that&#8217;s where I know IDEA best. I dabble in Ruby and Python, and I&#8217;ve written a reasonably large amount of Javascript, all in IDEA.</p>
+<p>The Pros:</p>
+<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you&#8217;re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don&#8217;t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)</p>
+<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I&#8217;ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I&#8217;ll be honest, sometimes when they don&#8217;t). It&#8217;s made making use of lambdas a lot easier.</p>
+<p>For a while, IDEA was becoming slower and more bloated, but I&#8217;m pleased to see that, partly thanks to the work of developers from <a href="http://facebook.com/">Facebook</a>, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
+<p>There&#8217;s a nice wide range of plugins available for IDEA. I&#8217;ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn&#8217;t have been possible, but having them there is incredibly useful and makes the IDE even more capable.</p>
+<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely &#8212; it&#8217;s fun to see what new language features we&#8217;ll be able to use in the future!</p>
+<p>The Cons:</p>
+<p>Although it&#8217;s a fine product, there are some niggles to be had.</p>
+<p>Most annoyingly, the built in code analysis doesn&#8217;t always warn that some Java classes won&#8217;t compile. The most recent example was where IDEA didn&#8217;t flag that some lambdas couldn&#8217;t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release &#8212; certainly these same files compiled just fine with older Java releases.</p>
+<p>When an error does happen, I&#8217;ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it&#8217;ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don&#8217;t touch faulty code. I dearly wish this same capability was present in IDEA!</p>
+<p>On the Selenium project, we use <a href="http://buckbuild.com/">Buck</a> for our builds. The Buck plugin doesn&#8217;t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can&#8217;t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an <a href="http://ant.apache.org/">Ant</a> step before a build is run, and it would be extremely useful if this was generalised to &#8220;any shell command&#8221;. Most of the time, it&#8217;s fine, but it&#8217;s irksome to forget to run things!</p>
+<p>On the whole, I love IntelliJ an awful lot. It&#8217;s a fast and capable IDE, and the company behind it supports OSS. What&#8217;s not to love?</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/jetbrains/">jetbrains</a>
+    <a href="https://selenium.dev/tags/intellij/">intellij</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Hacking%20with%20IntelliJ&body=https%3a%2f%2fselenium.dev%2fblog%2f2017%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2017%2fhacking-with-intellij%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Thursday, October 13, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2016/selenium-3-0-out-now/"><h2>Selenium 3.0: Out Now!</h2></a>
+            <p><span style="font-weight:400;">We are very pleased to announce the release of <a href="http://www.seleniumhq.org/download/">Selenium 3.0</a>. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find:</span></p>
+<p><span style="font-weight:400;">As <a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">we’ve said before</a>, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, such as <a href="https://sites.google.com/a/chromium.org/chromedriver/downloads">Chrome</a> and <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge</a> will continue to work just as before, and we’ve taken the opportunity to fix some bugs and improve stability. Selenium Grid users may require updates to their configuration as the json config file format has been updated, as have some of command line parameter options, but the upgrade should also be smooth. </span></p>
+<p><span style="font-weight:400;">The major change in Selenium 3.0 is we’re removing the original Selenium Core implementation and replacing it with one backed by WebDriver. This will affect all users of the <a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium RC</a> APIs. For more information, please see the <a href="https://seleniumhq.wordpress.com/2016/10/04/selenium-3-is-coming/">previous post</a>.</span></p>
+<p><span style="font-weight:400;">A lot has changed in the 5 years between versions 2 and 3. When we <a href="https://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">shipped Selenium 2</a>, the Selenium project was responsible for providing the driver for each browser. Now, we are happy to say that all the major browser vendors ship their own implementations (<a href="https://webkit.org/blog/6900/webdriver-support-in-safari-10/">Apple</a>, <a href="https://sites.google.com/a/chromium.org/chromedriver/">Google</a>, <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft</a>, and <a href="https://github.com/mozilla/geckodriver/releases">Mozilla</a>). Because the browser vendors know their browsers better than anyone, their WebDriver implementations can be tightly coupled to the browser, leading to a better testing experience for you.</span></p>
+<p><span style="font-weight:400;">The other notable change has been that there is now a <a href="https://www.w3.org/TR/webdriver/">W3C specification</a> for browser automation, based on the Open Source WebDriver. This has yet to reach “recommendation” status, but the people working on it (including members of the Selenium project!) are now focusing on finishing the text and writing the implementations.</span></p>
+<p><span style="font-weight:400;">Mozilla has been a front-runner in implementing the W3C WebDriver protocol. On the plus side, this has exposed problems with the spec as it has evolved, but it also means that Firefox support is hard to track as their engineering efforts have been forward looking, rather than on supporting the current wire protocol used by Selenium WebDriver. For now, the best advice we can offer is for you to try the latest release of <a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a> and Selenium together. </span></p>
+<p><span style="font-weight:400;">These are exciting times for browser automation! Selenium 3.0 is a major release and we’re looking forward to improving things further, as well as tracking the ongoing work of the W3C spec. Our goal is to keep the changes your tests need to deal with to an absolute minimum, to continue preserving the hard work that’s gone into writing your existing tests. </span></p>
+<p><span style="font-weight:400;">As a personal note, I’d like to say thank you to each of the many people that have worked so hard to make Selenium 3 possible. That’s not just the developers and contributors to the Open Source project (past and present), but also the engineers from Google, Microsoft, Mozilla, and Apple, and everyone involved with the W3C spec. I’d also like to say thank you to everyone who’s taken the time to report bugs, our users and our community. The project is great fun to work on and you’re the reason for that. A final thank you is due to the Software Freedom Conservancy, who have provided invaluable help with the logistics of running a large OSS project.</span></p>
+<p>&nbsp;<br />
+<span style="font-weight:400;">Happy hacking, everyone! May your tests run fast and true!</span></p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/selenium/">selenium</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/releases/">releases</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%203.0%3a%20Out%20Now%21&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-0-out-now%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-0-out-now%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
+            Tuesday, October 4, 2016 by <a href="https://twitter.com/shs96c">shs96c</a>
+            <a href="https://selenium.dev/blog/2016/selenium-3-is-coming/"><h2>Selenium 3 is Coming</h2></a>
+            <p><a href="http://www.seleniumhq.org/download/">Selenium 3</a> is coming! As I write this, we think that &#8220;beta 4&#8221; will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.</p>
+<h3>TL;DR:</h3>
+<ul>
+<li>WebDriver users will just find bug fixes and a drop-in replacement for 2.x.</li>
+<li>Selenium Grid users will also find bug fixes and a simple update.</li>
+<li>The WebDriver APIs are now the only APIs actively supported by the Selenium project.</li>
+<li>The Selenium RC APIs have been moved to a “legacy” package.</li>
+<li>The original code powering Selenium RC has been replaced with something backed by WebDriver, which is also contained in the “legacy” package.</li>
+<li>By a quirk of timing, Mozilla have made changes to Firefox that mean that from Firefox 48 you must use their geckodriver to use that browser, regardless of whether you’re using Selenium 2 or 3.</li>
+</ul>
+<h3>In more depth:</h3>
+<p>When we <a href="https://seleniumhq.wordpress.com/2011/07/08/selenium-2-0/">released Selenium 2.0</a> in 2011, we introduced the new WebDriver APIs, and encouraged everyone to start moving to them. If you’re using the WebDriver APIs, then Selenium 3.0 is a simple drop-in upgrade. We’ve not changed any of the public WebDriver APIs, and the code is essentially the same as the last 2.x release. If you’re using Selenium Grid, the same applies: in most cases, you can just drop in the new JAR (or update your maven dependency to 3.0.0), and you’re done.</p>
+<p>If the update to Selenium 3 is such a non-event, why did we call this Selenium 3.0? To answer this question, I first need to provide some history, and tell you a little about how Selenium works under the hood. The very first version of Selenium was “just” a very complicated Javascript framework, running in the browser and interpreting the table-based tests you may be familiar with if you use Selenium IDE. We call this “Selenium Core”. This Javascript framework formed the basis of the original implementation of Selenium RC (the oldest set of Selenium APIs, where all the method and functions were on the “<a href="http://seleniumhq.github.io/selenium/docs/api/java/com/thoughtworks/selenium/Selenium.html">Selenium</a>” interface, and which have been deprecated for some time now). Over time, the needs of modern web testing have grown ever more complicated and sophisticated, and Selenium Core is now less capable of meeting these needs than it was before.</p>
+<p>With Selenium 3.0, we are deleting the original Selenium Core implementation. If you use the old RC interfaces, we provide an alternative implementation that’s backed by WebDriver. This is the same “webdriver-backed selenium” that has been available as part of Selenium 2 since its release. Because the underlying technology has changed from Selenium Core to WebDriver, you may find some places where your existing tests using RC run into issues. Our experience with migrating suites is that it’s normally a systemic issue that can be fixed with a minimal engineering effort (that is, the problem is normally isolated to a few places, and these can be rewritten to avoid problems)</p>
+<p>We’re also removing the original Selenium RC APIs from the main downloads. If you’re a Java user, and need to use them to support existing tests, then you’ll need a dependency to “org.seleniumhq.selenium:selenium-leg-rc:3.0.0” (or later!). It’s strongly recommended that you do not do this unless you absolutely need to.<br />
+If you’re someone who runs tests exported from IDE in the table format, there is now a new test runner that the project has made available for you to use that can be <a href="http://www.seleniumhq.org/download/">downloaded</a> from the project’s website. It takes the same arguments as the old runner, and we’ve done our best to ensure the output of tests remains the same too.</p>
+<p>At the same time as the Selenium project is shipping Selenium 3.0, Mozilla are changing the internals of Firefox in a way that makes it more stable and secure, but which also makes the community provided Firefox Driver no longer work. As such, if you use Firefox for your testing, you’ll need to use the <a href="https://github.com/mozilla/geckodriver/releases">geckodriver</a>, which is an executable similar to the <a href="https://sites.google.com/a/chromium.org/chromedriver/">chromedriver</a> and the <a href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Microsoft WebDriver</a> for Edge. You’ll need to start using geckodriver even if you’re using Selenium 2 — the change is in the browser, not Selenium. Please be aware that geckodriver is alpha software, based on the evolving W3C WebDriver standard: everyone&#8217;s working flat out to give you the best testing experience they can, but there are undoubtedly some bumps in the road when it comes to testing with Firefox.</p>
+<p>This release marks the culmination of a lot of hard work by the Selenium committers and community. I’d like to thank everyone who has been part of this process, and the Selenium users around the world who have done so much to make the project as successful as it is.</p>
+
+            
+
+<b>Tags</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    <a href="https://selenium.dev/tags/beta/">beta</a></div>
+
+
+            
+
+<b>Categories</b>
+<div class="links-container">
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/releases/">releases</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%203%20is%20Coming&body=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2016%2fselenium-3-is-coming%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+
+        
+
+        <div class="pagination-container">
+            
+            <div class="button-container">
+                <a href="/categories/general/page/3/">
+                    <div class="button page-button"><b>OLDER POSTS</b></div>
+                </a>
+            </div>
+            
+
+            
+            <div class="button-container">
+                <a href="/categories/general/">
+                    <div class="button page-button"><b>NEWER POSTS</b></div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<div class="support-selenium-container">
+    <div class="support-selenium">
+        <h2>Support the Selenium Project</h2>
+        <p>Want to support the Selenium project? Learn more or view the full list of sponsors.</p>
+        <div class="button-container">
+            <a href="/sponsors">
+                <div class="button"><b>LEARN MORE</b></div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/project">Governance</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

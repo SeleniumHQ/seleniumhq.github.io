@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #130"
 Date = 2012-11-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Can&#8217;t get enough Se bloggage? Have a look at <a href="http://itkosmopolit.wordpress.com/2012/11/23/overview-of-selenium-blogs/">Overview of Selenium Blogs</a> &#8212; though I must say there has to be something wrong with the Alexa algorithm if I am that far down the list. And behind both David and Alister. 🙂</p>

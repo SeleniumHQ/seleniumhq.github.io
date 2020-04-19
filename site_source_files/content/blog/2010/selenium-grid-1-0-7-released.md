@@ -4,6 +4,8 @@ Title = "Selenium Grid 1.0.7 Released"
 Date = 2010-05-11
 Author = "Kevin Menard"
 AuthorLink = "https://twitter.com/nirvdrum"
+tags = ["selenium","grid"]
+categories = ["releases"]
 +++
 
 <p>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&#8217;re pleased to announce the release of Selenium Grid 1.0.7.  This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.</p>

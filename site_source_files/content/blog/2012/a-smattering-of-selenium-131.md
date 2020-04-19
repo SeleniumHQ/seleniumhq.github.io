@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #131"
 Date = 2012-11-29
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Not sure how widely broadcast this has been (cus, you know, we&#8217;re good at communicating and stuff), but if you are using 2.26.0 and Firefox 17 you will get a <a href="http://code.google.com/p/selenium/issues/detail?id=4814">nasty bug</a>. 2.27.0 is in the works to address this (and a couple other things&#8230;) so if you <i>need</i> FF right now, keep your install at the <a href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/16.0/">latest 16 release</a>.</p>

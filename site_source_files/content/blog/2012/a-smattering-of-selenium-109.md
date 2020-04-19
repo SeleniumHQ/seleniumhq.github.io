@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #109"
 Date = 2012-08-13
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Going to be on an airplane for the better part of the next day, so will likely miss some links &#8230; unless I am tagged on <a href="http://twitter.com/adamgoucher">twitter</a> with it.</p>
 <ul>
 <li><a href="http://ardesco.lazerycode.com/index.php/2012/08/introducing-the-driver-binary-downloader-maven-plugin-for-selenium/">Introducing The Driver Binary Downloader Maven Plugin For Selenium</a> solves a problem that has been solved a couple times but this seems the slickest. Normally I would suggest just using Chef/Puppet for this but it makes sense in the Maven context. I think.</li>

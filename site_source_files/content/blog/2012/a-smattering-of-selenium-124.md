@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #124"
 Date = 2012-11-06
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Too. Many. Links. Not. Enough. Posts.</p>
 <ul>
 <li>The important word is <i>strive</i> in <a href="http://www.testingmentor.com/imtesty/2012/10/08/100-automation-pass-rates/">100% Automation Pass Rates</a>.</li>

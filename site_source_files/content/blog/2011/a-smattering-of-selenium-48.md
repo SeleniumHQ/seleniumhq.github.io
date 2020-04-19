@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #48"
 Date = 2011-05-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>It&#8217;s catch-up time again! Here is the first 10.</p>
 <ul>
 <li><a href="http://spin.atomicobject.com/2011/04/29/automated-tests-for-html5-offline-web-applications-with-capybara-and-selenium">Automated tests for HTML5 offline web applications with Capybara and Selenium</a> shows how a custom Firefox profile lets you automate Offline capabilities of HTML5 apps</li>

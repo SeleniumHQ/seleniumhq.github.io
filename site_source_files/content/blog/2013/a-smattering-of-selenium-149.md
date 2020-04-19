@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #149"
 Date = 2013-06-05
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Too. Many. Tabs.</p>
 <li><a href="http://watirmelon.com/2013/05/30/internationalization-and-localization-testing/">Internationalization and Localization Testing</a> &#8212; yup, I agree.</li>
 <li><a href="http://daker.me/2013/05/5-html5-features-you-need-to-know.html">5 HTML5 Features you need to know</a> &#8211; &#8216;download attribute&#8217; and &#8216;datalist element&#8217; might be a pain for us automators. Or at least cause a couple hours annoyance until we figure out the pattern.</li>

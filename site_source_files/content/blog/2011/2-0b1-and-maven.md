@@ -4,6 +4,8 @@ Title = "2.0b1 and Maven"
 Date = 2011-01-25
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["maven","selenium"]
+categories = ["general"]
 +++
 
 <p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>

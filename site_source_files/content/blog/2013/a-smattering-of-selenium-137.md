@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #137"
 Date = 2013-01-16
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Whoops, missed a couple days&#8230; ah well.</p>

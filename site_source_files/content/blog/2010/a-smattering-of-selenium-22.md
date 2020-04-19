@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #22"
 Date = 2010-08-02
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Happy <a href="http://en.wikipedia.org/wiki/John_Graves_Simcoe">Simcoe Day</a>.  Only a handful of links this week to mention.<br />

@@ -4,6 +4,8 @@ Title = "Announcing Selenium 2.19: the Prancing Unicorn release"
 Date = 2012-02-08
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>You might be pleased to hear that Selenium 2.19 has been released (<a href="http://seleniumhq.org/download/">download it from here!</a>). There&#8217;s one big user facing changing that we&#8217;d like to tell you about: the webdriver-backed selenium can now be used in supported languages.</p>

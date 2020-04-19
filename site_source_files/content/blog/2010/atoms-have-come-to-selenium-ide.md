@@ -4,6 +4,8 @@ Title = "Atoms have come to Selenium IDE"
 Date = 2010-12-09
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["ide","webdriver"]
+categories = ["general"]
 +++
 
 <p>As mentioned in Simon&#8217;s <a href="http://seleniumhq.wordpress.com/2010/08/16/going-atomic-why/">Going Atomic: Why?</a> and <a href="http://seleniumhq.wordpress.com/2010/09/05/going-atomic-how/">Going Atomic: How</a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &#8216;atoms&#8217; is now included.<br />

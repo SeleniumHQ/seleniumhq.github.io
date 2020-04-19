@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #83"
 Date = 2012-03-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Well, might not be in Florida, but how about them juggernaut Blue Jays?</p>
 <ul>
 <li><a href="http://mguillem.wordpress.com/2011/10/11/webdriver-capture-js-errors-while-running-tests/">WebDriver: capture JS errors while running tests</a> is a JS way of capturing JS errors on a page</li>

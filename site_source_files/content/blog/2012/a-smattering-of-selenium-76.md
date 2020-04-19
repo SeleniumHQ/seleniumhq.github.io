@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #76"
 Date = 2012-01-25
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Post ten links, find seven more to add to the queue.</p>

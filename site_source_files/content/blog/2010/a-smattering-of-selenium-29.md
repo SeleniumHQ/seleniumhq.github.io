@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #29"
 Date = 2010-10-04
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>A fair number of links this week. The vast majority of which were buried in annoying airport internet advertising frames&#8230;<br />

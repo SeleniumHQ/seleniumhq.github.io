@@ -4,6 +4,8 @@ Title = "Selenium 2.0: Out Now!"
 Date = 2011-07-08
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>We are very, very pleased to announce the<a href="http://seleniumhq.org/download/"> release of Selenium 2.0</a>. If you&#8217;ve been waiting for a stable release since 1.0.3, now&#8217;s the chance to update. And if you do, what will you find?</p>

@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #144"
 Date = 2013-02-25
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p><i>Real</i> Canadians watch curling instead of hockey.</p>

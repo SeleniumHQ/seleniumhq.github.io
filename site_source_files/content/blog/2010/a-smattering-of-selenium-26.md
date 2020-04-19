@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #26"
 Date = 2010-09-06
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>It&#8217;s Labour Day here, so this post was written to backdrop of Sponge Bob. In case you were wondering.<br />
 </p>
 <ul>

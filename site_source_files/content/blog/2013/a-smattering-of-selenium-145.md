@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #145"
 Date = 2013-03-04
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p><a href="http://www.brothers-brick.com/2013/02/26/alice-finch-builds-massive-lego-hogwarts-from-400000-bricks/">Alice Finch builds massive LEGO Hogwarts from 400,000 bricks</a> starts out at awesome and goes somewhere further down the scale when you get to the photo that shows scale.</p>

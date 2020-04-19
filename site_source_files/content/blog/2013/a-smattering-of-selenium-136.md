@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #136"
 Date = 2013-01-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Someone go back to my past self and punch him for thinking that starting to get in shape was a good idea. OMGCANTMOVE.</p>
 <ul>
 <li><a href="http://www.infoq.com/news/2013/01/Immutable-BCL">.NET Goes Immutable</a> seems interesting. But I don&#8217;t really speak C# so it could very well be boring and uninteresting.</li>

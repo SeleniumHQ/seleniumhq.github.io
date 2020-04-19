@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #152"
 Date = 2013-07-11
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>40-ish minutes until midnight eastern so that counts as two days in a row, right? Right?</p>
 <ul>
 <li><a href="http://tobiasgeyer.wordpress.com/2013/07/04/improving-jenkins-execution-times-by-common-sense/">Improving jenkins execution times by common sense</a> &#8212; common sense. sadly lacking most days.</li>
