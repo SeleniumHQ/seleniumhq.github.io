@@ -38,4 +38,20 @@
             <a href="{{"blog/2010" | relURL}}">2010</a>
         </div>
     </div>
+    <div class="filter-section">
+        <h3>Tags</h3>
+        <div class="links-container">
+            {{ range .Site.Taxonomies.tags }}
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>({{ .Count }})
+            {{ end }}
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Categories</h3>
+        <div class="links-container">
+            {{ range .Site.Taxonomies.categories }}
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>({{ .Count }})
+            {{ end }}
+        </div>
+    </div>
 </div>

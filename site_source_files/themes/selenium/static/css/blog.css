@@ -123,6 +123,17 @@ a {
   color: white;
 }
 
+.links-container {
+    justify-content: space-around;
+    color: white;
+}
+
+.links-container a {
+    color: white;
+    text-decoration: underline;
+    padding: 3px;
+}
+
 .search-container {
   display: flex;
 }

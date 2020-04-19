@@ -13,7 +13,7 @@ meetings. These are written meetings which are held on the `#selenium-tlc` chann
 
 Here is the timeline of the meeting held on April 9, 2020 (times are on CET). 
 
-The next meeting will be on April 23, 2020.
+The next meeting will be on April 23, 2020, 4:30 PM CET.
 
 ---   
 
