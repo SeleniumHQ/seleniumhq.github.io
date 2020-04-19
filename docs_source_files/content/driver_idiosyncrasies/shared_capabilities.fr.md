@@ -3,116 +3,132 @@ title: "Capabilities partagées"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Afin de créer une nouvelle session par 
+Selenium WebDriver, l'extrémité locale doit fournir 
+les capacités de base à l'extrémité distante. L'extrémité 
+distante utilise le même ensemble de capacités pour
+créer une session et décrit les fonctionnalités 
+de la session actuelle. 
 
-In-order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
-
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+WebDriver offre des capacités que chaque télécommande
+fin soutiendra/devrait soutenir la mise en œuvre.
+Voici les fonctionnalités prises en charge par WebDriver:
 
 ## browserName:
 
-This capability is used to set the `browserName` for a given session. 
-If the specified browser is not installed at the 
-remote end, the session creation will fail
+Cette capacité est utilisée pour définir 
+le `browserName` pour une session donnée.
+Si le navigateur spécifié n'est pas installé sur le
+extrémité distante, la création de la session échouera
 
 ## browserVersion: 
 
-This capability is optional, this is used to 
-set the available browser version at remote end. 
-For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+Cette capacité est facultative, elle est utilisée pour
+définissez la version de navigateur disponible à l'extrémité distante.
+Par exemple, si vous demandez Chrome version 75 sur un système qui
+n'a que 80 installés, la création de session échouera.
 
 ## pageLoadStrategy:
 
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
+Lors de la navigation vers une nouvelle page via URL, 
+par défaut, Selenium attendra jusqu'à ce que la 
+page soit entièrement chargée avant de répondre. 
+Cela fonctionne bien pour débutants, mais peut entraîner 
+de longs temps d'attente sur les pages qui chargent une grande
+nombre de ressources tierces. L’utilisation d’une 
+stratégie autre que celle par défaut peut
+tester l'exécution plus rapidement dans des cas 
+comme celui-ci, mais peut également introduire une fragilité
+où les éléments de la page changent de position 
+lorsque les éléments se chargent et changent Taille.
 
-The page load strategy queries the
+La stratégie de chargement de page interroge le
 [document.readyState](//developer.mozilla.org/fr/docs/Web/API/Document/readyState)
-as described in the table below:
+comme décrit dans le tableau ci-dessous:
 
 | Strategy | Ready State | Notes |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | complete | Utilisé par défaut, attend le téléchargement de toutes les ressources |
+| eager | interactive | L'accès au DOM est prêt, mais d'autres ressources comme les images peuvent encore se charger |
+| none | Any | Ne bloque pas du tout WebDriver |
 
 ## platformName
 
-This identifies the operating system at the remote-end, 
-fetching the `platformName` returns the OS name. 
+Cela identifie le système d'exploitation à 
+l'extrémité distante, la récupération de 
+`platformName` renvoie le nom du système d'exploitation.
 
-In cloud-based providers, 
-setting `platformName` sets the OS at the remote-end.
+Dans les fournisseurs basés sur le cloud,
+la définition de `platformName` définit 
+le système d'exploitation à l'extrémité distante.
 
 ## acceptInsecureCerts
 
-This capability checks whether an expired (or) 
-invalid `TLS Certificate` is used while navigating 
-during a session.
+Cette capacité vérifie si un (ou) expiré
+un `certificat TLS` non valide est 
+utilisé lors de la navigation
+pendant une session.
 
-If the capability is set to `false`, an 
-[insecure certificate error](//developer.mozilla.org/fr/docs/Web/WebDriver/Errors/InsecureCertificate) 
-will be returned as navigation encounters any domain 
-certificate problems. If set to `true`, invalid certificate will be 
-trusted by the browser.
+Si la capacité est définie sur "false", un
+[erreur de certificat non sécurisé](//developer.mozilla.org/fr/docs/Web/WebDriver/Errors/InsecureCertificate)
+sera retourné car la navigation rencontre n'importe quel domaine
+problèmes de certificat. S'il est défini sur 
+`true`, un certificat non valide sera
+approuvé par le navigateur.
 
-All self-signed certificates will be trusted by this capability by default. 
-Once set, `acceptInsecureCerts` capability will have an 
-effect for the entire session.
+Tous les certificats auto-signés seront approuvés 
+par cette fonctionnalité par défaut.
+Une fois définie, la capacité `acceptInsecureCerts` aura un
+effet pour toute la session.
 
 ## Session timeouts
 
-A WebDriver `session` is imposed with a certain `session timeout`
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.
+Une `session` WebDriver est imposée avec un 
+certain `délai d'expiration de session`
+intervalle, pendant lequel l'utilisateur 
+peut contrôler le comportement d'exécuter des 
+scripts ou de récupérer des informations à partir du navigateur.
 
-Each session timeout is configured with
-combination of different `timeouts` as described below:
+Chaque délai d'expiration de session est configuré avec
+combinaison de différents `timeouts` comme décrit ci-dessous:
 
 ### Script Timeout:
-Specifies when to interrupt an executing script in
-a current browsing context. The default timeout **30,000**
-is imposed when a new session is created by WebDriver.
+
+Spécifie quand interrompre un script en cours 
+d'exécution dans un contexte de navigation actuel. 
+Délai d'expiration par défaut **30,000**
+est imposé lorsqu'une nouvelle session 
+est créée par WebDriver.
 
 ### Page Load Timeout:
-Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout **300,000** is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
+
+Spécifie l'intervalle de temps dans lequel la page Web
+doit être chargé dans un contexte de navigation actuel.
+Le délai d'attente par défaut **300,000** est imposé lorsqu'un
+une nouvelle session est créée par WebDriver. 
+Si les limites de chargement de page un 
+laps de temps donné / par défaut, le script sera arrêté par
 _TimeoutException_.
 
-### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
+### Implicit Wait Timeout:
+
+Cela spécifie le temps d'attente
+stratégie de localisation implicite des éléments lorsque
+éléments de localisation. Le délai d'expiration par défaut **0**
+est imposé lorsqu'une nouvelle session est créée par WebDriver.
 
 ## unhandledPromptBehavior
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+Spécifie l'état du `gestionnaire d'invite utilisateur` 
+de la session en cours.
+Par défaut, **ignorer et notifier l'état**.
 
-### User Prompt Handler
+### User Prompt Handler:
 
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+Cela définit les mesures à prendre lorsqu'un
+rencontres d'invite utilisateur à l'extrémité 
+distante. Ceci est défini par
+`unhandledPromptBehavior` et a les états suivants:
 
 * dismiss
 * accept
@@ -122,22 +138,27 @@ user prompt encounters at remote-end. This is defined by
 
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
+Cette commande modifie la taille et la 
+position du courant fenêtre contextuelle de 
+navigation. Cette commande agit en tant que setter
+à la commande `getWindowRect` qui accepte **width**, **height**,
+**x**, **y** comme arguments _optional_.
 
-During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
+Lors de l'automatisation, le contexte de navigation actuel sera associé
+avec des états de fenêtre, qui décrivent la visibilité
+état de la fenêtre du navigateur. Les états des fenêtres sont
 
 * maximized
 * minimized
 * normal
 * fullscreen
 
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+La définition de _Width_ ou _Height_ ne garantit 
+pas que le résultat la taille de la fenêtre correspondra 
+exactement à celle recherchée. Ceci est dû au fait
+certains pilotes peuvent ne pas être en mesure de 
+redimensionner par incréments d'un pixel.
+Pour cette raison, la récupération de l'état/des 
+détails de la fenêtre par `getWindowRect`
+peut ne pas correspondre également aux 
+valeurs définies pour le navigateur.
