@@ -9,7 +9,7 @@ categories = ["general","governance"]
 +++
 
 As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project
-meetings. These are written meetings which are held on the `#selenium-tlc` channels on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).
+meetings. These are written meetings which are held on the `#selenium-tlc` channel on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).
 
 Here is the timeline of the meeting held on April 9, 2020 (times are on CET). 
 
