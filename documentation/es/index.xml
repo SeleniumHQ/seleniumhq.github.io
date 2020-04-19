@@ -194,13 +194,12 @@ A tus usuarios, en general, no les importa cómo se ve su sitio. Ellos no se pre
     </item>
     
     <item>
-      <title>Migrating from RC to WebDriver</title>
+      <title>Migrando de RC a WebDriver</title>
       <link>https://selenium.dev/documentation/es/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests.</description>
+      <description>Cómo migrar a Selenium WebDriver Una pregunta común al adoptar Selenium 2 es qué seria lo correcto al agregar nuevas pruebas a un conjunto existente de pruebas?. Los usuarios que son nuevos al framework pueden comenzar utilizando las nuevas API de WebDriver para escribir sus pruebas. ¿Pero qué pasa con los usuarios que ya tienen suites de pruebas existentes? Esta guía es diseñada para demostrar cómo migrar tus pruebas existentes a las nuevas APIs, permitiendo que todas las pruebas nuevas se escriban usando las nuevas características ofrecidas por WebDriver.</description>
     </item>
     
     <item>
