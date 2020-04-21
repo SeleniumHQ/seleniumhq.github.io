@@ -186,3 +186,45 @@ options.destructivelyEnsureCleanSession()
 val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### ignoreZoomSetting
+
+InternetExplorer driver expects the browser zoom level to be 100%, 
+else the driver will throw an exception. This default behaviour 
+can be disabled by setting the _ignoreZoomSetting_ to _true_.
+ 
+ 
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.ignoreZoomSettings();
+WebDriver driver = new RemoteWebDriver(options);
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+options = webdriver.IeOptions
+options.ignore_zoom_level(true)
+driver = webdriver.Ie(ie_driver_path, options=options)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+var options = new InternetExplorerOptions();
+options.IgnoreZoomLevel = true;
+var driver = new RemoteWebDriver(options);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+options = Selenium::WebDriver::IE::Options.new
+options.ignore_zoom_level = true
+driver = Selenium::WebDriver.for(:ie, options: options)
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options().ignoreZoomSetting(true);
+let driver = await Builder()
+          .setIeOptions(options)
+          .build(); 
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val options = InternetExplorerOptions()
+options.ignoreZoomSettings()
+val driver = RemoteWebDriver(options)
+  {{< / code-panel >}}
+{{< / code-tab >}}
