@@ -11,20 +11,20 @@
     <title>Driver spezifische Capabilities :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1587324341" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1587324341" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1587475474" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1587475474" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1587324341" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1587475474" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1587324341"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1587475474"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1587324341"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1587324341"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1587475474"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1587475474"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1587324341"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1587475474"></script>
 
     
   </div>
@@ -1932,6 +1932,8 @@
 <li><a href="#internet-explorer">Internet Explorer</a>
 <ul>
 <li><a href="#fileuploaddialogtimeout">fileUploadDialogTimeout</a></li>
+<li><a href="#ensurecleansession">ensureCleanSession</a></li>
+<li><a href="#ignorezoomsetting">ignoreZoomSetting</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2312,6 +2314,229 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 </div>
 </div>
 
+<h3 id="ensurecleansession">ensureCleanSession</h3>
+
+<p>When set to <code>true</code>, this capability clears the <em>Cache,
+Browser History and Cookies</em> for all running instances
+of InternetExplorer including those started manually
+or by the driver. By default, it is set to <code>false</code>.</p>
+
+<p>Using this capability will cause performance drop while
+launching the browser, as the driver will wait until the cache
+gets cleared before launching the IE browser.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode4" id="tab0code4" aria-controls="javacode4" checked>
+    
+    <label for="tab0code4">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab1code4" aria-controls="pythoncode4">
+    
+    <label for="tab1code4">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab2code4" aria-controls="cscode4">
+    
+    <label for="tab2code4">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab3code4" aria-controls="rubycode4">
+    
+    <label for="tab3code4">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab4code4" aria-controls="javascriptcode4">
+    
+    <label for="tab4code4">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode4" id="tab5code4" aria-controls="kotlincode4">
+    
+    <label for="tab5code4">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+InternetExplorerOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.destructivelyEnsureCleanSession();
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions
+options<span style="color:#719e07">.</span>ensure_clean_session(true)
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(ie_driver_path, options<span style="color:#719e07">=</span>options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.EnsureCleanSession = <span style="color:#719e07">true</span>;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">IE</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new
+options<span style="color:#719e07">.</span>ensure_clean_session <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:ie</span>, <span style="color:#2aa198">options</span>: options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> ie <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/ie&#39;</span>);
+<span style="color:#268bd2">let</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ie.Options().ensureCleanSession(<span style="color:#cb4b16">true</span>);
+<span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await Builder()
+          .setIeOptions(options)
+          .build(); 
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode4" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> options = InternetExplorerOptions()
+options.destructivelyEnsureCleanSession()
+<span style="color:#719e07">val</span> driver = RemoteWebDriver(options)
+  </code></pre></div>
+</section>
+</div>
+</div>
+
+<h3 id="ignorezoomsetting">ignoreZoomSetting</h3>
+
+<p>InternetExplorer driver expects the browser zoom level to be 100%,
+else the driver will throw an exception. This default behaviour
+can be disabled by setting the <em>ignoreZoomSetting</em> to <em>true</em>.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode5" id="tab0code5" aria-controls="javacode5" checked>
+    
+    <label for="tab0code5">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab1code5" aria-controls="pythoncode5">
+    
+    <label for="tab1code5">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab2code5" aria-controls="cscode5">
+    
+    <label for="tab2code5">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab3code5" aria-controls="rubycode5">
+    
+    <label for="tab3code5">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab4code5" aria-controls="javascriptcode5">
+    
+    <label for="tab4code5">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode5" id="tab5code5" aria-controls="kotlincode5">
+    
+    <label for="tab5code5">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+InternetExplorerOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.ignoreZoomSettings();
+WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions
+options<span style="color:#719e07">.</span>ignore_zoom_level(true)
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(ie_driver_path, options<span style="color:#719e07">=</span>options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#dc322f">var</span> options = <span style="color:#719e07">new</span> InternetExplorerOptions();
+options.IgnoreZoomLevel = <span style="color:#719e07">true</span>;
+<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> RemoteWebDriver(options);
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">IE</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new
+options<span style="color:#719e07">.</span>ignore_zoom_level <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:ie</span>, <span style="color:#2aa198">options</span>: options)
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> ie <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/ie&#39;</span>);
+<span style="color:#268bd2">let</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ie.Options().ignoreZoomSetting(<span style="color:#cb4b16">true</span>);
+<span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await Builder()
+          .setIeOptions(options)
+          .build(); 
+  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode5" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#719e07">val</span> options = InternetExplorerOptions()
+options.ignoreZoomSettings()
+<span style="color:#719e07">val</span> driver = RemoteWebDriver(options)
+  </code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2320,7 +2545,7 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver spezifische Capabilities”
-    </a> was last updated on: 06 Apr 2020 22:59:59 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/0651f59ee30e361d624cb9766624b1281aad3257">Deploying on Mon Apr  6 22:59:59 UTC 2020, commit 1581abdb0cf23bc084d0a4b8ed6a1ab699280ff6, [skip ci] (0651f59e)</a>
+    </a> was last updated on: 21 Apr 2020 18:53:04 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/4e3622c63685dde9d570f35d945ebd457d1a98fd">Add: Adding ignoreZoomSetting in driverSpecific capabilities doc [deploy site] (4e3622c6)</a>
 </h5>
         
         </div> 
@@ -3485,19 +3710,19 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1587324342"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1587475474"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1587324342"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1587324342"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1587475474"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1587475474"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1587324342" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1587324342"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1587475474" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1587475474"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
