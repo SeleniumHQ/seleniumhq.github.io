@@ -161,6 +161,8 @@ Using this capability will cause performance drop while
 launching the browser, as the driver will wait until the cache 
 gets cleared before launching the IE browser.  
 
+This capability accepts a Boolean value as parameter.
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -202,7 +204,8 @@ InternetExplorer driver expects the browser zoom level to be 100%,
 else the driver will throw an exception. This default behaviour 
 can be disabled by setting the _ignoreZoomSetting_ to _true_.
  
- 
+This capability accepts a Boolean value as parameter.
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
@@ -234,6 +237,59 @@ let driver = await Builder()
   {{< code-panel language="kotlin" >}}
 val options = InternetExplorerOptions()
 options.ignoreZoomSettings()
+val driver = RemoteWebDriver(options)
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### ignoreProtectedModeSettings
+
+Whether to skip the _Protected Mode_ check while launching 
+a new IE session.
+
+If not set and _Protected Mode_ settings are not same for 
+for all zones, an exception will be thrown by the driver.
+
+If capability is set to `true`, tests may 
+become flaky, unresponsive, or browsers may hang.
+However, this is still by far a second-best choice, 
+and the first choice should *always* be to actually 
+set the Protected Mode settings of each zone manually. 
+If a user is using this property, 
+only a "best effort" at support will be given.
+
+This capability accepts a Boolean value as parameter.
+ 
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.introduceFlakinessByIgnoringSecurityDomains();
+WebDriver driver = new RemoteWebDriver(options);
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+options = webdriver.IeOptions
+options.ignore_protected_mode_settings(true)
+driver = webdriver.Ie(ie_driver_path, options=options)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+var options = new InternetExplorerOptions();
+options.IntroduceInstabilityByIgnoringProtectedModeSettings = true;
+var driver = new RemoteWebDriver(options);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+options = Selenium::WebDriver::IE::Options.new
+options.ignore_protected_mode_settings = true
+driver = Selenium::WebDriver.for(:ie, options: options)
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options().introduceFlakinessByIgnoringProtectedModeSettings(true);
+let driver = await Builder()
+          .setIeOptions(options)
+          .build(); 
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val options = InternetExplorerOptions()
+options.introduceFlakinessByIgnoringSecurityDomains()
 val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
