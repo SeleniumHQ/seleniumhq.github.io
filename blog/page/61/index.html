@@ -223,7 +223,7 @@
             
             <a href="https://selenium.dev/tags/maven/">maven</a>(2)
             
-            <a href="https://selenium.dev/tags/meeting/">meeting</a>(1)
+            <a href="https://selenium.dev/tags/meeting/">meeting</a>(2)
             
             <a href="https://selenium.dev/tags/meetup/">meetup</a>(1)
             
@@ -239,7 +239,7 @@
             
             <a href="https://selenium.dev/tags/sfc/">sfc</a>(1)
             
-            <a href="https://selenium.dev/tags/slack/">slack</a>(1)
+            <a href="https://selenium.dev/tags/slack/">slack</a>(2)
             
             <a href="https://selenium.dev/tags/smattering/">smattering</a>(145)
             
@@ -255,7 +255,7 @@
             
             <a href="https://selenium.dev/tags/technical/">technical</a>(2)
             
-            <a href="https://selenium.dev/tags/tlc/">tlc</a>(1)
+            <a href="https://selenium.dev/tags/tlc/">tlc</a>(2)
             
             <a href="https://selenium.dev/tags/webdriver/">webdriver</a>(1)
             
@@ -267,9 +267,9 @@
             
             <a href="https://selenium.dev/categories/conference/">conference</a>(19)
             
-            <a href="https://selenium.dev/categories/general/">general</a>(196)
+            <a href="https://selenium.dev/categories/general/">general</a>(197)
             
-            <a href="https://selenium.dev/categories/governance/">governance</a>(6)
+            <a href="https://selenium.dev/categories/governance/">governance</a>(7)
             
             <a href="https://selenium.dev/categories/meetup/">meetup</a>(1)
             
@@ -353,7 +353,7 @@
             
             <a href="https://selenium.dev/tags/maven/">maven</a>(2)
             
-            <a href="https://selenium.dev/tags/meeting/">meeting</a>(1)
+            <a href="https://selenium.dev/tags/meeting/">meeting</a>(2)
             
             <a href="https://selenium.dev/tags/meetup/">meetup</a>(1)
             
@@ -369,7 +369,7 @@
             
             <a href="https://selenium.dev/tags/sfc/">sfc</a>(1)
             
-            <a href="https://selenium.dev/tags/slack/">slack</a>(1)
+            <a href="https://selenium.dev/tags/slack/">slack</a>(2)
             
             <a href="https://selenium.dev/tags/smattering/">smattering</a>(145)
             
@@ -385,7 +385,7 @@
             
             <a href="https://selenium.dev/tags/technical/">technical</a>(2)
             
-            <a href="https://selenium.dev/tags/tlc/">tlc</a>(1)
+            <a href="https://selenium.dev/tags/tlc/">tlc</a>(2)
             
             <a href="https://selenium.dev/tags/webdriver/">webdriver</a>(1)
             
@@ -397,9 +397,9 @@
             
             <a href="https://selenium.dev/categories/conference/">conference</a>(19)
             
-            <a href="https://selenium.dev/categories/general/">general</a>(196)
+            <a href="https://selenium.dev/categories/general/">general</a>(197)
             
-            <a href="https://selenium.dev/categories/governance/">governance</a>(6)
+            <a href="https://selenium.dev/categories/governance/">governance</a>(7)
             
             <a href="https://selenium.dev/categories/meetup/">meetup</a>(1)
             
@@ -414,6 +414,48 @@
 </div>
 <div class="blog-container">
     <div class="blog-content">
+        
+            <div class="container dark-background">
+                Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
+                <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
+                <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
+<pre>&lt;dependency&gt;
+  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
+  &lt;version&gt;2.0b1&lt;/version&gt;
+  &lt;exclusions&gt;
+    &lt;exclusion&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+    &lt;/exclusion&gt;
+  &lt;/exclusions&gt;
+&lt;/dependency&gt;</pre></p>
+
+                
+
+<p><b>Tags</b></p>
+<divs>
+    
+    <a href="https://selenium.dev/tags/maven/">maven</a>
+    <a href="https://selenium.dev/tags/selenium/">selenium</a></divs>
+
+
+                
+
+<p><b>Categories</b></p>
+<div>
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - 2.0b1%20and%20Maven&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2f2-0b1-and-maven%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
         
             <div class="container dark-background">
                 Tuesday, January 25, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
@@ -498,45 +540,6 @@
 
                     <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2338A&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/mail.png"/></a>
                     <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fa-smattering-of-selenium-38a%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Friday, January 21, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
-                <a href="https://selenium.dev/blog/2011/bug-bash/"><h2>Bug Bash: 24-30 January</h2></a>
-                <p>When the <a href="http://selenium.googlecode.com/">Selenium</a> and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a <em>lot</em> of bugs and feature requests.</p>
-<p>In the run up for the 2.0b2 release, we&#8217;ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January. The aim will be to focus on clearing our bug list as much as possible, so that beta2 will be the best release of Selenium yet. We will, of course, be recognizing people who squash the most bugs here on the blog, and we&#8217;re hunting out goodies to mail to the top bug bashers once the week is over.</p>
-<p>If you&#8217;d like to get involved, it&#8217;s easy:</p>
-<ol>
-<li><a href="http://code.google.com/p/selenium/source/checkout">Check out</a> the source code</li>
-<li>Find a bug you&#8217;d like to squash in the <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a></li>
-<li>Fix it, attaching your patch to the issue</li>
-</ol>
-<p>That&#8217;s it. Easy! For help, and to ask questions of the core development team, please hop on to the <a href="http://seleniumhq.org/support/">IRC channel</a> or email the <a href="http://groups.google.com/group/selenium-developers">selenium-developers</a> group.</p>
-<p><strong>Update:</strong> The Bug Bash is now complete. All we have to do is count up the scores!</p>
-
-                
-
-<p><b>Tags</b></p>
-<divs>
-    
-    <a href="https://selenium.dev/tags/bug-bash/">bug-bash</a></divs>
-
-
-                
-
-<p><b>Categories</b></p>
-<div>
-    
-    <a href="https://selenium.dev/categories/general/">general</a></div>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Bug%20Bash%3a%2024-30%20January&body=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2011%2fbug-bash%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
