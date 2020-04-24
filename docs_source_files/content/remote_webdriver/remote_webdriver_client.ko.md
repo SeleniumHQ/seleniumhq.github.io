@@ -201,7 +201,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< code-panel language="python" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
 
-driver.find_element_by_id("myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
+driver.find_element(By.ID, "myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");

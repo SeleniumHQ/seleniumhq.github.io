@@ -225,7 +225,7 @@ with webdriver.Firefox() as driver:
     assert len(driver.window_handles) == 1
 
     # 单击在新窗口中打开的链接
-    driver.find_element_by_link_text("new window").click()
+    driver.find_element(By.LINK_TEXT, "new window").click()
 
     # 等待新窗口或标签页
     wait.until(EC.number_of_windows_to_be(2))

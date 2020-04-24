@@ -250,7 +250,7 @@ with webdriver.Firefox() as driver:
     assert len(driver.window_handles) == 1
 
     # Click the link which opens in a new window
-    driver.find_element_by_link_text("new window").click()
+    driver.find_element(By.LINK_TEXT, "new window").click()
 
     # Wait for the new window or tab
     wait.until(EC.number_of_windows_to_be(2))

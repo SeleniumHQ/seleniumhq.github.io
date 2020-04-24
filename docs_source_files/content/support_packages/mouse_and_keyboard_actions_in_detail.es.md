@@ -45,7 +45,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Guarda el elemento web del botón 'Sign in'
-searchBtn = driver.find_element_by_link_text("Sign in")
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
 # Realiza la acción click-and-hold en el elemento
 webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
@@ -174,7 +174,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Guarda el elemento web del botón 'Sign in'
-searchBtn = driver.find_element_by_link_text("Sign in")
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
 # Realiza la acción context-click en el elemento
 webdriver.ActionChains(driver).context_click(searchBtn).perform()
@@ -302,7 +302,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Guarda el elemento web del botón 'Sign in'
-searchBtn = driver.find_element_by_link_text("Sign in")
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
 # Realiza la acción double-click en el elemento
 webdriver.ActionChains(driver).double_click(searchBtn).perform()
@@ -431,7 +431,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Guarda el elemento web del enlace 'Gmail'
-gmailLink = driver.find_element_by_link_text("Gmail")
+gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
 
 # Realiza la acción move hacia el elemento
 webdriver.ActionChains(driver).move_to_element(gmailLink).perform()
@@ -565,7 +565,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Guarda el elemento web del enlace 'Gmail'
-gmailLink = driver.find_element_by_link_text("Gmail")
+gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
 # Captura el desplazamiento de las posiciones x e y del elemento
 xOffset = 100
 yOffset = 100
@@ -712,9 +712,9 @@ driver = webdriver.Chrome()
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
 # Guarda 'sourceEle' como elemento de origen
-sourceEle = driver.find_element_by_id("draggable")
+sourceEle = driver.find_element(By.ID, "draggable")
 # Guarda 'targetEle' como elemento de destino
-targetEle  = driver.find_element_by_id("droppable")
+targetEle  = driver.find_element(By.ID, "droppable")
 # Realiza la acción dragAndDrop desde el origen hacia el destino
 webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
   {{< / code-panel >}}
@@ -854,9 +854,9 @@ driver = webdriver.Chrome()
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
 # Guarda 'sourceEle' como elemento de origen
-sourceEle = driver.find_element_by_id("draggable")
+sourceEle = driver.find_element(By.ID, "draggable")
 # Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
-targetEle  = driver.find_element_by_id("droppable")
+targetEle  = driver.find_element(By.ID, "droppable")
 targetEleXOffset = targetEle.location.get("x")
 targetEleYOffset = targetEle.location.get("y")
 
@@ -1007,9 +1007,9 @@ driver = webdriver.Chrome()
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
 # Guarda 'sourceEle' como elemento de origen
-sourceEle = driver.find_element_by_id("draggable")
+sourceEle = driver.find_element(By.ID, "draggable")
 # Guarda 'targetEle' como elemento de destino
-targetEle  = driver.find_element_by_id("droppable")
+targetEle  = driver.find_element(By.ID, "droppable")
 webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
 # Realiza la acción release
 webdriver.ActionChains(driver).release().perform()

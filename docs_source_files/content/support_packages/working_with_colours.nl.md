@@ -158,9 +158,9 @@ Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).ge
 Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-login_button_colour = Color.from_string(driver.find_element_by_id('login').value_of_css_property('color'))
+login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('color'))
 
-login_button_background_colour = Color.from_string(driver.find_element_by_id('login').value_of_css_property('background-color'))
+login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
