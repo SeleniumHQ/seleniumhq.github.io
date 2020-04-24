@@ -22,6 +22,7 @@ _Diego Molina  4:32 PM_
 Hi all, we are going to start the next project status meeting in a moment
 
 for now, the agenda would be:
+
 - project stats: +/- issues, prs
 - any staffing announcements
 - whats been worked on (seems things are picking up again)
@@ -226,6 +227,7 @@ Oh, I’ve also started wrapping OpenTelemetry with our own APIs so we do an upd
 _Diego Molina  5:04 PM_
 
 From my side:
+
 - Docker images working with the Grid 4 Alpha 5, only supporting standalone and hub/node for now
 - Working on adding support for retries in the Grid, issue #8167
 - Also, added tags and categories to the blog in selenium.dev, so now all governance related meetings can be seen at https://www.selenium.dev/categories/governance/
@@ -454,6 +456,7 @@ _Simon Stewart  5:24 PM_
 _Marcus Merrell  5:26 PM_
 
 the conference status is currently:
+
 - We're waiting until around May 15th to make a decision, but
 - While we believe the conference could happen in November, it's Bill McGee's observation that people right now just don't seem to be interested in buying tickets, submitting papers, or writing checks to sponsor in-person conferences right now
 - Given that we're having trouble motivating people to take the actions they need to take now (the previous point), it's hard to imagine how we can feel confident in a November conference in the near future
