@@ -212,7 +212,7 @@ Selenium RC是基于Selenium Core的,
 可以访问Selenium Core的某些部分以使事情变得容易. 
 由于WebDriver不基于Selenium Core, 因此不再可能. 
 如何判断您是否正在使用Selenium Core?简单!
-只要看看您的"getEval"或类似调用是否在评估的Javascript中使用"selenium"或"browserbot".
+只要看看您的"getEval"或类似调用是否在评估的Javascript中使用"Selenium"或"browserbot".
 
 您可能正在使用browserbot获取测试的当前窗口或文档的句柄. 
 幸运的是, WebDriver总是在当前窗口的上下文中评估JS, 
@@ -239,7 +239,7 @@ String name = (String) ((JavascriptExecutor) driver).executeScript(
 请注意, 传入的"element"变量如何显示为JS标准"arguments"数组中的第一项.        
 
 
-### 执行Java不会返回任何内容
+### 执行JavaScript不会返回任何内容
 
 
 WebDriver的JavascriptExecutor将包装所有JS并将其评估为匿名表达式. 
