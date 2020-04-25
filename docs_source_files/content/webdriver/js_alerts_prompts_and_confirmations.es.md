@@ -38,7 +38,7 @@ alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Haz clic en el enlace para activar la alerta
-driver.find_element_by_link_text("See an example alert").click()
+driver.find_element(By.LINK_TEXT, "See an example alert").click()
 
 # Espera a que se muestre la alerta y almacenala en una variable
 alert = wait.until(expected_conditions.alert_is_present())
@@ -136,7 +136,7 @@ alert.dismiss();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #  Haz clic en el enlace para activar la alerta
-driver.find_element_by_link_text("See a sample confirm").click()
+driver.find_element(By.LINK_TEXT, "See a sample confirm").click()
 
 # Espera a que se muestre la alerta
 wait.until(expected_conditions.alert_is_present())
@@ -244,7 +244,7 @@ alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #  Haz clic en el enlace para activar la alerta
-driver.find_element_by_link_text("See a sample prompt").click()
+driver.find_element(By.LINK_TEXT, "See a sample prompt").click()
 
 # Espera a que se muestre la alerta
 wait.until(expected_conditions.alert_is_present())

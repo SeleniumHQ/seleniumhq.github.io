@@ -15,7 +15,7 @@ parmi lesquels la recherche d'une élément par son attribut ID:
 WebElement cheese = driver.findElement(By.id("fromage"));  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver.find_element_by_id("fromage")
+driver.find_element(By.ID, "fromage")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 IWebElement element = driver.FindElement(By.Id("fromage"));  
@@ -49,7 +49,7 @@ WebElement fromage = driver.findElement(By.id("fromage"));
 WebElement cheddar = fromage.findElement(By.id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-fromage = driver.find_element_by_id("fromage")
+fromage = driver.find_element(By.ID, "fromage")
 cheddar = fromage.find_elements_by_id("cheddar")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}

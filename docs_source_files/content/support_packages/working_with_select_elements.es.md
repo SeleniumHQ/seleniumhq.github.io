@@ -40,7 +40,7 @@ WebElement selectElement = driver.findElement(By.id("selectElementID"));
 Select selectObject = new Select(selectElement);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-select_element = driver.find_element_by_id('selectElementID')
+select_element = driver.find_element(By.ID,'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}

@@ -278,7 +278,7 @@ WebElement myDynamicElement = driver.findElement(By.id("myDynamicElement"));
 driver = Firefox()
 driver.implicitly_wait(10)
 driver.get("http://somedomain/url_that_delays_loading")
-my_dynamic_element = driver.find_element_by_id("myDynamicElement")
+my_dynamic_element = driver.find_element(By.ID, "myDynamicElement")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 IWebDriver driver = new ChromeDriver();

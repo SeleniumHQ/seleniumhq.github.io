@@ -48,8 +48,8 @@ WebElement target = driver.findElement(By.id("target"));
 new Actions(driver).dragAndDrop(source, target).build().perform();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-source = driver.find_element_by_id("source")
-target = driver.find_element_by_id("target")
+source = driver.find_element(By.ID, "source")
+target = driver.find_element(By.ID, "target")
 ActionChains(driver).drag_and_drop(source, target).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}

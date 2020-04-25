@@ -246,7 +246,7 @@ with webdriver.Firefox() as driver:
     assert len(driver.window_handles) == 1
 
     # Haz clic en el enlace el cual abre una nueva ventana
-    driver.find_element_by_link_text("new window").click()
+    driver.find_element(By.LINK_TEXT, "new window").click()
 
     # Espera a la nueva ventana o pestaña
     wait.until(EC.number_of_windows_to_be(2))
