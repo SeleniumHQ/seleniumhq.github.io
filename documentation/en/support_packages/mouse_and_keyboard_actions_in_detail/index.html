@@ -11,20 +11,20 @@
     <title>Mouse actions in detail :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1587719917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1587719917" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1587822434" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1587822434" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1587719917" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1587822434" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1587719917"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1587822434"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1587719917"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1587719917"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1587822434"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1587822434"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1587719917"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1587822434"></script>
 
     
   </div>
@@ -2040,13 +2040,14 @@ provide virtualized device input action to the web browser.</p>
 <section id="pythoncode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
 driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
 
 <span style="color:#586e75"># Navigate to url</span>
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;google search&#39; button web element</span>
-searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;Sign in&#34;</span>)
+searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>LINK_TEXT, <span style="color:#2aa198">&#34;Sign in&#34;</span>)
 
 <span style="color:#586e75"># Perform click-and-hold action on the element</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>click_and_hold(searchBtn)<span style="color:#719e07">.</span>perform()
@@ -2243,7 +2244,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;google search&#39; button web element</span>
-searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;Sign in&#34;</span>)
+searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>LINK_TEXT, <span style="color:#2aa198">&#34;Sign in&#34;</span>)
 
 <span style="color:#586e75"># Perform context-click action on the element</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>context_click(searchBtn)<span style="color:#719e07">.</span>perform()
@@ -2440,7 +2441,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;google search&#39; button web element</span>
-searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;Sign in&#34;</span>)
+searchBtn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>LINK_TEXT, <span style="color:#2aa198">&#34;Sign in&#34;</span>)
 
 <span style="color:#586e75"># Perform double-click action on the element</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>double_click(searchBtn)<span style="color:#719e07">.</span>perform()
@@ -2637,7 +2638,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;google search&#39; button web element</span>
-gmailLink <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;Gmail&#34;</span>)
+gmailLink <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>LINK_TEXT, <span style="color:#2aa198">&#34;Gmail&#34;</span>)
 
 <span style="color:#586e75"># Performs mouse move action onto the element</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>move_to_element(gmailLink)<span style="color:#719e07">.</span>perform()
@@ -2837,7 +2838,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;google search&#39; button web element</span>
-gmailLink <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_link_text(<span style="color:#2aa198">&#34;Gmail&#34;</span>)
+gmailLink <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>LINK_TEXT, <span style="color:#2aa198">&#34;Gmail&#34;</span>)
 <span style="color:#586e75">#Set x and y offset positions of element</span>
 xOffset <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span>
 yOffset <span style="color:#719e07">=</span> <span style="color:#2aa198">100</span>
@@ -3045,15 +3046,16 @@ moves to the location of the target element and then releases the mouse.</p>
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
 driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
 
 <span style="color:#586e75"># Navigate to url</span>
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://crossbrowsertesting.github.io/drag-and-drop&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;box A&#39; as source element</span>
-sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;draggable&#34;</span>)
+sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;draggable&#34;</span>)
 <span style="color:#586e75"># Store &#39;box B&#39; as source element</span>
-targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;droppable&#34;</span>)
+targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;droppable&#34;</span>)
 <span style="color:#586e75"># Performs drag and drop action of sourceEle onto the targetEle</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>drag_and_drop(sourceEle,targetEle)<span style="color:#719e07">.</span>perform()
   </code></pre></div>
@@ -3260,9 +3262,9 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://crossbrowsertesting.github.io/drag-and-drop&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;box A&#39; as source element</span>
-sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;draggable&#34;</span>)
+sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;draggable&#34;</span>)
 <span style="color:#586e75"># Store &#39;box B&#39; as source element</span>
-targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;droppable&#34;</span>)
+targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;droppable&#34;</span>)
 targetEleXOffset <span style="color:#719e07">=</span> targetEle<span style="color:#719e07">.</span>location<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;x&#34;</span>)
 targetEleYOffset <span style="color:#719e07">=</span> targetEle<span style="color:#719e07">.</span>location<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;y&#34;</span>)
 
@@ -3481,9 +3483,9 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://crossbrowsertesting.github.io/drag-and-drop&#34;</span>)
 
 <span style="color:#586e75"># Store &#39;box A&#39; as source element</span>
-sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;draggable&#34;</span>)
+sourceEle <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;draggable&#34;</span>)
 <span style="color:#586e75"># Store &#39;box B&#39; as source element</span>
-targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;droppable&#34;</span>)
+targetEle  <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;droppable&#34;</span>)
 
 <span style="color:#586e75"># Performs dragAndDropBy onto the target element offset position</span>
 webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>click_and_hold(sourceEle)<span style="color:#719e07">.</span>move_to_element(targetEle)<span style="color:#719e07">.</span>perform()
@@ -3618,7 +3620,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/support_packages/mouse_and_keyboard_actions_in_detail/">
       “Mouse actions in detail”
-    </a> was last updated on: 12 Apr 2020 14:59:00 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/fbd487fac48e9174da429ea258955fff3e8b9252">Deploying on Sun Apr 12 14:59:00 UTC 2020, commit 3ef4cf9882cb5ac67fc7ccb6e8f897838cf1099b, [skip ci] (fbd487fa)</a>
+    </a> was last updated on: 24 Apr 2020 21:47:18 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/2c01a956c7b94d19ecd4fdc49b293bcac0756946">Update python find element to not use deprecated methods (2c01a956)</a>
 </h5>
         
         </div> 
@@ -4783,19 +4785,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1587719917"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1587822434"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1587719917"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1587719917"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1587822434"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1587822434"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1587719917" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1587719917"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1587822434" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1587822434"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

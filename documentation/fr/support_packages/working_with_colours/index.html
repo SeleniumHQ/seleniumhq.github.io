@@ -11,20 +11,20 @@
     <title>Travailler avec les couleurs :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1587719926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1587719926" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1587822443" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1587822443" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1587719926" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1587822443" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1587719926"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1587822443"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1587719926"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1587719926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1587822443"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1587822443"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1587719926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1587822443"></script>
 
     
   </div>
@@ -2411,9 +2411,9 @@ Color <span style="color:#268bd2">loginButtonBackgroundColour</span> <span style
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-login_button_colour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;color&#39;</span>))
+login_button_colour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID,<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;color&#39;</span>))
 
-login_button_background_colour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;background-color&#39;</span>))
+login_button_background_colour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>from_string(driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID,<span style="color:#2aa198">&#39;login&#39;</span>)<span style="color:#719e07">.</span>value_of_css_property(<span style="color:#2aa198">&#39;background-color&#39;</span>))
   </code></pre></div>
 </section>
   
@@ -2658,7 +2658,7 @@ assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/support_packages/working_with_colours/">
       “Travailler avec les couleurs”
-    </a> was last updated on: 12 Apr 2020 14:59:00 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/fbd487fac48e9174da429ea258955fff3e8b9252">Deploying on Sun Apr 12 14:59:00 UTC 2020, commit 3ef4cf9882cb5ac67fc7ccb6e8f897838cf1099b, [skip ci] (fbd487fa)</a>
+    </a> was last updated on: 24 Apr 2020 21:47:18 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/2c01a956c7b94d19ecd4fdc49b293bcac0756946">Update python find element to not use deprecated methods (2c01a956)</a>
 </h5>
         
         </div> 
@@ -3820,19 +3820,19 @@ assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1587719926"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1587822443"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1587719926"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1587719926"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1587822443"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1587822443"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1587719926" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1587719926"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1587822443" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1587822443"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

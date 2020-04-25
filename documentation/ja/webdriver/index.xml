@@ -101,7 +101,7 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
       <description>WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。 これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。
 アラート これらの最も単純なものはアラートと呼ばれ、カスタムメッセージと、ほとんどのブラウザーでOKのラベルが付いたアラートを非表示にする単一のボタンを表示します。 ほとんどのブラウザーでは閉じるボタンを押すことで閉じることもできますが、これは常にOKボタンと同じことを行います。 アラートの例を参照してください。
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
-Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.find_element_by_link_text(&amp;#34;See an example alert&amp;#34;).</description>
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.find_element(By.LINK_TEXT, &amp;#34;See an example alert&amp;#34;).</description>
     </item>
     
     <item>

@@ -11,20 +11,20 @@
     <title>Waits :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1587719922" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1587719922" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1587822438" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1587822438" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1587719922" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1587822438" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1587719922"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1587822438"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1587719922"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1587719922"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1587822438"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1587822438"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1587719922"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1587822438"></script>
 
     
   </div>
@@ -2654,7 +2654,7 @@ WebElement <span style="color:#268bd2">myDynamicElement</span> <span style="colo
 driver <span style="color:#719e07">=</span> Firefox()
 driver<span style="color:#719e07">.</span>implicitly_wait(<span style="color:#2aa198">10</span>)
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>)
-my_dynamic_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>)
+my_dynamic_element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;myDynamicElement&#34;</span>)
   </code></pre></div>
 </section>
   
@@ -2869,7 +2869,7 @@ exception <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selen
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/webdriver/waits/">
       “Waits”
-    </a> was last updated on: 12 Apr 2020 14:59:00 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/fbd487fac48e9174da429ea258955fff3e8b9252">Deploying on Sun Apr 12 14:59:00 UTC 2020, commit 3ef4cf9882cb5ac67fc7ccb6e8f897838cf1099b, [skip ci] (fbd487fa)</a>
+    </a> was last updated on: 24 Apr 2020 21:47:18 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/2c01a956c7b94d19ecd4fdc49b293bcac0756946">Update python find element to not use deprecated methods (2c01a956)</a>
 </h5>
         
         </div> 
@@ -4034,19 +4034,19 @@ exception <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selen
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1587719922"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1587822438"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1587719922"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1587719922"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1587822438"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1587822438"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1587719922" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1587719922"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1587822438" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1587822438"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
