@@ -12,7 +12,7 @@ weight: 8
 
 SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
 
-SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに `driver.get()` および  `driver.naviagte().to()` を実行するまで、pageLoadStrategyは常に `COMPLETE` ステータスを表示します。
+SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに `driver.get()` および  `driver.navigate().to()` を実行するまで、pageLoadStrategyは常に `COMPLETE` ステータスを表示します。
 
 WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 
