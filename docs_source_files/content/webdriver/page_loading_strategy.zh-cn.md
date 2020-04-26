@@ -26,7 +26,7 @@ WebDriver都将延迟 `driver.get()` 的响应或
 单页应用程序可以动态加载许多视图, 
 而无需任何服务器请求, 
 因此页面加载策略将始终显示为 `COMPLETE` 的状态, 
-直到我们执行新的 `driver.get()` 或 `driver.naviagte().to()` 为止.
+直到我们执行新的 `driver.get()` 或 `driver.navigate().to()` 为止.
 
 
 WebDriver的 _页面加载策略_ 支持以下内容:

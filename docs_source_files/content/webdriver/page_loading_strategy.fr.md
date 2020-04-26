@@ -21,7 +21,7 @@ sur le serveur car le contenu est chargé dynamiquement côté client sans actua
 Les applications SPA peuvent charger de nombreuses vues dynamiquement
 sans aucune demande de serveur, donc pageLoadStrategy
 affichera toujours l'état `COMPLETE` jusqu'à
-nous faisons un nouveau `driver.get()` et `driver.naviagte().to()`
+nous faisons un nouveau `driver.get()` et `driver.navigate().to()`
 
 WebDriver _pageLoadStrategy_ prend en charge les valeurs suivantes:
 
