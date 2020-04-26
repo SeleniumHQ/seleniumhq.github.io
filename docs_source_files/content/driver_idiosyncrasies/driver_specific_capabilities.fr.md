@@ -294,3 +294,31 @@ options.introduceFlakinessByIgnoringSecurityDomains()
 val driver = RemoteWebDriver(options)
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### silent
+
+When set to `true`, this capability suppresses the
+diagnostic output of the IEDriverServer.
+
+This capability accepts a Boolean value as parameter.
+ 
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
