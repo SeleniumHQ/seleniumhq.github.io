@@ -52,8 +52,8 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>使用 sendKeys 方法设置元素的文本，如下所示:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.</description>
     </item>
     
   </channel>

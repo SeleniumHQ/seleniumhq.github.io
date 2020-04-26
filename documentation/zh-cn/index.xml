@@ -137,7 +137,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4483 commits 
-@barancev2993 commits 
+@barancev2999 commits 
 @jimevans2300 commits 
 @jleyba1464 commits</description>
     </item>
@@ -510,8 +510,8 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>使用 sendKeys 方法设置元素的文本，如下所示:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.</description>
     </item>
     
     <item>
@@ -691,7 +691,7 @@ public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&
       <description>定义当前会话的页面加载策略. 默认情况下, 当Selenium WebDriver加载页面时, 遵循 normal 的页面加载策略. 始终建议您在页面加载缓慢时, 停止下载其他资源 (例如图片, css, js) .
 document.readyState 属性描述当前页面的加载状态. 默认情况下, 在页面就绪状态是 complete 之前, WebDriver都将延迟 driver.get() 的响应或 driver.navigate().to() 的调用.
 在单页应用程序中 (例如Angular, react, Ember) , 一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) , 则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求, 因为内容在客户端动态加载, 无需刷新页面.
-单页应用程序可以动态加载许多视图, 而无需任何服务器请求, 因此页面加载策略将始终显示为 COMPLETE 的状态, 直到我们执行新的 driver.get() 或 driver.naviagte().to() 为止.
+单页应用程序可以动态加载许多视图, 而无需任何服务器请求, 因此页面加载策略将始终显示为 COMPLETE 的状态, 直到我们执行新的 driver.get() 或 driver.navigate().to() 为止.
 WebDriver的 页面加载策略 支持以下内容:
 normal 此配置使Selenium WebDriver等待整个页面的加载. 设置为 normal 时, Selenium WebDriver将保持等待, 直到 返回 load 事件
 默认情况下, 如果未设置页面加载策略, 则设置 normal 为初始策略.

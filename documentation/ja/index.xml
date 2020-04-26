@@ -195,7 +195,7 @@ acceptInsecureCerts この機能は、セッション中のナビゲーション
       <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
 このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
 帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4483 commits 
-@barancev2993 commits 
+@barancev2999 commits 
 @jimevans2300 commits 
 @jleyba1464 commits</description>
     </item>
@@ -512,8 +512,8 @@ Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElem
       
       <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element_by_name(&amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).dragAndDrop(source, target).</description>
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).</description>
     </item>
     
     <item>
@@ -748,7 +748,7 @@ public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&
       <description>現在のセッションのページ読み込み戦略を定義します。 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は normal となります。 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 ドキュメントの document.readyState プロパティは、現在のドキュメントの読み込み状態を記述します。 デフォルトでは、WebDriverは、ドキュメントの準備完了状態が complete になるまで、 driver.get()（または）driver.navigate().to() の呼び出しへの応答を保留します。
 SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
-SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに driver.get() および driver.naviagte().to() を実行するまで、pageLoadStrategyは常に COMPLETE ステータスを表示します。
+SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに driver.get() および driver.navigate().to() を実行するまで、pageLoadStrategyは常に COMPLETE ステータスを表示します。
 WebDriverの pageLoadStrategy は以下の値をサポートします。
 normal この値は、Selenium WebDriverはページ全体がロードされるまで待機します。 normal に設定すると、Selenium WebDriverは、ロードイベントの発生が返却されるまで待機します。
 何も指定されていない場合、デフォルトでは、 normal がブラウザに設定されます。
