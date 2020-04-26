@@ -17,7 +17,7 @@ driver.findElement(By.name("name")).sendKeys(name);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 name = "Charles"
-driver.find_element_by_name("name").send_keys(name)
+driver.find_element(By.NAME, "name").send_keys(name)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 string name = "Charles";
@@ -84,7 +84,7 @@ You can click on an element using the click method:
 driver.findElement(By.cssSelector("input[type='submit']")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver.find_element_by_css_selector("input[type='submit']").click()
+driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.FindElement(By.CssSelector("input[type='submit']")).Click();
