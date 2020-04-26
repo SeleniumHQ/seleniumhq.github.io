@@ -21,7 +21,7 @@ to the server as the content is dynamically loaded at the client side without a 
 SPA applications can load many views dynamically 
 without any server requests, So pageLoadStrategy 
 will always show `COMPLETE` status until 
-we do a new `driver.get()` and `driver.naviagte().to()`
+we do a new `driver.get()` and `driver.navigate().to()`
 
 WebDriver _pageLoadStrategy_ supports the following values:
 
