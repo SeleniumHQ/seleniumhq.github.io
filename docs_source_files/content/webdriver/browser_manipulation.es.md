@@ -657,7 +657,7 @@ driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Esto no funcionará
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Esto no funcionará
@@ -702,13 +702,13 @@ driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Almacena el elemento web
-iframe = driver.find_element_by_css_selector("#modal > iframe")
+iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
 
 # Cambia el foco al iframe
 driver.switch_to.frame(iframe)
 
 # Ahora podemos hacer clic en el botón
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Almacena el elemento web
@@ -774,7 +774,7 @@ driver.findElement(By.tagName("button")).click();
 driver.switch_to.frame('buttonframe')
 
 # Ahora podemos hacer clic en el botón
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Usando el ID

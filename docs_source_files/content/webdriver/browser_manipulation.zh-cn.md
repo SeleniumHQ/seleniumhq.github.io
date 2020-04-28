@@ -590,7 +590,7 @@ driver.findElement(By.tagName("button")).click();
   {{</ code-panel>}}
   {{<code-panel language="python">}}
 # 这不会工作
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 // 这不会工作
@@ -631,13 +631,13 @@ driver.findElement(By.tagName("button")).click();
   {{</ code-panel>}}
   {{<code-panel language="python">}}
 # 存储网页元素
-iframe = driver.find_element_by_css_selector("#modal> iframe")
+iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
 
 # 切换到选择的 iframe
 driver.switch_to.frame(iframe)
 
 # 单击按钮
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 // 存储网页元素
@@ -702,7 +702,7 @@ driver.findElement(By.tagName("button")).click();
 driver.switch_to.frame('buttonframe')
 
 # 单击按钮
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{</ code-panel>}}
   {{<code-panel language="csharp">}}
 // 使用 ID
