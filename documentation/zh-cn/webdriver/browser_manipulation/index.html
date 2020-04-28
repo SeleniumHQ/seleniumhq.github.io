@@ -11,20 +11,20 @@
     <title>操控浏览器 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1587966678" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1587966678" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1588079798" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1588079798" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1587966678" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1588079798" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1587966678"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1588079798"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1587966678"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1587966678"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1588079798"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1588079798"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1587966678"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1588079798"></script>
 
     
   </div>
@@ -3477,7 +3477,7 @@ after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style=
 <section id="pythoncode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75"># 这不会工作</span>
-driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3586,13 +3586,13 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="pythoncode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75"># 存储网页元素</span>
-iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#34;#modal&gt; iframe&#34;</span>)
+iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>CSS_SELECTOR, <span style="color:#2aa198">&#34;#modal &gt; iframe&#34;</span>)
 
 <span style="color:#586e75"># 切换到选择的 iframe</span>
 driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(iframe)
 
 <span style="color:#586e75"># 单击按钮</span>
-driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -3725,7 +3725,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>frame(<span style="color:#2aa198">&#39;buttonframe&#39;</span>)
 
 <span style="color:#586e75"># 单击按钮</span>
-driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
+driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;button&#39;</span>)<span style="color:#719e07">.</span>click()
   </code></pre></div>
 </section>
   
@@ -4700,7 +4700,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/">
       “操控浏览器”
-    </a> was last updated on: 24 Apr 2020 21:47:18 &#43;0100: <a href="https://github.com/SeleniumHQ/site/commit/2c01a956c7b94d19ecd4fdc49b293bcac0756946">Update python find element to not use deprecated methods (2c01a956)</a>
+    </a> was last updated on: 28 Apr 2020 18:44:56 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1f8c446f294301796186d837b8b76b1b7eb944bc">Modify: Modifying PY code samples [deploy site] (1f8c446f)</a>
 </h5>
         
         </div> 
@@ -5865,19 +5865,19 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1587966678"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1588079798"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1587966678"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1587966678"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1588079798"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1588079798"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1587966678" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1587966678"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1588079798" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1588079798"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
