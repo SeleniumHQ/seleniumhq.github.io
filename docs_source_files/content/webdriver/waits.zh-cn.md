@@ -35,7 +35,7 @@ assertEquals(element.getText(), "Hello from JavaScript!");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 driver.navigate("file:///race_condition.html")
-el = driver.find_element_by_tag_name("p")
+el = driver.find_element(By.TAG_NAME, "p")
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -104,7 +104,7 @@ def document_initialised(driver):
 
 driver.navigate("file:///race_condition.html")
 WebDriverWait(driver).until(document_initialised)
-el = driver.find_element_by_tag_name("p")
+el = driver.find_element(By.TAG_NAME, "p")
 assert el.text == "Hello from JavaScript!"
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
