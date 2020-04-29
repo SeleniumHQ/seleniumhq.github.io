@@ -11,20 +11,20 @@
     <title>Web element :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1588079805" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1588079805" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1588185915" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1588185915" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1588079805" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1588185915" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1588079805"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1588185915"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1588079805"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1588079805"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1588185915"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1588185915"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1588079805"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1588185915"></script>
 
     
   </div>
@@ -2037,7 +2037,7 @@ driver <span style="color:#719e07">=</span> Firefox()
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
 
 <span style="color:#586e75"># Get search box element from webElement &#39;q&#39; using Find Element</span>
-search_box <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)
+search_box <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)
 
 search_box<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
   </code></pre></div>
@@ -2202,7 +2202,7 @@ driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07"
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.example.com&#34;</span>)
 
 <span style="color:#586e75"># Get all the elements available with tag name &#39;p&#39;</span>
-elements <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;p&#39;</span>)
+elements <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_elements(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;p&#39;</span>)
 
 <span style="color:#719e07">for</span> e <span style="color:#719e07">in</span> elements:
     <span style="color:#719e07">print</span> e<span style="color:#719e07">.</span>text
@@ -2373,8 +2373,8 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>);
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 driver <span style="color:#719e07">=</span> Firefox()
 driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
-search_form <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#34;form&#34;</span>)
-search_box <span style="color:#719e07">=</span> search_form<span style="color:#719e07">.</span>find_element_by_name(<span style="color:#2aa198">&#34;q&#34;</span>)
+search_form <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#34;form&#34;</span>)
+search_box <span style="color:#719e07">=</span> search_form<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)
 search_box<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
   </code></pre></div>
 </section>
@@ -2540,10 +2540,10 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
   driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.example.com&#34;</span>)
 
   <span style="color:#586e75"># Get element with tag name &#39;div&#39;</span>
-  element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element_by_tag_name(<span style="color:#2aa198">&#39;div&#39;</span>)
+  element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;div&#39;</span>)
 
   <span style="color:#586e75"># Get all the elements available with tag name &#39;p&#39;</span>
-  elements <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>find_elements_by_tag_name(<span style="color:#2aa198">&#39;p&#39;</span>)
+  elements <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>find_elements(By<span style="color:#719e07">.</span>TAG_NAME, <span style="color:#2aa198">&#39;p&#39;</span>)
   <span style="color:#719e07">for</span> e <span style="color:#719e07">in</span> elements:
       <span style="color:#719e07">print</span> e<span style="color:#719e07">.</span>text
   </code></pre></div>
@@ -2736,7 +2736,7 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
 
   driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
   driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
-  driver<span style="color:#719e07">.</span>find_element_by_css_selector(<span style="color:#2aa198">&#39;[name=&#34;q&#34;]&#39;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webElement&#34;</span>)
+  driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>CSS_SELECTOR, <span style="color:#2aa198">&#39;[name=&#34;q&#34;]&#39;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webElement&#34;</span>)
 
   <span style="color:#586e75"># Get attribute of current active element</span>
   attr <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.</span>active_element<span style="color:#719e07">.</span>get_attribute(<span style="color:#2aa198">&#34;title&#34;</span>)
@@ -2844,7 +2844,7 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/web_element/">
       “Web element”
-    </a> was last updated on: 18 Apr 2020 21:32:16 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/b5d93207f54facaff420feb26e1edef8466aaf3e">Deploying on Sat Apr 18 21:32:16 UTC 2020, commit ea4752c3c0cd9603b9a89cdb390827a14a8a73f8, [skip ci] (b5d93207)</a>
+    </a> was last updated on: 29 Apr 2020 22:56:51 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/b45d34c4494130d09d14d83d65877d16c364f530">Modify: Updating py code samples [deploy site] (b45d34c4)</a>
 </h5>
         
         </div> 
@@ -4009,19 +4009,19 @@ To achieve this, the parent WebElement is chained with &lsquo;findElements&rsquo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1588079805"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1588185915"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1588079805"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1588079805"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1588185915"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1588185915"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1588079805" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1588079805"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1588185915" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1588185915"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

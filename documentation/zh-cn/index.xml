@@ -136,9 +136,9 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
-归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4483 commits 
-@barancev3009 commits 
-@jimevans2301 commits 
+归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4489 commits 
+@barancev3015 commits 
+@jimevans2310 commits 
 @jleyba1464 commits</description>
     </item>
     
@@ -533,7 +533,7 @@ Java Python C# Ruby JavaScript Kotlin WebElement source = driver.</description>
 根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 竞争条件 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 no such element 的错误。
 考虑下面的文档：
 &amp;lt;!doctype html&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;Race Condition Example&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; var initialised = false; window.addEventListener(&amp;#34;load&amp;#34;, function() { var newElement = document.createElement(&amp;#34;p&amp;#34;); newElement.textContent = &amp;#34;Hello from JavaScript!&amp;#34;; document.body.appendChild(newElement); initialised = true; }); &amp;lt;/script&amp;gt; 这个 WebDriver的说明可能看起来很简单:
-Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition.html&amp;#34;); WebElement element = driver.findElement(By.tagName(&amp;#34;p&amp;#34;)); assertEquals(element.getText(), &amp;#34;Hello from JavaScript!&amp;#34;);   driver.navigate(&amp;#34;file:///race_condition.html&amp;#34;) el = driver.find_element_by_tag_name(&amp;#34;p&amp;#34;) assert el.text == &amp;#34;Hello from JavaScript!&amp;#34;   driver.</description>
+Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition.html&amp;#34;); WebElement element = driver.findElement(By.tagName(&amp;#34;p&amp;#34;)); assertEquals(element.getText(), &amp;#34;Hello from JavaScript!&amp;#34;);   driver.navigate(&amp;#34;file:///race_condition.html&amp;#34;) el = driver.find_element(By.TAG_NAME, &amp;#34;p&amp;#34;) assert el.text == &amp;#34;Hello from JavaScript!&amp;#34;   driver.</description>
     </item>
     
     <item>
@@ -717,7 +717,7 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       <description>WebElement表示DOM元素. 可以通过使用WebDriver实例从文档根节点进行搜索, 或者在另一个WebElement下进行搜索来找到WebElement.
 WebDriver API提供了内置方法来查找基于不同属性的WebElement (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
 Find Element 此方法用于查找元素并返回第一个匹配的单个WebElement引用, 该元素可用于进一步的元素操作.
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element_by_name(&amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element(By.NAME, &amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
     </item>
     
     <item>

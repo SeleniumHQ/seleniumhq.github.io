@@ -11,20 +11,20 @@
     <title>Seleniumのサイトとドキュメントに貢献する :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1588079803" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1588079803" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1588185913" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1588185913" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1588079803" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1588185913" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1588079803"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1588185913"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1588079803"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1588079803"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1588185913"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1588185913"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1588079803"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1588185913"></script>
 
     
   </div>
@@ -1995,7 +1995,7 @@
 <li>翻訳の改善を行う場合は、各言語のファイルのみを変更してください。</li>
 <li>新しい言語向けの翻訳を追加したい場合、適切な接尾辞を付けてファイルを追加してください。プルリクエストを送信するために全てを翻訳する必要はありません、イテレーティブに行うことができます。<code>config.toml</code>ファイルで必要な設定値の確認を忘れないでください。</li>
 
-<li><p>英語版の文章に変更を加えたい場合は、翻訳されたファイルの同じ箇所をあなたの変更で（英語で）書き換えたうえで、以下の注意書きをファイルの戦闘に追加してください。</p>
+<li><p>英語版の文章に変更を加えたい場合は、翻訳されたファイルの同じ箇所をあなたの変更で（英語で）書き換えたうえで、以下の注意書きをファイルの先頭に追加してください。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{% notice info %}}
 &lt;i class=&#34;fas fa-language&#34;&gt;&lt;/i&gt; Page being translated from 
 English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
@@ -2034,7 +2034,7 @@ Fixes #141</code></pre></div>
 
 <h3 id="ステップ-5-リベース">ステップ 5: リベース</h3>
 
-<p>あなたの作業を同時するため、(<code>git merge</code>ではなく)<code>git rebase</code>を時々実行してください。</p>
+<p>あなたの作業を同期するため、(<code>git merge</code>ではなく)<code>git rebase</code>を時々実行してください。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git fetch upstream
 % git rebase upstream/master</code></pre></div>
 <h3 id="ステップ-6-テスト">ステップ 6: テスト</h3>
@@ -2065,7 +2065,7 @@ Fixes #141</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/contributing/">
       “Seleniumのサイトとドキュメントに貢献する”
-    </a> was last updated on: 18 Apr 2020 21:32:16 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/b5d93207f54facaff420feb26e1edef8466aaf3e">Deploying on Sat Apr 18 21:32:16 UTC 2020, commit ea4752c3c0cd9603b9a89cdb390827a14a8a73f8, [skip ci] (b5d93207)</a>
+    </a> was last updated on: 29 Apr 2020 17:16:52 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/43f129d6c8d7e393c69bce22001780bb1d18d73b">Fixes a typo in Japanese language (#410) (43f129d6)</a>
 </h5>
         
         </div> 
@@ -3220,19 +3220,19 @@ Fixes #141</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1588079803"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1588185913"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1588079803"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1588079803"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1588185913"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1588185913"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1588079803" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1588079803"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1588185913" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1588185913"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
