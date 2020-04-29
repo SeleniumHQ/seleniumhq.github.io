@@ -129,7 +129,7 @@ Fixes #141
 
 ### ステップ 5: リベース
 
-あなたの作業を同時するため、(`git merge`ではなく)`git rebase`を時々実行してください。
+あなたの作業を同期するため、(`git merge`ではなく)`git rebase`を時々実行してください。
 
 ```shell
 % git fetch upstream
