@@ -34,7 +34,7 @@ driver = Firefox()
 driver.get("http://www.google.com")
 
 # Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
-search_box = driver.find_element_by_name("q")
+search_box = driver.find_element(By.NAME, "q")
 
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
@@ -134,7 +134,7 @@ driver = webdriver.Firefox()
 driver.get("https://www.example.com")
 
 # Obtén todos los elementos con el nombre de etiqueta 'p'
-elements = driver.find_elements_by_tag_name('p')
+elements = driver.find_elements(By.TAG_NAME, 'p')
 
 for e in elements:
     print e.text
@@ -239,8 +239,8 @@ searchBox.sendKeys("webdriver");
   {{< code-panel language="python" >}}
 driver = Firefox()
 driver.get("http://www.google.com")
-search_form = driver.find_element_by_tag_name("form")
-search_box = search_form.find_element_by_name("q")
+search_form = driver.find_element(By.TAG_NAME, "form")
+search_box = search_form.find_element(By.NAME, "q")
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -340,10 +340,10 @@ con 'findElements'para acceder a elementos secundarios.
   driver.get("https://www.example.com")
 
   # Obten el elemento con el nombre de etiqueta 'div'
-  element = driver.find_element_by_tag_name('div')
+  element = driver.find_element(By.TAG_NAME, 'div')
 
   # Obtén todos los elementos con el nombre de etiqueta 'p'
-  elements = element.find_elements_by_tag_name('p')
+  elements = element.find_elements(By.TAG_NAME, 'p')
   for e in elements:
       print e.text
   {{< / code-panel >}}
@@ -469,7 +469,7 @@ que tiene el foco en el contexto de navegación actual.
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")
-  driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
+  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
 
   # Obtener el atributo del elemento activo actual
   attr = driver.switch_to.active_element.get_attribute("title")

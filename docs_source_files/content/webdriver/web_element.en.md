@@ -32,7 +32,7 @@ driver = Firefox()
 driver.get("http://www.google.com")
 
 # Get search box element from webElement 'q' using Find Element
-search_box = driver.find_element_by_name("q")
+search_box = driver.find_element(By.NAME, "q")
 
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
@@ -129,7 +129,7 @@ driver = webdriver.Firefox()
 driver.get("https://www.example.com")
 
 # Get all the elements available with tag name 'p'
-elements = driver.find_elements_by_tag_name('p')
+elements = driver.find_elements(By.TAG_NAME, 'p')
 
 for e in elements:
     print e.text
@@ -232,8 +232,8 @@ searchBox.sendKeys("webdriver");
   {{< code-panel language="python" >}}
 driver = Firefox()
 driver.get("http://www.google.com")
-search_form = driver.find_element_by_tag_name("form")
-search_box = search_form.find_element_by_name("q")
+search_form = driver.find_element(By.TAG_NAME, "form")
+search_box = search_form.find_element(By.NAME, "q")
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -331,10 +331,10 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   driver.get("https://www.example.com")
 
   # Get element with tag name 'div'
-  element = driver.find_element_by_tag_name('div')
+  element = driver.find_element(By.TAG_NAME, 'div')
 
   # Get all the elements available with tag name 'p'
-  elements = element.find_elements_by_tag_name('p')
+  elements = element.find_elements(By.TAG_NAME, 'p')
   for e in elements:
       print e.text
   {{< / code-panel >}}
@@ -459,7 +459,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")
-  driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
+  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
 
   # Get attribute of current active element
   attr = driver.switch_to.active_element.get_attribute("title")
