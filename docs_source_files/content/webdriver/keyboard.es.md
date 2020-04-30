@@ -46,7 +46,7 @@ driver = webdriver.Firefox()
 driver.get("http://www.google.com")
 
 # Inserta el texto "Webdriver" y ejecuta la accion del teclado "ENTER"
-driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
+driver.find_element(By.NAME, "q").send_keys("webdriver" + Keys.ENTER)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using (var driver = new FirefoxDriver())
@@ -141,7 +141,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Inserta el texto "Webdriver" y ejecuta la accion del teclado "ENTER"
-driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
+driver.find_element(By.NAME, "q").send_keys("webdriver" + Keys.ENTER)
 
 # Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
 webdriver.ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").perform()
@@ -269,7 +269,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Almacena el WebElement del cuadro de búsqueda de Google 
-search = driver.find_element_by_name("q")
+search = driver.find_element(By.NAME, "q")
 
 action = webdriver.ActionChains(driver)
 
@@ -408,7 +408,7 @@ driver = webdriver.Chrome()
 #  Navega a la URL
 driver.get("http://www.google.com")
 # Almacena el elemento  'SearchInput'
-SearchInput = driver.find_element_by_name("q")
+SearchInput = driver.find_element(By.NAME, "q")
 SearchInput.send_keys("selenium")
 # Borra el texto ingresado
 SearchInput.clear()
