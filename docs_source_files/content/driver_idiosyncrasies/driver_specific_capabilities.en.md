@@ -309,7 +309,22 @@ This capability accepts a Boolean value as parameter.
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR to add code sample
+const {Builder,By, Capabilities} = require('selenium-webdriver');
+let caps = Capabilities.ie();
+caps.set('silent', true);
+
+(async function example() {
+    let driver = await new Builder()
+        .forBrowser('internet explorer')
+        .withCapabilities(caps)
+        .build();
+    try {
+        await driver.get('http://www.google.com/ncr');
+    }
+    finally {
+        await driver.quit();
+    }
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please raise a PR to add code sample
