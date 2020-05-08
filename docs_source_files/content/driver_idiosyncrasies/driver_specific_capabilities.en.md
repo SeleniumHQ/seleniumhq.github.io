@@ -214,9 +214,16 @@ options.ignoreZoomSettings();
 WebDriver driver = new RemoteWebDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-options = webdriver.IeOptions
-options.ignore_zoom_level(true)
-driver = webdriver.Ie(ie_driver_path, options=options)
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.ignore_zoom_level = True
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var options = new InternetExplorerOptions();
