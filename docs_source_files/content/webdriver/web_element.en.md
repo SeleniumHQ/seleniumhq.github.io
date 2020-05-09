@@ -234,7 +234,10 @@ WebElement searchBox = searchForm.findElement(By.name("q"));
 searchBox.sendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver = Firefox()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox()
 driver.get("http://www.google.com")
 search_form = driver.find_element(By.TAG_NAME, "form")
 search_box = search_form.find_element(By.NAME, "q")
