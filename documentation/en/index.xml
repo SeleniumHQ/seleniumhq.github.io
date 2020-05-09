@@ -499,7 +499,7 @@ Add Cookie It is used to add a cookie to the current browsing context. Add Cooki
       <guid>https://selenium.dev/documentation/en/webdriver/http_proxies/</guid>
       <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
 A proxy server for automation scripts with Selenium could be helpful for:
- Capture network traffic Mock backend calls made by the website Access the requited website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
+ Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
     </item>
     
     <item>

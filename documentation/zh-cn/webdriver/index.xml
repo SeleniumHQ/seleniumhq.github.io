@@ -136,7 +136,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <description>WebElement表示DOM元素. 可以通过使用WebDriver实例从文档根节点进行搜索, 或者在另一个WebElement下进行搜索来找到WebElement.
 WebDriver API提供了内置方法来查找基于不同属性的WebElement (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
 Find Element 此方法用于查找元素并返回第一个匹配的单个WebElement引用, 该元素可用于进一步的元素操作.
-Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   driver = Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.find_element(By.NAME, &amp;#34;q&amp;#34;) search_box.send_keys(&amp;#34;webdriver&amp;#34;)   IWebDriver driver = new FirefoxDriver(); driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   from selenium import webdriver from selenium.webdriver.common.by import By driver = webdriver.Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.</description>
     </item>
     
     <item>
