@@ -33,7 +33,10 @@ WebElement searchBox = driver.findElement(By.name("q"));
 searchBox.sendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver = Firefox()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox()
 
 driver.get("http://www.google.com")
 
@@ -128,6 +131,7 @@ public class findElementsExample {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()
 

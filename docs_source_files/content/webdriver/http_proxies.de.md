@@ -10,7 +10,7 @@ requested and back.
 A proxy server for automation scripts with Selenium could be helpful for:
 - Capture network traffic
 - Mock backend calls made by the website
-- Access the requited website under complex network topologies or strict
+- Access the required website under complex network topologies or strict
 corporate restrictions/policies.
 
 If you are in a corporate environment, and a browser fails to connect to

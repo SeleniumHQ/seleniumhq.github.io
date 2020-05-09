@@ -29,11 +29,14 @@ WebElement searchBox = driver.findElement(By.name("q"));
 searchBox.sendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver = Firefox()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox()
 
 driver.get("http://www.google.com")
 
-# Obtén el elemento cuadro de búsqueda del webElement 'q' utilizando Find Element
+# Get search box element from webElement 'q' using Find Element
 search_box = driver.find_element(By.NAME, "q")
 
 search_box.send_keys("webdriver")
@@ -127,6 +130,7 @@ public class findElementsExample {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()
 
