@@ -41,6 +41,7 @@ public class HelloSelenium {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Firefox()
 
@@ -135,6 +136,7 @@ try {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
@@ -262,6 +264,7 @@ public class HelloSelenium {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
@@ -401,6 +404,7 @@ public class clear {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
 # Navigate to url
