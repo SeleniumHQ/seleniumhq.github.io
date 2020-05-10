@@ -2,14 +2,14 @@
 Description = "Public Project Meeting - May 07, 2020"
 Title = "Public Project Meeting - May 07, 2020"
 Date = 2020-05-09
-Author = "diemol"
-AuthorLink = "https://twitter.com/diegofmolina"
+Author = "Harsha"
+AuthorLink = "https://twitter.com/harsha509"
 tags = ["slack","meeting","tlc"]
 categories = ["general","governance"]
 +++
 
 Continuing the series of bi-weekly public project meetings, here is the
-timeline of the meeting held on May 07, 2020 (times are on CET). 
+timeline of the meeting held on May 07, 2020 (times are on IST). 
 
 Meetings are held on the `#selenium-tlc` channel on [Selenium Slack](https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y).
 
