@@ -11,20 +11,20 @@
     <title>Elemento web :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1589086267" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589086267" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1589088094" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589088094" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589086267" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589088094" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589086267"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589088094"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589086267"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589086267"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589088094"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589088094"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589086267"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589088094"></script>
 
     
   </div>
@@ -1928,7 +1928,7 @@
 <li><a href="#find-elements">Find Elements</a></li>
 <li><a href="#find-element-desde-element">Find Element desde Element</a></li>
 <li><a href="#find-elements-desde-element">Find Elements desde Element</a></li>
-<li><a href="#active-element">Active Element</a></li>
+<li><a href="#get-active-element">Get Active Element</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2544,6 +2544,7 @@ con &lsquo;findElements&rsquo;para acceder a elementos secundarios.</p>
 <section id="pythoncode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
   <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+  <span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
 
   driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
   driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.example.com&#34;</span>)
@@ -2671,7 +2672,7 @@ con &lsquo;findElements&rsquo;para acceder a elementos secundarios.</p>
 </div>
 </div>
 
-<h2 id="active-element">Active Element</h2>
+<h2 id="get-active-element">Get Active Element</h2>
 
 <p>Se utiliza para rastrear (o) encontrar el elemento DOM
 que tiene el foco en el contexto de navegación actual.</p>
@@ -2743,6 +2744,7 @@ que tiene el foco en el contexto de navegación actual.</p>
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
   <span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+  <span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
 
   driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
   driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
@@ -2854,7 +2856,7 @@ que tiene el foco en el contexto de navegación actual.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/web_element/">
       “Elemento web”
-    </a> was last updated on: 09 May 2020 21:43:08 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/665dc752ee835aad20c56f6e0330c76ee8fe2dc4">Modify: Fixing find_element from element code sample for py[deploy site] (665dc752)</a>
+    </a> was last updated on: 10 May 2020 10:32:28 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/4e6b5001d0baf90cb5b2b666b6386613af331d76">Modify: Updating py code samples in web elements doc (4e6b5001)</a>
 </h5>
         
         </div> 
@@ -4019,19 +4021,19 @@ que tiene el foco en el contexto de navegación actual.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589086267"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589088094"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1589086267"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589086267"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1589088094"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589088094"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589086267" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589086267"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589088094" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589088094"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
