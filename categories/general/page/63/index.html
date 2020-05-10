@@ -150,6 +150,51 @@
     <div class="blog-content">
         
         <div class="container dark-background">
+            Monday, August 9, 2010 by <a href="https://twitter.com/RaynatouD">raynatou</a>
+            <a href="https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/"><h2>Selenium 2.0 backend for running IDE test suite via the Se2 Firefox</h2></a>
+            <p>The  GSoC 2010, it’s a great adventure.<br />
+<br />
+I’m  Raynatou, I come from Burkina and do my internship at  <a href="http://www.serli.com/">SERLI</a>. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with  web pages. Selenium Core has several major limitations, including the  inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in  place of Selenium Core.<br />
+<br />
+I’m  mentored by  Eric Allen from <a href="http://saucelabs.com/">SauceLabs</a>, my lead mentor, and by Jérémy Hérault from SERLI, his second but not least ;).<br />
+<br />
+Eric has already done most of this integration earlier this year. The  goal of his work is mostly to show what&#8217;s possible with  Selenium IDE  and the Selenium 2.0 Firefox driver. It is based on an  asynchronous  communication between the Firefox WebDriver extension and  Selenium IDE,  Se-IDE waiting for that WebDriver says to him that the  current command  has been passed with success (or not) to call the next  command of the  current test case (use of callback function). The goal of my mission is  to finalize this integration.  However, Eric being a crazy man, and he  has done it quickly and together  we though to another way to do this  merge.<br />
+<br />
+Our new  thinking is based on a synchronous communication  between both of them.  To do it, I get the FirefoxDriver instance and  play with it like a  normal object, by calling its methods. But the behaviour of  FirefoxDriver isn’t as simple as I was  thinking. JavaScript being a  powerfull language (yes, it can make you  shiver), I&#8217;ve had just to  replace some objects (like Response object)  and to use a Proxy (and a  bit of IoC-like code) to simplify my life and  the code to do. You can  see my work on <a href="http://github.com/epall/selenium/commits/webdriver-synchronous">GitHub</a> and follow it.<br />
+<br />
+Currently, I think that more than 95% of the Selenium API  commands are usable  with WebDriver as backend in Selenium IDE.  The process was basically to go  through the seleniumemulation package and port all of  the Java classes into JavaScript methods on the WebDriver class.<br />
+<br />
+Now, I’m working on Unit tests to cover any of the 2.0 work  I&#8217;ve done. I managed to get all of the Selenium Core tests to run  through IDE. I’ve  some refactorings to do to optimize the code and add more comments for a bigger comprehension of my work. I have almost finished.<br />
+<br />
+I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this work  can be included in the wave of  Selenium 2.</p>
+
+            
+
+<p><b>Tags</b></p>
+<divs>
+    
+    <a href="https://selenium.dev/tags/stories/">stories</a>
+    <a href="https://selenium.dev/tags/ide/">ide</a></divs>
+
+
+            
+
+<p><b>Categories</b></p>
+<div>
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - Selenium%202.0%20backend%20for%20running%20IDE%20test%20suite%20via%20the%20Se2%20Firefox&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        <div class="container dark-background">
             Monday, August 2, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-22/"><h2>A Smattering of Selenium #22</h2></a>
             <p><p>Happy <a href="http://en.wikipedia.org/wiki/John_Graves_Simcoe">Simcoe Day</a>.  Only a handful of links this week to mention.<br />
@@ -239,60 +284,6 @@
 
                 <a href="mailto:?&subject=Selenium Blog - A%20Smattering%20of%20Selenium%20%2321&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-21%2f"><img class="social-icon" src="/images/mail.png"/></a>
                 <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fa-smattering-of-selenium-21%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-            </div>
-        </div>
-        
-        <div class="container dark-background">
-            Wednesday, July 21, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
-            <a href="https://selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/"><h2>The Current Status of Selenium 1 and Selenium 2</h2></a>
-            <p>In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.</p>
-<p>And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.</p>
-<dl>
-<dt><em>There are a couple annoying bugs in Se-RC 1.03; when is the 1.0.4 release?</em></dt>
-<dd>Se-RC 1.0.4 is planned for sometime towards the end of July 2010</dd>
-<dt><em>I&#8217;ve heard rumours that 1.0.4 the to be the final release?</em></dt>
-<dd>Yes. 1.0.4 is <em>planned</em> on being the final 1.x release</dd>
-<dt><em>That&#8217;s crazy talk! I can&#8217;t use a .0 or &#8216;alpha&#8217; release for my mission critical application</em></dt>
-<dd>Actually, its not all <em>that</em> crazy &#8212; and needs a bit more explanation. Se2 is truly a merger of the two projects, in fact 2.0a1 was literally the Se code from the OpenQA repository and the WebDriver code its Google Code repository merged into a <a href="http://code.google.com/p/selenium">new one</a>. This meant that from the first release of the 2.x series, it has contained 100% of the 1.x code which means 100% backwards compatibility. Later releases in the 2.x series have been driven primarily by evolutions of the code that came from WebDriver, <em>not from Se 1.x</em>.</dd>
-<dt><em>OK, so 100% of Se 1.x is in 2.x; I get that. But how are you making sure that fixes to one get into the other?</em></dt>
-<dd>Here is another &#8216;secret&#8217; &#8212; don&#8217;t tell anyone, but there hasn&#8217;t been any pure 1.x development since the merging of the codebases. Every 1.x release since the merger has really been a 2.x release &#8212; but all packaged up to make it look like a 1.x release. This is why observant people have noticed a log message that looks something like <em>11:09:37.507 INFO &#8211; v2.0 [a4], with Core v2.0 [a4]</em> when they start up their 1.x server.</dd>
-<dt><em>So you&#8217;ve been releasing <em>alpha</em> code disguised as a stable release? Jerks!</em></dt>
-<dd>Woah! Relax! Recall what I said above about it being backwards compatible by default. The &#8216;alpha&#8217; tag is there because the API for the new code is still being developed and features flushed out. The 1.x code is however, still stable and still production quality.</dd>
-<dt><em>Alright, I take back calling you folks jerks, but I really don&#8217;t like the alpha tag. When will it be out of &#8216;alpha&#8217;?</em></dt>
-<dd>There is only one or two more features to implement (like handling alerts) in the WebDriver code and some cleanup before the betas start. But hope for a 2.0.0 final by the end of the year. And while we&#8217;re on the topic of &#8216;alpha&#8217; vs. &#8216;beta&#8217;, this the team&#8217;s working definitions of each.</p>
-<ul>
-<li><em>Alpha</em> &#8211; APIs can, and likely will change. Possibly in dramatic ways.</li>
-<li><em>Beta</em> &#8211; With the APIs set, make sure they work with the major browsers</li>
-</ul>
-</dd>
-<dt><em>&#8216;Major Browsers&#8217; eh, what exactly does that mean?</em></dt>
-<dd>Right now it means Firefox, Internet Explorer and at least one WebKit based one (Safari or Chrome)</dd>
-</dl>
-<p>In short&#8230; it is a requirement of Se2 that the server be backwards compatible with Se-RC 1.x and that has already been accomplished by building the code from a common source repository. This means that if you are using Se-RC, you can switch out the server for a 2.x one and have no impact on the execution of the scripts. <em>Plus</em> you can start to experiment with the new stuff that came over from WebDriver.</p>
-
-            
-
-<p><b>Tags</b></p>
-<divs>
-    
-    <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    <a href="https://selenium.dev/tags/status/">status</a></divs>
-
-
-            
-
-<p><b>Categories</b></p>
-<div>
-    
-    <a href="https://selenium.dev/categories/general/">general</a></div>
-
-
-            <div class="share-container">
-                <h3>Share this: </h3>
-
-                <a href="mailto:?&subject=Selenium Blog - The%20Current%20Status%20of%20Selenium%201%20and%20Selenium%202&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-current-status-of-selenium-1-and-selenium-2%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fthe-current-status-of-selenium-1-and-selenium-2%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
             </div>
         </div>

@@ -4,46 +4,51 @@
   
   <url>
     <loc>https://selenium.dev/categories/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/categories/general/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/categories/governance/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/meeting/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://selenium.dev/blog/2020/public-project-meeting-20200423/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <loc>https://selenium.dev/blog/2020/public-project-meeting-20200507/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/slack/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/</loc>
-    <lastmod>2020-04-24T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/tlc/</loc>
+    <lastmod>2020-05-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2020/public-project-meeting-20200423/</loc>
     <lastmod>2020-04-24T00:00:00+00:00</lastmod>
   </url>
   
@@ -308,12 +313,12 @@
   </url>
   
   <url>
-    <loc>https://selenium.dev/tags/meetup/</loc>
+    <loc>https://selenium.dev/categories/meetup/</loc>
     <lastmod>2013-08-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://selenium.dev/categories/meetup/</loc>
+    <loc>https://selenium.dev/tags/meetup/</loc>
     <lastmod>2013-08-09T00:00:00+00:00</lastmod>
   </url>
   

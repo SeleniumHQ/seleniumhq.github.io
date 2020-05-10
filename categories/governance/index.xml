@@ -6,10 +6,25 @@
     <description>Recent content in governance on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/governance/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Public Project Meeting - May 07, 2020</title>
+      <link>https://selenium.dev/blog/2020/public-project-meeting-20200507/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/public-project-meeting-20200507/</guid>
+      <description>Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on May 07, 2020 (times are on IST).
+Meetings are held on the #selenium-tlc channel on Selenium Slack.
+The next meeting will be on May 21, 2020, 4:30 PM CET.
+adamgoucher 8:00 PM
+alright. welcome back. time for another fortnightly chat about the project.
+ Simon Stewart 8:01 PM  :wave:
+ Diego Molina 8:01 PM  :wave:</description>
+    </item>
     
     <item>
       <title>Public Project Meeting - April 23, 2020</title>

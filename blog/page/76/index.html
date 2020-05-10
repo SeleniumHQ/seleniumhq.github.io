@@ -223,7 +223,7 @@
             
             <a href="https://selenium.dev/tags/maven/">maven</a>(2)
             
-            <a href="https://selenium.dev/tags/meeting/">meeting</a>(2)
+            <a href="https://selenium.dev/tags/meeting/">meeting</a>(3)
             
             <a href="https://selenium.dev/tags/meetup/">meetup</a>(1)
             
@@ -239,7 +239,7 @@
             
             <a href="https://selenium.dev/tags/sfc/">sfc</a>(1)
             
-            <a href="https://selenium.dev/tags/slack/">slack</a>(2)
+            <a href="https://selenium.dev/tags/slack/">slack</a>(3)
             
             <a href="https://selenium.dev/tags/smattering/">smattering</a>(145)
             
@@ -255,7 +255,7 @@
             
             <a href="https://selenium.dev/tags/technical/">technical</a>(2)
             
-            <a href="https://selenium.dev/tags/tlc/">tlc</a>(2)
+            <a href="https://selenium.dev/tags/tlc/">tlc</a>(3)
             
             <a href="https://selenium.dev/tags/webdriver/">webdriver</a>(1)
             
@@ -267,9 +267,9 @@
             
             <a href="https://selenium.dev/categories/conference/">conference</a>(19)
             
-            <a href="https://selenium.dev/categories/general/">general</a>(197)
+            <a href="https://selenium.dev/categories/general/">general</a>(198)
             
-            <a href="https://selenium.dev/categories/governance/">governance</a>(7)
+            <a href="https://selenium.dev/categories/governance/">governance</a>(8)
             
             <a href="https://selenium.dev/categories/meetup/">meetup</a>(1)
             
@@ -353,7 +353,7 @@
             
             <a href="https://selenium.dev/tags/maven/">maven</a>(2)
             
-            <a href="https://selenium.dev/tags/meeting/">meeting</a>(2)
+            <a href="https://selenium.dev/tags/meeting/">meeting</a>(3)
             
             <a href="https://selenium.dev/tags/meetup/">meetup</a>(1)
             
@@ -369,7 +369,7 @@
             
             <a href="https://selenium.dev/tags/sfc/">sfc</a>(1)
             
-            <a href="https://selenium.dev/tags/slack/">slack</a>(2)
+            <a href="https://selenium.dev/tags/slack/">slack</a>(3)
             
             <a href="https://selenium.dev/tags/smattering/">smattering</a>(145)
             
@@ -385,7 +385,7 @@
             
             <a href="https://selenium.dev/tags/technical/">technical</a>(2)
             
-            <a href="https://selenium.dev/tags/tlc/">tlc</a>(2)
+            <a href="https://selenium.dev/tags/tlc/">tlc</a>(3)
             
             <a href="https://selenium.dev/tags/webdriver/">webdriver</a>(1)
             
@@ -397,9 +397,9 @@
             
             <a href="https://selenium.dev/categories/conference/">conference</a>(19)
             
-            <a href="https://selenium.dev/categories/general/">general</a>(197)
+            <a href="https://selenium.dev/categories/general/">general</a>(198)
             
-            <a href="https://selenium.dev/categories/governance/">governance</a>(7)
+            <a href="https://selenium.dev/categories/governance/">governance</a>(8)
             
             <a href="https://selenium.dev/categories/meetup/">meetup</a>(1)
             
@@ -414,6 +414,52 @@
 </div>
 <div class="blog-container">
     <div class="blog-content">
+        
+            <div class="container dark-background">
+                Tuesday, May 11, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
+                <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/"><h2>Selenium Grid 1.0.7 Released</h2></a>
+                <p>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&#8217;re pleased to announce the release of Selenium Grid 1.0.7.  This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.</p>
+<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.7-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The list of changes are:</p>
+<ul>
+<li>Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long</li>
+<li><a href="http://selenium-grid.seleniumhq.org/configuring-and-tuning.html#changing_maximum_wait_time_for_new_session">Added ability to specify timeout period when waiting for remote controls to become available</a>.  Now the client can timeout gracefully and decide what it would like to do next</li>
+<li>Handle common case of session ID not being found, either because it timed out or was already closed; rather than raising a NullPointerException we now raise a NoSuchSessionException</li>
+<li>Truncate long command response bodies to 128 characters</li>
+<li>Retry remote control checks up to three times before deciding that a remote control is unreliable or unresponsive.  This prevents aggressive unregistration of hosts that are busy or suffer from network issues</li>
+</ul>
+<p>As always, patches and bug reports are appreciated:</p>
+<ul>
+<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
+<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
+</ul>
+<p>Barring any critical issues, the next release of Selenium Grid will be 1.1 and will feature an enhanced Web view as well as a status API.  After that, we will be moving from GitHub to Google Code to live alongside the other Selenium projects.</p>
+<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.</p>
+
+                
+
+<p><b>Tags</b></p>
+<divs>
+    
+    <a href="https://selenium.dev/tags/selenium/">selenium</a>
+    <a href="https://selenium.dev/tags/grid/">grid</a></divs>
+
+
+                
+
+<p><b>Categories</b></p>
+<div>
+    
+    <a href="https://selenium.dev/categories/releases/">releases</a></div>
+
+
+                <div class="share-container">
+                    <h3>Share this: </h3>
+
+                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.7%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-7-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+                </div>
+            </div>
         
             <div class="container dark-background">
                 Tuesday, April 27, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
@@ -497,49 +543,6 @@
 
                     <a href="mailto:?&subject=Selenium Blog - Selenium%202.0a3%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
                     <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-2-0a3-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
-                </div>
-            </div>
-        
-            <div class="container dark-background">
-                Tuesday, April 13, 2010 by <a href="https://twitter.com/nirvdrum">Kevin Menard</a>
-                <a href="https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/"><h2>Selenium Grid 1.0.6 Released</h2></a>
-                <p>Following up on the Selenium Grid 1.0.5 release, which added <a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features</a> to ease grid management, we&#8217;re pleased to announce the release of Selenium Grid 1.0.6.  This is a bug fix release for 1.0.5 with some minor new additions.</p>
-<p>You can <a href="http://release.seleniumhq.org/selenium-grid/selenium-grid-1.0.6-bin.zip">download it now</a> or <a href="http://github.com/nirvdrum/selenium-grid/blob/master/ChangeLog">view the changelog</a>.  The summary of changes are:</p>
-<ul>
-<li>Fixed some concurrent modification issues that may have resulted in NullPointerExceptions</li>
-<li>Fixed issue with shutting down workers with Rakefile</li>
-<li>Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit</li>
-</ul>
-<p>In case you missed the announcement, Philippe is <a href="http://ph7spot.com/blog/selenium-grid-needs-a-new-maintainer">no longer maintaining</a> Selenium Grid.  We thank him for his years of effort and helping the project get to where it is today.  This is my first release as the <a href="http://ph7spot.com/blog/new-selenium-grid-maintainer">new Selenium Grid maintainer</a>.  I will be getting out a new post shortly that lays out the future for the project <em>[UPDATE: The <a href="http://seleniumhq.wordpress.com/2010/04/27/the-future-of-selenium-grid/">promised post</a> is live]</em>.  In the meanwhile, please note the new location of several key resources:</p>
-<ul>
-<li><a href="http://github.com/nirvdrum/selenium-grid/">Code repository</a></li>
-<li><a href="http://code.google.com/p/selenium/issues/list">Issue tracker</a></li>
-</ul>
-<p>If you have any questions about Selenium Grid, please use either the user or the developer list, as is most appropriate for the nature of your question.  Ongoing discussion about grid development should take place on the developer list.  We look forward to hearing what you think about how we can improve the project.</p>
-
-                
-
-<p><b>Tags</b></p>
-<divs>
-    
-    <a href="https://selenium.dev/tags/selenium/">selenium</a>
-    <a href="https://selenium.dev/tags/grid/">grid</a></divs>
-
-
-                
-
-<p><b>Categories</b></p>
-<div>
-    
-    <a href="https://selenium.dev/categories/releases/">releases</a></div>
-
-
-                <div class="share-container">
-                    <h3>Share this: </h3>
-
-                    <a href="mailto:?&subject=Selenium Blog - Selenium%20Grid%201.0.6%20Released&body=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/mail.png"/></a>
-                    <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2010%2fselenium-grid-1-0-6-released%2f"><img class="social-icon" src="/images/twitter.png"/></a>
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
                 </div>
             </div>
