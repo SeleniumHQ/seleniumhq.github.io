@@ -342,6 +342,7 @@ con 'findElements'para acceder a elementos secundarios.
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
@@ -445,7 +446,7 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Active Element
+## Get Active Element
 
 Se utiliza para rastrear (o) encontrar el elemento DOM 
 que tiene el foco en el contexto de navegación actual.
@@ -473,6 +474,7 @@ que tiene el foco en el contexto de navegación actual.
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")

@@ -336,6 +336,7 @@ searchBox.sendKeys("webdriver")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
@@ -466,6 +467,7 @@ namespace FindElementsFromElement {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")

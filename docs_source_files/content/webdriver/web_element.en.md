@@ -333,6 +333,7 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.example.com")
@@ -463,6 +464,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")
