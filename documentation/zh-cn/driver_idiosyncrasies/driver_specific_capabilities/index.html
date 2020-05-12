@@ -11,20 +11,20 @@
     <title>驱动特定的功能 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1589088098" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1589088098" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1589297710" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1589297710" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1589088098" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1589297710" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1589088098"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1589297710"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1589088098"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1589088098"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1589297710"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1589297710"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1589088098"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1589297710"></script>
 
     
   </div>
@@ -1936,6 +1936,7 @@
 <li><a href="#ignorezoomsetting">ignoreZoomSetting</a></li>
 <li><a href="#ignoreprotectedmodesettings">ignoreProtectedModeSettings</a></li>
 <li><a href="#silent">silent</a></li>
+<li><a href="#ie-command-line-options">IE Command-Line Options</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2793,6 +2794,112 @@ caps.set(<span style="color:#2aa198">&#39;silent&#39;</span>, <span style="color
 </div>
 </div>
 
+<h3 id="ie-command-line-options">IE Command-Line Options</h3>
+
+<p>Internet Explorer includes several command-line options
+that enable you to troubleshoot and configure the browser.</p>
+
+<p>The following describes few supported command-line options</p>
+
+<ul>
+<li><p><em>-private</em> : Used to start IE in private browsing mode. This works for IE 8 and later versions.</p></li>
+
+<li><p><em>-k</em> : Starts Internet Explorer in kiosk mode.
+The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.</p></li>
+
+<li><p><em>-extoff</em> : Starts IE in no add-on mode.
+This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.</p></li>
+</ul>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode7" id="tab0code7" aria-controls="javacode7" checked>
+    
+    <label for="tab0code7">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab1code7" aria-controls="pythoncode7">
+    
+    <label for="tab1code7">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab2code7" aria-controls="cscode7">
+    
+    <label for="tab2code7">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab3code7" aria-controls="rubycode7">
+    
+    <label for="tab3code7">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab4code7" aria-controls="javascriptcode7">
+    
+    <label for="tab4code7">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode7" id="tab5code7" aria-controls="kotlincode7">
+    
+    <label for="tab5code7">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR to add code sample</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR to add code sample</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode7" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2801,7 +2908,7 @@ caps.set(<span style="color:#2aa198">&#39;silent&#39;</span>, <span style="color
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/">
       “驱动特定的功能”
-    </a> was last updated on: 09 May 2020 20:48:21 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/737b2f98e9341bbf3153427bf3ef0bb37aea1d37">Modify: Upating py code sample for IE protected mode setting [deploy site] (737b2f98)</a>
+    </a> was last updated on: 12 May 2020 21:03:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/6448d006000f546b86d733c7de35fe354894d623">Add: Adding IE command line options document[deploy site] (6448d006)</a>
 </h5>
         
         </div> 
@@ -3966,19 +4073,19 @@ caps.set(<span style="color:#2aa198">&#39;silent&#39;</span>, <span style="color
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1589088098"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1589297710"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1589088098"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1589088098"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1589297710"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1589297710"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1589088098" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1589088098"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1589297710" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1589297710"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
