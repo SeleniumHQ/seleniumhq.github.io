@@ -358,3 +358,39 @@ caps.set('silent', true);
 // Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### IE Command-Line Options
+
+Internet Explorer includes several command-line options 
+that enable you to troubleshoot and configure the browser.
+
+The following describes few supported command-line options 
+
+* _-private_ : Used to start IE in private browsing mode. This works for IE 8 and later versions.
+
+* _-k_ : Starts Internet Explorer in kiosk mode. 
+The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.
+
+* _-extoff_ : Starts IE in no add-on mode. 
+This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
