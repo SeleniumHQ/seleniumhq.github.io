@@ -380,7 +380,16 @@ This option specifically used to troubleshoot problems with browser add-ons. Wor
 // Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.add_argument('-private')
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
