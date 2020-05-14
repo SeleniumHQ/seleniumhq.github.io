@@ -381,6 +381,8 @@ The browser opens in a maximized window that does not display the address bar, t
 * _-extoff_ : Starts IE in no add-on mode. 
 This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.
 
+Note: __forceCreateProcessApi__ should to enabled in-order for command line arguments to work.
+
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 // Please raise a PR to add code sample
@@ -404,7 +406,15 @@ driver.quit()
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR to add code sample
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options();
+options.addBrowserCommandSwitches('-k');
+options.addBrowserCommandSwitches('-private');
+options.forceCreateProcessApi(true);
+
+driver = await env.builder()
+          .setIeOptions(options)
+          .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please raise a PR to add code sample
