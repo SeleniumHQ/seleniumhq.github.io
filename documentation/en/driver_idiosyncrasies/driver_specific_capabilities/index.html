@@ -11,20 +11,20 @@
     <title>Driver specific capabilities :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1589380859" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1589380859" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1589477759" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1589477759" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1589380859" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1589477759" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1589380859"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1589477759"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1589380859"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1589380859"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1589477759"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1589477759"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1589380859"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1589477759"></script>
 
     
   </div>
@@ -2814,6 +2814,8 @@ The browser opens in a maximized window that does not display the address bar, t
 This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.</p></li>
 </ul>
 
+<p>Note: <strong>forceCreateProcessApi</strong> should to enabled in-order for command line arguments to work.</p>
+
 
 
 
@@ -2897,8 +2899,16 @@ driver<span style="color:#719e07">.</span>quit()
 
 <section id="javascriptcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#586e75">// Please raise a PR to add code sample
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> ie <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/ie&#39;</span>);
+<span style="color:#268bd2">let</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ie.Options();
+options.addBrowserCommandSwitches(<span style="color:#2aa198">&#39;-k&#39;</span>);
+options.addBrowserCommandSwitches(<span style="color:#2aa198">&#39;-private&#39;</span>);
+options.forceCreateProcessApi(<span style="color:#cb4b16">true</span>);
+
+driver <span style="color:#719e07">=</span> await env.builder()
+          .setIeOptions(options)
+          .build();
+  
 </code></pre></div>
 </section>
   
@@ -2920,7 +2930,7 @@ driver<span style="color:#719e07">.</span>quit()
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver specific capabilities”
-    </a> was last updated on: 13 May 2020 19:41:22 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/87a793e46b4efecf1ef30497c6ff925b2f298c98">Add: adding py code sample for IE browserCommandLineSwitch [deploy site] (87a793e4)</a>
+    </a> was last updated on: 14 May 2020 23:04:29 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1168f991cfd65c2ef7d22710d58d0e06dbe178d4">Add: Adding js code sample for browserCommandLineSwitches IE[deploy site] (1168f991)</a>
 </h5>
         
         </div> 
@@ -4085,19 +4095,19 @@ driver<span style="color:#719e07">.</span>quit()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1589380859"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1589477759"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1589380859"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1589380859"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1589477759"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1589477759"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1589380859" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1589380859"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1589477759" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1589477759"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
