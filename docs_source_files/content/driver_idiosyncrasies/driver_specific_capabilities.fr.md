@@ -392,6 +392,7 @@ from selenium import webdriver
 
 options = webdriver.IeOptions()
 options.add_argument('-private')
+options.force_create_process_api = True
 driver = webdriver.Ie(options=options)
 
 # Navigate to url
