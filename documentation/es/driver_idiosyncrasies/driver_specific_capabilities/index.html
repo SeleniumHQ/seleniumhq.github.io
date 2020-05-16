@@ -11,20 +11,20 @@
     <title>Capacidades específicas de los Drivers :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1589478083" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589478083" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1589609880" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589609880" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589478083" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589609880" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589478083"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589609880"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589478083"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589478083"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589609880"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589609880"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589478083"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589609880"></script>
 
     
   </div>
@@ -1937,6 +1937,7 @@
 <li><a href="#ignoreprotectedmodesettings">ignoreProtectedModeSettings</a></li>
 <li><a href="#silent">silent</a></li>
 <li><a href="#ie-command-line-options">IE Command-Line Options</a></li>
+<li><a href="#forcecreateprocessapi">forceCreateProcessApi</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -2870,6 +2871,7 @@ This option specifically used to troubleshoot problems with browser add-ons. Wor
 
 options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions()
 options<span style="color:#719e07">.</span>add_argument(<span style="color:#2aa198">&#39;-private&#39;</span>)
+options<span style="color:#719e07">.</span>force_create_process_api <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
 driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(options<span style="color:#719e07">=</span>options)
 
 <span style="color:#586e75"># Navigate to url</span>
@@ -2923,6 +2925,101 @@ driver <span style="color:#719e07">=</span> await env.builder()
 </div>
 </div>
 
+<h3 id="forcecreateprocessapi">forceCreateProcessApi</h3>
+
+<p>Forces launching Internet Explorer
+using the CreateProcess API. The default value is false.</p>
+
+<p>For IE 8 and above, this option requires the
+&ldquo;TabProcGrowth&rdquo; registry value to be set to 0.</p>
+
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode8" id="tab0code8" aria-controls="javacode8" checked>
+    
+    <label for="tab0code8">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab1code8" aria-controls="pythoncode8">
+    
+    <label for="tab1code8">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab2code8" aria-controls="cscode8">
+    
+    <label for="tab2code8">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab3code8" aria-controls="rubycode8">
+    
+    <label for="tab3code8">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab4code8" aria-controls="javascriptcode8">
+    
+    <label for="tab4code8">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode8" id="tab5code8" aria-controls="kotlincode8">
+    
+    <label for="tab5code8">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
+<span style="color:#586e75"># Please raise a PR to add code sample</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  
+</code></pre></div>
+</section>
+  
+
+
+<section id="rubycode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
+<span style="color:#586e75"># Please raise a PR to add code sample</span>
+  </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode8" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+  <span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  
+
+
+<span style="color:#719e07">&lt;</span>section id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;kotlincode4&#34;</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;tab-panel&#34;</span><span style="color:#719e07">&gt;</span>
+  <span style="color:#719e07">&lt;</span>div <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;highlight&#34;</span><span style="color:#719e07">&gt;&lt;</span>pre style<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span><span style="color:#719e07">&gt;&lt;</span>code <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;language-kotlin&#34;</span> data<span style="color:#719e07">-</span>lang<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;kotlin&#34;</span><span style="color:#719e07">&gt;</span>
+<span style="color:#719e07">&lt;</span>span style<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:#586e75&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span><span style="color:#719e07">&lt;</span>/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+<span style="color:#719e07">&lt;</span>/section&gt;
+</code></pre></div>
+</section></div>
+</div>
+
 
 <footer class=" footline" >
 	
@@ -2931,7 +3028,7 @@ driver <span style="color:#719e07">=</span> await env.builder()
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/">
       “Capacidades específicas de los Drivers”
-    </a> was last updated on: 14 May 2020 23:04:29 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1168f991cfd65c2ef7d22710d58d0e06dbe178d4">Add: Adding js code sample for browserCommandLineSwitches IE[deploy site] (1168f991)</a>
+    </a> was last updated on: 16 May 2020 11:46:29 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/abd1223b0f8840c5a2b1061c79b02190eeb98ae6">Add: Adding ie forceCreateProcessApi in doc [deploy site] (abd1223b)</a>
 </h5>
         
         </div> 
@@ -4096,19 +4193,19 @@ driver <span style="color:#719e07">=</span> await env.builder()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589478083"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589609880"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1589478083"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589478083"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1589609880"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589609880"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589478083" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589478083"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589609880" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589609880"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
