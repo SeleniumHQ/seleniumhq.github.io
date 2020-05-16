@@ -411,3 +411,31 @@ driver = await env.builder()
 // Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### forceCreateProcessApi
+
+Forces launching Internet Explorer 
+using the CreateProcess API. The default value is false.
+
+For IE 8 and above, this option requires the 
+"TabProcGrowth" registry value to be set to 0.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+  // Please raise a PR to add code sample
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
