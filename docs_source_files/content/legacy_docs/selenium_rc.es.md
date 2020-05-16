@@ -832,7 +832,7 @@ su método `start()`.
 
 ### Ejecutando Comandos
 
-Una vez que tienes el navegador inicializado y asignado a una variable (generalmente llamada "selenium") puedes hacer que ejecute comandos Selenese llamando los métodos respectivos de la variable del navegador. Por ejemplo, para llamar al método *type* del objeto selenium:
+Una vez que tienes el navegador inicializado y asignado a una variable (generalmente llamada "Selenium") puedes hacer que ejecute comandos Selenese llamando los métodos respectivos de la variable del navegador. Por ejemplo, para llamar al método *type* del objeto Selenium:
 
 ```
     selenium.type("field-id","string to type")
