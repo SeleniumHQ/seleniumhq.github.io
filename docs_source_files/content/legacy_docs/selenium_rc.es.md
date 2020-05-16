@@ -168,53 +168,45 @@ un script de Selenium-IDE a un archivo de Python.
 
 Para obtener detalles sobre la configuración del controlador del cliente Python, consulte el Apéndice: Configuración del controlador del cliente Python.
 
-### Using the .NET Client Driver
+### Utlizando el Controlador de Cliente .NET
 
-* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
-* Extract the folder
-* Download and install [NUnit](https://nunit.org/download/) (
-  Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
-  NUnit, you can also write a simple main() function to run your tests; 
-  however NUnit is very useful as a test engine.)
-* Open your desired .Net IDE (Visual Studio, SharpDevelop, MonoDevelop)
-* Create a class library (.dll)
-* Add references to the following DLLs: nmock.dll, nunit.core.dll, nunit.
-  framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll
-  and ThoughtWorks.Selenium.UnitTests.dll
-* Write your Selenium test in a .Net language (C#, VB.Net), or export
-  a script from Selenium-IDE to a C# file and copy this code into the class file 
-  you just created.
-* Write your own simple main() program or you can include NUnit in your project 
-  for running your test.  These concepts are explained later in this chapter.
-* Run Selenium server from console
-* Run your test either from the IDE, from the NUnit GUI or from the command line
+* Descarga Selenium RC desde SeleniumHQ [página de descargas](https://selenium.dev/downloads/)
+* Extrae la carpeta
+* Descargua e instala [NUnit](https://nunit.org/download/) 
+(Nota: Puedes usar NUnit como tu motor de prueba. Si aún no estás familiarizado con NUnit, también puedes escribir una función main() simple para ejecutar tus pruebas; sin embargo, NUnit es muy útil como motor de prueba).
+* Abre tu IDE .Net deseado (Visual Studio, SharpDevelop, MonoDevelop)
+* Crea una biblioteca de clases (.dll)
+* Agrega referencias a las siguientes DLL: nmock.dll, nunit.core.dll, nunit.
+framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll y ThoughtWorks.Selenium.UnitTests.dll
+* Escribe tu prueba de Selenium en un lenguaje .Net (C #, VB.Net), o exporta
+un script de Selenium-IDE a un archivo C# y copia este código en el archivo de clase acabas de crear.
+* Escribe tu  propio programa main() simple o puedes incluir NUnit en tu proyecto para ejecutar tu prueba. Estos conceptos se explican más adelante en este capítulo.
+* Ejecuta el servidor Selenium desde la consola
+* Ejecuta tu prueba desde el IDE, desde la GUI de NUnit o desde la línea de comandos.
 
-For specific details on .NET client driver configuration with Visual Studio, see the appendix 
-.NET client driver configuration. 
+Para obtener detalles específicos sobre la configuración del controlador del cliente .NET con Visual Studio, consulte el apéndice
+Configuración del controlador del cliente .NET
 
-### Using the Ruby Client Driver
+### Utilizando el Controlador de Cliente Ruby
 
-* If you do not already have RubyGems, install it from RubyForge.
-* Run ``gem install selenium-client``
-* At the top of your test script, add ``require "selenium/client"``
-* Write your test script using any Ruby test harness (eg Test::Unit,
-  Mini::Test or RSpec).
-* Run Selenium RC server from the console.
-* Execute your test in the same way you would run any other Ruby
-  script.
+* Si aún no tiene RubyGems, instálalo desde RubyForge.
+* Ejecuta ``gem install selenium-client``
+* En la parte superior de tu script de prueba, agrega ``require "selenium/client"``
+* Escribe tu script de prueba usando cualquier arnés de prueba Ruby (por ejemplo, Test::Unit Mini::Test o RSpec).
+* Ejecuta el servidor Selenium RC desde la consola.
+* Ejecuta tu prueba de la misma manera que ejecutarías cualquier otro script de Ruby.
 
+Para obtener detalles sobre la configuración del controlador del cliente Ruby, consulta la `Documentación de Selenium-Client`_
 
-For details on Ruby client driver configuration, see the `Selenium-Client documentation`_
+## De Selenese a un Programa
 
-## From Selenese to a Program
+La tarea principal para usar Selenium RC es convertir tu Selenese en un lenguaje de programación. En esta sección, proporcionamos varios ejemplos
+lenguaje-específico diferentes.
 
-The primary task for using Selenium RC is to convert your Selenese into a programming 
-language. In this section, we provide several different language-specific examples.
+### Muestra de un Script de prueba
 
-### Sample Test Script
-
-Let's start with an example Selenese test script.  Imagine recording
-the following test with Selenium-IDE.
+Comencemos con un ejemplo de un script de prueba de Selenese. Imagina grabar
+la siguiente prueba con Selenium-IDE.
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
@@ -223,16 +215,11 @@ the following test with Selenium-IDE.
 | clickAndWait       | btnG                          |             |
 | assertTextPresent  | Results * for selenium rc     |             |
 
+Nota: este ejemplo funcionaría con la página de búsqueda de Google <http://www.google.com>
 
-Note: This example would work with the Google search page http://www.google.com
+### Selenese Como Código de Programación
 
-### Selenese as Programming Code
-
-Here is the test script exported (via Selenium-IDE) to each of the supported
-programming languages.  If you have at least basic knowledge of an object-
-oriented programming language, you will understand how Selenium 
-runs Selenese commands by reading one of these 
-examples.  To see an example in a specific language, select one of these buttons.
+Aquí está el script de prueba exportado (a través de Selenium-IDE) a cada uno de los lenguajes de programación soportados. Si tienes al menos un conocimiento básico de un lenguaje de programación orientado a objetos, comprenderás cómo Selenium ejecuta comandos Selenese leyendo uno de estos ejemplos. Para ver un ejemplo en un lenguaje específico, seleccione uno de estos botones.
 
 #### CSharp
 ``` csharp
@@ -406,23 +393,25 @@ examples.  To see an example in a specific language, select one of these buttons
 
 ```
 
-In the next section we'll explain how to build a test program using the generated code.
+En la siguiente sección explicaremos cómo construir un programa de prueba usando el código generado.
 
-## Programming Your Test
+## Programando Tu Prueba
 
-Now we'll illustrate how to program your own tests using examples in each of the
-supported programming languages.
-There are essentially two tasks:
+Ahora ilustraremos cómo programar tus propias pruebas usando
+ejemplos en cada uno de las lenguajes de programación
+compatibles. Hay esencialmente dos tareas:
 
-* Generate your script into a programming 
-  language from Selenium-IDE, optionally modifying the result.  
-* Write a very simple main program that executes the generated code.  
+* Generar tu script a un lenguaje de programación desde Selenium-IDE,
+opcionalmente modificando el resultado.
+* Escribir un programa principal muy simple que ejecute el código generado.
 
-Optionally, you can adopt a test engine platform like JUnit or TestNG for Java, 
-or NUnit for .NET if you are using one of those languages.
+Opcionalmente, puedes adoptar una plataforma de prueba
+como JUnit o TestNG para Java, o NUnit para .NET si estás
+utilizando uno de esos lenguajes.
 
-Here, we show language-specific examples.  The language-specific APIs tend to 
-differ from one to another, so you'll find a separate explanation for each.  
+Aquí, mostramos ejemplos específicos del lenguaje. Las API
+específicas del lenguaje tienden a diferir uno de otro, por lo
+que encontrarás una explicación separada para cada uno.
 
 * Java
 * C#
@@ -430,26 +419,29 @@ differ from one to another, so you'll find a separate explanation for each.
 * Ruby
 * Perl, PHP
 
-
 ### Java
 
-For Java, people use either JUnit or TestNG as the test engine.  
-Some development environments like Eclipse have direct support for these via 
-plug-ins.  This makes it even easier. Teaching JUnit or TestNG is beyond the scope of 
-this document however materials may be found online and there are publications
-available.  If you are already a "java-shop" chances are your developers will 
-already have some experience with one of these test frameworks.
+Para Java, las personas utilizan JUnit o TestNG como plataforma de
+prueba.
+Algunos entornos de desarrollo como Eclipse tienen
+soporte directo para estos a través de complementos.
+Esto lo hace aún más fácil. Enseñar JUnit o TestNG está más allá del alcance
+de este documento, sin embargo, los materiales se pueden
+encontrar en línea y hay publicaciones disponibles. Si ya eres
+una "tienda de Java", es probable que tus desarrolladores lo
+hagan ya tengan algo de experiencia con uno de estos frameworks de
+prueba.
 
-You will probably want to rename the test class from "NewTest" to something 
-of your own choosing.  Also, you will need to change the browser-open 
-parameters in the statement:
+Probablemente desees cambiar el nombre de la clase de prueba de
+"NewTest" a algo de tu propia elección. Además, deberás cambiar
+los parámetros abrir-navegador en la declaración:
 
 ```java
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ``` 
 
-The Selenium-IDE generated code will look like this.  This example 
-has comments added manually for additional clarity.
+El código generado por Selenium-IDE se verá así. Este ejemplo
+tiene comentarios agregados manualmente para mayor claridad.
 
 ```java
    package com.example.tests;
@@ -486,24 +478,25 @@ has comments added manually for additional clarity.
 
 ### `C#`
 
-The .NET Client Driver works with Microsoft.NET.
-It can be used with any .NET testing framework 
-like NUnit or the Visual Studio 2005 Team System.
+El .NET Client Driver funciona con Microsoft.NET. Se puede usar con
+cualquier framework de prueba .NET como NUnit o Visual Studio 2005
+Team System.
 
-Selenium-IDE assumes you will use NUnit as your testing framework.
-You can see this in the generated code below.  It includes the *using* statement
-for NUnit along with corresponding NUnit attributes identifying 
-the role for each member function of the test class.  
+Selenium-IDE asume que usará NUnit como framework de prueba. Puedes
+ver esto en el código generado a continuación. Incluye la
+declaración *using* para NUnit junto con los atributos de
+NUnit correspondientes que identifican el rol de cada función
+miembro de la clase de prueba.
 
-You will probably have to rename the test class from "NewTest" to 
-something of your own choosing.  Also, you will need to change the browser-open
-parameters in the statement:
+Probablemente desees cambiar el nombre de la clase de prueba de
+"NewTest" a algo de tu propia elección. Además, deberás cambiar
+los parámetros abrir-navegador en la declaración:
 
 ```csharp
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ```
 
-The generated code will look similar to this.
+El codigo generado se vera similar a esto.
 
 ```csharp
 
@@ -588,17 +581,17 @@ The generated code will look similar to this.
     }
 ```
 
-You can allow NUnit to manage the execution 
-of your tests. Or alternatively, you can write a simple `main()` program that 
-instantiates the test object and runs each of the three methods, `SetupTest()`, 
-`TheNewTest()`, and `TeardownTest()` in turn.
-
+Puedes permitir que NUnit gestione la ejecución
+de tus pruebas. O, alternativamente, puedes escribir un simple programa
+`main()` que crea una instancia del objeto de prueba y ejecuta
+cada uno de los tres métodos, `SetupTest()`,
+`TheNewTest()` y `TeardownTest()` a su vez.
 
 ### Python
 
-Pyunit is the test framework to use for Python.
+Pyunit es el framework de prueba para usar en Python.
 
-The basic test structure is:
+La estructura de una prueba básica es:
 
 ```python
 
@@ -650,23 +643,23 @@ The basic test structure is:
 
 ### Ruby
 
+Las versiones anteriores (anteriores a 2.0) de Selenium-IDE generan
+código Ruby que requiere el antiguo gem de Selenium.
+Por lo tanto, es recomendable actualizar cualquier script Ruby 
+generado por IDE de la siguiente manera:
 
-Old (pre 2.0) versions of Selenium-IDE generate Ruby code that requires the old Selenium
-gem. Therefore, it is advisable to update any Ruby scripts generated by the
-IDE as follows:
-
-1. On line 1, change ``require "selenium"`` to ``require
+1. En la línea 1, cambia ``require "selenium"`` a ``require
 "selenium/client"``
 
-2. On line 11, change ``Selenium::SeleniumDriver.new`` to
+2. En la línea 11, cambia ``Selenium::SeleniumDriver.new`` a
 ``Selenium::Client::Driver.new``
 
-You probably also want to change the class name to something more
-informative than "Untitled," and change the test method's name to
-something other than "test_untitled."
+Probablemente también quieras cambiar el nombre de la clase a algo más
+informativo que "Sin título", y cambiar el nombre del método de prueba a
+algo diferente de "test_untitled".
 
-Here is a simple example created by modifying the Ruby code generated
-by Selenium IDE, as described above.
+Aquí hay un ejemplo simple creado al modificar el código Ruby generado
+por Selenium IDE, como se describió anteriormente.
 
 ```ruby
 
@@ -752,20 +745,19 @@ by Selenium IDE, as described above.
 
 ### Perl, PHP
 
-The members of the documentation team
-have not used Selenium RC with Perl or PHP. If you are using Selenium RC with either of
-these two languages please contact the Documentation Team (see the chapter on contributing).
-We would love to include some examples from you and your experiences, to support Perl and PHP users.
+Los miembros del equipo de documentación.
+no han utilizado Selenium RC con Perl o PHP. Si estás utilizando Selenium RC con cualquiera de estos dos lenguajes, póngase en contacto con el equipo de documentación (consulta el capítulo sobre contribuciones).
+Nos encantaría incluir algunos ejemplos tuyos y de tus experiencias, para apoyar a los usuarios de Perl y PHP.
 
 
-## Learning the API
+## Aprendiendo el API
 
-The Selenium RC API uses naming conventions 
-that, assuming you understand Selenese, much of the interface  
-will be self-explanatory. Here, however, we explain the most critical and 
-possibly less obvious aspects.
+La API de Selenium RC utiliza convenciones de nomenclatura
+suponiendo que entiendes a Selenese, gran parte de la interfaz
+se explicará por sí misma. Aquí, sin embargo, explicamos los
+aspectos más críticos y posiblemente menos obvios.
 
-### Starting the Browser 
+### Iniciando el Navegador
 
 #### CSharp
 ```csharp
@@ -806,49 +798,49 @@ possibly less obvious aspects.
       @selenium.start
 ```
 
-Each of these examples opens the browser and represents that browser 
-by assigning a "browser instance" to a program variable.  This 
-program variable is then used to call methods from the browser. 
-These methods execute the Selenium commands, i.e. like *open* or *type* or the *verify* 
-commands.
+Cada uno de estos ejemplos abre el navegador y representa ese
+navegador asignando una "instancia del navegador" a una variable
+de programa. Esta variable de programa se utiliza entonces para
+llamar a los métodos desde el navegador. Estos métodos ejecutan los
+comandos de Selenium, es decir, comandos como *open* o *type*
+o *verify*.
 
-The parameters required when creating the browser instance
-are: 
+Los parámetros necesarios al crear la instancia del navegador
+son:
 
-* **host**
-    Specifies the IP address of the computer where the server is located. Usually, this is
-    the same machine as where the client is running, so in this case *localhost* is passed.  In some clients this is an optional parameter.
-	
-* **port**
-    Specifies the TCP/IP socket where the server is listening waiting
-    for the client to establish a connection.  This also is optional in some
-    client drivers.
-	
-* **browser**
-    The browser in which you want to run the tests. This is a required 
-    parameter.
-	
-* **url**
-    The base url of the application under test. This is required by all the
-    client libs and is integral information for starting up the browser-proxy-AUT communication.
+* **host** Especifica la dirección IP de la computadora
+donde se encuentra el servidor. Por lo general, esta es la misma
+máquina donde se ejecuta el cliente, por lo que en este caso se
+pasa *localhost*. En algunos clientes, este es un parámetro
+opcional.
 
-Note that some of the client libraries require the browser to be started explicitly by calling
-its `start()` method.
+* **port** Especifica el socket TCP/IP donde el servidor
+está escuchando y esperando que el cliente establezca una
+conexión. Esto también es opcional en algunos controladores de
+clientes.
 
-### Running Commands 
+* **browser** El navegador en el que deseas ejecutar las
+pruebas. Este es un parámetro requerido.
 
-Once you have the browser initialized and assigned to a variable (generally
-named "selenium") you can make it run Selenese commands by calling the respective 
-methods from the browser variable. For example, to call the *type* method
-of the selenium object:
+* **url** La url base de la aplicación bajo prueba. Esto es
+requerido por todos las librerías de cliente y es información
+integral para iniciar la comunicación navegador-proxy-AUT.
+
+Ten en cuenta que algunas de las librerías de cliente
+requieren que el navegador se inicie explícitamente llamando a
+su método `start()`.
+
+### Ejecutando Comandos
+
+Una vez que tienes el navegador inicializado y asignado a una variable (generalmente llamada "Selenium") puedes hacer que ejecute comandos Selenese llamando los métodos respectivos de la variable del navegador. Por ejemplo, para llamar al método *type* del objeto Selenium:
 
 ```
     selenium.type("field-id","string to type")
 ```
 
-In the background the browser will actually perform a *type* operation, 
-essentially identical to a user typing input into the browser, by  
-using the locator and the string you specified during the method call.
+En segundo plano, el navegador realmente realizará una operación *type*,
+esencialmente idéntica a la entrada de un usuario escribiendo en el navegador,
+utilizando el localizador y la cadena que especificaste durante la llamada al método.
 
 ## Reporting Results
 
