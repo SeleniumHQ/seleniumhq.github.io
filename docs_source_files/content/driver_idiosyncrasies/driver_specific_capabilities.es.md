@@ -429,7 +429,16 @@ For IE 8 and above, this option requires the
 // Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.force_create_process_api = True
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
@@ -438,7 +447,14 @@ For IE 8 and above, this option requires the
 # Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-  // Please raise a PR to add code sample
+const ie = require('selenium-webdriver/ie');
+let options = new ie.Options();
+options.forceCreateProcessApi(true);
+
+driver = await env.builder()
+          .setIeOptions(options)
+          .build();
+  {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please raise a PR to add code sample
   {{< / code-panel >}}
