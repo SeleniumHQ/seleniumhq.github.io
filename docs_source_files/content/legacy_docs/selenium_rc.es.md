@@ -842,112 +842,133 @@ En segundo plano, el navegador realmente realizará una operación *type*,
 esencialmente idéntica a la entrada de un usuario escribiendo en el navegador,
 utilizando el localizador y la cadena que especificaste durante la llamada al método.
 
-## Reporting Results
+## Reportando Resultados
 
-Selenium RC does not have its own mechanism for reporting results. Rather, it allows
-you to build your reporting customized to your needs using features of your
-chosen programming language.  That's great, but what if you simply want something
-quick that's already done for you?  Often an existing library or test framework can 
-meet your needs faster than developing your own test reporting code.
+Selenium RC no tiene su propio mecanismo para reportar
+resultados. Más bien, te permite crear tus reportes
+personalizados según tus necesidades utilizando las funciones de
+tu lenguaje de programación elegido. Eso es genial, pero ¿y si
+simplemente quieres algo rápido que ya está hecho para ti? A
+menudo, una librería existente o un framework de prueba puede
+satisfacer tus necesidades más rápido que desarrollar tu propio
+código de reportes de prueba.
 
-### Test Framework Reporting Tools 
+### Herramientas de Reportes del Framework de Prueba
 
-Test frameworks are available for many programming languages. These, along with
-their primary function of providing a flexible test engine for executing your tests, 
-include library code for reporting results.  For example, Java has two 
-commonly used test frameworks, JUnit and TestNG.  .NET also has its own, NUnit.
+Los frameworks de prueba están disponibles para muchos lenguajes de
+programación. Estos, junto con su función principal de
+proporcionar un motor de prueba flexible para ejecutar tus
+pruebas, tambien incluyen código de librerías para reportar resultados.
+Por ejemplo, Java tiene dos frameworks de prueba de uso común, JUnit
+y TestNG. .NET también tiene el suyo, NUnit.
 
-We won't teach the frameworks themselves here; that's beyond the scope of this
-user guide.  We will simply introduce the framework features that relate to Selenium
-along with some techniques you can apply.  There are good books available on these
-test frameworks however along with information on the internet.
+Aquí no enseñaremos los frameworks por sí mismos; eso está más allá
+del alcance de esta guía del usuario. Simplemente presentaremos
+las características del framework que se relacionan con Selenium
+junto con algunas técnicas que puedes aplicar. Hay buenos libros
+disponibles sobre estos frameworks prueba junto con su
+información en internet.
 
-### Test Report Libraries 
+### Librerías de Reportes de Pruebas
 
-Also available are third-party libraries specifically created for reporting
-test results in your chosen programming language.  These often support a 
-variety of formats such as HTML or PDF.
+También están disponibles las librerías de terceros creadas
+específicamente para generar los reportes de las pruebas en el
+lenguaje de programación elegido. Estos a menudo sportan una
+variedad de formatos como HTML o PDF.
 
-### What's The Best Approach? 
+### Cuál Es El Mejor Enfoque?
 
-Most people new to the testing frameworks will begin with the framework's
-built-in reporting features.  From there most will examine any available libraries
-as that's less time consuming than developing your own.  As you begin to use
-Selenium no doubt you will start putting in your own "print statements" for 
-reporting progress.  That may gradually lead to you developing your own 
-reporting, possibly in parallel to using a library or test framework.  Regardless,
-after the initial, but short, learning curve you will naturally develop what works
-best for your own situation.
+La mayoría de las personas cuando son nuevas en los frameworks
+de prueba comenzarán con las funciones de reporteria integradas
+en el framework.
+A partir de ahí, la mayoría examinará las
+librerías disponibles, ya que requiere menos tiempo que
+desarrollar una propia.
+Cuando comiences a usar Selenium, sin duda
+comenzarás a poner tus propias "declaraciones impresas" para
+reportar sobre el progreso.
+Eso puede llevarte gradualmente a desarrollar tus propios reportes, posiblemente en paralelo al uso de una librería o framework de prueba.
+De todos modos, después de la curva de aprendizaje inicial, naturalmente
+desarrollarás lo que funciona mejor para tu propia situación.
 
-### Test Reporting Examples
+### Ejemplos de Reportes de Pruebas
 
-To illustrate, we'll direct you to some specific tools in some of the other languages 
-supported by Selenium.  The ones listed here are commonly used and have been used 
-extensively (and therefore recommended) by the authors of this guide.
+Para ilustrarlte, te guiaremos a algunas herramientas específicas
+en algunos de los lenguajes soportados por Selenium. Los que se enumeran
+aquí son de uso común y los autores de esta guía los han usado ampliamente
+(y, por lo tanto, los recomiendan).
 
-#### Test Reports in Java
+#### Reportes de Pruebas en Java
 
-* If Selenium Test cases are developed using JUnit then JUnit Report can be used
-  to generate test reports. 
+* Si los casos de prueba de Selenium se desarrollan utilizando JUnit,
+se puede utilizar JUnit Report para generar reportes de prueba.
 
-* If Selenium Test cases are developed using TestNG then no external task 
-  is required to generate test reports. The TestNG framework generates an 
-  HTML report which list details of tests. 
+* Si los casos de prueba de Selenium se desarrollan usando TestNG,
+entonces no se necesita ninguna tarea externa para generar reportes
+de prueba.
+El framework de TestNG genera un reporte HTML que enumera los detalles
+de las pruebas.
 
-* ReportNG is a HTML reporting plug-in for the TestNG framework. 
-  It is intended as a replacement for the default TestNG HTML report. 
-  ReportNG provides a simple, colour-coded view of the test results. 
+* ReportNG es un complemento de reportes HTML para el framework de TestNG.
+Está destinado a reemplazar el reporte HTML predeterminado de TestNG.
+ReportNG proporciona una vista simple y codificada por colores de los resultados de las pruebas.
   
-##### Logging the Selenese Commands
+##### Registrar los Comandos Selenese
 
-* Logging Selenium can be used to generate a report of all the Selenese commands
-  in your test along with the success or failure of each. Logging Selenium extends
-  the Java client driver to add this Selenese logging ability.
+* Logging Selenium se puede utilizar para generar un reporte de todos los comandos de Selenese en tu prueba junto con el resultado exitoso o no
+de cada uno. Logging Selenium extiende el controlador del cliente Java para agregar esta capacidad de registro de Selenese.
 
-#### Test Reports for Python
+#### Reportes de Pruebas para Python
 
-* When using Python Client Driver then HTMLTestRunner can be used to
-  generate a Test Report.
+* Al utilizar Python Client Driver, HTMLTestRunner se puede utilizar para
+generar un reporte de prueba.
 
-#### Test Reports for Ruby
+#### Reportes de Pruebas para Ruby
 
-* If RSpec framework is used for writing Selenium Test Cases in Ruby
-  then its HTML report can be used to generate a test report.
+* Si el framework RSpec se utiliza para escribir los casos de prueba de
+Selenium en Ruby, entonces su reporte HTML se puede utilizar para generar
+un reporte de prueba.
 
+## Agregando Sabor a Tus Pruebas
 
-## Adding Some Spice to Your Tests
+Ahora llegaremos a la razón de por que utilizar Selenium RC,
+agregando lógica de programación a tus pruebas. Es lo mismo que
+para cualquier programa.
+El flujo del programa se controla mediante declaraciones de condición e iteración.
+Además, puedes reportar la información de progreso mediante I/O.
+En esta sección mostraremos algunos ejemplos de cómo las construcciones
+del lenguaje de programación se pueden combinar con Selenium para
+resolver problemas comunes en las pruebas.
 
-Now we'll get to the whole reason for using Selenium RC, adding programming logic to your tests.
-It's the same as for any program.  Program flow is controlled using condition statements
-and iteration.  In addition you can report progress information using I/O.  In this section
-we'll show some examples of how programming language constructs can be combined with 
-Selenium to solve common testing problems. 
+Encontrarás que a medida que transicionas de pruebas simples
+como la existencia de elementos en una página, a pruebas de funcionalidad
+dinámica que involucran múltiples páginas web y datos variables, que
+vas a necesitar la lógica de programación para verificar los resultados
+esperados.
+Básicamente, Selenium-IDE no soporta declaraciones estándar de iteracion
+y de condición.
+Puede hacer algunas condiciones incrustando javascript en los parámetros
+Selenese, sin embargo la iteración es imposible, y la mayoría
+de las condiciones serán mucho más fáciles en un lenguaje de
+programación.
+Además, es posible que necesites manejo de excepciones para
+errores de recuperación.
+Por esta y otras razones, hemos escrito esta sección para ilustrar el uso de técnicas comunes de programación para brindarte mayor 'poder de verificación' en tus pruebas automatizadas.
 
-You will find as you transition from the simple tests of the existence of 
-page elements to tests of dynamic functionality involving multiple web-pages and 
-varying data that you will require programming logic for verifying expected 
-results.  Basically, the Selenium-IDE does not support iteration and 
-standard condition statements.  You can do some conditions by embedding javascript
-in Selenese parameters, however 
-iteration is impossible, and most conditions will be much easier in a  
-programming language.  In addition, you may need exception handling for
-error recovery.  For these reasons and others, we have written this section
-to illustrate the use of common programming techniques to
-give you greater 'verification power' in your automated testing.
+Los ejemplos en esta sección están escritos en C # y Java,
+aunque el código es simple y se puede adaptar fácilmente otros
+lenguajes soportados. Si tienes algún conocimiento básico de un
+lenguaje de programación orientado a objetos no deberías tener
+dificultades para comprender esta sección.
 
-The examples in this section are written
-in C# and Java, although the code is simple and can be easily adapted to the other supported
-languages.  If you have some basic knowledge
-of an object-oriented programming language you shouldn't have difficulty understanding this section.
+### Iteración
 
-### Iteration
+La iteración es una de las cosas más comunes que las personas
+necesitan hacer en sus pruebas.
+Por ejemplo, es posible que desees ejecutar una búsqueda varias veces.
+O tal vez para verificar los resultados de las pruebas debs procesar un "conjunto de resultados" retornado por una base de datos.
 
-Iteration is one of the most common things people need to do in their tests.
-For example, you may want to to execute a search multiple times.  Or, perhaps for
-verifying your test results you need to process a "result set" returned from a database.
-
-Using the same Google search example we used earlier, let's 
-check the Selenium search results. This test could use the Selenese:
+Utilizando el mismo ejemplo anterior de la búsqueda en Google, vamos a verificar los resultados de la búsqueda de Selenium. Esta prueba podría usar Selenese:
 
 |                    |                               |               |
 | --------           | ----------------------------  | ------------- |
@@ -962,13 +983,9 @@ check the Selenium search results. This test could use the Selenese:
 | clickAndWait       | btnG                          |               |
 | assertTextPresent  | Results * for selenium grid   |               |
 
+El código se ha repetido para ejecutar 3 veces los mismos pasos. Pero varias copias del mismo código no es una buena práctica de programacion ya que es más difícil de mantener. Al usar un lenguaje de programación, podemos iterar sobre los resultados de las búsquedas para obtener una solución más flexible y fácil de mantener.
 
-The code has been repeated to run the same steps 3 times.  But multiple
-copies of the same code is not good program practice because it's more
-work to maintain.  By using a programming language, we can iterate
-over the search results for a more flexible and maintainable solution. 
-
-#### In `C#`   
+#### En `C#`   
    
 ```csharp
    // Collection of String values.
@@ -985,30 +1002,27 @@ over the search results for a more flexible and maintainable solution.
     }
 ```
 
-### Condition Statements
+### Declaraciones de Condición
 
-To illustrate using conditions in tests we'll start with an example.
-A common problem encountered while running Selenium tests occurs when an 
-expected element is not available on page.  For example, when running the 
-following line:
+Para ilustrar el uso de condiciones en las pruebas comenzaremos con un
+ejemplo. Un problema común encontrado al ejecutar las pruebas de Selenium
+ocurre cuando un elemento esperado no está disponible en la página. Por
+ejemplo, al ejecutar la siguiente línea:
 
 ```
    selenium.type("q", "selenium " +s);
 ```
    
-If element 'q' is not on the page then an exception is
-thrown:
+Si el elemento 'q' no está en la pagina entonces se lanza una excepción:
 
 ```java
    com.thoughtworks.selenium.SeleniumException: ERROR: Element q not found
 ```
 
-This can cause your test to abort.  For some tests that's what you want.  But
-often that is not desirable as your test script has many other subsequent tests
-to perform.
+Esto puede hacer que tu prueba sea abortada. Para algunas pruebas eso es lo que quieres. Pero a menudo eso no es deseable ya que tu script de prueba tiene que ejecutar posteriormente muchas otras pruebas.
 
-A better approach is to first validate whether the element is really present
-and then take alternatives when it it is not.  Let's look at this using Java.
+Un mejor enfoque es validar primero si el elemento está realmente presente
+y luego tomar alternativas cuando no lo está. Observemos esto utilizando Java.
 
 ```java
    // If element is available on page then perform type operation.
@@ -1018,10 +1032,8 @@ and then take alternatives when it it is not.  Let's look at this using Java.
        System.out.printf("Element: " +q+ " is not available on page.")
    }
 ```
-   
-The advantage of this approach is to continue with test execution even if some UI 
-elements are not available on page.
 
+La ventaja de este enfoque es que continua con la ejecución de la prueba, incluso si algunos elementos de la interfaz de usuario no están disponibles en la página.
 
 ### Executing JavaScript from Your Test
 
