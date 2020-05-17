@@ -947,7 +947,7 @@ vas a necesitar la lógica de programación para verificar los resultados
 esperados.
 Básicamente, Selenium-IDE no soporta declaraciones estándar de iteracion
 y de condición.
-Puede hacer algunas condiciones incrustando javascript en los parámetros
+Puede hacer algunas condiciones incrustando JavaScript en los parámetros
 Selenese, sin embargo la iteración es imposible, y la mayoría
 de las condiciones serán mucho más fáciles en un lenguaje de
 programación.
