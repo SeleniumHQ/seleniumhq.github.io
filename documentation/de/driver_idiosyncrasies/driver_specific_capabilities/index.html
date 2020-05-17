@@ -11,20 +11,20 @@
     <title>Driver spezifische Capabilities :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1589648716" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1589648716" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1589691612" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1589691612" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1589648716" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1589691612" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1589648716"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1589691612"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1589648716"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1589648716"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1589691612"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1589691612"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1589648716"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1589691612"></script>
 
     
   </div>
@@ -2988,7 +2988,16 @@ using the CreateProcess API. The default value is false.</p>
 
 <section id="pythoncode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR to add code sample</span>
+<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
+
+options <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>IeOptions()
+options<span style="color:#719e07">.</span>force_create_process_api <span style="color:#719e07">=</span> <span style="color:#268bd2">True</span>
+driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Ie(options<span style="color:#719e07">=</span>options)
+
+<span style="color:#586e75"># Navigate to url</span>
+driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
+
+driver<span style="color:#719e07">.</span>quit()
   </code></pre></div>
 </section>
   
@@ -3013,17 +3022,25 @@ using the CreateProcess API. The default value is false.</p>
 
 <section id="javascriptcode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-  <span style="color:#586e75">// Please raise a PR to add code sample
-</span><span style="color:#586e75"></span>  
+<span style="color:#268bd2">const</span> ie <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver/ie&#39;</span>);
+<span style="color:#268bd2">let</span> options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ie.Options();
+options.forceCreateProcessApi(<span style="color:#cb4b16">true</span>);
 
-
-<span style="color:#719e07">&lt;</span>section id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;kotlincode4&#34;</span> <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;tab-panel&#34;</span><span style="color:#719e07">&gt;</span>
-  <span style="color:#719e07">&lt;</span>div <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;highlight&#34;</span><span style="color:#719e07">&gt;&lt;</span>pre style<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;</span><span style="color:#719e07">&gt;&lt;</span>code <span style="color:#268bd2">class</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;language-kotlin&#34;</span> data<span style="color:#719e07">-</span>lang<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;kotlin&#34;</span><span style="color:#719e07">&gt;</span>
-<span style="color:#719e07">&lt;</span>span style<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;color:#586e75&#34;</span><span style="color:#719e07">&gt;</span><span style="color:#586e75">// Please raise a PR to add code sample
-</span><span style="color:#586e75"></span><span style="color:#719e07">&lt;</span>/span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;&lt;/span&gt;  &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-<span style="color:#719e07">&lt;</span>/section&gt;
+driver <span style="color:#719e07">=</span> await env.builder()
+          .setIeOptions(options)
+          .build();
+  
 </code></pre></div>
-</section></div>
+</section>
+  
+
+
+<section id="kotlincode9" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
+<span style="color:#586e75">// Please raise a PR to add code sample
+</span><span style="color:#586e75"></span>  </code></pre></div>
+</section>
+</div>
 </div>
 
 
@@ -3034,7 +3051,7 @@ using the CreateProcess API. The default value is false.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver spezifische Capabilities”
-    </a> was last updated on: 16 May 2020 11:46:29 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/abd1223b0f8840c5a2b1061c79b02190eeb98ae6">Add: Adding ie forceCreateProcessApi in doc [deploy site] (abd1223b)</a>
+    </a> was last updated on: 17 May 2020 10:28:49 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/391f92f0a8dc80925f48f1eb1138b89426667e1a">Add: Adding JS and PY code samples[deploy site] (391f92f0)</a>
 </h5>
         
         </div> 
@@ -4199,19 +4216,19 @@ using the CreateProcess API. The default value is false.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1589648716"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1589691612"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1589648716"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1589648716"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1589691612"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1589691612"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1589648716" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1589648716"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1589691612" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1589691612"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
