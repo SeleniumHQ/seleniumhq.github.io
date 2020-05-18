@@ -431,7 +431,24 @@ For IE 8 and above, this option requires the
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a PR to add code sample
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+
+public class ieTest {
+    public static void main(String[] args) {
+        InternetExplorerOptions options = new InternetExplorerOptions();
+        options.useCreateProcessApiToLaunchIe();
+        InternetExplorerDriver driver = new InternetExplorerDriver(options);
+        try {
+            driver.get("https://google.com/ncr");
+            Capabilities caps = driver.getCapabilities();
+            System.out.println(caps);
+        } finally {
+            driver.quit();
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
