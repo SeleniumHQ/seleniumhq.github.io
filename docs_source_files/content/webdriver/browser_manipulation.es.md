@@ -111,7 +111,7 @@ Puedes leer la URL actual desde la barra de direcciones del navegador usando:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.currentUrl{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Retroceder
@@ -137,7 +137,7 @@ Presionando el botón de avanzar del navegador:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Actualizar
@@ -163,7 +163,7 @@ Puedes leer el título de la pagina actual desde el navegador:
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.title{{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -183,7 +183,7 @@ ventana actual usando:
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.windowHandle{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Cambiar entre ventanas o pestañas
@@ -351,10 +351,10 @@ wait.until(numberOfWindowsToBe(2))
 
 //Recorrelas hasta encontrar el controlador de la nueva ventana
 for (windowHandle in driver.getWindowHandles()) {
-      if (!originalWindow.contentEquals(windowHandle)) {
-          driver.switchTo().window(windowHandle)
-           break
-      }
+    if (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        break
+    }
 }
 
 //Espera a que la nueva ventana cargue su contenido
@@ -742,7 +742,7 @@ await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Almacena el elemento web
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
 //Cambia el foco al iframe
 driver.switchTo().frame(iframe)
@@ -943,13 +943,13 @@ const height1 = rect.height;
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Accede a cada dimensión individualmente
-val width = driver.manage().window().getSize().getWidth()
-val height = driver.manage().window().getSize().getHeight()
+val width = driver.manage().window().size.width
+val height = driver.manage().window().size.height
 
 //O almacénalas para acceder a ellas mas tarde
-val size = driver.manage().window().getSize()
-val width1 = size.getWidth()
-val height1 = size.getHeight()
+val size = driver.manage().window().size
+val width1 = size.width
+val height1 = size.height
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -961,7 +961,7 @@ Recupera la ventana y fija el tamaño de esta.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().size = Dimension(1024, 768){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Obten la posicion de la ventana
@@ -1026,7 +1026,7 @@ val y = driver.manage().window().position.y
 // O almacénalas para acceder a ellas mas tarde
 val position = driver.manage().window().position
 val x1 = position.x
-int y1 = position.y
+val y1 = position.y
   
   {{< / code-panel >}}
 {{< / code-tab >}}
