@@ -94,7 +94,7 @@ driver.navigate().to("https://selenium.dev")
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.currentUrl{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### 戻る
@@ -120,7 +120,7 @@ driver.navigate().to("https://selenium.dev")
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### 更新
@@ -146,7 +146,7 @@ driver.navigate().to("https://selenium.dev")
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.title{{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -165,7 +165,7 @@ WebDriverは、ウィンドウとタブを区別しません。
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.windowHandle{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### ウィンドウまたはタブの切り替え
@@ -326,10 +326,10 @@ wait.until(numberOfWindowsToBe(2))
 
 //Loop through until we find a new window handle
 for (windowHandle in driver.getWindowHandles()) {
-      if (!originalWindow.contentEquals(windowHandle)) {
-          driver.switchTo().window(windowHandle)
-           break
-      }
+    if (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        break
+    }
 }
 
 //Wait for the new tab to finish loading content
@@ -691,7 +691,7 @@ await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Store the web element
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
 //Switch to the frame
 driver.switchTo().frame(iframe)
@@ -889,13 +889,13 @@ const height1 = rect.height;
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Access each dimension individually
-val width = driver.manage().window().getSize().getWidth()
-val height = driver.manage().window().getSize().getHeight()
+val width = driver.manage().window().size.width
+val height = driver.manage().window().size.height
 
 //Or store the dimensions and query them later
-val size = driver.manage().window().getSize()
-val width1 = size.getWidth()
-val height1 = size.getHeight()
+val size = driver.manage().window().size
+val width1 = size.width
+val height1 = size.height
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -909,7 +909,7 @@ val height1 = size.getHeight()
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().size = Dimension(1024, 768){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### ウィンドウの位置を取得
@@ -974,7 +974,7 @@ val y = driver.manage().window().position.y
 // Or store the dimensions and query them later
 val position = driver.manage().window().position
 val x1 = position.x
-int y1 = position.y
+val y1 = position.y
   
   {{< / code-panel >}}
 {{< / code-tab >}}
