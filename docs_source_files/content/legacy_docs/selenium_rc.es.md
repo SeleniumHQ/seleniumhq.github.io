@@ -1037,13 +1037,10 @@ La ventaja de este enfoque es que continua con la ejecución de la prueba, inclu
 
 ### Executing JavaScript from Your Test
 
-JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
-Selenium RC. 
+JavaScript es muy útil para utilizar una aplicación que no es directamente compatible con Selenium. El método **getEval** de Selenium API se puede utilizar para ejecutar JavaScript desde Selenium RC.
 
-Consider an application having check boxes with no static identifiers. 
-In this case one could evaluate JavaScript from Selenium RC to get ids of all 
-check boxes and then exercise them. 
+Considera una aplicación que tiene casillas de verificación sin identificadores estáticos.
+En este caso, uno podría evaluar JavaScript desde Selenium RC para obtener los identificadores de todas las casillas de verificación y luego utilizarles.
 
 ```java
    public static String[] getAllCheckboxIds () { 
@@ -1065,21 +1062,22 @@ check boxes and then exercise them.
     }
 ```
 
-To count number of images on a page:
+Para contar el número de imágenes en una página:
 
 ```java   
    selenium.getEval("window.document.images.length;");
 ```
 
-Remember to use window object in case of DOM expressions as by default selenium
-window is referred to, not the test window.
+Recuerde usar un objeto window en caso de expresiones DOM ya que por
+defecto se hace referencia a la ventana de Selenium,
+no a la ventana de prueba.
 
-## Server Options
+## Opciones del Servidor
 
-When the server is launched, command line options can be used to change the
-default server behaviour.
+Cuando se inicia el servidor,se pueden utilizar opciones de línea
+de comando para cambiar el comportamiento predeterminado del servidor.
 
-Recall, the server is started by running the following.
+Recuerda, el servidor se inicia ejecutando lo siguiente.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar
@@ -1091,64 +1089,52 @@ To see the list of options, run the server with the ``-h`` option.
    $ java -jar selenium-server-standalone-<version-number>.jar -h
 ``` 
 
-You'll see a list of all the options you can use with the server and a brief
-description of each. The provided descriptions will not always be enough, so we've
-provided explanations for some of the more important options.
+Verás una lista de todas las opciones que puedes utilizar con el servidor
+y un breve descripción de cada una. Las descripciones proporcionadas no
+siempre serán suficientes, así que hemos proporcionado explicaciones
+para algunas de las opciones más importantes.
 
+### Configuración del Proxy
 
-### Proxy Configuration
-
-If your AUT is behind an HTTP proxy which requires authentication then you should 
-configure http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
-using the following command. 
+Si tu AUT está detrás de un proxy HTTP que requiere autenticación, entonces deberías configurar http.proxyHost, http.proxyPort, http.proxyUser y
+http.proxyPassword usando el siguiente comando.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -Dhttp.proxyHost=proxy.com -Dhttp.proxyPort=8080 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ``` 
 
-### Multi-Window Mode
+### Modo Multi-Window 
 
-If you are using Selenium 1.0 you can probably skip this section, since multiwindow mode is 
-the default behavior.  However, prior to version 1.0, Selenium by default ran the 
-application under test in a sub frame as shown here.
+Si estás utilizando Selenium 1.0, probablemente puedas omitir esta sección,
+ya que el modo de ventanas múltiples es el comportamiento predeterminado.
+Sin embargo, antes de la versión 1.0, Selenium ejecutaba la aplicación bajo prueba en un sub-marco como se muestra aquí:
 
 ![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
 
-Some applications didn't run correctly in a sub frame, and needed to be 
-loaded into the top frame of the window. The multi-window mode option allowed
-the AUT to run in a separate window rather than in the default 
-frame where it could then have the top frame it required.
+Algunas aplicaciones no se ejecutaban correctamente en un sub-marcoo y debían ser cargadas en el marco superior de la ventana. La opción modo de ventana múltiple permitia al AUT ejecutarse en una ventana separada en lugar de en el marco predeterminado donde entonces podía tener el marco superior requerido.
 
 ![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
 
-For older versions of Selenium you must specify multiwindow mode explicitly
-with the following option:
+Para versiones anteriores de Selenium, debes especificar explícitamente el modo de ventanas múltiples con la siguiente opción:
 
 ```bash   
    -multiwindow 
 ``` 
 
-As of Selenium RC 1.0, if you want to run your test within a
-single frame (i.e. using the standard for earlier Selenium versions) 
-you can state this to the Selenium Server using the option
+A partir de Selenium RC 1.0, si deseas ejecutar tu prueba dentro de un
+marco único (es decir, utilizando el estándar para versiones anteriores de Selenium) puedes indicar esto al servidor Selenium utilizando la opción
 
 ```bash   
    -singlewindow 
 ``` 
 
-### Specifying the Firefox Profile
+### Especificando el Perfil de Firefox
 
-Firefox will not run two instances simultaneously unless you specify a 
-separate profile for each instance. Selenium RC 1.0 and later runs in a 
-separate profile automatically, so if you are using Selenium 1.0, you can 
-probably skip this section.  However, if you're using an older version of 
-Selenium or if you need to use a specific profile for your tests
-(such as adding an https certificate or having some addons installed), you will 
-need to explicitly specify the profile. 
+Firefox no ejecutará dos instancias simultáneamente a menos que especifiques un
+perfil separado para cada instancia. Selenium RC 1.0 y posteriores se ejecutan en un perfil separado automáticamente, por lo que si estás utilizando Selenium 1.0, probablemente puedes omitir esta sección. Sin embargo, si estás utilizando una versión anterior de Selenium o si necesitas usar un perfil específico para tus pruebas (como agregar un certificado https o tener algunos complementos instalados), necesitas especificar explícitamente el perfil.
 
-First, to create a separate Firefox profile, follow this procedure.
-Open the Windows Start menu, select "Run", then type and enter one of the 
-following:
+Primero, para crear un perfil separado de Firefox, sigue este procedimiento.
+Abre el menú Inicio de Windows, seleccione "Ejecutar", luego escriba e ingrese uno de los siguientes:
 
 ```bash   
    firefox.exe -profilemanager 
@@ -1158,25 +1144,19 @@ following:
    firefox.exe -P 
 ``` 
 
-Create the new profile using the dialog. Then when you run Selenium Server, 
-tell it to use this new Firefox profile with the server command-line option 
-*\-firefoxProfileTemplate* and specify the path to the profile using its filename 
-and directory path.
+Crea el nuevo perfil utilizando el cuadro de diálogo. Luego, cuando ejecutes Selenium Server, especificale que use este nuevo perfil de Firefox con la opción de línea de comandos del servidor *\-firefoxProfileTemplate* y especifique la ruta del perfil utilizando el nombre del archivo y la ruta del directorio.
 
 ```bash   
-   -firefoxProfileTemplate "path to the profile" 
+   -firefoxProfileTemplate "ruta del perfil" 
 ``` 
 
-**Warning**:  Be sure to put your profile in a new folder separate from the default!!! 
-   The Firefox profile manager tool will delete all files in a folder if you 
-   delete a profile, regardless of whether they are profile files or not. 
-   
-More information about Firefox profiles can be found in [Mozilla's Knowledge Base](http://support.mozilla.com/en/kb/Managing+profiles)
+**Advertencia**: Asegúrate de poner tu perfil en una nueva carpeta separada de la predeterminada. La herramienta de administrador de perfiles de Firefox eliminará todos los archivos de una carpeta si eliminas un perfil, independientemente de si son archivos de perfil o no.
 
-### Run Selenese Directly Within the Server Using -htmlSuite
+Puedes encontrar más información sobre los perfiles de Firefox en la [Base de conocimiento de Mozilla](http://support.mozilla.com/en/kb/Managing+profiles)
 
-You can run Selenese html files directly within the Selenium Server
-by passing the html file to the server's command line.  For instance:
+### Ejecuta Selenese Directamente Dentro del Servidor Utilizando-htmlSuite
+
+Puedes ejecutar archivos html de Selenese directamente dentro del servidor Selenium pasando el archivo html a la línea de comandso del servidor. Por ejemplo:
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -htmlSuite "*firefox" 
@@ -1196,6 +1176,15 @@ This command line is very long so be careful when
 you type it. Note this requires you to pass in an HTML 
 Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with ``-interactive``
 You cannot run both at the same time.
+
+Esto iniciará automáticamente tu suite HTML, ejecutará todas las pruebas y guardará un bonito reporte HTML con los resultados.
+
+  *Nota:* Al usar esta opción, el servidor comenzará las pruebas y esperará un
+    número especificado de segundos a que la prueba se complete; si la prueba no se completa dentro de ese período de tiempo, el comando saldrá con un código distinto de cero y no se generará ningún reporte de resultados.
+
+Esta línea de comandos es muy larga, así que ten cuidado cuando
+la escribas. Ten en cuenta que esto requiere que pases una
+suite HTML Selenese, no una sola prueba. También ten en cuenta que la opción -htmlSuite es incompatible con ``-interactive`` No puedes ejecutar ambas al mismo tiempo.
 
 ### Selenium Server Logging
 
