@@ -11,20 +11,20 @@
     <title>操控浏览器 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1589819604" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1589819604" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1589923657" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1589923657" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1589819604" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1589923657" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1589819604"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1589923657"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1589819604"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1589819604"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1589923657"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1589923657"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1589819604"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1589923657"></script>
 
     
   </div>
@@ -2199,7 +2199,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="kotlincode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getCurrentUrl();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.currentUrl</code></pre></div>
 </section>
 </div>
 </div>
@@ -2361,7 +2361,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="kotlincode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().forward();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.navigate().forward()</code></pre></div>
 </section>
 </div>
 </div>
@@ -2523,7 +2523,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="kotlincode5" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getTitle()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.title</code></pre></div>
 </section>
 </div>
 </div>
@@ -2605,7 +2605,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="kotlincode6" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.getWindowHandle()</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.windowHandle</code></pre></div>
 </section>
 </div>
 </div>
@@ -2829,9 +2829,11 @@ windows.forEach(async handle =&gt; {<span style="color:#719e07">if</span> (handl
 </span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(<span style="color:#2aa198">2</span>))
 
 <span style="color:#586e75">// 循环执行，直到找到一个新的窗口句柄
-</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (windowHandle <span style="color:#719e07">in</span> driver.getWindowHandles()) {<span style="color:#719e07">if</span> (!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle)
-           <span style="color:#719e07">break</span>
-      }
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (windowHandle <span style="color:#719e07">in</span> driver.getWindowHandles()) {
+    <span style="color:#719e07">if</span> (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        <span style="color:#719e07">break</span>
+    }
 }
 
 <span style="color:#586e75">// 等待新标签页完成加载内容
@@ -3648,7 +3650,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="kotlincode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#586e75">// 存储网页元素
-</span><span style="color:#586e75"></span>WebElement iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> iframe = driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>))
 
 <span style="color:#586e75">// 切换到 frame
 </span><span style="color:#586e75"></span>driver.switchTo().frame(iframe)
@@ -4119,13 +4121,13 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 <section id="kotlincode18" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#586e75">// 分别获取每个尺寸
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().getSize().getWidth()
-<span style="color:#719e07">val</span> height = driver.manage().window().getSize().getHeight()
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> width = driver.manage().window().size.width
+<span style="color:#719e07">val</span> height = driver.manage().window().size.height
 
 <span style="color:#586e75">// 或者存储尺寸并在以后查询它们
-</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().getSize()
-<span style="color:#719e07">val</span> width1 = size.getWidth()
-<span style="color:#719e07">val</span> height1 = size.getHeight()
+</span><span style="color:#586e75"></span><span style="color:#719e07">val</span> size = driver.manage().window().size
+<span style="color:#719e07">val</span> width1 = size.width
+<span style="color:#719e07">val</span> height1 = size.height
   </code></pre></div>
 </section>
 </div>
@@ -4206,7 +4208,7 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="kotlincode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size(Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>))</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">driver.manage().window().size = Dimension(<span style="color:#2aa198">1024</span>, <span style="color:#2aa198">768</span>)</code></pre></div>
 </section>
 </div>
 </div></p>
@@ -4339,7 +4341,7 @@ y1 <span style="color:#719e07">=</span> rect<span style="color:#719e07">.</span>
 <span style="color:#586e75">// 或者存储尺寸并在以后查询它们
 </span><span style="color:#586e75"></span><span style="color:#719e07">val</span> position = driver.manage().window().position
 <span style="color:#719e07">val</span> x1 = position.x
-int y1 = position.y
+<span style="color:#719e07">val</span> y1 = position.y
   
   </code></pre></div>
 </section>
@@ -4700,7 +4702,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/">
       “操控浏览器”
-    </a> was last updated on: 30 Apr 2020 21:50:38 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/077abba5700c4e530711f06e847649ee9eacedc1">Modify: Updating PY code samples (077abba5)</a>
+    </a> was last updated on: 20 May 2020 06:25:50 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/ffcc8defcacf98f45cbd373ade0e6cd1eb63b72b">Fix Kotlin sample codes in Browser manipulation (#423)[deploy site] (ffcc8def)</a>
 </h5>
         
         </div> 
@@ -5865,19 +5867,19 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1589819604"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1589923658"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1589819604"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1589819604"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1589923658"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1589923658"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1589819604" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1589819604"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1589923658" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1589923658"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

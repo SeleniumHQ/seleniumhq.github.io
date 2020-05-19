@@ -11,20 +11,20 @@
     <title>Selenium 1 (Selenium RC) :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1589819599" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589819599" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1589923652" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1589923652" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589819599" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1589923652" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589819599"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1589923652"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589819599"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589819599"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1589923652"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1589923652"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589819599"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1589923652"></script>
 
     
   </div>
@@ -1997,12 +1997,12 @@
 <li><a href="#declaraciones-de-condición">Declaraciones de Condición</a></li>
 <li><a href="#executing-javascript-from-your-test">Executing JavaScript from Your Test</a></li>
 </ul></li>
-<li><a href="#server-options">Server Options</a>
+<li><a href="#opciones-del-servidor">Opciones del Servidor</a>
 <ul>
-<li><a href="#proxy-configuration">Proxy Configuration</a></li>
-<li><a href="#multi-window-mode">Multi-Window Mode</a></li>
-<li><a href="#specifying-the-firefox-profile">Specifying the Firefox Profile</a></li>
-<li><a href="#run-selenese-directly-within-the-server-using-htmlsuite">Run Selenese Directly Within the Server Using -htmlSuite</a></li>
+<li><a href="#configuración-del-proxy">Configuración del Proxy</a></li>
+<li><a href="#modo-multi-window">Modo Multi-Window</a></li>
+<li><a href="#especificando-el-perfil-de-firefox">Especificando el Perfil de Firefox</a></li>
+<li><a href="#ejecuta-selenese-directamente-dentro-del-servidor-utilizando-htmlsuite">Ejecuta Selenese Directamente Dentro del Servidor Utilizando-htmlSuite</a></li>
 <li><a href="#selenium-server-logging">Selenium Server Logging</a>
 <ul>
 <li><a href="#server-side-logs">Server-Side Logs</a></li>
@@ -3124,13 +3124,10 @@ y luego tomar alternativas cuando no lo está. Observemos esto utilizando Java.<
 
 <h3 id="executing-javascript-from-your-test">Executing JavaScript from Your Test</h3>
 
-<p>JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The <strong>getEval</strong> method of Selenium API can be used to execute JavaScript from
-Selenium RC.</p>
+<p>JavaScript es muy útil para utilizar una aplicación que no es directamente compatible con Selenium. El método <strong>getEval</strong> de Selenium API se puede utilizar para ejecutar JavaScript desde Selenium RC.</p>
 
-<p>Consider an application having check boxes with no static identifiers.
-In this case one could evaluate JavaScript from Selenium RC to get ids of all
-check boxes and then exercise them.</p>
+<p>Considera una aplicación que tiene casillas de verificación sin identificadores estáticos.
+En este caso, uno podría evaluar JavaScript desde Selenium RC para obtener los identificadores de todas las casillas de verificación y luego utilizarles.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">   <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> String[] <span style="color:#268bd2">getAllCheckboxIds</span> () { 
 		String <span style="color:#268bd2">script</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;var inputId  = new Array();&#34;</span>;<span style="color:#586e75">// Create array in java script.
 </span><span style="color:#586e75"></span>		script <span style="color:#719e07">+=</span> <span style="color:#2aa198">&#34;var cnt = 0;&#34;</span>; <span style="color:#586e75">// Counter for check box ids.  
@@ -3148,81 +3145,65 @@ check boxes and then exercise them.</p>
 </span><span style="color:#586e75"></span>		String[] <span style="color:#268bd2">checkboxIds</span> <span style="color:#719e07">=</span> selenium.getEval(script).split(<span style="color:#2aa198">&#34;,&#34;</span>); <span style="color:#586e75">// Split the string.
 </span><span style="color:#586e75"></span>		<span style="color:#719e07">return</span> checkboxIds;
     }</code></pre></div>
-<p>To count number of images on a page:</p>
+<p>Para contar el número de imágenes en una página:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">   selenium.getEval(<span style="color:#2aa198">&#34;window.document.images.length;&#34;</span>);</code></pre></div>
-<p>Remember to use window object in case of DOM expressions as by default selenium
-window is referred to, not the test window.</p>
+<p>Recuerde usar un objeto window en caso de expresiones DOM ya que por
+defecto se hace referencia a la ventana de Selenium,
+no a la ventana de prueba.</p>
 
-<h2 id="server-options">Server Options</h2>
+<h2 id="opciones-del-servidor">Opciones del Servidor</h2>
 
-<p>When the server is launched, command line options can be used to change the
-default server behaviour.</p>
+<p>Cuando se inicia el servidor,se pueden utilizar opciones de línea
+de comando para cambiar el comportamiento predeterminado del servidor.</p>
 
-<p>Recall, the server is started by running the following.</p>
+<p>Recuerda, el servidor se inicia ejecutando lo siguiente.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar</code></pre></div>
 <p>To see the list of options, run the server with the <code>-h</code> option.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar -h</code></pre></div>
-<p>You&rsquo;ll see a list of all the options you can use with the server and a brief
-description of each. The provided descriptions will not always be enough, so we&rsquo;ve
-provided explanations for some of the more important options.</p>
+<p>Verás una lista de todas las opciones que puedes utilizar con el servidor
+y un breve descripción de cada una. Las descripciones proporcionadas no
+siempre serán suficientes, así que hemos proporcionado explicaciones
+para algunas de las opciones más importantes.</p>
 
-<h3 id="proxy-configuration">Proxy Configuration</h3>
+<h3 id="configuración-del-proxy">Configuración del Proxy</h3>
 
-<p>If your AUT is behind an HTTP proxy which requires authentication then you should
-configure http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
-using the following command.</p>
+<p>Si tu AUT está detrás de un proxy HTTP que requiere autenticación, entonces deberías configurar http.proxyHost, http.proxyPort, http.proxyUser y
+http.proxyPassword usando el siguiente comando.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   $ java -jar selenium-server-standalone-&lt;version-number&gt;.jar -Dhttp.proxyHost<span style="color:#719e07">=</span>proxy.com -Dhttp.proxyPort<span style="color:#719e07">=</span><span style="color:#2aa198">8080</span> -Dhttp.proxyUser<span style="color:#719e07">=</span>username -Dhttp.proxyPassword<span style="color:#719e07">=</span>password</code></pre></div>
-<h3 id="multi-window-mode">Multi-Window Mode</h3>
+<h3 id="modo-multi-window">Modo Multi-Window</h3>
 
-<p>If you are using Selenium 1.0 you can probably skip this section, since multiwindow mode is
-the default behavior.  However, prior to version 1.0, Selenium by default ran the
-application under test in a sub frame as shown here.</p>
+<p>Si estás utilizando Selenium 1.0, probablemente puedas omitir esta sección,
+ya que el modo de ventanas múltiples es el comportamiento predeterminado.
+Sin embargo, antes de la versión 1.0, Selenium ejecutaba la aplicación bajo prueba en un sub-marco como se muestra aquí:</p>
 
 <p><img src="https://selenium.dev/documentation/es/images/legacy_docs/selenium_rc_single_window_mode.png" alt="Single window mode" /></p>
 
-<p>Some applications didn&rsquo;t run correctly in a sub frame, and needed to be
-loaded into the top frame of the window. The multi-window mode option allowed
-the AUT to run in a separate window rather than in the default
-frame where it could then have the top frame it required.</p>
+<p>Algunas aplicaciones no se ejecutaban correctamente en un sub-marcoo y debían ser cargadas en el marco superior de la ventana. La opción modo de ventana múltiple permitia al AUT ejecutarse en una ventana separada en lugar de en el marco predeterminado donde entonces podía tener el marco superior requerido.</p>
 
 <p><img src="https://selenium.dev/documentation/es/images/legacy_docs/selenium_rc_multi_window_mode.png" alt="Multiwindow Mode" /></p>
 
-<p>For older versions of Selenium you must specify multiwindow mode explicitly
-with the following option:</p>
+<p>Para versiones anteriores de Selenium, debes especificar explícitamente el modo de ventanas múltiples con la siguiente opción:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   -multiwindow </code></pre></div>
-<p>As of Selenium RC 1.0, if you want to run your test within a
-single frame (i.e. using the standard for earlier Selenium versions)
-you can state this to the Selenium Server using the option</p>
+<p>A partir de Selenium RC 1.0, si deseas ejecutar tu prueba dentro de un
+marco único (es decir, utilizando el estándar para versiones anteriores de Selenium) puedes indicar esto al servidor Selenium utilizando la opción</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   -singlewindow </code></pre></div>
-<h3 id="specifying-the-firefox-profile">Specifying the Firefox Profile</h3>
+<h3 id="especificando-el-perfil-de-firefox">Especificando el Perfil de Firefox</h3>
 
-<p>Firefox will not run two instances simultaneously unless you specify a
-separate profile for each instance. Selenium RC 1.0 and later runs in a
-separate profile automatically, so if you are using Selenium 1.0, you can
-probably skip this section.  However, if you&rsquo;re using an older version of
-Selenium or if you need to use a specific profile for your tests
-(such as adding an https certificate or having some addons installed), you will
-need to explicitly specify the profile.</p>
+<p>Firefox no ejecutará dos instancias simultáneamente a menos que especifiques un
+perfil separado para cada instancia. Selenium RC 1.0 y posteriores se ejecutan en un perfil separado automáticamente, por lo que si estás utilizando Selenium 1.0, probablemente puedes omitir esta sección. Sin embargo, si estás utilizando una versión anterior de Selenium o si necesitas usar un perfil específico para tus pruebas (como agregar un certificado https o tener algunos complementos instalados), necesitas especificar explícitamente el perfil.</p>
 
-<p>First, to create a separate Firefox profile, follow this procedure.
-Open the Windows Start menu, select &ldquo;Run&rdquo;, then type and enter one of the
-following:</p>
+<p>Primero, para crear un perfil separado de Firefox, sigue este procedimiento.
+Abre el menú Inicio de Windows, seleccione &ldquo;Ejecutar&rdquo;, luego escriba e ingrese uno de los siguientes:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   firefox.exe -profilemanager </code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   firefox.exe -P </code></pre></div>
-<p>Create the new profile using the dialog. Then when you run Selenium Server,
-tell it to use this new Firefox profile with the server command-line option
-<em>-firefoxProfileTemplate</em> and specify the path to the profile using its filename
-and directory path.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   -firefoxProfileTemplate <span style="color:#2aa198">&#34;path to the profile&#34;</span> </code></pre></div>
-<p><strong>Warning</strong>:  Be sure to put your profile in a new folder separate from the default!!!
-   The Firefox profile manager tool will delete all files in a folder if you
-   delete a profile, regardless of whether they are profile files or not.</p>
+<p>Crea el nuevo perfil utilizando el cuadro de diálogo. Luego, cuando ejecutes Selenium Server, especificale que use este nuevo perfil de Firefox con la opción de línea de comandos del servidor <em>-firefoxProfileTemplate</em> y especifique la ruta del perfil utilizando el nombre del archivo y la ruta del directorio.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   -firefoxProfileTemplate <span style="color:#2aa198">&#34;ruta del perfil&#34;</span> </code></pre></div>
+<p><strong>Advertencia</strong>: Asegúrate de poner tu perfil en una nueva carpeta separada de la predeterminada. La herramienta de administrador de perfiles de Firefox eliminará todos los archivos de una carpeta si eliminas un perfil, independientemente de si son archivos de perfil o no.</p>
 
-<p>More information about Firefox profiles can be found in <a href="http://support.mozilla.com/en/kb/Managing+profiles">Mozilla&rsquo;s Knowledge Base</a></p>
+<p>Puedes encontrar más información sobre los perfiles de Firefox en la <a href="http://support.mozilla.com/en/kb/Managing+profiles">Base de conocimiento de Mozilla</a></p>
 
-<h3 id="run-selenese-directly-within-the-server-using-htmlsuite">Run Selenese Directly Within the Server Using -htmlSuite</h3>
+<h3 id="ejecuta-selenese-directamente-dentro-del-servidor-utilizando-htmlsuite">Ejecuta Selenese Directamente Dentro del Servidor Utilizando-htmlSuite</h3>
 
-<p>You can run Selenese html files directly within the Selenium Server
-by passing the html file to the server&rsquo;s command line.  For instance:</p>
+<p>Puedes ejecutar archivos html de Selenese directamente dentro del servidor Selenium pasando el archivo html a la línea de comandso del servidor. Por ejemplo:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   java -jar selenium-server-standalone-&lt;version-number&gt;.jar -htmlSuite <span style="color:#2aa198">&#34;*firefox&#34;</span> 
    <span style="color:#2aa198">&#34;http://www.google.com&#34;</span> <span style="color:#2aa198">&#34;c:\absolute\path\to\my\HTMLSuite.html&#34;</span> 
    <span style="color:#2aa198">&#34;c:\absolute\path\to\my\results.html&#34;</span></code></pre></div>
@@ -3238,6 +3219,15 @@ nice HTML report with the results.</p>
 you type it. Note this requires you to pass in an HTML
 Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with <code>-interactive</code>
 You cannot run both at the same time.</p>
+
+<p>Esto iniciará automáticamente tu suite HTML, ejecutará todas las pruebas y guardará un bonito reporte HTML con los resultados.</p>
+
+<p><em>Nota:</em> Al usar esta opción, el servidor comenzará las pruebas y esperará un
+    número especificado de segundos a que la prueba se complete; si la prueba no se completa dentro de ese período de tiempo, el comando saldrá con un código distinto de cero y no se generará ningún reporte de resultados.</p>
+
+<p>Esta línea de comandos es muy larga, así que ten cuidado cuando
+la escribas. Ten en cuenta que esto requiere que pases una
+suite HTML Selenese, no una sola prueba. También ten en cuenta que la opción -htmlSuite es incompatible con <code>-interactive</code> No puedes ejecutar ambas al mismo tiempo.</p>
 
 <h3 id="selenium-server-logging">Selenium Server Logging</h3>
 
@@ -3728,7 +3718,7 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/legacy_docs/selenium_rc/">
       “Selenium 1 (Selenium RC)”
-    </a> was last updated on: 17 May 2020 15:39:04 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/d253bffa03fc38ef81190ee56975f3e11306aec5">Continue spanish translations to the RC site (#420)[deploy site] (d253bffa)</a>
+    </a> was last updated on: 19 May 2020 23:00:36 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/0344d8a714a26f4839bfd42ce9e079d57eb7b067">Add translations to js and server in RC site (#424) (0344d8a7)</a>
 </h5>
         
         </div> 
@@ -4890,19 +4880,19 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589819599"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1589923652"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1589819599"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589819599"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1589923652"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1589923652"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589819599" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589819599"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1589923652" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1589923652"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
