@@ -435,7 +435,23 @@ driver = await env.builder()
           .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR to add code sample
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+
+fun main() {
+    val options = InternetExplorerOptions();
+    options.useCreateProcessApiToLaunchIe();
+    options.addCommandSwitches("-k");
+    val driver = InternetExplorerDriver(options);
+    try {
+        driver.get("https://google.com/ncr");
+        val caps = driver.getCapabilities();
+        println(caps);
+    } finally {
+        driver.quit();
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
