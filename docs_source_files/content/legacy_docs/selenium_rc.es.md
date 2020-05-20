@@ -1035,7 +1035,7 @@ y luego tomar alternativas cuando no lo está. Observemos esto utilizando Java.
 
 La ventaja de este enfoque es que continua con la ejecución de la prueba, incluso si algunos elementos de la interfaz de usuario no están disponibles en la página.
 
-### Executing JavaScript from Your Test
+### Ejecutando JavaScript Desde tus Pruebas
 
 JavaScript es muy útil para utilizar una aplicación que no es directamente compatible con Selenium. El método **getEval** de Selenium API se puede utilizar para ejecutar JavaScript desde Selenium RC.
 
@@ -1154,7 +1154,7 @@ Crea el nuevo perfil utilizando el cuadro de diálogo. Luego, cuando ejecutes Se
 
 Puedes encontrar más información sobre los perfiles de Firefox en la [Base de conocimiento de Mozilla](http://support.mozilla.com/en/kb/Managing+profiles)
 
-### Ejecuta Selenese Directamente Dentro del Servidor Utilizando-htmlSuite
+### Ejecuta Selenese Directamente Dentro del Servidor Utilizando -htmlSuite
 
 Puedes ejecutar archivos html de Selenese directamente dentro del servidor Selenium pasando el archivo html a la línea de comandso del servidor. Por ejemplo:
 
@@ -1164,122 +1164,130 @@ Puedes ejecutar archivos html de Selenese directamente dentro del servidor Selen
    "c:\absolute\path\to\my\results.html"
 ``` 
 
-This will automatically launch your HTML suite, run all the tests and save a
-nice HTML report with the results.
-
-*Note:*  When using this option, the server will start the tests and wait for a
-   specified number of seconds for the test to complete; if the test doesn't 
-   complete within that amount of time, the command will exit with a non-zero 
-   exit code and no results file will be generated.
-
-This command line is very long so be careful when 
-you type it. Note this requires you to pass in an HTML 
-Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with ``-interactive``
-You cannot run both at the same time.
-
 Esto iniciará automáticamente tu suite HTML, ejecutará todas las pruebas y guardará un bonito reporte HTML con los resultados.
 
-  *Nota:* Al usar esta opción, el servidor comenzará las pruebas y esperará un
-    número especificado de segundos a que la prueba se complete; si la prueba no se completa dentro de ese período de tiempo, el comando saldrá con un código distinto de cero y no se generará ningún reporte de resultados.
+  *Nota:* Al usar esta opción, el servidor comenzará las pruebas y
+   esperará un número especificado de segundos a que la prueba se
+   complete; si la prueba no se completa dentro de ese período de
+   tiempo, el comando saldrá con un código distinto de cero y no se
+   generará ningún reporte de resultados.
 
 Esta línea de comandos es muy larga, así que ten cuidado cuando
-la escribas. Ten en cuenta que esto requiere que pases una
-suite HTML Selenese, no una sola prueba. También ten en cuenta que la opción -htmlSuite es incompatible con ``-interactive`` No puedes ejecutar ambas al mismo tiempo.
+la escribas. Ten en cuenta que esto requiere que pases una suite
+HTML Selenese, no una sola prueba. También ten en cuenta que la
+opción -htmlSuite es incompatible con ``-interactive`` No puedes
+ejecutar ambas al mismo tiempo.
 
-### Selenium Server Logging
+### Registros de Selenium Server
 
-#### Server-Side Logs
+#### Registros del Lado del servidor
 
-When launching Selenium server the **-log** option can be used to record
-valuable debugging information reported by the Selenium Server to a text file.
+Al iniciar el servidor de Selenium, la opción **-log** puede usarse para
+grabar informaciónes valiosas de depuración reportadas por el servidor
+Selenium a un archivo de texto.
 
-```bash   
+```bash
    java -jar selenium-server-standalone-<version-number>.jar -log selenium.log
-``` 
-   
-This log file is more verbose than the standard console logs (it includes DEBUG 
-level logging messages). The log file also includes the logger name, and the ID
-number of the thread that logged the message. For example:   
+```
+
+Este archivo de registro es más detallado que los registros de
+consola estándar(incluye mensajes de registro de nivel DEBUG).
+El archivo de registro también incluye el nombre del registrador
+y la ID del número del hilo que registró el mensaje. Por ejemplo:
 
 ```bash   
    20:44:25 DEBUG [12] org.openqa.selenium.server.SeleniumDriverResourceHandler - 
    Browser 465828/:top frame1 posted START NEW
 ``` 
    
-The message format is 
+El formato del mensaje es
 
 ```bash   
    TIMESTAMP(HH:mm:ss) LEVEL [THREAD] LOGGER - MESSAGE
 ``` 
    
-This message may be multiline.
+Este mensaje puede ser de multiples lineas.
 
-#### Browser-Side Logs
+#### Registros del Lado del Navegador
 
-JavaScript on the browser side (Selenium Core) also logs important messages; 
-in many cases, these can be more useful to the end-user than the regular Selenium 
-Server logs. To access browser-side logs, pass the **-browserSideLog**
-argument to the Selenium Server.
+JavaScript en el lado del navegador (Selenium Core) también
+registra mensajes importantes; en muchos casos, estos pueden ser
+más útiles para el usuario final que los registros normales de
+Selenium Server. Para acceder a los registros del lado del
+navegador, pase el argumento **-browserSideLog** al servidor
+Selenium.
 
 
-```bash   
+```bash
    java -jar selenium-server-standalone-<version-number>.jar -browserSideLog
-``` 
-   
-**-browserSideLog** must be combined with the **-log** argument, to log 
-browserSideLogs (as well as all other DEBUG level logging messages) to a file.
+```
+
+**-browserSideLog** debe combinarse con el argumento **-log**,
+para registrar browserSideLogs (así como todos los demás
+mensajes de registro de nivel DEBUG) en un archivo.
 
 
-## Specifying the Path to a Specific Browser 
+## Especificando la Ruta a un Navegador Específico
 
-You can specify to Selenium RC a path to a specific browser. This is useful if 
-you have different versions of the same browser and you wish to use a specific
-one. Also, this is used to allow your tests to run against a browser not 
-directly supported by Selenium RC. When specifying the run mode, use the 
-\*custom specifier followed by the full path to the browser's executable:
+Puede especificarle a Selenium RC una ruta a un navegador
+específico.
+Esto es útil si tienes diferentes versiones del
+mismo navegador y deseas utilizar una en específico.
+Además, esto se utiliza para permitir que tus pruebas se ejecuten en un
+navegador no directamente apoyado por Selenium RC.
+Al especificar el modo de ejecución, use el especificador \*custom
+seguido de la ruta completa al ejecutable del navegador:
 
-```bash   
-   *custom <path to browser> 
-``` 
+```bash
+   *custom <ruta al navegador>
+```
 
-   
-## Selenium RC Architecture
+## Arquitectura de Selenium RC
 
-*Note:* This topic tries to explain the technical implementation behind 
-   Selenium RC. It's not fundamental for a Selenium user to know this, but 
-   could be useful for understanding some of the problems you might find in the
-   future.
-   
-To understand in detail how Selenium RC Server works  and why it uses proxy injection
-and heightened privilege modes you must first understand `the same origin policy`_.
-   
-### The Same Origin Policy
+*Nota:* Este tema trata de explicar la implementación técnica
+   detrás de Selenium RC. No es fundamental para un usuario de
+   Selenium saber esto, pero podría ser útil para comprender
+   algunos de los problemas que pueda encontrar en el futuro.
 
-The main restriction that Selenium faces is the 
-Same Origin Policy. This security restriction is applied by every browser
-in the market and its objective is to ensure that a site's content will never
-be accessible by a script from another site.  The Same Origin Policy dictates that
-any code loaded within the browser can only operate within that website's domain.
-It cannot perform functions on another website.  So for example, if the browser
-loads JavaScript code when it loads www.mysite.com, it cannot run that loaded code
-against www.mysite2.com--even if that's another of your sites. If this were possible, 
-a script placed on any website you open would be able to read information on 
-your bank account if you had the account page
-opened on other tab. This is called XSS (Cross-site Scripting).
+Para comprender en detalle cómo funciona Selenium RC Server y
+por qué utiliza la inyección proxy y modos aumentados de
+privilegios, primero debes entender `la politica del mismo
+origen`_.
 
-To work within this policy, Selenium-Core (and its JavaScript commands that
-make all the magic happen) must be placed in the same origin as the Application
-Under Test (same URL). 
+### La Política del Mismo Origen
 
-Historically, Selenium-Core was limited by this problem since it was implemented in
-JavaScript.  Selenium RC is not, however, restricted by the Same Origin Policy.  Its 
-use of the Selenium Server as a proxy avoids this problem.  It, essentially, tells the 
-browser that the browser is working on a single "spoofed" website that the Server
-provides. 
+La principal restricción que enfrenta Selenium es la politica del
+mismo origen.
+Todos los navegadores en el mercado aplican esta
+restricción de seguridad y su objetivo es asegurar que el
+contenido de un sitio nunca sera accesible por un script desde
+otro sitio.
+La Política del Mismo Origen dicta que cualquier
+código cargado dentro de un navegador solo puede operar dentro
+del dominio de ese sitio web.
+No puede realizar funciones en otro sitio web.
+Entonces, por ejemplo, si el navegador carga el código JavaScript
+cuando carga www.mysite.com, no puede ejecutar ese código cargado
+contra www.mysite2.com, incluso si ese es otro de tus sitios.
+Si esto fuera posible, un script colocado en cualquier sitio web
+que abras podría leer información sobre tu cuenta bancaria
+si tuviera la página de la cuenta abierta en otra pestaña.
+Esto se llama XSS (Cross-site Scripting).
 
-*Note:* You can find additional information about this topic on Wikipedia
-   pages about Same Origin Policy and XSS. 
+Para trabajar dentro de esta política, Selenium-Core (y sus
+comandos JavaScript que hacen que ocurra toda la magia) debe
+colocarse en el mismo origen que la Aplicación Bajo prueba
+(misma URL).
 
+Históricamente, Selenium-Core estaba limitado por este problema
+ya que se implementó en JavaScript Sin embargo, Selenium RC no
+está restringido por la Política del Mismo Origen. Su uso de
+Selenium Server como proxy evita este problema. Esencialmente,
+le dice al navegador quq está trabajando en un único sitio web
+"falso" que el servidor proporciona.
+
+*Nota:* Puedes encontrar información adicional sobre este tema
+   en paginas Wikipedia sobre la Política del mismo origen y XSS.
 
 ### Proxy Injection
 
