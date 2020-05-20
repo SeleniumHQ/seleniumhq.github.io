@@ -101,7 +101,7 @@ driver.navigate().to("https://selenium.dev")
   {{<code-panel language="csharp">}}driver.Url;{{</ code-panel>}}
   {{<code-panel language="ruby">}}driver.current_url{{</ code-panel>}}
   {{<code-panel language="javascript">}}await driver.getCurrentUrl();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.getCurrentUrl();{{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.currentUrl{{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 后退
@@ -127,7 +127,7 @@ driver.navigate().to("https://selenium.dev")
   {{<code-panel language="csharp">}}driver.Navigate().Forward();{{</ code-panel>}}
   {{<code-panel language="ruby">}}driver.navigate.forward{{</ code-panel>}}
   {{<code-panel language="javascript">}}await driver.navigate().forward();{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.navigate().forward();{{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.navigate().forward(){{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 刷新
@@ -152,7 +152,7 @@ driver.navigate().to("https://selenium.dev")
   {{<code-panel language="csharp">}}driver.Title;{{</ code-panel>}}
   {{<code-panel language="ruby">}}driver.title{{</ code-panel>}}
   {{<code-panel language="javascript">}}await driver.getTitle();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.getTitle(){{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.title{{< / code-panel>}}
 {{</ code-tab>}}
 
 
@@ -167,7 +167,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
   {{<code-panel language="csharp">}}driver.CurrentWindowHandle;{{</ code-panel>}}
   {{<code-panel language="ruby">}}driver.window_handle{{</ code-panel>}}
   {{<code-panel language="javascript">}}await driver.getWindowHandle();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.getWindowHandle(){{< / code-panel>}}
+  {{<code-panel language="kotlin">}}driver.windowHandle{{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 切换窗口或标签页
@@ -324,9 +324,11 @@ driver.findElement(By.linkText("new window")).click()
 wait.until(numberOfWindowsToBe(2))
 
 // 循环执行，直到找到一个新的窗口句柄
-for (windowHandle in driver.getWindowHandles()) {if (!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle)
-           break
-      }
+for (windowHandle in driver.getWindowHandles()) {
+    if (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        break
+    }
 }
 
 // 等待新标签页完成加载内容
@@ -671,7 +673,7 @@ await driver.findElement(By.css('button')).click();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 // 存储网页元素
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
 // 切换到 frame
 driver.switchTo().frame(iframe)
@@ -870,13 +872,13 @@ const height1 = rect.height;
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 // 分别获取每个尺寸
-val width = driver.manage().window().getSize().getWidth()
-val height = driver.manage().window().getSize().getHeight()
+val width = driver.manage().window().size.width
+val height = driver.manage().window().size.height
 
 // 或者存储尺寸并在以后查询它们
-val size = driver.manage().window().getSize()
-val width1 = size.getWidth()
-val height1 = size.getHeight()
+val size = driver.manage().window().size
+val width1 = size.width
+val height1 = size.height
   {{</ code-panel>}}
 {{</ code-tab>}}
 
@@ -889,7 +891,7 @@ val height1 = size.getHeight()
   {{<code-panel language="csharp">}}driver.Manage().Window.Size = new Size(1024, 768);{{</ code-panel>}}
   {{<code-panel language="ruby">}}driver.manage.window.resize_to(1024,768){{</ code-panel>}}
   {{<code-panel language="javascript">}}await driver.manage().window().setRect({width: 1024, height: 768});{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.manage().window().size(Dimension(1024, 768)){{</ code-panel>}}
+  {{<code-panel language="kotlin">}}driver.manage().window().size = Dimension(1024, 768){{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 得到窗口的位置
@@ -954,7 +956,7 @@ val y = driver.manage().window().position.y
 // 或者存储尺寸并在以后查询它们
 val position = driver.manage().window().position
 val x1 = position.x
-int y1 = position.y
+val y1 = position.y
   
   {{</ code-panel>}}
 {{</ code-tab>}}
