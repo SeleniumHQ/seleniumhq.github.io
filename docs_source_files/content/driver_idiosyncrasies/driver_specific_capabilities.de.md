@@ -327,7 +327,6 @@ When set to `true`, this capability suppresses the
 diagnostic output of the IEDriverServer.
 
 This capability accepts a Boolean value as parameter.
- 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
