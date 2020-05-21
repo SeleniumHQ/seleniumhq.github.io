@@ -322,7 +322,9 @@ This capability accepts a Boolean value as parameter.
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a PR to add code sample
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.setCapability("silent", true);
+WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR to add code sample

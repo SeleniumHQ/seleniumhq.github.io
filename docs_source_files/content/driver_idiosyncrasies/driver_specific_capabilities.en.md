@@ -327,7 +327,7 @@ This capability accepts a Boolean value as parameter.
   {{< code-panel language="java" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.setCapability("silent", true);
-WebDriver driver = new RemoteWebDriver(options);
+WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR to add code sample
