@@ -7,8 +7,8 @@ weight: 3
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch Ã¼bersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu Ã¼bersetzen indem Du uns einen Pull Reqeust schickst!
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
 
 One of the most fundamental techniques to learn when using WebDriver is
@@ -44,7 +44,7 @@ another fundamental object type, the `WebElement`.
 * `WebElement` represents a particular DOM node
   (a control, e.g. a link or input field, etc.)
 
-Once you have a reference to a web element that's been â€œfoundâ€�,
+Once you have a reference to a web element that's been “found”,
 you can narrow the scope of your search
 by using the same call on that object instance:
 
@@ -90,7 +90,7 @@ Consequently, the _By_ interface used above also supports a
 number of additional locator strategies.  A nested lookup might not be
 the most effective cheese location strategy since it requires two
 separate commands to be issued to the browser; first searching the DOM
-for an element with ID â€œcheeseâ€�, then a search for â€œcheddarâ€� in a
+for an element with ID “cheese”, then a search for “cheddar” in a
 narrowed context.
 
 To improve the performance slightly, we should try to use a more
@@ -126,10 +126,10 @@ ordered list of the cheese we like the best:
 
 ```html
 <ol id=cheese>
- <li id=cheddar>â€¦
- <li id=brie>â€¦
- <li id=rochefort>â€¦
- <li id=camembert>â€¦
+ <li id=cheddar>…
+ <li id=brie>…
+ <li id=rochefort>…
+ <li id=camembert>…
 </ul>
 ```
 
@@ -149,7 +149,7 @@ List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"))
 mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(â€œ#cheese liâ€�));
+IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 mucho_cheese = driver.find_elements(css: '#cheese li')
