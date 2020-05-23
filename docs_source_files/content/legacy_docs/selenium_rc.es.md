@@ -1358,7 +1358,7 @@ Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
 sucede lo siguiente:
 
 1. El cliente/controlador establece una conexión con el servidor
-   selenium-RC.
+   Selenium-RC.
 2. El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
    conuna URL eso cargará Selenium-Core en la página web.
 3. Selenium-Core obtiene la primera instrucción del cliente/controlador
