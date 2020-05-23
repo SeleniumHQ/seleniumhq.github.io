@@ -328,7 +328,11 @@ options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+caps = webdriver.DesiredCapabilities.INTERNETEXPLORER
+caps['silent'] = True
+driver = webdriver.Ie(desired_capabilities=caps)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
@@ -355,7 +359,9 @@ caps.set('silent', true);
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR to add code sample
+val options = InternetExplorerOptions();
+options.setCapability("silent", true)
+val driver = InternetExplorerDriver(options);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
