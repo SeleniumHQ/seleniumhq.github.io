@@ -332,9 +332,14 @@ WebDriver driver = new InternetExplorerDriver(options);
   {{< code-panel language="python" >}}
 from selenium import webdriver
 
-caps = webdriver.DesiredCapabilities.INTERNETEXPLORER
-caps['silent'] = True
-driver = webdriver.Ie(desired_capabilities=caps)
+options = webdriver.IeOptions()
+options.set_capability("silent", True)
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
