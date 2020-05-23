@@ -11,20 +11,20 @@
     <title>Selenium 1 (Selenium RC) :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1590224062" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1590224062" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1590248397" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1590248397" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1590224062" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1590248397" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1590224062"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1590248397"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1590224062"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1590224062"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1590248397"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1590248397"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1590224062"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1590248397"></script>
 
     
   </div>
@@ -2013,14 +2013,14 @@
 <li><a href="#arquitectura-de-selenium-rc">Arquitectura de Selenium RC</a>
 <ul>
 <li><a href="#la-política-del-mismo-origen">La Política del Mismo Origen</a></li>
-<li><a href="#proxy-injection">Proxy Injection</a></li>
-<li><a href="#heightened-privileges-browsers">Heightened Privileges Browsers</a></li>
+<li><a href="#inyección-de-proxy">Inyección de Proxy</a></li>
+<li><a href="#navegadores-con-privilegios-aumentados">Navegadores con Privilegios Aumentados</a></li>
 </ul></li>
-<li><a href="#handling-https-and-security-popups">Handling HTTPS and Security Popups</a>
+<li><a href="#manejo-de-https-y-ventanas-emergentes-de-seguridad">Manejo de HTTPS y Ventanas Emergentes de Seguridad</a>
 <ul>
-<li><a href="#security-certificates-explained">Security Certificates Explained</a></li>
+<li><a href="#certificados-de-seguridad-explicados">Certificados de Seguridad Explicados</a></li>
 </ul></li>
-<li><a href="#supporting-additional-browsers-and-browser-configurations">Supporting Additional Browsers and Browser Configurations</a>
+<li><a href="#soportando-navegadores-y-configuraciones-de-navegador-adicionales">Soportando Navegadores y Configuraciones de Navegador Adicionales</a>
 <ul>
 <li><a href="#running-tests-with-different-browser-configurations">Running Tests with Different Browser Configurations</a></li>
 </ul></li>
@@ -3310,133 +3310,170 @@ le dice al navegador quq está trabajando en un único sitio web
 <p><em>Nota:</em> Puedes encontrar información adicional sobre este tema
    en paginas Wikipedia sobre la Política del mismo origen y XSS.</p>
 
-<h3 id="proxy-injection">Proxy Injection</h3>
+<h3 id="inyección-de-proxy">Inyección de Proxy</h3>
 
-<p>The first method Selenium used to avoid the The Same Origin Policy was Proxy Injection.
-In Proxy Injection Mode, the Selenium Server acts as a client-configured <strong>HTTP
-proxy</strong><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>, that sits between the browser and the Application Under Test<sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>.
-It then masks the AUT under a fictional URL (embedding
-Selenium-Core and the set of tests and delivering them as if they were coming
-from the same origin).</p>
+<p>El primer método utilizado por Selenium para evitar la Política
+del Mismo Origen fue la Inyección de Proxy.
+En el modo de inyección de proxy, el servidor Selenium actúa como un
+<strong>proxy HTTP</strong> configurado por el cliente<sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>, que se encuentra
+entre el navegador y la aplicación bajo prueba <sup class="footnote-ref" id="fnref:2"><a href="#fn:2">2</a></sup>.
+Luego enmascara el AUT bajo una URL ficticia (incrustando Selenium-
+Core y el conjunto de pruebas y entregandolas como si vinieran del
+mismo origen).</p>
 
-<p>Here is an architectural diagram.</p>
+<p>pelota entre las dos partes. Actúa como un &ldquo;servidor web&rdquo; que
+entrega el AUT al navegador. Ser un proxy le da al Selenium
+Server la capacidad de &ldquo;mentir&rdquo; sobre la URL real del AUT.</p>
+
+<p>establece localhost:4444 como el proxy HTTP, es por eso que
+cualquier solicitud HTTP que haga el navegador pasará a través
+del servidor Selenium y la respuesta pasará a través de él y no
+desde el servidor real.</p>
+
+<p>Aquí hay un diagrama arquitectónico.</p>
 
 <p><img src="https://selenium.dev/documentation/es/images/legacy_docs/selenium_rc_architecture_diagram_1.png" alt="Architectural Diagram 1" /></p>
 
-<p>As a test suite starts in your favorite language, the following happens:</p>
+<p>Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:</p>
 
 <ol>
-<li>The client/driver establishes a connection with the selenium-RC server.</li>
-<li>Selenium RC server launches a browser (or reuses an old one) with a URL
-that injects Selenium-Core&rsquo;s JavaScript into the browser-loaded web page.</li>
-<li>The client-driver passes a Selenese command to the server.</li>
-<li>The Server interprets the command and then triggers the corresponding
-JavaScript execution to execute that command within the browser.
-Selenium-Core instructs the browser to act on that first instruction, typically opening a page of the
-AUT.</li>
-<li>The browser receives the open request and asks for the website&rsquo;s content from
-the Selenium RC server (set as the HTTP proxy for the browser to use).</li>
-<li>Selenium RC server communicates with the Web server asking for the page and once
-it receives it, it sends the page to the browser masking the origin to look
-like the page comes from the same server as Selenium-Core (this allows
-Selenium-Core to comply with the Same Origin Policy).</li>
-<li>The browser receives the web page and renders it in the frame/window reserved
-for it.
+<li>El cliente/controlador establece una conexión con el
+servidor selenium-RC.</li>
+<li>El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+con una URL que inyecta el JavaScript de Selenium-Core en la página webcargada por el navegador.</li>
+<li>El controlador de cliente pasa un comando Selenese al servidor.</li>
+<li>El servidor interpreta el comando y luego activa la ejecucion
+JavaScript correspondiente para ejecutar ese comando dentro del
+navegador. Selenium-Core indica al navegador que actúe según esa
+primera instrucción, normalmente abriendo una página del AUT.</li>
+<li>El navegador recibe la solicitud abierta y solicita el contenido
+proxy HTTP para que lo use el navegador).</li>
+<li>El servidor Selenium RC se comunica con el servidor web
+solicitando la página y una vez lo recibe, envía la página al
+navegador enmascarando el origen para buscar como si la página
+viniera del mismo servidor que Selenium-Core (esto permite
+a Selenium-Core cumplir con la Política del mismo origen).<br /></li>
+<li>El navegador recibe la página web y la muestra en el marco/ventana
+reservada para ello.
 <br /></li>
 </ol>
 
-<h3 id="heightened-privileges-browsers">Heightened Privileges Browsers</h3>
+<h3 id="navegadores-con-privilegios-aumentados">Navegadores con Privilegios Aumentados</h3>
 
-<p>This workflow in this method is very similar to Proxy Injection but the main
-difference is that the browsers are launched in a special mode called <em>Heightened
-Privileges</em>, which allows websites to do things that are not commonly permitted
-(as doing XSS_, or filling file upload inputs and pretty useful stuff for
-Selenium). By using these browser modes, Selenium Core is able to directly open
-the AUT and read/interact with its content without having to pass the whole AUT
-through the Selenium RC server.</p>
+<p>Este flujo de trabajo en este método es muy similar a la
+Inyección de Proxy pero la principal diferencia es que los
+navegadores se inician en un modo especial llamado <em>Privilegios
+Aumentados</em>, que permite a los sitios web hacer cosas que
+normalmente no están permitidas (como hacer XSS_ o llenar
+entradas de carga de archivos y cosas bastante útiles para
+Selenium). Al usar estos modos de navegador, Selenium Core puede
+abrir directamente el AUT y leer/interactúar con su contenido
+sin tener que pasar todo el AUT a través del servidor Selenium
+RC.</p>
 
-<p>Here is the architectural diagram.</p>
+<p>Aquí hay un diagrama arquitectónico.</p>
 
 <p><img src="https://selenium.dev/documentation/es/images/legacy_docs/selenium_rc_architecture_diagram_2.png" alt="Architectural Diagram 1" /></p>
 
-<p>As a test suite starts in your favorite language, the following happens:</p>
+<p>Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:</p>
 
 <ol>
-<li>The client/driver establishes a connection with the selenium-RC server.</li>
-<li>Selenium RC server launches a browser (or reuses an old one) with a URL
-that will load Selenium-Core in the web page.</li>
-<li>Selenium-Core gets the first instruction from the client/driver (via another
-HTTP request made to the Selenium RC Server).</li>
-<li>Selenium-Core acts on that first instruction, typically opening a page of the
-AUT.</li>
-<li>The browser receives the open request and asks the Web Server for the page.
-Once the browser receives the web page, renders it in the frame/window reserved
-for it.</li>
+<li>El cliente/controlador establece una conexión con el servidor
+Selenium-RC.</li>
+<li>El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+conuna URL eso cargará Selenium-Core en la página web.</li>
+<li>Selenium-Core obtiene la primera instrucción del cliente/controlador
+(a través de otra solicitud HTTP realizada al servidor Selenium RC)</li>
+<li>Selenium-Core actúa en esa primera instrucción, generalmente abriendo una
+página del AUT.</li>
+<li>El navegador recibe la solicitud de apertura y le pide al servidor web
+página. Una vez que el navegador recibe la página web, la muestra en el marco/ventana reservada para ello.</li>
 </ol>
 
-<h2 id="handling-https-and-security-popups">Handling HTTPS and Security Popups</h2>
+<h2 id="manejo-de-https-y-ventanas-emergentes-de-seguridad">Manejo de HTTPS y Ventanas Emergentes de Seguridad</h2>
 
-<p>Many applications switch from using HTTP to HTTPS when they need to send
-encrypted information such as passwords or credit card information. This is
-common with many of today&rsquo;s web applications. Selenium RC supports this.</p>
+<p>Muchas aplicaciones cambian de HTTP a usar HTTPS cuando
+necesitan enviar información encriptada como contraseñas o
+informaciónes de tarjetas de crédito. Esto es común con muchas de
+las aplicaciones web actuales. Selenium RC apoya esto.</p>
 
-<p>To ensure the HTTPS site is genuine, the browser will need a security
-certificate. Otherwise, when the browser accesses the AUT using HTTPS, it will
-assume that application is not &lsquo;trusted&rsquo;. When this occurs the browser
-displays security popups, and these popups cannot be closed using Selenium RC.</p>
+<p>Para garantizar que el sitio HTTPS sea genuino, el navegador
+necesitará un certificado de seguridad .De lo contrario, cuando el
+navegador acceda al AUT usando HTTPS, lo hará suponiendo que la
+aplicación no es &ldquo;confiable&rdquo;. Cuando esto ocurre, el navegador
+muestra ventanas emergentes de seguridad, y estas ventanas
+emergentes no se pueden cerrar con Selenium RC.</p>
 
-<p>When dealing with HTTPS in a Selenium RC test, you must use a run mode that supports this and handles
-the security certificate for you. You specify the run mode when your test program
-initializes Selenium.</p>
+<p>Cuando se trata de HTTPS en una prueba de Selenium RC, debes usar
+un modo de ejecución que lo admita y maneje el certificado de
+seguridad por ti. Especificas el modo de ejecución
+cuando tu programa de prueba inicializa Selenium.</p>
 
-<p>In Selenium RC 1.0 beta 2 and later use *firefox or *iexplore for the run
-mode. In earlier versions, including Selenium RC 1.0 beta 1, use *chrome or
-*iehta, for the run mode. Using these run modes, you will not need to install
-any special security certificates; Selenium RC will handle it for you.</p>
+<p>En Selenium RC 1.0 beta 2 y posteriores, utiliza *firefox o
+*iexplore para el modo de ejecución. En versiones anteriores,
+incluida Selenium RC 1.0 beta 1, utiliza *chrome o *iehta,
+para el modo de ejecución. Con estos modos de ejecución, no
+necesitarás instalar ningun certificado de seguridad especial;
+Selenium RC lo manejará por ti.</p>
 
-<p>In version 1.0 the run modes *firefox or *iexplore are
-recommended. However, there are additional run modes of *iexploreproxy and
-*firefoxproxy. These are provided for backwards compatibility only, and
-should not be used unless required by legacy test programs. Their use will
-present limitations with security certificate handling and with the running
-of multiple windows if your application opens additional browser windows.</p>
+<p>En la versión 1.0, los modos de ejecución *firefox o
+*iexplore son recomendados. Sin embargo, hay modos de ejecución
+adicionales de *iexploreproxy y *firefoxproxy.
+Estos se proporcionan solo para compatibilidad con versiones anteriores,
+y no deben usarse a menos que lo requieran los programas de
+prueba heredados.
+Su uso lo presentará limitaciones con el manejo del certificado de
+seguridad y con la ejecución de varias ventanas si tu aplicación abre
+ventanas adicionales del navegador.</p>
 
-<p>In earlier versions of Selenium RC, *chrome or *iehta were the run modes that
-supported HTTPS and the handling of security popups. These were considered ‘experimental
-modes although they became quite stable and many people used them.  If you are using
-Selenium 1.0 you do not need, and should not use, these older run modes.</p>
+<p>En versiones anteriores de Selenium RC, *chrome o *iehta
+eran los modos de ejecución que soportaban HTTPS y el manejo de
+ventanas de seguridad emergentes. Estos fueron considerados
+modos ‘experimentales aunque se volvieron bastante estables y
+muchas personas los usaron. Si estas usando Selenium 1.0 no
+necesitas, y no debes usar, estos modos de ejecución más antiguos.</p>
 
-<h3 id="security-certificates-explained">Security Certificates Explained</h3>
+<h3 id="certificados-de-seguridad-explicados">Certificados de Seguridad Explicados</h3>
 
-<p>Normally, your browser will trust the application you are testing
-by installing a security certificate which you already own. You can
-check this in your browser&rsquo;s options or Internet properties (if you don&rsquo;t
-know your AUT&rsquo;s security certificate ask your system administrator).
-When Selenium loads your browser it injects code to intercept
-messages between the browser and the server. The browser now thinks
-untrusted software is trying to look like your application.  It responds by alerting you with popup messages.</p>
+<p>Normalmente, tu navegador confiará en la aplicación que está
+probando instalando un certificado de seguridad que ya posee.
+Puedes verificar esto en las opciones de tu navegador o en
+las propiedades de Internet (si no conoces el certificado de
+seguridad de tu AUT, consulta al administrador del sistema).
+Cuando Selenium carga tu navegador, inyecta código para interceptar
+mensajes entre el navegador y el servidor.
+El navegador ahora piensa el software no confiable está tratando de
+parecerse a su aplicación. Responde alertándote con ventanas emergentes.</p>
 
-<p>To get around this, Selenium RC, (again when using a run mode that support
-this) will install its own security certificate, temporarily, to your
-client machine in a place where the browser can access it. This tricks the
-browser into thinking it&rsquo;s accessing a site different from your AUT and effectively suppresses the popups.</p>
+<p>Para evitar esto, Selenium RC, (nuevamente cuando se utiliza un
+modo de ejecución que permite esto) instalará su propio
+certificado de seguridad, temporalmente, en tu máquina cliente
+en un lugar donde el navegador pueda acceder a ella. Esto engaña
+al navegador haciendole creer que está accediendo a un sitio
+diferente de su AUT y suprime efectivamente las ventanas
+emergentes.</p>
 
-<p>Another method used with earlier versions of Selenium was to
-install the Cybervillians security certificate provided with your Selenium
-installation. Most users should no longer need to do this however; if you are
-running Selenium RC in proxy injection mode, you may need to explicitly install this
-security certificate.</p>
+<p>Otro método utilizado con versiones anteriores de Selenium era
+instalar el certificado de seguridad de Cybervillians incluido
+con tu instalación de Selenium. Sin embargo, la mayoría de los
+usuarios ya no deberían de necesitar hacer esto; si estas
+ejecutando Selenium RC en modo de inyección proxy, es posible
+que debas instalar explícitamente este certificado de seguridad.</p>
 
-<h2 id="supporting-additional-browsers-and-browser-configurations">Supporting Additional Browsers and Browser Configurations</h2>
+<h2 id="soportando-navegadores-y-configuraciones-de-navegador-adicionales">Soportando Navegadores y Configuraciones de Navegador Adicionales</h2>
 
-<p>The Selenium API supports running against multiple browsers in addition to
-Internet Explorer and Mozilla Firefox.  See the <a href="https://selenium.dev">https://selenium.dev</a> website for
-supported browsers.  In addition, when a browser is not directly supported,
-you may still run your Selenium tests against a browser of your choosing by
-using the &ldquo;*custom&rdquo; run-mode (i.e. in place of *firefox or *iexplore) when
-your test application starts the browser.  With this, you pass in the path to
-the browsers executable within the API call. This can also be done from the
-Server in interactive mode.</p>
+<p>La API de Selenium permite la ejecución en múltiples navegadores
+además de Internet Explorer y Mozilla Firefox.
+Consulta el sitio web <a href="https://selenium.dev">https://selenium.dev</a> para ver los navegadores compatibles.
+Además, cuando un navegador no es directamente compatible, aún puede
+ejecutar tus pruebas de Selenium en un navegador de tu elección
+usando el modo de ejecución &ldquo;*custom&rdquo; (es decir, en lugar de *firefox
+o *iexplore) cuando tu aplicación de prueba inicia el navegador.
+Con esto,pasas la ruta a los navegadores ejecutables dentro de la llamada
+al API. Esto también se puede hacer desde el Servidor en modo
+interactivo.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">   <span style="color:#268bd2">cmd</span><span style="color:#719e07">=</span>getNewBrowserSession&amp;<span style="color:#268bd2">1</span><span style="color:#719e07">=</span>*custom c:<span style="color:#cb4b16">\P</span>rogram Files<span style="color:#cb4b16">\M</span>ozilla Firefox<span style="color:#cb4b16">\M</span>yBrowser.exe&amp;<span style="color:#268bd2">2</span><span style="color:#719e07">=</span>http://www.google.com</code></pre></div>
 <h3 id="running-tests-with-different-browser-configurations">Running Tests with Different Browser Configurations</h3>
 
@@ -3713,9 +3750,9 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
 <hr />
 
 <ol>
-<li id="fn:1">The proxy is a third person in the middle that passes the ball between the two parts. It acts as a &ldquo;web server&rdquo; that delivers the AUT to the browser. Being a proxy gives Selenium Server the capability of &ldquo;lying&rdquo; about the AUT&rsquo;s real URL.<br />
+<li id="fn:1">El proxy es una tercera persona situada en el medio que pasa la
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
-<li id="fn:2">The browser is launched with a configuration profile that has set localhost:4444 as the HTTP proxy, this is why any HTTP request that the browser does will pass through Selenium server and the response will pass through it and not from the real server.
+<li id="fn:2">El navegador se inicia con un perfil de configuración que
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
 </ol>
 </div>
@@ -3728,7 +3765,7 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/legacy_docs/selenium_rc/">
       “Selenium 1 (Selenium RC)”
-    </a> was last updated on: 20 May 2020 21:34:55 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/dcd1e812ce87dafda9677d2f82899c8f8c929861">Add spanish translations to server logging (#427)[deploy site] (dcd1e812)</a>
+    </a> was last updated on: 23 May 2020 17:38:36 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/cd99ce79bd3f4ce46a33713e5ebe250471266428">Add more spanish translations to proxy injection (#434)[deploy site] (cd99ce79)</a>
 </h5>
         
         </div> 
@@ -4890,19 +4927,19 @@ AND uncheck &lsquo;Enable Protected Mode&rsquo; option in Tools &gt;&gt; Options
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1590224063"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1590248397"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1590224063"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1590248397"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1590248397"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1590224063" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1590224063"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1590248397" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1590248397"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
