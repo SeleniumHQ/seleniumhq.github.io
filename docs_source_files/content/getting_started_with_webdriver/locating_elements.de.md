@@ -7,8 +7,8 @@ weight: 3
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
+auf Deutsch Ã¼bersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu Ã¼bersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
 
 One of the most fundamental techniques to learn when using WebDriver is
@@ -44,7 +44,7 @@ another fundamental object type, the `WebElement`.
 * `WebElement` represents a particular DOM node
   (a control, e.g. a link or input field, etc.)
 
-Once you have a reference to a web element that's been “found”,
+Once you have a reference to a web element that's been â€œfoundâ€�,
 you can narrow the scope of your search
 by using the same call on that object instance:
 
@@ -90,7 +90,7 @@ Consequently, the _By_ interface used above also supports a
 number of additional locator strategies.  A nested lookup might not be
 the most effective cheese location strategy since it requires two
 separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
+for an element with ID â€œcheeseâ€�, then a search for â€œcheddarâ€� in a
 narrowed context.
 
 To improve the performance slightly, we should try to use a more
@@ -126,10 +126,10 @@ ordered list of the cheese we like the best:
 
 ```html
 <ol id=cheese>
- <li id=cheddar>…
- <li id=brie>…
- <li id=rochefort>…
- <li id=camembert>…
+ <li id=cheddar>â€¦
+ <li id=brie>â€¦
+ <li id=rochefort>â€¦
+ <li id=camembert>â€¦
 </ul>
 ```
 
@@ -149,7 +149,7 @@ List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"))
 mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
+IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(â€œ#cheese liâ€�));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 mucho_cheese = driver.find_elements(css: '#cheese li')
@@ -228,6 +228,9 @@ to find the relative elements. This function returns
 properties of an element such as 
 right, left, bottom, and top.
 
+Let us consider the below example for understanding the relative locators.
+
+![Relative Locators](/images/relative_locators.png?width=400px)
 
 ### above()
 
@@ -236,7 +239,10 @@ above to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement passwordField= driver.findElement(By.id("password"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -263,7 +269,10 @@ below to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressField= driver.findElement(By.id("email"));
+WebElement passwordField = driver.findElement(withTagName("input")
+	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -290,7 +299,10 @@ to left of specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement submitButton= driver.findElement(By.id("submit"));
+WebElement cancelButton= driver.findElement(withTagName("button")
+                                            .toLeftOf(submitButton));                 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -317,7 +329,10 @@ to right of the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement cancelButton= driver.findElement(By.id("cancel"));
+WebElement submitButton= driver.findElement(withTagName("button")
+                                            .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -343,7 +358,10 @@ at most `50px` away from the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
