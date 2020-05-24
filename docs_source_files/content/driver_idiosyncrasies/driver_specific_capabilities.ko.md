@@ -336,7 +336,16 @@ options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.set_capability("silent", True)
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
@@ -518,7 +527,18 @@ driver.quit()
 // Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+options = Selenium::WebDriver::IE::Options.new
+options.force_create_process_api = true
+driver = Selenium::WebDriver.for(:ie, options: options)
+
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  puts(driver.capabilities.to_json)
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const ie = require('selenium-webdriver/ie');

@@ -11,20 +11,20 @@
     <title>Locating elements :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1590248409" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1590248409" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1590338124" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1590338124" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1590248409" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1590338124" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1590248409"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1590338124"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1590248409"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1590248409"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1590338124"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1590338124"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1590248409"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1590338124"></script>
 
     
   </div>
@@ -2506,6 +2506,10 @@ to find the relative elements. This function returns
 properties of an element such as
 right, left, bottom, and top.</p>
 
+<p>Let us consider the below example for understanding the relative locators.</p>
+
+<p><img src="https://selenium.dev/documentation/ko/images/relative_locators.png?width=400px" alt="Relative Locators" /></p>
+
 <h3 id="above">above()</h3>
 
 <p>Returns the WebElement, which appears
@@ -2552,8 +2556,11 @@ above to the specified element</p>
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Please raise a pr
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">passwordField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>));
+WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+                                                  .above(passwordField));
+  </code></pre></div>
 </section>
   
 
@@ -2646,8 +2653,11 @@ below to the specified element</p>
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Please raise a pr
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;email&#34;</span>));
+WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+	                                          .below(emailAddressField));
+  </code></pre></div>
 </section>
   
 
@@ -2740,8 +2750,11 @@ to left of specified element</p>
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Please raise a pr
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;submit&#34;</span>));
+WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
+                                            .toLeftOf(submitButton));
+  </code></pre></div>
 </section>
   
 
@@ -2834,8 +2847,11 @@ to right of the specified element</p>
 
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Please raise a pr
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cancel&#34;</span>));
+WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
+                                            .toRightOf(cancelButton));
+  </code></pre></div>
 </section>
   
 
@@ -2928,8 +2944,11 @@ at most <code>50px</code> away from the specified element.</p>
 
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#586e75">// Please raise a pr
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressLabel</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;lbl-email&#34;</span>));
+WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+                                                  .near(emailAddressLabel));
+  </code></pre></div>
 </section>
   
 
@@ -2984,7 +3003,7 @@ at most <code>50px</code> away from the specified element.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/">
       “Locating elements”
-    </a> was last updated on: 09 May 2020 21:43:08 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/665dc752ee835aad20c56f6e0330c76ee8fe2dc4">Modify: Fixing find_element from element code sample for py[deploy site] (665dc752)</a>
+    </a> was last updated on: 24 May 2020 03:17:26 -0700: <a href="https://github.com/SeleniumHQ/site/commit/0361064c5651fbea9490664cdfd293d092d850dc">Added the Java code snippets for Relative Locators (#435) [deploy site] (0361064c)</a>
 </h5>
         
         </div> 
@@ -4149,19 +4168,19 @@ at most <code>50px</code> away from the specified element.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1590248410"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1590338124"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1590248410"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1590248410"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1590338124"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1590338124"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1590248410" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1590248410"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1590338124" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1590338124"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
