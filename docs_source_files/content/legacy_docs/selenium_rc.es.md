@@ -1289,138 +1289,172 @@ le dice al navegador quq está trabajando en un único sitio web
 *Nota:* Puedes encontrar información adicional sobre este tema
    en paginas Wikipedia sobre la Política del mismo origen y XSS.
 
-### Proxy Injection
+### Inyección de Proxy
 
-The first method Selenium used to avoid the The Same Origin Policy was Proxy Injection.
-In Proxy Injection Mode, the Selenium Server acts as a client-configured **HTTP 
-proxy**[^1], that sits between the browser and the Application Under Test[^2].
-It then masks the AUT under a fictional URL (embedding
-Selenium-Core and the set of tests and delivering them as if they were coming
-from the same origin). 
+El primer método utilizado por Selenium para evitar la Política
+del Mismo Origen fue la Inyección de Proxy.
+En el modo de inyección de proxy, el servidor Selenium actúa como un
+**proxy HTTP** configurado por el cliente[^1], que se encuentra
+entre el navegador y la aplicación bajo prueba [^2].
+Luego enmascara el AUT bajo una URL ficticia (incrustando Selenium-
+Core y el conjunto de pruebas y entregandolas como si vinieran del
+mismo origen).
 
-[^1]: The proxy is a third person in the middle that passes the ball between the two parts. It acts as a "web server" that delivers the AUT to the browser. Being a proxy gives Selenium Server the capability of "lying" about the AUT's real URL.  
-   
-[^2]: The browser is launched with a configuration profile that has set localhost:4444 as the HTTP proxy, this is why any HTTP request that the browser does will pass through Selenium server and the response will pass through it and not from the real server.
+[^1]: El proxy es una tercera persona situada en el medio que pasa la
+pelota entre las dos partes. Actúa como un "servidor web" que
+entrega el AUT al navegador. Ser un proxy le da al Selenium
+Server la capacidad de "mentir" sobre la URL real del AUT.  
 
-Here is an architectural diagram. 
+[^2]: El navegador se inicia con un perfil de configuración que
+establece localhost:4444 como el proxy HTTP, es por eso que
+cualquier solicitud HTTP que haga el navegador pasará a través
+del servidor Selenium y la respuesta pasará a través de él y no
+desde el servidor real.
+
+Aquí hay un diagrama arquitectónico.
 
 ![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
 
-As a test suite starts in your favorite language, the following happens:
+Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that injects Selenium-Core's JavaScript into the browser-loaded web page.
-3. The client-driver passes a Selenese command to the server.
-4. The Server interprets the command and then triggers the corresponding 
-   JavaScript execution to execute that command within the browser.
-   Selenium-Core instructs the browser to act on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks for the website's content from
-   the Selenium RC server (set as the HTTP proxy for the browser to use).
-6. Selenium RC server communicates with the Web server asking for the page and once
-   it receives it, it sends the page to the browser masking the origin to look
-   like the page comes from the same server as Selenium-Core (this allows 
-   Selenium-Core to comply with the Same Origin Policy).
-7. The browser receives the web page and renders it in the frame/window reserved
-   for it.
+1. El cliente/controlador establece una conexión con el
+   servidor selenium-RC.
+2. El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+   con una URL que inyecta el JavaScript de Selenium-Core en la página webcargada por el navegador.
+3. El controlador de cliente pasa un comando Selenese al servidor.
+4. El servidor interpreta el comando y luego activa la ejecucion
+   JavaScript correspondiente para ejecutar ese comando dentro del
+   navegador. Selenium-Core indica al navegador que actúe según esa
+   primera instrucción, normalmente abriendo una página del AUT.
+5. El navegador recibe la solicitud abierta y solicita el contenido
+   proxy HTTP para que lo use el navegador).
+6. El servidor Selenium RC se comunica con el servidor web
+   solicitando la página y una vez lo recibe, envía la página al
+   navegador enmascarando el origen para buscar como si la página
+   viniera del mismo servidor que Selenium-Core (esto permite
+   a Selenium-Core cumplir con la Política del mismo origen).  
+7. El navegador recibe la página web y la muestra en el marco/ventana
+   reservada para ello.
    
-### Heightened Privileges Browsers
+### Navegadores con Privilegios Aumentados
 
-This workflow in this method is very similar to Proxy Injection but the main
-difference is that the browsers are launched in a special mode called *Heightened
-Privileges*, which allows websites to do things that are not commonly permitted
-(as doing XSS_, or filling file upload inputs and pretty useful stuff for 
-Selenium). By using these browser modes, Selenium Core is able to directly open
-the AUT and read/interact with its content without having to pass the whole AUT
-through the Selenium RC server.
+Este flujo de trabajo en este método es muy similar a la
+Inyección de Proxy pero la principal diferencia es que los
+navegadores se inician en un modo especial llamado *Privilegios
+Aumentados*, que permite a los sitios web hacer cosas que
+normalmente no están permitidas (como hacer XSS_ o llenar
+entradas de carga de archivos y cosas bastante útiles para
+Selenium). Al usar estos modos de navegador, Selenium Core puede
+abrir directamente el AUT y leer/interactúar con su contenido
+sin tener que pasar todo el AUT a través del servidor Selenium
+RC.
 
-Here is the architectural diagram. 
+Aquí hay un diagrama arquitectónico.
 
 ![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
 
-As a test suite starts in your favorite language, the following happens:
+Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that will load Selenium-Core in the web page.
-3. Selenium-Core gets the first instruction from the client/driver (via another 
-   HTTP request made to the Selenium RC Server).
-4. Selenium-Core acts on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks the Web Server for the page.
-   Once the browser receives the web page, renders it in the frame/window reserved
-   for it.
+1. El cliente/controlador establece una conexión con el servidor
+   Selenium-RC.
+2. El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+   conuna URL eso cargará Selenium-Core en la página web.
+3. Selenium-Core obtiene la primera instrucción del cliente/controlador
+   (a través de otra solicitud HTTP realizada al servidor Selenium RC)
+4. Selenium-Core actúa en esa primera instrucción, generalmente abriendo una
+   página del AUT.
+5. El navegador recibe la solicitud de apertura y le pide al servidor web
+   página. Una vez que el navegador recibe la página web, la muestra en el marco/ventana reservada para ello.
 
-## Handling HTTPS and Security Popups 
+## Manejo de HTTPS y Ventanas Emergentes de Seguridad
 
-Many applications switch from using HTTP to HTTPS when they need to send 
-encrypted information such as passwords or credit card information. This is 
-common with many of today's web applications. Selenium RC supports this. 
+Muchas aplicaciones cambian de HTTP a usar HTTPS cuando
+necesitan enviar información encriptada como contraseñas o
+informaciónes de tarjetas de crédito. Esto es común con muchas de
+las aplicaciones web actuales. Selenium RC apoya esto.
 
-To ensure the HTTPS site is genuine, the browser will need a security 
-certificate. Otherwise, when the browser accesses the AUT using HTTPS, it will
-assume that application is not 'trusted'. When this occurs the browser
-displays security popups, and these popups cannot be closed using Selenium RC. 
+Para garantizar que el sitio HTTPS sea genuino, el navegador
+necesitará un certificado de seguridad .De lo contrario, cuando el
+navegador acceda al AUT usando HTTPS, lo hará suponiendo que la
+aplicación no es "confiable". Cuando esto ocurre, el navegador
+muestra ventanas emergentes de seguridad, y estas ventanas
+emergentes no se pueden cerrar con Selenium RC.
 
-When dealing with HTTPS in a Selenium RC test, you must use a run mode that supports this and handles
-the security certificate for you. You specify the run mode when your test program
-initializes Selenium. 
+Cuando se trata de HTTPS en una prueba de Selenium RC, debes usar
+un modo de ejecución que lo admita y maneje el certificado de
+seguridad por ti. Especificas el modo de ejecución
+cuando tu programa de prueba inicializa Selenium.
 
-In Selenium RC 1.0 beta 2 and later use \*firefox or \*iexplore for the run 
-mode. In earlier versions, including Selenium RC 1.0 beta 1, use \*chrome or 
-\*iehta, for the run mode. Using these run modes, you will not need to install
-any special security certificates; Selenium RC will handle it for you.
+En Selenium RC 1.0 beta 2 y posteriores, utiliza \*firefox o
+\*iexplore para el modo de ejecución. En versiones anteriores,
+incluida Selenium RC 1.0 beta 1, utiliza \*chrome o \*iehta,
+para el modo de ejecución. Con estos modos de ejecución, no
+necesitarás instalar ningun certificado de seguridad especial;
+Selenium RC lo manejará por ti.
 
-In version 1.0 the run modes \*firefox or \*iexplore are 
-recommended. However, there are additional run modes of \*iexploreproxy and 
-\*firefoxproxy. These are provided for backwards compatibility only, and 
-should not be used unless required by legacy test programs. Their use will 
-present limitations with security certificate handling and with the running 
-of multiple windows if your application opens additional browser windows. 
+En la versión 1.0, los modos de ejecución \*firefox o
+\*iexplore son recomendados. Sin embargo, hay modos de ejecución
+adicionales de \*iexploreproxy y \*firefoxproxy.
+Estos se proporcionan solo para compatibilidad con versiones anteriores,
+y no deben usarse a menos que lo requieran los programas de
+prueba heredados.
+Su uso lo presentará limitaciones con el manejo del certificado de
+seguridad y con la ejecución de varias ventanas si tu aplicación abre
+ventanas adicionales del navegador.
 
-In earlier versions of Selenium RC, \*chrome or \*iehta were the run modes that 
-supported HTTPS and the handling of security popups. These were considered ‘experimental
-modes although they became quite stable and many people used them.  If you are using
-Selenium 1.0 you do not need, and should not use, these older run modes.
+En versiones anteriores de Selenium RC, \*chrome o \*iehta
+eran los modos de ejecución que soportaban HTTPS y el manejo de
+ventanas de seguridad emergentes. Estos fueron considerados
+modos ‘experimentales aunque se volvieron bastante estables y
+muchas personas los usaron. Si estas usando Selenium 1.0 no
+necesitas, y no debes usar, estos modos de ejecución más antiguos.
 
-### Security Certificates Explained
+### Certificados de Seguridad Explicados
 
-Normally, your browser will trust the application you are testing
-by installing a security certificate which you already own. You can 
-check this in your browser's options or Internet properties (if you don't 
-know your AUT's security certificate ask your system administrator). 
-When Selenium loads your browser it injects code to intercept 
-messages between the browser and the server. The browser now thinks 
-untrusted software is trying to look like your application.  It responds by alerting you with popup messages. 
+Normalmente, tu navegador confiará en la aplicación que está
+probando instalando un certificado de seguridad que ya posee.
+Puedes verificar esto en las opciones de tu navegador o en
+las propiedades de Internet (si no conoces el certificado de
+seguridad de tu AUT, consulta al administrador del sistema).
+Cuando Selenium carga tu navegador, inyecta código para interceptar
+mensajes entre el navegador y el servidor.
+El navegador ahora piensa el software no confiable está tratando de
+parecerse a su aplicación. Responde alertándote con ventanas emergentes.
 
-To get around this, Selenium RC, (again when using a run mode that support 
-this) will install its own security certificate, temporarily, to your 
-client machine in a place where the browser can access it. This tricks the 
-browser into thinking it's accessing a site different from your AUT and effectively suppresses the popups.  
+Para evitar esto, Selenium RC, (nuevamente cuando se utiliza un
+modo de ejecución que permite esto) instalará su propio
+certificado de seguridad, temporalmente, en tu máquina cliente
+en un lugar donde el navegador pueda acceder a ella. Esto engaña
+al navegador haciendole creer que está accediendo a un sitio
+diferente de su AUT y suprime efectivamente las ventanas
+emergentes.
 
-Another method used with earlier versions of Selenium was to 
-install the Cybervillians security certificate provided with your Selenium 
-installation. Most users should no longer need to do this however; if you are
-running Selenium RC in proxy injection mode, you may need to explicitly install this
-security certificate. 
+Otro método utilizado con versiones anteriores de Selenium era
+instalar el certificado de seguridad de Cybervillians incluido
+con tu instalación de Selenium. Sin embargo, la mayoría de los
+usuarios ya no deberían de necesitar hacer esto; si estas
+ejecutando Selenium RC en modo de inyección proxy, es posible
+que debas instalar explícitamente este certificado de seguridad.
 
 
-## Supporting Additional Browsers and Browser Configurations
+## Soportando Navegadores y Configuraciones de Navegador Adicionales
 
-The Selenium API supports running against multiple browsers in addition to 
-Internet Explorer and Mozilla Firefox.  See the https://selenium.dev website for
-supported browsers.  In addition, when a browser is not directly supported,
-you may still run your Selenium tests against a browser of your choosing by
-using the "\*custom" run-mode (i.e. in place of \*firefox or \*iexplore) when 
-your test application starts the browser.  With this, you pass in the path to
-the browsers executable within the API call. This can also be done from the 
-Server in interactive mode.
+La API de Selenium permite la ejecución en múltiples navegadores
+además de Internet Explorer y Mozilla Firefox.
+Consulta el sitio web https://selenium.dev para ver los navegadores compatibles.
+Además, cuando un navegador no es directamente compatible, aún puede
+ejecutar tus pruebas de Selenium en un navegador de tu elección
+usando el modo de ejecución "\*custom" (es decir, en lugar de \*firefox
+o \*iexplore) cuando tu aplicación de prueba inicia el navegador.
+Con esto,pasas la ruta a los navegadores ejecutables dentro de la llamada
+al API. Esto también se puede hacer desde el Servidor en modo
+interactivo.
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\MyBrowser.exe&2=http://www.google.com
 ```
-
 
 ### Running Tests with Different Browser Configurations
 

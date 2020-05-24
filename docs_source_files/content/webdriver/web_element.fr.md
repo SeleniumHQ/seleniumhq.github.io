@@ -136,7 +136,7 @@ driver.get("https://www.example.com")
 elements = driver.find_elements(By.TAG_NAME, 'p')
 
 for e in elements:
-    print e.text
+    print(e.text)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -332,19 +332,19 @@ Pour ce faire, le WebElement parent est chaîné avec "findElements" pour accéd
   }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-  from selenium import webdriver
-  from selenium.webdriver.common.by import By
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-  driver = webdriver.Chrome()
-  driver.get("https://www.example.com")
+driver = webdriver.Chrome()
+driver.get("https://www.example.com")
 
-  # Get element with tag name 'div'
-  element = driver.find_element(By.TAG_NAME, 'div')
+# Get element with tag name 'div'
+element = driver.find_element(By.TAG_NAME, 'div')
 
-  # Get all the elements available with tag name 'p'
-  elements = element.find_elements(By.TAG_NAME, 'p')
-  for e in elements:
-      print e.text
+# Get all the elements available with tag name 'p'
+elements = element.find_elements(By.TAG_NAME, 'p')
+for e in elements:
+    print(e.text)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -472,7 +472,7 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
 
   # Get attribute of current active element
   attr = driver.switch_to.active_element.get_attribute("title")
-  print attr
+  print(attr)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
     using OpenQA.Selenium;

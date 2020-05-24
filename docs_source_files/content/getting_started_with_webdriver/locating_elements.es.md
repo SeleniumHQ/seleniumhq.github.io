@@ -223,6 +223,9 @@ to find the relative elements. This function returns
 properties of an element such as 
 right, left, bottom, and top.
 
+Let us consider the below example for understanding the relative locators.
+
+![Relative Locators](/images/relative_locators.png?width=400px)
 
 ### above()
 
@@ -231,7 +234,10 @@ above to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement passwordField= driver.findElement(By.id("password"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -258,7 +264,10 @@ below to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressField= driver.findElement(By.id("email"));
+WebElement passwordField = driver.findElement(withTagName("input")
+	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -285,7 +294,10 @@ to left of specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement submitButton= driver.findElement(By.id("submit"));
+WebElement cancelButton= driver.findElement(withTagName("button")
+                                            .toLeftOf(submitButton)); 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -312,7 +324,10 @@ to right of the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement cancelButton= driver.findElement(By.id("cancel"));
+WebElement submitButton= driver.findElement(withTagName("button")
+                                            .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR
@@ -338,7 +353,10 @@ at most `50px` away from the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a PR

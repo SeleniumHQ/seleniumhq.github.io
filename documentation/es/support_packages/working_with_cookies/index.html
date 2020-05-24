@@ -11,20 +11,20 @@
     <title>Trabajando con las cookies :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1590224063" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1590224063" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1590315532" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1590315532" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1590224063" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1590315532" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1590224063"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1590315532"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1590224063"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1590224063"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1590315532"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1590315532"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1590224063"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1590315532"></script>
 
     
   </div>
@@ -2225,7 +2225,7 @@ driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;h
 driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;foo&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>: <span style="color:#2aa198">&#34;bar&#34;</span>})
 
 <span style="color:#586e75"># Obtiene los detalles de la cookie con el nombre &#39;foo&#39;</span>
-<span style="color:#719e07">print</span> driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#34;foo&#34;</span>)
+<span style="color:#719e07">print</span>(driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#34;foo&#34;</span>))
   </code></pre></div>
 </section>
   
@@ -2412,7 +2412,7 @@ driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198
 driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>: <span style="color:#2aa198">&#34;cookie2&#34;</span>})
 
 <span style="color:#586e75"># Obtiene todas las cookies disponibles</span>
-<span style="color:#719e07">print</span> driver<span style="color:#719e07">.</span>get_cookies()
+<span style="color:#719e07">print</span>(driver<span style="color:#719e07">.</span>get_cookies())
   </code></pre></div>
 </section>
   
@@ -2995,8 +2995,8 @@ driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198
 driver<span style="color:#719e07">.</span>add_cookie({<span style="color:#2aa198">&#34;name&#34;</span>: <span style="color:#2aa198">&#34;foo1&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>: <span style="color:#2aa198">&#34;value&#34;</span>, <span style="color:#2aa198">&#39;sameSite&#39;</span>: <span style="color:#2aa198">&#39;Lax&#39;</span>})
 cookie1 <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#39;foo&#39;</span>)
 cookie2 <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>get_cookie(<span style="color:#2aa198">&#39;foo1&#39;</span>)
-<span style="color:#719e07">print</span> cookie1
-<span style="color:#719e07">print</span> cookie2
+<span style="color:#719e07">print</span>(cookie1)
+<span style="color:#719e07">print</span>(cookie2)
   </code></pre></div>
 </section>
   
@@ -3085,7 +3085,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/support_packages/working_with_cookies/">
       “Trabajando con las cookies”
-    </a> was last updated on: 09 May 2020 21:09:43 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/de99a59e2a773562ce8a4982d7e9defcb17300f6">Modify: Fixing find_elements samples for python and replacing #413[deploy site] (de99a59e)</a>
+    </a> was last updated on: 24 May 2020 12:47:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/cf5a472a612d221175a78fdcf2b82ac31c27c6d0">Modify: Updating PY code samples targeting py3 version [deploy site] (cf5a472a)</a>
 </h5>
         
         </div> 
@@ -4250,19 +4250,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1590224063"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1590315532"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1590224063"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1590224063"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1590315532"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1590315532"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1590224063" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1590224063"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1590315532" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1590315532"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
