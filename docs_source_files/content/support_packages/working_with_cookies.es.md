@@ -155,7 +155,7 @@ driver.get("http://www.example.com")
 driver.add_cookie({"name": "foo", "value": "bar"})
 
 # Obtiene los detalles de la cookie con el nombre 'foo'
-print driver.get_cookie("foo")
+print(driver.get_cookie("foo"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -274,7 +274,7 @@ driver.add_cookie({"name": "test1", "value": "cookie1"})
 driver.add_cookie({"name": "test2", "value": "cookie2"})
 
 # Obtiene todas las cookies disponibles
-print driver.get_cookies()
+print(driver.get_cookies())
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -655,8 +655,8 @@ driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
 driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
 cookie1 = driver.get_cookie('foo')
 cookie2 = driver.get_cookie('foo1')
-print cookie1
-print cookie2
+print(cookie1)
+print(cookie2)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
