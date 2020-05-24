@@ -328,7 +328,16 @@ options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.set_capability("silent", True)
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // Please raise a PR to add code sample
