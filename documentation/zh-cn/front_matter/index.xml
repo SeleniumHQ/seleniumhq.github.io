@@ -20,7 +20,7 @@
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
 归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4541 commits 
-@barancev3053 commits 
+@barancev3057 commits 
 @jimevans2312 commits 
 @jleyba1464 commits</description>
     </item>
