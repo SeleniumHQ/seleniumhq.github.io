@@ -1456,39 +1456,48 @@ interactivo.
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\MyBrowser.exe&2=http://www.google.com
 ```
 
-### Running Tests with Different Browser Configurations
+### Ejecución de Pruebas con Diferentes Configuraciones de Navegador
 
-Normally Selenium RC automatically configures the browser, but if you launch 
-the browser using the "\*custom" run mode, you can force Selenium RC
-to launch the browser as-is, without using an automatic configuration.
+Normalmente, Selenium RC configura automáticamente el navegador,
+pero si inicias el navegador que utilizando modo de ejecución
+"\*custom", puedes forzar a Selenium RC a iniciar el navegador
+tal cual, sin usar una configuración automática.
 
-For example, you can launch Firefox with a custom configuration like this:
+Por ejemplo, puedes iniciar Firefox con una configuración
+personalizada como esta:
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\firefox.exe&2=http://www.google.com
 ```
 
-Note that when launching the browser this way, you must manually 
-configure the browser to use the Selenium Server as a proxy. Normally this just 
-means opening your browser preferences and specifying "localhost:4444" as 
-an HTTP proxy, but instructions for this can differ radically from browser to 
-browser.  Consult your browser's documentation for details.
+Ten en cuenta que al iniciar el navegador de esta manera, debes
+configurar el navegador para que use el servidor Selenium como
+un proxy. Normalmente esto solo significa abrir las preferencias
+del navegador y especificar "localhost:4444" como un proxy
+HTTP, pero las instrucciones para esto pueden diferir
+radicalmente de un navegador a otro. Consulte la
+documentación de tu navegador para más detalles.
 
-Be aware that Mozilla browsers can vary in how they start and stop. 
-One may need to set the MOZ_NO_REMOTE environment variable to make Mozilla browsers 
-behave a little more predictably. Unix users should avoid launching the browser using 
-a shell script; it's generally better to use the binary executable (e.g. firefox-bin) directly.
+Ten en cuenta que los navegadores Mozilla pueden variar en
+cómo se inician y se detienen. Es posible que sea necesario
+configurar la variable de entorno MOZ_NO_REMOTE para hacer
+que los navegadores Mozilla se comporten un poco más previsiblemente.
+Los usuarios de Unix deben evitar iniciar el navegador usando un
+script de shell; generalmente es mejor usar el ejecutable
+binario (por ejemplo, firefox-bin) directamente.
 
-   
-## Troubleshooting Common Problems
 
-When getting started with Selenium RC there's a few potential problems
-that are commonly encountered.  We present them along with their solutions here.
+## Solucionando Problemas Comunes
 
-### Unable to Connect to Server 
+Al comenzar con Selenium RC, potencialmente hay algunos problemas
+que comúnmente se pueden encontrar. Aquí los presentamos junto con sus
+soluciones .
 
-When your test program cannot connect to the Selenium Server, Selenium throws an exception in your test program. 
-It should display this message or a similar one:
+### Incapaz de Conectarse al Servidor
+
+Cuando tu programa de prueba no puede conectarse al servidor
+Selenium, Selenium lanza una excepción en tu programa de prueba.
+Debería mostrar este mensaje o uno similar:
 
 ```bash
     "Unable to connect to remote server (Inner Exception Message: 
@@ -1498,68 +1507,81 @@ It should display this message or a similar one:
 	(using .NET and XP Service Pack 2) 
 ```
 
-If you see a message like this, be sure you started the Selenium Server. If 
-so, then there is a problem with the connectivity between the Selenium Client 
-Library and the Selenium Server. 
+Si ves un mensaje como este, asegúrate de haber iniciado Selenium
+Server. Si es asi, entonces hay un problema con la conectividad entre
+la Librería Selenium Client y el servidor Selenium.
 
-When starting with Selenium RC, most people begin by running their test program
-(with a Selenium Client Library) and the Selenium Server on the same machine.  To
-do this use "localhost" as your connection parameter.
-We recommend beginning this way since it reduces the influence of potential networking problems
-which you're getting started.  Assuming your operating system has typical networking
-and TCP/IP settings you should have little difficulty.  In truth, many people
-choose to run the tests this way.  
+Al comenzar con Selenium RC, la mayoría de las personas
+comienzan ejecutando su programa de prueba (con una Librería
+Cliente de Selenium) y el servidor Selenium en la misma máquina.
+Para hacer esto utiliza "localhost" como parámetro de conexión.
+Recomendamos comenzar de esta manera, ya que reduce la influencia
+de posibles problemas de red  ya que estás empezando. Asumiendo que tu
+sistema operativo tiene una red típica y la configuración de TCP/IP
+debería tener poca dificultad. En verdad, mucha gente elige
+ejecutar las pruebas de esta manera.
 
-If, however, you do want to run Selenium Server
-on a remote machine, the connectivity should be fine assuming you have valid TCP/IP
-connectivity between the two machines.    
+Sin embargo, si desea ejecutar Selenium Server en una máquina
+remota, la conectividad debería estar bien suponiendo que tenga
+una conectividad TCP/IP válida entre las dos máquinas.
 
-If you have difficulty connecting, you can use common networking tools like *ping*,
-*telnet*, *ifconfig(Unix)/ipconfig* (Windows), etc to ensure you have a valid 
-network connection.  If unfamilar with these, your system administrator can assist you.
+Si tiene dificultades para conectarse, puedes usar herramientas
+de red comunes como *ping*, *telnet*, *ifconfig(Unix)/ipconfig*
+(Windows), etc. para garantizar que tenga una conexión de red.
+Si no estás familiarizado con estos, el administrador del sistema
+puede ayudarte.
  
-### Unable to Load the Browser 
+### Incapaz de Cargar el Navegador 
 
-Ok, not a friendly error message, sorry, but if the Selenium Server cannot load the browser 
-you will likely see this error.
+Ok, no es un mensaje de error amigable, lo siento, pero si el
+servidor Selenium no puede cargar el navegador es probable que
+veas este error.
 
 ```bash
     (500) Internal Server Error
 ```
 
-This could be caused by
+Esto podria ser causado por
 
-* Firefox (prior to Selenium 1.0) cannot start because the browser is already open and you did 
-  not specify a separate profile.   See the section on Firefox profiles under Server Options.
-* The run mode you're using doesn't match any browser on your machine.  Check the parameters you 
-  passed to Selenium when you program opens the browser. 
-* You specified the path to the browser explicitly (using "\*custom"--see above) but the path is 
-  incorrect.  Check to be sure the path is correct.  Also check the user group to be sure there are
-  no known issues with your browser and the "\*custom" parameters.
+* Firefox (anterior a Selenium 1.0) no puede iniciarse porque el
+  navegador ya está abierto y no espicificaste un perfil separado.
+  Consulte la sección sobre perfiles de Firefox en Opciones del
+  Servidor.
+* El modo de ejecución que está utilizando no coincide con ningún
+  navegador en su máquina. Comprueba los parámetros que pasó a Selenium
+  cuando tu programa abre el navegador.
+* Espicificaste la ruta al navegador explícitamente (usando
+  "\*custom" -ver arriba) pero la ruta es incorrecta. Verifique
+  que la ruta sea correcta.Tambien comprueba el grupo de usuarios
+  para asegurarte de que no haya ningun problema conocids con tu
+  navegador y los parámetros "\*custom".
 
-### Selenium Cannot Find the AUT 
+### Selenium no Puede Encontrar el AUT
 
-If your test program starts the browser successfully, but the browser doesn't
-display the website you're testing, the most likely cause is your test 
-program is not using the correct URL. 
+Si tu programa de prueba inicia el navegador con éxito, pero el
+navegador no muestra el sitio web que está probando, la causa
+más probable es que tu programa de prueba no está utilizando la URL
+correcta.
 
-This can easily happen. When you use Selenium-IDE to export your script,
-it inserts a dummy URL. You must manually change the URL to the correct one
-for your application to be tested. 
+Esto puede suceder fácilmente. Cuando uitlizas Selenium-IDE para
+exportar tu script, este inserta una URL ficticia. Debes cambiar
+manualmente la URL a la correcta para que tu aplicación sea
+probada.
 
-### Firefox Refused Shutdown While Preparing a Profile 
+### Firefox Rechazó Apagarse Mientras Preparaba un Perfil
 
-This most often occurs when you run your Selenium RC test program against Firefox,
-but you already have a Firefox browser session running and, you didn't specify
-a separate profile when you started the Selenium Server. The error from the 
-test program looks like this:
+Esto ocurre con mayor frecuencia cuando ejecutas tu programa de
+pruebas de Selenium RC contra Firefox, pero ya tienes una sesión del
+navegador Firefox ejecutándose y no especificaste un perfil
+separado cuando inició el servidor Selenium. El error del
+programa de prueba se parece a esto:
 
 ```bash
     Error:  java.lang.RuntimeException: Firefox refused shutdown while 
     preparing a profile 
 ```
 
-Here's the complete error message from the server:
+Aqui está el error completo del servidor:
 
 ```bash
     16:20:03.919 INFO - Preparing Firefox profile... 
@@ -1574,29 +1596,31 @@ Here's the complete error message from the server:
     ~1\Temp\customProfileDir203138\parent.lock 
 ```
 
-To resolve this, see the section on Specifying a Separate Firefox Profile
+Para resolver esto, ve a la sección Especificando el Perfil de Firefox
 
-### Versioning Problems 
+### Problemas de Versionamiento
 
-Make sure your version of Selenium supports the version of your browser. For
-example, Selenium RC 0.92 does not support Firefox 3. At times you may be lucky
-(I was). But don't forget to check which
-browser versions are supported by the version of Selenium you are using. When in
-doubt, use the latest release version of Selenium with the most widely used version
-of your browser.
+Asegúrate de que tu versión de Selenium sea compatible con la
+versión de tu navegador. Por ejemplo, Selenium RC 0.92 no es
+compatible con Firefox 3. A veces puedes ser afortunado (Yo lo era).
+Pero no olvides comprobar qué las versiones del navegador son
+compatibles con la versión de Selenium que estás utilizando.
+Cuando estes en duda, utiliza la última versión de lanzamiento de Selenium
+con la versión más utilizada de su navegador
 
-### Error message: "(Unsupported major.minor version 49.0)" while starting server
+### Mensaje de Error: "(Unsupported major.minor version 49.0)" Iniciando el Servidor
 
-This error says you're not using a correct version of Java. 
-The Selenium Server requires Java 1.5 or higher. 
+Este error dice que no estás utilizando una versión correcta de Java.
+El servidor Selenium requiere Java 1.5 ó superior.
 
-To check double-check your java version, run this from the command line.
+Para verificar tu versión de Java, ejecuta esto desde la línea
+de comandos.
 
 ```bash
    java -version
 ```
 
-You should see a message showing the Java version.
+Deberias ver un mensaje mostrando la version de Java.
 
 ```bash
    java version "1.5.0_07"
@@ -1604,9 +1628,8 @@ You should see a message showing the Java version.
    Java HotSpot(TM) Client VM (build 1.5.0_07-b03, mixed mode)
 ```
 
-If you see a lower version number, you may need to update the JRE,
-or you may simply need to add it to your PATH environment variable.
-
+Si ves un número de versión inferior, es posible que debas actualizar
+el JRE, o simplemente necesitas agregarlo a tu variable de entorno PATH.
 
 ### 404 error when running the getNewBrowserSession command
 
