@@ -248,10 +248,15 @@ WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+#from selenium.webdriver.support.relative_locator import with_tag_name
+passwordField = driver.find_element(By.ID, "password");
+emailAddressField = driver.find_element(with_tag_name("input").above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement passwordField = driver.FindElement(By.Id("password"));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input")
+                                                   .Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -278,10 +283,15 @@ WebElement passwordField = driver.findElement(withTagName("input")
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+#from selenium.webdriver.support.relative_locator import with_tag_name
+emailAddressField = driver.find_element(By.ID, "email");
+passwordField = driver.find_element(with_tag_name("input").below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+//using static OpenQA.Selenium.RelativeBy;  
+IWebElement emailAddressField = driver.FindElement(By.Id("email"));
+IWebElement passwordField = driver.FindElement(WithTagName("input")
+                                               .Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -308,10 +318,16 @@ WebElement cancelButton= driver.findElement(withTagName("button")
                                             .toLeftOf(submitButton));  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+#from selenium.webdriver.support.relative_locator import with_tag_name
+submitButton = driver.find_element(By.ID, "submit");
+cancelButton = driver.find_element(with_tag_name("button").
+                                   to_left_of(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement submitButton = driver.FindElement(By.Id("submit"));
+IWebElement cancelButton = driver.FindElement(WithTagName("button")
+                                              .LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -338,10 +354,16 @@ WebElement submitButton= driver.findElement(withTagName("button")
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+#from selenium.webdriver.support.relative_locator import with_tag_name
+cancelButton = driver.find_element(By.ID, "cancel");
+submitButton = driver.find_element(with_tag_name("button").
+                                   to_right_of(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
+IWebElement submitButton = driver.FindElement(WithTagName("button")
+                                              .RightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
@@ -367,10 +389,16 @@ WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+#from selenium.webdriver.support.relative_locator import with_tag_name
+emailAddressLabel = driver.find_element(By.ID, "lbl-email");    
+emailAddressField = driver.find_element(with_tag_name("input").
+                                       near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input")
+                                                   .Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR
