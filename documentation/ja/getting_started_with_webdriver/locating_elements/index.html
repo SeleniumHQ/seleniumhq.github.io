@@ -11,20 +11,20 @@
     <title>要素を探す :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1590338121" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1590338121" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1590386931" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1590386931" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1590338121" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1590386931" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1590338121"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1590386931"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1590338121"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1590338121"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1590386931"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1590386931"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1590338121"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1590386931"></script>
 
     
   </div>
@@ -2533,7 +2533,9 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
 
 <section id="pythoncode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
+passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;password&#34;</span>);
+emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>above(passwordField));
   </code></pre></div>
 </section>
   
@@ -2541,8 +2543,11 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
 
 <section id="csharpcode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">//using static OpenQA.Selenium.RelativeBy;
+</span><span style="color:#586e75"></span>IWebElement passwordField = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;password&#34;</span>));
+IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+                                                   .Above(passwordField));
+  
 </code></pre></div>
 </section>
   
@@ -2630,7 +2635,9 @@ WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#
 
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
+emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;email&#34;</span>);
+passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>below(emailAddressField));
   </code></pre></div>
 </section>
   
@@ -2638,8 +2645,11 @@ WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#
 
 <section id="csharpcode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">//using static OpenQA.Selenium.RelativeBy;  
+</span><span style="color:#586e75"></span>IWebElement emailAddressField = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;email&#34;</span>));
+IWebElement passwordField = driver.FindElement(WithTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+                                               .Below(emailAddressField));
+  
 </code></pre></div>
 </section>
   
@@ -2727,7 +2737,10 @@ WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#71
 
 <section id="pythoncode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
+submitButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;submit&#34;</span>);
+cancelButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;button&#34;</span>)<span style="color:#719e07">.</span>
+                                   to_left_of(submitButton));
   </code></pre></div>
 </section>
   
@@ -2735,8 +2748,11 @@ WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#71
 
 <section id="csharpcode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">//using static OpenQA.Selenium.RelativeBy;
+</span><span style="color:#586e75"></span>IWebElement submitButton = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;submit&#34;</span>));
+IWebElement cancelButton = driver.FindElement(WithTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
+                                              .LeftOf(submitButton));
+  
 </code></pre></div>
 </section>
   
@@ -2824,7 +2840,10 @@ WebElement <span style="color:#268bd2">submitButton</span><span style="color:#71
 
 <section id="pythoncode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
+cancelButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;cancel&#34;</span>);
+submitButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;button&#34;</span>)<span style="color:#719e07">.</span>
+                                   to_right_of(cancelButton));
   </code></pre></div>
 </section>
   
@@ -2832,8 +2851,11 @@ WebElement <span style="color:#268bd2">submitButton</span><span style="color:#71
 
 <section id="csharpcode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">//using static OpenQA.Selenium.RelativeBy;
+</span><span style="color:#586e75"></span>IWebElement cancelButton = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;cancel&#34;</span>));
+IWebElement submitButton = driver.FindElement(WithTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
+                                              .RightOf(cancelButton));
+  
 </code></pre></div>
 </section>
   
@@ -2921,7 +2943,10 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
 
 <section id="pythoncode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#586e75"># Please raise a PR</span>
+<span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
+emailAddressLabel <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;lbl-email&#34;</span>);    
+emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>
+                                       near(emailAddressLabel));
   </code></pre></div>
 </section>
   
@@ -2929,8 +2954,11 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
 
 <section id="csharpcode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  
+<span style="color:#586e75">//using static OpenQA.Selenium.RelativeBy;
+</span><span style="color:#586e75"></span>IWebElement emailAddressLabel = driver.FindElement(By.Id(<span style="color:#2aa198">&#34;lbl-email&#34;</span>));
+IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
+                                                   .Near(emailAddressLabel));
+  
 </code></pre></div>
 </section>
   
@@ -2969,7 +2997,7 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/">
       “要素を探す”
-    </a> was last updated on: 24 May 2020 03:17:26 -0700: <a href="https://github.com/SeleniumHQ/site/commit/0361064c5651fbea9490664cdfd293d092d850dc">Added the Java code snippets for Relative Locators (#435) [deploy site] (0361064c)</a>
+    </a> was last updated on: 24 May 2020 23:07:14 -0700: <a href="https://github.com/SeleniumHQ/site/commit/f5e4e0de23b55131f5d883cdb2bf19576089c612">Added the C# and Python code snippets for Relative Locators (#436)[deploy site] (f5e4e0de)</a>
 </h5>
         
         </div> 
@@ -4134,19 +4162,19 @@ WebElement <span style="color:#268bd2">emailAddressField</span> <span style="col
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1590338121"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1590386931"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1590338121"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1590338121"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1590386931"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1590386931"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1590338121" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1590338121"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1590386931" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1590386931"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
