@@ -438,7 +438,19 @@ driver.quit()
 // Please raise a PR to add code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+options = Selenium::WebDriver::IE::Options.new
+options.force_create_process_api = true
+options.add_argument('-k')
+driver = Selenium::WebDriver.for(:ie, options: options)
+
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  puts(driver.capabilities.to_json)
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const ie = require('selenium-webdriver/ie');
