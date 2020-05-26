@@ -11,20 +11,20 @@
     <title>Driver specifieke capabilities :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1590443127" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1590443127" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1590505079" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1590505079" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1590443127" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1590505079" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1590443127"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1590505079"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1590443127"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1590443127"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1590505079"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1590505079"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1590443127"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1590505079"></script>
 
     
   </div>
@@ -2934,7 +2934,19 @@ driver<span style="color:#719e07">.</span>quit()
 
 <section id="rubycode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#586e75"># Please raise a PR to add code sample</span>
+<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
+options <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">::</span><span style="color:#cb4b16">IE</span><span style="color:#719e07">::</span><span style="color:#cb4b16">Options</span><span style="color:#719e07">.</span>new
+options<span style="color:#719e07">.</span>force_create_process_api <span style="color:#719e07">=</span> <span style="color:#719e07">true</span>
+options<span style="color:#719e07">.</span>add_argument(<span style="color:#2aa198">&#39;-k&#39;</span>)
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for(<span style="color:#2aa198">:ie</span>, <span style="color:#2aa198">options</span>: options)
+
+<span style="color:#719e07">begin</span>
+  <span style="color:#586e75"># Navigate to URL</span>
+  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+  <span style="color:#b58900">puts</span>(driver<span style="color:#719e07">.</span>capabilities<span style="color:#719e07">.</span>to_json)
+<span style="color:#719e07">ensure</span>
+  driver<span style="color:#719e07">.</span>quit
+<span style="color:#719e07">end</span>
   </code></pre></div>
 </section>
   
@@ -3145,7 +3157,7 @@ driver <span style="color:#719e07">=</span> await env.builder()
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver specifieke capabilities”
-    </a> was last updated on: 24 May 2020 22:03:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/0e1a1afd0156cc93ed2c4abe44f5582aca34177a">Add: Adding rb code sample for IE options [deploy site] (0e1a1afd)</a>
+    </a> was last updated on: 26 May 2020 20:26:23 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/d2db6a1bf8f8a3e54bcf6b393fbe5ccc138a4b39">Add: Adding rb code samples for IE[deploy site] (d2db6a1b)</a>
 </h5>
         
         </div> 
@@ -4310,19 +4322,19 @@ driver <span style="color:#719e07">=</span> await env.builder()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1590443127"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1590505079"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1590443127"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1590443127"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1590505079"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1590505079"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1590443127" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1590443127"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1590505079" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1590505079"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
