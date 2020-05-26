@@ -70,17 +70,17 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 public class ProxyTest{
-	public static void Main() {
-		ChromeOptions options = new ChromeOptions();
-		Proxy proxy = new Proxy();
-		proxy.Kind = ProxyKind.Manual;
-		proxy.IsAutoDetect = false;
-		proxy.SslProxy = "<HOST:PORT>";
-		options.Proxy = proxy;
-		options.AddArgument("ignore-certificate-errors");
-		IWebDriver driver = new ChromeDriver(options);
-		driver.Navigate().GoToUrl("https://www.selenium.dev/");
-	}
+  public static void Main() {
+    ChromeOptions options = new ChromeOptions();
+	Proxy proxy = new Proxy();
+	proxy.Kind = ProxyKind.Manual;
+	proxy.IsAutoDetect = false;
+	proxy.SslProxy = "<HOST:PORT>";
+	options.Proxy = proxy;
+	options.AddArgument("ignore-certificate-errors");
+	IWebDriver driver = new ChromeDriver(options);
+	driver.Navigate().GoToUrl("https://www.selenium.dev/");
+  }
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
