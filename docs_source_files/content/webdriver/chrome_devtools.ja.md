@@ -51,48 +51,4 @@ public void geoLocationTest(){
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Emulate Network Throttling Conditions:
-
-Testing an application in different network conditions (i.e 2G, 3G, 4G etc) is always challenging. But we can easily do it using devtools as part of our automation itself. Below example is to emulate 3G speed in your browser. You can also add 2G, 4G etc in the same way. We can also emulate 'offline' condition by just sending 'false' as the first parameter in emulateNetworkConditions() method.
-
-{{< code-tab >}}
-  {{< code-panel language="java" >}}
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-import static org.openqa.selenium.devtools.network.Network.emulateNetworkConditions;
-import static org.openqa.selenium.devtools.network.Network.enable;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.network.model.ConnectionType;
-
-public void emulateNetworkConditionsTest() {
-  ChromeDriver driver = new ChromeDriver();
-  DevTools devTools = driver.getDevTools();
-  devTools.send(enable(of(100000000), empty(), empty()));
-  devTools.send(
-          emulateNetworkConditions(false,
-                  100,
-                  1000,
-                  2000,
-                  of(ConnectionType.CELLULAR3G)));
-  driver.get("<your site url>");
-}  
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample  
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-// Please raise a PR to add code sample  
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-// Please raise a PR to add code sample  
-  {{< / code-panel >}}
-{{< / code-tab >}}
-
 
