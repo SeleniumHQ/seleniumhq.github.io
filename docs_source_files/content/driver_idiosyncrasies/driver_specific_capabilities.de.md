@@ -349,7 +349,7 @@ driver.quit()
   {{< code-panel language="csharp" >}}
 InternetExplorerOptions options = new InternetExplorerOptions();
 options.AddAdditionalInternetExplorerOption("silent", true);
-IWebDriver driver = new InternetExplorerDriver(options);
+IWebDriver driver = new InternetExplorerDriver(options); 
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample
