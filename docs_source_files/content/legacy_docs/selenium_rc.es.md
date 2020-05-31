@@ -1753,7 +1753,7 @@ Comenta esta linea de esta forma:
 "//user_pref("browser.startup.page", 0);"
 e intenta de nuevo.
 
-### Está bien cargar una ventana emergente personalizada mientras se carga la página principal (es decir, antes de que se ejecute la función javascript window.onload() de la página principal)?
+### Está bien cargar una ventana emergente personalizada mientras se carga la página principal (es decir, antes de que se ejecute la función JavaScript window.onload() de la página principal)?
 
 No. Selenium depende de los interceptores para determinar los
 nombres de las ventanas a medida que se cargan. Estos
