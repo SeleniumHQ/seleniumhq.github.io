@@ -3,12 +3,6 @@ title: "Selenium 1 (Selenium RC)"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ## Introducción
 
 Selenium RC fue el principal proyecto de Selenium durante mucho tiempo,
@@ -1631,173 +1625,207 @@ Deberias ver un mensaje mostrando la version de Java.
 Si ves un número de versión inferior, es posible que debas actualizar
 el JRE, o simplemente necesitas agregarlo a tu variable de entorno PATH.
 
-### 404 error when running the getNewBrowserSession command
+### Error 404 ejecutando el comando getNewBrowserSession
 
-If you're getting a 404 error while attempting to open a page on 
-"http://www.google.com/selenium-server/", then it must be because the Selenium
-Server was not correctly configured as a proxy. The "selenium-server" directory 
-doesn't exist on google.com; it only appears to exist when the proxy is 
-properly configured. Proxy Configuration highly depends on how the browser is 
-launched with firefox, iexplore, opera, or custom.
+Si recibes un error 404 al intentar abrir una página en
+"http://www.google.com/selenium-server/", entonces debe ser porque el
+Selenium Server no se configuró correctamente como proxy.
+El directorio “selenium-server” no existe en google.com; solo
+parece existir cuando el proxy es debidamente configurado.
+La configuración del proxy depende en gran medida de cómo es
+lanzado el navegador con firefox, iexplore, opera o custom.
 
-* iexplore: If the browser is launched using \*iexplore, you could be 
-  having a problem with Internet Explorer's proxy settings.  Selenium
-  Server attempts To configure the global proxy settings in the Internet
-  Options Control Panel. You must make sure that those are correctly
-  configured when Selenium Server launches the browser. Try looking at
-  your Internet Options control panel. Click on the "Connections" tab
-  and click on "LAN Settings".     
-  * If you need to use a proxy to access the application you want to test,
-    you'll need to start Selenium Server with "-Dhttp.proxyHost"; 
-    see the `Proxy Configuration`_ for more details.
-  * You may also try configuring your proxy manually and then launching
-    the browser with \*custom, or with \*iehta browser launcher.
-      	   
-* custom: When using \*custom you must configure the proxy correctly(manually),
-  otherwise you'll get a 404 error. Double-check that you've configured your proxy
-  settings correctly. To check whether you've configured the proxy correctly is to
-  attempt to intentionally configure the browser incorrectly. Try configuring the
-  browser to use the wrong proxy server hostname, or the wrong port.  If you had
-  successfully configured the browser's proxy settings incorrectly, then the
-  browser will be unable to connect to the Internet, which is one way to make
-  sure that one is adjusting the relevant settings.
-  
-* For other browsers (\*firefox, \*opera) we automatically hard-code
-  the proxy for you, and so there are no known issues with this functionality.
-  If you're encountering 404 errors and have followed this user guide carefully 
-  post your results to user group for some help from the user community.
-      
-### Permission Denied Error
+* iexplore: si el navegador se inicia usando \*iexplore, podrías
+tener un problema con la configuración del proxy de Internet
+Explorer.
+Selenium Server intenta configurar la configuración
+global del proxy en el Panel de Control de Opciones de Internet.
+Debes asegurarte de que estén correctamente configurados cuando
+Selenium Server inicia el navegador. Intenta mirar en tu panel
+de control de Opciones de Internet. Haz clic en la pestaña
+"Conexiones" y haz clic en "Configuración de LAN".
 
-The most common reason for this error is that your session is attempting to violate
-the same-origin policy by crossing domain boundaries (e.g., accesses a page from 
-http://domain1 and then accesses a page from http://domain2) or switching protocols 
-(moving from http://domainX to https://domainX).
+  * Si necesitas usar un proxy para acceder a la aplicación que
+  deseas probar, deberás iniciar Selenium Server con
+  "-Dhttp.proxyHost"; consulta la `Configuración de proxy`_ para
+  obtener más detalles.
+  * También puedes intentar configurar tu proxy manualmente y luego
+  iniciar el navegador con \*custom, o con el lanzador de navegadores \*iehta.
 
-This error can also occur when JavaScript attempts to find UI objects 
-which are not yet available (before the page has completely loaded), or 
-are no longer available (after the page has started 
-to be unloaded). This is most typically encountered with AJAX pages
-which are working with sections of a page or subframes that load and/or reload 
-independently of the larger page. 
+* custom: cuando se usa \*custom, debes configurar el proxy
+correctamente (manualmente), de lo contrario, obtendrás un error 404.
+Verifica que hayas configuraste tus ajustes de proxy
+correctamente. Para verificar si se ha configurado el proxy
+correctamente intenta configurar intencionalmente el navegador
+de manera incorrecta. Intenta configurar el navegador para
+utilizar el nombre de host del servidor proxy incorrecto o el
+puerto incorrecto. Si configuraste correctamente la
+configuración del proxy incorrecto del navegador, entonces el
+navegador no podrá conectarse a Internet, lo que es una de las
+formas de asegurarse de que uno está ajustando las
+configuraciones relevantes.
 
-This error can be intermittent. Often it is impossible to reproduce the problem 
-with a debugger because the trouble stems from race conditions which 
-are not reproducible when the debugger's overhead is added to the system.
-Permission issues are covered in some detail in the tutorial. Read the section 
-about the `The Same Origin Policy`_, `Proxy Injection`_ carefully. 
+* Para otros navegadores (\*firefox, \*opera) automáticamente
+codificamos el proxy por ti, por lo que no hay problemas
+conocidos con esta funcionalidad. Si encuentras errores 404 y
+has seguido cuidadosamente esta guía del usuario publica tus
+resultados en el grupo de usuarios para obtener ayuda de la
+comunidad de usuarios.
+
+### Error Permiso Denegado
+
+La razón más común para este error es que tu sesión intenta
+violar la política del mismo origen al cruzar los límites
+del dominio (por ejemplo, accede a una página desde
+http://dominio1 y luego accede a una página desde http://dominio2)
+o al cambiar de protocolos (pasar de http://dominioX a https:// dominioX).
+
+Este error también puede ocurrir cuando JavaScript intenta
+encontrar objetos de la IU que aún no están disponibles (antes de
+que la página haya cargado completamente), o ya no están
+disponibles (después de que la página ha comenzado a descargarse).
+Esto se encuentra con mayor frecuencia con páginas AJAX que
+trabajan con secciones de una página o subtramas que se cargan y/o
+recargan independientemente de la página.
+
+Este error puede ser intermitente. A menudo es imposible
+reproducir el problema con un depurador porque el problema surge
+por condiciones de carrera que no son reproducibles cuando la
+sobrecarga del depurador se agrega al sistema. Problemas de
+permisos están cubiertos con algún detalle en el tutorial.
+Lee la sección sobre la `La Politica del Mismo Origen`_,
+y tambien la sección `Inyección de proxy`_ cuidadosamente.
 
 
-### Handling Browser Popup Windows
+### Manejo de Ventanas Emergentes del Navegador
 
-There are several kinds of "Popups" that you can get during a Selenium test.
-You may not be able to close these popups by running Selenium commands if 
-they are initiated by the browser and not your AUT.  You may
-need to know how to manage these.  Each type of popup needs to be addressed differently.
+Hay varios tipos de "ventanas emergentes" que puedse obtener
+durante una prueba de Selenium. Es posible que no puedas cerrar
+estas ventanas emergentes ejecutando comandos de Selenium si son
+iniciados por el navegador y no por tu AUT. Puedes necesitar
+saber cómo gestionarlos. Cada tipo de ventana emergente debe
+abordarse de manera diferente.
 
-* HTTP basic authentication dialogs: These dialogs prompt for a 
-  username/password to login to the site. To login to a site that requires 
-  HTTP basic authentication, use a username and password in the URL, as 
-  described in `RFC 1738`_, like this: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
+* Diálogos de autenticación básica HTTP: estos diálogos solicitan
+  un nombre de usuario/contraseña para iniciar sesión en el sitio.
+  Para iniciar sesión en un sitio que requiere autenticación HTTP básica,
+  use un nombre de usuario y contraseña en la URL, como esta descrito en
+  `RFC 1738`_, así: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
 
-* SSL certificate warnings: Selenium RC automatically attempts to spoof SSL 
-  certificates when it is enabled as a proxy; see more on this 
-  in the section on HTTPS. If your browser is configured correctly,
-  you should never see SSL certificate warnings, but you may need to 
-  configure your browser to trust our dangerous "CyberVillains" SSL certificate 
-  authority. Again, refer to the HTTPS section for how to do this.
+* Advertencias del certificado SSL: Selenium RC intenta
+  falsificar automáticamente los certificados SSL cuando está
+  habilitado como proxy; ver más sobre esto en la sección sobre
+  HTTPS. Si tu navegador está configurado correctamente, nunca
+  deberías ver las advertencias del certificado SSL, pero es
+  posible que debas configursr tu navegador para confiar en nuestra
+  autoridad peligrosa de certificado SSL "CyberVillains".
+  Nuevamente, consulte la sección HTTPS para saber cómo hacer esto.
 
-* modal JavaScript alert/confirmation/prompt dialogs: Selenium tries to conceal
-  those dialogs from you (by replacing window.alert, window.confirm and 
-  window.prompt) so they won't stop the execution of your page. If you're 
-  seeing an alert pop-up, it's probably because it fired during the page load process,
-  which is usually too early for us to protect the page.  Selenese contains commands
-  for asserting or verifying alert and confirmation popups. See the sections on these
-  topics in Chapter 4.
+* cuadros de diálogo de alerta/confirmación/aviso modal de
+  JavaScript: Selenium intenta ocultarte esos diálogos
+  (reemplazando window.alert, window.confirm y window.prompt)
+  para que no detengan la ejecución de tu página. Si ves una
+  ventana de alerta emergente, probablemente se deba a que se
+  disparó durante el proceso de carga de la página, que suele ser
+  demasiado pronto para que podamos proteger la página. Selenese
+  contiene comandos para afirmar o verificar alertas y ventanas
+  emergentes de confirmación. Ver las secciones sobre estos temas
+  en el Capítulo 4.
 
-      
-### On Linux, why isn't my Firefox browser session closing?
+### En Linux, ¿por qué no se cierra la sesión de mi navegador Firefox?
 
-On Unix/Linux you must invoke "firefox-bin" directly, so make sure that
-executable is on the path. If executing Firefox through a 
-shell script, when it comes time to kill the browser Selenium RC will kill
-the shell script, leaving the browser running.   You can specify the path
-to firefox-bin directly, like this.
-      
+En Unix/Linux debes invocar "firefox-bin" directamente, así que
+asegúrate de que el ejecutable está en la ruta. Si ejecutas
+Firefox a través de un script de shell, cuando llega el momento
+de matar el navegador Selenium RC matará el script de shell,
+dejando el navegador en ejecución. Puedes especificar la ruta a
+firefox-bin directamente, de esta forma.
+
 ```bash
    cmd=getNewBrowserSession&1=*firefox /usr/local/firefox/firefox-bin&2=http://www.google.com
 ```
 
-### Firefox \*chrome doesn't work with custom profile
+### Firefox \*chrome no funciona con un perfil personalizado
 
-Check Firefox profile folder -> prefs.js -> user_pref("browser.startup.page", 0);
-Comment this line like this: "//user_pref("browser.startup.page", 0);" and try again.
+Verifica el folder del perfil Firefox ->
+prefs.js -> user_pref("browser.startup.page", 0);
+Comenta esta linea de esta forma:
+"//user_pref("browser.startup.page", 0);"
+e intenta de nuevo.
 
+### Está bien cargar una ventana emergente personalizada mientras se carga la página principal (es decir, antes de que se ejecute la función javascript window.onload() de la página principal)?
 
-### Is it ok to load a custom pop-up as the parent page is loading (i.e., before the parent page's javascript window.onload() function runs)?
-
-No. Selenium relies on interceptors to determine window names as they are being loaded.
-These interceptors work best in catching new windows if the windows are loaded AFTER 
-the onload() function. Selenium may not recognize windows loaded before the onload function.
+No. Selenium depende de los interceptores para determinar los
+nombres de las ventanas a medida que se cargan. Estos
+interceptores funcionan mejor en la captura de nuevas ventanas
+si las ventanas se cargan DESPUÉS la función onload(). Selenium
+pueda que no reconozca ventanas cargadas antes de la función onload.
   
-### Firefox on Linux 
+### Firefox en Linux
 
-On Unix/Linux, versions of Selenium before 1.0 needed to invoke "firefox-bin" 
-directly, so if you are using a previous version, make sure that the real 
-executable is on the path. 
+En Unix/Linux, las versiones de Selenium anteriores a la 1.0
+necesitaban invocar "firefox-bin" directamente, por lo que si
+estás utilizando una versión anterior, asegúrate de que el
+ejecutable verdadero está en la ruta.
 
-On most Linux distributions, the real *firefox-bin* is located on:
+En la mayoría de las distribuciones de Linux, el verdadero
+*firefox-bin* se encuentra en:
 
 ```bash
-   /usr/lib/firefox-x.x.x/ 
+   /usr/lib/firefox-x.x.x/
 ```
 
-Where the x.x.x is the version number you currently have. So, to add that path 
-to the user's path. you will have to add the following to your .bashrc file:
+Donde x.x.x es el número de la versión que tiene actualmente.
+Entonces, para agregar esa ruta a la ruta del usuario, deberás
+agregar lo siguiente a tu archivo .bashrc:
 
 ```bash
    export PATH="$PATH:/usr/lib/firefox-x.x.x/"
 ```
 
-If necessary, you can specify the path to firefox-bin directly in your test,
-like this:
+Si es necesario, puedes especificar la ruta a firefox-bin
+directamente en tu prueba, de esta forma:
 
 ```bash
    "*firefox /usr/lib/firefox-x.x.x/firefox-bin"
 ```
 
-### IE and Style Attributes
+### IE y Atributos de Estilo
 
-If you are running your tests on Internet Explorer and you cannot locate
-elements using their `style` attribute.
-For example:
+Si estás ejecutando tus pruebas en Internet Explorer y no puedes
+localizar elementos que usan tu atributo `style`. Por ejemplo:
 
 ```bash
     //td[@style="background-color:yellow"]
 ```
 
-This would work perfectly in Firefox, Opera or Safari but not with IE. 
-IE interprets the keys in  `@style` as uppercase. So, even if the
-source code is in lowercase, you should use:
+Esto funcionaría perfectamente en Firefox, Opera o Safari
+pero no con IE. IE interpreta las teclas en `@style` como
+mayúsculas. Entonces, incluso si el código fuente está en
+minúsculas, debes usar:
 
 ```bash
     //td[@style="BACKGROUND-COLOR:yellow"]
 ```
 
-This is a problem if your test is intended to work on multiple browsers, but
-you can easily code your test to detect the situation and try the alternative
-locator that only works in IE.
+Esto es un problema si tu prueba está diseñada para funcionar en
+múltiples navegadores, pero puedes codificar fácilmente tu prueba
+para detectar la situación y probar el localizador alternativo
+que solo funciona en IE.
 
-### Error encountered - "Cannot convert object to primitive value" with shut down of  \*googlechrome  browser
+### Error encontrado - "Cannot convert object to primitive value" con el apagado del navegador *googlechrome
 
-To avoid this error you have to start browser with an option that disables same origin policy checks: 
+Para evitar este error, debes iniciar el navegador con una opción
+que deshabilite las mismas verificaciones de políticas de origen:
 
 ```bash
    selenium.start("commandLineFlags=--disable-web-security");
 ```
    
 
-### Error encountered in IE - "Couldn't open app window; is the pop-up blocker enabled?"
+### Error encontrado en IE - "Couldn't open app window; is the pop-up blocker enabled?"
 
-To avoid this error you have to configure the browser: disable the popup blocker 
-AND uncheck 'Enable Protected Mode' option in Tools >> Options >> Security.
+Para evitar este error, debes configurar el navegador: desactiva
+el bloqueador de ventanas emergentes Y desmarque la opción
+'Habilitar modo protegido' en Herramientas >> Opciones >>
+Seguridad.
