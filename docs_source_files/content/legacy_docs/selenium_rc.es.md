@@ -1633,7 +1633,7 @@ Selenium Server no se configuró correctamente como proxy.
 El directorio “selenium-server” no existe en google.com; solo
 parece existir cuando el proxy es debidamente configurado.
 La configuración del proxy depende en gran medida de cómo es
-lanzado el navegador con firefox, iexplore, opera o custom.
+lanzado el navegador con Firefox, iexplore, Opera o custom.
 
 * iexplore: si el navegador se inicia usando \*iexplore, podrías
 tener un problema con la configuración del proxy de Internet
