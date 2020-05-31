@@ -152,31 +152,14 @@
         <div class="container dark-background">
             Wednesday, July 21, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/"><h2>The Current Status of Selenium 1 and Selenium 2</h2></a>
-            <p>In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.</p>
-<p>And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.</p>
-<dl>
-<dt><em>There are a couple annoying bugs in Se-RC 1.03; when is the 1.0.4 release?</em></dt>
-<dd>Se-RC 1.0.4 is planned for sometime towards the end of July 2010</dd>
-<dt><em>I&#8217;ve heard rumours that 1.0.4 the to be the final release?</em></dt>
-<dd>Yes. 1.0.4 is <em>planned</em> on being the final 1.x release</dd>
-<dt><em>That&#8217;s crazy talk! I can&#8217;t use a .0 or &#8216;alpha&#8217; release for my mission critical application</em></dt>
-<dd>Actually, its not all <em>that</em> crazy &#8212; and needs a bit more explanation. Se2 is truly a merger of the two projects, in fact 2.0a1 was literally the Se code from the OpenQA repository and the WebDriver code its Google Code repository merged into a <a href="http://code.google.com/p/selenium">new one</a>. This meant that from the first release of the 2.x series, it has contained 100% of the 1.x code which means 100% backwards compatibility. Later releases in the 2.x series have been driven primarily by evolutions of the code that came from WebDriver, <em>not from Se 1.x</em>.</dd>
-<dt><em>OK, so 100% of Se 1.x is in 2.x; I get that. But how are you making sure that fixes to one get into the other?</em></dt>
-<dd>Here is another &#8216;secret&#8217; &#8212; don&#8217;t tell anyone, but there hasn&#8217;t been any pure 1.x development since the merging of the codebases. Every 1.x release since the merger has really been a 2.x release &#8212; but all packaged up to make it look like a 1.x release. This is why observant people have noticed a log message that looks something like <em>11:09:37.507 INFO &#8211; v2.0 [a4], with Core v2.0 [a4]</em> when they start up their 1.x server.</dd>
-<dt><em>So you&#8217;ve been releasing <em>alpha</em> code disguised as a stable release? Jerks!</em></dt>
-<dd>Woah! Relax! Recall what I said above about it being backwards compatible by default. The &#8216;alpha&#8217; tag is there because the API for the new code is still being developed and features flushed out. The 1.x code is however, still stable and still production quality.</dd>
-<dt><em>Alright, I take back calling you folks jerks, but I really don&#8217;t like the alpha tag. When will it be out of &#8216;alpha&#8217;?</em></dt>
-<dd>There is only one or two more features to implement (like handling alerts) in the WebDriver code and some cleanup before the betas start. But hope for a 2.0.0 final by the end of the year. And while we&#8217;re on the topic of &#8216;alpha&#8217; vs. &#8216;beta&#8217;, this the team&#8217;s working definitions of each.</p>
-<ul>
-<li><em>Alpha</em> &#8211; APIs can, and likely will change. Possibly in dramatic ways.</li>
-<li><em>Beta</em> &#8211; With the APIs set, make sure they work with the major browsers</li>
-</ul>
-</dd>
-<dt><em>&#8216;Major Browsers&#8217; eh, what exactly does that mean?</em></dt>
-<dd>Right now it means Firefox, Internet Explorer and at least one WebKit based one (Safari or Chrome)</dd>
-</dl>
-<p>In short&#8230; it is a requirement of Se2 that the server be backwards compatible with Se-RC 1.x and that has already been accomplished by building the code from a common source repository. This means that if you are using Se-RC, you can switch out the server for a 2.x one and have no impact on the execution of the scripts. <em>Plus</em> you can start to experiment with the new stuff that came over from WebDriver.</p>
-
+            In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.
+And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.
+ There are a couple annoying bugs in Se-RC 1.
+            
+            <div>
+                <a href="/blog/2010/the-current-status-of-selenium-1-and-selenium-2/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -206,22 +189,13 @@
         <div class="container dark-background">
             Monday, July 19, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-20/"><h2>A Smattering of Selenium #20</h2></a>
-            <p><p>12 hours late, but I was driving draft horses all day so that&#8217;s my excuse and I&#8217;m sticking with it. Enjoy. I&#8217;m going for a nap.<br />
-</p>
-<ul>
-<li>The big news this week was the <a href="http://seleniumhq.wordpress.com/2010/07/14/selenium-2-0a5-released/">next alpha of Se 2 came out</a>. Time to update those automation machines.</li>
-<li>Like TestNG&#8217;s @BeforeClass and @AfterClass but using JUnit4? <a href="http://www.eviltester.com/index.php/2010/07/17/using-junit-nested-suites-with-selenium-rc-to-simulate-testng-suite-and-grouping-annotations/">Using JUnit Nested Suites with Selenium RC to simulate TestNG suite and grouping annotations</a> is a long titled post, but describes how to fake one out to act like the other.</li>
-<li>Also on the topic of TestNG is the announcement of <a href="http://www.nabeelalimemon.com/blog/2010/07/selenium-on-testng/">Selenium on TestNG</a></li>
-<li>The folks at ActiveState did a survey in their community about tooling and <a href="http://www.activestate.com/blog/2010/07/survey-says-selenium-nose-most-popular-test-framework">Selenium won</a></li>
-<li>I had to hack DNS a bit for a client&#8217;s Se setup to work the other week, but that seems pretty kludgey compared to <a href="http://twasink.net/blog/2010/07/selenium-trick-using-a-different-dns/">Selenium Trick: Using a different DNS</a></li>
-<li>Using ExtJS? According to <a href="http://www.jslog.com/testing-extjs-with-selenium-automating-ui-tests">Testing ExtJS with Selenium Automating UI Tests</a> the trick is to use CSS as your location strategy</li>
-<li>Jason Huggins was interviewed by Matt Heusser in <a href="http://www.softwaretestpro.com:80/Item/4832">Episode 3 of TWiST</a></li>
-<li>If you are doing Se, then you are doing code. If you are converting &#8216;classic&#8217; manual testers to do automation you need to start thinking about <a href="http://deancornish.blogspot.com/2010/07/training-testers-in-how-to-code.html">Training Testers in how to code&#8230;</a></li>
-<li>While not directly related to Se, <a href="http://blog.nobien.net/2010/07/19/practicing-continuous-integration-on-flash-projects-using-hudson/">Practicing Continuous Integration on Flash Projects: Using Hudson</a> is the wrapup post in a series on doing what it says. If you are doing CI, and of course <i>everyone</i> is, then it needs to be for all parts of your system</li>
-<li><a href="http://blog.shino.de/2010/07/18/parkcalc-automation-–-keyword-driven-tests-in-fitnesse/">ParkCalc automation – Keyword-driven tests in FitNesse</a> wraps up the series by Markus Gärtner that has been mentioned the last two weeks as well.</li>
-<li><a href="http://blog.buberel.org/2010/07/howto-test-jquery-ajax-autocomplete-menus-with-selenium.html">HOWTO: Test JQuery AJAX autocomplete menus with Selenium</a> details something that is fairly common I think.</li>
-</ul></p>
-
+            12 hours late, but I was driving draft horses all day so that&#8217;s my excuse and I&#8217;m sticking with it. Enjoy. I&#8217;m going for a nap.
+ The big news this week was the next alpha of Se 2 came out. Time to update those automation machines. Like TestNG&#8217;s @BeforeClass and @AfterClass but using JUnit4? Using JUnit Nested Suites with Selenium RC to simulate TestNG suite and grouping annotations is a long titled post, but describes how to fake one out to act like the other.
+            
+            <div>
+                <a href="/blog/2010/a-smattering-of-selenium-20/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -250,17 +224,14 @@
         <div class="container dark-background">
             Thursday, July 15, 2010 by <a href="https://twitter.com/jeremyherault">jeremyherault</a>
             <a href="https://selenium.dev/blog/2010/gsoc-2010-remote-storage/"><h2>GSoC 2010 – Remote Storage</h2></a>
-            <p>What’s new for Selenium this summer ? The GSoC of course !!!!</p>
-<p>I’m Jérémy, a french engineer and I  work at <a href="http://www.serli.com/">SERLI</a>, a services company  based in France.<br />
-I’m working on Selenium since a year and this summer I’m  mentoring Aleksejs for the GSoC 2010. I’m helped by <a href="http://www.theautomatedtester.co.uk/">David Burns</a> when I’m on vacation  or offline. His experience is really useful to me, and David is  involved on student supervising regularly.</p>
-<p>Aleksejs comes from  Latvia in Europe (yes I know you know but perhaps Geography wasn’t your  favorite subject at school ;)). His work was initiated by Patrick and myself.  We thought to a remote system that allows Selenium users to save and  get remote test cases, directly with Selenium, without any other  installations like SVN.</p>
-<p>What’s better than record a test case with  Selenium IDE and save it on your remote storage? what’s better than  share your test cases with colleagues without any other installations,  just by using Selenium IDE or a Selenium Remote Storage client?</p>
-<p>For myself I don’t  know what’s better 🙂</p>
-<p>Aleksejs has already coded the server side of  the remote storage mechanism with all the necessary unit tests. He has  also created a web interface to use it directly through the browser.  With his work, you can put, get and delete a test case, and you can also  browse the directory where test cases are stored. His work has been  done in Java, and he used JSON, for data representation for the  communication protocol. This system is really simply to use, based on  REST technology, you only have to call URLs with the good parameters.</p>
-<p>The next step of his  work is to create a Se-IDE plugin based on the API done by Adam (thanks  to him). This part has to be done in less than a month and I think it’s a  hard task, but it’s so cool to write your own plugin. In this case,  Aleksejs will use JavaScript, AJAX and XUL technologies. It’s really  good to learn a lot of technologies for its own culture, it’s so  trainer.</p>
-<p>I hope you’re  enthousiastic to get this new feature, but wait until October, when the  work will be finalized 🙂</p>
-<p>Enjoy guys, Aleksejs, David and I are ready  to discuss on it if you have any questions. And good luck with the end  of this adventure Aleksejs.</p>
-
+            What’s new for Selenium this summer ? The GSoC of course !!!!
+I’m Jérémy, a french engineer and I work at SERLI, a services company based in France.
+I’m working on Selenium since a year and this summer I’m mentoring Aleksejs for the GSoC 2010. I’m helped by David Burns when I’m on vacation or offline. His experience is really useful to me, and David is involved on student supervising regularly.
+            
+            <div>
+                <a href="/blog/2010/gsoc-2010-remote-storage/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>

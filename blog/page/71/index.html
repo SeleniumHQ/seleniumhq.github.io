@@ -418,22 +418,13 @@
             <div class="container dark-background">
                 Monday, August 9, 2010 by <a href="https://twitter.com/RaynatouD">raynatou</a>
                 <a href="https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/"><h2>Selenium 2.0 backend for running IDE test suite via the Se2 Firefox</h2></a>
-                <p>The  GSoC 2010, it’s a great adventure.<br />
-<br />
-I’m  Raynatou, I come from Burkina and do my internship at  <a href="http://www.serli.com/">SERLI</a>. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with  web pages. Selenium Core has several major limitations, including the  inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in  place of Selenium Core.<br />
-<br />
-I’m  mentored by  Eric Allen from <a href="http://saucelabs.com/">SauceLabs</a>, my lead mentor, and by Jérémy Hérault from SERLI, his second but not least ;).<br />
-<br />
-Eric has already done most of this integration earlier this year. The  goal of his work is mostly to show what&#8217;s possible with  Selenium IDE  and the Selenium 2.0 Firefox driver. It is based on an  asynchronous  communication between the Firefox WebDriver extension and  Selenium IDE,  Se-IDE waiting for that WebDriver says to him that the  current command  has been passed with success (or not) to call the next  command of the  current test case (use of callback function). The goal of my mission is  to finalize this integration.  However, Eric being a crazy man, and he  has done it quickly and together  we though to another way to do this  merge.<br />
-<br />
-Our new  thinking is based on a synchronous communication  between both of them.  To do it, I get the FirefoxDriver instance and  play with it like a  normal object, by calling its methods. But the behaviour of  FirefoxDriver isn’t as simple as I was  thinking. JavaScript being a  powerfull language (yes, it can make you  shiver), I&#8217;ve had just to  replace some objects (like Response object)  and to use a Proxy (and a  bit of IoC-like code) to simplify my life and  the code to do. You can  see my work on <a href="http://github.com/epall/selenium/commits/webdriver-synchronous">GitHub</a> and follow it.<br />
-<br />
-Currently, I think that more than 95% of the Selenium API  commands are usable  with WebDriver as backend in Selenium IDE.  The process was basically to go  through the seleniumemulation package and port all of  the Java classes into JavaScript methods on the WebDriver class.<br />
-<br />
-Now, I’m working on Unit tests to cover any of the 2.0 work  I&#8217;ve done. I managed to get all of the Selenium Core tests to run  through IDE. I’ve  some refactorings to do to optimize the code and add more comments for a bigger comprehension of my work. I have almost finished.<br />
-<br />
-I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this work  can be included in the wave of  Selenium 2.</p>
-
+                The GSoC 2010, it’s a great adventure.
+I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with web pages. Selenium Core has several major limitations, including the inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in place of Selenium Core.
+                
+                <div>
+                    <a href="/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/">Read more…</a>
+                </div>
+                
                 
 
 <p><b>Tags</b></p>
@@ -463,19 +454,13 @@ I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this wo
             <div class="container dark-background">
                 Monday, August 2, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
                 <a href="https://selenium.dev/blog/2010/a-smattering-of-selenium-22/"><h2>A Smattering of Selenium #22</h2></a>
-                <p><p>Happy <a href="http://en.wikipedia.org/wiki/John_Graves_Simcoe">Simcoe Day</a>.  Only a handful of links this week to mention.<br />
-</p>
-<ul>
-<li>Kevin relaunched <a href="http://mogotest.com">Mogotest</a> &#8211; <i>see your website the way your users do.</i></li>
-<li>In a much earlier Smattering I think I linked to an announcement about a Se talk at Boston.rb. Well, <a href="http://blog.darnowsky.com/2010/07/27/slides-from-selenium-presentation-at-bostonrb.html">here are the slides</a></li>
-<li>While not directly related to Se, the W3C has released their Unified Validator called, wait for it, <a href="http://validator.w3.org/unicorn/">Unicorn</a>. So who is going to create the integration that magically sends pages to be validated there?</li>
-<li>&#8216;Ad Hoc Workflows&#8217; appears to be a plugin for Confluence, and is a user of Se. They released a video last week of their <a href="http://www.adhocworkflows.com/display/WWW/2010/07/23/How+we+use+Selenium+to+test+Ad+hoc+Workflows">tests in action</a>. (Make sure to have you volume up for the great soundtrack)</li>
-<li>The exploration of Se 2 and Ruby gets even deeper with <a href="http://mountaintroll.blogspot.com/2010/07/adding-automation-to-your-selenium-20.html">Adding automation to your Selenium 2.0 tests (Ruby)</a> &#8211; oh, and RSpec and Rake.</li>
-<li>Michael guest posted on this blog on <a href="http://seleniumhq.wordpress.com/2010/07/30/how-to-use-selenium-2-with-maven/">How to use Selenium 2 with Maven</a> which was a bit of a mystery as we internally changed how thing work around Maven but forgot to really communicate that.</li>
-<li>Sauce Labs is having a webinar this Thursday on <a href="https://www1.gotomeeting.com/register/244624344">Cloud-Based Web Application Testing for Adobe Flex and Flash</a>. Register now, etc.</li>
-<li><a href="http://kristjansson.us/?p=947">Selenium browser UnitTesting from TeamCity</a> is full of XML and C# that I&#8217;m sure would make sense to people familiar to TeamCity</li>
-</ul></p>
-
+                Happy Simcoe Day. Only a handful of links this week to mention.
+ Kevin relaunched Mogotest &#8211; see your website the way your users do. In a much earlier Smattering I think I linked to an announcement about a Se talk at Boston.rb. Well, here are the slides While not directly related to Se, the W3C has released their Unified Validator called, wait for it, Unicorn. So who is going to create the integration that magically sends pages to be validated there?
+                
+                <div>
+                    <a href="/blog/2010/a-smattering-of-selenium-22/">Read more…</a>
+                </div>
+                
                 
 
 <p><b>Tags</b></p>
@@ -504,37 +489,13 @@ I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this wo
             <div class="container dark-background">
                 Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
                 <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
-                <p>There are several ways to use Selenium 2:</p>
-<ol>
-<li>If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new <tt>WebDriver</tt> implemenations like <tt>ChromeDriver</tt>, <tt>HtmlUnitDriver</tt>, <tt>FirefoxDriver</tt>, or <tt>InternetExplorerDriver</tt> which provide a nice, small and easy to learn API.</li>
-<li>If you have Selenium 1.x legacy code, you can still use the well known <tt>DefaultSelenium</tt> class or the new <tt>WebDriverBackedSelenium</tt>, which extends <tt>DefaultSelenium</tt> but uses one of the <tt>WebDriver</tt> implementations internally.</li>
-</ol>
-<p>Whichever option you prefer, if you have want to use Maven, all you need to do is add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>If you know, that you will only use a certain <tt>WebDriver</tt> implementation, e.g. the <tt>FirefoxDriver</tt>, you don&#8217;t need to depend on the <tt>selenium</tt> artifact (which has dependencies to all <tt>WebDriver</tt> implementations as well as the support classes). Instead you can add the dependency to just the artifact you need, e.g.</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>When using a <tt>WebDriver</tt> implementation, there is no need to start a Selenium server &#8211; the browser will be directly started and remote controlled.</p>
-<p>But if you are using <tt>DefaultSelenium</tt> (or the <tt>RemoteWebDriver</tt> implementation), you still need to start a Selenium server.</p>
-<p>The best way is to download the <a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.0a5.jar">standalone Selenium server jar</a> and just use it.</p>
-<p>Furthermore you can also embed the Selenium server into your own project, if you add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>Now you can create a <tt>SeleniumServer</tt> instance yourself and start it.</p>
-<p>Be aware, that the <tt>selenium-server</tt> artifact has a dependency to the <tt>servlet-api-2.5</tt> artifact, which you need to exclude, if your project will be run in a web application container.</p>
-<p>Well, I hope that covers everything you need to know on how to use Selenium 2 with Maven.</p>
-<p>Michael</p>
-
+                There are several ways to use Selenium 2:
+ If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new WebDriver implemenations like ChromeDriver, HtmlUnitDriver, FirefoxDriver, or InternetExplorerDriver which provide a nice, small and easy to learn API. If you have Selenium 1.x legacy code, you can still use the well known DefaultSelenium class or the new WebDriverBackedSelenium, which extends DefaultSelenium but uses one of the WebDriver implementations internally.
+                
+                <div>
+                    <a href="/blog/2010/how-to-use-selenium-2-with-maven/">Read more…</a>
+                </div>
+                
                 
 
 <p><b>Tags</b></p>
