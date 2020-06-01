@@ -418,24 +418,13 @@
             <div class="container dark-background">
                 Monday, January 31, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
                 <a href="https://selenium.dev/blog/2011/bug-bash-aftermath/"><h2>Bug Bash Aftermath</h2></a>
-                <p>What a week! I&#8217;m almost (almost!) sorry that the Bug Bash is over. I&#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?</p>
-<ol>
-<li>Jari Bakken (24 issues)</li>
-<li>Simon Stewart (21 issues)</li>
-<li>David Burns, aka: AutomatedTester (11 issues)</li>
-<li>Jim Evans (10 issues)</li>
-<li>Michael Tamm (6 issues)</li>
-</ol>
-<p>Some interesting nuggets of information:</p>
-<ul>
-<li>We closed 85 issues over the course of the week (that&#8217;s about 20% of all open Selenium issues)</li>
-<li>There were 111 checkins last week alone</li>
-<li>All of the major languages supported by Selenium 2 are represented here.</li>
-<li>Jari Bakken needs to be bought a <a href="http://twitter.com/#!/chris_mcmahon/status/30372577704681473">steak as big as his head.</a></li>
-</ul>
-<p>What does this mean? It means that the next release of Selenium is set to be very solid. We&#8217;re going to be spending another week or so making sure that everything is stable after the influx of changes, but you can expect 2.0b2 to be out &#8220;real soon now&#8221;</p>
-<p>If you missed the Bug Bash but still want to contribute, it&#8217;s never too late. Feel free to drop by the IRC channel, or <a href="http://code.google.com/p/selenium/source/checkout">checkout the source</a>, <a href="http://code.google.com/p/selenium/issues/list">find a bug</a> and start building!</p>
-
+                What a week! I&#8217;m almost (almost!) sorry that the Bug Bash is over. I&#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?
+ Jari Bakken (24 issues) Simon Stewart (21 issues) David Burns, aka: AutomatedTester (11 issues) Jim Evans (10 issues) Michael Tamm (6 issues)  Some interesting nuggets of information:
+                
+                <div>
+                    <a href="/blog/2011/bug-bash-aftermath/">Read more…</a>
+                </div>
+                
                 
 
 <p><b>Tags</b></p>
@@ -464,19 +453,9 @@
             <div class="container dark-background">
                 Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
                 <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
-                <p><p>If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml</p>
-<pre>&lt;dependency&gt;
-  &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-  &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-  &lt;version&gt;2.0b1&lt;/version&gt;
-  &lt;exclusions&gt;
-    &lt;exclusion&gt;
-      &lt;groupId&gt;org.testng&lt;/groupId&gt;
-      &lt;artifactId&gt;testng&lt;/artifactId&gt;
-    &lt;/exclusion&gt;
-  &lt;/exclusions&gt;
-&lt;/dependency&gt;</pre></p>
-
+                If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml
+&lt;dependency&gt; &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt; &lt;artifactId&gt;selenium&lt;/artifactId&gt; &lt;version&gt;2.0b1&lt;/version&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.testng&lt;/groupId&gt; &lt;artifactId&gt;testng&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt; &lt;/dependency&gt;
+                
                 
 
 <p><b>Tags</b></p>
@@ -506,23 +485,13 @@
             <div class="container dark-background">
                 Tuesday, January 25, 2011 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
                 <a href="https://selenium.dev/blog/2011/a-smattering-of-selenium-38b/"><h2>A Smattering of Selenium #38B</h2></a>
-                <p><p>Will today be the day I finish three weeks of catch-up? Well, no..</p>
-<ul>
-<li><a href="http://www.cheezyworld.com/2010/12/16/ui-tests-putting-it-all-together/">UI Tests – putting it all together</a> summarizes the series of posts using Watir and Cucumber, but the ideas could be converted to Se pretty easily.</li>
-<li>I haven&#8217;t read it, but <a href="http://www.ryber.se/?p=213">Essential Software Testdesign</a> is now available for free [legitimately] as a pdf</a>. Test Design is something I expect to see more discussion around in 2011 when it comes to Se automation. The rules really are different here.</li>
-<li>Missed GTAC 2011 but want to be there vicariously? Now you can! <a href="http://googletesting.blogspot.com/2010/12/gtac-5-videos-slides-abstracts.html">GTAC #5: videos, slides, abstracts</a></li>
-<li>Removing -htmlSuite from the Selenium Server and replacing it with a &#8216;real&#8217; runner is something I&#8217;ve been thinking about recently after seeing <a href="http://code.google.com/p/selenium/issues/detail?id=175">  [PROPOSAL] Webdriver Selenese HTML Runner</a>. Who else has done this? Let&#8217;s see/share the code.</li>
-<li>I was babbling on about Page Objects on Twitter and was sent a video on &#8216;BDD, ATDD and Page Object&#8217;. Haven&#8217;t had time to see it yet, but you might.<br />
-<div class="embed-vimeo" style="text-align: center;"><iframe src="https://player.vimeo.com/video/18223672" width="400" height="371" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></p>
-<p><a href="http://vimeo.com/18223672">John Ferguson Smart</a> from <a href="http://vimeo.com/user4352894">Mohinder Khosla</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-</li>
-<li><a href="https://launchpad.net/selenium-zoetrope">Selenium Zoetrope</a> is a PHP Se runner that will also record a video of your script&#8217;s run.</li>
-<li><a href="http://codebaboon.com/economist-testing-drupal-using-selenium">The Economist: Testing Drupal using Selenium</a> is an experience report about the project that zoetrope originated in.</li>
-<li><a href="http://testingwithvision.com/2011/01/04/the-elements-of-cucumber-style/">The elements of (cucumber) style</a> is a nice &#8216;style guide&#8217; you could consider adopting for your Cucumber scripts.</li>
-<li>Another <a href="http://agilesoftwaretesting.com/?p=143">Selenium Auto Accept Self Signed SSL Certificates and Basic Authentication</a> post, but this time with a Ruby bias for those who insist on having SSL turned on in environments other than production. (WHY?)</li>
-<li>And from the same person, <a href="http://agilesoftwaretesting.com/?p=166">Testing PDF files with (and without) Selenium</a> which is outstandingly cool. I know of at least one client who needed this a year ago.</li>
-</ul></p>
-
+                Will today be the day I finish three weeks of catch-up? Well, no..
+ UI Tests – putting it all together summarizes the series of posts using Watir and Cucumber, but the ideas could be converted to Se pretty easily. I haven&#8217;t read it, but Essential Software Testdesign is now available for free [legitimately] as a pdf. Test Design is something I expect to see more discussion around in 2011 when it comes to Se automation.
+                
+                <div>
+                    <a href="/blog/2011/a-smattering-of-selenium-38b/">Read more…</a>
+                </div>
+                
                 
 
 <p><b>Tags</b></p>

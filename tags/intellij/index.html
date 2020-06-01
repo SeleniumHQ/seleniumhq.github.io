@@ -152,22 +152,13 @@
         <div class="container dark-background">
             Wednesday, February 8, 2017 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2017/hacking-with-intellij/"><h2>Hacking with IntelliJ</h2></a>
-            <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a> which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part of that programme, which the Selenium project has participated in for many years, they&#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&#8217;ll attempt to do that, and I&#8217;ll try and state my biases up-front so you&#8217;re aware of them.</p>
-<p>I&#8217;ve been using Jetbrain&#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago. It&#8217;s still my favourite IDE for my Java work, and it&#8217;s plenty of fun to use. For some time, I&#8217;ve been using the (free) Community Edition, which is ample for many coding needs.</p>
-<p>Most of my work is in Java, and that&#8217;s where I know IDEA best. I dabble in Ruby and Python, and I&#8217;ve written a reasonably large amount of Javascript, all in IDEA.</p>
-<p>The Pros:</p>
-<p>In common with other good IDEs, IDEA has the ability to work seamlessly with many different languages. If you&#8217;re a polyglot programmer, being able to stay in the same tool for much of your work makes life a lot easier. On the Selenium project, we use Java, C#, Ruby, Python, and Javascript extensively. I don&#8217;t do any C#, and I mainly focus on Java, but the support for JS, Ruby, and Python is lovely and seems to work well. The built in type detection and code navigation features are impressive (particularly for untyped languages such as JS)</p>
-<p>Of course, the feature that made IDEA so awesome in the first place is the range of refactoring options it offers. These are great, and always have been. One nice feature I&#8217;ve noticed as we move to a Java 8 future (finally!) is that it offers suggestions to help migrate to new features where they make sense (and, I&#8217;ll be honest, sometimes when they don&#8217;t). It&#8217;s made making use of lambdas a lot easier.</p>
-<p>For a while, IDEA was becoming slower and more bloated, but I&#8217;m pleased to see that, partly thanks to the work of developers from <a href="http://facebook.com/">Facebook</a>, the latest releases feel snappier and handle larger projects more efficiently. One thing I appreciate is how open Jetbrains were to receiving patches to their core product: it displays a level of respect for external contributors that I feel is important (of course, I would think that: I work on OSS for fun!)</p>
-<p>There&#8217;s a nice wide range of plugins available for IDEA. I&#8217;ve hooked up the Buck plugin and made use of it. Without an extensions API, this plugin wouldn&#8217;t have been possible, but having them there is incredibly useful and makes the IDE even more capable.</p>
-<p>Finally for the plus points of the IDE, I love that the IDE tracks new versions of Java relatively closely &#8212; it&#8217;s fun to see what new language features we&#8217;ll be able to use in the future!</p>
-<p>The Cons:</p>
-<p>Although it&#8217;s a fine product, there are some niggles to be had.</p>
-<p>Most annoyingly, the built in code analysis doesn&#8217;t always warn that some Java classes won&#8217;t compile. The most recent example was where IDEA didn&#8217;t flag that some lambdas couldn&#8217;t be used since the choice of method to use was ambiguous. This may be because the Java language continues its slothful way forward, and the compiler improves with each release &#8212; certainly these same files compiled just fine with older Java releases.</p>
-<p>When an error does happen, I&#8217;ve yet to find the magic setting to allow IDEA to keep going as far as possible. One of the features I like about Eclipse is that it&#8217;ll compile as much as it can, even if there are invalid source files. When doing TDD, this allows you to move just a little bit faster as unit tests can run and pass so long as they don&#8217;t touch faulty code. I dearly wish this same capability was present in IDEA!</p>
-<p>On the Selenium project, we use <a href="http://buckbuild.com/">Buck</a> for our builds. The Buck plugin doesn&#8217;t (yet!) allow me to build and run tests within the IDE, yet Buck performs some steps that can&#8217;t be repeated by the IDE that are required for a successful build. IDEA offers the ability to run an <a href="http://ant.apache.org/">Ant</a> step before a build is run, and it would be extremely useful if this was generalised to &#8220;any shell command&#8221;. Most of the time, it&#8217;s fine, but it&#8217;s irksome to forget to run things!</p>
-<p>On the whole, I love IntelliJ an awful lot. It&#8217;s a fast and capable IDE, and the company behind it supports OSS. What&#8217;s not to love?</p>
-
+            Jetbrains have a programme for Open Source projects which allows them to receive IntelliJ IDEA licenses. As part of that programme, which the Selenium project has participated in for many years, they&#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&#8217;ll attempt to do that, and I&#8217;ll try and state my biases up-front so you&#8217;re aware of them.
+I&#8217;ve been using Jetbrain&#8217;s IntelliJ to hack on the Selenium code since I started working on it slightly over ten years ago.
+            
+            <div>
+                <a href="/blog/2017/hacking-with-intellij/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -197,14 +188,13 @@
         <div class="container dark-background">
             Sunday, February 8, 2015 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2015/intellij/"><h2>IntelliJ</h2></a>
-            <p>Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project. As part of that process, they&#8217;ve asked that we review the product and (kudos to them!) have been clear that they hope we&#8217;re open and honest. So, I&#8217;ll be open and honest.</p>
-<p>When I tell people that I&#8217;m a professional Java developer, people in some circles make sympathetic noises and (sometimes) jokingly refer to how painful my coding life must be. After all, there are several far trendier and hipper languages, from Ruby, various flavours of Javascript, Python, Haskell, and even other languages running on the JVM such as Scala and Clojure. I tend to agree that Java is a relatively unexciting language as it&#8217;s generally practiced &#8212; Java 8 contains a wealth of goodies that lots of people won&#8217;t be using for years since they&#8217;ve still got to support Java 6(!) apps. Where I disagree with the detractors is that using Java is something to feel sorry for a developer for: Java on its own isn&#8217;t much fun, Java and IntelliJ is one of my favourite programming experiences.</p>
-<p>I&#8217;ve been using Java since the (very) late 90s, and have been using IntelliJ off-and-on since 2003 or so. In the intervening just-over-a-decade, what started as a tool that crossed the Rubicon of &#8220;being able to do refactoring&#8221; has matured. It has literally changed the way I write code: I now use the &#8220;Introduce Variable&#8221; refactoring to avoid needing to do initial assignments of values to variables as a matter of course. Indeed, with IntelliJ, I frequently stop thinking about the programming language and start thinking about the structure of the solution. Its refactorings make exploring large scale changes easy and entirely reliable, and once the restructurings are complete, I can jump to symbols with ease.</p>
-<p>Code exploration is aided by the simple and quick ways IntelliJ can find usages, and it&#8217;s simple to find unused code as method declarations get highlighted in a different shade to used ones. The integrated debugger is sufficiently capable that, coupled with unit tests, it&#8217;s normally pretty easy to figure out why some odd behaviour is happening. And, speaking of unit tests, the UI is clear and (I find) intuitive and easy to use.</p>
-<p>And those users of fancy-pants languages such as Clojure, Ruby, Python and Javascript (and PHP) can get plugins that extend IntelliJ&#8217;s capabilities and insight into those languages. Although it&#8217;s been a long time since I&#8217;ve had to deal with Spring and JEE, when I do IJ has my back, grokking the config files. The maven and gradle integration appears to work too, though Selenium uses CrazyFun and is migrating to Buck, so I&#8217;ve seldom any need to</p>
-<p>It&#8217;s not all wonder and joy. On large, multi-module codebases, IntelliJ seems to spend too long building caches. Activity Monitor on the Mac suggests it&#8217;s doing this in a single threaded manner, which is wasteful on a multicored machine. Switching away from IJ, doing something on the command line involving source control and then switching back is a sure-fire way to make it rebuild the caches, making it unresponsive. Extending IntelliJ by writing plugins is a black art &#8212; the documentation is scattered and appears out of date, making getting started on writing one hard.</p>
-<p>Overall, though, I love IntelliJ. On the Selenium project, it&#8217;s the IDE of choice, and I&#8217;ve been incredibly productive in it. Thank you, Jetbrains, for a wonderful tool.</p>
-
+            Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project. As part of that process, they&#8217;ve asked that we review the product and (kudos to them!) have been clear that they hope we&#8217;re open and honest. So, I&#8217;ll be open and honest.
+When I tell people that I&#8217;m a professional Java developer, people in some circles make sympathetic noises and (sometimes) jokingly refer to how painful my coding life must be.
+            
+            <div>
+                <a href="/blog/2015/intellij/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>

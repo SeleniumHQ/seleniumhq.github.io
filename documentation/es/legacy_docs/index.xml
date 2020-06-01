@@ -17,9 +17,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/legacy_docs/selenium_rc/</guid>
-      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
- Introducción Selenium RC fue el principal proyecto de Selenium durante mucho tiempo, antes de que la union de WebDriver/Selenium resultaran en Selenium 2, una herramienta más poderosa. Vale la pena resaltar que Selenium 1 ya no es soportado.
-Como funciona Selenium RC Primero, describiremos cómo funcionan los componentes de Selenium RC y el papel que desempeña cada uno en la ejecución tus scripts de prueba.</description>
+      <description>Introducción Selenium RC fue el principal proyecto de Selenium durante mucho tiempo, antes de que la union de WebDriver/Selenium resultaran en Selenium 2, una herramienta más poderosa. Vale la pena resaltar que Selenium 1 ya no es soportado.
+Como funciona Selenium RC Primero, describiremos cómo funcionan los componentes de Selenium RC y el papel que desempeña cada uno en la ejecución tus scripts de prueba.
+Componentes de RC Los componentes de Selenium RC son:</description>
     </item>
     
     <item>

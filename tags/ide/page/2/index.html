@@ -152,12 +152,12 @@
         <div class="container dark-background">
             Monday, May 30, 2011 by <a href="https://twitter.com/samitbadle">Samit Badle</a>
             <a href="https://selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/"><h2>Selenium IDE 1.0.11 – Now with Firefox 4 Support!</h2></a>
-            <p>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the <a href="http://seleniumhq.org/download/">seleniumhq download site</a>. The update will also be pushed to you automatically over the next couple days.</p>
-<p>Other things of note around this release<br />
-•<a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">Release Notes<br />
-</a>•<a href="http://code.google.com/p/selenium/issues/list">Where to log bugs</a><br />
-•<a href="http://blog.reallysimplethoughts.com/2011/05/30/welcome-selenium-ide-1-0-11-with-firefox-4-support/">Welcome Selenium IDE 1.0.11 (with Firefox 4 support)</a></p>
-
+            We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the seleniumhq download site. The update will also be pushed to you automatically over the next couple days.
+Other things of note around this release
+•Release Notes
+•Where to log bugs
+•Welcome Selenium IDE 1.0.11 (with Firefox 4 support)
+            
             
 
 <p><b>Tags</b></p>
@@ -187,54 +187,13 @@
         <div class="container dark-background">
             Thursday, December 9, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/"><h2>Atoms have come to Selenium IDE</h2></a>
-            <p>As mentioned in Simon&#8217;s <a href="http://seleniumhq.wordpress.com/2010/08/16/going-atomic-why/">Going Atomic: Why?</a> and <a href="http://seleniumhq.wordpress.com/2010/09/05/going-atomic-how/">Going Atomic: How</a>, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &#8216;atoms&#8217; is now included.<br />
-<br />
-Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &#8216;why&#8217; and suggests how to fix them as well.<br />
-<br />
-The HTML spec has the notion of a <i>boolean attribute</i> which is one that does something just by being there rather than by its value; <i>checked</i> and <i>selected</i> are two such examples of this. Optionally, you could give these boolean attributes a value that is the same as their name (checked=&#8221;checked&#8221;) and your page would still validate, but really, the browsers only care that the attribute exist.<br />
-<br />
-Prior to 1.0.10, it was not uncommon for people to do something like<br />
-</p>
-<pre>assertAttribute | checkbox@checked | checked</pre>
-<p>
-which fetches the value of the checked attribute on the checkbox with the id or name of checkbox and fails the script is the value is not checked.<br />
-<br />
-In 1.0.10 though, that will fail <i>even if it is checked</i>. This is because checked is a boolean attribute and will now return either true or throw an exception saying the attribute doesn&#8217;t exist. Redoing the above step check that the boolean attribute is set results in:<br />
-</p>
-<pre>assertAttribute | checkbox@checked | true</pre>
-<p>
-Thankfully, most of the real-world interaction with boolean attributes is focused on checked, disabled, hidden and selected and in these cases using assertAttribute is not really the right thing to do. Instead, the Selenium API provides wrappers for you to use.<br />
-</p>
-<table>
-<tr>
-<td>checked</td>
-<td>assertChecked(locator), assertNotChecked(locator), verifyChecked(locator), verifyNotChecked(locator)</td>
-</tr>
-<tr>
-<td>disabled</td>
-<td>assertEditable(locator), assertNotEditable(locator), verifyEditable(locator), verifyNotEditable(locator)</td>
-</tr>
-<tr>
-<td>hidden</td>
-<td>assertVisible(locator), assertNotVisible(locator), verifyVisible(locator), verifyNotVisible(locator)</td>
-</tr>
-<tr>
-<td>selected</td>
-<td>assertSelected*(locator, pattern), assertNotSelected*(locator, pattern), verifySelected*(locator, pattern), verifyNotSelected*(locator, pattern)</td>
-</tr>
-</table>
-<p>
-Checking for the absence of a boolean attribute that doesn&#8217;t have a nice wrapper is a bit of a pain though. In this example I am checking that the boolean attribute <i>multiple</i> is not on the select element with the name elephants.<br />
-</p>
-<pre>assertEval | this.browserbot.findElement("css=select[name=elephants]").getAttribute("multiple"); | null</pre>
-<p>
-If you find yourself doing this very often, I suggest you wrap it up in a user-extension inside a <a href="http://seleniumhq.org/projects/ide/plugins.html">plugin</a> as something like<br />
-</p>
-<pre>assertBooleanAttribute | css=select[name=elephants]@multiple | false
-assertBooleanAttribute | css=select[name=elephants]@multiple | true</pre>
-<p>
-Hopefully this addresses some of the eventual &#8216;why the heck did my script break!?!?!&#8217; problems that will no double crop up once Selenium IDE 1.0.10 gets wider distribution.</p>
-
+            As mentioned in Simon&#8217;s Going Atomic: Why? and Going Atomic: How, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &#8216;atoms&#8217; is now included.
+Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &#8216;why&#8217; and suggests how to fix them as well.
+            
+            <div>
+                <a href="/blog/2010/atoms-have-come-to-selenium-ide/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -264,22 +223,13 @@ Hopefully this addresses some of the eventual &#8216;why the heck did my script 
         <div class="container dark-background">
             Monday, August 9, 2010 by <a href="https://twitter.com/RaynatouD">raynatou</a>
             <a href="https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/"><h2>Selenium 2.0 backend for running IDE test suite via the Se2 Firefox</h2></a>
-            <p>The  GSoC 2010, it’s a great adventure.<br />
-<br />
-I’m  Raynatou, I come from Burkina and do my internship at  <a href="http://www.serli.com/">SERLI</a>. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with  web pages. Selenium Core has several major limitations, including the  inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in  place of Selenium Core.<br />
-<br />
-I’m  mentored by  Eric Allen from <a href="http://saucelabs.com/">SauceLabs</a>, my lead mentor, and by Jérémy Hérault from SERLI, his second but not least ;).<br />
-<br />
-Eric has already done most of this integration earlier this year. The  goal of his work is mostly to show what&#8217;s possible with  Selenium IDE  and the Selenium 2.0 Firefox driver. It is based on an  asynchronous  communication between the Firefox WebDriver extension and  Selenium IDE,  Se-IDE waiting for that WebDriver says to him that the  current command  has been passed with success (or not) to call the next  command of the  current test case (use of callback function). The goal of my mission is  to finalize this integration.  However, Eric being a crazy man, and he  has done it quickly and together  we though to another way to do this  merge.<br />
-<br />
-Our new  thinking is based on a synchronous communication  between both of them.  To do it, I get the FirefoxDriver instance and  play with it like a  normal object, by calling its methods. But the behaviour of  FirefoxDriver isn’t as simple as I was  thinking. JavaScript being a  powerfull language (yes, it can make you  shiver), I&#8217;ve had just to  replace some objects (like Response object)  and to use a Proxy (and a  bit of IoC-like code) to simplify my life and  the code to do. You can  see my work on <a href="http://github.com/epall/selenium/commits/webdriver-synchronous">GitHub</a> and follow it.<br />
-<br />
-Currently, I think that more than 95% of the Selenium API  commands are usable  with WebDriver as backend in Selenium IDE.  The process was basically to go  through the seleniumemulation package and port all of  the Java classes into JavaScript methods on the WebDriver class.<br />
-<br />
-Now, I’m working on Unit tests to cover any of the 2.0 work  I&#8217;ve done. I managed to get all of the Selenium Core tests to run  through IDE. I’ve  some refactorings to do to optimize the code and add more comments for a bigger comprehension of my work. I have almost finished.<br />
-<br />
-I hope  you enjoy what I’m doing and we hope (me and my  mentors) that this work  can be included in the wave of  Selenium 2.</p>
-
+            The GSoC 2010, it’s a great adventure.
+I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with web pages. Selenium Core has several major limitations, including the inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in place of Selenium Core.
+            
+            <div>
+                <a href="/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
