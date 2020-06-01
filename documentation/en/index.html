@@ -1966,7 +1966,7 @@ browsers. Here is one of the simplest instructions you can make:</p>
 
     <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
         WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-        WebDriverWait <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, 10L);
         <span style="color:#719e07">try</span> {
             driver.get(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
             driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
