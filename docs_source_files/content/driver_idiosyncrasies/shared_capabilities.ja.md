@@ -88,22 +88,21 @@ WebDriverの `セッション` には特定の `セッションタイムアウ�
 
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
+このコマンドは、現在のブラウジングコンテキストウィンドウのサイズと位置を変更します。
+このコマンドは、**幅** 、**高さ**、**x**、**y**を _任意_ の引数として受け取る
+`getWindowRect` コマンドのセッターとして機能します。
 
-During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
+自動化中、現在のブラウジングコンテキストは、
+ブラウザーウィンドウの可視状態を表すウィンドウ状態に関連付けられます。
+ウィンドウ状態は、以下です。
 
 * maximized
 * minimized
 * normal
 * fullscreen
 
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+_幅_ または _高さ_ を設定しても、結果のウィンドウサイズが要求されたものと
+正確に一致することを保証しません。
+これは、一部のドライバはシングルピクセル単位でサイズ変更できない場合があるからです。
+このため、 `getWindowRect` でウィンドウの状態/詳細を取得しても、
+ブラウザーに設定された値と等しく一致しない場合があります。

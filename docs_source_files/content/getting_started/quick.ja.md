@@ -22,13 +22,9 @@ IDEはあなたのブラウザ上で、その要素で定義されたパラメ�
 
 ## Grid
 
-Selenium Grid allows you to run test cases in different 
-machines across different platforms. The control of 
-triggering the test cases is on the local end, and 
-when the test cases are triggered, they are automatically 
-executed by the remote end.
+Selenium Grid を使用すると、さまざまなプラットフォームのさまざまなマシンでテストケースを実行できます。
+テストケースの起動の制御はローカル端末で行われ、テストケースが起動されると、
+リモート端末によって自動的に実行されます。
 
-After the development of the WebDriver tests, you may face 
-the need of running your tests on multiple browser and 
-operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.
+WebDriverテストの開発後、複数のブラウザーとオペレーティングシステムの組み合わせでテストを実行する必要が出てくる場合があります。
+ここで _[Grid]({{< ref "/grid/_index.md" >}})_ が登場します。
