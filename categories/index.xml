@@ -6,7 +6,7 @@
     <description>Recent content in Categories on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>general</title>
       <link>https://selenium.dev/categories/general/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>releases</title>
+      <link>https://selenium.dev/categories/releases/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/categories/releases/</guid>
       <description></description>
     </item>
     
@@ -35,15 +44,6 @@
       <pubDate>Sat, 09 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/categories/conference/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>releases</title>
-      <link>https://selenium.dev/categories/releases/</link>
-      <pubDate>Mon, 06 Aug 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/categories/releases/</guid>
       <description></description>
     </item>
     

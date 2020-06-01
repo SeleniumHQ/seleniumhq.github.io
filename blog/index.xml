@@ -12,6 +12,20 @@
     
     
     <item>
+      <title>Selenium 4.0 Alpha 6 is out!</title>
+      <link>https://selenium.dev/blog/2020/selenium-4-alpha-6-is-out/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/selenium-4-alpha-6-is-out/</guid>
+      <description>We are very pleased to announce the release of Selenium 4.0 Alpha 6.
+All the information can be seen in different tweets from the project contributors, here they are all in one place:
+Happy Friday! I&amp;#39;ve just pushed Selenium 4.0a6 for Java. There&amp;#39;s a lot of nice changes:
+* Full remoting of the CDP protocol across the Grid
+* The skeleton of our GraphQL support
+* Better configuration options, especially for Nodes, via TOML</description>
+    </item>
+    
+    <item>
       <title>Public Project Meeting - May 07, 2020</title>
       <link>https://selenium.dev/blog/2020/public-project-meeting-20200507/</link>
       <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
