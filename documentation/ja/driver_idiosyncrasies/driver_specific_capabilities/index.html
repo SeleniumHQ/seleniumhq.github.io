@@ -11,20 +11,20 @@
     <title>ドライバー固有の機能 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1590992926" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591017176" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1590992926" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591017176" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591017176"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1590992926"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1590992926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591017176"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591017176"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1590992926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591017176"></script>
 
     
   </div>
@@ -2317,16 +2317,14 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 
 <h3 id="ensurecleansession">ensureCleanSession</h3>
 
-<p>When set to <code>true</code>, this capability clears the <em>Cache,
-Browser History and Cookies</em> for all running instances
-of InternetExplorer including those started manually
-or by the driver. By default, it is set to <code>false</code>.</p>
+<p>この機能を <code>true</code> に設定すると、手動またはドライバーによって開始されたものを含め、
+InternetExplorerの実行中のすべてのインスタンスのキャッシュ、ブラウザー履歴、およびCookieがクリアされます。
+デフォルトでは、<code>false</code> に設定されています。</p>
 
-<p>Using this capability will cause performance drop while
-launching the browser, as the driver will wait until the cache
-gets cleared before launching the IE browser.</p>
+<p>この機能を使用すると、ドライバーがIEブラウザーを起動する前にキャッシュがクリアされるまで待機するため、
+ブラウザーの起動中にパフォーマンスが低下します。</p>
 
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>このケイパビリティは、ブール値をパラメーターとして受け入れます。</p>
 
 
 
@@ -2440,11 +2438,11 @@ options.destructivelyEnsureCleanSession()
 
 <h3 id="ignorezoomsetting">ignoreZoomSetting</h3>
 
-<p>InternetExplorer driver expects the browser zoom level to be 100%,
-else the driver will throw an exception. This default behaviour
-can be disabled by setting the <em>ignoreZoomSetting</em> to <em>true</em>.</p>
+<p>InternetExplorerドライバーは、ブラウザーのズームレベルが100％であることを想定しています。
+それ以外の場合、ドライバーは例外をスローします。
+このデフォルトの動作は、 <em>ignoreZoomSetting</em> を <em>true</em> に設定することで無効にできます。</p>
 
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>このケイパビリティは、ブール値をパラメーターとして受け入れます。</p>
 
 
 
@@ -2558,21 +2556,18 @@ options.ignoreZoomSettings()
 
 <h3 id="ignoreprotectedmodesettings">ignoreProtectedModeSettings</h3>
 
-<p>Whether to skip the <em>Protected Mode</em> check while launching
-a new IE session.</p>
+<p>新しいIEセッションの起動中に <em>保護モード</em> チェックをスキップするかどうか。</p>
 
-<p>If not set and <em>Protected Mode</em> settings are not same for
-for all zones, an exception will be thrown by the driver.</p>
+<p>設定されておらず、 <em>保護モード</em> 設定がすべてのゾーンで同じでない場合、
+ドライバーによって例外がスローされます。</p>
 
-<p>If capability is set to <code>true</code>, tests may
-become flaky, unresponsive, or browsers may hang.
-However, this is still by far a second-best choice,
-and the first choice should <em>always</em> be to actually
-set the Protected Mode settings of each zone manually.
-If a user is using this property,
-only a &ldquo;best effort&rdquo; at support will be given.</p>
+<p>ケイパビリティを <code>true</code> に設定すると、テストが不安定になったり、応答しなくなったり、
+ブラウザがハングしたりする場合があります。
+ただし、これはまだ2番目に良い選択であり、最初の選択は <em>常に</em>
+各ゾーンの保護モード設定を手動で実際に設定することです。
+ユーザーがこのプロパティを使用している場合、「ベストエフォート」のみがサポートされます。</p>
 
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>このケイパビリティは、ブール値をパラメーターとして受け入れます。</p>
 
 
 
@@ -2686,10 +2681,9 @@ options.introduceFlakinessByIgnoringSecurityDomains()
 
 <h3 id="silent">silent</h3>
 
-<p>When set to <code>true</code>, this capability suppresses the
-diagnostic output of the IEDriverServer.</p>
+<p><code>true</code> に設定すると、このケイパビリティはIEDriverServerの診断出力を抑制します。</p>
 
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>このケイパビリティは、ブール値をパラメーターとして受け入れます。</p>
 
 
 
@@ -2825,22 +2819,23 @@ caps.set(<span style="color:#2aa198">&#39;silent&#39;</span>, <span style="color
 
 <h3 id="ie-command-line-options">IE Command-Line Options</h3>
 
-<p>Internet Explorer includes several command-line options
-that enable you to troubleshoot and configure the browser.</p>
+<p>Internet Explorerには、ブラウザーのトラブルシューティングと構成を可能にするいくつかのコマンドラインオプションが含まれています。</p>
 
-<p>The following describes few supported command-line options</p>
+<p>次に、サポートされているいくつかのコマンドラインオプションについて説明します。</p>
 
 <ul>
-<li><p><em>-private</em> : Used to start IE in private browsing mode. This works for IE 8 and later versions.</p></li>
+<li><p><em>-private</em> : IEをプライベートブラウジングモードで起動するために使用されます。
+これはIE 8以降のバージョンで機能します。</p></li>
 
-<li><p><em>-k</em> : Starts Internet Explorer in kiosk mode.
-The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.</p></li>
+<li><p><em>-k</em> : Internet Explorerをキオスクモードで起動します。
+ブラウザは、アドレスバー、ナビゲーションボタン、またはステータスバーを表示しない最大化されたウィンドウで開きます。</p></li>
 
-<li><p><em>-extoff</em> : Starts IE in no add-on mode.
-This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.</p></li>
+<li><p><em>-extoff</em> : アドオンなしモードでIEを起動します。
+このオプションは、ブラウザーのアドオンに関する問題のトラブルシューティングに特に使用されます。
+IE 7以降のバージョンで動作します。</p></li>
 </ul>
 
-<p>Note: <strong>forceCreateProcessApi</strong> should to enabled in-order for command line arguments to work.</p>
+<p>注：コマンドライン引数が機能するためには、 <strong>forceCreateProcessApi</strong> を順番に有効にする必要があります。</p>
 
 
 
@@ -3001,11 +2996,10 @@ driver <span style="color:#719e07">=</span> await env.builder()
 
 <h3 id="forcecreateprocessapi">forceCreateProcessApi</h3>
 
-<p>Forces launching Internet Explorer
-using the CreateProcess API. The default value is false.</p>
+<p>CreateProcess APIを使用してInternet Explorerを強制的に起動します。
+デフォルト値はfalseです。</p>
 
-<p>For IE 8 and above, this option requires the
-&ldquo;TabProcGrowth&rdquo; registry value to be set to 0.</p>
+<p>IE 8以降の場合、このオプションでは &ldquo;TabProcGrowth&rdquo; レジストリの値を0に設定する必要があります。</p>
 
 
 
@@ -3165,7 +3159,7 @@ driver <span style="color:#719e07">=</span> await env.builder()
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/">
       “ドライバー固有の機能”
-    </a> was last updated on: 29 May 2020 19:59:05 &#43;0400: <a href="https://github.com/SeleniumHQ/site/commit/07fa2a638da95bf1bfe3b929a8137565103d325b">CodeSnippet of C# for IE silent option (#443)[deploy site] (07fa2a63)</a>
+    </a> was last updated on: 01 Jun 2020 21:44:37 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/b450bcee5db7bfdb5c32ba9df6e9f5ea05bf5d21">Translate some pages into Japanese (#450)[deploy site] (b450bcee)</a>
 </h5>
         
         </div> 
@@ -4330,19 +4324,19 @@ driver <span style="color:#719e07">=</span> await env.builder()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591017176"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591017176"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1590992926" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1590992926"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591017176" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591017176"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

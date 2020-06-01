@@ -11,20 +11,20 @@
     <title>要素を探す :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1590992926" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1590992926" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591017176" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591017176" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1590992926" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591017176" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591017176"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1590992926"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1590992926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591017176"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591017176"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1590992926"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591017176"></script>
 
     
   </div>
@@ -1931,9 +1931,9 @@
 <li><a href="#要素選択の方法">要素選択の方法</a></li>
 <li><a href="#セレクタを使うときのコツ">セレクタを使うときのコツ</a></li>
 </ul></li>
-<li><a href="#relative-locators">Relative Locators</a>
+<li><a href="#レラティブ-相対-ロケーター">レラティブ（相対）ロケーター</a>
 <ul>
-<li><a href="#how-does-it-work">How does it work</a></li>
+<li><a href="#どのように機能するか">どのように機能するか</a></li>
 <li><a href="#above">above()</a></li>
 <li><a href="#below">below()</a></li>
 <li><a href="#toleftof">toLeftOf()</a></li>
@@ -2446,12 +2446,11 @@ XPathはとても柔軟ですが、ブラウザベンダは性能テストを通
 WebDriverでDOM構造のトラバースを行うのは重い処理となります。
 検索の範囲を狭めた方がより良い結果を得られます。</p>
 
-<h2 id="relative-locators">Relative Locators</h2>
+<h2 id="レラティブ-相対-ロケーター">レラティブ（相対）ロケーター</h2>
 
-<p><strong>Selenium 4</strong> brings Relative Locators which are previously
-called as <em>Friendly Locators</em>. This functionality was
-added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:</p>
+<p><strong>Selenium 4</strong> は、以前は <em>Friendly Locators</em> と呼ばれていたレラティブ ロケーターをもたらします。
+この機能は、他の要素の近くにある要素を見つけるのに役立つように追加されました。
+使用可能なレラティブ ロケーターは次のとおりです。</p>
 
 <ul>
 <li><em>above</em></li>
@@ -2461,25 +2460,20 @@ The Available Relative Locators are:</p>
 <li><em>near</em></li>
 </ul>
 
-<p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
-which returns a RelativeLocator.</p>
+<p><em>findElement</em> メソッドは、レラティブ ロケーター を返す新しいメソッド <code>withTagName（）</code> を受け入れるようになりました。</p>
 
-<h3 id="how-does-it-work">How does it work</h3>
+<h3 id="どのように機能するか">どのように機能するか</h3>
 
-<p>Selenium uses the JavaScript function
-<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a>
-to find the relative elements. This function returns
-properties of an element such as
-right, left, bottom, and top.</p>
+<p>Seleniumは、JavaScript関数 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a> を使用して相対要素を見つけます。
+この関数は、right、left、bottom、topなどの要素のプロパティを返します。</p>
 
-<p>Let us consider the below example for understanding the relative locators.</p>
+<p>レラティブ ロケーターを理解するために、以下の例を考えてみましょう。</p>
 
 <p><img src="https://selenium.dev/documentation/ja/images/relative_locators.png?width=400px" alt="Relative Locators" /></p>
 
 <h3 id="above">above()</h3>
 
-<p>Returns the WebElement, which appears
-above to the specified element</p>
+<p>指定された要素の上に表示されるWebElementを返します。</p>
 
 
 
@@ -2580,8 +2574,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 
 <h3 id="below">below()</h3>
 
-<p>Returns the WebElement, which appears
-below to the specified element</p>
+<p>指定された要素の下に表示されるWebElementを返します。</p>
 
 
 
@@ -2682,8 +2675,7 @@ IWebElement passwordField = driver.FindElement(WithTagName(<span style="color:#2
 
 <h3 id="toleftof">toLeftOf()</h3>
 
-<p>Returns the WebElement, which appears
-to left of specified element</p>
+<p>指定された要素の左側に表示されるWebElementを返します。</p>
 
 
 
@@ -2785,8 +2777,7 @@ IWebElement cancelButton = driver.FindElement(WithTagName(<span style="color:#2a
 
 <h3 id="torightof">toRightOf()</h3>
 
-<p>Returns the WebElement, which appears
-to right of the specified element</p>
+<p>指定された要素の右側に表示されるWebElementを返します。</p>
 
 
 
@@ -2888,8 +2879,7 @@ IWebElement submitButton = driver.FindElement(WithTagName(<span style="color:#2a
 
 <h3 id="near">near()</h3>
 
-<p>Returns the WebElement, which is
-at most <code>50px</code> away from the specified element.</p>
+<p>指定した要素から最大 <code>50px</code> 離れたWebElementを返します。</p>
 
 
 
@@ -2997,7 +2987,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/">
       “要素を探す”
-    </a> was last updated on: 24 May 2020 23:07:14 -0700: <a href="https://github.com/SeleniumHQ/site/commit/f5e4e0de23b55131f5d883cdb2bf19576089c612">Added the C# and Python code snippets for Relative Locators (#436)[deploy site] (f5e4e0de)</a>
+    </a> was last updated on: 01 Jun 2020 21:44:37 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/b450bcee5db7bfdb5c32ba9df6e9f5ea05bf5d21">Translate some pages into Japanese (#450)[deploy site] (b450bcee)</a>
 </h5>
         
         </div> 
@@ -4162,19 +4152,19 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591017176"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1590992926"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1590992926"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591017176"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591017176"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1590992926" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1590992926"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591017176" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591017176"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
