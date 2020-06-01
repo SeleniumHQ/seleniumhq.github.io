@@ -152,10 +152,13 @@
         <div class="container dark-background">
             Monday, January 14, 2013 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2013/source-control/"><h2>Source Control</h2></a>
-            <p>This short technical note is to announce that the Selenium project is now using <a href="https://code.google.com/p/selenium/source/checkout">git on Google Code</a> in place of subversion.</p>
-<p>The move has been a long time in the making, and it&#8217;s largely thanks to the efforts of <a href="https://twitter.com/krosenvold">Kristian Rosenvold</a> that we&#8217;ve been able to do the migration and retain the project history. The project owes him a huge thank you! We&#8217;re in the process of migrating the last bits and pieces (none of which are user facing), so there may be some last minute turbulence as we settle everything down.</p>
-<p>Although the canonical source will be on <a href="http://selenium.googlecode.com/">Google Code</a>, we&#8217;re working on setting up a github mirror. We&#8217;ll announce the location of that once it&#8217;s set up.</p>
-
+            This short technical note is to announce that the Selenium project is now using git on Google Code in place of subversion.
+The move has been a long time in the making, and it&#8217;s largely thanks to the efforts of Kristian Rosenvold that we&#8217;ve been able to do the migration and retain the project history. The project owes him a huge thank you! We&#8217;re in the process of migrating the last bits and pieces (none of which are user facing), so there may be some last minute turbulence as we settle everything down.
+            
+            <div>
+                <a href="/blog/2013/source-control/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -186,18 +189,13 @@
         <div class="container dark-background">
             Sunday, September 5, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2010/going-atomic-how/"><h2>Going Atomic: How</h2></a>
-            <p>This is the second of my technical posts. Again, if you&#8217;re interested in the internal workings of Selenium 2, then please skip straight to something else. If you&#8217;re interested in how and why we made some of the technical decisions on the project, keep reading&#8230;.</p>
-<p>We left our intrepid heroes in a tight spot: they&#8217;d decided to write a shared library of code, to be used by the various webdriver implementations and selenium core, but the requirements for doing this seemed to be at odds with it actually happening. </p>
-<p>Fortunately, at about the same time we started down this path, Google Open Sourced the <a href="closure-compiler.googlecode.com">Closure compiler</a>. This is a Javascript compiler that takes as input a set of Javascript files, and which outputs Javascript. It can be configured to either pass the code through untouched into a single file, or it can compile a script aggressively, removing unused code-paths and minifying the output as much as possible. The Closure compiler is used on a lot of Google products, so we know that it&#8217;s reliable and consistent.</p>
-<p>In order to get the best out of the Closure compiler, we&#8217;re writing the atoms using the <a href="closure-library.googlecode.com">Closure library</a>. This isn&#8217;t as well known as some of the other JS libraries out there, but it&#8217;s solid, well tested and is being actively developed. It also features an easy-to-use extension of JsUnit, which makes writing tests a far simpler task than might otherwise be the case, and it has an easy to use mechanism for modularizing code.</p>
-<p>So, given that we could compile a single Javascript function (and it&#8217;s dependencies) into a minified fragment of JS, we were all set, right? Not quite.</p>
-<p>The problem is that the atoms are being extracted from two frameworks that have a different way of viewing the world. As an example, Selenium 1&#8217;s &#8220;<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/com/thoughtworks/selenium/Selenium.html#getAttribute(java.lang.String)">getAttribute</a>&#8221; method only returns the value of a particular attribute, whereas WebDriver&#8217;s &#8220;<a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/WebElement.html#getAttribute(java.lang.String)">getAttribute</a>&#8221; method will return the value of either a property or an attribute (because sometimes it&#8217;s hard to remember whether something is an attribute or a property of an element)</p>
-<p>As with all problems in computer science, an extra level of indirection is used to solve this issue.</p>
-<p>We&#8217;re busy implementing the expected behaviour of both<a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/common/src/js/webdriver"> WebDriver&#8217;s</a> and <a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/common/src/js/selenium%3Fstate%3Dclosed">Selenium&#8217;s</a> API on top of the atoms.</p>
-<p>There is, of course, the obvious question about how we get this carefully compressed JS into a driver. One option would be to include the raw Javascript as files in each language binding, and pull them in as required. That&#8217;s possible, but it would make each language binding bloated, and would introduce a lot of duplication. The alternative is to push the atoms as far into the driver as possible, and this is what we do. As part of the build process for webdriver, we take the compressed JS and convert it into a form that can be consumed by a particular driver. For example, for the IE driver, we convert them into constants in a <a href="http://code.google.com/p/selenium/source/browse/trunk/jobbie/src/cpp/InternetExplorerDriver/atoms.h">C header file</a>. These constants can then be referred to by the driver and converted back into a script than be executed via the same mechanism that is used by &#8220;executeScript&#8221;.</p>
-<p>What do we gain from this seemingly baroque approach? Other than the ability to share the same code between drivers? Many things. The cost of maintenance drops dramatically as we can fix a bug in one place and have that fix be picked up by every driver. Because we&#8217;re working in pure JS and just querying the DOM, we can run the unit tests in a browser whilst we&#8217;re developing the code. This leads to a very tight feedback cycle. It also makes it easier for developers not familiar with the code to take a look at how we do things, and send us patches (always appreciated!) Finally, we can ensure a consistency of result. </p>
-<p>Right, any questions?</p>
-
+            This is the second of my technical posts. Again, if you&#8217;re interested in the internal workings of Selenium 2, then please skip straight to something else. If you&#8217;re interested in how and why we made some of the technical decisions on the project, keep reading&#8230;.
+We left our intrepid heroes in a tight spot: they&#8217;d decided to write a shared library of code, to be used by the various webdriver implementations and selenium core, but the requirements for doing this seemed to be at odds with it actually happening.
+            
+            <div>
+                <a href="/blog/2010/going-atomic-how/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -227,18 +225,14 @@
         <div class="container dark-background">
             Monday, August 16, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2010/going-atomic-why/"><h2>Going Atomic: Why?</h2></a>
-            <p>This is the first in a series of technical posts by me about the internals of Selenium WebDriver. If you&#8217;re not interested in technical nitty-gritty, then feel free to step away now.</p>
-<p>Still here? Excellent.</p>
-<p>Let&#8217;s take a step back to just before the Selenium and WebDriver projects merged. There were, very obviously, two separate codebases. Looking closer and with a slightly different perspective, there were more than this. We used the test suites for webdriver to define the behaviour for multiple, largely independent, driver codebases. The <a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/jobbie">IE driver</a> was written in C, the HtmlUnit driver in Java and the <a href="http://code.google.com/p/selenium/source/browse/#svn/trunk/firefox">Firefox driver</a> is largely Javascript, and so on. </p>
-<p>This means that there was a lot of &#8220;congruent code&#8221;: code that performed the same function but was implemented in a different way. The natural result of this was there was the possibility for behaviour to diverge between drivers. Worse, it meant that when a bug was found, we had to check it in every browser, and it wasn&#8217;t certain that an individual could actually fix the code. After all, not everyone is comfortable writing in all the languages we use on the project, or is au fait with all the technologies. For an Open Source project like Selenium, this is a major problem: we rely on a relatively small core of key developers backed up with a far larger team of individuals submitting small changes and fixes. Anything that makes it harder for us to function effectively as a development community is a Bad Thing.</p>
-<p>So, we wanted a way off the island; a mechanism that would make it easy to share code between the various drivers and selenium core, that allowed us to fix a bug in one place only and have that fix ripple out to every driver that made use of this mechanism. More importantly, it had to be easy to use, and for someone not familiar with a raft of languages and technologies to quickly get started with.</p>
-<p>What would this mechanism look like? Well, there&#8217;s a few things that feed into this, but the most important one, was that a majority of the code we&#8217;d think of merging was querying the state of the browser (&#8220;find an element&#8221;, &#8220;get the value of this attribute&#8221;) and, as Jason Huggins would point out to me at the drop of a hat, the natural language for querying the state of a browser is Javascript. One of the nice things with Javascript is that it&#8217;s possible to get a nice, fast development cycle going in it. Just modify a test, save and then hit &#8220;refresh&#8221; in the browser. That&#8217;s kind of attractive. Better still, there are a lot of developers familiar with Javascript.</p>
-<p>So, we decided to use Javascript.</p>
-<p>Because this shared code was to be composed of the smallest useful fragments of functionality required for browser automation we decided to refer to them as &#8220;Browser Automation Atoms&#8221;, or &#8220;atoms&#8221; for short. Rather than write them from scratch, the easiest thing to do was to extract them from the existing code &#8212; this is stuff that&#8217;s been battle-tested, so we know it&#8217;s robust.</p>
-<p>There was one very obvious fly in the ointment: not every driver is written in Javascript. Although we have a <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/JavascriptExecutor.html">mechanism available</a> in every browser for executing JS, it&#8217;s wildly inefficient to dump an enormous lump of code on to the JS engine of the browser whenever you want to query the DOM. After all, most of the code would not be needed, and not all JS engines have been created equal. Some are blazingly fast. Others, not so much.</p>
-<p>It would also be nice to break the code up into manageably-sized modules, rather than being in a single, monolithic file, which implies some clever &#8220;module loading&#8221; capability. Except this code isn&#8217;t always going to be executing inside an environment where writing &#8220;script&#8221; tags to load additional scripts is possible. You can&#8217;t do that in the guts of a firefox extension, though you can load files other ways. However we tie modules together will need to cope with that.</p>
-<p>Ah! These opposing requirements: small modules containing the functions we want to use, no extraneous code, and for everything to be in a single file in order to minimize the pain of loading additional modules. That doesn&#8217;t sound like a very compatible list. How we resolved those differences is the topic of my next post&#8230;.</p>
-
+            This is the first in a series of technical posts by me about the internals of Selenium WebDriver. If you&#8217;re not interested in technical nitty-gritty, then feel free to step away now.
+Still here? Excellent.
+Let&#8217;s take a step back to just before the Selenium and WebDriver projects merged. There were, very obviously, two separate codebases. Looking closer and with a slightly different perspective, there were more than this. We used the test suites for webdriver to define the behaviour for multiple, largely independent, driver codebases.
+            
+            <div>
+                <a href="/blog/2010/going-atomic-why/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>

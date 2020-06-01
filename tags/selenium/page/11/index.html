@@ -152,21 +152,13 @@
         <div class="container dark-background">
             Friday, October 8, 2010 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2010/selenium-2-0a6-released/"><h2>Selenium 2.0a6 Released</h2></a>
-            <p>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the <a href="http://code.google.com/p/selenium/downloads/list">downloads page</a> to get it while it&#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and <a href="http://rubygems.org/gems/selenium-webdriver">ruby libraries</a> have been having smaller, more frequent releases all this time.</p>
-<p>You&#8217;ll be pleased to hear that the Selenium 1.0 APIs have remained constant, so what&#8217;s changed? Here, in no particular order are the major changes you&#8217;ll find in 2.0a6:</p>
-<ul>
-<li>Android support: you can now <a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.0a6.apk">download the APK</a> and run webdriver tests using Android 1.6 to 2.2.</li>
-<li>Firefox 4 support.</li>
-<li>Experimental IE9 support</li>
-<li>New APIs for dealing with <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/html5/package-summary.html">HTML5 elements</a> (best implemented, for now, by the mobile webdrivers)</li>
-<li>A richer .Net API</li>
-<li>A move to <a href="http://sizzlejs.com/">Sizzle</a> for locating elements using CSS in browsers that don&#8217;t have a native API for that.</li>
-<li>Far better support for running your existing Selenium RC tests using WebDriver, helping you make a managed migration to the newer APIs.</li>
-</ul>
-<p>There are also lots of nice touches for the more technically inclined, including the ability to re-use instances of <a href="http://selenium.googlecode.com/svn/trunk/docs/api/java/org/openqa/selenium/firefox/FirefoxProfile.html">FirefoxProfiles</a>, better configurability when requesting a remote webdriver instance, better resource management and more shared code between the Selenium and WebDriver implementations.</p>
-<p>Thank you to everyone who has taken the time to report a bug on our <a href="http://code.google.com/p/selenium/issues/list">issue tracker</a>, or raised problems on one of our <a href="https://groups.google.com/group/webdriver">mailing</a> <a href="http://www.google.com/url?q=http://groups.google.com/group/selenium-users">lists</a>, or shown up for some of the banter on the IRC channel: without your involvement, the project wouldn&#8217;t be half as much fun, and wouldn&#8217;t be as capable as it is. Thanks are also due to the development team, who have poured an enormous amount of work into this release (538 revisions in under 90 days, or about 6 check-ins each and every day)</p>
-<p>Hope you like it!</p>
-
+            We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the downloads page to get it while it&#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and ruby libraries have been having smaller, more frequent releases all this time.
+You&#8217;ll be pleased to hear that the Selenium 1.
+            
+            <div>
+                <a href="/blog/2010/selenium-2-0a6-released/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -196,37 +188,13 @@
         <div class="container dark-background">
             Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
             <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
-            <p>There are several ways to use Selenium 2:</p>
-<ol>
-<li>If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new <tt>WebDriver</tt> implemenations like <tt>ChromeDriver</tt>, <tt>HtmlUnitDriver</tt>, <tt>FirefoxDriver</tt>, or <tt>InternetExplorerDriver</tt> which provide a nice, small and easy to learn API.</li>
-<li>If you have Selenium 1.x legacy code, you can still use the well known <tt>DefaultSelenium</tt> class or the new <tt>WebDriverBackedSelenium</tt>, which extends <tt>DefaultSelenium</tt> but uses one of the <tt>WebDriver</tt> implementations internally.</li>
-</ol>
-<p>Whichever option you prefer, if you have want to use Maven, all you need to do is add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>If you know, that you will only use a certain <tt>WebDriver</tt> implementation, e.g. the <tt>FirefoxDriver</tt>, you don&#8217;t need to depend on the <tt>selenium</tt> artifact (which has dependencies to all <tt>WebDriver</tt> implementations as well as the support classes). Instead you can add the dependency to just the artifact you need, e.g.</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-firefox-driver&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>When using a <tt>WebDriver</tt> implementation, there is no need to start a Selenium server &#8211; the browser will be directly started and remote controlled.</p>
-<p>But if you are using <tt>DefaultSelenium</tt> (or the <tt>RemoteWebDriver</tt> implementation), you still need to start a Selenium server.</p>
-<p>The best way is to download the <a href="http://code.google.com/p/selenium/downloads/detail?name=selenium-server-standalone-2.0a5.jar">standalone Selenium server jar</a> and just use it.</p>
-<p>Furthermore you can also embed the Selenium server into your own project, if you add the following dependency to your <tt>pom.xml</tt>:</p>
-<pre>    &lt;dependency&gt;
-        &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
-        &lt;artifactId&gt;selenium-server&lt;/artifactId&gt;
-        &lt;version&gt;2.0a5&lt;/version&gt;
-    &lt;/dependency&gt;</pre>
-<p>Now you can create a <tt>SeleniumServer</tt> instance yourself and start it.</p>
-<p>Be aware, that the <tt>selenium-server</tt> artifact has a dependency to the <tt>servlet-api-2.5</tt> artifact, which you need to exclude, if your project will be run in a web application container.</p>
-<p>Well, I hope that covers everything you need to know on how to use Selenium 2 with Maven.</p>
-<p>Michael</p>
-
+            There are several ways to use Selenium 2:
+ If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new WebDriver implemenations like ChromeDriver, HtmlUnitDriver, FirefoxDriver, or InternetExplorerDriver which provide a nice, small and easy to learn API. If you have Selenium 1.x legacy code, you can still use the well known DefaultSelenium class or the new WebDriverBackedSelenium, which extends DefaultSelenium but uses one of the WebDriver implementations internally.
+            
+            <div>
+                <a href="/blog/2010/how-to-use-selenium-2-with-maven/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -256,31 +224,14 @@
         <div class="container dark-background">
             Wednesday, July 21, 2010 by <a href="https://twitter.com/adamgoucher">adam goucher</a>
             <a href="https://selenium.dev/blog/2010/the-current-status-of-selenium-1-and-selenium-2/"><h2>The Current Status of Selenium 1 and Selenium 2</h2></a>
-            <p>In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.</p>
-<p>And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.</p>
-<dl>
-<dt><em>There are a couple annoying bugs in Se-RC 1.03; when is the 1.0.4 release?</em></dt>
-<dd>Se-RC 1.0.4 is planned for sometime towards the end of July 2010</dd>
-<dt><em>I&#8217;ve heard rumours that 1.0.4 the to be the final release?</em></dt>
-<dd>Yes. 1.0.4 is <em>planned</em> on being the final 1.x release</dd>
-<dt><em>That&#8217;s crazy talk! I can&#8217;t use a .0 or &#8216;alpha&#8217; release for my mission critical application</em></dt>
-<dd>Actually, its not all <em>that</em> crazy &#8212; and needs a bit more explanation. Se2 is truly a merger of the two projects, in fact 2.0a1 was literally the Se code from the OpenQA repository and the WebDriver code its Google Code repository merged into a <a href="http://code.google.com/p/selenium">new one</a>. This meant that from the first release of the 2.x series, it has contained 100% of the 1.x code which means 100% backwards compatibility. Later releases in the 2.x series have been driven primarily by evolutions of the code that came from WebDriver, <em>not from Se 1.x</em>.</dd>
-<dt><em>OK, so 100% of Se 1.x is in 2.x; I get that. But how are you making sure that fixes to one get into the other?</em></dt>
-<dd>Here is another &#8216;secret&#8217; &#8212; don&#8217;t tell anyone, but there hasn&#8217;t been any pure 1.x development since the merging of the codebases. Every 1.x release since the merger has really been a 2.x release &#8212; but all packaged up to make it look like a 1.x release. This is why observant people have noticed a log message that looks something like <em>11:09:37.507 INFO &#8211; v2.0 [a4], with Core v2.0 [a4]</em> when they start up their 1.x server.</dd>
-<dt><em>So you&#8217;ve been releasing <em>alpha</em> code disguised as a stable release? Jerks!</em></dt>
-<dd>Woah! Relax! Recall what I said above about it being backwards compatible by default. The &#8216;alpha&#8217; tag is there because the API for the new code is still being developed and features flushed out. The 1.x code is however, still stable and still production quality.</dd>
-<dt><em>Alright, I take back calling you folks jerks, but I really don&#8217;t like the alpha tag. When will it be out of &#8216;alpha&#8217;?</em></dt>
-<dd>There is only one or two more features to implement (like handling alerts) in the WebDriver code and some cleanup before the betas start. But hope for a 2.0.0 final by the end of the year. And while we&#8217;re on the topic of &#8216;alpha&#8217; vs. &#8216;beta&#8217;, this the team&#8217;s working definitions of each.</p>
-<ul>
-<li><em>Alpha</em> &#8211; APIs can, and likely will change. Possibly in dramatic ways.</li>
-<li><em>Beta</em> &#8211; With the APIs set, make sure they work with the major browsers</li>
-</ul>
-</dd>
-<dt><em>&#8216;Major Browsers&#8217; eh, what exactly does that mean?</em></dt>
-<dd>Right now it means Firefox, Internet Explorer and at least one WebKit based one (Safari or Chrome)</dd>
-</dl>
-<p>In short&#8230; it is a requirement of Se2 that the server be backwards compatible with Se-RC 1.x and that has already been accomplished by building the code from a common source repository. This means that if you are using Se-RC, you can switch out the server for a 2.x one and have no impact on the execution of the scripts. <em>Plus</em> you can start to experiment with the new stuff that came over from WebDriver.</p>
-
+            In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.
+And then the confusion began. Let&#8217;s see if I can start to address some of it via a ficticious conversation that consolidates the Se-user list and #selenium irc channel.
+ There are a couple annoying bugs in Se-RC 1.
+            
+            <div>
+                <a href="/blog/2010/the-current-status-of-selenium-1-and-selenium-2/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>

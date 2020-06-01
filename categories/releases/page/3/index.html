@@ -152,17 +152,13 @@
         <div class="container dark-background">
             Wednesday, February 8, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/"><h2>Announcing Selenium 2.19: the Prancing Unicorn release</h2></a>
-            <p>You might be pleased to hear that Selenium 2.19 has been released (<a href="http://seleniumhq.org/download/">download it from here!</a>). There&#8217;s one big user facing changing that we&#8217;d like to tell you about: the webdriver-backed selenium can now be used in supported languages.</p>
-<p>By providing this capability, it&#8217;s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:</p>
-<pre class="brush: python; title: ; notranslate" title="">
-driver = RemoteWebDriver(desired_capabilities = DesiredCapabilities.FIREFOX)
-selenium = DefaultSelenium('localhost', 4444', '*webdriver', 'http://www.google.com')
-selenium.start(driver = driver)
-</pre>
-<p>Provided you keep a reference to the original webdriver and selenium objects you created you can use the two APIs interchangeably.  You&#8217;ll see that the magic is the &#8220;*webdriver&#8221; browser name passed to the selenium instance, and that we pass the webdriver instance when calling start().</p>
-<p>We hope you like it!</p>
-<p>PS: I have no idea why this is the Prancing Unicorn release, but it&#8217;s been a while since we named one 🙂</p>
-
+            You might be pleased to hear that Selenium 2.19 has been released (download it from here!). There&#8217;s one big user facing changing that we&#8217;d like to tell you about: the webdriver-backed selenium can now be used in supported languages.
+By providing this capability, it&#8217;s possible to migrate from RC to the WebDriver APIs without rewriting all your tests in one fell swoop (which must be a Good Thing, right?) An example of how to use it in Python would be:
+            
+            <div>
+                <a href="/blog/2012/announcing-selenium-2-19-the-prancing-unicorn-release/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -191,10 +187,12 @@ selenium.start(driver = driver)
         <div class="container dark-background">
             Thursday, January 5, 2012 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2012/selenium-2-16-released-welcome-to-2012/"><h2>Selenium 2.16 Released: Welcome to 2012!</h2></a>
-            <p>It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing. I think we&#8217;ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.16</a>.</p>
-<p>If you&#8217;re unsure about what&#8217;s been happening since the last time we announced a release here, the best place to look is our <a href="http://selenium.googlecode.com/svn/trunk/java/CHANGELOG">changelog</a>. The most notable feature in 2.16 is better support for Firefox 9, but if it&#8217;s been a while since you&#8217;ve last updated, we&#8217;ve been beavering away on bug fixes and making existing features work as flawlessly as possible. Now&#8217;s a great time to update!</p>
-<p>One of the key tools we use for assessing whether it&#8217;s okay to push a release is our continuous build. This watches for each and every change made to the project&#8217;s source code, and runs an increasingly vast suite of tests to verify that nothing has broken. Our friends at <a href="http://saucelabs.com/">SauceLabs</a> have been extremely generous in providing support for this, and have worked closely with us to make the build as stable and quick as possible. Special kudos and thanks to them!</p>
-
+            It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing.
+            
+            <div>
+                <a href="/blog/2012/selenium-2-16-released-welcome-to-2012/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
@@ -223,9 +221,12 @@ selenium.start(driver = driver)
         <div class="container dark-background">
             Thursday, October 20, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2011/selenium-2-9-released/"><h2>Selenium 2.9 Released</h2></a>
-            <p>We&#8217;re pleased to announce the release of <a href="http://seleniumhq.org/download/">Selenium 2.9</a>. As well as improving the stability of Grid under high loads, we&#8217;ve added an experimental (and temporary!) feature that allows the Firefox driver to use a different mechanism for determining when a page is loaded. This is designed to handle the case where the driver appears to hang, as it&#8217;s waiting for all incoming requests to complete before continuing. How to enable this mode is listed in the <a href="http://code.google.com/p/selenium/source/browse/trunk/java/CHANGELOG">changelog</a>.</p>
-<p>This release also includes an updated <a href="http://code.google.com/p/selenium/downloads/detail?name=android-server-2.9.apk">Android driver</a>, allowing your tests to run on Ice Cream Sandwich devices.</p>
-
+            We&#8217;re pleased to announce the release of Selenium 2.9. As well as improving the stability of Grid under high loads, we&#8217;ve added an experimental (and temporary!) feature that allows the Firefox driver to use a different mechanism for determining when a page is loaded. This is designed to handle the case where the driver appears to hang, as it&#8217;s waiting for all incoming requests to complete before continuing. How to enable this mode is listed in the changelog.
+            
+            <div>
+                <a href="/blog/2011/selenium-2-9-released/">Read more…</a>
+            </div>
+            
             
 
 <p><b>Tags</b></p>
