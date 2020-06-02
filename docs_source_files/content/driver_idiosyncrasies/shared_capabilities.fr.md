@@ -162,3 +162,10 @@ Pour cette raison, la récupération de l'état/des
 détails de la fenêtre par `getWindowRect`
 peut ne pas correspondre également aux 
 valeurs définies pour le navigateur.
+
+## strictFileInteractability
+
+The new capabilitiy indicates if strict interactability checks 
+should be applied to _<input type=file>_ elements. As strict interactability 
+checks are off by default, there is a change in behaviour 
+when using _Element Send Keys_ with hidden file upload controls.

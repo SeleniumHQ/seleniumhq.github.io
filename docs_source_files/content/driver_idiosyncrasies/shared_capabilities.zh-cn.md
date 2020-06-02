@@ -121,3 +121,10 @@ WebDriver创建新会话时,
 这是因为某些驱动程序可能无法以单像素为单位调整大小. 
 因此, 通过 `getWindowRect` 获取窗口状态 (或详细信息) 
 可能与浏览器设置的值不匹配.
+
+## strictFileInteractability
+
+The new capabilitiy indicates if strict interactability checks 
+should be applied to _<input type=file>_ elements. As strict interactability 
+checks are off by default, there is a change in behaviour 
+when using _Element Send Keys_ with hidden file upload controls.

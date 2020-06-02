@@ -106,3 +106,10 @@ _幅_ または _高さ_ を設定しても、結果のウィンドウサイズ�
 これは、一部のドライバはシングルピクセル単位でサイズ変更できない場合があるからです。
 このため、 `getWindowRect` でウィンドウの状態/詳細を取得しても、
 ブラウザーに設定された値と等しく一致しない場合があります。
+
+## strictFileInteractability
+
+The new capabilitiy indicates if strict interactability checks 
+should be applied to _<input type=file>_ elements. As strict interactability 
+checks are off by default, there is a change in behaviour 
+when using _Element Send Keys_ with hidden file upload controls.
