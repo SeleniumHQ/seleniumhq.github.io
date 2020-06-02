@@ -11,20 +11,20 @@
     <title>共享的功能 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591017171" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591017171" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591116780" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591116780" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591017171" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591116780" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591017171"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591116780"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591017171"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591017171"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591116780"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591116780"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591017171"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591116780"></script>
 
     
   </div>
@@ -1940,6 +1940,7 @@
 <li><a href="#user-prompt-handler">User Prompt Handler</a></li>
 </ul></li>
 <li><a href="#setwindowrect">setWindowRect</a></li>
+<li><a href="#strictfileinteractability">strictFileInteractability</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -2119,6 +2120,13 @@ WebDriver创建新会话时,
 因此, 通过 <code>getWindowRect</code> 获取窗口状态 (或详细信息)
 可能与浏览器设置的值不匹配.</p>
 
+<h2 id="strictfileinteractability">strictFileInteractability</h2>
+
+<p>The new capabilitiy indicates if strict interactability checks
+should be applied to <em><input type=file></em> elements. As strict interactability
+checks are off by default, there is a change in behaviour
+when using <em>Element Send Keys</em> with hidden file upload controls.</p>
+
 
 <footer class=" footline" >
 	
@@ -2127,7 +2135,7 @@ WebDriver创建新会话时,
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/">
       “共享的功能”
-    </a> was last updated on: 19 May 2020 21:27:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/d0efe564939c5d246ccaa389445e25a5fd02e7ca">Deploying on Tue May 19 21:27:48 UTC 2020, commit ffcc8defcacf98f45cbd373ade0e6cd1eb63b72b, [skip ci] (d0efe564)</a>
+    </a> was last updated on: 02 Jun 2020 22:21:23 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/6310d92c580e70ca8c641a95df860cc16f7e280f">Add: Adding shared capability &#39;strictFileInteractability&#39; [deploy site] (6310d92c)</a>
 </h5>
         
         </div> 
@@ -3289,19 +3297,19 @@ WebDriver创建新会话时,
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591017171"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591116780"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591017171"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591017171"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591116780"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591116780"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591017171" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591017171"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591116780" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591116780"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
