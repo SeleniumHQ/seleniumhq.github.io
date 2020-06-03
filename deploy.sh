@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if git --no-pager log -1 --oneline | grep -i "\\[deploy site\\]"; then
-  echo -e "\033[0;32mDeploying Selenium site to GitHub...\033[0m"
+  echo -e "\033[0;32mDeploying Selenium site to GitHub Pages...\033[0m"
 
   if [ -n "$GITHUB_AUTH_SECRET" ]
   then
@@ -16,7 +16,6 @@ if git --no-pager log -1 --oneline | grep -i "\\[deploy site\\]"; then
 
   git remote add github "https://selenium-ci:${GITHUB_AUTH_SECRET}@github.com/SeleniumHQ/seleniumhq.github.io.git"
   git fetch github
-  # git stash save || true
   git checkout -t github/master -b github/master
   git pull
   chmod +x "$TRAVIS_BUILD_DIR"/build-site.sh && "$TRAVIS_BUILD_DIR"/build-site.sh
