@@ -1,5 +1,5 @@
 +++
-Description = "<p>We are very pleased to announce the release of Selenium 3.0. If you’ve been waiting for a stable release since 2.53.1, now’s your chance to update. And if you do, here is what you’ll find: As we’ve said before, for users of the WebDriver APIs this is a drop-in replacement. You’ll find that modern browsers, […]</p>"
+Description = "We are very pleased to announce the release of Selenium 4.0 Alpha 6"
 Title = "Selenium 4.0 Alpha 6 is out!"
 Date = 2020-06-01
 Author = "diemol"
