@@ -5,9 +5,6 @@ on:
     branches:
       - master
 
-env:
-  SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
-
 jobs:
   deploy:
     # Skip job based on the commit message
@@ -22,3 +19,5 @@ jobs:
           hugo-version: '0.66.0'
       - name: Deploy
         run: chmod +x deploy.sh && ./deploy.sh
+        env:
+          SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
