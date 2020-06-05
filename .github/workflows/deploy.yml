@@ -1,0 +1,24 @@
+name: Publish Selenium Site
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  GITHUB_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
+
+jobs:
+  deploy:
+    # Skip job based on the commit message
+    if: contains(toJson(github.event.commits), '[skip ci]') == false
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.66.0'
+      - name: Deploy
+        run: chmod +x deploy.sh && ./deploy.sh
