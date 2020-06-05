@@ -17,8 +17,7 @@
       <pubDate>Tue, 23 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-1-0-3-released/</guid>
-      <description>Hot off the heals of 1.0.2, we&amp;#8217;re releasing Selenium Remote Control 1.0.3. You can download it now.
-There is no functional difference between this version and 1.0.2, other than it is packaged up a little nicer and we&amp;#8217;ve clarified the relationship between selenium-server and the client drivers. That is: we are not releasing new client drivers with future 1.x releases. The reason is that we locked down the API in version 1.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@ There is no functional difference between this version and 1.0.2, other than it 
       <pubDate>Mon, 22 Feb 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-1-0-2-release-firefox-3-6-and-snow-leopard-support/</guid>
-      <description>Today we&amp;#8217;re happy to announce that Selenium Remote Control 1.0.2 has been released. While most of our efforts are on Selenium 2.0, we understand that there are millions of Selenium users that still need the 1.x line supported. That&amp;#8217;s why we&amp;#8217;ve said from the start that our goal is make 2.x 100% backwards compatible with 1.x. And that&amp;#8217;s why we&amp;#8217;re releasing a new version of Selenium RC today.
-Download it here.</description>
+      <description></description>
     </item>
     
   </channel>

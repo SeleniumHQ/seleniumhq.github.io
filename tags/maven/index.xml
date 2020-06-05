@@ -17,8 +17,7 @@
       <pubDate>Tue, 25 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/2-0b1-and-maven/</guid>
-      <description>If you&amp;#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.0b1&amp;lt;/version&amp;gt; &amp;lt;exclusions&amp;gt; &amp;lt;exclusion&amp;gt; &amp;lt;groupId&amp;gt;org.testng&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;testng&amp;lt;/artifactId&amp;gt; &amp;lt;/exclusion&amp;gt; &amp;lt;/exclusions&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Fri, 30 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/</guid>
-      <description>There are several ways to use Selenium 2:
- If you don&amp;#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new WebDriver implemenations like ChromeDriver, HtmlUnitDriver, FirefoxDriver, or InternetExplorerDriver which provide a nice, small and easy to learn API. If you have Selenium 1.x legacy code, you can still use the well known DefaultSelenium class or the new WebDriverBackedSelenium, which extends DefaultSelenium but uses one of the WebDriver implementations internally.</description>
+      <description></description>
     </item>
     
   </channel>

@@ -21,7 +21,7 @@
 브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의 상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.
 최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.
 필드에 텍스트 입력, 드롭 다운 및 체크 박스 선택, 링크 클릭, 마우스 이동, 임의의 JavaScript 실행 등의 기능이 제공됩니다.
-웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다.</description>
+웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description>
     </item>
     
     <item>
@@ -42,7 +42,8 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       
       <guid>https://selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question:
+ Are we building the right product?.</description>
     </item>
     
     <item>

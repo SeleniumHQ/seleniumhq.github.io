@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</guid>
-      <description> 消费级浏览器 当前Selenium框架支持以下浏览器:
+      <description>消费级浏览器 当前Selenium框架支持以下浏览器:
    浏览器 维护者 支持的版本     Chrome Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
    驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
@@ -53,7 +53,7 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>使用 sendKeys 方法设置元素的文本，如下所示:
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
     </item>
     
   </channel>

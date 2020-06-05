@@ -11,20 +11,20 @@
     <title>了解组件 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379911" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379911" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379911"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,17 +1921,15 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#专业术语">专业术语</a></li>
-<li><a href="#组成部分">组成部分</a></li>
-</ul></li>
-<li><a href="#应用框架">应用框架</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#专业术语">专业术语</a></li>
+        <li><a href="#组成部分">组成部分</a></li>
+      </ul>
+    </li>
+    <li><a href="#应用框架">应用框架</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,13 +1954,9 @@
 
 
 
-
-
 <p>使用 WebDriver 构建测试套件需要您理解并有效地使用许多不同的组件。就像软件中的一切一样，
 不同的人对同一个想法使用不同的术语。下面是在这个描述中如何使用术语的细分。</p>
-
 <h3 id="专业术语">专业术语</h3>
-
 <ul>
 <li><strong>API:</strong> 应用程序编程接口。这是一组用来操作 WebDriver 的 “命令”。</li>
 <li><strong>库:</strong> 一个代码模块，它包含 api 和实现这些 api 所需的代码。库是对应于具体的语言的，例如 Java 的 .jar 文件，.NET 的 .dll 文件，等等。</li>
@@ -1973,39 +1967,25 @@
 它们也可能是支持自然语言特性的框架，如 Cucumber 或 Robotium。还可以编写和使用框架来操作或配置被测试的系统、
 数据创建、测试预言等等。</li>
 </ul>
-
 <h3 id="组成部分">组成部分</h3>
-
 <p>至少，WebDriver 通过一个驱动程序与浏览器对话。通信有两种方式: WebDriver 通过驱动程序向浏览器传递命令，
 然后通过相同的路径接收信息。</p>
-
-<p><img src="https://selenium.dev/documentation/zh-cn/images/basic_comms.png?width=400px" alt="基本通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/zh-cn/images/basic_comms.png?width=400px" alt="基本通信"></p>
 <p>驱动程序是特定于浏览器的，例如 ChromeDriver 对应于谷歌的 Chrome/Chromium，
 GeckoDriver 对应于 Mozilla 的 Firefox 的，等等。驱动程序在与浏览器相同的系统上运行。
 这可能与执行测试本身的系统相同，也可能不同。</p>
-
 <p>上面这个简单的例子就是 _直接_通信。与浏览器的通信也可以是通过 Selenium 服务器或 RemoteWebDriver
 进行的 _远程_通信。RemoteWebDriver 与驱动程序和浏览器运行在同一个系统上。</p>
-
-<p><img src="https://selenium.dev/documentation/zh-cn/images/remote_comms.png?width=400px" alt="远程通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/zh-cn/images/remote_comms.png?width=400px" alt="远程通信"></p>
 <p>远程通信也可以使用 Selenium Server 或 Selenium Grid 进行，这两者依次与主机系统上的驱动程序进行通信</p>
-
-<p><img src="https://selenium.dev/documentation/zh-cn/images/remote_comms_server.png?width=400px" alt="通过 Grid 远程通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/zh-cn/images/remote_comms_server.png?width=400px" alt="通过 Grid 远程通信"></p>
 <h2 id="应用框架">应用框架</h2>
-
 <p>WebDriver 有且只有一个任务: 通过上面的任何方法与浏览器通信。WebDriver 对测试一窍不通：它不知道如何比较事物、
 断言通过或失败，当然它也不知道报告或 Given/When/Then 语法。</p>
-
 <p>这就是各种框架发挥作用的地方。至少你需要一个与绑定语言相匹配的测试框架，比如. NET 的 NUnit, Java 的 JUnit,
 Ruby 的 RSpec 等等。</p>
-
 <p>测试框架负责运行和执行 WebDriver 以及测试中相关步骤。因此，您可以认为它看起来类似于下图。</p>
-
-<p><img src="https://selenium.dev/documentation/zh-cn/images/test_framework.png?width=400px" alt="测试框架" /></p>
-
+<p><img src="https://selenium.dev/documentation/zh-cn/images/test_framework.png?width=400px" alt="测试框架"></p>
 <p>像 Cucumber 这样的自然语言框架/工具可能作为上图中测试框架框的一部分存在，
 或者它们可能将测试框架完全封装在它们自己的实现中。</p>
 
@@ -2017,7 +1997,7 @@ Ruby 的 RSpec 等等。</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/">
       “了解组件”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3179,19 +3159,19 @@ Ruby 的 RSpec 等等。</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379911" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379911"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

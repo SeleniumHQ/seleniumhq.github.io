@@ -38,8 +38,8 @@ Téléchargez le binaire WebDriver pris en charge par votre navigateur et placez
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/</guid>
-      <description>Si vous prévoyez d&amp;rsquo;utiliser Grid, vous devez télécharger le selenium-server-standalone JAR. Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+      <description>Si vous prévoyez d&amp;rsquo;utiliser [Grid] (/grid/), vous devez télécharger le [selenium-server-standalone JAR] (https://selenium.dev/downloads/). Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
   </channel>

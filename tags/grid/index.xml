@@ -17,8 +17,7 @@
       <pubDate>Thu, 10 Jun 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-8-released/</guid>
-      <description>We&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.8. This release fixes multithreaded issues with the Selenium Grid hub that appeared randomly under heavy load. If you&amp;#8217;ve ever seen a log message about HttpClient being accessed by multiple threads, you definitely want to upgrade. Even if you haven&amp;#8217;t, this release is highly recommended for all.
-You can download it now or view the changelog. The list of changes is:</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,9 +26,7 @@ You can download it now or view the changelog. The list of changes is:</descript
       <pubDate>Tue, 11 May 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-7-released/</guid>
-      <description>Following up on the Selenium Grid 1.0.6 release, which was mostly a bug fix release, we&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.7. This is another bug fix release that focuses primarily on how Selenium Grid handles browser sessions.
-You can download it now or view the changelog. The list of changes are:
- Hub now instructs remote controls to shutdown a session if the hub is going to remove it due to being idle for too long Added ability to specify timeout period when waiting for remote controls to become available.</description>
+      <description></description>
     </item>
     
     <item>
@@ -38,8 +35,7 @@ You can download it now or view the changelog. The list of changes are:
       <pubDate>Tue, 27 Apr 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/the-future-of-selenium-grid/</guid>
-      <description>As you likely know by now, after years of stewardship Philippe has stepped down as maintainer of Selenium Grid and has named me the new maintainer. In this post, I hope to address the most immediate questions about what this means for the future of Selenium Grid.
-Background I realize many of you may not know who I am. I&amp;#8217;ve been using Selenium in some capacity for close to five years now.</description>
+      <description></description>
     </item>
     
     <item>
@@ -48,9 +44,7 @@ Background I realize many of you may not know who I am. I&amp;#8217;ve been usin
       <pubDate>Tue, 13 Apr 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-grid-1-0-6-released/</guid>
-      <description>Following up on the Selenium Grid 1.0.5 release, which added self-healing features to ease grid management, we&amp;#8217;re pleased to announce the release of Selenium Grid 1.0.6. This is a bug fix release for 1.0.5 with some minor new additions.
-You can download it now or view the changelog. The summary of changes are:
- Fixed some concurrent modification issues that may have resulted in NullPointerExceptions Fixed issue with shutting down workers with Rakefile Added PID file support for hub and worker started via Rakefile, making it easier to use a process monitor such as monit  In case you missed the announcement, Philippe is no longer maintaining Selenium Grid.</description>
+      <description></description>
     </item>
     
   </channel>

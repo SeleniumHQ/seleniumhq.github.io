@@ -27,7 +27,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/file_downloads/</guid>
-      <description>Bien qu&amp;rsquo;il soit possible de démarrer un téléchargement en cliquant sur un lien avec un navigateur sous le contrôle de Selenium, l&amp;rsquo;API n&amp;rsquo;expose pas la progression du téléchargement, ce qui n&amp;rsquo;est pas idéal pour tester les fichiers téléchargés. En effet, le téléchargement de fichiers n&amp;rsquo;est pas considéré comme un aspect important d&amp;rsquo;émuler l&amp;rsquo;interaction des utilisateurs avec la plate-forme Web. À la place, recherchez le lien à l&amp;rsquo;aide de Selenium (et tous les cookies requis) et le passer à une bibliothèque de requêtes HTTP comme libcurl.</description>
+      <description>Bien qu&amp;rsquo;il soit possible de démarrer un téléchargement en cliquant sur un lien avec un navigateur sous le contrôle de Selenium, l&amp;rsquo;API n&amp;rsquo;expose pas la progression du téléchargement, ce qui n&amp;rsquo;est pas idéal pour tester les fichiers téléchargés. En effet, le téléchargement de fichiers n&amp;rsquo;est pas considéré comme un aspect important d&#39;émuler l&amp;rsquo;interaction des utilisateurs avec la plate-forme Web. À la place, recherchez le lien à l&amp;rsquo;aide de Selenium (et tous les cookies requis) et le passer à une bibliothèque de requêtes HTTP comme libcurl.</description>
     </item>
     
     <item>
@@ -46,7 +46,7 @@ Selenium WebDriver est une approche complètement différente à l&amp;rsquo;aut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>Pour plusieurs raisons, vous connecter à des sites comme Gmail et Facebook l&amp;rsquo;utilisation de WebDriver n&amp;rsquo;est pas recommandée. En plus d&amp;rsquo;être contre les conditions d&amp;rsquo;utilisation de ces sites (où vous risquez de fermer le compte), c&amp;rsquo;est lent et peu fiable.
+      <description>Pour plusieurs raisons, vous connecter à des sites comme Gmail et Facebook l&amp;rsquo;utilisation de WebDriver n&amp;rsquo;est pas recommandée. En plus d&#39;être contre les conditions d&amp;rsquo;utilisation de ces sites (où vous risquez de fermer le compte), c&amp;rsquo;est lent et peu fiable.
 La pratique idéale consiste à utiliser les API proposées par les fournisseurs de messagerie, ou dans le cas de Facebook le service des outils de développement qui expose une API pour créer des comptes de test, des amis, etc.</description>
     </item>
     
@@ -75,7 +75,7 @@ Cela peut sembler idéal pour tester les performances dans le contexte de l&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/link_spidering/</guid>
-      <description>Utilisation de WebDriver pour parcourir des liens n&amp;rsquo;est pas une pratique recommandée non pas parce que cela ne peut pas être fait, mais parce que ce n&amp;rsquo;est certainement pas l&amp;rsquo;outil le plus idéal. WebDriver a besoin de temps pour démarrer, et peut prendre plusieurs secondes jusqu&amp;rsquo;à une minute en fonction de la façon dont votre test est écrit, juste pour accéder à la page et parcourir le DOM.
+      <description>Utilisation de WebDriver pour parcourir des liens n&amp;rsquo;est pas une pratique recommandée non pas parce que cela ne peut pas être fait, mais parce que ce n&amp;rsquo;est certainement pas l&amp;rsquo;outil le plus idéal. WebDriver a besoin de temps pour démarrer, et peut prendre plusieurs secondes jusqu&#39;à une minute en fonction de la façon dont votre test est écrit, juste pour accéder à la page et parcourir le DOM.
 Au lieu d&amp;rsquo;utiliser WebDriver pour cela, vous pourriez économiser une tonne de temps en exécutant une commande curl, ou en utilisant une bibliothèque telle que BeautifulSoup puisque ces méthodes ne reposent pas sur la création d&amp;rsquo;un navigateur et la navigation vers une page.</description>
     </item>
     

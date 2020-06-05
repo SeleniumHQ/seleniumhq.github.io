@@ -298,7 +298,7 @@ Información común  Combinaciónes de versiones de geckodriver / firefox / sele
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</guid>
       <description>Si planeas usar Grid debes descargar el fichero selenium-server-standalone JAR. Todos los componentes están disponibles a través de selenium-server. El standalone JAR contiene todo, incluso el servidor remoto de Selenium y los enlaces del lado del cliente. Ésto quiere decir que si usas el selenium-server-standalone jar en tu proyecto, no tienes que añadir selenium-java o un jar de navegador específico.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
     <item>
@@ -326,8 +326,9 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
-      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta: &amp;gt;¿Estamos construyendo el producto correcto?.
-Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
+      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta:
+ ¿Estamos construyendo el producto correcto?.
+ Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
     </item>
     
     <item>
@@ -466,8 +467,8 @@ Alertas El más simple de estos se conoce como alerta, que muestra unmensaje per
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Aunque se menciona en varios lugares, vale la pena mencionarlo nuevamente. Asegurate de que las pruebas estén aisladas unas de otras.
- No compartas datos de prueba. Imagina varias pruebas en la que cada una consulta a la base de datos para pedidos válidos antes de elegir uno para realizar una acción. Si dos pruebas eligen el mismo pedido es probable que obtengas un comportamiento inesperado.
- Limpia los datos obsoletos en la aplicación que podrían ser recogidos por otra prueba p.</description>
+  No compartas datos de prueba. Imagina varias pruebas en la que cada una consulta a la base de datos para pedidos válidos antes de elegir uno para realizar una acción. Si dos pruebas eligen el mismo pedido es probable que obtengas un comportamiento inesperado.
+  Limpia los datos obsoletos en la aplicación que podrían ser recogidos por otra prueba p.</description>
     </item>
     
     <item>
@@ -540,7 +541,7 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       
       <guid>https://selenium.dev/documentation/es/webdriver/page_loading_strategy/</guid>
       <description>Define la estrategia de carga de la página en la sesión actual. Por defecto, cuando Selenium WebDriver carga una página, sigue la pageLoadStrategy normal. Siempre se recomienda detener la descarga de más recursos adicionales (como imágenes, css, js) cuando la carga de la página lleva mucho tiempo.
-La propiedad document.readyState de un documento describe el estado de carga del documento actual. Por defecto, WebDriver esperará responder a una llamada driver.</description>
+La propiedad document.readyState de un documento describe el estado de carga del documento actual. Por defecto, WebDriver esperará responder a una llamada driver.get() (o) driver.</description>
     </item>
     
     <item>
@@ -561,7 +562,7 @@ Find Element Se utiliza para encontrar un elemento y devuelve la primera referen
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>Comienza cada prueba desde un estado limpio conocido. Idealmente, ejecuta una nueva máquina virtual para cada prueba. Si ejecutar una nueva máquina virtual no es práctico, al menos inicia un nuevo WebDriver para cada prueba. Para Firefox, inicia un WebDriver con su perfil conocido.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
     <item>

@@ -11,20 +11,20 @@
     <title>从RC迁移到WebDriver :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379911" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379911" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379911"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,24 +1921,22 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#如何迁移到selenium-webdriver">如何迁移到Selenium WebDriver</a></li>
-<li><a href="#为什么要迁移到webdriver">为什么要迁移到WebDriver</a></li>
-<li><a href="#在开始之前">在开始之前</a></li>
-<li><a href="#开始上手">开始上手</a></li>
-<li><a href="#下一步">下一步</a></li>
-<li><a href="#常见问题">常见问题</a>
-<ul>
-<li><a href="#单击和键入更加完整">单击和键入更加完整</a></li>
-<li><a href="#waitforpagetoload很快返回">WaitForPageToLoad很快返回</a></li>
-<li><a href="#通过xpath或css选择器查找并不总是可行-但在selenium-1中却可以">通过XPath或CSS选择器查找并不总是可行, 但在Selenium 1中却可以</a></li>
-<li><a href="#没有browserbot">没有Browserbot</a></li>
-<li><a href="#执行javascript不会返回任何内容">执行JavaScript不会返回任何内容</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#如何迁移到selenium-webdriver">如何迁移到Selenium WebDriver</a></li>
+    <li><a href="#为什么要迁移到webdriver">为什么要迁移到WebDriver</a></li>
+    <li><a href="#在开始之前">在开始之前</a></li>
+    <li><a href="#开始上手">开始上手</a></li>
+    <li><a href="#下一步">下一步</a></li>
+    <li><a href="#常见问题">常见问题</a>
+      <ul>
+        <li><a href="#单击和键入更加完整">单击和键入更加完整</a></li>
+        <li><a href="#waitforpagetoload很快返回">WaitForPageToLoad很快返回</a></li>
+        <li><a href="#通过xpath或css选择器查找并不总是可行-但在selenium-1中却可以">通过XPath或CSS选择器查找并不总是可行, 但在Selenium 1中却可以</a></li>
+        <li><a href="#没有browserbot">没有Browserbot</a></li>
+        <li><a href="#执行javascript不会返回任何内容">执行JavaScript不会返回任何内容</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1963,10 +1961,7 @@
 
 
 
-
-
 <h2 id="如何迁移到selenium-webdriver">如何迁移到Selenium WebDriver</h2>
-
 <p>在采用Selenium 2时, 一个常见的问题是,
 在将新测试添加到现有测试集中时,
 正确的做法是什么?
@@ -1974,22 +1969,17 @@
 但是, 已经拥有一套现有测试的用户又该如何呢?
 本指南旨在演示如何将现有测试迁移到新的API,
 从而允许使用WebDriver提供的新功能编写所有新测试.</p>
-
 <p>此处介绍的方法描述了向WebDriver API的零星迁移,
 而无需一次大刀阔斧地重新进行所有工作.
 这意味着您可以留出更多时间来迁移现有测试,
 这可以使您更轻松地决定将精力花在哪里.</p>
-
 <p>本指南使用Java编写, 因为它为迁移提供了最佳支持.
 由于我们为其他语言提供了更好的工具,
 因此本指南将扩展为包括这些语言.</p>
-
 <h2 id="为什么要迁移到webdriver">为什么要迁移到WebDriver</h2>
-
 <p>将一组测试从一个API移到另一个API需要大量的工作.
 为什么您和您的团队考虑采取此举?
 这是您应考虑迁移Selenium测试以使用WebDriver的一些原因.</p>
-
 <ul>
 <li>较小, 紧凑的API.
 WebDriver的API比原始的Selenium RC API更面向对象.
@@ -2005,116 +1995,96 @@ Opera, Mozilla和Google都是WebDriver开发的积极参与者,
 通常, 这意味着对WebDriver的支持已包含在浏览器本身中：
 您的测试运行得尽可能快且稳定.</li>
 </ul>
-
 <h2 id="在开始之前">在开始之前</h2>
-
 <p>为了使迁移过程尽可能轻松,
 请确保所有测试都在最新的Selenium版本中正常运行.
 这听起来似乎显而易见, 但是最好说一下!</p>
-
 <h2 id="开始上手">开始上手</h2>
-
 <p>开始迁移的第一步是更改获取Selenium实例的方式.
 使用Selenium RC时, 就像这样:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> DefaultSelenium(<span style="color:#2aa198">&#34;localhost&#34;</span>, 4444, <span style="color:#2aa198">&#34;*firefox&#34;</span>, <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span>);
-selenium.start();</code></pre></div>
-<p>应该这样替换:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium(driver, <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span>);</code></pre></div>
-<h2 id="下一步">下一步</h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium selenium <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> DefaultSelenium<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;localhost&#34;</span><span style="color:#719e07">,</span> 4444<span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;*firefox&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span><span style="color:#719e07">);</span>
+selenium<span style="color:#719e07">.</span>start<span style="color:#719e07">();</span>
+</code></pre></div><p>应该这样替换:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+Selenium selenium <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;http://www.yoursite.com&#34;</span><span style="color:#719e07">);</span>
+</code></pre></div><h2 id="下一步">下一步</h2>
 <p>一旦测试成功执行, 下一步就是迁移实际的测试代码以使用WebDriver API.
 根据代码的抽象程度,
 这可能是一个短暂的过程, 也可能是一个漫长的过程.
 在这两种情况下, 方法都是相同的,
 可以简单地总结一下：修改代码以在使用新API时进行编辑.</p>
-
 <p>如果您需要从Selenium实例中提取基础WebDriver实现,
 则只需将其强制转换为WrapsDriver:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> ((WrapsDriver) selenium).getWrappedDriver();</code></pre></div>
-<p>这使您可以继续正常传递Selenium实例,
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">((</span>WrapsDriver<span style="color:#719e07">)</span> selenium<span style="color:#719e07">).</span>getWrappedDriver<span style="color:#719e07">();</span>
+</code></pre></div><p>这使您可以继续正常传递Selenium实例,
 但可以根据需要解包WebDriver实例.</p>
-
 <p>有时, 您的代码库将主要使用较新的API.
 此时, 您可以翻转关系,
 使用WebDriver并按需实例化Selenium实例:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium <span style="color:#268bd2">selenium</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium(driver, baseUrl);</code></pre></div>
-<h2 id="常见问题">常见问题</h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Selenium selenium <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverBackedSelenium<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> baseUrl<span style="color:#719e07">);</span>
+</code></pre></div><h2 id="常见问题">常见问题</h2>
 <p>幸运的是, 您不是第一个进行此迁移的人,
 因此这里有其他人已经看到的一些常见问题以及如何解决它们.</p>
-
 <h3 id="单击和键入更加完整">单击和键入更加完整</h3>
-
 <p>Selenium RC测试中的常见模式如下所示:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">selenium.type(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;exciting tex&#34;</span>);
-selenium.keyDown(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);
-selenium.keyPress(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);
-selenium.keyUp(<span style="color:#2aa198">&#34;name&#34;</span>, <span style="color:#2aa198">&#34;t&#34;</span>);</code></pre></div>
-<p>这依赖于以下事实：
-&ldquo;类型&rdquo;仅替换所标识元素的内容,
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">selenium<span style="color:#719e07">.</span>type<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;exciting tex&#34;</span><span style="color:#719e07">);</span>
+selenium<span style="color:#719e07">.</span>keyDown<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;t&#34;</span><span style="color:#719e07">);</span>
+selenium<span style="color:#719e07">.</span>keyPress<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;t&#34;</span><span style="color:#719e07">);</span>
+selenium<span style="color:#719e07">.</span>keyUp<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;t&#34;</span><span style="color:#719e07">);</span>
+</code></pre></div><p>这依赖于以下事实：
+&ldquo;类型&quot;仅替换所标识元素的内容,
 而不触发用户与页面进行交互时通常会触发的所有事件.
-最后的&rdquo;key*&ldquo;直接调用导致JS处理程序按预期方式触发.</p>
-
+最后的&quot;key*&ldquo;直接调用导致JS处理程序按预期方式触发.</p>
 <p>使用WebDriverBackedSelenium时,
-填写表单字段的结果将是&rdquo;exciting texttt&rdquo;：
+填写表单字段的结果将是&quot;exciting texttt&rdquo;：
 并非您所期望的!
 这样做的原因是WebDriver更准确地模拟了用户行为,
 因此一直会触发事件.</p>
-
 <p>相同的事实有时可能会导致页面加载比Selenium 1测试中更早触发.
-如果WebDriver抛出&rdquo;StaleElementException&rdquo;,
+如果WebDriver抛出&quot;StaleElementException&rdquo;,
 您可以说这已经发生.</p>
-
 <h3 id="waitforpagetoload很快返回">WaitForPageToLoad很快返回</h3>
-
 <p>发现何时完成页面加载是一项艰巨的任务.
-我们的意思是&rdquo;何时触发加载事件&rdquo;,
+我们的意思是&quot;何时触发加载事件&rdquo;,
 &ldquo;何时完成所有AJAX请求&rdquo;,
 &ldquo;何时没有网络流量&rdquo;,
 &ldquo;何时document.readyState发生更改&rdquo;
 或其他所有内容?</p>
-
 <p>WebDriver试图模拟原始的Selenium行为,
 但是由于种种原因, 这种方法并不总是能完美发挥作用.
 最常见的原因是, 很难区分在尚未开始的页面加载与在方法调用之间完成的页面加载之间的区别.
 有时这意味着在页面完成（甚至开始!）加载之前, 控件已返回测试.</p>
-
 <p>解决方案是等待特定的东西.
 通常, 这可能是您想与之交互的元素,
 或者是将某些Javascript变量设置为特定值.
 一个例子是:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(30));
-WebElement <span style="color:#268bd2">element</span><span style="color:#719e07">=</span> wait.until(visibilityOfElementLocated(By.id(<span style="color:#2aa198">&#34;some_id&#34;</span>)));</code></pre></div>
-<p>其中&rdquo;visibilityOfElementLocated&rdquo;实现为:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">ExpectedCondition</span><span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">visibilityOfElementLocated</span>(<span style="color:#268bd2">final</span> <span style="color:#268bd2">By</span> locator) {
-  <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> ExpectedCondition<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span>() {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">WebElement</span> apply(WebDriver <span style="color:#268bd2">driver</span>) {
-      WebElement <span style="color:#268bd2">toReturn</span> <span style="color:#719e07">=</span> driver.findElement(locator);
-      <span style="color:#719e07">if</span> (toReturn.isDisplayed()) {
-        <span style="color:#719e07">return</span> toReturn;
-      }
-      <span style="color:#719e07">return</span> <span style="color:#cb4b16">null</span>;
-    }
-  };
-}</code></pre></div>
-<p>这看起来很复杂, 但这几乎是所有样板代码.
-唯一有趣的一点是, 将反复评估&rdquo;ExpectedCondition&rdquo;,
-直到&rdquo;apply&rdquo;方法返回的结果既不是&rdquo;null&rdquo;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> wait <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>30<span style="color:#719e07">));</span>
+WebElement element<span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>visibilityOfElementLocated<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;some_id&#34;</span><span style="color:#719e07">)));</span>
+</code></pre></div><p>其中&quot;visibilityOfElementLocated&quot;实现为:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> ExpectedCondition<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">visibilityOfElementLocated</span><span style="color:#719e07">(</span><span style="color:#268bd2">final</span> By locator<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+  <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> ExpectedCondition<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;()</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> WebElement <span style="color:#268bd2">apply</span><span style="color:#719e07">(</span>WebDriver driver<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+      WebElement toReturn <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>locator<span style="color:#719e07">);</span>
+      <span style="color:#719e07">if</span> <span style="color:#719e07">(</span>toReturn<span style="color:#719e07">.</span>isDisplayed<span style="color:#719e07">())</span> <span style="color:#719e07">{</span>
+        <span style="color:#719e07">return</span> toReturn<span style="color:#719e07">;</span>
+      <span style="color:#719e07">}</span>
+      <span style="color:#719e07">return</span> <span style="color:#cb4b16">null</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">};</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>这看起来很复杂, 但这几乎是所有样板代码.
+唯一有趣的一点是, 将反复评估&quot;ExpectedCondition&rdquo;,
+直到&quot;apply&quot;方法返回的结果既不是&quot;null&rdquo;
 也不是Boolean.FALSE.</p>
-
-<p>当然, 添加所有这些&rdquo;等待&rdquo;调用可能会使您的代码混乱.
+<p>当然, 添加所有这些&quot;等待&quot;调用可能会使您的代码混乱.
 如果是这样, 并且您的需求很简单, 请考虑使用隐式等待:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);</code></pre></div>
-<p>这样, 每次定位某个元素时（如果不存在该元素）,
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>timeouts<span style="color:#719e07">().</span>implicitlyWait<span style="color:#719e07">(</span>30<span style="color:#719e07">,</span> TimeUnit<span style="color:#719e07">.</span>SECONDS<span style="color:#719e07">);</span>
+</code></pre></div><p>这样, 每次定位某个元素时（如果不存在该元素）,
 都会重试该位置, 直到该元素存在或经过30秒为止.</p>
-
 <h3 id="通过xpath或css选择器查找并不总是可行-但在selenium-1中却可以">通过XPath或CSS选择器查找并不总是可行, 但在Selenium 1中却可以</h3>
-
 <p>在Selenium 1中, xpath通常使用捆绑的库而不是浏览器本身的功能.
 除非没有其他选择, 否则WebDriver将始终使用本机浏览器方法.
 这意味着复杂的xpath表达式可能会在某些浏览器上中断.</p>
-
 <p>Selenium 1中的CSS选择器是使用Sizzle库实现的.
 这实现了CSS Selector规范的超集,
 而且并不总是清楚您越界的位置.
@@ -2123,39 +2093,34 @@ WebElement <span style="color:#268bd2">element</span><span style="color:#719e07"
 则会在控制台上记录一条警告.
 值得花时间去寻找这些东西,
 尤其是如果由于找不到元素而导致测试失败时.</p>
-
 <h3 id="没有browserbot">没有Browserbot</h3>
-
 <p>Selenium RC是基于Selenium Core的,
 因此, 当您执行Javascript时,
 可以访问Selenium Core的某些部分以使事情变得容易.
 由于WebDriver不基于Selenium Core, 因此不再可能.
 如何判断您是否正在使用Selenium Core?简单!
-只要看看您的&rdquo;getEval&rdquo;或类似调用是否在评估的Javascript中使用&rdquo;Selenium&rdquo;或&rdquo;browserbot&rdquo;.</p>
-
+只要看看您的&quot;getEval&quot;或类似调用是否在评估的Javascript中使用&quot;Selenium&quot;或&quot;browserbot&rdquo;.</p>
 <p>您可能正在使用browserbot获取测试的当前窗口或文档的句柄.
 幸运的是, WebDriver总是在当前窗口的上下文中评估JS,
-因此您可以直接使用&rdquo;window&rdquo;或&rdquo;document&rdquo;.</p>
-
+因此您可以直接使用&quot;window&quot;或&quot;document&rdquo;.</p>
 <p>另外, 您可能正在使用browserbot查找元素.
 在WebDriver中, 这样做的习惯是首先找到该元素,
 然后将其作为参数传递给Javascript.
 从而:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</span> selenium.getEval(
-    <span style="color:#2aa198">&#34;selenium.browserbot.findElement(&#39;id=foo&#39;, browserbot.getCurrentWindow()).tagName&#34;</span>);</code></pre></div>
-<p>变成:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;foo&#34;</span>));
-String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</span> (String) ((JavascriptExecutor) driver).executeScript(
-    <span style="color:#2aa198">&#34;return arguments[0].tagName&#34;</span>, element);</code></pre></div>
-<p>请注意, 传入的&rdquo;element&rdquo;变量如何显示为JS标准&rdquo;arguments&rdquo;数组中的第一项.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String name <span style="color:#719e07">=</span> selenium<span style="color:#719e07">.</span>getEval<span style="color:#719e07">(</span>
+    <span style="color:#2aa198">&#34;selenium.browserbot.findElement(&#39;id=foo&#39;, browserbot.getCurrentWindow()).tagName&#34;</span><span style="color:#719e07">);</span>
+</code></pre></div><p>变成:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;foo&#34;</span><span style="color:#719e07">));</span>
+String name <span style="color:#719e07">=</span> <span style="color:#719e07">(</span>String<span style="color:#719e07">)</span> <span style="color:#719e07">((</span>JavascriptExecutor<span style="color:#719e07">)</span> driver<span style="color:#719e07">).</span>executeScript<span style="color:#719e07">(</span>
+    <span style="color:#2aa198">&#34;return arguments[0].tagName&#34;</span><span style="color:#719e07">,</span> element<span style="color:#719e07">);</span>
+</code></pre></div><p>请注意, 传入的&quot;element&quot;变量如何显示为JS标准&quot;arguments&quot;数组中的第一项.</p>
 <h3 id="执行javascript不会返回任何内容">执行JavaScript不会返回任何内容</h3>
-
 <p>WebDriver的JavascriptExecutor将包装所有JS并将其评估为匿名表达式.
-这意味着您需要使用&rdquo;return&rdquo;关键字:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#268bd2">title</span> <span style="color:#719e07">=</span> selenium.getEval(<span style="color:#2aa198">&#34;browserbot.getCurrentWindow().document.title&#34;</span>);</code></pre></div>
-<p>变成:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">((JavascriptExecutor) driver).executeScript(<span style="color:#2aa198">&#34;return document.title;&#34;</span>);</code></pre></div>
+这意味着您需要使用&quot;return&quot;关键字:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String title <span style="color:#719e07">=</span> selenium<span style="color:#719e07">.</span>getEval<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;browserbot.getCurrentWindow().document.title&#34;</span><span style="color:#719e07">);</span>
+</code></pre></div><p>变成:</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">((</span>JavascriptExecutor<span style="color:#719e07">)</span> driver<span style="color:#719e07">).</span>executeScript<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;return document.title;&#34;</span><span style="color:#719e07">);</span>
+</code></pre></div>
 
 <footer class=" footline" >
 	
@@ -2164,7 +2129,7 @@ String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</sp
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/legacy_docs/migrating_from_rc_to_webdriver/">
       “从RC迁移到WebDriver”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3329,19 +3294,19 @@ String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379911" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379911"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

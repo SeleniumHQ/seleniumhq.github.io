@@ -17,8 +17,7 @@
       <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</guid>
-      <description>As mentioned in Simon&amp;#8217;s Going Atomic: Why? and Going Atomic: How, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &amp;#8216;atoms&amp;#8217; is now included.
-Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &amp;#8216;why&amp;#8217; and suggests how to fix them as well.</description>
+      <description></description>
     </item>
     
   </channel>

@@ -17,15 +17,7 @@
       <pubDate>Tue, 23 Dec 2014 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2014/selenium-hangout-6-recap/</guid>
-      <description>01:35 &amp;#8211; 9:45 W3C Update
-Notes from most recent W3C Meeting
-Highlights:
-&amp;#8211; changes to the get_attribute method call
-&amp;#8211; screenshots (changing to viewport only, eventually will support whole page)
-&amp;#8211; The WebDriver W3C working group has a GitHub repo now
-&amp;#8211; WebDriver will move from a &amp;#8220;REST-ish&amp;#8221; to a more &amp;#8220;RESTful&amp;#8221; interface
-11:23 &amp;#8211; 16:00 Selenium 3 Status Update
-16:05 &amp;#8211; 17:10 Marionette (FirefoxdDiver rewrite) testing help</description>
+      <description></description>
     </item>
     
     <item>
@@ -34,10 +26,7 @@ Highlights:
       <pubDate>Mon, 19 May 2014 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2014/selenium-hangout-5-recap/</guid>
-      <description>0:00 &amp;#8211; 01:10 Intro
-1:11 &amp;#8211; 13:00 WebDriver W3C Spec &amp;amp; Selenium 3 Update
- Progress on the spec, still a work in progress No user facing changes to the Selenium API as a result Trying to pair the spec and Selenium 3 together If all goes well, the spec and Selenium 3 could drop during Selenium Conf (fingers crossed)  13:01 &amp;#8211; 24:10 Selenium Conf 2014 Update
- Check out the new and shiny conference site Dates posted (e.</description>
+      <description></description>
     </item>
     
     <item>
@@ -46,15 +35,7 @@ Highlights:
       <pubDate>Fri, 07 Feb 2014 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2014/selenium-hangout-4-recap/</guid>
-      <description>Here&amp;#8217;s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (@seleniumhangout) or e-mail us (questions@seleniumhangout.com).
- Panel
-David Burns (@AutomatedTester)
-Kevin Menard (@nirvdrum)
-Dave Haeffner (@TourDeDave)
-Timeline
-1:30-16:51: How to handle screenshots across different drivers
-tl;dr driver specific issues due to a lacking standard and missing API
- This is getting addressed in World Wide Web Consortium (W3C) spec which is under development E-mail use-cases you would like to see in the spec to automatedtester@mozilla.</description>
+      <description></description>
     </item>
     
     <item>
@@ -63,9 +44,7 @@ tl;dr driver specific issues due to a lacking standard and missing API
       <pubDate>Fri, 01 Nov 2013 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2013/selenium-hangout-3-recap/</guid>
-      <description>Here is a recap of our most recent Selenium Hangout where we answered a grab bag of questions ranging from how to use Selenium within your existing workflow down to nitty-gritty details around performance and deprecated functions.
-Be sure to tune into our Twitter feed to find out details about our next Hangout.
-And if your question didn&amp;#8217;t get answered, we encourage you to hop on IRC and ask it there.</description>
+      <description></description>
     </item>
     
     <item>
@@ -74,10 +53,7 @@ And if your question didn&amp;#8217;t get answered, we encourage you to hop on I
       <pubDate>Wed, 09 Oct 2013 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2013/selenium-hangout-2-recap/</guid>
-      <description>This is a recap from the most recent Selenium Hangout (a.k.a. The World&amp;#8217;s Best Selenium Meetup). For info on future meetups, follow them on Twitter.
-Thanks to all who attended and tuned into the last Selenium Hangout where we talked about Selenium 3! Below is a write-up of the meetup, the video, and relevant links we mentioned. And to access all meetup videos you can go here.
-Panel
-David Burns (@AutomatedTester)</description>
+      <description></description>
     </item>
     
   </channel>

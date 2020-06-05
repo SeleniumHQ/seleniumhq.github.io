@@ -37,8 +37,9 @@ Sin embargo, las pruebas funcionales de usuario final, como las pruebas de Selen
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/es/introduction/types_of_testing/</guid>
-      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta: &amp;gt;¿Estamos construyendo el producto correcto?.
-Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
+      <description>Pruebas de aceptación Este tipo de prueba se realiza para determinar si una funcionalidad o un sistema cumple con las expectativas y requerimientos del cliente. Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente, siendo una actividad de validación que responde la pregunta:
+ ¿Estamos construyendo el producto correcto?.
+ Para aplicaciones web, la automatización de esta prueba se puede hacer directamente con Selenium simulando el comportamiento esperado del usuario.</description>
     </item>
     
     <item>

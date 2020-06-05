@@ -11,20 +11,20 @@
     <title>WebDriver :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591379919" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591393153" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591379919" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591393153" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591393153"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591379919"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591379919"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591393153"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591393153"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591379919"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591393153"></script>
 
     
   </div>
@@ -1927,29 +1927,28 @@
 
 
 
-	
-
-<h1 id="웹-드라이버-web-driver">웹 드라이버(Web Driver)</h1>
-
+	<h1 id="웹-드라이버web-driver">웹 드라이버(Web Driver)</h1>
 <p>최근 셀레니움의 가장 큰 변화는 WebDriver API의 포함이었다. 사용자가 로컬로 또는 Selenium 서버를 사용하여
 원격 컴퓨터에서 브라우저를 기본적으로 구동하는 것은 브라우저 자동화 측면에서 비약적인 발전을 의미한다.</p>
-
 <p>Selenium WebDriver는 RC와 같은 역할에 적합하며, 원래의 1.x 바인딩을 통합하였다.
 언어 바인딩과 개별 브라우저 제어 코드의 구현을 모두 말한다.
 이것은 일반적으로 단지 <em>WebDriver</em> 라고 부르거나 때로는 <em>Selenium 2</em> 라고 부른다.</p>
-
 <p>Selenium 1.0 + WebDriver = Selenium 2.0</p>
-
 <ul>
-<li><p>WebDriver는 Selenium-RC API의 일부 제한사항과 함께 보다 단순하고 간결한 프로그래밍 인터페이스로 설계되었다.</p></li>
-
-<li><p>WebDriver는 Selenium 1.0과 비교하여 컴팩트한 객체 지향 API이다.</p></li>
-
-<li><p>브라우저를 훨씬 효과적으로 구동하고 파일 업로드 또는 다운로드, 팝업, 대화 상자 도착자 등 기능 테스트 범위에
-영향을 준 Selenium 1의 한계를 극복한다.</p></li>
-
-<li><p>WebDriver는 Selenium RC의
-<a href="//en.wikipedia.org/wiki/Same-origin_policy">Single-host 오리진 policy</a>.의 한계를 극복한다.</p></li>
+<li>
+<p>WebDriver는 Selenium-RC API의 일부 제한사항과 함께 보다 단순하고 간결한 프로그래밍 인터페이스로 설계되었다.</p>
+</li>
+<li>
+<p>WebDriver는 Selenium 1.0과 비교하여 컴팩트한 객체 지향 API이다.</p>
+</li>
+<li>
+<p>브라우저를 훨씬 효과적으로 구동하고 파일 업로드 또는 다운로드, 팝업, 대화 상자 도착자 등 기능 테스트 범위에
+영향을 준 Selenium 1의 한계를 극복한다.</p>
+</li>
+<li>
+<p>WebDriver는 Selenium RC의
+<a href="//en.wikipedia.org/wiki/Same-origin_policy">Single-host 오리진 policy</a>.의 한계를 극복한다.</p>
+</li>
 </ul>
 
 
@@ -1963,7 +1962,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/">
       “WebDriver”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
             </div> 
@@ -3126,19 +3125,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591393153"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591393153"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591379919" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591379919"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591393153" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591393153"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

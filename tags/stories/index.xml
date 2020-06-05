@@ -17,8 +17,7 @@
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/</guid>
-      <description>The GSoC 2010, it’s a great adventure.
-I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with web pages. Selenium Core has several major limitations, including the inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in place of Selenium Core.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,9 +26,7 @@ I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all inte
       <pubDate>Thu, 15 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/gsoc-2010-remote-storage/</guid>
-      <description>What’s new for Selenium this summer ? The GSoC of course !!!!
-I’m Jérémy, a french engineer and I work at SERLI, a services company based in France.
-I’m working on Selenium since a year and this summer I’m mentoring Aleksejs for the GSoC 2010. I’m helped by David Burns when I’m on vacation or offline. His experience is really useful to me, and David is involved on student supervising regularly.</description>
+      <description></description>
     </item>
     
   </channel>

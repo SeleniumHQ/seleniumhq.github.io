@@ -11,20 +11,20 @@
     <title>Alerts, prompts et confirmations Javascript :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591379914" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591393151" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591379914" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591393151" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591393151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591379914"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591393151"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591393151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591393151"></script>
 
     
   </div>
@@ -1921,14 +1921,11 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#alerts">Alerts</a></li>
-<li><a href="#confirm">Confirm</a></li>
-<li><a href="#prompt">Prompt</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#alerts">Alerts</a></li>
+    <li><a href="#confirm">Confirm</a></li>
+    <li><a href="#prompt">Prompt</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1953,24 +1950,18 @@
 
 
 
-
-
 <p>WebDriver fournit une API pour travailler avec
 les trois types de messages contextuels natifs
 proposés par JavaScript. Ces popups sont stylisés par le navigateur
 et offrent une personnalisation limitée.</p>
-
 <h2 id="alerts">Alerts</h2>
-
 <p>Le plus simple d&rsquo;entre eux est appelé une alerte, qui montre une
 message personnalisé, et un seul bouton qui rejette l&rsquo;alerte, étiqueté
 dans la plupart des navigateurs comme OK. Il peut également être ignoré dans la plupart des navigateurs par
 en appuyant sur le bouton de fermeture, mais cela fera toujours la même chose que
-le bouton OK. <a onclick="window.alert('Sample alert')">Voir un exemple d&rsquo;alerte</a>.</p>
-
+le bouton OK. <!-- raw HTML omitted -->Voir un exemple d&rsquo;alerte<!-- raw HTML omitted -->.</p>
 <p>WebDriver peut obtenir le texte de la fenêtre contextuelle et les accepter ou les rejeter
 alertes.</p>
-
 
 
 
@@ -2013,16 +2004,16 @@ alertes.</p>
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See an example alert&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See an example alert&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
+</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
 
 <span style="color:#586e75">//Store the alert text in a variable
-</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
+</span><span style="color:#586e75"></span>String text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>getText<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert.accept();
+</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>accept<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2124,15 +2115,11 @@ alert<span style="color:#719e07">.</span>accept
 </section>
 </div>
 </div>
-
 <h2 id="confirm">Confirm</h2>
-
 <p>Une boîte de confirmation est similaire à une alerte, sauf que l&rsquo;utilisateur peut également choisir
-pour annuler le message. <a onclick="window.confirm('êtes-vous sûr?')"> Voir
-un échantillon confirme </a>.</p>
-
+pour annuler le message. <!-- raw HTML omitted --> Voir
+un échantillon confirme <!-- raw HTML omitted -->.</p>
 <p>Cet exemple montre également une approche différente du stockage d&rsquo;une alerte:</p>
-
 
 
 
@@ -2175,19 +2162,19 @@ un échantillon confirme </a>.</p>
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample confirm&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See a sample confirm&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Wait for the alert to be displayed
-</span><span style="color:#586e75"></span>wait.until(ExpectedConditions.alertIsPresent());
+</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
 
 <span style="color:#586e75">//Store the alert in a variable
-</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> driver.switchTo().alert();
+</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>alert<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Store the alert in a variable for reuse
-</span><span style="color:#586e75"></span>String <span style="color:#268bd2">text</span> <span style="color:#719e07">=</span> alert.getText();
+</span><span style="color:#586e75"></span>String text <span style="color:#719e07">=</span> alert<span style="color:#719e07">.</span>getText<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Press the Cancel button
-</span><span style="color:#586e75"></span>alert.dismiss();
+</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>dismiss<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2298,16 +2285,13 @@ alert<span style="color:#719e07">.</span>dismiss
 </section>
 </div>
 </div>
-
 <h2 id="prompt">Prompt</h2>
-
 <p>Les invites sont similaires aux cases de confirmation, sauf qu&rsquo;elles incluent également un texte
 contribution. Comme pour travailler avec des éléments de formulaire, vous pouvez utiliser WebDriver
 envoyer des clés pour remplir une réponse. Cela remplacera complètement l&rsquo;espace réservé
 texte. En appuyant sur le bouton Annuler, aucun texte ne sera envoyé.
-<a onclick="window.prompt('Quel est votre outil de choix?',navigator.appName)">
-Voir un exemple d&rsquo;invite </a>.</p>
-
+<!-- raw HTML omitted -->
+Voir un exemple d&rsquo;invite <!-- raw HTML omitted -->.</p>
 
 
 
@@ -2350,16 +2334,16 @@ Voir un exemple d&rsquo;invite </a>.</p>
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Click the link to activate the alert
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;See a sample prompt&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;See a sample prompt&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Wait for the alert to be displayed and store it in a variable
-</span><span style="color:#586e75"></span>Alert <span style="color:#268bd2">alert</span> <span style="color:#719e07">=</span> wait.until(ExpectedConditions.alertIsPresent());
+</span><span style="color:#586e75"></span>Alert alert <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>alertIsPresent<span style="color:#719e07">());</span>
 
 <span style="color:#586e75">//Type your message
-</span><span style="color:#586e75"></span>alert.sendKeys(<span style="color:#2aa198">&#34;Selenium&#34;</span>);
+</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Selenium&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">//Press the OK button
-</span><span style="color:#586e75"></span>alert.accept();
+</span><span style="color:#586e75"></span>alert<span style="color:#719e07">.</span>accept<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2473,7 +2457,7 @@ alert<span style="color:#719e07">.</span>accept
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/webdriver/js_alerts_prompts_and_confirmations/">
       “Alerts, prompts et confirmations Javascript”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3638,19 +3622,19 @@ alert<span style="color:#719e07">.</span>accept
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591393151"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591393151"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591379914" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591379914"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591393151" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591393151"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

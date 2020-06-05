@@ -17,8 +17,7 @@
       <pubDate>Mon, 31 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/bug-bash-aftermath/</guid>
-      <description>What a week! I&amp;#8217;m almost (almost!) sorry that the Bug Bash is over. I&amp;#8217;d like to say thank you to everyone involved in the Bug Bash, from those reporting issues, through those brave souls (Dharani, Anthony, Jari!) who went through the issue tracker, applied labels and made sure the issues were still fresh, all the way to those contributing fixes. And the top five bug fixers were?
- Jari Bakken (24 issues) Simon Stewart (21 issues) David Burns, aka: AutomatedTester (11 issues) Jim Evans (10 issues) Michael Tamm (6 issues)  Some interesting nuggets of information:</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@
       <pubDate>Fri, 21 Jan 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/bug-bash/</guid>
-      <description>When the Selenium and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a lot of bugs and feature requests.
-In the run up for the 2.0b2 release, we&amp;#8217;ll be running a Bug Bash. This will run from the 24th January all the way to the end of the 30th January.</description>
+      <description></description>
     </item>
     
   </channel>

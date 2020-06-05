@@ -11,20 +11,20 @@
     <title>Http 代理 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1946,22 +1946,17 @@
 
 <p>代理服务器充当客户端和服务器之间的请求中介.
 简述而言, 流量将通过代理服务器流向您请求的地址, 然后返回.</p>
-
 <p>使用代理服务器用于Selenium的自动化脚本,
 可能对以下方面有益:</p>
-
 <ul>
 <li>捕获网络流量</li>
 <li>模拟网站后端响应</li>
 <li>在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.</li>
 </ul>
-
 <p>如果您在公司环境中,
 并且浏览器无法连接到URL,
 则最有可能是因为环境, 需要借助代理进行访问.</p>
-
 <p>Selenium WebDriver提供了如下设置代理的方法</p>
-
 
 
 
@@ -2003,23 +1998,23 @@
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Proxy;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeOptions;
+<span style="color:#719e07">import</span> org.openqa.selenium.Proxy<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeOptions<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> proxyTest {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    Proxy <span style="color:#268bd2">proxy</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Proxy();
-    proxy.setHttpProxy(<span style="color:#2aa198">&#34;&lt;HOST:PORT&gt;&#34;</span>);
-    ChromeOptions <span style="color:#268bd2">options</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
-    options.setCapability(<span style="color:#2aa198">&#34;proxy&#34;</span>, proxy);
-    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver(options);
-    driver.get(<span style="color:#2aa198">&#34;https://www.google.com/&#34;</span>);
-    driver.manage().window().maximize();
-    driver.quit();
-  }
-}
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">proxyTest</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    Proxy proxy <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Proxy<span style="color:#719e07">();</span>
+    proxy<span style="color:#719e07">.</span>setHttpProxy<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;&lt;HOST:PORT&gt;&#34;</span><span style="color:#719e07">);</span>
+    ChromeOptions options <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions<span style="color:#719e07">();</span>
+    options<span style="color:#719e07">.</span>setCapability<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;proxy&#34;</span><span style="color:#719e07">,</span> proxy<span style="color:#719e07">);</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">(</span>options<span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.google.com/&#34;</span><span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>maximize<span style="color:#719e07">();</span>
+    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2121,7 +2116,7 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/">
       “Http 代理”
-    </a> was last updated on: 26 May 2020 08:39:42 -0700: <a href="https://github.com/SeleniumHQ/site/commit/85f1a80302b9bb0d40c80d0daf45808e82c0b23a">Added C# Code snippets for http proxy settings functionality (#438) [deploy site] (85f1a803)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3286,19 +3281,19 @@ webdriver<span style="color:#719e07">.</span>DesiredCapabilities<span style="col
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

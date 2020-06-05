@@ -11,20 +11,20 @@
     <title>Tipos de pruebas :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1921,24 +1921,18 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#pruebas-de-aceptación">Pruebas de aceptación</a></li>
-<li><a href="#pruebas-funcionales">Pruebas funcionales</a></li>
-<li><a href="#pruebas-de-rendimiento">Pruebas de rendimiento</a>
-<ul>
-<li><a href="#pruebas-de-carga">Pruebas de carga</a></li>
-<li><a href="#pruebas-de-estrés">Pruebas de estrés</a></li>
-</ul></li>
-<li><a href="#pruebas-de-regresión">Pruebas de regresión</a></li>
-<li><a href="#desarrollo-guiado-por-pruebas-tdd">Desarrollo guiado por pruebas (TDD)</a></li>
-<li><a href="#desarrollo-guiado-por-comportamiento-bdd">Desarrollo guiado por comportamiento (BDD)</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#pruebas-de-aceptación">Pruebas de aceptación</a></li>
+        <li><a href="#pruebas-funcionales">Pruebas funcionales</a></li>
+        <li><a href="#pruebas-de-rendimiento">Pruebas de rendimiento</a></li>
+        <li><a href="#pruebas-de-regresión">Pruebas de regresión</a></li>
+        <li><a href="#desarrollo-guiado-por-pruebas-tdd">Desarrollo guiado por pruebas (TDD)</a></li>
+        <li><a href="#desarrollo-guiado-por-comportamiento-bdd">Desarrollo guiado por comportamiento (BDD)</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1963,16 +1957,14 @@
 
 
 
-
-
 <h3 id="pruebas-de-aceptación">Pruebas de aceptación</h3>
-
 <p>Este tipo de prueba se realiza para determinar si una funcionalidad
 o un sistema cumple con las expectativas y requerimientos del cliente.
 Este tipo de pruebas generalmente implican la cooperación o retroalimentación del cliente,
-siendo una actividad de validación que responde la pregunta:
-&gt;¿Estamos construyendo el producto <strong><em>correcto</em></strong>?.</p>
-
+siendo una actividad de validación que responde la pregunta:</p>
+<blockquote>
+<p>¿Estamos construyendo el producto <strong><em>correcto</em></strong>?.</p>
+</blockquote>
 <p>Para aplicaciones web, la automatización de esta prueba se puede
 hacer directamente con Selenium simulando el comportamiento esperado
 del usuario. Esta simulación podría hacerse mediante grabación/
@@ -1980,120 +1972,91 @@ reproducción o mediante los diferentes lenguajes soportados como se explica
 en esta documentación. Nota: Las pruebas de aceptación son un subtipo
 de <strong><em>pruebas funcionales</em></strong>, a lo que algunas personas también
 podrían referirse.</p>
-
 <h3 id="pruebas-funcionales">Pruebas funcionales</h3>
-
 <p>Este tipo de prueba se realiza para determinar si una
 funcionalidad o sistema funciona correctamente y sin problemas.
 Se comprueba el sistema en diferentes niveles para garantizar que
 todos los escenarios están cubiertos y que el sistema hace <em>lo que</em>
 se supone que debe de hacer. Es una actividad de verificación que
-responde la pregunta:
-&gt;¿Estamos construyendo el producto <strong><em>correctamente?</em></strong>.</p>
-
+responde la pregunta:</p>
+<blockquote>
+<p>¿Estamos construyendo el producto <strong><em>correctamente?</em></strong>.</p>
+</blockquote>
 <p>Para aplicaciones web, la automatización de esta prueba puede ser
 hecha directamente con Selenium simulando los retornos esperados.
 Esta simulación podría hacerse mediante grabación/reproducción o
 mediante los diferentes lenguajes soportados como se explica en esta
 documentación.</p>
-
 <h3 id="pruebas-de-rendimiento">Pruebas de rendimiento</h3>
-
 <p>Como su nombre indica, se realizan pruebas
 de rendimiento para medir qué tan bien está funcionando una
 aplicación.</p>
-
 <p>Hay dos subtipos principales para las pruebas de rendimiento:</p>
-
 <h4 id="pruebas-de-carga">Pruebas de carga</h4>
-
 <p>La prueba de carga se realiza para verificar qué
 tan bien la aplicación funciona bajo diferentes cargas definidas (
 generalmente un número particular de usuarios conectados a la vez).</p>
-
 <h4 id="pruebas-de-estrés">Pruebas de estrés</h4>
-
 <p>Se realizan pruebas de estrés para verificar
 qué tan bien la aplicación funciona bajo estrés (o por encima de la
 carga máxima soportada).</p>
-
 <p>En general, las pruebas de rendimiento se realizan ejecutando algunas
 pruebas de Selenium que simulan diferentes usuarios golpeando
 una función particular en la aplicación web y obteniendo algunas
 medidas significativas.</p>
-
 <p>En general, esto lo hacen otras herramientas que obtienen las
 métricas. Una de esas herramientas es <strong><em>JMeter</em></strong>.</p>
-
 <p>Para una aplicación web, los detalles a medir incluyen rendimiento,
 latencia, pérdida de datos, tiempos de carga de componentes
 individuales&hellip;</p>
-
 <p>Nota 1: Todos los navegadores tienen una pestaña de rendimiento en su
 sección de herramientas para desarrolladores (accesible presionando
 F12)</p>
-
 <p>Nota 2: es un subtipo de <strong><em>pruebas no funcionales</em></strong> ya que esto
 generalmente se mide por sistema y no por función/funcionalidad.</p>
-
 <h3 id="pruebas-de-regresión">Pruebas de regresión</h3>
-
 <p>Esta prueba generalmente se realiza después
 de un cambio, corrección o adición de funcionalidad.</p>
-
 <p>Para garantizar que el cambio no ha roto ninguna de las funcionalidades
-existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.<br />
+existentes, algunas pruebas ya ejecutadas se ejecutan nuevamente.<br>
 El conjunto de pruebas ejecutadas nuevamente puede ser total o
 parcial, y puede incluir varios tipos diferentes, dependiendo del
 equipo de desarrollo y la aplicación.</p>
-
 <h3 id="desarrollo-guiado-por-pruebas-tdd">Desarrollo guiado por pruebas (TDD)</h3>
-
 <p>En lugar de un tipo de prueba <em>per se</em>, TDD es una
 metodología iterativa de desarrollo en la que las pruebas guían el
 diseño de una funcionalidad.</p>
-
 <p>Cada ciclo comienza creando un conjunto de pruebas unitarias que la
 funcionalidad debería pasar finalmente (deberían fallar la primera
 vez que se ejecuta).</p>
-
 <p>Después de esto, se lleva a cabo el desarrollo para pasar las
 pruebas. Las pruebas se ejecutan nuevamente, comenzando otro ciclo y
 este proceso continúa hasta que todas las pruebas pasen.</p>
-
 <p>El objetivo es acelerar el desarrollo de una aplicación basado en el
 hecho de que los defectos son menos costosos cuanto más antes se
 encuentran.</p>
-
 <h3 id="desarrollo-guiado-por-comportamiento-bdd">Desarrollo guiado por comportamiento (BDD)</h3>
-
 <p>BDD es también una metodología de desarrollo iterativo basado en
 el TDD anterior, en el que el objetivo es involucrar todas las
 partes en el desarrollo de una aplicación.</p>
-
 <p>Cada ciclo comienza creando algunas especificaciones (que deberían
 fallar). Luego creando las pruebas unitarias fallidas (que también deberían
 fallar) y luego hacer el desarrollo.</p>
-
 <p>Este ciclo se repite hasta que pasan todos los tipos de pruebas.</p>
-
 <p>Para realizar esto, se usa un lenguaje de especificación. Debe ser
 simple y entendible por todas las partes, estándar y explícito. La
 mayoría de las herramientas usan <strong><em>Gherkin</em></strong> como este
 lenguaje.</p>
-
 <p>El objetivo es poder detectar aún más errores que TDD, apuntando
 también a posibles errores de aceptación y a facilitar la comunicación
 entre las partes.</p>
-
 <p>Actualmente hay un conjunto de herramientas disponibles para
 escribir las especificaciones y relacionarlas con funciones de
 código, como <strong>Cucumber</strong> o <strong><em>SpecFlow.</em></strong></p>
-
 <p>Un conjunto de herramientas se han construido encima de Selenium para realizar
 este proceso aún más rápido al transformar directamente las
 especificaciones de BDD en código ejecutable. Algunas de estas son
- <strong><em>JBehave, Capybara y Robot Framework</em></strong>.</p>
+<strong><em>JBehave, Capybara y Robot Framework</em></strong>.</p>
 
 
 <footer class=" footline" >
@@ -2103,7 +2066,7 @@ especificaciones de BDD en código ejecutable. Algunas de estas son
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/introduction/types_of_testing/">
       “Tipos de pruebas”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3268,19 +3231,19 @@ especificaciones de BDD en código ejecutable. Algunas de estas son
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

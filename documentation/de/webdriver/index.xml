@@ -28,7 +28,8 @@
       
       <guid>https://selenium.dev/documentation/de/webdriver/driver_requirements/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
+WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
     </item>
     
     <item>
@@ -48,7 +49,7 @@
       
       <guid>https://selenium.dev/documentation/de/webdriver/waits/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM.</description>
+ WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
     </item>
     
     <item>
@@ -80,7 +81,8 @@ Alerts The simplest of these is referred to as an alert, which shows a custom me
       
       <guid>https://selenium.dev/documentation/de/webdriver/http_proxies/</guid>
       <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
-A proxy server for automation scripts with Selenium could be helpful for: - Capture network traffic - Mock backend calls made by the website - Access the required website under complex network topologies or strict corporate restrictions/policies.</description>
+A proxy server for automation scripts with Selenium could be helpful for:
+ Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
     </item>
     
     <item>

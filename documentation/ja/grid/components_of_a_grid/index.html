@@ -11,20 +11,20 @@
     <title>グリッドのコンポーネント :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393151" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393151" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393151"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393151"></script>
 
     
   </div>
@@ -1921,13 +1921,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#ハブ">ハブ</a></li>
-<li><a href="#ノード">ノード</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ハブ">ハブ</a></li>
+    <li><a href="#ノード">ノード</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1952,32 +1949,24 @@
 
 
 
-
-
-<p><img src="https://selenium.dev/documentation/ja/images/grid.png" alt="Grid" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/grid.png" alt="Grid"></p>
 <h2 id="ハブ">ハブ</h2>
-
 <ul>
 <li>仲介者およびマネージャー</li>
 <li>テストを実行する要求を受け入れます</li>
 <li>クライアントから命令を受け取り、ノード上でリモートで実行します</li>
 <li>スレッドを管理します</li>
 </ul>
-
 <p><em>ハブ</em> は、すべてのテストが送信される中心点です。
 各Selenium Gridは、ちょうど1つのハブで構成されます。
 ハブは、それぞれのクライアント（CIサーバー、開発者マシンなど）から到達可能である必要があります。
 ハブは、テストが委任される1つ以上のノードを接続します。</p>
-
 <h2 id="ノード">ノード</h2>
-
 <ul>
 <li>ブラウザが存在する場所</li>
 <li>ハブに自分自身を登録し、その機能を伝えます</li>
 <li>ハブからリクエストを受信して実行します</li>
 </ul>
-
 <p><em>ノード</em> は、個々のコンピューターシステムでテストを実行するさまざまなSeleniumインスタンスです。
 グリッドには多くのノードが存在する場合があります。
 ノードであるマシンは、ハブまたは他のノードと同じプラットフォームであったり、同じブラウザーを選定する必要はありません。
@@ -1991,7 +1980,7 @@ Windows上のノードは、Internet Explorerをブラウザーオプション�
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/grid/components_of_a_grid/">
       “グリッドのコンポーネント”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3156,19 +3145,19 @@ Windows上のノードは、Internet Explorerをブラウザーオプション�
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379916"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

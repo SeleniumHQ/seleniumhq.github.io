@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/nl/grid/purposes_and_main_functionalities/</guid>
-      <description>  Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
+      <description> Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     

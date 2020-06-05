@@ -11,20 +11,20 @@
     <title>When to use Grid :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591379919" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591379919" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591379919" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591379919"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591379919"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591379919"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591393152"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1945,20 +1945,17 @@
 
 
 
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from
 English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!</p>
 </div>
 
-
 <p>Generally speaking, there’s two reasons why you might want to use Grid.</p>
-
 <ul>
 <li>To run your tests against multiple browsers, multiple versions of browser,
 and browsers running on different operating systems.</li>
 <li>To reduce the time it takes for the test suite to complete a test pass.</li>
 </ul>
-
 <p>Grid is used to speed up the execution of a test pass by using
 multiple machines to run tests in parallel. For example, if you have a suite of
 100 tests, but you set up Grid to support 4 different machines (VMs or
@@ -1971,7 +1968,6 @@ time spent running the suite is to shorten the turnaround time for test results
 after developers check-in code for the AUT. Increasingly software teams
 practicing Agile software development want test feedback as immediately as
 possible as opposed to wait overnight for an overnight test pass.</p>
-
 <p>Grid is also used to support running tests against multiple runtime
 environments, specifically, against different browsers at the same time. For
 example, a ‘grid’ of virtual machines can be setup with each supporting a
@@ -1980,7 +1976,6 @@ has Internet Explorer 8, machine 2, Internet Explorer 9, machine 3 the latest
 Chrome, and machine 4 the latest Firefox. When the test suite is run,
 Selenium-Grid receives each test-browser combination and assigns each test to
 run against its required browser.</p>
-
 <p>In addition, one can have a grid of all the same browser, type and version. For
 instance, one could have a grid of 4 machines each running 3 instances of
 Firefox 70, allowing for a ‘server-farm’ (in a sense) of available Firefox
@@ -1988,7 +1983,6 @@ instances. When the suite runs, each test is passed to Grid which
 assigns the test to the next available Firefox instance. In this manner one
 gets test pass where conceivably 12 tests are all running at the same time in
 parallel, significantly reducing the time required to complete a test pass.</p>
-
 <p>Grid is very flexible. These two examples can be combined to allow
 multiple instances of each browser type and version. A configuration such as
 this would provide both, parallel execution for fast test pass completion and
@@ -2002,7 +1996,7 @@ support for multiple browser types and versions simultaneously.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/grid/when_to_use_grid/">
       “When to use Grid”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3167,19 +3161,19 @@ support for multiple browser types and versions simultaneously.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591379919"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591379919"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591379919" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591379919"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

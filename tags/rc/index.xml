@@ -17,8 +17,7 @@
       <pubDate>Wed, 08 Feb 2012 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2012/a-note-about-the-cybervillains-ssl-certificate/</guid>
-      <description>If you&amp;#8217;re using Selenium RC to test websites hosted on a secure site (accessed using a URL starting with HTTPS), we strongly recommend that you upgrade to Selenium 2.19. This is because the Cybervillains certificate in previous versions will expire soon, and has been replaced in 2.19 with an updated one.
-Our thanks to Patrick Lightbody, Ivan De Marino and Mark Watson and Neustar for taking providing the new certificate and the patch!</description>
+      <description></description>
     </item>
     
   </channel>

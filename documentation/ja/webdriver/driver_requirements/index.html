@@ -11,20 +11,20 @@
     <title>ドライバー要件 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393152"></script>
 
     
   </div>
@@ -1921,27 +1921,26 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#実行可能ファイルをパスに追加する">実行可能ファイルをパスに追加する</a></li>
-<li><a href="#クイックリファレンス">クイックリファレンス</a></li>
-<li><a href="#chromium-chrome">Chromium/Chrome</a></li>
-<li><a href="#firefox">Firefox</a></li>
-<li><a href="#edge">Edge</a></li>
-<li><a href="#internet-explorer">Internet Explorer</a></li>
-<li><a href="#opera">Opera</a></li>
-<li><a href="#safari">Safari</a></li>
-</ul></li>
-<li><a href="#モック-ブラウザー">モック ブラウザー</a>
-<ul>
-<li><a href="#htmlunit">HtmlUnit</a></li>
-<li><a href="#phantomjs">PhantomJS</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#実行可能ファイルをパスに追加する">実行可能ファイルをパスに追加する</a></li>
+        <li><a href="#クイックリファレンス">クイックリファレンス</a></li>
+        <li><a href="#chromiumchrome">Chromium/Chrome</a></li>
+        <li><a href="#firefox">Firefox</a></li>
+        <li><a href="#edge">Edge</a></li>
+        <li><a href="#internet-explorer">Internet Explorer</a></li>
+        <li><a href="#opera">Opera</a></li>
+        <li><a href="#safari">Safari</a></li>
+      </ul>
+    </li>
+    <li><a href="#モック-ブラウザー">モック ブラウザー</a>
+      <ul>
+        <li><a href="#htmlunit">HtmlUnit</a></li>
+        <li><a href="#phantomjs">PhantomJS</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1966,60 +1965,52 @@
 
 
 
-
-
 <p>SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。
 すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。</p>
-
 <p>WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。
 これは、ブラウザーによって異なる水準となる可能性があります。
 さまざまなドライバーの特異性の詳細については、 <em><a href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/">ドライバーの特異性</a></em> をご覧ください。</p>
-
 <p>ブラウザーを制御するためすべてのドライバーが単一のユーザー向けインターフェイスを共有している場合でも、
 ブラウザーのセッションを設定する方法が少し異なります。
 ドライバーの実装の多くはサードパーティによって提供されているため、
 標準のSeleniumディストリビューションには含まれていません。</p>
-
 <p>ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。
 このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。</p>
-
 <h3 id="実行可能ファイルをパスに追加する">実行可能ファイルをパスに追加する</h3>
-
 <p>ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。
 WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。
 実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。</p>
-
 <p>WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。</p>
-
 <ul>
 <li>実行可能ファイルを配置するディレクトリをこのように作成します。
 <em>C:\WebDriver\bin</em> or <em>/opt/WebDriver/bin</em></li>
-
-<li><p>PATHにディレクトリを追加します。</p>
-
+<li>PATHにディレクトリを追加します。
 <ul>
-<li><p>Windows - 管理者権限でコマンドプロンプトを開いて
-次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">setx /m path <span style="color:#2aa198">&#34;%path%;C:\WebDriver\bin\&#34;</span></code></pre></div></li>
-
-<li><p>macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#268bd2">$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile</code></pre></div></li>
-</ul></li>
-
-<li><p>これで、変更をテストする準備ができました。
+<li>Windows - 管理者権限でコマンドプロンプトを開いて
+次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">setx /m path <span style="color:#2aa198">&#34;%path%;C:\WebDriver\bin\&#34;
+</span></code></pre></div><ul>
+<li>macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#268bd2">$PATH</span>:/opt/WebDriver/bin &gt;&gt; ~/.profile
+</code></pre></div><ul>
+<li>
+<p>これで、変更をテストする準備ができました。
 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。
 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chromedriver</code></pre></div></li>
-
-<li><p><code>PATH</code>が正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
-Only local connections are allowed.</code></pre></div></li>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">chromedriver
+</code></pre></div></li>
+<li>
+<p><code>PATH</code>が正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。</p>
+</li>
 </ul>
-
-<p><kbd>Ctrl + C</kbd> を押すと、コマンドプロンプトの制御を取り戻すことができます。</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
+Only local connections are allowed.
+</code></pre></div><p><!-- raw HTML omitted -->Ctrl + C<!-- raw HTML omitted --> を押すと、コマンドプロンプトの制御を取り戻すことができます。</p>
 <h3 id="クイックリファレンス">クイックリファレンス</h3>
-
 <table>
 <thead>
 <tr>
@@ -2030,7 +2021,6 @@ Only local connections are allowed.</code></pre></div></li>
 <th>イシュートラッカー</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Chromium/Chrome</td>
@@ -2039,7 +2029,6 @@ Only local connections are allowed.</code></pre></div></li>
 <td><a href="//chromedriver.storage.googleapis.com/index.html">ダウンロード</a></td>
 <td><a href="//bugs.chromium.org/p/chromedriver/issues/list">イシュートラッカー</a></td>
 </tr>
-
 <tr>
 <td>Firefox</td>
 <td>Windows/macOS/Linux</td>
@@ -2047,15 +2036,13 @@ Only local connections are allowed.</code></pre></div></li>
 <td><a href="//github.com/mozilla/geckodriver/releases">ダウンロード</a></td>
 <td><a href="//github.com/mozilla/geckodriver/issues">イシュートラッカー</a></td>
 </tr>
-
 <tr>
 <td>Edge</td>
 <td>Windows 10</td>
 <td>Microsoft</td>
 <td><a href="//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">ダウンロード</a></td>
-<td><a href="//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;amp;q=webdriver">イシュートラッカー</a></td>
+<td><a href="//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver">イシュートラッカー</a></td>
 </tr>
-
 <tr>
 <td>Internet Explorer</td>
 <td>Windows</td>
@@ -2063,7 +2050,6 @@ Only local connections are allowed.</code></pre></div></li>
 <td><a href="//selenium-release.storage.googleapis.com/index.html">ダウンロード</a></td>
 <td><a href="//github.com/SeleniumHQ/selenium/labels/D-IE">イシュートラッカー</a></td>
 </tr>
-
 <tr>
 <td>Safari</td>
 <td>macOS El Capitan and newer</td>
@@ -2071,7 +2057,6 @@ Only local connections are allowed.</code></pre></div></li>
 <td>ビルトイン</td>
 <td><a href="//bugreport.apple.com/logon">イシュートラッカー</a></td>
 </tr>
-
 <tr>
 <td>Opera</td>
 <td>Windows/macOS/Linux</td>
@@ -2081,22 +2066,17 @@ Only local connections are allowed.</code></pre></div></li>
 </tr>
 </tbody>
 </table>
-
-<h3 id="chromium-chrome">Chromium/Chrome</h3>
-
+<h3 id="chromiumchrome">Chromium/Chrome</h3>
 <p>Chrome または Chromium を動かす場合、<a href="//sites.google.com/a/chromium.org/chromedriver/downloads">chromedriver</a> をダウンロードして、システムパスのフォルダに置いてください。</p>
-
 <p>LinuxまたはmacOSでは、これは <code>PATH</code> 環境変数を変更することを意味します。
 次のコマンドを実行すると、コロンで区切られたディレクトリがシステムのパスを構成していることがわかります。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ <span style="color:#b58900">echo</span> <span style="color:#268bd2">$PATH</span>
-/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin</code></pre></div>
-<p>まだパスを追加していない場合にchromedriverをパスに含めるには、chromedriverバイナリの親ディレクトリを必ず含めてください。
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+</code></pre></div><p>まだパスを追加していない場合にchromedriverをパスに含めるには、chromedriverバイナリの親ディレクトリを必ず含めてください。
 次の行は、 <code>PATH</code> 環境変数の現在のコンテンツに加えて、コロンの後に追加のパスを設定します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ <span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;</span><span style="color:#268bd2">$PATH</span><span style="color:#2aa198">:/path/to/chromedriver&#34;</span></code></pre></div>
-<p>パス上でchromedriverが使用可能な場合、任意のディレクトリから_chromedriver_実行可能ファイルを実行できるはずです。</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">$ <span style="color:#b58900">export</span> <span style="color:#268bd2">PATH</span><span style="color:#719e07">=</span><span style="color:#2aa198">&#34;</span><span style="color:#268bd2">$PATH</span><span style="color:#2aa198">:/path/to/chromedriver&#34;</span>
+</code></pre></div><p>パス上でchromedriverが使用可能な場合、任意のディレクトリから_chromedriver_実行可能ファイルを実行できるはずです。</p>
 <p>Chrome / Chromiumセッションをインスタンス化するには、次のとおり。</p>
-
 
 
 
@@ -2138,10 +2118,10 @@ Only local connections are allowed.</code></pre></div></li>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2211,10 +2191,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <p>chromedriver実行可能ファイルへのパスを設定する必要があることに注意してください。
 これは、次の行を使えば可能です。</p>
-
 
 
 
@@ -2256,7 +2234,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/chromedriver&#34;</span>);
+System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/path/to/chromedriver&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2303,18 +2281,13 @@ System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;
 </section>
 </div>
 </div>
-
 <p>chromedriverは、Chromeの内部自動化プロキシインターフェイスを公開することにより、ブラウザーに処理を指示するWebDriverリモートサーバーとして実装されています。</p>
-
 <h3 id="firefox">Firefox</h3>
-
 <p>Selenium 3以降、MozillaはFirefoxドライバーの実装である <a href="//github.com/mozilla/geckodriver">geckodriver</a> を引き継ぎました。
 Firefox用の新しいドライバーはgeckodriverと呼ばれ、Firefox 48以降で動作します。
 Firefox WebDriverは開発中であるため、Firefoxバージョンが新しいほどサポートが向上します。</p>
-
 <p>geckodriverはFirefoxを起動する新しいデフォルトの方法であるため、
 Selenium 2と同じ方法でFirefoxをインスタンス化できます。</p>
-
 
 
 
@@ -2356,10 +2329,10 @@ Selenium 2と同じ方法でFirefoxをインスタンス化できます。</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Firefox.FirefoxDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.Firefox.FirefoxDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2427,10 +2400,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <p>PATHを使用してgeckodriverの場所を設定しない場合は、
 geckodriverバイナリの場所をプログラムで設定します。</p>
-
 
 
 
@@ -2472,7 +2443,7 @@ geckodriverバイナリの場所をプログラムで設定します。</p>
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System.setProperty(<span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span>, <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span>);
+System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/path/to/geckodriver&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2522,20 +2493,16 @@ System.setProperty(<span style="color:#2aa198">&#34;webdriver.gecko.driver&#34;<
 </section>
 </div>
 </div>
-
 <p>実行時にプロパティを設定することも可能です。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mvn <span style="color:#b58900">test</span> -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/path/to/geckodriver</code></pre></div>
-<p>Firefox <a href="//ftp.mozilla.org/pub/firefox/releases/47.0.1/">47.0.1</a> または <a href="//ftp.mozilla.org/pub/firefox/releases/45.0esr/">45 ESR</a> をインストール、および <strong>marionette</strong> の必要な機能を <strong>false</strong> として指定することにより、多くの機能が完了した古いFirefoxドライバーに戻すことが可能です。
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mvn <span style="color:#b58900">test</span> -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/path/to/geckodriver
+</code></pre></div><p>Firefox <a href="//ftp.mozilla.org/pub/firefox/releases/47.0.1/">47.0.1</a> または <a href="//ftp.mozilla.org/pub/firefox/releases/45.0esr/">45 ESR</a> をインストール、および <strong>marionette</strong> の必要な機能を <strong>false</strong> として指定することにより、多くの機能が完了した古いFirefoxドライバーに戻すことが可能です。
 以降のFirefoxのリリースには互換性がありません。</p>
-
 <h3 id="edge">Edge</h3>
-
 <p>Edgeは、Microsoftの最新のブラウザーで、Windows 10およびServer 2016に含まれています。
 Edgeの更新は、主要なWindowsUpdateプログラムにバンドルされているため、現在インストールされているWindowsビルドのビルド番号に一致するバイナリをダウンロードする必要があります。
 <a href="//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/">Edge Developer サイト</a>には、利用可能なすべてのバイナリへのリンクが含まれています。
 EdgeDriverの実装に対するバグは、<a href="//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver">Microsoft</a>に起票する可能性があります。
 Edgeに対してテストを実行したいがWindows 10を実行していない場合、MicrosoftはEdge <a href="//developer.microsoft.com/en-us/microsoft-edge/tools/vms/">Edge Developer サイト</a>でテスター向けに無料のVMを提供しています。</p>
-
 
 
 
@@ -2577,10 +2544,10 @@ Edgeに対してテストを実行したいがWindows 10を実行していない
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.edge.EdgeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.edge.EdgeDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> EdgeDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> EdgeDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2648,9 +2615,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <p>Edgeドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。</p>
-
 
 
 
@@ -2692,7 +2657,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System.setProperty(<span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/MicrosoftWebDriver.exe&#34;</span>);
+System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;C:/path/to/MicrosoftWebDriver.exe&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2747,16 +2712,12 @@ System.setProperty(<span style="color:#2aa198">&#34;webdriver.edge.driver&#34;</
 </section>
 </div>
 </div>
-
 <h3 id="internet-explorer">Internet Explorer</h3>
-
 <p>Internet Explorerは、Windows 10まではMicrosoftのデフォルトのブラウザーでしたが、Windows 10にはまだ含まれています。
 Internet ExplorerドライバーはSeleniumプロジェクトは、同じリリースの<a href="//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer">Microsoftの現在の考慮</a>をサポートすることを目指す唯一のドライバーです。
 古いリリースは動作する可能性がありますが、サポートされません。</p>
-
 <p>SeleniumプロジェクトはInternet Explorerの32ビット版と64ビット版の両方のバイナリを提供しますが、64ビットドライバーを使用するInternet Explorer 10および11にはいくつかの<a href="//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html">制限</a>がありますが、32ビットドライバーの使うことでうまく機能します。
 ログインしたユーザーのアカウントに対してInternet Explorerの設定が保存されるため、<a href="//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration">追加の設定が必要になること</a>に注意してください。</p>
-
 
 
 
@@ -2798,10 +2759,10 @@ Internet ExplorerドライバーはSeleniumプロジェクトは、同じリリ�
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.ie.InternetExplorerDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> InternetExplorerDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2869,9 +2830,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <p>Internet Explorerドライバーがパスに存在しない場合、次の行を使用してパスを設定できます。</p>
-
 
 
 
@@ -2913,7 +2872,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-System.setProperty(<span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</span>, <span style="color:#2aa198">&#34;C:/path/to/IEDriver.exe&#34;</span>);
+System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;C:/path/to/IEDriver.exe&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2968,16 +2927,11 @@ System.setProperty(<span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</sp
 </section>
 </div>
 </div>
-
 <p>Microsoftは、<a href="//www.microsoft.com/en-gb/download/details.aspx?id=44069">Internet Explorer 11 on Windows 7 &amp; 8.1</a>上のInternet Explorer 11用のWebDriverバイナリも提供しています。
 2014年以降更新されておらず、W3仕様のドラフトバージョンに基づいています。 <a href="//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html">ジム エバンス</a>は、Microsoftの実装に関する優れた記事を持っています。</p>
-
 <h3 id="opera">Opera</h3>
-
 <p>Operaの現在のリリースはChromiumエンジンの上に構築されており、WebDriverは<a href="#adding-executables-to-your-path">PATHに追加</a>したりシステムプロパティとして追加したりできるクローズドソースの<a href="//github.com/operasoftware/operachromiumdriver/releases">Opera Chromium Driver</a>を介してサポートされるようになりました。</p>
-
 <p>ドライバーセッションのインスタンス化は、FirefoxとChromiumに似ています。</p>
-
 
 
 
@@ -3019,10 +2973,10 @@ System.setProperty(<span style="color:#2aa198">&#34;webdriver.ie.driver&#34;</sp
 
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.opera.OperaDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.opera.OperaDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> OperaDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> OperaDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -3091,24 +3045,20 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h3 id="safari">Safari</h3>
-
-<p>High Sierra 以降 :
-* まず端末から次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">safaridriver --enable</code></pre></div>
-<p>El Capitan と Sierra :</p>
-
+<p>High Sierra 以降 :</p>
+<ul>
+<li>まず端末から次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">safaridriver --enable
+</code></pre></div><p>El Capitan と Sierra :</p>
 <ul>
 <li>Safariの設定から開発メニューを有効にします</li>
 <li>開発メニューから <em>リモート オートメーションを許可</em> オプションをオンにします</li>
-
-<li><p>まずターミナルから次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/bin/safaridriver -p <span style="color:#2aa198">1337</span>&lt;/</code></pre></div></li>
+<li>まずターミナルから次のコマンドを実行し、プロンプトでパスワードを入力してWebDriverを認証します</li>
 </ul>
-
-<p>その後、次を使用してドライバーセッションを開始できます。</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">/usr/bin/safaridriver -p 1337&lt;/
+</code></pre></div><p>その後、次を使用してドライバーセッションを開始できます。</p>
 
 
 
@@ -3150,10 +3100,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode10" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.safari.SafariDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.safari.SafariDriver<span style="color:#719e07">;</span>
 
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SafariDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SafariDriver<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -3221,21 +3171,15 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <p>iOSでSafariを自動化する場合は、<a href="//appium.io/">Appium project</a>をご覧ください。
 Safariは以前はWindowsで利用可能でしたが、Appleは長い間サポートを終了しており、テストプラットフォームの選択肢としては不適切です。</p>
-
 <h2 id="モック-ブラウザー">モック ブラウザー</h2>
-
 <h3 id="htmlunit">HtmlUnit</h3>
-
 <p>HtmlUnitは &ldquo;Javaプログラム用のGUIレスブラウザー&rdquo; です。 HTMLドキュメントをモデル化し、ページの呼び出し、フォームへの入力、リンクのクリックなどを可能にするAPIを提供します。
 JavaScriptをサポートしており、AJAXライブラリを使用して、使用する設定に応じてChrome、Firefox、またはInternet Explorerをシミュレートできます。
 <a href="http://htmlunit.sourceforge.net/gettingStarted.html">新しい場所</a>に移動しました。
 ソースはsvnで管理されています。</p>
-
 <h3 id="phantomjs">PhantomJS</h3>
-
 <p>PhantomJSは、Google ChromeまたはSafariで使用されているバージョンよりもはるかに古いバージョンですが、Webkitベースのヘッドレスブラウザーです。
 歴史的に人気のある選択肢でしたが、今ではPhantomJSを避ける​​のが賢明です。
 プロジェクトは<a href="//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE">8月5日以降</a>メンテナンスされていないため、Webの変更は継続されますが、PhantomJSは更新されません。これは、GoogleがChromeをヘッドレスで実行する機能を発表した後のことで、MozillaのFirefoxでも提供されています。</p>
@@ -3248,7 +3192,7 @@ JavaScriptをサポートしており、AJAXライブラリを使用して、使
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/driver_requirements/">
       “ドライバー要件”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4413,19 +4357,19 @@ JavaScriptをサポートしており、AJAXライブラリを使用して、使
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379916"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

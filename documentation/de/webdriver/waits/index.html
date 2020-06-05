@@ -11,20 +11,20 @@
     <title>Waits :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1591379901" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1591393145" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1591393145" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1591379901" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1591393145" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1591379901"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1591393145"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1591379901"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1591379901"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1591393145"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1591393145"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1591379901"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1591393145"></script>
 
     
   </div>
@@ -1921,18 +1921,16 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#explicit-wait">Explicit wait</a>
-<ul>
-<li><a href="#options">Options</a></li>
-<li><a href="#expected-conditions">Expected conditions</a></li>
-</ul></li>
-<li><a href="#implicit-wait">Implicit wait</a></li>
-<li><a href="#fluentwait">FluentWait</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#explicit-wait">Explicit wait</a>
+      <ul>
+        <li><a href="#options">Options</a></li>
+        <li><a href="#expected-conditions">Expected conditions</a></li>
+      </ul>
+    </li>
+    <li><a href="#implicit-wait">Implicit wait</a></li>
+    <li><a href="#fluentwait">FluentWait</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1957,10 +1955,8 @@
 
 
 
-
-
 <p>
-<div class="notices info" ><p><i class="fas fa-language"></i> Diese Seite wird von Englisch
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Diese Seite wird von Englisch
 auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
 zu übersetzen indem Du uns einen Pull Reqeust schickst!</p>
 </div>
@@ -1971,7 +1967,6 @@ Because it is an out-of-process library that
 and because the web platform has an intrinsically asynchronous nature,
 WebDriver does not track the active, real-time state of the DOM.
 This comes with some challenges that we will discuss here.</p>
-
 <p>From experience,
 most intermittent issues that arise from use of Selenium and WebDriver
 are connected to <em>race conditions</em> that occur between
@@ -1979,7 +1974,6 @@ the browser and the user&rsquo;s instructions.
 An example could be that the user instructs the browser to navigate to a page,
 then gets a <strong>no such element</strong> error
 when trying to find an element.</p>
-
 <p>Consider the following document:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#719e07">&lt;!doctype html&gt;</span>
 &lt;<span style="color:#268bd2">meta</span> charset<span style="color:#719e07">=</span><span style="color:#2aa198">utf-8</span>&gt;
@@ -1993,9 +1987,8 @@ when trying to find an element.</p>
     <span style="color:#b58900">document</span>.body.appendChild(newElement);
     initialised <span style="color:#719e07">=</span> <span style="color:#cb4b16">true</span>;
   });
-&lt;/<span style="color:#268bd2">script</span>&gt;</code></pre></div>
-<p>The WebDriver instructions might look innocent enough:</p>
-
+&lt;/<span style="color:#268bd2">script</span>&gt;
+</code></pre></div><p>The WebDriver instructions might look innocent enough:</p>
 
 
 
@@ -2037,9 +2030,9 @@ when trying to find an element.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.get(<span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span>);
-WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>));
-assertEquals(element.getText(), <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>);
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;file:///race_condition.html&#34;</span><span style="color:#719e07">);</span>
+WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;p&#34;</span><span style="color:#719e07">));</span>
+assertEquals<span style="color:#719e07">(</span>element<span style="color:#719e07">.</span>getText<span style="color:#719e07">(),</span> <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2106,7 +2099,6 @@ assert(element.text == <span style="color:#2aa198">&#34;Hello from JavaScript!&#
 </section>
 </div>
 </div>
-
 <p>The issue here is that the default
 <a href="https://selenium.dev/documentation/de/webdriver/page_loading_strategy/">page load strategy</a>
 used in WebDriver listens for the <code>document.readyState</code>
@@ -2117,32 +2109,27 @@ this WebDriver script <em>might</em> be intermittent.
 It “might” be intermittent because no guarantees can be made
 about elements or events that trigger asynchronously
 without explicitly waiting—or blocking—on those events.</p>
-
 <p>Fortunately, the normal instruction set available on
 the <a href="https://selenium.dev/documentation/de/webdriver/web_element/"><em>WebElement</em></a> interface—such
- as <em>WebElement.click</em> and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls will not return
- (or the callback will not trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- <a href="https://selenium.dev/documentation/de/webdriver/keyboard/"><em>Keyboard</em></a>
- and <a href="https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/"><em>Mouse</em></a>,
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.</p>
-
+as <em>WebElement.click</em> and <em>WebElement.sendKeys</em>—are
+guaranteed to be synchronous,
+in that the function calls will not return
+(or the callback will not trigger in callback-style languages)
+until the command has been completed in the browser.
+The advanced user interaction APIs,
+<a href="https://selenium.dev/documentation/de/webdriver/keyboard/"><em>Keyboard</em></a>
+and <a href="https://selenium.dev/documentation/de/support_packages/mouse_and_keyboard_actions_in_detail/"><em>Mouse</em></a>,
+are exceptions as they are explicitly intended as
+“do what I say” asynchronous commands.</p>
 <p>Waiting is having the automated task execution
 elapse a certain amount of time before continuing with the next step.</p>
-
 <p>To overcome the problem of race conditions
 between the browser and your WebDriver script,
 most Selenium clients ship with a <em>wait</em> package.
 When employing a wait,
 you are using what is commonly referred to
 as an <a href="#explicit-wait"><em>explicit wait</em></a>.</p>
-
 <h2 id="explicit-wait">Explicit wait</h2>
-
 <p><em>Explicit waits</em> are available to Selenium clients
 for imperative, procedural languages.
 They allow your code to halt program execution,
@@ -2152,16 +2139,13 @@ The condition is called with a certain frequency
 until the timeout of the wait is elapsed.
 This means that for as long as the condition returns a falsy value,
 it will keep trying and waiting.</p>
-
 <p>Since explicit waits allow you to wait for a condition to occur,
 they make a good fit for synchronising the state between the browser and its DOM,
 and your WebDriver script.</p>
-
 <p>To remedy our buggy instruction set from earlier,
 we could employ a wait to have the <em>findElement</em> call
 wait until the dynamically added element from the script
 has been added to the DOM:</p>
-
 
 
 
@@ -2203,14 +2187,14 @@ has been added to the DOM:</p>
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-driver.get(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
-driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
 <span style="color:#586e75">// Initialize and wait till element(link) became clickable - timeout in 10 seconds
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">firstResult</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(10))
-        .until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
+</span><span style="color:#586e75"></span>WebElement firstResult <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>10<span style="color:#719e07">))</span>
+        <span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>elementToBeClickable<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>xpath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;//a/h3&#34;</span><span style="color:#719e07">)));</span>
 <span style="color:#586e75">// Print the first result
-</span><span style="color:#586e75"></span>System.out.println(firstResult.getText());
+</span><span style="color:#586e75"></span>System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>firstResult<span style="color:#719e07">.</span>getText<span style="color:#719e07">());</span>
   </code></pre></div>
 </section>
   
@@ -2298,7 +2282,6 @@ driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).send
 </section>
 </div>
 </div>
-
 <p>We pass in the <em>condition</em> as a function reference
 that the <em>wait</em> will run repeatedly until its return value is truthy.
 A “truthful” return value is anything that evaluates to boolean true
@@ -2308,11 +2291,9 @@ or a populated (non-empty) sequence or list.
 That means an <em>empty list</em> evaluates to false.
 When the condition is truthful and the blocking wait is aborted,
 the return value from the condition becomes the return value of the wait.</p>
-
 <p>With this knowledge,
 and because the wait utility ignores <em>no such element</em> errors by default,
 we can refactor our instructions to be more concise:</p>
-
 
 
 
@@ -2354,9 +2335,9 @@ we can refactor our instructions to be more concise:</p>
 
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(3))
-          .until(driver <span style="color:#719e07">-&gt;</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)));
-assertEquals(foo.getText(), <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span>); 
+WebElement foo <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>3<span style="color:#719e07">))</span>
+          <span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>driver <span style="color:#719e07">-&gt;</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)));</span>
+assertEquals<span style="color:#719e07">(</span>foo<span style="color:#719e07">.</span>getText<span style="color:#719e07">(),</span> <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;</span><span style="color:#719e07">);</span> 
   </code></pre></div>
 </section>
   
@@ -2421,7 +2402,6 @@ assert(ele.text == <span style="color:#2aa198">&#34;Hello from JavaScript!&#34;<
 </section>
 </div>
 </div>
-
 <p>In that example, we pass in an anonymous function
 (but we could also define it explicitly as we did earlier so it may be reused).
 The first and only argument that is passed to our condition
@@ -2430,25 +2410,19 @@ is always a reference to our driver object, <em>WebDriver</em>
 In a multi-threaded environment, you should be careful
 to operate on the driver reference passed in to the condition
 rather than the reference to the driver in the outer scope.</p>
-
 <p>Because the wait will swallow <em>no such element</em> errors
 that are raised when the element is not found,
 the condition will retry until the element is found.
 Then it will take the return value, a <em>WebElement</em>,
 and pass it back through to our script.</p>
-
 <p>If the condition fails,
 e.g. a truthful return value from the condition is never reached,
 the wait will throw/raise an error/exception called a <em>timeout error</em>.</p>
-
 <h3 id="options">Options</h3>
-
 <p>The wait condition can be customised to match your needs.
 Sometimes it is unnecessary to wait the full extent of the default timeout,
 as the penalty for not hitting a successful condition can be expensive.</p>
-
 <p>The wait lets you pass in an argument to override the timeout:</p>
-
 
 
 
@@ -2490,7 +2464,7 @@ as the penalty for not hitting a successful condition can be expensive.</p>
 
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToBeClickable(By.xpath(<span style="color:#2aa198">&#34;//a/h3&#34;</span>)));
+<span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>3<span style="color:#719e07">)).</span>until<span style="color:#719e07">(</span>ExpectedConditions<span style="color:#719e07">.</span>elementToBeClickable<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>xpath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;//a/h3&#34;</span><span style="color:#719e07">)));</span>
   </code></pre></div>
 </section>
   
@@ -2539,20 +2513,15 @@ WebDriverWait(driver, Duration.ofSeconds(<span style="color:#2aa198">3</span>)).
 </section>
 </div>
 </div>
-
 <h3 id="expected-conditions">Expected conditions</h3>
-
 <p>Because it is quite a common occurrence
 to have to synchronise the DOM and your instructions,
 most clients also come with a set of predefined <em>expected conditions</em>.
 As might be obvious by the name,
 they are conditions that are predefined for frequent wait operations.</p>
-
 <p>The conditions available in the different language bindings vary,
 but this is a non-exhaustive list of a few:</p>
-
-<!-- TODO(ato): Fill in -->
-
+<!-- raw HTML omitted -->
 <ul>
 <li>alert is present</li>
 <li>element exists</li>
@@ -2562,44 +2531,36 @@ but this is a non-exhaustive list of a few:</p>
 <li>element staleness</li>
 <li>visible text</li>
 </ul>
-
 <p>You can refer to the API documentation for each client binding
 to find an exhaustive list of expected conditions:</p>
-
 <ul>
 <li>Java&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html">org.openqa.selenium.support.ui.ExpectedConditions</a> class</li>
 <li>Python&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected">selenium.webdriver.support.expected_conditions</a> class</li>
 <li>.NET&rsquo;s <a href="//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm">OpenQA.Selenium.Support.UI.ExpectedConditions</a> type</li>
 </ul>
-
 <h2 id="implicit-wait">Implicit wait</h2>
-
 <p>There is a second type of wait that is distinct from
 <a href="#explicit-wait">explicit wait</a> called <em>implicit wait</em>.
 By implicitly waiting, WebDriver polls the DOM
 for a certain duration when trying to find <em>any</em> element.
 This can be useful when certain elements on the webpage
 are not available immediately and need some time to load.</p>
-
 <p>Implicit waiting for elements to appear is disabled by default
 and will need to be manually enabled on a per-session basis.
 Mixing <a href="#explicit-wait">explicit waits</a> and implicit waits
 will cause unintended consequences, namely waits sleeping for the maximum
 time even if the element is available or condition is true.</p>
-
 <p><em>Warning:</em>
 Do not mix implicit and explicit waits.
 Doing so can cause unpredictable wait times.
 For example, setting an implicit wait of 10 seconds
 and an explicit wait of 15 seconds
 could cause a timeout to occur after 20 seconds.</p>
-
 <p>An implicit wait is to tell WebDriver to poll the DOM
 for a certain amount of time when trying to find an element or elements
 if they are not immediately available.
 The default setting is 0, meaning disabled.
 Once set, the implicit wait is set for the life of the session.</p>
-
 
 
 
@@ -2641,10 +2602,10 @@ Once set, the implicit wait is set for the life of the session.</p>
 
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-driver.get(<span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span>);
-WebElement <span style="color:#268bd2">myDynamicElement</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;myDynamicElement&#34;</span>));
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>timeouts<span style="color:#719e07">().</span>implicitlyWait<span style="color:#719e07">(</span>10<span style="color:#719e07">,</span> TimeUnit<span style="color:#719e07">.</span>SECONDS<span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://somedomain/url_that_delays_loading&#34;</span><span style="color:#719e07">);</span>
+WebElement myDynamicElement <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myDynamicElement&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2719,15 +2680,11 @@ driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;h
 </section>
 </div>
 </div>
-
 <h2 id="fluentwait">FluentWait</h2>
-
 <p>FluentWait instance defines the maximum amount of time to wait for a condition,
 as well as the frequency with which to check the condition.</p>
-
 <p>Users may configure the wait to ignore specific types of exceptions whilst waiting,
 such as <code>NoSuchElementException</code> when searching for an element on the page.</p>
-
 
 
 
@@ -2771,16 +2728,16 @@ such as <code>NoSuchElementException</code> when searching for an element on the
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Waiting 30 seconds for an element to be present on the page, checking
 </span><span style="color:#586e75">// for its presence once every 5 seconds.
-</span><span style="color:#586e75"></span>Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FluentWait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span>(driver)
-  .withTimeout(Duration.ofSeconds(30))
-  .pollingEvery(Duration.ofSeconds(5))
-  .ignoring(NoSuchElementException.class);
+</span><span style="color:#586e75"></span>Wait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;</span> wait <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FluentWait<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">&gt;(</span>driver<span style="color:#719e07">)</span>
+  <span style="color:#719e07">.</span>withTimeout<span style="color:#719e07">(</span>Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>30<span style="color:#719e07">))</span>
+  <span style="color:#719e07">.</span>pollingEvery<span style="color:#719e07">(</span>Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>5<span style="color:#719e07">))</span>
+  <span style="color:#719e07">.</span>ignoring<span style="color:#719e07">(</span>NoSuchElementException<span style="color:#719e07">.</span>class<span style="color:#719e07">);</span>
 
-WebElement <span style="color:#268bd2">foo</span> <span style="color:#719e07">=</span> wait.until(<span style="color:#719e07">new</span> Function<span style="color:#719e07">&lt;</span>WebDriver, WebElement<span style="color:#719e07">&gt;</span>() {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">WebElement</span> apply(WebDriver <span style="color:#268bd2">driver</span>) {
-    <span style="color:#719e07">return</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;foo&#34;</span>));
-  }
-});
+WebElement foo <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Function<span style="color:#719e07">&lt;</span>WebDriver<span style="color:#719e07">,</span> WebElement<span style="color:#719e07">&gt;()</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> WebElement <span style="color:#268bd2">apply</span><span style="color:#719e07">(</span>WebDriver driver<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">return</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;foo&#34;</span><span style="color:#719e07">));</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">});</span>
   </code></pre></div>
 </section>
   
@@ -2871,7 +2828,7 @@ exception <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selen
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/webdriver/waits/">
       “Waits”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4036,19 +3993,19 @@ exception <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selen
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1591379902"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1591393145"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1591379902"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1591379902"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1591393145"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1591393145"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1591379902" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1591379902"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1591393145" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1591393145"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

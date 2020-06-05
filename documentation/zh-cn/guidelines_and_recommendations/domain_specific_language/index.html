@@ -11,20 +11,20 @@
     <title>领域特定语言 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379911" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379911" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379911"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,13 +1921,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#好处">好处</a></li>
-<li><a href="#java">Java</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#好处">好处</a></li>
+    <li><a href="#java">Java</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1952,81 +1949,72 @@
 
 
 
-
-
 <p>领域特定语言 (DSL) 是一种为用户提供解决问题的表达方式的系统.
 它使用户可以按照自己的术语与系统进行交互, 而不仅仅是通过程序员的语言.</p>
-
 <p>您的用户通常并不关心您网站的外观.
 他们不在乎装饰, 动画或图形.
 他们希望借助于您的系统, 以最小的难度使新员工融入整个流程；
 他们想预订去阿拉斯加的旅行；
 他们想以折扣价配置和购买独角兽.
-您作为测试人员的工作应尽可能接近&rdquo;捕捉”这种思维定势.
-考虑到这一点, 我们开始着手&rdquo;建模”您正在工作的应用程序,
+您作为测试人员的工作应尽可能接近&quot;捕捉”这种思维定势.
+考虑到这一点, 我们开始着手&quot;建模”您正在工作的应用程序,
 以使测试脚本 (发布前用户仅有的代理) &ldquo;说话”并代表用户.</p>
-
 <p>在Selenium中, DSL通常由方法表示,
 其编写方式使API简单易读-它们使开发人员和干系人
- (用户, 产品负责人, 商业智能专家等) 之间能够产生汇报.</p>
-
+(用户, 产品负责人, 商业智能专家等) 之间能够产生汇报.</p>
 <h2 id="好处">好处</h2>
-
 <ul>
 <li><strong>可读:</strong> 业务关系人可以理解.</li>
 <li><strong>可写:</strong> 易于编写, 避免不必要的重复.</li>
 <li><strong>可扩展:</strong> 可以 (合理地) 添加功能而无需打破约定以及现有功能.</li>
 <li><strong>可维护:</strong> 通过将实现细节排除在测试用例之外, 您可以很好地隔离 AUT* 的修改.</li>
 </ul>
-
 <h2 id="java">Java</h2>
-
 <p>以下是Java中合理的DSL方法的示例.
 为简便起见, 假定 <code>driver</code> 对象是预定义的并且可用于该方法.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/**
 </span><span style="color:#586e75"> * Takes a username and password, fills out the fields, and clicks &#34;login&#34;.
 </span><span style="color:#586e75"> * @return An instance of the AccountPage
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">AccountPage</span> loginAsUser(String <span style="color:#268bd2">username</span>, String <span style="color:#268bd2">password</span>) {
-  WebElement <span style="color:#268bd2">loginField</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;loginField&#34;</span>));
-  loginField.clear();
-  loginField.sendKeys(username);
+<span style="color:#268bd2">public</span> AccountPage <span style="color:#268bd2">loginAsUser</span><span style="color:#719e07">(</span>String username<span style="color:#719e07">,</span> String password<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+  WebElement loginField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;loginField&#34;</span><span style="color:#719e07">));</span>
+  loginField<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
+  loginField<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span>username<span style="color:#719e07">);</span>
 
   <span style="color:#586e75">// Fill out the password field. The locator we&#39;re using is &#34;By.id&#34;, and we should
 </span><span style="color:#586e75"></span>  <span style="color:#586e75">// have it defined elsewhere in the class.
-</span><span style="color:#586e75"></span>  WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>));
-  passwordField.clear();
-  passwordField.sendKeys(password);
+</span><span style="color:#586e75"></span>  WebElement passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">));</span>
+  passwordField<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
+  passwordField<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span>password<span style="color:#719e07">);</span>
 
   <span style="color:#586e75">// Click the login button, which happens to have the id &#34;submit&#34;.
-</span><span style="color:#586e75"></span>  driver.findElement(By.id(<span style="color:#2aa198">&#34;submit&#34;</span>)).click();
+</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;submit&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
   <span style="color:#586e75">// Create and return a new instance of the AccountPage (via the built-in Selenium
 </span><span style="color:#586e75"></span>  <span style="color:#586e75">// PageFactory).
-</span><span style="color:#586e75"></span>  <span style="color:#719e07">return</span> PageFactory.newInstance(AccountPage.class);
-}</code></pre></div>
-<p>此方法完全从测试代码中抽象出输入字段, 按钮, 单击甚至页面的概念.
+</span><span style="color:#586e75"></span>  <span style="color:#719e07">return</span> PageFactory<span style="color:#719e07">.</span>newInstance<span style="color:#719e07">(</span>AccountPage<span style="color:#719e07">.</span>class<span style="color:#719e07">);</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>此方法完全从测试代码中抽象出输入字段, 按钮, 单击甚至页面的概念.
 使用这种方法, 测试人员要做的就是调用此方法.
 这给您带来了维护方面的优势: 如果登录字段曾经更改过,
 则只需更改此方法-而非您的测试.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> loginTest() {
-    loginAsUser(<span style="color:#2aa198">&#34;cbrown&#34;</span>, <span style="color:#2aa198">&#34;cl0wn3&#34;</span>);
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">loginTest</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+    loginAsUser<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cbrown&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cl0wn3&#34;</span><span style="color:#719e07">);</span>
 
     <span style="color:#586e75">// Now that we&#39;re logged in, do some other stuff--since we used a DSL to support
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// our testers, it&#39;s as easy as choosing from available methods.
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">do</span>.something();
-    <span style="color:#719e07">do</span>.somethingElse();
-    Assert.assertTrue(<span style="color:#2aa198">&#34;Something should have been done!&#34;</span>, something.wasDone());
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">do</span><span style="color:#719e07">.</span>something<span style="color:#719e07">();</span>
+    <span style="color:#719e07">do</span><span style="color:#719e07">.</span>somethingElse<span style="color:#719e07">();</span>
+    Assert<span style="color:#719e07">.</span>assertTrue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Something should have been done!&#34;</span><span style="color:#719e07">,</span> something<span style="color:#719e07">.</span>wasDone<span style="color:#719e07">());</span>
 
     <span style="color:#586e75">// Note that we still haven&#39;t referred to a button or web control anywhere in this
 </span><span style="color:#586e75"></span>    <span style="color:#586e75">// script...
-</span><span style="color:#586e75"></span>}</code></pre></div>
-<p>郑重强调: 您的主要目标之一应该是编写一个API,
+</span><span style="color:#586e75"></span><span style="color:#719e07">}</span>
+</code></pre></div><p>郑重强调: 您的主要目标之一应该是编写一个API,
 该API允许您的测试解决 <strong>当前的问题, 而不是UI的问题</strong>.
 用户界面是用户的次要问题–用户并不关心用户界面, 他们只是想完成工作.
 您的测试脚本应该像用户希望做的事情以及他们想知道的事情的完整清单那样易于阅读.
 测试不应该考虑UI如何要求您去做.</p>
-
 <p>*<strong>AUT</strong>: 待测系统</p>
 
 
@@ -2037,7 +2025,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/">
       “领域特定语言”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3202,19 +3190,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379911" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379911"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -144,7 +144,7 @@
 <link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
 <body>
 <section class="hero">
-    <a href="/blog"><h1>Selenium Blog - (tags-maven)</h1></a>
+    <a href="/blog"><h1>Selenium Blog - (tagsmaven)</h1></a>
 </section>
 <div class="blog-container">
     <div class="blog-content">
@@ -152,8 +152,7 @@
         <div class="container dark-background">
             Tuesday, January 25, 2011 by <a href="https://twitter.com/shs96c">shs96c</a>
             <a href="https://selenium.dev/blog/2011/2-0b1-and-maven/"><h2>2.0b1 and Maven</h2></a>
-            If you&#8217;re using Maven and the 2.0b1 release of Selenium, you may be running into some problems getting maven to pick up your tests. The underlying problem is that selenium contains support classes for both JUnit and TestNG. The solution is to add this to your pom.xml
-&lt;dependency&gt; &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt; &lt;artifactId&gt;selenium&lt;/artifactId&gt; &lt;version&gt;2.0b1&lt;/version&gt; &lt;exclusions&gt; &lt;exclusion&gt; &lt;groupId&gt;org.testng&lt;/groupId&gt; &lt;artifactId&gt;testng&lt;/artifactId&gt; &lt;/exclusion&gt; &lt;/exclusions&gt; &lt;/dependency&gt;
+            
             
             
 
@@ -184,12 +183,7 @@
         <div class="container dark-background">
             Friday, July 30, 2010 by <a href="https://twitter.com/MichaelTamm">Michael Tamm</a>
             <a href="https://selenium.dev/blog/2010/how-to-use-selenium-2-with-maven/"><h2>How to use Selenium 2 with Maven</h2></a>
-            There are several ways to use Selenium 2:
- If you don&#8217;t have Selenium 1.x legacy code, you might want to directly use on of the new WebDriver implemenations like ChromeDriver, HtmlUnitDriver, FirefoxDriver, or InternetExplorerDriver which provide a nice, small and easy to learn API. If you have Selenium 1.x legacy code, you can still use the well known DefaultSelenium class or the new WebDriverBackedSelenium, which extends DefaultSelenium but uses one of the WebDriver implementations internally.
             
-            <div>
-                <a href="/blog/2010/how-to-use-selenium-2-with-maven/">Read more…</a>
-            </div>
             
             
 

@@ -11,20 +11,20 @@
     <title>パフォーマンステスト :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379917" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379917" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379917" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379917"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379917"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379917"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379917"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393152"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1946,18 +1946,14 @@
 
 <p>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。
 それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。</p>
-
 <p>ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。
 たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。</p>
-
 <p>他の潜在的な魅力は &ldquo;時間の節約&rdquo; です。
 機能テストとパフォーマンステストを同時に実行します。
 ただし、機能テストとパフォーマンステストには反対の目的があります。
 機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。</p>
-
 <p>Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。
 このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。</p>
-
 <p>使用する（オープンソース）パッケージの例は次のとおりです。: <a href="//jmeter.apache.org/">JMeter</a></p>
 
 
@@ -1968,7 +1964,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/worst_practices/performance_testing/">
       “パフォーマンステスト”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3133,19 +3129,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379917"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379917"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379917"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379917" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379917"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

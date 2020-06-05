@@ -27,7 +27,7 @@ Il permet aux utilisateurs de simuler les activités courantes effectuées par l
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
-      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&amp;rsquo;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
+      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&#39;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
 Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au sélénium, sont cependant coûteux à exécuter. En outre, ils nécessitent généralement une infrastructure substantielle être en place pour fonctionner efficacement. C&amp;rsquo;est une bonne règle de toujours se demander si ce que l&amp;rsquo;on veut tester peut être fait en utilisant des approches de test plus légères telles que des tests unitaires ou avec une approche de niveau inférieur.</description>
     </item>
     
@@ -37,8 +37,9 @@ Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
-      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si une fonctionnalité ou un système répond aux attentes et exigences du client. Ce type de test implique généralement le client la coopération ou la rétroaction, étant une activité de validation qui répond à la question: &amp;gt; Construisons-nous le produit non?.
-Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur.</description>
+      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si une fonctionnalité ou un système répond aux attentes et exigences du client. Ce type de test implique généralement le client la coopération ou la rétroaction, étant une activité de validation qui répond à la question:
+ Construisons-nous le produit non?.
+ Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur.</description>
     </item>
     
     <item>

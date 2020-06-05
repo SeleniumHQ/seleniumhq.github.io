@@ -1,5 +1,0 @@
-<h5 class="meta-data">
-    <a href="{{ .Permalink }}">
-      “{{ .Title }}”
-    </a> was last updated on: {{ .Lastmod.Format "02 Jan 2006 15:04:05 -0700" }}{{ with .GitInfo }}: <a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}
-</h5>

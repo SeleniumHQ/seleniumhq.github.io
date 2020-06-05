@@ -40,7 +40,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <guid>https://selenium.dev/documentation/de/legacy_docs/html-runner/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
  Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
-Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere.</description>
+Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor).</description>
     </item>
     
     <item>

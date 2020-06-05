@@ -11,20 +11,20 @@
     <title>Trabajando con colores :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1950,11 +1950,8 @@ no son constantes.
 ¿No estaría bien que existiese una forma sencilla de comparar una
 representación de color HEX con una representación de color RGB, o una
 representación de color RGBA con una representación de color HSLA?</p>
-
 <p>No te preocupes. Hay una solución para esto, la clase <em>Color</em></p>
-
 <p>Lo primero de todo, necesitaras importar la clase:</p>
-
 
 
 
@@ -1996,7 +1993,7 @@ representación de color RGBA con una representación de color HSLA?</p>
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.Color;
+<span style="color:#719e07">import</span> org.openqa.selenium.support.Color<span style="color:#719e07">;</span>
   </code></pre></div>
 </section>
   
@@ -2041,13 +2038,10 @@ representación de color RGBA con una representación de color HSLA?</p>
 </section>
 </div>
 </div>
-
 <p>Ahora puedes empezar a crear objetos de la clase <em>Color</em>.
 Cada objeto necesita ser creado a partir de la representación de una cadena de
 texto de tu color.</p>
-
 <p>Las representaciones de colores soportadas son:</p>
-
 
 
 
@@ -2089,13 +2083,13 @@ texto de tu color.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">HEX_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;#2F7ED8&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">RGB_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;rgb(255, 255, 255)&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">RGB_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;rgb(40%, 20%, 40%)&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">RGBA_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;rgba(255, 255, 255, 0.5)&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">RGBA_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;rgba(40%, 20%, 40%, 0.5)&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">HSL_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;hsl(100, 0%, 50%)&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">HSLA_COLOUR</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;hsla(100, 0%, 50%, 0.5)&#34;</span>);
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HEX_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#2F7ED8&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(255, 255, 255)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGB_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(40%, 20%, 40%)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(255, 255, 255, 0.5)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color RGBA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(40%, 20%, 40%, 0.5)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HSL_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hsl(100, 0%, 50%)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HSLA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hsla(100, 0%, 50%, 0.5)&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2160,11 +2154,9 @@ HSLA_COLOUR <span style="color:#719e07">=</span> Color<span style="color:#719e07
 </section>
 </div>
 </div>
-
 <p>La clase <em>Color</em> también soporta todas las definiciones base de colores
 especificadas en
 <a href="//www.w3.org/TR/css3-color/#html4">http://www.w3.org/TR/css3-color/#html4</a>.</p>
-
 
 
 
@@ -2206,9 +2198,9 @@ especificadas en
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">BLACK</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;black&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">CHOCOLATE</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;chocolate&#34;</span>);
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">HOTPINK</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;hotpink&#34;</span>);
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color BLACK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;black&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color CHOCOLATE <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;chocolate&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color HOTPINK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;hotpink&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2261,11 +2253,9 @@ HOTPINK <span style="color:#719e07">=</span> Color<span style="color:#719e07">.<
 </section>
 </div>
 </div>
-
 <p>En muchas ocasiones los navegadores devolverán un valor de color de transparente
 si no se ha establecido color en el elemento.
 La clase <em>Color</em> también soporta esto:</p>
-
 
 
 
@@ -2307,7 +2297,7 @@ La clase <em>Color</em> también soporta esto:</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color <span style="color:#268bd2">TRANSPARENT</span> <span style="color:#719e07">=</span> Color.fromString(<span style="color:#2aa198">&#34;transparent&#34;</span>);
+<span style="color:#268bd2">private</span> <span style="color:#268bd2">final</span> Color TRANSPARENT <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;transparent&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2354,11 +2344,9 @@ TRANSPARENT <span style="color:#719e07">=</span> Color<span style="color:#719e07
 </section>
 </div>
 </div>
-
 <p>Ahora puedes consultar de forma segura un elemento para obtener su color/color
 de fondo sabiendo que cualquier  respuesta sera correctamente parseada y
 convertida en un objeto <em>Color</em> valido.</p>
-
 
 
 
@@ -2400,9 +2388,9 @@ convertida en un objeto <em>Color</em> valido.</p>
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-Color <span style="color:#268bd2">loginButtonColour</span> <span style="color:#719e07">=</span> Color.fromString(driver.findElement(By.id(<span style="color:#2aa198">&#34;login&#34;</span>)).getCssValue(<span style="color:#2aa198">&#34;color&#34;</span>));
+Color loginButtonColour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;login&#34;</span><span style="color:#719e07">)).</span>getCssValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;color&#34;</span><span style="color:#719e07">));</span>
 
-Color <span style="color:#268bd2">loginButtonBackgroundColour</span> <span style="color:#719e07">=</span> Color.fromString(driver.findElement(By.id(<span style="color:#2aa198">&#34;login&#34;</span>)).getCssValue(<span style="color:#2aa198">&#34;background-color&#34;</span>));
+Color loginButtonBackgroundColour <span style="color:#719e07">=</span> Color<span style="color:#719e07">.</span>fromString<span style="color:#719e07">(</span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;login&#34;</span><span style="color:#719e07">)).</span>getCssValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;background-color&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2455,9 +2443,7 @@ login_button_background_colour <span style="color:#719e07">=</span> <span style=
 </section>
 </div>
 </div>
-
 <p>Puedes comparar objetos de <em>Color</em> directamente:</p>
-
 
 
 
@@ -2499,7 +2485,7 @@ login_button_background_colour <span style="color:#719e07">=</span> <span style=
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">assert</span> loginButtonBackgroundColour.equals(HOTPINK);
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>equals<span style="color:#719e07">(</span>HOTPINK<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2546,10 +2532,8 @@ assert(loginButtonBackgroundColour.equals(HOTPINK))
 </section>
 </div>
 </div>
-
 <p>También puedes convertir un color en uno de los siguientes formatos y después
 realizar una validación estática:</p>
-
 
 
 
@@ -2591,9 +2575,9 @@ realizar una validación estática:</p>
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">assert</span> loginButtonBackgroundColour.asHex().equals(<span style="color:#2aa198">&#34;#ff69b4&#34;</span>);
-<span style="color:#719e07">assert</span> loginButtonBackgroundColour.asRgba().equals(<span style="color:#2aa198">&#34;rgba(255, 105, 180, 1)&#34;</span>);
-<span style="color:#719e07">assert</span> loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#34;rgb(255, 105, 180)&#34;</span>);
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asHex<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#ff69b4&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asRgba<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgba(255, 105, 180, 1)&#34;</span><span style="color:#719e07">);</span>
+<span style="color:#719e07">assert</span> loginButtonBackgroundColour<span style="color:#719e07">.</span>asRgb<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;rgb(255, 105, 180)&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2646,7 +2630,6 @@ assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#
 </section>
 </div>
 </div>
-
 <p>Con todo esto los colores ya no serán un problema.</p>
 
 
@@ -2657,7 +2640,7 @@ assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/support_packages/working_with_colours/">
       “Trabajando con colores”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3819,19 +3802,19 @@ assert(loginButtonBackgroundColour.asRgb().equals(<span style="color:#2aa198">&#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -19,7 +19,7 @@
       <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
       <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
 Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.xml 파일에 추가해야 합니다.</description>
     </item>
     
     <item>

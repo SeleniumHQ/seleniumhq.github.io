@@ -11,20 +11,20 @@
     <title>Legacy Selenium IDE :: Documentation for Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/theme.css?1591379904" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1591379904" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/nucleus.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/fontawesome-all.min.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hybrid.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/featherlight.min.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/perfect-scrollbar.min.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/auto-complete.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/atom-one-dark-reasonable.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/theme.css?1591393147" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/en/css/hugo-theme.css?1591393147" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1591379904" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/en/css/theme-selenium.css?1591393147" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1591379904"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery-3.3.1.min.js?1591393147"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1591379904"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1591379904"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/lunr.min.js?1591393147"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/auto-complete.js?1591393147"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/en\/en";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1591379904"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/en/js/search.js?1591393147"></script>
 
     
   </div>
@@ -1921,118 +1921,95 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#introduction">Introduction</a></li>
-<li><a href="#installing-the-ide">Installing the IDE</a></li>
-<li><a href="#opening-the-ide">Opening the IDE</a></li>
-<li><a href="#ide-features">IDE Features</a>
-<ul>
-<li><a href="#menu-bar">Menu Bar</a></li>
-<li><a href="#toolbar">Toolbar</a></li>
-<li><a href="#test-case-pane">Test Case Pane</a></li>
-<li><a href="#log-reference-ui-element-rollup-pane">Log/Reference/UI-Element/Rollup Pane</a>
-<ul>
-<li><a href="#log">Log</a></li>
-<li><a href="#reference">Reference</a></li>
-<li><a href="#ui-element-and-rollup">UI-Element and Rollup</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#building-test-cases">Building Test Cases</a>
-<ul>
-<li><a href="#recording">Recording</a></li>
-<li><a href="#adding-verifications-and-asserts-with-the-context-menu">Adding Verifications and Asserts With the Context Menu</a></li>
-<li><a href="#editing">Editing</a>
-<ul>
-<li><a href="#insert-command">Insert Command</a>
-<ul>
-<li><a href="#table-view">Table View</a></li>
-<li><a href="#source-view">Source View</a></li>
-</ul></li>
-<li><a href="#insert-comment">Insert Comment</a>
-<ul>
-<li><a href="#table-view-1">Table View</a></li>
-<li><a href="#source-view-1">Source View</a></li>
-</ul></li>
-<li><a href="#edit-a-command-or-comment">Edit a Command or Comment</a>
-<ul>
-<li><a href="#table-view-2">Table View</a></li>
-<li><a href="#source-view-2">Source View</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#opening-and-saving-a-test-case">Opening and Saving a Test Case</a></li>
-</ul></li>
-<li><a href="#running-test-cases">Running Test Cases</a></li>
-<li><a href="#using-base-url-to-run-test-cases-in-different-domains">Using Base URL to Run Test Cases in Different Domains</a></li>
-<li><a href="#selenium-commands-selenese">Selenium Commands – “Selenese”</a></li>
-<li><a href="#script-syntax">Script Syntax</a></li>
-<li><a href="#test-suites">Test Suites</a></li>
-<li><a href="#commonly-used-selenium-commands">Commonly Used Selenium Commands</a></li>
-<li><a href="#verifying-page-elements">Verifying Page Elements</a></li>
-<li><a href="#assertion-or-verification">Assertion or Verification?</a>
-<ul>
-<li><a href="#verifytextpresent"><strong>verifyTextPresent</strong></a></li>
-<li><a href="#verifyelementpresent"><strong>verifyElementPresent</strong></a></li>
-<li><a href="#verifytext"><strong>verifyText</strong></a></li>
-</ul></li>
-<li><a href="#locating-elements">Locating Elements</a>
-<ul>
-<li><a href="#locating-by-identifier">Locating by Identifier</a></li>
-<li><a href="#locating-by-id">Locating by Id</a></li>
-<li><a href="#locating-by-name">Locating by Name</a></li>
-<li><a href="#locating-by-xpath">Locating by XPath</a></li>
-<li><a href="#locating-hyperlinks-by-link-text">Locating Hyperlinks by Link Text</a></li>
-<li><a href="#locating-by-dom">Locating by DOM</a></li>
-<li><a href="#locating-by-css">Locating by CSS</a></li>
-<li><a href="#implicit-locators">Implicit Locators</a></li>
-</ul></li>
-<li><a href="#matching-text-patterns">Matching Text Patterns</a>
-<ul>
-<li><a href="#globbing-patterns">Globbing Patterns</a>
-<ul>
-<li><a href="#regular-expression-patterns">Regular Expression Patterns</a></li>
-<li><a href="#exact-patterns">Exact Patterns</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#the-andwait-commands">The &ldquo;AndWait&rdquo; Commands</a></li>
-<li><a href="#the-waitfor-commands-in-ajax-applications">The waitFor Commands in AJAX applications</a></li>
-<li><a href="#sequence-of-evaluation-and-flow-control">Sequence of Evaluation and Flow Control</a></li>
-<li><a href="#store-commands-and-selenium-variables">Store Commands and Selenium Variables</a>
-<ul>
-<li><a href="#storeelementpresent">storeElementPresent</a></li>
-<li><a href="#storetext">storeText</a></li>
-<li><a href="#storeeval">storeEval</a></li>
-</ul></li>
-<li><a href="#javascript-and-selenese-parameters">JavaScript and Selenese Parameters</a>
-<ul>
-<li><a href="#javascript-usage-with-script-parameters">JavaScript Usage with Script Parameters</a>
-<ul>
-<li><a href="#javascript-usage-with-non-script-parameters">JavaScript Usage with Non-Script Parameters</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#echo-the-selenese-print-command"><em>echo</em> - The Selenese Print Command</a></li>
-<li><a href="#alerts-popups-and-multiple-windows">Alerts, Popups, and Multiple Windows</a>
-<ul>
-<li><a href="#alerts">Alerts</a></li>
-<li><a href="#confirmations">Confirmations</a></li>
-<li><a href="#prompts">Prompts</a></li>
-</ul></li>
-<li><a href="#debugging">Debugging</a>
-<ul>
-<li><a href="#breakpoints-and-startpoints">Breakpoints and Startpoints</a></li>
-<li><a href="#stepping-through-a-testcase">Stepping Through a Testcase</a></li>
-<li><a href="#find-button">Find Button</a></li>
-<li><a href="#page-source-for-debugging">Page Source for Debugging</a></li>
-<li><a href="#locator-assistance">Locator Assistance</a></li>
-</ul></li>
-<li><a href="#writing-a-test-suite">Writing a Test Suite</a></li>
-<li><a href="#user-extensions">User Extensions</a></li>
-<li><a href="#format">Format</a></li>
-<li><a href="#executing-selenium-ide-tests-on-different-browsers">Executing Selenium-IDE Tests on Different Browsers</a></li>
-<li><a href="#troubleshooting">Troubleshooting</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#installing-the-ide">Installing the IDE</a></li>
+    <li><a href="#opening-the-ide">Opening the IDE</a></li>
+    <li><a href="#ide-features">IDE Features</a>
+      <ul>
+        <li><a href="#menu-bar">Menu Bar</a></li>
+        <li><a href="#toolbar">Toolbar</a></li>
+        <li><a href="#test-case-pane">Test Case Pane</a></li>
+        <li><a href="#logreferenceui-elementrollup-pane">Log/Reference/UI-Element/Rollup Pane</a></li>
+      </ul>
+    </li>
+    <li><a href="#building-test-cases">Building Test Cases</a>
+      <ul>
+        <li><a href="#recording">Recording</a></li>
+        <li><a href="#adding-verifications-and-asserts-with-the-context-menu">Adding Verifications and Asserts With the Context Menu</a></li>
+        <li><a href="#editing">Editing</a></li>
+        <li><a href="#opening-and-saving-a-test-case">Opening and Saving a Test Case</a></li>
+      </ul>
+    </li>
+    <li><a href="#running-test-cases">Running Test Cases</a></li>
+    <li><a href="#using-base-url-to-run-test-cases-in-different-domains">Using Base URL to Run Test Cases in Different Domains</a></li>
+    <li><a href="#selenium-commands--selenese">Selenium Commands – “Selenese”</a></li>
+    <li><a href="#script-syntax">Script Syntax</a></li>
+    <li><a href="#test-suites">Test Suites</a></li>
+    <li><a href="#commonly-used-selenium-commands">Commonly Used Selenium Commands</a></li>
+    <li><a href="#verifying-page-elements">Verifying Page Elements</a></li>
+    <li><a href="#assertion-or-verification">Assertion or Verification?</a>
+      <ul>
+        <li><a href="#verifytextpresent"><strong>verifyTextPresent</strong></a></li>
+        <li><a href="#verifyelementpresent"><strong>verifyElementPresent</strong></a></li>
+        <li><a href="#verifytext"><strong>verifyText</strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#locating-elements">Locating Elements</a>
+      <ul>
+        <li><a href="#locating-by-identifier">Locating by Identifier</a></li>
+        <li><a href="#locating-by-id">Locating by Id</a></li>
+        <li><a href="#locating-by-name">Locating by Name</a></li>
+        <li><a href="#locating-by-xpath">Locating by XPath</a></li>
+        <li><a href="#locating-hyperlinks-by-link-text">Locating Hyperlinks by Link Text</a></li>
+        <li><a href="#locating-by-dom">Locating by DOM</a></li>
+        <li><a href="#locating-by-css">Locating by CSS</a></li>
+        <li><a href="#implicit-locators">Implicit Locators</a></li>
+      </ul>
+    </li>
+    <li><a href="#matching-text-patterns">Matching Text Patterns</a>
+      <ul>
+        <li><a href="#globbing-patterns">Globbing Patterns</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-andwait-commands">The &ldquo;AndWait&rdquo; Commands</a></li>
+    <li><a href="#the-waitfor-commands-in-ajax-applications">The waitFor Commands in AJAX applications</a></li>
+    <li><a href="#sequence-of-evaluation-and-flow-control">Sequence of Evaluation and Flow Control</a></li>
+    <li><a href="#store-commands-and-selenium-variables">Store Commands and Selenium Variables</a>
+      <ul>
+        <li><a href="#storeelementpresent">storeElementPresent</a></li>
+        <li><a href="#storetext">storeText</a></li>
+        <li><a href="#storeeval">storeEval</a></li>
+      </ul>
+    </li>
+    <li><a href="#javascript-and-selenese-parameters">JavaScript and Selenese Parameters</a>
+      <ul>
+        <li><a href="#javascript-usage-with-script-parameters">JavaScript Usage with Script Parameters</a></li>
+      </ul>
+    </li>
+    <li><a href="#echo---the-selenese-print-command"><em>echo</em> - The Selenese Print Command</a></li>
+    <li><a href="#alerts-popups-and-multiple-windows">Alerts, Popups, and Multiple Windows</a>
+      <ul>
+        <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#confirmations">Confirmations</a></li>
+        <li><a href="#prompts">Prompts</a></li>
+      </ul>
+    </li>
+    <li><a href="#debugging">Debugging</a>
+      <ul>
+        <li><a href="#breakpoints-and-startpoints">Breakpoints and Startpoints</a></li>
+        <li><a href="#stepping-through-a-testcase">Stepping Through a Testcase</a></li>
+        <li><a href="#find-button">Find Button</a></li>
+        <li><a href="#page-source-for-debugging">Page Source for Debugging</a></li>
+        <li><a href="#locator-assistance">Locator Assistance</a></li>
+      </ul>
+    </li>
+    <li><a href="#writing-a-test-suite">Writing a Test Suite</a></li>
+    <li><a href="#user-extensions">User Extensions</a></li>
+    <li><a href="#format">Format</a></li>
+    <li><a href="#executing-selenium-ide-tests-on-different-browsers">Executing Selenium-IDE Tests on Different Browsers</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -2057,10 +2034,7 @@
 
 
 
-
-
 <h2 id="introduction">Introduction</h2>
-
 <p>The Selenium-IDE (Integrated Development Environment) is the tool you use to
 develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is
 generally the most efficient way to develop test cases. It also contains a
@@ -2069,50 +2043,32 @@ currently displayed page and then select from a list of Selenium commands with
 parameters pre-defined according to the context of the selected UI element.
 This is not only a time-saver, but also an excellent way of learning Selenium
 script syntax.</p>
-
 <p>This chapter is all about the Selenium IDE and how to use it effectively.</p>
-
 <h2 id="installing-the-ide">Installing the IDE</h2>
-
 <p>Using Firefox, first, download the IDE from the SeleniumHQ <a href="https://selenium.dev/downloads">downloads page</a></p>
-
 <p>Firefox will protect you from installing addons from unfamiliar locations, so
 you will need to click ‘Allow’ to proceed with the installation, as shown in
 the following screenshot.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_1.png" alt="Selenium IDE Installation 1" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_1.png" alt="Selenium IDE Installation 1"></p>
 <p>When downloading from Firefox, you’ll be presented with the following window.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_2.png" alt="Selenium IDE Installation 2" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_2.png" alt="Selenium IDE Installation 2"></p>
 <p>Select Install Now. The Firefox Add-ons window pops up, first showing a progress bar,
 and when the download is complete, displays the following.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_3.png" alt="Selenium IDE Installation 3" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_3.png" alt="Selenium IDE Installation 3"></p>
 <p>Restart Firefox. After Firefox reboots you will find the Selenium-IDE listed under
 the Firefox Tools menu.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_4.png" alt="Selenium IDE Installation 4" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_installation_4.png" alt="Selenium IDE Installation 4"></p>
 <h2 id="opening-the-ide">Opening the IDE</h2>
-
 <p>To run the Selenium-IDE, simply select it from the Firefox Tools menu. It opens
 as follows with an empty script-editing window and a menu for loading, or
 creating new test cases.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_open.png" alt="Selenium IDE Open" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_open.png" alt="Selenium IDE Open"></p>
 <h2 id="ide-features">IDE Features</h2>
-
 <h3 id="menu-bar">Menu Bar</h3>
-
 <p>The File menu has options for Test Case and Test Suite (suite of Test Cases).
 Using these you can add a new Test Case, open a Test Case, save a Test Case,
 export Test Case in a language of your choice. You can also open the recent
 Test Case. All these options are also available for Test Suite.</p>
-
 <p>The Edit menu allows copy, paste, delete, undo, and select all operations for
 editing the commands in your test case. The Options menu allows the changing of
 settings. You can set the timeout value for certain commands, add user-defined
@@ -2120,96 +2076,65 @@ user extensions to the base set of Selenium commands, and specify the format
 (language) used when saving your test cases. The Help menu is the standard
 Firefox Help menu; only one item on this menu–UI-Element Documentation–pertains
 to Selenium-IDE.</p>
-
 <h3 id="toolbar">Toolbar</h3>
-
 <p>The toolbar contains buttons for controlling the execution of your test cases,
 including a step feature for debugging your test cases. The right-most button,
 the one with the red-dot, is the record button.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_1.png" alt="Selenium IDE Features" />
-<img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_2.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_1.png" alt="Selenium IDE Features">
+<img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_2.png" alt="Selenium IDE Features"></p>
 <p>Speed Control: controls how fast your test case runs.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_3.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_3.png" alt="Selenium IDE Features"></p>
 <p>Run All: Runs the entire test suite when a test suite with multiple test cases is loaded.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_4.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_4.png" alt="Selenium IDE Features"></p>
 <p>Run: Runs the currently selected test. When only a single test is loaded
 this button and the Run All button have the same effect.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_5.png" alt="Selenium IDE Features" />
-<img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_6.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_5.png" alt="Selenium IDE Features">
+<img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_6.png" alt="Selenium IDE Features"></p>
 <p>Pause/Resume: Allows stopping and re-starting of a running test case.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_7.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_7.png" alt="Selenium IDE Features"></p>
 <p>Step: Allows you to “step” through a test case by running it one command at a time.
 Use for debugging test cases.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_8.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_8.png" alt="Selenium IDE Features"></p>
 <p>TestRunner Mode: Allows you to run the test case in a browser loaded with the
 Selenium-Core TestRunner. The TestRunner is not commonly used now and is likely
 to be deprecated. This button is for evaluating test cases for backwards
 compatibility with the TestRunner. Most users will probably not need this
 button.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_9.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_9.png" alt="Selenium IDE Features"></p>
 <p>Apply Rollup Rules: This advanced feature allows repetitive sequences of
 Selenium commands to be grouped into a single action. Detailed documentation on
 rollup rules can be found in the UI-Element Documentation on the Help menu.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_10.png" alt="Selenium IDE Features" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_features_10.png" alt="Selenium IDE Features"></p>
 <h3 id="test-case-pane">Test Case Pane</h3>
-
 <p>Your script is displayed in the test case pane. It has two tabs, one for
 displaying the command and their parameters in a readable “table” format.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_image_pane.png" alt="Selenium IDE Image Pane" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_image_pane.png" alt="Selenium IDE Image Pane"></p>
 <p>The other tab - Source displays the test case in the native format in which the
 file will be stored. By default, this is HTML although it can be changed to a
 programming language such as Java or C#, or a scripting language like Python.
 See the Options menu for details. The Source view also allows one to edit the
 test case in its raw form, including copy, cut and paste operations.</p>
-
 <p>The Command, Target, and Value entry fields display the currently selected
 command along with its parameters. These are entry fields where you can modify
 the currently selected command. The first parameter specified for a command in
 the Reference tab of the bottom pane always goes in the Target field. If a
 second parameter is specified by the Reference tab, it always goes in the Value
 field.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_entry_fields.png" alt="Selenium IDE Entry Fields" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_entry_fields.png" alt="Selenium IDE Entry Fields"></p>
 <p>If you start typing in the Command field, a drop-down list will be populated
 based on the first characters you type; you can then select your desired
 command from the drop-down.</p>
-
-<h3 id="log-reference-ui-element-rollup-pane">Log/Reference/UI-Element/Rollup Pane</h3>
-
+<h3 id="logreferenceui-elementrollup-pane">Log/Reference/UI-Element/Rollup Pane</h3>
 <p>The bottom pane is used for four different functions–Log, Reference,
 UI-Element, and Rollup–depending on which tab is selected.</p>
-
 <h4 id="log">Log</h4>
-
 <p>When you run your test case, error messages and information messages showing
 the progress are displayed in this pane automatically, even if you do not first
 select the Log tab. These messages are often useful for test case debugging.
 Notice the Clear button for clearing the Log. Also notice the Info button is a
 drop-down allowing selection of different levels of information to log.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_bottom_box.png" alt="Selenium IDE Bottom Box" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_bottom_box.png" alt="Selenium IDE Bottom Box"></p>
 <h4 id="reference">Reference</h4>
-
 <p>The Reference tab is the default selection whenever you are entering or
 modifying Selenese commands and parameters in Table mode. In Table mode, the
 Reference pane will display documentation on the current command. When entering
@@ -2220,42 +2145,30 @@ number of parameters provided must match the number specified, the order of
 parameters provided must match the order specified, and the type of parameters
 provided must match the type specified. If there is a mismatch in any of these
 three areas, the command will not run correctly.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_bottom_box_ref.png" alt="Selenium IDE Bottom Box" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_bottom_box_ref.png" alt="Selenium IDE Bottom Box"></p>
 <p>While the Reference tab is invaluable as a quick reference, it is still often
 necessary to consult the Selenium Reference document.</p>
-
 <h4 id="ui-element-and-rollup">UI-Element and Rollup</h4>
-
 <p>Detailed information on these two panes (which cover advanced features) can be
 found in the UI-Element Documentation on the Help menu of Selenium-IDE.</p>
-
 <h2 id="building-test-cases">Building Test Cases</h2>
-
 <p>There are three primary methods for developing test cases. Frequently, a test
 developer will require all three techniques.</p>
-
 <h3 id="recording">Recording</h3>
-
 <p>Many first-time users begin by recording a test case from their interactions
 with a website. When Selenium-IDE is first opened, the record button is ON by
 default. If you do not want Selenium-IDE to begin recording automatically you
 can turn this off by going under Options &gt; Options… and deselecting “Start
 recording immediately on open.”</p>
-
 <p>During recording, Selenium-IDE will automatically insert commands into your
 test case based on your actions. Typically, this will include:</p>
-
 <ul>
 <li>clicking a link - click or clickAndWait commands</li>
 <li>entering values - type command</li>
 <li>selecting options from a drop-down listbox - select command</li>
 <li>clicking checkboxes or radio buttons - click command</li>
 </ul>
-
 <p>Here are some “gotchas” to be aware of:</p>
-
 <ul>
 <li>The type command may require clicking on some other area of the web page for it
 to record.</li>
@@ -2265,33 +2178,26 @@ completely loaded. Otherwise, your test case will continue running commands
 before the page has loaded all its UI elements. This will cause unexpected test
 case failures.</li>
 </ul>
-
 <h3 id="adding-verifications-and-asserts-with-the-context-menu">Adding Verifications and Asserts With the Context Menu</h3>
-
 <p>Your test cases will also need to check the properties of a web-page. This
 requires assert and verify commands. We won’t describe the specifics of these
 commands here; that is in the chapter on Selenium Commands – “Selenese”. Here
 we’ll simply describe how to add them to your test case.</p>
-
 <p>With Selenium-IDE recording, go to the browser displaying your test application
 and right click anywhere on the page. You will see a context menu showing
 verify and/or assert commands.</p>
-
 <p>The first time you use Selenium, there may only be one Selenium command listed.
 As you use the IDE however, you will find additional commands will quickly be
 added to this menu. Selenium-IDE will attempt to predict what command, along
 with the parameters, you will need for a selected UI element on the current
 web-page.</p>
-
 <p>Let’s see how this works. Open a web-page of your choosing and select a block
 of text on the page. A paragraph or a heading will work fine. Now, right-click
 the selected text. The context menu should give you a verifyTextPresent command
 and the suggested parameter should be the text itself.</p>
-
 <p>Also, notice the Show All Available Commands menu option. This shows many, many
 more commands, again, along with suggested parameters, for testing your
 currently selected UI element.</p>
-
 <p>Try a few more UI elements. Try right-clicking an image, or a user control like
 a button or a checkbox. You may need to use Show All Available Commands to see
 options other than verifyTextPresent. Once you select these other options, the
@@ -2299,26 +2205,19 @@ more commonly used ones will show up on the primary context menu. For example,
 selecting verifyElementPresent for an image should later cause that command to
 be available on the primary context menu the next time you select an image and
 right-click.</p>
-
 <p>Again, these commands will be explained in detail in the chapter on Selenium
 commands. For now though, feel free to use the IDE to record and select
 commands into a test case and then run it. You can learn a lot about the
 Selenium commands simply by experimenting with the IDE.</p>
-
 <h3 id="editing">Editing</h3>
-
 <h4 id="insert-command">Insert Command</h4>
-
 <h5 id="table-view">Table View</h5>
-
 <p>Select the point in your test case where you want to insert the command. To do
 this, in the Test Case Pane, left-click on the line where you want to insert a
 new command. Right-click and select Insert Command; the IDE will add a blank
 line just ahead of the line you selected. Now use the command editing text
 fields to enter your new command and its parameters.</p>
-
 <h5 id="source-view">Source View</h5>
-
 <p>Select the point in your test case where you want to insert the command. To do
 this, in the Test Case Pane, left-click between the commands where you want to
 insert a new command, and enter the HTML tags needed to create a 3-column row
@@ -2329,94 +2228,64 @@ parameter(again, if one is required to have a value). Example:</p>
     &lt;<span style="color:#268bd2">td</span>&gt;Command&lt;/<span style="color:#268bd2">td</span>&gt;
     &lt;<span style="color:#268bd2">td</span>&gt;target (locator)&lt;/<span style="color:#268bd2">td</span>&gt;
     &lt;<span style="color:#268bd2">td</span>&gt;Value&lt;/<span style="color:#268bd2">td</span>&gt;
-&lt;/<span style="color:#268bd2">tr</span>&gt;</code></pre></div>
-<h4 id="insert-comment">Insert Comment</h4>
-
+&lt;/<span style="color:#268bd2">tr</span>&gt;
+</code></pre></div><h4 id="insert-comment">Insert Comment</h4>
 <p>Comments may be added to make your test case more readable. These comments are
 ignored when the test case is run.</p>
-
 <p>Comments may also be used to add vertical white space (one or more blank lines)
 in your tests; just create empty comments. An empty command will cause an error
 during execution; an empty comment won’t.</p>
-
 <h5 id="table-view-1">Table View</h5>
-
 <p>Select the line in your test case where you want to insert the comment.
 Right-click and select Insert Comment. Now use the Command field to enter the
 comment. Your comment will appear in purple text.</p>
-
 <h5 id="source-view-1">Source View</h5>
-
 <p>Select the point in your test case where you want to insert the comment. Add an
 HTML-style comment, i.e., <code>&lt;!-- your comment here --&gt;</code>.</p>
-
 <h4 id="edit-a-command-or-comment">Edit a Command or Comment</h4>
-
 <h5 id="table-view-2">Table View</h5>
-
 <p>Simply select the line to be changed and edit it using the Command, Target,
 and Value fields.</p>
-
 <h5 id="source-view-2">Source View</h5>
-
 <p>Since Source view provides the equivalent of a WYSIWYG (What You See is What
 You Get) editor, simply modify which line you wish–command, parameter, or comment.</p>
-
 <h3 id="opening-and-saving-a-test-case">Opening and Saving a Test Case</h3>
-
 <p>Like most programs, there are Save and Open commands under the File menu.
 However, Selenium distinguishes between test cases and test suites. To save
 your Selenium-IDE tests for later use you can either save the individual test
 cases, or save the test suite. If the test cases of your test suite have not
 been saved, you’ll be prompted to save them before saving the test suite.</p>
-
 <p>When you open an existing test case or suite, Selenium-IDE displays its
 Selenium commands in the Test Case Pane.</p>
-
 <h2 id="running-test-cases">Running Test Cases</h2>
-
 <p>The IDE allows many options for running your test case. You can run a test case
 all at once, stop and start it, run it one line at a time, run a single command
 you are currently developing, and you can do a batch run of an entire test
 suite. Execution of test cases is very flexible in the IDE.</p>
-
 <p><strong>Run a Test Case</strong></p>
-
 <p>Click the Run button to run the currently displayed test case.</p>
-
 <p><strong>Run a Test Suite</strong></p>
-
 <p>Click the Run All button to run all the test cases in the currently loaded test
 suite.</p>
-
 <p><strong>Stop and Start</strong></p>
-
 <p>The Pause button can be used to stop the test case while it is running. The
 icon of this button then changes to indicate the Resume button. To continue
 click Resume.</p>
-
 <p><strong>Stop in the Middle</strong></p>
-
 <p>You can set a breakpoint in the test case to cause it to stop on a particular
 command. This is useful for debugging your test case. To set a breakpoint,
 select a command, right-click, and from the context menu select Toggle
 Breakpoint.</p>
-
 <p><strong>Start from the Middle</strong></p>
-
 <p>You can tell the IDE to begin running from a specific command in the middle of
 the test case. This also is used for debugging. To set a startpoint, select a
 command, right-click, and from the context menu select Set/Clear Start Point.</p>
-
 <p><strong>Run Any Single Command</strong></p>
-
 <p>Double-click any single command to run it by itself. This is useful when
 writing a single command. It lets you immediately test a command you are
 constructing, when you are not sure if it is correct. You can double-click it
 to see if it runs correctly. This is also available from the context menu.</p>
-
 <h2 id="using-base-url-to-run-test-cases-in-different-domains">Using Base URL to Run Test Cases in Different Domains</h2>
-
 <p>The Base URL field at the top of the Selenium-IDE window is very useful for
 allowing test cases to be run across different domains. Suppose that a site
 named <a href="http://news.portal.com">http://news.portal.com</a> had an in-house beta site named
@@ -2426,71 +2295,60 @@ than an absolute URL (one starting with a protocol such as http: or https:).
 Selenium-IDE will then create an absolute URL by appending the open command’s
 argument onto the end of the value of Base URL. For example, the test case
 below would be run against <a href="http://news.portal.com/about.html:">http://news.portal.com/about.html:</a></p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_base_url_prod.png" alt="Selenium IDE Prod URL" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_base_url_prod.png" alt="Selenium IDE Prod URL"></p>
 <p>This same test case with a modified Base URL setting would be run against
 <a href="http://beta.news.portal.com/about.html:">http://beta.news.portal.com/about.html:</a></p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_base_url_beta.png" alt="Selenium IDE Beta URL" /></p>
-
-<h2 id="selenium-commands-selenese">Selenium Commands – “Selenese”</h2>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_base_url_beta.png" alt="Selenium IDE Beta URL"></p>
+<h2 id="selenium-commands--selenese">Selenium Commands – “Selenese”</h2>
 <p>Selenium commands, often called selenese, are the set of commands that run your
 tests. A sequence of these commands is a test script. Here we explain those
 commands in detail, and we present the many choices you have in testing your
 web application when using Selenium.</p>
-
 <p>Selenium provides a rich set of commands for fully testing your web-app in
 virtually any way you can imagine. The command set is often called selenese.
 These commands essentially create a testing language.</p>
-
 <p>In selenese, one can test the existence of UI elements based on their HTML
 tags, test for specific content, test for broken links, input fields, selection
 list options, submitting forms, and table data among other things. In addition
 Selenium commands support testing of window size, mouse position, alerts, Ajax
 functionality, pop up windows, event handling, and many other web-application
 features. The Command Reference lists all the available commands.</p>
-
 <p>A command tells Selenium what to do. Selenium commands come in three “flavors”:
 <strong>Actions</strong>, <strong>Accessors</strong>, and <strong>Assertions</strong>.</p>
-
 <ul>
-<li><p><strong>Actions</strong> are commands that generally manipulate the state of the application.
+<li>
+<p><strong>Actions</strong> are commands that generally manipulate the state of the application.
 They do things like “click this link” and “select that option”. If an Action
 fails, or has an error, the execution of the current test is stopped.</p>
-
 <p>Many Actions can be called with the “AndWait” suffix, e.g. “clickAndWait”. This
 suffix tells Selenium that the action will cause the browser to make a call to
-the server, and that Selenium should wait for a new page to load.</p></li>
-
-<li><p><strong>Accessors</strong> examine the state of the application and store the results in
+the server, and that Selenium should wait for a new page to load.</p>
+</li>
+<li>
+<p><strong>Accessors</strong> examine the state of the application and store the results in
 variables, e.g. “storeTitle”. They are also used to automatically generate
-Assertions.</p></li>
-
-<li><p><strong>Assertions</strong> are like Accessors, but they verify that the state of the
+Assertions.</p>
+</li>
+<li>
+<p><strong>Assertions</strong> are like Accessors, but they verify that the state of the
 application conforms to what is expected. Examples include “make sure the page
-title is X” and “verify that this checkbox is checked”.</p></li>
+title is X” and “verify that this checkbox is checked”.</p>
+</li>
 </ul>
-
 <p>All Selenium Assertions can be used in 3 modes: “assert”, “verify”, and ”
 waitFor”. For example, you can “assertText”, “verifyText” and “waitForText”.
 When an “assert” fails, the test is aborted. When a “verify” fails, the test
 will continue execution, logging the failure. This allows a single “assert” to
 ensure that the application is on the correct page, followed by a bunch of
 “verify” assertions to test form field values, labels, etc.</p>
-
 <p>“waitFor” commands wait for some condition to become true (which can be useful
 for testing Ajax applications). They will succeed immediately if the condition
 is already true. However, they will fail and halt the test if the condition
 does not become true within the current timeout setting (see the setTimeout
 action below).</p>
-
 <h2 id="script-syntax">Script Syntax</h2>
-
 <p>Selenium commands are simple, they consist of the command and two parameters.
 For example:</p>
-
 <table>
 <thead>
 <tr>
@@ -2499,7 +2357,6 @@ For example:</p>
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyText</td>
@@ -2508,12 +2365,10 @@ For example:</p>
 </tr>
 </tbody>
 </table>
-
 <p>The parameters are not always required; it depends on the command. In some
 cases both are required, in others one parameter is required, and in still
 others the command may take no parameters at all. Here are a couple more
 examples:</p>
-
 <table>
 <thead>
 <tr>
@@ -2522,26 +2377,22 @@ examples:</p>
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>goBackAndWait</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTextPresent</td>
 <td></td>
 <td>Welcome to My Home Page</td>
 </tr>
-
 <tr>
 <td>type</td>
 <td>id=phone</td>
 <td>(555) 666-7066</td>
 </tr>
-
 <tr>
 <td>type</td>
 <td>id=address1</td>
@@ -2549,21 +2400,16 @@ examples:</p>
 </tr>
 </tbody>
 </table>
-
 <p>The command reference describes the parameter requirements for each command.</p>
-
 <p>Parameters vary, however they are typically:</p>
-
 <ul>
 <li>a locator for identifying a UI element within a page.</li>
 <li>a text pattern for verifying or asserting expected page content</li>
 <li>a text pattern or a Selenium variable for entering text in an input field or
 for selecting an option from an option list.</li>
 </ul>
-
 <p>Locators, text patterns, Selenium variables, and the commands themselves are
 described in considerable detail in the section on Selenium Commands.</p>
-
 <p>Selenium scripts that will be run from Selenium-IDE will be stored in an HTML
 text file format. This consists of an HTML table with three columns. The first
 column identifies the Selenium command, the second is a target, and the final
@@ -2575,9 +2421,8 @@ opens a page, asserts the page title and then verifies some content on the page:
     &lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;open&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;/download/&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
     &lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;assertTitle&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;Downloads&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
     &lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;verifyText&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;//h2&lt;/<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;Downloads&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
-&lt;/<span style="color:#268bd2">table</span>&gt;</code></pre></div>
-<p>Rendered as a table in a browser this would look like the following:</p>
-
+&lt;/<span style="color:#268bd2">table</span>&gt;
+</code></pre></div><p>Rendered as a table in a browser this would look like the following:</p>
 <table>
 <thead>
 <tr>
@@ -2586,20 +2431,17 @@ opens a page, asserts the page title and then verifies some content on the page:
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td>/download/</td>
 <td></td>
 </tr>
-
 <tr>
 <td>assertTitle</td>
 <td></td>
 <td>Downloads</td>
 </tr>
-
 <tr>
 <td>verifyText</td>
 <td>//h2</td>
@@ -2607,16 +2449,12 @@ opens a page, asserts the page title and then verifies some content on the page:
 </tr>
 </tbody>
 </table>
-
 <p>The Selenese HTML syntax can be used to write and run tests without requiring
 knowledge of a programming language. With a basic knowledge of selenese and
 Selenium-IDE you can quickly produce and run testcases.</p>
-
 <h2 id="test-suites">Test Suites</h2>
-
 <p>A test suite is a collection of tests. Often one will run all the tests in a
 test suite as one continuous batch-job.</p>
-
 <p>When using Selenium-IDE, test suites also can be defined using a simple HTML
 file. The syntax again is simple. An HTML table defines a list of tests where
 each row defines the filesystem path to each test. An example tells it all.</p>
@@ -2632,10 +2470,9 @@ each row defines the filesystem path to each test. An example tells it all.</p>
   &lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;./SaveValues.html&#34;</span>&gt;Test Save&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
 &lt;/<span style="color:#268bd2">table</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<p>A file similar to this would allow running the tests all at once, one after
+&lt;/<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><p>A file similar to this would allow running the tests all at once, one after
 another, from the Selenium-IDE.</p>
-
 <p>Test suites can also be maintained when using Selenium-RC. This is done via
 programming and can be done a number of ways. Commonly Junit is used to
 maintain a test suite if one is using Selenium-RC with Java. Additionally, if
@@ -2644,76 +2481,49 @@ language like Python with Selenium-RC then some simple programming would be
 involved in setting up a test suite. Since the whole reason for using
 Selenium-RC is to make use of programming logic for your testing this usually
 isn’t a problem.</p>
-
 <h2 id="commonly-used-selenium-commands">Commonly Used Selenium Commands</h2>
-
 <p>To conclude our introduction of Selenium, we’ll show you a few typical Selenium
 commands. These are probably the most commonly used commands for building
 tests.</p>
-
 <p><strong>open</strong></p>
-
 <p>opens a page using a URL.</p>
-
 <p><strong>click/clickAndWait</strong></p>
-
 <p>performs a click operation, and optionally waits for a new page to load.</p>
-
 <p><strong>verifyTitle/assertTitle</strong></p>
-
 <p>verifies an expected page title.</p>
-
 <p><strong>verifyTextPresent</strong></p>
-
 <p>verifies expected text is somewhere on the page.</p>
-
 <p><strong>verifyElementPresent</strong></p>
-
 <p>verifies an expected UI element, as defined by its HTML tag, is present on the
 page.</p>
-
 <p><strong>verifyText</strong></p>
-
 <p>verifies expected text and its corresponding HTML tag are present on the page.</p>
-
 <p><strong>verifyTable</strong></p>
-
 <p>verifies a table’s expected contents.</p>
-
 <p><strong>waitForPageToLoad</strong></p>
-
 <p>pauses execution until an expected new page loads. Called automatically when
 clickAndWait is used.</p>
-
 <p><strong>waitForElementPresent</strong></p>
-
 <p>pauses execution until an expected UI element, as defined by its HTML tag, is
 present on the page.</p>
-
 <h2 id="verifying-page-elements">Verifying Page Elements</h2>
-
 <p>Verifying UI elements on a web page is probably the most common feature of your
 automated tests. Selenese allows multiple ways of checking for UI elements. It
 is important that you understand these different methods because these methods
 define what you are actually testing.</p>
-
 <p>For example, will you test that…</p>
-
 <ol>
 <li>an element is present somewhere on the page?</li>
 <li>specific text is somewhere on the page?</li>
 <li>specific text is at a specific location on the page?</li>
 </ol>
-
 <p>For example, if you are testing a text heading, the text and its position at
 the top of the page are probably relevant for your test. If, however, you are
 testing for the existence of an image on the home page, and the web designers
 frequently change the specific image file along with its position on the page,
 then you only want to test that an image (as opposed to the specific image
 file) exists somewhere on the page.</p>
-
 <h2 id="assertion-or-verification">Assertion or Verification?</h2>
-
 <p>Choosing between “assert” and “verify” comes down to convenience and management
 of failures. There’s very little point checking that the first paragraph on the
 page is the correct one if your test has already failed when checking that the
@@ -2725,11 +2535,9 @@ as this will allow you to review all failures on the page and take the
 appropriate action. Effectively an “assert” will fail the test and abort the
 current test case, whereas a “verify” will fail the test and continue to run
 the test case.</p>
-
 <p>The best use of this feature is to logically group your test commands, and
 start each group with an “assert” followed by one or more “verify” test
 commands. An example follows:</p>
-
 <table>
 <thead>
 <tr>
@@ -2738,38 +2546,32 @@ commands. An example follows:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td>/download/</td>
 <td></td>
 </tr>
-
 <tr>
 <td>assertTitle</td>
 <td></td>
 <td>Downloads</td>
 </tr>
-
 <tr>
 <td>verifyText</td>
 <td>//h2</td>
 <td>Downloads</td>
 </tr>
-
 <tr>
 <td>assertTable</td>
 <td>1.2.1</td>
 <td>Selenium IDE</td>
 </tr>
-
 <tr>
 <td>verifyTable</td>
 <td>1.2.2</td>
 <td>June 3, 2008</td>
 </tr>
-
 <tr>
 <td>verifyTable</td>
 <td>1.2.3</td>
@@ -2777,20 +2579,16 @@ commands. An example follows:</p>
 </tr>
 </tbody>
 </table>
-
 <p>The above example first opens a page and then “asserts” that the correct page
 is loaded by comparing the title with the expected value. Only if this passes
 will the following command run and “verify” that the text is present in the
 expected location. The test case then “asserts” the first column in the second
 row of the first table contains the expected value, and only if this passed
 will the remaining cells in that row be “verified”.</p>
-
 <h3 id="verifytextpresent"><strong>verifyTextPresent</strong></h3>
-
 <p>The command <code>verifyTextPresent</code> is used to verify specific text exists somewhere
 on the page. It takes a single argument–the text pattern to be verified. For
 example:</p>
-
 <table>
 <thead>
 <tr>
@@ -2799,7 +2597,6 @@ example:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyTextPresent</td>
@@ -2808,19 +2605,15 @@ example:</p>
 </tr>
 </tbody>
 </table>
-
 <p>This would cause Selenium to search for, and verify, that the text string
 “Marketing Analysis” appears somewhere on the page currently being tested. Use
 verifyTextPresent when you are interested in only the text itself being present
 on the page. Do not use this when you also need to test where the text occurs
 on the page.</p>
-
 <h3 id="verifyelementpresent"><strong>verifyElementPresent</strong></h3>
-
 <p>Use this command when you must test for the presence of a specific UI element,
 rather than its content. This verification does not check the text, only the
 HTML tag. One common use is to check for the presence of an image.</p>
-
 <table>
 <thead>
 <tr>
@@ -2829,7 +2622,6 @@ HTML tag. One common use is to check for the presence of an image.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyElementPresent</td>
@@ -2838,16 +2630,13 @@ HTML tag. One common use is to check for the presence of an image.</p>
 </tr>
 </tbody>
 </table>
-
-<p>This command verifies that an image, specified by the existence of an <img>
-HTML tag, is present on the page, and that it follows a <div> tag and a <p>
+<p>This command verifies that an image, specified by the existence of an <!-- raw HTML omitted -->
+HTML tag, is present on the page, and that it follows a <!-- raw HTML omitted --> tag and a <!-- raw HTML omitted -->
 tag. The first (and only) parameter is a locator for telling the Selenese
 command how to find the element. Locators are explained in the next section.</p>
-
 <p><code>verifyElementPresent</code> can be used to check the existence of any HTML tag within
-the page. You can check the existence of links, paragraphs, divisions <div>,
+the page. You can check the existence of links, paragraphs, divisions <!-- raw HTML omitted -->,
 etc. Here are a few more examples.</p>
-
 <table>
 <thead>
 <tr>
@@ -2856,38 +2645,32 @@ etc. Here are a few more examples.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyElementPresent</td>
 <td>//div/p</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyElementPresent</td>
 <td>//div/a</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyElementPresent</td>
 <td>id=Login</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyElementPresent</td>
 <td>link=Go to Marketing Research</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyElementPresent</td>
 <td>//a[2]</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyElementPresent</td>
 <td>//head/title</td>
@@ -2895,17 +2678,13 @@ etc. Here are a few more examples.</p>
 </tr>
 </tbody>
 </table>
-
 <p>These examples illustrate the variety of ways a UI element may be tested. Again,
 locators are explained in the next section.</p>
-
 <h3 id="verifytext"><strong>verifyText</strong></h3>
-
 <p>Use <code>verifyText</code> when both the text and its UI element must be tested. verifyText
 must use a locator. If you choose an <em>XPath</em> or <em>DOM</em> locator, you can verify that
 specific text appears at a specific location on the page relative to other UI
 components on the page.</p>
-
 <table>
 <thead>
 <tr>
@@ -2914,7 +2693,6 @@ components on the page.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyText</td>
@@ -2923,23 +2701,18 @@ components on the page.</p>
 </tr>
 </tbody>
 </table>
-
 <h2 id="locating-elements">Locating Elements</h2>
-
 <p>For many Selenium commands, a target is required. This target identifies an
 element in the content of the web application, and consists of the location
 strategy followed by the location in the format <code>locatorType=location</code>. The
 locator type can be omitted in many cases. The various locator types are
 explained below with examples for each.</p>
-
 <h3 id="locating-by-identifier">Locating by Identifier</h3>
-
 <p>This is probably the most common method of locating elements and is the
 catch-all default when no recognized locator type is used. With this strategy,
 the first element with the id attribute value matching the location will be used. If
 no element has a matching id attribute, then the first element with a name
 attribute matching the location will be used.</p>
-
 <p>For instance, your page source could have id and name attributes
 as follows:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  &lt;<span style="color:#268bd2">html</span>&gt;
@@ -2950,22 +2723,18 @@ as follows:</p>
      &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;submit&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Login&#34;</span> /&gt;
     &lt;/<span style="color:#268bd2">form</span>&gt;
    &lt;/<span style="color:#268bd2">body</span>&gt;
-  &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<p>The following locator strategies would return the elements from the HTML
+  &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><p>The following locator strategies would return the elements from the HTML
 snippet above indicated by line number:</p>
-
 <ul>
 <li><code>identifier=loginForm</code> (3)</li>
 <li><code>identifier=password</code> (5)</li>
 <li><code>identifier=continue</code> (6)</li>
 <li><code>continue</code> (6)</li>
 </ul>
-
 <p>Since the <code>identifier</code> type of locator is the default, the <code>identifier=</code>
 in the first three examples above is not necessary.</p>
-
 <h3 id="locating-by-id">Locating by Id</h3>
-
 <p>This type of locator is more limited than the identifier locator type, but
 also more explicit. Use this when you know an element&rsquo;s id attribute.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">   &lt;<span style="color:#268bd2">html</span>&gt;
@@ -2977,13 +2746,11 @@ also more explicit. Use this when you know an element&rsquo;s id attribute.</p>
       &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;button&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Clear&#34;</span> /&gt;
      &lt;/<span style="color:#268bd2">form</span>&gt;
     &lt;/<span style="color:#268bd2">body</span>&gt;
-   &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+   &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>id=loginForm</code> (3)</li>
 </ul>
-
 <h3 id="locating-by-name">Locating by Name</h3>
-
 <p>The name locator type will locate the first element with a matching name
 attribute. If multiple elements have the same value for a name attribute, then
 you can use filters to further refine your location strategy. The default
@@ -2997,45 +2764,39 @@ filter type is value (matching the value attribute).</p>
       &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;button&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Clear&#34;</span> /&gt;
      &lt;/<span style="color:#268bd2">form</span>&gt;
    &lt;/<span style="color:#268bd2">body</span>&gt;
-   &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+   &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>name=username</code> (4)</li>
 <li><code>name=continue value=Clear</code> (7)</li>
 <li><code>name=continue Clear</code> (7)</li>
 <li><code>name=continue type=button</code> (7)</li>
 </ul>
-
 <p>Note: Unlike some types of XPath and DOM locators, the three
-   types of locators above allow Selenium to test a UI element independent
-   of its location on
-   the page.  So if the page structure and organization is altered, the test
-   will still pass.  You may or may not want to also test whether the page
-   structure changes.  In the case where web designers frequently alter the
-   page, but its functionality must be regression tested, testing via id and
-   name attributes, or really via any HTML property, becomes very important.</p>
-
+types of locators above allow Selenium to test a UI element independent
+of its location on
+the page.  So if the page structure and organization is altered, the test
+will still pass.  You may or may not want to also test whether the page
+structure changes.  In the case where web designers frequently alter the
+page, but its functionality must be regression tested, testing via id and
+name attributes, or really via any HTML property, becomes very important.</p>
 <h3 id="locating-by-xpath">Locating by XPath</h3>
-
 <p>XPath is the language used for locating nodes in an XML document. As HTML can
 be an implementation of XML (XHTML), Selenium users can leverage this powerful
 language to target elements in their web applications. XPath extends beyond (as
 well as supporting) the simple methods of locating by id or name
 attributes, and opens up all sorts of new possibilities such as locating the
 third checkbox on the page.</p>
-
 <p>One of the main reasons for using XPath is when you don&rsquo;t have a suitable id
 or name attribute for the element you wish to locate. You can use XPath to
 either locate the element in absolute terms (not advised), or relative to an
 element that does have an id or name attribute.  XPath locators can also be
 used to specify elements via attributes other than id and name.</p>
-
 <p>Absolute XPaths contain the location of all elements from the root (html) and
 as a result are likely to fail with only the slightest adjustment to the
 application. By finding a nearby element with an id or name attribute (ideally
 a parent element) you can locate your target element based on the relationship.
 This is much less likely to change and can make your tests more robust.</p>
-
-<p>Since only <code>xpath</code> locators start with &ldquo;//&rdquo;, it is not necessary to include
+<p>Since only <code>xpath</code> locators start with &ldquo;//&quot;, it is not necessary to include
 the <code>xpath=</code> label when specifying an XPath locator.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">   &lt;<span style="color:#268bd2">html</span>&gt;
     &lt;<span style="color:#268bd2">body</span>&gt;
@@ -3046,8 +2807,8 @@ the <code>xpath=</code> label when specifying an XPath locator.</p>
       &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;button&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Clear&#34;</span> /&gt;
      &lt;/<span style="color:#268bd2">form</span>&gt;
    &lt;/<span style="color:#268bd2">body</span>&gt;
-   &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+   &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>xpath=/html/body/form[1]</code> (3) - <em>Absolute path (would break if the HTML was
 changed only slightly)</em></li>
 <li><code>//form[1]</code> (3) - <em>First form element in the HTML</em></li>
@@ -3063,27 +2824,21 @@ and attribute named &lsquo;type&rsquo; and the value &lsquo;button&rsquo;</em></
 <li><code>//form[@id='loginForm']/input[4]</code> (7) - <em>Fourth input child element of the
 form element with attribute named &lsquo;id&rsquo; and value &lsquo;loginForm&rsquo;</em></li>
 </ul>
-
 <p>These examples cover some basics, but in order to learn more, the
 following references are recommended:</p>
-
 <ul>
-<li><a href="http://www.w3schools.com/xml/xpath_intro.asp">W3Schools XPath Tutorial</a></li>
+<li><a href="http://www.w3schools.com/xml/xpath_intro.asp%3E">W3Schools XPath Tutorial</a></li>
 <li><a href="http://www.w3.org/TR/xpath">W3C XPath Recommendation</a></li>
 </ul>
-
 <p>There are also a couple of very useful Firefox Add-ons that can assist in
 discovering the XPath of an element:</p>
-
 <ul>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/1095?id=1095">XPath Checker</a>
 XPath and can be used to test XPath results.</li>
 <li>[Firebug](<a href="https://addons.mozilla.org/en-US/firefox/addon/1843">https://addons.mozilla.org/en-US/firefox/addon/1843</a> -  XPath
 suggestions are just one of the many powerful features of this very useful add-on.</li>
 </ul>
-
 <h3 id="locating-hyperlinks-by-link-text">Locating Hyperlinks by Link Text</h3>
-
 <p>This is a simple method of locating a hyperlink in your web page by using the
 text of the link. If two links with the same text are present, then the first
 match will be used.</p>
@@ -3093,19 +2848,16 @@ match will be used.</p>
     &lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue.html&#34;</span>&gt;Continue&lt;/<span style="color:#268bd2">a</span>&gt; 
     &lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;cancel.html&#34;</span>&gt;Cancel&lt;/<span style="color:#268bd2">a</span>&gt;
   &lt;/<span style="color:#268bd2">body</span>&gt;
-  &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+  &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>link=Continue</code> (4)</li>
 <li><code>link=Cancel</code> (5)</li>
 </ul>
-
 <h3 id="locating-by-dom">Locating by DOM</h3>
-
 <p>The Document Object Model represents an HTML document and can be accessed
 using JavaScript. This location strategy takes JavaScript that evaluates to
 an element on the page, which can be simply the element&rsquo;s location using the
 hierarchical dotted notation.</p>
-
 <p>Since only <code>dom</code> locators start with &ldquo;document&rdquo;, it is not necessary to include
 the <code>dom=</code> label when specifying a DOM locator.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">   &lt;<span style="color:#268bd2">html</span>&gt;
@@ -3117,8 +2869,8 @@ the <code>dom=</code> label when specifying a DOM locator.</p>
       &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;button&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Clear&#34;</span> /&gt;
      &lt;/<span style="color:#268bd2">form</span>&gt;
    &lt;/<span style="color:#268bd2">body</span>&gt;
-   &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+   &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>dom=document.getElementById('loginForm')</code> (3)</li>
 <li><code>dom=document.forms['loginForm']</code> (3)</li>
 <li><code>dom=document.forms[0]</code> (3)</li>
@@ -3127,12 +2879,9 @@ the <code>dom=</code> label when specifying a DOM locator.</p>
 <li><code>document.forms[0].elements[0]</code> (4)</li>
 <li><code>document.forms[0].elements[3]</code> (7)</li>
 </ul>
-
 <p>You can use Selenium itself as well as other sites and extensions to explore
 the DOM of your web application. A good reference exists on <a href="http://www.w3schools.com/js/js_htmldom.asp">W3Schools</a>.</p>
-
 <h3 id="locating-by-css">Locating by CSS</h3>
-
 <p>CSS (Cascading Style Sheets) is a language for describing the rendering of HTML
 and XML documents. CSS uses Selectors for binding style properties to elements
 in the document. These Selectors can be used by Selenium as another locating
@@ -3146,8 +2895,8 @@ strategy.</p>
       &lt;<span style="color:#268bd2">input</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;continue&#34;</span> type<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;button&#34;</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;Clear&#34;</span> /&gt;
      &lt;/<span style="color:#268bd2">form</span>&gt;
    &lt;/<span style="color:#268bd2">body</span>&gt;
-   &lt;<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<ul>
+   &lt;<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><ul>
 <li><code>css=form#loginForm</code> (3)</li>
 <li><code>css=input[name=&quot;username&quot;]</code> (4)</li>
 <li><code>css=input.required[type=&quot;text&quot;]</code> (4)</li>
@@ -3155,67 +2904,54 @@ strategy.</p>
 <li><code>css=#loginForm input[type=&quot;button&quot;]</code> (7)</li>
 <li><code>css=#loginForm input:nth-child(2)</code> (5)</li>
 </ul>
-
 <p>For more information about CSS Selectors, the best place to go is <a href="http://www.w3.org/TR/css3-selectors/">the W3C
 publication</a>.  You&rsquo;ll find additional
 references there.</p>
-
 <h3 id="implicit-locators">Implicit Locators</h3>
-
 <p>You can choose to omit the locator type in the following situations:</p>
-
 <ul>
-<li><p>Locators without an explicitly defined locator strategy will default
-to using the identifier locator strategy. See <code>Locating by Identifier</code>_.</p></li>
-
-<li><p>Locators starting with &ldquo;//&rdquo; will use the XPath locator strategy.
-See <code>Locating by XPath</code>_.</p></li>
-
-<li><p>Locators starting with &ldquo;document&rdquo; will use the DOM locator strategy.
-See <code>Locating by DOM</code>_</p></li>
+<li>
+<p>Locators without an explicitly defined locator strategy will default
+to using the identifier locator strategy. See <code>Locating by Identifier</code>_.</p>
+</li>
+<li>
+<p>Locators starting with &ldquo;//&rdquo; will use the XPath locator strategy.
+See <code>Locating by XPath</code>_.</p>
+</li>
+<li>
+<p>Locators starting with &ldquo;document&rdquo; will use the DOM locator strategy.
+See <code>Locating by DOM</code>_</p>
+</li>
 </ul>
-
 <h2 id="matching-text-patterns">Matching Text Patterns</h2>
-
 <p>Like locators, <em>patterns</em> are a type of parameter frequently required by Selenese
 commands.  Examples of commands which require patterns are <strong>verifyTextPresent</strong>,
 <strong>verifyTitle</strong>, <strong>verifyAlert</strong>, <strong>assertConfirmation</strong>, <strong>verifyText</strong>, and
 <strong>verifyPrompt</strong>.  And as has been mentioned above, link locators can utilize
 a pattern.  Patterns allow you to <em>describe</em>, via the use of special characters,
 what text is expected rather than having to specify that text exactly.</p>
-
 <p>There are three types of patterns: <em>globbing</em>, <em>regular expressions</em>, and <em>exact</em>.</p>
-
 <h3 id="globbing-patterns">Globbing Patterns</h3>
-
 <p>Most people are familiar with globbing as it is utilized in
 filename expansion at a DOS or Unix/Linux command line such as <code>ls *.c</code>.
 In this case, globbing is used to display all the files ending with a <code>.c</code>
-extension that exist in the current directory.  Globbing is fairly limited.<br />
+extension that exist in the current directory.  Globbing is fairly limited.<br>
 Only two special characters are supported in the Selenium implementation:</p>
-
 <p><code>*</code> which translates to &ldquo;match anything,&rdquo; i.e., nothing, a single character, or many characters.</p>
-
 <p><code>[ ]</code> (<em>character class</em>) which translates to &ldquo;match any single character
 found inside the square brackets.&rdquo; A dash (hyphen) can be used as a shorthand
 to specify a range of characters (which are contiguous in the ASCII character
 set).  A few examples will make the functionality of a character class clear:</p>
-
 <p><code>[aeiou]</code> matches any lowercase vowel</p>
-
 <p><code>[0-9]</code> matches any digit</p>
-
 <p><code>[a-zA-Z0-9]</code> matches any alphanumeric character</p>
-
 <p>In most other contexts, globbing includes a third special character, the <strong>?</strong>.
 However, Selenium globbing patterns only support the asterisk and character
 class.</p>
-
 <p>To specify a globbing pattern parameter for a Selenese command, you can
 prefix the pattern with a <strong>glob:</strong> label.  However, because globbing
 patterns are the default, you can also omit the label and specify just the
 pattern itself.</p>
-
 <p>Below is an example of two commands that use globbing patterns.  The
 actual link text on the page being tested
 was &ldquo;Film/Television Department&rdquo;; by using a pattern
@@ -3223,7 +2959,6 @@ rather than the exact text, the <strong>click</strong> command will work even if
 link text is changed to &ldquo;Film &amp; Television Department&rdquo; or &ldquo;Film and Television
 Department&rdquo;.  The glob pattern&rsquo;s asterisk will match &ldquo;anything or nothing&rdquo;
 between the word &ldquo;Film&rdquo; and the word &ldquo;Television&rdquo;.</p>
-
 <table>
 <thead>
 <tr>
@@ -3232,14 +2967,12 @@ between the word &ldquo;Film&rdquo; and the word &ldquo;Television&rdquo;.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>click</td>
 <td>link=glob:Film*Television Department</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTitle</td>
 <td>glob:*Film*Television*</td>
@@ -3247,7 +2980,6 @@ between the word &ldquo;Film&rdquo; and the word &ldquo;Television&rdquo;.</p>
 </tr>
 </tbody>
 </table>
-
 <p>The actual title of the page reached by clicking on the link was &ldquo;De Anza Film And
 Television Department - Menu&rdquo;.  By using a pattern rather than the exact
 text, the <code>verifyTitle</code> will pass as long as the two words &ldquo;Film&rdquo; and &ldquo;Television&rdquo; appear
@@ -3257,9 +2989,7 @@ the title to just &ldquo;Film &amp; Television Department,&rdquo; the test would
 Using a pattern for both a link and a simple test that the link worked (such as
 the <code>verifyTitle</code> above does) can greatly reduce the maintenance for such
 test cases.</p>
-
 <h4 id="regular-expression-patterns">Regular Expression Patterns</h4>
-
 <p><em>Regular expression</em> patterns are the most powerful of the three types
 of patterns that Selenese supports.  Regular expressions
 are also supported by most high-level programming languages, many text
@@ -3269,13 +2999,11 @@ expression patterns allow a user to perform many tasks that would
 be very difficult otherwise.  For example, suppose your test needed
 to ensure that a particular table cell contained nothing but a number.
 <code>regexp: [0-9]+</code> is a simple pattern that will match a decimal number of any length.</p>
-
 <p>Whereas Selenese globbing patterns support only the <strong>*</strong>
 and <strong>[ ]</strong> (character
 class) features, Selenese regular expression patterns offer the same
 wide array of special characters that exist in JavaScript.  Below
 are a subset of those special characters:</p>
-
 <table>
 <thead>
 <tr>
@@ -3283,61 +3011,50 @@ are a subset of those special characters:</p>
 <th>MATCH</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>.</td>
 <td>any single character</td>
 </tr>
-
 <tr>
 <td>[ ]</td>
 <td>character class: any single character that appears inside the brackets</td>
 </tr>
-
 <tr>
 <td>*</td>
 <td>quantifier: 0 or more of the preceding character (or group)</td>
 </tr>
-
 <tr>
 <td>+</td>
 <td>quantifier: 1 or more of the preceding character (or group)</td>
 </tr>
-
 <tr>
 <td>?</td>
 <td>quantifier: 0 or 1 of the preceding character (or group)</td>
 </tr>
-
 <tr>
 <td>{1,5}</td>
 <td>quantifier: 1 through 5 of the preceding character (or group)</td>
 </tr>
-
 <tr>
 <td>|</td>
 <td>alternation: the character/group on the left or the character/group on the right</td>
 </tr>
-
 <tr>
 <td>( )</td>
 <td>grouping: often used with alternation and/or quantifier</td>
 </tr>
 </tbody>
 </table>
-
 <p>Regular expression patterns in Selenese need to be prefixed with
 either <code>regexp:</code> or <code>regexpi:</code>.  The former is case-sensitive; the
 latter is case-insensitive.</p>
-
 <p>A few examples will help clarify how regular expression patterns can
 be used with Selenese commands.  The first one uses what is probably
 the most commonly used regular expression pattern&ndash;<strong>.*</strong> (&ldquo;dot star&rdquo;).  This
 two-character sequence can be translated as &ldquo;0 or more occurrences of
 any character&rdquo; or more simply, &ldquo;anything or nothing.&rdquo;  It is the
 equivalent of the one-character globbing pattern <strong>*</strong> (a single asterisk).</p>
-
 <table>
 <thead>
 <tr>
@@ -3346,14 +3063,12 @@ equivalent of the one-character globbing pattern <strong>*</strong> (a single as
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>click</td>
 <td>link=glob:Film*Television Department</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTitle</td>
 <td>regexp:.*Film.*Television.*</td>
@@ -3361,15 +3076,12 @@ equivalent of the one-character globbing pattern <strong>*</strong> (a single as
 </tr>
 </tbody>
 </table>
-
 <p>The example above is functionally equivalent to the earlier example
 that used globbing patterns for this same test.  The only differences
 are the prefix (<strong>regexp:</strong> instead of <strong>glob:</strong>) and the &ldquo;anything
 or nothing&rdquo; pattern (<strong>.*</strong> instead of just <strong>*</strong>).</p>
-
 <p>The more complex example below tests that the Yahoo!
 Weather page for Anchorage, Alaska contains info on the sunrise time:</p>
-
 <table>
 <thead>
 <tr>
@@ -3378,14 +3090,12 @@ Weather page for Anchorage, Alaska contains info on the sunrise time:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td><a href="http://weather.yahoo.com/forecast/USAK0012.html">http://weather.yahoo.com/forecast/USAK0012.html</a></td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTextPresent</td>
 <td>regexp:Sunrise: *[0-9]{1,2}:[0-9]{2} [ap]m</td>
@@ -3393,9 +3103,7 @@ Weather page for Anchorage, Alaska contains info on the sunrise time:</p>
 </tr>
 </tbody>
 </table>
-
 <p>Let&rsquo;s examine the regular expression above one part at a time:</p>
-
 <table>
 <thead>
 <tr>
@@ -3403,37 +3111,30 @@ Weather page for Anchorage, Alaska contains info on the sunrise time:</p>
 <th></th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td><code>Sunrise: *</code></td>
 <td>The string <strong>Sunrise:</strong> followed by 0 or more spaces</td>
 </tr>
-
 <tr>
 <td><code>[0-9]{1,2}</code></td>
 <td>1 or 2 digits (for the hour of the day)</td>
 </tr>
-
 <tr>
 <td><code>:</code></td>
 <td>The character <strong>:</strong> (no special characters involved)</td>
 </tr>
-
 <tr>
 <td><code>[0-9]{2}</code></td>
 <td>2 digits (for the minutes) followed by a space</td>
 </tr>
-
 <tr>
 <td><code>[ap]m</code></td>
 <td>&ldquo;a&rdquo; or &ldquo;p&rdquo; followed by &ldquo;m&rdquo; (am or pm)</td>
 </tr>
 </tbody>
 </table>
-
 <h4 id="exact-patterns">Exact Patterns</h4>
-
 <p>The <strong>exact</strong> type of Selenium pattern is of marginal usefulness.
 It uses no special characters at all.  So, if you needed to look for
 an actual asterisk character (which is special for both globbing and
@@ -3443,7 +3144,6 @@ to do that.  For example, if you wanted to select an item labeled
 The asterisk in the <code>glob:Real *</code> pattern will match anything or nothing.
 So, if there was an earlier select option labeled &ldquo;Real Numbers,&rdquo; it would
 be the option selected rather than the &ldquo;Real *&rdquo; option.</p>
-
 <table>
 <thead>
 <tr>
@@ -3452,7 +3152,6 @@ be the option selected rather than the &ldquo;Real *&rdquo; option.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>select</td>
@@ -3461,10 +3160,8 @@ be the option selected rather than the &ldquo;Real *&rdquo; option.</p>
 </tr>
 </tbody>
 </table>
-
 <p>In order to ensure that the &ldquo;Real *&rdquo; item would be selected, the <code>exact:</code>
 prefix could be used to create an <strong>exact</strong> pattern as shown below:</p>
-
 <table>
 <thead>
 <tr>
@@ -3473,7 +3170,6 @@ prefix could be used to create an <strong>exact</strong> pattern as shown below:
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>select</td>
@@ -3482,10 +3178,8 @@ prefix could be used to create an <strong>exact</strong> pattern as shown below:
 </tr>
 </tbody>
 </table>
-
 <p>But the same effect could be achieved via escaping the asterisk in a
 regular expression pattern:</p>
-
 <table>
 <thead>
 <tr>
@@ -3494,7 +3188,6 @@ regular expression pattern:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>select</td>
@@ -3503,31 +3196,24 @@ regular expression pattern:</p>
 </tr>
 </tbody>
 </table>
-
 <p>It&rsquo;s rather unlikely that most testers will ever need to look for
 an asterisk or a set of square brackets with characters inside them (the
 character class for globbing patterns).  Thus, globbing patterns and
 regular expression patterns are sufficient for the vast majority of us.</p>
-
 <h2 id="the-andwait-commands">The &ldquo;AndWait&rdquo; Commands</h2>
-
 <p>The difference between a command and its <em>AndWait</em>
 alternative is that the regular command (e.g. <em>click</em>) will do the action and
 continue with the following command as fast as it can, while the <em>AndWait</em>
 alternative (e.g. <em>clickAndWait</em>) tells Selenium to <strong>wait</strong> for the page to
 load after the action has been done.</p>
-
 <p>The <em>AndWait</em> alternative is always used when the action causes the browser to
 navigate to another page or reload the present one.</p>
-
 <p>Be aware, if you use an <em>AndWait</em> command for an action that
 does not trigger a navigation/refresh, your test will fail. This happens
-because Selenium will reach the <em>AndWait</em>&rsquo;s timeout without seeing any
+because Selenium will reach the <em>AndWait</em>&lsquo;s timeout without seeing any
 navigation or refresh being made, causing Selenium to raise a timeout
 exception.</p>
-
 <h2 id="the-waitfor-commands-in-ajax-applications">The waitFor Commands in AJAX applications</h2>
-
 <p>In AJAX driven web applications, data is retrieved from server without
 refreshing the page. Using <em>andWait</em> commands will not work as the page is not
 actually refreshed. Pausing the test execution for a certain period of time is
@@ -3536,48 +3222,37 @@ stipulated period depending on the system&rsquo;s responsiveness, load or other
 uncontrolled factors of the moment, leading to test failures. The best approach
 would be to wait for the needed element in a dynamic period and then continue
 the execution as soon as the element is found.</p>
-
 <p>This is done using <em>waitFor</em> commands, as <em>waitForElementPresent</em> or
 <em>waitForVisible</em>, which wait dynamically, checking for the desired condition
 every second and continuing to the next command in the script as soon as the
 condition is met.</p>
-
 <h2 id="sequence-of-evaluation-and-flow-control">Sequence of Evaluation and Flow Control</h2>
-
 <p>When a script runs, it simply runs in sequence, one command after another.</p>
-
 <p>Selenese, by itself, does not support condition statements (if-else, etc.) or
 iteration (for, while, etc.). Many useful tests can be conducted without flow
 control. However, for a functional test of dynamic content, possibly involving
 multiple pages, programming logic is often needed.</p>
-
 <p>When flow control is needed, there are three options:</p>
-
 <p>a) Run the script using Selenium-RC and a client library such as Java or
-   PHP to utilize the programming language&rsquo;s flow control features.
+PHP to utilize the programming language&rsquo;s flow control features.
 b) Run a small JavaScript snippet from within the script using the storeEval command.
 c) Install the <code>goto_sel_ide.js extension</code>.</p>
-
 <p>Most testers will export the test script into a programming language file that uses the
 Selenium-RC API (see the Selenium-IDE chapter).  However, some organizations prefer
 to run their scripts from Selenium-IDE whenever possible (for instance, when they have
 many junior-level people running tests for them, or when programming skills are
 lacking). If this is your case, consider a JavaScript snippet or the goto_sel_ide.js extension.</p>
-
 <h2 id="store-commands-and-selenium-variables">Store Commands and Selenium Variables</h2>
-
 <p>You can use Selenium variables to store constants at the
 beginning of a script.  Also, when combined with a data-driven test design
 (discussed in a later section), Selenium variables can be used to store values
 passed to your test program from the command-line, from another program, or from
 a file.</p>
-
 <p>The plain <em>store</em> command is the most basic of the many store commands and can be used
 to simply store a constant value in a Selenium variable.  It takes two
 parameters, the text value to be stored and a Selenium variable.  Use the
 standard variable naming conventions of only alphanumeric characters when
 choosing a name for your variable.</p>
-
 <table>
 <thead>
 <tr>
@@ -3586,20 +3261,17 @@ choosing a name for your variable.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>store</td>
-<td>paul@mysite.org</td>
+<td><a href="mailto:paul@mysite.org">paul@mysite.org</a></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-
 <p>Later in your script, you&rsquo;ll want to use the stored value of your
 variable.  To access the value of a variable, enclose the variable in
 curly brackets ({}) and precede it with a dollar sign like this.</p>
-
 <table>
 <thead>
 <tr>
@@ -3608,7 +3280,6 @@ curly brackets ({}) and precede it with a dollar sign like this.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>verifyText</td>
@@ -3617,9 +3288,7 @@ curly brackets ({}) and precede it with a dollar sign like this.</p>
 </tr>
 </tbody>
 </table>
-
 <p>A common use of variables is for storing input for an input field.</p>
-
 <table>
 <thead>
 <tr>
@@ -3628,7 +3297,6 @@ curly brackets ({}) and precede it with a dollar sign like this.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>type</td>
@@ -3637,33 +3305,23 @@ curly brackets ({}) and precede it with a dollar sign like this.</p>
 </tr>
 </tbody>
 </table>
-
 <p>Selenium variables can be used in either the first or second parameter and
 are interpreted by Selenium prior to any other operations performed by the
 command.  A Selenium variable may also be used within a locator expression.</p>
-
 <p>An equivalent store command exists for each verify and assert command.  Here
 are a couple more commonly used store commands.</p>
-
 <h3 id="storeelementpresent">storeElementPresent</h3>
-
 <p>This corresponds to verifyElementPresent.  It simply stores a boolean value&ndash;&ldquo;true&rdquo;
 or &ldquo;false&rdquo;&ndash;depending on whether the UI element is found.</p>
-
 <h3 id="storetext">storeText</h3>
-
 <p>StoreText corresponds to verifyText.  It uses a locator to identify specific
 page text.  The text, if found, is stored in the variable.  StoreText can be
 used to extract text from the page being tested.</p>
-
 <h3 id="storeeval">storeEval</h3>
-
 <p>This command takes a script as its
 first parameter.  Embedding JavaScript within Selenese is covered in the next section.
 StoreEval allows the test to store the result of running the script in a variable.</p>
-
 <h2 id="javascript-and-selenese-parameters">JavaScript and Selenese Parameters</h2>
-
 <p>JavaScript can be used with two types of Selenese parameters: script
 and non-script (usually expressions).  In most cases, you&rsquo;ll want to access
 and/or manipulate a test case variable inside the JavaScript snippet used as
@@ -3673,19 +3331,15 @@ rather than sequential numeric indexes.  The associative array containing
 your test case&rsquo;s variables is named <strong>storedVars</strong>.  Whenever you wish to
 access or manipulate a variable within a JavaScript snippet, you must refer
 to it as <strong>storedVars[&lsquo;yourVariableName&rsquo;]</strong>.</p>
-
 <h3 id="javascript-usage-with-script-parameters">JavaScript Usage with Script Parameters</h3>
-
 <p>Several Selenese commands specify a <strong>script</strong> parameter including
 <strong>assertEval</strong>, <strong>verifyEval</strong>, <strong>storeEval</strong>, and <strong>waitForEval</strong>.
 These parameters require no special syntax.  A Selenium-IDE
 user would simply place a snippet of JavaScript code into
 the  appropriate field, normally the <strong>Target</strong> field (because
 a <strong>script</strong> parameter is normally the first or only parameter).</p>
-
 <p>The example below illustrates how a JavaScript snippet
 can be used to perform a simple numerical calculation:</p>
-
 <table>
 <thead>
 <tr>
@@ -3694,20 +3348,17 @@ can be used to perform a simple numerical calculation:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>store</td>
 <td>10</td>
 <td>hits</td>
 </tr>
-
 <tr>
 <td>storeXpathCount</td>
 <td>//blockquote</td>
 <td>blockquotes</td>
 </tr>
-
 <tr>
 <td>storeEval</td>
 <td>storedVars[&lsquo;hits&rsquo;].storedVars[&lsquo;blockquotes&rsquo;]</td>
@@ -3715,11 +3366,9 @@ can be used to perform a simple numerical calculation:</p>
 </tr>
 </tbody>
 </table>
-
 <p>This next example illustrates how a JavaScript snippet can include calls to
 methods, in this case the JavaScript String object&rsquo;s <code>toUpperCase</code> method
 and <code>toLowerCase</code> method.</p>
-
 <table>
 <thead>
 <tr>
@@ -3728,20 +3377,17 @@ and <code>toLowerCase</code> method.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>store</td>
 <td>Edith Wharton</td>
 <td>name</td>
 </tr>
-
 <tr>
 <td>storeEval</td>
 <td>storedVars[&lsquo;name&rsquo;].toUpperCase()</td>
 <td>uc</td>
 </tr>
-
 <tr>
 <td>storeEval</td>
 <td>storedVars[&lsquo;name&rsquo;].toUpperCase()</td>
@@ -3749,17 +3395,14 @@ and <code>toLowerCase</code> method.</p>
 </tr>
 </tbody>
 </table>
-
 <h4 id="javascript-usage-with-non-script-parameters">JavaScript Usage with Non-Script Parameters</h4>
-
 <p>JavaScript can also be used to help generate values for parameters, even
-when the parameter is not specified to be of type <strong>script</strong>.<br />
+when the parameter is not specified to be of type <strong>script</strong>.<br>
 However, in this case, special syntax is required&ndash;the <em>entire</em> parameter
 value must be prefixed by <code>javascript{</code> with a trailing <code>}</code>, which encloses the JavaScript
 snippet, as in <code>javascript{*yourCodeHere*}</code>.
 Below is an example in which the <code>type</code> command&rsquo;s second parameter
 <code>value</code> is generated via JavaScript code using this special syntax:</p>
-
 <table>
 <thead>
 <tr>
@@ -3768,14 +3411,12 @@ Below is an example in which the <code>type</code> command&rsquo;s second parame
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>store</td>
 <td>league of nations</td>
 <td>searchString</td>
 </tr>
-
 <tr>
 <td>type</td>
 <td>q</td>
@@ -3783,9 +3424,7 @@ Below is an example in which the <code>type</code> command&rsquo;s second parame
 </tr>
 </tbody>
 </table>
-
-<h2 id="echo-the-selenese-print-command"><em>echo</em> - The Selenese Print Command</h2>
-
+<h2 id="echo---the-selenese-print-command"><em>echo</em> - The Selenese Print Command</h2>
 <p>Selenese has a simple command that allows you to print text to your test&rsquo;s
 output.  This is useful for providing informational progress notes in your
 test which display on the console as your test is running.  These notes also can be
@@ -3793,7 +3432,6 @@ used to provide context within your test result reports, which can be useful
 for finding where a defect exists on a page in the event your test finds a
 problem.  Finally, echo statements can be used to print the contents of
 Selenium variables.</p>
-
 <table>
 <thead>
 <tr>
@@ -3802,14 +3440,12 @@ Selenium variables.</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>echo</td>
 <td>Testing page footer now.</td>
 <td></td>
 </tr>
-
 <tr>
 <td>echo</td>
 <td>Username is \${userName}</td>
@@ -3817,9 +3453,7 @@ Selenium variables.</p>
 </tr>
 </tbody>
 </table>
-
 <h2 id="alerts-popups-and-multiple-windows">Alerts, Popups, and Multiple Windows</h2>
-
 <p>Suppose that you are testing a page that looks like this.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">  <span style="color:#719e07">&lt;!DOCTYPE HTML&gt;</span>
   &lt;<span style="color:#268bd2">html</span>&gt;
@@ -3865,14 +3499,12 @@ Selenium variables.</p>
     &lt;<span style="color:#268bd2">span</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;output&#34;</span>&gt;
     &lt;/<span style="color:#268bd2">span</span>&gt;
   &lt;/<span style="color:#268bd2">body</span>&gt;
-  &lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<p>The user must respond to alert/confirm boxes, as well as moving focus to newly
+  &lt;/<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><p>The user must respond to alert/confirm boxes, as well as moving focus to newly
 opened popup windows. Fortunately, Selenium can cover JavaScript pop-ups.</p>
-
 <p>But before we begin covering alerts/confirms/prompts in individual detail, it is
 helpful to understand the commonality between them. Alerts, confirmation boxes
 and prompts all have variations of the following</p>
-
 <table>
 <thead>
 <tr>
@@ -3880,52 +3512,42 @@ and prompts all have variations of the following</p>
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>assertFoo(pattern)</td>
 <td>throws error if pattern doesn’t match the text of the pop-up</td>
 </tr>
-
 <tr>
 <td>assertFooPresent</td>
 <td>throws error if pop-up is not available</td>
 </tr>
-
 <tr>
 <td>assertFooNotPresent</td>
 <td>throws error if any pop-up is present</td>
 </tr>
-
 <tr>
 <td>storeFoo(variable)</td>
 <td>stores the text of the pop-up in a variable</td>
 </tr>
-
 <tr>
 <td>storeFooPresent(variable)</td>
 <td>stores the text of the pop-up in a variable and returns true or false</td>
 </tr>
 </tbody>
 </table>
-
 <p>When running under Selenium, JavaScript pop-ups will not appear. This is because
 the function calls are actually being overridden at runtime by Selenium&rsquo;s own
 JavaScript. However, just because you cannot see the pop-up doesn&rsquo;t mean you don&rsquo;t
 have to deal with it. To handle a pop-up, you must call its <code>assertFoo(pattern)</code>
 function. If you fail to assert the presence of a pop-up your next command will be
-blocked and you will get an error similar to the following <code>[error] Error: There
-was an unexpected Confirmation! [Chose an option.]</code></p>
-
+blocked and you will get an error similar to the following <code>[error] Error: There was an unexpected Confirmation! [Chose an option.]</code></p>
 <h3 id="alerts">Alerts</h3>
-
 <p>Let&rsquo;s start with alerts because they are the simplest pop-up to handle. To begin,
 open the HTML sample above in a browser and click on the &ldquo;Show alert&rdquo; button. You&rsquo;ll
 notice that after you close the alert the text &ldquo;Alert is gone.&rdquo; is displayed on the
 page. Now run through the same steps with Selenium IDE recording, and verify
 the text is added after you close the alert. Your test will look something like
 this:</p>
-
 <table>
 <thead>
 <tr>
@@ -3934,26 +3556,22 @@ this:</p>
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td>/</td>
 <td></td>
 </tr>
-
 <tr>
 <td>click</td>
 <td>btnAlert</td>
 <td></td>
 </tr>
-
 <tr>
 <td>assertAlert</td>
 <td>I’m blocking!</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTextPresent</td>
 <td>Alert is gone.</td>
@@ -3961,25 +3579,19 @@ this:</p>
 </tr>
 </tbody>
 </table>
-
 <p>You may be thinking &ldquo;That&rsquo;s odd, I never tried to assert that alert.&rdquo; But this is
 Selenium-IDE handling and closing the alert for you. If you remove that step and replay
-the test you will get the following error <code>[error] Error: There was an unexpected
-Alert! [I'm blocking!]</code>. You must include an assertion of the alert to acknowledge
+the test you will get the following error <code>[error] Error: There was an unexpected Alert! [I'm blocking!]</code>. You must include an assertion of the alert to acknowledge
 its presence.</p>
-
 <p>If you just want to assert that an alert is present but either don&rsquo;t know or don&rsquo;t care
 what text it contains, you can use <code>assertAlertPresent</code>. This will return true or false,
 with false halting the test.</p>
-
 <h3 id="confirmations">Confirmations</h3>
-
 <p>Confirmations behave in much the same way as alerts, with <code>assertConfirmation</code> and
 <code>assertConfirmationPresent</code> offering the same characteristics as their alert counterparts.
 However, by default Selenium will select OK when a confirmation pops up. Try recording
 clicking on the &ldquo;Show confirm box&rdquo; button in the sample page, but click on the &ldquo;Cancel&rdquo; button
 in the popup, then assert the output text. Your test may look something like this:</p>
-
 <table>
 <thead>
 <tr>
@@ -3988,32 +3600,27 @@ in the popup, then assert the output text. Your test may look something like thi
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td>/</td>
 <td></td>
 </tr>
-
 <tr>
 <td>click</td>
 <td>btnConfirm</td>
 <td></td>
 </tr>
-
 <tr>
 <td>chooseCancelOnNextConfirmation</td>
 <td></td>
 <td></td>
 </tr>
-
 <tr>
 <td>assertConfirmation</td>
 <td>Choose an option.</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTextPresent</td>
 <td>Rejected</td>
@@ -4021,23 +3628,18 @@ in the popup, then assert the output text. Your test may look something like thi
 </tr>
 </tbody>
 </table>
-
 <p>The <code>chooseCancelOnNextConfirmation</code> function tells Selenium that all following
 confirmation should return false. It can be reset by calling chooseOkOnNextConfirmation.</p>
-
 <p>You may notice that you cannot replay this test, because Selenium complains that there
 is an unhandled confirmation. This is because the order of events Selenium-IDE records
 causes the click and chooseCancelOnNextConfirmation to be put in the wrong order (it makes sense
 if you think about it, Selenium can&rsquo;t know that you&rsquo;re cancelling before you open a confirmation)
 Simply switch these two commands and your test will run fine.</p>
-
 <h3 id="prompts">Prompts</h3>
-
 <p>Prompts behave in much the same way as alerts, with <code>assertPrompt</code> and <code>assertPromptPresent</code>
 offering the same characteristics as their alert counterparts. By default, Selenium will wait for
 you to input data when the prompt pops up. Try recording clicking on the &ldquo;Show prompt&rdquo; button in
 the sample page and enter &ldquo;Selenium&rdquo; into the prompt. Your test may look something like this:</p>
-
 <table>
 <thead>
 <tr>
@@ -4046,32 +3648,27 @@ the sample page and enter &ldquo;Selenium&rdquo; into the prompt. Your test may 
 <th>Value</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>open</td>
 <td>/</td>
 <td></td>
 </tr>
-
 <tr>
 <td>answerOnNextPrompt</td>
 <td>Selenium!</td>
 <td></td>
 </tr>
-
 <tr>
 <td>click</td>
 <td>id=btnPrompt</td>
 <td></td>
 </tr>
-
 <tr>
 <td>assertPrompt</td>
 <td>What’s the best web QA tool?</td>
 <td></td>
 </tr>
-
 <tr>
 <td>verifyTextPresent</td>
 <td>Selenium!</td>
@@ -4079,124 +3676,101 @@ the sample page and enter &ldquo;Selenium&rdquo; into the prompt. Your test may 
 </tr>
 </tbody>
 </table>
-
 <p>If you choose cancel on the prompt, you may notice that answerOnNextPrompt will simply show a
 target of blank. Selenium treats cancel and a blank entry on the prompt basically as the same thing.</p>
-
 <h2 id="debugging">Debugging</h2>
-
 <p>Debugging means finding and fixing errors in your test case.  This is a normal
 part of test case development.</p>
-
 <p>We won&rsquo;t teach debugging here as most new users to Selenium will already have
 some basic experience with debugging.  If this is new to you, we recommend
 you ask one of the developers in your organization.</p>
-
 <h3 id="breakpoints-and-startpoints">Breakpoints and Startpoints</h3>
-
 <p>The Sel-IDE supports the setting of breakpoints and the ability to start and
 stop the running of a test case, from any point within the test case.  That is, one
 can run up to a specific command in the middle of the test case and inspect how
 the test case behaves at that point.  To do this, set a breakpoint on the
 command just before the one to be examined.</p>
-
 <p>To set a breakpoint, select a command, right-click, and from the context menu
 select <em>Toggle Breakpoint</em>.  Then click the Run button to run your test case from
 the beginning up to the breakpoint.</p>
-
 <p>It is also sometimes useful to run a test case from somewhere in the middle to
-the end of the test case or up to a breakpoint that follows the starting point.<br />
+the end of the test case or up to a breakpoint that follows the starting point.<br>
 For example, suppose your test case first logs into the website and then
-performs a series of tests and you are trying to debug one of those tests.<br />
+performs a series of tests and you are trying to debug one of those tests.<br>
 However, you only need to login once, but you need to keep rerunning your
 tests as you are developing them.  You can login once, then run your test case
 from a startpoint placed after the login portion of your test case.  That will
 prevent you from having to manually logout each time you rerun your test case.</p>
-
 <p>To set a startpoint, select a command, right-click, and from the context
 menu select <em>Set/Clear Start Point</em>.  Then click the Run button to execute the
 test case beginning at that startpoint.</p>
-
 <h3 id="stepping-through-a-testcase">Stepping Through a Testcase</h3>
-
 <p>To execute a test case one command at a time (&ldquo;step through&rdquo; it), follow these
 steps:</p>
-
 <ol>
-<li><p>Start the test case running with the Run button from the toolbar.</p></li>
-
-<li><p>Immediately pause the executing test case with the Pause button.</p></li>
-
-<li><p>Repeatedly select the Step button.</p></li>
+<li>
+<p>Start the test case running with the Run button from the toolbar.</p>
+</li>
+<li>
+<p>Immediately pause the executing test case with the Pause button.</p>
+</li>
+<li>
+<p>Repeatedly select the Step button.</p>
+</li>
 </ol>
-
 <h3 id="find-button">Find Button</h3>
-
 <p>The Find button is used to see which UI element on the currently displayed
-webpage (in the browser) is used in the currently selected Selenium command.<br />
+webpage (in the browser) is used in the currently selected Selenium command.<br>
 This is useful when building a locator for a command&rsquo;s first parameter (see the
 section on :ref:<code>locators &lt;locators-section&gt;</code> in the Selenium Commands chapter).
 It can be used with any command that identifies a UI element on a webpage,
 i.e. <em>click</em>, <em>clickAndWait</em>, <em>type</em>, and certain <em>assert</em> and <em>verify</em> commands,
 among others.</p>
-
 <p>From Table view, select any command that has a locator parameter.
-Click the Find button.<br />
+Click the Find button.<br>
 Now look on the webpage: There should be a bright green rectangle
 enclosing the element specified by the locator parameter.</p>
-
 <h3 id="page-source-for-debugging">Page Source for Debugging</h3>
-
 <p>Often, when debugging a test case, you simply must look at the page source (the
 HTML for the webpage you&rsquo;re trying to test) to determine a problem.  Firefox
-makes this easy.  Simply right-click the webpage and select &lsquo;View-&gt;Page Source.<br />
+makes this easy.  Simply right-click the webpage and select &lsquo;View-&gt;Page Source.<br>
 The HTML opens in a separate window.  Use its Search feature (Edit=&gt;Find)
 to search for a keyword to find the HTML for the UI element you&rsquo;re trying
 to test.</p>
-
 <p>Alternatively, select just that portion of the webpage for which you want to
 see the source.  Then right-click the webpage and select View Selection
 Source.  In this case, the separate HTML window will contain just a small
 amount of source, with highlighting on the portion representing your
 selection.</p>
-
 <h3 id="locator-assistance">Locator Assistance</h3>
-
 <p>Whenever Selenium-IDE records a locator-type argument, it stores
 additional information which allows the user to view other possible
 locator-type arguments that could be used instead.  This feature can be
 very useful for learning more about locators, and is often needed to help
 one build a different type of locator than the type that was recorded.</p>
-
 <p>This locator assistance is presented on the Selenium-IDE window as a drop-down
 list accessible at the right end of the Target field
-(only when the Target field contains a recorded locator-type argument).<br />
+(only when the Target field contains a recorded locator-type argument).<br>
 Below is a snapshot showing the
 contents of this drop-down for one command.  Note that the first column of
 the drop-down provides alternative locators, whereas the second column
 indicates the type of each alternative.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_locator_assistance.png" alt="Selenium Locator Assistance" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_locator_assistance.png" alt="Selenium Locator Assistance"></p>
 <h2 id="writing-a-test-suite">Writing a Test Suite</h2>
-
 <p>A test suite is a collection of test cases which is displayed in the leftmost
-pane in the IDE.<br />
+pane in the IDE.<br>
 The test suite pane can be manually opened or closed via selecting a small dot
 halfway down the right edge of the pane (which is the left edge of the
 entire Selenium-IDE window if the pane is closed).</p>
-
 <p>The test suite pane will be automatically opened when an existing test suite
 is opened <em>or</em> when the user selects the New Test Case item from the
 File menu.  In the latter case, the new test case will appear immediately
 below the previous test case.</p>
-
 <p>Selenium-IDE also supports loading pre-existing test cases by using the File
 -&gt; Add Test Case menu option.  This allows you to add existing test cases to
 a new test suite.</p>
-
 <p>A test suite file is an HTML file containing a one-column table.  Each
-cell of each row in the <tbody> section contains a link to a test case.
+cell of each row in the <!-- raw HTML omitted --> section contains a link to a test case.
 The example below is of a test suite containing four test cases:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">html</span>&gt;
     &lt;<span style="color:#268bd2">head</span>&gt;
@@ -4216,59 +3790,44 @@ The example below is of a test suite containing four test cases:</p>
         &lt;/<span style="color:#268bd2">tbody</span>&gt;
         &lt;/<span style="color:#268bd2">table</span>&gt;
     &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<p>Note: Test case files should not have to be co-located with the test suite file
-   that invokes them.  And on Mac OS and Linux systems, that is indeed the
-   case.  However, at the time of this writing, a bug prevents Windows users
-   from being able to place the test cases elsewhere than with the test suite
-   that invokes them.</p>
-
+&lt;/<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><p>Note: Test case files should not have to be co-located with the test suite file
+that invokes them.  And on Mac OS and Linux systems, that is indeed the
+case.  However, at the time of this writing, a bug prevents Windows users
+from being able to place the test cases elsewhere than with the test suite
+that invokes them.</p>
 <h2 id="user-extensions">User Extensions</h2>
-
 <p>User extensions are JavaScript files that allow one to create his or her own
 customizations and features to add additional functionality.  Often this is in
 the form of customized commands although this extensibility is not limited to
 additional commands.</p>
-
 <p>There are a number of useful extensions_ created by users.</p>
-
 <p><em>IMPORTANT:  THIS SECTION IS OUT OF DATE&ndash;WE WILL BE REVISING THIS SOON.</em></p>
-
 <ul>
 <li>_extensions: <a href="http://wiki.openqa.org/display/SEL/Contributed+User-Extensions">http://wiki.openqa.org/display/SEL/Contributed+User-Extensions</a></li>
 </ul>
-
 <p>.. _<a href="http://wiki.openqa.org/download/attachments/379/goto_sel_ide.js"><code>goto_sel_ide.js extension</code></a>:</p>
-
 <p>Perhaps the most popular of all Selenium-IDE extensions
 is one which provides flow control in the form of while loops and primitive
-conditionals.  This extension is the goto_sel<em>ide.js</em>.  For an example
+conditionals.  This extension is the goto_sel_ide.js_.  For an example
 of how to use the functionality provided by this extension, look at the
 page_ created by its author.</p>
-
 <p>To install this extension, put the pathname to its location on your
 computer in the <strong>Selenium Core extensions</strong> field of Selenium-IDE&rsquo;s
 Options=&gt;Options=&gt;General tab.</p>
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_extensions_install.png" alt="Selenium IDE Extensions Install" /></p>
-
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_extensions_install.png" alt="Selenium IDE Extensions Install"></p>
 <p>After selecting the <strong>OK</strong> button, you must close and reopen Selenium-IDE
 in order for the extensions file to be read.  Any change you make to an
 extension will also require you to close and reopen Selenium-IDE.</p>
-
 <p>Information on writing your own extensions can be found near the
 bottom of the Selenium Reference_ document.</p>
-
 <p>Sometimes it can prove very useful to debug step by step Selenium IDE and your
 User Extension. The only debugger that appears able to debug
 XUL/Chrome based extensions is Venkman which is supported in Firefox until version 32 included.
 The step by step debug has been verified to work with Firefox 32 and Selenium IDE 2.9.0.</p>
-
 <h2 id="format">Format</h2>
-
 <p>Format, under the Options menu, allows you to select a language for saving
 and displaying the test case.  The default is HTML.</p>
-
 <p>If you will be using Selenium-RC to run your test cases, this feature is used
 to translate your test case into a programming language. Select the
 language, e.g. Java, PHP, you will be using with Selenium-RC for developing
@@ -4276,57 +3835,40 @@ your test programs.  Then simply save the test case using File=&gt;Export Test C
 Your test case will be translated into a series of functions in the language you
 choose. Essentially, program code supporting your test is generated for you
 by Selenium-IDE.</p>
-
 <p>Also, note that if the generated code does not suit your needs, you can alter
-it by editing a configuration file which defines the generation process.<br />
+it by editing a configuration file which defines the generation process.<br>
 Each supported language has configuration settings which are editable.  This
 is under the Options=&gt;Options=&gt;Formats tab.</p>
-
 <h2 id="executing-selenium-ide-tests-on-different-browsers">Executing Selenium-IDE Tests on Different Browsers</h2>
-
 <p>While Selenium-IDE can only run tests against Firefox, tests
 developed with Selenium-IDE can be run against other browsers, using a
 simple command-line interface that invokes the Selenium-RC server.  This topic
 is covered in the :ref:<code>Run Selenese tests &lt;html-suite&gt;</code> section on Selenium-RC
 chapter. The <em>-htmlSuite</em> command-line option is the particular feature of interest.</p>
-
 <h2 id="troubleshooting">Troubleshooting</h2>
-
 <p>Below is a list of image/explanation pairs which describe frequent
 sources of problems with Selenium-IDE:</p>
-
 <p><em>Table view is not available with this format.</em></p>
-
 <p>This message can be occasionally displayed in the Table tab when Selenium IDE is
 launched. The workaround is to close and reopen Selenium IDE. See
 <a href="http://code.google.com/p/selenium/issues/detail?id=1008">issue 1008</a>.
 for more information. If you are able to reproduce this reliably then please
 provide details so that we can work on a fix.</p>
-
-<hr />
-
+<hr>
 <p><em>error loading test case: no command found</em></p>
-
 <p>You&rsquo;ve used <strong>File=&gt;Open</strong> to try to open a test suite file. Use <strong>File=&gt;Open
 Test Suite</strong> instead.</p>
-
 <p>An enhancement request has been raised to improve this error message. See
 <a href="http://code.google.com/p/selenium/issues/detail?id=1010">issue 1010</a>.</p>
-
-<hr />
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_timing.png" alt="Selenium IDE Trouble Timing" /></p>
-
+<hr>
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_timing.png" alt="Selenium IDE Trouble Timing"></p>
 <p>This type of <strong>error</strong> may indicate a timing problem, i.e., the element
 specified by a locator in your command wasn&rsquo;t fully loaded when the command
 was executed.  Try putting a <strong>pause 5000</strong> before the command to determine
 whether the problem is indeed related to timing.  If so, investigate using an
 appropriate <strong>waitFor*</strong> or <strong>*AndWait</strong> command before the failing command.</p>
-
-<hr />
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_param.png" alt="Selenium IDE Trouble Param" /></p>
-
+<hr>
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_param.png" alt="Selenium IDE Trouble Param"></p>
 <p>Whenever your attempt to use variable substitution fails as is the
 case for the <strong>open</strong> command above, it indicates
 that you haven&rsquo;t actually created the variable whose value you&rsquo;re
@@ -4338,26 +3880,19 @@ placed in the reverse order of what is required.
 For any Selenese command, the first required parameter must go
 in the <strong>Target</strong> field, and the second required parameter (if one exists)
 must go in the <strong>Value</strong> field.</p>
-
-<hr />
-
+<hr>
 <p><em>error loading test case: [Exception&hellip; &ldquo;Component returned failure code:
 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [nsIFileInputStream.init]&rdquo; nresult:
 &ldquo;0x80520012 (NS_ERROR_FILE_NOT_FOUND)&rdquo; location: &ldquo;JS frame ::
 chrome://selenium-ide/content/file-utils.js :: anonymous :: line 48&rdquo; data: no]</em></p>
-
 <p>One of the test cases in your test suite cannot be found.  Make sure that the
 test case is indeed located where the test suite indicates it is located.  Also,
 make sure that your actual test case files have the .html extension both in
 their filenames, and in the test suite file where they are referenced.</p>
-
 <p>An enhancement request has been raised to improve this error message. See
 <a href="http://code.google.com/p/selenium/issues/detail?id=1011">issue 1011</a>.</p>
-
-<hr />
-
-<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_extension.png" alt="Selenium IDE Trouble Extension" /></p>
-
+<hr>
+<p><img src="https://selenium.dev/documentation/en/images/legacy_docs/selenium_ide_trouble_extension.png" alt="Selenium IDE Trouble Extension"></p>
 <p>Your extension file&rsquo;s contents have not been read by Selenium-IDE.  Be
 sure you have specified the proper pathname to the extensions file via
 <strong>Options=&gt;Options=&gt;General</strong> in the <strong>Selenium Core extensions</strong> field.
@@ -4373,7 +3908,7 @@ field.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/en/legacy_docs/selenium_ide/">
       “Legacy Selenium IDE”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -5538,19 +5073,19 @@ field.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1591379904"></script>
+    <script src="https://selenium.dev/documentation/en/js/clipboard.min.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.min.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/perfect-scrollbar.jquery.min.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/jquery.sticky.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/featherlight.min.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/highlight.pack.js?1591393147"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/learn.js?1591379904"></script>
-    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1591379904"></script>
+    <script src="https://selenium.dev/documentation/en/js/modernizr.custom-3.6.0.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/learn.js?1591393147"></script>
+    <script src="https://selenium.dev/documentation/en/js/hugo-learn.js?1591393147"></script>
 
-    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1591379904" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1591379904"></script>
+    <link href="https://selenium.dev/documentation/en/mermaid/mermaid.css?1591393147" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/en/mermaid/mermaid.js?1591393147"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

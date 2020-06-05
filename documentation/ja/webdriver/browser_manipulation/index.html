@@ -11,20 +11,20 @@
     <title>ブラウザー操作 :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393152"></script>
 
     
   </div>
@@ -1921,49 +1921,51 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#ruby">Ruby</a></li>
-<li><a href="#internet-explorer">Internet Explorer</a></li>
-<li><a href="#browser操作">Browser操作</a>
-<ul>
-<li><a href="#ナビゲート">ナビゲート</a></li>
-<li><a href="#現在のurlを取得">現在のURLを取得</a></li>
-<li><a href="#戻る">戻る</a></li>
-<li><a href="#次へ">次へ</a></li>
-<li><a href="#更新">更新</a></li>
-<li><a href="#タイトルの取得">タイトルの取得</a></li>
-</ul></li>
-<li><a href="#ウィンドウとタブ">ウィンドウとタブ</a>
-<ul>
-<li><a href="#ウィンドウハンドルの取得">ウィンドウハンドルの取得</a></li>
-<li><a href="#ウィンドウまたはタブの切り替え">ウィンドウまたはタブの切り替え</a></li>
-<li><a href="#新しいウィンドウ-または-新しいタブを作成して切り替える">新しいウィンドウ（または）新しいタブを作成して切り替える</a></li>
-<li><a href="#ウィンドウまたはタブを閉じる">ウィンドウまたはタブを閉じる</a></li>
-<li><a href="#セッションの終了時にブラウザーを終了する">セッションの終了時にブラウザーを終了する</a></li>
-</ul></li>
-<li><a href="#frameとiframe">FrameとIframe</a>
-<ul>
-<li><a href="#webelementを使う">WebElementを使う</a></li>
-<li><a href="#nameまたはidを使う">nameまたはIDを使う</a></li>
-<li><a href="#インデックスを使う">インデックスを使う</a></li>
-<li><a href="#frameを終了する">frameを終了する</a></li>
-</ul></li>
-<li><a href="#ウィンドウマネジメント">ウィンドウマネジメント</a>
-<ul>
-<li><a href="#ウィンドウサイズの取得">ウィンドウサイズの取得</a></li>
-<li><a href="#ウィンドウサイズの設定">ウィンドウサイズの設定</a></li>
-<li><a href="#ウィンドウの位置を取得">ウィンドウの位置を取得</a></li>
-</ul></li>
-<li><a href="#ウィンドウの位置設定">ウィンドウの位置設定</a>
-<ul>
-<li><a href="#ウィンドウの最大化">ウィンドウの最大化</a></li>
-<li><a href="#ウィンドウを最小化">ウィンドウを最小化</a></li>
-<li><a href="#全画面ウィンドウ">全画面ウィンドウ</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#ruby">Ruby</a></li>
+    <li><a href="#internet-explorer">Internet Explorer</a></li>
+    <li><a href="#browser操作">Browser操作</a>
+      <ul>
+        <li><a href="#ナビゲート">ナビゲート</a></li>
+        <li><a href="#現在のurlを取得">現在のURLを取得</a></li>
+        <li><a href="#戻る">戻る</a></li>
+        <li><a href="#次へ">次へ</a></li>
+        <li><a href="#更新">更新</a></li>
+        <li><a href="#タイトルの取得">タイトルの取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#ウィンドウとタブ">ウィンドウとタブ</a>
+      <ul>
+        <li><a href="#ウィンドウハンドルの取得">ウィンドウハンドルの取得</a></li>
+        <li><a href="#ウィンドウまたはタブの切り替え">ウィンドウまたはタブの切り替え</a></li>
+        <li><a href="#新しいウィンドウまたは新しいタブを作成して切り替える">新しいウィンドウ（または）新しいタブを作成して切り替える</a></li>
+        <li><a href="#ウィンドウまたはタブを閉じる">ウィンドウまたはタブを閉じる</a></li>
+        <li><a href="#セッションの終了時にブラウザーを終了する">セッションの終了時にブラウザーを終了する</a></li>
+      </ul>
+    </li>
+    <li><a href="#frameとiframe">FrameとIframe</a>
+      <ul>
+        <li><a href="#webelementを使う">WebElementを使う</a></li>
+        <li><a href="#nameまたはidを使う">nameまたはIDを使う</a></li>
+        <li><a href="#インデックスを使う">インデックスを使う</a></li>
+        <li><a href="#frameを終了する">frameを終了する</a></li>
+      </ul>
+    </li>
+    <li><a href="#ウィンドウマネジメント">ウィンドウマネジメント</a>
+      <ul>
+        <li><a href="#ウィンドウサイズの取得">ウィンドウサイズの取得</a></li>
+        <li><a href="#ウィンドウサイズの設定">ウィンドウサイズの設定</a></li>
+        <li><a href="#ウィンドウの位置を取得">ウィンドウの位置を取得</a></li>
+      </ul>
+    </li>
+    <li><a href="#ウィンドウの位置設定">ウィンドウの位置設定</a>
+      <ul>
+        <li><a href="#ウィンドウの最大化">ウィンドウの最大化</a></li>
+        <li><a href="#ウィンドウを最小化">ウィンドウを最小化</a></li>
+        <li><a href="#全画面ウィンドウ">全画面ウィンドウ</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1988,37 +1990,27 @@
 
 
 
-
-
-<!-- #codeExamples -->
-
-<!-- Remember to cover profile and extensions here -->
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h2 id="ruby">Ruby</h2>
-
 <p>RubyはWindowsにデフォルトではインストールされません。最新<a href="//rubyinstaller.org/downloads">バージョン</a>をダウンロードし、インストーラーを実行します。 <em>Installation Destination and Optional Tasks</em> 画面で <em>Add Ruby executables to your PATH</em> チェックボックス以外のすべての設定をデフォルト値のままにすることができます。ブラウザーを操作するには、<code>selenium-webdriver</code> Ruby gemをインストールする必要があります。それをインストールするには、コマンドプロンプトを開き、次のように入力します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver</code></pre></div>
-<p>または、<a href="//bundler.io">Bundler</a>を使用する場合、次の行をアプリケーションのGemfileに追加します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">gem <span style="color:#2aa198">&#34;selenium-webdriver&#34;</span></code></pre></div>
-<p>そして、プロンプトで次のコマンドを実行します。</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bundle install</code></pre></div>
-<h2 id="internet-explorer">Internet Explorer</h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver
+</code></pre></div><p>または、<a href="//bundler.io">Bundler</a>を使用する場合、次の行をアプリケーションのGemfileに追加します。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">gem <span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>
+</code></pre></div><p>そして、プロンプトで次のコマンドを実行します。</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">bundle install
+</code></pre></div><h2 id="internet-explorer">Internet Explorer</h2>
 <p>Internet ExplorerはデフォルトでWindowsにインストールされるため、インストールは不要です。
 WindowsでInternet Explorerを動かすには、最新の<a href="https://selenium.dev/downloads/">Internet Explorer Driver</a>をダウンロードし、ファイルを <code>PATH</code>にあるフォルダーに入れる必要があります。どのディレクトリが <code>PATH</code>にあるかを調べるには、コマンドプロンプトで<code>echo％PATH％</code>と入力します。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">$ echo <span style="color:#268bd2">%PATH%</span>
-C:\Ruby200\bin<span style="color:#586e75">;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</span></code></pre></div>
-<p><code>C:\Ruby200\bin</code> は良い場所のようです。 <code>IEDriverServer</code>ファイルを解凍し、<code>IEDriverServer.exe</code>をそこに移動します。</p>
-
+C:\Ruby200\bin<span style="color:#586e75">;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem</span>
+</code></pre></div><p><code>C:\Ruby200\bin</code> は良い場所のようです。 <code>IEDriverServer</code>ファイルを解凍し、<code>IEDriverServer.exe</code>をそこに移動します。</p>
 <p>これにより、新しいInternet Explorerウィンドウが開きます。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#b58900">require</span> <span style="color:#2aa198">&#34;selenium-webdriver&#34;</span>
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:internet_explorer</span></code></pre></div>
-<h2 id="browser操作">Browser操作</h2>
-
+driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:internet_explorer</span>
+</code></pre></div><h2 id="browser操作">Browser操作</h2>
 <h3 id="ナビゲート">ナビゲート</h3>
-
 <p>ブラウザーを起動した後に最初に行うことは、Webサイトを開くことです。これは1行で実現できます。</p>
-
 
 
 
@@ -2061,10 +2053,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Convenient
-</span><span style="color:#586e75"></span>driver.get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://selenium.dev&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">//Longer way
-</span><span style="color:#586e75"></span>driver.navigate().to(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>to<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://selenium.dev&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2119,11 +2111,8 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="現在のurlを取得">現在のURLを取得</h3>
-
 <p>ブラウザーのアドレスバーから現在のURLを読むには、次を使用します。</p>
-
 
 
 
@@ -2164,7 +2153,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getCurrentUrl();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getCurrentUrl<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2200,11 +2189,8 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="戻る">戻る</h3>
-
 <p>ブラウザーの戻るボタンを押す。</p>
-
 
 
 
@@ -2245,7 +2231,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().back();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>back<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2281,11 +2267,8 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="次へ">次へ</h3>
-
 <p>ブラウザーの次へボタンを押す。</p>
-
 
 
 
@@ -2326,7 +2309,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().forward();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>forward<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2362,11 +2345,8 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="更新">更新</h3>
-
 <p>現在のページを更新する。</p>
-
 
 
 
@@ -2407,7 +2387,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode4" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.navigate().refresh();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>navigate<span style="color:#719e07">().</span>refresh<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2443,11 +2423,8 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="タイトルの取得">タイトルの取得</h3>
-
 <p>ブラウザーから現在のページタイトルを読むことができます。</p>
-
 
 
 
@@ -2488,7 +2465,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode5" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getTitle();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getTitle<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2524,16 +2501,12 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h2 id="ウィンドウとタブ">ウィンドウとタブ</h2>
-
 <h3 id="ウィンドウハンドルの取得">ウィンドウハンドルの取得</h3>
-
 <p>WebDriverは、ウィンドウとタブを区別しません。
 サイトが新しいタブまたはウィンドウを開く場合、Seleniumはウィンドウハンドルを使って連動します。
 各ウィンドウには一意の識別子があり、これは単一のセッションで持続します。
 次のコードを使用して、現在のウィンドウのウィンドウハンドルを取得できます。</p>
-
 
 
 
@@ -2574,7 +2547,7 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 
 
 <section id="javacode6" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.getWindowHandle();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>getWindowHandle<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -2610,15 +2583,11 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウまたはタブの切り替え">ウィンドウまたはタブの切り替え</h3>
-
-<p><a href="https://seleniumhq.github.io" target="_blank"> 新しいウィンドウ</a>で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
+<p><!-- raw HTML omitted --> 新しいウィンドウ<!-- raw HTML omitted -->で開くリンクをクリックすると、新しいウィンドウまたはタブが画面にフォーカスされますが、WebDriverはオペレーティングシステムがアクティブと見なすウィンドウを認識しません。
 新しいウィンドウで作業するには、それに切り替える必要があります。
 開いているタブまたはウィンドウが2つしかなく、どちらのウィンドウから開始するかがわかっている場合、削除のプロセスによって、WebDriverが表示できる両方のウィンドウまたはタブをループし、元のウィンドウまたはタブに切り替えることができます。</p>
-
-<p>ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI <a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/#新しいウィンドウ（または）新しいタブを作成して切り替える">NewWindow</a>が用意されています。</p>
-
+<p>ただし、Selenium 4には、新しいタブ（または）新しいウィンドウを作成して自動的に切り替える新しいAPI <!-- raw HTML omitted -->NewWindow<!-- raw HTML omitted -->が用意されています。</p>
 
 
 
@@ -2661,27 +2630,27 @@ await driver.get(<span style="color:#2aa198">&#39;https://selenium.dev&#39;</spa
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Store the ID of the original window
-</span><span style="color:#586e75"></span>String <span style="color:#268bd2">originalWindow</span> <span style="color:#719e07">=</span> driver.getWindowHandle();
+</span><span style="color:#586e75"></span>String originalWindow <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>getWindowHandle<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Check we don&#39;t have other windows open already
-</span><span style="color:#586e75"></span><span style="color:#719e07">assert</span> driver.getWindowHandles().size() <span style="color:#719e07">==</span> 1;
+</span><span style="color:#586e75"></span><span style="color:#719e07">assert</span> driver<span style="color:#719e07">.</span>getWindowHandles<span style="color:#719e07">().</span>size<span style="color:#719e07">()</span> <span style="color:#719e07">==</span> 1<span style="color:#719e07">;</span>
 
 <span style="color:#586e75">//Click the link which opens in a new window
-</span><span style="color:#586e75"></span>driver.findElement(By.linkText(<span style="color:#2aa198">&#34;new window&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>linkText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;new window&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Wait for the new window or tab
-</span><span style="color:#586e75"></span>wait.until(numberOfWindowsToBe(2));
+</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>numberOfWindowsToBe<span style="color:#719e07">(</span>2<span style="color:#719e07">));</span>
 
 <span style="color:#586e75">//Loop through until we find a new window handle
-</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> (String <span style="color:#268bd2">windowHandle</span> <span style="color:#719e07">:</span> driver.getWindowHandles()) {
-    <span style="color:#719e07">if</span>(<span style="color:#719e07">!</span>originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle);
-        <span style="color:#719e07">break</span>;
-    }
-}
+</span><span style="color:#586e75"></span><span style="color:#719e07">for</span> <span style="color:#719e07">(</span>String windowHandle <span style="color:#719e07">:</span> driver<span style="color:#719e07">.</span>getWindowHandles<span style="color:#719e07">())</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">if</span><span style="color:#719e07">(!</span>originalWindow<span style="color:#719e07">.</span>contentEquals<span style="color:#719e07">(</span>windowHandle<span style="color:#719e07">))</span> <span style="color:#719e07">{</span>
+        driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>window<span style="color:#719e07">(</span>windowHandle<span style="color:#719e07">);</span>
+        <span style="color:#719e07">break</span><span style="color:#719e07">;</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
 
 <span style="color:#586e75">//Wait for the new tab to finish loading content
-</span><span style="color:#586e75"></span>wait.until(titleIs(<span style="color:#2aa198">&#34;Selenium documentation&#34;</span>));  
+</span><span style="color:#586e75"></span>wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>titleIs<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Selenium documentation&#34;</span><span style="color:#719e07">));</span>  
   </code></pre></div>
 </section>
   
@@ -2848,15 +2817,11 @@ windows.forEach(async handle =&gt; {
 </section>
 </div>
 </div>
-
-<h3 id="新しいウィンドウ-または-新しいタブを作成して切り替える">新しいウィンドウ（または）新しいタブを作成して切り替える</h3>
-
+<h3 id="新しいウィンドウまたは新しいタブを作成して切り替える">新しいウィンドウ（または）新しいタブを作成して切り替える</h3>
 <p>新しいウィンドウ（または）タブを作成し、画面上の新しいウィンドウまたはタブにフォーカスします。
 新しいウィンドウ（または）タブを使用するように切り替える必要はありません。
 新しいウィンドウ以外に3つ以上のウィンドウ（または）タブを開いている場合、WebDriverが表示できる両方のウィンドウまたはタブをループして、元のものではないものに切り替えることができます。</p>
-
 <p><strong>注意: この機能は、Selenium 4以降のバージョンで機能します。</strong></p>
-
 
 
 
@@ -2899,10 +2864,10 @@ windows.forEach(async handle =&gt; {
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Opens a new tab and switches to new tab
-</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.TAB);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>newWindow<span style="color:#719e07">(</span>WindowType<span style="color:#719e07">.</span>TAB<span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Opens a new window and switches to new window
-</span><span style="color:#586e75"></span>driver.switchTo().newWindow(WindowType.WINDOW);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>newWindow<span style="color:#719e07">(</span>WindowType<span style="color:#719e07">.</span>WINDOW<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2973,13 +2938,10 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウまたはタブを閉じる">ウィンドウまたはタブを閉じる</h3>
-
 <p>ウィンドウまたはタブでの作業が終了し、 <em>かつ</em> ブラウザーで最後に開いたウィンドウまたはタブではない場合、それを閉じて、以前使用していたウィンドウに切り替える必要があります。
 前のセクションのコードサンプルに従ったと仮定すると、変数に前のウィンドウハンドルが格納されます。
 これをまとめると以下のようになります。</p>
-
 
 
 
@@ -3022,10 +2984,10 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 <section id="javacode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Close the tab or window
-</span><span style="color:#586e75"></span>driver.close();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>close<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Switch back to the old tab or window
-</span><span style="color:#586e75"></span>driver.switchTo().window(originalWindow);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>window<span style="color:#719e07">(</span>originalWindow<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -3093,13 +3055,9 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 </section>
 </div>
 </div>
-
 <p>ウィンドウを閉じた後に別のウィンドウハンドルに切り替えるのを忘れると、現在閉じられているページでWebDriverが実行されたままになり、 <strong>No Such Window Exception</strong> が発行されます。実行を継続するには、有効なウィンドウハンドルに切り替える必要があります。</p>
-
 <h3 id="セッションの終了時にブラウザーを終了する">セッションの終了時にブラウザーを終了する</h3>
-
 <p>ブラウザーセッションを終了したら、closeではなく、quitを呼び出す必要があります。</p>
-
 
 
 
@@ -3140,7 +3098,7 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 
 
 <section id="javacode10" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.quit();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -3176,22 +3134,18 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 </section>
 </div>
 </div>
-
 <ul>
 <li>Quitは、
-
 <ul>
 <li>そのWebDriverセッションに関連付けられているすべてのウィンドウとタブを閉じます</li>
 <li>ブラウザーのプロセス</li>
 <li>バックグラウンドのドライバーのプロセス</li>
 <li>ブラウザーが使用されなくなったことをSelenium Gridに通知して、別のセッションで使用できるようにします（Selenium Gridを使用している場合）</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>quitの呼び出しに失敗すると、余分なバックグラウンドプロセスとポートがマシン上で実行されたままになり、後で問題が発生する可能性があります。</p>
-
 <p>一部のテストフレームワークでは、テストの終了時にフックできるメソッドとアノテーションを提供しています。</p>
-
 
 
 
@@ -3238,9 +3192,9 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 </span><span style="color:#586e75"> * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
 </span><span style="color:#586e75"> */</span>
 <span style="color:#268bd2">@AfterAll</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span>() {
-    driver.quit();
-}
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">tearDown</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -3316,9 +3270,7 @@ after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style=
 </section>
 </div>
 </div>
-
 <p>テストコンテキストでWebDriverを実行していない場合は、ほとんどの言語で提供されている <code>try  / finally</code> の使用を検討して、例外がWebDriverセッションをクリーンアップするようにします。</p>
-
 
 
 
@@ -3360,11 +3312,11 @@ after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style=
 
 <section id="javacode12" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">try</span> {
+<span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">//WebDriver code here...
-</span><span style="color:#586e75"></span>} <span style="color:#719e07">finally</span> {
-    driver.quit();
-}
+</span><span style="color:#586e75"></span><span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -3430,27 +3382,23 @@ after(<span style="color:#2aa198">&#39;Tear down&#39;</span>, async <span style=
 </section>
 </div>
 </div>
-
 <p>PythonのWebDriverは、pythonコンテキストマネージャーをサポートするようになりました。
 withキーワードを使用すると、実行終了時にドライバーを自動的に終了できます。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#719e07">with</span> webdriver<span style="color:#719e07">.</span>Firefox() <span style="color:#719e07">as</span> driver:
   <span style="color:#586e75"># WebDriver code here...</span>
 
-<span style="color:#586e75"># WebDriver will automatically quit after indentation</span></code></pre></div>
-<h2 id="frameとiframe">FrameとIframe</h2>
-
+<span style="color:#586e75"># WebDriver will automatically quit after indentation</span>
+</code></pre></div><h2 id="frameとiframe">FrameとIframe</h2>
 <p>frameは、同じドメイン上の複数のドキュメントからサイトレイアウトを構築する非推奨の手段となりました。
 HTML5以前のWebアプリを使用している場合を除き、frameを使用することはほとんどありません。
 iframeは、まったく異なるドメインからのドキュメントの挿入を許可し、今でも一般的に使用されています。</p>
-
 <p>フレームまたはiframeを使用する必要がある場合、Webdriverを使用して同じ方法で作業できます。 iframe内のボタンがある場合を考えてみましょう。ブラウザー開発ツールを使用して要素を検査すると、次のように表示される場合があります。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">div</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;modal&#34;</span>&gt;
   &lt;<span style="color:#268bd2">iframe</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;buttonframe&#34;</span> name<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;myframe&#34;</span>  src<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;https://seleniumhq.github.io&#34;</span>&gt;
    &lt;<span style="color:#268bd2">button</span>&gt;Click here&lt;/<span style="color:#268bd2">button</span>&gt;
  &lt;/<span style="color:#268bd2">iframe</span>&gt;
-&lt;/<span style="color:#268bd2">div</span>&gt;</code></pre></div>
-<p>iframeがなければ、次のようなボタンを使用してボタンをクリックします。</p>
-
+&lt;/<span style="color:#268bd2">div</span>&gt;
+</code></pre></div><p>iframeがなければ、次のようなボタンを使用してボタンをクリックします。</p>
 
 
 
@@ -3493,7 +3441,7 @@ iframeは、まったく異なるドメインからのドキュメントの挿�
 <section id="javacode13" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//This won&#39;t work
-</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -3545,16 +3493,12 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 </section>
 </div>
 </div>
-
 <p>ただし、iframeの外側にボタンがない場合は、代わりにno such elementエラーが発生する可能性があります。
 これは、Seleniumがトップレベルのドキュメントの要素のみを認識するために発生します。
 ボタンを操作するには、ウィンドウを切り替える方法と同様に、最初にフレームに切り替える必要があります。
 WebDriverは、フレームに切り替える3つの方法を提供します。</p>
-
 <h3 id="webelementを使う">WebElementを使う</h3>
-
 <p>WebElementを使用した切り替えは、最も柔軟なオプションです。好みのセレクタを使用してフレームを見つけ、それに切り替えることができます。</p>
-
 
 
 
@@ -3597,13 +3541,13 @@ WebDriverは、フレームに切り替える3つの方法を提供します。<
 <section id="javacode14" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Store the web element
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">iframe</span> <span style="color:#719e07">=</span> driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span>));
+</span><span style="color:#586e75"></span>WebElement iframe <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#modal&gt;iframe&#34;</span><span style="color:#719e07">));</span>
 
 <span style="color:#586e75">//Switch to the frame
-</span><span style="color:#586e75"></span>driver.switchTo().frame(iframe);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span>iframe<span style="color:#719e07">);</span>
 
 <span style="color:#586e75">//Now we can click the button
-</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -3685,12 +3629,9 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 </section>
 </div>
 </div>
-
 <h3 id="nameまたはidを使う">nameまたはIDを使う</h3>
-
 <p>フレームまたはiframeにidまたはname属性がある場合、代わりにこれを使うことができます。
 名前またはIDがページ上で一意でない場合、最初に見つかったものに切り替えます。</p>
-
 
 
 
@@ -3733,13 +3674,13 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javacode15" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Using the ID
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;buttonframe&#34;</span>);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;buttonframe&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">//Or using the name instead
-</span><span style="color:#586e75"></span>driver.switchTo().frame(<span style="color:#2aa198">&#34;myframe&#34;</span>);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myframe&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">//Now we can click the button
-</span><span style="color:#586e75"></span>driver.findElement(By.tagName(<span style="color:#2aa198">&#34;button&#34;</span>)).click();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -3815,11 +3756,8 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 </section>
 </div>
 </div>
-
 <h3 id="インデックスを使う">インデックスを使う</h3>
-
 <p>JavaScriptの <em>window.frames</em> を使用して照会できるように、frameのインデックスを使用することもできます。</p>
-
 
 
 
@@ -3862,7 +3800,7 @@ driver<span style="color:#719e07">.</span>find_element(<span style="color:#2aa19
 <section id="javacode16" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Switches to the second frame  
-</span><span style="color:#586e75"></span>driver.switchTo().frame(1);
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>frame<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -3917,11 +3855,8 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 </section>
 </div>
 </div>
-
 <h3 id="frameを終了する">frameを終了する</h3>
-
 <p>iframeまたはフレームセットを終了するには、次のようにデフォルトのコンテンツに切り替えます。</p>
-
 
 
 
@@ -3964,7 +3899,7 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 <section id="javacode17" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Return to the top level
-</span><span style="color:#586e75"></span>driver.switchTo().defaultContent();
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>defaultContent<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -4016,15 +3951,10 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 </section>
 </div>
 </div>
-
 <h2 id="ウィンドウマネジメント">ウィンドウマネジメント</h2>
-
 <p>画面解像度はWebアプリケーションのレンダリング方法に影響を与える可能性があるため、WebDriverはブラウザーウィンドウを移動およびサイズ変更するメカニズムを提供します。</p>
-
 <h3 id="ウィンドウサイズの取得">ウィンドウサイズの取得</h3>
-
 <p>ブラウザーウィンドウのサイズをピクセル単位で取得します。</p>
-
 
 
 
@@ -4067,13 +3997,13 @@ driver<span style="color:#719e07">.</span>switch_to<span style="color:#719e07">.
 <section id="javacode18" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">width</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getWidth();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">height</span> <span style="color:#719e07">=</span> driver.manage().window().getSize().getHeight();
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> width <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">().</span>getWidth<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> height <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">().</span>getHeight<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">//Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Dimension <span style="color:#268bd2">size</span> <span style="color:#719e07">=</span> driver.manage().window().getSize();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">width1</span> <span style="color:#719e07">=</span> size.getWidth();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">height1</span> <span style="color:#719e07">=</span> size.getHeight();
+</span><span style="color:#586e75"></span>Dimension size <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getSize<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> width1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>getWidth<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</span>getHeight<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -4154,11 +4084,8 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウサイズの設定">ウィンドウサイズの設定</h3>
-
 <p>ウィンドウを復元し、ウィンドウサイズを設定します。</p>
-
 
 
 
@@ -4199,7 +4126,7 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 
 
 <section id="javacode19" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().setSize(<span style="color:#719e07">new</span> Dimension(1024, 768));</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>setSize<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Dimension<span style="color:#719e07">(</span>1024<span style="color:#719e07">,</span> 768<span style="color:#719e07">));</span></code></pre></div>
 </section>
   
 
@@ -4235,11 +4162,8 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウの位置を取得">ウィンドウの位置を取得</h3>
-
 <p>ブラウザーウィンドウの左上の座標を取得します。</p>
-
 
 
 
@@ -4282,13 +4206,13 @@ height1 <span style="color:#719e07">=</span> size<span style="color:#719e07">.</
 <section id="javacode20" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Access each dimension individually
-</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> <span style="color:#268bd2">x</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getX();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">y</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition().getY();
+</span><span style="color:#586e75"></span><span style="color:#dc322f">int</span> x <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">().</span>getX<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> y <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">().</span>getY<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">// Or store the dimensions and query them later
-</span><span style="color:#586e75"></span>Point <span style="color:#268bd2">position</span> <span style="color:#719e07">=</span> driver.manage().window().getPosition();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">x1</span> <span style="color:#719e07">=</span> position.getX();
-<span style="color:#dc322f">int</span> <span style="color:#268bd2">y1</span> <span style="color:#719e07">=</span> position.getY();
+</span><span style="color:#586e75"></span>Point position <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>getPosition<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> x1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>getX<span style="color:#719e07">();</span>
+<span style="color:#dc322f">int</span> y1 <span style="color:#719e07">=</span> position<span style="color:#719e07">.</span>getY<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -4370,11 +4294,8 @@ y1 <span style="color:#719e07">=</span> rect<span style="color:#719e07">.</span>
 </section>
 </div>
 </div>
-
 <h2 id="ウィンドウの位置設定">ウィンドウの位置設定</h2>
-
 <p>選択した位置にウィンドウを移動します。</p>
-
 
 
 
@@ -4417,7 +4338,7 @@ y1 <span style="color:#719e07">=</span> rect<span style="color:#719e07">.</span>
 <section id="javacode21" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Move the window to the top left of the primary monitor
-</span><span style="color:#586e75"></span>driver.manage().window().setPosition(<span style="color:#719e07">new</span> Point(0, 0));
+</span><span style="color:#586e75"></span>driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>setPosition<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Point<span style="color:#719e07">(</span>0<span style="color:#719e07">,</span> 0<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -4468,11 +4389,8 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウの最大化">ウィンドウの最大化</h3>
-
 <p>ウィンドウを拡大します。ほとんどのオペレーティングシステムでは、オペレーティングシステムのメニューとツールバーをブロックすることなく、ウィンドウが画面いっぱいに表示されます。</p>
-
 
 
 
@@ -4513,7 +4431,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 
 <section id="javacode22" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().maximize();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>maximize<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -4549,16 +4467,11 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 </section>
 </div>
 </div>
-
 <h3 id="ウィンドウを最小化">ウィンドウを最小化</h3>
-
 <p>現在のブラウジングコンテキストのウィンドウを最小化します。
 このコマンドの正確な動作は、個々のウィンドウマネージャーに固有のものです。</p>
-
 <p>ウィンドウを最小化すると、通常、システムトレイのウィンドウが非表示になります。</p>
-
 <p><strong>注：この機能は、Selenium 4以降のバージョンで機能します。</strong></p>
-
 
 
 
@@ -4599,7 +4512,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 
 <section id="javacode23" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().minimize();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>minimize<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -4635,11 +4548,8 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 </section>
 </div>
 </div>
-
 <h3 id="全画面ウィンドウ">全画面ウィンドウ</h3>
-
 <p>ほとんどのブラウザーでF11を押すのと同じように、画面全体に表示されます。</p>
-
 
 
 
@@ -4680,7 +4590,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 
 
 <section id="javacode24" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver.manage().window().fullscreen();</code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>window<span style="color:#719e07">().</span>fullscreen<span style="color:#719e07">();</span></code></pre></div>
 </section>
   
 
@@ -4725,7 +4635,7 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/browser_manipulation/">
       “ブラウザー操作”
-    </a> was last updated on: 01 Jun 2020 21:44:37 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/b450bcee5db7bfdb5c32ba9df6e9f5ea05bf5d21">Translate some pages into Japanese (#450)[deploy site] (b450bcee)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -5890,19 +5800,19 @@ driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">.</s
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379916"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

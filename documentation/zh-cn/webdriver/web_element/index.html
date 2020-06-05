@@ -11,20 +11,20 @@
     <title>网络元素 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,16 +1921,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#find-element">Find Element</a></li>
-<li><a href="#find-elements">Find Elements</a></li>
-<li><a href="#find-element-from-element">Find Element From Element</a></li>
-<li><a href="#find-elements-from-element">Find Elements From Element</a></li>
-<li><a href="#get-active-element">Get Active Element</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#find-element">Find Element</a></li>
+    <li><a href="#find-elements">Find Elements</a></li>
+    <li><a href="#find-element-from-element">Find Element From Element</a></li>
+    <li><a href="#find-elements-from-element">Find Elements From Element</a></li>
+    <li><a href="#get-active-element">Get Active Element</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1955,20 +1952,14 @@
 
 
 
-
-
 <p>WebElement表示DOM元素.
 可以通过使用WebDriver实例从文档根节点进行搜索,
 或者在另一个WebElement下进行搜索来找到WebElement.</p>
-
 <p>WebDriver API提供了内置方法来查找基于不同属性的WebElement
 (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).</p>
-
 <h2 id="find-element">Find Element</h2>
-
 <p>此方法用于查找元素并返回第一个匹配的单个WebElement引用,
 该元素可用于进一步的元素操作.</p>
-
 
 
 
@@ -2010,14 +2001,14 @@
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
 
-driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Get search box element from webElement &#39;q&#39; using Find Element
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">searchBox</span> <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
+</span><span style="color:#586e75"></span>WebElement searchBox <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
 
-searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>);
+searchBox<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2115,13 +2106,10 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
 </section>
 </div>
 </div>
-
 <h2 id="find-elements">Find Elements</h2>
-
-<p>与&rdquo;Find Element&rdquo;相似, 但返回的是匹配WebElement列表.
+<p>与&quot;Find Element&quot;相似, 但返回的是匹配WebElement列表.
 要使用列表中的特定WebElement,
 您需要遍历元素列表以对选定元素执行操作.</p>
-
 
 
 
@@ -2163,27 +2151,27 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.util.List;
+<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> java.util.List<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> findElementsExample {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">findElementsExample</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://example.com&#34;</span><span style="color:#719e07">);</span>
             <span style="color:#586e75">// Get all the elements available with tag name &#39;p&#39;
-</span><span style="color:#586e75"></span>            List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">elements</span> <span style="color:#719e07">=</span> driver.findElements(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>));
-            <span style="color:#719e07">for</span> (WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">:</span> elements) {
-                System.out.println(<span style="color:#2aa198">&#34;Paragraph text:&#34;</span> <span style="color:#719e07">+</span> element.getText());
-            }
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+</span><span style="color:#586e75"></span>            List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> elements <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElements<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;p&#34;</span><span style="color:#719e07">));</span>
+            <span style="color:#719e07">for</span> <span style="color:#719e07">(</span>WebElement element <span style="color:#719e07">:</span> elements<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+                System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Paragraph text:&#34;</span> <span style="color:#719e07">+</span> element<span style="color:#719e07">.</span>getText<span style="color:#719e07">());</span>
+            <span style="color:#719e07">}</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2310,12 +2298,9 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="find-element-from-element">Find Element From Element</h2>
-
 <p>此方法用于在父元素的上下文中查找子元素.
-为此, 父WebElement与&rdquo;findElement&rdquo;链接并访问子元素.</p>
-
+为此, 父WebElement与&quot;findElement&quot;链接并访问子元素.</p>
 
 
 
@@ -2357,11 +2342,11 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
-WebElement <span style="color:#268bd2">searchForm</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;form&#34;</span>));
-WebElement <span style="color:#268bd2">searchBox</span> <span style="color:#719e07">=</span> searchForm.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
-searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>);
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+WebElement searchForm <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;form&#34;</span><span style="color:#719e07">));</span>
+WebElement searchBox <span style="color:#719e07">=</span> searchForm<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
+searchBox<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2456,12 +2441,9 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
 </section>
 </div>
 </div>
-
 <h2 id="find-elements-from-element">Find Elements From Element</h2>
-
 <p>此方法用于在父元素的上下文中查找匹配子WebElement的列表.
-为此, 父WebElement与&rdquo;findElements&rdquo;链接并访问子元素.</p>
-
+为此, 父WebElement与&quot;findElements&quot;链接并访问子元素.</p>
 
 
 
@@ -2503,31 +2485,31 @@ searchBox.sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span>)
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.util.List;
+  <span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+  <span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+  <span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
+  <span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
+  <span style="color:#719e07">import</span> java.util.List<span style="color:#719e07">;</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> findElementsFromElement {
-      <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-          WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-          <span style="color:#719e07">try</span> {
-              driver.get(<span style="color:#2aa198">&#34;https://example.com&#34;</span>);
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">findElementsFromElement</span> <span style="color:#719e07">{</span>
+      <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+          WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+          <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+              driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://example.com&#34;</span><span style="color:#719e07">);</span>
 
               <span style="color:#586e75">// Get element with tag name &#39;div&#39;
-</span><span style="color:#586e75"></span>              WebElement <span style="color:#268bd2">element</span> <span style="color:#719e07">=</span> driver.findElement(By.tagName(<span style="color:#2aa198">&#34;div&#34;</span>));
+</span><span style="color:#586e75"></span>              WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;div&#34;</span><span style="color:#719e07">));</span>
 
               <span style="color:#586e75">// Get all the elements available with tag name &#39;p&#39;
-</span><span style="color:#586e75"></span>              List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">elements</span> <span style="color:#719e07">=</span> element.findElements(By.tagName(<span style="color:#2aa198">&#34;p&#34;</span>));
-              <span style="color:#719e07">for</span> (WebElement <span style="color:#268bd2">e</span> <span style="color:#719e07">:</span> elements) {
-                  System.out.println(e.getText());
-              }
-          } <span style="color:#719e07">finally</span> {
-              driver.quit();
-          }
-      }
-  }
+</span><span style="color:#586e75"></span>              List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> elements <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>findElements<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;p&#34;</span><span style="color:#719e07">));</span>
+              <span style="color:#719e07">for</span> <span style="color:#719e07">(</span>WebElement e <span style="color:#719e07">:</span> elements<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+                  System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>e<span style="color:#719e07">.</span>getText<span style="color:#719e07">());</span>
+              <span style="color:#719e07">}</span>
+          <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+              driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+          <span style="color:#719e07">}</span>
+      <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2663,11 +2645,8 @@ elements <span style="color:#719e07">=</span> element<span style="color:#719e07"
 </section>
 </div>
 </div>
-
 <h2 id="get-active-element">Get Active Element</h2>
-
 <p>此方法用于追溯或查找当前页面上下文中具有焦点的DOM元素.</p>
-
 
 
 
@@ -2709,24 +2688,24 @@ elements <span style="color:#719e07">=</span> element<span style="color:#719e07"
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-  <span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+  <span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+  <span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> activeElementTest {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-      WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-      <span style="color:#719e07">try</span> {
-        driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
-        driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;[name=&#39;q&#39;]&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;webElement&#34;</span>);
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">activeElementTest</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+      WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+      <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+        driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+        driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;[name=&#39;q&#39;]&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webElement&#34;</span><span style="color:#719e07">);</span>
 
         <span style="color:#586e75">// Get attribute of current active element
-</span><span style="color:#586e75"></span>        String <span style="color:#268bd2">attr</span> <span style="color:#719e07">=</span> driver.switchTo().activeElement().getAttribute(<span style="color:#2aa198">&#34;title&#34;</span>);
-        System.out.println(attr);
-      } <span style="color:#719e07">finally</span> {
-        driver.quit();
-      }
-    }
-  }
+</span><span style="color:#586e75"></span>        String attr <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>switchTo<span style="color:#719e07">().</span>activeElement<span style="color:#719e07">().</span>getAttribute<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;title&#34;</span><span style="color:#719e07">);</span>
+        System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>attr<span style="color:#719e07">);</span>
+      <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+        driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+      <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2847,7 +2826,7 @@ elements <span style="color:#719e07">=</span> element<span style="color:#719e07"
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/web_element/">
       “网络元素”
-    </a> was last updated on: 24 May 2020 12:47:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/cf5a472a612d221175a78fdcf2b82ac31c27c6d0">Modify: Updating PY code samples targeting py3 version [deploy site] (cf5a472a)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4012,19 +3991,19 @@ elements <span style="color:#719e07">=</span> element<span style="color:#719e07"
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

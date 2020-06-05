@@ -89,7 +89,7 @@ Un servidor proxy para scripts de automatización con Selenium podría ser útil
       
       <guid>https://selenium.dev/documentation/es/webdriver/page_loading_strategy/</guid>
       <description>Define la estrategia de carga de la página en la sesión actual. Por defecto, cuando Selenium WebDriver carga una página, sigue la pageLoadStrategy normal. Siempre se recomienda detener la descarga de más recursos adicionales (como imágenes, css, js) cuando la carga de la página lleva mucho tiempo.
-La propiedad document.readyState de un documento describe el estado de carga del documento actual. Por defecto, WebDriver esperará responder a una llamada driver.</description>
+La propiedad document.readyState de un documento describe el estado de carga del documento actual. Por defecto, WebDriver esperará responder a una llamada driver.get() (o) driver.</description>
     </item>
     
     <item>

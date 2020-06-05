@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es" class="js csstransforms3d">
   <head>
-	<meta name="generator" content="Hugo 0.59.0" />
+	<meta name="generator" content="Hugo 0.66.0" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Documentation for Selenium">
@@ -12,20 +12,20 @@
     <title>Selenium, el proyecto para automatizar navegadores :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379907" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379907" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379907" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379907"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379907"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379907"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379907"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1885,33 +1885,25 @@
 </span>
 
  
-
-
 <h1 id="selenium-el-proyecto-para-automatizar-navegadores">Selenium, el proyecto para automatizar navegadores</h1>
-
 <p>Selenium es un proyecto que alberga un abanico de herramientas y librerías que
 permiten y apoyan la automatización de navegadores web.</p>
-
 <p>Proporciona extensiones que permiten emular las interacciones que realizan los
 usuarios con los navegadores, un servidor que permite distribuir la asignación
 de navegadores de forma escalable, y la infraestructura necesaria para las
 implementaciones de la <a href="//www.w3.org/TR/webdriver/">especificación del WebDriver del W3C</a>,
 el cual permite escribir código intercambiable para los navegadores web mas usados.</p>
-
 <p>Este proyecto es posible gracias a los colaboradores voluntarios, los cuales
 han dedicado miles de horas de su propio tiempo haciendo así que el código fuente
-esté <a href="https://selenium.dev/documentation/es/front_matter/copyright_and_attributions/#license">disponible de manera gratuita</a>
+esté <a href="https://selenium.dev/documentation/es/front_matter/copyright_and_attributions/">disponible de manera gratuita</a>
 para que cualquiera pueda usarlo, disfrutarlo y mejorarlo.</p>
-
 <p>Selenium conecta a proveedores de navegadores web, ingenieros y entusiastas para
 promover un debate abierto sobre la automatización de plataformas web.
 El proyecto organiza <a href="//seleniumconf.com/">una conferencia anual</a> con el fin de
 enseñar y nutrir a la comunidad.</p>
-
 <p>El corazón de Selenium es el <a href="https://selenium.dev/documentation/es/webdriver/">WebDriver</a>, una
 interfaz que permite escribir conjuntos de instrucciones que se pueden ejecutar de
 manera indistinta en muchos navegadores.</p>
-
 
 
 
@@ -1953,30 +1945,30 @@ manera indistinta en muchos navegadores.</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.ui.WebDriverWait;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">static</span> org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.time.Duration;
+<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.WebDriverWait<span style="color:#719e07">;</span>
+<span style="color:#719e07">import static</span> org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> java.time.Duration<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
 
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-        WebDriverWait <span style="color:#268bd2">wait</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait(driver, Duration.ofSeconds(10));
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
-            driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
-            WebElement <span style="color:#268bd2">firstResult</span> <span style="color:#719e07">=</span> wait.until(presenceOfElementLocated(By.cssSelector(<span style="color:#2aa198">&#34;h3&gt;div&#34;</span>)));
-            System.out.println(firstResult.getAttribute(<span style="color:#2aa198">&#34;textContent&#34;</span>));
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+        WebDriverWait wait <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebDriverWait<span style="color:#719e07">(</span>driver<span style="color:#719e07">,</span> Duration<span style="color:#719e07">.</span>ofSeconds<span style="color:#719e07">(</span>10<span style="color:#719e07">));</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span><span style="color:#719e07">);</span>
+            driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
+            WebElement firstResult <span style="color:#719e07">=</span> wait<span style="color:#719e07">.</span>until<span style="color:#719e07">(</span>presenceOfElementLocated<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h3&gt;div&#34;</span><span style="color:#719e07">)));</span>
+            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>firstResult<span style="color:#719e07">.</span>getAttribute<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;textContent&#34;</span><span style="color:#719e07">));</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2102,7 +2094,6 @@ wait <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</
 </section>
 </div>
 </div>
-
 <p>Puedes ver este <a href="https://selenium.dev/documentation/es/getting_started/quick/">tour rápido</a> para una
 explicación completa de lo que sucede entre bastidores cuando se ejecuta el código.
 Es recomendable continuar con el
@@ -2111,20 +2102,17 @@ para entender como se puede <a href="https://selenium.dev/documentation/es/selen
 y usar correctamente Selenium como herramienta de automatización de pruebas, y como se
 puede escalar pruebas simples como el ejemplo anterior, en grandes entornos con múltiples
 navegadores en diferentes sistemas operativos.</p>
-
 <h2 id="empezando">Empezando</h2>
-
 <p>Si eres nuevo con Selenium, tenemos una serie de
 recursos que te pueden ayudar a ponerte al día de inmediato</p>
-
 <ul>
 <li><a href="https://selenium.dev/documentation/es/getting_started/quick/">Tour rápido</a>
-
 <ul>
-<li><a href="https://selenium.dev/documentation/es/getting_started/quick/#webdriver">WebDriver</a></li>
-<li><a href="https://selenium.dev/documentation/es/getting_started/quick/#ide">IDE</a></li>
-<li><a href="https://selenium.dev/documentation/es/getting_started/quick/#grid">Grid</a></li>
-</ul></li>
+<li><a href="https://selenium.dev/documentation/es/getting_started/quick/">WebDriver</a></li>
+<li><a href="https://selenium.dev/documentation/es/getting_started/quick/">IDE</a></li>
+<li><a href="https://selenium.dev/documentation/es/getting_started/quick/">Grid</a></li>
+</ul>
+</li>
 </ul>
 	
   
@@ -3281,19 +3269,19 @@ recursos que te pueden ayudar a ponerte al día de inmediato</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379907"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379907"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379907"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379907" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379907"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

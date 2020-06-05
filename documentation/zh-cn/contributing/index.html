@@ -11,20 +11,20 @@
     <title>为 Selenium 文档做贡献 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393149" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393149" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393149"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393149"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393149"></script>
 
     
   </div>
@@ -1929,119 +1929,99 @@
 
 
 
-
-
 <p>Selenium是一个大型软件项目,
 其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.</p>
-
 <p>该项目包含Selenium的网站和文档.
 这是一项持续的工作(不针对任何特定版本),
 用于提供有效使用Selenium、
 如何参与以及如何为Selenium做出贡献的更新信息.</p>
-
 <p>对网站和文档的贡献遵循以下部分中有关贡献的描述.
 您应该花一些时间来熟悉以下文档
 <a href="https://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/">查看更多</a>.</p>
-
-<hr />
-
+<hr>
 <p>Selenium项目欢迎每一个人的贡献.
 您可以通过多种方式提供帮助:</p>
-
 <h2 id="上报问题">上报问题</h2>
-
 <p>在报告新问题或评论现有问题时,
 请确保讨论与Selenium的软件、
 其站点与文档的具体技术问题相关.</p>
-
 <p>随着时间的推移, 所有Selenium组件的变化都非常快,
 因此这可能会导致文档过时.
 如前所述, 如果您确实遇到这种情况, 请不要为此担心.
 您也可能知道如何更新文档, 因此请向我们发送包含相关更改的Pull Request.</p>
-
 <p>如果不确定所发现的问题是否存在, 请通过以下沟通渠道进行描述
 <a href="https://selenium.dev/support">https://selenium.dev/support</a>.</p>
-
 <h2 id="贡献">贡献</h2>
-
 <p>Selenium项目欢迎新的贡献者.
 随时间做出重大贡献的个人将成为 <em>提交者</em> , 并获得对该项目的提交权限.</p>
-
 <p>本指南将指导您完成贡献的过程.</p>
-
 <h3 id="步骤-1-fork">步骤 1: Fork</h3>
-
 <p>在 <a href="https://github.com/seleniumhq/seleniumhq.github.io">Github</a>上Fork本项目,
 并check out到您的本地</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git clone git@github.com:seleniumhq/seleniumhq.github.io.git
-% <span style="color:#b58900">cd</span> seleniumhq.github.io</code></pre></div>
-<h4 id="依赖-hugo">依赖: Hugo</h4>
-
+% <span style="color:#b58900">cd</span> seleniumhq.github.io
+</code></pre></div><h4 id="依赖-hugo">依赖: Hugo</h4>
 <p>我们使用 <a href="https://gohugo.io/">Hugo</a> 来构建和渲染网站和文档.
 需要在提交任何更改之前, 在本地验证所有内容,
 请<a href="https://gohugo.io/getting-started/installing/">安装 Hugo</a>,
 熟悉它并<a href="https://gohugo.io/getting-started/usage/#livereload">运行本地服务器</a>
 以在本地呈现该网站(详细说明可在后续步骤中找到).</p>
-
 <h3 id="步骤-2-分支">步骤 2: 分支</h3>
-
 <p>创建一个功能分支并开始工作:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git checkout -b my-feature-branch</code></pre></div>
-<p>我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.</p>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git checkout -b my-feature-branch
+</code></pre></div><p>我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.</p>
 <h3 id="步骤-3-做出改变">步骤 3: 做出改变</h3>
-
 <p>仓库包含站点和文档, 这是两个独立的Hugo项目.
 如果要更改站点, 请在 <code>site_source_files</code> 目录上工作.
 要查看更改的实时预览, 请在网站的根目录上运行 <code>hugo server</code> 命令.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% <span style="color:#b58900">cd</span> site_source_files
-% hugo server</code></pre></div>
-<p>要更改文档, 请切换到 <code>docs_source_files</code> 目录.</p>
+% hugo server
+</code></pre></div><p>要更改文档, 请切换到 <code>docs_source_files</code> 目录.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% <span style="color:#b58900">cd</span> docs_source_files
-% hugo server</code></pre></div>
-<p>本文档基于英语内容, 被翻译成多种语言.
+% hugo server
+</code></pre></div><p>本文档基于英语内容, 被翻译成多种语言.
 更改文件时, 请 <strong>确保</strong> 也对所有其他翻译文件进行更改.
 这可能会略有不同, 例如:</p>
-
 <ul>
-<li><p>如果将代码示例添加到 <code>browser_manipulation.en.md</code> 文件中后,
+<li>
+<p>如果将代码示例添加到 <code>browser_manipulation.en.md</code> 文件中后,
 则还需将其添加到 <code>browser_manipulation.es.md</code>,
 <code>browser_manipulation.ef.md</code>,
-<code>browser_manipulation.ja.md</code> 以及所有其他的已翻译文件.</p></li>
-
-<li><p>如果您发现可以改进的翻译, 请仅更改翻译的文件.</p></li>
-
-<li><p>如果要添加新的语言翻译, 请添加具有适当后缀的新文件.
+<code>browser_manipulation.ja.md</code> 以及所有其他的已翻译文件.</p>
+</li>
+<li>
+<p>如果您发现可以改进的翻译, 请仅更改翻译的文件.</p>
+</li>
+<li>
+<p>如果要添加新的语言翻译, 请添加具有适当后缀的新文件.
 无需翻译所有内容即可提交PR, 可以迭代完成.
-不要忘记在 <code>config.toml</code> 文件中检查一些必要的配置.</p></li>
-
-<li><p>如果您用英语版本更改了文本,
+不要忘记在 <code>config.toml</code> 文件中检查一些必要的配置.</p>
+</li>
+<li>
+<p>如果您用英语版本更改了文本,
 请用您的更改替换翻译文件中的同一部分(是的, 用英语),
 然后在文件顶部添加以下注意事项.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">{{% notice info %}}
+</li>
+</ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">{{% notice info %}}
 &lt;i class=&#34;fas fa-language&#34;&gt;&lt;/i&gt; Page being translated from 
 English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
 it by sending us pull requests!
-{{% /notice %}}</pre></div></li>
-</ul>
-
-<h3 id="步骤-4-提交">步骤 4: 提交</h3>
-
+{{% /notice %}}
+</code></pre></div><h3 id="步骤-4-提交">步骤 4: 提交</h3>
 <p>首先确保git知道您的姓名和电子邮件地址:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git config --global user.name <span style="color:#2aa198">&#39;Santa Claus&#39;</span>
-% git config --global user.email <span style="color:#2aa198">&#39;santa@example.com&#39;</span></code></pre></div>
-<p><strong>编写良好的提交信息很重要.</strong>
+% git config --global user.email <span style="color:#2aa198">&#39;santa@example.com&#39;</span>
+</code></pre></div><p><strong>编写良好的提交信息很重要.</strong>
 提交信息应描述更改的内容,
 原因以及已解决的参考问题(如果有).
 撰写时应遵循以下规则:</p>
-
 <ol>
 <li>第一行应少于或等于50个字符, 并包含对该更改的简短说明.</li>
 <li>保持第二行空白.</li>
 <li>在所有72列处换行.</li>
 <li>包括 <code>Fixes #N</code>, 其中 <em>N</em> 是提交修复的问题编号(如果有).</li>
 </ol>
-
 <p>一个好的提交信息可能看起来像这样:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">explain commit normatively in one line
 
@@ -2054,37 +2034,28 @@ please do proper word-wrap and keep columns shorter than about
 72 characters or so. That way `git log` will show things
 nicely even when it is indented.
 
-Fixes #141</code></pre></div>
-<p>第一行必须有意义, 因为这是人们在运行 <code>git shortlog</code> 或 <code>git log --oneline</code> 时看到的内容.</p>
-
+Fixes #141
+</code></pre></div><p>第一行必须有意义, 因为这是人们在运行 <code>git shortlog</code> 或 <code>git log --oneline</code> 时看到的内容.</p>
 <h3 id="步骤-5-rebase">步骤 5: Rebase</h3>
-
 <p>使用 <code>git rebase</code> (并非 <code>git merge</code>) 同步实时的工作.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git fetch upstream
-% git rebase upstream/master</code></pre></div>
-<h3 id="步骤-6-测试">步骤 6: 测试</h3>
-
+% git rebase upstream/master
+</code></pre></div><h3 id="步骤-6-测试">步骤 6: 测试</h3>
 <p>永远记住要<a href="https://gohugo.io/getting-started/usage/#livereload">运行本地服务</a>,
 这样做可以确保您的更改没有破坏任何事情.</p>
-
 <h3 id="步骤-7-push">步骤 7: Push</h3>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git push origin my-feature-branch</code></pre></div>
-<p>访问 <a href="https://github.com/yourusername/seleniumhq.github.io.git">https://github.com/yourusername/seleniumhq.github.io.git</a>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git push origin my-feature-branch
+</code></pre></div><p>访问 <a href="https://github.com/yourusername/seleniumhq.github.io.git">https://github.com/yourusername/seleniumhq.github.io.git</a>
 并点击 <em>Pull Request</em> 以及填写表格.
- <strong>请明确您已经签署了CLA</strong> (详见步骤 7).</p>
-
+<strong>请明确您已经签署了CLA</strong> (详见步骤 7).</p>
 <p>Pull requests通常会在几天内进行审核.
 如果有评论要解决, 请在新提交(最好是<a href="http://git-scm.com/docs/git-commit">修正</a>)中应用您的更改,
 然后推push到同一分支.</p>
-
 <h3 id="步骤-8-集成">步骤 8: 集成</h3>
-
 <p>代码审查完成后, 提交者将获取您的PR并将其集成到项目的master分支中.
 因为我们希望在master分支上保持线性历史记录,
 所以我们通常会squash并rebase您的分支历史记录.</p>
-
 <h2 id="沟通">沟通</h2>
-
 <p>有关如何与项目贡献者和整个社区进行沟通的所有详细信息,
 请访问以下网址 <a href="https://selenium.dev/support">https://selenium.dev/support</a></p>
 
@@ -2096,7 +2067,7 @@ Fixes #141</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/contributing/">
       “为 Selenium 文档做贡献”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3251,19 +3222,19 @@ Fixes #141</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

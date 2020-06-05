@@ -18,7 +18,7 @@
       
       <guid>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
       <description>WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。 ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。 以下は、本説明での用語の使用方法の内訳です。
-用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;rdquo;コマンド&amp;rdquo;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
+用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;quot;コマンド&amp;quot;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
 ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。 ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。
 上記の簡単な例は 直接 通信です。ブラウザへのコミュニケーションは、Selenium ServerまたはRemoteWebDriverを経由した リモート 通信もできます。RemoteWebDriverは、ドライバーおよびブラウザと同じシステムで実行されます。
 リモート通信は、ホストシステム上のドライバーと順に通信するSelenium ServerまたはSelenium Gridを使用して行うこともできます。
@@ -40,13 +40,9 @@ WebDriverの目的は、できるだけブラウザーに近づけて実際の�
 ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。 このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。
 実行可能ファイルをパスに追加する ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。 WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。 実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。
 WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。
- 実行可能ファイルを配置するディレクトリをこのように作成します。 C:\WebDriver\bin or /opt/WebDriver/bin PATHにディレクトリを追加します。
- Windows - 管理者権限でコマンドプロンプトを開いて 次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
-setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
-export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  これで、変更をテストする準備ができました。 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
-chromedriver PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
-Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed.  Ctrl + C を押すと、コマンドプロンプトの制御を取り戻すことができます。
-クイックリファレンス    ブラウザー サポートOS メンテナ ダウンロード イシュートラッカー     Chromium/Chrome Windows/macOS/Linux Google ダウンロード イシュートラッカー   Firefox Windows/macOS/Linux Mozilla ダウンロード イシュートラッカー   Edge Windows 10 Microsoft ダウンロード イシュートラッカー   Internet Explorer Windows Selenium Project ダウンロード イシュートラッカー   Safari macOS El Capitan and newer Apple ビルトイン イシュートラッカー   Opera Windows/macOS/Linux Opera ダウンロード イシュートラッカー    Chromium/Chrome Chrome または Chromium を動かす場合、chromedriver をダウンロードして、システムパスのフォルダに置いてください。</description>
+ 実行可能ファイルを配置するディレクトリをこのように作成します。 C:\WebDriver\bin or /opt/WebDriver/bin PATHにディレクトリを追加します。  Windows - 管理者権限でコマンドプロンプトを開いて 次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。    setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34;  macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。  export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile   これで、変更をテストする準備ができました。 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
+chromedriver   PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
+  Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed. Ctrl + Cを押すと、コマンドプロンプトの制御を取り戻すことができます。</description>
     </item>
     
     <item>
@@ -153,7 +149,7 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
       <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
       <description>キーボードはキーボードイベントを表します。 キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
 sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。 WebDriverがサポートする可能なキーストロークのリストは、こちらにあります。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.</description>
     </item>
     
   </channel>

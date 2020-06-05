@@ -17,7 +17,7 @@
       <pubDate>Tue, 22 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2013/a-plan-to-drop-firefox-3-x-support/</guid>
-      <description>The support policy of the selenium project for Firefox browsers is to support the current and previous stables releases, as well as the current and previous ESR releases. At the time of writing, that means the supported versions are &amp;#8220;10&amp;#8221; and &amp;#8220;17&amp;#8221; (ESR) and &amp;#8220;17&amp;#8221; and &amp;#8220;18&amp;#8221; (stable channel). In addition to this, we are currently supporting Firefox 3.x too.  This is an official announcement that we are planning to end support for Firefox 3.</description>
+      <description></description>
     </item>
     
     <item>
@@ -26,8 +26,7 @@
       <pubDate>Fri, 24 Feb 2012 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2012/support-for-ancient-browsers/</guid>
-      <description>The first code checked into the Selenium project&amp;#8217;s public repository was in November, 2004. We&amp;#8217;re now in 2012. In the intervening years there have been many browsers released. The last browser we officially stopped supporting was Firefox 2.0, and it&amp;#8217;s time to review the list of browsers again.
-We periodically review the list of supported browsers as the more changes there are between the oldest version of a browser that we support and the most recent, the harder it is for us to add new features and maintain those that already exist.</description>
+      <description></description>
     </item>
     
   </channel>

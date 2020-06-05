@@ -11,20 +11,20 @@
     <title>支持的类 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,18 +1921,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#threadguard"><strong>ThreadGuard</strong></a>
-<ul>
-<li>
-<ul>
-<li><a href="#注意">注意:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#threadguard"><strong>ThreadGuard</strong></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1957,14 +1952,11 @@
 
 
 
-
-
 <p>WebDriver提供了一些用于简化代码维护的类.
 其提供了一种不错的抽象,
 使得将HTML元素建模为域对象的操作, 变得更加容易,
 还提供了一些更有帮助的方法, 使用此类对象时更容易操作.
 我们将学到以下方法:</p>
-
 <ul>
 <li>Locator Strategies</li>
 <li>Events</li>
@@ -1972,59 +1964,52 @@
 <li>ThreadGuard</li>
 <li>etc.</li>
 </ul>
-
 <p>我们开始吧:</p>
-
 <h2 id="threadguard"><strong>ThreadGuard</strong></h2>
-
 
 <div class="notices info" ><p>此类仅在Java中可用</p>
 </div>
 
-
 <p>ThreadGuard检查是否仅从创建驱动程序的同一线程中调用了驱动程序.
 线程问题 (尤其是在Parallel中运行测试时)
 可能遇到神秘并且难以诊断错误.
-使用此包装器可以防止此类错误,<br />
+使用此包装器可以防止此类错误,<br>
 并且在发生此类情况时会抛出异常.</p>
-
 <p>以下的示例模拟一种线程冲突的情况:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> DriverClash {
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">DriverClash</span> <span style="color:#719e07">{</span>
   <span style="color:#586e75">//thread main (id 1) created this driver
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">WebDriver</span> protectedDriver <span style="color:#719e07">=</span> ThreadGuard.protect(<span style="color:#719e07">new</span> ChromeDriver());
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> WebDriver protectedDriver <span style="color:#719e07">=</span> ThreadGuard<span style="color:#719e07">.</span>protect<span style="color:#719e07">(</span><span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">());</span>
 
-  <span style="color:#268bd2">static</span> {
-    System.setProperty(<span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span>, <span style="color:#2aa198">&#34;&lt;Set path to your Chromedriver&gt;&#34;</span>);
-  }
+  <span style="color:#268bd2">static</span> <span style="color:#719e07">{</span>
+    System<span style="color:#719e07">.</span>setProperty<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver.chrome.driver&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;&lt;Set path to your Chromedriver&gt;&#34;</span><span style="color:#719e07">);</span>
+  <span style="color:#719e07">}</span>
 
   <span style="color:#586e75">//Thread-1 (id 24) is calling the same driver causing the clash to happen
-</span><span style="color:#586e75"></span>  Runnable <span style="color:#268bd2">r1</span> <span style="color:#719e07">=</span> () <span style="color:#719e07">-&gt;</span> {protectedDriver.get(<span style="color:#2aa198">&#34;https://selenium.dev&#34;</span>);};
-  Thread <span style="color:#268bd2">thr1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Thread(r1);
+</span><span style="color:#586e75"></span>  Runnable r1 <span style="color:#719e07">=</span> <span style="color:#719e07">()</span> <span style="color:#719e07">-&gt;</span> <span style="color:#719e07">{</span>protectedDriver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://selenium.dev&#34;</span><span style="color:#719e07">);};</span>
+  Thread thr1 <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Thread<span style="color:#719e07">(</span>r1<span style="color:#719e07">);</span>
 
-  <span style="color:#dc322f">void</span> <span style="color:#268bd2">runThreads</span>(){
-    thr1.start();
-  }
+  <span style="color:#dc322f">void</span> <span style="color:#268bd2">runThreads</span><span style="color:#719e07">(){</span>
+    thr1<span style="color:#719e07">.</span>start<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    <span style="color:#719e07">new</span> DriverClash().runThreads();
-  }
-}</code></pre></div>
-<p>结果如下所示:</p>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">new</span> DriverClash<span style="color:#719e07">().</span>runThreads<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>结果如下所示:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Exception in thread &#34;Thread-1&#34; org.openqa.selenium.WebDriverException:
 Thread safety error; this instance of WebDriver was constructed
 on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
-This is not permitted and *will* cause undefined behaviour</code></pre></div>
-<p>正如示例所示:</p>
+This is not permitted and *will* cause undefined behaviour
 
+</code></pre></div><p>正如示例所示:</p>
 <ul>
 <li><code>protectedDriver</code> 将在主线程中创建</li>
 <li>我们使用Java的 <code>Runnable</code> 启动一个新进程,  并使用一个新的 <code>Thread</code> 运行该进程</li>
 <li>这两个 <code>Thread</code> 都会发生冲突,  因为主线程的内存中没有 <code>protectedDriver</code></li>
 <li><code>ThreadGuard.protect</code> 会抛出异常</li>
 </ul>
-
 <h4 id="注意">注意:</h4>
-
 <p>这不能代替并发运行时使用 <code>ThreadLocal</code> 管理驱动程序的需求.</p>
 
 
@@ -2035,7 +2020,7 @@ This is not permitted and *will* cause undefined behaviour</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/webdriver/support_classes/">
       “支持的类”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3200,19 +3185,19 @@ This is not permitted and *will* cause undefined behaviour</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

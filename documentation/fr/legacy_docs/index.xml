@@ -28,7 +28,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&amp;rsquo;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
+      <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&#39;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
     </item>
     
     <item>
@@ -38,7 +38,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       
       <guid>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</guid>
       <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
-Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
+Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor). Assurez-vous de vous y conformer.</description>
     </item>
     
     <item>

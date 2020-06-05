@@ -11,20 +11,20 @@
     <title>要素を探す :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393151" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393151" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393151"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393151"></script>
 
     
   </div>
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="はじめる" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1921,27 +1921,26 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#一つの要素を探す">一つの要素を探す</a></li>
-<li><a href="#複数の要素を探す">複数の要素を探す</a></li>
-<li><a href="#要素選択の方法">要素選択の方法</a></li>
-<li><a href="#セレクタを使うときのコツ">セレクタを使うときのコツ</a></li>
-</ul></li>
-<li><a href="#レラティブ-相対-ロケーター">レラティブ（相対）ロケーター</a>
-<ul>
-<li><a href="#どのように機能するか">どのように機能するか</a></li>
-<li><a href="#above">above()</a></li>
-<li><a href="#below">below()</a></li>
-<li><a href="#toleftof">toLeftOf()</a></li>
-<li><a href="#torightof">toRightOf()</a></li>
-<li><a href="#near">near()</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一つの要素を探す">一つの要素を探す</a></li>
+        <li><a href="#複数の要素を探す">複数の要素を探す</a></li>
+        <li><a href="#要素選択の方法">要素選択の方法</a></li>
+        <li><a href="#セレクタを使うときのコツ">セレクタを使うときのコツ</a></li>
+      </ul>
+    </li>
+    <li><a href="#レラティブ相対ロケーター">レラティブ（相対）ロケーター</a>
+      <ul>
+        <li><a href="#どのように機能するか">どのように機能するか</a></li>
+        <li><a href="#above">above()</a></li>
+        <li><a href="#below">below()</a></li>
+        <li><a href="#toleftof">toLeftOf()</a></li>
+        <li><a href="#torightof">toRightOf()</a></li>
+        <li><a href="#near">near()</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1966,12 +1965,8 @@
 
 
 
-
-
 <h3 id="一つの要素を探す">一つの要素を探す</h3>
-
 <p>ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。</p>
-
 
 
 
@@ -2013,7 +2008,7 @@
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cheese&#34;</span>));  
+WebElement cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span><span style="color:#719e07">));</span>  
   </code></pre></div>
 </section>
   
@@ -2060,16 +2055,12 @@ cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.<
 </section>
 </div>
 </div>
-
 <p>例を見ての通り、WebDriverで要素を特定するには、<code>WebDriver</code>クラスのインスタンスを使います。<code>findElement(By)</code>メソッドは<code>WebElement</code>という別の基本的なオブジェクトを返します。</p>
-
 <ul>
 <li><code>WebDriver</code>はブラウザをあらわす</li>
 <li><code>WebElement</code>は特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす</li>
 </ul>
-
 <p>一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。</p>
-
 
 
 
@@ -2111,8 +2102,8 @@ cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.<
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cheese&#34;</span>));
-WebElement <span style="color:#268bd2">cheddar</span> <span style="color:#719e07">=</span> cheese.findElement(By.id(<span style="color:#2aa198">&#34;cheddar&#34;</span>));
+WebElement cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheese&#34;</span><span style="color:#719e07">));</span>
+WebElement cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheddar&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2164,21 +2155,17 @@ cheddar <span style="color:#719e07">=</span> cheese<span style="color:#719e07">.
 </section>
 </div>
 </div>
-
 <p>これは <em>WebDriver</em> と <em>WebElement</em> クラスの両方が<a href="//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html"><em>SearchContext</em></a>インターフェイスを実装しているため可能になっています。
 これはWebDriverでは <em>ロールベースインターフェイス (role-based interface)</em> と呼ばれています。
 ロールベースインターフェイスは、どのドライバー実装がどの機能をサポートしているかどうかを判断する助けになります。これらのインターフェイスは明確に定義され、単一の役割の責任のみを持つことを守っています。
-WebDriverの設計と、どんな役割がどのドライバでサポートされているかは<a href="#">Some Other Section Which Must Be Named</a>で読むことができます。
-<!-- TODO: A new section needs to be created for the above.--></p>
-
+WebDriverの設計と、どんな役割がどのドライバでサポートされているかは<a href="#">Some Other Section Which Must Be Named</a>で読むことができます。</p>
+<!-- raw HTML omitted -->
 <p>その結果、 上で使っていた <em>By</em> インターフェイスはいくつものロケータストラテジをサポートしています。
 ネストした探索はcheeseを探す方法としてもっとも効率的なものではないかもしれません。
-なぜなら、この方法は二つに分割されたコマンドをブラウザに発行するからです。具体的には、まずDOMから&rdquo;cheese&rdquo;というidの要素を探し出し、それから狭まった範囲で&rdquo;cheddar&rdquo;という要素を探しています。</p>
-
+なぜなら、この方法は二つに分割されたコマンドをブラウザに発行するからです。具体的には、まずDOMから&quot;cheese&quot;というidの要素を探し出し、それから狭まった範囲で&quot;cheddar&quot;という要素を探しています。</p>
 <p>パフォーマンスをわずかに向上させるために、より効果的なロケータを使ってみましょう。
 WebDriverはCSSロケータによる要素の探索をサポートしています。
 これは先ほどの二つのロケータを1回の検索に組み合わせることができます。</p>
-
 
 
 
@@ -2220,7 +2207,7 @@ WebDriverはCSSロケータによる要素の探索をサポートしていま�
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span>));
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#cheese #cheddar&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2267,22 +2254,19 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #ched
 </section>
 </div>
 </div>
-
 <h3 id="複数の要素を探す">複数の要素を探す</h3>
-
 <p>今作業しているドキュメントに、私たちが一番好きなチーズについての順序付きリストがあるとします。</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">ol</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">cheese</span>&gt;
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">cheddar</span>&gt;…
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">brie</span>&gt;…
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">rochefort</span>&gt;…
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">camembert</span>&gt;…
-&lt;/<span style="color:#268bd2">ul</span>&gt;</code></pre></div>
-<p>チーズがたくさんある方が良いのは疑いの余地がなく、また一個一個取らなければなければならないのは面倒です。
+&lt;/<span style="color:#268bd2">ul</span>&gt;
+</code></pre></div><p>チーズがたくさんある方が良いのは疑いの余地がなく、また一個一個取らなければなければならないのは面倒です。
 なので、チーズを取得する上位のテクニックは、複数形の<code>findElements(By)</code>を使うことです。
 このメソッドはWeb要素のコレクションを返します。
 もし一つの要素しか見つからなかった場合も、（一つの要素だけの）コレクションを返します。
 もしロケータにマッチする要素が一つもなかった場合は、空のリストが返ります。</p>
-
 
 
 
@@ -2324,7 +2308,7 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #ched
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">muchoCheese</span> <span style="color:#719e07">=</span> driver.findElements(By.cssSelector(<span style="color:#2aa198">&#34;#cheese li&#34;</span>));
+List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> muchoCheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElements<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#cheese li&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2371,11 +2355,8 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 </section>
 </div>
 </div>
-
 <h3 id="要素選択の方法">要素選択の方法</h3>
-
 <p>WebDriverには標準のロケータが8種類あります。</p>
-
 <table>
 <thead>
 <tr>
@@ -2383,75 +2364,58 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 <th>詳細</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>class name</td>
 <td>class名に値を含む要素を探す (複合クラス名は使えない)</td>
 </tr>
-
 <tr>
 <td>css selector</td>
 <td>CSSセレクタが一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>id</td>
 <td>id属性が一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>name</td>
 <td>name属性が一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>link text</td>
 <td>a要素のテキストが一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>partial link text</td>
 <td>a要素のテキストが部分一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>tag name</td>
 <td>タグ名が一致する要素を探す</td>
 </tr>
-
 <tr>
 <td>xpath</td>
 <td>XPathと一致する要素を探す</td>
 </tr>
 </tbody>
 </table>
-
 <h3 id="セレクタを使うときのコツ">セレクタを使うときのコツ</h3>
-
 <p>一般に、HTMLのid属性が利用可能でユニークかつ一貫している場合、ページで要素を探す方法として適しています。
 idは動作がとても速い傾向があり、複雑なDOMトラバースに伴う処理を省略できます。</p>
-
 <p>ユニークなidが使えない場合、きれいに書かれたCSSセレクタが要素を探す方法として適しています。
 XPathはCSSセレクタと同様に動作しますが、シンタックスは複雑で大抵の場合デバッグが困難です。
 XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。</p>
-
 <p>link textセレクタとpartial <em>linkText</em> セレクタはa要素でしか動作しないという欠点があります。
 加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。</p>
-
 <p>タグ名によるロケータは危険な方法になり得ます。
 大抵の場合ページ上には同じタグ名の要素が複数あります。タグ名は要素のコレクションを返す <em>findElements(By)</em> メソッドを使う時にもっとも役に立ちます。</p>
-
 <p>ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
 WebDriverでDOM構造のトラバースを行うのは重い処理となります。
 検索の範囲を狭めた方がより良い結果を得られます。</p>
-
-<h2 id="レラティブ-相対-ロケーター">レラティブ（相対）ロケーター</h2>
-
+<h2 id="レラティブ相対ロケーター">レラティブ（相対）ロケーター</h2>
 <p><strong>Selenium 4</strong> は、以前は <em>Friendly Locators</em> と呼ばれていたレラティブ ロケーターをもたらします。
 この機能は、他の要素の近くにある要素を見つけるのに役立つように追加されました。
 使用可能なレラティブ ロケーターは次のとおりです。</p>
-
 <ul>
 <li><em>above</em></li>
 <li><em>below</em></li>
@@ -2459,22 +2423,14 @@ WebDriverでDOM構造のトラバースを行うのは重い処理となりま�
 <li><em>toRightOf</em></li>
 <li><em>near</em></li>
 </ul>
-
 <p><em>findElement</em> メソッドは、レラティブ ロケーター を返す新しいメソッド <code>withTagName（）</code> を受け入れるようになりました。</p>
-
 <h3 id="どのように機能するか">どのように機能するか</h3>
-
 <p>Seleniumは、JavaScript関数 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a> を使用して相対要素を見つけます。
 この関数は、right、left、bottom、topなどの要素のプロパティを返します。</p>
-
 <p>レラティブ ロケーターを理解するために、以下の例を考えてみましょう。</p>
-
-<p><img src="https://selenium.dev/documentation/ja/images/relative_locators.png?width=400px" alt="Relative Locators" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/relative_locators.png?width=400px" alt="Relative Locators"></p>
 <h3 id="above">above()</h3>
-
 <p>指定された要素の上に表示されるWebElementを返します。</p>
-
 
 
 
@@ -2517,9 +2473,9 @@ WebDriverでDOM構造のトラバースを行うのは重い処理となりま�
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">passwordField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>));
-WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-                                                  .above(passwordField));
+</span><span style="color:#586e75"></span>WebElement passwordField<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">));</span>
+WebElement emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+                                                  <span style="color:#719e07">.</span>above<span style="color:#719e07">(</span>passwordField<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2571,11 +2527,8 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 </section>
 </div>
 </div>
-
 <h3 id="below">below()</h3>
-
 <p>指定された要素の下に表示されるWebElementを返します。</p>
-
 
 
 
@@ -2618,9 +2571,9 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;email&#34;</span>));
-WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-	                                          .below(emailAddressField));
+</span><span style="color:#586e75"></span>WebElement emailAddressField<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;email&#34;</span><span style="color:#719e07">));</span>
+WebElement passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+	                                          <span style="color:#719e07">.</span>below<span style="color:#719e07">(</span>emailAddressField<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2672,11 +2625,8 @@ IWebElement passwordField = driver.FindElement(WithTagName(<span style="color:#2
 </section>
 </div>
 </div>
-
 <h3 id="toleftof">toLeftOf()</h3>
-
 <p>指定された要素の左側に表示されるWebElementを返します。</p>
-
 
 
 
@@ -2719,9 +2669,9 @@ IWebElement passwordField = driver.FindElement(WithTagName(<span style="color:#2
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;submit&#34;</span>));
-WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
-                                            .toLeftOf(submitButton));   
+</span><span style="color:#586e75"></span>WebElement submitButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;submit&#34;</span><span style="color:#719e07">));</span>
+WebElement cancelButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)</span>
+                                            <span style="color:#719e07">.</span>toLeftOf<span style="color:#719e07">(</span>submitButton<span style="color:#719e07">));</span>   
   </code></pre></div>
 </section>
   
@@ -2774,11 +2724,8 @@ IWebElement cancelButton = driver.FindElement(WithTagName(<span style="color:#2a
 </section>
 </div>
 </div>
-
 <h3 id="torightof">toRightOf()</h3>
-
 <p>指定された要素の右側に表示されるWebElementを返します。</p>
-
 
 
 
@@ -2821,9 +2768,9 @@ IWebElement cancelButton = driver.FindElement(WithTagName(<span style="color:#2a
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cancel&#34;</span>));
-WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
-                                            .toRightOf(cancelButton));
+</span><span style="color:#586e75"></span>WebElement cancelButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cancel&#34;</span><span style="color:#719e07">));</span>
+WebElement submitButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)</span>
+                                            <span style="color:#719e07">.</span>toRightOf<span style="color:#719e07">(</span>cancelButton<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2876,11 +2823,8 @@ IWebElement submitButton = driver.FindElement(WithTagName(<span style="color:#2a
 </section>
 </div>
 </div>
-
 <h3 id="near">near()</h3>
-
 <p>指定した要素から最大 <code>50px</code> 離れたWebElementを返します。</p>
-
 
 
 
@@ -2923,9 +2867,9 @@ IWebElement submitButton = driver.FindElement(WithTagName(<span style="color:#2a
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressLabel</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;lbl-email&#34;</span>));
-WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-                                                  .near(emailAddressLabel));
+</span><span style="color:#586e75"></span>WebElement emailAddressLabel<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;lbl-email&#34;</span><span style="color:#719e07">));</span>
+WebElement emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+                                                  <span style="color:#719e07">.</span>near<span style="color:#719e07">(</span>emailAddressLabel<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2987,7 +2931,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/">
       “要素を探す”
-    </a> was last updated on: 01 Jun 2020 21:44:37 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/b450bcee5db7bfdb5c32ba9df6e9f5ea05bf5d21">Translate some pages into Japanese (#450)[deploy site] (b450bcee)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4152,19 +4096,19 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393151"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393151"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379916"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393151" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393151"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

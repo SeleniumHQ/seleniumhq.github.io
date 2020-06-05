@@ -11,20 +11,20 @@
     <title>在 AUT* 中执行 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="入门指南" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1921,15 +1921,13 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#单击元素">单击元素</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#单击元素">单击元素</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1954,10 +1952,7 @@
 
 
 
-
-
 <p>使用 sendKeys 方法设置元素的文本，如下所示:</p>
-
 
 
 
@@ -1999,8 +1994,8 @@
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-String <span style="color:#268bd2">name</span> <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span>;
-driver.findElement(By.name(<span style="color:#2aa198">&#34;name&#34;</span>)).sendKeys(name);
+String name <span style="color:#719e07">=</span> <span style="color:#2aa198">&#34;Charles&#34;</span><span style="color:#719e07">;</span>
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;name&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span>name<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2052,10 +2047,8 @@ driver.findElement(By.name(<span style="color:#2aa198">&#34;name&#34;</span>)).s
 </section>
 </div>
 </div>
-
 <p>一些 web 应用程序使用 JavaScript 库来实现拖放功能。
 下面是一个简单的例子，拖动一个元素到另一个元素:</p>
-
 
 
 
@@ -2097,9 +2090,9 @@ driver.findElement(By.name(<span style="color:#2aa198">&#34;name&#34;</span>)).s
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">source</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;source&#34;</span>));
-WebElement <span style="color:#268bd2">target</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;target&#34;</span>));
-<span style="color:#719e07">new</span> Actions(driver).dragAndDrop(source, target).build().perform();
+WebElement source <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;source&#34;</span><span style="color:#719e07">));</span>
+WebElement target <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;target&#34;</span><span style="color:#719e07">));</span>
+<span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">).</span>dragAndDrop<span style="color:#719e07">(</span>source<span style="color:#719e07">,</span> target<span style="color:#719e07">).</span>build<span style="color:#719e07">().</span>perform<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2157,11 +2150,8 @@ Actions(driver).dragAndDrop(source, target).build().perform()
 </section>
 </div>
 </div>
-
 <h3 id="单击元素">单击元素</h3>
-
 <p>你可以使用 click 方法单击一个元素:</p>
-
 
 
 
@@ -2203,7 +2193,7 @@ Actions(driver).dragAndDrop(source, target).build().perform()
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span>)).click();
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input[type=&#39;submit&#39;]&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2250,7 +2240,6 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
 </section>
 </div>
 </div>
-
 <p>*<strong>AUT</strong>: 待测试应用</p>
 
 
@@ -2261,7 +2250,7 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/">
       “在 AUT* 中执行”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3426,19 +3415,19 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;input[type=&#
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

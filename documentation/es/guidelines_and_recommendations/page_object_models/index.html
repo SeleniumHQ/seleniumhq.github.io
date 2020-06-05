@@ -11,20 +11,20 @@
     <title>Modelos de objetos de página :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1956,10 +1956,8 @@ página, las pruebas en sí mismas no necesitan cambiar, solo el
 código dentro del objeto de página necesita cambiar.
 Posteriormente, todos los cambios para soportar esa nueva
 interfaz de usuario están ubicados en un solo lugar.</p>
-
 <p>El patrón de diseño de objetos de página ofrece las siguientes
 ventajas:</p>
-
 <ul>
 <li>Existe una separación clara entre el código de prueba y el
 código específico de la página, como localizadores (o su uso si
@@ -1968,38 +1966,35 @@ está utilizando un mapa de interfaz de usuario) y diseño.</li>
 ofrece la página en lugar de tener estos servicios dispersos a
 lo largo de las pruebas.</li>
 </ul>
-
 <p>En ambos casos, esto permite cualquier modificación requerida
 debido a cambios en la interfaz de usuario puedan hacerse en
 un solo lugar. Puedes encontrar buena información sobre esta
 técnica en numerosos blogs, ya que este &ldquo;patrón de diseño de
 prueba&rdquo; se está utilizando ampliamente. Nosotros animamos al
-lector que desea saber más a buscar blogs en Internet al respecto.<br />
+lector que desea saber más a buscar blogs en Internet al respecto.<br>
 Muchos han escrito sobre este patrón de diseño y
 pueden proporcionar consejos útiles más allá del alcance de esta
 guía del usuario. Para empezar, sin embargo, ilustraremos
 objetos de página con un ejemplo simple.</p>
-
 <p>Primero, considere un ejemplo, típico de la automatización de
 pruebas, que no utiliza un objeto de página:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/***
 </span><span style="color:#586e75"> * Prueba de la funcionalidad de inicio de sesión
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> Login {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">Login</span> <span style="color:#719e07">{</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
+  <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">testLogin</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">// ingresa los datos de inicio de sesión en la página de inicio de sesión
-</span><span style="color:#586e75"></span>    driver.findElement(By.name(<span style="color:#2aa198">&#34;user_name&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;testUser&#34;</span>);
-    driver.findElement(By.name(<span style="color:#2aa198">&#34;password&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;my supersecret password&#34;</span>);
-    driver.findElement(By.name(<span style="color:#2aa198">&#34;sign-in&#34;</span>)).click();
+</span><span style="color:#586e75"></span>    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;user_name&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;testUser&#34;</span><span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;my supersecret password&#34;</span><span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;sign-in&#34;</span><span style="color:#719e07">)).</span>click<span style="color:#719e07">();</span>
 
     <span style="color:#586e75">// verifica que la etiqueta h1 tiene el valor &#34;Hello userName&#34; después de iniciar sesión
-</span><span style="color:#586e75"></span>    driver.findElement(By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>)).isDisplayed();
-    assertThat(driver.findElement(By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>)).getText(), is(<span style="color:#2aa198">&#34;Hello userName&#34;</span>));
-  }
-}</code></pre></div>
-<p>Hay dos problemas con este enfoque.</p>
-
+</span><span style="color:#586e75"></span>    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h1&#34;</span><span style="color:#719e07">)).</span>isDisplayed<span style="color:#719e07">();</span>
+    assertThat<span style="color:#719e07">(</span>driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h1&#34;</span><span style="color:#719e07">)).</span>getText<span style="color:#719e07">(),</span> is<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Hello userName&#34;</span><span style="color:#719e07">));</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>Hay dos problemas con este enfoque.</p>
 <ul>
 <li>No hay separación entre el método de prueba y los
 localizadores del AUT (ID en este ejemplo); ambos están
@@ -2010,29 +2005,28 @@ sesión, la prueba en sí debe cambiar.</li>
 se distribuirían en múltiples pruebas, en todas las pruebas que
 debían usar esta página de inicio de sesión.</li>
 </ul>
-
 <p>Aplicando las técnicas de objeto de página, este ejemplo podría
 reescribirse como en el siguiente ejemplo de un objeto de página
 para una página de inicio de sesión.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
 
 <span style="color:#586e75">/**
 </span><span style="color:#586e75"> * El objeto de página encapsula la página de inicio de sesión.
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> SignInPage {
-  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver <span style="color:#268bd2">driver</span>;
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">SignInPage</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver driver<span style="color:#719e07">;</span>
 
   <span style="color:#586e75">// &lt;input name=&#34;user_name&#34; type=&#34;text&#34; value=&#34;&#34;&gt;
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> usernameBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;user_name&#34;</span>);
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> By usernameBy <span style="color:#719e07">=</span> By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;user_name&#34;</span><span style="color:#719e07">);</span>
   <span style="color:#586e75">// &lt;input name=&#34;password&#34; type=&#34;password&#34; value=&#34;&#34;&gt;
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> passwordBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;password&#34;</span>);
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> By passwordBy <span style="color:#719e07">=</span> By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">);</span>
   <span style="color:#586e75">// &lt;input name=&#34;sign_in&#34; type=&#34;submit&#34; value=&#34;SignIn&#34;&gt;
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> signinBy <span style="color:#719e07">=</span> By.name(<span style="color:#2aa198">&#34;sign_in&#34;</span>);
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> By signinBy <span style="color:#719e07">=</span> By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;sign_in&#34;</span><span style="color:#719e07">);</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">SignInPage</span>(WebDriver <span style="color:#268bd2">driver</span>){
-    <span style="color:#719e07">this</span>.driver <span style="color:#719e07">=</span> driver;
-  }
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">SignInPage</span><span style="color:#719e07">(</span>WebDriver driver<span style="color:#719e07">){</span>
+    <span style="color:#719e07">this</span><span style="color:#719e07">.</span>driver <span style="color:#719e07">=</span> driver<span style="color:#719e07">;</span>
+  <span style="color:#719e07">}</span>
 
   <span style="color:#586e75">/**
 </span><span style="color:#586e75">    * Inicia sesión como un usuario válido
@@ -2041,69 +2035,68 @@ para una página de inicio de sesión.</p>
 </span><span style="color:#586e75">    * @param password
 </span><span style="color:#586e75">    * @return HomePage object
 </span><span style="color:#586e75">    */</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> loginValidUser(String <span style="color:#268bd2">userName</span>, String <span style="color:#268bd2">password</span>) {
-    driver.findElement(usernameBy).sendKeys(userName);
-    driver.findElement(passwordBy).sendKeys(password);
-    driver.findElement(signinBy).click();
-    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(driver);
-  }
-}</code></pre></div>
-<p>y el objeto de página para una página de inicio podría verse así.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
+  <span style="color:#268bd2">public</span> HomePage <span style="color:#268bd2">loginValidUser</span><span style="color:#719e07">(</span>String userName<span style="color:#719e07">,</span> String password<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>usernameBy<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span>userName<span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>passwordBy<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span>password<span style="color:#719e07">);</span>
+    driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>signinBy<span style="color:#719e07">).</span>click<span style="color:#719e07">();</span>
+    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>y el objeto de página para una página de inicio podría verse así.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
 
 <span style="color:#586e75">/**
 </span><span style="color:#586e75"> * El objeto de página encapsula la página de inicio
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HomePage {
-  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver <span style="color:#268bd2">driver</span>;
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HomePage</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">protected</span> <span style="color:#268bd2">static</span> WebDriver driver<span style="color:#719e07">;</span>
 
   <span style="color:#586e75">// &lt;h1&gt;Hola userName&lt;/h1&gt;
-</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> <span style="color:#268bd2">By</span> messageBy <span style="color:#719e07">=</span> By.tagName(<span style="color:#2aa198">&#34;h1&#34;</span>);
+</span><span style="color:#586e75"></span>  <span style="color:#268bd2">private</span> By messageBy <span style="color:#719e07">=</span> By<span style="color:#719e07">.</span>tagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h1&#34;</span><span style="color:#719e07">);</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span>(WebDriver <span style="color:#268bd2">driver</span>){
-    <span style="color:#719e07">this</span>.driver <span style="color:#719e07">=</span> driver;
-    <span style="color:#719e07">if</span> (<span style="color:#719e07">!</span>driver.getTitle().equals(<span style="color:#2aa198">&#34;Home Page of logged in user&#34;</span>)) {
-      <span style="color:#719e07">throw</span> <span style="color:#719e07">new</span> IllegalStateException(<span style="color:#2aa198">&#34;This is not Home Page of logged in user,&#34;</span> <span style="color:#719e07">+</span>
-            <span style="color:#2aa198">&#34; current page is: &#34;</span> <span style="color:#719e07">+</span> driver.getCurrentUrl());
-    }
-  }
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span><span style="color:#719e07">(</span>WebDriver driver<span style="color:#719e07">){</span>
+    <span style="color:#719e07">this</span><span style="color:#719e07">.</span>driver <span style="color:#719e07">=</span> driver<span style="color:#719e07">;</span>
+    <span style="color:#719e07">if</span> <span style="color:#719e07">(!</span>driver<span style="color:#719e07">.</span>getTitle<span style="color:#719e07">().</span>equals<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Home Page of logged in user&#34;</span><span style="color:#719e07">))</span> <span style="color:#719e07">{</span>
+      <span style="color:#719e07">throw</span> <span style="color:#719e07">new</span> IllegalStateException<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;This is not Home Page of logged in user,&#34;</span> <span style="color:#719e07">+</span>
+            <span style="color:#2aa198">&#34; current page is: &#34;</span> <span style="color:#719e07">+</span> driver<span style="color:#719e07">.</span>getCurrentUrl<span style="color:#719e07">());</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
 
   <span style="color:#586e75">/**
 </span><span style="color:#586e75">    * Get message (h1 tag)
 </span><span style="color:#586e75">    *
 </span><span style="color:#586e75">    * @return String message text
 </span><span style="color:#586e75">    */</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">String</span> getMessageText() {
-    <span style="color:#719e07">return</span> driver.findElement(messageBy).getText();
-  }
+  <span style="color:#268bd2">public</span> String <span style="color:#268bd2">getMessageText</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+    <span style="color:#719e07">return</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>messageBy<span style="color:#719e07">).</span>getText<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
 
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">HomePage</span> manageProfile() {
+  <span style="color:#268bd2">public</span> HomePage <span style="color:#268bd2">manageProfile</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
     <span style="color:#586e75">// Encapsulación de página para administrar la funcionalidad del perfil
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage(driver);
-  }
+</span><span style="color:#586e75"></span>    <span style="color:#719e07">return</span> <span style="color:#719e07">new</span> HomePage<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+  <span style="color:#719e07">}</span>
   <span style="color:#586e75">/* Mas métodos que ofrecen los servicios representados por la página de inicio
 </span><span style="color:#586e75">   del usuario registrado. Estos métodos a su vez podrían devolver más objetos de página,
 </span><span style="color:#586e75">   por ejemplo hacer clic en el botón Redactar correo podría devolver el objeto de clase ComposeMail */</span>
-}</code></pre></div>
-<p>Entonces, la prueba de inicio de sesión usaría estos dos objetos de página de la siguiente manera.</p>
+<span style="color:#719e07">}</span>
+</code></pre></div><p>Entonces, la prueba de inicio de sesión usaría estos dos objetos de página de la siguiente manera.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#586e75">/***
 </span><span style="color:#586e75"> * Prueba de la funcionalidad de inicio de sesión de pruebas
 </span><span style="color:#586e75"> */</span>
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> TestLogin {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">TestLogin</span> <span style="color:#719e07">{</span>
 
   <span style="color:#268bd2">@Test</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">void</span> testLogin() {
-    SignInPage <span style="color:#268bd2">signInPage</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SignInPage(driver);
-    HomePage <span style="color:#268bd2">homePage</span> <span style="color:#719e07">=</span> signInPage.loginValidUser(<span style="color:#2aa198">&#34;userName&#34;</span>, <span style="color:#2aa198">&#34;password&#34;</span>);
-    assertThat(homePage.getMessageText(), is(<span style="color:#2aa198">&#34;Hello userName&#34;</span>));
-  }
+  <span style="color:#268bd2">public</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">testLogin</span><span style="color:#719e07">()</span> <span style="color:#719e07">{</span>
+    SignInPage signInPage <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SignInPage<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+    HomePage homePage <span style="color:#719e07">=</span> signInPage<span style="color:#719e07">.</span>loginValidUser<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;userName&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">);</span>
+    assertThat<span style="color:#719e07">(</span>homePage<span style="color:#719e07">.</span>getMessageText<span style="color:#719e07">(),</span> is<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Hello userName&#34;</span><span style="color:#719e07">));</span>
+  <span style="color:#719e07">}</span>
 
-}</code></pre></div>
-<p>Hay mucha flexibilidad en cómo se pueden diseñar los objetos de
+<span style="color:#719e07">}</span>
+</code></pre></div><p>Hay mucha flexibilidad en cómo se pueden diseñar los objetos de
 página, pero hay algunas reglas básicas para obtener la
 mantenibilidad deseada de tu código de prueba.</p>
-
 <p>Los objetos de página en sí mismos nunca deben hacer
 verificaciones o afirmaciones. Esto es parte de tu prueba y
 siempre debe estar dentro del código de la prueba, nunca en una
@@ -2111,7 +2104,6 @@ página objeto. El objeto de página contendrá la representación
 de la página, y el servicios que proporciona la página a través
 de métodos, pero ningún código relacionado con lo que se está
 probado debe estar dentro del objeto de la página.</p>
-
 <p>Hay una verificación única que puede y debe estar dentro del
 objeto de página y eso es para verificar que la página, y
 posiblemente elementos críticos en la página, se cargaron
@@ -2120,14 +2112,12 @@ se instancia el objeto de la página. En los ejemplos anteriores,
 tanto SignInPage como los constructores de HomePage verifican
 que la página esperada esté disponible y lista para las solicitudes
 de la prueba.</p>
-
 <p>Un objeto de página no necesariamente necesita representar una
 página completa. El patrón de diseño de objetos de pagina podría
 usarse para representar componentes en una página. Si la
 página en el AUT tiene múltiples componentes, puede mejorar la
 mantenibilidad si hay un objeto de página separado para cada
 componente.</p>
-
 <p>Existen otros patrones de diseño que también pueden usarse en
 las pruebas. Algunos usan un Page Factory para crear instancias
 de sus objetos de página. Discutir todo esto es más allá del
@@ -2145,7 +2135,7 @@ lector para buscar blogs sobre estos temas.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/">
       “Modelos de objetos de página”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3307,19 +3297,19 @@ lector para buscar blogs sobre estos temas.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

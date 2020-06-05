@@ -11,20 +11,20 @@
     <title>Selenium 라이브러리 설치 :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591379918" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591393153" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591379918" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591393153" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591393153"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591379918"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591393153"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591393153"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591393153"></script>
 
     
   </div>
@@ -1921,17 +1921,14 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#java"><em>Java</em></a></li>
-<li><a href="#python"><em>Python</em></a></li>
-<li><a href="#c"><em>C#</em></a></li>
-<li><a href="#ruby"><em>Ruby</em></a></li>
-<li><a href="#javascript"><em>JavaScript</em></a></li>
-<li><a href="#kotlin"><em>Kotlin</em></a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#_java_"><em>Java</em></a></li>
+    <li><a href="#_python_"><em>Python</em></a></li>
+    <li><a href="#_c_"><em>C#</em></a></li>
+    <li><a href="#_ruby_"><em>Ruby</em></a></li>
+    <li><a href="#_javascript_"><em>JavaScript</em></a></li>
+    <li><a href="#_kotlin_"><em>Kotlin</em></a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,55 +1953,46 @@
 
 
 
-
-
 <p>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다.
 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.</p>
-
-<h2 id="java"><em>Java</em></h2>
-
+<h2 id="_java_"><em>Java</em></h2>
 <p>Maven을 사용한 Java용 Selenium 라이브러리 설치입니다.
 프로젝트안에 있는 pom.xml에 <em>selenium-java</em> 의존 라이브러리를 추가하세요.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-java<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
-<span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p><em>selenium-java</em> 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 <em>pom.xml</em> 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 <em>pom.xml</em> 파일에 추가해야 합니다.</p>
+<span style="color:#268bd2">&lt;/dependency&gt;</span>
+</code></pre></div><p><em>selenium-java</em> 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 <em>pom.xml</em> 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 <em>pom.xml</em> 파일에 추가해야 합니다.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-firefox-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
-<span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<p>이와 비슷하게, 만약 크롬에서만 테스트하길 원한다면, 다음과 같은 의존성을 추가해야 합니다.</p>
+<span style="color:#268bd2">&lt;/dependency&gt;</span>
+</code></pre></div><p>이와 비슷하게, 만약 크롬에서만 테스트하길 원한다면, 다음과 같은 의존성을 추가해야 합니다.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#268bd2">&lt;dependency&gt;</span>
   <span style="color:#268bd2">&lt;groupId&gt;</span>org.seleniumhq.selenium<span style="color:#268bd2">&lt;/groupId&gt;</span>
   <span style="color:#268bd2">&lt;artifactId&gt;</span>selenium-chrome-driver<span style="color:#268bd2">&lt;/artifactId&gt;</span>
   <span style="color:#268bd2">&lt;version&gt;</span>3.X<span style="color:#268bd2">&lt;/version&gt;</span>
-<span style="color:#268bd2">&lt;/dependency&gt;</span></code></pre></div>
-<h2 id="python"><em>Python</em></h2>
-
+<span style="color:#268bd2">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="_python_"><em>Python</em></h2>
 <p>파이썬을 위한 Selenium 라이브러리는 pip로 설치할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install selenium</code></pre></div>
-<p>혹은,  <a href="https://pypi.org/project/selenium/#files">PyPI source archive</a>를 다운로드해서 <em>setup.py</em> 를 통해 설치할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python setup.py install</code></pre></div>
-<h2 id="c"><em>C#</em></h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">pip install selenium
+</code></pre></div><p>혹은,  <a href="https://pypi.org/project/selenium/#files">PyPI source archive</a>를 다운로드해서 <em>setup.py</em> 를 통해 설치할 수 있습니다.</p>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">python setup.py install
+</code></pre></div><h2 id="_c_"><em>C#</em></h2>
 <p>C#을 위한 Selenium 라이브러리는 NuGet으로 설치할 수 있습니다.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#586e75"># Using package manager</span>
 Install-Package Selenium.WebDriver
 <span style="color:#586e75"># or using .Net CLI</span>
-dotnet add package Selenium.WebDriver</code></pre></div>
-<h2 id="ruby"><em>Ruby</em></h2>
-
+dotnet add package Selenium.WebDriver
+</code></pre></div><h2 id="_ruby_"><em>Ruby</em></h2>
 <p>Ruby를 위한 Selenium 라이브러리는 gem으로 설치할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver</code></pre></div>
-<h2 id="javascript"><em>JavaScript</em></h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">gem install selenium-webdriver
+</code></pre></div><h2 id="_javascript_"><em>JavaScript</em></h2>
 <p>자바스크립트를 위한 Selenium 라이브러리는 npm으로 설치할 수 있습니다.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install selenium-webdriver</code></pre></div>
-<h2 id="kotlin"><em>Kotlin</em></h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">npm install selenium-webdriver
+</code></pre></div><h2 id="_kotlin_"><em>Kotlin</em></h2>
 <p>Kotlin을 위한 네이티브 언어 바인딩이 없기 때문에, 자바 바인딩을 사용해야 합니다. e.g. 메이븐 <a href="#java">Java</a></p>
 
 
@@ -2015,7 +2003,7 @@ dotnet add package Selenium.WebDriver</code></pre></div>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/">
       “Selenium 라이브러리 설치”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3177,19 +3165,19 @@ dotnet add package Selenium.WebDriver</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591393153"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591393153"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591379918" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591379918"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591393153" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591393153"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

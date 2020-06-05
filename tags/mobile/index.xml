@@ -17,9 +17,7 @@
       <pubDate>Tue, 24 Dec 2013 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2013/android-and-ios-support/</guid>
-      <description>TL;DR: We&amp;#8217;re retiring Selenium&amp;#8217;s own AndroidDriver and iPhoneDriver in favour of any of Selendroid, iosdriver and Appium. If you&amp;#8217;re using one of Selenium&amp;#8217;s own mobile drivers, please evaluate one of these alternatives.
-The longer version:
-In 2007, Steve Jobs announced the iPhone and changed the mobile Web from a curiosity to something the mainstream wanted and used. Current trends suggest that mobile Web usage will surpass desktop usage in the not too distant future.</description>
+      <description></description>
     </item>
     
     <item>
@@ -28,7 +26,7 @@ In 2007, Steve Jobs announced the iPhone and changed the mobile Web from a curio
       <pubDate>Wed, 28 Aug 2013 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2013/mobile-webdriver/</guid>
-      <description>Although the WebDriver APIs started life as just a mechanism for automating web browsers, over the past few years it has been extended to also work on mobile devices. Projects such as Appium, iosdriver, and Selendroid have all shown that this approach works, and works well. On the Web, if you start using Selenium WebDriver with one browser (Firefox, for example), it&amp;#8217;s easy to switch out the browser for another one (such as Internet Explorer or Chrome).</description>
+      <description></description>
     </item>
     
   </channel>

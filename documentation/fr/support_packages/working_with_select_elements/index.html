@@ -11,20 +11,20 @@
     <title>Travailler avec les éléments select :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591379914" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591393151" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591379914" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591393151" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591393151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591379914"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591393151"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591393151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591393151"></script>
 
     
   </div>
@@ -1920,7 +1920,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1950,7 +1950,6 @@ Pour réduire cela et rendre vos tests plus propres,
 il existe un Classe <code>Select</code> dans le package de support Selenium.
 Pour l&rsquo;utiliser, vous aurez besoin de
 l&rsquo;instruction d&rsquo;importation suivante:</p>
-
 
 
 
@@ -1992,7 +1991,7 @@ l&rsquo;instruction d&rsquo;importation suivante:</p>
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.support.ui.Select;
+<span style="color:#719e07">import</span> org.openqa.selenium.support.ui.Select<span style="color:#719e07">;</span>
   </code></pre></div>
 </section>
   
@@ -2039,11 +2038,9 @@ l&rsquo;instruction d&rsquo;importation suivante:</p>
 </section>
 </div>
 </div>
-
 <p>Vous pouvez ensuite créer un objet
 Select à l&rsquo;aide d&rsquo;un WebElement qui
 référence un élément <code>&lt;select&gt;</code>.</p>
-
 
 
 
@@ -2085,8 +2082,8 @@ référence un élément <code>&lt;select&gt;</code>.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">selectElement</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;selectElementID&#34;</span>));
-Select <span style="color:#268bd2">selectObject</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Select(selectElement);
+WebElement selectElement <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;selectElementID&#34;</span><span style="color:#719e07">));</span>
+Select selectObject <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Select<span style="color:#719e07">(</span>selectElement<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2137,19 +2134,17 @@ select_object <span style="color:#719e07">=</span> <span style="color:#cb4b16">S
 </section>
 </div>
 </div>
-
 <p>L&rsquo;objet Select va maintenant vous donner une série de commandes
 qui vous permettent d&rsquo;interagir avec un élément <code>&lt;select&gt;</code>.
 Tout d&rsquo;abord, il existe différentes façons de sélectionner une option
-de l&rsquo;élément <code>&lt;select&gt;</code>.</p>
+de l'élément <code>&lt;select&gt;</code>.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">select</span>&gt;
  &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value1</span>&gt;Bread&lt;/<span style="color:#268bd2">option</span>&gt;
  &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value2</span> selected&gt;Milk&lt;/<span style="color:#268bd2">option</span>&gt;
  &lt;<span style="color:#268bd2">option</span> value<span style="color:#719e07">=</span><span style="color:#2aa198">value3</span>&gt;Cheese&lt;/<span style="color:#268bd2">option</span>&gt;
-&lt;/<span style="color:#268bd2">select</span>&gt;</code></pre></div>
-<p>Il existe trois façons de sélectionner la
-première option dans l&rsquo;élément ci-dessus:</p>
-
+&lt;/<span style="color:#268bd2">select</span>&gt;
+</code></pre></div><p>Il existe trois façons de sélectionner la
+première option dans l'élément ci-dessus:</p>
 
 
 
@@ -2192,13 +2187,13 @@ première option dans l&rsquo;élément ci-dessus:</p>
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Select an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.selectByIndex(1);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByIndex<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Select an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.selectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;value1&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Select an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.selectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>selectByVisibleText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Bread&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2273,10 +2268,8 @@ select_object<span style="color:#719e07">.</span>select_by(<span style="color:#2
 </section>
 </div>
 </div>
-
 <p>Vous pouvez ensuite vérifier les
 options sélectionnées en utilisant:</p>
-
 
 
 
@@ -2319,10 +2312,10 @@ options sélectionnées en utilisant:</p>
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that have been selected
-</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allSelectedOptions</span> <span style="color:#719e07">=</span> selectObject.getAllSelectedOptions();
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> allSelectedOptions <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getAllSelectedOptions<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">// Return a WebElement referencing the first selection option found by walking down the DOM
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">firstSelectedOption</span> <span style="color:#719e07">=</span> selectObject.getFirstSelectedOption();
+</span><span style="color:#586e75"></span>WebElement firstSelectedOption <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getFirstSelectedOption<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2385,10 +2378,8 @@ first_selected_option <span style="color:#719e07">=</span> select_object<span st
 </section>
 </div>
 </div>
-
-<p>Ou vous pouvez simplement être intéressé par les éléments <option>
-l&rsquo;élément <code>&lt;select&gt;</code> contient:</p>
-
+<p>Ou vous pouvez simplement être intéressé par les éléments <!-- raw HTML omitted -->
+l'élément <code>&lt;select&gt;</code> contient:</p>
 
 
 
@@ -2431,7 +2422,7 @@ l&rsquo;élément <code>&lt;select&gt;</code> contient:</p>
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Return a List&lt;WebElement&gt; of options that the &lt;select&gt; element contains
-</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">allAvailableOptions</span> <span style="color:#719e07">=</span> selectObject.getOptions();
+</span><span style="color:#586e75"></span>List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> allAvailableOptions <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>getOptions<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2482,10 +2473,8 @@ all_available_options <span style="color:#719e07">=</span> select_object<span st
 </section>
 </div>
 </div>
-
 <p>Si vous souhaitez désélectionner des éléments,
 vous avez maintenant quatre options:</p>
-
 
 
 
@@ -2528,16 +2517,16 @@ vous avez maintenant quatre options:</p>
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">// Deselect an &lt;option&gt; based upon the &lt;select&gt; element&#39;s internal index
-</span><span style="color:#586e75"></span>selectObject.deselectByIndex(1);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByIndex<span style="color:#719e07">(</span>1<span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Deselect an &lt;option&gt; based upon its value attribute
-</span><span style="color:#586e75"></span>selectObject.deselectByValue(<span style="color:#2aa198">&#34;value1&#34;</span>);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByValue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;value1&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Deselect an &lt;option&gt; based upon its text
-</span><span style="color:#586e75"></span>selectObject.deselectByVisibleText(<span style="color:#2aa198">&#34;Bread&#34;</span>);
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectByVisibleText<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Bread&#34;</span><span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Deselect all selected &lt;option&gt; elements
-</span><span style="color:#586e75"></span>selectObject.deselectAll();
+</span><span style="color:#586e75"></span>selectObject<span style="color:#719e07">.</span>deselectAll<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2624,12 +2613,10 @@ select_object<span style="color:#719e07">.</span>deselect_all
 </section>
 </div>
 </div>
-
 <p>Enfin, certains éléments <code>&lt;select&gt;</code> vous permettent
 de sélectionner plusieurs options.
 Vous pouvez savoir si votre
 élément <code>&lt;select&gt;</code> en fait partie en utilisant:</p>
-
 
 
 
@@ -2671,7 +2658,7 @@ Vous pouvez savoir si votre
 
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-Boolean <span style="color:#268bd2">doesThisAllowMultipleSelections</span> <span style="color:#719e07">=</span> selectObject.isMultiple();
+Boolean doesThisAllowMultipleSelections <span style="color:#719e07">=</span> selectObject<span style="color:#719e07">.</span>isMultiple<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2727,7 +2714,7 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/support_packages/working_with_select_elements/">
       “Travailler avec les éléments select”
-    </a> was last updated on: 01 Jun 2020 14:23:29 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/bd0eab946d2d8ff7e4706c4bb0fd70e979eba2cd">add a csharp description:SelectElement code Demo for each language (#447) (bd0eab94)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3892,19 +3879,19 @@ does_this_allow_multiple_selections <span style="color:#719e07">=</span> select_
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591393151"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591393151"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591379914" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591379914"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591393151" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591393151"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

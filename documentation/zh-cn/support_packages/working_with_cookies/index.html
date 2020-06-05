@@ -11,20 +11,20 @@
     <title>同cookies一起工作 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379912" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379912" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379912" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379912"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379912"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,19 +1921,16 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#添加-cookie">添加 Cookie</a></li>
-<li><a href="#获取命名的-cookie">获取命名的 Cookie</a></li>
-<li><a href="#获取全部-cookies">获取全部 Cookies</a></li>
-<li><a href="#删除-cookie">删除 Cookie</a></li>
-<li><a href="#删除所有-cookies">删除所有 Cookies</a></li>
-<li><a href="#same-site-cookie属性">Same-Site Cookie属性</a></li>
-<li><a href="#strict">Strict:</a></li>
-<li><a href="#lax">Lax:</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#添加-cookie">添加 Cookie</a></li>
+    <li><a href="#获取命名的-cookie">获取命名的 Cookie</a></li>
+    <li><a href="#获取全部-cookies">获取全部 Cookies</a></li>
+    <li><a href="#删除-cookie">删除 Cookie</a></li>
+    <li><a href="#删除所有-cookies">删除所有 Cookies</a></li>
+    <li><a href="#same-site-cookie属性">Same-Site Cookie属性</a></li>
+    <li><a href="#strict">Strict:</a></li>
+    <li><a href="#lax">Lax:</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1958,20 +1955,13 @@
 
 
 
-
-
 <p>Cookie是从网站发送并存储在您的计算机中的一小段数据. Cookies主要用于识别用户并加载存储的信息.</p>
-
 <p>WebDriver API提供了一种使用内置的方法与Cookie进行交互:</p>
-
 <h2 id="添加-cookie">添加 Cookie</h2>
-
-<p>这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. <a href="https://www.w3.org/TR/webdriver1/#cookies"> 这里 </a>
+<p>这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. <!-- raw HTML omitted --> 这里 <!-- raw HTML omitted -->
 是一个链接, 用于描述可接受的JSON键值的列表</p>
-
 <p>首先, 您需要位于有效Cookie的域上. 如果您在开始与网站进行交互之前尝试预设cookie, 并且您的首页很大或需要一段时间才能加载完毕, 则可以选择在网站上找到一个较小的页面 (通常404页很小,
-例如 <a href="http://example.com/some404page)">http://example.com/some404page)</a></p>
-
+例如 <a href="http://example.com/some404page">http://example.com/some404page</a>)</p>
 
 
 
@@ -2013,22 +2003,22 @@
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> addCookie {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">addCookie</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
 
             <span style="color:#586e75">// Adds the cookie into current browser context
-</span><span style="color:#586e75"></span>            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>));
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+</span><span style="color:#586e75"></span>            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;key&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;value&#34;</span><span style="color:#719e07">));</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
 
@@ -2133,11 +2123,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="获取命名的-cookie">获取命名的 Cookie</h2>
-
 <p>此方法返回与cookie名称匹配的序列化cookie数据中所有关联的cookie.</p>
-
 
 
 
@@ -2179,24 +2166,24 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> getCookieNamed {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
-            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;foo&#34;</span>, <span style="color:#2aa198">&#34;bar&#34;</span>));
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">getCookieNamed</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;foo&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;bar&#34;</span><span style="color:#719e07">));</span>
 
             <span style="color:#586e75">// Get cookie details with named cookie &#39;foo&#39;
-</span><span style="color:#586e75"></span>            Cookie <span style="color:#268bd2">cookie1</span> <span style="color:#719e07">=</span> driver.manage().getCookieNamed(<span style="color:#2aa198">&#34;foo&#34;</span>);
-            System.out.println(cookie1);
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+</span><span style="color:#586e75"></span>            Cookie cookie1 <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>getCookieNamed<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;foo&#34;</span><span style="color:#719e07">);</span>
+            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>cookie1<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
  
@@ -2315,11 +2302,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="获取全部-cookies">获取全部 Cookies</h2>
-
 <p>此方法会针对当前访问上下文返回“成功的序列化cookie数据”. 如果浏览器不再可用, 则返回错误.</p>
-
 
 
 
@@ -2361,27 +2345,27 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.util.Set;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> java.util.Set<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> getAllCookies {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">getAllCookies</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
             <span style="color:#586e75">// Add few cookies
-</span><span style="color:#586e75"></span>            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
-            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+</span><span style="color:#586e75"></span>            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test1&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie1&#34;</span><span style="color:#719e07">));</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test2&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie2&#34;</span><span style="color:#719e07">));</span>
 
             <span style="color:#586e75">// Get All available cookies
-</span><span style="color:#586e75"></span>            Set<span style="color:#719e07">&lt;</span>Cookie<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">cookies</span> <span style="color:#719e07">=</span> driver.manage().getCookies();
-            System.out.println(cookies);
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+</span><span style="color:#586e75"></span>            Set<span style="color:#719e07">&lt;</span>Cookie<span style="color:#719e07">&gt;</span> cookies <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>getCookies<span style="color:#719e07">();</span>
+            System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>cookies<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
  
@@ -2503,11 +2487,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="删除-cookie">删除 Cookie</h2>
-
 <p>此方法删除与提供的cookie名称匹配的cookie数据.</p>
-
 
 
 
@@ -2549,31 +2530,31 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> deleteCookie {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
-            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
-            Cookie <span style="color:#268bd2">cookie1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>);
-            driver.manage().addCookie(cookie1);
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">deleteCookie</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test1&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie1&#34;</span><span style="color:#719e07">));</span>
+            Cookie cookie1 <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test2&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie2&#34;</span><span style="color:#719e07">);</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span>cookie1<span style="color:#719e07">);</span>
 
             <span style="color:#586e75">// delete a cookie with name &#39;test1&#39;
-</span><span style="color:#586e75"></span>            driver.manage().deleteCookieNamed(<span style="color:#2aa198">&#34;test1&#34;</span>);
+</span><span style="color:#586e75"></span>            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>deleteCookieNamed<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test1&#34;</span><span style="color:#719e07">);</span>
 
             <span style="color:#586e75">/*
 </span><span style="color:#586e75">             Selenium Java bindings also provides a way to delete
 </span><span style="color:#586e75">             cookie by passing cookie object of current browsing context
 </span><span style="color:#586e75">             */</span>
-            driver.manage().deleteCookie(cookie1);
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>deleteCookie<span style="color:#719e07">(</span>cookie1<span style="color:#719e07">);</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
  
@@ -2704,11 +2685,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="删除所有-cookies">删除所有 Cookies</h2>
-
 <p>此方法删除当前访问上下文的所有cookie.</p>
-
 
 
 
@@ -2750,24 +2728,24 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> deleteAllCookies {
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-        WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-        <span style="color:#719e07">try</span> {
-            driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
-            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test1&#34;</span>, <span style="color:#2aa198">&#34;cookie1&#34;</span>));
-            driver.manage().addCookie(<span style="color:#719e07">new</span> Cookie(<span style="color:#2aa198">&#34;test2&#34;</span>, <span style="color:#2aa198">&#34;cookie2&#34;</span>));
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">deleteAllCookies</span> <span style="color:#719e07">{</span>
+    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+        <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test1&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie1&#34;</span><span style="color:#719e07">));</span>
+            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span><span style="color:#719e07">new</span> Cookie<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;test2&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;cookie2&#34;</span><span style="color:#719e07">));</span>
 
             <span style="color:#586e75">// deletes all cookies
-</span><span style="color:#586e75"></span>            driver.manage().deleteAllCookies();
-        } <span style="color:#719e07">finally</span> {
-            driver.quit();
-        }
-    }
-}
+</span><span style="color:#586e75"></span>            driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>deleteAllCookies<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+            driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+        <span style="color:#719e07">}</span>
+    <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
  
@@ -2884,28 +2862,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="same-site-cookie属性">Same-Site Cookie属性</h2>
-
 <p>此属性允许用户引导浏览器控制cookie, 是否与第三方站点发起的请求一起发送.
 引入其是为了防止CSRF（跨站请求伪造）攻击.</p>
-
 <p>Same-Site cookie属性接受以下两种参数作为指令</p>
-
 <h2 id="strict">Strict:</h2>
-
 <p>当sameSite属性设置为 <strong>Strict</strong>,
 cookie不会与来自第三方网站的请求一起发送.</p>
-
 <h2 id="lax">Lax:</h2>
-
 <p>当您将cookie sameSite属性设置为 <strong>Lax</strong>,
 cookie将与第三方网站发起的GET请求一起发送.</p>
-
 <p><strong>注意</strong>: <strong>到目前为止,
 此功能已适配于chrome (80+ version) 中,
 并适用于Selenium 4以及更高版本.</strong></p>
-
 
 
 
@@ -2947,25 +2916,25 @@ cookie将与第三方网站发起的GET请求一起发送.</p>
 
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.<span style="color:#719e07">*</span>;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> cookieTest {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-    <span style="color:#719e07">try</span> {
-      driver.get(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>);
-      Cookie <span style="color:#268bd2">cookie</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Strict&#34;</span>).build();
-      Cookie <span style="color:#268bd2">cookie1</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie.Builder(<span style="color:#2aa198">&#34;key&#34;</span>, <span style="color:#2aa198">&#34;value&#34;</span>).sameSite(<span style="color:#2aa198">&#34;Lax&#34;</span>).build();
-      driver.manage().addCookie(cookie);
-      driver.manage().addCookie(cookie1);
-      System.out.println(cookie.getSameSite());
-      System.out.println(cookie1.getSameSite());
-    } <span style="color:#719e07">finally</span> {
-      driver.quit();
-    }
-  }
-}
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">cookieTest</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
+      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
+      Cookie cookie <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie<span style="color:#719e07">.</span>Builder<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;key&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;value&#34;</span><span style="color:#719e07">).</span>sameSite<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Strict&#34;</span><span style="color:#719e07">).</span>build<span style="color:#719e07">();</span>
+      Cookie cookie1 <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Cookie<span style="color:#719e07">.</span>Builder<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;key&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;value&#34;</span><span style="color:#719e07">).</span>sameSite<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Lax&#34;</span><span style="color:#719e07">).</span>build<span style="color:#719e07">();</span>
+      driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span>cookie<span style="color:#719e07">);</span>
+      driver<span style="color:#719e07">.</span>manage<span style="color:#719e07">().</span>addCookie<span style="color:#719e07">(</span>cookie1<span style="color:#719e07">);</span>
+      System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>cookie<span style="color:#719e07">.</span>getSameSite<span style="color:#719e07">());</span>
+      System<span style="color:#719e07">.</span>out<span style="color:#719e07">.</span>println<span style="color:#719e07">(</span>cookie1<span style="color:#719e07">.</span>getSameSite<span style="color:#719e07">());</span>
+    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
  
@@ -3072,7 +3041,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/">
       “同cookies一起工作”
-    </a> was last updated on: 24 May 2020 12:47:39 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/cf5a472a612d221175a78fdcf2b82ac31c27c6d0">Modify: Updating PY code samples targeting py3 version [deploy site] (cf5a472a)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4237,19 +4206,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379912"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379912"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379912" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379912"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

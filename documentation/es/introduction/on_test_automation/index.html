@@ -11,20 +11,20 @@
     <title>Sobre automatización de pruebas :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1921,17 +1921,15 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#requisitos-de-pruebas">Requisitos de pruebas</a></li>
-<li><a href="#iniciemos-con-un-ejemplo">Iniciemos con un ejemplo</a></li>
-<li><a href="#automatizar-o-no-automatizar">¿Automatizar o no automatizar?</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#requisitos-de-pruebas">Requisitos de pruebas</a></li>
+        <li><a href="#iniciemos-con-un-ejemplo">Iniciemos con un ejemplo</a></li>
+        <li><a href="#automatizar-o-no-automatizar">¿Automatizar o no automatizar?</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,13 +1954,10 @@
 
 
 
-
-
 <p>Primero, pregúntate si realmente necesitas o no usar un navegador. Lo
 más probable es que, en algún momento, si estás trabajando en una
 aplicación web compleja, necesitarás abrir un navegador y realmente
 probarlo.</p>
-
 <p>Sin embargo, las pruebas funcionales de usuario final, como las
 pruebas de Selenium son caras de ejecutar. Además, normalmente
 requieren que una infraestructura considerable este disponible para
@@ -1970,18 +1965,15 @@ estas ejecutarse de manera efectiva. Es una buena regla preguntarse siempre
 si lo que se quiere probar se puede hacer usando enfoques de prueba
 más livianos como las pruebas unitarias o con un enfoque de bajo
 nivel.</p>
-
 <p>Una vez que hayas tomado la determinación de que estás en el negocio
 de hacer pruebas en el navegador, y que tengas tu ambiente de
 Selenium listo para empezar a escribir pruebas, generalmente
 realizaras alguna combinación de estos tres pasos:</p>
-
 <ul>
 <li>Preparar los datos</li>
 <li>Realizar un conjunto discreto de acciones</li>
 <li>Evaluar los resultados</li>
 </ul>
-
 <p>Querrás mantener estos pasos tan cortos como sea posible; una o dos
 operaciones deberían ser suficientes la mayor parte del tiempo. La
 automatización del navegador tiene la reputación de ser &ldquo;frágil&rdquo;,
@@ -1990,41 +1982,32 @@ demasiado. En capítulos posteriores, volveremos a las técnicas que
 puedes utilizar para mitigar problemas aparentemente intermitentes en
 las pruebas, en particular como
 <a href="https://selenium.dev/documentation/es/webdriver/waits/">superar race conditions</a> entre el navegador y WebDriver.</p>
-
 <p>Manteniendo tus pruebas cortas y usando el navegador web solo cuando
 no tienes absolutamente ninguna alternativa,
 Puedes tener muchas pruebas con fragilidades muy mínimas.</p>
-
 <p>Una clara ventaja de las pruebas de Selenium es su capacidad
 inherente para probar todos los componentes de la aplicación, desde
 el backend hasta el frontend, desde la perspectiva del usuario. En
 otras palabras, aunque las pruebas funcionales pueden ser caras de
 ejecutar, también abarcan a la vez grandes porciones críticas para el
 negocio.</p>
-
 <h3 id="requisitos-de-pruebas">Requisitos de pruebas</h3>
-
 <p>Como se mencionó anteriormente, las pruebas de Selenium pueden ser
 costosas de ejecutar. Hasta qué punto, dependerá del navegador en el
 que estás ejecutando las pruebas, pero históricamente el
 comportamiento de los navegadores ha variado tanto que a menudo ha
 sido un objetivo claro realizar pruebas cruzadas contra múltiples
 navegadores.</p>
-
 <p>Selenium te permite ejecutar las mismas instrucciones en múltiples
 navegadores en múltiples sistemas operativos, pero la enumeración de
 todos los navegadores posibles, sus diferentes versiones y los muchos
 sistemas operativos en los que se ejecutan se convertirá rápidamente
 en una misión no trivial.</p>
-
 <h3 id="iniciemos-con-un-ejemplo">Iniciemos con un ejemplo</h3>
-
 <p>Larry ha escrito un sitio web que le permite a los usuarios ordenar
 unicornios personalizados.</p>
-
 <p>El flujo de trabajo principal (que llamaremos el &ldquo;camino feliz&rdquo;) es
 algo como esto:</p>
-
 <ul>
 <li>Crea una cuenta</li>
 <li>Configura el unicornio</li>
@@ -2032,7 +2015,6 @@ algo como esto:</p>
 <li>Envialo a caja y realiza el pago</li>
 <li>Dar feedback sobre el unicornio</li>
 </ul>
-
 <p>Sería tentador escribir un gran script de Selenium para realizar
 todas estas operaciones, muchos lo intentarán. <strong>¡Resiste la
 tentación!</strong> Hacerlo dará como resultado una prueba que a) toma mucho
@@ -2040,33 +2022,26 @@ tiempo, b) estará sujeta a algunos problemas comunes relacionados con
 los problemas de tiempo de representación de la página, y c) es tal
 que si falla, no te dará un método conciso y &ldquo;fácil de ver&rdquo; para
 diagnosticar lo que salió mal.</p>
-
 <p>La estrategia preferida para probar este escenario sería dividirlo en
 una serie de pruebas rápidas e independientes, cada una de las cuales
 tenga una &ldquo;razón&rdquo; para existir.</p>
-
 <p>Supongamos que deseas probar el segundo paso: Configurando tu
 unicornio. Realizará las siguientes acciones:</p>
-
 <ul>
 <li>Crea una cuenta</li>
 <li>Configura el unicornio</li>
 </ul>
-
 <p>Ten en cuenta que nos estamos saltando el resto de los pasos,
 probaremos el resto del flujo en otros casos de prueba pequeños y
 discretos, después de que hayamos terminado con este.</p>
-
 <p>Para comenzar, debes crear una cuenta. Aquí tienes que tomar algunas
 decisiones:</p>
-
 <ul>
 <li>¿Quieres usar una cuenta existente?</li>
 <li>¿Quieres crear una nueva cuenta?</li>
 <li>¿Hay alguna propiedad especial de dicho usuario que deba ser
   tomado en cuenta antes de que comience la configuración?</li>
 </ul>
-
 <p>Independientemente de cómo respondas esta pregunta, la solución es
 hacer que forme parte del paso de &ldquo;preparar los datos&rdquo; de la prueba. Si
 Larry ha expuesto una API que te permite a ti (o cualquier persona) crear
@@ -2074,18 +2049,15 @@ y actualizar cuentas de usuario, asegúrate de usar eso para responder
 esta pregunta. Si es posible, debes iniciar el navegador solo después
 de tener un usuario &ldquo;en la mano&rdquo;, cuyas credenciales pueden iniciar
 sesión.</p>
-
 <p>Si cada prueba para cada flujo de trabajo comienza con la creación de
 una cuenta de usuario, se agregarán muchos segundos a la ejecución de
 cada prueba. Llamar a una API y hablar con una base de datos son
 operaciones &ldquo;sin cabeza&rdquo; rápidas, que no requieren el costoso proceso
 de abrir un navegador, navegar a las páginas correctas, hacer clic y
 esperar que se envíen los formularios, etc.</p>
-
 <p>Idealmente, puedes abordar esta fase de configuración en una sola
 línea de código, que se ejecutará antes de que se inicie cualquier
 navegador:</p>
-
 
 
 
@@ -2132,13 +2104,13 @@ navegador:</p>
 </span><span style="color:#586e75">// privilegios administrativos. En el momento en que se crea el usuario, su correo electrónico
 </span><span style="color:#586e75">// la dirección y la contraseña se generan aleatoriamente--ni siquiera necesitas
 </span><span style="color:#586e75">// conocerlos.
-</span><span style="color:#586e75"></span>User <span style="color:#268bd2">user</span> <span style="color:#719e07">=</span> UserFactory.createCommonUser(); <span style="color:#586e75">//Este método se define en otro lugar.
+</span><span style="color:#586e75"></span>User user <span style="color:#719e07">=</span> UserFactory<span style="color:#719e07">.</span>createCommonUser<span style="color:#719e07">();</span> <span style="color:#586e75">//Este método se define en otro lugar.
 </span><span style="color:#586e75"></span>
 <span style="color:#586e75">// Inicia sesión como este usuario.
 </span><span style="color:#586e75">// Iniciar sesión en este sitio te lleva a tu página personal &#34;Mi cuenta&#34;, por lo que
 </span><span style="color:#586e75">// el método loginAs devuelve el objeto AccountPage, lo que le permite
 </span><span style="color:#586e75">// realizar acciones de AccountPage.
-</span><span style="color:#586e75"></span>AccountPage <span style="color:#268bd2">accountPage</span> <span style="color:#719e07">=</span> loginAs(user.getEmail(), user.getPassword());
+</span><span style="color:#586e75"></span>AccountPage accountPage <span style="color:#719e07">=</span> loginAs<span style="color:#719e07">(</span>user<span style="color:#719e07">.</span>getEmail<span style="color:#719e07">(),</span> user<span style="color:#719e07">.</span>getPassword<span style="color:#719e07">());</span>
   </code></pre></div>
 </section>
   
@@ -2240,24 +2212,20 @@ account_page <span style="color:#719e07">=</span> login_as(user<span style="colo
 </section>
 </div>
 </div>
-
 <p>Como puedes imaginar, la <code>UserFactory</code> puede ampliarse para
 proporcionar métodos como <code>createAdminUser()</code> y <code>createUserWithPayment()</code>.
 El punto es, que estas dos líneas de código
 no te distraigan del propósito final de esta prueba: configurar un
 unicornio.</p>
-
 <p>Las complejidades del
 <a href="https://selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/">Modelo Page Object</a>
 serán discutidas en capítulos posteriores, pero introduciremos el concepto aquí:</p>
-
 <p>Tus pruebas deben estar compuestas de acciones, realizadas desde el
 punto de vista del usuario, dentro del contexto de las páginas en el
 sitio web. Estas páginas se almacenan como objetos, que contendrán
 información específica sobre cómo está compuesta la página web y cómo
 se realizan las acciones– muy poco de lo que cual debería preocuparte
 como probador.</p>
-
 <p>¿Qué tipo de unicornio quieres? Es posible que desees rosa, pero no
 necesariamente. El morado es muy popular últimamente. ¿Ella necesita
 gafas de sol? ¿Tatuajes de estrellas? Estas elecciones, aunque
@@ -2265,13 +2233,11 @@ difíciles, son tu principal preocupación como probador: debes
 asegurarte de que tu centro de distribución de pedidos envíe el
 unicornio correcto a la persona correcta, y eso comienza con estas
 elecciones.</p>
-
 <p>Observa que en ninguna parte de este párrafo hablamos de botones,
 campos, menús desplegables, botones de opción o formularios web.
 <strong>¡Tampoco deberían tus pruebas!</strong> Debes escribir tu código como el
 usuario que intenta resolver su problema. Aquí hay una forma de
 hacerlo (continuando con el ejemplo anterior):</p>
-
 
 
 
@@ -2316,17 +2282,17 @@ hacerlo (continuando con el ejemplo anterior):</p>
 <span style="color:#586e75">// El Unicornio es un Objeto de nivel superior--tiene atributos, que se establecen aquí.
 </span><span style="color:#586e75">// Esto solo almacena los valores; no llena ningún formulario web ni interactúa
 </span><span style="color:#586e75">// con el navegador de ninguna manera.
-</span><span style="color:#586e75"></span>Unicorn <span style="color:#268bd2">sparkles</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn(<span style="color:#2aa198">&#34;Sparkles&#34;</span>, UnicornColors.PURPLE, UnicornAccessories.SUNGLASSES, UnicornAdornments.STAR_TATTOOS);
+</span><span style="color:#586e75"></span>Unicorn sparkles <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Unicorn<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Sparkles&#34;</span><span style="color:#719e07">,</span> UnicornColors<span style="color:#719e07">.</span>PURPLE<span style="color:#719e07">,</span> UnicornAccessories<span style="color:#719e07">.</span>SUNGLASSES<span style="color:#719e07">,</span> UnicornAdornments<span style="color:#719e07">.</span>STAR_TATTOOS<span style="color:#719e07">);</span>
 
 <span style="color:#586e75">// Dado que ya estamos &#34;en&#34; la página de la cuenta, tenemos que usarla para acceder al
 </span><span style="color:#586e75">// lugar especifico donde configuras unicornios. Llamar al método &#34;Agregar unicornio&#34;
 </span><span style="color:#586e75">// nos llevará allí.
-</span><span style="color:#586e75"></span>AddUnicornPage <span style="color:#268bd2">addUnicornPage</span> <span style="color:#719e07">=</span> accountPage.addUnicorn();
+</span><span style="color:#586e75"></span>AddUnicornPage addUnicornPage <span style="color:#719e07">=</span> accountPage<span style="color:#719e07">.</span>addUnicorn<span style="color:#719e07">();</span>
 
 <span style="color:#586e75">// Ahora que estamos en la página AddUnicornPage, pasaremos el objeto &#34;sparkles&#34; a
 </span><span style="color:#586e75">// su método createUnicorn(). Este método tomará los atributos de Sparkles,
 </span><span style="color:#586e75">// completara el formulario y hará clic en enviar.
-</span><span style="color:#586e75"></span>UnicornConfirmationPage <span style="color:#268bd2">unicornConfirmationPage</span> <span style="color:#719e07">=</span> addUnicornPage.createUnicorn(sparkles);
+</span><span style="color:#586e75"></span>UnicornConfirmationPage unicornConfirmationPage <span style="color:#719e07">=</span> addUnicornPage<span style="color:#719e07">.</span>createUnicorn<span style="color:#719e07">(</span>sparkles<span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2441,10 +2407,8 @@ unicorn_confirmation_page <span style="color:#719e07">=</span> add_unicorn_page<
 </section>
 </div>
 </div>
-
 <p>Ahora que has configurado tu unicornio,
 debes avanzar al paso 3: asegurarte de que realmente funcionó.</p>
-
 
 
 
@@ -2489,7 +2453,7 @@ debes avanzar al paso 3: asegurarte de que realmente funcionó.</p>
 <span style="color:#586e75">// El método exist() de UnicornConfirmationPage tomará el objeto
 </span><span style="color:#586e75">// Sparkles--una especificación de los atributos que deseas ver, y los va a comparar
 </span><span style="color:#586e75">// con los campos en la página.
-</span><span style="color:#586e75"></span>Assert.assertTrue(<span style="color:#2aa198">&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span>, unicornConfirmationPage.exists(sparkles));
+</span><span style="color:#586e75"></span>Assert<span style="color:#719e07">.</span>assertTrue<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;Sparkles debe haberse creado, con todos los atributos intactos&#34;</span><span style="color:#719e07">,</span> unicornConfirmationPage<span style="color:#719e07">.</span>exists<span style="color:#719e07">(</span>sparkles<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2552,7 +2516,6 @@ expect(unicorn_confirmation_page<span style="color:#719e07">.</span>exists?(spar
 </section>
 </div>
 </div>
-
 <p>Ten en cuenta que el probador aún no ha hecho nada más que hablar de
 unicornios en este código&ndash; nada de botones, nada de localizadores,
 nada de controles del navegador. Este método de <em>modelar</em> la
@@ -2560,7 +2523,6 @@ aplicación te permite mantener estos comandos de nivel-de-prueba en
 su lugar y sin cambios, incluso si Larry decide la próxima semana que
 ya no le gusta Ruby-on-Rails y decide volver a implementar todo el
 sitio en las últimas librerías de enlace de Haskell con un front-end de Fortran.</p>
-
 <p>Los objetos de tu página requerirán un pequeño mantenimiento para
 poder cumplir con el rediseño del sitio, pero estas pruebas seguirán
 siendo iguales. Tomando este diseño básico, querrás continuar con tus
@@ -2572,19 +2534,15 @@ su estado correctamente: ¿Hay más de un unicornio en el carrito antes
 de comenzar? ¿Cuántos pueden caber en el carrito de compras? Si crea
 más de uno con el mismo nombre y/o características, ¿se romperá?
 ¿Conservará solo el existente o agregará otro?</p>
-
 <p>Cada vez que te mueves por el flujo de trabajo, deseas evitar tener
 que crear una cuenta, iniciar sesión como usuario y configurar el
 unicornio. Idealmente, podrás crear una cuenta y preconfigurar un
 unicornio a través de la API o de la base de datos. Luego, todo lo
 que tienes que hacer es iniciar sesión como usuario, ubicar Sparkles,
 y agrégarla al carrito.</p>
-
 <h3 id="automatizar-o-no-automatizar">¿Automatizar o no automatizar?</h3>
-
 <p>Es la automatización siempre ventajosa? Cuando uno debería decidir
 automatizar casos de prueba?</p>
-
 <p>No siempre es ventajoso automatizar casos de prueba. Hay veces que
 las pruebas manuales pueden ser mas apropiadas. Por ejemplo, si la
 interface de usuario de la aplicación va a cambiar considerablemente
@@ -2605,7 +2563,7 @@ mejor solución.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/introduction/on_test_automation/">
       “Sobre automatización de pruebas”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3770,19 +3728,19 @@ mejor solución.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

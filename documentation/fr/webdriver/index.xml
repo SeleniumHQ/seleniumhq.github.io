@@ -28,7 +28,7 @@ Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
       <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
-L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
+L&amp;rsquo;objectif de WebDriver est d&#39;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interactio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
-      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&amp;rsquo;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
+      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&#39;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
 De l&amp;rsquo;expérience, la plupart des intermittents résultant de l&amp;rsquo;utilisation de Selenium et de WebDriver sont liés aux conditions de concurrence qui se produisent entre le navigateur et les instructions de l&amp;rsquo;utilisateur.</description>
     </item>
     
@@ -91,7 +91,7 @@ Un serveur proxy pour les scripts d&amp;rsquo;automatisation avec Le Selenium po
       
       <guid>https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/</guid>
       <description>Définit la stratégie de chargement des pages de la session en cours. Par défaut, lorsque Selenium WebDriver charge une page, il suit le normal pageLoadStrategy. Il est toujours recommandé d&amp;rsquo;arrêter le téléchargement de ressources (comme les images, css, js) lorsque le chargement de la page prend beaucoup de temps.
-La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.</description>
+La propriété document.readyState d&amp;rsquo;un document décrit l&#39;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.get() (ou) driver.</description>
     </item>
     
     <item>
@@ -102,7 +102,7 @@ La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;�
       <guid>https://selenium.dev/documentation/fr/webdriver/web_element/</guid>
       <description>WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant racine du document à l&amp;rsquo;aide d&amp;rsquo;une instance WebDriver ou en recherchant sous une autre WebElement
 L&amp;rsquo;API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
-Find Element Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante, qui peut être utilisé pour de futures actions d&amp;rsquo;élément</description>
+Find Element Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante, qui peut être utilisé pour de futures actions d&#39;élément</description>
     </item>
     
     <item>
@@ -112,8 +112,8 @@ Find Element Il est utilisé pour rechercher un élément et renvoie une premiè
       
       <guid>https://selenium.dev/documentation/fr/webdriver/keyboard/</guid>
       <description>Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l&amp;rsquo;aide de bas niveau interface qui nous permet de fournir une entrée d&amp;rsquo;appareil virtualisé au navigateur Web.
-sendKeys SendKeys tape une séquence de touches dans l&amp;rsquo;élément DOM même si une séquence de touches de modification est rencontrée. Here are the list of possible keystrokes that WebDriver Supports.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.</description>
+sendKeys SendKeys tape une séquence de touches dans l&#39;élément DOM même si une séquence de touches de modification est rencontrée. Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.</description>
     </item>
     
   </channel>

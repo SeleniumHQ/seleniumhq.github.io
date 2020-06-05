@@ -11,20 +11,20 @@
     <title>구성 요소 이해 :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591379918" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591393153" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591393153" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591379918" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591393153" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591393153"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591379918"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591393153"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591393153"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591393153"></script>
 
     
   </div>
@@ -1921,17 +1921,15 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#술어">술어</a></li>
-<li><a href="#부품과-조각">부품과 조각</a></li>
-</ul></li>
-<li><a href="#프레임-워크가-적합한-곳">프레임 워크가 적합한 곳</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#술어">술어</a></li>
+        <li><a href="#부품과-조각">부품과 조각</a></li>
+      </ul>
+    </li>
+    <li><a href="#프레임-워크가-적합한-곳">프레임 워크가 적합한 곳</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,17 +1954,13 @@
 
 
 
-
-
 <p>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다.
 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로
 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는
 이 설명에서 용어가 사용되는 방식에 대한 분석.</p>
-
 <h3 id="술어">술어</h3>
-
 <ul>
-<li><strong>API:</strong> <em>Application Programming Interface</em>. 이것은 &ldquo;명령&rdquo;세트입니다
+<li><strong>API:</strong> <em>Application Programming Interface</em>. 이것은 &ldquo;명령&quot;세트입니다
 WebDriver를 조작하는 데 사용합니다.</li>
 <li><strong>Library:</strong> API와 필요한 코드를 포함하는 코드 모듈
 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar).
@@ -1983,49 +1977,35 @@ Java 용 파일, .NET 용 .dll 파일 등</li>
 테스트중인 시스템 조작 또는 구성, 데이터
 제작, 테스트 오라클 등</li>
 </ul>
-
 <h3 id="부품과-조각">부품과 조각</h3>
-
 <p>최소한 WebDriver는 드라이버를 통해 브라우저와 통신합니다. 통신
 WebDriver는 드라이버를 통해 브라우저에 명령을 전달합니다.
 동일한 경로를 통해 정보를 다시받습니다.</p>
-
-<p><img src="https://selenium.dev/documentation/ko/images/basic_comms.png?width=400px" alt="기본 커뮤니케이션" /></p>
-
+<p><img src="https://selenium.dev/documentation/ko/images/basic_comms.png?width=400px" alt="기본 커뮤니케이션"></p>
 <p>드라이버는 Google의 ChromeDriver와 같은 브라우저에 따라 다릅니다.
 Chrome/Chromium, Mozilla Firefox 용 GeckoDriver 등 드라이버는 다음에서 실행됩니다.
 브라우저와 동일한 시스템. 이것은 동일한 시스템 일 수도 있고 아닐 수도 있습니다.
 테스트 자체가 실행 중입니다.</p>
-
 <p>위의 간단한 예는 <em>direct</em> 통신 입니다. 통신
 브라우저는 Selenium 서버를 통한 <em>remote</em> 통신 일 수도 있고
 RemoteWebDriver. RemoteWebDriver는 드라이버와 동일한 시스템에서 실행됩니다.
 그리고 브라우저.</p>
-
-<p><img src="https://selenium.dev/documentation/ko/images/remote_comms.png?width=400px" alt="원격 커뮤니케이션" /></p>
-
+<p><img src="https://selenium.dev/documentation/ko/images/remote_comms.png?width=400px" alt="원격 커뮤니케이션"></p>
 <p>Selenium Server 또는 Selenium을 사용하여 원격 통신을 수행 할 수도 있습니다.
 그리드, 둘 다 호스트 시스템의 드라이버와 통신</p>
-
-<p><img src="https://selenium.dev/documentation/ko/images/remote_comms_server.png?width=400px" alt="그리드와의 원격 통신" /></p>
-
+<p><img src="https://selenium.dev/documentation/ko/images/remote_comms_server.png?width=400px" alt="그리드와의 원격 통신"></p>
 <h2 id="프레임-워크가-적합한-곳">프레임 워크가 적합한 곳</h2>
-
 <p>WebDriver에는 하나의 작업과 하나의 작업 만 있습니다.
 위의 방법 중 하나입니다. WebDriver는 테스트에 대해 알지 못합니다.
 사물을 비교하는 방법을 알고, 통과 또는 실패를 주장하며, 확실하지 않습니다
 보고 또는 주어진 / 언제 / 그럼 문법에 관한 것.</p>
-
 <p>다양한 프레임 워크가 등장합니다. 최소한 당신은 필요합니다
 언어 바인딩과 일치하는 테스트 프레임 워크 (예 : .NET, JUnit 용 NUnit
 Java, Ruby 용 RSpec 등</p>
-
 <p>테스트 프레임 워크는 WebDriver 실행 및 실행을 담당합니다.
 그리고 테스트의 관련 단계. 따라서, 당신은 비슷한 것으로 생각할 수 있습니다
 다음 이미지에.</p>
-
-<p><img src="https://selenium.dev/documentation/ko/images/test_framework.png?width=400px" alt="테스트 프레임 워크" /></p>
-
+<p><img src="https://selenium.dev/documentation/ko/images/test_framework.png?width=400px" alt="테스트 프레임 워크"></p>
 <p>Cucumber와 같은 자연 언어 프레임 워크 / 도구는 그 일부로 존재할 수 있습니다.
 위 그림의 테스트 프레임 워크 상자 또는 테스트 프레임 워크를 래핑 할 수 있습니다.
 전적으로 자신의 구현에.</p>
@@ -2038,7 +2018,7 @@ Java, Ruby 용 RSpec 등</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/webdriver/understanding_the_components/">
       “구성 요소 이해”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3200,19 +3180,19 @@ Java, Ruby 용 RSpec 등</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591393153"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591393153"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591393153"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591379918" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591379918"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591393153" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591393153"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

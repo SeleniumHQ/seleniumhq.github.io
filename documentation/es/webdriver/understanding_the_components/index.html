@@ -11,20 +11,20 @@
     <title>Entendiendo los componentes :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1921,17 +1921,15 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#terminología">Terminología</a></li>
-<li><a href="#las-partes-y-las-piezas">Las Partes y las Piezas</a></li>
-</ul></li>
-<li><a href="#dónde-encaja-el-framework">Dónde encaja el Framework</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#terminología">Terminología</a></li>
+        <li><a href="#las-partes-y-las-piezas">Las Partes y las Piezas</a></li>
+      </ul>
+    </li>
+    <li><a href="#dónde-encaja-el-framework">Dónde encaja el Framework</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,15 +1954,11 @@
 
 
 
-
-
 <p>Construir una suite de test usando WebDriver requerirá que entiendas y
 uses de forma efectiva diferentes componentes. Como con todo en
 el desarrollo de software, la gente usa diferentes términos para la misma idea.
 A continuación hay un desglose de cómo los términos son usados en esa descripción.</p>
-
 <h3 id="terminología">Terminología</h3>
-
 <ul>
 <li><strong>API:</strong> Interfaz de Programación de Aplicaciones. Es un conjunto de &ldquo;comandos&rdquo;
 que se utilizan para manipular el WebDriver.</li>
@@ -1983,48 +1977,34 @@ Cucumber o Robotium. Los <em>frameworks</em> también pueden ser escritos y usad
 cosas como la manipulación o configuración del sistema bajo la prueba, creación
 de datos, <em>test oracles</em>, etc</li>
 </ul>
-
 <h3 id="las-partes-y-las-piezas">Las Partes y las Piezas</h3>
-
 <p>Como mínimo, el WebDriver habla con un navegador a través del driver. La comunicación
 es bidireccional: el WebDriver pasa comandos al navegador a través del driver, y
 recive la información de vuelta por la misma ruta.</p>
-
-<p><img src="https://selenium.dev/documentation/es/images/basic_comms.png?width=400px" alt="Basic communication" /></p>
-
+<p><img src="https://selenium.dev/documentation/es/images/basic_comms.png?width=400px" alt="Basic communication"></p>
 <p>El driver es específico para el navegador, como es ChromeDriver para Chrome/Chromium
 de Google, GeckoDriver para Mozilla Firefox, etc. El driver corre en el
 mismo sistema que el browser. Esto puede, o no puede ser, el mismo sistema donde
 los tests se están ejecutando.</p>
-
 <p>Este simple ejemplo anterior es de comunicación directa. La comunicación con el
 navegador puede ser remota a través de Selenium Server o RemoteWebdriver. Éste
 último corre en el mismo sistema que el driver y el browser.</p>
-
-<p><img src="https://selenium.dev/documentation/es/images/remote_comms.png?width=400px" alt="Remote communication" /></p>
-
+<p><img src="https://selenium.dev/documentation/es/images/remote_comms.png?width=400px" alt="Remote communication"></p>
 <p>La comunicación remota puede también hacerse usando Selenium Server o Selenium
 Grid, ambos a su vez hablan con el driver en el sistema anfitrión.</p>
-
-<p><img src="https://selenium.dev/documentation/es/images/remote_comms_server.png?width=400px" alt="Remote communication with Grid" /></p>
-
+<p><img src="https://selenium.dev/documentation/es/images/remote_comms_server.png?width=400px" alt="Remote communication with Grid"></p>
 <h2 id="dónde-encaja-el-framework">Dónde encaja el Framework</h2>
-
 <p>El WebDriver tiene un trabajo y solo un trabajo: comunicarse con el navegador a
 través de uno de los métodos nombrados. El WebDriver no tiene que saber nada sobre
 testing: no sabe cómo comparar cosas, asegurar un <em>pass</em> o <em>fail</em>, y ciertamente
 no sabe nada acerca de reportes o sobre la gramática <em>Given/When/Then</em>.</p>
-
 <p>Aquí es donde varios <em>frameworks</em> entran en juego. Como mínimo neesitarás un
 <em>framework</em> de test que compare los enlaces de idiomas, por ejempolo NUnit para .NET,
 JUnit para Java, RSpec para Ruby, etc.</p>
-
 <p>El <em>framework</em> de test es responsable de correr y ejecutar tu WebDriver
 y los pasos de tus tests. Como tal, puedes pensar que se parece
 a la siguiente imagen.</p>
-
-<p><img src="https://selenium.dev/documentation/es/images/test_framework.png?width=400px" alt="Test framework" /></p>
-
+<p><img src="https://selenium.dev/documentation/es/images/test_framework.png?width=400px" alt="Test framework"></p>
 <p>Los <em>frameworks</em> o herramientas de lenguage natural como Cucumber pueden existir
 como parte de la caja de <em>Test Framework</em> de la figura de arriba, o envolver totalmente
 el <em>Test Framework</em> en su propia implementación.</p>
@@ -2037,7 +2017,7 @@ el <em>Test Framework</em> en su propia implementación.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/webdriver/understanding_the_components/">
       “Entendiendo los componentes”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3199,19 +3179,19 @@ el <em>Test Framework</em> en su propia implementación.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -42,7 +42,7 @@ RCサーバーはSelenium Coreをバンドルし、ブラウザーに自動的�
 使用する言語を選択したら、次のことを行う必要があります。
  Selenium RCサーバーをインストールします。 言語固有のクライアントドライバーを使用してプログラミングプロジェクトをセットアップします。  Seleniumサーバーのインストール Selenium RCサーバーは単なるJava jarファイル（selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar）であり、特別なインストールは不要です。 zipファイルをダウンロードして、目的のディレクトリにサーバーを展開するだけで十分です。
 Seleniumサーバーを実行する テストを開始する前に、サーバーを起動する必要があります。 Selenium RCのサーバーがあるディレクトリに移動し、コマンドラインコンソールから次を実行します。
-java -jar selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar これは、上記のコマンドを含むバッチまたはシェル実行可能ファイル（Windowsでは.</description>
+java -jar selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar これは、上記のコマンドを含むバッチまたはシェル実行可能ファイル（Windowsでは.bat、Linuxでは.sh）を作成することで簡素化できます。 次に、デスクトップ上でその実行可能ファイルへのショートカットを作成し、アイコンをダブルクリックしてサーバーを起動します。</description>
     </item>
     
     <item>
@@ -59,7 +59,7 @@ java -jar selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar これ�
 サーバールームまたはデータセンターにある積み重なったのコンピューターがすべてブラウザーを同時に起動してサイトのリンク、フォーム、およびテーブルにアクセスし、アプリケーションを24時間テストすることを想像してください。 最も一般的な言語用に提供されたシンプルなプログラミングインターフェイスを介して、これらのテストは休むことなく並行して実行され、エラーが発生したときにレポートを返します。
 ブラウザを制御するだけでなく、そのようなグリッドを簡単に拡張および展開できるツールとドキュメントをユーザーに提供することで、これを実現することを目指しています。
 誰がSeleniumを使うか 世界で最も重要な企業の多くは、ブラウザベースのテストにSeleniumを採用しており、多くの場合、他の独自のツールを使用した長年の努力に取って代わりました。 人気が高まるにつれて、その要件と課題が倍増しています。
-ウェブがより複雑になり、新しいテクノロジーがウェブサイトに追加されるにつれて、可能な限りそれらに遅れずについていくことがこのプロジェクトの使命です。 オープンソースプロジェクトであるこのサポートは、&amp;rdquo;本業&amp;rdquo;をもっている多くのボランティアからの寛大な時間の寄付によって提供されます。
+ウェブがより複雑になり、新しいテクノロジーがウェブサイトに追加されるにつれて、可能な限りそれらに遅れずについていくことがこのプロジェクトの使命です。 オープンソースプロジェクトであるこのサポートは、&amp;ldquo;本業&amp;quot;をもっている多くのボランティアからの寛大な時間の寄付によって提供されます。
 プロジェクトのもう1つの使命は、より多くのボランティアがこの取り組みに参加することを奨励し、プロジェクトが引き続き新しいテクノロジーに追いつき、機能テスト自動化の主要なプラットフォームであり続けることができるよう、強力なコミュニティを構築することです。
 歴史 2004年にSelenium 1がリリースされたとき、Webアプリケーションのフロントエンドで一貫した動作を手動で検証するために費やす時間を削減する必要はありませんでした。 当時利用可能なツールを利用し、テスト中のWebページへのJavaScriptの注入に大きく依存して、ユーザーのインタラクションをエミュレートしました。
 JavaScriptは、DOMのプロパティを内観し、他の方法では実行できない特定のクライアント側の観察を行うことができる優れたツールですが、キーボードが使っているようなマウスとマウスの操作を自然に複製する機能には不十分です。
@@ -81,7 +81,8 @@ Java JavaへのSeleniumライブラリのインストールはMavenを使いま�
 pip install selenium また、PyPI source archive (selenium-x.x.x.tar.gz)をダウンロードして、 setup.py でインストールすることもできます。
 python setup.py install C# C#へのSeleniumライブラリのインストールはNuGetを使います。
 # Using package manager Install-Package Selenium.WebDriver # or using .Net CLI dotnet add package Selenium.WebDriver Ruby RubyへのSeleniumライブラリのインストールはgemを使います。
-gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラリのインストールはnpmを使います。</description>
+gem install selenium-webdriver JavaScript JavaScriptへのSeleniumライブラリのインストールはnpmを使います。
+npm install selenium-webdriver </description>
     </item>
     
     <item>
@@ -104,7 +105,7 @@ WebDriverテストの開発後、複数のブラウザーとオペレーティ�
       
       <guid>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
       <description>WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。 ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。 以下は、本説明での用語の使用方法の内訳です。
-用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;rdquo;コマンド&amp;rdquo;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
+用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;quot;コマンド&amp;quot;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
 ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。 ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。
 上記の簡単な例は 直接 通信です。ブラウザへのコミュニケーションは、Selenium ServerまたはRemoteWebDriverを経由した リモート 通信もできます。RemoteWebDriverは、ドライバーおよびブラウザと同じシステムで実行されます。
 リモート通信は、ホストシステム上のドライバーと順に通信するSelenium ServerまたはSelenium Gridを使用して行うこともできます。
@@ -120,7 +121,7 @@ WebDriverテストの開発後、複数のブラウザーとオペレーティ�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
-      <description> 一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
+      <description>一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
    ブラウザ メンテナ サポートバージョン     Chrome Chromium 全てのバージョン   Firefox Mozilla 54 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
    ドライバー名 用途 メンテナ     HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト    </description>
     </item>
@@ -133,7 +134,7 @@ WebDriverテストの開発後、複数のブラウザーとオペレーティ�
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/page_object_models/</guid>
       <description>ページオブジェクトは、テストメンテナンスを強化し、コードの重複を減らすためのテスト自動化で一般的になったデザインパターンです。 ページオブジェクトは、AUT（テスト対象アプリケーション）のページへのインターフェイスとして機能するオブジェクト指向クラスです。 テストは、そのページのUIと対話する必要があるときは常に、このページオブジェクトクラスのメソッドを使用します。 利点は、ページのUIが変更された場合、テスト自体を変更する必要はなく、ページオブジェクト内のコードのみを変更する必要があることです。 その後、その新しいUIをサポートするためのすべての変更は1か所に配置されます。
 ページオブジェクトデザインパターンには、次の利点があります。
- テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。 これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。  どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。 この&amp;rsquo;テストデザインパターン&amp;rsquo;が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。 詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。 多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。 ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
+ テストコードと、ロケーター（またはUIマップを使用している場合はロケーター）、レイアウトなどのページ固有のコードを明確に分離します。 これらのサービスをテスト全体に分散させるのではなく、ページによって提供されるサービスまたは操作用の単一のリポジトリがあります。  どちらの場合でも、これにより、UIの変更により必要な変更をすべて1か所で行うことができます。 この&#39;テストデザインパターン&#39;が広く使用されるようになったため、この手法に関する有用な情報は多数のブログで見つけることができます。 詳細を知りたい読者には、このテーマに関するブログをインターネットで検索することをお勧めします。 多くの人がこの設計パターンについて書いており、このユーザーガイドの範囲を超えた有用なヒントを提供できます。 ただし、簡単に始めるために、ページオブジェクトを簡単な例で説明します。
 最初に、ページオブジェクトを使用しないテスト自動化の典型的な例を考えてみましょう。
 /*** * Tests login feature */ public class Login { public void testLogin() { // fill login data on sign-in page  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign_in&amp;#34;)).click(); // verify h1 tag is &amp;#34;Hello userName&amp;#34; after login  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } このアプローチには2つの問題があります。
  テスト方法とAUTのロケーター（この例ではID）の間に区別はありません。 どちらも単一のメソッドで絡み合っています。 AUTのUIが識別子、レイアウト、またはログインの入力および処理方法を変更する場合、テスト自体を変更する必要があります。 IDロケーターは、このログインページを使用する必要があったすべてのテストで、複数のテストに分散されます。  ページオブジェクトの手法を適用すると、この例は、サインインページのページオブジェクトの次の例のように書き換えることができます。
@@ -151,7 +152,7 @@ import org.openqa.selenium.By; import org.</description>
 java -jar selenium-server-standalone-{VERSION}.jar サーバーを実行するにあたって考慮すること 呼び出し元は、Selenium#stop()またはWebDriver#quitを呼び出して、各セッションを適切に終了すべきです。
 selenium-serverは、進行中の各セッションのメモリ内ログを保持します。 これらのログは、Selenium#stop()またはWebDriver#quitが呼び出されるとクリアされます。 これらのセッションの終了を忘れると、サーバーでメモリリークが発生する可能性があります。 非常に長時間実行されるセッションを維持する場合は、時々停止または終了する必要があります（または-Xmx jvmオプションでメモリを増やします）。
 タイムアウト (version 2.21以降) サーバーには2つの異なるタイムアウトがあり、次のように設定できます。
-java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  ブラウザーのハングを許可する時間を制御します（値は秒単位）。  timeout  セッションが回収されるまでにクライアントがいなくなる時間を制御します（値は秒単位）。   システムプロパティselenium.server.session.timeoutは、2.21からサポートされなくなりました。
+java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  ブラウザーのハングを許可する時間を制御します（値は秒単位）。   timeout  セッションが回収されるまでにクライアントがいなくなる時間を制御します（値は秒単位）。    システムプロパティselenium.server.session.timeoutは、2.21からサポートされなくなりました。
 browserTimeoutは、通常のタイムアウトメカニズムが失敗した場合の予備のタイムアウトメカニズムであることに注意してください。これは主にグリッド/サーバー環境で使用され、クラッシュ/失われたプロセスが長く滞留、ランタイム環境を汚染しないようにします。
 プログラムでサーバーを構成する 理論的には、プロセスはDriverServletをURLにマッピングするのと同じくらい簡単ですが、ページを全体的にコードで構成されたJettyなどの軽量コンテナでホストすることもできます。これを行う手順は次のとおりです。
 selenium-server.zipをダウンロードして解凍します。 JARをCLASSPATHに配置します。 AppServerという新しいクラスを作成します。 ここでは、Jettyを使用しているので、それもダウンロードする必要があります。
@@ -194,10 +195,7 @@ acceptInsecureCerts この機能は、セッション中のナビゲーション
       <guid>https://selenium.dev/documentation/ja/front_matter/copyright_and_attributions/</guid>
       <description>Seleniumのドキュメント 著作権 &amp;copy; 2013-2020 Software Freedom Conservancy
 このドキュメントをできるだけ完全かつ正確にするためにあらゆる努力が払われましたが、 保証または適合性は暗示されていません。 提供される情報は「現状のまま」です。 著者および出版社は、本書に含まれる情報から生じる損失または損害に関して、 いかなる個人または団体に対しても責任も責任も負わないものとします。 ここに含まれる情報の使用に関して、特許責任は一切負いません。
-帰属 Thanks to: Selenium メイン Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4547 commits 
-@barancev3066 commits 
-@jimevans2312 commits 
-@jleyba1464 commits</description>
+帰属 Thanks to: Selenium メイン Repository Selenium IDE Docker Selenium Selenium Website &amp;amp; Docs Previous Selenium Website Previous Documentation Rewrite Project Seleniumドキュメントプロジェクトで使用されるサードパーティソフトウェア    Software Version License     Hugo v0.59.0 Apache 2.0   Hugo Learn Theme v2.4.0 MIT   Code Tabs Style &amp;mdash; MIT    ライセンス Seleniumプロジェクトから作成されたすべてのコードとドキュメントは、 Apache 2.0ライセンスに基づいてライセンスされており、 Software Freedom Conservancy に著作権があります。</description>
     </item>
     
     <item>
@@ -258,24 +256,24 @@ WebDriver driver = ((WrapsDriver) selenium).</description>
       <description>まず、本当にブラウザを使用する必要があるかどうかを自問することから始めます。 ある時点で複雑なWebアプリケーションで作業している場合、おそらくブラウザを開いて実際にテストする必要があるでしょう。
 ただし、Seleniumテストなどの機能的なエンドユーザーテストの実行には費用がかかります。 さらに、それらは通常、効果的に実行するために適切なインフラストラクチャを配置する必要があります。 単体テストなどのより軽量なテストアプローチを使用して、または下位レベルのアプローチを使用して、テストすることを実行できるかどうかを常に自問するのは良いルールです。
 Webブラウザーのテストビジネスに参加していることを確認し、Selenium環境でテストの記述を開始できるようになったら、通常は3つのステップを組み合わせて実行します。
- データを設定する 個別の一連のアクションを実行する 結果を評価する  これらの手順はできるだけ短くしてください。 ほとんどの場合、1つまたは2つの操作で十分です。 ブラウザの自動化は&amp;rdquo;不安定&amp;rdquo;であるという評判がありますが、実際には、ユーザーが頻繁に多くを求めることが多いためです。 後の章では、特にブラウザーとWebDriver間の競合状態を克服する方法に関する、テストでの断続的な問題を軽減するために使用できる手法に戻ります。
+ データを設定する 個別の一連のアクションを実行する 結果を評価する  これらの手順はできるだけ短くしてください。 ほとんどの場合、1つまたは2つの操作で十分です。 ブラウザの自動化は&amp;quot;不安定&amp;quot;であるという評判がありますが、実際には、ユーザーが頻繁に多くを求めることが多いためです。 後の章では、特にブラウザーとWebDriver間の競合状態を克服する方法に関する、テストでの断続的な問題を軽減するために使用できる手法に戻ります。
 テストを短くして、代替手段がまったくない場合にのみWebブラウザーを使用することで、不安定さを最小限にして多くのテストを実行できます。
 Seleniumテストの明確な利点は、ユーザーの観点から、バックエンドからフロントエンドまで、アプリケーションのすべてのコンポーネントをテストする固有の機能です。 つまり、機能テストは実行に費用がかかる可能性がありますが、同時にビジネスに不可欠な大規模な部分も含まれます。
 テスト要件 前述のように、Seleniumテストの実行には費用がかかる場合があります。 どの程度までテストを実行しているブラウザーに依存しますが、歴史的にブラウザーの動作は非常に多様であるため、多くの場合、複数のブラウザーに対するクロステストの目標として述べられてきました。
 Seleniumを使用すると、複数のオペレーティングシステム上の複数のブラウザーに対して同じ命令を実行できますが、すべての可能なブラウザー、それらの異なるバージョン、およびそれらが実行される多くのオペレーティングシステムの列挙はすぐに重要な作業になります。
 例から始めましょう ラリーは、ユーザーがカスタムユニコーンを注文できるWebサイトを作成しました。
-一般的なワークフロー（&amp;rdquo;ハッピーパス&amp;rdquo;と呼ぶ）は次のようなものです。
+一般的なワークフロー（&amp;ldquo;ハッピーパス&amp;quot;と呼ぶ）は次のようなものです。
  アカウントを作成する ユニコーンを設定する ショッピングカートにユニコーンを追加します チェックアウトしてお支払い ユニコーンについてフィードバックを送る  これらのすべての操作を実行するために1つの壮大なSeleniumスクリプトを作成するのは魅力的です。 その誘惑に抵抗しましょう！ そうすると、
 a）時間がかかる
 b）ページレンダリングのタイミングの問題に関する一般的な問題が発生する
-c）失敗した場合、簡潔で&amp;rdquo;一目瞭然&amp;rdquo;にならない、何がうまくいかなかったかを診断する方法がない
+c）失敗した場合、簡潔で&amp;quot;一目瞭然&amp;quot;にならない、何がうまくいかなかったかを診断する方法がない
 というテストになります。
-このシナリオをテストするための好ましい戦略は、一連の独立した迅速なテストに分割することです。 各テストには、1つの&amp;rdquo;理由&amp;rdquo;が存在します。
+このシナリオをテストするための好ましい戦略は、一連の独立した迅速なテストに分割することです。 各テストには、1つの&amp;quot;理由&amp;quot;が存在します。
 2番目のステップであるユニコーンの構成をテストしたいと思います。 次のアクションを実行します。
  アカウントを作成する ユニコーンを設定する  これらの手順の残りをスキップしていることに注意してください。 この手順を完了した後、他の小さな個別のテストケースで残りのワークフローをテストします。
 開始するには、アカウントを作成する必要があります。 ここには、いくつかの選択があります。
- 既存のアカウントを使用しますか？ 新しいアカウントを作成しますか？ 設定を開始する前に考慮する必要があるそのようなユーザーの特別なプロパティはありますか？  この質問への回答方法に関係なく、テストの&amp;rdquo;データのセットアップ&amp;rdquo;部分の一部にすると解決します。 ラリーが、ユーザー（またはだれでも）がユーザーアカウントを作成および更新できるAPIを公開している場合は、それを使用してこの質問に回答してください。 可能であれば、資格情報を使用してログインできるユーザーが&amp;rdquo;手元に&amp;rdquo;いる場合にのみブラウザを起動します。
-各ワークフローの各テストがユーザーアカウントの作成から始まる場合、各テストの実行に何秒も追加されます。 APIの呼び出しとデータベースとの対話は、ブラウザを開いたり、適切なページに移動したり、フォームをクリックして送信されるのを待つなどの高価なプロセスを必要としない、迅速な&amp;rdquo;ヘッドレス&amp;rdquo;操作です。
+ 既存のアカウントを使用しますか？ 新しいアカウントを作成しますか？ 設定を開始する前に考慮する必要があるそのようなユーザーの特別なプロパティはありますか？  この質問への回答方法に関係なく、テストの&amp;quot;データのセットアップ&amp;quot;部分の一部にすると解決します。 ラリーが、ユーザー（またはだれでも）がユーザーアカウントを作成および更新できるAPIを公開している場合は、それを使用してこの質問に回答してください。 可能であれば、資格情報を使用してログインできるユーザーが&amp;quot;手元に&amp;quot;いる場合にのみブラウザを起動します。
+各ワークフローの各テストがユーザーアカウントの作成から始まる場合、各テストの実行に何秒も追加されます。 APIの呼び出しとデータベースとの対話は、ブラウザを開いたり、適切なページに移動したり、フォームをクリックして送信されるのを待つなどの高価なプロセスを必要としない、迅速な&amp;quot;ヘッドレス&amp;quot;操作です。
 理想的には、1行のコードでこのセットアップフェーズに対処できます。 これは、ブラウザーが起動する前に実行されます。
 Java Python C# Ruby JavaScript Kotlin // Create a user who has read-only permissions--they can configure a unicorn, // but they do not have payment information set up, nor do they have // administrative privileges.</description>
     </item>
@@ -287,7 +285,7 @@ Java Python C# Ruby JavaScript Kotlin // Create a user who has read-only permiss
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>ドメイン固有言語（DSL）は、問題を解決するための表現手段をユーザーに提供するシステムです。 それによって、ユーザーは、プログラマーの言葉でなく、自分の言葉でシステムとやりとりすることができます。
-通常、ユーザーはサイトの外観を気にしません。 装飾、アニメーション、グラフィックスは気にしません。 彼らはあなたのシステムを使用して、新しい従業員を最小限の難しさでプロセスに押し込みたいと考えています。 彼らはアラスカへの旅行を予約したい。 ユニコーンを設定して割引価格で購入したいのです。 テスターとしてのあなたの仕事は、この考え方を&amp;rdquo;とらえる&amp;rdquo;ことにできるだけ近づくことです。 それを念頭に置いて、テストスクリプト（ユーザーの唯一のプレリリースの代理人）がユーザーを&amp;rdquo;代弁し&amp;rdquo;、表現するように、作業中のアプリケーションの&amp;rdquo;モデリング&amp;rdquo;に取り掛かります。
+通常、ユーザーはサイトの外観を気にしません。 装飾、アニメーション、グラフィックスは気にしません。 彼らはあなたのシステムを使用して、新しい従業員を最小限の難しさでプロセスに押し込みたいと考えています。 彼らはアラスカへの旅行を予約したい。 ユニコーンを設定して割引価格で購入したいのです。 テスターとしてのあなたの仕事は、この考え方を&amp;quot;とらえる&amp;quot;ことにできるだけ近づくことです。 それを念頭に置いて、テストスクリプト（ユーザーの唯一のプレリリースの代理人）がユーザーを&amp;quot;代弁し&amp;rdquo;、表現するように、作業中のアプリケーションの&amp;quot;モデリング&amp;quot;に取り掛かります。
 Seleniumでは、DSLは通常、APIをシンプルで読みやすいように記述したメソッドで表されます。 開発者と利害関係者（ユーザー、製品所有者、ビジネスインテリジェンススペシャリストなど）との伝達が可能になります。
 利点  Readable: ビジネス関係者はそれを理解できます。 Writable: 書きやすく、不要な重複を避けます。 Extensible: 機能は（合理的に）契約と既存の機能を壊すことなく追加できます。 Maintainable: 実装の詳細をテストケースから除外することにより、AUT* の変更に対して十分に隔離されます。  Java Javaの妥当なDSLメソッドの例を次に示します。 簡潔にするために、driverオブジェクトが事前に定義されており、メソッドで使用可能であることを前提としています。
 /** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.findElement(By.id(&amp;#34;loginField&amp;#34;)); loginField.clear(); loginField.sendKeys(username); // Fill out the password field. The locator we&amp;#39;re using is &amp;#34;By.</description>
@@ -315,13 +313,9 @@ WebDriverの目的は、できるだけブラウザーに近づけて実際の�
 ドライバーのインスタンス化、プロファイル管理、およびブラウザー固有のさまざまな設定は、ブラウザーに応じて異なる要件を持つパラメーターの例です。 このセクションでは、さまざまなブラウザーを使い始めるための基本的な要件について説明します。
 実行可能ファイルをパスに追加する ほとんどのドライバーでは、ブラウザーと通信するためにSeleniumの追加の実行可能ファイルが必要です。 WebDriverを起動する前に実行可能ファイルの場所を手動で指定できますが、これによりテストの移植性が低下します。 実行可能ファイルはすべてのマシンの同じ場所にあるか、テストコードリポジトリに含まれている必要があるためです。
 WebDriverのバイナリを含むフォルダーをシステムのパスに追加することで、Seleniumはドライバーの正確な場所を見つけるためにテストコードを要求することなく、追加のバイナリを見つけることができます。
- 実行可能ファイルを配置するディレクトリをこのように作成します。 C:\WebDriver\bin or /opt/WebDriver/bin PATHにディレクトリを追加します。
- Windows - 管理者権限でコマンドプロンプトを開いて 次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。
-setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。
-export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  これで、変更をテストする準備ができました。 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
-chromedriver PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
-Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed.  Ctrl + C を押すと、コマンドプロンプトの制御を取り戻すことができます。
-クイックリファレンス    ブラウザー サポートOS メンテナ ダウンロード イシュートラッカー     Chromium/Chrome Windows/macOS/Linux Google ダウンロード イシュートラッカー   Firefox Windows/macOS/Linux Mozilla ダウンロード イシュートラッカー   Edge Windows 10 Microsoft ダウンロード イシュートラッカー   Internet Explorer Windows Selenium Project ダウンロード イシュートラッカー   Safari macOS El Capitan and newer Apple ビルトイン イシュートラッカー   Opera Windows/macOS/Linux Opera ダウンロード イシュートラッカー    Chromium/Chrome Chrome または Chromium を動かす場合、chromedriver をダウンロードして、システムパスのフォルダに置いてください。</description>
+ 実行可能ファイルを配置するディレクトリをこのように作成します。 C:\WebDriver\bin or /opt/WebDriver/bin PATHにディレクトリを追加します。  Windows - 管理者権限でコマンドプロンプトを開いて 次のコマンドを実行して、マシン上のすべてのユーザー向けにディレクトリをPATHに永続的に追加します。    setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34;  macOS、Linux で bashを使う場合は、terminalを開いて次のコマンドを実行します。  export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile   これで、変更をテストする準備ができました。 開いているすべてのコマンドプロンプトを閉じて、新しいプロンプトを開きます。 前の手順で作成したフォルダー内のバイナリのいずれかの名前を入力します。例：
+chromedriver   PATHが正しく設定されている場合、ドライバーの起動に関連する出力が表示されます。
+  Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515 Only local connections are allowed. Ctrl + Cを押すと、コマンドプロンプトの制御を取り戻すことができます。</description>
     </item>
     
     <item>
@@ -340,7 +334,7 @@ Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on 
       
       <guid>https://selenium.dev/documentation/ja/remote_webdriver/remote_webdriver_client/</guid>
       <description>リモートWebDriverクライアントを実行するには、まずRemoteWebDriverに接続する必要があります。 これを行うには、テストを実行しているサーバーのアドレスをURLに指定します。 設定をカスタマイズするために、desired capabilitiesを設定します。 以下は、Firefoxでテストを実行しているリモートWebサーバー www.example.com を指定してリモートWebDriverオブジェクトをインスタンス化する例です。
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.for :remote, url: &amp;#34;http://www.</description>
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.for :remote, url: &amp;#34;http://www.example.com&amp;#34;, desired_capabilities: :firefox driver.</description>
     </item>
     
     <item>
@@ -387,7 +381,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
       <guid>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</guid>
       <description>Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。 これは、Seleniumを通過したすべてのブラウザートラフィックをキャプチャまたは操作できることを意味していました。 captureNetworkTraffic() メソッドは、HTTPレスポンスコードを含むブラウザーと自動化されているサイト間のすべてのネットワークトラフィックをキャプチャすることを目的としています。
 Selenium WebDriverは、ブラウザーの自動化に対するまったく異なるアプローチであり、ユーザーのように振る舞うことを好むため、WebDriverを使用してテストを記述する方法で表現します。 自動化された機能テストでは、ステータスコードの確認はテストの失敗の特に重要な詳細ではありません。 それに先行する手順がより重要です。
-ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。 これらのエラーページの1つに遭遇したときに&amp;rdquo;早く失敗&amp;rdquo;する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば &amp;lt;h1&amp;gt; タグ）のコンテンツをチェックすることです。 ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。 場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。 WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
+ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。 これらのエラーページの1つに遭遇したときに&amp;quot;早く失敗&amp;quot;する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば &amp;lt;h1&amp;gt; タグ）のコンテンツをチェックすることです。 ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。 場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。 WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
 Webページ自体を確認することは、WebDriverの理想的なプラクティスに沿っており、WebDriverのユーザーのWebサイトの見え方を表現し、主張します。
 HTTPステータスコードをキャプチャするための高度なソリューションは、プロキシを使用してSelenium RCの動作を複製することです。 WebDriver APIは、ブラウザーのプロキシを設定する機能を提供します。 Webサーバーとの間で送受信されるリクエストのコンテンツをプログラムで操作できるプロキシがいくつかあります。 プロキシを使用すると、リダイレクトレスポンスコードへの応答方法を決めることができます。 さらに、すべてのブラウザーがWebDriverでレスポンスコードを利用できるようにするわけではないため、プロキシを使用することを選択すると、すべてのブラウザーで機能するソリューションが得られます。</description>
     </item>
@@ -409,7 +403,7 @@ HTTPステータスコードをキャプチャするための高度なソリュ�
       
       <guid>https://selenium.dev/documentation/ja/selenium_installation/installing_standalone_server/</guid>
       <description>Gridを使う予定なら、selenium-server-standalone JARファイルをダウンロードする必要があります。selenium-server-standalone jarは決してアップロードされることはありませんが、selenium-serverを通して全てのコンポーネントが利用可能です。 このスタンドアロンJARはリモートSeleniumサーバとクライアントサイドバインディングを含む全てが入っています。 これはプロジェクトでselenium-server-standalone jarを使えば、selenium-javaやブラウザ固有のjarを追加しなくても良いということです。
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
     <item>
@@ -418,10 +412,12 @@ HTTPステータスコードをキャプチャするための高度なソリュ�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
-      <description>受け入れテスト このタイプのテストは、機能またはシステムが顧客の期待と要件を満たしているかどうかを判断するために行われます。 このタイプのテストには通常、顧客の協力またはフィードバックが関与します。 下記質問に答えることで確認することができます。 &amp;gt; 正しい 製品を作っていますか？
-Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、 このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、 またはサポートされているさまざまな言語によって実行できます。 注：受け入れテストは 機能テスト のサブタイプであり、一部の人はこれにも言及する場合があります。
-機能テスト このタイプのテストは、機能またはシステムが問題なく正常に機能するかどうかを判断するために行われます。 システムをさまざまなレベルでチェックして、すべてのシナリオがカバーされていること、 およびシステムが実行すべきことを実行していることを確認します。 下記質問に答えることで確認することができます。 &amp;gt;製品を 正しく 作っていますか？
-これは通常以下を含みます。 テストがエラーなし（404、例外&amp;hellip;）、使用可能な方法（正しいリダイレクト）で機能する、 利用しやすく、仕様に一致します（上記の 受け入れテスト を参照）。
+      <description>受け入れテスト このタイプのテストは、機能またはシステムが顧客の期待と要件を満たしているかどうかを判断するために行われます。 このタイプのテストには通常、顧客の協力またはフィードバックが関与します。 下記質問に答えることで確認することができます。
+ 正しい 製品を作っていますか？
+ Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、 このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、 またはサポートされているさまざまな言語によって実行できます。 注：受け入れテストは 機能テスト のサブタイプであり、一部の人はこれにも言及する場合があります。
+機能テスト このタイプのテストは、機能またはシステムが問題なく正常に機能するかどうかを判断するために行われます。 システムをさまざまなレベルでチェックして、すべてのシナリオがカバーされていること、 およびシステムが実行すべきことを実行していることを確認します。 下記質問に答えることで確認することができます。
+ 製品を 正しく 作っていますか？
+ これは通常以下を含みます。 テストがエラーなし（404、例外&amp;hellip;）、使用可能な方法（正しいリダイレクト）で機能する、 利用しやすく、仕様に一致します（上記の 受け入れテスト を参照）。
 Webアプリケーションの場合、期待されるリターンをシミュレートすることにより、このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生またはサポートされているさまざまな言語で実行できます。
 パフォーマンステスト その名前が示すように、パフォーマンステストは、アプリケーションのパフォーマンスを測定するために行われます。
 パフォーマンステストには2つの主なサブタイプがあります。
@@ -442,8 +438,7 @@ Webアプリケーションの場合、測定する詳細には、スループ�
 ビヘイビア駆動開発 (BDD) BDDは、上記に基づいた反復開発方法論（TDD）でもあり、その目的は、アプリケーションの開発にすべての関係者を関与させることです。
 各サイクルは、いくつかの仕様を作成することから始まります（これは失敗するはずです）。 次に、失敗する単体テスト（これも失敗するはずです）を作成し、開発を作成します。
 このサイクルは、すべてのタイプのテストに合格するまで繰り返されます。
-そのためには、仕様言語が使用されます。 すべての関係者が理解でき、単純で、標準的かつ明示的でなければなりません。 ほとんどのツールは、この言語として Gherkin を使用します。
-目標は、潜在的な受入エラーも対象とすることでTDDよりも多くのエラーを検出し、当事者間のコミュニケーションを円滑にすることです。</description>
+そのためには、仕様言語が使用されます。 すべての関係者が理解でき、単純で、標準的かつ明示的でなければなりません。 ほとんどのツールは、この言語として Gherkin を使用します。</description>
     </item>
     
     <item>
@@ -491,7 +486,7 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
       <description>一つの要素を探す ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element(By.ID, &amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     例を見ての通り、WebDriverで要素を特定するには、WebDriverクラスのインスタンスを使います。findElement(By)メソッドはWebElementという別の基本的なオブジェクトを返します。
  WebDriverはブラウザをあらわす WebElementは特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす  一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;));   cheese = driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;));   cheese = driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) cheddar = cheese.</description>
     </item>
     
     <item>
@@ -513,7 +508,7 @@ Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElem
       <guid>https://selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).</description>
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).dragAndDrop(source, target).</description>
     </item>
     
     <item>
@@ -547,8 +542,8 @@ W3C準拠 のWebDriver実装は、サービス拒否攻撃を軽減できるよ�
       <guid>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</guid>
       <description>一般的に、グリッドを使用する理由は2つあります。
  複数のブラウザー、複数のバージョンのブラウザー、および異なるオペレーティングシステムで実行されているブラウザーに対してテストを実行するため。 テストスイートがテストがパスするのに完了するのにかかる時間を短縮するため。  グリッドは、複数のマシンを使用してテストを並行して実行することにより、テストパスの実行を高速化するために使用されます。 たとえば、100個のテストスイートがあり、それらのテストを実行するために4つの異なるマシン（VMまたは個別の物理マシン）をサポートするようにグリッドをセットアップした場合、テストスイートは単一のマシンでテストを連続して実行した場合と比較して（およそ）4分の1の時間で完了します。 大規模なテストスイート、および大量のデータ検証を実行するような長時間実行されるテストスイートの場合、これは大幅な時間の節約になります。 一部のテストスイートの実行には数時間かかる場合があります。 スイートの実行に費やす時間を増やすもう1つの理由は、開発者がAUTのコードをチェックインした後のテスト結果の所要時間を短縮することです。 アジャイルソフトウェア開発を実践しているソフトウェアチームは、一晩テストパスを一晩待つのではなく、できるだけ早くテストフィードバックを求めています。
-グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。 たとえば、仮想マシンの&amp;rdquo;グリッド&amp;rdquo;は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。 したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。 テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。
-さらに、すべて同じブラウザ、タイプ、およびバージョンのグリッドを持つことができます。 たとえば、それぞれがFirefox 70の3つのインスタンスを実行する4台のマシンのグリッドを持つことができ、利用可能なFirefoxインスタンスの&amp;rdquo;ある意味&amp;rdquo;での&amp;rdquo;サーバーファーム&amp;rdquo;を可能にします。 スイートが実行されると、各テストはグリッドに渡され、グリッドは次に利用可能なFirefoxインスタンスにテストを割り当てます。 この方法で、おそらく12のテストがすべて同時に並行して実行されるテストパスを取得し、テストパスの完了に必要な時間を大幅に短縮します。
+グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。 たとえば、仮想マシンの&amp;quot;グリッド&amp;quot;は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。 したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。 テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。
+さらに、すべて同じブラウザ、タイプ、およびバージョンのグリッドを持つことができます。 たとえば、それぞれがFirefox 70の3つのインスタンスを実行する4台のマシンのグリッドを持つことができ、利用可能なFirefoxインスタンスの&amp;quot;ある意味&amp;quot;での&amp;quot;サーバーファーム&amp;quot;を可能にします。 スイートが実行されると、各テストはグリッドに渡され、グリッドは次に利用可能なFirefoxインスタンスにテストを割り当てます。 この方法で、おそらく12のテストがすべて同時に並行して実行されるテストパスを取得し、テストパスの完了に必要な時間を大幅に短縮します。
 グリッドは非常に柔軟です。 これらの2つの例を組み合わせて、各ブラウザタイプとバージョンの複数のインスタンスを許可することができます。 このような構成では、迅速にテストがパスすることを完了するための並列実行と、複数のブラウザタイプおよびバージョンの同時サポートの両方が提供されます。</description>
     </item>
     
@@ -560,7 +555,7 @@ W3C準拠 のWebDriver実装は、サービス拒否攻撃を軽減できるよ�
       <guid>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>マウスは、マウスイベントを表します。 マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
 クリックとホールド 要素に移動し、指定された要素の中央で（解放せずに）クリックします。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.clickAndHold(searchBtn).build().perform(); } finally { driver.</description>
     </item>
     
     <item>
@@ -581,7 +576,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <description>紹介 Selenium-IDE (統合開発環境) は、Selenium テストケースを開発するためのツールです。 Selenium-IDE は使いやすい Firefox プラグインで、一般にテストケースを開発するための最も効率的な方法です。 Selenium-IDE ではコンテキストメニューも使用できます。 コンテキストメニューを使うと、まず現在ブラウザに表示されているページ上の UI 要素を選択し、次に Selenium コマンドのリストから目的のコマンドを選択できます。 コマンドのパラメータは、選択された UI 要素のコンテキストに従って、あらかじめ定義されたものが使われます。 Selenium-IDE を使う方法は、時間の節約になるだけでなく、Selenium スクリプトの構文を学ぶ手段としても優れています。
 この章では Selenium-IDE について詳しく取り上げ、Selenium-IDE を効果的に使う方法について説明します。
 IDEのインストール Firefoxを使用して、最初にSeleniumHQダウンロードページからIDEをダウンロードします。
-Firefoxは、不慣れな場所からアドオンをインストールしないように保護するため、次のスクリーンショットに示すように、インストールを続行するには&amp;rsquo;許可&amp;rsquo;をクリックする必要があります。
+Firefoxは、不慣れな場所からアドオンをインストールしないように保護するため、次のスクリーンショットに示すように、インストールを続行するには&#39;許可&#39;をクリックする必要があります。
 Firefoxからダウンロードすると、次のウィンドウが表示されます。
 「今すぐインストール」を選択します。 Firefoxの「アドオン」ウィンドウがポップアップし、最初にプログレスバーが表示されます。 ダウンロードが完了すると、次のような画面になります。
 Firefoxを再起動します。 Firefoxの再起動後、Firefoxの「ツール」メニューには、「Selenium-IDE」が表示されます。
@@ -590,7 +585,8 @@ IDEの機能 メニューバー 「ファイル」メニューには、テスト
 「編集」メニューでは、テストケースのコマンドを編集するためのすべての操作をコピー、貼り付け、削除、元に戻す、選択できます。 「オプション」メニューでは、さまざまな設定を変更できます。 特定のコマンドのタイムアウト値を設定し、Seleniumコマンドの基本セットにユーザー定義のユーザー拡張機能を追加し、テストケースを保存するときに使用する形式（言語）を指定できます。 「ヘルプ」メニューは Firefox 標準の「ヘルプ」メニューで、この中の 「UI-Element Documentation」 だけが Selenium-IDE に関係のある項目です。
 ツールバー ツールバーには、テストケースをデバッグするためのステップ実行機能をはじめ、テストケースの実行をコントロールするためのさまざまなボタンが並んでいます。 右端の赤い丸のボタンは、「Record」(記録) ボタンです。
 「Speed Control」 (速度調節): テストケースの実行速度を調節します。
-「Run All」 (すべて実行): 複数のテストケースを持つテストスイートが読み込まれているときにテストスイート全体を実行します。</description>
+「Run All」 (すべて実行): 複数のテストケースを持つテストスイートが読み込まれているときにテストスイート全体を実行します。
+「Run」 (実行): 現在選択されているテストを実行します。 テストが1つしか読み込まれていない場合、このボタンと「Run All」ボタンの動作は同じです。</description>
     </item>
     
     <item>
@@ -635,7 +631,8 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。 単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。 ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。 NUnit 3 Console Runner
+      <description>Seleniumは、実行されたテストケースのステータスをレポートするようには設計されていません。 単体テストフレームワークの組み込みのレポート機能を利用することは、良いスタートです。 ほとんどの単体テストフレームワークには、xUnitまたはHTML形式のレポートを生成できるレポートがあります。 xUnitレポートは、Jenkins、Travis、Bambooなどの継続的インテグレーション（CI）サーバーに結果をインポートするのに人気があります。 いくつかの言語のレポート出力に関する詳細情報へのリンクがあります。
+NUnit 3 Console Runner
 NUnit 3 Console Command Line
 xUnit getting test results in TeamCity
 xUnit getting test results in CruiseControl.NET
@@ -687,9 +684,9 @@ Webサイトのパフォーマンスを改善するには、改善すべき点�
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>いくつかの場所で言及されていますが、再度言及する価値があります。 テストが互いに分離されていることを確認してください。
- テストデータを共有しないでください。 アクションを実行する1つを選択する前に、それぞれが有効な注文をデータベースに照会するいくつかのテストを想像してください。 2つのテストで同じ順序を選択すると、予期しない動作が発生する可能性があります。
- 別のテストで取得される可能性のあるアプリケーション内の古いデータを削除します。 例: 無効な注文レコード
- テストごとに新しいWebDriverインスタンスを作成します。 これにより、テストの分離が保証され、並列化がより簡単になります。
+  テストデータを共有しないでください。 アクションを実行する1つを選択する前に、それぞれが有効な注文をデータベースに照会するいくつかのテストを想像してください。 2つのテストで同じ順序を選択すると、予期しない動作が発生する可能性があります。
+  別のテストで取得される可能性のあるアプリケーション内の古いデータを削除します。 例: 無効な注文レコード
+  テストごとに新しいWebDriverインスタンスを作成します。 これにより、テストの分離が保証され、並列化がより簡単になります。
   </description>
     </item>
     
@@ -774,7 +771,7 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
       
       <guid>https://selenium.dev/documentation/ja/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>クリーンな既知の状態から各テストを開始します。 理想的には、テストごとに新しい仮想マシンを起動します。 新しい仮想マシンの起動が実用的でない場合は、少なくともテストごとに新しいWebDriverを起動してください。 Firefoxの場合、既知のプロファイルでWebDriverを起動します。
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
     <item>
@@ -785,7 +782,7 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
       <description>キーボードはキーボードイベントを表します。 キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
 sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。 WebDriverがサポートする可能なキーストロークのリストは、こちらにあります。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.</description>
     </item>
     
     <item>
@@ -797,7 +794,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.
       <description>Seleniumは大きなソフトウェアプロジェクトであり、そのサイトとドキュメントは、物事の仕組みを理解し、その可能性を活用する効果的な方法を学ぶための鍵となります。
 このプロジェクトには、Seleniumのサイトとドキュメントの両方が含まれています。これは、Seleniumを効果的に使用する方法、Seleniumに参加する方法、およびSeleniumに貢献する方法に関する最新情報を提供するための継続的な取り組みです（特定のリリースを対象としていません）。
 サイトおよびドキュメントへの貢献は、以下のセクションで説明されているプロセスに従います。 このドキュメントについてをよく読み、本ドキュメントに慣れてください。
-Seleniumプロジェクトは、皆様からのコントリビューションを歓迎します。 お手伝いをいただくには、いくつかの方法があります:
+ Seleniumプロジェクトは、皆様からのコントリビューションを歓迎します。 お手伝いをいただくには、いくつかの方法があります:
 イシュー報告 新しい問題を報告したり、既存の問題についてコメントしたりするときは、議論がSeleniumソフトウェア、そのサイトおよび/またはドキュメントに関する具体的な技術問題に関連していることを確認してください。
 Seleniumのすべてのコンポーネントは、時間の経過とともに非常に速く変化するため、ドキュメントが古くなる可能性があります。 このようなケースを見つけた場合には、遠慮なくイシューを作成してください。 また、ドキュメントを最新の状態に更新する方法をご存知でしたら、関連する変更を含むプルリクエストを送ってしてください。
 見つかったものが問題であるかどうかわからない場合、https://selenium.dev/supportに記載されているコミュニケーション手段にて質問してください。

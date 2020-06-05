@@ -64,8 +64,8 @@ A tus usuarios, en general, no les importa cómo se ve su sitio. Ellos no se pre
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Aunque se menciona en varios lugares, vale la pena mencionarlo nuevamente. Asegurate de que las pruebas estén aisladas unas de otras.
- No compartas datos de prueba. Imagina varias pruebas en la que cada una consulta a la base de datos para pedidos válidos antes de elegir uno para realizar una acción. Si dos pruebas eligen el mismo pedido es probable que obtengas un comportamiento inesperado.
- Limpia los datos obsoletos en la aplicación que podrían ser recogidos por otra prueba p.</description>
+  No compartas datos de prueba. Imagina varias pruebas en la que cada una consulta a la base de datos para pedidos válidos antes de elegir uno para realizar una acción. Si dos pruebas eligen el mismo pedido es probable que obtengas un comportamiento inesperado.
+  Limpia los datos obsoletos en la aplicación que podrían ser recogidos por otra prueba p.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       
       <guid>https://selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>Comienza cada prueba desde un estado limpio conocido. Idealmente, ejecuta una nueva máquina virtual para cada prueba. Si ejecutar una nueva máquina virtual no es práctico, al menos inicia un nuevo WebDriver para cada prueba. Para Firefox, inicia un WebDriver con su perfil conocido.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
   </channel>

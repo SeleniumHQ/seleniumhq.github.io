@@ -11,20 +11,20 @@
     <title>远程WebDriver服务器 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379911" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379911" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379911"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,15 +1921,12 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#从命令行启动服务器">从命令行启动服务器</a></li>
-<li><a href="#运行服务器的注意事项">运行服务器的注意事项</a></li>
-<li><a href="#超时-自2-21版本">超时 (自2.21版本)</a></li>
-<li><a href="#以编程方式配置服务器">以编程方式配置服务器</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#从命令行启动服务器">从命令行启动服务器</a></li>
+    <li><a href="#运行服务器的注意事项">运行服务器的注意事项</a></li>
+    <li><a href="#超时-自221版本">超时 (自2.21版本)</a></li>
+    <li><a href="#以编程方式配置服务器">以编程方式配置服务器</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1954,100 +1951,86 @@
 
 
 
-
-
 <p>服务器将始终在安装了待测浏览器的机器上运行.
 可以从命令行或通过代码配置来使用服务器.</p>
-
 <h2 id="从命令行启动服务器">从命令行启动服务器</h2>
-
 <p>下载 <code>selenium-server-standalone-{VERSION}.jar</code> 后,
 将其传到具有待测浏览器的电脑上.
 然后, 切换到包含此jar文件的目录中, 运行以下命令:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar</code></pre></div>
-<h2 id="运行服务器的注意事项">运行服务器的注意事项</h2>
-
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar
+</code></pre></div><h2 id="运行服务器的注意事项">运行服务器的注意事项</h2>
 <p>调用者应调用 <code>Selenium#stop()</code> 或 <code>WebDriver#quit</code> 以结束每次会话.</p>
-
 <p>Selenium服务器在内存中保留每个运行会话的日志,
 这些日志将在调用 <code>Selenium#stop()</code> 或 <code>WebDriver#quit</code> 时清除.
 如果您忘记终止这些会话, 则可能会造成服务器内存泄漏.
 如果您保持运行时间非常长的会话,
 则可能需要不时执行停止或退出的操作 (或使用-Xmx jvm选项增加内存) .</p>
-
-<h2 id="超时-自2-21版本">超时 (自2.21版本)</h2>
-
+<h2 id="超时-自221版本">超时 (自2.21版本)</h2>
 <p>服务器有两种不同的超时, 可以按如下设置:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar -timeout<span style="color:#719e07">=</span><span style="color:#2aa198">20</span> -browserTimeout<span style="color:#719e07">=</span><span style="color:#2aa198">60</span></code></pre></div>
-<ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java -jar selenium-server-standalone-<span style="color:#719e07">{</span>VERSION<span style="color:#719e07">}</span>.jar -timeout<span style="color:#719e07">=</span><span style="color:#2aa198">20</span> -browserTimeout<span style="color:#719e07">=</span><span style="color:#2aa198">60</span>
+</code></pre></div><ul>
 <li>browserTimeout
-
 <ul>
 <li>控制允许浏览器挂起的时间
 (以秒为单位的值) .</li>
-</ul></li>
+</ul>
+</li>
 <li>timeout
-
 <ul>
 <li>控制在回收会话之前允许客户端离开的时间
 (以秒为单位的值) .</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>从2.21版本开始不再支持系统属性
- <code>selenium.server.session.timeout</code>.</p>
-
+<code>selenium.server.session.timeout</code>.</p>
 <p>请注意, 当常规超时机制发生故障时,
 <code>browserTimeout</code>旨在用作备份超时机制,
 该机制应主要在网格和服务器的环境中使用,
 以确保崩溃或丢失的进程不会驻留太长时间,
 从而干扰了运行时环境.</p>
-
 <h2 id="以编程方式配置服务器">以编程方式配置服务器</h2>
-
 <p>从理论上讲, 此过程就像将 <code>DriverServlet</code>映射到URL一样简单,
 但是也可以将页面托管在轻量级容器中,
 例如完全用代码配置的Jetty.
 步骤如下.</p>
-
 <ul>
 <li>下载并解压 <code>selenium-server.zip</code>.</li>
 <li>将这些Jar设置在CLASSPATH中.</li>
-
-<li><p>创建一个名为 <code>AppServer</code>的新类.
+<li>创建一个名为 <code>AppServer</code>的新类.
 在这里, 我使用Jetty,
-因此您也需要<a href="//www.eclipse.org/jetty/download.html">download</a>:</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Connector;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.Server;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.nio.SelectChannelConnector;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.security.SslSocketConnector;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.mortbay.jetty.webapp.WebAppContext;
-
-<span style="color:#719e07">import</span> <span style="color:#268bd2">javax</span>.servlet.Servlet;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">java</span>.io.File;
-
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.remote.server.DriverServlet;
-
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> AppServer {
-<span style="color:#268bd2">private</span> <span style="color:#268bd2">Server</span> server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server();
-
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span>() <span style="color:#268bd2">throws</span> <span style="color:#268bd2">Exception</span> {
-WebAppContext <span style="color:#268bd2">context</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext();
-context.setContextPath(<span style="color:#2aa198">&#34;&#34;</span>);
-context.setWar(<span style="color:#719e07">new</span> File(<span style="color:#2aa198">&#34;.&#34;</span>));
-server.addHandler(context);
-
-context.addServlet(DriverServlet.class, <span style="color:#2aa198">&#34;/wd/*&#34;</span>);
-
-SelectChannelConnector <span style="color:#268bd2">connector</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector();
-connector.setPort(3001);
-server.addConnector(connector);
-
-server.start();
-}
-}</code></pre></div></li>
+因此您也需要<a href="//www.eclipse.org/jetty/download.html">download</a>:</li>
 </ul>
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#719e07">import</span> org.mortbay.jetty.Connector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.Server<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.nio.SelectChannelConnector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.security.SslSocketConnector<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.mortbay.jetty.webapp.WebAppContext<span style="color:#719e07">;</span>
 
+<span style="color:#719e07">import</span> javax.servlet.Servlet<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> java.io.File<span style="color:#719e07">;</span>
+
+<span style="color:#719e07">import</span> org.openqa.selenium.remote.server.DriverServlet<span style="color:#719e07">;</span>
+
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">AppServer</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">private</span> Server server <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Server<span style="color:#719e07">();</span>
+
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">AppServer</span><span style="color:#719e07">()</span> <span style="color:#268bd2">throws</span> Exception <span style="color:#719e07">{</span>
+    WebAppContext context <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> WebAppContext<span style="color:#719e07">();</span>
+    context<span style="color:#719e07">.</span>setContextPath<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;&#34;</span><span style="color:#719e07">);</span>
+    context<span style="color:#719e07">.</span>setWar<span style="color:#719e07">(</span><span style="color:#719e07">new</span> File<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;.&#34;</span><span style="color:#719e07">));</span>
+    server<span style="color:#719e07">.</span>addHandler<span style="color:#719e07">(</span>context<span style="color:#719e07">);</span>
+
+    context<span style="color:#719e07">.</span>addServlet<span style="color:#719e07">(</span>DriverServlet<span style="color:#719e07">.</span>class<span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;/wd/*&#34;</span><span style="color:#719e07">);</span>
+
+    SelectChannelConnector connector <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> SelectChannelConnector<span style="color:#719e07">();</span>
+    connector<span style="color:#719e07">.</span>setPort<span style="color:#719e07">(</span>3001<span style="color:#719e07">);</span>
+    server<span style="color:#719e07">.</span>addConnector<span style="color:#719e07">(</span>connector<span style="color:#719e07">);</span>
+
+    server<span style="color:#719e07">.</span>start<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
+</code></pre></div>
 
 <footer class=" footline" >
 	
@@ -2056,7 +2039,7 @@ server.start();
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/">
       “远程WebDriver服务器”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3218,19 +3201,19 @@ server.start();
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379911" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379911"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

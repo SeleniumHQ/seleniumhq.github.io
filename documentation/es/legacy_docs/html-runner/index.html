@@ -11,20 +11,20 @@
     <title>HTML runner :: Documentación de Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/theme.css?1591379906" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591379906" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/nucleus.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/fontawesome-all.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hybrid.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/featherlight.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/auto-complete.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/theme.css?1591393148" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/es/css/hugo-theme.css?1591393148" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591379906" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/es/css/theme-selenium.css?1591393148" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1591393148"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591379906"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/lunr.min.js?1591393148"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/auto-complete.js?1591393148"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591379906"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/es/js/search.js?1591393148"></script>
 
     
   </div>
@@ -1921,14 +1921,11 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#información-común">Información común</a></li>
-<li><a href="#ejemplo-en-un-ambiente-linux">Ejemplo en un ambiente Linux</a></li>
-<li><a href="#como-ejecutar-headless-sin-interfaz-visual-selenium-html-runner">Como ejecutar headless (sin interfaz visual) selenium-html-runner</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#información-común">Información común</a></li>
+    <li><a href="#ejemplo-en-un-ambiente-linux">Ejemplo en un ambiente Linux</a></li>
+    <li><a href="#como-ejecutar-headless-sin-interfaz-visual-selenium-html-runner">Como ejecutar headless (sin interfaz visual) selenium-html-runner</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1953,14 +1950,10 @@
 
 
 
-
-
 <p><em>Selenium HTML-runner</em> te permite ejecutar Test Suites desde una
 línea de comando. Las suites de prueba son exportaciones HTML de
 Selenium IDE o herramientas de compatibles.</p>
-
 <h2 id="información-común">Información común</h2>
-
 <ul>
 <li>Combinaciónes de versiones de geckodriver / firefox / selenium-html-runner importan. Puede haber una matriz de compatibilidad de software
 en alguna parte.</li>
@@ -1970,19 +1963,17 @@ Asegurate que cumples con esto.</li>
 <li>Para usuarios de Linux sin INTERFAZ: debes iniciar html-runner
 con pantalla virtual (buscar xvfb)</li>
 </ul>
-
 <h2 id="ejemplo-en-un-ambiente-linux">Ejemplo en un ambiente Linux</h2>
-
 <p>Instala / descarga los siguientes paquetes de software:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ cat /etc/redhat-release
-CentOS Linux release <span style="color:#2aa198">7</span>.4.1708 <span style="color:#719e07">(</span>Core<span style="color:#719e07">)</span>
+CentOS Linux release 7.4.1708 <span style="color:#719e07">(</span>Core<span style="color:#719e07">)</span>
 
 <span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ rpm -qa | egrep -i <span style="color:#2aa198">&#34;xvfb|java-1.8|firefox&#34;</span>
 xorg-x11-server-Xvfb-1.19.3-11.el7.x86_64
 firefox-52.4.0-1.el7.centos.x86_64
 java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
-java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64</code></pre></div>
-<p>Ejemplo de Test Suite:</p>
+java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
+</code></pre></div><p>Ejemplo de Test Suite:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">[user@localhost ~]$ cat testsuite.html
 <span style="color:#719e07">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 <span style="color:#719e07">&lt;!DOCTYPE html PUBLIC &#34;-//W3C//DTD XHTML 1.0 Strict//EN&#34; &#34;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&#34;&gt;</span>
@@ -1997,36 +1988,39 @@ java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64</code></pre></div>
 &lt;<span style="color:#268bd2">tr</span>&gt;&lt;<span style="color:#268bd2">td</span>&gt;&lt;<span style="color:#268bd2">a</span> href<span style="color:#719e07">=</span><span style="color:#2aa198">&#34;YOUR-TEST-SCENARIO.html&#34;</span>&gt;YOUR-TEST-SCENARIO&lt;/<span style="color:#268bd2">a</span>&gt;&lt;/<span style="color:#268bd2">td</span>&gt;&lt;/<span style="color:#268bd2">tr</span>&gt;
 &lt;/<span style="color:#268bd2">tbody</span>&gt;&lt;/<span style="color:#268bd2">table</span>&gt;
 &lt;/<span style="color:#268bd2">body</span>&gt;
-&lt;/<span style="color:#268bd2">html</span>&gt;</code></pre></div>
-<h2 id="como-ejecutar-headless-sin-interfaz-visual-selenium-html-runner">Como ejecutar headless (sin interfaz visual) selenium-html-runner</h2>
-
+&lt;/<span style="color:#268bd2">html</span>&gt;
+</code></pre></div><h2 id="como-ejecutar-headless-sin-interfaz-visual-selenium-html-runner">Como ejecutar headless (sin interfaz visual) selenium-html-runner</h2>
 <p>Ahora, la parte más importante, un ejemplo de cómo ejecutar el
 selenium-html-runner! Tu experiencia puede variar según
 combinaciones de las versiones del software - geckodriver / FF / html-runner.</p>
-<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;*firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html
+<div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html
+</code></pre></div><div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#719e07">[</span>user@localhost ~<span style="color:#719e07">]</span>$ xvfb-run java -Dwebdriver.gecko.driver<span style="color:#719e07">=</span>/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite <span style="color:#2aa198">&#34;*firefox&#34;</span> <span style="color:#2aa198">&#34;https://YOUR-BASE-URL&#34;</span> <span style="color:#2aa198">&#34;</span><span style="color:#719e07">$(</span><span style="color:#b58900">pwd</span><span style="color:#719e07">)</span><span style="color:#2aa198">/testsuite.html&#34;</span> <span style="color:#2aa198">&#34;results.html&#34;</span> ; grep result: -A1 results.html/firefox.results.html
 Multi-window mode is longer used as an option and will be ignored.
-<span style="color:#2aa198">1510061109691</span>   geckodriver     INFO    geckodriver <span style="color:#2aa198">0</span>.18.0
-<span style="color:#2aa198">1510061109708</span>   geckodriver     INFO    Listening on <span style="color:#2aa198">127</span>.0.0.1:2885
+<span style="color:#2aa198">1510061109691</span>   geckodriver     INFO    geckodriver 0.18.0
+<span style="color:#2aa198">1510061109708</span>   geckodriver     INFO    Listening on 127.0.0.1:2885
 <span style="color:#2aa198">1510061110162</span>   geckodriver::marionette INFO    Starting browser /usr/bin/firefox with args <span style="color:#719e07">[</span><span style="color:#2aa198">&#34;-marionette&#34;</span><span style="color:#719e07">]</span>
 <span style="color:#2aa198">1510061111084</span>   Marionette      INFO    Listening on port <span style="color:#2aa198">43229</span>
 <span style="color:#2aa198">1510061111187</span>   Marionette      WARN    TLS certificate errors will be ignored <span style="color:#719e07">for</span> this session
-Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+Nov 07, <span style="color:#2aa198">2017</span> 1:25:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.714:INFO::main: Logging initialized @3915ms to org.seleniumhq.jetty9.util.log.StdErrLog
-<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.804:INFO:osjs.Server:main: jetty-9.4.z-SNAPSHOT
-<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.822:INFO:osjsh.ContextHandler:main: Started o.s.j.s.h.ContextHandler@87a85e1<span style="color:#719e07">{</span>/tests,null,AVAILABLE<span style="color:#719e07">}</span>
-<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.843:INFO:osjs.AbstractConnector:main: Started ServerConnector@52102734<span style="color:#719e07">{</span>HTTP/1.1,<span style="color:#719e07">[</span>http/1.1<span style="color:#719e07">]}{</span><span style="color:#2aa198">0</span>.0.0.0:31892<span style="color:#719e07">}</span>
-<span style="color:#2aa198">2017</span>-11-07 <span style="color:#2aa198">13</span>:25:12.843:INFO:osjs.Server:main: Started @4045ms
-Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:13 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
+2017-11-07 13:25:12.714:INFO::main: Logging initialized @3915ms to org.seleniumhq.jetty9.util.log.StdErrLog
+2017-11-07 13:25:12.804:INFO:osjs.Server:main: jetty-9.4.z-SNAPSHOT
+2017-11-07 13:25:12.822:INFO:osjsh.ContextHandler:main: Started o.s.j.s.h.ContextHandler@87a85e1<span style="color:#719e07">{</span>/tests,null,AVAILABLE<span style="color:#719e07">}</span>
+2017-11-07 13:25:12.843:INFO:osjs.AbstractConnector:main: Started ServerConnector@52102734<span style="color:#719e07">{</span>HTTP/1.1,<span style="color:#719e07">[</span>http/1.1<span style="color:#719e07">]}{</span>0.0.0.0:31892<span style="color:#719e07">}</span>
+2017-11-07 13:25:12.843:INFO:osjs.Server:main: Started @4045ms
+Nov 07, <span style="color:#2aa198">2017</span> 1:25:13 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
 INFO: |open | /auth_mellon.php |  |
-Nov <span style="color:#2aa198">07</span>, <span style="color:#2aa198">2017</span> <span style="color:#2aa198">1</span>:25:14 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
+Nov 07, <span style="color:#2aa198">2017</span> 1:25:14 PM org.openqa.selenium.server.htmlrunner.CoreTestCase run
 INFO: |waitForPageToLoad | <span style="color:#2aa198">3000</span> |  |
 .
 .
 .etc
 
 &lt;td&gt;result:&lt;/td&gt;
-&lt;td&gt;PASS&lt;/td&gt;</code></pre></div>
+&lt;td&gt;PASS&lt;/td&gt;
+
+
+</code></pre></div>
 
 <footer class=" footline" >
 	
@@ -2035,7 +2029,7 @@ INFO: |waitForPageToLoad | <span style="color:#2aa198">3000</span> |  |
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/es/legacy_docs/html-runner/">
       “HTML runner”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3200,19 +3194,19 @@ INFO: |waitForPageToLoad | <span style="color:#2aa198">3000</span> |  |
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/clipboard.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/jquery.sticky.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/featherlight.min.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/highlight.pack.js?1591393148"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/learn.js?1591379906"></script>
-    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591379906"></script>
+    <script src="https://selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/learn.js?1591393148"></script>
+    <script src="https://selenium.dev/documentation/es/js/hugo-learn.js?1591393148"></script>
 
-    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591379906" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591379906"></script>
+    <link href="https://selenium.dev/documentation/es/mermaid/mermaid.css?1591393148" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/es/mermaid/mermaid.js?1591393148"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

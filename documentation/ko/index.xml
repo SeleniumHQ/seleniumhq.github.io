@@ -49,7 +49,7 @@ Every effort has been made to make this documentation as complete and as accurat
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid>
-      <description>  Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     
@@ -83,7 +83,7 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
       <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
       <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
 Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.xml 파일에 추가해야 합니다.</description>
     </item>
     
     <item>
@@ -96,7 +96,7 @@ Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로
 브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의 상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.
 최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.
 필드에 텍스트 입력, 드롭 다운 및 체크 박스 선택, 링크 클릭, 마우스 이동, 임의의 JavaScript 실행 등의 기능이 제공됩니다.
-웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다.</description>
+웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description>
     </item>
     
     <item>
@@ -117,7 +117,7 @@ WebDriver provides capabilities that each remote end will/should support the imp
       
       <guid>https://selenium.dev/documentation/ko/webdriver/understanding_the_components/</guid>
       <description>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다. 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는 이 설명에서 용어가 사용되는 방식에 대한 분석.
-술어  API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;rdquo;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description>
+술어  API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;quot;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description>
     </item>
     
     <item>
@@ -159,7 +159,7 @@ WebDriver provides capabilities that each remote end will/should support the imp
       <guid>https://selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks.</description>
+Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics.</description>
     </item>
     
     <item>
@@ -181,7 +181,7 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <guid>https://selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.</description>
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.</description>
     </item>
     
     <item>
@@ -345,7 +345,8 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       
       <guid>https://selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question: &amp;gt;Are we building the right product?.</description>
+ Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question:
+ Are we building the right product?.</description>
     </item>
     
     <item>
@@ -475,7 +476,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</guid>
-      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;rdquo;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
+      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;quot;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
     </item>
     
     <item>
@@ -486,7 +487,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       <guid>https://selenium.dev/documentation/ko/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
- Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
+  Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
     </item>
     
     <item>
@@ -519,7 +520,7 @@ Add Cookie It is used to add a cookie to the current browsing context.</descript
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</guid>
       <description>Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다. 불가능해서가 아니라, 그것들이 성능을 테스트하는데 최적화되어 있지 않기 때문에 좋은 결과를 얻지 못 할 것이다.
-사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&amp;rsquo;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
+사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&#39;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
 예를 들어 브라우저 시작 속도, HTTP 서버의 속도, JavaScript 또는 CSS를 호스팅하는 타사 서버의 응답, WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은 결과에 변화를 일으킬 것이다.</description>
     </item>
     
@@ -531,7 +532,8 @@ Add Cookie It is used to add a cookie to the current browsing context.</descript
       <guid>https://selenium.dev/documentation/ko/webdriver/http_proxies/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
-A proxy server for automation scripts with Selenium could be helpful for:</description>
+A proxy server for automation scripts with Selenium could be helpful for:
+ Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.</description>
     </item>
     
     <item>
@@ -562,7 +564,7 @@ curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사
       
       <guid>https://selenium.dev/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Wait class. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
+ Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Waitclass. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
     </item>
     
     <item>
@@ -582,8 +584,9 @@ The document.readyState property of a document describes the loading state of th
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.</description>
+      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
     <item>
@@ -617,7 +620,7 @@ sendKeys The sendKeys types a key sequence in DOM element even if modifier key s
       <description>Selenium은 거대한 소프트웨어 프로젝트로, 사이트와 문서는 작동 원리를 이해하고 잠재력을 효과적으로 활용하는 데 중요한 역할을 합니다.
 이 프로젝트는 Selenium 사이트와 문서를 담고 있습니다. 여기엔 Selenium을 효과적으로 사용하기 위한 업데이트 정보를 제공하고, 어떻게 참여하고 기여할 수 있는지에 대한 지속적인 노력이 담겨 있습니다.
 사이트와 문서에 기여하기 위한 방법은 아래 기술된 과정을 따릅니다. 여러분은 익숙해질 때 까지 더 보기를 충분한 시간을 들여 읽어보시고 바랍니다.
-Selenium은 여러분의 기여를 환영합니다. 기여하는 방법은 여러 가지가 있습니다:</description>
+ Selenium은 여러분의 기여를 환영합니다. 기여하는 방법은 여러 가지가 있습니다:</description>
     </item>
     
   </channel>

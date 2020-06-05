@@ -11,20 +11,20 @@
     <title>Remote WebDriver client :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1591379909" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1591393149" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1591379909" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1591393149" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1591393149"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1591379909"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1591379909"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1591393149"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1591393149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1591379909"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1591393149"></script>
 
     
   </div>
@@ -1921,13 +1921,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#browser-options">Browser options</a></li>
-<li><a href="#local-file-detector">Local file detector</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#browser-options">Browser options</a></li>
+    <li><a href="#local-file-detector">Local file detector</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1953,21 +1950,17 @@
 
 
 
-
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from
 English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!</p>
 </div>
-
 
 <p>To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
 We do this by pointing the URL to the address of the server running our tests.
 In order to customize our configuration, we set desired capabilities.
 Below is an example of instantiating a remote WebDriver object
-pointing to our remote web server, <em>www.example.com</em>,
+pointing to our remote web server, <em><a href="http://www.example.com">www.example.com</a></em>,
 running our tests on Firefox.</p>
-
 
 
 
@@ -2009,10 +2002,10 @@ running our tests on Firefox.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-FirefoxOptions <span style="color:#268bd2">firefoxOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions();
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(<span style="color:#719e07">new</span> URL(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>), firefoxOptions);
-driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
-driver.quit();
+FirefoxOptions firefoxOptions <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxOptions<span style="color:#719e07">();</span>
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span><span style="color:#719e07">new</span> URL<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">),</span> firefoxOptions<span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2089,14 +2082,10 @@ driver.quit()
 </section>
 </div>
 </div>
-
 <p>To further customize our test configuration, we can add other desired capabilities.</p>
-
 <h2 id="browser-options">Browser options</h2>
-
 <p>For example, suppose you wanted to run Chrome on Windows XP,
 using Chrome version 67:</p>
-
 
 
 
@@ -2138,12 +2127,12 @@ using Chrome version 67:</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-ChromeOptions <span style="color:#268bd2">chromeOptions</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions();
-chromeOptions.setCapability(<span style="color:#2aa198">&#34;browserVersion&#34;</span>, <span style="color:#2aa198">&#34;67&#34;</span>);
-chromeOptions.setCapability(<span style="color:#2aa198">&#34;platformName&#34;</span>, <span style="color:#2aa198">&#34;Windows XP&#34;</span>);
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver(<span style="color:#719e07">new</span> URL(<span style="color:#2aa198">&#34;http://www.example.com&#34;</span>), chromeOptions);
-driver.get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>);
-driver.quit();
+ChromeOptions chromeOptions <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeOptions<span style="color:#719e07">();</span>
+chromeOptions<span style="color:#719e07">.</span>setCapability<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;browserVersion&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;67&#34;</span><span style="color:#719e07">);</span>
+chromeOptions<span style="color:#719e07">.</span>setCapability<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;platformName&#34;</span><span style="color:#719e07">,</span> <span style="color:#2aa198">&#34;Windows XP&#34;</span><span style="color:#719e07">);</span>
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> RemoteWebDriver<span style="color:#719e07">(</span><span style="color:#719e07">new</span> URL<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">),</span> chromeOptions<span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.google.com&#34;</span><span style="color:#719e07">);</span>
+driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
   </code></pre></div>
 </section>
   
@@ -2232,9 +2221,7 @@ driver.quit();
 </section>
 </div>
 </div>
-
 <h2 id="local-file-detector">Local file detector</h2>
-
 <p>The Local File Detector allows the transfer of files from the client
 machine to the remote server.  For example, if a test needs to upload a
 file to a web application, a remote WebDriver can automatically transfer
@@ -2242,7 +2229,6 @@ the file from the local machine to the remote web server during
 runtime. This allows the file to be uploaded from the remote machine
 running the test. It is not enabled by default and can be enabled in
 the following way:</p>
-
 
 
 
@@ -2284,7 +2270,7 @@ the following way:</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.setFileDetector(<span style="color:#719e07">new</span> LocalFileDetector());
+driver<span style="color:#719e07">.</span>setFileDetector<span style="color:#719e07">(</span><span style="color:#719e07">new</span> LocalFileDetector<span style="color:#719e07">());</span>
   </code></pre></div>
 </section>
   
@@ -2342,9 +2328,7 @@ driver.fileDetector = LocalFileDetector()
 </section>
 </div>
 </div>
-
 <p>Once the above code is defined, you can upload a file in your test in the following way:</p>
-
 
 
 
@@ -2386,9 +2370,9 @@ driver.fileDetector = LocalFileDetector()
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.get(<span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span>);
-WebElement <span style="color:#268bd2">upload</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;myfile&#34;</span>));
-upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span>);
+driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://sso.dev.saucelabs.com/test/guinea-file-upload&#34;</span><span style="color:#719e07">);</span>
+WebElement upload <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;myfile&#34;</span><span style="color:#719e07">));</span>
+upload<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/darkbulb.jpg&#34;</span><span style="color:#719e07">);</span>
   </code></pre></div>
 </section>
   
@@ -2454,7 +2438,7 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/remote_webdriver/remote_webdriver_client/">
       “Remote WebDriver client”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3619,19 +3603,19 @@ upload.sendKeys(<span style="color:#2aa198">&#34;/Users/sso/the/local/path/to/da
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1591393149"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1591393149"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1591379909" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1591379909"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1591393149" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1591393149"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -100,7 +100,7 @@ Démarrage du serveur à partir de la ligne de commande Une fois que vous avez t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/grid/purposes_and_main_functionalities/</guid>
-      <description> Point d&amp;rsquo;entrée central pour tous les tests Gestion et contrôle des nœuds / environnement où s&amp;rsquo;exécutent les navigateurs Mise à l&amp;rsquo;échelle Exécution de tests en parallèle Test multiplateforme L&amp;rsquo;équilibrage de charge  </description>
+      <description> Point d&amp;rsquo;entrée central pour tous les tests Gestion et contrôle des nœuds / environnement où s&amp;rsquo;exécutent les navigateurs Mise à l&#39;échelle Exécution de tests en parallèle Test multiplateforme L&#39;équilibrage de charge  </description>
     </item>
     
     <item>
@@ -139,7 +139,7 @@ WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/on_test_automation/</guid>
-      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&amp;rsquo;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
+      <description>Commencez par vous demander si vous avez vraiment besoin ou non d&amp;rsquo;un navigateur. Il est probable qu&#39;à un moment donné, si vous travaillez sur une application Web complexe, vous devrez ouvrir un navigateur et le tester.
 Les tests fonctionnels pour l&amp;rsquo;utilisateur final, tels que les tests au sélénium, sont cependant coûteux à exécuter. En outre, ils nécessitent généralement une infrastructure substantielle être en place pour fonctionner efficacement. C&amp;rsquo;est une bonne règle de toujours se demander si ce que l&amp;rsquo;on veut tester peut être fait en utilisant des approches de test plus légères telles que des tests unitaires ou avec une approche de niveau inférieur.</description>
     </item>
     
@@ -219,7 +219,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new Firefo
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
       <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
-L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
+L&amp;rsquo;objectif de WebDriver est d&#39;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>
@@ -228,7 +228,7 @@ L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interactio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&amp;rsquo;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
+      <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&#39;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
     </item>
     
     <item>
@@ -247,7 +247,7 @@ Ne t&amp;rsquo;inquiètes pas. Il y a une solution: la classe Color!</descriptio
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/file_downloads/</guid>
-      <description>Bien qu&amp;rsquo;il soit possible de démarrer un téléchargement en cliquant sur un lien avec un navigateur sous le contrôle de Selenium, l&amp;rsquo;API n&amp;rsquo;expose pas la progression du téléchargement, ce qui n&amp;rsquo;est pas idéal pour tester les fichiers téléchargés. En effet, le téléchargement de fichiers n&amp;rsquo;est pas considéré comme un aspect important d&amp;rsquo;émuler l&amp;rsquo;interaction des utilisateurs avec la plate-forme Web. À la place, recherchez le lien à l&amp;rsquo;aide de Selenium (et tous les cookies requis) et le passer à une bibliothèque de requêtes HTTP comme libcurl.</description>
+      <description>Bien qu&amp;rsquo;il soit possible de démarrer un téléchargement en cliquant sur un lien avec un navigateur sous le contrôle de Selenium, l&amp;rsquo;API n&amp;rsquo;expose pas la progression du téléchargement, ce qui n&amp;rsquo;est pas idéal pour tester les fichiers téléchargés. En effet, le téléchargement de fichiers n&amp;rsquo;est pas considéré comme un aspect important d&#39;émuler l&amp;rsquo;interaction des utilisateurs avec la plate-forme Web. À la place, recherchez le lien à l&amp;rsquo;aide de Selenium (et tous les cookies requis) et le passer à une bibliothèque de requêtes HTTP comme libcurl.</description>
     </item>
     
     <item>
@@ -275,8 +275,8 @@ Selenium WebDriver est une approche complètement différente à l&amp;rsquo;aut
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/</guid>
-      <description>Si vous prévoyez d&amp;rsquo;utiliser Grid, vous devez télécharger le selenium-server-standalone JAR. Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+      <description>Si vous prévoyez d&amp;rsquo;utiliser [Grid] (/grid/), vous devez télécharger le [selenium-server-standalone JAR] (https://selenium.dev/downloads/). Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
     <item>
@@ -316,7 +316,7 @@ D&amp;rsquo;autres options incluent l&amp;rsquo;utilisation de fournisseurs tels
       
       <guid>https://selenium.dev/documentation/fr/legacy_docs/html-runner/</guid>
       <description>Selenium HTML-runner permet d&amp;rsquo;exécuter des Test Suites depuis la ligne de commande. Les Tests Suites sont des exports HTML depuis Selenium IDE ou autre outil compatible.
-Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor).</description>
+Informations générales  Les combinaisons de version de geckodriver / firefox / selenium-html-runner sont importantes. Il doit y avoir une matrice de compatibilité quelque part. selenium-html-runner exécute seulement des Test Suites (et non pas des Test Case, comme un export de Monitis Transaction Monitor). Assurez-vous de vous y conformer.</description>
     </item>
     
     <item>
@@ -335,8 +335,9 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Sele
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/introduction/types_of_testing/</guid>
-      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si une fonctionnalité ou un système répond aux attentes et exigences du client. Ce type de test implique généralement le client la coopération ou la rétroaction, étant une activité de validation qui répond à la question: &amp;gt; Construisons-nous le produit non?.
-Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur.</description>
+      <description>Test d&amp;rsquo;acceptation Ce type de test est effectué pour déterminer si une fonctionnalité ou un système répond aux attentes et exigences du client. Ce type de test implique généralement le client la coopération ou la rétroaction, étant une activité de validation qui répond à la question:
+ Construisons-nous le produit non?.
+ Pour les applications web, l&amp;rsquo;automatisation de ces tests peut se faire directement avec Selenium en simulant le comportement attendu de l&amp;rsquo;utilisateur.</description>
     </item>
     
     <item>
@@ -356,7 +357,7 @@ Si vous rencontrez un problème avec la documentation, nous souhaitons le savoir
       
       <guid>https://selenium.dev/documentation/fr/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>La souris représente un événement de souris. Les actions de la souris sont effectuées en utilisant une interface de bas niveau qui nous permet de fournir une action de saisie de périphérique virtualisé au navigateur Web.
-clickAndHold Il se déplacera vers l&amp;rsquo;élément et cliquera (sans le relâcher) au milieu de l&amp;rsquo;élément donné.
+clickAndHold Il se déplacera vers l&#39;élément et cliquera (sans le relâcher) au milieu de l&#39;élément donné.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.</description>
     </item>
     
@@ -366,7 +367,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>L&amp;rsquo;élimination des dépendances sur les services externes s&amp;rsquo;améliorera considérablement la vitesse et la stabilité de vos tests.</description>
+      <description>L&#39;élimination des dépendances sur les services externes s&amp;rsquo;améliorera considérablement la vitesse et la stabilité de vos tests.</description>
     </item>
     
     <item>
@@ -375,7 +376,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>Pour plusieurs raisons, vous connecter à des sites comme Gmail et Facebook l&amp;rsquo;utilisation de WebDriver n&amp;rsquo;est pas recommandée. En plus d&amp;rsquo;être contre les conditions d&amp;rsquo;utilisation de ces sites (où vous risquez de fermer le compte), c&amp;rsquo;est lent et peu fiable.
+      <description>Pour plusieurs raisons, vous connecter à des sites comme Gmail et Facebook l&amp;rsquo;utilisation de WebDriver n&amp;rsquo;est pas recommandée. En plus d&#39;être contre les conditions d&amp;rsquo;utilisation de ces sites (où vous risquez de fermer le compte), c&amp;rsquo;est lent et peu fiable.
 La pratique idéale consiste à utiliser les API proposées par les fournisseurs de messagerie, ou dans le cas de Facebook le service des outils de développement qui expose une API pour créer des comptes de test, des amis, etc.</description>
     </item>
     
@@ -415,7 +416,7 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/waits/</guid>
-      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&amp;rsquo;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
+      <description>WebDriver peut généralement être considéré comme ayant une API de blocage. Parce que c&amp;rsquo;est une bibliothèque hors processus qui instruit le navigateur à faire, et parce que la plate-forme Web a une nature intrinsèquement asynchrone, WebDriver ne suit pas l&#39;état actif en temps réel du DOM. Cela s&amp;rsquo;accompagne de quelques défis que nous aborderons ici.
 De l&amp;rsquo;expérience, la plupart des intermittents résultant de l&amp;rsquo;utilisation de Selenium et de WebDriver sont liés aux conditions de concurrence qui se produisent entre le navigateur et les instructions de l&amp;rsquo;utilisateur.</description>
     </item>
     
@@ -446,7 +447,7 @@ ThreadGuard  Cette classe est uniquement disponible dans la liaison Java
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Le sélénium n&amp;rsquo;est pas conçu pour rendre compte de l&amp;rsquo;état des cas de test courir. Profitant des capacités de rapport intégrées de l&amp;rsquo;unité les cadres de test sont un bon début. La plupart des cadres de tests unitaires ont rapports pouvant générer des rapports au format xUnit ou HTML. xUnit les rapports sont populaires pour importer des résultats dans une intégration continue (CI) comme Jenkins, Travis, Bamboo, etc. Voici quelques liens pour plus d&amp;rsquo;informations sur les sorties de rapports pour plusieurs langues.</description>
+      <description>Le sélénium n&amp;rsquo;est pas conçu pour rendre compte de l&#39;état des cas de test courir. Profitant des capacités de rapport intégrées de l&amp;rsquo;unité les cadres de test sont un bon début. La plupart des cadres de tests unitaires ont rapports pouvant générer des rapports au format xUnit ou HTML. xUnit les rapports sont populaires pour importer des résultats dans une intégration continue (CI) comme Jenkins, Travis, Bamboo, etc. Voici quelques liens pour plus d&amp;rsquo;informations sur les sorties de rapports pour plusieurs langues.</description>
     </item>
     
     <item>
@@ -466,8 +467,8 @@ Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre u
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Bien que mentionné à plusieurs endroits, il convient de le mentionner à nouveau. Assurer les tests sont isolés les uns des autres.
- Ne partagez pas les données de test. Imaginez plusieurs tests qui interrogent chacun la base de données pour les commandes valides avant d&amp;rsquo;en choisir une pour effectuer une action. Devrait deux tests prenez la même commande que vous risquez d&amp;rsquo;obtenir un comportement inattendu.
- Nettoyez les données périmées dans l&amp;rsquo;application qui pourraient être récupérées par un autre test par ex.</description>
+  Ne partagez pas les données de test. Imaginez plusieurs tests qui interrogent chacun la base de données pour les commandes valides avant d&amp;rsquo;en choisir une pour effectuer une action. Devrait deux tests prenez la même commande que vous risquez d&amp;rsquo;obtenir un comportement inattendu.
+  Nettoyez les données périmées dans l&amp;rsquo;application qui pourraient être récupérées par un autre test par ex.</description>
     </item>
     
     <item>
@@ -508,7 +509,7 @@ Une mauvaise façon de tester votre module est que le contenu est créé et publ
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/worst_practices/link_spidering/</guid>
-      <description>Utilisation de WebDriver pour parcourir des liens n&amp;rsquo;est pas une pratique recommandée non pas parce que cela ne peut pas être fait, mais parce que ce n&amp;rsquo;est certainement pas l&amp;rsquo;outil le plus idéal. WebDriver a besoin de temps pour démarrer, et peut prendre plusieurs secondes jusqu&amp;rsquo;à une minute en fonction de la façon dont votre test est écrit, juste pour accéder à la page et parcourir le DOM.
+      <description>Utilisation de WebDriver pour parcourir des liens n&amp;rsquo;est pas une pratique recommandée non pas parce que cela ne peut pas être fait, mais parce que ce n&amp;rsquo;est certainement pas l&amp;rsquo;outil le plus idéal. WebDriver a besoin de temps pour démarrer, et peut prendre plusieurs secondes jusqu&#39;à une minute en fonction de la façon dont votre test est écrit, juste pour accéder à la page et parcourir le DOM.
 Au lieu d&amp;rsquo;utiliser WebDriver pour cela, vous pourriez économiser une tonne de temps en exécutant une commande curl, ou en utilisant une bibliothèque telle que BeautifulSoup puisque ces méthodes ne reposent pas sur la création d&amp;rsquo;un navigateur et la navigation vers une page.</description>
     </item>
     
@@ -529,7 +530,7 @@ Un serveur proxy pour les scripts d&amp;rsquo;automatisation avec Le Selenium po
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>Martin Fowler a inventé le terme &amp;ldquo;Fluent API&amp;rdquo;. Sélénium déjà implémente quelque chose comme ça dans leur classe FluentWait, qui est conçu comme une alternative à la classe standard Wait. Vous pouvez activer le modèle de conception de l&amp;rsquo;API Fluent dans votre objet de page puis interrogez la page de recherche Google avec un extrait de code comme celui-ci:
+      <description>Martin Fowler a inventé le terme [&amp;ldquo;Fluent API&amp;rdquo;](// www.martinfowler.com/bliki/FluentInterface.html). Sélénium déjà implémente quelque chose comme ça dans leur classe FluentWait, qui est conçu comme une alternative à la classe standard Wait. Vous pouvez activer le modèle de conception de l&amp;rsquo;API Fluent dans votre objet de page puis interrogez la page de recherche Google avec un extrait de code comme celui-ci:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); La classe d&amp;rsquo;objets de page Google avec ce comportement fluide pourrait ressembler à ceci:</description>
     </item>
     
@@ -540,7 +541,7 @@ driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#3
       
       <guid>https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/</guid>
       <description>Définit la stratégie de chargement des pages de la session en cours. Par défaut, lorsque Selenium WebDriver charge une page, il suit le normal pageLoadStrategy. Il est toujours recommandé d&amp;rsquo;arrêter le téléchargement de ressources (comme les images, css, js) lorsque le chargement de la page prend beaucoup de temps.
-La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.</description>
+La propriété document.readyState d&amp;rsquo;un document décrit l&#39;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.get() (ou) driver.</description>
     </item>
     
     <item>
@@ -550,7 +551,7 @@ La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;�
       
       <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>Commencez chaque test à partir d&amp;rsquo;un état connu propre. Idéalement, faites tourner une nouvelle machine virtuelle pour chaque test. Si la rotation d&amp;rsquo;une nouvelle machine virtuelle n&amp;rsquo;est pas pratique, démarrez au moins un nouveau WebDriver pour chaque test. Pour Firefox, démarrez un WebDriver avec votre profil connu.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
     <item>
@@ -561,7 +562,7 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
       <guid>https://selenium.dev/documentation/fr/webdriver/web_element/</guid>
       <description>WebElement représente un élément DOM. Les WebElements peuvent être trouvés en recherchant racine du document à l&amp;rsquo;aide d&amp;rsquo;une instance WebDriver ou en recherchant sous une autre WebElement
 L&amp;rsquo;API WebDriver fournit des méthodes intégrées pour trouver les WebElements qui sont basé sur différentes propriétés comme ID, nom, classe, XPath, sélecteurs CSS, texte de lien, etc.
-Find Element Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante, qui peut être utilisé pour de futures actions d&amp;rsquo;élément</description>
+Find Element Il est utilisé pour rechercher un élément et renvoie une première référence WebElement unique correspondante, qui peut être utilisé pour de futures actions d&#39;élément</description>
     </item>
     
     <item>
@@ -571,8 +572,8 @@ Find Element Il est utilisé pour rechercher un élément et renvoie une premiè
       
       <guid>https://selenium.dev/documentation/fr/webdriver/keyboard/</guid>
       <description>Le clavier représente un événement KeyBoard. Les actions du clavier sont effectuées à l&amp;rsquo;aide de bas niveau interface qui nous permet de fournir une entrée d&amp;rsquo;appareil virtualisé au navigateur Web.
-sendKeys SendKeys tape une séquence de touches dans l&amp;rsquo;élément DOM même si une séquence de touches de modification est rencontrée. Here are the list of possible keystrokes that WebDriver Supports.
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.</description>
+sendKeys SendKeys tape une séquence de touches dans l&#39;élément DOM même si une séquence de touches de modification est rencontrée. Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.</description>
     </item>
     
     <item>
@@ -582,7 +583,8 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.
       
       <guid>https://selenium.dev/documentation/fr/contributing/</guid>
       <description>Selenium est un gros projet logiciel, son site et sa documentation sont essentiels comprendre comment les choses fonctionnent et apprendre des moyens efficaces d&amp;rsquo;exploiter son potentiel.
-Ce projet contient à la fois le site et la documentation de Selenium. C&amp;rsquo;est un effort continu (qui ne vise aucune version spécifique) pour fournir des informations mises à jour sur la façon d&amp;rsquo;utiliser efficacement le sélénium, impliqués et comment contribuer au sélénium.</description>
+Ce projet contient à la fois le site et la documentation de Selenium. C&amp;rsquo;est un effort continu (qui ne vise aucune version spécifique) pour fournir des informations mises à jour sur la façon d&amp;rsquo;utiliser efficacement le sélénium, impliqués et comment contribuer au sélénium.
+Les contributions vers le site et les documents suivent le processus décrit dans la section ci-dessous sur les contributions.</description>
     </item>
     
   </channel>

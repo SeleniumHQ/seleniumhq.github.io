@@ -11,20 +11,20 @@
     <title>Browsers :: Selenium 문서</title>
 
     
-    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591379918" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591379918" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ko/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591379918" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ko/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591379918"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591379918"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ko/js/search.js?1591393152"></script>
 
     
   </div>
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="시작하기" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1921,13 +1921,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#consumer-browsers">Consumer browsers</a></li>
-<li><a href="#specialized-browsers">Specialized browsers</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#consumer-browsers">Consumer browsers</a></li>
+    <li><a href="#specialized-browsers">Specialized browsers</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1953,18 +1950,13 @@
 
 
 
-
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from
 English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!</p>
 </div>
 
-
 <h2 id="consumer-browsers">Consumer browsers</h2>
-
 <p>The Selenium framework officially supports the following browsers:</p>
-
 <table>
 <thead>
 <tr>
@@ -1973,32 +1965,27 @@ it by sending us pull requests!</p>
 <th>Versions Supported</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>Chrome</td>
 <td><a href="//sites.google.com/a/chromium.org/chromedriver/">Chromium</a></td>
 <td>All versions</td>
 </tr>
-
 <tr>
 <td>Firefox</td>
 <td><a href="//github.com/mozilla/geckodriver/">Mozilla</a></td>
 <td>54 and newer</td>
 </tr>
-
 <tr>
 <td>Internet Explorer</td>
 <td>Selenium</td>
 <td>6 and newer</td>
 </tr>
-
 <tr>
 <td>Opera</td>
 <td><a href="//github.com/operasoftware/operachromiumdriver/">Opera Chromium</a> / <a href="//github.com/operasoftware/operaprestodriver">Presto</a></td>
 <td>10.5 and newer</td>
 </tr>
-
 <tr>
 <td>Safari</td>
 <td><a href="//webkit.org/blog/6900/webdriver-support-in-safari-10/">Apple</a></td>
@@ -2006,14 +1993,11 @@ it by sending us pull requests!</p>
 </tr>
 </tbody>
 </table>
-
 <h2 id="specialized-browsers">Specialized browsers</h2>
-
 <p>There is also a set of specialized browsers out there
 typically used in development environments.
 We can make use of some of these browsers for automation purposes also,
 and Selenium ties in support for the following specialized drivers:</p>
-
 <table>
 <thead>
 <tr>
@@ -2022,7 +2006,6 @@ and Selenium ties in support for the following specialized drivers:</p>
 <th>Maintainer</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>HtmlUnitDriver</td>
@@ -2040,7 +2023,7 @@ and Selenium ties in support for the following specialized drivers:</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/">
       “Browsers”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3202,19 +3185,19 @@ and Selenium ties in support for the following specialized drivers:</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591379918"></script>
-    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591379918"></script>
+    <script src="https://selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ko/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591379918" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591379918"></script>
+    <link href="https://selenium.dev/documentation/ko/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ko/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

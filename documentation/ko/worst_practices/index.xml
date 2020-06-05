@@ -56,7 +56,7 @@ Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근�
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/test_dependency/</guid>
-      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;rdquo;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
+      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;quot;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근�
       
       <guid>https://selenium.dev/documentation/ko/worst_practices/performance_testing/</guid>
       <description>Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다. 불가능해서가 아니라, 그것들이 성능을 테스트하는데 최적화되어 있지 않기 때문에 좋은 결과를 얻지 못 할 것이다.
-사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&amp;rsquo;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
+사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&#39;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
 예를 들어 브라우저 시작 속도, HTTP 서버의 속도, JavaScript 또는 CSS를 호스팅하는 타사 서버의 응답, WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은 결과에 변화를 일으킬 것이다.</description>
     </item>
     

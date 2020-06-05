@@ -19,7 +19,7 @@
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/page_object_models/</guid>
       <description>PO（page object）设计模式是在自动化中已经流行起来的一种易于维护和减少代码的设计模式. 在自动化测试中, PO对象作为一个与页面交互的接口. 测试中需要与页面的UI进行交互时, 便调用PO的方法. 这样做的好处是, 如果页面的UI发生了更改,那么测试用例本身不需要更改, 只需更改PO中的代码即可.
 PO设计模式具有以下优点:
- 测试代码与页面的定位代码（如定位器或者其他的映射）相分离. 该页面提供的方法或元素在一个独立的类中, 而不是将这些方法或元素分散在整个测试中.  这允许在一个地方修改由于UI变化所带来的所有修改. 随着这种&amp;rdquo;测试设计模式&amp;rdquo;的广泛使用, 可以在众多博客中找到有关此技术的有用信息. 我们鼓励希望了解更多信息的读者在互联网上搜索有关此主题的博客. 许多人已经写过这种设计模式, 并且可以提供超出本用户指南范围的有用提示. 不过, 为了让您入门, 我们将通过一个简单的示例来说明页面对象.
+ 测试代码与页面的定位代码（如定位器或者其他的映射）相分离. 该页面提供的方法或元素在一个独立的类中, 而不是将这些方法或元素分散在整个测试中.  这允许在一个地方修改由于UI变化所带来的所有修改. 随着这种&amp;quot;测试设计模式&amp;quot;的广泛使用, 可以在众多博客中找到有关此技术的有用信息. 我们鼓励希望了解更多信息的读者在互联网上搜索有关此主题的博客. 许多人已经写过这种设计模式, 并且可以提供超出本用户指南范围的有用提示. 不过, 为了让您入门, 我们将通过一个简单的示例来说明页面对象.
 首先, 思考一个不使用PO模式的自动化测试的典型案例:
 /*** * Tests login feature */ public class Login { public void testLogin() { // 在登录页面上填写登录数据  driver.findElement(By.name(&amp;#34;user_name&amp;#34;)).sendKeys(&amp;#34;testUser&amp;#34;); driver.findElement(By.name(&amp;#34;password&amp;#34;)).sendKeys(&amp;#34;my supersecret password&amp;#34;); driver.findElement(By.name(&amp;#34;sign-in&amp;#34;)).click(); // 登录后验证h1标签是否为Hello userName  driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).isDisplayed(); assertThat(driver.findElement(By.tagName(&amp;#34;h1&amp;#34;)).getText(), is(&amp;#34;Hello userName&amp;#34;)); } } 这种方法有两个问题.
  测试方法与定位器 (在此实例中为By.name)耦合过于严重. 如果测试的用户界面更改了其定位器或登录名的输入和处理方式, 则测试本身必须进行更改. 在对登录页面的所有测试中, 同一个定位器会散布在其中.  可以在以下登录页面的示例中应用PO设计模式重写此示例.
@@ -54,7 +54,7 @@ RC服务器捆绑了Selenium Core并将其自动注入浏览器. 当您的测试
 虽然 Selenium 主要用于网站的前端测试，但其核心是浏览器用户代理库。 这些接口在应用程序中无处不在，它们鼓励与其他库进行组合，以满足您的目的。
 一个接口来统治它们 该项目的指导原则之一是支持所有（主要）浏览器技术的通用接口。 Web 浏览器是非常复杂的，高度工程化的应用程序， 以完全不同的方式执行它们的操作，但是在执行这些操作时，它们通常看起来是一样的 即使文本以相同的字体呈现，图像也会显示在相同的位置，并且链接会将您带到相同的目的地。 下面发生的事情就像白天和黑夜一样不同。 Selenium “抽象”了这些差异，向编写代码的人隐藏了它们的细节和复杂性。 这允许您编写几行代码来执行一个复杂的工作流程， 但是这几行代码将在 Firefox、 Internet Explorer、 Chrome 和所有其他支持的浏览器上执行。
 工具和支持 Selenium 的极简设计方法使其具有通用性，可以作为更大应用程序中的组件。 Selenium 保护伞下提供的周边基础设施为您提供了组合自己的 浏览器 grid 的工具， 因此测试就可以跨一系列机器在不同的浏览器和多个操作系统上运行。
-想象一下， 服务器机房或数据中心的一组计算机同时启动浏览器，访问站点的链接、表单和表格 &amp;mdash; 全天 24 小时测试应用程序。 通过为最常见的语言提供的简单编程接口， 这些测试将不知疲倦地并行运行， 当错误发生时向您报告。
+想象一下， 服务器机房或数据中心的一组计算机同时启动浏览器，访问站点的链接、表单和表格 — 全天 24 小时测试应用程序。 通过为最常见的语言提供的简单编程接口， 这些测试将不知疲倦地并行运行， 当错误发生时向您报告。
 通过为用户提供工具和文档， 不仅可以控制浏览器， 还可以方便地扩展和部署这些 grid， 从而帮助您实现这一目标。
 通过为用户提供工具和文档，不仅可以控制浏览器， 还可以简化网格的伸缩和部署。 来帮助您实现这一目标， 这些工具和文档
 谁在使用 Selenium 世界上许多最重要的公司都在基于浏览器的测试中采用了 Selenium， 这常常取代了多年来涉及其他专有工具的工作。 随着它越来越受欢迎， 它的需求和挑战也成倍增加。
@@ -123,7 +123,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</guid>
-      <description> 消费级浏览器 当前Selenium框架支持以下浏览器:
+      <description>消费级浏览器 当前Selenium框架支持以下浏览器:
    浏览器 维护者 支持的版本     Chrome Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
    驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
@@ -136,10 +136,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       <guid>https://selenium.dev/documentation/zh-cn/front_matter/copyright_and_attributions/</guid>
       <description>Selenium文档 Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 我们已尽一切努力使本文档尽可能完整和准确, 但难以保证一定适用. 信息提供是基于“as-is”的. 若本文档所含信息引起的任何损失或损害, 作者和出版者对所有个人或实体均不承担任何责任. 不承担任何与使用本文信息相关的专利责任.
-归属 感谢: Selenium Main Repository .ghContributors { display: flex; flex-flow: wrap; align-content: flex-start; } .ghContributors &amp;gt; div { width: 50%; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label { padding-left: 4px; } .ghContributors &amp;gt; div span { font-size: x-small; padding-left: 4px; }  @shs96c4547 commits 
-@barancev3066 commits 
-@jimevans2312 commits 
-@jleyba1464 commits</description>
+归属 感谢: Selenium Main Repository Selenium IDE Docker Selenium Selenium Website &amp;amp; Docs Previous Selenium Website Previous Documentation Rewrite Project Selenium文档项目使用的第三方软件:    软件 版本 许可     Hugo v0.59.0 Apache 2.0   Hugo Learn Theme v2.4.0 MIT   Code Tabs Style &amp;mdash; MIT    许可 源自Selenium项目的所有代码和文档均基于Apache2.0的许可, 由 Software Freedom Conservancy 作为版权所有者.</description>
     </item>
     
     <item>
@@ -162,9 +159,9 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
 java -jar selenium-server-standalone-{VERSION}.jar 运行服务器的注意事项 调用者应调用 Selenium#stop() 或 WebDriver#quit 以结束每次会话.
 Selenium服务器在内存中保留每个运行会话的日志, 这些日志将在调用 Selenium#stop() 或 WebDriver#quit 时清除. 如果您忘记终止这些会话, 则可能会造成服务器内存泄漏. 如果您保持运行时间非常长的会话, 则可能需要不时执行停止或退出的操作 (或使用-Xmx jvm选项增加内存) .
 超时 (自2.21版本) 服务器有两种不同的超时, 可以按如下设置:
-java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  控制允许浏览器挂起的时间 (以秒为单位的值) .  timeout  控制在回收会话之前允许客户端离开的时间 (以秒为单位的值) .   从2.21版本开始不再支持系统属性 selenium.server.session.timeout.
+java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  控制允许浏览器挂起的时间 (以秒为单位的值) .   timeout  控制在回收会话之前允许客户端离开的时间 (以秒为单位的值) .    从2.21版本开始不再支持系统属性 selenium.server.session.timeout.
 请注意, 当常规超时机制发生故障时, browserTimeout旨在用作备份超时机制, 该机制应主要在网格和服务器的环境中使用, 以确保崩溃或丢失的进程不会驻留太长时间, 从而干扰了运行时环境.
-以编程方式配置服务器 从理论上讲, 此过程就像将 DriverServlet映射到URL一样简单, 但是也可以将页面托管在轻量级容器中, 例如完全用代码配置的Jetty. 步骤如下.</description>
+以编程方式配置服务器 从理论上讲, 此过程就像将 DriverServlet映射到URL一样简单, 但是也可以将页面托管在轻量级容器中, 例如完全用代码配置的Jetty.</description>
     </item>
     
     <item>
@@ -296,7 +293,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new Firefo
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>领域特定语言 (DSL) 是一种为用户提供解决问题的表达方式的系统. 它使用户可以按照自己的术语与系统进行交互, 而不仅仅是通过程序员的语言.
-您的用户通常并不关心您网站的外观. 他们不在乎装饰, 动画或图形. 他们希望借助于您的系统, 以最小的难度使新员工融入整个流程； 他们想预订去阿拉斯加的旅行； 他们想以折扣价配置和购买独角兽. 您作为测试人员的工作应尽可能接近&amp;rdquo;捕捉”这种思维定势. 考虑到这一点, 我们开始着手&amp;rdquo;建模”您正在工作的应用程序, 以使测试脚本 (发布前用户仅有的代理) &amp;ldquo;说话”并代表用户.
+您的用户通常并不关心您网站的外观. 他们不在乎装饰, 动画或图形. 他们希望借助于您的系统, 以最小的难度使新员工融入整个流程； 他们想预订去阿拉斯加的旅行； 他们想以折扣价配置和购买独角兽. 您作为测试人员的工作应尽可能接近&amp;quot;捕捉”这种思维定势. 考虑到这一点, 我们开始着手&amp;quot;建模”您正在工作的应用程序, 以使测试脚本 (发布前用户仅有的代理) &amp;ldquo;说话”并代表用户.
 在Selenium中, DSL通常由方法表示, 其编写方式使API简单易读-它们使开发人员和干系人 (用户, 产品负责人, 商业智能专家等) 之间能够产生汇报.
 好处  可读: 业务关系人可以理解. 可写: 易于编写, 避免不必要的重复. 可扩展: 可以 (合理地) 添加功能而无需打破约定以及现有功能. 可维护: 通过将实现细节排除在测试用例之外, 您可以很好地隔离 AUT* 的修改.  Java 以下是Java中合理的DSL方法的示例. 为简便起见, 假定 driver 对象是预定义的并且可用于该方法.
 /** * Takes a username and password, fills out the fields, and clicks &amp;#34;login&amp;#34;. * @return An instance of the AccountPage */ public AccountPage loginAsUser(String username, String password) { WebElement loginField = driver.</description>
@@ -320,15 +317,12 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</guid>
       <description>通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、 Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持， 但 WebDriver 尽可能使用浏览器的内置自动化支持来驱动浏览器。
 WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。
-在不同的浏览器中，这可能有不同的级别。有关不同驱动程序特性的详细信息， 请参见 _驱动程序特性_。
+在不同的浏览器中，这可能有不同的级别。有关不同驱动程序特性的详细信息， 请参见 驱动程序特性。
 尽管所有的驱动程序共享一个面向用户的界面来控制浏览器，但它们设置浏览器会话的方式略有不同。 由于许多驱动程序实现是由第三方提供的，所以它们不包括在标准的 Selenium 发行版中。
 驱动程序实例化、配置文件管理和各种特定于浏览器的设置都是具体参数的例子，这些参数根据浏览器有 不同的需求。本节介绍了使用不同浏览器的基本要求。
 将可执行文件添加到 PATH 中 大多数驱动程序需要 Selenium 额外的可执行文件才能与浏览器通信。您可以在启动 WebDriver 之前手动指定可执行文件的存放位置，但这会使测试的可移植性降低，因为可执行文件必须位于每台 计算机上的同一位置，或包含在测试代码存储库中。
 通过将包含 WebDriver 二进制文件的文件夹添加到系统 path 环境变量中，Selenium 将能够找到其他二进制文件，而无需您的测试代码来定位驱动程序的确切位置。
- 创建一个目录来放置可执行文件，例如 C:\WebDriver\bin 或 /opt/WebDriver/bin 将目录添加到您的 path 中：
- 在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：
-setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; 在 macOS 和 Linux 上的 Bash 用户 - 在终端中：
-export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可以测试更改了。关闭所有打开的命令提示符，然后打开一个新的提示符。 输入您在上一步创建的文件夹中的某一个二进制文件的名称，例如：</description>
+ 创建一个目录来放置可执行文件，例如 C:\WebDriver\bin 或 /opt/WebDriver/bin 将目录添加到您的 path 中：  在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：    setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34;  在 macOS 和 Linux 上的 Bash 用户 - 在终端中：  export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.</description>
     </item>
     
     <item>
@@ -338,8 +332,9 @@ export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可�
       
       <guid>https://selenium.dev/documentation/zh-cn/legacy_docs/html-runner/</guid>
       <description>Selenium HTML-runner 允许您从命令行运行 Test Suites。 Test Suites 是从 Selenium IDE 或兼容工具导出的 HTML。
-公共信息  geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。 selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
- 对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
+公共信息   geckodriver / firefox / selenium-html-runner 版本的组合很重要。 可能在某个地方有一个软件兼容性矩阵。
+  selenium-html-runner 只运行 Test Suite（而不是 Test Case —— 例如从 Monitis Transaction Monitor 导出的东西）。一定要遵守这个规定。
+  对于没有 DISPLAY 的 Linux 用户，您需要启动具有 Virtual DISPLAY 的 html-runner （搜索 xvfb）
   示例 Linux 环境 安装 / 下载以下软件包：
 [user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.</description>
     </item>
@@ -375,7 +370,7 @@ Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElem
       
       <guid>https://selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/</guid>
       <description>如果您打算使用 Grid， 那么您应该下载 selenium-server-standalone JAR 文件， 但是所有的组件都可以通过 selenium-server 提供。 standalone JAR 文件包含所有内容，包括远程 Selenium 服务器和客户端绑定。 这意味着，如果在项目中使用 selenium-server-standalone JAR，则不必添加 selenium-java 或浏览器特定的 jar。
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
     <item>
@@ -402,7 +397,8 @@ gem &amp;#34;selenium-webdriver&amp;#34; 然后在命令提示符中执行以下
 bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的 Internet Explorer 驱动程序 并将文件放入 PATH 路径中的文件夹中。要查看 PATH 路径中的目录，在命令提示符中键入 echo %PATH%。
 $ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
 这将打开一个新的 IE 浏览器窗口:
-require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
+require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:
+Java Python C# Ruby JavaScript Kotlin // 简便的方法 driver.</description>
     </item>
     
     <item>
@@ -411,19 +407,19 @@ require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :i
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
-      <description>验收测试 进行这种类型的测试以确定功能或系统是否满足客户的期望和要求. 这种测试通常涉及客户的合作或反馈, 是一种验证活动, 可以用于回答以下问题： &amp;gt;我们是否在制造 正确的 产品?
-对于Web应用程序, 可以通过模拟用户期望的行为 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟. 注意：有些人可能还会提到, 验收测试是 功能测试 的子类型.
-功能测试 进行这种类型的测试是为了确定功能或系统是否正常运行而没有问题. 它会在不同级别检查系统, 以确保涵盖所有方案并且系统能够执行预期的 工作 . 这是一个验证活动, 它回答了以下问题： &amp;gt;我们是否在 正确地 制造产品？
-这通常包括： 测试没有错误 (404, 异常…) , 以可用的方式 (正确的重定向) 正常运行, 以可访问的方式并匹配其规格 (请参见前述的 验收测试 ) .
+      <description>验收测试 进行这种类型的测试以确定功能或系统是否满足客户的期望和要求. 这种测试通常涉及客户的合作或反馈, 是一种验证活动, 可以用于回答以下问题：
+ 我们是否在制造 正确的 产品?
+ 对于Web应用程序, 可以通过模拟用户期望的行为 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟. 注意：有些人可能还会提到, 验收测试是 功能测试 的子类型.
+功能测试 进行这种类型的测试是为了确定功能或系统是否正常运行而没有问题. 它会在不同级别检查系统, 以确保涵盖所有方案并且系统能够执行预期的 工作 . 这是一个验证活动, 它回答了以下问题：
+ 我们是否在 正确地 制造产品？
+ 这通常包括： 测试没有错误 (404, 异常…) , 以可用的方式 (正确的重定向) 正常运行, 以可访问的方式并匹配其规格 (请参见前述的 验收测试 ) .
 对于Web应用程序, 可以通过模拟预期的结果, 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放或通过本文档中说明的各种支持的语言来完成此模拟.
 性能测试 顾名思义, 进行性能测试是为了衡量应用程序的性能.
 性能测试主要有两种类型:
 负载测试 进行了负载测试, 以验证应用程序在各种特定的负载 (通常是同时连接一定数量的用户) 下的运行状况
 压力测试 进行压力测试, 以验证应用程序在压力 (或高于最大支持负载) 下的运行状况.
 通常, 性能测试是通过执行一些Selenium书写的测试来完成的, 这些测试模拟了不同的用户 使用Web应用程序的特定功能 并检索了一些有意义的指标.
-通常, 这是由其他检索指标的工具完成的.
-JMeter 就是这样一种工具.
-对于Web应用程序, 要测量的详细信息包括 吞吐量、 延迟、数据丢失、单个组件加载时间&amp;hellip;</description>
+通常, 这是由其他检索指标的工具完成的.</description>
     </item>
     
     <item>
@@ -434,7 +430,7 @@ JMeter 就是这样一种工具.
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Selenium不应用于准备测试用例. 测试用例中所有重复性动作和准备工作, 都应通过其他方法来完成.
 例如, 大多数Web UI都具有身份验证 (诸如一个登录表单) . 在每次测试之前通过Web浏览器进行登录的消除, 将提高测试的速度和稳定性. 应该创建一种方法来获取对 AUT* 的访问权限 (例如, 使用API登录并设置Cookie) . 此外, 不应使用Selenium创建预加载数据来进行测试的方法.
-如前所述, 应利用现有的API为 AUT* 创建数据. *AUT: 待测系统</description>
+如前所述, 应利用现有的API为 AUT* 创建数据. ***AUT**: 待测系统</description>
     </item>
     
     <item>
@@ -511,7 +507,7 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
       <guid>https://selenium.dev/documentation/zh-cn/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>使用 sendKeys 方法设置元素的文本，如下所示:
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     一些 web 应用程序使用 JavaScript 库来实现拖放功能。 下面是一个简单的例子，拖动一个元素到另一个元素:
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.</description>
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.</description>
     </item>
     
     <item>
@@ -592,7 +588,7 @@ xUnit getting test results in Azure DevOps</description>
       
       <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
       <description>WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
-Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;rdquo;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;rdquo;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
+Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;quot;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;quot;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
 WebDriver可以从弹窗获取文本并接受或关闭这些警告.
 Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.</description>
     </item>
@@ -605,7 +601,7 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
       <guid>https://selenium.dev/documentation/zh-cn/support_packages/working_with_cookies/</guid>
       <description>Cookie是从网站发送并存储在您的计算机中的一小段数据. Cookies主要用于识别用户并加载存储的信息.
 WebDriver API提供了一种使用内置的方法与Cookie进行交互:
-添加 Cookie 这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. 这里  是一个链接, 用于描述可接受的JSON键值的列表
+添加 Cookie 这个方法常常用于将cookie添加到当前访问的上下文中. 添加Cookie仅接受一组已定义的可序列化JSON对象. 这里 是一个链接, 用于描述可接受的JSON键值的列表
 首先, 您需要位于有效Cookie的域上. 如果您在开始与网站进行交互之前尝试预设cookie, 并且您的首页很大或需要一段时间才能加载完毕, 则可以选择在网站上找到一个较小的页面 (通常404页很小, 例如 http://example.com/some404page)
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context  driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } }   from selenium import webdriver driver = webdriver.</description>
     </item>
@@ -618,7 +614,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.o
       <guid>https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</guid>
       <description>通常不建议使用Selenium和WebDriver进行性能测试. 并非因为不能做, 只是缺乏针对此类工作的优化, 因而难以得到乐观的结果.
 对于用户而言, 在用户上下文中执行性能测试似乎是自然而然的选择, 但是WebDriver的测试会受到许多外部和内部的影响而变得脆弱, 这是您无法控制的. 例如, 浏览器的启动速度, HTTP服务器的速度, 托管JavaScript或CSS的第三方服务器的响应 以及WebDriver实现本身检测的损失. 这些因素的变化会影响结果. 很难区分网站自身与外部资源之间的性能差异, 并且也很难明确浏览器中使用WebDriver对性能的影响, 尤其是在注入脚本时.
-另一个潜在的吸引点是&amp;rdquo;节省时间&amp;rdquo;-同时执行功能和性能测试. 但是, 功能和性能测试分别具有截然不同的目标. 要测试功能, 测试人员可能需要耐心等待加载, 但这会使性能测试结果蒙上阴影, 反之亦然.
+另一个潜在的吸引点是&amp;quot;节省时间&amp;rdquo;-同时执行功能和性能测试. 但是, 功能和性能测试分别具有截然不同的目标. 要测试功能, 测试人员可能需要耐心等待加载, 但这会使性能测试结果蒙上阴影, 反之亦然.
 为了提高网站的性能, 您需要不依赖于环境的差异来分析整体性能, 识别不良代码的实践, 对单个资源 (即CSS或JavaScript) 的性能进行细分 以了解需要改进的地方. 有很多性能测试工具已经可以完成这项工作, 并且提供了报告和分析结果, 甚至可以提出改进建议.
 例如一种易于使用的 (开源) 软件包是: JMeter</description>
     </item>
@@ -630,9 +626,9 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.o
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>尽管在多个地方都提到过, 但这点仍值得被再次提及. 确保测试相互隔离.
- 不要共享测试数据. 想象一下有几个测试, 每个测试都会在选择操作执行之前查询数据库中的有效订单. 如果两个测试采用相同的顺序, 则很可能会出现意外行为.
- 清理应用程序中过时的数据, 这些数据可能会被其他测试. 例如无效的订单记录.
- 每次测试都创建一个新的WebDriver实例. 这在确保测试隔离的同时可以保障并行化更为简单.
+  不要共享测试数据. 想象一下有几个测试, 每个测试都会在选择操作执行之前查询数据库中的有效订单. 如果两个测试采用相同的顺序, 则很可能会出现意外行为.
+  清理应用程序中过时的数据, 这些数据可能会被其他测试. 例如无效的订单记录.
+  每次测试都创建一个新的WebDriver实例. 这在确保测试隔离的同时可以保障并行化更为简单.
   </description>
     </item>
     
@@ -677,7 +673,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import o
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>Martin Fowler创造了术语 &amp;ldquo;Fluent API&amp;rdquo;. Selenium已经在其 FluentWait 类中实现了类似的东西, 这是对标准 Wait 类的替代. 您可以在页面对象中启用Fluent API设计模式, 然后使用如下代码段查询Google搜索页面:
+      <description>Martin Fowler创造了术语 &amp;ldquo;Fluent API&amp;rdquo;. Selenium已经在其 FluentWait 类中实现了类似的东西, 这是对标准 Wait类的替代. 您可以在页面对象中启用Fluent API设计模式, 然后使用如下代码段查询Google搜索页面:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); Google页面对象类具有这种流畅行为后可能看起来像这样:
 public class GoogleSearchPage extends LoadableComponent&amp;lt;GoogleSearchPage&amp;gt; { private final WebDriver driver; private GSPFluentInterface gspfi; public class GSPFluentInterface { private GoogleSearchPage gsp; public GSPFluentInterface(GoogleSearchPage googleSearchPage) { gsp = googleSearchPage; } public GSPFluentInterface clickSearchButton() { gsp.searchButton.click(); return this; } public GSPFluentInterface setSearchString( String sstr ) { clearAndType( gsp.searchField, sstr ); return this; } } @FindBy(id = &amp;#34;gbqfq&amp;#34;) private WebElement searchField; @FindBy(id = &amp;#34;gbqfb&amp;#34;) private WebElement searchButton; public GoogleSearchPage(WebDriver driver) { gspfi = new GSPFluentInterface( this ); this.</description>
     </item>
@@ -705,7 +701,7 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
       
       <guid>https://selenium.dev/documentation/zh-cn/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>每次测试都从一个干净的已知状态开始. 理想情况下, 为每次测试打开一个新的虚拟机. 如果打开新虚拟机不切实际, 则至少应为每次测试启动一个新的WebDriver. 对于Firefox, 请使用您已知的配置文件去启动WebDriver.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description>
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>
     
     <item>
@@ -740,7 +736,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
       <description>Selenium是一个大型软件项目, 其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.
 该项目包含Selenium的网站和文档. 这是一项持续的工作(不针对任何特定版本), 用于提供有效使用Selenium、 如何参与以及如何为Selenium做出贡献的更新信息.
 对网站和文档的贡献遵循以下部分中有关贡献的描述. 您应该花一些时间来熟悉以下文档 查看更多.
-Selenium项目欢迎每一个人的贡献. 您可以通过多种方式提供帮助:
+ Selenium项目欢迎每一个人的贡献. 您可以通过多种方式提供帮助:
 上报问题 在报告新问题或评论现有问题时, 请确保讨论与Selenium的软件、 其站点与文档的具体技术问题相关.
 随着时间的推移, 所有Selenium组件的变化都非常快, 因此这可能会导致文档过时. 如前所述, 如果您确实遇到这种情况, 请不要为此担心. 您也可能知道如何更新文档, 因此请向我们发送包含相关更改的Pull Request.
 如果不确定所发现的问题是否存在, 请通过以下沟通渠道进行描述 https://selenium.dev/support.

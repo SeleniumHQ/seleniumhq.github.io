@@ -39,7 +39,7 @@ Descarga el binario de WebDriver soportado por tu navegador y colócalo en el PA
       
       <guid>https://selenium.dev/documentation/es/selenium_installation/installing_standalone_server/</guid>
       <description>Si planeas usar Grid debes descargar el fichero selenium-server-standalone JAR. Todos los componentes están disponibles a través de selenium-server. El standalone JAR contiene todo, incluso el servidor remoto de Selenium y los enlaces del lado del cliente. Ésto quiere decir que si usas el selenium-server-standalone jar en tu proyecto, no tienes que añadir selenium-java o un jar de navegador específico.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
   </channel>

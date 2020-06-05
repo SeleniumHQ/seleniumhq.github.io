@@ -17,7 +17,7 @@
       <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/new-chromedriver/</guid>
-      <description>The ChromeDriver is composed of two major pieces. There are the client APIs, which you use in your tests, and there&amp;#8217;s a server part, which the client APIs know how to start and run and which takes the form of an executable called &amp;#8220;chromedriver&amp;#8221;. The server piece is maintained by the Chromium team, and they&amp;#8217;ve just released a new version, with support for Chrome 14 and with bug fixes. If you&amp;#8217;re using Selenium 2.</description>
+      <description></description>
     </item>
     
   </channel>

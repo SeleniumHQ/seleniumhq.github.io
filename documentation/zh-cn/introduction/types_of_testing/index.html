@@ -11,20 +11,20 @@
     <title>测试的类型 :: Selenium 文档</title>
 
     
-    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591379911" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591379911" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/nucleus.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hybrid.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/featherlight.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/auto-complete.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/theme.css?1591393150" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/zh-cn/css/hugo-theme.css?1591393150" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591379911" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/zh-cn/css/theme-selenium.css?1591393150" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1591393150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591379911"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/lunr.min.js?1591393150"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/auto-complete.js?1591393150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591379911"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/zh-cn/js/search.js?1591393150"></script>
 
     
   </div>
@@ -1921,24 +1921,18 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#验收测试">验收测试</a></li>
-<li><a href="#功能测试">功能测试</a></li>
-<li><a href="#性能测试">性能测试</a>
-<ul>
-<li><a href="#负载测试">负载测试</a></li>
-<li><a href="#压力测试">压力测试</a></li>
-</ul></li>
-<li><a href="#回归测试">回归测试</a></li>
-<li><a href="#测试驱动开发-tdd">测试驱动开发 (TDD)</a></li>
-<li><a href="#行为驱动开发-bdd">行为驱动开发 (BDD)</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#验收测试">验收测试</a></li>
+        <li><a href="#功能测试">功能测试</a></li>
+        <li><a href="#性能测试">性能测试</a></li>
+        <li><a href="#回归测试">回归测试</a></li>
+        <li><a href="#测试驱动开发-tdd">测试驱动开发 (TDD)</a></li>
+        <li><a href="#行为驱动开发-bdd">行为驱动开发 (BDD)</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1963,124 +1957,91 @@
 
 
 
-
-
 <h3 id="验收测试">验收测试</h3>
-
 <p>进行这种类型的测试以确定功能或系统是否满足客户的期望和要求.
 这种测试通常涉及客户的合作或反馈,
 是一种验证活动,
-可以用于回答以下问题：
-&gt;我们是否在制造 <strong><em>正确的</em></strong> 产品?</p>
-
+可以用于回答以下问题：</p>
+<blockquote>
+<p>我们是否在制造 <strong><em>正确的</em></strong> 产品?</p>
+</blockquote>
 <p>对于Web应用程序,
 可以通过模拟用户期望的行为
 直接使用Selenium来完成此测试的自动化.
 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟.
 注意：有些人可能还会提到, 验收测试是 <strong><em>功能测试</em></strong> 的子类型.</p>
-
 <h3 id="功能测试">功能测试</h3>
-
 <p>进行这种类型的测试是为了确定功能或系统是否正常运行而没有问题.
 它会在不同级别检查系统,
 以确保涵盖所有方案并且系统能够执行预期的 <em>工作</em> .
-这是一个验证活动, 它回答了以下问题：
-&gt;我们是否在 <strong><em>正确地</em></strong> 制造产品？</p>
-
+这是一个验证活动, 它回答了以下问题：</p>
+<blockquote>
+<p>我们是否在 <strong><em>正确地</em></strong> 制造产品？</p>
+</blockquote>
 <p>这通常包括：
 测试没有错误 (404, 异常…) ,
 以可用的方式 (正确的重定向) 正常运行,
 以可访问的方式并匹配其规格 (请参见前述的 <strong><em>验收测试</em></strong> ) .</p>
-
 <p>对于Web应用程序,
 可以通过模拟预期的结果, 直接使用Selenium来完成此测试的自动化.
 可以通过记录/回放或通过本文档中说明的各种支持的语言来完成此模拟.</p>
-
 <h3 id="性能测试">性能测试</h3>
-
 <p>顾名思义, 进行性能测试是为了衡量应用程序的性能.</p>
-
 <p>性能测试主要有两种类型:</p>
-
 <h4 id="负载测试">负载测试</h4>
-
 <p>进行了负载测试,
 以验证应用程序在各种特定的负载
- (通常是同时连接一定数量的用户) 下的运行状况</p>
-
+(通常是同时连接一定数量的用户) 下的运行状况</p>
 <h4 id="压力测试">压力测试</h4>
-
 <p>进行压力测试,
 以验证应用程序在压力 (或高于最大支持负载) 下的运行状况.</p>
-
 <p>通常, 性能测试是通过执行一些Selenium书写的测试来完成的,
 这些测试模拟了不同的用户
 使用Web应用程序的特定功能
 并检索了一些有意义的指标.</p>
-
-<p>通常, 这是由其他检索指标的工具完成的.<br />
+<p>通常, 这是由其他检索指标的工具完成的.<br>
 <strong><em>JMeter</em></strong> 就是这样一种工具.</p>
-
 <p>对于Web应用程序,
 要测量的详细信息包括
 吞吐量、 延迟、数据丢失、单个组件加载时间&hellip;</p>
-
 <p>注意1：所有浏览器的开发人员工具
 均具有“性能”标签 (可通过按F12进行访问)</p>
-
 <p>注2：这属于 <strong><em>非功能测试</em></strong> 的类型,
 因为它通常是按系统而不是按功能/特征进行测量.</p>
-
 <h3 id="回归测试">回归测试</h3>
-
 <p>此测试通常在修改, 修复或添加功能之后进行.</p>
-
 <p>为了确保所做的更改没有破坏任何现有功能,
 将再次执行一些已经执行过的测试.</p>
-
 <p>重新执行的测试集可以是全部或部分,
 并且可以包括几种不同的类型,
 具体取决于具体的应用程序和开发团队.</p>
-
 <h3 id="测试驱动开发-tdd">测试驱动开发 (TDD)</h3>
-
 <p>TDD本身不是一种测试类型,
 而是一种迭代开发方法,
 用于测试驱动功能的设计.</p>
-
 <p>每个周期都从创建功能应通过的一组单元测试开始
- (这将使首次执行失败) .</p>
-
+(这将使首次执行失败) .</p>
 <p>此后, 进行开发以使测试通过.
 在另一个周期开始再次执行测试,
 此过程一直持续到所有测试通过为止.</p>
-
 <p>如此做的目的是基于以下情况,
 既缺陷发现的时间越早成本越低,
 从而加快了应用程序的开发.</p>
-
 <h3 id="行为驱动开发-bdd">行为驱动开发 (BDD)</h3>
-
 <p>BDD还是基于上述 (TDD) 的迭代开发方法,
 其目的是让各方参与到应用程序的开发中.</p>
-
 <p>每个周期都从创建一些规范开始 (应该失败) .
 然后创建会失败的单元测试 (也应该失败) ,
 之后着手开发.</p>
-
 <p>重复此循环, 直到所有类型的测试通过.</p>
-
 <p>为此, 使用了规范语言.
 因为简单、标准和明确, 各方都应该能够理解.
 大多数工具都使用 <strong><em>Gherkin</em></strong> 作为这种语言.</p>
-
 <p>目标是为了解决潜在的验收问题,
 从而能够检测出比TDD还要多的错误,
 并使各方之间的沟通更加顺畅.</p>
-
 <p>当前有一组工具可用于编写规范
 并将其与编码功能 (例如 <strong><em>Cucumber</em></strong> 或 <strong><em>SpecFlow</em></strong> ) 匹配.</p>
-
 <p>在Selenium之上构建了一系列工具,
 可通过将BDD规范直接转换为可执行代码, 使得上述过程更为迅速.
 例如 <strong><em>JBehave, Capybara 和 Robot Framework</em></strong>.</p>
@@ -2093,7 +2054,7 @@
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/">
       “测试的类型”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3258,19 +3219,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/clipboard.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/featherlight.min.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/highlight.pack.js?1591393150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591379911"></script>
-    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591379911"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/learn.js?1591393150"></script>
+    <script src="https://selenium.dev/documentation/zh-cn/js/hugo-learn.js?1591393150"></script>
 
-    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591379911" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591379911"></script>
+    <link href="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1591393150" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1591393150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

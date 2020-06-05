@@ -11,20 +11,20 @@
     <title>Komponenten des Grids :: Dokumentation für Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/theme.css?1591379901" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1591379901" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/nucleus.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/fontawesome-all.min.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hybrid.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/featherlight.min.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/auto-complete.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/theme.css?1591393144" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/de/css/hugo-theme.css?1591393144" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1591379901" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/de/css/theme-selenium.css?1591393144" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1591379901"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1591393144"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1591379901"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1591379901"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/lunr.min.js?1591393144"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/auto-complete.js?1591393144"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1591379901"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/de/js/search.js?1591393144"></script>
 
     
   </div>
@@ -1921,13 +1921,10 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#hub">Hub</a></li>
-<li><a href="#nodes">Nodes</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#hub">Hub</a></li>
+    <li><a href="#nodes">Nodes</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1952,39 +1949,31 @@
 
 
 
-
-
 <p>
-<div class="notices info" ><p><i class="fas fa-language"></i> Diese Seite wird von Englisch
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Diese Seite wird von Englisch
 auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite
 zu übersetzen indem Du uns einen Pull Reqeust schickst!</p>
 </div>
 
-<img src="https://selenium.dev/documentation/de/images/grid.png" alt="Grid" /></p>
-
+<img src="https://selenium.dev/documentation/de/images/grid.png" alt="Grid"></p>
 <h2 id="hub">Hub</h2>
-
 <ul>
 <li>Intermediary and manager</li>
 <li>Accepts requests to run tests</li>
 <li>Takes instructions from client and executes them remotely on the nodes</li>
 <li>Manages threads</li>
 </ul>
-
 <p>A <em>Hub</em> is a central point where all your tests are sent.
 Each Selenium Grid consists of exactly one hub. The hub needs to be reachable
 from the respective clients (i.e. CI server, Developer machine etc.)
 The hub will connect one or more nodes
 that tests will be delegated to.</p>
-
 <h2 id="nodes">Nodes</h2>
-
 <ul>
 <li>Where the browsers live</li>
 <li>Registers itself to the hub and communicates its capabilities</li>
 <li>Receives requests from the hub and executes them</li>
 </ul>
-
 <p><em>Nodes</em> are different Selenium instances
 that will execute tests on individual computer systems.
 There can be many nodes in a grid.
@@ -2002,7 +1991,7 @@ whereas this wouldn&rsquo;t be possible on Linux or Mac.</p>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/de/grid/components_of_a_grid/">
       “Komponenten des Grids”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3167,19 +3156,19 @@ whereas this wouldn&rsquo;t be possible on Linux or Mac.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1591379901"></script>
+    <script src="https://selenium.dev/documentation/de/js/clipboard.min.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/jquery.sticky.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/featherlight.min.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/highlight.pack.js?1591393144"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/learn.js?1591379901"></script>
-    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1591379901"></script>
+    <script src="https://selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/learn.js?1591393144"></script>
+    <script src="https://selenium.dev/documentation/de/js/hugo-learn.js?1591393144"></script>
 
-    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1591379901" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1591379901"></script>
+    <link href="https://selenium.dev/documentation/de/mermaid/mermaid.css?1591393144" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/de/mermaid/mermaid.js?1591393144"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -43,7 +43,7 @@ python setup.py install C# 可以使用 NuGet 安装 C# 的 Selenium 库：</des
       
       <guid>https://selenium.dev/documentation/zh-cn/selenium_installation/installing_standalone_server/</guid>
       <description>如果您打算使用 Grid， 那么您应该下载 selenium-server-standalone JAR 文件， 但是所有的组件都可以通过 selenium-server 提供。 standalone JAR 文件包含所有内容，包括远程 Selenium 服务器和客户端绑定。 这意味着，如果在项目中使用 selenium-server-standalone JAR，则不必添加 selenium-java 或浏览器特定的 jar。
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
   </channel>

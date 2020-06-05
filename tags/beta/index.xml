@@ -17,8 +17,7 @@
       <pubDate>Tue, 04 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2016/selenium-3-is-coming/</guid>
-      <description>Selenium 3 is coming! As I write this, we think that &amp;#8220;beta 4&amp;#8221; will be the last beta before the official 3.0 release. I’m here to tell you about what’s changed, and what impact this will have on your testing.
-TL;DR:  WebDriver users will just find bug fixes and a drop-in replacement for 2.x. Selenium Grid users will also find bug fixes and a simple update. The WebDriver APIs are now the only APIs actively supported by the Selenium project.</description>
+      <description></description>
     </item>
     
     <item>
@@ -27,8 +26,7 @@ TL;DR:  WebDriver users will just find bug fixes and a drop-in replacement for 2
       <pubDate>Fri, 29 Jul 2016 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2016/announcing-selenium-3-0-beta1/</guid>
-      <description>At SeleniumConf in 2013, we announced that a new major version of Selenium would be released &amp;#8220;by Christmas&amp;#8221;. Fortunately, we never said which Christmas, as it has taken us a while to make all the changes we wanted to make! We&amp;#8217;re excited to announce the release of the first beta &amp;#8212; Selenium 3.0.0-beta1.
-We&amp;#8217;d love you to try it out on your projects, and provide us with feedback on where the rough edges are before we ship the 3.</description>
+      <description></description>
     </item>
     
     <item>
@@ -37,8 +35,7 @@ We&amp;#8217;d love you to try it out on your projects, and provide us with feed
       <pubDate>Mon, 27 Jun 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-2-0rc3-the-next-ones-the-big-one-release/</guid>
-      <description>When we pushed the 2.0rc1 live, we really hoped that the next release would be 2.0 final. We very quickly got some feedback that encouraged us to push a 2.0rc2. Now, after just under three weeks, we&amp;#8217;re launching a third and final release candidate. You can download it from the Selenium HQ site or directly from Google Code.
-We think we&amp;#8217;ve addressed many of the common issues, added some polish and added a host of bug fixes and minor changes, and we hope to hear your feedback!</description>
+      <description></description>
     </item>
     
     <item>
@@ -47,8 +44,7 @@ We think we&amp;#8217;ve addressed many of the common issues, added some polish 
       <pubDate>Thu, 02 Jun 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-2-0rc2-the-better-working-release/</guid>
-      <description>You win some and you lose some. We&amp;#8217;d been really pleased to get Selenium 2.0rc1 out, so we were pretty disappointed to hear that some of you were running into problems with the Java version of the IE driver not launching IE sometimes. That&amp;#8217;s definitely not good, so we fixed the problems and havereleased Selenium 2.0rc2. It&amp;#8217;s the same as rc1, but with fewer problems 🙂
-We&amp;#8217;re still very keen to hear your feedback!</description>
+      <description></description>
     </item>
     
     <item>
@@ -57,7 +53,7 @@ We&amp;#8217;re still very keen to hear your feedback!</description>
       <pubDate>Wed, 01 Jun 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-2-0rc1-the-grid-release/</guid>
-      <description>We&amp;#8217;re very happy to announce the first Release Candidate for Selenium 2, available for Java, C#, Ruby and Python. The API has been stabilised and the functionality needed for the final 2.0 release is mostly in. We’re going to be working hard to get there as soon as possible, but now’s the perfect time to test the waters and provide us with any feedback you may have! Grab the downloads from the site!</description>
+      <description></description>
     </item>
     
     <item>
@@ -66,7 +62,7 @@ We&amp;#8217;re still very keen to hear your feedback!</description>
       <pubDate>Mon, 21 Mar 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-2-0b3-the-next-gen-browser-release/</guid>
-      <description>It&amp;#8217;s been about 5 weeks since the release of beta 2, so we&amp;#8217;re very pleased to announce that Selenium 2.0b3 has just been released simultaneously for Java, .Net, Ruby and Python. You can download it from Selenium HQ or from the Google Code site. This release focused on providing excellent support for the next generation of browsers, particularly IE 9 and Firefox 4, and we think you&amp;#8217;ll like what you&amp;#8217;ll find.</description>
+      <description></description>
     </item>
     
     <item>
@@ -75,7 +71,7 @@ We&amp;#8217;re still very keen to hear your feedback!</description>
       <pubDate>Tue, 15 Feb 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-2-0b2-released/</guid>
-      <description>We&amp;#8217;ve just released Selenium 2.0b2. If you&amp;#8217;re the impatient sort who loves to have the latest and greatest, head over to thedownload site and get it while it&amp;#8217;s hot. If you&amp;#8217;re a Python user, then all you need to do is a simple &amp;#8220;pip install -U selenium&amp;#8221;. Ruby users can, as ever, simply run &amp;#8220;gem install selenium-webdriver&amp;#8221;. Maven users need to wait just a little bit longer: we&amp;#8217;re going to be checking the release in ASAP.</description>
+      <description></description>
     </item>
     
     <item>
@@ -84,8 +80,7 @@ We&amp;#8217;re still very keen to hear your feedback!</description>
       <pubDate>Fri, 24 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0-beta-1-release/</guid>
-      <description>We recently released the first of the betas for Selenium 2. It&amp;#8217;s available for Java, C# and Ruby. If you&amp;#8217;ve been holding off trying Selenium 2 because of the alpha label, then the biggest improvement you&amp;#8217;ll see is with the new WebDriver APIs, but there&amp;#8217;s a lot more!
- A promise of relatively stable APIs For Firefox only right now, an API for dealing with alerts, prompts and confirms. A brand new IE driver.</description>
+      <description></description>
     </item>
     
     <item>
@@ -94,8 +89,7 @@ We&amp;#8217;re still very keen to hear your feedback!</description>
       <pubDate>Fri, 08 Oct 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0a6-released/</guid>
-      <description>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the downloads page to get it while it&amp;#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and ruby libraries have been having smaller, more frequent releases all this time.
-You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
+      <description></description>
     </item>
     
     <item>
@@ -104,8 +98,7 @@ You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
       <pubDate>Wed, 14 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0a5-released/</guid>
-      <description>I&amp;#8217;m pleased to announce the release of Selenium 2.0a5, available for immediate download. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:
- Newinterfaces for dealing with HTML 5 elements. An API for &amp;#8220;implicit waits&amp;#8220;: quietly waiting until an element is present before continuing with a test. You can use them like this: driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS) A revamped Firefox driver. More shared code between Selenium and WebDriver.</description>
+      <description></description>
     </item>
     
     <item>
@@ -114,8 +107,7 @@ You&amp;#8217;ll be pleased to hear that the Selenium 1.</description>
       <pubDate>Mon, 19 Apr 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0a3-released/</guid>
-      <description>Selenium 2.0a3 has been released and can be downloaded from the Selenium project site. This is a major update to 2.0 and all users are encouraged to update. The new features include:
- An improved remote protocol. Updating the version of HtmlUnit used to 2.7. Improved support for simulating user interactions with the browser via native events on Linux. Better support for Firefox 3.6. Bug fixes  The .Net, Python and Ruby bindings will be updated soon, as will the maven artefacts.</description>
+      <description></description>
     </item>
     
   </channel>

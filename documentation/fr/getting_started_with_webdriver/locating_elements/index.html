@@ -11,20 +11,20 @@
     <title>Localiser des éléments :: Documentation Selenium</title>
 
     
-    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591379914" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591379914" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/nucleus.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/fontawesome-all.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hybrid.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/featherlight.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/auto-complete.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/theme.css?1591393151" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/fr/css/hugo-theme.css?1591393151" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591379914" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/fr/css/theme-selenium.css?1591393151" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1591393151"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591379914"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/lunr.min.js?1591393151"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/auto-complete.js?1591393151"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591379914"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/fr/js/search.js?1591393151"></script>
 
     
   </div>
@@ -93,7 +93,7 @@
   
     
     <li data-nav-id="/getting_started/" title="Pour débuter" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1921,27 +1921,26 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#localiser-des-éléments">Localiser des éléments</a></li>
-<li><a href="#localiser-plusieurs-éléments">Localiser plusieurs éléments</a></li>
-<li><a href="#stratégie-de-sélection-des-éléments">Stratégie de sélection des éléments</a></li>
-<li><a href="#astuces-d-utilisation-des-sélecteurs">Astuces d&rsquo;utilisation des sélecteurs</a></li>
-</ul></li>
-<li><a href="#relative-locators">Relative Locators</a>
-<ul>
-<li><a href="#how-does-it-work">How does it work</a></li>
-<li><a href="#above">above()</a></li>
-<li><a href="#below">below()</a></li>
-<li><a href="#toleftof">toLeftOf()</a></li>
-<li><a href="#torightof">toRightOf()</a></li>
-<li><a href="#near">near()</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#localiser-des-éléments">Localiser des éléments</a></li>
+        <li><a href="#localiser-plusieurs-éléments">Localiser plusieurs éléments</a></li>
+        <li><a href="#stratégie-de-sélection-des-éléments">Stratégie de sélection des éléments</a></li>
+        <li><a href="#astuces-dutilisation-des-sélecteurs">Astuces d&rsquo;utilisation des sélecteurs</a></li>
+      </ul>
+    </li>
+    <li><a href="#relative-locators">Relative Locators</a>
+      <ul>
+        <li><a href="#how-does-it-work">How does it work</a></li>
+        <li><a href="#above">above()</a></li>
+        <li><a href="#below">below()</a></li>
+        <li><a href="#toleftof">toLeftOf()</a></li>
+        <li><a href="#torightof">toRightOf()</a></li>
+        <li><a href="#near">near()</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1966,15 +1965,11 @@
 
 
 
-
-
 <h3 id="localiser-des-éléments">Localiser des éléments</h3>
-
 <p>Une des techniques fondamentales à maîtriser lorsque l&rsquo;on utilise WebDriver
 consiste à chercher des éléments sur une page.
 WebDriver offre pour cela un ensemble pré-défini de type de selecteurs,
 parmi lesquels la recherche d&rsquo;une élément par son attribut ID:</p>
-
 
 
 
@@ -2016,7 +2011,7 @@ parmi lesquels la recherche d&rsquo;une élément par son attribut ID:</p>
 
 <section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">cheese</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;fromage&#34;</span>));  
+WebElement cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;fromage&#34;</span><span style="color:#719e07">));</span>  
   </code></pre></div>
 </section>
   
@@ -2063,21 +2058,17 @@ cheese <span style="color:#719e07">=</span> driver<span style="color:#719e07">.<
 </section>
 </div>
 </div>
-
 <p>Comme démontré dans cet exemple, la localisation des éléments à l&rsquo;aide de WebDriver
 se fait via une instance de l&rsquo;objet <code>WebDriver</code>.
 La méthode <code>findElement(By)</code> retourne un autre type d&rsquo;objet fondamental, un <code>WebElement</code>.</p>
-
 <ul>
 <li><code>WebDriver</code> represente la navigateur</li>
 <li><code>WebElement</code> represente un noeud particulier du DOM
 (un lien, un champ texte, etc.)</li>
 </ul>
-
-<p>Un fois que l&rsquo;on a obtenu la référence de l&rsquo;élément web qui a été &ldquo;trouvé&rdquo;,
+<p>Un fois que l&rsquo;on a obtenu la référence de l'élément web qui a été &ldquo;trouvé&rdquo;,
 on peut encore réduire la portée de notre recherche
 en utilisant le même appel de méthode sur l&rsquo;instance de cet objet:</p>
-
 
 
 
@@ -2119,8 +2110,8 @@ en utilisant le même appel de méthode sur l&rsquo;instance de cet objet:</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebElement <span style="color:#268bd2">fromage</span> <span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;fromage&#34;</span>));
-WebElement <span style="color:#268bd2">cheddar</span> <span style="color:#719e07">=</span> fromage.findElement(By.id(<span style="color:#2aa198">&#34;cheddar&#34;</span>));
+WebElement fromage <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;fromage&#34;</span><span style="color:#719e07">));</span>
+WebElement cheddar <span style="color:#719e07">=</span> fromage<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cheddar&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2172,28 +2163,24 @@ cheddar <span style="color:#719e07">=</span> fromage<span style="color:#719e07">
 </section>
 </div>
 </div>
-
 <p>Nous pouvons faire cela car les types <em>WebDriver</em> et <em>WebElement</em>
 implémentent tous deux l&rsquo;interface <a href="//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html"><em>SearchContext</em></a>.
 Dans WebDriver, ce principe est connu sous le nom de <em>role-based interface</em>.
 Les interfaces basées sur le rôle nous permettent de déterminer
 si une implémentation particulière de driver supporte une fonctionnalité donnée.
 Ces interfaces sont clairement définies et tente d&rsquo;adhérer au principe de responsabilité unique.
-Vous pouvez en lire plus sur le design de WebDriver et sur quels drivers supportent quels rôles dans le chapitre <a href="#">Un Autre Chapitre Qui Aura Un Nom</a>.
-<!-- TODO: A new section needs to be created for the above.--></p>
-
+Vous pouvez en lire plus sur le design de WebDriver et sur quels drivers supportent quels rôles dans le chapitre <a href="#">Un Autre Chapitre Qui Aura Un Nom</a>.</p>
+<!-- raw HTML omitted -->
 <p>Par conséquent, l&rsquo;interface <em>By</em> utilisée précédement fournit également
 d&rsquo;autres stratégies de localisation. Une recherche imbriquée peut ne pas
 être la startégie la plus adaptée pour trouver notre cheddar
 puisqu&rsquo;elle nécessite que deux instructions séparées soient envoyées au navigateur ;
 tout d&rsquo;abord rechercher un élément ayant pour ID &ldquo;fromage&rdquo;,
 puis une recherche pour &ldquo;cheddar&rdquo; dans ce contexte plus restreint.</p>
-
 <p>Pour améliorer légèrement les performances, nous pourrions essayer
 un sélecteur (une stratégie de localisation) plus spécifique :
-WebDriver supporte la localisation d&rsquo;élément via sélecteur CSS,
+WebDriver supporte la localisation d'élément via sélecteur CSS,
 nous permettant de combiner les deux sélecteurs précédents en un seul:</p>
-
 
 
 
@@ -2235,7 +2222,7 @@ nous permettant de combiner les deux sélecteurs précédents en un seul:</p>
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#fromage #cheddar&#34;</span>));
+driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#fromage #cheddar&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2282,9 +2269,7 @@ driver.findElement(By.cssSelector(<span style="color:#2aa198">&#34;#cheese #ched
 </section>
 </div>
 </div>
-
 <h3 id="localiser-plusieurs-éléments">Localiser plusieurs éléments</h3>
-
 <p>Il est possible que le document web sur lequel nous travaillons
 dispose d&rsquo;une liste ordonnée de nos fromages préférés:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#268bd2">ol</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">fromage</span>&gt;
@@ -2292,14 +2277,13 @@ dispose d&rsquo;une liste ordonnée de nos fromages préférés:</p>
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">brie</span>&gt;…
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">rochefort</span>&gt;…
  &lt;<span style="color:#268bd2">li</span> id<span style="color:#719e07">=</span><span style="color:#2aa198">camembert</span>&gt;…
-&lt;/<span style="color:#268bd2">ul</span>&gt;</code></pre></div>
-<p>Puisque plus de fromage est sans conteste meilleur, et qu&rsquo;il serait lourd
+&lt;/<span style="color:#268bd2">ul</span>&gt;
+</code></pre></div><p>Puisque plus de fromage est sans conteste meilleur, et qu&rsquo;il serait lourd
 de devoir récupérer chaque item un par un, une technique supérieure est d&rsquo;utiliser
 la forme plurielle <code>findElements(By)</code>. Cette méthode retourne une collection
-d&rsquo;éléments web. Si un seul élement a été trouvé, la méthode renverra tout de même
+d'éléments web. Si un seul élement a été trouvé, la méthode renverra tout de même
 une collection (d&rsquo;un seul élément). Si aucun élément ne correspond au sélécteur,
 la collection retournée sera alors vide.</p>
-
 
 
 
@@ -2341,7 +2325,7 @@ la collection retournée sera alors vide.</p>
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> <span style="color:#268bd2">pleinDeFromage</span> <span style="color:#719e07">=</span> driver.findElements(By.cssSelector(<span style="color:#2aa198">&#34;#fromage li&#34;</span>));
+List<span style="color:#719e07">&lt;</span>WebElement<span style="color:#719e07">&gt;</span> pleinDeFromage <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElements<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#fromage li&#34;</span><span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2388,11 +2372,8 @@ plein_de_fromage <span style="color:#719e07">=</span> driver<span style="color:#
 </section>
 </div>
 </div>
-
 <h3 id="stratégie-de-sélection-des-éléments">Stratégie de sélection des éléments</h3>
-
 <p>WebDriver possède huit stratégies de localisation pré-définies différentes:</p>
-
 <table>
 <thead>
 <tr>
@@ -2400,84 +2381,67 @@ plein_de_fromage <span style="color:#719e07">=</span> driver<span style="color:#
 <th>Description</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>class name</td>
 <td>Localise les éléments dont le nom de la classe contient la valeur recherchée (nom composés non permis)</td>
 </tr>
-
 <tr>
 <td>css selector</td>
 <td>Localise les éléments correspondant à un sélecteur CSS</td>
 </tr>
-
 <tr>
 <td>id</td>
 <td>Localise les éléments dont l&rsquo;attribut ID correspond à la valeur recherchée</td>
 </tr>
-
 <tr>
 <td>name</td>
 <td>Localise les éléments dont l&rsquo;attribut NAME correspond à la valeur recherchée</td>
 </tr>
-
 <tr>
 <td>link text</td>
 <td>Localise les éléments de type ancre (lien) dont le texte visible correspond à la valeur recherchée</td>
 </tr>
-
 <tr>
 <td>partial link text</td>
 <td>Localise les éléments de type ancre (lien) dont le texte visible contient la valeur recherchée</td>
 </tr>
-
 <tr>
 <td>tag name</td>
 <td>Localise les éléments dont le nom de tag correspond à la valeur recherchée</td>
 </tr>
-
 <tr>
 <td>xpath</td>
 <td>Localise les éléments correspondant à un chemin XPath</td>
 </tr>
 </tbody>
 </table>
-
-<h3 id="astuces-d-utilisation-des-sélecteurs">Astuces d&rsquo;utilisation des sélecteurs</h3>
-
+<h3 id="astuces-dutilisation-des-sélecteurs">Astuces d&rsquo;utilisation des sélecteurs</h3>
 <p>En règle général, si des ID HTML sont disponibles, uniques et prédictibles avec constance,
-alors il est préférable d&rsquo;utiliser cette stratégie pour la localisation d&rsquo;élément sur une page.
+alors il est préférable d&rsquo;utiliser cette stratégie pour la localisation d'élément sur une page.
 Elle a tendance à être très rapide et évite les longs traitements liés à des traversées complexes du DOM.</p>
-
 <p>Si des IDs uniques ne sont pas disponibles, un sélecteur CSS bien écrit
 est la méthode de localisation la plus adaptée. Un sélecteur XPath marchera
 aussi bien qu&rsquo;un sélecteur CSS, cependant sa syntaxe est plus complexe, et souvent,
 plus compliquée à débugguer. Même si les sélecteur XPath sont très flexibles,
 ils sont rarement testés d&rsquo;un point de vue performance par les fournisseurs de navigateur
 et ont donc tendance à être assez lents.</p>
-
 <p>Les stratégies basés sur <em>linkText</em> et <em>partialLinkText</em> sont
 contraingnantes du fait qu&rsquo;elles ne fonctionnent
 que sur des éléments de type lien hypertexte. De plus, elles
 sont implémentées au sein de WebDriver via des sélecteurs XPath.</p>
-
 <p>Le nom de tag est une façon dangereuse de localiser des éléments.
 Il y a fréquemment de multiples éléments ayant le même tag sur une page.
 Cette stratégie est principalement utile lorsque utilisée avec la méthode
 <em>findElements(By)</em>, renvoyant une collection des élements.</p>
-
 <p>Au final, la recommendation est de garder ses sélecteurs aussi compacts et lisibles que possible.
 Demander à WebDriver de traverser la structure du DOM est une opération très coûteuse,
 de fait plus le scope de recherche sera restreint, meilleures seront les performances.</p>
-
 <h2 id="relative-locators">Relative Locators</h2>
-
 <p><strong>Selenium 4</strong> brings Relative Locators which are previously
 called as <em>Friendly Locators</em>. This functionality was
 added to help you locate elements that are nearby other elements.
 The Available Relative Locators are:</p>
-
 <ul>
 <li><em>above</em></li>
 <li><em>below</em></li>
@@ -2485,27 +2449,19 @@ The Available Relative Locators are:</p>
 <li><em>toRightOf</em></li>
 <li><em>near</em></li>
 </ul>
-
 <p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
 which returns a RelativeLocator.</p>
-
 <h3 id="how-does-it-work">How does it work</h3>
-
 <p>Selenium uses the JavaScript function
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a>
 to find the relative elements. This function returns
 properties of an element such as
 right, left, bottom, and top.</p>
-
 <p>Let us consider the below example for understanding the relative locators.</p>
-
-<p><img src="https://selenium.dev/documentation/fr/images/relative_locators.png?width=400px" alt="Relative Locators" /></p>
-
+<p><img src="https://selenium.dev/documentation/fr/images/relative_locators.png?width=400px" alt="Relative Locators"></p>
 <h3 id="above">above()</h3>
-
 <p>Returns the WebElement, which appears
 above to the specified element</p>
-
 
 
 
@@ -2548,9 +2504,9 @@ above to the specified element</p>
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">passwordField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>));
-WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-                                                  .above(passwordField));
+</span><span style="color:#586e75"></span>WebElement passwordField<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;password&#34;</span><span style="color:#719e07">));</span>
+WebElement emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+                                                  <span style="color:#719e07">.</span>above<span style="color:#719e07">(</span>passwordField<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2602,12 +2558,9 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 </section>
 </div>
 </div>
-
 <h3 id="below">below()</h3>
-
 <p>Returns the WebElement, which appears
 below to the specified element</p>
-
 
 
 
@@ -2650,9 +2603,9 @@ below to the specified element</p>
 <section id="javacode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressField</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;email&#34;</span>));
-WebElement <span style="color:#268bd2">passwordField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-	                                          .below(emailAddressField));
+</span><span style="color:#586e75"></span>WebElement emailAddressField<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;email&#34;</span><span style="color:#719e07">));</span>
+WebElement passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+	                                          <span style="color:#719e07">.</span>below<span style="color:#719e07">(</span>emailAddressField<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2704,12 +2657,9 @@ IWebElement passwordField = driver.FindElement(WithTagName(<span style="color:#2
 </section>
 </div>
 </div>
-
 <h3 id="toleftof">toLeftOf()</h3>
-
 <p>Returns the WebElement, which appears
 to left of specified element</p>
-
 
 
 
@@ -2752,9 +2702,9 @@ to left of specified element</p>
 <section id="javacode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;submit&#34;</span>));
-WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
-                                            .toLeftOf(submitButton));
+</span><span style="color:#586e75"></span>WebElement submitButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;submit&#34;</span><span style="color:#719e07">));</span>
+WebElement cancelButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)</span>
+                                            <span style="color:#719e07">.</span>toLeftOf<span style="color:#719e07">(</span>submitButton<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2807,12 +2757,9 @@ IWebElement cancelButton = driver.FindElement(WithTagName(<span style="color:#2a
 </section>
 </div>
 </div>
-
 <h3 id="torightof">toRightOf()</h3>
-
 <p>Returns the WebElement, which appears
 to right of the specified element</p>
-
 
 
 
@@ -2855,9 +2802,9 @@ to right of the specified element</p>
 <section id="javacode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">cancelButton</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;cancel&#34;</span>));
-WebElement <span style="color:#268bd2">submitButton</span><span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>)
-                                            .toRightOf(cancelButton));
+</span><span style="color:#586e75"></span>WebElement cancelButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;cancel&#34;</span><span style="color:#719e07">));</span>
+WebElement submitButton<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;button&#34;</span><span style="color:#719e07">)</span>
+                                            <span style="color:#719e07">.</span>toRightOf<span style="color:#719e07">(</span>cancelButton<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -2910,12 +2857,9 @@ IWebElement submitButton = driver.FindElement(WithTagName(<span style="color:#2a
 </section>
 </div>
 </div>
-
 <h3 id="near">near()</h3>
-
 <p>Returns the WebElement, which is
 at most <code>50px</code> away from the specified element.</p>
-
 
 
 
@@ -2958,9 +2902,9 @@ at most <code>50px</code> away from the specified element.</p>
 <section id="javacode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#586e75">//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-</span><span style="color:#586e75"></span>WebElement <span style="color:#268bd2">emailAddressLabel</span><span style="color:#719e07">=</span> driver.findElement(By.id(<span style="color:#2aa198">&#34;lbl-email&#34;</span>));
-WebElement <span style="color:#268bd2">emailAddressField</span> <span style="color:#719e07">=</span> driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>)
-                                                  .near(emailAddressLabel));
+</span><span style="color:#586e75"></span>WebElement emailAddressLabel<span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>id<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;lbl-email&#34;</span><span style="color:#719e07">));</span>
+WebElement emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>withTagName<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;input&#34;</span><span style="color:#719e07">)</span>
+                                                  <span style="color:#719e07">.</span>near<span style="color:#719e07">(</span>emailAddressLabel<span style="color:#719e07">));</span>
   </code></pre></div>
 </section>
   
@@ -3022,7 +2966,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/fr/getting_started_with_webdriver/locating_elements/">
       “Localiser des éléments”
-    </a> was last updated on: 24 May 2020 23:07:14 -0700: <a href="https://github.com/SeleniumHQ/site/commit/f5e4e0de23b55131f5d883cdb2bf19576089c612">Added the C# and Python code snippets for Relative Locators (#436)[deploy site] (f5e4e0de)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -4187,19 +4131,19 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/clipboard.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/jquery.sticky.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/featherlight.min.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/highlight.pack.js?1591393151"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591379914"></script>
-    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591379914"></script>
+    <script src="https://selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/learn.js?1591393151"></script>
+    <script src="https://selenium.dev/documentation/fr/js/hugo-learn.js?1591393151"></script>
 
-    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591379914" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591379914"></script>
+    <link href="https://selenium.dev/documentation/fr/mermaid/mermaid.css?1591393151" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/fr/mermaid/mermaid.js?1591393151"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -28,9 +28,7 @@ It is currently in “alpha” and available for use in both Chrome and Firefox.
       <pubDate>Wed, 09 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2017/firefox-55-and-selenium-ide/</guid>
-      <description>The bad news: from Firefox 55 onwards, Selenium IDE will no longer work. 
-The reasons for this are complex, but boil down to two main causes:
- Browsers are complicated pieces of software that are constantly evolving. Mozilla has been working hard to make Firefox faster and more stable, while still retaining the flexibility and ease of extension that we’ve come to know and love. As part of that process, Firefox is switching extensions from the original “XPI” format, to a newer, more widely adopted “Web Extension” mechanism.</description>
+      <description></description>
     </item>
     
     <item>
@@ -39,8 +37,7 @@ The reasons for this are complex, but boil down to two main causes:
       <pubDate>Mon, 04 Jul 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-ide-1-0-12-firefox-5/</guid>
-      <description>Last week we quietly released Selenium IDE 1.0.12 on the website. It has Firefox 5 support along with other improvements. See the release notes and unofficial announcement. Download it here or ask Firefox to check for plugins updates.
-And for those who did not download 1.0.11 (it was not pushed through the update system) you will want to read about the formatter change that landed. </description>
+      <description></description>
     </item>
     
     <item>
@@ -49,11 +46,7 @@ And for those who did not download 1.0.11 (it was not pushed through the update 
       <pubDate>Mon, 30 May 2011 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2011/selenium-ide-1-0-11-now-with-firefox-4-support/</guid>
-      <description>We know that you have been waiting eagerly for this release and you have to wait no more. Selenium IDE 1.0.11 is now here and you can get it from the seleniumhq download site. The update will also be pushed to you automatically over the next couple days.
-Other things of note around this release
-•Release Notes
-•Where to log bugs
-•Welcome Selenium IDE 1.0.11 (with Firefox 4 support)</description>
+      <description></description>
     </item>
     
     <item>
@@ -62,8 +55,7 @@ Other things of note around this release
       <pubDate>Thu, 09 Dec 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/atoms-have-come-to-selenium-ide/</guid>
-      <description>As mentioned in Simon&amp;#8217;s Going Atomic: Why? and Going Atomic: How, part of the merging of Selenium and WebDriver is to share common code between the two. And as of the 1.0.10 release of Selenium IDE, this merged code, &amp;#8216;atoms&amp;#8217; is now included.
-Some early users of this release are noticing that this the atom that drives assertAttribute and verifyAttribute is causing their scripts to break. This post explains the &amp;#8216;why&amp;#8217; and suggests how to fix them as well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -72,8 +64,7 @@ Some early users of this release are noticing that this the atom that drives ass
       <pubDate>Mon, 09 Aug 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-2-0-backend-for-running-ide-test-suite-via-the-se2-firefox/</guid>
-      <description>The GSoC 2010, it’s a great adventure.
-I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all interns in this company the topic of my internship focuses on advanced topics like the integration of WebDriver as backend for Selenium IDE. Selenium IDE is currently built upon Selenium Core for interacting with web pages. Selenium Core has several major limitations, including the inability to fire native events. To avoid these limitations and produce more robust tests, I am investigating Selenium IDE to using WebDriver in place of Selenium Core.</description>
+      <description></description>
     </item>
     
     <item>
@@ -82,8 +73,7 @@ I’m Raynatou, I come from Burkina and do my internship at SERLI. Like all inte
       <pubDate>Fri, 09 Jul 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-ide-looking-back-and-looking-forward/</guid>
-      <description>Its been around six months and three releases since I took the reins of Selenium-IDE. The fundamental change in that time has been the adoption of a plugin model like the fine folks over that Firebug. (We&amp;#8217;re also self-hosting it which is big from a project internals perspective.)
-Right now, you can add custom user-extensions and formatters, but in the very near future you will be able to add location strategies as well.</description>
+      <description></description>
     </item>
     
     <item>
@@ -92,9 +82,7 @@ Right now, you can add custom user-extensions and formatters, but in the very ne
       <pubDate>Thu, 27 May 2010 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/blog/2010/selenium-ide-1-0-7-released/</guid>
-      <description>So its a month later than planned, but Selenium IDE 1.0.7 is now available. The delay was due to some internal build changes and not code, but one of the code changes that is there more than makes up for the delay.
-That&amp;#8217;s right, drag-and-drop has finally arrived to Se-IDE &amp;#8212; though credit lies with Jérémy Hérault for implementing it.
-Oh, and if you are Swedish, there is now a localization for you.</description>
+      <description></description>
     </item>
     
   </channel>

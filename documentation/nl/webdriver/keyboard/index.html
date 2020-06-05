@@ -11,20 +11,20 @@
     <title>Keyboard :: Selenium documentatie</title>
 
     
-    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/theme.css?1591379909" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1591379909" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/nucleus.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/fontawesome-all.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hybrid.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/featherlight.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/perfect-scrollbar.min.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/auto-complete.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/atom-one-dark-reasonable.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/theme.css?1591393149" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/nl/css/hugo-theme.css?1591393149" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1591379909" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/nl/css/theme-selenium.css?1591393149" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery-3.3.1.min.js?1591393149"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1591379909"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1591379909"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/lunr.min.js?1591393149"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/auto-complete.js?1591393149"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/nl\/nl";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1591379909"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/nl/js/search.js?1591393149"></script>
 
     
   </div>
@@ -1921,15 +1921,12 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#sendkeys">sendKeys</a></li>
-<li><a href="#keydown">keyDown</a></li>
-<li><a href="#keyup">keyUp</a></li>
-<li><a href="#clear">clear</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#sendkeys">sendKeys</a></li>
+    <li><a href="#keydown">keyDown</a></li>
+    <li><a href="#keyup">keyUp</a></li>
+    <li><a href="#clear">clear</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1955,24 +1952,18 @@
 
 
 
-
-
-<div class="notices info" ><p><i class="fas fa-language"></i> Page being translated from
+<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from 
 English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!</p>
 </div>
 
-
 <p>Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
 interface which allows us to provide virtualized device input to the web browser.</p>
-
 <h2 id="sendkeys">sendKeys</h2>
-
-<p>The sendKeys types a key sequence in DOM element
+<p>The sendKeys types a key sequence in DOM element 
 even if modifier key sequence is encountered.
-<a href="https://www.w3.org/TR/webdriver/#keyboard-actions">Here</a> are the list of
+<a href="https://www.w3.org/TR/webdriver/#keyboard-actions">Here</a> are the list of 
 possible keystrokes that WebDriver Supports.</p>
-
 
 
 
@@ -2014,25 +2005,25 @@ possible keystrokes that WebDriver Supports.</p>
 
 <section id="javacode1" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-    <span style="color:#719e07">try</span> {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
       <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>      driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
 
       <span style="color:#586e75">// Enter text &#34;q&#34; and perform keyboard action &#34;Enter&#34;
-</span><span style="color:#586e75"></span>      driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;q&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
-    } <span style="color:#719e07">finally</span> {
-      driver.quit();
-    }
-  }
-}
+</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
+    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2136,11 +2127,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="keydown">keyDown</h2>
-
 <p>The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)</p>
-
 
 
 
@@ -2182,20 +2170,20 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode2" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-<span style="color:#719e07">try</span> {
+WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+<span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
   <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>  driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
 
   <span style="color:#586e75">// Enter &#34;webdriver&#34; text and perform &#34;ENTER&#34; keyboard action
-</span><span style="color:#586e75"></span>  driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys.ENTER);
+</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
 
-  Actions <span style="color:#268bd2">actionProvider</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
-  Action <span style="color:#268bd2">keydown</span> <span style="color:#719e07">=</span> actionProvider.keyDown(Keys.CONTROL).sendKeys(<span style="color:#2aa198">&#34;a&#34;</span>).build();
-  keydown.perform();
-} <span style="color:#719e07">finally</span> {
-  driver.quit();
-}
+  Actions actionProvider <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+  Action keydown <span style="color:#719e07">=</span> actionProvider<span style="color:#719e07">.</span>keyDown<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>CONTROL<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;a&#34;</span><span style="color:#719e07">).</span>build<span style="color:#719e07">();</span>
+  keydown<span style="color:#719e07">.</span>perform<span style="color:#719e07">();</span>
+<span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+  driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2321,11 +2309,8 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="keyup">keyUp</h2>
-
 <p>The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)</p>
-
 
 
 
@@ -2367,31 +2352,31 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 
 <section id="javacode3" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.Keys;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.firefox.FirefoxDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.interactions.Actions;
+<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> HelloSelenium {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver();
-    <span style="color:#719e07">try</span> {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
+    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
       <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>      driver.get(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
-      Actions <span style="color:#268bd2">action</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions(driver);
+</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
+      Actions action <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
 
       <span style="color:#586e75">// Store google search box WebElement
-</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">search</span> <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
+</span><span style="color:#586e75"></span>      WebElement search <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
 
       <span style="color:#586e75">// Enters text &#34;qwerty&#34; with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
-</span><span style="color:#586e75"></span>      action.keyDown(Keys.SHIFT).sendKeys(search,<span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Keys.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).perform();
-    } <span style="color:#719e07">finally</span> {
-      driver.quit();
-    }
-  }
-}
+</span><span style="color:#586e75"></span>      action<span style="color:#719e07">.</span>keyDown<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>SHIFT<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span>search<span style="color:#719e07">,</span><span style="color:#2aa198">&#34;qwerty&#34;</span><span style="color:#719e07">).</span>keyUp<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>SHIFT<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;qwerty&#34;</span><span style="color:#719e07">).</span>perform<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2532,13 +2517,10 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
-
 <h2 id="clear">clear</h2>
-
-<p>Clears the content of an editable element.
-This is only applied for the elements which is editable and interactable,
+<p>Clears the content of an editable element. 
+This is only applied for the elements which is editable and interactable, 
 otherwise Selenium returns the error (invalid element state (or) Element not interactable)</p>
-
 
 
 
@@ -2580,27 +2562,27 @@ otherwise Selenium returns the error (invalid element state (or) Element not int
 
 <section id="javacode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.By;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebDriver;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.WebElement;
-<span style="color:#719e07">import</span> <span style="color:#268bd2">org</span>.openqa.selenium.chrome.ChromeDriver;
+<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
+<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> clear {
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span>(String[] <span style="color:#268bd2">args</span>) {
-    WebDriver <span style="color:#268bd2">driver</span> <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver();
-    <span style="color:#719e07">try</span> {
+<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">clear</span> <span style="color:#719e07">{</span>
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
       <span style="color:#586e75">// Navigate to Url
-</span><span style="color:#586e75"></span>      driver.get(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>);
+</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.google.com&#34;</span><span style="color:#719e07">);</span>
       <span style="color:#586e75">// Store &#39;SearchInput&#39; element
-</span><span style="color:#586e75"></span>      WebElement <span style="color:#268bd2">searchInput</span> <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>));
-      searchInput.sendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>);
+</span><span style="color:#586e75"></span>      WebElement searchInput <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
+      searchInput<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;selenium&#34;</span><span style="color:#719e07">);</span>
       <span style="color:#586e75">// Clears the entered text
-</span><span style="color:#586e75"></span>      searchInput.clear();
-    } <span style="color:#719e07">finally</span> {
-      driver.quit();
-    }
-  }
-}
+</span><span style="color:#586e75"></span>      searchInput<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
+      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+    <span style="color:#719e07">}</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
   </code></pre></div>
 </section>
   
@@ -2735,7 +2717,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/nl/webdriver/keyboard/">
       “Keyboard”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3900,19 +3882,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/clipboard.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/perfect-scrollbar.jquery.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/jquery.sticky.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/featherlight.min.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/highlight.pack.js?1591393149"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/learn.js?1591379909"></script>
-    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1591379909"></script>
+    <script src="https://selenium.dev/documentation/nl/js/modernizr.custom-3.6.0.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/learn.js?1591393149"></script>
+    <script src="https://selenium.dev/documentation/nl/js/hugo-learn.js?1591393149"></script>
 
-    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1591379909" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1591379909"></script>
+    <link href="https://selenium.dev/documentation/nl/mermaid/mermaid.css?1591393149" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/nl/mermaid/mermaid.js?1591393149"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

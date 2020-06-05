@@ -11,20 +11,20 @@
     <title>コンポーネントを理解する :: Seleniumドキュメント</title>
 
     
-    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591379916" rel="stylesheet">
-    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591379916" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/nucleus.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/fontawesome-all.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hybrid.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/featherlight.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/auto-complete.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/theme.css?1591393152" rel="stylesheet">
+    <link href="https://selenium.dev/documentation/ja/css/hugo-theme.css?1591393152" rel="stylesheet">
     
-      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591379916" rel="stylesheet">
+      <link href="https://selenium.dev/documentation/ja/css/theme-selenium.css?1591393152" rel="stylesheet">
     
 
-    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1591393152"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591379916"></script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/lunr.min.js?1591393152"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/auto-complete.js?1591393152"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591379916"></script>
+<script type="text/javascript" src="https://selenium.dev/documentation/ja/js/search.js?1591393152"></script>
 
     
   </div>
@@ -1921,17 +1921,15 @@
                     <div class="progress">
     <div class="wrapper">
 <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#用語">用語</a></li>
-<li><a href="#部品構成">部品構成</a></li>
-</ul></li>
-<li><a href="#どのフレームワークに適しているか">どのフレームワークに適しているか</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#用語">用語</a></li>
+        <li><a href="#部品構成">部品構成</a></li>
+      </ul>
+    </li>
+    <li><a href="#どのフレームワークに適しているか">どのフレームワークに適しているか</a></li>
+  </ul>
 </nav>
     </div>
 </div>
@@ -1956,16 +1954,12 @@
 
 
 
-
-
 <p>WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。
 ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。
 以下は、本説明での用語の使用方法の内訳です。</p>
-
 <h3 id="用語">用語</h3>
-
 <ul>
-<li><strong>API:</strong> アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&rdquo;コマンド&rdquo;をまとめたものです。</li>
+<li><strong>API:</strong> アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&quot;コマンド&quot;をまとめたものです。</li>
 <li><strong>ライブラリ:</strong> APIとそれらを実装する必要なコードを含むコードモジュール。
 ライブラリは各言語バインディング向けのものです。例 .jar
 files for Java, .dll files for .NET, など.</li>
@@ -1973,37 +1967,23 @@ files for Java, .dll files for .NET, など.</li>
 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）<em>注: 一部の人々はドライバーをプロキシと呼んでいます。</em></li>
 <li><strong>フレームワーク:</strong> WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。</li>
 </ul>
-
 <h3 id="部品構成">部品構成</h3>
-
 <p>最低限、WebDriverはドライバーを経由してブラウザーと通信します。
 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。</p>
-
-<p><img src="https://selenium.dev/documentation/ja/images/basic_comms.png?width=400px" alt="基本通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/basic_comms.png?width=400px" alt="基本通信"></p>
 <p>ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。
 ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。</p>
-
 <p>上記の簡単な例は <em>直接</em> 通信です。ブラウザへのコミュニケーションは、Selenium ServerまたはRemoteWebDriverを経由した <em>リモート</em> 通信もできます。RemoteWebDriverは、ドライバーおよびブラウザと同じシステムで実行されます。</p>
-
-<p><img src="https://selenium.dev/documentation/ja/images/remote_comms.png?width=400px" alt="リモート通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/remote_comms.png?width=400px" alt="リモート通信"></p>
 <p>リモート通信は、ホストシステム上のドライバーと順に通信するSelenium ServerまたはSelenium Gridを使用して行うこともできます。</p>
-
-<p><img src="https://selenium.dev/documentation/ja/images/remote_comms_server.png?width=400px" alt="SeleniumGridを用いたリモート通信" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/remote_comms_server.png?width=400px" alt="SeleniumGridを用いたリモート通信"></p>
 <h2 id="どのフレームワークに適しているか">どのフレームワークに適しているか</h2>
-
 <p>WebDriverには1つのジョブしかありません:　上記の任意のメソッドを経由してブラウザと通信します。WebDriverはテストに関することを知りません:　WebDriverは物事を比較する方法、成功または失敗を確認する方法を知りません、そして、レポートや Given/When/Then 文法に関しても確実に知りません。</p>
-
 <p>ここで、さまざまなフレームワークが登場します。
 最低限必要なのは言語バインディングに一致するテストフレームワーク、例えば NUnit for .NET, JUnitfor Java, RSpec for Ruby などです。</p>
-
 <p>テストフレームワークは、WebDriverおよびテストの関連手順の実行を担当します。
 それは下記図に似ていると考えることができます。</p>
-
-<p><img src="https://selenium.dev/documentation/ja/images/test_framework.png?width=400px" alt="テストフレームワーク" /></p>
-
+<p><img src="https://selenium.dev/documentation/ja/images/test_framework.png?width=400px" alt="テストフレームワーク"></p>
 <p>上図でCucumberなどの自然言語のフレームワーク/ツールがテストフレームワークボックスの一部として存在する場合があります、またはテストフレームワークを独自の実装で完全に密閉する場合があります。</p>
 
 
@@ -2014,7 +1994,7 @@ files for Java, .dll files for .NET, など.</li>
 <h5 class="meta-data">
     <a href="https://selenium.dev/documentation/ja/webdriver/understanding_the_components/">
       “コンポーネントを理解する”
-    </a> was last updated on: 21 May 2020 12:16:48 &#43;0000: <a href="https://github.com/SeleniumHQ/site/commit/64f5ef99fb521859805d18f4da8bacccfbc2e748">Deploying on Thu May 21 12:16:48 UTC 2020, commit 486028a4fd3073cc6831bf0b42c8fc0250be6127, [skip ci] (64f5ef99)</a>
+    </a> was last updated on: 05 Jun 2020 23:38:41 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ea8e3a6e9c3f198b218f569a214f9b71ae11746e">Fixing the deploy, attempt 1 [deploy site] (ea8e3a6)</a>
 </h5>
         
         </div> 
@@ -3176,19 +3156,19 @@ files for Java, .dll files for .NET, など.</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/clipboard.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/jquery.sticky.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/featherlight.min.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/highlight.pack.js?1591393152"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591379916"></script>
-    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591379916"></script>
+    <script src="https://selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/learn.js?1591393152"></script>
+    <script src="https://selenium.dev/documentation/ja/js/hugo-learn.js?1591393152"></script>
 
-    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591379916" rel="stylesheet" />
-    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591379916"></script>
+    <link href="https://selenium.dev/documentation/ja/mermaid/mermaid.css?1591393152" rel="stylesheet" />
+    <script src="https://selenium.dev/documentation/ja/mermaid/mermaid.js?1591393152"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
