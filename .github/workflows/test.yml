@@ -3,7 +3,7 @@ name: Test site build
 on:
   pull_request:
     branches:
-      - master
+      - dev
 
 jobs:
   test_build:
