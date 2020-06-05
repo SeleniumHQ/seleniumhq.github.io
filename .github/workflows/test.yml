@@ -20,7 +20,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: '0.66.0'
-      - name: Build docs
+      - name: Build documentation site
         run: cd docs_source_files && hugo
-      - name: Build site
+      - name: Build website
         run: cd site_source_files && hugo
