@@ -339,7 +339,9 @@ driver.get("http://www.google.com")
 driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.AddAdditionalInternetExplorerOption("silent", true);
+IWebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample
@@ -435,7 +437,21 @@ driver.get("http://www.google.com")
 driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+namespace ieTest {
+ class Program {
+  static void Main(string[] args) {
+   InternetExplorerOptions options = new InternetExplorerOptions();
+   options.ForceCreateProcessApi = true;
+   options.BrowserCommandLineArguments = "-k";
+   IWebDriver driver = new InternetExplorerDriver(options);
+   driver.Url = "https://google.com/ncr";
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
@@ -527,7 +543,20 @@ driver.get("http://www.google.com")
 driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+namespace ieTest {
+ class Program {
+  static void Main(string[] args) {
+   InternetExplorerOptions options = new InternetExplorerOptions();
+   options.ForceCreateProcessApi = true;
+   IWebDriver driver = new InternetExplorerDriver(options);
+   driver.Url = "https://google.com/ncr";
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
