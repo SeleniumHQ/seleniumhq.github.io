@@ -10,7 +10,8 @@ env:
 
 jobs:
   test_build:
-    if: contains(toJson(github.event.commits), '[ci skip]') == false
+    # Skip job based on the commit message
+    if: contains(toJson(github.event.commits), '[skip ci]') == false
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout repo
