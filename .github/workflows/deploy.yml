@@ -22,6 +22,7 @@ jobs:
         env:
           SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
       - name: Deploy
+        if: contains(toJson(github.event.commits), '[deploy site]') == true
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.SELENIUM_CI_TOKEN }}
