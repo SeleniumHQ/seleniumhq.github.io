@@ -1,6 +1,0 @@
-{{ $codeTabId := printf "code%d" .Parent.Ordinal }}
-{{ $language := .Get "language" }}
-{{ $tabId := printf "%s-%s" $language $codeTabId }}
-<section id="{{$language}}{{$codeTabId}}" class="tab-panel">
-  {{ highlight .Inner $language "" }}
-</section>
