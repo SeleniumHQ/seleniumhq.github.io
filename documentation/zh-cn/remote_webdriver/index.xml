@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>远程 WebDriver on Selenium 文档</title>
+    <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/</link>
+    <description>Recent content in 远程 WebDriver on Selenium 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/zh-cn/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>远程WebDriver服务器</title>
+      <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_server/</guid>
+      <description>服务器将始终在安装了待测浏览器的机器上运行. 可以从命令行或通过代码配置来使用服务器.
+从命令行启动服务器 下载 selenium-server-standalone-{VERSION}.jar 后, 将其传到具有待测浏览器的电脑上. 然后, 切换到包含此jar文件的目录中, 运行以下命令:
+java -jar selenium-server-standalone-{VERSION}.jar 运行服务器的注意事项 调用者应调用 Selenium#stop() 或 WebDriver#quit 以结束每次会话.
+Selenium服务器在内存中保留每个运行会话的日志, 这些日志将在调用 Selenium#stop() 或 WebDriver#quit 时清除. 如果您忘记终止这些会话, 则可能会造成服务器内存泄漏. 如果您保持运行时间非常长的会话, 则可能需要不时执行停止或退出的操作 (或使用-Xmx jvm选项增加内存) .
+超时 (自2.21版本) 服务器有两种不同的超时, 可以按如下设置:
+java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=60  browserTimeout  控制允许浏览器挂起的时间 (以秒为单位的值) .  timeout  控制在回收会话之前允许客户端离开的时间 (以秒为单位的值) .   从2.21版本开始不再支持系统属性 selenium.server.session.timeout.
+请注意, 当常规超时机制发生故障时, browserTimeout旨在用作备份超时机制, 该机制应主要在网格和服务器的环境中使用, 以确保崩溃或丢失的进程不会驻留太长时间, 从而干扰了运行时环境.
+以编程方式配置服务器 从理论上讲, 此过程就像将 DriverServlet映射到URL一样简单, 但是也可以将页面托管在轻量级容器中, 例如完全用代码配置的Jetty. 步骤如下.</description>
+    </item>
+    
+    <item>
+      <title>远程WebDriver客户端</title>
+      <link>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</guid>
+      <description>要运行远程WebDriver客户端, 我们首先需要连接到RemoteWebDriver. 为此, 我们将URL指向运行测试的服务器的地址. 为了自定义我们的配置, 我们设置了既定的功能. 下面是一个实例化样例, 其指向我们的远程Web服务器 www.example.com 的远程WebDriver对象, 并在Firefox上运行测试.
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.</description>
+    </item>
+    
+  </channel>
+</rss>

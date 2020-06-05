@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Installation de Selenium on Documentation Selenium</title>
+    <link>https://selenium.dev/documentation/fr/selenium_installation/</link>
+    <description>Recent content in Installation de Selenium on Documentation Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/fr/selenium_installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installer les librairies Selenium</title>
+      <link>https://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_selenium_libraries/</guid>
+      <description>Vous devez d&amp;rsquo;abord installer les fixations Selenium pour votre projet d&amp;rsquo;automatisation. Le processus d&amp;rsquo;installation des bibliothèques dépend de la langue que vous choisissez d&amp;rsquo;utiliser.
+Java L&amp;rsquo;installation des bibliothèques Selenium pour Java peut être effectuée à l&amp;rsquo;aide de Maven. Ajoutez la dépendance selenium-java dans votre projet pom.xml:
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; La dépendance selenium-java prend en charge l&amp;rsquo;exécution de votre automatisation projet avec tous les navigateurs pris en charge par Selenium.</description>
+    </item>
+    
+    <item>
+      <title>Installer les binaires WebDriver</title>
+      <link>https://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>Pour exécuter votre projet et contrôler le navigateur, vous devez installer des binaires WebDriver spécifiques au navigateur.
+Téléchargez le binaire WebDriver pris en charge par votre navigateur et placez-le dans le CHEMIN système.</description>
+    </item>
+    
+    <item>
+      <title>Installer le serveur Standalone</title>
+      <link>https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/fr/selenium_installation/installing_standalone_server/</guid>
+      <description>Si vous prévoyez d&amp;rsquo;utiliser Grid, vous devez télécharger le selenium-server-standalone JAR. Tous les composants sont disponibles via selenium-server. Le JAR autonome contient tout, y compris le serveur Selenium distant et les liaisons côté client. Cela signifie que si vous utilisez le la jar selenium-server-standalone dans votre projet, vous n&amp;rsquo;avez pas besoin d&amp;rsquo;ajouter de sélénium-java ou un le jar spécifique au navigateur.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

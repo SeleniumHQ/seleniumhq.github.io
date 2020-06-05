@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>最悪の慣行 on Seleniumドキュメント</title>
+    <link>https://selenium.dev/documentation/ja/worst_practices/</link>
+    <description>Recent content in 最悪の慣行 on Seleniumドキュメント</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/ja/worst_practices/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CAPTCHA（キャプチャ）</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/captchas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/captchas/</guid>
+      <description>CAPTCHA（キャプチャ）は、 Completely Automated Public Turing test to tell Computers and Humans Apart （コンピューターと人間を区別するための完全に自動化された公開チューリングテスト）の略で、自動化を防ぐように明示的に設計されているため、試さないでください！ CAPTCHAチェックを回避するための2つの主要な戦略があります。
+ テスト環境でCAPTCHAを無効にします テストがCAPTCHAをバイパスできるようにするフックを追加します  </description>
+    </item>
+    
+    <item>
+      <title>ファイルダウンロード</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/file_downloads/</guid>
+      <description>Seleniumの管理下にあるブラウザーでリンクをクリックしてダウンロードを開始することは可能ですが、APIはダウンロードの進行状況を公開しないため、ダウンロードしたファイルのテストには理想的ではありません。 これは、ファイルのダウンロードは、Webプラットフォームとのユーザーインタラクションをエミュレートする重要な側面とは見なされないためです。 代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 libcurl などのHTTPリクエストライブラリに渡します。</description>
+    </item>
+    
+    <item>
+      <title>HTTPレスポンスコード</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/http_response_codes/</guid>
+      <description>Selenium RCの一部のブラウザー構成では、Seleniumはブラウザーと自動化されているサイトの間のプロキシとして機能しました。 これは、Seleniumを通過したすべてのブラウザートラフィックをキャプチャまたは操作できることを意味していました。 captureNetworkTraffic() メソッドは、HTTPレスポンスコードを含むブラウザーと自動化されているサイト間のすべてのネットワークトラフィックをキャプチャすることを目的としています。
+Selenium WebDriverは、ブラウザーの自動化に対するまったく異なるアプローチであり、ユーザーのように振る舞うことを好むため、WebDriverを使用してテストを記述する方法で表現します。 自動化された機能テストでは、ステータスコードの確認はテストの失敗の特に重要な詳細ではありません。 それに先行する手順がより重要です。
+ブラウザーは常にHTTPステータスコードを表します。たとえば、404または500エラーページを想像してください。 これらのエラーページの1つに遭遇したときに&amp;rdquo;早く失敗&amp;rdquo;する簡単な方法は、ページが読み込まれるたびにページタイトルまたは信頼できるポイント（たとえば &amp;lt;h1&amp;gt; タグ）のコンテンツをチェックすることです。 ページオブジェクトモデルを使用している場合、このチェックをクラスコンストラクターまたはページの読み込みが予想される同様のポイントに含めることができます。 場合によっては、HTTPコードがブラウザーのエラーページに表示されることもあります。 WebDriverを使用してこれを読み取り、デバッグ出力を改善できます。
+Webページ自体を確認することは、WebDriverの理想的なプラクティスに沿っており、WebDriverのユーザーのWebサイトの見え方を表現し、主張します。
+HTTPステータスコードをキャプチャするための高度なソリューションは、プロキシを使用してSelenium RCの動作を複製することです。 WebDriver APIは、ブラウザーのプロキシを設定する機能を提供します。 Webサーバーとの間で送受信されるリクエストのコンテンツをプログラムで操作できるプロキシがいくつかあります。 プロキシを使用すると、リダイレクトレスポンスコードへの応答方法を決めることができます。 さらに、すべてのブラウザーがWebDriverでレスポンスコードを利用できるようにするわけではないため、プロキシを使用することを選択すると、すべてのブラウザーで機能するソリューションが得られます。</description>
+    </item>
+    
+    <item>
+      <title>Gmail、Eメール、Facebookログイン</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <description>複数の理由から、WebDriverを使用してGmailやFacebookなどのサイトにログインすることはお勧めしません。 これらのサイトの使用条件（アカウントがシャットダウンされるリスクがある）に違反することは別として、それは遅く、信頼性がありません。
+理想的なプラクティスは、メールプロバイダーが提供するAPIを使用すること、またはFacebookの場合、テストアカウントや友人などを作成するためのAPIを公開する開発者ツールサービスを使用することです。 APIの使用は少し大変な作業のように思えるかもしれませんが、速度、信頼性、および安定性に見返りがあります。 また、APIが変更されることはほとんどありませんが、WebページとHTMLロケーターは頻繁に変更され、テストフレームワークを更新する必要があります。
+テストの任意の時点でWebDriverを使用してサードパーティのサイトにログインすると、テストが長くなるため、テストが失敗するリスクが高くなります。 一般的な経験則として、テストが長くなるほど脆弱で信頼性が低くなります。
+W3C準拠 のWebDriver実装は、サービス拒否攻撃を軽減できるように、navigatorオブジェクトにWebDriverプロパティで注釈を付けます。</description>
+    </item>
+    
+    <item>
+      <title>テストの依存関係</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/test_dependency/</guid>
+      <description>自動テストに関する一般的な考え方と誤解は、特定のテスト順序に関するものです。 テストは 任意 の順序で実行でき、成功するために完了するために他のテストに依存してはなりません。</description>
+    </item>
+    
+    <item>
+      <title>パフォーマンステスト</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/performance_testing/</guid>
+      <description>通常、SeleniumとWebDriverを使用したパフォーマンステストはお勧めしません。 それができないからではなく、ジョブに最適化されておらず、良い結果が得られないからです。
+ユーザーのコンテキストでパフォーマンステストを行うのが理想的なように思えるかもしれませんが、WebDriverテストスイートは、外部および内部の脆弱性の多くのポイントにさらされます。 たとえば、ブラウザの起動速度、HTTPサーバーの速度、JavaScriptまたはCSSをホストするサードパーティサーバーの応答、およびWebDriver実装自体の計測ペナルティ。 これらのポイントが変わることで、結果が変わります。 Webサイトのパフォーマンスと外部リソースのパフォーマンスの違いを区別することは困難です。また、ブラウザでWebDriverを使用すること、特にスクリプトを挿入する場合のパフォーマンスの低下を把握することも困難です。
+他の潜在的な魅力は &amp;ldquo;時間の節約&amp;rdquo; です。 機能テストとパフォーマンステストを同時に実行します。 ただし、機能テストとパフォーマンステストには反対の目的があります。 機能をテストするために、テスターは忍耐強くロードを待つ必要があるかもしれませんが、これはパフォーマンステスト結果を曖昧にし、その逆もまた同様です。
+Webサイトのパフォーマンスを改善するには、改善すべき点を知るために、環境の違いに関係なく全体的なパフォーマンスを分析し、貧弱なコードプラクティス、個々のリソース（例えば、CSSまたはJavaScript）のパフォーマンスの内訳を特定できる必要があります。 このジョブを実行できるパフォーマンステストツールが既にあり、それらは改善を提案できるレポートと分析を提供します。
+使用する（オープンソース）パッケージの例は次のとおりです。: JMeter</description>
+    </item>
+    
+    <item>
+      <title>リンクスパイダー</title>
+      <link>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ja/worst_practices/link_spidering/</guid>
+      <description>WebDriverを使用してリンクをスパイダーすることは、実行できないためではなく、最も理想的なツールではないため明らかに推奨される方法ではありません。 WebDriverの起動には時間が必要であり、テストの記述方法によっては、ページに到達してDOMを通過するために数秒から1分かかる場合があります。
+このためにWebDriverを使用する代わりに、curl コマンドを実行するか、BeautifulSoupなどのライブラリを使用することにより、これらの方法はブラウザーの作成やページへの移動に依存しないため、時間を大幅に節約できます。 このタスクにWebDriverを使用しないことで、時間を大幅に節約できます。</description>
+    </item>
+    
+  </channel>
+</rss>

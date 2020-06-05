@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Exceptions</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/project">Governance</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/main.css"/>
+<link rel="stylesheet" href="/css/support.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+    <h1>Exceptions</h1>
+    <div class="header-description">
+        <p class="body-large">
+            In this page you can find the description and explanations to some common exceptions in WebDriver.
+        </p>
+    </div>
+</section>
+
+<div class="section dark-background">
+    <h2 id="invalid_selector_exception">Invalid Selector</h2>
+    <p>This section describes why you might be seeing the InvalidSelectorError (or similar).</p>
+    <h3>Common Causes</h3>
+    <p>The CSS or xPath selector you are trying to use...</p>
+    <ul>
+        <li>has invalid characters <em>or</em></li>
+        <li>has an invalid query</li>
+    </ul>
+    <h3>Common Examples of the problem</h3>
+    A CSS selector with the following query: <pre>* >>> #canvas div.bwu-datagrid-row div.bwu-datagrid-cell.l0</pre>
+    is invalid because <blockquote>Unexpected token '&gt;' at column 4</blockquote>
+    <h3>Common Solutions</h3>
+    <ul>
+        <li>
+            Run your selector through a validator service
+            (<a href="http://csslint.net/">CSS Validator</a>|<a href="http://www.freeformatter.com/xpath-tester.html">xPath Validator</a>)
+        </li>
+    </ul>
+</div>
+
+<div class="section">
+    <h2 id="no_such_element">No Such Element</h2>
+    <p>This section describes why you might be seeing the NoSuchElementException (or similar).</p>
+    <h3>Common Causes</h3>
+    <ul>
+        <li>The element may not be present.</li>
+    </ul>
+    <h3>Common Solutions</h3>
+</div>
+
+<div class="section dark-background">
+    <h2 id="stale_element_reference">Stale Element Reference Exception</h2>
+    <p>You have probably been directed to this page because you've seen a StaleElementReferenceException in your tests.</p>
+    <h3>Common Causes</h3>
+    <p>A stale element reference exception is thrown in one of two cases, the first being more common than the second:</p>
+    <ul>
+        <li>The element has been deleted entirely.</li>
+        <li>The element is no longer attached to the DOM.</li>
+    </ul>
+
+    <h4>The Element has been Deleted</h4>
+
+    <p>
+        The most frequent cause of this is that page that the element was part of has been refreshed, or the user has<br>
+        navigated away to another page. A less common, but still common cause is where a JS library has deleted an element<br>
+        and replaced it with one with the same ID or attributes. In this case, although the replacement elements may look<br>
+        identical they are different; the driver has no way to determine that the replacements are actually what's expected.
+    </p>
+
+    <p>
+        If the element has been replaced with an identical one, a useful strategy is to look up the element again. If you<br>
+        do this automatically, be aware that you may well be opening your tests to a race condition and potential flakiness.<br>
+        For example, given the code:
+    </p>
+
+    <pre class="code">
+    WebElement element = driver.findElement(By.id("example"));
+    String text = element.getText();
+    </pre>
+
+    <p>
+        If <code>element.getText</code> returns before the element is removed from the DOM you'll get one result.<br>
+        If, however, the element is removed from the DOM and your code does an automatic lookup for the element again<br>
+        before <code>element.getText</code> a different result may be returned.
+    </p>
+
+    <p>
+        Should you wish to head down this route, the simplest hook point is to call
+        <a href="https://seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/remote/RemoteWebDriver.html#setElementConverter(org.openqa.selenium.remote.internal.JsonToWebElementConverter)">
+            setElementConverter</a>.
+    </p>
+
+    <h4>The Element is not Attached to the DOM</h4>
+
+    <p>
+        A common technique used for simulating a tabbed UI in a web app is to prepare DIVs for each tab, but only attach<br>
+        one at a time, storing the rest in variables. In this case, it's entirely possible that your code might have a reference<br>
+        to an element that is no longer attached to the DOM (that is, that has an ancestor which is &quot;document.documentElement&quot;).
+    </p>
+    <p>
+        If WebDriver throws a stale element exception in this case, even though the element still exists, the reference<br>
+        is lost. You should discard the current reference you hold and replace it, possibly by locating the element again<br>
+        once it is attached to the DOM.
+    </p>
+
+    <h3>Edge Cases</h3>
+
+    <ul>
+        <li>The element changes type, but keeps the same locator sematics (JQuery and others)</li>
+    </ul>
+
+    <h4>The element changes type, but keeps the same locator sematics (JQuery and others)</h4>
+
+    <p>
+        Watermarked fields in JQuery change from a regular input to a password field as they get focus. The first end-user<br>
+        key press arrives in the password variant. <br>
+        Refer to pwField2 in <a href="http://regression-tests.seleniumhq.org/issues/2915.groovy">this example</a>
+    </p>
+
+</div>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/project">Governance</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+            <a href="/blog/index.xml"><img class="social-icon" src="/images/rss.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+

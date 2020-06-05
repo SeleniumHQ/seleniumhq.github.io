@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>slack on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/slack/</link>
+    <description>Recent content in slack on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 09 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/slack/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Public Project Meeting - May 07, 2020</title>
+      <link>https://selenium.dev/blog/2020/public-project-meeting-20200507/</link>
+      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/public-project-meeting-20200507/</guid>
+      <description>Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on May 07, 2020 (times are on IST).
+Meetings are held on the #selenium-tlc channel on Selenium Slack.
+The next meeting will be on May 21, 2020, 4:30 PM CET.
+adamgoucher 8:00 PM
+alright. welcome back. time for another fortnightly chat about the project.
+ Simon Stewart 8:01 PM  :wave:
+ Diego Molina 8:01 PM  :wave:</description>
+    </item>
+    
+    <item>
+      <title>Public Project Meeting - April 23, 2020</title>
+      <link>https://selenium.dev/blog/2020/public-project-meeting-20200423/</link>
+      <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/public-project-meeting-20200423/</guid>
+      <description>Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on April 23, 2020 (times are on CET).
+Meetings are held on the #selenium-tlc channel on Selenium Slack.
+The next meeting will be on May 7, 2020, 4:30 PM CET.
+Diego Molina 4:32 PM
+Hi all, we are going to start the next project status meeting in a moment
+for now, the agenda would be:</description>
+    </item>
+    
+    <item>
+      <title>Public Project Meeting - April 9, 2020</title>
+      <link>https://selenium.dev/blog/2020/public-project-meeting-20200409/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/public-project-meeting-20200409/</guid>
+      <description>As an initiative to bring more transparency to the Selenium project, we are now holding bi-weekly public project meetings. These are written meetings which are held on the #selenium-tlc channel on Selenium Slack.
+Here is the timeline of the meeting held on April 9, 2020 (times are on CET).
+The next meeting will be on April 23, 2020, 4:30 PM CET.
+Simon Stewart 4:31 PM @adamgoucher there needs to be a calendar invite for these things</description>
+    </item>
+    
+  </channel>
+</rss>

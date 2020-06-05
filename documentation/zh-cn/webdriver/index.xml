@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WebDriver on Selenium 文档</title>
+    <link>https://selenium.dev/documentation/zh-cn/webdriver/</link>
+    <description>Recent content in WebDriver on Selenium 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/zh-cn/webdriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>了解组件</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</guid>
+      <description>使用 WebDriver 构建测试套件需要您理解并有效地使用许多不同的组件。就像软件中的一切一样， 不同的人对同一个想法使用不同的术语。下面是在这个描述中如何使用术语的细分。
+专业术语  API: 应用程序编程接口。这是一组用来操作 WebDriver 的 “命令”。 库: 一个代码模块，它包含 api 和实现这些 api 所需的代码。库是对应于具体的语言的，例如 Java 的 .jar 文件，.NET 的 .dll 文件，等等。 驱动程序: 负责控制实际的浏览器。大多数驱动程序是由浏览器厂商自己创建的。 驱动程序通常是与浏览器一起在系统上运行的可执行模块，而不是在执行测试套件的系统上。 (尽管它们可能是同一个系统。) 注意: 有些人把驱动称为代理。 框架: 用于支持 WebDriver 套件的附加库。这些框架可能是测试框架，如 JUnit 或 NUnit。 它们也可能是支持自然语言特性的框架，如 Cucumber 或 Robotium。还可以编写和使用框架来操作或配置被测试的系统、 数据创建、测试预言等等。  组成部分 至少，WebDriver 通过一个驱动程序与浏览器对话。通信有两种方式: WebDriver 通过驱动程序向浏览器传递命令， 然后通过相同的路径接收信息。
+驱动程序是特定于浏览器的，例如 ChromeDriver 对应于谷歌的 Chrome/Chromium， GeckoDriver 对应于 Mozilla 的 Firefox 的，等等。驱动程序在与浏览器相同的系统上运行。 这可能与执行测试本身的系统相同，也可能不同。
+上面这个简单的例子就是 _直接_通信。与浏览器的通信也可以是通过 Selenium 服务器或 RemoteWebDriver 进行的 _远程_通信。RemoteWebDriver 与驱动程序和浏览器运行在同一个系统上。
+远程通信也可以使用 Selenium Server 或 Selenium Grid 进行，这两者依次与主机系统上的驱动程序进行通信</description>
+    </item>
+    
+    <item>
+      <title>驱动要求</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/driver_requirements/</guid>
+      <description>通过 WebDriver，Selenium 支持市面上所有主流的浏览器，如 Chrom(ium)、Firefox、 Internet Explorer、Opera 和 Safari。 尽管并非所有浏览器都对远程控制提供官方支持， 但 WebDriver 尽可能使用浏览器的内置自动化支持来驱动浏览器。
+WebDriver 的目标是尽可能模拟真实用户与浏览器的交互。
+在不同的浏览器中，这可能有不同的级别。有关不同驱动程序特性的详细信息， 请参见 _驱动程序特性_。
+尽管所有的驱动程序共享一个面向用户的界面来控制浏览器，但它们设置浏览器会话的方式略有不同。 由于许多驱动程序实现是由第三方提供的，所以它们不包括在标准的 Selenium 发行版中。
+驱动程序实例化、配置文件管理和各种特定于浏览器的设置都是具体参数的例子，这些参数根据浏览器有 不同的需求。本节介绍了使用不同浏览器的基本要求。
+将可执行文件添加到 PATH 中 大多数驱动程序需要 Selenium 额外的可执行文件才能与浏览器通信。您可以在启动 WebDriver 之前手动指定可执行文件的存放位置，但这会使测试的可移植性降低，因为可执行文件必须位于每台 计算机上的同一位置，或包含在测试代码存储库中。
+通过将包含 WebDriver 二进制文件的文件夹添加到系统 path 环境变量中，Selenium 将能够找到其他二进制文件，而无需您的测试代码来定位驱动程序的确切位置。
+ 创建一个目录来放置可执行文件，例如 C:\WebDriver\bin 或 /opt/WebDriver/bin 将目录添加到您的 path 中：
+ 在 Windows 上 - 以管理员身份打开命令提示符，然后运行以下命令将目录永久添加到计算机上所有用户的路径中：
+setx /m path &amp;#34;%path%;C:\WebDriver\bin\&amp;#34; 在 macOS 和 Linux 上的 Bash 用户 - 在终端中：
+export PATH=$PATH:/opt/WebDriver/bin &amp;gt;&amp;gt; ~/.profile  现在您可以测试更改了。关闭所有打开的命令提示符，然后打开一个新的提示符。 输入您在上一步创建的文件夹中的某一个二进制文件的名称，例如：</description>
+    </item>
+    
+    <item>
+      <title>操控浏览器</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/</guid>
+      <description>Ruby 默认情况下，Ruby 没有安装在 Windows 上。下载最新版本 并运行安装程序。你可以保留所有设置的默认值，除要勾选 安装位置和可选任务 屏幕上 将 Ruby 可执行程序添加到您的系统路径 复选框外。想要驱动任何浏览器，你必须安装 selenium-webdriver Ruby gem. 打开命令提示符并输入以下命令来安装它:
+gem install selenium-webdriver 如果你使用 Bundler，添加这一行到你的应用程序的 Gemfile 中:
+gem &amp;#34;selenium-webdriver&amp;#34; 然后在命令提示符中执行以下命令：
+bundle install Internet Explorer IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的 Internet Explorer 驱动程序 并将文件放入 PATH 路径中的文件夹中。要查看 PATH 路径中的目录，在命令提示符中键入 echo %PATH%。
+$ echo %PATH% C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem C:\Ruby200\bin 看起来是个不错的位置。解压 IEDriverServer 文件并将 IEDriverServer.exe 移动进去。
+这将打开一个新的 IE 浏览器窗口:
+require &amp;#34;selenium-webdriver&amp;#34; driver = Selenium::WebDriver.for :internet_explorer 浏览器导航 打开网站 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:</description>
+    </item>
+    
+    <item>
+      <title>等待</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/waits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/waits/</guid>
+      <description>WebDriver通常可以说有一个阻塞API。因为它是一个指示浏览器做什么的进程外库，而且web平台本质上是异步的，所以WebDriver不跟踪DOM的实时活动状态。这伴随着一些我们将在这里讨论的挑战。
+根据经验，大多数由于使用Selenium和WebDriver而产生的间歇性问题都与浏览器和用户指令之间的 竞争条件 有关。例如，用户指示浏览器导航到一个页面，然后在试图查找元素时得到一个 no such element 的错误。
+考虑下面的文档：
+&amp;lt;!doctype html&amp;gt; &amp;lt;meta charset=utf-8&amp;gt; &amp;lt;title&amp;gt;Race Condition Example&amp;lt;/title&amp;gt; &amp;lt;script&amp;gt; var initialised = false; window.addEventListener(&amp;#34;load&amp;#34;, function() { var newElement = document.createElement(&amp;#34;p&amp;#34;); newElement.textContent = &amp;#34;Hello from JavaScript!&amp;#34;; document.body.appendChild(newElement); initialised = true; }); &amp;lt;/script&amp;gt; 这个 WebDriver的说明可能看起来很简单:
+Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition.html&amp;#34;); WebElement element = driver.findElement(By.tagName(&amp;#34;p&amp;#34;)); assertEquals(element.getText(), &amp;#34;Hello from JavaScript!&amp;#34;);   driver.navigate(&amp;#34;file:///race_condition.html&amp;#34;) el = driver.find_element(By.TAG_NAME, &amp;#34;p&amp;#34;) assert el.text == &amp;#34;Hello from JavaScript!&amp;#34;   driver.</description>
+    </item>
+    
+    <item>
+      <title>支持的类</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/support_classes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/support_classes/</guid>
+      <description>WebDriver提供了一些用于简化代码维护的类. 其提供了一种不错的抽象, 使得将HTML元素建模为域对象的操作, 变得更加容易, 还提供了一些更有帮助的方法, 使用此类对象时更容易操作. 我们将学到以下方法:
+ Locator Strategies Events LoadableComponent ThreadGuard etc.  我们开始吧:
+ThreadGuard 此类仅在Java中可用
+ ThreadGuard检查是否仅从创建驱动程序的同一线程中调用了驱动程序. 线程问题 (尤其是在Parallel中运行测试时) 可能遇到神秘并且难以诊断错误. 使用此包装器可以防止此类错误,
+并且在发生此类情况时会抛出异常.
+以下的示例模拟一种线程冲突的情况:
+public class DriverClash { //thread main (id 1) created this driver  private WebDriver protectedDriver = ThreadGuard.protect(new ChromeDriver()); static { System.setProperty(&amp;#34;webdriver.chrome.driver&amp;#34;, &amp;#34;&amp;lt;Set path to your Chromedriver&amp;gt;&amp;#34;); } //Thread-1 (id 24) is calling the same driver causing the clash to happen  Runnable r1 = () -&amp;gt; {protectedDriver.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript 警告框,提示框和确认框</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <description>WebDriver提供了一个API, 用于处理JavaScript提供的三种类型的原生弹窗消息. 这些弹窗由浏览器提供限定的样式.
+Alerts 警告框 其中最基本的称为警告框, 它显示一条自定义消息, 以及一个用于关闭该警告的按钮, 在大多数浏览器中标记为&amp;rdquo;确定&amp;rdquo;(OK). 在大多数浏览器中, 也可以通过按&amp;rdquo;关闭&amp;rdquo;(close)按钮将其关闭, 但这始终与“确定”按钮具有相同的作用. 查看样例警告框.
+WebDriver可以从弹窗获取文本并接受或关闭这些警告.
+Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert driver.findElement(By.linkText(&amp;#34;See an example alert&amp;#34;)).click(); //Wait for the alert to be displayed and store it in a variable Alert alert = wait.until(ExpectedConditions.alertIsPresent()); //Store the alert text in a variable String text = alert.getText(); //Press the OK button alert.accept();   # Click the link to activate the alert driver.</description>
+    </item>
+    
+    <item>
+      <title>Http 代理</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/http_proxies/</guid>
+      <description>代理服务器充当客户端和服务器之间的请求中介. 简述而言, 流量将通过代理服务器流向您请求的地址, 然后返回.
+使用代理服务器用于Selenium的自动化脚本, 可能对以下方面有益:
+ 捕获网络流量 模拟网站后端响应 在复杂的网络拓扑结构或严格的公司限制/政策下访问目标站点.  如果您在公司环境中, 并且浏览器无法连接到URL, 则最有可能是因为环境, 需要借助代理进行访问.
+Selenium WebDriver提供了如下设置代理的方法
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import org.openqa.selenium.WebDriver; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.chrome.ChromeOptions; public class proxyTest { public static void main(String[] args) { Proxy proxy = new Proxy(); proxy.setHttpProxy(&amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34;); ChromeOptions options = new ChromeOptions(); options.setCapability(&amp;#34;proxy&amp;#34;, proxy); WebDriver driver = new ChromeDriver(options); driver.get(&amp;#34;https://www.google.com/&amp;#34;); driver.manage().window().maximize(); driver.quit(); } }   from selenium import webdriver PROXY = &amp;#34;&amp;lt;HOST:PORT&amp;gt;&amp;#34; webdriver.</description>
+    </item>
+    
+    <item>
+      <title>页面加载策略</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/page_loading_strategy/</guid>
+      <description>定义当前会话的页面加载策略. 默认情况下, 当Selenium WebDriver加载页面时, 遵循 normal 的页面加载策略. 始终建议您在页面加载缓慢时, 停止下载其他资源 (例如图片, css, js) .
+document.readyState 属性描述当前页面的加载状态. 默认情况下, 在页面就绪状态是 complete 之前, WebDriver都将延迟 driver.get() 的响应或 driver.navigate().to() 的调用.
+在单页应用程序中 (例如Angular, react, Ember) , 一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) , 则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求, 因为内容在客户端动态加载, 无需刷新页面.
+单页应用程序可以动态加载许多视图, 而无需任何服务器请求, 因此页面加载策略将始终显示为 COMPLETE 的状态, 直到我们执行新的 driver.get() 或 driver.navigate().to() 为止.
+WebDriver的 页面加载策略 支持以下内容:
+normal 此配置使Selenium WebDriver等待整个页面的加载. 设置为 normal 时, Selenium WebDriver将保持等待, 直到 返回 load 事件
+默认情况下, 如果未设置页面加载策略, 则设置 normal 为初始策略.
+Java Python C# Ruby JavaScript Kotlin import org.</description>
+    </item>
+    
+    <item>
+      <title>网络元素</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/web_element/</guid>
+      <description>WebElement表示DOM元素. 可以通过使用WebDriver实例从文档根节点进行搜索, 或者在另一个WebElement下进行搜索来找到WebElement.
+WebDriver API提供了内置方法来查找基于不同属性的WebElement (例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
+Find Element 此方法用于查找元素并返回第一个匹配的单个WebElement引用, 该元素可用于进一步的元素操作.
+Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); driver.get(&amp;#34;http://www.google.com&amp;#34;); // Get search box element from webElement &amp;#39;q&amp;#39; using Find Element WebElement searchBox = driver.findElement(By.name(&amp;#34;q&amp;#34;)); searchBox.sendKeys(&amp;#34;webdriver&amp;#34;);   from selenium import webdriver from selenium.webdriver.common.by import By driver = webdriver.Firefox() driver.get(&amp;#34;http://www.google.com&amp;#34;) # Get search box element from webElement &amp;#39;q&amp;#39; using Find Element search_box = driver.</description>
+    </item>
+    
+    <item>
+      <title>Keyboard</title>
+      <link>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
+      <description>Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.
+sendKeys 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列. Here are the list of possible keystrokes that WebDriver Supports.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34;  driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER); } finally { driver.quit(); } } }   from selenium import webdriver from selenium.</description>
+    </item>
+    
+  </channel>
+</rss>

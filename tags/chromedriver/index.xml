@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chromedriver on SeleniumHQ Browser Automation</title>
+    <link>https://selenium.dev/tags/chromedriver/</link>
+    <description>Recent content in chromedriver on SeleniumHQ Browser Automation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Jul 2011 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://selenium.dev/tags/chromedriver/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>New ChromeDriver</title>
+      <link>https://selenium.dev/blog/2011/new-chromedriver/</link>
+      <pubDate>Thu, 07 Jul 2011 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2011/new-chromedriver/</guid>
+      <description>The ChromeDriver is composed of two major pieces. There are the client APIs, which you use in your tests, and there&amp;#8217;s a server part, which the client APIs know how to start and run and which takes the form of an executable called &amp;#8220;chromedriver&amp;#8221;. The server piece is maintained by the Chromium team, and they&amp;#8217;ve just released a new version, with support for Chrome 14 and with bug fixes. If you&amp;#8217;re using Selenium 2.</description>
+    </item>
+    
+  </channel>
+</rss>

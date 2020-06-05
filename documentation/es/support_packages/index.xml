@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paquetes de soporte on Documentación de Selenium</title>
+    <link>https://selenium.dev/documentation/es/support_packages/</link>
+    <description>Recent content in Paquetes de soporte on Documentación de Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/es/support_packages/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Trabajando con colores</title>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_colours/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_colours/</guid>
+      <description>En algunas ocasiones es posible que sea necesario querer validar el color de algo como parte de tus tests; el problema es que las definiciones de color en la web no son constantes. ¿No estaría bien que existiese una forma sencilla de comparar una representación de color HEX con una representación de color RGB, o una representación de color RGBA con una representación de color HSLA?
+No te preocupes. Hay una solución para esto, la clase Color</description>
+    </item>
+    
+    <item>
+      <title>Trabajando con elementos select</title>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_select_elements/</guid>
+      <description>A la hora de seleccionar elementos puede ser necesario código repetitivo para poder ser automatizado. Para reducir esto y hacer tus test mas limpios, existe un clase Select en los paquetes de soporte de Selenium. Para usarla, necesitarás importarla de la siguiente forma:
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR    import org.</description>
+    </item>
+    
+    <item>
+      <title>Acciones del ratón en detalle</title>
+      <link>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <description>El ratón representa eventos del ratón. Las acciones del ratón son realizadas a través de una interfaz de bajo nivel la cual nos permite introducir acciones de dispositivos virtualizados al navegador web.
+clickAndHold Moverá el ratón al elemento y hará clic (sin soltar) en medio del elemento dado.
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navega a la URL  driver.</description>
+    </item>
+    
+    <item>
+      <title>Trabajando con las cookies</title>
+      <link>https://selenium.dev/documentation/es/support_packages/working_with_cookies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/es/support_packages/working_with_cookies/</guid>
+      <description>Una cookie es una pequeña pieza de datos que es enviada desde el sitio web y es almacenada en el ordenador. Las cookies son usadas principalmente para reconocer al usuario y cargar la información almacenada.
+El API de WebDriver proporciona una forma de interactuar con las cookies a través de métodos incorporados como:
+Añadir una Cookie Este método es usado para añadir una cookie al contexto actual del navegador. Este método solo acepta un conjunto de objetos JSON serializables definidos.</description>
+    </item>
+    
+  </channel>
+</rss>

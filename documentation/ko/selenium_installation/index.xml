@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Selenium installation on Selenium 문서</title>
+    <link>https://selenium.dev/documentation/ko/selenium_installation/</link>
+    <description>Recent content in Selenium installation on Selenium 문서</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://selenium.dev/documentation/ko/selenium_installation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Selenium 라이브러리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
+      <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
+Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.</description>
+    </item>
+    
+    <item>
+      <title>웹드라이버 바이너리 설치</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
+      <description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
+당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description>
+    </item>
+    
+    <item>
+      <title>Installing Standalone server</title>
+      <link>https://selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+    </item>
+    
+  </channel>
+</rss>
