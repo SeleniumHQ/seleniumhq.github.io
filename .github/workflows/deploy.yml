@@ -30,3 +30,4 @@ jobs:
           user_name: 'Selenium CI Bot'
           user_email: 'selenium-ci@users.noreply.github.com'
           commit_message: ${{ github.event.head_commit.message }}
+          cname: www.selenium.dev
