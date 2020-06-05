@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remote WebDriver on Documentation Selenium</title>
-    <link>https://selenium.dev/documentation/fr/remote_webdriver/</link>
+    <link>https://www.selenium.dev/documentation/fr/remote_webdriver/</link>
     <description>Recent content in Remote WebDriver on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/fr/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/fr/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Le serveur Remote WebDriver</title>
-      <link>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/</link>
+      <link>https://www.selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_server/</guid>
       <description>Le serveur fonctionnera toujours sur la machine avec le navigateur que vous souhaitez tester. Le serveur peut être utilisé à partir de la ligne de commande ou via du code configuration.
 Démarrage du serveur à partir de la ligne de commande Une fois que vous avez téléchargé selenium-server-standalone-{VERSION}.jar, placez-le sur l&amp;rsquo;ordinateur avec le navigateur que vous souhaitez tester. Ensuite, à partir de le répertoire avec le pot, exécutez ce qui suit:</description>
     </item>
     
     <item>
       <title>Le client Remote WebDriver</title>
-      <link>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</link>
+      <link>https://www.selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/remote_webdriver/remote_webdriver_client/</guid>
       <description>Pour exécuter un client WebDriver distant, nous devons d&amp;rsquo;abord nous connecter au RemoteWebDriver. Nous le faisons en pointant l&amp;rsquo;URL vers l&amp;rsquo;adresse du serveur exécutant nos tests. Afin de personnaliser notre configuration, nous avons défini les capacités souhaitées. Voici un exemple d&amp;rsquo;instanciation d&amp;rsquo;un objet WebDriver distant pointant vers notre serveur Web distant, www.example.com, exécuter nos tests sur Firefox.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.</description>
     </item>

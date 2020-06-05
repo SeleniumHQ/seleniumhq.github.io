@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>시작하기 on Selenium 문서</title>
-    <link>https://selenium.dev/documentation/ko/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/ko/getting_started/</link>
     <description>Recent content in 시작하기 on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ko/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ko/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>빠르게 살펴보기</title>
-      <link>https://selenium.dev/documentation/ko/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/ko/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/getting_started/quick/</guid>
       <description>셀레니움은 그저 하나의 도구(tool)나 API가 아니라, 여러 도구들로 구성되어 있습니다.
 웹 드라이버(WebDriver) 컴퓨터나 모바일 웹사이트 테스트를 자동화하는 것부터 시작하신다면, 아마 웹 드라이버 APIs부터 쓰게 될 겁니다. 웹 드라이버WebDriver 는 브라우저를 조종하고 테스트를 진행할 수 있도록 제작사에서 제공하는 브라우저 자동화 API들을 사용합니다. 이는 진짜 사용자가 브라우저를 이용하는 것과 비슷합니다. 웹 드라이버 API를 애플리케이션의 코드로 컴파일할 필요가 없기 때문에, 뒤섞이지 않습니다(not intrusive). 더 나아가, 실시간으로 사용하는 것과 같은 애플리케이션을 테스트합니다.
 통합개발환경 (IDE) IDE (통합개발환경 Integrated Development Environment) 은 자신만의 셀레니움 테스트 케이스를 개발하기 위해 사용할 도구입니다.</description>

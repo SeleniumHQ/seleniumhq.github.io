@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>介绍 on Selenium 文档</title>
-    <link>https://selenium.dev/documentation/zh-cn/introduction/</link>
+    <link>https://www.selenium.dev/documentation/zh-cn/introduction/</link>
     <description>Recent content in 介绍 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/zh-cn/introduction/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/zh-cn/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Selenium 项目和工具</title>
-      <link>https://selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/introduction/the_selenium_project_and_tools/</guid>
       <description>Selenium 控制网页浏览器 Selenium 有很多功能， 但其核心是 web 浏览器自动化的一个工具集， 它使用最好的技术来远程控制浏览器实例， 并模拟用户与浏览器的交互。
 它允许用户模拟终端用户执行的常见活动；将文本输入到字段中，选择下拉值和复选框，并单击文档中的链接。 它还提供许多其他控件，比如鼠标移动、任意 JavaScript 执行等等。
 虽然 Selenium 主要用于网站的前端测试，但其核心是浏览器用户代理库。 这些接口在应用程序中无处不在，它们鼓励与其他库进行组合，以满足您的目的。
@@ -31,10 +31,10 @@
     
     <item>
       <title>关于测试自动化</title>
-      <link>https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/introduction/on_test_automation/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/introduction/on_test_automation/</guid>
       <description>首先，问问自己是否真的需要使用浏览器。 在某些情况下，如果您正在开发一个复杂的 web 应用程序， 您需要打开一个浏览器并进行实际测试，这种可能性是很大的。
 然而，诸如 Selenium 之类的功能性最终用户测试运行起来很昂贵。 此外，它们通常需要大量的基础设施才能有效运行。 经常问问自己，您想要测试的东西是否可以使用更轻量级的测试方法（如单元测试）完成， 还是使用较低级的方法完成，这是一个很好的规则。
 一旦确定您正在进行Web浏览器测试业务， 并且您的 Selenium 环境已经准备好开始编写测试， 您通常会执行以下三个步骤的组合：
@@ -52,10 +52,10 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
     
     <item>
       <title>测试的类型</title>
-      <link>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/introduction/types_of_testing/</guid>
       <description>验收测试 进行这种类型的测试以确定功能或系统是否满足客户的期望和要求. 这种测试通常涉及客户的合作或反馈, 是一种验证活动, 可以用于回答以下问题：
  我们是否在制造 正确的 产品?
  对于Web应用程序, 可以通过模拟用户期望的行为 直接使用Selenium来完成此测试的自动化. 可以通过记录/回放, 或通过本文档中介绍的各种支持的语言来完成此类模拟. 注意：有些人可能还会提到, 验收测试是 功能测试 的子类型.
@@ -73,10 +73,10 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
     
     <item>
       <title>关于这个文档</title>
-      <link>https://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/introduction/about_this_documentation/</guid>
       <description>这些文档，就像代码本身一样，100% 由 Selenium 社区中的志愿者维护。 许多人自成立以来一直在使用它，但更多人只是在短时间内使用它，并且已经花时间帮助改善新用户的入门体验。
 如果文档有问题，我们想知道！ 沟通问题的最佳方式是访问 https://github.com/seleniumhq/seleniumhq.github.io/issues 并搜索问题是否已经提交。 如果没有，请随意打开一个！
 社区的许多成员经常光顾 irc.freenode.net 的 #selenium IRC 频道。 请随时来访并提出问题，如果您得到了您认为在这些文档中可能有用的帮助，请务必添加您的贡献！ 我们可以更新这些文档，但当我们从普通提交者之外获得贡献时，对每个人来说都容易得多。</description>

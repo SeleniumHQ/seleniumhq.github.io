@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ドライバーの特異性 on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/</link>
+    <link>https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/</link>
     <description>Recent content in ドライバーの特異性 on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>共有Capabilities</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Selenium WebDriverで新しいセッションを作成するには、ローカルエンドがリモートエンドに基本的なCapabilities（ブラウザの設定情報）を提供する必要があります。 リモートエンドは、一連の同じCapabilitiesを使用してセッションを作成し、現在のセッション機能を描きます。
 WebDriverは、各リモートエンドがCapabilitiesをサポートする/すべきCapabilitiesを提供します。 WebDriverがサポートするCapabilitiesは次のとおりです。
 browserName: このCapabilityは、特定のセッションの browserName を設定するために使います。 指定されたブラウザがリモートエンドにインストールされていない場合、セッションの作成は失敗します。
@@ -32,10 +32,10 @@ acceptInsecureCerts この機能は、セッション中のナビゲーション
     
     <item>
       <title>ドライバー固有の機能</title>
-      <link>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox FirefoxOptions を使用してCapabilitiesを定義する FirefoxOptions は、Firefoxブラウザの機能を定義する新しい方法であり、通常はDesiredCapabilitiesよりも優先して使用する必要があります。
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>

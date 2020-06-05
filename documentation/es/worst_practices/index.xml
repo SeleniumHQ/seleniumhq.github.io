@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Malas prácticas on Documentación de Selenium</title>
-    <link>https://selenium.dev/documentation/es/worst_practices/</link>
+    <link>https://www.selenium.dev/documentation/es/worst_practices/</link>
     <description>Recent content in Malas prácticas on Documentación de Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/es/worst_practices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/es/worst_practices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Captchas</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/captchas/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/captchas/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/captchas/</guid>
       <description>CAPTCHA es la abreviatura de Completely Automated Public Turing test to tell Computers and Humans Apart o en español Prueba de Turing Completamente Automática y Pública para diferenciar Ordenadores de Humanos, está explícitamente diseñado para prevenir la automatización, ¡así que no intentes automatizarlo!
 Existen dos estrategias principales para evitar los CAPTCHAs:
  Deshabilitar los CAPTCHAs en tus entornos de pruebas. Agrega un parámetro que permita que las pruebas hagan un baipás.</description>
@@ -24,58 +24,58 @@ Existen dos estrategias principales para evitar los CAPTCHAs:
     
     <item>
       <title>Descarga de archivos</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/file_downloads/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/file_downloads/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/file_downloads/</guid>
       <description>Mientras que es posible empezar una descarga haciendo clic en el enlace, con el navegador que este siendo controlado por Selenium, el API no expone el progreso de la descarga, haciéndolo poco ideal para probar la descarga de archivos. Esto es debido a que descargar archivos no es considerado un aspecto importante de la emulación de las interacciones de los usuarios con las plataformas web. En lugar de ello, se recomienda encontrar el enlace con Selenium (y cualquier Cookie requerida) y pasarselo a una librería que permita hacer peticiones HTTP como libcurl.</description>
     </item>
     
     <item>
       <title>Códigos de respuesta HTTP</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/http_response_codes/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/http_response_codes/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/http_response_codes/</guid>
       <description>Para algunas configuraciones de navegadores en Selenium RC, Selenium actuaba como proxy entre el navegador y el sitio web que iba a ser automatizado. Esto significaba que todo el trafico que pasaba a través de Selenium podía ser capturado o manipulado. El método captureNetworkTraffic() pretendía capturar todo el trafico de red entre el navegador y el sitio que estaba siendo automatizado, incluyendo los códigos de respuestas HTTP.
 El WebDriver de Selenium parte de una aproximación completamente diferente respecto a la automatización de los navegadores, prefiriendo así actuar mas como un usuario y esto se representa en la forma en la que escribes los tests con el WebDriver.</description>
     </item>
     
     <item>
       <title>Autenticarse con Gmail, email y Facebook</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/</guid>
       <description>Por múltiples razones, autenticarse en sitios como Gmail y Facebook usando el WebDriver no esta recomendado. Aparte de estar en contra de los términos y condiciones de estos sitios (te expones a que te cierren la cuenta), es un proceso lento y poco fiable.
 La practica ideal respecto a estos los sitios de emails es usar las APIs que ofrecen, en el caso de Facebook usar las herramientas para desarrolladores las cuales exponen un API para crear cuentas de prueba, amigos, etc.</description>
     </item>
     
     <item>
       <title>Dependencia entre pruebas</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/test_dependency/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/test_dependency/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/test_dependency/</guid>
       <description>Una idea muy común y equivocada sobre la automatización de pruebas es en lo que respecta al orden de los tests. Tus tests deberían ser capaces de ejecutarse sin tener en cuenta el orden y no depender los unos de los otros para poder finalizarse satisfactoriamente.</description>
     </item>
     
     <item>
       <title>Pruebas de rendimiento</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/performance_testing/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/performance_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/performance_testing/</guid>
       <description>Las pruebas de rendimiento usando Selenium y el WebDriver generalmente no son aconsejables. No porque Selenium sea incapaz de ello si no porque no esta optimizado para ello y es poco probable que se obtengan buenos resultados.
 Puede parecer ideal realizar pruebas de rendimiento desde el contexto de un usuario pero una suite de tests del WebDriver esta sujeta a demasiados puntos fragiles tanto internamente como externamente los cuales están fuera de nuestro control.</description>
     </item>
     
     <item>
       <title>Rastreo de enlaces</title>
-      <link>https://selenium.dev/documentation/es/worst_practices/link_spidering/</link>
+      <link>https://www.selenium.dev/documentation/es/worst_practices/link_spidering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/worst_practices/link_spidering/</guid>
+      <guid>https://www.selenium.dev/documentation/es/worst_practices/link_spidering/</guid>
       <description>Usando WebDriver para arañar una web a través de enlaces no es una práctica recomendada, no porque no se pueda hacer, pero porque definitivamente no es la herramienta más ideal. WebDriver necesita tiempo para iniciarse, y puede tomar varios de segundos hasta un minuto dependiendo de cómo se escriba tu prueba, solo para llegar a la página y atravesar el DOM.
 En lugar de usar WebDriver para esto, podrías ahorrar un montón de tiempo ejecutando un comando curl, o usando una librería como BeautifulSoup ya que estos métodos no se basan en crear un navegador y navegar a una página.</description>
     </item>

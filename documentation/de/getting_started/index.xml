@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Erste Schritte on Dokumentation für Selenium</title>
-    <link>https://selenium.dev/documentation/de/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/de/getting_started/</link>
     <description>Recent content in Erste Schritte on Dokumentation für Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/de/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/de/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Kurze Einführung</title>
-      <link>https://selenium.dev/documentation/de/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/de/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/de/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/de/getting_started/quick/</guid>
       <description>Selenium ist nicht ein einzelnes Tool oder eine API, es besteht aus mehreren Tools
 WebDriver Startest Du mit dem automatisieren von Websiten, dann wirst Du die WebDriver APIs verwenden. WebDriver verwendet die von den Browsern Herstellern zur Verfügung gestellten APIs um den Browser zu steuern und Test auszuführen. Die Ausführung simuliert einen echten Benutzer. Da der WebDriver eigenständig ist und nicht mit der Applikation kompiliert werden muss, handelt es sich um eine minimal invasive Methode.</description>
     </item>

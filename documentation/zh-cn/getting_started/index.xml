@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>入门指南 on Selenium 文档</title>
-    <link>https://selenium.dev/documentation/zh-cn/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/zh-cn/getting_started/</link>
     <description>Recent content in 入门指南 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/zh-cn/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/zh-cn/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>快速浏览</title>
-      <link>https://selenium.dev/documentation/zh-cn/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/getting_started/quick/</guid>
       <description>Selenium 不仅仅是一个工具或 API, 它还包含许多工具.
 WebDriver 如果您开始使用桌面网站测试自动化, 那么您将使用 WebDriver APIs. WebDriver 使用浏览器供应商提供的浏览器自动化 API 来控制浏览器和运行测试. 这就像真正的用户正在操作浏览器一样. 由于 WebDriver 不要求使用应用程序代码编译其 API, 因此它本质上不具有侵入性. 因此, 您测试的应用程序与实时推送的应用程序相同.
 Selenium IDE Selenium IDE (Integrated Development Environment 集成开发环境) 是用来开发 Selenium 测试用例的工具. 这是一个易于使用的 Chrome 和 Firefox 浏览器扩展, 通常是开发测试用例最有效率的方式. 它使用现有的 Selenium 命令记录用户在浏览器中的操作, 参数由元素的上下文确定. 这不仅节省了开发时间, 而且是学习 Selenium 脚本语法的一种很好的方法.

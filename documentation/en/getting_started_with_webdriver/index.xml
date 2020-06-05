@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting started with WebDriver on Documentation for Selenium</title>
-    <link>https://selenium.dev/documentation/en/getting_started_with_webdriver/</link>
+    <link>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/</link>
     <description>Recent content in Getting started with WebDriver on Documentation for Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/en/getting_started_with_webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/en/getting_started_with_webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Browsers</title>
-      <link>https://selenium.dev/documentation/en/getting_started_with_webdriver/browsers/</link>
+      <link>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/browsers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/getting_started_with_webdriver/browsers/</guid>
+      <guid>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/browsers/</guid>
       <description>Consumer browsers The Selenium framework officially supports the following browsers:
    Browser Maintainer Versions Supported     Chrome Chromium All versions   Firefox Mozilla 54 and newer   Internet Explorer Selenium 6 and newer   Opera Opera Chromium / Presto 10.5 and newer   Safari Apple 10 and newer    Specialized browsers There is also a set of specialized browsers out there typically used in development environments.</description>
     </item>
     
     <item>
       <title>Third party drivers and plugins</title>
-      <link>https://selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
+      <link>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
+      <guid>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
       <description>Selenium can be extended through the use of plugins. Here are a number of plugins created and maintained by third parties. For more information on how to create your own plugin or have it listed, consult the docs.
 Please note that these plugins are not supported, maintained, hosted, or endorsed by the Selenium project. In addition, be advised that the plugins listed below are not necessarily licensed under the Apache License v.</description>
     </item>
     
     <item>
       <title>Locating elements</title>
-      <link>https://selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/</link>
+      <link>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/</guid>
+      <guid>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/locating_elements/</guid>
       <description>Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
 Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element(By.ID, &amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.</description>
     </item>
     
     <item>
       <title>Performing actions on the AUT*</title>
-      <link>https://selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
+      <link>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
+      <guid>https://www.selenium.dev/documentation/en/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
       <description>You can set an element&amp;rsquo;s text using the sendKeys method as follows:
 Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     Some web applications use JavaScript libraries to add drag-and-drop functionality.</description>
     </item>

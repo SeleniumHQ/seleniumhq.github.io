@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>소개 on Selenium 문서</title>
-    <link>https://selenium.dev/documentation/ko/introduction/</link>
+    <link>https://www.selenium.dev/documentation/ko/introduction/</link>
     <description>Recent content in 소개 on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ko/introduction/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ko/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Selenium 프로젝트와 도구들</title>
-      <link>https://selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</link>
+      <link>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</guid>
       <description>Selenium 은 웹브라우저를 제어합니다. Selenium 은 여러 프로젝트를 포함하지만, 웹 브라우저 자동화를 위한 도구가 핵심입니다.
 브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의 상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.
 최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.
@@ -26,10 +26,10 @@
     
     <item>
       <title>On test automation</title>
-      <link>https://selenium.dev/documentation/ko/introduction/on_test_automation/</link>
+      <link>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/introduction/on_test_automation/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
 Functional end-user tests such as Selenium tests are expensive to run, however.</description>
@@ -37,10 +37,10 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
     
     <item>
       <title>Types of testing</title>
-      <link>https://selenium.dev/documentation/ko/introduction/types_of_testing/</link>
+      <link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question:
  Are we building the right product?.</description>
@@ -48,10 +48,10 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
     
     <item>
       <title>이 문서에 대하여</title>
-      <link>https://selenium.dev/documentation/ko/introduction/about_this_documentation/</link>
+      <link>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/introduction/about_this_documentation/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</guid>
       <description>이 문서들은 Selenium의 코드와 마찬가지로 자원 봉사자들에 의해 100% 유지됩니다.
 많은 사람들이 이 문서가 만들어진 후 사용해오고 있지만, 더 많은 사람들은 찰나의 시간만 사용하고,
 신규 유저의 경험을 개전하기 위해 각자의 시간을 할애해 왔습니다.

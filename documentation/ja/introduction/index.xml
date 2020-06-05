@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>紹介 on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/introduction/</link>
+    <link>https://www.selenium.dev/documentation/ja/introduction/</link>
     <description>Recent content in 紹介 on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/introduction/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/introduction/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Seleniumプロジェクトとツール</title>
-      <link>https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</link>
+      <link>https://www.selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/introduction/the_selenium_project_and_tools/</guid>
       <description>SeleniumはWebブラウザーを制御します Selenium はいろいろなものがありますが中核となるのは、ブラウザインスタンスをリモートで制御し、ブラウザとのユーザーの対話をエミュレートするために利用可能な最良の技術を使用するWebブラウザ自動化用のツールセットです。
 ユーザーは、エンドユーザーが実行する一般的なアクティビティをシミュレートできます。 フィールドにテキストを入力し、ドロップダウン値とチェックボックスを選択し、ドキュメント内のリンクをクリックします。 また、マウスの移動、任意のJavaScriptの実行など、他の多くのコントロールも提供します。
 主にWebサイトのフロントエンドテストに使用されますが、Seleniumはブラウザーユーザーエージェント ライブラリ の中核です。 インターフェイスはアプリケーションに遍在しているため、目的に合わせて他のライブラリとの組み合わせて使うことを奨励します。
@@ -35,10 +35,10 @@ Selenium RCが当時利用可能な業界のツールを利用したように、
     
     <item>
       <title>テスト自動化について</title>
-      <link>https://selenium.dev/documentation/ja/introduction/on_test_automation/</link>
+      <link>https://www.selenium.dev/documentation/ja/introduction/on_test_automation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/introduction/on_test_automation/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/introduction/on_test_automation/</guid>
       <description>まず、本当にブラウザを使用する必要があるかどうかを自問することから始めます。 ある時点で複雑なWebアプリケーションで作業している場合、おそらくブラウザを開いて実際にテストする必要があるでしょう。
 ただし、Seleniumテストなどの機能的なエンドユーザーテストの実行には費用がかかります。 さらに、それらは通常、効果的に実行するために適切なインフラストラクチャを配置する必要があります。 単体テストなどのより軽量なテストアプローチを使用して、または下位レベルのアプローチを使用して、テストすることを実行できるかどうかを常に自問するのは良いルールです。
 Webブラウザーのテストビジネスに参加していることを確認し、Selenium環境でテストの記述を開始できるようになったら、通常は3つのステップを組み合わせて実行します。
@@ -66,10 +66,10 @@ Java Python C# Ruby JavaScript Kotlin // Create a user who has read-only permiss
     
     <item>
       <title>テストの種類</title>
-      <link>https://selenium.dev/documentation/ja/introduction/types_of_testing/</link>
+      <link>https://www.selenium.dev/documentation/ja/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/introduction/types_of_testing/</guid>
       <description>受け入れテスト このタイプのテストは、機能またはシステムが顧客の期待と要件を満たしているかどうかを判断するために行われます。 このタイプのテストには通常、顧客の協力またはフィードバックが関与します。 下記質問に答えることで確認することができます。
  正しい 製品を作っていますか？
  Webアプリケーションの場合、ユーザーの予想される動作をシミュレートすることで、 このテストの自動化をSeleniumで直接実行できます。 このシミュレーションは、このドキュメントで説明されているように、記録/再生によって、 またはサポートされているさまざまな言語によって実行できます。 注：受け入れテストは 機能テスト のサブタイプであり、一部の人はこれにも言及する場合があります。
@@ -101,10 +101,10 @@ Webアプリケーションの場合、測定する詳細には、スループ�
     
     <item>
       <title>このドキュメントについて</title>
-      <link>https://selenium.dev/documentation/ja/introduction/about_this_documentation/</link>
+      <link>https://www.selenium.dev/documentation/ja/introduction/about_this_documentation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/introduction/about_this_documentation/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/introduction/about_this_documentation/</guid>
       <description>これらのドキュメントは、コード自体と同様に、Seleniumコミュニティ内のボランティアによって100％維持されます。 当初から多くの人が使用してきましたが、多くの人が短期間しか使用しておらず、新しいユーザーのオンボーディングエクスペリエンスの改善に時間を割いてきました。
 ドキュメントに問題がある場合、知りたいです！ 問題を伝える最良の方法は、https://github.com/seleniumhq/seleniumhq.github.io/issuesにアクセスし、問題が既に報告されているかどうかを検索することです。 そうでない場合は、自由に開いてください！
 コミュニティの多くのメンバーは、irc.freenode.netで #selenium IRCチャンネルに頻繁にアクセスします。 気軽に立ち寄って質問してください。 これらのドキュメントで役立つと思われるヘルプを受け取った場合は、必ず貢献を追加してください。 これらのドキュメントを更新することはできますが、通常のコミッター以外から投稿を受け取ると、誰にとってもずっと簡単になります。</description>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Support packages on Selenium documentatie</title>
-    <link>https://selenium.dev/documentation/nl/support_packages/</link>
+    <link>https://www.selenium.dev/documentation/nl/support_packages/</link>
     <description>Recent content in Support packages on Selenium documentatie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/nl/support_packages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/nl/support_packages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Working with colours</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/working_with_colours/</link>
+      <link>https://www.selenium.dev/documentation/nl/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/support_packages/working_with_colours/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/support_packages/working_with_colours/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
     </item>
     
     <item>
       <title>Working with select elements</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/working_with_select_elements/</link>
+      <link>https://www.selenium.dev/documentation/nl/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/support_packages/working_with_select_elements/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/support_packages/working_with_select_elements/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.</description>
@@ -34,10 +34,10 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     
     <item>
       <title>Details van muisactie</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <link>https://www.selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
 clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
@@ -46,10 +46,10 @@ Java Python C# Ruby JavaScript Kotlin import org.</description>
     
     <item>
       <title>Working with cookies</title>
-      <link>https://selenium.dev/documentation/nl/support_packages/working_with_cookies/</link>
+      <link>https://www.selenium.dev/documentation/nl/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/support_packages/working_with_cookies/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/support_packages/working_with_cookies/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
 WebDriver API provides a way to interact with cookies with built-in methods:

@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebDriver on Documentation for Selenium</title>
-    <link>https://selenium.dev/documentation/en/webdriver/</link>
+    <link>https://www.selenium.dev/documentation/en/webdriver/</link>
     <description>Recent content in WebDriver on Documentation for Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/en/webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/en/webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Understanding the components</title>
-      <link>https://selenium.dev/documentation/en/webdriver/understanding_the_components/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/understanding_the_components/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/understanding_the_components/</guid>
       <description>Building a test suite using WebDriver will require you to understand and effectively use a number of different components. As with everything in software, different people use different terms for the same idea. Below is a breakdown of how terms are used in this description.
 Terminology  API: Application Programming Interface. This is the set of &amp;ldquo;commands&amp;rdquo; you use to manipulate WebDriver. Library: A code module which contains the APIs and the code necessary to implement them.</description>
     </item>
     
     <item>
       <title>Driver requirements</title>
-      <link>https://selenium.dev/documentation/en/webdriver/driver_requirements/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/driver_requirements/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/driver_requirements/</guid>
       <description>Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
 WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible. This is possible at varying levels in different browsers. For more details on the different driver idiosyncracies, please see Driver Idiosyncracies.</description>
     </item>
     
     <item>
       <title>Browser manipulation</title>
-      <link>https://selenium.dev/documentation/en/webdriver/browser_manipulation/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/browser_manipulation/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/browser_manipulation/</guid>
       <description>Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check where you need to check the Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem. To install it, open command prompt and type this:
 gem install selenium-webdriver Or, if you use Bundler, add this line to your application&amp;rsquo;s Gemfile:</description>
     </item>
     
     <item>
       <title>Waits</title>
-      <link>https://selenium.dev/documentation/en/webdriver/waits/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/waits/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/waits/</guid>
       <description>WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.
 From experience, most intermittent issues that arise from use of Selenium and WebDriver are connected to race conditions that occur between the browser and the user&amp;rsquo;s instructions.</description>
     </item>
     
     <item>
       <title>Support classes</title>
-      <link>https://selenium.dev/documentation/en/webdriver/support_classes/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/support_classes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/support_classes/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/support_classes/</guid>
       <description>WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
  Locator Strategies Events LoadableComponent ThreadGuard etc.  Let&amp;rsquo;s Start:
 ThreadGuard  This class is only available in the Java Binding
@@ -65,20 +65,20 @@ ThreadGuard  This class is only available in the Java Binding
     
     <item>
       <title>JavaScript alerts, prompts and confirmations</title>
-      <link>https://selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/js_alerts_prompts_and_confirmations/</guid>
       <description>WebDriver provides an API for working with the three types of native popup messages offered by JavaScript. These popups are styled by the browser and offer limited customisation.
 Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK. It can also be dismissed in most browsers by pressing the close button, but this will always do the same thing as the OK button.</description>
     </item>
     
     <item>
       <title>Http proxies</title>
-      <link>https://selenium.dev/documentation/en/webdriver/http_proxies/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/http_proxies/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/http_proxies/</guid>
       <description>A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
 A proxy server for automation scripts with Selenium could be helpful for:
  Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.  If you are in a corporate environment, and a browser fails to connect to a URL, this is most likely because the environment needs a proxy to be accessed.</description>
@@ -86,20 +86,20 @@ A proxy server for automation scripts with Selenium could be helpful for:
     
     <item>
       <title>Page loading strategy</title>
-      <link>https://selenium.dev/documentation/en/webdriver/page_loading_strategy/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/page_loading_strategy/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/page_loading_strategy/</guid>
       <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
 The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
     </item>
     
     <item>
       <title>Web element</title>
-      <link>https://selenium.dev/documentation/en/webdriver/web_element/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/web_element/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/web_element/</guid>
       <description>WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
 WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
 Find Element It is used to find an element and returns a first matching single WebElement reference, that can be used for future element actions</description>
@@ -107,10 +107,10 @@ Find Element It is used to find an element and returns a first matching single W
     
     <item>
       <title>Keyboard</title>
-      <link>https://selenium.dev/documentation/en/webdriver/keyboard/</link>
+      <link>https://www.selenium.dev/documentation/en/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/webdriver/keyboard/</guid>
+      <guid>https://www.selenium.dev/documentation/en/webdriver/keyboard/</guid>
       <description>Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
 sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered. Here are the list of possible keystrokes that WebDriver Supports.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.</description>

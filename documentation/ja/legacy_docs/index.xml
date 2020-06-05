@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>レガシー on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/legacy_docs/</link>
+    <link>https://www.selenium.dev/documentation/ja/legacy_docs/</link>
     <description>Recent content in レガシー on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/legacy_docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/legacy_docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Selenium 1 (Selenium RC)</title>
-      <link>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</link>
+      <link>https://www.selenium.dev/documentation/ja/legacy_docs/selenium_rc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/legacy_docs/selenium_rc/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/legacy_docs/selenium_rc/</guid>
       <description>紹介 Selenium RCは長い間メインのSeleniumプロジェクトでしたが、WebDriver/Seleniumを併合したより強力なツールであるSelenium 2が登場しました。 Selenium 1はもうサポートされていないことを強調する価値があります。
 Selenium RCの仕組み はじめに、Selenium RCのコンポーネントがどのように動作するか、およびテストスクリプトの実行でそれぞれが果たす役割について説明します。
 RCコンポーネント SeleniumRCコンポーネントは、以下のとおりです。
@@ -37,10 +37,10 @@ java -jar selenium-server-standalone-&amp;lt;version-number&amp;gt;.jar これ�
     
     <item>
       <title>RCからWebDriverへの移行</title>
-      <link>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</link>
+      <link>https://www.selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/legacy_docs/migrating_from_rc_to_webdriver/</guid>
       <description>Selenium WebDriverに移行する方法 Selenium 2を採用する際によくある質問は、「既存のテストセットに新しいテストを追加するときに正しいことは何ですか？」ということです。 フレームワークを初めて使用するユーザーは、新しいWebDriver APIを使用してテストを作成することから始めることができます。 しかし、既存のテストスイートを既に持っているユーザーはどうでしょうか？ このガイドは、既存のテストを新しいAPIに移行し、WebDriverが提供する新機能を使用してすべての新しいテストを作成する方法を示すことを目的としています。
 ここで紹介する方法は、1回の大規模なプッシュですべてをやり直す必要のない、WebDriver APIへの断片的な移行について説明しています。 これは、既存のテストの移行により多くの時間を割り当てることができることを意味します。 これにより、どこに労力を費やすかを決定しやすくなります。
 このガイドは、移行を行うための最良のサポートがあるため、Javaを使用して書かれています。 他の言語用のより優れたツールを提供するため、このガイドはそれらの言語を含むように拡張されます。
@@ -55,10 +55,10 @@ WebDriver driver = ((WrapsDriver) selenium).</description>
     
     <item>
       <title>HTMLランナー</title>
-      <link>https://selenium.dev/documentation/ja/legacy_docs/html-runner/</link>
+      <link>https://www.selenium.dev/documentation/ja/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/legacy_docs/html-runner/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/legacy_docs/html-runner/</guid>
       <description>Selenium HTMLランナー を使用すると、コマンドラインからテストスイートを実行できます。 テストスイートは、Selenium IDEまたは互換性ツールからのHTMLエクスポートです。
 共通情報  geckodriver / firefox / selenium-html-runnerのリリースの組み合わせが重要です。 どこかにソフトウェア互換性マトリックスがあるかもしれません。 selenium-html-runnerはテストスイートのみを実行します（テストケースではなく、Monitis Transaction Monitorからのエクスポートなど）。 必ずこれを順守してください。 DISPLAYのないLinuxユーザーの場合-仮想ディスプレイでhtml-runnerを起動する必要があります（xvfbを検索）。  Linux環境の例 次のソフトウェアパッケージをインストール/ダウンロードします。
 [user@localhost ~]$ cat /etc/redhat-release CentOS Linux release 7.4.1708 (Core) [user@localhost ~]$ rpm -qa | egrep -i &amp;#34;xvfb|java-1.8|firefox&amp;#34; xorg-x11-server-Xvfb-1.19.3-11.el7.x86_64 firefox-52.4.0-1.el7.centos.x86_64 java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64 テストスイートの例
@@ -67,10 +67,10 @@ WebDriver driver = ((WrapsDriver) selenium).</description>
     
     <item>
       <title>レガシー Selenium IDE</title>
-      <link>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</link>
+      <link>https://www.selenium.dev/documentation/ja/legacy_docs/selenium_ide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/legacy_docs/selenium_ide/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/legacy_docs/selenium_ide/</guid>
       <description>紹介 Selenium-IDE (統合開発環境) は、Selenium テストケースを開発するためのツールです。 Selenium-IDE は使いやすい Firefox プラグインで、一般にテストケースを開発するための最も効率的な方法です。 Selenium-IDE ではコンテキストメニューも使用できます。 コンテキストメニューを使うと、まず現在ブラウザに表示されているページ上の UI 要素を選択し、次に Selenium コマンドのリストから目的のコマンドを選択できます。 コマンドのパラメータは、選択された UI 要素のコンテキストに従って、あらかじめ定義されたものが使われます。 Selenium-IDE を使う方法は、時間の節約になるだけでなく、Selenium スクリプトの構文を学ぶ手段としても優れています。
 この章では Selenium-IDE について詳しく取り上げ、Selenium-IDE を効果的に使う方法について説明します。
 IDEのインストール Firefoxを使用して、最初にSeleniumHQダウンロードページからIDEをダウンロードします。

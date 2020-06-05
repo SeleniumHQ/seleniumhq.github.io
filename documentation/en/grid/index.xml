@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on Documentation for Selenium</title>
-    <link>https://selenium.dev/documentation/en/grid/</link>
+    <link>https://www.selenium.dev/documentation/en/grid/</link>
     <description>Recent content in Grid on Documentation for Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/en/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/en/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Purposes and main functionalities</title>
-      <link>https://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/</link>
+      <link>https://www.selenium.dev/documentation/en/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/grid/purposes_and_main_functionalities/</guid>
+      <guid>https://www.selenium.dev/documentation/en/grid/purposes_and_main_functionalities/</guid>
       <description> Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
     </item>
     
     <item>
       <title>Components of a Grid</title>
-      <link>https://selenium.dev/documentation/en/grid/components_of_a_grid/</link>
+      <link>https://www.selenium.dev/documentation/en/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/grid/components_of_a_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/en/grid/components_of_a_grid/</guid>
       <description>Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.) The hub will connect one or more nodes that tests will be delegated to.</description>
     </item>
     
     <item>
       <title>Setting up your own Grid</title>
-      <link>https://selenium.dev/documentation/en/grid/setting_up_your_own_grid/</link>
+      <link>https://www.selenium.dev/documentation/en/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/grid/setting_up_your_own_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/en/grid/setting_up_your_own_grid/</guid>
       <description>To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
 Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud. It is certainly possible to also run nodes on your own hardware.</description>
     </item>
     
     <item>
       <title>When to use Grid</title>
-      <link>https://selenium.dev/documentation/en/grid/when_to_use_grid/</link>
+      <link>https://www.selenium.dev/documentation/en/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/grid/when_to_use_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/en/grid/when_to_use_grid/</guid>
       <description>Generally speaking, there’s two reasons why you might want to use Grid.
  To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel. For example, if you have a suite of 100 tests, but you set up Grid to support 4 different machines (VMs or separate physical machines) to run those tests, your test suite will complete in (roughly) one-fourth the time as it would if you ran your tests sequentially on a single machine.</description>
     </item>

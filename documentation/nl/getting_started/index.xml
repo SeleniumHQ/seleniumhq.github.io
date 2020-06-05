@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Aan de slag on Selenium documentatie</title>
-    <link>https://selenium.dev/documentation/nl/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/nl/getting_started/</link>
     <description>Recent content in Aan de slag on Selenium documentatie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/nl/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/nl/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Korte uitleg</title>
-      <link>https://selenium.dev/documentation/nl/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/nl/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/getting_started/quick/</guid>
       <description>Selenium is niet enkel een instrument of API, het bestaat uit verschillende instrumenten.
 WebDriver Als je begint met het automatiseren van websites, dan zul je de WebDriver API&amp;rsquo;s gebruiken. WebDriver gebruikt automatisatie API&amp;rsquo;s die door de browsers zelf worden aangeboden. Laatstgenoemden worden gebruikt om de browser aan te sturen. Op die manier word een echte gebruiker gesimuleerd.WebDriver staat los van de applicatieve code en is daarom niet-intrusief. Zo test je dezelfde applicatie als diegene die live staat.</description>
     </item>

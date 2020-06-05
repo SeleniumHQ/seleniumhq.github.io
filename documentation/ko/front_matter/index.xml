@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Front matter on Selenium 문서</title>
-    <link>https://selenium.dev/documentation/ko/front_matter/</link>
+    <link>https://www.selenium.dev/documentation/ko/front_matter/</link>
     <description>Recent content in Front matter on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ko/front_matter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ko/front_matter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Copyright and attributions</title>
-      <link>https://selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link>
+      <link>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
@@ -24,10 +24,10 @@ Every effort has been made to make this documentation as complete and as accurat
     
     <item>
       <title>Typographical conventions</title>
-      <link>https://selenium.dev/documentation/ko/front_matter/typographical_conventions/</link>
+      <link>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/front_matter/typographical_conventions/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
     </item>

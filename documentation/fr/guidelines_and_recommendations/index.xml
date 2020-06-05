@@ -2,67 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lignes directrices et recommendations on Documentation Selenium</title>
-    <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/</link>
+    <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/</link>
     <description>Recent content in Lignes directrices et recommendations on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/fr/guidelines_and_recommendations/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Page object models</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/page_object_models/</guid>
       <description>L&amp;rsquo;objet de page est un modèle de conception qui est devenu populaire dans l&amp;rsquo;automatisation des tests pour améliorer la maintenance des tests et réduire la duplication de code. Un objet page est un classe orientée objet qui sert d&amp;rsquo;interface à une page de votre AUT. le les tests utilisent ensuite les méthodes de cette classe d&amp;rsquo;objets de page chaque fois qu&amp;rsquo;ils ont besoin de interagir avec l&amp;rsquo;interface utilisateur de cette page.</description>
     </item>
     
     <item>
       <title>Langue spécifique au domaine</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/domain_specific_language/</guid>
       <description>Une langue spécifique au domaine (DSL) est un système qui fournit à l&amp;rsquo;utilisateur un moyen expressif de résoudre un problème. Il permet à un utilisateur de interagir avec le système à leurs conditions - pas seulement parler de programmeur.
 Vos utilisateurs, en général, ne se soucient pas de l&amp;rsquo;apparence de votre site. Ils ne se soucient de la décoration, des animations ou des graphismes. Ils voulez utiliser votre système pour pousser leurs nouveaux employés à travers le processus avec une difficulté minimale; ils veulent réserver un voyage en Alaska; ils veulent configurer et acheter des licornes à prix réduit.</description>
     </item>
     
     <item>
       <title>Generer l&#39;état de l&#39;application</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/generating_application_state/</guid>
       <description>Le sélénium ne doit pas être utilisé pour préparer un cas de test. Tous répétitifs les actions et les préparatifs pour un test élémentaire devraient être effectués par méthodes. Par exemple, la plupart des interfaces utilisateur Web ont une authentification (par exemple, une connexion forme). Éliminer la connexion via un navigateur Web avant chaque test améliorer à la fois la vitesse et la stabilité du test. Une méthode devrait être créé pour accéder à l&amp;rsquo;AUT * (par exemple, en utilisant une API pour vous connecter et définir un biscuit).</description>
     </item>
     
     <item>
       <title>Bouchonner les appels externes</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/mock_external_services/</guid>
       <description>L&#39;élimination des dépendances sur les services externes s&amp;rsquo;améliorera considérablement la vitesse et la stabilité de vos tests.</description>
     </item>
     
     <item>
       <title>Reporting amélioré</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/improved_reporting/</guid>
       <description>Le sélénium n&amp;rsquo;est pas conçu pour rendre compte de l&#39;état des cas de test courir. Profitant des capacités de rapport intégrées de l&amp;rsquo;unité les cadres de test sont un bon début. La plupart des cadres de tests unitaires ont rapports pouvant générer des rapports au format xUnit ou HTML. xUnit les rapports sont populaires pour importer des résultats dans une intégration continue (CI) comme Jenkins, Travis, Bamboo, etc. Voici quelques liens pour plus d&amp;rsquo;informations sur les sorties de rapports pour plusieurs langues.</description>
     </item>
     
     <item>
       <title>Eviter de partager l&#39;état</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/avoid_sharing_state/</guid>
       <description>Bien que mentionné à plusieurs endroits, il convient de le mentionner à nouveau. Assurer les tests sont isolés les uns des autres.
   Ne partagez pas les données de test. Imaginez plusieurs tests qui interrogent chacun la base de données pour les commandes valides avant d&amp;rsquo;en choisir une pour effectuer une action. Devrait deux tests prenez la même commande que vous risquez d&amp;rsquo;obtenir un comportement inattendu.
   Nettoyez les données périmées dans l&amp;rsquo;application qui pourraient être récupérées par un autre test par ex.</description>
@@ -70,10 +70,10 @@ Vos utilisateurs, en général, ne se soucient pas de l&amp;rsquo;apparence de v
     
     <item>
       <title>Indépendence des tests</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/test_independency/</guid>
       <description>Écrivez chaque test comme sa propre unité. Écrivez les tests d&amp;rsquo;une manière qui ne sera pas dépendant d&amp;rsquo;autres tests pour effectuer:
 Disons qu&amp;rsquo;il existe un système de gestion de contenu avec lequel vous pouvez créer du contenu personnalisé qui apparaît ensuite sur votre site Web sous forme de module après la publication et la synchronisation entre le CMS et le serveur peut prendre un certain temps. application.
 Une mauvaise façon de tester votre module est que le contenu est créé et publié dans un test, puis vérifier le module dans un autre test.</description>
@@ -81,20 +81,20 @@ Une mauvaise façon de tester votre module est que le contenu est créé et publ
     
     <item>
       <title>Considerer l&#39;utilisation d&#39;une API fluent</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
       <description>Martin Fowler a inventé le terme [&amp;ldquo;Fluent API&amp;rdquo;](// www.martinfowler.com/bliki/FluentInterface.html). Sélénium déjà implémente quelque chose comme ça dans leur classe FluentWait, qui est conçu comme une alternative à la classe standard Wait. Vous pouvez activer le modèle de conception de l&amp;rsquo;API Fluent dans votre objet de page puis interrogez la page de recherche Google avec un extrait de code comme celui-ci:
 driver.get( &amp;#34;http://www.google.com/webhp?hl=en&amp;amp;amp;tab=ww&amp;#34; ); GoogleSearchPage gsp = new GoogleSearchPage(); gsp.withFluent().setSearchString().clickSearchButton(); La classe d&amp;rsquo;objets de page Google avec ce comportement fluide pourrait ressembler à ceci:</description>
     </item>
     
     <item>
       <title>Nouveau navigateur par test</title>
-      <link>https://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</link>
+      <link>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/</guid>
       <description>Commencez chaque test à partir d&amp;rsquo;un état connu propre. Idéalement, faites tourner une nouvelle machine virtuelle pour chaque test. Si la rotation d&amp;rsquo;une nouvelle machine virtuelle n&amp;rsquo;est pas pratique, démarrez au moins un nouveau WebDriver pour chaque test. Pour Firefox, démarrez un WebDriver avec votre profil connu.
 FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
     </item>

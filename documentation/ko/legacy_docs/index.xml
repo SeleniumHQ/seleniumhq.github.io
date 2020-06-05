@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Legacy on Selenium 문서</title>
-    <link>https://selenium.dev/documentation/ko/legacy_docs/</link>
+    <link>https://www.selenium.dev/documentation/ko/legacy_docs/</link>
     <description>Recent content in Legacy on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ko/legacy_docs/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ko/legacy_docs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Selenium 1 (Selenium RC)</title>
-      <link>https://selenium.dev/documentation/ko/legacy_docs/selenium_rc/</link>
+      <link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/legacy_docs/selenium_rc/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
 How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
@@ -24,20 +24,20 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
     
     <item>
       <title>Migrating from RC to WebDriver</title>
-      <link>https://selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
+      <link>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests.</description>
     </item>
     
     <item>
       <title>HTML runner</title>
-      <link>https://selenium.dev/documentation/ko/legacy_docs/html-runner/</link>
+      <link>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/legacy_docs/html-runner/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
 Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor).</description>
@@ -45,10 +45,10 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
     
     <item>
       <title>Legacy Selenium IDE</title>
-      <link>https://selenium.dev/documentation/ko/legacy_docs/selenium_ide/</link>
+      <link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/legacy_docs/selenium_ide/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
     </item>

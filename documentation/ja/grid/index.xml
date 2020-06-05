@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/grid/</link>
+    <link>https://www.selenium.dev/documentation/ja/grid/</link>
     <description>Recent content in Grid on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>目的と主な機能</title>
-      <link>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</link>
+      <link>https://www.selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/grid/purposes_and_main_functionalities/</guid>
       <description> すべてのテストの中央エントリポイント ブラウザーが実行されるノード・環境の管理と制御 スケーリング テストを並列実行 クロスプラットフォームでのテスト 負荷分散  </description>
     </item>
     
     <item>
       <title>グリッドのコンポーネント</title>
-      <link>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</link>
+      <link>https://www.selenium.dev/documentation/ja/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/grid/components_of_a_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/grid/components_of_a_grid/</guid>
       <description>ハブ  仲介者およびマネージャー テストを実行する要求を受け入れます クライアントから命令を受け取り、ノード上でリモートで実行します スレッドを管理します  ハブ は、すべてのテストが送信される中心点です。 各Selenium Gridは、ちょうど1つのハブで構成されます。 ハブは、それぞれのクライアント（CIサーバー、開発者マシンなど）から到達可能である必要があります。 ハブは、テストが委任される1つ以上のノードを接続します。
 ノード  ブラウザが存在する場所 ハブに自分自身を登録し、その機能を伝えます ハブからリクエストを受信して実行します  ノード は、個々のコンピューターシステムでテストを実行するさまざまなSeleniumインスタンスです。 グリッドには多くのノードが存在する場合があります。 ノードであるマシンは、ハブまたは他のノードと同じプラットフォームであったり、同じブラウザーを選定する必要はありません。 Windows上のノードは、Internet Explorerをブラウザーオプションとして提供する機能を備えている場合がありますが、これはLinuxまたはMacでは不可能です。</description>
     </item>
     
     <item>
       <title>独自のグリッドを設定する</title>
-      <link>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</link>
+      <link>https://www.selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/grid/setting_up_your_own_grid/</guid>
       <description>Selenium Gridを使用するには、ノード用の独自のインフラストラクチャを維持する必要があります。 これは面倒で時間のかかる作業になる可能性があるため、多くの組織はこのインフラストラクチャを提供するためにAmazon EC2やGoogle ComputeなどのIaaSプロバイダーを使用しています。
 他の選択肢として、クラウドのサービスとしてSelenium Gridを提供するSauce LabsやTesting Botなどのプロバイダーの使うこともできます。 独自のハードウェアでノードを実行することも確かに可能です。 この章では、独自のノードインフラストラクチャを備えた独自のグリッドを実行するオプションについて詳しく説明します。
 クイックスタート この例では、Selenium 2グリッドハブを起動し、WebDriverノードとSelenium 1 RCレガシーノードの両方を登録する方法を示します。 また、Javaからグリッドを呼び出す方法も示します。 ここでは、ハブとノードが同じマシンで実行されていますが、もちろん、selenium-server-standaloneを複数のマシンにコピーできます。
@@ -52,10 +52,10 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
     
     <item>
       <title>グリッドを使用する場合</title>
-      <link>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</link>
+      <link>https://www.selenium.dev/documentation/ja/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/grid/when_to_use_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/grid/when_to_use_grid/</guid>
       <description>一般的に、グリッドを使用する理由は2つあります。
  複数のブラウザー、複数のバージョンのブラウザー、および異なるオペレーティングシステムで実行されているブラウザーに対してテストを実行するため。 テストスイートがテストがパスするのに完了するのにかかる時間を短縮するため。  グリッドは、複数のマシンを使用してテストを並行して実行することにより、テストパスの実行を高速化するために使用されます。 たとえば、100個のテストスイートがあり、それらのテストを実行するために4つの異なるマシン（VMまたは個別の物理マシン）をサポートするようにグリッドをセットアップした場合、テストスイートは単一のマシンでテストを連続して実行した場合と比較して（およそ）4分の1の時間で完了します。 大規模なテストスイート、および大量のデータ検証を実行するような長時間実行されるテストスイートの場合、これは大幅な時間の節約になります。 一部のテストスイートの実行には数時間かかる場合があります。 スイートの実行に費やす時間を増やすもう1つの理由は、開発者がAUTのコードをチェックインした後のテスト結果の所要時間を短縮することです。 アジャイルソフトウェア開発を実践しているソフトウェアチームは、一晩テストパスを一晩待つのではなく、できるだけ早くテストフィードバックを求めています。
 グリッドは、複数のランタイム環境、特に異なるブラウザーに対して同時に実行するテストをサポートするためにも使用されます。 たとえば、仮想マシンの&amp;quot;グリッド&amp;quot;は、テスト対象のアプリケーションがサポートする必要がある異なるブラウザーをサポートするようにセットアップできます。 したがって、マシン1にはInternet Explorer 8、マシン2、Internet Explorer 9、マシン3は最新のChrome、マシン4は最新のFirefoxを持っています。 テストスイートが実行されると、Selenium-Gridは各テストブラウザーの組み合わせを受け取り、必要なブラウザーに対して実行する各テストを割り当てます。

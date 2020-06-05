@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pour débuter on Documentation Selenium</title>
-    <link>https://selenium.dev/documentation/fr/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/fr/getting_started/</link>
     <description>Recent content in Pour débuter on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/fr/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/fr/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tour rapide</title>
-      <link>https://selenium.dev/documentation/fr/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/fr/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/getting_started/quick/</guid>
       <description>Selenium n&amp;rsquo;est pas juste un outil ou une API mais est composé de nombreux outils.
 WebDriver Si vous débutez dans l&amp;rsquo;automatisation de test de site web desktop vous allez utiliser les APIs WebDriver. WebDriver utilise les APIs d&amp;rsquo;automatisation fournies par les distributeurs de navigateur pour les contrôler et exécuter les tests. C&amp;rsquo;est comme si un utilisateur réel utilisait le navigateur. Puisque WebDriver n&amp;rsquo;a pas besoin que ses APIs soient compilées avec le code de l&amp;rsquo;application testée, il est non intrusif par nature.</description>
     </item>

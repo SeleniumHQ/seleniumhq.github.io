@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>服务网格 on Selenium 文档</title>
-    <link>https://selenium.dev/documentation/zh-cn/grid/</link>
+    <link>https://www.selenium.dev/documentation/zh-cn/grid/</link>
     <description>Recent content in 服务网格 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/zh-cn/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/zh-cn/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>目的和主要功能</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/purposes_and_main_functionalities/</guid>
       <description> 为所有的测试提供统一的入口 管理和控制运行着浏览器的节点/环境 扩展 并行测试 跨平台(操作系统)测试 负载测试  </description>
     </item>
     
     <item>
       <title>服务网格的组件</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</guid>
       <description>转发器(hub)  中间人和管理者 接受请求 执行测试任务 接受客户端的指示并在远程节点上执行任务 管理进程  转发器(hub) 是一个接受所有所有测试任务的中心节点。 每个Selenium服务网格包含一个转发器(hub)。转发器(hub)需要能被所有的客户机（比如：持续集成服务器，开发机等等）访问到。 转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。
 节点  浏览器会被安装在节点上 节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等) 接受转发器(hub)的指示并执行这些指示  节点 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。 一个服务网格中可以有很多节点。 这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。 一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</description>
     </item>
     
     <item>
       <title>配置自己的服务网格</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
       <description>使用Selenium网格， 你需要维护你自己的基础设置来作为节点使用， 这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
 使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。 当然，在你自己的硬件群运行节点也是可行的。 这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
 快速开始 这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub), 然后注册WebDriver节点和Selenium 1 RC节点。 我们也会向你展示如何使用Java来使用Selenium服务网格。 这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到 多台终端机。
@@ -52,10 +52,10 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
     
     <item>
       <title>什么时候应该使用服务网格</title>
-      <link>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
       <description>通常来说，有2个原因你需要使用服务网格。
  在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试 缩短完成测试的时间  服务网格通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。 比如的测试套件里包含100个测试，你的服务网格支持4种不同的终端（虚拟机或者独立的物理设备） 来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。 在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。 一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
 服务网格也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。 比如，一个由虚拟机组成的服务网格，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。 比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了， Selenium服务网格会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。

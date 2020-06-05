@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getting started on Documentation for Selenium</title>
-    <link>https://selenium.dev/documentation/en/getting_started/</link>
+    <link>https://www.selenium.dev/documentation/en/getting_started/</link>
     <description>Recent content in Getting started on Documentation for Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/en/getting_started/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/en/getting_started/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Quick tour</title>
-      <link>https://selenium.dev/documentation/en/getting_started/quick/</link>
+      <link>https://www.selenium.dev/documentation/en/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/en/getting_started/quick/</guid>
+      <guid>https://www.selenium.dev/documentation/en/getting_started/quick/</guid>
       <description>Selenium is not just one tool or API but it composes many tools.
 WebDriver If you are beginning with desktop website or mobile website test automation, then you are going to be using WebDriver APIs. WebDriver uses browser automation APIs provided by browser vendors to control browser and run tests. This is as if a real user is operating the browser. Since WebDriver does not require its API to be compiled with application code, it is not intrusive.</description>
     </item>

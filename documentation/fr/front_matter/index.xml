@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Front matter on Documentation Selenium</title>
-    <link>https://selenium.dev/documentation/fr/front_matter/</link>
+    <link>https://www.selenium.dev/documentation/fr/front_matter/</link>
     <description>Recent content in Front matter on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/fr/front_matter/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/fr/front_matter/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Copyright et attributions</title>
-      <link>https://selenium.dev/documentation/fr/front_matter/copyright_and_attributions/</link>
+      <link>https://www.selenium.dev/documentation/fr/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/front_matter/copyright_and_attributions/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/front_matter/copyright_and_attributions/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
 Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
@@ -24,10 +24,10 @@ Every effort has been made to make this documentation as complete and as accurat
     
     <item>
       <title>Conventions typographique</title>
-      <link>https://selenium.dev/documentation/fr/front_matter/typographical_conventions/</link>
+      <link>https://www.selenium.dev/documentation/fr/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/front_matter/typographical_conventions/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/front_matter/typographical_conventions/</guid>
       <description>Capitalisation des titres Il faut éviter la capitalisation du titre, comme A Very Fine Heading, et optez plutôt pour un titre très fin. Capitalisation gratuite ou casse de titre, montrent souvent un malentendu - ou un mépris pour - conventions orthographiques. Nous préférons ce que l&amp;rsquo;on appelle le &amp;ldquo;cas de peine&amp;rdquo;, avec un seul capital initial pour démarrer les en-têtes.
 Longueur de la ligne Lors de la modification de la source de la documentation, qui est écrit en HTML simple, limitez la longueur de vos lignes à environ 72 caractères.</description>
     </item>

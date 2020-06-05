@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Remote WebDriver on Selenium 문서</title>
-    <link>https://selenium.dev/documentation/ko/remote_webdriver/</link>
+    <link>https://www.selenium.dev/documentation/ko/remote_webdriver/</link>
     <description>Recent content in Remote WebDriver on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ko/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ko/remote_webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Remote WebDriver server</title>
-      <link>https://selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</link>
+      <link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
 Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description>
@@ -24,10 +24,10 @@ Starting the server from the command line Once you have downloaded selenium-serv
     
     <item>
       <title>Remote WebDriver client</title>
-      <link>https://selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</link>
+      <link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</guid>
+      <guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
     </item>

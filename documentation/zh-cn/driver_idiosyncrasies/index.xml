@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>驱动特性 on Selenium 文档</title>
-    <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/</link>
+    <link>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/</link>
     <description>Recent content in 驱动特性 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>共享的功能</title>
-      <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>为了通过Selenium WebDriver创建新会话, 本地端应向远程端提供基本功能. 远端使用相同的功能集来创建会话并描述当前会话功能.
 WebDriver提供了每个远程端将 (或应该) 支持实现的功能. 以下是WebDriver支持的功能:
 browserName: 此功能用于设置既定会话的 browserName . 如果未在远端安装指定的浏览器, 则会话创建将失败 This capability is used to set the browserName for a given session. If the specified browser is not installed at the remote end, the session creation will fail
@@ -28,10 +28,10 @@ browserVersion: 此功能是可选的, 用于在远程端设置可用的浏览�
     
     <item>
       <title>驱动特定的功能</title>
-      <link>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox 使用FirefoxOptions定义功能 FirefoxOptions 是为Firefox浏览器定义功能(Capabilities)的新方法，通常应优先使用预期功能(DesiredCapabilities).
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.Direct; var driver = new FirefoxDriver(options);   require &amp;#39;selenium-webdriver&amp;#39; opts = Selenium::WebDriver::Firefox::Options.new(args: [&amp;#39;-headless&amp;#39;]) driver = Selenium::WebDriver.for(:firefox, options: opts)   const { Builder } = require(&amp;#34;selenium-webdriver&amp;#34;); const firefox = require(&amp;#39;selenium-webdriver/firefox&amp;#39;); const options = new firefox.</description>
     </item>

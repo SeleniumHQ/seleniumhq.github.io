@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>反模式 on Selenium 文档</title>
-    <link>https://selenium.dev/documentation/zh-cn/worst_practices/</link>
+    <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/</link>
     <description>Recent content in 反模式 on Selenium 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/zh-cn/worst_practices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/zh-cn/worst_practices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>验证码</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/captchas/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/captchas/</guid>
       <description>验证码 (CAPTCHA), 是 全自动区分计算机和人类的图灵测试 (Completely Automated Public Turing test to tell Computers and Humans Apart) 的简称, 是被明确地设计用于阻止自动化的, 所以不要尝试!
 规避验证码的检查, 主要有两个策略:
  在测试环境中禁用验证码 添加钩子以允许测试绕过验证码  </description>
@@ -24,19 +24,19 @@
     
     <item>
       <title>文件下载</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/file_downloads/</guid>
       <description>虽然可以通过在Selenium的控制下单击浏览器的链接来开始下载, 但是API并不会暴露下载进度, 因此这是一种不理想的测试下载文件的方式. 因为下载文件并非模拟用户与Web平台交互的重要方面. 取而代之的是, 应使用Selenium(以及任何必要的cookie)查找链接, 并将其传递给例如libcurl这样的HTTP请求库.</description>
     </item>
     
     <item>
       <title>HTTP响应码</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/http_response_codes/</guid>
       <description>对于Selenium RC中的某些浏览器配置， Selenium充当了浏览器和自动化站点之间的代理. 这意味着可以捕获或操纵通过Selenium传递的所有浏览器流量. captureNetworkTraffic() 方法旨在捕获浏览器和自动化站点之间的所有网络流量，包括HTTP响应码.
 Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜欢表现得像用户一样，这种方式来自于基于WebDriver编写测试的方式. 在自动化功能测试中，检查状态码并不是测试失败的特别重要的细节, 之前的步骤更重要.
 浏览器将始终呈现HTTP状态代码，例如404或500错误页面. 遇到这些错误页面时，一种“快速失败”的简单方法是 在每次加载页面后检查页面标题或可信赖点的内容（例如 &amp;lt;h1&amp;gt; 标签）. 如果使用的是页面对象模型，则可以将此检查置于类构造函数中或类似于期望的页面加载的位置. 有时，HTTP代码甚至可能出现在浏览器的错误页面中， 您可以使用WebDriver读取此信息并改善调试输出.
@@ -46,10 +46,10 @@ Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜�
     
     <item>
       <title>Gmail, email 和 Facebook 登录</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</guid>
       <description>由于多种原因, 不建议使用WebDriver登录Gmail和Facebook等网站. 除了违反这些网站的使用条款之外 (您可能会面临帐户被关闭的风险) , 还有其运行速度缓慢且不可靠的因素.
 理想的做法是使用电子邮件供应商提供的API, 或者对于Facebook, 使用开发者工具的服务, 该服务是被用于创建测试帐户、朋友等内容的API. 尽管使用API可能看起来有些额外的工作量, 但是您将获得基于速度、可靠性和稳定性的回报. API不会频繁更改, 但是网页和HTML定位符经常变化, 并且需要您更新测试框架的代码.
 在任何时候测试使用WebDriver登录第三方站点, 都会增加测试失败的风险, 因为这会使您的测试时间更长. 通常的经验是, 执行时间较长的测试会更加脆弱和不可靠.
@@ -58,19 +58,19 @@ Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜�
     
     <item>
       <title>测试依赖</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/test_dependency/</guid>
       <description>关于自动化测试的一个常见想法和误解是关于特定的测试顺序. 您的测试应该能够以任何顺序运行，而不是依赖于完成其他测试才能成功.</description>
     </item>
     
     <item>
       <title>性能测试</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/performance_testing/</guid>
       <description>通常不建议使用Selenium和WebDriver进行性能测试. 并非因为不能做, 只是缺乏针对此类工作的优化, 因而难以得到乐观的结果.
 对于用户而言, 在用户上下文中执行性能测试似乎是自然而然的选择, 但是WebDriver的测试会受到许多外部和内部的影响而变得脆弱, 这是您无法控制的. 例如, 浏览器的启动速度, HTTP服务器的速度, 托管JavaScript或CSS的第三方服务器的响应 以及WebDriver实现本身检测的损失. 这些因素的变化会影响结果. 很难区分网站自身与外部资源之间的性能差异, 并且也很难明确浏览器中使用WebDriver对性能的影响, 尤其是在注入脚本时.
 另一个潜在的吸引点是&amp;quot;节省时间&amp;rdquo;-同时执行功能和性能测试. 但是, 功能和性能测试分别具有截然不同的目标. 要测试功能, 测试人员可能需要耐心等待加载, 但这会使性能测试结果蒙上阴影, 反之亦然.
@@ -80,10 +80,10 @@ Selenium WebDriver是一种完全不同的浏览器自动化实现， 它更喜�
     
     <item>
       <title>爬取链接</title>
-      <link>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/link_spidering/</guid>
       <description>建议您不要使用WebDriver来通过链接进行爬网， 并非因为无法完成，而是因为它绝对不是最理想的工具。 WebDriver需要一些时间来启动，并且可能要花几秒钟到一分钟的时间， 具体取决于测试的编写方式，仅仅是为了获取页面并遍历DOM.
 除了使用WebDriver之外， 您还可以通过执行 curl 命令或 使用诸如BeautifulSoup之类的库来节省大量时间， 因为这些方法不依赖于创建浏览器和导航至页面. 通过不使用WebDriver可以节省大量时间.</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WebDriver on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/webdriver/</link>
+    <link>https://www.selenium.dev/documentation/ja/webdriver/</link>
     <description>Recent content in WebDriver on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/webdriver/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/webdriver/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>コンポーネントを理解する</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/understanding_the_components/</guid>
       <description>WebDriverを使ってテストスイートを構築するには、多くの異なるコンポーネントを理解し、効率的に使用する必要があります。 ソフトウェアのすべてがそうであるように、人によっては同じ概念に異なる用語を使用します。 以下は、本説明での用語の使用方法の内訳です。
 用語  API: アプリケーション プログラミング インターフェイス。これはWebDriverを操作するために使用する&amp;quot;コマンド&amp;quot;をまとめたものです。 ライブラリ: APIとそれらを実装する必要なコードを含むコードモジュール。 ライブラリは各言語バインディング向けのものです。例 .jar files for Java, .dll files for .NET, など. ドライバー: 実際のブラウザを制御します。 ほとんどのドライバーはブラウザベンダー自身が作成します。ドライバーは一般的にブラウザ自体を備えたシステムで実行される実行可能モジュールであり、テストスイートを実行するシステムにはありません。（ただし、それらは同じシステムであっても構いません。）注: 一部の人々はドライバーをプロキシと呼んでいます。 フレームワーク: WebDriverスイートのサポートとして使用する追加ライブラリ。これらのフレームワークは、JUnitやNUnitなどのテストフレームワークです。また、CucumberまたはRobotiumといった自然言語機能をサポートするフレームワークでもあります。フレームワークは、テスト対象のシステムの操作や構成、データ作成、テストオラクルなどに記述、利用されます。  部品構成 最低限、WebDriverはドライバーを経由してブラウザーと通信します。 コミュニケーションは双方向です：WebDriverは、ドライバーを経由してブラウザーにコマンドを渡し、同じルートを経由して情報を受け取ります。
 ドライバーは、ChromeDriver for GoogleのChrome/Chromium、MozillaのFirefox用GeckoDriverなどブラウザー固有のものです。 ドライバーはブラウザと同じシステムで動きます。これは、テスト自体を実行するところが同じシステムである場合とそうでない場合があります。
@@ -30,10 +30,10 @@
     
     <item>
       <title>ドライバー要件</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/driver_requirements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/driver_requirements/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/driver_requirements/</guid>
       <description>SeleniumはWebDriverを経由して、Chrom(ium)、Firefox、Internet Explorer、Opera、Safariなど、市場のすべての主要なブラウザーをサポートします。 すべてのブラウザーがリモートコントロールを公式にサポートしているわけではありませんが、可能であれば、ブラウザーの自動化のビルトインサポートを使用して、WebDriverはブラウザーを動かします。
 WebDriverの目的は、できるだけブラウザーに近づけて実際のユーザーのインタラクションを模倣することです。 これは、ブラウザーによって異なる水準となる可能性があります。 さまざまなドライバーの特異性の詳細については、 ドライバーの特異性 をご覧ください。
 ブラウザーを制御するためすべてのドライバーが単一のユーザー向けインターフェイスを共有している場合でも、 ブラウザーのセッションを設定する方法が少し異なります。 ドライバーの実装の多くはサードパーティによって提供されているため、 標準のSeleniumディストリビューションには含まれていません。
@@ -47,10 +47,10 @@ chromedriver   PATHが正しく設定されている場合、ドライバーの�
     
     <item>
       <title>ブラウザー操作</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/browser_manipulation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/browser_manipulation/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/browser_manipulation/</guid>
       <description>Ruby RubyはWindowsにデフォルトではインストールされません。最新バージョンをダウンロードし、インストーラーを実行します。 Installation Destination and Optional Tasks 画面で Add Ruby executables to your PATH チェックボックス以外のすべての設定をデフォルト値のままにすることができます。ブラウザーを操作するには、selenium-webdriver Ruby gemをインストールする必要があります。それをインストールするには、コマンドプロンプトを開き、次のように入力します。
 gem install selenium-webdriver または、Bundlerを使用する場合、次の行をアプリケーションのGemfileに追加します。
 gem &amp;#34;selenium-webdriver&amp;#34; そして、プロンプトで次のコマンドを実行します。
@@ -63,10 +63,10 @@ Java Python C# Ruby JavaScript Kotlin //Convenient driver.get(&amp;#34;https://s
     
     <item>
       <title>待機</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/waits/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/waits/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/waits/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/waits/</guid>
       <description>WebDriverは一般にブロッキングAPIを持っていると言えます。 ブラウザーに処理を 指示する Out-of-Processライブラリであり、Webプラットフォームは本質的に非同期の性質を持っているため、WebDriverはDOMのアクティブでリアルタイムな状態を追跡しません。 このことは、ここで説明するいくつかの課題が出てきます。
 経験から、SeleniumとWebDriverの使用から生じる断続的なもののほとんどは、ブラウザーとユーザーの指示の間で発生する 競合状態 に関連しています。 たとえば、ユーザーがブラウザーにページに移動するように指示し、要素を見つけようとすると、no such element エラーが表示される場合があります。
 次のドキュメントを考えてみましょう。
@@ -76,10 +76,10 @@ Java Python C# Ruby JavaScript Kotlin driver.get(&amp;#34;file:///race_condition
     
     <item>
       <title>サポートクラス</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/support_classes/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/support_classes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/support_classes/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/support_classes/</guid>
       <description>WebDriverサポートクラスは、コードのメンテナンスを簡素化するために提供されています。 ドメインオブジェクトとしてのHTML要素のモデリングを容易にする優れた抽象化を提供し、そのようなオブジェクトの使用を推論しやすくするヘルパーメソッドも提供します。 ここでは下記について学びます。
  Locator Strategies Events LoadableComponent ThreadGuard etc.  さぁ、始めましょう。
 ThreadGuard  このクラスは、Javaバインディングでのみ使用可能です。
@@ -90,10 +90,10 @@ public class DriverClash { //thread main (id 1) created this driver  private Web
     
     <item>
       <title>JavaScript アラート、プロンプトおよび確認</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/js_alerts_prompts_and_confirmations/</guid>
       <description>WebDriverは、JavaScriptが提供する3種類のネイティブポップアップメッセージを操作するためのAPIを提供します。 これらのポップアップはブラウザーによってスタイルが設定され、カスタマイズが制限されています。
 アラート これらの最も単純なものはアラートと呼ばれ、カスタムメッセージと、ほとんどのブラウザーでOKのラベルが付いたアラートを非表示にする単一のボタンを表示します。 ほとんどのブラウザーでは閉じるボタンを押すことで閉じることもできますが、これは常にOKボタンと同じことを行います。 アラートの例を参照してください。
 WebDriverはポップアップからテキストを取得し、これらのアラートを受け入れるか、または閉じることができます。
@@ -102,10 +102,10 @@ Java Python C# Ruby JavaScript Kotlin //Click the link to activate the alert dri
     
     <item>
       <title>Httpプロキシ</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/http_proxies/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/http_proxies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/http_proxies/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/http_proxies/</guid>
       <description>プロキシサーバーは、クライアントとサーバー間の要求の仲介役として機能します。 簡単に言えば、トラフィックはプロキシサーバーを経由して、要求したアドレスに戻り、戻ってきます。
 Seleniumを使用した自動化スクリプト用のプロキシサーバーは、
  ネットワークトラフィックをキャプチャする ウェブサイトによって行われた模擬バックエンドを呼び出す 複雑なネットワークトポロジーまたは厳格な企業の制限/ポリシーの下で、必要なWebサイトにアクセスします。  企業環境でブラウザがURLへの接続に失敗した場合、環境にアクセスするにはプロキシが必要であることが原因であることが最も可能性が高いです。
@@ -115,10 +115,10 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.Proxy; import o
     
     <item>
       <title>ページ読み込み戦略</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/page_loading_strategy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/page_loading_strategy/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/page_loading_strategy/</guid>
       <description>現在のセッションのページ読み込み戦略を定義します。 デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は normal となります。 ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 ドキュメントの document.readyState プロパティは、現在のドキュメントの読み込み状態を記述します。 デフォルトでは、WebDriverは、ドキュメントの準備完了状態が complete になるまで、 driver.get()（または）driver.navigate().to() の呼び出しへの応答を保留します。
 SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
@@ -131,10 +131,10 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.PageLoadStrateg
     
     <item>
       <title>Web要素</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/web_element/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/web_element/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/web_element/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/web_element/</guid>
       <description>Web要素はDOM要素を表します。 Web要素は、WebDriverインスタンスを使用してドキュメントルートから検索するか、別のWeb要素の下で検索することで見つけることができます。
 WebDriver APIは、ID、名前、クラス、XPath、CSSセレクター、リンクテキストなどのさまざまなプロパティに基づいたWeb要素を見つけるための組み込みメソッドを提供します。
 要素の検索 要素を検索するために使用され、最初の一致する単一のWeb要素の参照を返します。 これは、将来の要素アクションに使用できます。
@@ -143,10 +143,10 @@ Java Python C# Ruby JavaScript Kotlin WebDriver driver = new FirefoxDriver(); dr
     
     <item>
       <title>キーボード</title>
-      <link>https://selenium.dev/documentation/ja/webdriver/keyboard/</link>
+      <link>https://www.selenium.dev/documentation/ja/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/webdriver/keyboard/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/webdriver/keyboard/</guid>
       <description>キーボードはキーボードイベントを表します。 キーボードアクションは、仮想化されたデバイス入力をWebブラウザーに提供できる低レベルインターフェイスを使用して実行されます。
 sendKeys sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。 WebDriverがサポートする可能なキーストロークのリストは、こちらにあります。
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By;import org.openqa.selenium.Keys;import org.openqa.selenium.WebDriver;import org.openqa.selenium.firefox.FirefoxDriver;public class HelloSelenium {public static void main(String[] args) {WebDriver driver = new FirefoxDriver();try {// Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;);// Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34; driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER);} finally {driver.quit();}}} from selenium import webdriverfrom selenium.webdriver.common.by import Byfrom selenium.</description>

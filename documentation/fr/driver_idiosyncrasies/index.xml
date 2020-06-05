@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Singularités du Driver on Documentation Selenium</title>
-    <link>https://selenium.dev/documentation/fr/driver_idiosyncrasies/</link>
+    <link>https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/</link>
     <description>Recent content in Singularités du Driver on Documentation Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/fr/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Capabilities partagées</title>
-      <link>https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>Afin de créer une nouvelle session par Selenium WebDriver, l&amp;rsquo;extrémité locale doit fournir les capacités de base à l&amp;rsquo;extrémité distante. L&amp;rsquo;extrémité distante utilise le même ensemble de capacités pour créer une session et décrit les fonctionnalités de la session actuelle.
 WebDriver offre des capacités que chaque télécommande fin soutiendra/devrait soutenir la mise en œuvre. Voici les fonctionnalités prises en charge par WebDriver:
 browserName: Cette capacité est utilisée pour définir le browserName pour une session donnée.</description>
@@ -24,10 +24,10 @@ browserName: Cette capacité est utilisée pour définir le browserName pour une
     
     <item>
       <title>Capabilities spécifiques du Driver</title>
-      <link>https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/</link>
+      <link>https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/</guid>
+      <guid>https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/</guid>
       <description>Firefox Définir les Capabilities à l&amp;rsquo;aide de &amp;ldquo;FirefoxOptions&amp;rdquo; FirefoxOptions est la nouvelle façon de définir les capacités de Firefox navigateur et doit généralement être utilisé de préférence à DesiredCapabilities.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.headless = True driver = webdriver.Firefox(options=options)   var options = new FirefoxOptions(); options.Proxy.Kind = ProxyKind.</description>
     </item>

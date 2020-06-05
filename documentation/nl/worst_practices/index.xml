@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Worst practices on Selenium documentatie</title>
-    <link>https://selenium.dev/documentation/nl/worst_practices/</link>
+    <link>https://www.selenium.dev/documentation/nl/worst_practices/</link>
     <description>Recent content in Worst practices on Selenium documentatie</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/nl/worst_practices/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/nl/worst_practices/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Captchas</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/captchas/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/captchas/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/captchas/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/captchas/</guid>
       <description>CAPTCHA, afkorting voor Completely Automated Public Turing test om computers en mensen apart te vertellen, is expliciet ontworpen om automatisering te voorkomen, dus probeer het niet! Er zijn twee primaire strategieën om CAPTCHA-controles te omzeilen:
  Schakel CAPTCHA&amp;rsquo;s uit in uw testomgeving Voeg een haak toe zodat tests de CAPTCHA kunnen omzeilen  </description>
     </item>
     
     <item>
       <title>File downloads</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/file_downloads/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/file_downloads/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/file_downloads/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Whilst it is possible to start a download by clicking a link with a browser under Selenium&amp;rsquo;s control, the API does not expose download progress, making it less than ideal for testing downloaded files. This is because downloading files is not considered an important aspect of emulating user interaction with the web platform.</description>
     </item>
     
     <item>
       <title>HTTP response codes</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/http_response_codes/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/http_response_codes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/http_response_codes/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/http_response_codes/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  For some browser configurations in Selenium RC, Selenium acted as a proxy between the browser and the site being automated. This meant that all browser traffic passed through Selenium could be captured or manipulated. The captureNetworkTraffic() method purported to capture all of the network traffic between the browser and the site being automated, including HTTP response codes.</description>
     </item>
     
     <item>
       <title>Gmail, email and Facebook logins</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/gmail_email_and_facebook_logins/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  For multiple reasons, logging into sites like Gmail and Facebook using WebDriver is not recommended. Aside from being against the usage terms for these sites (where you risk having the account shut down), it is slow and unreliable.
 The ideal practice is to use the APIs that email providers offer, or in the case of Facebook the developer tools service which exposes an API for creating test accounts, friends and so forth.</description>
@@ -54,20 +54,20 @@ The ideal practice is to use the APIs that email providers offer, or in the case
     
     <item>
       <title>Test dependency</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/test_dependency/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/test_dependency/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/test_dependency/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/test_dependency/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  A common idea and misconception about automated testing is regarding a specific test order. Your tests should be able to run in any order, and not rely on other tests to complete in order to be successful.</description>
     </item>
     
     <item>
       <title>Performance testing</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/performance_testing/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/performance_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/performance_testing/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/performance_testing/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Performance testing using Selenium and WebDriver is generally not advised. Not because it is incapable but because it is not optimised for the job and you are unlikely to get good results.
 It may seem ideal to performance test in the context of the user but a suite of WebDriver tests are subjected to many points of external and internal fragility which are beyond your control; for example browser startup speed, speed of HTTP servers, response of third party servers that host JavaScript or CSS, and the instrumentation penalty of the WebDriver implementation itself.</description>
@@ -75,10 +75,10 @@ It may seem ideal to performance test in the context of the user but a suite of 
     
     <item>
       <title>Link spidering</title>
-      <link>https://selenium.dev/documentation/nl/worst_practices/link_spidering/</link>
+      <link>https://www.selenium.dev/documentation/nl/worst_practices/link_spidering/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/nl/worst_practices/link_spidering/</guid>
+      <guid>https://www.selenium.dev/documentation/nl/worst_practices/link_spidering/</guid>
       <description>Page being translated from English to Dutch. Do you speak Dutch? Help us to translate it by sending us pull requests!
  Using WebDriver to spider through links is not a recommended practice not because it cannot be done, but because it’s definitely not the most ideal tool. WebDriver needs time to start up, and can take several seconds up to a minute depending on how your test is written, just to get to the page and traverse through the DOM.</description>
     </item>

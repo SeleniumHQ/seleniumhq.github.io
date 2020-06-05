@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>サポートパッケージ on Seleniumドキュメント</title>
-    <link>https://selenium.dev/documentation/ja/support_packages/</link>
+    <link>https://www.selenium.dev/documentation/ja/support_packages/</link>
     <description>Recent content in サポートパッケージ on Seleniumドキュメント</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/ja/support_packages/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/ja/support_packages/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>色を扱う</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
+      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
       <description>テストの一部として何かの色を検証したい場合があります。 問題は、ウェブ上の色の定義が一定ではないことです。 色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
 心配しないでください。解決策があります。: Color クラスです！
 まず、クラスをインポートする必要があります。
@@ -25,10 +25,10 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
     
     <item>
       <title>選択要素の操作</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link>
+      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
       <description>一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。 これを減らしてテストをきれいにするために、Seleniumサポートパッケージに Select クラスがあります。 それを使用するには、次のimportステートメントが必要です。
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.ui.Select     そして、 &amp;lt;select&amp;gt; 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
 Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement);   select_element = driver.</description>
@@ -36,10 +36,10 @@ Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElem
     
     <item>
       <title>マウスアクションの詳細</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link>
+      <link>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
       <description>マウスは、マウスイベントを表します。 マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
 クリックとホールド 要素に移動し、指定された要素の中央で（解放せずに）クリックします。
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.clickAndHold(searchBtn).build().perform(); } finally { driver.</description>
@@ -47,10 +47,10 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
     
     <item>
       <title>クッキーの使用</title>
-      <link>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
+      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
+      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
       <description>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。 Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。
 WebDriver APIは、組み込みメソッドでCookieと対話するメソッドを提供します。
 クッキーの追加 現在のブラウジングコンテキストにCookieを追加するために使用されます。 Cookieの追加では、一連の定義済みのシリアル化可能なJSONオブジェクトのみを受け入れます。 受け入れられたJSONキー値のリストへのリンクはこちらにあります。

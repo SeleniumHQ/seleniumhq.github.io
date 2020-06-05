@@ -2,49 +2,49 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grid on Documentación de Selenium</title>
-    <link>https://selenium.dev/documentation/es/grid/</link>
+    <link>https://www.selenium.dev/documentation/es/grid/</link>
     <description>Recent content in Grid on Documentación de Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
     
-	<atom:link href="https://selenium.dev/documentation/es/grid/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.selenium.dev/documentation/es/grid/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Objetivos y funcionalidades principales</title>
-      <link>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
+      <link>https://www.selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
+      <guid>https://www.selenium.dev/documentation/es/grid/purposes_and_main_functionalities/</guid>
       <description> Punto de entrada centralizado para todos los tests Gestión y control de los nodos / entornos donde se ejecutan los navegadores Escalado Ejecución de los tests en paralelo Testing cruzado entre diferentes sistemas operativos Balanceo de carga  </description>
     </item>
     
     <item>
       <title>Componentes de un Grid</title>
-      <link>https://selenium.dev/documentation/es/grid/components_of_a_grid/</link>
+      <link>https://www.selenium.dev/documentation/es/grid/components_of_a_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/es/grid/components_of_a_grid/</guid>
       <description>Hub  Ejerce como mediador y administrador Acepta peticiones para ejecutar los tests Recoge instrucciones de los clientes y las ejecuta de forma remota en los nodos Gestiona los hilos  El Hub es un punto central donde se envian todos tus tests. Cada Selenium Grid consiste en exactamente un hub. El hub necesita ser accesible desde la perspectiva de los clientes (ej. Servidor de la CI, maquina del desarrollador) El hub se conectará a uno o mas nodos a los que los tests serán delegados.</description>
     </item>
     
     <item>
       <title>Configurando tu propio Grid</title>
-      <link>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
+      <link>https://www.selenium.dev/documentation/es/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/es/grid/setting_up_your_own_grid/</guid>
       <description>Para usar Selenium Grid, necesitas mantener tu propia infraestructura para los nodos. Como esto puede suponer un engorro y suponer un gran esfuerzo de tiempo, muchas organizaciones usan proveedores de IaaS (Infraestructura como servicio) como Amazon EC2 y Google Compute para proveer esta infraestructura.
 Otras opciones incluyen usar proveedores como Sauce Labs or Testing Bot los cuales proveen Selenium Grid como servicio en la nueve. Ciertamente, también es posible ejecutar los nodos en tu propio hardware.</description>
     </item>
     
     <item>
       <title>Cuando usar el Grid</title>
-      <link>https://selenium.dev/documentation/es/grid/when_to_use_grid/</link>
+      <link>https://www.selenium.dev/documentation/es/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/es/grid/when_to_use_grid/</guid>
       <description>Generalmente hablando, hay dos razones por las cuales podrías querer usar el Grid.
  Para ejecutar tus tests contra múltiples navegadores, múltiples versiones de navegadores y múltiples navegadores bajo diferentes sistemas operativos. Para reducir el tiempo que tarda en completarse la ejecución de tu suite de test.  El Grid se usa para acelerar la ejecución de los test usando múltiples maquinas para ejecutarlos en paralelo. Por ejemplo, si tienes una suite con 100 tests, pero configuras el Grid para soportar cuatro maquinas diferentes (ya sean maquinas virtuales o maquinas separadas físicamente) para ejecutar los tests, tu suite completará la ejecución en aproximadamente una cuarta parte del tiempo que habría tardado si se hubiesen ejecutado de manera secuencial en una sola maquina.</description>
     </item>
