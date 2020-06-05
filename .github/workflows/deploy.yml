@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  GITHUB_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
+  SELENIUM_CI_TOKEN: ${{secrets.SELENIUM_CI_TOKEN}}
 
 jobs:
   deploy:
