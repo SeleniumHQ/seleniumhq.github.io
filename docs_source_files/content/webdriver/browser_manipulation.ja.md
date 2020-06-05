@@ -1022,14 +1022,13 @@ driver.manage().window().position = Point(0,0)
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Minimize window
-Minimizes the window of current browsing context. 
-The exact behavior of this command is specific to 
-individual window managers. 
+### ウィンドウを最小化
+現在のブラウジングコンテキストのウィンドウを最小化します。
+このコマンドの正確な動作は、個々のウィンドウマネージャーに固有のものです。
  
-Minimize Window typically hides the window in the system tray.
+ウィンドウを最小化すると、通常、システムトレイのウィンドウが非表示になります。
 
-__Note: This feature works with Selenium 4 and later versions.__
+__注：この機能は、Selenium 4以降のバージョンで機能します。__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}

@@ -13,7 +13,7 @@ echo -e "\033[0;32mMerging both sites into a single one...\033[0m"
 mv docs_source_files/public/* site_source_files/public/documentation
 
 echo -e "\033[0;32mRefreshing contents of the published directory...\033[0m"
-rm -rf $(ls site_source_files/public)
-mv site_source_files/public/* .
+#rm -rf $(ls site_source_files/public)
+#mv site_source_files/public/* .
 
 echo -e "\033[0;32mDone building site!\033[0m"
