@@ -1,0 +1,17 @@
+name: Test site build
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test_build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Build docs
+        run: cd docs_source_files && hugo
+      - name: Build site
+        run: cd site_source_files && hugo
