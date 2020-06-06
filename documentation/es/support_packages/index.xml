@@ -53,5 +53,16 @@ El API de WebDriver proporciona una forma de interactuar con las cookies a trav�
 Añadir una Cookie Este método es usado para añadir una cookie al contexto actual del navegador. Este método solo acepta un conjunto de objetos JSON serializables definidos.</description>
     </item>
     
+    <item>
+      <title>Chrome Devtools</title>
+      <link>https://www.selenium.dev/documentation/es/support_packages/chrome_devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/es/support_packages/chrome_devtools/</guid>
+      <description>Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+ Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+    </item>
+    
   </channel>
 </rss>

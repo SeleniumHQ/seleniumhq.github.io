@@ -56,5 +56,16 @@ WebDriver API provides a way to interact with cookies with built-in methods:
 Add Cookie It is used to add a cookie to the current browsing context.</description>
     </item>
     
+    <item>
+      <title>Chrome Devtools</title>
+      <link>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+    </item>
+    
   </channel>
 </rss>

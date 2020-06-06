@@ -58,5 +58,16 @@ WebDriver API提供了一种使用内置的方法与Cookie进行交互:
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context  driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } }   from selenium import webdriver driver = webdriver.</description>
     </item>
     
+    <item>
+      <title>Chrome Devtools</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/support_packages/chrome_devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/support_packages/chrome_devtools/</guid>
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+    </item>
+    
   </channel>
 </rss>

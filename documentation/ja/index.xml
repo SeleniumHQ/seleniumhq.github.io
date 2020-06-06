@@ -775,6 +775,17 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
     </item>
     
     <item>
+      <title>Chrome Devtools</title>
+      <link>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</guid>
+      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
+ Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+    </item>
+    
+    <item>
       <title>キーボード</title>
       <link>https://www.selenium.dev/documentation/ja/webdriver/keyboard/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

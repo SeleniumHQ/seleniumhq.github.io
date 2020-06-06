@@ -54,5 +54,16 @@ clickAndHold It will move to the element and clicks (without releasing) in the m
 WebDriver API provides a way to interact with cookies with built-in methods:</description>
     </item>
     
+    <item>
+      <title>Chrome Devtools</title>
+      <link>https://www.selenium.dev/documentation/de/support_packages/chrome_devtools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/support_packages/chrome_devtools/</guid>
+      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+    </item>
+    
   </channel>
 </rss>
