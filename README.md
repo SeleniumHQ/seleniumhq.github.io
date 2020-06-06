@@ -1,4 +1,4 @@
-[![Travis Status](https://travis-ci.com/SeleniumHQ/seleniumhq.github.io.svg?branch=master)](//travis-ci.com/SeleniumHQ/seleniumhq.github.io/builds)
+[![GitHub Actions](https://github.com/seleniumhq/seleniumhq.github.io/workflows/Publish%20Selenium%20Site/badge.svg)](https://github.com/SeleniumHQ/seleniumhq.github.io/actions?query=workflow%3A%22Publish+Selenium+Site%22)
 
 <a href="https://selenium.dev"><img src="https://selenium.dev/images/selenium_logo_square_green.png" width="200" alt="Selenium"/></a>
 
@@ -31,18 +31,23 @@ Please check all the information available at https://selenium.dev/getinvolved/
 
 ### How does the site and docs get build?
 
-Travis CI runs for every commit on each PR and protected branch. The regular CI execution will just
+GitHub actions runs for every commit on each PR and protected branch. The regular CI execution will just
 build the site with Hugo to verify that the commit works. The description of these steps can be seen
-at the Travis configuration file [here](./.travis.yml).
+at the actions configuration file, [one for testing a PR](./.github/workflows/test.yml), and 
+[one for deploying the site](./.github/workflows/deploy.yml)
 
 ### How are the site and docs deployed?
 
-After each CI execution that happens in the master branch, the script [build-site.sh](./build-site.sh) 
+After each CI execution that happens in the `dev` branch, the script [build-site.sh](./build-site.sh) 
 is executed for deployment. This script checks for the string `[deploy site]` in the commit message.
 
-If the commit message contains that string, and the commit is in master, [deploy.sh](./deploy.sh) is
-invoked from [build-site.sh](./build-site.sh). The site and docs will be built, and the changes will
+If the commit message contains that string, and the commit is in `dev`, a 
+[GitHub action](./.github/workflows/deploy.yml) is triggered to build and deploy the site. 
+The site and docs will be built, and the changes will
 be committed to master by the user [Selenium-CI](https://github.com/selenium-ci/).
+
+*What is important to take into account is that the source files for the site are in the `dev`
+branch, and the files that get deployed are pushed to the `master` branch.*
 
 The site and docs are deployed using GitHub pages, and the configuration for this can be seen at the
 repo [settings](https://github.com/SeleniumHQ/seleniumhq.github.io/settings) (if you are a maintainer
