@@ -150,7 +150,11 @@ all_selected_options = select_object.all_selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// No disponemos del ejemplo de código en C# aun - Ayudanos a ello abriendo un PR
+// Return a List<WebElement> of options that have been selected
+var allSelectedOptions = selectObject.AllSelectedOptions;
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+var firstSelectedOption = selectObject.AllSelectedOptions.FirstOrDefault();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Devuelve un Array de <WebElements> con las opciones que han sido seleccionadas

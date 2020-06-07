@@ -9,8 +9,7 @@ weight: 10
 ## sendKeys
 
 sendKeysは、修飾キーシーケンスが検出された場合でも、DOM要素にキーシーケンスを入力します。
-[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
-possible keystrokes that WebDriver Supports.
+WebDriverがサポートする可能なキーストロークのリストは、[こちら](https://www.w3.org/TR/webdriver/#keyboard-actions)にあります。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

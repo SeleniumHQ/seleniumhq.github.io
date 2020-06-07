@@ -336,10 +336,21 @@ options.setCapability("silent", true);
 WebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+
+options = webdriver.IeOptions()
+options.set_capability("silent", True)
+driver = webdriver.Ie(options=options)
+
+# Navigate to url
+driver.get("http://www.google.com")
+
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+InternetExplorerOptions options = new InternetExplorerOptions();
+options.AddAdditionalInternetExplorerOption("silent", true);
+IWebDriver driver = new InternetExplorerDriver(options);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample
@@ -363,7 +374,22 @@ caps.set('silent', true);
 })();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR to add code sample
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
+
+fun main() {
+    val options = InternetExplorerOptions()
+    options.setCapability("silent", true)
+    val driver = InternetExplorerDriver(options)
+    try {
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
+        println(caps)
+    } finally {
+        driver.quit()
+    }
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -420,10 +446,36 @@ driver.get("http://www.google.com")
 driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+namespace ieTest {
+ class Program {
+  static void Main(string[] args) {
+   InternetExplorerOptions options = new InternetExplorerOptions();
+   options.ForceCreateProcessApi = true;
+   options.BrowserCommandLineArguments = "-k";
+   IWebDriver driver = new InternetExplorerDriver(options);
+   driver.Url = "https://google.com/ncr";
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+options = Selenium::WebDriver::IE::Options.new
+options.force_create_process_api = true
+options.add_argument('-k')
+driver = Selenium::WebDriver.for(:ie, options: options)
+
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  puts(driver.capabilities.to_json)
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const ie = require('selenium-webdriver/ie');
@@ -500,10 +552,34 @@ driver.get("http://www.google.com")
 driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample
+using System;
+using OpenQA.Selenium;
+using OpenQA.Selenium.IE;
+
+namespace ieTest {
+ class Program {
+  static void Main(string[] args) {
+   InternetExplorerOptions options = new InternetExplorerOptions();
+   options.ForceCreateProcessApi = true;
+   IWebDriver driver = new InternetExplorerDriver(options);
+   driver.Url = "https://google.com/ncr";
+  }
+ }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+options = Selenium::WebDriver::IE::Options.new
+options.force_create_process_api = true
+driver = Selenium::WebDriver.for(:ie, options: options)
+
+begin
+  # Navigate to URL
+  driver.get 'https://google.com'
+  puts(driver.capabilities.to_json)
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const ie = require('selenium-webdriver/ie');
