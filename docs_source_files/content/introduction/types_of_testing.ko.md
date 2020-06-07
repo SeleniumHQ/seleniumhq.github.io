@@ -1,130 +1,96 @@
 ---
-title: "Types of testing"
+title: "테스트의 종류"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### 적합 테스트
+이러한 유형의 테스트는 기능이나 시스템이   
+고객의 기대와 요구사항을 충족하는지 판단하기 위해 수행됩니다.  
+이러한 유형의 테스트는 일반적으로 고객의 협조나 피드백을 포함하며,   
+이는 다음 질문에 대한 답을 제공하는 검증활동입니다.
+>우리가 **_올바른_** 제품을 만들고 있나요?.
 
-### Acceptance testing
-This type of testing is done to determine if a feature or system
-meets the customer expectations and requirements. 
-This type of testing generally involves the customer's 
-cooperation or feedback, being a validation activity that
-answers the question:
->Are we building the **_right_** product?.
+웹 애플리케이션의 경우, 이 테스트의 자동화는 사용자의 예상 행동을   
+시뮬레이션하여 Selenium과 간접적으로 연계할 수 있습니다.  
+이 시뮬레이션은 기록/재생 또는 이 문서에 설명된 지원하는 다른 프로그래밍 언어를 통해 수행될 수 있습니다.  
+참고: 적합 테스트는 **_기능 테스트_**의 하위 유형이며, 일부 사람들이 이를 언급하기도 합니다.   
 
-For web applications, the automation of this testing can be done
-directly with Selenium by simulating user expected behaviour.
-This simulation could be done by record/playback or through the
-different supported languages as explained in this documentation.
-Note: Acceptance testing is a subtype of **_functional testing_**,
-which some people might also refer to.
             
-### Functional testing
-This type of testing is done to determine if a
-feature or system functions properly without issues. It checks
-the system at different levels to ensure that all scenarios
-are covered and that the system does _what's_ 
-supposed to do. It's a verification activity that
-answers the question:
->Are we building the product **_right?_**.
+### 기능 테스트
+이러한 유형의 테스트는 기능이나 시스템이  
+문제 없이 제기능을 하는지 판단하기 위해 수행됩니다.  
+모든 시나리오가 적용되고 시스템이 해야 할 일을 하는지를   
+확인하기 위해 다른 레벨에서 시스템을 점검합니다.
+이는 다음과 같은 질문에 대한 답을 제공하는 검증 활동입니다.
+>우리가 제품을 **_올바르게_** 만들고 있나요?.
              
-This generally includes: the tests work without errors 
-(404, exceptions...), in a usable way (correct redirections),   
-in an accessible way and matching its specifications 
-(see **_acceptance testing_** above).
+여기에는 일반적으로 오류(404, exceptions 등...) 없이, 사용하능한 방법으로,  
+접근 가능하고 규격에 부합하는 테스트(위의 **_적합 테스트_** 참고)가 포함됩니다.
 
-For web applications, the automation of this testing can be
-done directly with Selenium by simulating expected returns.     
-This simulation could be done by record/playback or through 
-the different supported languages as explained in this documentation.
+웹 애플리케이션의 경우, 이 테스트의 자동하는 예상 리턴값을   
+시뮬레이션 하여 Selenium과 직접 수행될 수 있습니다.  
+이 시뮬레이션은 기록/재생 또는 이 문서에 설명된 지원하는 다른 프로그래밍 언어를 통해 수행될 수 있습니다.  
 
-### Performance testing
-As its name indicates, performance tests are done 
-to measure how well an application is performing.
 
-There are two main sub-types for performance testing:
+### 성능 테스트
+이름에서 알 수 있듯이, 성능 테스트가 수행됩니다.
+응용 프로그램이 얼마나 제기능을 잘 수행하는지 측정합니다.
 
-#### Load testing
-Load testing is done to verify how well the 
-application works under different defined loads 
-(usually a particular number of users connected at once).
+성능 테스트를 위한 두 가지 주요 하위 유형이 있습니다:
 
-#### Stress testing
-Stress testing is done to verify how well the
-application works under stress (or above the maximum supported load).
+#### 로드 테스트
+로드 테스트는 애플리케이션이 서로 다르게 정의된 부하(보통 한 번에 연결된 특정 사용자 수)
+에서 얼마나 잘 작동하는지 검증하기 위해 수행됩니다.
 
-Generally, performance tests are done by executing some 
-Selenium written tests simulating different users 
-hitting a particular function on the web app and 
-retrieving some meaningful measurements. 
+#### 스트레스 테스트
+스트레스 테스트는 애플리케이션이 스트레스(또는 최대 부하 이상)  
+에서 얼마나 잘 작동하는지 확인하기 위해 수행됩니다.
 
-This is generally done by other tools that retrieve the metrics.
-One such tool is **_JMeter_**.
+이 작업은 일반적으로 메트릭스를 검색하는 다른 도구에 의해 수행됩니다.  
+예를들어, **_JMeter_** 가 그러한 도구 중 하나가 될 수 있습니다..
 
-For a web application, details to measure include 
-throughput, latency, data loss, individual component loading times...
+웹 애플리케이션의 경우, 측정해야 할 세부 정보에는 처리량, 지연 시간, 데이터 손설, 개별 구성 요소 로딩 시간 등이 있습니다.
 
-Note 1: All browsers have a performance tab in their
-developers' tools section (accessible by pressing F12)
+참고 1: 모든 브라우저의 개발자 도구 섹션에 성능 탭이 있습니다. (F12를 눌러 접근합니다.)  
 
-Note 2: is a subtype of **_non-functional testing_**
-as this is generally measured per system and not per function/feature.
+참고 2: 기능/비기능 시스템별로 일반적으로 측정되므로, 이는 비기능성 시험의 하위 유형입니다.  
             
-### Regression testing
-This testing is generally done after a change, fix or feature addition. 
 
-To ensure that the change has not broken any of the existing 
-functionality, some already executed tests are executed again. 
+### 회귀 테스트
+이 테스트는 일반적으로 변경, 수정 또는 기능 추가 후에 수행됩니다. 
+
+변경으로 인해 기존 기능이 손상되지 않았는지 확인하기 위해 이미 실행된 일부 테스트를 다시 실행합니다.
             
-The set of re-executed tests can be full or partial
-and can include several different types, depending
-on the application and development team.
+재실행 테스트 집합은 전체 또는 부분적일 수 있으며,  
+애플리케이션 및 개발 팀에 따라 몇 가지 다른 유형을 포함할 수 있습니다.
             
-### Test driven development (TDD)
-Rather than a test type _per se_, TDD is an iterative
-development methodology in which tests drive the design of a feature.
 
-Each cycle starts by creating a set of unit tests that
-the feature should eventually pass (they should fail their first time executed).
+### 테스트 주도 개발 (TDD;Test-driven Development)
+TDD는 테스트 유형 자체가 아니라, 테스트가 기능의 디자인을 주도하는 반복적인 개발 방법론입니다.
 
-After this, development takes place to make the tests pass. 
-The tests are executed again, starting another cycle 
-and this process continues until all tests are passing.
+각 사이클은 기능이 최종적으로 통과해야 하는 장치 테스트 집합을 생성하는 것으로 시작합니다.  
+(첫 번째 실행 시 실패해야 합니다.)  
 
-This aims to speed up the development of an application
-based on the fact that defects are less costly the earlier they are found.
+그 후, 테스트를 통과하기 위한 개발이 이루어집니다.  
+테스트는 다시 실행되어 다른 사이클을 시작하고, 이 프로세스는 모든 테스트가 통과될 때까지 계속됩니다.
 
-### Behavior-driven development (BDD)
-BDD is also an iterative development methodology
-based on the above TDD, in which the goal is to involve
-all the parties in the development of an application.
+이는 결함이 조기에 발견될수록 비용이 덜 든다는 사실에 근거하여 애플리케이션의 개발을 가속화하기 위한 것입니다.
 
-Each cycle starts by creating some specifications 
-(which should fail). Then create the failing unit 
-tests (which should also fail) and then do the development. 
+### 행위 주도 개발 (BDD;Behavior-driven development)
+BDD는 위의 TDD에 기초한 반복적인 개발 방법론으로서,  
+애플리케이션 개발에 모든 당사자를 참여시키는 것을 목표로 합니다.
 
-This cycle is repeated until all types of tests are passing.
+각 사이클은 실패해야 하는 몇 가지 사양을 작성하여 시작합니다.  
+그런 다음 실패한 단위 테스트(이 또한 실패해야 합니다.)를 작성하고 개발을 수행하십시오.
 
-In order to do so, a specification language is 
-used. It should be understandable by all parties and 
-simple, standard and explicit. 
-Most tools use **_Gherkin_** as this language.
+이 사이클은 모든 유형의 시험이 통과할 때까지 반복됩니다.
 
-The goal is to be able to detect even more errors
-than TDD, by targeting potential acceptance errors
-too and make communication between parties smoother.
+이를 위해 명세언어(Specification language)가 사용됩니다.  
+모든 당사자가 이해할 수 있어야하며 단순하고 표준이며 명시적이어야 합니다.  
+대부분의 도구는 명세언어로 **_Gherkin_** 을 사용합니다.
 
-A set of tools are currently available 
-to write the specifications and match them with code functions,
-such as **_Cucumber_** or **_SpecFlow._**
+사양을 작성하고 코드 기능을 일치시키기 위해 **_Cucumber_** 나 **_SpecFlow_** 와 같은 도구를 사용할 수 있습니다.  
 
-A set of tools are built on top of Selenium to make this process
-even faster by directly transforming the BDD specifications into 
-executable code.
-Some of these are **_JBehave, Capybara and Robot Framework_**.
+BDD 사양을 실행 가능한 코드로 직접 변환하여 이 프로세스를 더욱 빠르게 수행할 수 있도록 
+Selenium에 **_JBehave_**, **_Capybara_** 나 **_Robot Framework_** 와 같은 도구 세트가 구축되어 있습니다.  
             
