@@ -36,14 +36,20 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
     </item>
     
     <item>
-      <title>Types of testing</title>
+      <title>테스트의 종류</title>
       <link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Acceptance testing This type of testing is done to determine if a feature or system meets the customer expectations and requirements. This type of testing generally involves the customer&amp;rsquo;s cooperation or feedback, being a validation activity that answers the question:
- Are we building the right product?.</description>
+      <description>적합 테스트 이러한 유형의 테스트는 기능이나 시스템이
+고객의 기대와 요구사항을 충족하는지 판단하기 위해 수행됩니다.
+이러한 유형의 테스트는 일반적으로 고객의 협조나 피드백을 포함하며,
+이는 다음 질문에 대한 답을 제공하는 검증활동입니다.
+ 우리가 올바른 제품을 만들고 있나요?.
+ 웹 애플리케이션의 경우, 이 테스트의 자동화는 사용자의 예상 행동을
+시뮬레이션하여 Selenium과 간접적으로 연계할 수 있습니다.
+이 시뮬레이션은 기록/재생 또는 이 문서에 설명된 지원하는 다른 프로그래밍 언어를 통해 수행될 수 있습니다.
+참고: 적합 테스트는 **기능 테스트**의 하위 유형이며, 일부 사람들이 이를 언급하기도 합니다.</description>
     </item>
     
     <item>
