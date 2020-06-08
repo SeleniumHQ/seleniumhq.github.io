@@ -1,35 +1,21 @@
 ---
-title: "Getting started with WebDriver"
+title: "WebDriver 시작하기"
 chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# WebDriver 시작하기
 
-# Getting started with WebDriver
+Selenium은 _WebDriver_ 의 사용을 통해 모든 주요 브라우저의 자동화를 지원합니다.   
+_WebDriver_ 는 웹 브라우저의 동작을 제어하기 위한 언어 중립 인터페이스를 정의하는 API와 프로토콜 입니다.  
+각 브라우저는 *드라이버* 라고 불리는 특정한 웹 드라이버 구현에 의해 뒷받침됩니다.    
+드라이버는 브라우저로의 위임을 담당하는 구성 요소이며, Selenium과 브라우저와의 통신을 처리합니다.  
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+이러한 분리는 브라우저 공급 업체가 브라우저 구현을 책임지게하려는 의식적인 노력의 일부입니다.  
+Selenium은 가능한 한 이러한 타사의 드라이버를 사용하지만, 현실적으로 불가능할 경우 프로젝트에서 유지&관리하는 자체 드라이버도 제공합니다.  
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
+Selenium 프레임워크는 이 모든 부분을 하나로 묶습니다.    
+서로 다른 브라우저 백엔드를 투명하게 사용할 수 있는   
+사용자 대면 인터페이스를 통해 브라우저 간 및 플랫폼 간의 자동화가 가능합니다.  
 
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
-
-More details about drivers can be found in 
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+드라이버에 대한 자세한 내용은 [Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}) 를 참조하십시오.
