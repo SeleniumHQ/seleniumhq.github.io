@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>Public Project Meeting - June 04, 2020</title>
+      <link>https://selenium.dev/blog/2020/public-project-meeting-20200604/</link>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/public-project-meeting-20200604/</guid>
+      <description>Continuing the series of bi-weekly public project meetings, here is the timeline of the meeting held on June 04, 2020 (times are on IST).
+Meetings are held on the #selenium-tlc channel on Selenium Slack.
+The next meeting will be on June 18, 2020, 4:30 PM CET.
+ Diego Molina 8:05 PM
+the agenda will be: • anything people want to add in the next 2 minutes • me looking to previous agendas and adding those items here</description>
+    </item>
+    
+    <item>
       <title>Selenium 4.0 Alpha 6 is out!</title>
       <link>https://selenium.dev/blog/2020/selenium-4-alpha-6-is-out/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>

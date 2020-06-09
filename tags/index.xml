@@ -6,24 +6,15 @@
     <description>Recent content in Tags on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 01 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>selenium</title>
-      <link>https://selenium.dev/tags/selenium/</link>
-      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://selenium.dev/tags/selenium/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>meeting</title>
       <link>https://selenium.dev/tags/meeting/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/meeting/</guid>
       <description></description>
@@ -32,7 +23,7 @@
     <item>
       <title>slack</title>
       <link>https://selenium.dev/tags/slack/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/slack/</guid>
       <description></description>
@@ -41,9 +32,18 @@
     <item>
       <title>tlc</title>
       <link>https://selenium.dev/tags/tlc/</link>
-      <pubDate>Sat, 09 May 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 04 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/tags/tlc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://selenium.dev/tags/selenium/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/tags/selenium/</guid>
       <description></description>
     </item>
     
