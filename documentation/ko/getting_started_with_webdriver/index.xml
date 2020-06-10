@@ -38,25 +38,23 @@
     </item>
     
     <item>
-      <title>Locating elements</title>
+      <title>Element 찾기</title>
       <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Locating one element One of the most fundamental techniques to learn when using WebDriver is how to find elements on the page. WebDriver offers a number of built-in selector types, amongst them finding an element by its ID attribute:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.</description>
+      <description>하나의 element 찾기 웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element(By.ID, &amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.</description>
     </item>
     
     <item>
-      <title>Performing actions on the AUT*</title>
+      <title>AUT*에 대한 작업 수행</title>
       <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- You can set an element&amp;rsquo;s text using the sendKeys method as follows:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.</description>
+      <description>sendKeys 메소드를 이용하여 element의 텍스트를 설정할 수 있습니다:
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     몇몇 웹 어플리케이션들은 자바스크립트 라이브러리를 이용하여 드래그-앤-드롭 기능을 구현합니다. 아래는 하나의 element를 또다른 element로 드래그하는 가장 기본적인 예시입니다:</description>
     </item>
     
   </channel>

@@ -155,6 +155,61 @@
         
         
         <div class="container dark-background">
+            June 10, 2020 by <a href="https://twitter.com/AutomatedTester">AutomatedTester</a>
+            <a href="https://selenium.dev/blog/2020/how-selenium-works-transport/"><h2>How Selenium Works: Episode 1 - Transportation</h2></a>
+            <p>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.</p>
+<p>I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</p>
+<p>Why?</p>
+<p>Selenium, by chance and being good at what it does, is used by millions of people around the world as well. It&rsquo;s how companies from Microsoft and Google to the small startup make sure that their site works in every browser.</p>
+<h2 id="how-does-selenium-talk-to-the-browser">How Does Selenium talk to the browser?</h2>
+<p>Selenium, over the years, decided that we were going to use HTTP to speak to the browser. We built a REST-ish API that every client binding could use and hopefully get the same results.</p>
+<h3 id="http-and-rest-ish-really">HTTP and REST-ish? Really?</h3>
+<p>Yea&hellip;</p>
+<p>Let&rsquo;s start with the HTTP part. When we started we had to have a unique way to speak for each browser based on the best way to speak to them. So for Internet Explorer we wrote COM code. It was fine, it worked but gave us nightmares. For Firefox we wrote a monstrocity that read line by line and, thankfully, due to Mozilla&rsquo;s &ldquo;make the browser yours&rdquo; attitude we could do a lot. Opera allowed us to go in via the DevTools protocol.</p>
+<p>Now, it meant that, especially in the early days of WebDriver, we would need to maintain N: M bindings where N is the language bindings and  M is the browsers we support. This is not a road to a good product. We decided that we need something that every language would understand. We also needed something that would be pretty robust. HTTP was chosen and we set about building the <code>JSONWireProtocol</code>.</p>
+<p>The <code>JSONWireProtocol</code> is where we built a REST-ish interface that would speak JSON. I say REST-ish because it didn&rsquo;t follow all the principles of REST but enough to make it powerful for our needs.</p>
+<h3 id="how-does-it-relate-to-things-now">How does it relate to things now?</h3>
+<p>The Web, the internet, and the world has moved on. Why hasn&rsquo;t Selenium?</p>
+<p>This is a good question and the thing is we are trying to move things on. Unfortunately the web has a state where it is broken unless it is working. HTTP is pretty robust as a protocol. It can also allow people to build up clusters for testing without having to worry too much about how the multiplexing would work. This is the reason why Selenium Grid was created and is still a pretty good choice when it comes to farming out your testing to multiple devices and multiple machines.</p>
+<h3 id="but-some-automation-framework-that-uses-chrome-debug-protocol-is-more-like-the-web-be-like-them">But <strong>Some automation Framework that uses Chrome Debug Protocol</strong> is more like the web, be like them.</h3>
+<p>So&hellip; There are tools that use Chrome&rsquo;s Debug Protocol to drive the browser and some of the things they do better than Selenium are down to their choice of how they speak to the speak to the browser. Unfortunately it&rsquo;s a Chrome proprietary protocol and Google is not interested in working with other browsers on making it not.</p>
+<p>Also, ignoring the interesting design choices from the the Google team, there is the problem that we have to have a permenantly open connection. In this case it uses WebSockets but if you remember my comment earlier about the internet is down until it&rsquo;s up. WebSockets would be constantly re-establishing the connection. There is also the problem of how much traffic would be going up and down that pipe.</p>
+<p>This is fine for puppeteer where you are only speaking to something on your local machine but if you are combining a CI service, like Circle CI or TravisCI and something like AWS Device Farm, Sauce Labs, or BrowserStack you suddenly have a lot of internet inbetween you and your runner and that data needs to get somewhere.</p>
+<p>The W3C Browser Testing and Tools Working group, which is made up of browser vendors and Selenium folk, are trying to design what this will look like to make sure that we can make it cross browser from the start without having to do weird hacky patches to browsers and ship those browsers ourselves.</p>
+<h2 id="want-to-read-more">Want to read more?</h2>
+<ul>
+<li><a href="https://w3c.github.io/webdriver/#processing-model">WebDriver Specification details about transport</a></li>
+</ul>
+<p>This was originally posted to <a href="https://www.theautomatedtester.co.uk/">https://www.theautomatedtester.co.uk/</a></p>
+
+            
+
+<p><b>Tags</b></p>
+<divs>
+    
+    <a href="https://selenium.dev/tags/selenium/">selenium</a></divs>
+
+
+            
+
+<p><b>Categories</b></p>
+<div>
+    
+    <a href="https://selenium.dev/categories/general/">general</a></div>
+
+
+            <div class="share-container">
+                <h3>Share this: </h3>
+
+                <a href="mailto:?&subject=Selenium Blog - How%20Selenium%20Works%3a%20Episode%201%20-%20Transportation&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fhow-selenium-works-transport%2f"><img class="social-icon" src="/images/mail.png"/></a>
+                <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fhow-selenium-works-transport%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+            </div>
+        </div>
+        
+        
+        
+        <div class="container dark-background">
             June 4, 2020 by <a href="https://twitter.com/harsha509">Harsha</a>
             <a href="https://selenium.dev/blog/2020/public-project-meeting-20200604/"><h2>Public Project Meeting - June 04, 2020</h2></a>
             <p>Continuing the series of bi-weekly public project meetings, here is the

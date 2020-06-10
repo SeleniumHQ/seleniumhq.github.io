@@ -6,10 +6,20 @@
     <description>Recent content on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How Selenium Works: Episode 1 - Transportation</title>
+      <link>https://selenium.dev/blog/2020/how-selenium-works-transport/</link>
+      <pubDate>Wed, 10 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/how-selenium-works-transport/</guid>
+      <description>After an interaction on the last weekend of January 2020, on a Selenium Issue where someone said “why can’t you just…” after I explained the issue I thought that I would start explaining commands in Selenium WebDriver and why we landed on the design that we have today.
+I will repeat this on every page of the series but a lot, an annoying amount sometimes, of thinking goes into how every little bit of Selenium works.</description>
+    </item>
     
     <item>
       <title>Public Project Meeting - June 04, 2020</title>
