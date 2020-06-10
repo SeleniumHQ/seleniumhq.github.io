@@ -1,19 +1,11 @@
 ---
-title: "Locating elements"
+title: "Element 찾기"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+### 하나의 element 찾기
 
-### Locating one element
-
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
+웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -36,17 +28,12 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
+예시와 같이, 웹드라이버에서 element들을 찾는 것은 `WebDriver`  인스턴스 객체에서 시행됩니다. `findElement(By)` 메소드는 `WebElement`라는 기초적인 객체를 반환합니다.
 
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
+* `WebDriver` 는 브라우저를 나타냅니다.
+* `WebElement` 는 특정한 DOM 노드를 나타냅니다. (링크나 인풋 필드 등)
 
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+발견된 웹 element에 대한 참조가 있다면, 그 참조를 통해 검색 범위를 좁힐 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -75,28 +62,12 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
-interface. In WebDriver, this is known as a _role-based interface_.
-Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are
-clearly defined and try to adhere to having only a single role of
-responsibility.  You can read more about WebDriver's design and what
-roles are supported in which drivers in the [Some Other Section Which
-Must Be Named](#).
+이것이 가능한 이유는 *WebDriver* 과 *WebElement* 모두 [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)라는 인터페이스를 구현한 것이기 때문입니다.이것은 웹드라이버에서 role-based(역할 기반) 인터페이스라고 알려져 있습니다. Role-based 인터페이스는 특정 드라이버 구현이 주어진 기능을 지원하는지 확인할 수 있게 해줍니다. 이러한 인터페이스는 명확하게 정의되어 있으며, 단 하나의 역할만을 가지고 있는 것을 고수하려고 노력합니다.  웹드라이버의 디자인이나 어떠한 드라이버에서 어떠한 역할을 지원하는지에 대해서는  [여기(아직 미구현)](#)를 참고하십시오.
 <!-- TODO: A new section needs to be created for the above.-->
 
-Consequently, the _By_ interface used above also supports a
-number of additional locator strategies.  A nested lookup might not be
-the most effective cheese location strategy since it requires two
-separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
-narrowed context.
+따라서, 위에서 사용한 *By*인터페이스도 다양한 추가 locator 전략을 지원합니다. 중첩된 조회는 브라우저에 별도의 두 개 명령을 실행해야하므로 가장 효과적인 cheese 찾기 전략이 아닐 수 있습니다. 별도의 두 개 명령은 ID "cheese"를 DOM에서 찾는 명령과 그 곳에서 "cheddar"를 그 다음에 찾는 명령을 말합니다. 
 
-To improve the performance slightly, we should try to use a more
-specific locator: WebDriver supports looking up elements
-by CSS locators, allowing us to combine the two previous locators into
-one search:
+성능을 향상시키기 위해서는 좀 더 세부적인 locator를 사용해야합니다. 웹드라이버는 CSS locator를 통해 element를 검색하는 기능을 지원하고, 이는 위처럼 두 개의 locator를 사용할 필요가 없게 해줍니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -119,10 +90,9 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Locating multiple elements
+### 다수의 element 찾기
 
-It is possible that the document we are working with may turn out to have an
-ordered list of the cheese we like the best:
+우리가 작업하고 있는 문서가 다음과 같이 우리가 제일 좋아하는 치즈들의 정렬된 리스트일 수 있습니다:
 
 ```html
 <ol id=cheese>
@@ -133,13 +103,7 @@ ordered list of the cheese we like the best:
 </ul>
 ```
 
-Since more cheese is undisputably better, and it would be cumbersome
-to have to retrieve each of the items individually, a superior
-technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
-elements. If only one element is found, it will still return a
-collection (of one element). If no element matches the locator, an
-empty list will be returned.
+더 많은 치즈는 의심할 여지 없이 더 좋지만, 각각의 아이템들을 따로 회수하기에는 너무 복잡하고 힘들어질 것입니다. 이를 위한 좀 더 상급 테크닉은 바로 다수 버전의  `findElements(By)`를 사용하는 것입니다. 이 메소드는 web elements들의 컬렉션을 반환합니다. 하나의 element만 발견되어도 여전히 컬렉션을 반환합니다. (이 때의 컬렉션은 하나의 element로 이루어져 있습니다). 만약 아무 element가 발견되지 않는다면, 빈 리스트가 반환됩니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -162,54 +126,38 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element selection strategies
+### Element 선택 전략
 
-There are eight different built-in element location strategies in WebDriver:
+웹드라이버에는 여덟 가지의 내장된 element location 전략이 있습니다:
 
 | Locator | Description |
 | -------- | ---------- |
-| class name | Locates elements whose class name contains the search value (compound class names are not permitted) |
-| css selector | Locates elements matching a CSS selector |
-| id | Locates elements whose ID attribute matches the search value |
-| name | Locates elements whose NAME attribute matches the search value |
-| link text | Locates anchor elements whose visible text matches the search value |
-| partial link text | Locates anchor elements whose visible text matches the search value |
-| tag name | Locates elements whose tag name matches the search value |
-| xpath | Locates elements matching an XPath expression |
+| class name | class name 중에서 검색한 값이 있는지 찾습니다. |
+| css selector | CSS selector 속성 중에서 검색한 값이 있는지 찾습니다. |
+| id | ID 속성 중에서 검색한 값이 있는지 찾습니다. |
+| name | NAME 속성 중에서 검색한 값이 있는지 찾습니다. |
+| link text | 보이는 텍스트 중에서 검색한 값이 있는지 찾습니다. |
+| partial link text | 보이는 텍스트 중에서 검색한 값이 있는지 찾습니다. |
+| tag name | tag name 중에서 검색한 값이 있는지 찾습니다. |
+| xpath | Xpath expression 중에서 검색한 값이 있는지 찾습니다. |
 
-### Tips on using selectors
+### Selector 사용 팁
 
-In general, if HTML IDs are available, unique, and consistently
-predictable, they are the preferred method for locating an element on
-a page. They tend to work very quickly, and forego much processing
-that comes with complicated DOM traversals.
+일반적으로 HTML ID가 사용가능하고, 고유하며, 예측가능하다면 검색할 때 HTML ID를 통해 하는 것이 좋습니다. HTML ID로 검색하는 것은 매우 빠르며, 복잡하게 DOM을 이용하는 방법들을 속도에서 앞섭니다.
 
-If unique IDs are unavailable, a well-written CSS selector is the
-preferred method of locating an element. XPath works as well as CSS
-selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they are typically
-not performance tested by browser vendors and tend to be quite slow.
+고유한 ID가 없다면, CSS selector이 그 다음으로 선호되는 방법입니다. XPath 또한 CSS selector만큼 잘 작동되지만, 구문이 복잡하며 디버깅을 하기 힘듭니다. 하지만 XPath selector는 매우 유연하기 때문에 일반적으로 브라우저 벤더에 의해 성능 테스트를 받지 않으며 꽤 느린 경향이 있다.
 
-Selection strategies based on _linkText_ and _partialLinkText_ have
-drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+linkText와 partialLinkText를 이용한 전략은 link element에서만 사용이 가능합니다. 또한, 웹드라이버 내부적으로는 XPath selector를 사용하여 작동합니다.
 
-Tag name can be a dangerous way to locate elements. There are
-frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the _findElements(By)_ method which
-returns a collection of elements.
+Tag name은 element 검색을 할 때 위험한 방법이 될 수도 있습니다. 한 페이지에는 종종 동일한 tag를 가진 여러 element들이 있습니다. 이 방법은 주로 _findElements(By)_ 메소드를 통해 element의 컬렉션을 반환할 때 유용합니다.
 
-The recommendation is to keep your locators as compact and
-readable as possible. Asking WebDriver to traverse the DOM structure
-is an expensive operation, and the more you can narrow the scope of
-your search, the better.
+Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천드립니다. 웹 드라이버에게 DOM 전체를 검색하라는 것은 성능이 많이 들어가기 때문에, 검색범위를 좁히면 좁힐수록 좋습니다.
 
 ## Relative Locators
 
-**Selenium 4** brings Relative Locators which are previously 
-called as _Friendly Locators_. This functionality was 
-added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:
+**Selenium 4**는 Relative Locators, 또는 _Friendly Locators_를 지원합니다. 이 기능은 다른 element 근처에 있는 element를 검색할 때 도움이 됩니다.
+
+사용가능한 Relative Locators들은 다음과 같습니다:
 
 * *above*
 * *below*
@@ -217,25 +165,19 @@ The Available Relative Locators are:
 * *toRightOf*
 * *near*
 
-_findElement_ method now accepts a new method `withTagName()` 
-which returns a RelativeLocator. 
+_findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
 
-### How does it work
+### 어떻게 작동하는가
 
-Selenium uses the JavaScript function 
-[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to find the relative elements. This function returns 
-properties of an element such as 
-right, left, bottom, and top.
+셀레니움은 자바스크립트 함수 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 를 사용해서 releative element를 찾습니다. 이 함수는 right(오른쪽), left(왼쪽), bottom(아래), top(위)와 같은 element의 속성들을 반환합니다.
 
-Let us consider the below example for understanding the relative locators.
+아래 사진을 예시로 relative locator에 대해 알아봅시다.
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
 ### above()
 
-Returns the WebElement, which appears 
-above to the specified element
+특정 element 위의 WebElement를 반환합니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -256,6 +198,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
+
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
@@ -269,8 +212,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName("input")
 
 ### below()
 
-Returns the WebElement, which appears 
-below to the specified element
+특정 element 아래의 WebElement를 반환합니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -304,8 +246,7 @@ IWebElement passwordField = driver.FindElement(WithTagName("input")
 
 ### toLeftOf()
 
-Returns the WebElement, which appears 
-to left of specified element
+특정 element 왼쪽의 WebElement를 반환합니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -340,8 +281,7 @@ IWebElement cancelButton = driver.FindElement(WithTagName("button")
 
 ### toRightOf()
 
-Returns the WebElement, which appears 
-to right of the specified element
+특정 element 오른쪽의 WebElement를 반환합니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -375,8 +315,7 @@ IWebElement submitButton = driver.FindElement(WithTagName("button")
 
 ### near()
 
-Returns the WebElement, which is
-at most `50px` away from the specified element.
+특정 element의 최대 50px 근처의 WebElement를 반환합니다.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -398,6 +337,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
+
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
