@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Grid on Selenium 문서</title>
+    <title>조합 격자(Grid) on Selenium 문서</title>
     <link>https://www.selenium.dev/documentation/ko/grid/</link>
-    <description>Recent content in Grid on Selenium 문서</description>
+    <description>Recent content in 조합 격자(Grid) on Selenium 문서</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Purposes and main functionalities</title>
+      <title>목적 및 주요 기능</title>
       <link>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid>
-      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
+      <description> 모든 테스트의 중앙 진입 지점 브라우저가 실행되는 환경과 노드의 관리 및 제어 스케일링 병렬로 테스트 실행 교차 플랫폼 테스트 부하분산  </description>
     </item>
     
     <item>

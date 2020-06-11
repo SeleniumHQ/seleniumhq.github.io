@@ -33,16 +33,6 @@ Every effort has been made to make this documentation as complete and as accurat
     </item>
     
     <item>
-      <title>Purposes and main functionalities</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid>
-      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
-  Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
       <title>Remote WebDriver server</title>
       <link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -107,6 +97,15 @@ WebDriver provides capabilities that each remote end will/should support the imp
       <guid>https://www.selenium.dev/documentation/ko/webdriver/understanding_the_components/</guid>
       <description>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다. 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는 이 설명에서 용어가 사용되는 방식에 대한 분석.
 술어  API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;quot;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description>
+    </item>
+    
+    <item>
+      <title>목적 및 주요 기능</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid>
+      <description> 모든 테스트의 중앙 진입 지점 브라우저가 실행되는 환경과 노드의 관리 및 제어 스케일링 병렬로 테스트 실행 교차 플랫폼 테스트 부하분산  </description>
     </item>
     
     <item>
@@ -321,16 +320,6 @@ Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근�
     </item>
     
     <item>
-      <title>Installing Standalone server</title>
-      <link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
-    </item>
-    
-    <item>
       <title>Setting up your own Grid</title>
       <link>https://www.selenium.dev/documentation/ko/grid/setting_up_your_own_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -350,6 +339,16 @@ Other options include using providers such as Sauce Labs or Testing Bot who prov
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.</description>
+    </item>
+    
+    <item>
+      <title>독립형 서버 설치</title>
+      <link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid>
+      <description>Grid를 사용하려면 selenium-server-standalone JAR 파일을 다운로드하십시오. 모든 구성요소는 selenium-server를 통해 이용할 수 있습니다. 독립형 JAR에는 원격 Selenium 서버와 클라이언트측 바인딩을 포함한 모든 것이 들어 있습니다. 즉, 프로젝트에서 selenium 서버 독립형 jar을 사용할 경우 selenium-java 또는 브라우저별 jar을 추가하지 않아도 됩니다.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
     </item>
     
     <item>
