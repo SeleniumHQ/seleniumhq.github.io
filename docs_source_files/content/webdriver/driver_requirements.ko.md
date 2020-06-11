@@ -1,126 +1,91 @@
 ---
-title: "Driver requirements"
+title: "드라이버 요구사항"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium은 WebDriver를 이용하여 Chrom(ium), Firefox, Internet Explorer, Opera, Safari와 같은 시장의 모든 주요 브라우저들을 지원합니다. 
+모든 브라우저가 원격 제어에 대한 공식적인 지원을 가지고 있는 것은 아니지만, WebDriver는 가능한 경우 브라우저에 내장된 자동화 지원을 이용하여 브라우저를 구동합니다. 
 
-Through WebDriver, Selenium supports all major browsers on the market
-such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari.
-Where possible, WebDriver drives the browser
-using the browser's built-in support for automation,
-although not all browsers have official support for remote control.
+WebDriver의 목적은 브라우저와 실제 사용자의 상호작용을 최대한 모방하는 것이며, 이는 브라우저마다 다른 수준으로 진행될 수 있습니다. 다양한 드라이버 특성에 대한 자세한 내용은 _[드라이버 특성]({{< ref "/driver_idiosyncrasies/_index.md" >}})_을 참조하십시오.
 
-WebDriver's aim is to emulate a real user's interaction
-with the browser as closely as possible.
-This is possible at varying levels in different browsers.
-For more details on the different driver idiosyncracies,
-please see _[Driver Idiosyncracies]({{< ref "/driver_idiosyncrasies/_index.md" >}})_.
+브라우저 제어를 위한 사용자 대면 인터페이스는 모든 드라이버가 동일하지만, 브라우저 세션을 설정하는 방법에는 약간의 차이가 존재합니다.
+드라이버 구현의 많은 부분들은 서드파티에 의해 제공되기 때문에 표준 Selenium 배포에 포함되지 않습니다.
 
-Even though all the drivers share a single user-facing interface
-for controlling the browser,
-they have slightly different ways of setting up browser sessions.
-Since many of the driver implementations are provided by third parties,
-they are not included in the standard Selenium distribution.
+브라우저에 따라 요구사항이 다른 매개변수의 예시에는 드라이버의 인스턴스화, 프로필 관리 및 다양한 브라우저별 설정 등의 작업 등이 있습니다. 
+여기서는 다른 브라우저를 시작하기 위한 기초적인 요구사항을 안내합니다.
 
-Driver instantiation, profile management, and various browser specific settings
-are examples of parameters that have different requirements depending on the browser.
-This section explains the basic requirements
-for getting you started with the different browsers.
+### PATH에 실행 파일을 추가합니다.
+대부분의 드라이버들은 Selenium이 브라우저를 이용하여 통신하기 위한 추가 실행 파일을 필요로 합니다.
+WebDriver를 시작하기 전에 실행 파일의 위치를 수동으로 지정할 수 있습니다. 그러나 실행 파일이 모든 시스템에서 동일한 위치에 있거나, 테스트 코드 저장소에 실행 파일이 포함되어야 하기 때문에 이식성이 떨어질 수 있습니다.
 
-### Adding Executables to your PATH
-Most drivers require an extra executable for Selenium to communicate
-with the browser. You can manually specify where the executable lives
-before starting WebDriver, but this can make your tests less portable
-as the executables will need to be in the same place on every machine,
-or include the executable within your test code repository.
+Selenium은 시스템 경로에 WebDriver의 바이너리가 들어 있는 폴더를 추가함으로써, 테스트 코드가 드라이버의 정확한 위치를 찾도록 요구하지 않아도 추가 바이너리를 찾도록 할 수 있습니다.
 
-By adding a folder containing WebDriver's binaries to your system's
-path, Selenium will be able to locate the additional binaries without
-requiring your test code to locate the exact location of the driver.
-
-* Create a directory to place the executables in, like 
+* 실행 파일을 넣을 디렉토리를 다음과 같이 만듭니다.
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
-* Add the directory to your PATH:
-  * On Windows - Open a command prompt as administrator
-     and the run the following command
-     to permanently add the directory to your path
-     for all users on your machine:
+* PATH에 디렉토리를 추가합니다: 
+  * Windows의 경우 - CMD를 관리자 권한으로 실행한 뒤, 
+     다음 명령을 실행하여 컴퓨터의 모든 사용자에 대한 디렉터리를 경로에 영구적으로 추가합니다.
 
 ```shell
 setx /m path "%path%;C:\WebDriver\bin\"
 ```
-  * Bash users on macOS and Linux - In a terminal:
+  * Mac OS와 Linux의 Bash 사용자의 경우 - terminal을 사용합니다: 
 
 ```shell
 export PATH=$PATH:/opt/WebDriver/bin >> ~/.profile
 ```
 
-* You are now ready to test your changes.
-  Close all open command prompts and open a new one.
-  Type out the name of one of the binaries
-  in the folder you created in the previous step,
-  e.g.: 
+* 이제 변경 사항을 테스트 할 준비가 되었습니다.
+열려있는 모든 CMD를 닫고, 새 CMD를 실행한 뒤, 이전 단계에서 생성한 폴더에 바이너리 중 하나의 이름을 다음과 같이 입력합니다. 
 
   ```shell
   chromedriver
   ```
-* If your `PATH` is configured correctly,
-you will see some output relating to the startup of the driver:
+* 만약 `PATH`가 올바르게 구성되었다면,
+다음과 같이 드라이버 시작과 관련된 일부 출력을 볼 수 있을 것입니다.:
 
 ```text
 Starting ChromeDriver 2.25.426935 (820a95b0b81d33e42712f9198c215f703412e1a1) on port 9515
 Only local connections are allowed.
 ```
 
-You can regain control of your command prompt by pressing <kbd>Ctrl+C</kbd>
+이 상태에선 <kbd>Ctrl+C</kbd>를 눌러 CMD를 다시 제어할 수 있습니다.
 
 
-### Quick reference
+### 빠른 참조
 
-| Browser | Supported OS | Maintained by | Download | Issue Tracker |
+| 브라우저 | 지원하는 OS | 유지 및 관리 | 다운로드 | 이슈 트래커 |
 | ------- | ------------ | ------------- | -------- | ------------- |
-| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/issues/list) |
-| Firefox | Windows/macOS/Linux | Mozilla | [Downloads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/issues) |
-| Edge | Windows 10 | Microsoft | [Downloads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&amp;q=webdriver) |
-| Internet Explorer | Windows | Selenium Project | [Downloads](//selenium-release.storage.googleapis.com/index.html) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
+| Chromium/Chrome | Windows/macOS/Linux | Google | [Downloads](//chromedriver.storage.googleapis.com/index.html) | [Issues](//bugs.chromium.org/p/chromedriver/Issues/list) |
+| Firefox | Windows/macOS/Linux | Mozilla | [DownLoads](//github.com/mozilla/geckodriver/releases) | [Issues](//github.com/mozilla/geckodriver/Issues) |
+| Edge | Windows 10 | Microsoft | [DownLoads](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | [Issues](//developer.microsoft.com/en-us/microsoft-edge/platform/Issues/?page=1&amp;q=webdriver) |
+| Internet Explorer | Windows | Selenium Project | [DownLoads](//selenium-release.storage.googleapis.com/index.html) | [Issues](//github.com/SeleniumHQ/selenium/labels/D-IE) |
 | Safari | macOS El Capitan and newer | Apple | Built in | [Issues](//bugreport.apple.com/logon) |
-| Opera | Windows/macOS/Linux | Opera | [Downloads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/issues) |
+| Opera | Windows/macOS/Linux | Opera | [DownLoads](//github.com/operasoftware/operachromiumdriver/releases) | [Issues](//github.com/operasoftware/operachromiumdriver/Issues) |
 
 
 ### Chromium/Chrome
 
-To drive Chrome or Chromium, you have to download
-[chromedriver](//sites.google.com/a/chromium.org/chromedriver/downloads)
-and put it in a folder that is on your system's path.
+Chrome 또는 Chromium에서 구동하기 위해 
+[chromedriver](//sites.google.com/a/chromium.org/chromedriver/DownLoads)
+를 다운받은 뒤, 시스템 경로에 넣어야 합니다.
 
-On Linux or macOS, this means modifying
-the `PATH` environmental variable.
-You can see what directories, separated by a colon,
-make up your system's path by executing the following command:
+Linux 또는 MacOS에서 이는 `PATH` 환경 변수 수정을 의미하므로, 다음 명령을 실행하여 콜론(:)으로 구분된 디렉토리를 시스템 경로를 구성할 수 있습니다:
 
 ```shell
 $ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-To include chromedriver on the path, if it is not already,
-make sure you include the chromedriver binary's parent directory.
-The following line will set the `PATH` environmental variable
-its current content, plus an additional path added after the colon:
+경로에 chromedriver를 포함할 때, chromedriver 바이너리의 상위 디렉토리를 포함하는지 확인 해야 합니다. 다음 줄은 `PATH` 환경 변수의 현재 내용과 콜론(:) 뒤에 추가 경로를 덧붙여야 합니다:
 
 ```shell
 $ export PATH="$PATH:/path/to/chromedriver"
 ```
 
-When chromedriver is available on your path,
-you should be able to execute the _chromedriver_ executable from any directory.
+경로에서 chromedriver를 사용할 수 있는 경우, 모든 디렉토리에서 chromedriver 실행 파일을 실행할 수 있어야 합니다.
 
-To instantiate a Chrome/Chromium session, you can do the following:
+다음을 이용하여 Chrome/Chromium 세션을 인스턴스화 할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -169,8 +134,7 @@ val driver: WebDriver = ChromeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Remember that you have to set the path to the chromedriver executable.
-This is possible using the following line:
+chromedriver 실행 파일의 경로 설정은 다음과 같이 가능합니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -193,21 +157,14 @@ System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The chromedriver is implemented as a WebDriver remote server
-that instructs the browser what to do by exposing Chrome's 
-internal automation proxy interface.
+chromedriver는 Chrome의 내부 자동화 프록시 인터페이스를 노출하여 브라우저에게 수행할 작업을 지시하는 웹 드라이버 원격 서버로 구현됩니다. 
 
 
 ### Firefox
 
-Starting with Selenium 3, Mozilla has taken over implementation of
-Firefox Driver, with [geckodriver](//github.com/mozilla/geckodriver).
-The new driver for Firefox is called geckodriver and works with Firefox
-48 and newer. Since the Firefox WebDriver is under development, the
-newer the Firefox version the better the support.
+Mozilla는 Selenium 3을 시작으로 Firefox 드라이버 [geckodriver](//github.com/mozilla/geckodriver)의 구현을 이어받았으며, geckodriver라고 불립니다. 이는 Firefox 48 이상 버전에서 작동하고, Firefox WebDriver가 꾸준히 개발중이기 때문에 새로운 Firefox 버전이 나올때마다 더 나은 지원을 제공합니다.
 
-As geckodriver is the new default way of launching Firefox, you can
-instantiate Firefox in the same way as Selenium 2:
+geckodriver은 Firefox를 시작하는 기본적인 방법이기 때문에 Selenium 2와 같은 방법으로 Firefox를 인스턴스화 할 수 있습니다: 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -254,8 +211,7 @@ val driver: WebDriver = FirefoxDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you prefer not to set geckodriver's location using PATH,
-set the geckodriver binary location programmatically:
+PATH를 사용하지 않고 geckodriver의 위치를 설정하려면, 프로그램적으로 geckodriver의 바이너리 위치를 설정해야 합니다: 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -281,31 +237,23 @@ System.setProperty("webdriver.gecko.driver", "/path/to/geckodriver")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-It is also possible to set the property at run time:
+런타임의 속성을 설정하는 것 또한 가능합니다:
 
 ```shell
 mvn test -Dwebdriver.gecko.driver=/path/to/geckodriver
 ```
 
-It is currently possible to revert to the older, more feature complete
-Firefox driver, by installing Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/)
-or [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/)
-and specifying a desired capability of **marionette** as
-**false**. Later releases of Firefox are no longer compatible.
-
+현재 Firefox [47.0.1](//ftp.mozilla.org/pub/firefox/releases/47.0.1/) 또는 [45 ESR](//ftp.mozilla.org/pub/firefox/releases/45.0esr/))을 설치하고 원하는 **marionette** 기능을 **false**로 지정함으로써 이전의, 보다 완전한 Firefox 드라이버로 되돌릴 수 있습니다. 그러나 이후 출시된 Firefox는 더 이상 호환이 불가능합니다.
 
 ### Edge
 
-Edge is Microsoft's newest browser, included with Windows 10 and Server 2016.
-Updates to Edge are bundled with major Windows updates,
-so you will need to download a binary which matches the build number of your 
-currently installed build of Windows.
-The [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
-contains links to all the available binaries. Bugs against the EdgeDriver 
-implementation can be raised with 
-[Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=webdriver). 
-If you would like to run tests against Edge, but are not running Windows 10, Microsoft
-offer free VMs for testers on the [Edge Developer site](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/).
+Edge는 Windows 10과 Server 2016에 포함된 microsoft의 최신 브라우저입니다.
+
+Edge의 업데이트는 주요 Windows 업데이트와 함께 번들로 제공되기 때문에 바이너리를 다운로드 할 때는 현재 설치된 Windows 빌드 번호와 바이너리의 빌드 번호가 일치하는지 확인이 필요합니다.
+
+[Edge Developer sites](///developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)는 사용 가능한 모든 바이너리 파일에 대한 링크를 포함합니다.
+EdgeDriver 구현에 대한 버그는 [Microsoft](//developer.microsoft.com/en-us/microsoft-edge/platform/Issues/?page=1&q=webdriver)에 올라올 수 있습니다.
+microsoft는 Windows 10을 실행하지 않고 Edge에 대해 테스트를 하려는 테스터를 위해  다음 사이트에서 무료 VM을 제공합니다. [Edge Developer sites](//developer.microsoft.com/en-us/microsoft-edge/tools/vms/)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -352,8 +300,7 @@ val driver: WebDriver = EdgeDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Edge driver is not present in your path, you can set the path using 
-the following line:
+경로에 Edge 드라이버가 없는 경우 다음과 같이 경로를 설정할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -385,19 +332,12 @@ System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
 {{< / code-tab >}}
 
 ### Internet Explorer
-Internet Explorer was Microsoft's default browser until Windows 10, although it 
-is still included in Windows 10. Internet Explorer Driver is the only driver 
-The Selenium project aims to support the same releases
-[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer).
-Older releases may work, but will be unsupported. 
+Internet Explorer는 windows 10에 포함되며, windows 10까지 microsoft의 기본 브라우저였습니다. Internet Explorer 드라이버는 Selenium 프로젝트와 동일한 릴리즈를 지원하는 것을 목표로 하는 유일한 드라이버입니다.[Microsoft considers current](//support.microsoft.com/en-gb/help/17454/lifecycle-support-policy-faq-internet-explorer) 또한 이전 릴리즈들은 작동할 수 있지만 지원은 되지 않을 예정입니다.
 
-While the Selenium project provides binaries for both the 32-bit and 64-bit 
-versions of Internet Explorer, there are some 
-[limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
-with Internet Explorer 10 & 11 with the 64-bit driver, but using the 32-bit 
-driver continues to work well. It should be noted that as Internet Explorer
-preferences are saved against the logged in user's account, some 
-[additional setup is required](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration).
+Selenium 프로젝트는 32-bit와 64-bit 버전의 Internet Explorer에 모두 바이너리를 제공합니다. 32-bit 드라이버를 사용하는 것은 계속해서 잘 작동하는 반면 64-bit 드라이버가 있는 Internet Explorer 10 & 11에는 몇가지 제한이 존재합니다. [limitations](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
+
+Internet Explorer은 로그인한 사용자 계정에 대해 설정이 저장되므로 일부 추가 설정 [additional setup is required](//github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver#required-configuration)이 필요하다는 점을 유의해야 합니다.
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -444,8 +384,7 @@ val driver: WebDriver = InternetExplorerDriver()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If Internet Explorer driver is not present in your path, you can set the path 
-using the following line:
+경로에 Internet Explorer 드라이버가 없는 경우 다음과 같이 경로를 설정할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -476,22 +415,18 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Microsoft also offer a WebDriver binary for
-[Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069). 
-It has not been updated since 2014 and is based on a draft version of the 
-W3 specification. [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)
-has an excellent writeup on Microsoft's implementation.
+microsoft는 또한 [Internet Explorer 11 on Windows 7 & 8.1](//www.microsoft.com/en-gb/download/details.aspx?id=44069)에서 Windows 7 & 8.1에 존재하는 Internet Explorer 11을 위한 WebDriver 바이너리를 제공합니다.
+이는 2014년 이후 업데이트되지 않았지만, W3 규격 초안을 기반으로 하고 있습니다.
+
+ [Jim Evans](//jimevansmusic.blogspot.co.uk/2014/09/using-internet-explorer-webdriver.html)는 microsoft의 구현에 대한 훌륭한 기록을 가지고 있습니다.
 
 
 ### Opera
 
-Current releases of Opera are built on top of the Chromium engine,
-and WebDriver is now supported via the closed-source
-[Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases),
-which can be [added to your PATH](#adding-executables-to-your-path) or as a 
-system property.
+현재 출시된 Opera는 Chromium 엔진 위에 구축되어 있으며, WebDriver는 이제 closed-source [Opera Chromium Driver](//github.com/operasoftware/operachromiumdriver/releases)를 통해 PATH에 추가 [added to your PATH](#adding-executables-to-your-path) 또는 시스템 속성으로 지원됩니다.
 
-Instantiating a driver session is similar to Firefox and Chromium:
+드라이버 세션을 인스턴스화하는 것은 Firefox, Chromium과 유사합니다:
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -541,26 +476,24 @@ val driver: WebDriver = OperaDriver()
 
 ### Safari
 
-High Sierra and later:
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+High Sierra 이상 버전:
+
+* 터미널에서 다음 명령을 한 뒤, WebDriver를 승인하기 위해 프롬프트에 암호를 입력합니다.
 ```shell
 safaridriver --enable
 ```
 
-El Capitan and Sierra:
+El Capitan과 Sierra:
 
-* Enable the Developer menu from Safari preferences
-* Check the _Allow Remote Automation_ option from with 
-the Develop menu
-* Run the following command from the terminal for the first
-time and type your password at the prompt to authorise WebDriver
+* Safari 기본 설정에서 개발자 메뉴를 사용합니다.
+* 개발 메뉴에서 '원격 자동화 허용' 옵션을 확인합니다.
+*  터미널에서 다음 명령을 한 뒤, WebDriver를 승인하기 위해 프롬프트에 암호를 입력합니다.
 
 ```shell
 /usr/bin/safaridriver -p 1337</
 ```
 
-You can then start a driver session using:
+이후 아래를 사용하여 드라이버 세션을 시작할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -608,10 +541,7 @@ val driver: WebDriver = SafariDriver()
 {{< / code-tab >}}
 
 
-Those looking to automate Safari on iOS should look to the 
-[Appium project](//appium.io/). Whilst Safari was previously
-available for Windows, Apple has long since dropped support, making it
-a poor choice of test platform.
+iOS에서 Safari 자동화를 원하는 사용자는 [Appium project](///appium.io/)를 참조해야 합니다. 이전에는 Windows용 Safari를 사용할 수 있었지만, 오랫동안 중단된 Apple의 지원으로 인해 Safari의 시험용 플랫폼으로서의 가치가 낮아졌습니다.
 
 
 ## Mock browsers
@@ -619,24 +549,15 @@ a poor choice of test platform.
 
 ### HtmlUnit
 
-HtmlUnit is a "GUI-Less browser for Java programs". It models HTML documents 
-and provides an API that allows you to invoke pages, fill out forms, click
-links, etc. It has JavaScript support and is able to work with AJAX libraries,
-simulating Chrome, Firefox or Internet Explorer depending on the configuration
-used. It has been moved to a 
-[new location](http://htmlunit.sourceforge.net/gettingStarted.html). 
-The source is maintained on svn.
+HTMLUnit은 "Java 프로그램을 위한 GUI-Less 브라우저"입니다. 이는 HTML 문서를 모델링하고 페이지 호출, 양식 작성, 클릭링크 등이 가능한 API를 제공합니다. 또한 JavaScript 지원 기능이 있으며, 사용되는 구성에 따라 Chrome, Firefox 또는 Internet Explorer를 시뮬레이션하여 AJAX 라이브러리와 작업할 수 있습니다. 이것은 [new location](http://htmlunit.sourceforge.net/gettingStarted.html))로 옮겨졌으며, 소스는 svn으로 유지됩니다.
 
 
 ### PhantomJS
 
-PhantomJS is a headless browser based on Webkit, albeit a version much older 
-than that used by Google Chrome or Safari. Whilst historically a popular 
-choice, it would now be wise to avoid PhantomJS. The project has been 
-unmaintained 
-[since the 5th of August 2017](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 
-so whilst the web will continue to change, PhantomJS will not be updated. 
-This was after Google announced the ability to run Chrome headlessly, 
-something also now offered by Mozilla's Firefox.
+PhantomJS는 Google Chrome이나 Safari가 사용하는 것 보다 훨씬 오래된 버전의 Webkit을 기반으로 한 헤드리스 브라우저입니다. 역사적으로 대중적인 선택이었지만, 이제 이 프로젝트는 유지되지 않으므로 PhantomJS를 피하는 것이 현명할 것입니다. [since the 5th of August 2017](//groups.google.com/forum/#!topic/phantomjs/9aI5d-LDuNE), 따라서 웹이 계속 바뀌는 동안, PhantomJS는 업데이트되지 않을 것입니다. 
+
+프로젝트의 유지 중단은 Google이 Chrome을 헤드리스로 실행할 수 있는 능력을 발표한 후였는데, 지금은 Mozilla의 Firefox도 이 기능을 제공하고 있습니다.
+
+
 
 

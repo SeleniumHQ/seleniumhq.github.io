@@ -20,8 +20,8 @@ The next meeting will be on June 18, 2020, 4:30 PM CET.
 _Diego Molina  8:05 PM_
 
 the agenda will be:
-•   anything people want to add in the next 2 minutes
-•   me looking to previous agendas and adding those items here
+* anything people want to add in the next 2 minutes
+* me looking to previous agendas and adding those items here
 
 _Simon Stewart  8:06 PM_
 
@@ -35,16 +35,16 @@ I’d like to hear about the work that @AutomatedTester has in mind for his inte
 _Diego Molina  8:08 PM_
 
 Agenda:
-•   general project statistics
-•   any overall announcements? new people on committees, have the commit bit, etc?
-•   so do we want/need to wait for that work to be done before doing Alpha 7?
-•   Work to be done before beta? (Path to betas)
-•   when is the next SFC call? (if its happened in the last two weeks, anything to report)
-•   Did anyone pick up the ball to talk to Miki about the go bindings?
-•   SeConf India SeConf Chicago
-•   Selenium Conf website in GitHub org?
-•   IDE to main repo?
-•   CoC
+* general project statistics
+* any overall announcements? new people on committees, have the commit bit, etc?
+* so do we want/need to wait for that work to be done before doing Alpha 7?
+* Work to be done before beta? (Path to betas)
+* when is the next SFC call? (if its happened in the last two weeks, anything to report)
+* Did anyone pick up the ball to talk to Miki about the go bindings?
+* SeConf India SeConf Chicago
+* Selenium Conf website in GitHub org?
+* IDE to main repo?
+* CoC
 
 Let's start
 
@@ -86,9 +86,9 @@ _Simon Stewart  8:15 PM_
 
 Things I’d like to see:
 
-• Switch to the reactor client for http
-• Land a basic replacement for the UI
-• Straw-man proposals for the functionality that might rely on CDP
+* Switch to the reactor client for http
+* Land a basic replacement for the UI
+* Straw-man proposals for the functionality that might rely on CDP
 
 Of which that last is in my court
 
@@ -126,10 +126,12 @@ _David Burns  8:18 PM_
 
 The goal of the work is to add most, if not all, the features we want in this area
 
-8:19
+_8:19_
+
 both @Saksham Gupta and Phani will be supported by me and @rajendra
 
-8:20
+_8:20_
+
 and next week we have another member joining our team who we can get to support both interns to make sure we don't have any performance hits with the work they add and guide them through perf profiling. etc
 
 _Simon Stewart  8:20 PM_
@@ -368,17 +370,20 @@ _Marcus Merrell  8:41 PM_
 
 yeah--we're negotiating with the hotel to take our contract and move it to 2021, around the same time of year
 
-8:42
+_8:42_
+
 we're waiting to hear back from them with a selection of dates in the Sep-Oct-Nov range
 
 hoping not to have it the week before Thanksgiving, but also hoping to keep the room rates low
 
-8:43
+_8:43_
+
 as to this year, we're talking about holding a very sane, relatively small virtual conference, or a series of webinars spread over a couple months
 
 we're also discussing having another group help us out with planning and execution, someone with experience at promoting and running virtual conferences
 
-8:44
+_8:44_
+
 the first discussion will happen today, and if we decide to explore further, I will probably feel more comfortable talking about who we're considering 
 
 
@@ -477,14 +482,16 @@ _Diego Molina  8:56 PM_
 
 next topic: IDE to main repo?
 
-8:57
+_8:57_
+
 I guess we should focus more on the bindings and the Grid for now?
 
 _Simon Stewart  8:58 PM_
 
 I think @AutomatedTester has already done a chunk of the heavy lifting
 
-9:00
+_9:00_
+
 Got to go. Meeting time
 
 _Diego Molina  9:00 PM_
@@ -493,8 +500,6 @@ last topic was CoC, but we can take it next time
 
 well, we covered everything (almost), thank you everyone!
 1
-
-
 
 _Marcus Merrell  9:01 PM_
 
