@@ -197,8 +197,8 @@ WebElement emailAddressField = driver.findElement(withTagName("input")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
-passwordField = driver.find_element(By.ID, "password");
-emailAddressField = driver.find_element(with_tag_name("input").above(passwordField));
+passwordField = driver.find_element(By.ID, "password")
+emailAddressField = driver.find_element(with_tag_name("input").above(passwordField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //using static OpenQA.Selenium.RelativeBy;
@@ -232,8 +232,8 @@ WebElement passwordField = driver.findElement(withTagName("input")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
-emailAddressField = driver.find_element(By.ID, "email");
-passwordField = driver.find_element(with_tag_name("input").below(emailAddressField));
+emailAddressField = driver.find_element(By.ID, "email")
+passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //using static OpenQA.Selenium.RelativeBy;  
@@ -267,9 +267,9 @@ WebElement cancelButton= driver.findElement(withTagName("button")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
-submitButton = driver.find_element(By.ID, "submit");
+submitButton = driver.find_element(By.ID, "submit")
 cancelButton = driver.find_element(with_tag_name("button").
-                                   to_left_of(submitButton));
+                                   to_left_of(submitButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //using static OpenQA.Selenium.RelativeBy;
@@ -303,9 +303,9 @@ WebElement submitButton= driver.findElement(withTagName("button")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
-cancelButton = driver.find_element(By.ID, "cancel");
+cancelButton = driver.find_element(By.ID, "cancel")
 submitButton = driver.find_element(with_tag_name("button").
-                                   to_right_of(cancelButton));
+                                   to_right_of(cancelButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //using static OpenQA.Selenium.RelativeBy;
@@ -338,9 +338,9 @@ WebElement emailAddressField = driver.findElement(withTagName("input")
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
-emailAddressLabel = driver.find_element(By.ID, "lbl-email");    
+emailAddressLabel = driver.find_element(By.ID, "lbl-email")
 emailAddressField = driver.find_element(with_tag_name("input").
-                                       near(emailAddressLabel));
+                                       near(emailAddressLabel))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //using static OpenQA.Selenium.RelativeBy;
