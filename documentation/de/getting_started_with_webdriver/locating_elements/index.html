@@ -11,20 +11,20 @@
     <title>Elemente lokalisieren :: Dokumentation für Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1591890857" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1591890857" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1592061724" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1592061724" rel="stylesheet">
     
-      <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1591890857" rel="stylesheet">
+      <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1592061724" rel="stylesheet">
     
 
-    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1591890857"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1592061724"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1591890857"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1591890857"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1592061724"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1592061724"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1591890857"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1592061724"></script>
 
     
   </div>
@@ -2542,8 +2542,8 @@ WebElement emailAddressField <span style="color:#719e07">=</span> driver<span st
 <section id="pythoncode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
-passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;password&#34;</span>);
-emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>above(passwordField));
+passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;password&#34;</span>)
+emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>above(passwordField))
   </code></pre></div>
 </section>
   
@@ -2641,8 +2641,8 @@ WebElement passwordField <span style="color:#719e07">=</span> driver<span style=
 <section id="pythoncode6" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
-emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;email&#34;</span>);
-passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>below(emailAddressField));
+emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;email&#34;</span>)
+passwordField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>below(emailAddressField))
   </code></pre></div>
 </section>
   
@@ -2740,9 +2740,9 @@ WebElement cancelButton<span style="color:#719e07">=</span> driver<span style="c
 <section id="pythoncode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
-submitButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;submit&#34;</span>);
+submitButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;submit&#34;</span>)
 cancelButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;button&#34;</span>)<span style="color:#719e07">.</span>
-                                   to_left_of(submitButton));
+                                   to_left_of(submitButton))
   </code></pre></div>
 </section>
   
@@ -2840,9 +2840,9 @@ WebElement submitButton<span style="color:#719e07">=</span> driver<span style="c
 <section id="pythoncode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
-cancelButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;cancel&#34;</span>);
+cancelButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;cancel&#34;</span>)
 submitButton <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;button&#34;</span>)<span style="color:#719e07">.</span>
-                                   to_right_of(cancelButton));
+                                   to_right_of(cancelButton))
   </code></pre></div>
 </section>
   
@@ -2940,9 +2940,9 @@ WebElement emailAddressField <span style="color:#719e07">=</span> driver<span st
 <section id="pythoncode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75">#from selenium.webdriver.support.relative_locator import with_tag_name</span>
-emailAddressLabel <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;lbl-email&#34;</span>);    
+emailAddressLabel <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>ID, <span style="color:#2aa198">&#34;lbl-email&#34;</span>)
 emailAddressField <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(with_tag_name(<span style="color:#2aa198">&#34;input&#34;</span>)<span style="color:#719e07">.</span>
-                                       near(emailAddressLabel));
+                                       near(emailAddressLabel))
   </code></pre></div>
 </section>
   
@@ -2993,7 +2993,7 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/de/getting_started_with_webdriver/locating_elements/">
       “Elemente lokalisieren”
-    </a> was last updated on: 12 Jun 2020 00:53:56 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/0557015a47248df16a7070e974b0d78c692faed8">Add Korean translation of &#34;grid_index&#34; and &#34;grid_purposes and main functionalities&#34; and &#34;installing Standalone server&#34; (#459)[deploy site] (0557015)</a>
+    </a> was last updated on: 13 Jun 2020 20:51:37 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a8078eeb810550b85d0f99e671d0b22c55a9081a">Modify: removing extra semicolon for py code samples [deploy site] (a8078ee)</a>
 </h5>
         
         </div> 
@@ -4174,19 +4174,19 @@ IWebElement emailAddressField = driver.FindElement(WithTagName(<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1591890857"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1592061724"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1591890857"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1591890857"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1592061724"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1592061724"></script>
 
-    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1591890857" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1591890857"></script>
+    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1592061724" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1592061724"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
