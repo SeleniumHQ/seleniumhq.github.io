@@ -1,33 +1,20 @@
 ---
-title: "Grid"
+title: "조합 격자(Grid)"
 chapter: true
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Grid
 
-_Selenium Grid_ is a smart proxy server
-that allows Selenium tests to route commands to remote web browser instances.
-Its aim is to provide an easy way to run tests in parallel on multiple machines.
+_Selenium Grid_ 는 Selenium 테스트가 명령을 원격 웹 브라우저 인스턴스로 보낼 수 있도록 하는 스마트 프록시 서버입니다.
+이것의 목적은 여러 기계에서 병렬로 테스트를 실행할 수 있는 쉬운 방법을 제공하는 것입니다.
 
-With Selenium Grid,
-one server acts as the hub that routes JSON formatted test commands
-to one or more registered Grid nodes.
-Tests contact the hub to obtain access to remote browser instances.
-The hub has a list of registered servers that it provides access to,
-and allows control of these instances.
+_Selenium Grid_ 에서 한 서버는 JSON 형식 테스트 명령을 하나 이상의 등록된 Grid 노드로 보내는 허브로서의 역할을 합니다.
+테스트를 허브에 연결하여 원격 브라우저 인스턴스에 대한 액세스 권한을 얻으십시오.
+허브에는 이러한 인스턴스에 대한 액세스 권한을 제공하고 제어를 허용하는 등록된 서버 목록이 있습니다.
 
-Selenium Grid allows us to run tests in parallel on multiple machines,
-and to manage different browser versions and browser configurations centrally
-(instead of in each individual test).
+_Selenium Grid_ 는 여러 컴퓨터에서 동시에 테스트를 실행할 수 있도록 하며,
+(개별 테스트 대신에) 서로 다른 브라우저 버전과 브라우저 구성을 중앙에서 관리할 수 있도록 합니다.
 
-Selenium Grid is not a silver bullet.
-It solves a subset of common delegation and distribution problems,
-but will for example not manage your infrastructure,
-and might not suit your specific needs.
+_Selenium Grid_ 는 묘책이 아닙니다. 일반적인 위임 및 배포 문제의 부분 집합을 해결하지만,
+예를 들어 당신의 인프라를 관리하지 않으며 당신의 특정한 요구에 적합하지 않을 수 있습니다.

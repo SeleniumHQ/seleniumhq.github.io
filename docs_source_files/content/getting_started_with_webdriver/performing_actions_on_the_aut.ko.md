@@ -1,15 +1,9 @@
 ---
-title: "Performing actions on the AUT*"
+title: "AUT*에 대한 작업 수행"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-You can set an element's text using the sendKeys method as follows:
+sendKeys 메소드를 이용하여 element의 텍스트를 설정할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -38,9 +32,7 @@ driver.findElement(By.name("name")).sendKeys(name)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Some web applications use JavaScript libraries to add drag-and-drop
-functionality. The following is a basic example of dragging one
-element onto another element:
+몇몇 웹 어플리케이션들은 자바스크립트 라이브러리를 이용하여 드래그-앤-드롭 기능을 구현합니다. 아래는 하나의 element를 또다른 element로 드래그하는 가장 기본적인 예시입니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -76,9 +68,9 @@ Actions(driver).dragAndDrop(source, target).build().perform()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Clicking on an element
+### Element 클릭하기
 
-You can click on an element using the click method:
+click 메소드를 이용하여 element를 클릭할 수 있습니다:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
