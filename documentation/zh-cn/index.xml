@@ -62,6 +62,16 @@ RC服务器捆绑了Selenium Core并将其自动注入浏览器. 当您的测试
     </item>
     
     <item>
+      <title>Two Factor Authentication</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</guid>
+      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+ Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium. There are some ways to automate this process.</description>
+    </item>
+    
+    <item>
       <title>了解组件</title>
       <link>https://www.selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

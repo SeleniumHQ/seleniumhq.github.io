@@ -127,6 +127,16 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
     </item>
     
     <item>
+      <title>Two Factor Authentication</title>
+      <link>https://www.selenium.dev/documentation/de/worst_practices/two_factor_authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/worst_practices/two_factor_authentication/</guid>
+      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium.</description>
+    </item>
+    
+    <item>
       <title>Zweck und hauptsächlich genutze Funktionalität</title>
       <link>https://www.selenium.dev/documentation/de/grid/purposes_and_main_functionalities/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
