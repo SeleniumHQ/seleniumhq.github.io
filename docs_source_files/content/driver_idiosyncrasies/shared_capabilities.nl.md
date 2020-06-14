@@ -129,3 +129,10 @@ window size will exactly match that which was quested. This is because
 some drivers may not be able to resize in single-pixel increments.
 Due to this, fetching the window state/details by `getWindowRect` 
 may not equally match the values set to the browser.
+
+## strictFileInteractability
+
+The new capabilitiy indicates if strict interactability checks 
+should be applied to _input type=file_ elements. As strict interactability 
+checks are off by default, there is a change in behaviour 
+when using _Element Send Keys_ with hidden file upload controls.
