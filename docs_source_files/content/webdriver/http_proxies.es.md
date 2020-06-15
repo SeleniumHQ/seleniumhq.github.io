@@ -79,7 +79,13 @@ public class ProxyTest{
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
- # Need PR
+# this code was written with Selenium 4
+
+proxy = Selenium::WebDriver::Proxy.new(http: '<HOST:PORT>')
+cap   = Selenium::WebDriver::Remote::Capabilities.chrome(proxy: proxy)
+
+driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
+driver.get('http://google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // need PR
