@@ -114,22 +114,22 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome")
-var capabilities = Capabilities.chrome();
-//To avoid InsecureCertificateError for selenium4-aplha5
-capabilities.setAcceptInsecureCerts(true);
-capabilities.set("browserVersion", "67");
-capabilities.set("platformName", "Windows XP");
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+let opts = new chrome.Options();
+opts.setAcceptInsecureCerts(true);
+opts.setBrowserVersion('67');
+opts.setPlatform('Windows XP');
 (async function helloSelenium() {
     let driver = new Builder()
-        .usingServer("http://example.com")   
-        .withCapabilities(capabilities)
+        .usingServer("http://example.com")
+        .forBrowser('chrome')
+        .setChromeOptions(opts)
         .build();
     try {
         await driver.get('http://www.google.com');
-    }    
-    finally {       
+    }
+    finally {
         await driver.quit();
     }
 })();
