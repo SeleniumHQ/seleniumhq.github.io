@@ -117,7 +117,6 @@ driver = Selenium::WebDriver.for :chrome
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
 
 (async function myFunction() {let driver = await new Builder().forBrowser('chrome').build();
     //你的代码放在这个块中
