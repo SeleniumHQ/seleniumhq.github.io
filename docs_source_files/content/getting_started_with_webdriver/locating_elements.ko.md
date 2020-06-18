@@ -233,7 +233,8 @@ IWebElement passwordField = driver.FindElement(WithTagName("input")
                                                .Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+email_address_field= driver.find_element(:id, "email")
+password_field = driver.find_element(relative: {tag_name: 'input', below: email_address_field})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR
