@@ -86,16 +86,6 @@ npm install selenium-webdriver </description>
     </item>
     
     <item>
-      <title>Two Factor Authentication</title>
-      <link>https://www.selenium.dev/documentation/ja/worst_practices/two_factor_authentication/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/worst_practices/two_factor_authentication/</guid>
-      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium. There are some ways to automate this process.</description>
-    </item>
-    
-    <item>
       <title>クイックツアー</title>
       <link>https://www.selenium.dev/documentation/ja/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -167,6 +157,17 @@ browserTimeoutは、通常のタイムアウトメカニズムが失敗した場
 プログラムでサーバーを構成する 理論的には、プロセスはDriverServletをURLにマッピングするのと同じくらい簡単ですが、ページを全体的にコードで構成されたJettyなどの軽量コンテナでホストすることもできます。これを行う手順は次のとおりです。
 selenium-server.zipをダウンロードして解凍します。 JARをCLASSPATHに配置します。 AppServerという新しいクラスを作成します。 ここでは、Jettyを使用しているので、それもダウンロードする必要があります。
 import org.mortbay.jetty.Connector; import org.mortbay.jetty.Server; import org.mortbay.jetty.nio.SelectChannelConnector; import org.mortbay.jetty.security.SslSocketConnector; import org.mortbay.jetty.webapp.WebAppContext; import javax.servlet.Servlet; import java.io.File; import org.openqa.selenium.remote.server.DriverServlet; public class AppServer { private Server server = new Server(); public AppServer() throws Exception { WebAppContext context = new WebAppContext(); context.</description>
+    </item>
+    
+    <item>
+      <title>二要素認証</title>
+      <link>https://www.selenium.dev/documentation/ja/worst_practices/two_factor_authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ja/worst_practices/two_factor_authentication/</guid>
+      <description>2FA として知られている2要素認証は、&amp;ldquo;Google Authenticator&amp;rdquo; 、 &amp;ldquo;Microsoft Authenticator&amp;rdquo; などの&amp;quot;Authenticator&amp;rdquo; モバイルアプリを使用して、 またはSMS、電子メールで認証することにより、 ワンタイムパスワード（OTP）を生成する認証メカニズムです。 これをシームレスかつ一貫して自動化することは、Seleniumの大きな課題です。 このプロセスを自動化する方法はいくつかあります。 しかし、これはSeleniumテストの上にある別のレイヤーであり、また安全でもありません。 したがって、2FAの自動化を回避したほうがいいです。
+2FAチェックを回避するいくつかの選択肢があります。
+ テスト環境で特定のユーザーの2FAを無効にして、 それらのユーザー資格情報を自動化で使用できるようにします。 テスト環境で2FAを無効にします。 特定のIPからログインする場合は、2FAを無効にします。 そうすれば、テストマシンのIPを設定してこれを回避できます。  </description>
     </item>
     
     <item>
