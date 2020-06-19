@@ -786,14 +786,15 @@ FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfi
     </item>
     
     <item>
-      <title>Chrome Devtools</title>
+      <title>Chrome デベロッパーツール</title>
       <link>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</guid>
-      <description>Page being translated from English to Japanese. Do you speak Japanese? Help us to translate it by sending us pull requests!
- Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
-Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
+      <description>Selenium 4 alphaバージョンには、&amp;ldquo;DevTools&amp;rdquo; インターフェースを介した Chrome Dev Protocolのネイティブサポートが待望されています。 これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、 プロファイラー、リソースタイミング、セキュリティ、 ターゲットCDPドメインなどのChrome開発プロパティを取得できます。
+Chrome デベロッパーツールは、Google Chromeブラウザに直接組み込まれた一連のWeb開発ツールです。 DevToolsは、ページをすぐに編集して問題をすばやく診断するのに役立ち、 最終的にはより優れたWebサイトをより速く構築するのに役立ちます。
+ジオロケーションをエミュレート 一部のアプリケーションには、場所によって特徴や機能性が異なります。 このようなアプリケーションの自動化は、ブラウザでSeleniumを使用して 地理的位置をエミュレートすることが難しいため、困難です。 しかし、デベロッパーツールの助けを借りて、それらを簡単にエミュレートできます。 以下のコードスニペットはそのことを示しています。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.devtools.DevTools; public void geoLocationTest(){ ChromeDriver driver = new ChromeDriver(); Map coordinates = new HashMap() {{ put(&amp;#34;latitude&amp;#34;, 50.2334); put(&amp;#34;longitude&amp;#34;, 0.2334); put(&amp;#34;accuracy&amp;#34;, 1); }}; driver.executeCdpCommand(&amp;#34;Emulation.setGeolocationOverride&amp;#34;, coordinates); driver.get(&amp;#34;&amp;lt;your site url&amp;gt;&amp;#34;); }   # Please raise a PR to add code sample   // Please raise a PR to add code sample    # Please raise a PR to add code sample   // Please raise a PR to add code sample    // Please raise a PR to add code sample      </description>
     </item>
     
     <item>

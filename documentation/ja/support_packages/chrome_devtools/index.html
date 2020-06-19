@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://www.selenium.dev/documentation/ja/images/favicon.png" type="image/png">
 
-    <title>Chrome Devtools :: Seleniumドキュメント</title>
+    <title>Chrome デベロッパーツール :: Seleniumドキュメント</title>
 
     
-    <link href="https://www.selenium.dev/documentation/ja/css/nucleus.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/fontawesome-all.min.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/hybrid.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/featherlight.min.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/auto-complete.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/theme.css?1592489277" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ja/css/hugo-theme.css?1592489277" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/nucleus.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/fontawesome-all.min.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/hybrid.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/featherlight.min.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/perfect-scrollbar.min.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/auto-complete.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/atom-one-dark-reasonable.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/theme.css?1592564196" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ja/css/hugo-theme.css?1592564196" rel="stylesheet">
     
-      <link href="https://www.selenium.dev/documentation/ja/css/theme-selenium.css?1592489277" rel="stylesheet">
+      <link href="https://www.selenium.dev/documentation/ja/css/theme-selenium.css?1592564196" rel="stylesheet">
     
 
-    <script src="https://www.selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1592489277"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/jquery-3.3.1.min.js?1592564196"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/lunr.min.js?1592489277"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/auto-complete.js?1592489277"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/lunr.min.js?1592564196"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/auto-complete.js?1592564196"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/ja\/ja";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/search.js?1592489277"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ja/js/search.js?1592564196"></script>
 
     
   </div>
@@ -1428,9 +1428,9 @@
  
   
     
-      <li data-nav-id="/support_packages/chrome_devtools/" title="Chrome Devtools" class="dd-item active">
+      <li data-nav-id="/support_packages/chrome_devtools/" title="Chrome デベロッパーツール" class="dd-item active">
         <a href="https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/">
-        Chrome Devtools
+        Chrome デベロッパーツール
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1945,7 +1945,7 @@
             
           
           
-            <a href='https://www.selenium.dev/documentation/ja/'>Seleniumブラウザー自動化プロジェクト</a> > <a href='https://www.selenium.dev/documentation/ja/support_packages/'>サポートパッケージ</a> > Chrome Devtools
+            <a href='https://www.selenium.dev/documentation/ja/'>Seleniumブラウザー自動化プロジェクト</a> > <a href='https://www.selenium.dev/documentation/ja/support_packages/'>サポートパッケージ</a> > Chrome デベロッパーツール
           
          
           
@@ -1960,7 +1960,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#emulate-geo-location">Emulate Geo Location:</a></li>
+    <li><a href="#ジオロケーションをエミュレート">ジオロケーションをエミュレート</a></li>
   </ul>
 </nav>
     </div>
@@ -1978,7 +1978,7 @@
           
             <h1>
               
-              Chrome Devtools
+              Chrome デベロッパーツール
             </h1>
           
 
@@ -1986,56 +1986,60 @@
 
 
 
-
-<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-<p>Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &ldquo;DevTools&rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.</p>
-<p>Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster.</p>
-<h2 id="emulate-geo-location">Emulate Geo Location:</h2>
-<p>Some applications have different features and functionalities across different locations. Automating such applications is difficult because it is hard to emulate the geo locations in the browser using Selenium. But with the help of Devtools, we can easily emulate them. Below code snippet demonstrates that.</p>
+<p>Selenium 4 alphaバージョンには、&ldquo;DevTools&rdquo; インターフェースを介した
+Chrome Dev Protocolのネイティブサポートが待望されています。
+これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、
+プロファイラー、リソースタイミング、セキュリティ、
+ターゲットCDPドメインなどのChrome開発プロパティを取得できます。</p>
+<p>Chrome デベロッパーツールは、Google Chromeブラウザに直接組み込まれた一連のWeb開発ツールです。
+DevToolsは、ページをすぐに編集して問題をすばやく診断するのに役立ち、
+最終的にはより優れたWebサイトをより速く構築するのに役立ちます。</p>
+<h2 id="ジオロケーションをエミュレート">ジオロケーションをエミュレート</h2>
+<p>一部のアプリケーションには、場所によって特徴や機能性が異なります。
+このようなアプリケーションの自動化は、ブラウザでSeleniumを使用して
+地理的位置をエミュレートすることが難しいため、困難です。
+しかし、デベロッパーツールの助けを借りて、それらを簡単にエミュレートできます。
+以下のコードスニペットはそのことを示しています。</p>
 
 
 
 <div class="tabset">
   
     
-      <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
+      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
     
-    <label for="tab0code1">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1">
-    
-    <label for="tab1code1">Python</label>
+    <label for="tab0code0">Java</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1">
+      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
     
-    <label for="tab2code1">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1">
-    
-    <label for="tab3code1">Ruby</label>
+    <label for="tab1code0">Python</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
+      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
     
-    <label for="tab4code1">JavaScript</label>
+    <label for="tab2code0">C#</label>
     
     
-      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
+      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
     
-    <label for="tab5code1">Kotlin</label>
+    <label for="tab3code0">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
+    
+    <label for="tab4code0">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
+    
+    <label for="tab5code0">Kotlin</label>
       
   <div class="tab-panels">
   
 
 
-<section id="javacode1" class="tab-panel">
+<section id="javacode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
 <span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
 <span style="color:#719e07">import</span> org.openqa.selenium.devtools.DevTools<span style="color:#719e07">;</span>
@@ -2056,7 +2060,7 @@ it by sending us pull requests!</p>
   
 
 
-<section id="pythoncode1" class="tab-panel">
+<section id="pythoncode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
 <span style="color:#586e75"># Please raise a PR to add code sample</span>
   </code></pre></div>
@@ -2064,7 +2068,7 @@ it by sending us pull requests!</p>
   
 
 
-<section id="csharpcode1" class="tab-panel">
+<section id="csharpcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
 <span style="color:#586e75">// Please raise a PR to add code sample  
 </span><span style="color:#586e75"></span>  
@@ -2073,7 +2077,7 @@ it by sending us pull requests!</p>
   
 
 
-<section id="rubycode1" class="tab-panel">
+<section id="rubycode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
 <span style="color:#586e75"># Please raise a PR to add code sample</span>
   </code></pre></div>
@@ -2081,7 +2085,7 @@ it by sending us pull requests!</p>
   
 
 
-<section id="javascriptcode1" class="tab-panel">
+<section id="javascriptcode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
 <span style="color:#586e75">// Please raise a PR to add code sample  
 </span><span style="color:#586e75"></span>  
@@ -2090,7 +2094,7 @@ it by sending us pull requests!</p>
   
 
 
-<section id="kotlincode1" class="tab-panel">
+<section id="kotlincode0" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#586e75">// Please raise a PR to add code sample  
 </span><span style="color:#586e75"></span>  </code></pre></div>
@@ -2105,8 +2109,8 @@ it by sending us pull requests!</p>
 
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/">
-      “Chrome Devtools”
-    </a> was last updated on: 18 Jun 2020 23:07:21 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/a017dddaf74cbaa07b18378270935f257f1719e8">Add Japanese transration of two factor authentication (#462) [deploy site] (a017ddd)</a>
+      “Chrome デベロッパーツール”
+    </a> was last updated on: 19 Jun 2020 19:56:11 &#43;0900: <a href="https://github.com/SeleniumHQ/site/commit/287eb1e3cc0ca61c0f7381287d896656f208f2a5">Add Japanese transration of Chrome Devtools (#464)[deploy site] (287eb1e)</a>
 </h5>
         
         </div> 
@@ -3303,19 +3307,19 @@ it by sending us pull requests!</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/ja/js/clipboard.min.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/jquery.sticky.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/featherlight.min.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/highlight.pack.js?1592489277"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/clipboard.min.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/perfect-scrollbar.min.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/perfect-scrollbar.jquery.min.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/jquery.sticky.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/featherlight.min.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/highlight.pack.js?1592564196"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/learn.js?1592489277"></script>
-    <script src="https://www.selenium.dev/documentation/ja/js/hugo-learn.js?1592489277"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/modernizr.custom-3.6.0.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/learn.js?1592564196"></script>
+    <script src="https://www.selenium.dev/documentation/ja/js/hugo-learn.js?1592564196"></script>
 
-    <link href="https://www.selenium.dev/documentation/ja/mermaid/mermaid.css?1592489277" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/ja/mermaid/mermaid.js?1592489277"></script>
+    <link href="https://www.selenium.dev/documentation/ja/mermaid/mermaid.css?1592564196" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/ja/mermaid/mermaid.js?1592564196"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
