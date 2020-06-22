@@ -1,26 +1,21 @@
 ---
-title: "Two Factor Authentication"
+title: "二要素認証"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+_2FA_ として知られている2要素認証は、"Google Authenticator" 、
+"Microsoft Authenticator" などの"Authenticator" モバイルアプリを使用して、
+またはSMS、電子メールで認証することにより、
+ワンタイムパスワード（OTP）を生成する認証メカニズムです。 
+これをシームレスかつ一貫して自動化することは、Seleniumの大きな課題です。
+このプロセスを自動化する方法はいくつかあります。
+しかし、これはSeleniumテストの上にある別のレイヤーであり、また安全でもありません。
+したがって、2FAの自動化を回避したほうがいいです。
 
-Two Factor Authentication shortly know as _2FA_ is a authorization 
-mechanism where One Time Password(OTP) is generated using "Authenticator" 
-mobile apps such as "Google Authenticator", "Microsoft Authenticator" 
-etc., or by SMS, e-mail to authenticate. Automating this seamlessly 
-and consistently is a big challenge in Selenium. There are some ways 
-to automate this process. But that will be another layer on top of our 
-Selenium tests and not secured as well.  So, you can avoid automating 2FA.
+2FAチェックを回避するいくつかの選択肢があります。
 
-There are few options to get around 2FA checks:
-
-* Disable 2FA for certain Users in the test environment, so that you can 
-use those user credentials in the automation.
-* Disable 2FA in your test environment.
-* Disable 2FA if you login from certain IPs. That way we can configure our 
-test machine IPs to avoid this.
+* テスト環境で特定のユーザーの2FAを無効にして、
+それらのユーザー資格情報を自動化で使用できるようにします。
+* テスト環境で2FAを無効にします。
+* 特定のIPからログインする場合は、2FAを無効にします。
+そうすれば、テストマシンのIPを設定してこれを回避できます。

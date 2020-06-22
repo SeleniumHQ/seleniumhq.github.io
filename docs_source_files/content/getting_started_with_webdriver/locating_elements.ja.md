@@ -289,7 +289,8 @@ IWebElement cancelButton = driver.FindElement(WithTagName("button")
                                               .LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+submit_button= driver.find_element(:id, "submit")
+cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_button})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR
@@ -324,7 +325,8 @@ IWebElement submitButton = driver.FindElement(WithTagName("button")
                                               .RightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+cancel_button = driver.find_element(:id, "cancel")
+submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_button})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR
