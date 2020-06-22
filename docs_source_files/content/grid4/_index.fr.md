@@ -4,7 +4,7 @@ chapter: true
 weight: 9
 ---
 
-# Grid
+# Selenium Grid 4
 
 _Selenium Grid 4_ est un serveur proxy intelligent
 qui permet aux tests Selenium d'acheminer des 

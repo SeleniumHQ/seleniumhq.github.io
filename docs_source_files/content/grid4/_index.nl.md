@@ -10,7 +10,7 @@ English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Grid
+# Selenium Grid 4
 
 _Selenium Grid 4_ is a smart proxy server
 that allows Selenium tests to route commands to remote web browser instances.
@@ -23,7 +23,7 @@ Tests contact the hub to obtain access to remote browser instances.
 The hub has a list of registered servers that it provides access to,
 and allows control of these instances.
 
-Selenium Grid allows us to run tests in parallel on multiple machines,
+This feature allows us to run tests in parallel on multiple machines,
 and to manage different browser versions and browser configurations centrally
 (instead of in each individual test).
 
