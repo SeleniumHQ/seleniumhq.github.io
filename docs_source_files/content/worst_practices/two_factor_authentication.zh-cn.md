@@ -3,12 +3,6 @@ title: "双因素认证"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 双因素认证通常简写成 _2FA_ 是一种一次性密码（OTP）通常用在移动应用上例如“谷歌认证器”，
 “微软认证器”等等，或者通过短信或者邮件来认证。在Selenium自动化中这些都是影响有效自动化
 的极大挑战。虽然也有一些方法可以自动化这些过程，但是同样对于Selenium自动化也引入了很多不安全因素。
