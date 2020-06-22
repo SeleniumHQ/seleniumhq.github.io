@@ -62,16 +62,6 @@ RC服务器捆绑了Selenium Core并将其自动注入浏览器. 当您的测试
     </item>
     
     <item>
-      <title>Two Factor Authentication</title>
-      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</guid>
-      <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
- Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium. There are some ways to automate this process.</description>
-    </item>
-    
-    <item>
       <title>了解组件</title>
       <link>https://www.selenium.dev/documentation/zh-cn/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -97,6 +87,17 @@ browserVersion: 此功能是可选的, 用于在远程端设置可用的浏览�
 页面加载策略 通过URL导航到新页面时, 默认情况下, Selenium将等待页面完全加载后再进行响应. 这对于初学者来说效果很好, 但是在加载大量第三方资源的页面上可能会导致较长的等待时间. 在这种情况下, 使用非默认策略可以使测试的执行速度更快, 但是也可能导致不稳定, 即页面上的元素随元素加载和大小变化而改变位置.
 页面加载策略可以参考链接 document.readyState 如下述表格的描述:
    策略 准备完成的状态 备注     normal complete 默认情况下使用, 等待所有资源下载完成   eager interactive DOM访问已准备就绪, 但其他资源 (如图像) 可能仍在加载中   none Any 完全不阻塞WebDriver    platformName 这标识了远端的操作系统, 获取 platformName 将返回操作系统的名称.</description>
+    </item>
+    
+    <item>
+      <title>双因素认证</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/</guid>
+      <description>双因素认证通常简写成 2FA 是一种一次性密码（OTP）通常用在移动应用上例如“谷歌认证器”， “微软认证器”等等，或者通过短信或者邮件来认证。在Selenium自动化中这些都是影响有效自动化 的极大挑战。虽然也有一些方法可以自动化这些过程，但是同样对于Selenium自动化也引入了很多不安全因素。 所以你应该要避免对2FA自动化。
+这里有一些对于如何绕过2FA校验的建议：
+ 在测试环境中对特定用户禁止2FA校验，这样对于这些特定用户可以直接进行自动化测试。 禁止2FA校验在测试环境中。 对于特定IP区域禁止2FA校验，这样我们可以配置测试机器的IP在这些白名单区域中。  </description>
     </item>
     
     <item>

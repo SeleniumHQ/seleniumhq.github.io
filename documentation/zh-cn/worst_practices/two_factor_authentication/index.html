@@ -8,23 +8,23 @@
 
     <link rel="icon" href="https://www.selenium.dev/documentation/zh-cn/images/favicon.png" type="image/png">
 
-    <title>Two Factor Authentication :: Selenium 文档</title>
+    <title>双因素认证 :: Selenium 文档</title>
 
     
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1592665733" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1592665733" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1592800605" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1592800605" rel="stylesheet">
     
-      <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1592665733" rel="stylesheet">
+      <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1592800605" rel="stylesheet">
     
 
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1592665733"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1592800605"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1592665733"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1592665733"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1592800605"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1592800605"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1592665733"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1592800605"></script>
 
     
   </div>
@@ -984,9 +984,9 @@
  
   
     
-      <li data-nav-id="/worst_practices/two_factor_authentication/" title="Two Factor Authentication" class="dd-item active">
+      <li data-nav-id="/worst_practices/two_factor_authentication/" title="双因素认证" class="dd-item active">
         <a href="https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/">
-        Two Factor Authentication
+        双因素认证
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -1945,7 +1945,7 @@
             
           
           
-            <a href='https://www.selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://www.selenium.dev/documentation/zh-cn/worst_practices/'>反模式</a> > Two Factor Authentication
+            <a href='https://www.selenium.dev/documentation/zh-cn/'>Selenium 浏览器自动化项目</a> > <a href='https://www.selenium.dev/documentation/zh-cn/worst_practices/'>反模式</a> > 双因素认证
           
          
           
@@ -1974,7 +1974,7 @@
           
             <h1>
               
-              Two Factor Authentication
+              双因素认证
             </h1>
           
 
@@ -1982,26 +1982,15 @@
 
 
 
-
-<div class="notices info" ><p><!-- raw HTML omitted --><!-- raw HTML omitted --> Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!</p>
-</div>
-
-<p>Two Factor Authentication shortly know as <em>2FA</em> is a authorization
-mechanism where One Time Password(OTP) is generated using &ldquo;Authenticator&rdquo;
-mobile apps such as &ldquo;Google Authenticator&rdquo;, &ldquo;Microsoft Authenticator&rdquo;
-etc., or by SMS, e-mail to authenticate. Automating this seamlessly
-and consistently is a big challenge in Selenium. There are some ways
-to automate this process. But that will be another layer on top of our
-Selenium tests and not secured as well.  So, you can avoid automating 2FA.</p>
-<p>There are few options to get around 2FA checks:</p>
+<p>双因素认证通常简写成 <em>2FA</em> 是一种一次性密码（OTP）通常用在移动应用上例如“谷歌认证器”，
+“微软认证器”等等，或者通过短信或者邮件来认证。在Selenium自动化中这些都是影响有效自动化
+的极大挑战。虽然也有一些方法可以自动化这些过程，但是同样对于Selenium自动化也引入了很多不安全因素。
+所以你应该要避免对2FA自动化。</p>
+<p>这里有一些对于如何绕过2FA校验的建议：</p>
 <ul>
-<li>Disable 2FA for certain Users in the test environment, so that you can
-use those user credentials in the automation.</li>
-<li>Disable 2FA in your test environment.</li>
-<li>Disable 2FA if you login from certain IPs. That way we can configure our
-test machine IPs to avoid this.</li>
+<li>在测试环境中对特定用户禁止2FA校验，这样对于这些特定用户可以直接进行自动化测试。</li>
+<li>禁止2FA校验在测试环境中。</li>
+<li>对于特定IP区域禁止2FA校验，这样我们可以配置测试机器的IP在这些白名单区域中。</li>
 </ul>
 
 
@@ -2011,8 +2000,8 @@ test machine IPs to avoid this.</li>
 
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/zh-cn/worst_practices/two_factor_authentication/">
-      “Two Factor Authentication”
-    </a> was last updated on: 20 Jun 2020 20:38:18 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/3ba34c08e64dc7b89e498a238706d587ecd1e24b">Add: Adding ruby code sample for relative right[deploy site] (3ba34c0)</a>
+      “双因素认证”
+    </a> was last updated on: 22 Jun 2020 12:36:13 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/01ea1d2f4c08b1c3daaadd2624b2adae2613e7c7">Update two_factor_authentication.zh-cn.md (#463)[deploy site] (01ea1d2)</a>
 </h5>
         
         </div> 
@@ -3206,19 +3195,19 @@ test machine IPs to avoid this.</li>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1592665733"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1592800605"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1592665733"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1592665733"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1592800605"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1592800605"></script>
 
-    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1592665733" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1592665733"></script>
+    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1592800605" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1592800605"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
