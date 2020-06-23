@@ -1,21 +1,15 @@
 ---
-title: "Chrome Devtools"
+title: "Chrome开发工具"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+在Selenium 4 alpha版本通过对Chrome开发工具协议（Chrome DevTools Protocol）的支持添加了大家期待已久的源生Chrome开发工具“DevTools”调用。这将帮助我们获取Chrome开发属性集例如：应用程序缓存、获取、网络、性能、探查器、资源计时、安全性和目标CDP域等。
 
-Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through "DevTools" interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome开发工具是在谷歌Chrome浏览其中内置的网页开发工具集。开发工具可以帮助你快速编辑页面和诊断问题，最终帮助你更快地建立更好的网站。
 
-Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster.
+## 模拟 Geo location 定位:
 
-## Emulate Geo Location:
-
-Some applications have different features and functionalities across different locations. Automating such applications is difficult because it is hard to emulate the geo locations in the browser using Selenium. But with the help of Devtools, we can easily emulate them. Below code snippet demonstrates that.
+有一些应用在不同的定位下有不同的特性和功能。想通过Selenium在浏览器中模拟geo locations定位是从而实现应用的自动化是非常困难的。但是通过开发工具的帮助，我们可以非常简单的模拟它们。下面的代码判断演示了这一点。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
