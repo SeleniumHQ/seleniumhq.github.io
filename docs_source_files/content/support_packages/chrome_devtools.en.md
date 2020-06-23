@@ -3,7 +3,7 @@ title: "Chrome Devtools"
 weight: 10
 ---
 
-Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through "DevTools" interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Selenium 4 alpha versions have much awaited native support for Chrome DevTools Protocol through "DevTools" interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
 
 Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser. DevTools can help you edit pages on-the-fly and diagnose problems quickly, which ultimately helps you build better websites, faster.
 
