@@ -11,20 +11,20 @@
     <title>定位元素 :: Selenium 文档</title>
 
     
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1593011484" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1593011484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1593020961" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1593020961" rel="stylesheet">
     
-      <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1593011484" rel="stylesheet">
+      <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1593020961" rel="stylesheet">
     
 
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1593011484"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1593020961"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1593011484"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1593011484"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1593020961"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1593020961"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1593011484"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1593020961"></script>
 
     
   </div>
@@ -1968,14 +1968,14 @@
         <li><a href="#使用选择器的提示">使用选择器的提示</a></li>
       </ul>
     </li>
-    <li><a href="#relative-locators">Relative Locators</a>
+    <li><a href="#相对定位">相对定位</a>
       <ul>
-        <li><a href="#how-does-it-work">How does it work</a></li>
-        <li><a href="#above">above()</a></li>
-        <li><a href="#below">below()</a></li>
-        <li><a href="#toleftof">toLeftOf()</a></li>
-        <li><a href="#torightof">toRightOf()</a></li>
-        <li><a href="#near">near()</a></li>
+        <li><a href="#如何工作">如何工作</a></li>
+        <li><a href="#above-元素上">above() 元素上</a></li>
+        <li><a href="#below-元素下">below() 元素下</a></li>
+        <li><a href="#toleftof-元素左">toLeftOf() 元素左</a></li>
+        <li><a href="#torightof-元素右">toRightOf() 元素右</a></li>
+        <li><a href="#near-附近">near() 附近</a></li>
       </ul>
     </li>
   </ul>
@@ -2389,18 +2389,18 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 <table>
 <thead>
 <tr>
-<th>定位器</th>
+<th>定位器 Locator</th>
 <th>描述</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>class 名称</td>
-<td>定位类的名称中包含搜索值的元素（不允许使用复合类名）</td>
+<td>class name</td>
+<td>定位class属性与搜索值匹配的元素（不允许使用复合类名）</td>
 </tr>
 <tr>
-<td>css 选择器</td>
-<td>定位与 CSS 选择器匹配的元素</td>
+<td>css selector</td>
+<td>定位 CSS 选择器匹配的元素</td>
 </tr>
 <tr>
 <td>id</td>
@@ -2411,15 +2411,15 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 <td>定位 name 属性与搜索值匹配的元素</td>
 </tr>
 <tr>
-<td>链接文本</td>
-<td>定位其可视文本与搜索值匹配的锚元素</td>
+<td>link text</td>
+<td>定位link text可视文本与搜索值完全匹配的锚元素</td>
 </tr>
 <tr>
-<td>部分链接文本</td>
-<td>定位其可视文本与搜索值匹配的锚元素</td>
+<td>partial link text</td>
+<td>定位link text可视文本部分与搜索值部分匹配的锚点元素。如果匹配多个元素，则只选择第一个元素。</td>
 </tr>
 <tr>
-<td>标签名称</td>
+<td>tag name</td>
 <td>定位标签名称与搜索值匹配的元素</td>
 </tr>
 <tr>
@@ -2434,31 +2434,26 @@ mucho_cheese <span style="color:#719e07">=</span> driver<span style="color:#719e
 <p>基于链接文本和部分链接文本的选择策略有其缺点，即只能对链接元素起作用。此外，它们在 WebDriver 内部调用 XPath 选择器。</p>
 <p>标签名可能是一种危险的定位元素的方法。页面上经常出现同一标签的多个元素。这在调用 <em>findElements(By)</em> 方法返回元素集合的时候非常有用。</p>
 <p>建议您尽可能保持定位器的紧凑性和可读性。使用 WebDriver 遍历 DOM 结构是一项性能花销很大的操作，搜索范围越小越好。</p>
-<h2 id="relative-locators">Relative Locators</h2>
-<p><strong>Selenium 4</strong> brings Relative Locators which are previously
-called as <em>Friendly Locators</em>. This functionality was
-added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:</p>
+<h2 id="相对定位">相对定位</h2>
+<p>在<strong>Selenium 4</strong>中带来了相对定位这个新功能，在以前的版本中被称之为&quot;好友定位 (Firendly Locators)&quot;。
+它可以帮助你通过某些元素作为参考来定位其附近的元素。
+现在可用的相对定位有：</p>
 <ul>
-<li><em>above</em></li>
-<li><em>below</em></li>
-<li><em>toLeftOf</em></li>
-<li><em>toRightOf</em></li>
-<li><em>near</em></li>
+<li><em>above</em> 元素上</li>
+<li><em>below</em> 元素下</li>
+<li><em>toLeftOf</em> 元素左</li>
+<li><em>toRightOf</em> 元素右</li>
+<li><em>near</em> 附近</li>
 </ul>
-<p><em>findElement</em> method now accepts a new method <code>withTagName()</code>
-which returns a RelativeLocator.</p>
-<h3 id="how-does-it-work">How does it work</h3>
-<p>Selenium uses the JavaScript function
+<p><em>findElement</em> 方法现在支持<code>witTagName()</code>新方法其可返回RelativeLocator相对定位对象。</p>
+<h3 id="如何工作">如何工作</h3>
+<p>Selenium是通过使用JavaScript函数
 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">getBoundingClientRect()</a>
-to find the relative elements. This function returns
-properties of an element such as
-right, left, bottom, and top.</p>
-<p>Let us consider the below example for understanding the relative locators.</p>
+来查找相对元素的。这个函数能够返回对应元素的各种属性例如：右，左，下，上。</p>
+<p>通过下面的例子我们来理解一下关于相对定位的使用</p>
 <p><img src="https://www.selenium.dev/documentation/zh-cn/images/relative_locators.png?width=400px" alt="Relative Locators"></p>
-<h3 id="above">above()</h3>
-<p>Returns the WebElement, which appears
-above to the specified element</p>
+<h3 id="above-元素上">above() 元素上</h3>
+<p>返回当前指定元素位置上方的WebElement对象</p>
 
 
 
@@ -2556,9 +2551,8 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
 </section>
 </div>
 </div>
-<h3 id="below">below()</h3>
-<p>Returns the WebElement, which appears
-below to the specified element</p>
+<h3 id="below-元素下">below() 元素下</h3>
+<p>返回当前指定元素位置下方的WebElement对象</p>
 
 
 
@@ -2656,9 +2650,8 @@ password_field <span style="color:#719e07">=</span> driver<span style="color:#71
 </section>
 </div>
 </div>
-<h3 id="toleftof">toLeftOf()</h3>
-<p>Returns the WebElement, which appears
-to left of specified element</p>
+<h3 id="toleftof-元素左">toLeftOf() 元素左</h3>
+<p>返回当前指定元素位置左方的WebElement对象</p>
 
 
 
@@ -2757,9 +2750,8 @@ cancel_button <span style="color:#719e07">=</span> driver<span style="color:#719
 </section>
 </div>
 </div>
-<h3 id="torightof">toRightOf()</h3>
-<p>Returns the WebElement, which appears
-to right of the specified element</p>
+<h3 id="torightof-元素右">toRightOf() 元素右</h3>
+<p>返回当前指定元素位置右方的WebElement对象</p>
 
 
 
@@ -2858,9 +2850,8 @@ submit_button <span style="color:#719e07">=</span> driver<span style="color:#719
 </section>
 </div>
 </div>
-<h3 id="near">near()</h3>
-<p>Returns the WebElement, which is
-at most <code>50px</code> away from the specified element.</p>
+<h3 id="near-附近">near() 附近</h3>
+<p>返回当前指定元素位置附近大约<code>px50</code>50像素的WebElement对象</p>
 
 
 
@@ -2968,7 +2959,7 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/locating_elements/">
       “定位元素”
-    </a> was last updated on: 24 Jun 2020 20:40:51 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/09cd2394d2cc26c26971cd715b7785d005db246e">Add: Adding ruby code sample for relative near[deploy site] (09cd239)</a>
+    </a> was last updated on: 25 Jun 2020 01:48:56 &#43;0800: <a href="https://github.com/SeleniumHQ/site/commit/e04e67aab5fe701c6d9003b1e1bd4d8554401e79">Update locating_elements.zh-cn.md (#467)[deploy site] (e04e67a)</a>
 </h5>
         
         </div> 
@@ -4165,19 +4156,19 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1593011485"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1593020961"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1593011485"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1593011485"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1593020961"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1593020961"></script>
 
-    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1593011485" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1593011485"></script>
+    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1593020961" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1593020961"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
