@@ -132,15 +132,15 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 在 WebDriver 中有 8 种不同的内置元素定位策略：
 
-| 定位器 | 描述 |
+| 定位器 Locator | 描述 |
 | -------- | ---------- |
-| class 名称 | 定位类的名称中包含搜索值的元素（不允许使用复合类名） |
-| css 选择器 | 定位与 CSS 选择器匹配的元素 |
+| class name | 定位class属性与搜索值匹配的元素（不允许使用复合类名） |
+| css selector | 定位 CSS 选择器匹配的元素 |
 | id | 定位 id 属性与搜索值匹配的元素 |
 | name | 定位 name 属性与搜索值匹配的元素 |
-| 链接文本| 定位其可视文本与搜索值匹配的锚元素 |
-| 部分链接文本 | 定位其可视文本与搜索值匹配的锚元素 |
-| 标签名称 | 定位标签名称与搜索值匹配的元素 |
+| link text | 定位link text可视文本与搜索值完全匹配的锚元素 |
+| partial link text | 定位link text可视文本部分与搜索值部分匹配的锚点元素。如果匹配多个元素，则只选择第一个元素。 |
+| tag name | 定位标签名称与搜索值匹配的元素 |
 | xpath | 定位与 XPath 表达式匹配的元素 |
 
 ### 使用选择器的提示
@@ -155,38 +155,33 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 建议您尽可能保持定位器的紧凑性和可读性。使用 WebDriver 遍历 DOM 结构是一项性能花销很大的操作，搜索范围越小越好。
 
-## Relative Locators
+## 相对定位
 
-**Selenium 4** brings Relative Locators which are previously 
-called as _Friendly Locators_. This functionality was 
-added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:
+在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Firendly Locators)"。
+它可以帮助你通过某些元素作为参考来定位其附近的元素。
+现在可用的相对定位有：
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+* *above* 元素上
+* *below* 元素下
+* *toLeftOf* 元素左
+* *toRightOf* 元素右
+* *near* 附近
 
-_findElement_ method now accepts a new method `withTagName()` 
-which returns a RelativeLocator. 
+_findElement_ 方法现在支持`witTagName()`新方法其可返回RelativeLocator相对定位对象。
 
-### How does it work
+### 如何工作
 
-Selenium uses the JavaScript function 
+Selenium是通过使用JavaScript函数
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to find the relative elements. This function returns 
-properties of an element such as 
-right, left, bottom, and top.
+来查找相对元素的。这个函数能够返回对应元素的各种属性例如：右，左，下，上。
 
-Let us consider the below example for understanding the relative locators.
+通过下面的例子我们来理解一下关于相对定位的使用
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
-### above()
+### above() 元素上
 
-Returns the WebElement, which appears 
-above to the specified element
+返回当前指定元素位置上方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -219,10 +214,10 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', above:pa
 {{< / code-tab >}}
 
 
-### below()
+### below() 元素下
 
-Returns the WebElement, which appears 
-below to the specified element
+返回当前指定元素位置下方的WebElement对象
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -255,10 +250,9 @@ password_field = driver.find_element(relative: {tag_name: 'input', below: email_
 {{< / code-tab >}}
 
 
-### toLeftOf()
+### toLeftOf() 元素左
 
-Returns the WebElement, which appears 
-to left of specified element
+返回当前指定元素位置左方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -292,10 +286,9 @@ cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_b
 {{< / code-tab >}}
 
 
-### toRightOf()
+### toRightOf() 元素右
 
-Returns the WebElement, which appears 
-to right of the specified element
+返回当前指定元素位置右方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -328,10 +321,9 @@ submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### near()
+### near() 附近
 
-Returns the WebElement, which is
-at most `50px` away from the specified element.
+返回当前指定元素位置附近大约`px50`50像素的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
