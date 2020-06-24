@@ -345,7 +345,8 @@ IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+email_address_label = driver.find_element(:id, "lbl-email")
+email_address_field = driver.find_element(relative: {tag_name: 'input', near: email_address_label})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR
