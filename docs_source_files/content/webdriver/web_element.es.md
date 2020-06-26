@@ -194,8 +194,8 @@ const {Builder, By} = require('selenium-webdriver');
         // Navega a la URL
         await driver.get('https://www.example.com');
 
-        // Obtén todos los elementos con el nombre de etiqueta 'p'
-        let elements = await driver.findElements(By.tagName('p'));
+        // Get all the elements available with tag 'p'
+        let elements = await driver.findElements(By.css('p'));
         for(let e of elements) {
             console.log(await e.getText());
         }
