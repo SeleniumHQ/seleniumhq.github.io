@@ -256,7 +256,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', above:pa
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val passwordField = driver.findElement(By.id("password"))
-val emailAddressField = driver.findElement(withTagName("input").above(passwordField)
+val emailAddressField = driver.findElement(withTagName("input").above(passwordField))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -292,7 +292,8 @@ password_field = driver.find_element(relative: {tag_name: 'input', below: email_
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val emailAddressField = driver.findElement(By.id("email"))
+val passwordField = driver.findElement(withTagName("input").below(emailAddressField))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
