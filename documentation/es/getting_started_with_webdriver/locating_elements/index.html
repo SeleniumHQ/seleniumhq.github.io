@@ -12,21 +12,21 @@
     <title>Localizando elementos :: Documentación de Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/es/css/nucleus.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hybrid.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/featherlight.min.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/auto-complete.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/theme.css?1593440814" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hugo-theme.css?1593440814" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/nucleus.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/hybrid.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/featherlight.min.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/auto-complete.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/theme.css?1593496995" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/hugo-theme.css?1593496995" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/es/css/theme-selenium.css?1593440814" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/theme-selenium.css?1593496995" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1593440814"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1593496995"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/lunr.min.js?1593440814"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/auto-complete.js?1593440814"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/lunr.min.js?1593496995"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/auto-complete.js?1593496995"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/search.js?1593440814"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/search.js?1593496995"></script>
 
     
   </div>
@@ -2740,7 +2740,7 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
 <section id="kotlincode4" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
 <span style="color:#719e07">val</span> passwordField = driver.findElement(By.id(<span style="color:#2aa198">&#34;password&#34;</span>))
-<span style="color:#719e07">val</span> emailAddressField = driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>).above(passwordField)
+<span style="color:#719e07">val</span> emailAddressField = driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>).above(passwordField))
   </code></pre></div>
 </section>
 </div>
@@ -2840,8 +2840,9 @@ password_field <span style="color:#719e07">=</span> driver<span style="color:#71
 
 <section id="kotlincode5" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">val</span> emailAddressField = driver.findElement(By.id(<span style="color:#2aa198">&#34;email&#34;</span>))
+<span style="color:#719e07">val</span> passwordField = driver.findElement(withTagName(<span style="color:#2aa198">&#34;input&#34;</span>).below(emailAddressField))
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -3157,7 +3158,7 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/">
       “Localizando elementos”
-    </a> was last updated on: 29 Jun 2020 19:56:24 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/02f11a6e7bda592be38d4453b691afc49576964b">Add: kotlin code sample for relative locator[deploy site] (02f11a6)</a>
+    </a> was last updated on: 30 Jun 2020 11:32:41 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/e36feaca124e224a00561602af7de1079205b28c">add: Adding kotlin code sample for relative locator[deploy site] (e36feac)</a>
 </h5>
         
         </div> 
@@ -4354,19 +4355,19 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/es/js/clipboard.min.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/featherlight.min.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/highlight.pack.js?1593440814"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/clipboard.min.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/featherlight.min.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/highlight.pack.js?1593496996"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/learn.js?1593440814"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/hugo-learn.js?1593440814"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/learn.js?1593496996"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/hugo-learn.js?1593496996"></script>
 
-    <link href="https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1593440814" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1593440814"></script>
+    <link href="https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1593496996" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1593496996"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
