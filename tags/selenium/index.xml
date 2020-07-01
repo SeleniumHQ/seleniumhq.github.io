@@ -6,10 +6,21 @@
     <description>Recent content in selenium on SeleniumHQ Browser Automation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://selenium.dev/tags/selenium/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Moving to Trunk</title>
+      <link>https://selenium.dev/blog/2020/moving-to-trunk-development/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://selenium.dev/blog/2020/moving-to-trunk-development/</guid>
+      <description>Since the project started we have been following trunk based development. This was a very natural fit when we were using SVN over a decade ago on Google Code.
+As Google Code shut down we moved to GitHub and the git model of doing things. We moved there mostly due to the gravity that GitHub had created in Open Source projects.
+This meant that we followed the standard use of master as our trunk to work off.</description>
+    </item>
     
     <item>
       <title>How Selenium Works: Episode 1 - Transportation</title>

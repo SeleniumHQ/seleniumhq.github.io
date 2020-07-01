@@ -4,31 +4,36 @@
   
   <url>
     <loc>https://selenium.dev/categories/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/categories/general/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://selenium.dev/blog/2020/how-selenium-works-transport/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <loc>https://selenium.dev/blog/2020/moving-to-trunk-development/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/selenium/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/</loc>
-    <lastmod>2020-06-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://selenium.dev/tags/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://selenium.dev/blog/2020/how-selenium-works-transport/</loc>
     <lastmod>2020-06-10T00:00:00+00:00</lastmod>
   </url>
   
