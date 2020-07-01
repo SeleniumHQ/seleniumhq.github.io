@@ -376,7 +376,8 @@ submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val cancelButton= driver.findElement(By.id("cancel"))
+val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
