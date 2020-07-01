@@ -283,7 +283,8 @@ cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_b
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val submitButton= driver.findElement(By.id("submit"))
+val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
