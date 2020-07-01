@@ -12,21 +12,21 @@
     <title>Localiser des éléments :: Documentation Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1593618211" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1593618211" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1593620085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1593620085" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1593618211" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1593620085" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1593618211"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1593620085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1593618211"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1593618211"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1593620085"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1593620085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1593618211"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1593620085"></script>
 
     
   </div>
@@ -3039,8 +3039,9 @@ submit_button <span style="color:#719e07">=</span> driver<span style="color:#719
 
 <section id="kotlincode7" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#586e75">// Please raise a PR
-</span><span style="color:#586e75"></span>  </code></pre></div>
+<span style="color:#719e07">val</span> cancelButton= driver.findElement(By.id(<span style="color:#2aa198">&#34;cancel&#34;</span>))
+<span style="color:#719e07">val</span> submitButton= driver.findElement(withTagName(<span style="color:#2aa198">&#34;button&#34;</span>).toRightOf(cancelButton))
+  </code></pre></div>
 </section>
 </div>
 </div>
@@ -3154,7 +3155,7 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/fr/getting_started_with_webdriver/locating_elements/">
       “Localiser des éléments”
-    </a> was last updated on: 01 Jul 2020 08:42:16 -0700: <a href="https://github.com/SeleniumHQ/site/commit/99c582973b9e19c67494ff4cdd61f0bbe604ba76">Add: Adding kotlin code sample[deploy site] (99c5829)</a>
+    </a> was last updated on: 01 Jul 2020 21:44:08 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/7a0b3eab24487664f23478f13443e6b973326a16">Add: Adding kotlin code sample for relative locator[deploy site] (7a0b3ea)</a>
 </h5>
         
         </div> 
@@ -4351,19 +4352,19 @@ email_address_field <span style="color:#719e07">=</span> driver<span style="colo
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1593618211"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1593620085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1593618211"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1593618211"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1593620085"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1593620085"></script>
 
-    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1593618211" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1593618211"></script>
+    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1593620085" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1593620085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
