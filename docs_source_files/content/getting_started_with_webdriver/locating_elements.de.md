@@ -391,7 +391,7 @@ at most `50px` away from the specified element.
 //import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
-                                                  .near(emailAddressLabel));
+                                               .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 #from selenium.webdriver.support.relative_locator import with_tag_name
@@ -413,6 +413,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', near: em
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val emailAddressLabel = driver.findElement(By.id("lbl-email"))
+val emailAddressField = driver.findElement(withTagName("input").near(emailAddressLabel))
   {{< / code-panel >}}
 {{< / code-tab >}}
