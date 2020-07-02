@@ -1,14 +1,9 @@
 /***/
 
-html {
-    filter: grayscale(100%);
-}
-
 /*Hero Image Styles*/
 
 .hero.homepage {
-    background-color: black;
-    /*background-image: url("/images/green-bg-opt.jpg");*/
+    background-image: url("/images/green-bg-opt.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

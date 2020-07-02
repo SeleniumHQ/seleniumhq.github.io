@@ -376,6 +376,15 @@ h1.sub-header {
     color: #cf0a2c;
 }
 
+.banner-notification {
+    filter: grayscale(100%);
+}
+
+.banner-notification h2 {
+    color: black !important;
+    font-weight: 700;
+}
+
 /* Mobile-only styles */
 @media only screen and (max-width: 900px) {
     .logo {
