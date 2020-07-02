@@ -330,7 +330,8 @@ cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_b
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val submitButton= driver.findElement(By.id("submit"))
+val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -367,7 +368,8 @@ submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val cancelButton= driver.findElement(By.id("cancel"))
+val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -403,6 +405,7 @@ email_address_field = driver.find_element(relative: {tag_name: 'input', near: em
 // Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR
+val emailAddressLabel = driver.findElement(By.id("lbl-email"))
+val emailAddressField = driver.findElement(withTagName("input").near(emailAddressLabel))
   {{< / code-panel >}}
 {{< / code-tab >}}
