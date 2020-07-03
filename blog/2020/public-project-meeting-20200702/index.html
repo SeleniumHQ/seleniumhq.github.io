@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/header.css"/>
+
+<html>
+<head>
+  <title>Public Project Meeting - July 02, 2020</title>
+  <link rel="icon" href="/favicon.ico" type="image/png">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<header id="header" class="header">
+    <a href="https://selenium.dev" class="headerLink">
+      <img class="logo logo-large" src="/images/selenium_logo_large.png"/>
+      <img class="logo logo-small" src="/images/selenium_logo_square_green.png"/>
+      <img class="logo logo-small logo-hide" src="/images/selenium_logo_square_white.png"/>
+    </a>
+
+  <a id="dropdownButton" class="dropdownButton" onClick="toggleMenu()">MENU +</a>
+	<nav id="navbar" class="navbar">
+        <div class="nav-item" onClick="toggleAboutNav()">
+            <span>About</span>
+            <div id="aboutArrow" class="arrow-down"></div>
+        </div>
+              <ul id="aboutSubnav" class="about-subnav">
+                  <div class="subnav subnav-item">
+                    <a href="/about">About</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/project">Governance</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/events">Events</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/ecosystem">Ecosystem</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/history">History</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/getinvolved">Get Involved</a>
+                  </div>
+                  <div class="subnav subnav-item">
+                    <a href="/sponsors">Sponsors</a>
+                  </div>
+              </ul>
+		<a class="nav-item" href="/downloads">Downloads</a>
+		<a class="nav-item" href="/projects">Projects</a>
+		<a class="nav-item" href="/documentation">Documentation</a>
+		<a class="nav-item" href="/support">Support</a>
+		<a class="nav-item" href="/blog">Blog</a>
+        <div class="nav-item">
+        <div class="search-bar-container">
+            <script>
+              (function() {
+                var cx = '018435082943254453647:ktxsp1-jcb8';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+              })();
+            </script>
+            <gcse:searchbox-only></gcse:searchbox-only>
+            <img class="search-icon" src="/images/search.png"/>
+        </div>
+        </div>
+  </nav>
+</header>
+<body>
+
+<script>
+  function activateSearch() {
+    console.log('ACTIVATE')
+  }
+
+  function toggleMenu() {
+    const navbarItems = document.getElementsByClassName("nav-item");
+    const navbarElements = [...navbarItems];
+    const smallLogos = document.getElementsByClassName("logo logo-small");
+    const logoElements = [...smallLogos];
+    const header = document.getElementById("header");
+    const dropdownButton = document.getElementById("dropdownButton");
+    const subnavs = document.getElementsByClassName("about-subnav");
+    const subnavElements = [...subnavs];
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(dropdownButton.innerText === "MENU +") {
+      dropdownButton.innerText = "MENU -"
+    } else dropdownButton.innerText = "MENU +"
+
+    
+    navbarElements.forEach(element => {
+      if(element.className === "nav-item") {
+        element.className += " dropdown-active"
+      } else {
+        element.className = "nav-item"
+      }
+    })
+
+    
+    subnavElements.forEach(element => {
+      element.className = "about-subnav";
+    });
+
+    
+    aboutArrow.className = "arrow-down";
+
+    
+    logoElements.forEach(element => {
+      if(element.className.includes("logo-hide")) {
+        element.className = "logo logo-small"
+      } else {
+        element.className += " logo-hide"
+      }
+    })
+
+    
+    if(header.className === "header") {
+      header.className += " dropdown-active"
+    } else {
+      header.className = "header"
+    }
+  }
+
+  function toggleAboutNav() {
+    const aboutSubnav = document.getElementById("aboutSubnav");
+    const aboutArrow = document.getElementById("aboutArrow");
+
+    if(aboutSubnav.className === "about-subnav") {
+      aboutSubnav.className += " about-subnav-active";
+    } else {
+      aboutSubnav.className = "about-subnav"
+    }
+
+    if(aboutArrow.className === "arrow-up") aboutArrow.className = "arrow-down";
+    else aboutArrow.className = "arrow-up";
+  }
+</script>
+
+<link rel="stylesheet" href="/css/blog.css"/>
+<link rel="stylesheet" href="/css/main.css"/>
+<link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel="stylesheet">
+
+<body>
+<section class="hero">
+  <a href="/blog"><h1>Selenium Blog</h1></a>
+</section>
+
+<div class="blog-container">
+  <div class="blog-content">
+    <div class="container dark-background">
+      July 2, 2020 by <a href="https://twitter.com/harsha509">Harsha</a>
+      <a href="https://selenium.dev/blog/2020/public-project-meeting-20200702/"><h2>Public Project Meeting - July 02, 2020</h2></a>
+      <p>Continuing the series of bi-weekly public project meetings, here is the
+timeline of the meeting held on July 02, 2020 (times are on IST).</p>
+<p>Meetings are held on the <code>#selenium-tlc</code> channel on <a href="https://seleniumhq.slack.com/join/shared_invite/enQtODAwOTUzOTM5OTEwLTZjZjgzN2ExOTBmZGE0NjkwYzA2Nzc0MjczMGYwYjdiNGQ5YjI0ZjdjYjFhMjVlMjFkZWJmNDYyMmU1OTYyM2Y">Selenium Slack</a>.</p>
+<p>The next meeting will be on July 16, 2020, 4:30 PM CET.</p>
+<hr>
+<p><em>Diego Molina  8:00 PM</em></p>
+<p>Hi all, who is in for the Public Project meeting?</p>
+<p><em>8:01 PM</em></p>
+<ul>
+<li>Here is the overall agenda:</li>
+<li>Overall announcements? New people on committees, with the commit bit, etc?</li>
+<li>Anything new to report from the last PLC/SFC call?</li>
+<li>Did anyone talk to Miki about the go bindings?</li>
+<li>This topic has been skipped in the previous meetings but it is good to keep it on the agenda so we act on it when we have more bandwidth</li>
+<li>Pending work that needs to be done for Alpha 7?</li>
+<li>Pending work that needs to be done for the first Beta?</li>
+<li>Conferences. Status for SeConf India &amp; SeConf Chicago?</li>
+<li>Selenium Conf website in GitHub org?</li>
+<li>IDE to the main repo?</li>
+<li>CoC, next steps?</li>
+<li>Selenium Branding guide</li>
+<li>Selenium marketing strategy (e.g: Webpack)
+(if anyone wants to add something, feel free to do it)</li>
+</ul>
+<p><em>8:02 PM</em></p>
+<p>First, some project health:
+General project statistics
+Previous meeting: 343 open issues, 72 open PRs
+Now: 338 open issues, 73 open PRs</p>
+<p><em>David Burns  8:03 PM</em></p>
+<p>looks like healthy movement as I know I&rsquo;ve handled a few issues and PRs personally</p>
+<p><em>Diego Molina  8:03 PM</em></p>
+<p>Next topic:
+Overall announcements? New people on committees, with the commit bit, etc?</p>
+<p><em>Simon Stewart  8:04 PM</em></p>
+<p>WebDriver BiDi meeting was yesterday. There’s some spec prose</p>
+<p><em>David Burns  8:04 PM</em></p>
+<p>@tourdedave is stepping back from the tlc, for a while at least unless I have misunderstood</p>
+<p><em>Manoj Kumar Kumar  8:05 PM</em></p>
+<p>@AutomatedTester stepping into TLC</p>
+<p><em>Simon Stewart  8:05 PM</em></p>
+<p>I thought he did that a while ago, but we failed to update everything</p>
+<p><em>David Burns  8:05 PM</em></p>
+<p>its more official :)</p>
+<p><em>Diego Molina  8:05 PM</em></p>
+<p>do we want to remove him from the list explicitly? does it make a difference?</p>
+<p><em>Simon Stewart  8:05 PM</em></p>
+<p>And @AutomatedTester should have been in the TLC from the start :man-facepalming::skin-tone-2:</p>
+<p>“The list”? On the governance part of the site?</p>
+<p>Yes</p>
+<p><em>Diego Molina  8:05 PM</em></p>
+<p>I thought @AutomatedTester was there, it just my mistake :slightly_smiling_face:</p>
+<p><em>Simon Stewart  8:06 PM</em></p>
+<p>Unofficial draft of the bidi spec: <a href="https://w3c.github.io/webdriver-bidi/">https://w3c.github.io/webdriver-bidi/</a> There’s a way to go yet</p>
+<p><em>Diego Molina  8:06 PM</em></p>
+<p>ok, I will create a PR to do that (removing @tourdedave)</p>
+<p><em>David Burns  8:06 PM</em></p>
+<p>As retribution for not being on the TLC officially you all owe me cake
+:cake:</p>
+<p><em>8:06</em>
+:P
+as for the webdriver bidi, as @simonstewart said, there is prose.</p>
+<p><em>8:07</em></p>
+<p>yesterday&rsquo;s meeting notes are in <a href="https://www.w3.org/2020/07/01-webdriver-minutes.html">https://www.w3.org/2020/07/01-webdriver-minutes.html</a>
+The spec is being driven by Mozilla and Google mostly atm</p>
+<p><em>Diego Molina  8:08 PM</em></p>
+<p>thanks for the updates
+next topic?
+Anything new to report from the last PLC/SFC call?</p>
+<p><em>Luke Hill  8:08 PM</em></p>
+<p>I&rsquo;m just being nosy, nothing to see here.</p>
+<p><em>Manoj Kumar Kumar  8:09 PM</em></p>
+<p>Nothing specific from the last PLC/SFC call. We&rsquo;ve caught up on conference updates, which we will cover shortly.</p>
+<p><em>Diego Molina  8:10 PM</em></p>
+<p>ok, sounds good
+next topic is:
+Did anyone talk to Miki about the go bindings?</p>
+<ul>
+<li>This topic has been skipped in the previous meetings
+but it is good to keep it on the agenda so we act on it
+when we have more bandwidth there is no need to
+comment or discuss if no one has updates though</li>
+</ul>
+<p><em>Simon Stewart  8:10 PM</em></p>
+<p>Nothing from me</p>
+<p><em>Diego Molina  8:11 PM</em></p>
+<p>ok
+the next topic is:
+Pending work that needs to be done for Alpha 7?</p>
+<p><em>Simon Stewart  8:11 PM</em></p>
+<p>I’d really like us to get the new UI in place for alpha 7
+Even if it’s just a skeleton</p>
+<p><em>David Burns  8:12 PM</em></p>
+<p>That is in flight now, hope to get a demo on Monday and see
+what needs to be improved before we move into the repo
+:tada:</p>
+<p><em>Simon Stewart  8:12 PM</em></p>
+<p>Great news :slightly_smiling_face:
+Lemme check the project plan</p>
+<p><em>Diego Molina  8:12 PM</em></p>
+<p>I have seen CDP in Python and JS are almost there</p>
+<p><em>David Burns  8:12 PM</em></p>
+<p>we already have some of the parts required
+in master and the rest are being worked on
+CDP in python has landed</p>
+<p><em>Simon Stewart  8:13 PM</em></p>
+<p><a href="https://github.com/SeleniumHQ/selenium/projects/2">https://github.com/SeleniumHQ/selenium/projects/2</a></p>
+<p><em>Manoj Kumar Kumar  8:13 PM</em></p>
+<p>And GraphQL is nearing completion, I guess.</p>
+<p><em>Simon Stewart  8:13 PM</em></p>
+<p>Things on my list are the new features based on CDP usage
+Pluggable locators</p>
+<p><em>8:14</em></p>
+<p>And CDP/WebDriver interop (mostly at the element and window level)
+Those will let us call alpha 7 the final alpha
+:tada:
+And we can make a start on the betas as we’ll be feature complete
+IMO
+Anything else that folks can think of?</p>
+<p><em>Diego Molina  8:15 PM</em></p>
+<p>nothing else from my side</p>
+<p><em>David Burns  8:15 PM</em></p>
+<p>we do have the beta list at <a href="https://github.com/SeleniumHQ/selenium/issues?q=is%3Aopen+is%3Aissue+label%3ASelenium-4-Beta">https://github.com/SeleniumHQ/selenium/issues?q=is%3Aopen+is%3Aissue+label%3ASelenium-4-Beta</a></p>
+<p><em>8:16</em></p>
+<p>do we need to move more things there?</p>
+<p><em>Simon Stewart  8:16 PM</em></p>
+<p>Are those “bugs to fix in the betas” or “bugs to fix before we can cut a beta”?</p>
+<p><em>David Burns  8:16 PM</em>
+or remove
+yes</p>
+<p><em>Simon Stewart  8:16 PM</em></p>
+<p>Logically correct, but not an actual answer :slightly_smiling_face:</p>
+<p><em>David Burns  8:16 PM</em></p>
+<p>it&rsquo;s a list of things @diemol thought we needed and I mostly agree</p>
+<p><em>Diego Molina  8:17 PM</em></p>
+<p>they come from the Google Doc we went through in London in February with Simon</p>
+<p><em>Simon Stewart  8:17 PM</em></p>
+<p>I shall ruthlessly reprioritise
+Those are things that we mostly need in place before release</p>
+<p><em>8:18</em></p>
+<p>But I think we can go into the betas with “the features are there, but they’re known to be unstable”
+The alphas are “the features aren’t even there yet”</p>
+<p><em>Diego Molina  8:18 PM</em></p>
+<p>I would expect to have a few things being unstable in the betas</p>
+<p><em>Simon Stewart  8:19 PM</em></p>
+<p>“A few things” will definitely be unstable</p>
+<p><em>David Burns  8:19 PM</em></p>
+<p>I would like to get things that may have got sorted but
+the bug list is out of date sorted as well from our lists</p>
+<p><em>Simon Stewart  8:20 PM</em></p>
+<p>That list seems mostly up to date</p>
+<p><em>David Burns  8:20 PM</em></p>
+<p>but things like Ruby on bazel and ide in the
+mono repo I dont think are Se4 dependent</p>
+<p><em>Simon Stewart  8:20 PM</em></p>
+<p>I don’t see things that are already fixed in it</p>
+<p><em>David Burns  8:20 PM</em></p>
+<p>my comment was general so people checked :D</p>
+<p><em>Diego Molina  8:20 PM</em></p>
+<p>indeed, I usually keep an eye on the issues, and I believe is up to date
+btw, we are already covering the next topic in the agenda
+Pending work that needs to be done for the first Beta?
+:+1::skin-tone-4:</p>
+<p><em>David Burns  8:21 PM</em></p>
+<p>yes and no&hellip;
+Can we get PRs in flight finished if they are just waiting on reviews
+on fixing review comments I meant</p>
+<p><em>Simon Stewart  8:22 PM</em></p>
+<p>Which ones in particular?</p>
+<p><em>David Burns  8:22 PM</em></p>
+<p>The draining one and the redis one (not picking on people) come to mind</p>
+<p><em>Simon Stewart  8:22 PM</em></p>
+<p>I’m not happy landing the Redis one since it leaves a broken
+RedisBackedDistributor in the tree, and that’s suboptimal</p>
+<p><em>8:23</em></p>
+<p>I need to re-review the draining one</p>
+<p><em>David Burns  8:23 PM</em></p>
+<p>I am not saying we need to fix it but we need people to finish them off :)</p>
+<p><em>Simon Stewart  8:23 PM</em></p>
+<p>Indeed.</p>
+<p><em>Diego Molina  8:25 PM</em></p>
+<p>so, is there anything else to add before moving to the next one?</p>
+<p><em>Manoj Kumar Kumar  8:25 PM</em></p>
+<p>Selenium IDE work is a separate topic? Unsure if @corevo is here?
+I meant on the Electron piece of work.</p>
+<p><em>David Burns  8:25 PM</em></p>
+<p>I can field that&hellip;</p>
+<p><em>Manoj Kumar Kumar  8:25 PM</em></p>
+<p>great!</p>
+<p><em>David Burns  8:26 PM</em></p>
+<p>Selenium IDE is now in the Edge store
+:tada:
+that&rsquo;s the extension version</p>
+<p><em>8:27</em></p>
+<p>As for the electron version, that&rsquo;s slightly on hold atm but hopefully we can start that up soon
+:+1::skin-tone-4:</p>
+<p><em>Manoj Kumar Kumar  8:27 PM</em></p>
+<p><a href="https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp">https://microsoftedge.microsoft.com/addons/detail/selenium-ide/ajdpfmkffanmkhejnopjppegokpogffp</a>
+Link to MS Edge store</p>
+<p><em>David Burns  8:27 PM</em></p>
+<p>I would like it to be a thing as we work on core &ldquo;fit and finish&rdquo; pieces</p>
+<p><em>Diego Molina  8:28 PM</em></p>
+<p>sounds good
+should we move to the next topic?</p>
+<p><em>Manoj Kumar Kumar  8:28 PM</em></p>
+<p>yes</p>
+<p><em>Diego Molina  8:28 PM</em></p>
+<p>Conferences. Status for SeConf India &amp; SeConf Chicago?</p>
+<p><em>Manoj Kumar Kumar  8:29 PM</em></p>
+<p>SeConf Chicago - Postponed to 2021 - we are working on new dates and Hotels.</p>
+<p><em>8:30</em></p>
+<p>SeConf India - It was supposed to held on June - we&rsquo;ve moved it to September, but it seems
+hard and the Indian borders won&rsquo;t open up for any travels in and out.</p>
+<p><em>8:31</em></p>
+<p>Final decision is yet to be made, it will get postponed or we may have a shortened(online event)</p>
+<p>Diego Molina  8:32 PM
+thanks for the updates :slightly_smiling_face:</p>
+<p><em>Manoj Kumar Kumar  8:32 PM</em></p>
+<p>@mmerrell Please fill in, if I&rsquo;ve missed anything!</p>
+<p><em>Diego Molina  8:32 PM</em></p>
+<p>next topic is:
+Selenium Conf website in GitHub org?
+@andrewmkrug did a great job in revamping the site weeks ago, and now the
+code is in a private repo under the SeleniumHQ GitHub org he&rsquo;ll add some
+instructions to the README on how to develop on it and deploy it
+:clap::skin-tone-4:</p>
+<p><em>8:34</em></p>
+<p>the repo is private just to keep information about future
+conferences confidential :slightly_smiling_face:
+next topic:
+IDE to the main repo?</p>
+<p><em>David Burns  8:35 PM</em></p>
+<p>No change on this. I hope to get to it soon,
+I have a branch doing the Bazel work</p>
+<p><em>Diego Molina  8:35 PM</em></p>
+<p>ok, sounds good
+next topic:
+CoC, next steps?</p>
+<p><em>David Burns  8:36 PM</em></p>
+<p>Last week @diemol and I met with Sage
+Sharp and had a productive meeting</p>
+<p>We have given them a bunch of details and they
+hoped to get back to use end of this week or beginning of next week with a draft</p>
+<p><em>Diego Molina  8:37 PM</em></p>
+<p>yeah, it was a great session,
+and I think the CoC is on a good path</p>
+<p><em>Marcus Merrell  8:38 PM</em></p>
+<p>The only conference-related note is that we&rsquo;re
+looking at a potential opportunity to host an online-only
+conference sometime in September/October,
+but we don&rsquo;t have details or info on the $$ piece yet</p>
+<p><em>Diego Molina  8:39 PM</em></p>
+<p>thanks @mmerrell</p>
+<p><em>8:40</em></p>
+<p>should we move to the next topic?</p>
+<p><em>David Burns  8:40 PM</em></p>
+<p>regarding online confs I would like people to speak to their
+respective marketing companies and see if it&rsquo;s being over done</p>
+<p><em>Marcus Merrell  8:40 PM</em></p>
+<p>that&rsquo;s my #1 concern</p>
+<p><em>David Burns  8:40 PM</em></p>
+<p>there are so many atm&hellip;</p>
+<p><em>Marcus Merrell  8:40 PM</em></p>
+<p>how&rsquo;s Breakpoint looking, btw?</p>
+<p><em>David Burns  8:41 PM</em></p>
+<p>It&rsquo;s good so far but I know marketing
+team don&rsquo;t really want anything past that</p>
+<p><em>Marcus Merrell  8:41 PM</em></p>
+<p>right&hellip; not surprising</p>
+<p><em>David Burns  8:41 PM</em>
+but that may change</p>
+<p><em>Marcus Merrell  8:42 PM</em></p>
+<p>@simonstewart was talking about potentially having a webinar
+series instead of a 6-hour block of content, and I&rsquo;m kind
+of interested in anything that will keep the zoom fatigue to a minimum</p>
+<p>unfortunately, online conferences are not my thing,
+as an organizer or a participant&hellip; this might make
+me an ideal candidate to create an event that won&rsquo;t over-do it</p>
+<p><em>David Burns  8:42 PM</em></p>
+<p>heheh</p>
+<p><em>Diego Molina  8:43 PM</em></p>
+<p>ok, seems we can move to the next topic</p>
+<p>Selenium Branding guide</p>
+<p><em>Manoj Kumar Kumar  8:44 PM</em></p>
+<p>We’ve always get many requests on usage of Selenium Logo for
+multiple purposes, PLC usually respond to those
+requests with the help of SFC folks.</p>
+<p>And there is also an issue to track : <a href="https://github.com/SeleniumHQ/seleniumhq.github.io/issues/81">https://github.com/SeleniumHQ/seleniumhq.github.io/issues/81</a>
+This has been long pending and finally  we&rsquo;ve started with it&hellip;</p>
+<p><em>8:45</em></p>
+<p>Selenium Branding guide is in-progress. Its on a private Google doc shared with the PLC and TLC members.
+The legal rep from the SFC team has reviewed and shared feedback and recommendations.
+And right now its with our Selenium team (PLC, TLC(may not be all of TLC) to look at it and see if we need more clarifications.</p>
+<p><em>8:46</em></p>
+<p>@simonstewart @diemol @AutomatedTester  and others When you get a moment, pls take a look and share your feedback</p>
+<p><em>Diego Molina  8:47 PM</em></p>
+<p>I think it makes sense to have something like that, it is easy
+to see the Selenium logo / name misused in many places</p>
+<p>that&rsquo;s a good initiative @manoj9788!</p>
+<p><em>David Burns  8:47 PM</em></p>
+<p>What does this mean when people use our brand incorrectly.
+Like there is a linkedin group that charges for people making specific posts there.</p>
+<p><em>8:48</em></p>
+<p>(from what I am told)
+do we have recourse to challenge them?</p>
+<p><em>Manoj Kumar Kumar  8:49 PM</em></p>
+<p>That reminds of another questions,<code>What are social media accounts that are handled by SeleniumHQ team?</code></p>
+<p><em>Marcus Merrell  8:49 PM</em></p>
+<p>using it to promote &ldquo;Selenium Certification&rdquo; is the example I see most often
+I believe we&rsquo;ve done it before (before I joined the PLC)
+&ldquo;done it&rdquo; == &ldquo;challenged them&rdquo;</p>
+<p><em>Manoj Kumar Kumar  8:50 PM</em></p>
+<p>AFAIK,
+Twitter: SeleniumHQ, SeleniumConference are handled by SeleniumHQ team.
+LinkedIn: Is there one?
+Facebook: I think there is one, but don&rsquo;t think anyone from SeleniumHQ team is handling that.</p>
+<p><em>Marcus Merrell  8:51 PM</em></p>
+<p>we should hire a tween to manage our insta
+(and TikTok)
+only half-kidding</p>
+<p><em>Diego Molina  8:51 PM</em></p>
+<p>there is this <a href="https://www.linkedin.com/company/selenium/about/">https://www.linkedin.com/company/selenium/about/</a>
+and this <a href="https://www.linkedin.com/company/selenium/about/">https://www.linkedin.com/company/selenium/about/</a></p>
+<p><em>Marcus Merrell  8:51 PM</em></p>
+<p>especially considering how many tweens
+use Selenium to do fortnite/roblox stuff</p>
+<p><em>Manoj Kumar Kumar  8:51 PM</em></p>
+<p>TikTok is officially banned in India :slightly_smiling_face:</p>
+<p><em>Marcus Merrell  8:51 PM</em></p>
+<p>lol</p>
+<p><em>Diego Molina  8:52 PM</em></p>
+<p>sorry, the 2nd link was meant to be this one
+<a href="https://www.linkedin.com/groups/961927/">https://www.linkedin.com/groups/961927/</a> (edited)</p>
+<p><em>Manoj Kumar Kumar  8:52 PM</em></p>
+<p>ok, no politics here.
+No idea, who owns that.</p>
+<p><em>Diego Molina  8:54 PM</em></p>
+<p>I feel this topic overlaps with the last one in the agenda:
+Selenium marketing strategy (e.g: Webpack)</p>
+<p><em>Manoj Kumar Kumar  8:55 PM</em></p>
+<p>Diego you could share some insights on the example you gave on Webpack</p>
+<p><em>Diego Molina  8:56 PM</em></p>
+<p>yeah, I was trying to find some info while Googling</p>
+<p><em>8:57</em></p>
+<p>the idea I heard, is that webpack was not having a good moment in terms of users and reputation
+and revamping their image (docs, social media, and of course improving the project code) helped them enormously
+so this point is just to have a conversation starter and see if you think something similar makes sense for Selenium</p>
+<p><em>Simon Stewart  8:58 PM</em></p>
+<p>It’s useful. I think we should also take a look at the
+things that people like about Cypress and make it
+clear how to surface the same thing in Selenium
+:+1::skin-tone-4:</p>
+<p><em>Manoj Kumar Kumar  8:59 PM</em></p>
+<p>Agreed! I think it makes sense @diemol</p>
+<p><em>David Burns  8:59 PM</em></p>
+<p>I would love for us to do something here.
+@simonstewart and I have previously discussed this as &ldquo;fit and finish&rdquo;</p>
+<p><em>9:00</em></p>
+<p>these are the things that people like about puppeteer/cypress and we&rsquo;ve not done a good job of explaining similar things</p>
+<p><em>Simon Stewart  9:01 PM</em></p>
+<p>Indeed.
+TBH, I thought we’d be done with Se4 at this point
+And well into the fit-and-finish bit that could be Se5
+But I agree with @diemol that part of that is a nice site with excellent docs</p>
+<p><em>Diego Molina  9:02 PM</em></p>
+<p>nice, so it seems there is a general feeling that we should be doing something like that
+I can try to do something about it and give an update for the next meeting</p>
+<p><em>Simon Stewart  9:02 PM</em></p>
+<p>Just one piece isn’t good enough to solve the problems
+That’d be fantastic, @diemol</p>
+<p><em>Manoj Kumar Kumar  9:02 PM</em></p>
+<p>Happy to pair on that @diemol</p>
+<p><em>Diego Molina  9:02 PM</em></p>
+<p>sounds good!</p>
+<p><em>9:03</em></p>
+<p>well, that was the last topic in the agenda, and we are 3 minutes past the end of the meeting
+thank you everyone!</p>
+<p><em>David Burns  9:03 PM</em></p>
+<p>yay</p>
+<p><em>Manoj Kumar Kumar  9:03 PM</em></p>
+<p>And we&rsquo;ve moved from Master to Trunk
+Thanks @AutomatedTester</p>
+<p><em>David Burns  9:03 PM</em></p>
+<p>yes, and it was an important move</p>
+<p><em>Manoj Kumar Kumar  9:04 PM</em></p>
+<p>Thanks @diemol @simonstewart @AutomatedTester and everyone!</p>
+
+      
+
+<p><b>Tags</b></p>
+<divs>
+    
+    <a href="https://selenium.dev/tags/slack/">slack</a>
+    <a href="https://selenium.dev/tags/meeting/">meeting</a>
+    <a href="https://selenium.dev/tags/tlc/">tlc</a></divs>
+
+
+      
+
+<p><b>Categories</b></p>
+<div>
+    
+    <a href="https://selenium.dev/categories/general/">general</a>
+    <a href="https://selenium.dev/categories/governance/">governance</a></div>
+
+
+      <div class="share-container">
+        <h3>Share this: </h3>
+
+        <a href="mailto:?&subject=Selenium Blog - Public%20Project%20Meeting%20-%20July%2002%2c%202020&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fpublic-project-meeting-20200702%2f"><img class="social-icon" src="/images/mail.png"/></a>
+        <a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fpublic-project-meeting-20200702%2f"><img class="social-icon" src="/images/twitter.png"/></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class="social-icon" src="/images/facebook.png"/></a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="filter-container">
+  <div class="blog-filter">
+    <div class="filter-section">
+        <h3>Search blog</h3>
+        <div class="search-container">
+            <div class="search-bar-container">
+                
+                
+                
+                
+                <script>
+                  (function() {
+                    var cx = '018435082943254453647:ktxsp1-jcb8';
+                    var gcse = document.createElement('script');
+                    gcse.type = 'text/javascript';
+                    gcse.async = true;
+                    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                    var s = document.getElementsByTagName('script')[0];
+                    s.parentNode.insertBefore(gcse, s);
+                  })();
+                </script>
+                <gcse:searchbox-only></gcse:searchbox-only>
+            </div>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Archive</h3>
+        <div class="archive-link-container">
+            <a href="/blog/2020">2020</a>
+            <a href="/blog/2019">2019</a>
+            <a href="/blog/2018">2018</a>
+            <a href="/blog/2017">2017</a>
+            <a href="/blog/2016">2016</a>
+            <a href="/blog/2015">2015</a>
+            <a href="/blog/2014">2014</a>
+            <a href="/blog/2013">2013</a>
+            <a href="/blog/2012">2012</a>
+            <a href="/blog/2011">2011</a>
+            <a href="/blog/2010">2010</a>
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Tags</h3>
+        <div class="links-container">
+            
+            <a href="https://selenium.dev/tags/beta/">beta</a>(11)
+            
+            <a href="https://selenium.dev/tags/bug-bash/">bug-bash</a>(2)
+            
+            <a href="https://selenium.dev/tags/chromedriver/">chromedriver</a>(1)
+            
+            <a href="https://selenium.dev/tags/conference/">conference</a>(19)
+            
+            <a href="https://selenium.dev/tags/decisions/">decisions</a>(3)
+            
+            <a href="https://selenium.dev/tags/future/">future</a>(1)
+            
+            <a href="https://selenium.dev/tags/grid/">grid</a>(4)
+            
+            <a href="https://selenium.dev/tags/hangout/">hangout</a>(5)
+            
+            <a href="https://selenium.dev/tags/ide/">ide</a>(8)
+            
+            <a href="https://selenium.dev/tags/intellij/">intellij</a>(2)
+            
+            <a href="https://selenium.dev/tags/jetbrains/">jetbrains</a>(2)
+            
+            <a href="https://selenium.dev/tags/maven/">maven</a>(2)
+            
+            <a href="https://selenium.dev/tags/meeting/">meeting</a>(5)
+            
+            <a href="https://selenium.dev/tags/meetup/">meetup</a>(1)
+            
+            <a href="https://selenium.dev/tags/mobile/">mobile</a>(2)
+            
+            <a href="https://selenium.dev/tags/operadriver/">operadriver</a>(1)
+            
+            <a href="https://selenium.dev/tags/rc/">rc</a>(1)
+            
+            <a href="https://selenium.dev/tags/selenium/">selenium</a>(47)
+            
+            <a href="https://selenium.dev/tags/selenium-rc/">selenium-rc</a>(2)
+            
+            <a href="https://selenium.dev/tags/sfc/">sfc</a>(1)
+            
+            <a href="https://selenium.dev/tags/slack/">slack</a>(5)
+            
+            <a href="https://selenium.dev/tags/smattering/">smattering</a>(145)
+            
+            <a href="https://selenium.dev/tags/source-control/">source-control</a>(1)
+            
+            <a href="https://selenium.dev/tags/status/">status</a>(1)
+            
+            <a href="https://selenium.dev/tags/stories/">stories</a>(2)
+            
+            <a href="https://selenium.dev/tags/support/">support</a>(2)
+            
+            <a href="https://selenium.dev/tags/survey/">survey</a>(1)
+            
+            <a href="https://selenium.dev/tags/technical/">technical</a>(2)
+            
+            <a href="https://selenium.dev/tags/tlc/">tlc</a>(5)
+            
+            <a href="https://selenium.dev/tags/webdriver/">webdriver</a>(1)
+            
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Categories</h3>
+        <div class="links-container">
+            
+            <a href="https://selenium.dev/categories/conference/">conference</a>(19)
+            
+            <a href="https://selenium.dev/categories/general/">general</a>(203)
+            
+            <a href="https://selenium.dev/categories/governance/">governance</a>(10)
+            
+            <a href="https://selenium.dev/categories/meetup/">meetup</a>(1)
+            
+            <a href="https://selenium.dev/categories/releases/">releases</a>(36)
+            
+            <a href="https://selenium.dev/categories/technical/">technical</a>(4)
+            
+        </div>
+    </div>
+</div>
+
+</div>
+
+</body>
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/main.css"/>
+
+<div class="selenium-backers separator">
+    <h2>Selenium Level Sponsors</h2>
+    <div class="backers">
+        
+        <div class="backer-logo">
+            <a href="http://www.browserstack.com/automate/?utm_campaign=open-source-sponsor&utm_source=seleniumorg&utm_medium=referral">
+                <img class="backer-logo" src="/images/sponsors/browserstack.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://saucelabs.com">
+                <img class="backer-logo" src="/images/sponsors/saucelabs.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://bit.ly/36uZ7ad">
+                <img class="backer-logo" src="/images/sponsors/experitest.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://newrelic.com/synthetics?utm_campaign=brn+awr+seleniumorg+FY17Q1&utm_medium=REF&utm_source=selenium.dev&utm_content=synthetics-logo+&mpc=REF-selenium.dev-EN-generic--synthetics-logo">
+                <img class="backer-logo" src="/images/sponsors/synthetics.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://crossbrowsertesting.com/selenium-testing?utm_source=seleniumhq&utm_campaign=sshp">
+                <img class="backer-logo" src="/images/sponsors/CBT.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://applitools.com/">
+                <img class="backer-logo" src="/images/sponsors/applitools.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://www.ranorex.com/selocity/browser-extension.html">
+                <img class="backer-logo" src="/images/sponsors/selocity_banner_seleniumhq.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="https://software.microfocus.com/en-us/software/leanft">
+                <img class="backer-logo" src="/images/sponsors/microfocus_logo.png"/>
+            </a>
+        </div>
+        
+        <div class="backer-logo">
+            <a href="http://www.subject-7.com/">
+                <img class="backer-logo" src="/images/sponsors/subject7_logo.png"/>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/footer.css"/>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<footer>
+    <div onClick="toggleSitemap()" class="toggle-container">
+        Sitemap
+        <div id="sitemapArrow" class="arrow-down"></div>
+    </div>
+
+    <div id="navLinks" class="nav-links">
+        <div class="footer-section">
+            <a href="/about"><h3>About</h3></a>
+            <a href="/events">Events</a>
+            <a href="/blog">News</a>
+            <a href="/history">History</a>
+            <a href="/sponsor">Contribute</a>
+            <a href="/sponsors">Sponsors</a>
+            <a href="/getinvolved">Get Involved</a>
+            <a href="/ecosystem">Ecosystem</a>
+            <a href="https://selenium.dev/documentation/en/front_matter/copyright_and_attributions/#license">License</a>
+        </div>
+        <div class="footer-section">
+            <a href="/downloads"><h3>Downloads</h3></a>
+            <a href="/maven">Maven</a>
+            <a href="https://github.com/SeleniumHQ/selenium">Source Code</a>
+        </div>
+        <div class="footer-section">
+            <a href="/projects"><h3>Projects</h3></a>
+            <a href="/projects/#selenium-webdriver">Selenium WebDriver</a>
+            <a href="/projects/#selenium-grid">Selenium Grid</a>
+            <a href="/projects/#selenium-ide">Selenium IDE</a>
+        </div>
+        <div class="footer-section">
+            <a href="/support"><h3>Support</h3></a>
+            <a href="/blog">Blog</a>
+            <a href="/documentation">Documentation</a>
+            <a href="/project">Governance</a>
+        </div>
+    </div>
+    <div class="social">
+        Follow us on twitter to keep up-to-date with all Selenium development and community activity!
+        <div class="social-icons">
+            <a href="mailto:selenium@sfconservancy.org"><img class="social-icon" src="/images/mail.png"/></a>
+            <a href="https://github.com/SeleniumHQ/selenium"><img class="social-icon" src="/images/github.png"/></a>
+            <a href="https://twitter.com/SeleniumHQ"><img class="social-icon" src="/images/twitter.png"/></a>
+            <a href="https://www.facebook.com/Selenium2.WebDriver"><img class="social-icon" src="/images/facebook.png"/></a>
+            <a href="https://www.youtube.com/channel/UCbDlgX_613xNMrDqCe3QNEw"><img class="social-icon" src="/images/youtube.png"/></a>
+            <a href="/blog/index.xml"><img class="social-icon" src="/images/rss.png"/></a>
+        </div>
+    </div>
+</footer>
+<div class="sfc">
+    <p style="text-align:center;">All rights reserved, Software Freedom Conservancy</p>
+</div>
+<body>
+
+<script>
+function toggleSitemap () {
+  const sitemapArrow = document.getElementById("sitemapArrow");
+  const navLinks = document.getElementById("navLinks");
+
+  if(sitemapArrow.className === 'arrow-down') {
+    sitemapArrow.className = 'arrow-up'
+  } else {
+    sitemapArrow.className = 'arrow-down'
+  }
+
+  if(navLinks.className === 'nav-links') {
+    navLinks.className = 'nav-links show'
+  } else {
+    navLinks.className = 'nav-links'
+  }
+}
+</script>
+
