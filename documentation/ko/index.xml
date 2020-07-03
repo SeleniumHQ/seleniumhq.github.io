@@ -12,6 +12,27 @@
     
     
     <item>
+      <title>Components</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+    </item>
+    
+    <item>
+      <title>Components</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</guid>
+      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Copyright and attributions</title>
       <link>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -151,16 +172,6 @@ WebDriver provides capabilities that each remote end will/should support the imp
     </item>
     
     <item>
-      <title>Components of a Grid</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/components_of_a_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
-    </item>
-    
-    <item>
       <title>Domain specific language</title>
       <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -214,6 +225,28 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
     </item>
     
     <item>
+      <title>Setting up your own</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</guid>
+      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Typographical conventions</title>
       <link>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -221,6 +254,17 @@ Functional end-user tests such as Selenium tests are expensive to run, however.<
       <guid>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
+    </item>
+    
+    <item>
+      <title>When to use Grid</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>
@@ -330,17 +374,6 @@ Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근�
     </item>
     
     <item>
-      <title>Setting up your own Grid</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/setting_up_your_own_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
-    </item>
-    
-    <item>
       <title>Working with select elements</title>
       <link>https://www.selenium.dev/documentation/ko/support_packages/working_with_select_elements/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -426,17 +459,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://www.selenium.dev/documentation/ko/webdriver/waits/</guid>
       <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
  WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
-    </item>
-    
-    <item>
-      <title>When to use Grid</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
     </item>
     
     <item>

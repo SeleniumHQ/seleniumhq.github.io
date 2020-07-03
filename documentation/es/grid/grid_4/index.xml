@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grid 4 on Documentación de Selenium</title>
+    <link>https://www.selenium.dev/documentation/es/grid/grid_4/</link>
+    <description>Recent content in Grid 4 on Documentación de Selenium</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://www.selenium.dev/documentation/es/grid/grid_4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Componentes</title>
+      <link>https://www.selenium.dev/documentation/es/grid/grid_4/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/es/grid/grid_4/components_of_a_grid/</guid>
+      <description> Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
+      <title>Configurando tu propio Grid</title>
+      <link>https://www.selenium.dev/documentation/es/grid/grid_4/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/es/grid/grid_4/setting_up_your_own_grid/</guid>
+      <description> Page being translated from English to Spanish. Do you speak Spanish? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+  </channel>
+</rss>

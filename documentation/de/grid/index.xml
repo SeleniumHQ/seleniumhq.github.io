@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Selenium Grid on Dokumentation für Selenium</title>
+    <title>Grid on Dokumentation für Selenium</title>
     <link>https://www.selenium.dev/documentation/de/grid/</link>
-    <description>Recent content in Selenium Grid on Dokumentation für Selenium</description>
+    <description>Recent content in Grid on Dokumentation für Selenium</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <copyright>2013-{year}</copyright>
@@ -19,27 +19,6 @@
       <guid>https://www.selenium.dev/documentation/de/grid/purposes_and_main_functionalities/</guid>
       <description> Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
   Central entry point for all tests Management and control of the nodes / environment where the browsers run Scaling Running tests in parallel Cross platform testing Load balancing  </description>
-    </item>
-    
-    <item>
-      <title>Komponenten des Grids</title>
-      <link>https://www.selenium.dev/documentation/de/grid/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/grid/components_of_a_grid/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
-    </item>
-    
-    <item>
-      <title>Aufsetzen eines Grid</title>
-      <link>https://www.selenium.dev/documentation/de/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/grid/setting_up_your_own_grid/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
     </item>
     
     <item>

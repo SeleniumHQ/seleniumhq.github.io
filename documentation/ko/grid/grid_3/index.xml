@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grid 3 on Selenium 문서</title>
+    <link>https://www.selenium.dev/documentation/ko/grid/grid_3/</link>
+    <description>Recent content in Grid 3 on Selenium 문서</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2013-{year}</copyright>
+    
+	<atom:link href="https://www.selenium.dev/documentation/ko/grid/grid_3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Components</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+    </item>
+    
+    <item>
+      <title>Setting up your own</title>
+      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</guid>
+      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+ To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+    </item>
+    
+  </channel>
+</rss>

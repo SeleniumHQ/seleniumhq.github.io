@@ -129,6 +129,27 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
     </item>
     
     <item>
+      <title>服务网格的组件</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/grid_3/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_3/components_of_a_grid/</guid>
+      <description>转发器(hub)  中间人和管理者 接受请求 执行测试任务 接受客户端的指示并在远程节点上执行任务 管理进程  转发器(hub) 是一个接受所有所有测试任务的中心节点。 每个Selenium服务网格包含一个转发器(hub)。转发器(hub)需要能被所有的客户机（比如：持续集成服务器，开发机等等）访问到。 转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。
+节点  浏览器会被安装在节点上 节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等) 接受转发器(hub)的指示并执行这些指示  节点 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。 一个服务网格中可以有很多节点。 这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。 一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</description>
+    </item>
+    
+    <item>
+      <title>服务网格的组件</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</guid>
+      <description> Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>浏览器</title>
       <link>https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -184,6 +205,19 @@ java -jar selenium-server-standalone-{VERSION}.jar -timeout=20 -browserTimeout=6
       <description>验证码 (CAPTCHA), 是 全自动区分计算机和人类的图灵测试 (Completely Automated Public Turing test to tell Computers and Humans Apart) 的简称, 是被明确地设计用于阻止自动化的, 所以不要尝试!
 规避验证码的检查, 主要有两个策略:
  在测试环境中禁用验证码 添加钩子以允许测试绕过验证码  </description>
+    </item>
+    
+    <item>
+      <title>什么时候应该使用服务网格</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
+      <description>通常来说，有2个原因你需要使用服务网格。
+ 在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试 缩短完成测试的时间  服务网格通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。 比如的测试套件里包含100个测试，你的服务网格支持4种不同的终端（虚拟机或者独立的物理设备） 来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。 在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。 一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
+服务网格也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。 比如，一个由虚拟机组成的服务网格，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。 比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了， Selenium服务网格会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。
+另外，一个服务网格可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个 Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进服务网格的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行， 显著的缩短的整个测试完成的时间。
+服务网格是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。</description>
     </item>
     
     <item>
@@ -267,16 +301,6 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
     </item>
     
     <item>
-      <title>服务网格的组件</title>
-      <link>https://www.selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/zh-cn/grid/components_of_a_grid/</guid>
-      <description>转发器(hub)  中间人和管理者 接受请求 执行测试任务 接受客户端的指示并在远程节点上执行任务 管理进程  转发器(hub) 是一个接受所有所有测试任务的中心节点。 每个Selenium服务网格包含一个转发器(hub)。转发器(hub)需要能被所有的客户机（比如：持续集成服务器，开发机等等）访问到。 转发器(hub)会连接1个或者多个节点，这些节点会代理执行测试任务。
-节点  浏览器会被安装在节点上 节点会把自己注册在转发器(hub)上并申报自己作为测试代理的能力(有些什么浏览器，每个浏览器可以运行几个实例等等) 接受转发器(hub)的指示并执行这些指示  节点 和不同的Selenium实例，他们能够在特定的计算机系统上执行测试。 一个服务网格中可以有很多节点。 这些终端设备并不需要使用统一的平台(或者说操作系统)也不需要选择相同的浏览器。 一个Windows节点可以提供IE作为一个浏览器选项来执行测试，然而Linux和MAC是不可能提供的。</description>
-    </item>
-    
-    <item>
       <title>第三方驱动和插件</title>
       <link>https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -295,6 +319,37 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; 
       <guid>https://www.selenium.dev/documentation/zh-cn/remote_webdriver/remote_webdriver_client/</guid>
       <description>要运行远程WebDriver客户端, 我们首先需要连接到RemoteWebDriver. 为此, 我们将URL指向运行测试的服务器的地址. 为了自定义我们的配置, 我们设置了既定的功能. 下面是一个实例化样例, 其指向我们的远程Web服务器 www.example.com 的远程WebDriver对象, 并在Firefox上运行测试.
 Java Python C# Ruby JavaScript Kotlin FirefoxOptions firefoxOptions = new FirefoxOptions(); WebDriver driver = new RemoteWebDriver(new URL(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.get(&amp;#34;http://www.google.com&amp;#34;); driver.quit();   from selenium import webdriver firefox_options = webdriver.FirefoxOptions() driver = webdriver.Remote( command_executor=&amp;#39;http://www.example.com&amp;#39;, options=firefox_options ) driver.get(&amp;#34;http://www.google.com&amp;#34;) driver.quit()   FirefoxOptions firefoxOptions = new FirefoxOptions(); IWebDriver driver = new RemoteWebDriver(new Uri(&amp;#34;http://www.example.com&amp;#34;), firefoxOptions); driver.Navigate().GoToUrl(&amp;#34;http://www.google.com&amp;#34;); driver.Quit();   require &amp;#39;selenium-webdriver&amp;#39; driver = Selenium::WebDriver.</description>
+    </item>
+    
+    <item>
+      <title>配置自己的服务网格</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_3/setting_up_your_own_grid/</guid>
+      <description>使用Selenium网格， 你需要维护你自己的基础设置来作为节点使用， 这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
+使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。 当然，在你自己的硬件群运行节点也是可行的。 这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
+快速开始 这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub), 然后注册WebDriver节点和Selenium 1 RC节点。 我们也会向你展示如何使用Java来使用Selenium服务网格。 这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到 多台终端机。
+selenium-server-standalone 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了. 你可以在https://selenium.dev/downloads/.下载 selenium-server-standalone.jar
+第一步: 启动转发器(hub) 转发器(hub)是接受测试请求并分发到合适的节点的中心点。 分发是基于节点的能力的，这就意味着一个有特定需求的测试仅会被分发到能提供这个需求的节点上。
+因为一个测试所期望的能力，就如字面意思，期望，并不代表转发器(hub)能够找到一个真正满足所有期望的节点。
+打开命令行窗口，来到存放selenium-server-standalone.jar文件的地方。 启动转发器(hub)并传入-role hub作为参数来启动一个独立的服务：
+java -jar selenium-server-standalone.jar -role hub 转发器(hub)默认会监听4444端口，你也可以通过打开浏览器访问http://localhost:4444/grid/console来查看转发器(hub)的状态。
+如果需要改变默认端口，你可以添加-port加上一个数字作为参数来代表你期望监听的端口， 同时，所有其他的可选参数都可以在下面这个JSON配置文件里找到。
+你已经在上面获得了一个简单命令，当然如果你希望一些更高级的配置， 方便起见，你也可以指定一个JSON格式的配置文件来配置并启动你的转发器(hub)。 你可以这么做：
+java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug 下面你可以看到一个配置文件hubConfig.json的例子。 我们会在第二步深入探讨怎么来提供节点配置文件。
+{ &amp;#34;_comment&amp;#34; : &amp;#34;Configuration for Hub - hubConfig.json&amp;#34;, &amp;#34;host&amp;#34;: ip, &amp;#34;maxSession&amp;#34;: 5, &amp;#34;port&amp;#34;: 4444, &amp;#34;cleanupCycle&amp;#34;: 5000, &amp;#34;timeout&amp;#34;: 300000, &amp;#34;newSessionWaitTimeout&amp;#34;: -1, &amp;#34;servlets&amp;#34;: [], &amp;#34;prioritizer&amp;#34;: null, &amp;#34;capabilityMatcher&amp;#34;: &amp;#34;org.</description>
+    </item>
+    
+    <item>
+      <title>配置自己的服务网格</title>
+      <link>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/setting_up_your_own_grid/</guid>
+      <description> Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
     </item>
     
     <item>
@@ -445,26 +500,6 @@ Java Python C# Ruby JavaScript Kotlin // 简便的方法 driver.</description>
     </item>
     
     <item>
-      <title>配置自己的服务网格</title>
-      <link>https://www.selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/zh-cn/grid/setting_up_your_own_grid/</guid>
-      <description>使用Selenium网格， 你需要维护你自己的基础设置来作为节点使用， 这将是一个繁重的紧张的工作，很多组织使用IaaS供应商比如Amazon EC2或者Google来提供这些基础设施。
-使用Sauce Labs或者Testing Bot这类提供了Selenium网格作为云服务的供应商也是一个选择。 当然，在你自己的硬件群运行节点也是可行的。 这一章会深入探讨如何用你自己的基础设施来运行你的服务网格，
-快速开始 这个例子会向你展示如何开始Selenium 2服务网格的转发器(hub), 然后注册WebDriver节点和Selenium 1 RC节点。 我们也会向你展示如何使用Java来使用Selenium服务网格。 这个例子里转发器和节点被运行在了同一台终端机上，当然你也可以服务selenium-server-standalone到 多台终端机。
-selenium-server-standalone 包含了运行网格所需要的转发器(hub),WebDriver和legacy RC needed, _ant_已经不是必须的了. 你可以在https://selenium.dev/downloads/.下载 selenium-server-standalone.jar
-第一步: 启动转发器(hub) 转发器(hub)是接受测试请求并分发到合适的节点的中心点。 分发是基于节点的能力的，这就意味着一个有特定需求的测试仅会被分发到能提供这个需求的节点上。
-因为一个测试所期望的能力，就如字面意思，期望，并不代表转发器(hub)能够找到一个真正满足所有期望的节点。
-打开命令行窗口，来到存放selenium-server-standalone.jar文件的地方。 启动转发器(hub)并传入-role hub作为参数来启动一个独立的服务：
-java -jar selenium-server-standalone.jar -role hub 转发器(hub)默认会监听4444端口，你也可以通过打开浏览器访问http://localhost:4444/grid/console来查看转发器(hub)的状态。
-如果需要改变默认端口，你可以添加-port加上一个数字作为参数来代表你期望监听的端口， 同时，所有其他的可选参数都可以在下面这个JSON配置文件里找到。
-你已经在上面获得了一个简单命令，当然如果你希望一些更高级的配置， 方便起见，你也可以指定一个JSON格式的配置文件来配置并启动你的转发器(hub)。 你可以这么做：
-java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -debug 下面你可以看到一个配置文件hubConfig.json的例子。 我们会在第二步深入探讨怎么来提供节点配置文件。
-{ &amp;#34;_comment&amp;#34; : &amp;#34;Configuration for Hub - hubConfig.json&amp;#34;, &amp;#34;host&amp;#34;: ip, &amp;#34;maxSession&amp;#34;: 5, &amp;#34;port&amp;#34;: 4444, &amp;#34;cleanupCycle&amp;#34;: 5000, &amp;#34;timeout&amp;#34;: 300000, &amp;#34;newSessionWaitTimeout&amp;#34;: -1, &amp;#34;servlets&amp;#34;: [], &amp;#34;prioritizer&amp;#34;: null, &amp;#34;capabilityMatcher&amp;#34;: &amp;#34;org.</description>
-    </item>
-    
-    <item>
       <title>Gmail, email 和 Facebook 登录</title>
       <link>https://www.selenium.dev/documentation/zh-cn/worst_practices/gmail_email_and_facebook_logins/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -484,19 +519,6 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
       <guid>https://www.selenium.dev/documentation/zh-cn/legacy_docs/selenium_ide/</guid>
       <description>Page being translated from English to Chinese. Do you speak Chinese? Help us to translate it by sending us pull requests!
  Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
-    </item>
-    
-    <item>
-      <title>什么时候应该使用服务网格</title>
-      <link>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/zh-cn/grid/when_to_use_grid/</guid>
-      <description>通常来说，有2个原因你需要使用服务网格。
- 在多种浏览器，多种版本的浏览器，不同操作系统里的浏览器里执行你的测试 缩短完成测试的时间  服务网格通过使用多台终端机器来并行执行测试，以达到加速测试执行的目的。 比如的测试套件里包含100个测试，你的服务网格支持4种不同的终端（虚拟机或者独立的物理设备） 来执行这些测试，相比你只有一台终端来执行，你的测试套件只需要4分之1的时间。 在一些大型测试套件，或者一些长时间执行的测试比如执行大量的数据校验，这样做会节约大量的时间。 一些测试会需要几个小时。另一个改善的动力来自缩短这种耗时的测试的是为了开发人员从提交代码到获得测试结果的期间。软件开发团队实践敏捷开发时期望尽可能早的得到测试反馈，而不是一晚一晚的等测试通过。
-服务网格也会被用来支持在不同的运行环境的测试，比如，在同一实践针对不同浏览器的测试。 比如，一个由虚拟机组成的服务网格，每一个终端机可以支持一个不同的应用程序需要支持的浏览器。 比如终端1有IE8，终端2有IE9，终端3有最新的Chrmoe，终端4有最新的Firefox。当所有的测试套件都执行了， Selenium服务网格会接受每个测试浏览器组合的要求，然后安排每个测试被执行在所要求的浏览器上。
-另外，一个服务网格可以包含同样的浏览器，类型，版本。比如，你可以有一个包含4台终端，没个终端包含3个 Firefox70的实例的网格，提供了一个服务器集群提供可用的Firefox实例。当测试套件被执行的时候，每个被提交进服务网格的测试会被分发到可用的Firefox实例。在这个情况下，同一时间可以有12个测试被并行的执行， 显著的缩短的整个测试完成的时间。
-服务网格是弹性的。这2个例子可以被组合来创建多种实例的浏览器和版本。通过配置，可以提供并行执行以加速测试，或者支持多种浏览器版本的模拟2中能力。</description>
     </item>
     
     <item>

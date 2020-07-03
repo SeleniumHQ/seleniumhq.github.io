@@ -95,6 +95,27 @@ WebDriver provides capabilities that each remote end will/should support the imp
     </item>
     
     <item>
+      <title>Komponenten</title>
+      <link>https://www.selenium.dev/documentation/de/grid/grid_3/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/grid/grid_3/components_of_a_grid/</guid>
+      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+    </item>
+    
+    <item>
+      <title>Komponenten</title>
+      <link>https://www.selenium.dev/documentation/de/grid/grid_4/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/grid/grid_4/components_of_a_grid/</guid>
+      <description> Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Kurze Einführung</title>
       <link>https://www.selenium.dev/documentation/de/getting_started/quick/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -157,6 +178,28 @@ How Selenium RC Works First, we will describe how the components of Selenium RC 
     </item>
     
     <item>
+      <title>Aufsetzen eines Grid</title>
+      <link>https://www.selenium.dev/documentation/de/grid/grid_3/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/grid/grid_3/setting_up_your_own_grid/</guid>
+      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
+    </item>
+    
+    <item>
+      <title>Aufsetzen eines Grid</title>
+      <link>https://www.selenium.dev/documentation/de/grid/grid_4/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/de/grid/grid_4/setting_up_your_own_grid/</guid>
+      <description> Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Dateidownloads</title>
       <link>https://www.selenium.dev/documentation/de/worst_practices/file_downloads/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -211,13 +254,14 @@ Please note that these plugins are not supported, maintained, hosted, or endorse
     </item>
     
     <item>
-      <title>Komponenten des Grids</title>
-      <link>https://www.selenium.dev/documentation/de/grid/components_of_a_grid/</link>
+      <title>Einsatz eines Grid</title>
+      <link>https://www.selenium.dev/documentation/de/grid/when_to_use_grid/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://www.selenium.dev/documentation/de/grid/components_of_a_grid/</guid>
+      <guid>https://www.selenium.dev/documentation/de/grid/when_to_use_grid/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
+ Generally speaking, there’s two reasons why you might want to use Grid.
+ To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.</description>
     </item>
     
     <item>
@@ -280,17 +324,6 @@ Downloade die entsprechende WebDriver binary für den Browser den Du verwenden w
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
  Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
 Java Python C# Ruby JavaScript Kotlin import org.</description>
-    </item>
-    
-    <item>
-      <title>Aufsetzen eines Grid</title>
-      <link>https://www.selenium.dev/documentation/de/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/grid/setting_up_your_own_grid/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
     </item>
     
     <item>
@@ -385,17 +418,6 @@ Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; d
       <guid>https://www.selenium.dev/documentation/de/legacy_docs/selenium_ide/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
  Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
-    </item>
-    
-    <item>
-      <title>Einsatz eines Grid</title>
-      <link>https://www.selenium.dev/documentation/de/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/grid/when_to_use_grid/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.</description>
     </item>
     
     <item>

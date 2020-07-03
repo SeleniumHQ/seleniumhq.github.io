@@ -33,6 +33,26 @@ browserName: Cette capacité est utilisée pour définir le browserName pour une
     </item>
     
     <item>
+      <title>Composant</title>
+      <link>https://www.selenium.dev/documentation/fr/grid/grid_3/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/fr/grid/grid_3/components_of_a_grid/</guid>
+      <description>Hub  Intermédiaire et gestionnaire Accepte les demandes d&amp;rsquo;exécution de tests Prend les instructions du client et les exécute à distance sur les nœuds Gère les threads  Un Hub est un point central où tous vos tests sont envoyés. Chaque grille de sélénium se compose exactement d&amp;rsquo;un concentrateur. Le hub doit être accessible des clients respectifs (c.-à-d. serveur CI, machine développeur, etc.) Le concentrateur connectera un ou plusieurs nœuds auquel les tests seront délégués.</description>
+    </item>
+    
+    <item>
+      <title>Composant</title>
+      <link>https://www.selenium.dev/documentation/fr/grid/grid_4/components_of_a_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/fr/grid/grid_4/components_of_a_grid/</guid>
+      <description> Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Comprendre les composants</title>
       <link>https://www.selenium.dev/documentation/fr/webdriver/understanding_the_components/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -164,15 +184,6 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
     </item>
     
     <item>
-      <title>Composant d&#39;une Grid</title>
-      <link>https://www.selenium.dev/documentation/fr/grid/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/fr/grid/components_of_a_grid/</guid>
-      <description>Hub  Intermédiaire et gestionnaire Accepte les demandes d&amp;rsquo;exécution de tests Prend les instructions du client et les exécute à distance sur les nœuds Gère les threads  Un Hub est un point central où tous vos tests sont envoyés. Chaque grille de sélénium se compose exactement d&amp;rsquo;un concentrateur. Le hub doit être accessible des clients respectifs (c.-à-d. serveur CI, machine développeur, etc.) Le concentrateur connectera un ou plusieurs nœuds auquel les tests seront délégués.</description>
-    </item>
-    
-    <item>
       <title>Conventions typographique</title>
       <link>https://www.selenium.dev/documentation/fr/front_matter/typographical_conventions/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -233,12 +244,43 @@ L&amp;rsquo;objectif de WebDriver est d&#39;émuler l&amp;rsquo;interaction d&am
     </item>
     
     <item>
+      <title>Mettre en place votre propre Grid</title>
+      <link>https://www.selenium.dev/documentation/fr/grid/grid_3/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/fr/grid/grid_3/setting_up_your_own_grid/</guid>
+      <description>Pour utiliser la grille de Selenium, vous devez maintenir votre propre infrastructure pour les nœuds. Comme cela peut être un effort lourd et intense en temps, de nombreuses organisations utilisent des fournisseurs IaaS comme Amazon EC2 et Google Compute pour fournir cette infrastructure.
+D&amp;rsquo;autres options incluent l&amp;rsquo;utilisation de fournisseurs tels que Sauce Labs ou Testing Bot qui fournissent un Selenium Grid en tant que service dans le cloud. Il est certainement possible d&amp;rsquo;exécuter également des nœuds sur votre propre matériel.</description>
+    </item>
+    
+    <item>
+      <title>Mettre en place votre propre Grid</title>
+      <link>https://www.selenium.dev/documentation/fr/grid/grid_4/setting_up_your_own_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/fr/grid/grid_4/setting_up_your_own_grid/</guid>
+      <description> Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
+  Work in progress
+ </description>
+    </item>
+    
+    <item>
       <title>Migrating from RC to WebDriver</title>
       <link>https://www.selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.selenium.dev/documentation/fr/legacy_docs/migrating_from_rc_to_webdriver/</guid>
       <description>Comment migrer vers Selenium WebDriver Une question fréquente lors de l&amp;rsquo;adoption de Selenium 2 est la bonne chose à faire lors de l&amp;rsquo;ajout de nouveaux tests à un ensemble de tests existant? Utilisateurs nouveaux dans le Le framework peut commencer par utiliser les nouvelles API WebDriver pour écrire leurs tests. Mais qu&amp;rsquo;en est-il des utilisateurs qui ont déjà des suites de tests existants? Ce guide est conçu pour montrer comment migrer vos tests existants vers les nouvelles API, permettant à tous les nouveaux tests d&#39;être écrits en utilisant les nouvelles fonctionnalités offertes par WebDriver.</description>
+    </item>
+    
+    <item>
+      <title>Quand utiliser Grid</title>
+      <link>https://www.selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
+      <description>De manière générale, il existe deux raisons pour lesquelles vous souhaiterez peut-être utiliser Grid.
+ Pour exécuter vos tests sur plusieurs navigateurs, plusieurs versions de navigateur, et les navigateurs fonctionnant sur différents systèmes d&amp;rsquo;exploitation. Pour réduire le temps nécessaire à la suite de tests pour terminer une passe de test.  La grille est utilisée pour accélérer l&amp;rsquo;exécution d&amp;rsquo;un test réussi en utilisant plusieurs machines pour exécuter des tests en parallèle.</description>
     </item>
     
     <item>
@@ -307,16 +349,6 @@ Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.
       <guid>https://www.selenium.dev/documentation/fr/webdriver/browser_manipulation/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check Add Ruby executables to your PATH checkbox. To drive any browser, you have to install selenium-webdriver Ruby gem.</description>
-    </item>
-    
-    <item>
-      <title>Mettre en place votre propre Grid</title>
-      <link>https://www.selenium.dev/documentation/fr/grid/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/fr/grid/setting_up_your_own_grid/</guid>
-      <description>Pour utiliser la grille de Selenium, vous devez maintenir votre propre infrastructure pour les nœuds. Comme cela peut être un effort lourd et intense en temps, de nombreuses organisations utilisent des fournisseurs IaaS comme Amazon EC2 et Google Compute pour fournir cette infrastructure.
-D&amp;rsquo;autres options incluent l&amp;rsquo;utilisation de fournisseurs tels que Sauce Labs ou Testing Bot qui fournissent un Selenium Grid en tant que service dans le cloud. Il est certainement possible d&amp;rsquo;exécuter également des nœuds sur votre propre matériel.</description>
     </item>
     
     <item>
@@ -398,16 +430,6 @@ La pratique idéale consiste à utiliser les API proposées par les fournisseurs
       <guid>https://www.selenium.dev/documentation/fr/legacy_docs/selenium_ide/</guid>
       <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
  Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
-    </item>
-    
-    <item>
-      <title>Quand utiliser Grid</title>
-      <link>https://www.selenium.dev/documentation/fr/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/fr/grid/when_to_use_grid/</guid>
-      <description>De manière générale, il existe deux raisons pour lesquelles vous souhaiterez peut-être utiliser Grid.
- Pour exécuter vos tests sur plusieurs navigateurs, plusieurs versions de navigateur, et les navigateurs fonctionnant sur différents systèmes d&amp;rsquo;exploitation. Pour réduire le temps nécessaire à la suite de tests pour terminer une passe de test.  La grille est utilisée pour accélérer l&amp;rsquo;exécution d&amp;rsquo;un test réussi en utilisant plusieurs machines pour exécuter des tests en parallèle.</description>
     </item>
     
     <item>
