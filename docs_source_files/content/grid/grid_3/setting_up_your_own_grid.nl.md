@@ -1,13 +1,14 @@
 ---
-title: "Aufsetzen eines Grid"
-weight: 3
+title: "Setting up your own"
+weight: 2
 ---
 
 {{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 To use Selenium Grid,
 you need to maintain your own infrastructure for the nodes.
 As this can be a cumbersome and time intense effort,

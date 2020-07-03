@@ -5,16 +5,26 @@ weight: 9
 ---
 
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 # Grid
 
-_Selenium Grid_ は、SeleniumテストがコマンドをリモートWebブラウザーインスタンスにルーティングできるようにする賢いプロキシサーバーです。
-その目的は、複数のマシンで並行してテストを実行する簡単な方法を提供することです。
+_Selenium Grid_ allows the execution of WebDriver scripts on remote machines (virtual
+or real) by routing commands sent by the client to remote browser instances.
+It aims to provide an easy way to run tests in parallel on multiple machines.
 
-Selenium Gridでは、1つのサーバーが、JSON形式のテストコマンドを1つ以上の登録済みのグリッドノードにルーティングするハブとして機能します。
-テストはハブに接続して、リモートブラウザーインスタンスへのアクセスを取得します。
-ハブには、アクセスを提供する登録済みサーバーのリストがあり、これらのインスタンスを制御できます。
+Selenium Grid allows us to run tests in parallel on multiple machines,
+and to manage different browser versions and browser configurations centrally
+(instead of in each individual test).
 
-Selenium Gridを使用すると、複数のマシンで並行してテストを実行し、さまざまなブラウザーバージョンとブラウザー構成を（個々のテストではなく）一元的に管理できます。
+Selenium Grid is not a silver bullet.
+It solves a subset of common delegation and distribution problems,
+but will for example not manage your infrastructure,
+and might not suit your specific needs.
 
-Selenium Gridは特効薬ではありません。
-一般的な委任および配布の問題のサブセットを解決しますが、たとえばインフラストラクチャを管理せず、特定のニーズに適さない場合があります。
+**Please note Grid 3 is not supported anymore and the Selenium project
+recommends to use [Grid 4]({{<ref "/grid/grid_4/_index.ja.md">}})**

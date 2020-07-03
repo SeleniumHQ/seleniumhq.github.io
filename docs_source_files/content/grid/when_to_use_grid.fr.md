@@ -1,6 +1,6 @@
 ---
 title: "Quand utiliser Grid"
-weight: 4
+weight: 2
 ---
 
 De manière générale, il existe deux raisons pour 

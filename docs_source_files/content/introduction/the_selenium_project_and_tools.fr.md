@@ -46,7 +46,7 @@ L'approche de conception minimaliste de Selenium lui confère
 polyvalence à inclure en tant que composant dans des applications plus importantes.
 L'infrastructure environnante fournie sous l'égide du sélénium
 vous donne les outils pour assembler
-votre [grille de navigateurs] ({{<ref "/grid/_index.md">}})
+votre [grille de navigateurs]({{<ref "/grid/_index.md">}})
 afin que les tests puissent être exécutés sur différents navigateurs et plusieurs systèmes d'exploitation
 sur une gamme de machines.
 
@@ -109,7 +109,7 @@ pour un public niché et un cas d'utilisation spécifique,
 à la bibliothèque d'automatisation du navigateur _de facto_ du monde.
 
 Tout comme Selenium RC utilisait les outils du commerce disponibles à l'époque,
-[Selenium WebDriver] ({{<ref "/webdriver/_index.md">}}) perpétue cette tradition en prenant
+[Selenium WebDriver]({{<ref "/webdriver/_index.md">}}) perpétue cette tradition en prenant
 la partie d'interaction du navigateur avec le gazon du vendeur du navigateur
 et en leur demandant de prendre la responsabilité des implémentations back-end, orientées navigateur.
 Récemment, ce travail est devenu un processus de normalisation du W3C

@@ -4,27 +4,26 @@ chapter: true
 weight: 9
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 # Grid
 
-_Selenium Grid_ es un servidor inteligente que efectúa de proxy que permite a los
-tests de Selenium enrutar sus comandos hacia instancias remotas de navegadores
-web.
-La intención de esto es proporcionar una forma sencilla de ejecutar los tests en
-paralelo en múltiple maquinas.
+_Selenium Grid_ allows the execution of WebDriver scripts on remote machines (virtual
+or real) by routing commands sent by the client to remote browser instances.
+It aims to provide an easy way to run tests in parallel on multiple machines.
 
+Selenium Grid allows us to run tests in parallel on multiple machines,
+and to manage different browser versions and browser configurations centrally
+(instead of in each individual test).
 
-Con _Selenium Grid_ un servidor actúa como el centro de actividad (_hub_) 
-encargado de enrutar los comandos de los tests en formato JSON hacia uno o mas
-nodos registrados en el _Grid_.
-Los tests contactan con el hub para obtener acceso a las instancias remotas de
-los navegadores.
+Selenium Grid is not a silver bullet.
+It solves a subset of common delegation and distribution problems,
+but will for example not manage your infrastructure,
+and might not suit your specific needs.
 
-_Selenium Grid_ te permite ejecutar los tests en paralelo en múltiples maquinas
-y también te permite gestionar diferentes versiones de navegadores y diferentes
-configuraciones de navegadores de manera centralizada (en lugar de hacerlo de
-manera individual en cada test)
-
-_Selenium Grid_ no es una solución mágica para todos tus problemas.
-Permite resolver un subconjunto de problemas comunes de delegación y distribución,
-pero, por ejemplo, no administrará su infraestructura y podría no satisfacer sus
-necesidades personales.
+**Please note Grid 3 is not supported anymore and the Selenium project
+recommends to use [Grid 4]({{<ref "/grid/grid_4/_index.es.md">}})**

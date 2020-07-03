@@ -1,13 +1,14 @@
 ---
-title: "Komponenten des Grids"
-weight: 2
+title: "Components"
+weight: 1
 ---
 
 {{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+<i class="fas fa-language"></i> Page being translated from
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 ![Grid](/images/grid.png)
 
 ## Hub

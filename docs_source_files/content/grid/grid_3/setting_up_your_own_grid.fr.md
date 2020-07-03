@@ -1,6 +1,6 @@
 ---
 title: "Mettre en place votre propre Grid"
-weight: 3
+weight: 2
 ---
 
 Pour utiliser la grille de Selenium,

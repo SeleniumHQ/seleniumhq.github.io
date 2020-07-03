@@ -1,7 +1,7 @@
 ---
-title: "Grid"
+title: "Grid 3"
 chapter: true
-weight: 9
+weight: 3
 ---
 
 {{% notice info %}}
@@ -10,11 +10,18 @@ English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-# Grid
+# Grid 3
 
-_Selenium Grid_ allows the execution of WebDriver scripts on remote machines (virtual
-or real) by routing commands sent by the client to remote browser instances.
-It aims to provide an easy way to run tests in parallel on multiple machines.
+_Selenium Grid_ is a smart proxy server
+that allows Selenium tests to route commands to remote web browser instances.
+Its aim is to provide an easy way to run tests in parallel on multiple machines.
+
+With Selenium Grid,
+one server acts as the hub that routes JSON formatted test commands
+to one or more registered Grid nodes.
+Tests contact the hub to obtain access to remote browser instances.
+The hub has a list of registered servers that it provides access to,
+and allows control of these instances.
 
 Selenium Grid allows us to run tests in parallel on multiple machines,
 and to manage different browser versions and browser configurations centrally

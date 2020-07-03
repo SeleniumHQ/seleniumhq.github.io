@@ -1,6 +1,6 @@
 ---
 title: "配置自己的服务网格"
-weight: 3
+weight: 2
 ---
 
 使用Selenium网格，

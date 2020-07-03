@@ -1,7 +1,13 @@
 ---
-title: "Setting up your own Grid"
-weight: 3
+title: "Setting up your own"
+weight: 2
 ---
+
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Korean. Do you speak Korean? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
 To use Selenium Grid,
 you need to maintain your own infrastructure for the nodes.

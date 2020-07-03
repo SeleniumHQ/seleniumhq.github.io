@@ -1,6 +1,6 @@
 ---
 title: "Configurando tu propio Grid"
-weight: 3
+weight: 2
 ---
 
 Para usar Selenium Grid, necesitas mantener tu propia infraestructura para los
