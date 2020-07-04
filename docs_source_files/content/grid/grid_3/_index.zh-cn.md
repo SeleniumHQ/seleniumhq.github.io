@@ -4,12 +4,6 @@ chapter: true
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # 服务网格 3
 
 _Selenium服务网格_ 是一个能够让Selenium的测试把命令传送到一个远程浏览器实例的职能代理服务器。
@@ -26,5 +20,5 @@ Selenium服务网格允许我们在多台节点服务器上并行执行测试，
 Selenium服务网格并不是万能的(silver bullet)。
 它能够解决一些通用的代理问题和分布式的问题，但是并不能管理你的硬件，也可能不适合你的一些特殊需求。
 
-**Please note Grid 3 is not supported anymore and the Selenium project
-recommends to use [Grid 4]({{<ref "/grid/grid_4/_index.zh-cn.md">}})**
+**请注意Grid 3不再被支持, 
+Selenium项目建议使用[Grid 4]({{<ref "/grid/grid_4/_index.zh-cn.md">}})**
