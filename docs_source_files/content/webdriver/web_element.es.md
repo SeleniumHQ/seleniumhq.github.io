@@ -413,10 +413,10 @@ namespace FindElementsFromElement {
       await driver.get('https://www.example.com');
 
       // Obten el elemento con el nombre de etiqueta 'div'
-      let element = driver.findElement(By.tagName("div"));
+      let element = driver.findElement(By.css("div"));
 
       // Obtén todos los elementos con el nombre de etiqueta 'p'
-      let elements = await element.findElements(By.tagName("p"));
+      let elements = await element.findElements(By.css("p"));
       for(let e of elements) {
           console.log(await e.getText());
       }
