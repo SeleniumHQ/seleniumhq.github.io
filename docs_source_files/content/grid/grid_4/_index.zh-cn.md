@@ -1,22 +1,17 @@
 ---
-title: "服务网格 3"
+title: "服务网格 4"
 chapter: true
 weight: 4
 ---
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
+ 
 # Grid 4
 
-_Selenium Grid 4_ is a fresh implementation and does not share the codebase
-the previous version had.
+_Selenium Grid 4_ 是全新的实现, 
+并且不共享之前版本的代码库.
 
-Grid 4 has an approach to take advantage of a number of new technologies in order 
-to facilitate scaling up, while still allowing local execution.
+Grid 4有一种实现可以利用许多新技术来促进扩展, 
+同时仍然允许本地执行.
 
-To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse the sections below.
+关于Grid 4组件的所有详细信息, 
+了解其工作原理以及如何设置自己的组件, 
+请浏览以下章节.
