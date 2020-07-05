@@ -15,9 +15,6 @@ WebDriver提供了每个远程端将 (或应该) 支持实现的功能.
 此功能用于设置既定会话的 `browserName` . 
 如果未在远端安装指定的浏览器, 
 则会话创建将失败
-This capability is used to set the `browserName` for a given session. 
-If the specified browser is not installed at the 
-remote end, the session creation will fail
  
 ## browserVersion: 
  
@@ -124,7 +121,7 @@ WebDriver创建新会话时,
 
 ## strictFileInteractability
 
-The new capabilitiy indicates if strict interactability checks 
-should be applied to _input type=file_ elements. As strict interactability 
-checks are off by default, there is a change in behaviour 
-when using _Element Send Keys_ with hidden file upload controls.
+新功能用于是否对 _类型为文件的输入(input type=file)_ 元素进行严格的交互性检查.
+默认关闭严格性检查, 
+在将 _元素的Send Keys_ 方法作用于隐藏的文件上传时, 
+会有控制方面的行为区别.
