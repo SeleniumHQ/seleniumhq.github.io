@@ -19,11 +19,12 @@
       <guid>https://www.selenium.dev/documentation/zh-cn/driver_idiosyncrasies/shared_capabilities/</guid>
       <description>为了通过Selenium WebDriver创建新会话, 本地端应向远程端提供基本功能. 远端使用相同的功能集来创建会话并描述当前会话功能.
 WebDriver提供了每个远程端将 (或应该) 支持实现的功能. 以下是WebDriver支持的功能:
-browserName: 此功能用于设置既定会话的 browserName . 如果未在远端安装指定的浏览器, 则会话创建将失败 This capability is used to set the browserName for a given session. If the specified browser is not installed at the remote end, the session creation will fail
+browserName: 此功能用于设置既定会话的 browserName . 如果未在远端安装指定的浏览器, 则会话创建将失败
 browserVersion: 此功能是可选的, 用于在远程端设置可用的浏览器版本. 例如, 如果在仅安装80版本的系统上询问75版本的Chrome, 则会话创建将失败
 页面加载策略 通过URL导航到新页面时, 默认情况下, Selenium将等待页面完全加载后再进行响应. 这对于初学者来说效果很好, 但是在加载大量第三方资源的页面上可能会导致较长的等待时间. 在这种情况下, 使用非默认策略可以使测试的执行速度更快, 但是也可能导致不稳定, 即页面上的元素随元素加载和大小变化而改变位置.
 页面加载策略可以参考链接 document.readyState 如下述表格的描述:
-   策略 准备完成的状态 备注     normal complete 默认情况下使用, 等待所有资源下载完成   eager interactive DOM访问已准备就绪, 但其他资源 (如图像) 可能仍在加载中   none Any 完全不阻塞WebDriver    platformName 这标识了远端的操作系统, 获取 platformName 将返回操作系统的名称.</description>
+   策略 准备完成的状态 备注     normal complete 默认情况下使用, 等待所有资源下载完成   eager interactive DOM访问已准备就绪, 但其他资源 (如图像) 可能仍在加载中   none Any 完全不阻塞WebDriver    platformName 这标识了远端的操作系统, 获取 platformName 将返回操作系统的名称.
+在基于云的供应者中, 设置 platformName 将在远程端设置操作系统.</description>
     </item>
     
     <item>
