@@ -17,6 +17,26 @@ from the respective clients (i.e. CI server, Developer machine etc.)
 The hub will connect one or more nodes
 that tests will be delegated to.
 
+## Router
+* Routes request each request to the corresponding handler.
+
+__Router__ is a point where all the requests to run a new session are sent.
+It forwards the request to __Distributor__ for further processing. It routes different
+requests based on where they are meant to be sent. It also helps to communicate with the
+Session Map. All the communication with a session is done via router.
+
+## Distributor
+* Contains information on nodes and its capabilities.
+* Selects node on which session is run.
+
+__Distributor__ is responsible for selecting the node on which your session will be run.
+It has all the information related to nodes and is aware of each node's capabilities.
+
+## SessionMap
+* Datastore mapping for session id and the node.
+
+__SessionMap__ is data store used to store the map of session id and the node on which the session is running.
+
 ## Nodes
 
 * Where the browsers live
