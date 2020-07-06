@@ -5,18 +5,6 @@ weight: 1
 
 ![Grid](/images/grid4.png)
 
-## Hub
-* Intermediary and manager
-* Accepts requests to run tests
-* Takes instructions from client and executes them remotely on the nodes
-* Manages threads
-
-A _Hub_ is a central point where all your tests are sent.
-Each Selenium Grid consists of exactly one hub. The hub needs to be reachable
-from the respective clients (i.e. CI server, Developer machine etc.)
-The hub will connect one or more nodes
-that tests will be delegated to.
-
 ## Router
 * Routes request each request to the corresponding handler.
 
@@ -43,7 +31,7 @@ __SessionMap__ is data store used to store the map of session id and the node on
 * Registers itself to the hub and communicates its capabilities
 * Receives requests from the hub and executes them
 
-_Nodes_ are different Selenium instances
+__Nodes__ are different Selenium instances
 that will execute tests on individual computer systems.
 There can be many nodes in a grid.
 The machines which are nodes do not need to be the same platform
@@ -52,3 +40,20 @@ A node on Windows might have the capability of
 offering Internet Explorer as a browser option,
 whereas this wouldn't be possible on Linux or Mac.
 
+## Hub
+* Accepts requests to run tests
+* Acts as a Router
+* Acts as a Distributor
+* Acts as a SessionMap
+* Takes instructions from client and executes them remotely on the nodes
+
+A __Hub__ is a central point where all your tests are sent.
+It allows you to run a Router, Distributor and a SessionMap on the same machine using a single command. 
+The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.). 
+It communicates with the node to run your selenium sessions. Instead of running each component separately, 
+you can use _hub_ role to run all 3 together.
+
+## Standalone
+
+A __Standalone__ version of Grid consists of all components running as single process, including the node.
+You can directly start running sessions after starting the standalone version of the Grid.
