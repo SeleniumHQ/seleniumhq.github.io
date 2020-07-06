@@ -545,7 +545,7 @@ que tiene el foco en el contexto de navegación actual.
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
           // Obtener el atributo del elemento activo actual
-          val attr = driver.switchTo().activeElement().getAttribute("title");
+          val attr = driver.switchTo().activeElement().getAttribute("title")
           print(attr);
       } finally {
           driver.quit()

@@ -131,11 +131,11 @@ opts.setPlatform('Windows XP');
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val chromeOptions = ChromeOptions()
-chromeOptions.setCapability("browserVersion", "67");
-chromeOptions.setCapability("platformName", "Windows XP");
+chromeOptions.setCapability("browserVersion", "67")
+chromeOptions.setCapability("platformName", "Windows XP")
 val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
 driver.get("http://www.google.com")
-driver.quit();
+driver.quit()
   {{< / code-panel >}}
 {{< / code-tab >}}
 

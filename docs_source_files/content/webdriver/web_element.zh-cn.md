@@ -538,7 +538,7 @@ namespace FindElementsFromElement {
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title");
+          val attr = driver.switchTo().activeElement().getAttribute("title")
           print(attr);
       } finally {
           driver.quit()
