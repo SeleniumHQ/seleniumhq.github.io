@@ -1,6 +1,6 @@
 ---
 title: "Komponenten"
-weight: 2
+weight: 1
 ---
 
 {{% notice info %}}
@@ -8,7 +8,7 @@ weight: 2
 auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
 zu übersetzen indem Du uns einen Pull Reqeust schickst!
  {{% /notice %}}
-![Grid](/images/grid.png)
+![Grid](/images/grid4.png)
 
 ## Hub
 * Intermediary and manager

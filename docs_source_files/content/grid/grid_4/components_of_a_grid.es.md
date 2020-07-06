@@ -3,7 +3,7 @@ title: "Componentes"
 weight: 1
 ---
 
-![Grid](/images/grid.png)
+![Grid](/images/grid4.png)
 
 ## Hub
 * Ejerce como mediador y administrador

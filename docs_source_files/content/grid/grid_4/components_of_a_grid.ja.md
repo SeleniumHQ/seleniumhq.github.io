@@ -3,7 +3,7 @@ title: "グリッドのコンポーネント"
 weight: 1
 ---
 
-![Grid](/images/grid.png)
+![Grid](/images/grid4.png)
 
 ## ハブ
 * 仲介者およびマネージャー

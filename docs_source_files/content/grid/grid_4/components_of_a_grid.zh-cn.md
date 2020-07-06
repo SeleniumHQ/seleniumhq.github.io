@@ -3,7 +3,7 @@ title: "服务网格的组件"
 weight: 1
 ---
 
-![Grid](/images/grid.png)
+![Grid](/images/grid4.png)
 
 ## 转发器(hub)
 * 中间人和管理者

@@ -9,7 +9,7 @@ English to Dutch. Do you speak Dutch? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-![Grid](/images/grid.png)
+![Grid](/images/grid4.png)
 
 ## Hub
 * Intermediary and manager
