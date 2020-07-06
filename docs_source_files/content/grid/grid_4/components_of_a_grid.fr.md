@@ -1,6 +1,6 @@
 ---
 title: "Composant"
-weight: 2
+weight: 1
 ---
 
 ![Grid](/images/grid.png)

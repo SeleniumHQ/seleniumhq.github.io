@@ -1,6 +1,6 @@
 ---
 title: "服务网格的组件"
-weight: 2
+weight: 1
 ---
 
 ![Grid](/images/grid.png)
