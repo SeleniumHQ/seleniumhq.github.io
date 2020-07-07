@@ -41,4 +41,32 @@ The structure of grid schema is as follows:
 
 ## Querying GraphQL
 
-Work in Progress
+The best way to query GraphQL is by using `curl` requests. GraphQL allows you to fetch only the data that you want, nothing more nothing less.
+
+Some of the example GraphQL queries are given below. You can build your own queries as you like.
+
+### Querying the number of `totalSlots` and `usedSlots` in the grid :
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data 'query { grid { totalSlots, usedSlots } }' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
+
+Generally on local machine the `<LINK_TO_GRAPHQL_ENDPOINT>` would be `http://localhost:4444/graphql`
+
+### Querying the capabilities of each node in the grid :
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data 'query { grid { nodes { capabilities } } }' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
+
+### Querying the status of each node in the grid :
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data 'query { grid { nodes { status } } }' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
+
+### Querying the URI of each node and the grid :
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data 'query { grid { nodes { uri }, uri } }' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
