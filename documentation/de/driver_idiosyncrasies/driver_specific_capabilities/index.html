@@ -12,21 +12,21 @@
     <title>Driver spezifische Capabilities :: Dokumentation für Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1594045406" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1594045406" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1594141650" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1594141650" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1594045406" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1594141650" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1594045406"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1594141650"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1594045406"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1594045406"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1594141650"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1594141650"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1594045406"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1594141650"></script>
 
     
   </div>
@@ -3262,21 +3262,21 @@ driver <span style="color:#719e07">=</span> await env.builder()
 
 <section id="kotlincode8" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.Capabilities;
-<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver;
-<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerOptions;
+<span style="color:#719e07">import</span> org.openqa.selenium.Capabilities
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerOptions
 
 <span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-    <span style="color:#719e07">val</span> options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    options.addCommandSwitches(<span style="color:#2aa198">&#34;-k&#34;</span>);
-    <span style="color:#719e07">val</span> driver = InternetExplorerDriver(options);
+    <span style="color:#719e07">val</span> options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    options.addCommandSwitches(<span style="color:#2aa198">&#34;-k&#34;</span>)
+    <span style="color:#719e07">val</span> driver = InternetExplorerDriver(options)
     <span style="color:#719e07">try</span> {
-        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
-        <span style="color:#719e07">val</span> caps = driver.getCapabilities();
-        println(caps);
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>)
+        <span style="color:#719e07">val</span> caps = driver.getCapabilities()
+        println(caps)
     } <span style="color:#719e07">finally</span> {
-        driver.quit();
+        driver.quit()
     }
 }
   </code></pre></div>
@@ -3427,20 +3427,20 @@ driver <span style="color:#719e07">=</span> await env.builder()
 
 <section id="kotlincode9" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.Capabilities;
-<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver;
-<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerOptions;
+<span style="color:#719e07">import</span> org.openqa.selenium.Capabilities
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerDriver
+<span style="color:#719e07">import</span> org.openqa.selenium.ie.InternetExplorerOptions
 
 <span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-    <span style="color:#719e07">val</span> options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    <span style="color:#719e07">val</span> driver = InternetExplorerDriver(options);
+    <span style="color:#719e07">val</span> options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    <span style="color:#719e07">val</span> driver = InternetExplorerDriver(options)
     <span style="color:#719e07">try</span> {
-        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>);
-        <span style="color:#719e07">val</span> caps = driver.getCapabilities();
+        driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com/ncr&#34;</span>)
+        <span style="color:#719e07">val</span> caps = driver.getCapabilities()
         println(caps)
     } <span style="color:#719e07">finally</span> {
-        driver.quit();
+        driver.quit()
     }
 }
   </code></pre></div>
@@ -3456,7 +3456,7 @@ driver <span style="color:#719e07">=</span> await env.builder()
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/de/driver_idiosyncrasies/driver_specific_capabilities/">
       “Driver spezifische Capabilities”
-    </a> was last updated on: 06 Jul 2020 19:52:57 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/8b0141cb68e1bf523850639dc7a82b2784ef7a1a">Modify: Cleaning up Kotlin code samples [deploy site] (8b0141c)</a>
+    </a> was last updated on: 07 Jul 2020 22:37:00 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1279227c0b81847448563a4650e9b17f94cbd882">Modify: Cleaning up kotlin code samples[deploy site] (1279227)</a>
 </h5>
         
         </div> 
@@ -4719,19 +4719,19 @@ driver <span style="color:#719e07">=</span> await env.builder()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1594045407"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1594141650"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1594045407"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1594045407"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1594141650"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1594141650"></script>
 
-    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1594045407" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1594045407"></script>
+    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1594141650" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1594141650"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
