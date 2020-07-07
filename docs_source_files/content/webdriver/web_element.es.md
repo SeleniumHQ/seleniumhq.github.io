@@ -546,7 +546,7 @@ que tiene el foco en el contexto de navegación actual.
 
           // Obtener el atributo del elemento activo actual
           val attr = driver.switchTo().activeElement().getAttribute("title")
-          print(attr);
+          print(attr)
       } finally {
           driver.quit()
       }

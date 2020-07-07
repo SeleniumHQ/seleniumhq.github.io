@@ -542,7 +542,7 @@ It is used to track (or) find DOM element which has the focus in the current bro
 
           // Get attribute of current active element
           val attr = driver.switchTo().activeElement().getAttribute("title")
-          print(attr);
+          print(attr)
       } finally {
           driver.quit()
       }
