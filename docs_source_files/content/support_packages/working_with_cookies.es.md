@@ -109,7 +109,7 @@ fun main() {
         driver.get("https://example.com")
 
         // Añade una cookie al contexto actual del navegador
-        driver.manage().addCookie(Cookie("key", "value"));
+        driver.manage().addCookie(Cookie("key", "value"))
     } finally {
         driver.quit()
     }
@@ -220,11 +220,11 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("foo", "bar"));
+        driver.manage().addCookie(Cookie("foo", "bar"))
 
         // Obtiene los detalles de la cookie con el nombre 'foo'
-        val cookie = driver.manage().getCookieNamed("foo");
-        println(cookie);
+        val cookie = driver.manage().getCookieNamed("foo")
+        println(cookie)
     } finally {
         driver.quit()
     }
@@ -341,12 +341,12 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // Obtiene todas las cookies disponibles
-        val cookies = driver.manage().cookies;
-        println(cookies);
+        val cookies = driver.manage().cookies
+        println(cookies)
     } finally {
         driver.quit()
     }
@@ -472,15 +472,15 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
         val cookie1 = Cookie("test2", "cookie2")
-        driver.manage().addCookie(cookie1);
+        driver.manage().addCookie(cookie1)
 
         // Borra la cookie con el nombre 'test1'
-        driver.manage().deleteCookieNamed("test1");
+        driver.manage().deleteCookieNamed("test1")
 
         // Borra una cookie pasando un objeto cookie del contexto actual del navegador. 
-        driver.manage().deleteCookie(cookie1);
+        driver.manage().deleteCookie(cookie1)
     } finally {
         driver.quit()
     }
@@ -589,11 +589,11 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // Borra todas las cookies
-        driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies()
     } finally {
         driver.quit()
     }
