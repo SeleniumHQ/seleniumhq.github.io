@@ -267,7 +267,8 @@ Selenium 允许您在多个操作系统上的多个浏览器上运行相同的�
       <description>在测试中, 您偶尔会需要验证某事物的颜色；问题是网络上的颜色定义不是个常量. 如果有一种简单的方法可以比较颜色的十六进制与RGB呈现, 或者颜色的RGBA与HSLA呈现, 岂不美哉?
 不用担心有一个解决方案：Color 类!
 首先, 您需要导入该类:
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // This feature is not supported in JS bindings    import org.openqa.selenium.support.Color    您现在可以开始创建颜色对象. 每个颜色对象都需要使用您颜色的字符串定义来创建. 支持的颜色定义如下:
+Java Python C# Ruby JavaScript Kotlin private final Color HEX_COLOUR = Color.</description>
     </item>
     
     <item>

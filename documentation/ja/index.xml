@@ -412,7 +412,8 @@ java -jar selenium-server-standalone.jar -role hub -hubConfig hubConfig.json -de
       <description>テストの一部として何かの色を検証したい場合があります。 問題は、ウェブ上の色の定義が一定ではないことです。 色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
 心配しないでください。解決策があります。: Color クラスです！
 まず、クラスをインポートする必要があります。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.Color    これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。</description>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // This feature is not supported in JS bindings    import org.openqa.selenium.support.Color    これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。
+Java Python C# Ruby JavaScript Kotlin private final Color HEX_COLOUR = Color.</description>
     </item>
     
     <item>
