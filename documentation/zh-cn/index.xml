@@ -770,7 +770,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.chrome.ChromeDr
       
       <guid>https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/</guid>
       <description>Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许我们向web浏览器提供虚拟设备输入.
-sendKeys 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列. Here are the list of possible keystrokes that WebDriver Supports.
+sendKeys 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列. 这里 是WebDriver能够支持的键位列表.
 Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.Keys; import org.openqa.selenium.WebDriver; import org.openqa.selenium.firefox.FirefoxDriver; public class HelloSelenium { public static void main(String[] args) { WebDriver driver = new FirefoxDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Enter text &amp;#34;q&amp;#34; and perform keyboard action &amp;#34;Enter&amp;#34;  driver.findElement(By.name(&amp;#34;q&amp;#34;)).sendKeys(&amp;#34;q&amp;#34; + Keys.ENTER); } finally { driver.quit(); } } }   from selenium import webdriver from selenium.</description>
     </item>
     
