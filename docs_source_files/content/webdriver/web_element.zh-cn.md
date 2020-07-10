@@ -407,10 +407,10 @@ namespace FindElementsFromElement {
       await driver.get('https://www.example.com');
 
       // Get element with tag name 'div'
-      let element = driver.findElement(By.tagName("div"));
+      let element = driver.findElement(By.css("div"));
 
       // Get all the elements available with tag name 'p'
-      let elements = await element.findElements(By.tagName("p"));
+      let elements = await element.findElements(By.css("p"));
       for(let e of elements) {
           console.log(await e.getText());
       }
@@ -538,8 +538,8 @@ namespace FindElementsFromElement {
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title");
-          print(attr);
+          val attr = driver.switchTo().activeElement().getAttribute("title")
+          print(attr)
       } finally {
           driver.quit()
       }

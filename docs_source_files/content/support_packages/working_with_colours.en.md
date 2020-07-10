@@ -27,7 +27,7 @@ from selenium.webdriver.support.color import Color
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
@@ -69,7 +69,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -106,7 +106,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -133,7 +133,7 @@ TRANSPARENT = Color.from_string('transparent')
 TRANSPARENT = Color.from_string('transparent')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
@@ -165,7 +165,7 @@ login_button_colour = Color.from_string(driver.find_element(id: 'login').css_val
 login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
@@ -191,7 +191,7 @@ assert login_button_background_colour == HOTPINK
 assert(login_button_background_colour == HOTPINK)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
@@ -221,7 +221,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not supported in JS bindings
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))

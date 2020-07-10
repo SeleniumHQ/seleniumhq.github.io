@@ -47,7 +47,18 @@ public void geoLocationTest(){
 // Please raise a PR to add code sample  
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR to add code sample  
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.devtools.DevTools
+
+fun main() {
+    val driver =  ChromeDriver()
+    val coordinates : HashMap<String, Any> = HashMap<String, Any> ()
+    coordinates.put("latitude", 50.2334)
+    coordinates.put("longitude", 0.2334)
+    coordinates.put("accuracy", 1)
+    driver.executeCdpCommand("Emulation.setGeolocationOverride", coordinates)
+    driver.get("https://www.google.com")
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}
 
