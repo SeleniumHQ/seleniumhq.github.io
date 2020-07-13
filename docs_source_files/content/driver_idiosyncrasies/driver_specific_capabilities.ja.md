@@ -476,21 +476,21 @@ driver = await env.builder()
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    options.addCommandSwitches("-k");
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    options.addCommandSwitches("-k")
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
         println(caps);
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
   {{< / code-panel >}}
@@ -576,20 +576,20 @@ driver = await env.builder()
           .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
         println(caps)
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
 
