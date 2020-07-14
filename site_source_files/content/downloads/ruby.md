@@ -9,6 +9,6 @@ AlphaClientVersion = "4.0.0alpha6"
 Author = "Selenium Team"
 DownloadLink = "http://rubygems.org/gems/selenium-webdriver"
 AlphaDownloadLink = "https://rubygems.org/gems/selenium-webdriver/versions/4.0.0.alpha6"
-ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/master/rb/CHANGES"
+ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/rb/CHANGES"
 DocsLink = "https://seleniumhq.github.io/selenium/docs/api/rb/index.html"
 +++
