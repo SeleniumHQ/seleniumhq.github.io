@@ -239,7 +239,8 @@ email_address_field= driver.find_element(:id, "email")
 password_field = driver.find_element(relative: {tag_name: 'input', below: email_address_field})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+let emailAddressField = await driver.findElement(By.id('email'));
+let passwordField = driver.findElements(withTagName('input').below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressField = driver.findElement(By.id("email"))
