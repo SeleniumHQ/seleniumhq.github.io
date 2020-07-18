@@ -244,8 +244,8 @@ email_address_field= driver.find_element(:id, "email")
 password_field = driver.find_element(relative: {tag_name: 'input', below: email_address_field})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-let emailAddressField = await driver.findElement(By.id('email'));
-let passwordField = driver.findElements(withTagName('input').below(emailAddressField));
+let emailAddressField = driver.findElement(By.id('email'));
+let passwordField = await driver.findElements(withTagName('input').below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressField = driver.findElement(By.id("email"))
@@ -283,7 +283,7 @@ cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_b
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 let submitButton = driver.findElement(By.id("submit"));
-let cancelButton = driver.findElements(withTagName("button").toLeftOf(submitButton));
+let cancelButton = await driver.findElements(withTagName("button").toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val submitButton= driver.findElement(By.id("submit"))
@@ -320,7 +320,8 @@ cancel_button = driver.find_element(:id, "cancel")
 submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_button})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+let cancelButton = driver.findElement(By.id('cancel'));
+let submitButton = await driver.findElements(withTagName('button').toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val cancelButton= driver.findElement(By.id("cancel"))
