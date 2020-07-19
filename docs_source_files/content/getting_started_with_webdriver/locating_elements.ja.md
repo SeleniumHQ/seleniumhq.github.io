@@ -372,7 +372,8 @@ email_address_label = driver.find_element(:id, "lbl-email")
 email_address_field = driver.find_element(relative: {tag_name: 'input', near: email_address_label})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR
+let emailAddressLabel = driver.findElement(By.id("lbl-email"));
+let emailAddressField = await driver.findElements(withTagName("input").near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val emailAddressLabel = driver.findElement(By.id("lbl-email"))
