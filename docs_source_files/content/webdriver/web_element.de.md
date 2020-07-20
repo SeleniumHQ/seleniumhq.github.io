@@ -541,8 +541,8 @@ It is used to track (or) find DOM element which has the focus in the current bro
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
   
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title");
-          print(attr);
+          val attr = driver.switchTo().activeElement().getAttribute("title")
+          print(attr)
       } finally {
           driver.quit()
       }

@@ -9,6 +9,6 @@ AlphaClientVersion = "4.0.0a6.post1"
 Author = "Selenium Team"
 DownloadLink = "http://pypi.python.org/pypi/selenium"
 AlphaDownloadLink = "https://pypi.org/project/selenium/4.0.0a6.post1/"
-ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/master/py/CHANGES"
+ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/py/CHANGES"
 DocsLink = "https://seleniumhq.github.io/selenium/docs/api/py/index.html"
 +++
