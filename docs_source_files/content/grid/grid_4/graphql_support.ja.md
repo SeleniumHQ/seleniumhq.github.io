@@ -3,6 +3,12 @@ title: "GraphQL querying support"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It gives users the power to ask for exactly what they need and nothing more.
 
 ## Enums
