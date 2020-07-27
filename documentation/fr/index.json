@@ -326,7 +326,7 @@
 	"title": "Grid 4",
 	"tags": [],
 	"description": "",
-	"content": " Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!\n Grid 4 Selenium Grid 4 is a fresh implementation and does not share the codebase the previous version had.\nGrid 4 has an approach to take advantage of a number of new technologies in order to facilitate scaling up, while still allowing local execution.\nTo get all the details of Grid 4 components, understand how it works, and how to set up you own, please browse the sections below.\n"
+	"content": "Grid 4 Selenium Grid 4 est une nouvelle implémentation et ne partage pas la base de code la version précédente avait.\nGrid 4 a une approche pour tirer parti d\u0026rsquo;un certain nombre de nouvelles technologies afin pour faciliter la mise à l'échelle, tout en permettant l\u0026rsquo;exécution locale.\nPour obtenir tous les détails des composants de Grid 4, comprendre comment cela fonctionne et comment définir vous possédez, veuillez parcourir les sections ci-dessous.\n"
 },
 {
 	"uri": "https://www.selenium.dev/documentation/fr/legacy_docs/selenium_ide/",
@@ -466,7 +466,7 @@
 	"title": "Grid",
 	"tags": [],
 	"description": "",
-	"content": " Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!\n Grid Selenium Grid allows the execution of WebDriver scripts on remote machines (virtual or real) by routing commands sent by the client to remote browser instances. It aims to provide an easy way to run tests in parallel on multiple machines.\nSelenium Grid allows us to run tests in parallel on multiple machines, and to manage different browser versions and browser configurations centrally (instead of in each individual test).\nSelenium Grid is not a silver bullet. It solves a subset of common delegation and distribution problems, but will for example not manage your infrastructure, and might not suit your specific needs.\nPlease note Grid 3 is not supported anymore and the Selenium project recommends to use Grid 4\n"
+	"content": "Grid Selenium Grid permet l\u0026rsquo;exécution de scripts WebDriver sur des machines distantes (ou réel) en acheminant les commandes envoyées par le client vers des instances de navigateur distantes. Il vise à fournir un moyen simple d\u0026rsquo;exécuter des tests en parallèle sur plusieurs machines.\nSelenium Grid nous permet d\u0026rsquo;exécuter des tests en parallèle sur plusieurs machines, et de gérer les différentes versions et configurations de navigateurs de manière centralisée (au lieu de dans chaque test individuel).\nSelenium Grid n\u0026rsquo;est pas une solution miracle. Il résout un sous-ensemble de problèmes courants de délégation et de distribution, mais ne gérera par exemple pas votre infrastructure, et peut ne pas répondre à vos besoins spécifiques.\nVeuillez noter que Grid 3 n\u0026rsquo;est plus pris en charge et le projet Selenium recommande d\u0026rsquo;utiliser Grid 4\n"
 },
 {
 	"uri": "https://www.selenium.dev/documentation/fr/guidelines_and_recommendations/fresh_browser_per_test/",
