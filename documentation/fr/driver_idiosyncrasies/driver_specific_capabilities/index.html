@@ -12,21 +12,21 @@
     <title>Capabilities spécifiques du Driver :: Documentation Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1595861322" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1595861322" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1596128150" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1596128150" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1595861322" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1596128150" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1595861322"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1596128150"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1595861322"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1595861322"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1596128150"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1596128150"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1595861322"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1596128150"></script>
 
     
   </div>
@@ -2612,14 +2612,16 @@ options.waitForUploadDialogUpTo(Duration.ofSeconds(<span style="color:#2aa198">2
 </div>
 </div>
 <h3 id="ensurecleansession">ensureCleanSession</h3>
-<p>When set to <code>true</code>, this capability clears the <em>Cache,
-Browser History and Cookies</em> for all running instances
-of InternetExplorer including those started manually
-or by the driver. By default, it is set to <code>false</code>.</p>
-<p>Using this capability will cause performance drop while
-launching the browser, as the driver will wait until the cache
-gets cleared before launching the IE browser.</p>
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>Lorsqu&rsquo;elle est définie sur <code>true</code>, cette fonctionnalité
+efface le <em>Cache, Historique du navigateur et cookies</em>
+pour toutes les instances en cours d&rsquo;exécution
+d&rsquo;InternetExplorer, y compris ceux démarrés manuellement
+ou par le chauffeur. Par défaut, il est défini sur <code>false</code>.</p>
+<p>L&rsquo;utilisation de cette fonctionnalité
+entraînera une baisse des performances
+lancement du navigateur, car le pilote
+attendra que le cache est effacé avant de lancer le navigateur IE.</p>
+<p>Cette capacité accepte une valeur booléenne comme paramètre.</p>
 
 
 
@@ -2730,10 +2732,11 @@ options.destructivelyEnsureCleanSession()
 </div>
 </div>
 <h3 id="ignorezoomsetting">ignoreZoomSetting</h3>
-<p>InternetExplorer driver expects the browser zoom level to be 100%,
-else the driver will throw an exception. This default behaviour
-can be disabled by setting the <em>ignoreZoomSetting</em> to <em>true</em>.</p>
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>Le pilote InternetExplorer s&rsquo;attend à ce que le
+niveau de zoom du navigateur soit de 100%,
+sinon le pilote lèvera une exception. Ce comportement par défaut
+peut être désactivé en définissant <em>ignoreZoomSetting</em> sur <em>true</em>.</p>
+<p>Cette capacité accepte une valeur booléenne comme paramètre.</p>
 
 
 
@@ -2844,18 +2847,21 @@ options.ignoreZoomSettings()
 </div>
 </div>
 <h3 id="ignoreprotectedmodesettings">ignoreProtectedModeSettings</h3>
-<p>Whether to skip the <em>Protected Mode</em> check while launching
-a new IE session.</p>
-<p>If not set and <em>Protected Mode</em> settings are not same for
-for all zones, an exception will be thrown by the driver.</p>
-<p>If capability is set to <code>true</code>, tests may
-become flaky, unresponsive, or browsers may hang.
-However, this is still by far a second-best choice,
-and the first choice should <em>always</em> be to actually
-set the Protected Mode settings of each zone manually.
-If a user is using this property,
-only a &ldquo;best effort&rdquo; at support will be given.</p>
-<p>This capability accepts a Boolean value as parameter.</p>
+<p>Ignorer la vérification du <em>Protected Mode</em> lors du lancement
+une nouvelle session IE.</p>
+<p>S&rsquo;il n&rsquo;est pas défini et que les paramètres du
+mode protégé ne sont pas les mêmes pour
+toutes les zones, une exception sera levée par le pilote.</p>
+<p>Si la capabilité est définie sur <code>true</code>,
+les tests peuvent deviennent irréguliers,
+ne répondent pas ou les navigateurs peuvent se bloquer.
+Cependant, c&rsquo;est toujours de loin un deuxième meilleur choix,
+et le premier choix devrait <em>toujours</em> être de réellement
+définissez manuellement les paramètres
+du mode protégé de chaque zone.
+Si un utilisateur utilise cette propriété,
+seul un &ldquo;meilleur effort&rdquo; de soutien sera donné.</p>
+<p>Cette capacité accepte une valeur booléenne comme paramètre.</p>
 
 
 
@@ -3459,7 +3465,7 @@ driver <span style="color:#719e07">=</span> await env.builder()
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/fr/driver_idiosyncrasies/driver_specific_capabilities/">
       “Capabilities spécifiques du Driver”
-    </a> was last updated on: 27 Jul 2020 20:18:05 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/1265b0ac4ad38e843cde929a7f2bc6ec03b8fe5c">Modify: Translating doc [EN]-&gt;[FR] [deploy site] (1265b0a)</a>
+    </a> was last updated on: 30 Jul 2020 22:25:15 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a31169b60a79b967e7c13ff70faa639f5df4bfe4">Modify: doc translation [deploy site] (a31169b)</a>
 </h5>
         
         </div> 
@@ -4722,19 +4728,19 @@ driver <span style="color:#719e07">=</span> await env.builder()
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1595861322"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1596128150"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1595861322"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1595861322"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1596128150"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1596128150"></script>
 
-    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1595861322" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1595861322"></script>
+    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1596128150" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1596128150"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
