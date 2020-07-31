@@ -1104,3 +1104,18 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
   {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
 {{< / code-tab >}}
+
+### TakeScreenshot
+
+Used to capture screenshot for current browsing context. 
+The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+returns screenshot which is encoded in Base64 format.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="python" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="javascript" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+{{< / code-tab >}}
