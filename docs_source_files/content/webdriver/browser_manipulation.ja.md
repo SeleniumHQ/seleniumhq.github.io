@@ -1063,6 +1063,21 @@ returns screenshot which is encoded in Base64 format.
   {{< code-panel language="python" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // Code sample not available please raise a PR {{< / code-panel >}}
-  {{< code-panel language="javascript" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="javascript" >}} 
+let {Builder} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    await driver.get('https://www.example.com');
+    // Returns base64 encoded string
+    let encodedString = driver.takeScreenshot();
+    await fs.writeFileSync('./image.png', encodedString, 'base64');
+    await driver.quit();
+}())
+  {{< / code-panel >}}
   {{< code-panel language="kotlin" >}} // Code sample not available please raise a PR {{< / code-panel >}}
 {{< / code-tab >}}
