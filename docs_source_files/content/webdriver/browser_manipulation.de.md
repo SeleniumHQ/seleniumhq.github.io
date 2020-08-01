@@ -1113,7 +1113,22 @@ The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-sc
 returns screenshot which is encoded in Base64 format.
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="java" >}}
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.*;
+import org.openqa.selenium.*;
+  
+public class SeleniumTakeScreenshot {
+    public static void main(String args[]) throws IOException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.example.com");
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./image.png"));
+        driver.quit();
+    }
+}
+  {{< / code-panel >}}
   {{< code-panel language="python" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // Code sample not available please raise a PR {{< / code-panel >}}
