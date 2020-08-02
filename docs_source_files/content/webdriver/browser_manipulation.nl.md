@@ -1125,7 +1125,20 @@ public class SeleniumTakeScreenshot {
     }
 }
   {{< / code-panel >}}
-  {{< code-panel language="python" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="python" >}} 
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+# Returns and base64 encoded string into image
+driver.save_screenshot('./image.png')
+
+driver.quit()
+
+{{< / code-panel >}}
   {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // Code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="javascript" >}} 
