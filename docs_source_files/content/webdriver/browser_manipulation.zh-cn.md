@@ -1071,7 +1071,18 @@ driver.save_screenshot('./image.png')
 driver.quit()
 {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} 
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://example.com/'
+
+  # Takes and Stores the screenshot in specified path
+  driver.save_screenshot('./image.png')
+
+end   
+  {{< / code-panel >}}
   {{< code-panel language="javascript" >}} 
 let {Builder} = require('selenium-webdriver');
 let fs = require('fs');
