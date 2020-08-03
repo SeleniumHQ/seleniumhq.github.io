@@ -27,7 +27,7 @@ jobs:
         with:
           personal_token: ${{ secrets.SELENIUM_CI_TOKEN }}
           publish_dir: ./site_source_files/public
-          publish_branch: master
+          publish_branch: publish
           user_name: 'Selenium CI Bot'
           user_email: 'selenium-ci@users.noreply.github.com'
           commit_message: ${{ github.event.head_commit.message }}
