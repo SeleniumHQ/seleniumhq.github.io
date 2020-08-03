@@ -792,7 +792,7 @@ Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.
 步骤 1: Fork 在 Github上Fork本项目, 并check out到您的本地
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git % cd seleniumhq.github.io 依赖: Hugo 我们使用 Hugo 来构建和渲染网站和文档. 需要在提交任何更改之前, 在本地验证所有内容, 请安装 Hugo, 熟悉它并运行本地服务器 以在本地呈现该网站(详细说明可在后续步骤中找到).
 步骤 2: 分支 创建一个功能分支并开始工作:
-% git checkout -b my-feature-branch 我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.</description>
+% git checkout -b my-feature-branch 我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在trunk之上.</description>
     </item>
     
   </channel>

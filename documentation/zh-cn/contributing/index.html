@@ -12,21 +12,21 @@
     <title>为 Selenium 文档做贡献 :: Selenium 文档</title>
 
     
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1596432808" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1596432808" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/nucleus.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/fontawesome-all.min.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hybrid.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/featherlight.min.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/perfect-scrollbar.min.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/auto-complete.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/atom-one-dark-reasonable.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme.css?1596440087" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/hugo-theme.css?1596440087" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1596432808" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/zh-cn/css/theme-selenium.css?1596440087" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1596432808"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery-3.3.1.min.js?1596440087"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1596432808"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1596432808"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/lunr.min.js?1596440087"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/auto-complete.js?1596440087"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/zh-cn\/zh-cn";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1596432808"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/zh-cn/js/search.js?1596440087"></script>
 
     
   </div>
@@ -2177,7 +2177,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/site/edit/master/docs_source_files/content//CONTRIBUTING.zh-cn.md" target="blank">
+                    <a class="github-link" title='Edit this page' href="https://github.com/SeleniumHQ/site/edit/trunk/docs_source_files/content//CONTRIBUTING.zh-cn.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Edit this page</span>
                     </a>
@@ -2269,7 +2269,7 @@
 <h3 id="步骤-2-分支">步骤 2: 分支</h3>
 <p>创建一个功能分支并开始工作:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git checkout -b my-feature-branch
-</code></pre></div><p>我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.</p>
+</code></pre></div><p>我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在trunk之上.</p>
 <h3 id="步骤-3-做出改变">步骤 3: 做出改变</h3>
 <p>仓库包含站点和文档, 这是两个独立的Hugo项目.
 如果要更改站点, 请在 <code>site_source_files</code> 目录上工作.
@@ -2339,7 +2339,7 @@ Fixes #141
 <h3 id="步骤-5-rebase">步骤 5: Rebase</h3>
 <p>使用 <code>git rebase</code> (并非 <code>git merge</code>) 同步实时的工作.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 </code></pre></div><h3 id="步骤-6-测试">步骤 6: 测试</h3>
 <p>永远记住要<a href="https://gohugo.io/getting-started/usage/#livereload">运行本地服务</a>,
 这样做可以确保您的更改没有破坏任何事情.</p>
@@ -2352,8 +2352,8 @@ Fixes #141
 如果有评论要解决, 请在新提交(最好是<a href="http://git-scm.com/docs/git-commit">修正</a>)中应用您的更改,
 然后推push到同一分支.</p>
 <h3 id="步骤-8-集成">步骤 8: 集成</h3>
-<p>代码审查完成后, 提交者将获取您的PR并将其集成到项目的master分支中.
-因为我们希望在master分支上保持线性历史记录,
+<p>代码审查完成后, 提交者将获取您的PR并将其集成到项目的trunk分支中.
+因为我们希望在trunk分支上保持线性历史记录,
 所以我们通常会squash并rebase您的分支历史记录.</p>
 <h2 id="沟通">沟通</h2>
 <p>有关如何与项目贡献者和整个社区进行沟通的所有详细信息,
@@ -2367,7 +2367,7 @@ Fixes #141
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/zh-cn/contributing/">
       “为 Selenium 文档做贡献”
-    </a> was last updated on: 03 Aug 2020 11:02:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5430db29f41e85ea3e746fbe66726c5c5193907c">Add: rb code samples for take screenshot [deploy site] (5430db2)</a>
+    </a> was last updated on: 03 Aug 2020 09:34:18 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ce320551b7b3bb47d5cca09451c52d61bb116c90">Removing mentions to master and move to publish branch [deploy site] (ce32055)</a>
 </h5>
         
         </div> 
@@ -3620,19 +3620,19 @@ Fixes #141
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1596432808"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/clipboard.min.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.min.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/perfect-scrollbar.jquery.min.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/jquery.sticky.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/featherlight.min.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/highlight.pack.js?1596440087"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1596432808"></script>
-    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1596432808"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/modernizr.custom-3.6.0.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/learn.js?1596440087"></script>
+    <script src="https://www.selenium.dev/documentation/zh-cn/js/hugo-learn.js?1596440087"></script>
 
-    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1596432808" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1596432808"></script>
+    <link href="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.css?1596440087" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/zh-cn/mermaid/mermaid.js?1596440087"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

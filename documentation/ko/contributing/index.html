@@ -12,21 +12,21 @@
     <title>Selenium 사이트와 문서에 기여하기 :: Selenium 문서</title>
 
     
-    <link href="https://www.selenium.dev/documentation/ko/css/nucleus.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/fontawesome-all.min.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/hybrid.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/featherlight.min.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/auto-complete.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/theme.css?1596432811" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/ko/css/hugo-theme.css?1596432811" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/nucleus.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/fontawesome-all.min.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/hybrid.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/featherlight.min.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/perfect-scrollbar.min.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/auto-complete.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/atom-one-dark-reasonable.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/theme.css?1596440089" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/hugo-theme.css?1596440089" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/ko/css/theme-selenium.css?1596432811" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/ko/css/theme-selenium.css?1596440089" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1596432811"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/jquery-3.3.1.min.js?1596440089"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/lunr.min.js?1596432811"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/auto-complete.js?1596432811"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/lunr.min.js?1596440089"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/auto-complete.js?1596440089"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/ko\/ko";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/search.js?1596432811"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/ko/js/search.js?1596440089"></script>
 
     
   </div>
@@ -2177,7 +2177,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='이 페이지 편집' href="https://github.com/SeleniumHQ/site/edit/master/docs_source_files/content//CONTRIBUTING.ko.md" target="blank">
+                    <a class="github-link" title='이 페이지 편집' href="https://github.com/SeleniumHQ/site/edit/trunk/docs_source_files/content//CONTRIBUTING.ko.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">이 페이지 편집</span>
                     </a>
@@ -2260,7 +2260,7 @@
 <h3 id="2-단계-branch">2 단계: Branch</h3>
 <p>기능을 추가한 branch를 생성하고 개발을 시작하세요:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git checkout -b my-feature-branch
-</code></pre></div><p>우리는 HEAD-based development 지향하고 있어, 모든 변경사항은 master에 직접 적용됩니다.</p>
+</code></pre></div><p>우리는 HEAD-based development 지향하고 있어, 모든 변경사항은 trunk에 직접 적용됩니다.</p>
 <h3 id="3-단계-make-changes">3 단계: Make changes</h3>
 <p>Repository는 사이트와 문서의 서로 다른 2개의 Hugo 프로젝트로 구성되어 있습니다.
 사이트를 변경하시려면 <code>site_source_files</code> 디렉토리에서 작업해주시기 바랍니다.
@@ -2317,7 +2317,7 @@ Fixes #141
 <h3 id="5-단계--rebase">5 단계 : Rebase</h3>
 <p>작업을 동기화하려면 <code>git rebase</code>를 사용하십시오. (<code>git merge</code>가 아니라)</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 </code></pre></div><h3 id="6-단계-테스트">6 단계: 테스트</h3>
 <p>항상 로컬 서버를 실행하는 것을 기억하십시오. 그러면 당신의 변경 사항들이 아무것도 안 건드리고 안전합니다.</p>
 <h3 id="7-단계--push">7 단계 : Push</h3>
@@ -2326,7 +2326,7 @@ Fixes #141
 <p>Pull request 는 몇 일 내에 확인됩니다. 주소에 코멘트들이 있다면, 새로운 커밋에 변경 사항(가급적
 <a href="http://git-scm.com/docs/git-commit">fixups</a>)을 적용하고 같은 branch 에 push 해주시기 바랍니다.</p>
 <h3 id="8-단계--integration">8 단계 : Integration</h3>
-<p>코드 확인이 완료되었으면, committer는 당신의 PR을 저장소의 master branch에 통합할 것입니다. 왜냐하면 우리는 master branch에 순차적인 이력을 유지하고 싶기 때문에, 우리는 당신의 branch 이력은 squash나 rebase 할 것입니다.</p>
+<p>코드 확인이 완료되었으면, committer는 당신의 PR을 저장소의 trunk branch에 통합할 것입니다. 왜냐하면 우리는 trunk branch에 순차적인 이력을 유지하고 싶기 때문에, 우리는 당신의 branch 이력은 squash나 rebase 할 것입니다.</p>
 <h2 id="커뮤니케이션">커뮤니케이션</h2>
 <p>프로젝트 기여자들과 커뮤니티와 어떻게 소통할지에 대한 자세한 사항은 <a href="https://selenium.dev/support">https://selenium.dev/support</a> 에서 찾을 수 있습니다.</p>
 
@@ -2338,7 +2338,7 @@ Fixes #141
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/ko/contributing/">
       “Selenium 사이트와 문서에 기여하기”
-    </a> was last updated on: 03 Aug 2020 11:02:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5430db29f41e85ea3e746fbe66726c5c5193907c">Add: rb code samples for take screenshot [deploy site] (5430db2)</a>
+    </a> was last updated on: 03 Aug 2020 09:34:18 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ce320551b7b3bb47d5cca09451c52d61bb116c90">Removing mentions to master and move to publish branch [deploy site] (ce32055)</a>
 </h5>
         
         </div> 
@@ -3591,19 +3591,19 @@ Fixes #141
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/ko/js/clipboard.min.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/jquery.sticky.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/featherlight.min.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/highlight.pack.js?1596432811"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/clipboard.min.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/perfect-scrollbar.min.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/perfect-scrollbar.jquery.min.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/jquery.sticky.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/featherlight.min.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/highlight.pack.js?1596440089"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/learn.js?1596432811"></script>
-    <script src="https://www.selenium.dev/documentation/ko/js/hugo-learn.js?1596432811"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/modernizr.custom-3.6.0.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/learn.js?1596440089"></script>
+    <script src="https://www.selenium.dev/documentation/ko/js/hugo-learn.js?1596440089"></script>
 
-    <link href="https://www.selenium.dev/documentation/ko/mermaid/mermaid.css?1596432811" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/ko/mermaid/mermaid.js?1596432811"></script>
+    <link href="https://www.selenium.dev/documentation/ko/mermaid/mermaid.css?1596440089" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/ko/mermaid/mermaid.js?1596440089"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

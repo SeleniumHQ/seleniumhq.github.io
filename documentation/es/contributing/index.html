@@ -12,21 +12,21 @@
     <title>Contributing to the Selenium Site &amp; Documentation :: Documentación de Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/es/css/nucleus.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hybrid.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/featherlight.min.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/auto-complete.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/theme.css?1596432806" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hugo-theme.css?1596432806" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/nucleus.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/hybrid.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/featherlight.min.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/auto-complete.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/theme.css?1596440085" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/hugo-theme.css?1596440085" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/es/css/theme-selenium.css?1596432806" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/es/css/theme-selenium.css?1596440085" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1596432806"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1596440085"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/lunr.min.js?1596432806"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/auto-complete.js?1596432806"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/lunr.min.js?1596440085"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/auto-complete.js?1596440085"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/es\/es";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/search.js?1596432806"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/search.js?1596440085"></script>
 
     
   </div>
@@ -2177,7 +2177,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Editar esta página' href="https://github.com/SeleniumHQ/site/edit/master/docs_source_files/content//CONTRIBUTING.es.md" target="blank">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/SeleniumHQ/site/edit/trunk/docs_source_files/content//CONTRIBUTING.es.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Editar esta página</span>
                     </a>
@@ -2283,7 +2283,7 @@ next steps).</p>
 <p>Create a feature branch and start hacking:</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git checkout -b my-feature-branch
 </code></pre></div><p>We practice HEAD-based development, which means all changes are applied
-directly on top of master.</p>
+directly on top of <code>trunk</code>.</p>
 <h3 id="step-3-make-changes">Step 3: Make changes</h3>
 <p>The repository contains the site and docs, which are two separate Hugo
 projects. If you want to make changes to the site, work on the
@@ -2350,7 +2350,7 @@ run <code>git shortlog</code> or <code>git log --oneline</code>.</p>
 <h3 id="step-5-rebase">Step 5: Rebase</h3>
 <p>Use <code>git rebase</code> (not <code>git merge</code>) to sync your work from time to time.</p>
 <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">% git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 </code></pre></div><h3 id="step-6-test">Step 6: Test</h3>
 <p>Always remember to <a href="https://gohugo.io/getting-started/usage/#livereload">run the local server</a>,
 with this you can be safe that your changes have not broken anything.</p>
@@ -2365,8 +2365,8 @@ comments to address, apply your changes in new commits (preferably
 branch.</p>
 <h3 id="step-8-integration">Step 8: Integration</h3>
 <p>When code review is complete, a committer will take your PR and
-integrate it on the repository&rsquo;s master branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
+integrate it on the repository&rsquo;s trunk branch. Because we like to keep a
+linear history on the trunk branch, we will normally squash and rebase
 your branch history.</p>
 <h2 id="communication">Communication</h2>
 <p>All details on how to communicate with the project contributors
@@ -2380,7 +2380,7 @@ and the community overall can be found at <a href="https://selenium.dev/support"
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/es/contributing/">
       “Contributing to the Selenium Site &amp; Documentation”
-    </a> was last updated on: 03 Aug 2020 11:02:54 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/5430db29f41e85ea3e746fbe66726c5c5193907c">Add: rb code samples for take screenshot [deploy site] (5430db2)</a>
+    </a> was last updated on: 03 Aug 2020 09:34:18 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ce320551b7b3bb47d5cca09451c52d61bb116c90">Removing mentions to master and move to publish branch [deploy site] (ce32055)</a>
 </h5>
         
         </div> 
@@ -3633,19 +3633,19 @@ and the community overall can be found at <a href="https://selenium.dev/support"
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/es/js/clipboard.min.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/featherlight.min.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/highlight.pack.js?1596432806"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/clipboard.min.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/featherlight.min.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/highlight.pack.js?1596440085"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/learn.js?1596432806"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/hugo-learn.js?1596432806"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/learn.js?1596440085"></script>
+    <script src="https://www.selenium.dev/documentation/es/js/hugo-learn.js?1596440085"></script>
 
-    <link href="https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1596432806" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1596432806"></script>
+    <link href="https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1596440085" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1596440085"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
