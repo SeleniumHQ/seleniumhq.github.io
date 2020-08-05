@@ -12,21 +12,21 @@
     <title>Browser Manipulation :: Dokumentation für Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1596440082" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1596440082" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/nucleus.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/fontawesome-all.min.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hybrid.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/featherlight.min.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/perfect-scrollbar.min.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/auto-complete.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/atom-one-dark-reasonable.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/theme.css?1596641158" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/hugo-theme.css?1596641158" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1596440082" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/de/css/theme-selenium.css?1596641158" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1596440082"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery-3.3.1.min.js?1596641158"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1596440082"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1596440082"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/lunr.min.js?1596641158"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/auto-complete.js?1596641158"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/de\/de";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1596440082"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/de/js/search.js?1596641158"></script>
 
     
   </div>
@@ -2265,6 +2265,7 @@
         <li><a href="#minimize-window">Minimize window</a></li>
         <li><a href="#fullscreen-window">Fullscreen window</a></li>
         <li><a href="#takescreenshot">TakeScreenshot</a></li>
+        <li><a href="#takeelementscreenshot">TakeElementScreenshot</a></li>
       </ul>
     </li>
   </ul>
@@ -5131,6 +5132,86 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 </section>
 </div>
 </div>
+<h3 id="takeelementscreenshot">TakeElementScreenshot</h3>
+<p>Used to capture screenshot of an element for current browsing context.
+The WebDriver endpoint <a href="https://www.w3.org/TR/webdriver/#take-element-screenshot">screenshot</a>
+returns screenshot which is encoded in Base64 format.</p>
+
+
+
+<div class="tabset">
+  
+    
+      <input type="radio" name="tabsetcode27" id="tab0code27" aria-controls="javacode27" checked>
+    
+    <label for="tab0code27">Java</label>
+    
+    
+      <input type="radio" name="tabsetcode27" id="tab1code27" aria-controls="pythoncode27">
+    
+    <label for="tab1code27">Python</label>
+    
+    
+      <input type="radio" name="tabsetcode27" id="tab2code27" aria-controls="cscode27">
+    
+    <label for="tab2code27">C#</label>
+    
+    
+      <input type="radio" name="tabsetcode27" id="tab3code27" aria-controls="rubycode27">
+    
+    <label for="tab3code27">Ruby</label>
+    
+    
+      <input type="radio" name="tabsetcode27" id="tab4code27" aria-controls="javascriptcode27">
+    
+    <label for="tab4code27">JavaScript</label>
+    
+    
+      <input type="radio" name="tabsetcode27" id="tab5code27" aria-controls="kotlincode27">
+    
+    <label for="tab5code27">Kotlin</label>
+      
+  <div class="tab-panels">
+  
+
+
+<section id="javacode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"> <span style="color:#719e07">//</span> code sample not available please raise a PR </code></pre></div>
+</section>
+  
+
+
+<section id="pythoncode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"> <span style="color:#719e07">//</span> code sample <span style="color:#719e07">not</span> available please <span style="color:#719e07">raise</span> a PR </code></pre></div>
+</section>
+  
+
+
+<section id="csharpcode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"> <span style="color:#586e75">// code sample not available please raise a PR 
+</span></code></pre></div>
+</section>
+  
+
+
+<section id="rubycode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"> <span style="color:#dc322f">//</span> code sample <span style="color:#719e07">not</span> available please <span style="color:#719e07">raise</span> a <span style="color:#cb4b16">PR</span> </code></pre></div>
+</section>
+  
+
+
+<section id="javascriptcode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#586e75">// code sample not available please raise a PR 
+</span></code></pre></div>
+</section>
+  
+
+
+<section id="kotlincode27" class="tab-panel">
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin"> <span style="color:#586e75">// code sample not available please raise a PR </span></code></pre></div>
+</section>
+</div>
+</div>
 
 
 <footer class=" footline" >
@@ -5140,7 +5221,7 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/de/webdriver/browser_manipulation/">
       “Browser Manipulation”
-    </a> was last updated on: 03 Aug 2020 09:34:18 &#43;0200: <a href="https://github.com/SeleniumHQ/site/commit/ce320551b7b3bb47d5cca09451c52d61bb116c90">Removing mentions to master and move to publish branch [deploy site] (ce32055)</a>
+    </a> was last updated on: 05 Aug 2020 20:55:40 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/d9ebe8c733df004028cfcf962870169aab8f4366">content for takeelementscreenshot (#486)[deploy site] (d9ebe8c)</a>
 </h5>
         
         </div> 
@@ -6403,19 +6484,19 @@ driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1596440082"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/clipboard.min.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.min.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/perfect-scrollbar.jquery.min.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/jquery.sticky.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/featherlight.min.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/highlight.pack.js?1596641158"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1596440082"></script>
-    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1596440082"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/modernizr.custom-3.6.0.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/learn.js?1596641158"></script>
+    <script src="https://www.selenium.dev/documentation/de/js/hugo-learn.js?1596641158"></script>
 
-    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1596440082" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1596440082"></script>
+    <link href="https://www.selenium.dev/documentation/de/mermaid/mermaid.css?1596641158" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/de/mermaid/mermaid.js?1596641158"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
