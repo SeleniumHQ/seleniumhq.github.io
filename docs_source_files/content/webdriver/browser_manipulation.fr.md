@@ -1212,6 +1212,22 @@ public class SeleniumelementTakeScreenshot {
   {{< code-panel language="python" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
-  {{< code-panel language="javascript" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder, By} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+   let driver = await new Builder()
+       .forBrowser('chrome')
+       .build();
+
+   await driver.get('https://www.example.com');
+   let ele = await driver.findElement(By.css("h1"));
+   // Captures the element screenshot
+   let encodedString = await ele.takeScreenshot(true);
+   await fs.writeFileSync('./image.png', encodedString, 'base64');
+   await driver.quit();
+}())
+  {{< / code-panel >}}
   {{< code-panel language="kotlin" >}} // code sample not available please raise a PR {{< / code-panel >}}
 {{< / code-tab >}}
