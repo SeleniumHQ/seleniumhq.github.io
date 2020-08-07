@@ -12,21 +12,21 @@
     <title>Manipulation du navigateur :: Documentation Selenium</title>
 
     
-    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1596733711" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1596733711" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/nucleus.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/fontawesome-all.min.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hybrid.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/featherlight.min.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/perfect-scrollbar.min.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/auto-complete.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/atom-one-dark-reasonable.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme.css?1596813484" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/hugo-theme.css?1596813484" rel="stylesheet">
     
-    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1596733711" rel="stylesheet">
+    <link href="https://www.selenium.dev/documentation/fr/css/theme-selenium.css?1596813484" rel="stylesheet">
     
     
 
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1596733711"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery-3.3.1.min.js?1596813484"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -71,14 +71,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1596733711"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1596733711"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/lunr.min.js?1596813484"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/auto-complete.js?1596813484"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/www.selenium.dev\/documentation\/fr\/fr";
     
 </script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1596733711"></script>
+<script type="text/javascript" src="https://www.selenium.dev/documentation/fr/js/search.js?1596813484"></script>
 
     
   </div>
@@ -5175,7 +5175,6 @@ returns screenshot which is encoded in Base64 format.</p>
 
 <section id="javacode27" class="tab-panel">
   <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-  
 <span style="color:#719e07">import</span> org.apache.commons.io.FileUtils<span style="color:#719e07">;</span>
 <span style="color:#719e07">import</span> org.openqa.selenium.*<span style="color:#719e07">;</span>
 <span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
@@ -5183,17 +5182,15 @@ returns screenshot which is encoded in Base64 format.</p>
 <span style="color:#719e07">import</span> java.io.IOException<span style="color:#719e07">;</span>
 
 <span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">SeleniumelementTakeScreenshot</span> <span style="color:#719e07">{</span>
-    <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String args<span style="color:#719e07">[])</span> <span style="color:#268bd2">throws</span> IOException <span style="color:#719e07">{</span>
-        WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
-        driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;http://www.example.com&#34;</span><span style="color:#719e07">);</span>
-        WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;#Element&#34;</span><span style="color:#719e07">));</span>
-        File scrFile <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>getScreenshotAs<span style="color:#719e07">(</span>OutputType<span style="color:#719e07">.</span>FILE<span style="color:#719e07">);</span>
-        FileUtils<span style="color:#719e07">.</span>copyFile<span style="color:#719e07">(</span>scrFile<span style="color:#719e07">,</span> <span style="color:#719e07">new</span> File<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;./image.png&#34;</span><span style="color:#719e07">));</span>
-        driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-
-    <span style="color:#719e07">}</span>
- <span style="color:#719e07">}</span> 
- 
+  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String args<span style="color:#719e07">[])</span> <span style="color:#268bd2">throws</span> IOException <span style="color:#719e07">{</span>
+    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
+    driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.example.com&#34;</span><span style="color:#719e07">);</span>
+    WebElement element <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>cssSelector<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;h1&#34;</span><span style="color:#719e07">));</span>
+    File scrFile <span style="color:#719e07">=</span> element<span style="color:#719e07">.</span>getScreenshotAs<span style="color:#719e07">(</span>OutputType<span style="color:#719e07">.</span>FILE<span style="color:#719e07">);</span>
+    FileUtils<span style="color:#719e07">.</span>copyFile<span style="color:#719e07">(</span>scrFile<span style="color:#719e07">,</span> <span style="color:#719e07">new</span> File<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;./image.png&#34;</span><span style="color:#719e07">));</span>
+    driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
+  <span style="color:#719e07">}</span>
+<span style="color:#719e07">}</span>
  </code></pre></div>
 </section>
   
@@ -5219,8 +5216,24 @@ returns screenshot which is encoded in Base64 format.</p>
 
 
 <section id="javascriptcode27" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#586e75">// code sample not available please raise a PR 
-</span></code></pre></div>
+  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
+<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
+<span style="color:#268bd2">let</span> fs <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;fs&#39;</span>);
+
+(async <span style="color:#268bd2">function</span> example() {
+   <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder()
+       .forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>)
+       .build();
+
+   await driver.get(<span style="color:#2aa198">&#39;https://www.example.com&#39;</span>);
+   <span style="color:#268bd2">let</span> ele <span style="color:#719e07">=</span> await driver.findElement(By.css(<span style="color:#2aa198">&#34;h1&#34;</span>));
+   <span style="color:#586e75">// Captures the element screenshot
+</span><span style="color:#586e75"></span>   <span style="color:#268bd2">let</span> encodedString <span style="color:#719e07">=</span> await ele.takeScreenshot(<span style="color:#cb4b16">true</span>);
+   await fs.writeFileSync(<span style="color:#2aa198">&#39;./image.png&#39;</span>, encodedString, <span style="color:#2aa198">&#39;base64&#39;</span>);
+   await driver.quit();
+}())
+  
+</code></pre></div>
 </section>
   
 
@@ -5239,7 +5252,7 @@ returns screenshot which is encoded in Base64 format.</p>
 <h5 class="meta-data">
     <a href="https://www.selenium.dev/documentation/fr/webdriver/browser_manipulation/">
       “Manipulation du navigateur”
-    </a> was last updated on: 06 Aug 2020 22:38:06 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/a8abad15031db071cf0600f38143608921e2bba9">adding java code for TakeElementScreenshot (#487)[deploy site] (a8abad1)</a>
+    </a> was last updated on: 07 Aug 2020 20:48:14 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/32548ab635aa9f3600529ccb78cfd9d9c557684a">Add: JS code sample for take element screenshot [deploy site] (32548ab)</a>
 </h5>
         
         </div> 
@@ -6502,19 +6515,19 @@ returns screenshot which is encoded in Base64 format.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1596733711"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/clipboard.min.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.min.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/perfect-scrollbar.jquery.min.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/jquery.sticky.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/featherlight.min.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/highlight.pack.js?1596813484"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1596733711"></script>
-    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1596733711"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/modernizr.custom-3.6.0.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/learn.js?1596813484"></script>
+    <script src="https://www.selenium.dev/documentation/fr/js/hugo-learn.js?1596813484"></script>
 
-    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1596733711" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1596733711"></script>
+    <link href="https://www.selenium.dev/documentation/fr/mermaid/mermaid.css?1596813484" rel="stylesheet" />
+    <script src="https://www.selenium.dev/documentation/fr/mermaid/mermaid.js?1596813484"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
