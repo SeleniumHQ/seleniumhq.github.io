@@ -1142,7 +1142,6 @@ returns screenshot which is encoded in Base64 format.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}} 
-   
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -1150,17 +1149,15 @@ import java.io.File;
 import java.io.IOException;
 
 public class SeleniumelementTakeScreenshot {
-    public static void main(String args[]) throws IOException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.example.com");
-        WebElement element = driver.findElement(By.cssSelector("#Element"));
-        File scrFile = element.getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("./image.png"));
-        driver.quit();
-
-    }
- } 
- 
+  public static void main(String args[]) throws IOException {
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://www.example.com");
+    WebElement element = driver.findElement(By.cssSelector("h1"));
+    File scrFile = element.getScreenshotAs(OutputType.FILE);
+    FileUtils.copyFile(scrFile, new File("./image.png"));
+    driver.quit();
+  }
+}
  {{< / code-panel >}}
   {{< code-panel language="python" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // code sample not available please raise a PR {{< / code-panel >}}
