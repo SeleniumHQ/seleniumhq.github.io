@@ -160,16 +160,18 @@ val driver = RemoteWebDriver(options)
 
 ### ensureCleanSession
 
-When set to `true`, this capability clears the _Cache, 
-Browser History and Cookies_ for all running instances 
-of InternetExplorer including those started manually 
-or by the driver. By default, it is set to `false`.
+Lorsqu'elle est définie sur `true`, cette fonctionnalité 
+efface le _Cache, Historique du navigateur et cookies_ 
+pour toutes les instances en cours d'exécution
+d'InternetExplorer, y compris ceux démarrés manuellement
+ou par le chauffeur. Par défaut, il est défini sur `false`.
 
-Using this capability will cause performance drop while 
-launching the browser, as the driver will wait until the cache 
-gets cleared before launching the IE browser.  
+L'utilisation de cette fonctionnalité 
+entraînera une baisse des performances
+lancement du navigateur, car le pilote 
+attendra que le cache est effacé avant de lancer le navigateur IE.
 
-This capability accepts a Boolean value as parameter.
+Cette capacité accepte une valeur booléenne comme paramètre.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -215,11 +217,12 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreZoomSetting
 
-InternetExplorer driver expects the browser zoom level to be 100%, 
-else the driver will throw an exception. This default behaviour 
-can be disabled by setting the _ignoreZoomSetting_ to _true_.
+Le pilote InternetExplorer s'attend à ce que le 
+niveau de zoom du navigateur soit de 100%,
+sinon le pilote lèvera une exception. Ce comportement par défaut
+peut être désactivé en définissant _ignoreZoomSetting_ sur _true_.
  
-This capability accepts a Boolean value as parameter.
+Cette capacité accepte une valeur booléenne comme paramètre.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -265,21 +268,24 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreProtectedModeSettings
 
-Whether to skip the _Protected Mode_ check while launching 
-a new IE session.
+Ignorer la vérification du _Protected Mode_ lors du lancement
+une nouvelle session IE.
 
-If not set and _Protected Mode_ settings are not same for 
-for all zones, an exception will be thrown by the driver.
+S'il n'est pas défini et que les paramètres du 
+mode protégé ne sont pas les mêmes pour
+toutes les zones, une exception sera levée par le pilote.
 
-If capability is set to `true`, tests may 
-become flaky, unresponsive, or browsers may hang.
-However, this is still by far a second-best choice, 
-and the first choice should *always* be to actually 
-set the Protected Mode settings of each zone manually. 
-If a user is using this property, 
-only a "best effort" at support will be given.
+Si la capabilité est définie sur `true`, 
+les tests peuvent deviennent irréguliers, 
+ne répondent pas ou les navigateurs peuvent se bloquer.
+Cependant, c'est toujours de loin un deuxième meilleur choix,
+et le premier choix devrait *toujours* être de réellement
+définissez manuellement les paramètres 
+du mode protégé de chaque zone. 
+Si un utilisateur utilise cette propriété,
+seul un "meilleur effort" de soutien sera donné.
 
-This capability accepts a Boolean value as parameter.
+Cette capacité accepte une valeur booléenne comme paramètre.
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}

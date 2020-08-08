@@ -54,7 +54,7 @@ Seleniumプロジェクトは新しいコントリビュータを歓迎します
 % git checkout -b my-feature-branch
 ```
 
-我々はHEADベースの開発を行っています。つまり、全ての変更はmasterブランチ上に直接適用されます。
+我々はHEADベースの開発を行っています。つまり、全ての変更はtrunkブランチ上に直接適用されます。
 
 ### ステップ 3: 変更を加える
 
@@ -133,7 +133,7 @@ Fixes #141
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
 ### ステップ 6: テスト
@@ -153,7 +153,7 @@ https://github.com/yourusername/seleniumhq.github.io.git を開き、_Pull Reque
 
 ### ステップ 8: 統合
 
-コードレビューが完了すると、コミッターがPRを取得し、リポジトリのmasterブランチに統合します。
+コードレビューが完了すると、コミッターがPRを取得し、リポジトリのtrunkブランチに統合します。
 マスターブランチで履歴を線形に保持するのが好きなので、通常はブランチの履歴をスカッシュしてリベースします。
 
 ## コミュニケーション
