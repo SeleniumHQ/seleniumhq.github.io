@@ -1034,11 +1034,12 @@ __注意: 此功能适用于Selenium 4以及更高版本.__
   {{<code-panel language="kotlin">}}driver.manage().window().fullscreen(){{< / code-panel>}}
 {{</ code-tab>}}
 
-### TakeScreenshot
+### 屏幕截图
 
-Used to capture screenshot for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
-returns screenshot which is encoded in Base64 format.
+用于捕获当前浏览上下文的屏幕截图.
+WebDriver端点 
+[屏幕截图](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1115,11 +1116,12 @@ fun main(){
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-###  TakeElementScreenshot
+###  元素屏幕截图
 
-Used to capture screenshot of an element for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
-returns screenshot which is encoded in Base64 format.
+用于捕获当前浏览上下文的元素的屏幕截图.
+WebDriver端点
+[屏幕截图](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
+返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
