@@ -1234,5 +1234,19 @@ let fs = require('fs');
    await driver.quit();
 }())
   {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.apache.commons.io.FileUtils
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.*
+import java.io.File
+
+fun main() {
+    val driver = ChromeDriver()
+    driver.get("https://www.example.com")
+    val element = driver.findElement(By.cssSelector("h1"))
+    val scrFile: File = element.getScreenshotAs(OutputType.FILE)
+    FileUtils.copyFile(scrFile, File("./image.png"))
+    driver.quit()
+}
+  {{< / code-panel >}}
 {{< / code-tab >}}
