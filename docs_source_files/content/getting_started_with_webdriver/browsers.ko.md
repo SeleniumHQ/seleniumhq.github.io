@@ -11,6 +11,7 @@ Selenium 프레임워크는 공식적으로 다음과 같은 브라우저를 지
 | -------- | ---------- | ------------------ |
 | Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 모든 버전 |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 이상 |
+| Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84 이상 |
 | Internet Explorer | Selenium | 6 이상 |
 | Opera | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 이상 |
 | Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 이상 |

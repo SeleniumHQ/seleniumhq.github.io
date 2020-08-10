@@ -11,6 +11,7 @@ weight: 1
 | -------- | ---------- | ------------------ |
 | Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | 所有版本 |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54及以上版本 |
+| Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84及以上版本 |
 | Internet Explorer | Selenium | 6及以上版本 |
 | Opera | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5及以上版本 |
 | Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10及以上版本 |
