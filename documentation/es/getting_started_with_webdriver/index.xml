@@ -18,7 +18,7 @@
       
       <guid>https://www.selenium.dev/documentation/es/getting_started_with_webdriver/browsers/</guid>
       <description>Navegadores para el consumidor El framework de Selenium soporta oficialmente los siguientes navegadores:
-   Navegador Mantenedor Versiones Soportadas     Chrome Chromium Todas las Versiones   Firefox Mozilla 54 y más recientes   Internet Explorer Selenium 6 y más recientes   Opera Opera Chromium / Presto 10.5 y más recientes   Safari Apple 10 y más recientes    Navegadores especializados También hay un conjunto de navegadores especializados utilizados típicamente en entornos de desarrollo.</description>
+   Navegador Mantenedor Versiones Soportadas     Chrome Chromium Todas las Versiones   Firefox Mozilla 54 y más recientes   Edge Microsoft 84 y más recientes   Internet Explorer Selenium 6 y más recientes   Opera Opera Chromium / Presto 10.5 y más recientes   Safari Apple 10 y más recientes    Navegadores especializados También hay un conjunto de navegadores especializados utilizados típicamente en entornos de desarrollo.</description>
     </item>
     
     <item>

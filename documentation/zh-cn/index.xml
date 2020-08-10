@@ -157,7 +157,7 @@ Grid Selenium Grid允许您在不同平台的不同机器上运行测试用例. 
       
       <guid>https://www.selenium.dev/documentation/zh-cn/getting_started_with_webdriver/browsers/</guid>
       <description>消费级浏览器 当前Selenium框架支持以下浏览器:
-   浏览器 维护者 支持的版本     Chrome Chromium 所有版本   Firefox Mozilla 54及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
+   浏览器 维护者 支持的版本     Chrome Chromium 所有版本   Firefox Mozilla 54及以上版本   Edge Microsoft 84及以上版本   Internet Explorer Selenium 6及以上版本   Opera Opera Chromium / Presto 10.5及以上版本   Safari Apple 10及以上版本    专业级浏览器 还有一些通常在开发环境中使用的专业级浏览器。 我们也可以使用其中一些浏览器实现自动化的目的， Selenium支持以下专业驱动:
    驱动名称 用途 维护者     HtmlUnitDriver Rhino支持的无头浏览器模拟器 Selenium项目组    </description>
     </item>
     

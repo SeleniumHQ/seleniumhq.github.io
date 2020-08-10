@@ -143,7 +143,7 @@ WebDriverテストの開発後、複数のブラウザーとオペレーティ�
       
       <guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
       <description>一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
-   ブラウザ メンテナ サポートバージョン     Chrome Chromium 全てのバージョン   Firefox Mozilla 54 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
+   ブラウザ メンテナ サポートバージョン     Chrome Chromium 全てのバージョン   Firefox Mozilla 54 以上   Edge Microsoft 84 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
    ドライバー名 用途 メンテナ     HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト    </description>
     </item>
     

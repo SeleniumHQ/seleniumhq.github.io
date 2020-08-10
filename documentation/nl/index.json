@@ -11,7 +11,7 @@
 	"title": "Browsers",
 	"tags": [],
 	"description": "",
-	"content": "Algemene browsers Selenium ondersteunt officieel volgende browsers:\n   Browser Beheerder Ondersteunde versies     Chrome Chromium Alle versies   Firefox Mozilla 54 en nieuwer   Internet Explorer Selenium 6 en nieuwer   Opera Opera Chromium / Presto 10.5 en nieuwer   Safari Apple 10 en nieuwer    Gespecialiseerde browsers Er bestaan ook gespecialiseerde browser die enkel in ontwikkelomgevingen gebruikt worden. Deze kunnen ook gebruikt worden voor het automatiseren van de browser. Selenium biedt ondersteuning voor de volgende drivers:\n   Driver Doel Beheerder     HtmlUnitDriver Headless browser emulator ontwikkeld door Rhino Selenium project    "
+	"content": "Algemene browsers Selenium ondersteunt officieel volgende browsers:\n   Browser Beheerder Ondersteunde versies     Chrome Chromium Alle versies   Firefox Mozilla 54 en nieuwer   Edge Microsoft 84 en nieuwer   Internet Explorer Selenium 6 en nieuwer   Opera Opera Chromium / Presto 10.5 en nieuwer   Safari Apple 10 en nieuwer    Gespecialiseerde browsers Er bestaan ook gespecialiseerde browser die enkel in ontwikkelomgevingen gebruikt worden. Deze kunnen ook gebruikt worden voor het automatiseren van de browser. Selenium biedt ondersteuning voor de volgende drivers:\n   Driver Doel Beheerder     HtmlUnitDriver Headless browser emulator ontwikkeld door Rhino Selenium project    "
 },
 {
 	"uri": "https://www.selenium.dev/documentation/nl/worst_practices/captchas/",
