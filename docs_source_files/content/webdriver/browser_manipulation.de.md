@@ -1213,7 +1213,22 @@ public class SeleniumelementTakeScreenshot {
   }
 }
    {{< / code-panel >}}
-  {{< code-panel language="python" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+ele = driver.find_element(By.CSS_SELECTOR, 'h1')
+
+# Returns and base64 encoded string into image
+ele.screenshot('./image.png')
+
+driver.quit()
+  {{< / code-panel >}}
   {{< code-panel language="csharp" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
