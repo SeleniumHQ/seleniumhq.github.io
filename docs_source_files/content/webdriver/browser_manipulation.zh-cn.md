@@ -1077,6 +1077,7 @@ driver.quit()
     using OpenQA.Selenium.Support.UI;
 
     var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
     var screenshot = (driver as ITakesScreenshot).GetScreenshot();
     screenshot.SaveAsFile("screenshot.png");
   {{< / code-panel >}}
@@ -1173,9 +1174,10 @@ driver.quit()
 
     // Webdriver
     var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
 
     // Fetch element using FindElement
-    var webElement = driver.FindElement(By.XPath(@"(//*[@id=""messages""])/div[last() - 1]"));
+    var webElement = driver.FindElement(By.CssSelector("h1"));
 
     // Screenshot for the element
     var elementScreenshot = (lastMessage as ITakesScreenshot).GetScreenshot();
