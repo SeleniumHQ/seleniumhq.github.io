@@ -1071,7 +1071,16 @@ driver.save_screenshot('./image.png')
 
 driver.quit()
 {{< / code-panel >}}
-  {{< code-panel language="csharp" >}} // Code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Support.UI;
+
+    var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
+    var screenshot = (driver as ITakesScreenshot).GetScreenshot();
+    screenshot.SaveAsFile("screenshot.png");
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}} 
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
@@ -1158,7 +1167,22 @@ ele.screenshot('./image.png')
 
 driver.quit()
   {{< / code-panel >}}
-  {{< code-panel language="csharp" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Support.UI;
+
+    // Webdriver
+    var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
+
+    // Fetch element using FindElement
+    var webElement = driver.FindElement(By.CssSelector("h1"));
+
+    // Screenshot for the element
+    var elementScreenshot = (lastMessage as ITakesScreenshot).GetScreenshot();
+    elementScreenshot.SaveAsFile("screenshot_of_element.png");
+  {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
