@@ -546,3 +546,31 @@ namespace FindElementsFromElement {
   }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Is Element Enabled
+
+This method is used to check if the connected Element 
+is enabled or disabled on a webpage.
+Returns a boolean value, True if the connected element is 
+`enabled` in the current browsing context else returns `false`.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+  // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+   # Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a PR for code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
