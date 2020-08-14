@@ -556,7 +556,10 @@ Returns a boolean value, True if the connected element is
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR for code sample
+  //navigates to url 
+  driver.get("https://www.google.com/");
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
    # Please raise a PR for code sample
