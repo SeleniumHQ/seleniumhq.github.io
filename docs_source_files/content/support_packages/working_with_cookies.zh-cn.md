@@ -605,9 +605,8 @@ cookie不会与来自第三方网站的请求一起发送.
 当您将cookie sameSite属性设置为 **Lax**,
 cookie将与第三方网站发起的GET请求一起发送.
 
-**注意**: **到目前为止, 
-此功能已适配于chrome (80+ version) 中, 
-并适用于Selenium 4以及更高版本.**
+**Note**: **As of now this feature is landed in chrome(80+version), 
+Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
