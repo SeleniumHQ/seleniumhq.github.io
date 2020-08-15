@@ -549,10 +549,10 @@ namespace FindElementsFromElement {
 
 ## Is Element Enabled
 
-This method is used to check if the connected Element 
-is enabled or disabled on a webpage.
-Returns a boolean value, True if the connected element is 
-`enabled` in the current browsing context else returns `false`.
+此方法用于检查网页上连接的元素是否被启用或禁用.
+返回一个布尔值, 
+如果在当前浏览上下文中`启用`了连接的元素, 则返回True；
+否则返回`false` .
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
