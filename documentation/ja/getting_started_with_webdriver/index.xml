@@ -1,60 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>WebDriverをはじめよう on Seleniumドキュメント</title>
-    <link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/</link>
-    <description>Recent content in WebDriverをはじめよう on Seleniumドキュメント</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2013-{year}</copyright>
-    
-	<atom:link href="https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>ブラウザ</title>
-      <link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid>
-      <description>一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
-   ブラウザ メンテナ サポートバージョン     Chrome Chromium 全てのバージョン   Firefox Mozilla 54 以上   Edge Microsoft 84 以上   Internet Explorer Selenium 6 以上   Opera Opera Chromium / Presto 10.5 以上   Safari Apple 10 以上    専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
-   ドライバー名 用途 メンテナ     HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト    </description>
-    </item>
-    
-    <item>
-      <title>サードパーティのドライバとプラグイン</title>
-      <link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Seleniumはプラグインを通して拡張することができます。ここにはサードパーティによって作られたいくつかのプラグインがあります。 独自のプラグインを作成する、またはリストする方法についてはドキュメントを参照してください。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WebDriverをはじめよう on Seleniumドキュメント</title><link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/</link><description>Recent content in WebDriverをはじめよう on Seleniumドキュメント</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/index.xml" rel="self" type="application/rss+xml"/><item><title>ブラウザ</title><link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/browsers/</guid><description>一般のブラウザ Seleniumフレームワークは公式に以下のブラウザをサポートしています。
+ブラウザ メンテナ サポートバージョン Chrome Chromium 全てのバージョン Firefox Mozilla 54 以上 Edge Microsoft 84 以上 Internet Explorer Selenium 6 以上 Opera Opera Chromium / Presto 10.5 以上 Safari Apple 10 以上 専用のブラウザ それ以外に専用のブラウザがあります。これらは通常は開発環境で使用されます。 これらのブラウザを自動化の目的で使用することができます。 Seleniumは次の専用のブラウザをサポートしています。
+ドライバー名 用途 メンテナ HtmlUnitDriver Rhinoバックエンドのヘッドレスブラウザエミュレーター Seleniumプロジェクト</description></item><item><title>サードパーティのドライバとプラグイン</title><link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid><description>Seleniumはプラグインを通して拡張することができます。ここにはサードパーティによって作られたいくつかのプラグインがあります。 独自のプラグインを作成する、またはリストする方法についてはドキュメントを参照してください。
 これらのプラグインはSeleniumプロジェクトによってサポート、メンテナンス、主催、承認されているものではないことに注意してください。加えて、以下にリストされているプラグインは必ずしもApache License v.2.0によってライセンスされているわけではありません。 いくつかは他のフリーかつオープンソースのライセンス下で使用可能であり、他のいくつかはプロプライエタリなライセンスの下でのみ使用可能です。プラグインとその配布ライセンスに関するどんな質問も、それぞれの開発者に対して上げる必要があります。
-   ブラウザ 最新版 変更履歴 イシュートラッカー     Mozilla GeckoDriver 最新版 変更履歴 イシュートラッカー   Google Chrome Driver 最新版 変更履歴 イシュートラッカー   Opera 最新版 - イシュートラッカー   Microsoft Edge Driver 最新版 - イシュートラッカー   SafariDriver ビルトイン - イシュートラッカー    </description>
-    </item>
-    
-    <item>
-      <title>要素を探す</title>
-      <link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</guid>
-      <description>一つの要素を探す ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element(By.ID, &amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;))     例を見ての通り、WebDriverで要素を特定するには、WebDriverクラスのインスタンスを使います。findElement(By)メソッドはWebElementという別の基本的なオブジェクトを返します。
- WebDriverはブラウザをあらわす WebElementは特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす  一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;));   cheese = driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) cheddar = cheese.</description>
-    </item>
-    
-    <item>
-      <title>AUT* を操作する</title>
-      <link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
-Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).dragAndDrop(source, target).</description>
-    </item>
-    
-  </channel>
-</rss>
+ブラウザ 最新版 変更履歴 イシュートラッカー Mozilla GeckoDriver 最新版 変更履歴 イシュートラッカー Google Chrome Driver 最新版 変更履歴 イシュートラッカー Opera 最新版 - イシュートラッカー Microsoft Edge Driver 最新版 - イシュートラッカー SafariDriver ビルトイン - イシュートラッカー</description></item><item><title>要素を探す</title><link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/locating_elements/</guid><description>一つの要素を探す ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;)); cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;) const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;)); val cheese: WebElement = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)) 例を見ての通り、WebDriverで要素を特定するには、WebDriverクラスのインスタンスを使います。findElement(By)メソッドはWebElementという別の基本的なオブジェクトを返します。
+WebDriverはブラウザをあらわす WebElementは特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす 一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); WebElement cheddar = cheese.findElement(By.id(&amp;#34;cheddar&amp;#34;)); cheese = driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) cheddar = cheese.</description></item><item><title>AUT* を操作する</title><link>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/getting_started_with_webdriver/performing_actions_on_the_aut/</guid><description>次のようにsendKeysを使うことで、要素にテキストをセットすることができます。
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name); name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name) string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name); name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name) const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name); val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name) JavaScriptライブラリを使ってドラックアンドドロップ機能を追加したWebアプリケーションがあります。 次の例はある要素を別の要素へドラッグする例です。
+Java Python C# Ruby JavaScript Kotlin WebElement source = driver.findElement(By.id(&amp;#34;source&amp;#34;)); WebElement target = driver.findElement(By.id(&amp;#34;target&amp;#34;)); new Actions(driver).dragAndDrop(source, target).</description></item></channel></rss>

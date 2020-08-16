@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Categories on Selenium 문서</title>
-    <link>https://www.selenium.dev/documentation/ko/categories/</link>
-    <description>Recent content in Categories on Selenium 문서</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2013-{year}</copyright>
-    
-	<atom:link href="https://www.selenium.dev/documentation/ko/categories/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Categories on Selenium 문서</title><link>https://www.selenium.dev/documentation/ko/categories/</link><description>Recent content in Categories on Selenium 문서</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/ko/categories/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

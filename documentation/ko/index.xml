@@ -1,676 +1,111 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Selenium 브라우저 자동화 프로젝트 on Selenium 문서</title>
-    <link>https://www.selenium.dev/documentation/ko/</link>
-    <description>Recent content in Selenium 브라우저 자동화 프로젝트 on Selenium 문서</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2013-{year}</copyright>
-    
-	<atom:link href="https://www.selenium.dev/documentation/ko/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Components</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Hub  Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads  A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description>
-    </item>
-    
-    <item>
-      <title>Components</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</guid>
-      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
-  Work in progress
- </description>
-    </item>
-    
-    <item>
-      <title>Copyright and attributions</title>
-      <link>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
-Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description>
-    </item>
-    
-    <item>
-      <title>Page object models</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description>
-    </item>
-    
-    <item>
-      <title>Remote WebDriver server</title>
-      <link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
-Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description>
-    </item>
-    
-    <item>
-      <title>Selenium 1 (Selenium RC)</title>
-      <link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
-How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description>
-    </item>
-    
-    <item>
-      <title>Selenium 라이브러리 설치</title>
-      <link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid>
-      <description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium 브라우저 자동화 프로젝트 on Selenium 문서</title><link>https://www.selenium.dev/documentation/ko/</link><description>Recent content in Selenium 브라우저 자동화 프로젝트 on Selenium 문서</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/ko/index.xml" rel="self" type="application/rss+xml"/><item><title>Components</title><link>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/grid_3/components_of_a_grid/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Hub Intermediary and manager Accepts requests to run tests Takes instructions from client and executes them remotely on the nodes Manages threads A Hub is a central point where all your tests are sent. Each Selenium Grid consists of exactly one hub. The hub needs to be reachable from the respective clients (i.</description></item><item><title>Components</title><link>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/grid_4/components_of_a_grid/</guid><description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Work in progress</description></item><item><title>Copyright and attributions</title><link>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/front_matter/copyright_and_attributions/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+The Documentation of Selenium Copyright &amp;copy; 2013-2020 , Software Freedom Conservancy.
+Every effort has been made to make this documentation as complete and as accurate as possible, but no warranty or fitness is implied. The information provided is on an “as-is” basis. The authors and the publisher shall have neither liability nor responsibility to any person or entity with respect to any loss or damages arising from the information contained in this book.</description></item><item><title>Page object models</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/page_object_models/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Page Object is a Design Pattern which has become popular in test automation for enhancing test maintenance and reducing code duplication. A page object is an object-oriented class that serves as an interface to a page of your AUT. The tests then use the methods of this page object class whenever they need to interact with the UI of that page.</description></item><item><title>Remote WebDriver server</title><link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_server/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+The server will always run on the machine with the browser you want to test. The server can be used either from the command line or through code configuration.
+Starting the server from the command line Once you have downloaded selenium-server-standalone-{VERSION}.jar, place it on the computer with the browser you want to test.</description></item><item><title>Selenium 1 (Selenium RC)</title><link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_rc/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Introduction Selenium RC was the main Selenium project for a long time, before the WebDriver/Selenium merge brought up Selenium 2, a more powerful tool. It is worth to highlight that Selenium 1 is not supported anymore.
+How Selenium RC Works First, we will describe how the components of Selenium RC operate and the role each plays in running your test scripts.</description></item><item><title>Selenium 라이브러리 설치</title><link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_selenium_libraries/</guid><description>당신의 자동화 프로젝트를 위해서 첫 번째로 Selenium 바인딩을 설치해야 합니다. 당신이 사용할 언어에 따른 라이브러리 설치 절차입니다.
 Java Maven을 사용한 Java용 Selenium 라이브러리 설치입니다. 프로젝트안에 있는 pom.xml에 selenium-java 의존 라이브러리를 추가하세요.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.xml 파일에 추가해야 합니다.</description>
-    </item>
-    
-    <item>
-      <title>Selenium 프로젝트와 도구들</title>
-      <link>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</guid>
-      <description>Selenium 은 웹브라우저를 제어합니다. Selenium 은 여러 프로젝트를 포함하지만, 웹 브라우저 자동화를 위한 도구가 핵심입니다.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; selenium-java 의존성 라이브러리는 Selenium이 자동화할 수 있는 모든 브라우저의 자동화를 지원합니다. 만약 당신이 특정 브라우저에서만 테스트를 실행하기 원한다면, 원하는 브라우저를 pom.xml 파일에 의존성을 추가합니다. 예를 들어, Firefox에서 테스트를 실행하고 싶다면 다음과 같은 의존성을 pom.xml 파일에 추가해야 합니다.</description></item><item><title>Selenium 프로젝트와 도구들</title><link>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/the_selenium_project_and_tools/</guid><description>Selenium 은 웹브라우저를 제어합니다. Selenium 은 여러 프로젝트를 포함하지만, 웹 브라우저 자동화를 위한 도구가 핵심입니다.
 브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의 상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.
 최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.
 필드에 텍스트 입력, 드롭 다운 및 체크 박스 선택, 링크 클릭, 마우스 이동, 임의의 JavaScript 실행 등의 기능이 제공됩니다.
-웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description>
-    </item>
-    
-    <item>
-      <title>Shared capabilities</title>
-      <link>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
-WebDriver provides capabilities that each remote end will/should support the implementation.</description>
-    </item>
-    
-    <item>
-      <title>Two Factor Authentication</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/two_factor_authentication/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/two_factor_authentication/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium. There are some ways to automate this process.</description>
-    </item>
-    
-    <item>
-      <title>구성 요소 이해</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/understanding_the_components/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/understanding_the_components/</guid>
-      <description>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다. 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는 이 설명에서 용어가 사용되는 방식에 대한 분석.
-술어  API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;quot;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description>
-    </item>
-    
-    <item>
-      <title>목적 및 주요 기능</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid>
-      <description> 모든 테스트의 중앙 진입 지점 브라우저가 실행되는 환경과 노드의 관리 및 제어 스케일링 병렬로 테스트 실행 교차 플랫폼 테스트 부하분산  </description>
-    </item>
-    
-    <item>
-      <title>브라우저</title>
-      <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</guid>
-      <description>일반적인 브라우저 Selenium 프레임워크는 공식적으로 다음과 같은 브라우저를 지원합니다.
-   브라우저 관리자 지원 버전     Chrome Chromium 모든 버전   Firefox Mozilla 54 이상   Edge Microsoft 84 이상   Internet Explorer Selenium 6 이상   Opera Opera Chromium / Presto 10.5 이상   Safari Apple 10 이상    전문화된 브라우저 개발 환경에서 전형적으로 사용되는 특수 브라우저 세트도 있습니다.</description>
-    </item>
-    
-    <item>
-      <title>빠르게 살펴보기</title>
-      <link>https://www.selenium.dev/documentation/ko/getting_started/quick/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/getting_started/quick/</guid>
-      <description>셀레니움은 그저 하나의 도구(tool)나 API가 아니라, 여러 도구들로 구성되어 있습니다.
+웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 라이브러리 의 핵심입니다. 인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.</description></item><item><title>Shared capabilities</title><link>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/shared_capabilities/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+In-order to create a new session by Selenium WebDriver, local end should provide the basic capabilities to remote end. The remote end uses the same set of capabilities to create a session and describes the current session features.
+WebDriver provides capabilities that each remote end will/should support the implementation.</description></item><item><title>Two Factor Authentication</title><link>https://www.selenium.dev/documentation/ko/worst_practices/two_factor_authentication/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/two_factor_authentication/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Two Factor Authentication shortly know as 2FA is a authorization mechanism where One Time Password(OTP) is generated using &amp;ldquo;Authenticator&amp;rdquo; mobile apps such as &amp;ldquo;Google Authenticator&amp;rdquo;, &amp;ldquo;Microsoft Authenticator&amp;rdquo; etc., or by SMS, e-mail to authenticate. Automating this seamlessly and consistently is a big challenge in Selenium. There are some ways to automate this process.</description></item><item><title>구성 요소 이해</title><link>https://www.selenium.dev/documentation/ko/webdriver/understanding_the_components/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/understanding_the_components/</guid><description>WebDriver를 사용하여 테스트 스위트를 빌드하려면 이해하고 이해해야합니다. 다양한 구성 요소를 효과적으로 사용합니다. 모든 것과 마찬가지로 소프트웨어, 다른 사람들은 동일한 아이디어에 대해 다른 용어를 사용합니다. 아래는 이 설명에서 용어가 사용되는 방식에 대한 분석.
+술어 API: Application Programming Interface. 이것은 &amp;ldquo;명령&amp;quot;세트입니다 WebDriver를 조작하는 데 사용합니다. Library: API와 필요한 코드를 포함하는 코드 모듈 그것들을 구현하기 위해. 라이브러리는 각 언어 바인딩에 따라 다릅니다 (예 : .jar). Java 용 파일, .NET 용 .dll 파일 등 Driver: 실제 브라우저를 제어합니다.</description></item><item><title>목적 및 주요 기능</title><link>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/purposes_and_main_functionalities/</guid><description> 모든 테스트의 중앙 진입 지점 브라우저가 실행되는 환경과 노드의 관리 및 제어 스케일링 병렬로 테스트 실행 교차 플랫폼 테스트 부하분산</description></item><item><title>브라우저</title><link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/browsers/</guid><description>일반적인 브라우저 Selenium 프레임워크는 공식적으로 다음과 같은 브라우저를 지원합니다.
+브라우저 관리자 지원 버전 Chrome Chromium 모든 버전 Firefox Mozilla 54 이상 Edge Microsoft 84 이상 Internet Explorer Selenium 6 이상 Opera Opera Chromium / Presto 10.5 이상 Safari Apple 10 이상 전문화된 브라우저 개발 환경에서 전형적으로 사용되는 특수 브라우저 세트도 있습니다.</description></item><item><title>빠르게 살펴보기</title><link>https://www.selenium.dev/documentation/ko/getting_started/quick/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started/quick/</guid><description>셀레니움은 그저 하나의 도구(tool)나 API가 아니라, 여러 도구들로 구성되어 있습니다.
 웹 드라이버(WebDriver) 컴퓨터나 모바일 웹사이트 테스트를 자동화하는 것부터 시작하신다면, 아마 웹 드라이버 APIs부터 쓰게 될 겁니다. 웹 드라이버WebDriver 는 브라우저를 조종하고 테스트를 진행할 수 있도록 제작사에서 제공하는 브라우저 자동화 API들을 사용합니다. 이는 진짜 사용자가 브라우저를 이용하는 것과 비슷합니다. 웹 드라이버 API를 애플리케이션의 코드로 컴파일할 필요가 없기 때문에, 뒤섞이지 않습니다(not intrusive). 더 나아가, 실시간으로 사용하는 것과 같은 애플리케이션을 테스트합니다.
-통합개발환경 (IDE) IDE (통합개발환경 Integrated Development Environment) 은 자신만의 셀레니움 테스트 케이스를 개발하기 위해 사용할 도구입니다.</description>
-    </item>
-    
-    <item>
-      <title>자동화 튜링 테스트</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/captchas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/captchas/</guid>
-      <description>캡차(CAPTCHA)는 컴퓨터와 인간을 구분하기 위한 완전 자동화된 공공 튜링 테스트(Completely Automated Public Turing Test to telling Computer and Humans addition)의 줄임말로, 자동화를 방지하도록 명시되어 있으므로 시도하지 마시오! CAPTCHA 검사를 수행하기 위한 두 가지 주요 전략이 있다.
- 테스트 환경에서 CAPTCHA 비활성화 테스트가 CAPTCHA를 우회할 수 있도록 후크 추가  </description>
-    </item>
-    
-    <item>
-      <title>Domain specific language</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
-Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics.</description>
-    </item>
-    
-    <item>
-      <title>Driver specific capabilities</title>
-      <link>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
-Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options);   from selenium.webdriver.firefox.options import Options options = Options() options.</description>
-    </item>
-    
-    <item>
-      <title>Migrating from RC to WebDriver</title>
-      <link>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests.</description>
-    </item>
-    
-    <item>
-      <title>On test automation</title>
-      <link>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
-Functional end-user tests such as Selenium tests are expensive to run, however.</description>
-    </item>
-    
-    <item>
-      <title>Remote WebDriver client</title>
-      <link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description>
-    </item>
-    
-    <item>
-      <title>Setting up your own</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
-Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description>
-    </item>
-    
-    <item>
-      <title>Setting up your own</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</guid>
-      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
-  Work in progress
- </description>
-    </item>
-    
-    <item>
-      <title>Typographical conventions</title>
-      <link>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description>
-    </item>
-    
-    <item>
-      <title>When to use Grid</title>
-      <link>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Generally speaking, there’s two reasons why you might want to use Grid.
- To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass.  Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description>
-    </item>
-    
-    <item>
-      <title>Working with colours</title>
-      <link>https://www.selenium.dev/documentation/ko/support_packages/working_with_colours/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_colours/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description>
-    </item>
-    
-    <item>
-      <title>드라이버 요구사항</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/driver_requirements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/driver_requirements/</guid>
-      <description>Selenium은 WebDriver를 이용하여 Chrom(ium), Firefox, Internet Explorer, Opera, Safari와 같은 시장의 모든 주요 브라우저들을 지원합니다. 모든 브라우저가 원격 제어에 대한 공식적인 지원을 가지고 있는 것은 아니지만, WebDriver는 가능한 경우 브라우저에 내장된 자동화 지원을 이용하여 브라우저를 구동합니다.
+통합개발환경 (IDE) IDE (통합개발환경 Integrated Development Environment) 은 자신만의 셀레니움 테스트 케이스를 개발하기 위해 사용할 도구입니다.</description></item><item><title>자동화 튜링 테스트</title><link>https://www.selenium.dev/documentation/ko/worst_practices/captchas/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/captchas/</guid><description>캡차(CAPTCHA)는 컴퓨터와 인간을 구분하기 위한 완전 자동화된 공공 튜링 테스트(Completely Automated Public Turing Test to telling Computer and Humans addition)의 줄임말로, 자동화를 방지하도록 명시되어 있으므로 시도하지 마시오! CAPTCHA 검사를 수행하기 위한 두 가지 주요 전략이 있다.
+테스트 환경에서 CAPTCHA 비활성화 테스트가 CAPTCHA를 우회할 수 있도록 후크 추가</description></item><item><title>Domain specific language</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/domain_specific_language/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+A domain specific language (DSL) is a system which provides the user with an expressive means of solving a problem. It allows a user to interact with the system on their terms – not just programmer-speak.
+Your users, in general, do not care how your site looks. They do not care about the decoration, animations, or graphics.</description></item><item><title>Driver specific capabilities</title><link>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/driver_idiosyncrasies/driver_specific_capabilities/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Firefox Define Capabilities using FirefoxOptions FirefoxOptions is the new way to define capabilities for the Firefox browser and should generally be used in preference to DesiredCapabilities.
+Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOptions(); options.addPreference(&amp;#34;network.proxy.type&amp;#34;, 0); driver = new RemoteWebDriver(options); from selenium.webdriver.firefox.options import Options options = Options() options.</description></item><item><title>Migrating from RC to WebDriver</title><link>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/legacy_docs/migrating_from_rc_to_webdriver/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+How to Migrate to Selenium WebDriver A common question when adopting Selenium 2 is what&amp;rsquo;s the correct thing to do when adding new tests to an existing set of tests? Users who are new to the framework can begin by using the new WebDriver APIs for writing their tests.</description></item><item><title>On test automation</title><link>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/on_test_automation/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+First, start by asking yourself whether or not you really need to use a browser. Odds are that, at some point, if you are working on a complex web application, you will need to open a browser and actually test it.
+Functional end-user tests such as Selenium tests are expensive to run, however.</description></item><item><title>Remote WebDriver client</title><link>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/remote_webdriver/remote_webdriver_client/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+To run a remote WebDriver client, we first need to connect to the RemoteWebDriver. We do this by pointing the URL to the address of the server running our tests. In order to customize our configuration, we set desired capabilities. Below is an example of instantiating a remote WebDriver object pointing to our remote web server, www.</description></item><item><title>Setting up your own</title><link>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/grid_3/setting_up_your_own_grid/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+To use Selenium Grid, you need to maintain your own infrastructure for the nodes. As this can be a cumbersome and time intense effort, many organizations use IaaS providers such as Amazon EC2 and Google Compute to provide this infrastructure.
+Other options include using providers such as Sauce Labs or Testing Bot who provide a Selenium Grid as a service in the cloud.</description></item><item><title>Setting up your own</title><link>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/grid_4/setting_up_your_own_grid/</guid><description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Work in progress</description></item><item><title>Typographical conventions</title><link>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/front_matter/typographical_conventions/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Capitalisation of titles One should avoid title capitalisation, such as A Very Fine Heading, and instead go for A very fine heading. Gratutious capitalisation, or title case, often show a misunderstanding of – or a disregard for – orthographic conventions. We prefer what is known as sentence case, with a single initial capital to start headers.</description></item><item><title>When to use Grid</title><link>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/grid/when_to_use_grid/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Generally speaking, there’s two reasons why you might want to use Grid.
+To run your tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems. To reduce the time it takes for the test suite to complete a test pass. Grid is used to speed up the execution of a test pass by using multiple machines to run tests in parallel.</description></item><item><title>Working with colours</title><link>https://www.selenium.dev/documentation/ko/support_packages/working_with_colours/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_colours/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+You will occasionally want to validate the colour of something as part of your tests; the problem is that colour definitions on the web are not constant. Would it not be nice if there was an easy way to compare a HEX representation of a colour with a RGB representation of a colour, or a RGBA representation of a colour with a HSLA representation of a colour?</description></item><item><title>드라이버 요구사항</title><link>https://www.selenium.dev/documentation/ko/webdriver/driver_requirements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/driver_requirements/</guid><description>Selenium은 WebDriver를 이용하여 Chrom(ium), Firefox, Internet Explorer, Opera, Safari와 같은 시장의 모든 주요 브라우저들을 지원합니다. 모든 브라우저가 원격 제어에 대한 공식적인 지원을 가지고 있는 것은 아니지만, WebDriver는 가능한 경우 브라우저에 내장된 자동화 지원을 이용하여 브라우저를 구동합니다.
 WebDriver의 목적은 브라우저와 실제 사용자의 상호작용을 최대한 모방하는 것이며, 이는 브라우저마다 다른 수준으로 진행될 수 있습니다. 다양한 드라이버 특성에 대한 자세한 내용은 _드라이버 특성_을 참조하십시오.
-브라우저 제어를 위한 사용자 대면 인터페이스는 모든 드라이버가 동일하지만, 브라우저 세션을 설정하는 방법에는 약간의 차이가 존재합니다.</description>
-    </item>
-    
-    <item>
-      <title>써드파티 드라이버와 플러그인</title>
-      <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/third_party_drivers_and_plugins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid>
-      <description>Selenium은 플러그인의 사용으로 확장될 수 있습니다.
+브라우저 제어를 위한 사용자 대면 인터페이스는 모든 드라이버가 동일하지만, 브라우저 세션을 설정하는 방법에는 약간의 차이가 존재합니다.</description></item><item><title>써드파티 드라이버와 플러그인</title><link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/third_party_drivers_and_plugins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/third_party_drivers_and_plugins/</guid><description>Selenium은 플러그인의 사용으로 확장될 수 있습니다.
 다음은 제3자에 의해 생성되고 유지되는 많은 플러그인 입니다.
 고유한 플러그인을 만들거나 플러그인이 나열되는 자세한 내용은 문서를 참조하세요.
 이러한 플러그인은 Selenium 프로젝트에서 지원, 유지 관리, 호스팅 또는 보증하지 않는다는 점에서 유의하십시오.
 또한 아래 나열된 플러그인이 반드시 Apache License v2.0에 따라 라이센스가 부여되지 않는다는 것을 유념하십시오.
 일부 플러그인은 다른 모료 오픈소스 소프트웨어 라이센스로 사용할 수 있으며, 다른 플러그인은 독점 라이센스로만 사용할 수 있습니다.
-플러그인과 해당 플러그인의 배포 라이센스에 대한 모든 질문은 해당 개발자와 함께 제기해 주세요.</description>
-    </item>
-    
-    <item>
-      <title>웹드라이버 바이너리 설치</title>
-      <link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
-당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description>
-    </item>
-    
-    <item>
-      <title>파일 다운로드</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/file_downloads/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/file_downloads/</guid>
-      <description>Selenium의 제어 하에 브라우저로 링크를 클릭하면 다운로드를 시작할 수 있지만, API는 다운로드 진행 상황을 노출시키지 않아 다운로드 파일 테스트에 이상적이지 않다. 이것은 파일 다운로드가 웹 플랫폼과의 사용자 상호작용을 모방하는 중요한 측면으로 여겨지지 않기 때문이다. 대신 Selenium(및 필요한 쿠키)을 사용하여 링크를 찾아 HTTP 요청 라이브러리 like libcurl.에 전달하라.</description>
-    </item>
-    
-    <item>
-      <title>Browser manipulation</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/browser_manipulation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/browser_manipulation/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check where you need to check the Add Ruby executables to your PATH checkbox.</description>
-    </item>
-    
-    <item>
-      <title>Element 찾기</title>
-      <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</guid>
-      <description>하나의 element 찾기 웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;));   driver.find_element(By.ID, &amp;#34;cheese&amp;#34;)   IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;));   cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;)   const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;));   val cheese: WebElement = driver.</description>
-    </item>
-    
-    <item>
-      <title>Generating application state</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/generating_application_state/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/generating_application_state/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description>
-    </item>
-    
-    <item>
-      <title>HTML runner</title>
-      <link>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
-Common information  Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor).</description>
-    </item>
-    
-    <item>
-      <title>HTTP 응답 코드</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/http_response_codes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/http_response_codes/</guid>
-      <description>Selenium RC의 일부 브라우저 구성에서 Selenium은 자동화되고 있는 브라우저와 사이트 사이의 프록시 역할을 했다. 이것은 셀레니움을 통과하는 모든 브라우저 트래픽이 캡처되거나 조작될 수 있다는 것을 의미했다. captureNetworkTraffic() 방법은 HTTP 응답 코드를 포함하여 자동화되고 있는 브라우저와 사이트 사이의 모든 네트워크 트래픽을 캡처하기 위한 것이다.
-Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근방식으로, 사용자처럼 행동하는 것을 선호한다. 이는 당신이 WebDriver로 시험을 작성하는 방식으로 표현된다. 자동 기능 테스트에서 상태 코드 확인은 테스트 실패의 특별히 중요한 세부 사항은 아니다; 그 이전의 단계들이 더 중요하다.</description>
-    </item>
-    
-    <item>
-      <title>Working with select elements</title>
-      <link>https://www.selenium.dev/documentation/ko/support_packages/working_with_select_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_select_elements/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
-Java Python C# Ruby JavaScript Kotlin import org.</description>
-    </item>
-    
-    <item>
-      <title>독립형 서버 설치</title>
-      <link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid>
-      <description>Grid를 사용하려면 selenium-server-standalone JAR 파일을 다운로드하십시오. 모든 구성요소는 selenium-server를 통해 이용할 수 있습니다. 독립형 JAR에는 원격 Selenium 서버와 클라이언트측 바인딩을 포함한 모든 것이 들어 있습니다. 즉, 프로젝트에서 selenium 서버 독립형 jar을 사용할 경우 selenium-java 또는 브라우저별 jar을 추가하지 않아도 됩니다.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
-    </item>
-    
-    <item>
-      <title>테스트의 종류</title>
-      <link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid>
-      <description>적합 테스트 이러한 유형의 테스트는 기능이나 시스템이
+플러그인과 해당 플러그인의 배포 라이센스에 대한 모든 질문은 해당 개발자와 함께 제기해 주세요.</description></item><item><title>웹드라이버 바이너리 설치</title><link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_webdriver_binaries/</guid><description>당신의 프로젝트와 브라우저 제어를 시작하기 위해서 특정 브라우저의 웹드라이버 바이너리가 설치돼있어야 합니다.
+당신의 브라우저가 지원하는 웹드라이버 바이너리 를 다운로드하고, 시스템 경로에 위치하세요.</description></item><item><title>파일 다운로드</title><link>https://www.selenium.dev/documentation/ko/worst_practices/file_downloads/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/file_downloads/</guid><description>Selenium의 제어 하에 브라우저로 링크를 클릭하면 다운로드를 시작할 수 있지만, API는 다운로드 진행 상황을 노출시키지 않아 다운로드 파일 테스트에 이상적이지 않다. 이것은 파일 다운로드가 웹 플랫폼과의 사용자 상호작용을 모방하는 중요한 측면으로 여겨지지 않기 때문이다. 대신 Selenium(및 필요한 쿠키)을 사용하여 링크를 찾아 HTTP 요청 라이브러리 like libcurl.에 전달하라.</description></item><item><title>Browser manipulation</title><link>https://www.selenium.dev/documentation/ko/webdriver/browser_manipulation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/browser_manipulation/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Ruby Ruby is not installed by default on Windows. Download the latest version and run the installer. You can leave all settings at default values, except at the Installation Destination and Optional Tasks screen check where you need to check the Add Ruby executables to your PATH checkbox.</description></item><item><title>Element 찾기</title><link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</guid><description>하나의 element 찾기 웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
+Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;)); cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;) const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;)); val cheese: WebElement = driver.</description></item><item><title>Generating application state</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/generating_application_state/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/generating_application_state/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Selenium should not be used to prepare a test case. All repetitive actions and preparations for a test case, should be done through other methods. For example, most web UIs have authentication (e.g. a login form). Eliminating logging in via web browser before every test will improve both the speed and stability of the test.</description></item><item><title>HTML runner</title><link>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/legacy_docs/html-runner/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Selenium HTML-runner allows you to run Test Suites from a command line. Test Suites are HTML exports from Selenium IDE or campatible tools.
+Common information Combination of releases of geckodriver / firefox / selenium-html-runner matters. There might be a software compatibility matrix somewhere. selenium-html-runner runs only Test Suite (not Test Case - for example an export from Monitis Transaction Monitor).</description></item><item><title>HTTP 응답 코드</title><link>https://www.selenium.dev/documentation/ko/worst_practices/http_response_codes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/http_response_codes/</guid><description>Selenium RC의 일부 브라우저 구성에서 Selenium은 자동화되고 있는 브라우저와 사이트 사이의 프록시 역할을 했다. 이것은 셀레니움을 통과하는 모든 브라우저 트래픽이 캡처되거나 조작될 수 있다는 것을 의미했다. captureNetworkTraffic() 방법은 HTTP 응답 코드를 포함하여 자동화되고 있는 브라우저와 사이트 사이의 모든 네트워크 트래픽을 캡처하기 위한 것이다.
+Selenium WebDriver는 브라우저 자동화에 대한 완전히 다른 접근방식으로, 사용자처럼 행동하는 것을 선호한다. 이는 당신이 WebDriver로 시험을 작성하는 방식으로 표현된다. 자동 기능 테스트에서 상태 코드 확인은 테스트 실패의 특별히 중요한 세부 사항은 아니다; 그 이전의 단계들이 더 중요하다.</description></item><item><title>Working with select elements</title><link>https://www.selenium.dev/documentation/ko/support_packages/working_with_select_elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_select_elements/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Select elements can require quite a bit of boiler plate code to automate. To reduce this, and make your tests cleaner, there is a Select class in the Selenium support package. To use it, you will need the following import statement:
+Java Python C# Ruby JavaScript Kotlin import org.</description></item><item><title>독립형 서버 설치</title><link>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/selenium_installation/installing_standalone_server/</guid><description>Grid를 사용하려면 selenium-server-standalone JAR 파일을 다운로드하십시오. 모든 구성요소는 selenium-server를 통해 이용할 수 있습니다. 독립형 JAR에는 원격 Selenium 서버와 클라이언트측 바인딩을 포함한 모든 것이 들어 있습니다. 즉, 프로젝트에서 selenium 서버 독립형 jar을 사용할 경우 selenium-java 또는 브라우저별 jar을 추가하지 않아도 됩니다.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description></item><item><title>테스트의 종류</title><link>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/types_of_testing/</guid><description>적합 테스트 이러한 유형의 테스트는 기능이나 시스템이
 고객의 기대와 요구사항을 충족하는지 판단하기 위해 수행됩니다.
 이러한 유형의 테스트는 일반적으로 고객의 협조나 피드백을 포함하며,
 이는 다음 질문에 대한 답을 제공하는 검증활동입니다.
- 우리가 올바른 제품을 만들고 있나요?.
- 웹 애플리케이션의 경우, 이 테스트의 자동화는 사용자의 예상 행동을
+우리가 올바른 제품을 만들고 있나요?.
+웹 애플리케이션의 경우, 이 테스트의 자동화는 사용자의 예상 행동을
 시뮬레이션하여 Selenium과 간접적으로 연계할 수 있습니다.
 이 시뮬레이션은 기록/재생 또는 이 문서에 설명된 지원하는 다른 프로그래밍 언어를 통해 수행될 수 있습니다.
-참고: 적합 테스트는 **기능 테스트**의 하위 유형이며, 일부 사람들이 이를 언급하기도 합니다.</description>
-    </item>
-    
-    <item>
-      <title>AUT*에 대한 작업 수행</title>
-      <link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</guid>
-      <description>sendKeys 메소드를 이용하여 element의 텍스트를 설정할 수 있습니다:
-Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name)   string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name);   name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name)   const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name);   val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name)     몇몇 웹 어플리케이션들은 자바스크립트 라이브러리를 이용하여 드래그-앤-드롭 기능을 구현합니다. 아래는 하나의 element를 또다른 element로 드래그하는 가장 기본적인 예시입니다:</description>
-    </item>
-    
-    <item>
-      <title>Gmail, 이메일과 Facebook logins</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</guid>
-      <description>여러 가지 이유로, WebDriver를 사용하여 Gmail이나 Facebook과 같은 사이트에 로그인하는 것은 권장되지 않는다. 이러한 사이트의 사용 조건에 반대하는 것 외에도(계정 종료의 위험이 있는 경우) 느리고 신뢰할 수 없다.
-이상적인 방법은 이메일 제공자들이 제공하는 API를 사용하는 것이다. 또는 Facebook의 경우 시험 계정, 친구 등을 만들기 위한 API를 공개하는 개발자 도구 서비스를 이용하는 것이다. 비록 API를 사용하는 것이 조금 더 힘든 일처럼 보일지 모르지만, 당신은 속도, 신뢰성, 그리고 안정성에 대한 보상을 받을 것이다.</description>
-    </item>
-    
-    <item>
-      <title>Legacy Selenium IDE</title>
-      <link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description>
-    </item>
-    
-    <item>
-      <title>Mock external services</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/mock_external_services/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/mock_external_services/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description>
-    </item>
-    
-    <item>
-      <title>Waits</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/waits/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/waits/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description>
-    </item>
-    
-    <item>
-      <title>마우스 동작 세부 사항</title>
-      <link>https://www.selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
+참고: 적합 테스트는 **기능 테스트**의 하위 유형이며, 일부 사람들이 이를 언급하기도 합니다.</description></item><item><title>AUT*에 대한 작업 수행</title><link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/performing_actions_on_the_aut/</guid><description>sendKeys 메소드를 이용하여 element의 텍스트를 설정할 수 있습니다:
+Java Python C# Ruby JavaScript Kotlin String name = &amp;#34;Charles&amp;#34;; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name); name = &amp;#34;Charles&amp;#34; driver.find_element(By.NAME, &amp;#34;name&amp;#34;).send_keys(name) string name = &amp;#34;Charles&amp;#34;; driver.FindElement(By.Name(&amp;#34;name&amp;#34;)).SendKeys(name); name = &amp;#34;Charles&amp;#34; driver.find_element(name: &amp;#34;name&amp;#34;).send_keys(name) const name = &amp;#34;Charles&amp;#34;; await driver.findElement(By.name(&amp;#39;name&amp;#39;)).sendKeys(name); val name = &amp;#34;Charles&amp;#34; driver.findElement(By.name(&amp;#34;name&amp;#34;)).sendKeys(name) 몇몇 웹 어플리케이션들은 자바스크립트 라이브러리를 이용하여 드래그-앤-드롭 기능을 구현합니다. 아래는 하나의 element를 또다른 element로 드래그하는 가장 기본적인 예시입니다:</description></item><item><title>Gmail, 이메일과 Facebook logins</title><link>https://www.selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/gmail_email_and_facebook_logins/</guid><description>여러 가지 이유로, WebDriver를 사용하여 Gmail이나 Facebook과 같은 사이트에 로그인하는 것은 권장되지 않는다. 이러한 사이트의 사용 조건에 반대하는 것 외에도(계정 종료의 위험이 있는 경우) 느리고 신뢰할 수 없다.
+이상적인 방법은 이메일 제공자들이 제공하는 API를 사용하는 것이다. 또는 Facebook의 경우 시험 계정, 친구 등을 만들기 위한 API를 공개하는 개발자 도구 서비스를 이용하는 것이다. 비록 API를 사용하는 것이 조금 더 힘든 일처럼 보일지 모르지만, 당신은 속도, 신뢰성, 그리고 안정성에 대한 보상을 받을 것이다.</description></item><item><title>Legacy Selenium IDE</title><link>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/legacy_docs/selenium_ide/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Introduction The Selenium-IDE (Integrated Development Environment) is the tool you use to develop your Selenium test cases. It’s an easy-to-use Firefox plug-in and is generally the most efficient way to develop test cases. It also contains a context menu that allows you to first select a UI element from the browser’s currently displayed page and then select from a list of Selenium commands with parameters pre-defined according to the context of the selected UI element.</description></item><item><title>Mock external services</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/mock_external_services/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/mock_external_services/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Eliminating the dependencies on external services will greatly improve the speed and stability of your tests.</description></item><item><title>Waits</title><link>https://www.selenium.dev/documentation/ko/webdriver/waits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/waits/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+WebDriver can generally be said to have a blocking API. Because it is an out-of-process library that instructs the browser what to do, and because the web platform has an intrinsically asynchronous nature, WebDriver does not track the active, real-time state of the DOM. This comes with some challenges that we will discuss here.</description></item><item><title>마우스 동작 세부 사항</title><link>https://www.selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/support_packages/mouse_and_keyboard_actions_in_detail/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Mouse represents a mouse event. Mouse actions are performed by using low-level interface which allows us to provide virtualized device input action to the web browser.
 clickAndHold It will move to the element and clicks (without releasing) in the middle of the given element.
-Java Python C# Ruby JavaScript Kotlin import org.</description>
-    </item>
-    
-    <item>
-      <title>이 문서에 대하여</title>
-      <link>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</guid>
-      <description>이 문서들은 Selenium의 코드와 마찬가지로 자원 봉사자들에 의해 100% 유지됩니다.
+Java Python C# Ruby JavaScript Kotlin import org.</description></item><item><title>이 문서에 대하여</title><link>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/introduction/about_this_documentation/</guid><description>이 문서들은 Selenium의 코드와 마찬가지로 자원 봉사자들에 의해 100% 유지됩니다.
 많은 사람들이 이 문서가 만들어진 후 사용해오고 있지만, 더 많은 사람들은 찰나의 시간만 사용하고,
 신규 유저의 경험을 개전하기 위해 각자의 시간을 할애해 왔습니다.
 문서에 문제가 있는 경우, 우리에게 알려주세요!
 문제를 전달하는 가장 좋은 방법은 Github 저장소에 방문하는 것입니다. https://github.com/seleniumhq/seleniumhq.github.io/issues
 이미 동일한 문제가 접수되었는지 여부를 검색해보세요. 그렇지 않다면, 자유롭게 문제를 제기하면 됩니다.
-많은 커뮤니티 구성원들이 셀레니움 IRC 채널 irc.freenode.net 을 방문합니다.</description>
-    </item>
-    
-    <item>
-      <title>Improved reporting</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/improved_reporting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/improved_reporting/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description>
-    </item>
-    
-    <item>
-      <title>Support classes</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/support_classes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/support_classes/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
- Locator Strategies Events LoadableComponent ThreadGuard etc.</description>
-    </item>
-    
-    <item>
-      <title>실험 의존성</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/test_dependency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/test_dependency/</guid>
-      <description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;quot;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description>
-    </item>
-    
-    <item>
-      <title>Avoid sharing state</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/avoid_sharing_state/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/avoid_sharing_state/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
-  Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description>
-    </item>
-    
-    <item>
-      <title>JavaScript alerts, prompts and confirmations</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/js_alerts_prompts_and_confirmations/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/js_alerts_prompts_and_confirmations/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- WebDriver provides an API for working with the three types of native popup messages offered by JavaScript. These popups are styled by the browser and offer limited customisation.
-Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description>
-    </item>
-    
-    <item>
-      <title>Working with cookies</title>
-      <link>https://www.selenium.dev/documentation/ko/support_packages/working_with_cookies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_cookies/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
+많은 커뮤니티 구성원들이 셀레니움 IRC 채널 irc.freenode.net 을 방문합니다.</description></item><item><title>Improved reporting</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/improved_reporting/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/improved_reporting/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Selenium is not designed to report on the status of test cases run. Taking advantage of the built-in reporting capabilities of unit test frameworks is a good start. Most unit test frameworks have reports that can generate xUnit or HTML formatted reports. xUnit reports are popular for importing results to a Continuous Integration (CI) server like Jenkins, Travis, Bamboo, etc.</description></item><item><title>Support classes</title><link>https://www.selenium.dev/documentation/ko/webdriver/support_classes/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/support_classes/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
+Locator Strategies Events LoadableComponent ThreadGuard etc.</description></item><item><title>실험 의존성</title><link>https://www.selenium.dev/documentation/ko/worst_practices/test_dependency/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/test_dependency/</guid><description>자동화된 실험에 대한 일반적인 생각이나 오해는 &amp;ldquo;특정한 순서&amp;quot;로 판단된다. 당신의 실험들은 어떠한 형태 로든 정해진 순서 에 따라 실행되어질 수 있고, 단순히 성공하기 위해 다른 테스트에 의존하지 않는다.</description></item><item><title>Avoid sharing state</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/avoid_sharing_state/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/avoid_sharing_state/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Although mentioned in several places it is worth mentioning again. Ensure tests are isolated from one another.
+Do not share test data. Imagine several tests that each query the database for valid orders before picking one to perform an action on. Should two tests pick up the same order you are likely to get unexpected behaviour.</description></item><item><title>JavaScript alerts, prompts and confirmations</title><link>https://www.selenium.dev/documentation/ko/webdriver/js_alerts_prompts_and_confirmations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/js_alerts_prompts_and_confirmations/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+WebDriver provides an API for working with the three types of native popup messages offered by JavaScript. These popups are styled by the browser and offer limited customisation.
+Alerts The simplest of these is referred to as an alert, which shows a custom message, and a single button which dismisses the alert, labelled in most browsers as OK.</description></item><item><title>Working with cookies</title><link>https://www.selenium.dev/documentation/ko/support_packages/working_with_cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/support_packages/working_with_cookies/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+A cookie is a small piece of data that is sent from a website and stored in your computer. Cookies are mostly used to recognise the user and load the stored information.
 WebDriver API provides a way to interact with cookies with built-in methods:
-Add Cookie It is used to add a cookie to the current browsing context.</description>
-    </item>
-    
-    <item>
-      <title>성능 테스트</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/performance_testing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/performance_testing/</guid>
-      <description>Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다. 불가능해서가 아니라, 그것들이 성능을 테스트하는데 최적화되어 있지 않기 때문에 좋은 결과를 얻지 못 할 것이다.
-사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내&#39;외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
-예를 들어 브라우저 시작 속도, HTTP 서버의 속도, JavaScript 또는 CSS를 호스팅하는 타사 서버의 응답, WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은 결과에 변화를 일으킬 것이다.</description>
-    </item>
-    
-    <item>
-      <title>Http proxies</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/http_proxies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/http_proxies/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
+Add Cookie It is used to add a cookie to the current browsing context.</description></item><item><title>성능 테스트</title><link>https://www.selenium.dev/documentation/ko/worst_practices/performance_testing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/performance_testing/</guid><description>Selenium과 WebDriver를 사용한 성능 테스트는 일반적으로 권장되지 않는다. 불가능해서가 아니라, 그것들이 성능을 테스트하는데 최적화되어 있지 않기 때문에 좋은 결과를 얻지 못 할 것이다.
+사용자의 입장에서는, 성능 테스트에 이상적으로 보일 수 있지만 WebDriver 테스트들은 내'외부의 수많은 취약점이 존재하고, 이는 사용자 본인이 직접 통제할 수 없다.
+예를 들어 브라우저 시작 속도, HTTP 서버의 속도, JavaScript 또는 CSS를 호스팅하는 타사 서버의 응답, WebDriver 구현 자체의 계측 페널티 등 이 지점들에서의 변동은 결과에 변화를 일으킬 것이다.</description></item><item><title>Http proxies</title><link>https://www.selenium.dev/documentation/ko/webdriver/http_proxies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/http_proxies/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+A proxy server acts as an intermediary for requests between a client and a server. In simple, the traffic flows through the proxy server on its way to the address you requested and back.
 A proxy server for automation scripts with Selenium could be helpful for:
- Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.</description>
-    </item>
-    
-    <item>
-      <title>Test independency</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
-Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description>
-    </item>
-    
-    <item>
-      <title>링크 이동</title>
-      <link>https://www.selenium.dev/documentation/ko/worst_practices/link_spidering/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/worst_practices/link_spidering/</guid>
-      <description>WebDriver를 링크를 통해 이동하는 것은 권장되는 연습이 아니다. 할 수 없어서가 아니라, WebDriver가 확실히 이것에 가장 이상적인 도구가 아니기 때문이다. WebDriver를 시작하는 데 시간이 필요하며 최대 1분까지 몇 초 정도 걸릴 수 있음 시험이 어떻게 작성되느냐에 따라, 그냥 페이지로 가서 DOM을 통과한다.
-curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사용함으로써, browser를 만들고 페이지로 이동하는데 의존하지 않는 방법이기에 WebDriver를 사용하는 것보다 더 많은 시간을 절약할 수 있다. 당신은 이 작업에 WebDriver를 사용하지 않음으로써 많은 시간을 절약하고 있다.</description>
-    </item>
-    
-    <item>
-      <title>Consider using a fluent API</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Waitclass. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description>
-    </item>
-    
-    <item>
-      <title>Page loading strategy</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/page_loading_strategy/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/page_loading_strategy/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-The document.readyState property of a document describes the loading state of the current document.</description>
-    </item>
-    
-    <item>
-      <title>Fresh browser per test</title>
-      <link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/fresh_browser_per_test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/fresh_browser_per_test/</guid>
-      <description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
-FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile); </description>
-    </item>
-    
-    <item>
-      <title>Web element</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/web_element/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/web_element/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
-WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.</description>
-    </item>
-    
-    <item>
-      <title>Chrome Devtools</title>
-      <link>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
-Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description>
-    </item>
-    
-    <item>
-      <title>Keyboard</title>
-      <link>https://www.selenium.dev/documentation/ko/webdriver/keyboard/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/webdriver/keyboard/</guid>
-      <description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
- Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
-sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered. Here are the list of possible keystrokes that WebDriver Supports.</description>
-    </item>
-    
-    <item>
-      <title>Selenium 사이트와 문서에 기여하기</title>
-      <link>https://www.selenium.dev/documentation/ko/contributing/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ko/contributing/</guid>
-      <description>Selenium은 거대한 소프트웨어 프로젝트로, 사이트와 문서는 작동 원리를 이해하고 잠재력을 효과적으로 활용하는 데 중요한 역할을 합니다.
+Capture network traffic Mock backend calls made by the website Access the required website under complex network topologies or strict corporate restrictions/policies.</description></item><item><title>Test independency</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/test_independency/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Write each test as its own unit. Write the tests in a way that will not be reliant on other tests to complete:
+Let us say there is a content management system with which you can create some custom content which then appears on your website as a module after publishing, and it may take some time to sync between the CMS and the application.</description></item><item><title>링크 이동</title><link>https://www.selenium.dev/documentation/ko/worst_practices/link_spidering/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/worst_practices/link_spidering/</guid><description>WebDriver를 링크를 통해 이동하는 것은 권장되는 연습이 아니다. 할 수 없어서가 아니라, WebDriver가 확실히 이것에 가장 이상적인 도구가 아니기 때문이다. WebDriver를 시작하는 데 시간이 필요하며 최대 1분까지 몇 초 정도 걸릴 수 있음 시험이 어떻게 작성되느냐에 따라, 그냥 페이지로 가서 DOM을 통과한다.
+curl명령어를 실행하거나, BeautifulSoup과 같은 라이브러리를 사용함으로써, browser를 만들고 페이지로 이동하는데 의존하지 않는 방법이기에 WebDriver를 사용하는 것보다 더 많은 시간을 절약할 수 있다. 당신은 이 작업에 WebDriver를 사용하지 않음으로써 많은 시간을 절약하고 있다.</description></item><item><title>Consider using a fluent API</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/consider_using_a_fluent_api/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Martin Fowler coined the term &amp;ldquo;Fluent API&amp;rdquo;. Selenium already implements something like this in their FluentWait class, which is meant as an alternative to the standard Waitclass. You could enable the Fluent API design pattern in your page object and then query the Google search page with a code snippet like this one:</description></item><item><title>Page loading strategy</title><link>https://www.selenium.dev/documentation/ko/webdriver/page_loading_strategy/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/page_loading_strategy/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
+The document.readyState property of a document describes the loading state of the current document.</description></item><item><title>Fresh browser per test</title><link>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/fresh_browser_per_test/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/guidelines_and_recommendations/fresh_browser_per_test/</guid><description> Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Start each test from a clean known state. Ideally, spin up a new virtual machine for each test. If spinning up a new virtual machine is not practical, at least start a new WebDriver for each test. For Firefox, start a WebDriver with your known profile.
+FirefoxProfile profile = new FirefoxProfile(new File(&amp;#34;pathToFirefoxProfile&amp;#34;)); WebDriver driver = new FirefoxDriver(profile);</description></item><item><title>Web element</title><link>https://www.selenium.dev/documentation/ko/webdriver/web_element/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/web_element/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+WebElement represents a DOM element. WebElements can be found by searching from the document root using a WebDriver instance, or by searching under another WebElement.
+WebDriver API provides built-in methods to find the WebElements which are based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.</description></item><item><title>Chrome Devtools</title><link>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/support_packages/chrome_devtools/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Selenium 4 alpha versions have much awaited native support for Chrome Dev Protocol through &amp;ldquo;DevTools&amp;rdquo; interface. This helps us getting Chrome Development properties such as Application Cache, Fetch, Network, Performance, Profiler, Resource Timing, Security and Target CDP domains etc.
+Chrome DevTools is a set of web developer tools built directly into the Google Chrome browser.</description></item><item><title>Keyboard</title><link>https://www.selenium.dev/documentation/ko/webdriver/keyboard/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/webdriver/keyboard/</guid><description>Page being translated from English to Korean. Do you speak Korean? Help us to translate it by sending us pull requests!
+Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level interface which allows us to provide virtualized device input to the web browser.
+sendKeys The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered. Here are the list of possible keystrokes that WebDriver Supports.</description></item><item><title>Selenium 사이트와 문서에 기여하기</title><link>https://www.selenium.dev/documentation/ko/contributing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/contributing/</guid><description>Selenium은 거대한 소프트웨어 프로젝트로, 사이트와 문서는 작동 원리를 이해하고 잠재력을 효과적으로 활용하는 데 중요한 역할을 합니다.
 이 프로젝트는 Selenium 사이트와 문서를 담고 있습니다. 여기엔 Selenium을 효과적으로 사용하기 위한 업데이트 정보를 제공하고, 어떻게 참여하고 기여할 수 있는지에 대한 지속적인 노력이 담겨 있습니다.
 사이트와 문서에 기여하기 위한 방법은 아래 기술된 과정을 따릅니다. 여러분은 익숙해질 때 까지 더 보기를 충분한 시간을 들여 읽어보시고 바랍니다.
- Selenium은 여러분의 기여를 환영합니다. 기여하는 방법은 여러 가지가 있습니다:</description>
-    </item>
-    
-  </channel>
-</rss>
+Selenium은 여러분의 기여를 환영합니다. 기여하는 방법은 여러 가지가 있습니다:</description></item></channel></rss>

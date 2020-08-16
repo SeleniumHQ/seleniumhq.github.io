@@ -1,2734 +1,392 @@
-<!DOCTYPE html>
-<html lang="es" class="js csstransforms3d">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.66.0" />
-    <meta name="description" content="Documentation for Selenium">
-
-
-    <link rel="icon" href="https://www.selenium.dev/documentation/es/images/favicon.png" type="image/png">
-
-    <title>Teclado :: Documentación de Selenium</title>
-
-    
-    <link href="https://www.selenium.dev/documentation/es/css/nucleus.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hybrid.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/featherlight.min.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/auto-complete.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/theme.css?1597506667" rel="stylesheet">
-    <link href="https://www.selenium.dev/documentation/es/css/hugo-theme.css?1597506667" rel="stylesheet">
-    
-    <link href="https://www.selenium.dev/documentation/es/css/theme-selenium.css?1597506667" rel="stylesheet">
-    
-    
-
-    <script src="https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1597506667"></script>
-
-    <style>
-      :root #header + #content > #left > #rlblock_left{
-          display:none !important;
-      }
-      
-    </style>
-    
-  </head>
-  <body class="" data-url="/webdriver/keyboard/">
-    <nav id="sidebar" class="showVisitedLinks">
-
-
-
-  <div id="header-wrapper">
-    <div id="header">
-      <a id="logo" href="https://www.selenium.dev/documentation/es/">
-  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"
-    width="100%" height="100%" xml:space="preserve">
-    <defs>
-      <style>.cls-1{fill:#fff;}</style>
-    </defs>
-    <title>Selenium</title>
-    <path class="cls-1" d="M46.2,26.37a18.85,18.85,0,0,1-2.57-.2,25,25,0,0,1-2.74-.53l0-1.39a25.31,25.31,0,0,0,2.71.53,18,18,0,0,0,2.5.2,5.51,5.51,0,0,0,3.29-.84,2.79,2.79,0,0,0,1.14-2.39,2.85,2.85,0,0,0-1.24-2.49A6,6,0,0,0,48,18.55q-.78-.29-1.67-.55A15.93,15.93,0,0,1,44,17.13a5.92,5.92,0,0,1-1.58-1.05,3.6,3.6,0,0,1-.9-1.34A5,5,0,0,1,41.23,13a4.46,4.46,0,0,1,.41-1.93,4.31,4.31,0,0,1,1.17-1.5,5.26,5.26,0,0,1,1.82-1A8,8,0,0,1,47,8.28a20.51,20.51,0,0,1,4.41.57l0,1.42a20,20,0,0,0-2.23-.44,15.2,15.2,0,0,0-2-.15,4.86,4.86,0,0,0-3.08.9A2.9,2.9,0,0,0,42.88,13a3.25,3.25,0,0,0,.21,1.21,2.61,2.61,0,0,0,.7,1,4.83,4.83,0,0,0,1.27.79,14.31,14.31,0,0,0,2,.68q1.11.33,2.06.71a6.21,6.21,0,0,1,1.65.94,4.09,4.09,0,0,1,1.1,1.38,4.54,4.54,0,0,1,.4,2,4.15,4.15,0,0,1-1.56,3.48A7.16,7.16,0,0,1,46.2,26.37Z"/>
-    <path class="cls-1" d="M60.62,26.32a5.46,5.46,0,0,1-4.28-1.62A6.9,6.9,0,0,1,54.88,20a7.8,7.8,0,0,1,1.43-5,5,5,0,0,1,4.14-1.75,4.24,4.24,0,0,1,3.47,1.43A6.48,6.48,0,0,1,65.1,18.8q0,.54,0,.92a3.22,3.22,0,0,1-.09.64H56.44a5.39,5.39,0,0,0,1.17,3.5A4.18,4.18,0,0,0,60.8,25a10.52,10.52,0,0,0,1.82-.17,11.77,11.77,0,0,0,1.93-.52l.12,1.27a10.68,10.68,0,0,1-2,.55A11.47,11.47,0,0,1,60.62,26.32ZM60.4,14.43q-3.68,0-3.94,4.74h7.15a6.49,6.49,0,0,0-.78-3.63A2.76,2.76,0,0,0,60.4,14.43Z"/>
-    <path class="cls-1" d="M68.64,7h1.58V26.11H68.64Z"/>
-    <path class="cls-1" d="M79.56,26.32a5.46,5.46,0,0,1-4.28-1.62A6.9,6.9,0,0,1,73.83,20a7.8,7.8,0,0,1,1.43-5,5,5,0,0,1,4.14-1.75,4.24,4.24,0,0,1,3.47,1.43A6.48,6.48,0,0,1,84,18.8q0,.54,0,.92a3.22,3.22,0,0,1-.09.64H75.38a5.4,5.4,0,0,0,1.17,3.5A4.18,4.18,0,0,0,79.75,25a10.52,10.52,0,0,0,1.82-.17,11.8,11.8,0,0,0,1.93-.52l.12,1.27a10.68,10.68,0,0,1-2,.55A11.47,11.47,0,0,1,79.56,26.32Zm-.21-11.89q-3.68,0-3.94,4.74h7.15a6.49,6.49,0,0,0-.78-3.63A2.76,2.76,0,0,0,79.35,14.43Z"/>
-    <path class="cls-1" d="M87.51,13.37h1.32l.12,1.49h.12q.94-.45,1.72-.78t1.43-.54a8.42,8.42,0,0,1,1.2-.31,6.54,6.54,0,0,1,1.1-.09A3.3,3.3,0,0,1,97,14a3.63,3.63,0,0,1,.83,2.63v9.51H96.24v-9a3,3,0,0,0-.55-2,2.18,2.18,0,0,0-1.69-.6,7.25,7.25,0,0,0-2.24.41,20.1,20.1,0,0,0-2.67,1.12v10H87.51Z"/>
-    <path class="cls-1" d="M102.75,10.52a.93.93,0,0,1-1.06-1,1.06,1.06,0,0,1,2.12,0A.93.93,0,0,1,102.75,10.52Zm-.8,2.85h1.58V26.11h-1.58Z"/>
-    <path class="cls-1" d="M110.81,26.34q-3.14,0-3.14-3.47V13.37h1.58v9a3.16,3.16,0,0,0,.48,2,1.92,1.92,0,0,0,1.59.6,6.83,6.83,0,0,0,2.48-.48q1.25-.48,2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9,7.9,0,0,1-1.23.33A7.34,7.34,0,0,1,110.81,26.34Z"/>
-    <path class="cls-1" d="M122.18,13.37h1.3l.14,1.49h.09a19.53,19.53,0,0,1,2.58-1.31,5.51,5.51,0,0,1,2-.41,2.83,2.83,0,0,1,3,1.77h.12q.8-.5,1.45-.83a12.61,12.61,0,0,1,1.2-.54,6.17,6.17,0,0,1,1-.31,5.18,5.18,0,0,1,1-.09,3.3,3.3,0,0,1,2.45.84,3.63,3.63,0,0,1,.83,2.63v9.51h-1.56v-9a2.9,2.9,0,0,0-.55-2,2.21,2.21,0,0,0-1.69-.59,5.14,5.14,0,0,0-1.78.38A14.45,14.45,0,0,0,131.6,16v10.1H130v-9a2.9,2.9,0,0,0-.55-2,2.21,2.21,0,0,0-1.69-.59,5.24,5.24,0,0,0-1.86.4A14,14,0,0,0,123.76,16V26.11h-1.58Z"/>
-    <path class="cls-1" d="M21.45,21.51a2.49,2.49,0,0,0-2.55,2.21.08.08,0,0,0,.08.1h4.95a.08.08,0,0,0,.08-.09A2.41,2.41,0,0,0,21.45,21.51Z"/>
-    <path class="cls-1" d="M32.06,4.91,21.56,16.7a.32.32,0,0,1-.47,0l-5.36-5.53a.32.32,0,0,1,0-.4l1.77-2.27a.32.32,0,0,1,.52,0l3,3.32a.32.32,0,0,0,.49,0L29.87.36A.23.23,0,0,0,29.69,0H.25A.25.25,0,0,0,0,.25v33.5A.25.25,0,0,0,.25,34h32a.25.25,0,0,0,.25-.25V5.06A.23.23,0,0,0,32.06,4.91Zm-23,25.36a8.08,8.08,0,0,1-5.74-2,.31.31,0,0,1,0-.41l1.25-1.75A.31.31,0,0,1,5,26a6.15,6.15,0,0,0,4.2,1.64c1.64,0,2.44-.76,2.44-1.56,0-2.48-8.08-.78-8.08-6.06,0-2.33,2-4.27,5.32-4.27a7.88,7.88,0,0,1,5.25,1.76.31.31,0,0,1,0,.43L12.9,19.65a.31.31,0,0,1-.45.05,6.08,6.08,0,0,0-3.84-1.32c-1.28,0-2,.57-2,1.41,0,2.23,8.06.74,8.06,6C14.67,28.33,12.84,30.27,9.05,30.27ZM26.68,25.4a.27.27,0,0,1-.28.28H19a.09.09,0,0,0-.08.1,2.81,2.81,0,0,0,3,2.32,4.62,4.62,0,0,0,2.56-.84.27.27,0,0,1,.4.06l.9,1.31a.28.28,0,0,1-.06.37,6.67,6.67,0,0,1-4.1,1.28,5.28,5.28,0,0,1-5.57-5.48,5.31,5.31,0,0,1,5.4-5.46c3.11,0,5.22,2.33,5.22,5.74Z"/>
-  </svg>
-</a>
-
-    </div>
-    
-        <div class="searchbox">
-    <label for="search-by"><i class="fas fa-search"></i></label>
-    <input data-search-input id="search-by" type="search" placeholder="Buscar...">
-    <span data-search-clear=""><i class="fas fa-times"></i></span>
-</div>
-
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/lunr.min.js?1597506667"></script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/auto-complete.js?1597506667"></script>
-<script type="text/javascript">
-    
-        var baseurl = "https:\/\/www.selenium.dev\/documentation\/es\/es";
-    
-</script>
-<script type="text/javascript" src="https://www.selenium.dev/documentation/es/js/search.js?1597506667"></script>
-
-    
-  </div>
-
-    <div class="highlightable">
-    <ul class="topics">
-
-        
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/getting_started/" title="Empezando" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/getting_started/">
-          Empezando
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started/quick/" title="Guía rápida" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/getting_started/quick/">
-        Guía rápida
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/introduction/" title="Introducción" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/introduction/">
-          Introducción
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/introduction/the_selenium_project_and_tools/" title="El proyecto Selenium y sus herramientas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/">
-        El proyecto Selenium y sus herramientas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/introduction/on_test_automation/" title="Sobre automatización de pruebas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/introduction/on_test_automation/">
-        Sobre automatización de pruebas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/introduction/types_of_testing/" title="Tipos de pruebas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/introduction/types_of_testing/">
-        Tipos de pruebas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/introduction/about_this_documentation/" title="Acerca de esta documentación" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/introduction/about_this_documentation/">
-        Acerca de esta documentación
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/selenium_installation/" title="Instalación de Selenium" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/selenium_installation/">
-          Instalación de Selenium
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/selenium_installation/installing_selenium_libraries/" title="Instalando las librerías de Selenium" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/">
-        Instalando las librerías de Selenium
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/selenium_installation/installing_webdriver_binaries/" title="Instalando los binarios de WebDriver" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/">
-        Instalando los binarios de WebDriver
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/selenium_installation/installing_standalone_server/" title="Instalación del servidor Standalone" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/selenium_installation/installing_standalone_server/">
-        Instalación del servidor Standalone
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/getting_started_with_webdriver/" title="Iniciando con WebDriver" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/">
-          Iniciando con WebDriver
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started_with_webdriver/browsers/" title="Navegadores" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/browsers/">
-        Navegadores
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started_with_webdriver/third_party_drivers_and_plugins/" title="Navegadores de terceros y plugins" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/">
-        Navegadores de terceros y plugins
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started_with_webdriver/locating_elements/" title="Localizando elementos" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/">
-        Localizando elementos
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/getting_started_with_webdriver/performing_actions_on_the_aut/" title="Ejecutando acciones en el AUT*" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/">
-        Ejecutando acciones en el AUT*
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/webdriver/" title="WebDriver" class="dd-item 
-        parent
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/webdriver/">
-          WebDriver
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/understanding_the_components/" title="Entendiendo los componentes" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/understanding_the_components/">
-        Entendiendo los componentes
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/driver_requirements/" title="Requerimientos de los controladores" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/driver_requirements/">
-        Requerimientos de los controladores
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/browser_manipulation/" title="Manipulación de Navegadores" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/browser_manipulation/">
-        Manipulación de Navegadores
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/waits/" title="Esperas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/waits/">
-        Esperas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/support_classes/" title="Clases de apoyo" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/support_classes/">
-        Clases de apoyo
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/js_alerts_prompts_and_confirmations/" title="Alertas, avisos y confirmaciones de JavaScript" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/">
-        Alertas, avisos y confirmaciones de JavaScript
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/http_proxies/" title="Proxies Http" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/http_proxies/">
-        Proxies Http
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/page_loading_strategy/" title="Estrategia de carga de página" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/page_loading_strategy/">
-        Estrategia de carga de página
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/web_element/" title="Elemento web" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/web_element/">
-        Elemento web
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/webdriver/keyboard/" title="Teclado" class="dd-item active">
-        <a href="https://www.selenium.dev/documentation/es/webdriver/keyboard/">
-        Teclado
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/remote_webdriver/" title="WebDriver remoto" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/remote_webdriver/">
-          WebDriver remoto
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/remote_webdriver/remote_webdriver_server/" title="WebDriver remoto - servidor" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/">
-        WebDriver remoto - servidor
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/remote_webdriver/remote_webdriver_client/" title="WebDriver remoto - cliente" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/">
-        WebDriver remoto - cliente
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/guidelines_and_recommendations/" title="Guías y recomendaciones" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/">
-          Guías y recomendaciones
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/page_object_models/" title="Modelos de objetos de página" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/">
-        Modelos de objetos de página
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/domain_specific_language/" title="Lenguage de dominio específico" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/">
-        Lenguage de dominio específico
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/generating_application_state/" title="Generar el estado de la aplicación" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/">
-        Generar el estado de la aplicación
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/mock_external_services/" title="Mock de servicios externos" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/">
-        Mock de servicios externos
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/improved_reporting/" title="Mejores reportes" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/">
-        Mejores reportes
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/avoid_sharing_state/" title="Evitar compartir estados" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/">
-        Evitar compartir estados
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/test_independency/" title="Independencia en las pruebas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/">
-        Independencia en las pruebas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/consider_using_a_fluent_api/" title="Considerar el uso de un API fluída" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/">
-        Considerar el uso de un API fluída
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/guidelines_and_recommendations/fresh_browser_per_test/" title="Nueva instancia del navegador por prueba" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/">
-        Nueva instancia del navegador por prueba
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/worst_practices/" title="Malas prácticas" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/worst_practices/">
-          Malas prácticas
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/captchas/" title="Captchas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/captchas/">
-        Captchas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/two_factor_authentication/" title="Two Factor Authentication" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/two_factor_authentication/">
-        Two Factor Authentication
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/file_downloads/" title="Descarga de archivos" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/file_downloads/">
-        Descarga de archivos
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/http_response_codes/" title="Códigos de respuesta HTTP" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/http_response_codes/">
-        Códigos de respuesta HTTP
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/gmail_email_and_facebook_logins/" title="Autenticarse con Gmail, email y Facebook" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/">
-        Gmail, email y Facebook
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/test_dependency/" title="Dependencia entre pruebas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/test_dependency/">
-        Dependencia entre pruebas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/performance_testing/" title="Pruebas de rendimiento" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/performance_testing/">
-        Pruebas de rendimiento
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/worst_practices/link_spidering/" title="Rastreo de enlaces" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/worst_practices/link_spidering/">
-        Rastreo de enlaces
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/grid/" title="Grid" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/grid/">
-          Grid
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-            
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/purposes_and_main_functionalities/" title="Objetivos y funcionalidades principales" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/purposes_and_main_functionalities/">
-        Objetivos y funcionalidades principales
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/when_to_use_grid/" title="Cuando usar el Grid" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/when_to_use_grid/">
-        Cuando usar el Grid
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/grid/grid_3/" title="Grid 3" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/grid/grid_3/">
-          Grid 3
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/grid_3/components_of_a_grid/" title="Componentes" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/grid_3/components_of_a_grid/">
-        Componentes
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/grid_3/setting_up_your_own_grid/" title="Configurando tu propio Grid" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/grid_3/setting_up_your_own_grid/">
-        Configurando tu propio Grid
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/grid/grid_4/" title="Grid 4" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/grid/grid_4/">
-          Grid 4
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/grid_4/components_of_a_grid/" title="Componentes" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/grid_4/components_of_a_grid/">
-        Componentes
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/grid/grid_4/setting_up_your_own_grid/" title="Configurando tu propio Grid" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/grid/grid_4/setting_up_your_own_grid/">
-        Configurando tu propio Grid
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/driver_idiosyncrasies/" title="Comportamientos del controlador" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/driver_idiosyncrasies/">
-          Comportamientos del controlador
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/driver_idiosyncrasies/shared_capabilities/" title="Shared capabilities" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/">
-        Shared capabilities
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/driver_idiosyncrasies/driver_specific_capabilities/" title="Capacidades específicas de los Drivers" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/">
-        Capacidades específicas de los Drivers
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/support_packages/" title="Paquetes de soporte" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/support_packages/">
-          Paquetes de soporte
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/support_packages/working_with_colours/" title="Trabajando con colores" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/support_packages/working_with_colours/">
-        Trabajando con colores
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/support_packages/working_with_select_elements/" title="Trabajando con elementos select" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/support_packages/working_with_select_elements/">
-        Trabajando con elementos select
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/support_packages/mouse_and_keyboard_actions_in_detail/" title="Acciones del ratón en detalle" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/">
-        Acciones del ratón en detalle
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/support_packages/working_with_cookies/" title="Trabajando con las cookies" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/support_packages/working_with_cookies/">
-        Trabajando con las cookies
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/support_packages/chrome_devtools/" title="Chrome Devtools" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/support_packages/chrome_devtools/">
-        Chrome Devtools
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/legacy_docs/" title="Legacy" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/legacy_docs/">
-          Legacy
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/legacy_docs/selenium_rc/" title="Selenium 1 (Selenium RC)" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/legacy_docs/selenium_rc/">
-        Selenium 1 (Selenium RC)
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/legacy_docs/migrating_from_rc_to_webdriver/" title="Migrando de RC a WebDriver" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/legacy_docs/migrating_from_rc_to_webdriver/">
-        Migrando de RC a WebDriver
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/legacy_docs/html-runner/" title="HTML runner" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/legacy_docs/html-runner/">
-        HTML runner
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/legacy_docs/selenium_ide/" title="Legacy Selenium IDE" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/legacy_docs/selenium_ide/">
-        Legacy Selenium IDE
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-          
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/front_matter/" title="Texto preliminar" class="dd-item 
-        
-        
-        
-        ">
-      <a href="https://www.selenium.dev/documentation/es/front_matter/">
-          Texto preliminar
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-      
-        <ul>
-          
-          
-          
-          
-        
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/front_matter/copyright_and_attributions/" title="Derechos de autor y atribuciones" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions/">
-        Derechos de autor
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/front_matter/typographical_conventions/" title="Convenciones tipográficas" class="dd-item ">
-        <a href="https://www.selenium.dev/documentation/es/front_matter/typographical_conventions/">
-        Convenciones tipográficas
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-        
-        </ul>
-              
-    </li>
-  
- 
-
-          
-         
-    </ul>
-
-    
-    
-      <section id="shortcuts">
-        <h3>Más</h3>
-        <ul>
-          
-              <li> 
-                  <a class="padding" href="https://www.selenium.dev/"><i class='fas fa-home'></i> Selenium Home</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/SeleniumHQ/seleniumhq.github.io"><i class='fab fa-fw fa-github'></i> Repo en GitHub</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://github.com/seleniumhq/seleniumhq.github.io/issues"><i class='fas fa-fw fa-exclamation-triangle'></i> Reportar un problema</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions"><i class='fas fa-fw fa-trophy'></i> Créditos</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://www.selenium.dev/documentation/es/contributing"><i class='fas fa-fw fa-bullhorn'></i> Cómo contribuír</a>
-              </li>
-          
-        </ul>
-      </section>
-    
-
-    
-    <section id="prefooter">
-      <hr/>
-      <ul>
-      
-        <li>
-          <a class="padding">
-            <i class="fas fa-language fa-fw"></i>
-          <div class="select-style">
-            <select id="select-language" onchange="location = this.value;">
-          
-          
-          
-              
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="en" value="https://www.selenium.dev/documentation/en/webdriver/keyboard/">English</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-                    
-                    
-                      <option id="de" value="https://www.selenium.dev/documentation/de/webdriver/keyboard/">Deutsch</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="es" value="https://www.selenium.dev/documentation/es/webdriver/keyboard/" selected>Español</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="nl" value="https://www.selenium.dev/documentation/nl/webdriver/keyboard/">Nederlands</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="zh-cn" value="https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/">中文简体</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="fr" value="https://www.selenium.dev/documentation/fr/webdriver/keyboard/">Français</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="ja" value="https://www.selenium.dev/documentation/ja/webdriver/keyboard/">日本語</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="ko" value="https://www.selenium.dev/documentation/ko/webdriver/keyboard/">한국어</option>
-                    
-                  
-              
-          
-        </select>
-        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
-          <g>
-            <g id="arrow-drop-down">
-              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
-            </g>
-          </g>
-        </svg>
-        </div>
-        </a>
-        </li>
-      
-      
-      
-        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Borrar Historial</a></li>
-      
-      </ul>
-    </section>
-    
-    <section id="footer">
-      <p>    
-  &copy; 2013-2020
-</p>
-<p>    
-  Software Freedom Conservancy (SFC)
-</p>
-    </section>
-  </div>
-</nav>
-
-
-
-
-        <section id="body">
-        <div id="overlay"></div>
-        <div class="padding highlightable">
-              
-              <div>
-                <div id="top-bar">
-                
-                  
-                  
-                  
-                  <div id="top-github-link">
-                    <a class="github-link" title='Editar esta página' href="https://github.com/SeleniumHQ/site/edit/trunk/docs_source_files/content/webdriver/keyboard.es.md" target="blank">
-                      <i class="fas fa-code-branch"></i>
-                      <span id="top-github-link-text">Editar esta página</span>
-                    </a>
-                  </div>
-                  
-                
-                
-                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                    <span id="sidebar-toggle-span">
-                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
-                          <i class="fas fa-bars"></i>
-                        </a>
-                    </span>
-                  
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
-                  <span class="links">
-                 
-                 
-                    
-          
-          
-            
-            
-          
-          
-            
-            
-          
-          
-            <a href='https://www.selenium.dev/documentation/es/'>Selenium, el proyecto para automatizar navegadores</a> > <a href='https://www.selenium.dev/documentation/es/webdriver/'>WebDriver</a> > Teclado
-          
-        
-          
-        
-          
-        
-                 
-                  </span>
-                </div>
-                
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#sendkeys">sendKeys</a></li>
-    <li><a href="#keydown">keyDown</a></li>
-    <li><a href="#keyup">keyUp</a></li>
-    <li><a href="#clear">clear</a></li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-                
-              </div>
-            </div>
-            
-        <div id="head-tags">
-        
-        </div>
-        
-        <div id="body-inner">
-          
-            <h1>
-              
-              Teclado
-            </h1>
-          
-
-        
-
-
-<p>Keyboard representa un evento del teclado. Las acciones del teclado
+<!doctype html><html lang=es class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.66.0"><meta name=description content="Documentation for Selenium"><link rel=icon href=https://www.selenium.dev/documentation/es/images/favicon.png type=image/png><title>Teclado :: Documentación de Selenium</title><link href=https://www.selenium.dev/documentation/es/css/nucleus.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/fontawesome-all.min.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/hybrid.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/featherlight.min.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/perfect-scrollbar.min.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/auto-complete.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/atom-one-dark-reasonable.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/theme.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/hugo-theme.css?1597571110 rel=stylesheet><link href=https://www.selenium.dev/documentation/es/css/theme-selenium.css?1597571110 rel=stylesheet><script src=https://www.selenium.dev/documentation/es/js/jquery-3.3.1.min.js?1597571110></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=/webdriver/keyboard/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=https://www.selenium.dev/documentation/es/><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 139.38 34"><defs><style>.cls-1{fill:#fff}</style></defs><title>Selenium</title><path class="cls-1" d="M46.2 26.37a18.85 18.85.0 01-2.57-.2 25 25 0 01-2.74-.53v-1.39a25.31 25.31.0 002.71.53 18 18 0 002.5.2 5.51 5.51.0 003.29-.84 2.79 2.79.0 001.14-2.39 2.85 2.85.0 00-1.24-2.49A6 6 0 0048 18.55q-.78-.29-1.67-.55A15.93 15.93.0 0144 17.13a5.92 5.92.0 01-1.58-1.05 3.6 3.6.0 01-.9-1.34A5 5 0 0141.23 13a4.46 4.46.0 01.41-1.93 4.31 4.31.0 011.17-1.5 5.26 5.26.0 011.82-1A8 8 0 0147 8.28a20.51 20.51.0 014.41.57v1.42a20 20 0 00-2.23-.44 15.2 15.2.0 00-2-.15 4.86 4.86.0 00-3.08.9A2.9 2.9.0 0042.88 13a3.25 3.25.0 00.21 1.21 2.61 2.61.0 00.7 1 4.83 4.83.0 001.27.79 14.31 14.31.0 002 .68q1.11.33 2.06.71a6.21 6.21.0 011.65.94 4.09 4.09.0 011.1 1.38 4.54 4.54.0 01.4 2 4.15 4.15.0 01-1.56 3.48A7.16 7.16.0 0146.2 26.37z"/><path class="cls-1" d="M60.62 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0154.88 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0165.1 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H56.44a5.39 5.39.0 001.17 3.5A4.18 4.18.0 0060.8 25a10.52 10.52.0 001.82-.17 11.77 11.77.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0160.62 26.32zM60.4 14.43q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0060.4 14.43z"/><path class="cls-1" d="M68.64 7h1.58V26.11H68.64z"/><path class="cls-1" d="M79.56 26.32a5.46 5.46.0 01-4.28-1.62A6.9 6.9.0 0173.83 20a7.8 7.8.0 011.43-5 5 5 0 014.14-1.75 4.24 4.24.0 013.47 1.43A6.48 6.48.0 0184 18.8q0 .54.0.92a3.22 3.22.0 01-.09.64H75.38a5.4 5.4.0 001.17 3.5A4.18 4.18.0 0079.75 25a10.52 10.52.0 001.82-.17 11.8 11.8.0 001.93-.52l.12 1.27a10.68 10.68.0 01-2 .55A11.47 11.47.0 0179.56 26.32zm-.21-11.89q-3.68.0-3.94 4.74h7.15a6.49 6.49.0 00-.78-3.63A2.76 2.76.0 0079.35 14.43z"/><path class="cls-1" d="M87.51 13.37h1.32l.12 1.49h.12q.94-.45 1.72-.78t1.43-.54a8.42 8.42.0 011.2-.31 6.54 6.54.0 011.1-.09A3.3 3.3.0 0197 14a3.63 3.63.0 01.83 2.63v9.51H96.24v-9a3 3 0 00-.55-2 2.18 2.18.0 00-1.69-.6 7.25 7.25.0 00-2.24.41 20.1 20.1.0 00-2.67 1.12v10H87.51z"/><path class="cls-1" d="M102.75 10.52a.93.93.0 01-1.06-1 1.06 1.06.0 012.12.0A.93.93.0 01102.75 10.52zm-.8 2.85h1.58V26.11h-1.58z"/><path class="cls-1" d="M110.81 26.34l-3.14-3.47V13.37h1.58v9a3.16 3.16.0 00.48 2 1.92 1.92.0 001.59.6 6.83 6.83.0 002.48-.48q1.25-.48 2.59-1.14V13.37H118V26.11h-1.32l-.12-1.58h-.09l-1.73.81q-.74.34-1.38.57a7.9 7.9.0 01-1.23.33A7.34 7.34.0 01110.81 26.34z"/><path class="cls-1" d="M122.18 13.37h1.3l.14 1.49h.09a19.53 19.53.0 012.58-1.31 5.51 5.51.0 012-.41 2.83 2.83.0 013 1.77h.12q.8-.5 1.45-.83a12.61 12.61.0 011.2-.54 6.17 6.17.0 011-.31 5.18 5.18.0 011-.09 3.3 3.3.0 012.45.84 3.63 3.63.0 01.83 2.63v9.51h-1.56v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.14 5.14.0 00-1.78.38A14.45 14.45.0 00131.6 16v10.1H130v-9a2.9 2.9.0 00-.55-2 2.21 2.21.0 00-1.69-.59 5.24 5.24.0 00-1.86.4A14 14 0 00123.76 16V26.11h-1.58z"/><path class="cls-1" d="M21.45 21.51a2.49 2.49.0 00-2.55 2.21.08.08.0 00.08.1h4.95a.08.08.0 00.08-.09A2.41 2.41.0 0021.45 21.51z"/><path class="cls-1" d="M32.06 4.91 21.56 16.7a.32.32.0 01-.47.0l-5.36-5.53a.32.32.0 010-.4l1.77-2.27a.32.32.0 01.52.0l3 3.32a.32.32.0 00.49.0L29.87.36A.23.23.0 0029.69.0H.25A.25.25.0 000 .25v33.5A.25.25.0 00.25 34h32a.25.25.0 00.25-.25V5.06A.23.23.0 0032.06 4.91zm-23 25.36a8.08 8.08.0 01-5.74-2 .31.31.0 010-.41l1.25-1.75A.31.31.0 015 26a6.15 6.15.0 004.2 1.64c1.64.0 2.44-.76 2.44-1.56.0-2.48-8.08-.78-8.08-6.06.0-2.33 2-4.27 5.32-4.27a7.88 7.88.0 015.25 1.76.31.31.0 010 .43L12.9 19.65a.31.31.0 01-.45.05 6.08 6.08.0 00-3.84-1.32c-1.28.0-2 .57-2 1.41.0 2.23 8.06.74 8.06 6C14.67 28.33 12.84 30.27 9.05 30.27zM26.68 25.4a.27.27.0 01-.28.28H19a.09.09.0 00-.08.1 2.81 2.81.0 003 2.32 4.62 4.62.0 002.56-.84.27.27.0 01.4.06l.9 1.31a.28.28.0 01-.06.37 6.67 6.67.0 01-4.1 1.28 5.28 5.28.0 01-5.57-5.48 5.31 5.31.0 015.4-5.46c3.11.0 5.22 2.33 5.22 5.74z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label><input data-search-input id=search-by type=search placeholder=Buscar...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=https://www.selenium.dev/documentation/es/js/lunr.min.js?1597571110></script><script type=text/javascript src=https://www.selenium.dev/documentation/es/js/auto-complete.js?1597571110></script><script type=text/javascript>var baseurl="https:\/\/www.selenium.dev\/documentation\/es\/es";</script><script type=text/javascript src=https://www.selenium.dev/documentation/es/js/search.js?1597571110></script></div><div class=highlightable><ul class=topics><li data-nav-id=/getting_started/ title=Empezando class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started/>Empezando
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/getting_started/quick/ title="Guía rápida" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started/quick/>Guía rápida
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/introduction/ title=Introducción class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/>Introducción
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/introduction/the_selenium_project_and_tools/ title="El proyecto Selenium y sus herramientas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/the_selenium_project_and_tools/>El proyecto Selenium y sus herramientas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/on_test_automation/ title="Sobre automatización de pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/on_test_automation/>Sobre automatización de pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/types_of_testing/ title="Tipos de pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/types_of_testing/>Tipos de pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/introduction/about_this_documentation/ title="Acerca de esta documentación" class=dd-item><a href=https://www.selenium.dev/documentation/es/introduction/about_this_documentation/>Acerca de esta documentación
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/selenium_installation/ title="Instalación de Selenium" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/>Instalación de Selenium
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/selenium_installation/installing_selenium_libraries/ title="Instalando las librerías de Selenium" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_selenium_libraries/>Instalando las librerías de Selenium
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/selenium_installation/installing_webdriver_binaries/ title="Instalando los binarios de WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_webdriver_binaries/>Instalando los binarios de WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/selenium_installation/installing_standalone_server/ title="Instalación del servidor Standalone" class=dd-item><a href=https://www.selenium.dev/documentation/es/selenium_installation/installing_standalone_server/>Instalación del servidor Standalone
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/getting_started_with_webdriver/ title="Iniciando con WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/>Iniciando con WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/getting_started_with_webdriver/browsers/ title=Navegadores class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/browsers/>Navegadores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/getting_started_with_webdriver/third_party_drivers_and_plugins/ title="Navegadores de terceros y plugins" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/third_party_drivers_and_plugins/>Navegadores de terceros y plugins
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/getting_started_with_webdriver/locating_elements/ title="Localizando elementos" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/locating_elements/>Localizando elementos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/getting_started_with_webdriver/performing_actions_on_the_aut/ title="Ejecutando acciones en el AUT*" class=dd-item><a href=https://www.selenium.dev/documentation/es/getting_started_with_webdriver/performing_actions_on_the_aut/>Ejecutando acciones en el AUT*
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/webdriver/ title=WebDriver class="dd-item
+parent"><a href=https://www.selenium.dev/documentation/es/webdriver/>WebDriver
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/webdriver/understanding_the_components/ title="Entendiendo los componentes" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/understanding_the_components/>Entendiendo los componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/driver_requirements/ title="Requerimientos de los controladores" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/driver_requirements/>Requerimientos de los controladores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/browser_manipulation/ title="Manipulación de Navegadores" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/browser_manipulation/>Manipulación de Navegadores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/waits/ title=Esperas class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/waits/>Esperas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/support_classes/ title="Clases de apoyo" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/support_classes/>Clases de apoyo
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/js_alerts_prompts_and_confirmations/ title="Alertas, avisos y confirmaciones de JavaScript" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/js_alerts_prompts_and_confirmations/>Alertas, avisos y confirmaciones de JavaScript
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/http_proxies/ title="Proxies Http" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/http_proxies/>Proxies Http
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/page_loading_strategy/ title="Estrategia de carga de página" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/page_loading_strategy/>Estrategia de carga de página
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/web_element/ title="Elemento web" class=dd-item><a href=https://www.selenium.dev/documentation/es/webdriver/web_element/>Elemento web
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/webdriver/keyboard/ title=Teclado class="dd-item active"><a href=https://www.selenium.dev/documentation/es/webdriver/keyboard/>Teclado
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/remote_webdriver/ title="WebDriver remoto" class=dd-item><a href=https://www.selenium.dev/documentation/es/remote_webdriver/>WebDriver remoto
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/remote_webdriver/remote_webdriver_server/ title="WebDriver remoto - servidor" class=dd-item><a href=https://www.selenium.dev/documentation/es/remote_webdriver/remote_webdriver_server/>WebDriver remoto - servidor
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/remote_webdriver/remote_webdriver_client/ title="WebDriver remoto - cliente" class=dd-item><a href=https://www.selenium.dev/documentation/es/remote_webdriver/remote_webdriver_client/>WebDriver remoto - cliente
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/guidelines_and_recommendations/ title="Guías y recomendaciones" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/>Guías y recomendaciones
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/guidelines_and_recommendations/page_object_models/ title="Modelos de objetos de página" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/page_object_models/>Modelos de objetos de página
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/domain_specific_language/ title="Lenguage de dominio específico" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/domain_specific_language/>Lenguage de dominio específico
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/generating_application_state/ title="Generar el estado de la aplicación" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/generating_application_state/>Generar el estado de la aplicación
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/mock_external_services/ title="Mock de servicios externos" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/mock_external_services/>Mock de servicios externos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/improved_reporting/ title="Mejores reportes" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/improved_reporting/>Mejores reportes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/avoid_sharing_state/ title="Evitar compartir estados" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/avoid_sharing_state/>Evitar compartir estados
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/test_independency/ title="Independencia en las pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/test_independency/>Independencia en las pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/consider_using_a_fluent_api/ title="Considerar el uso de un API fluída" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/consider_using_a_fluent_api/>Considerar el uso de un API fluída
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/guidelines_and_recommendations/fresh_browser_per_test/ title="Nueva instancia del navegador por prueba" class=dd-item><a href=https://www.selenium.dev/documentation/es/guidelines_and_recommendations/fresh_browser_per_test/>Nueva instancia del navegador por prueba
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/worst_practices/ title="Malas prácticas" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/>Malas prácticas
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/worst_practices/captchas/ title=Captchas class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/captchas/>Captchas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/two_factor_authentication/ title="Two Factor Authentication" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/two_factor_authentication/>Two Factor Authentication
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/file_downloads/ title="Descarga de archivos" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/file_downloads/>Descarga de archivos
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/http_response_codes/ title="Códigos de respuesta HTTP" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/http_response_codes/>Códigos de respuesta HTTP
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/gmail_email_and_facebook_logins/ title="Autenticarse con Gmail, email y Facebook" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/gmail_email_and_facebook_logins/>Gmail, email y Facebook
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/test_dependency/ title="Dependencia entre pruebas" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/test_dependency/>Dependencia entre pruebas
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/performance_testing/ title="Pruebas de rendimiento" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/performance_testing/>Pruebas de rendimiento
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/worst_practices/link_spidering/ title="Rastreo de enlaces" class=dd-item><a href=https://www.selenium.dev/documentation/es/worst_practices/link_spidering/>Rastreo de enlaces
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/grid/ title=Grid class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/>Grid
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/grid/purposes_and_main_functionalities/ title="Objetivos y funcionalidades principales" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/purposes_and_main_functionalities/>Objetivos y funcionalidades principales
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/grid/when_to_use_grid/ title="Cuando usar el Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/when_to_use_grid/>Cuando usar el Grid
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/grid/grid_3/ title="Grid 3" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/>Grid 3
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/grid/grid_3/components_of_a_grid/ title=Componentes class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/components_of_a_grid/>Componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/grid/grid_3/setting_up_your_own_grid/ title="Configurando tu propio Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_3/setting_up_your_own_grid/>Configurando tu propio Grid
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/grid/grid_4/ title="Grid 4" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/>Grid 4
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/grid/grid_4/components_of_a_grid/ title=Componentes class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/components_of_a_grid/>Componentes
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/grid/grid_4/setting_up_your_own_grid/ title="Configurando tu propio Grid" class=dd-item><a href=https://www.selenium.dev/documentation/es/grid/grid_4/setting_up_your_own_grid/>Configurando tu propio Grid
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li><li data-nav-id=/driver_idiosyncrasies/ title="Comportamientos del controlador" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/>Comportamientos del controlador
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/driver_idiosyncrasies/shared_capabilities/ title="Shared capabilities" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/shared_capabilities/>Shared capabilities
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/driver_idiosyncrasies/driver_specific_capabilities/ title="Capacidades específicas de los Drivers" class=dd-item><a href=https://www.selenium.dev/documentation/es/driver_idiosyncrasies/driver_specific_capabilities/>Capacidades específicas de los Drivers
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/support_packages/ title="Paquetes de soporte" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/>Paquetes de soporte
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/support_packages/working_with_colours/ title="Trabajando con colores" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_colours/>Trabajando con colores
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/support_packages/working_with_select_elements/ title="Trabajando con elementos select" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_select_elements/>Trabajando con elementos select
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/support_packages/mouse_and_keyboard_actions_in_detail/ title="Acciones del ratón en detalle" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/mouse_and_keyboard_actions_in_detail/>Acciones del ratón en detalle
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/support_packages/working_with_cookies/ title="Trabajando con las cookies" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/working_with_cookies/>Trabajando con las cookies
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/support_packages/chrome_devtools/ title="Chrome Devtools" class=dd-item><a href=https://www.selenium.dev/documentation/es/support_packages/chrome_devtools/>Chrome Devtools
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/legacy_docs/ title=Legacy class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/>Legacy
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/legacy_docs/selenium_rc/ title="Selenium 1 (Selenium RC)" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/selenium_rc/>Selenium 1 (Selenium RC)
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/legacy_docs/migrating_from_rc_to_webdriver/ title="Migrando de RC a WebDriver" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/migrating_from_rc_to_webdriver/>Migrando de RC a WebDriver
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/legacy_docs/html-runner/ title="HTML runner" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/html-runner/>HTML runner
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/legacy_docs/selenium_ide/ title="Legacy Selenium IDE" class=dd-item><a href=https://www.selenium.dev/documentation/es/legacy_docs/selenium_ide/>Legacy Selenium IDE
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/front_matter/ title="Texto preliminar" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/>Texto preliminar
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/front_matter/copyright_and_attributions/ title="Derechos de autor y atribuciones" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions/>Derechos de autor
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/front_matter/typographical_conventions/ title="Convenciones tipográficas" class=dd-item><a href=https://www.selenium.dev/documentation/es/front_matter/typographical_conventions/>Convenciones tipográficas
+<i class="fas fa-check read-icon"></i></a></li></ul></li></ul><section id=shortcuts><h3>Más</h3><ul><li><a class=padding href=https://www.selenium.dev/><i class="fas fa-home"></i>Selenium Home</a></li><li><a class=padding href=https://github.com/SeleniumHQ/seleniumhq.github.io><i class="fab fa-fw fa-github"></i>Repo en GitHub</a></li><li><a class=padding href=https://github.com/seleniumhq/seleniumhq.github.io/issues><i class="fas fa-fw fa-exclamation-triangle"></i>Reportar un problema</a></li><li><a class=padding href=https://www.selenium.dev/documentation/es/front_matter/copyright_and_attributions><i class="fas fa-fw fa-trophy"></i>Créditos</a></li><li><a class=padding href=https://www.selenium.dev/documentation/es/contributing><i class="fas fa-fw fa-bullhorn"></i>Cómo contribuír</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value;">
+<option id=en value=https://www.selenium.dev/documentation/en/webdriver/keyboard/>English</option>
+<option id=de value=https://www.selenium.dev/documentation/de/webdriver/keyboard/>Deutsch</option>
+<option id=es value=https://www.selenium.dev/documentation/es/webdriver/keyboard/ selected>Español</option>
+<option id=nl value=https://www.selenium.dev/documentation/nl/webdriver/keyboard/>Nederlands</option>
+<option id=zh-cn value=https://www.selenium.dev/documentation/zh-cn/webdriver/keyboard/>中文简体</option>
+<option id=fr value=https://www.selenium.dev/documentation/fr/webdriver/keyboard/>Français</option>
+<option id=ja value=https://www.selenium.dev/documentation/ja/webdriver/keyboard/>日本語</option>
+<option id=ko value=https://www.selenium.dev/documentation/ko/webdriver/keyboard/>한국어</option></select><svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75" /></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i>Borrar Historial</a></li></ul></section><section id=footer><p>&copy; 2013-2020</p><p>Software Freedom Conservancy (SFC)</p></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title="Editar esta página" href=https://github.com/SeleniumHQ/site/edit/trunk/docs_source_files/content/webdriver/keyboard.es.md target=blank><i class="fas fa-code-branch"></i><span id=top-github-link-text>Editar esta página</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i></a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span><span class=links><a href=https://www.selenium.dev/documentation/es/>Selenium, el proyecto para automatizar navegadores</a> > <a href=https://www.selenium.dev/documentation/es/webdriver/>WebDriver</a> > Teclado</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#sendkeys>sendKeys</a></li><li><a href=#keydown>keyDown</a></li><li><a href=#keyup>keyUp</a></li><li><a href=#clear>clear</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Teclado</h1><p>Keyboard representa un evento del teclado. Las acciones del teclado
 se realizan mediante el uso de una interfaz de bajo nivel
-que nos permite proporcionar entradas de un dispositivo virtualizado 
-al navegador web.</p>
-<h2 id="sendkeys">sendKeys</h2>
-<p>El sendKeys escribe una secuencia de teclas en el elemento del DOM
+que nos permite proporcionar entradas de un dispositivo virtualizado
+al navegador web.</p><h2 id=sendkeys>sendKeys</h2><p>El sendKeys escribe una secuencia de teclas en el elemento del DOM
 incluso si se encuentra una secuencia de teclas modificadoras.
-<a href="https://www.w3.org/TR/webdriver/#keyboard-actions">Here</a> are the list of 
-possible keystrokes that WebDriver Supports.</p>
+<a href=https://www.w3.org/TR/webdriver/#keyboard-actions>Here</a> are the list of
+possible keystrokes that WebDriver Supports.</p><div class=tabset><input type=radio name=tabsetcode0 id=tab0code0 aria-controls=javacode0 checked>
+<label for=tab0code0>Java</label>
+<input type=radio name=tabsetcode0 id=tab1code0 aria-controls=pythoncode0>
+<label for=tab1code0>Python</label>
+<input type=radio name=tabsetcode0 id=tab2code0 aria-controls=cscode0>
+<label for=tab2code0>C#</label>
+<input type=radio name=tabsetcode0 id=tab3code0 aria-controls=rubycode0>
+<label for=tab3code0>Ruby</label>
+<input type=radio name=tabsetcode0 id=tab4code0 aria-controls=javascriptcode0>
+<label for=tab4code0>JavaScript</label>
+<input type=radio name=tabsetcode0 id=tab5code0 aria-controls=kotlincode0>
+<label for=tab5code0>Kotlin</label><div class=tab-panels><section id=javacode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import</span> org.openqa.selenium.By<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.Keys<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.WebDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.firefox.FirefoxDriver<span style=color:#719e07>;</span>
 
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>HelloSelenium</span> <span style=color:#719e07>{</span>
+  <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>main</span><span style=color:#719e07>(</span>String<span style=color:#719e07>[]</span> args<span style=color:#719e07>)</span> <span style=color:#719e07>{</span>
+    WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> FirefoxDriver<span style=color:#719e07>();</span>
+    <span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
+      <span style=color:#586e75>// Navega a la URL
+</span><span style=color:#586e75></span>      driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://google.com&#34;</span><span style=color:#719e07>);</span>
 
+      <span style=color:#586e75>// Inserta el texto &#34;q&#34; y ejecuta la accion del teclado &#34;Enter&#34;
+</span><span style=color:#586e75></span>      driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>name<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>)).</span>sendKeys<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span> <span style=color:#719e07>+</span> Keys<span style=color:#719e07>.</span>ENTER<span style=color:#719e07>);</span>
+    <span style=color:#719e07>}</span> <span style=color:#719e07>finally</span> <span style=color:#719e07>{</span>
+      driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span>
+  <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.common.by <span style=color:#719e07>import</span> By
+<span style=color:#719e07>from</span> selenium.webdriver.common.keys <span style=color:#719e07>import</span> Keys
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Firefox()
 
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode0" id="tab0code0" aria-controls="javacode0" checked>
-    
-    <label for="tab0code0">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab1code0" aria-controls="pythoncode0">
-    
-    <label for="tab1code0">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab2code0" aria-controls="cscode0">
-    
-    <label for="tab2code0">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab3code0" aria-controls="rubycode0">
-    
-    <label for="tab3code0">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab4code0" aria-controls="javascriptcode0">
-    
-    <label for="tab4code0">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode0" id="tab5code0" aria-controls="kotlincode0">
-    
-    <label for="tab5code0">Kotlin</label>
-      
-  <div class="tab-panels">
-  
+<span style=color:#586e75># Navega a la URL</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.google.com&#34;</span>)
 
-
-<section id="javacode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
-
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
-    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-      <span style="color:#586e75">// Navega a la URL
-</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
-
-      <span style="color:#586e75">// Inserta el texto &#34;q&#34; y ejecuta la accion del teclado &#34;Enter&#34;
-</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
-    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-    <span style="color:#719e07">}</span>
-  <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
-<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
-<span style="color:#719e07">from</span> selenium.webdriver.common.keys <span style="color:#719e07">import</span> Keys
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Firefox()
-
-<span style="color:#586e75"># Navega a la URL</span>
-driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
-
-<span style="color:#586e75"># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
-driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER)
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#719e07">using</span> (<span style="color:#dc322f">var</span> driver = <span style="color:#719e07">new</span> FirefoxDriver())
+<span style=color:#586e75># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>NAME, <span style=color:#2aa198>&#34;q&#34;</span>)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;webdriver&#34;</span> <span style=color:#719e07>+</span> Keys<span style=color:#719e07>.</span>ENTER)
+  </code></pre></div></section><section id=csharpcode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> (<span style=color:#dc322f>var</span> driver = <span style=color:#719e07>new</span> FirefoxDriver())
 {
-  <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>  driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+  <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>  driver.Navigate().GoToUrl(<span style=color:#2aa198>&#34;https://google.com&#34;</span>);
 
-  <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>  driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.Enter);
+  <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>  driver.FindElement(By.Name(<span style=color:#2aa198>&#34;q&#34;</span>)).SendKeys(<span style=color:#2aa198>&#34;webdriver&#34;</span> + Keys.Enter);
 }
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=rubycode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:firefox</span>
+<span style=color:#719e07>begin</span>
+  <span style=color:#586e75>#  Navega a la URL</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://google.com&#39;</span>
 
+  <span style=color:#586e75># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
+  driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>name</span>: <span style=color:#2aa198>&#39;q&#39;</span>)<span style=color:#719e07>.</span>send_keys <span style=color:#2aa198>&#39;webdriver&#39;</span>, <span style=color:#2aa198>:return</span>
 
-<section id="rubycode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:firefox</span>
-<span style="color:#719e07">begin</span>
-  <span style="color:#586e75">#  Navega a la URL</span>
-  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+<span style=color:#719e07>ensure</span>
+  driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> {Builder, By, Key} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
 
-  <span style="color:#586e75"># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
-  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;webdriver&#39;</span>, <span style="color:#2aa198">:return</span>
+(async <span style=color:#268bd2>function</span> example() {
+  <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder().forBrowser(<span style=color:#2aa198>&#39;firefox&#39;</span>).build();
 
-<span style="color:#719e07">ensure</span>
-  driver<span style="color:#719e07">.</span>quit
-<span style="color:#719e07">end</span>
-  </code></pre></div>
-</section>
-  
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    await driver.get(<span style=color:#2aa198>&#39;https://www.google.com&#39;</span>);
 
-
-<section id="javascriptcode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-
-(async <span style="color:#268bd2">function</span> example() {
-  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
-
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
-
-    <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>    await driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;webdriver&#39;</span>, Key.ENTER);
+    <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>    await driver.findElement(By.name(<span style=color:#2aa198>&#39;q&#39;</span>)).sendKeys(<span style=color:#2aa198>&#39;webdriver&#39;</span>, Key.ENTER);
   }
-  <span style="color:#719e07">finally</span> {
+  <span style=color:#719e07>finally</span> {
     await driver.quit();
   }
 })();
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=kotlincode0 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> org.openqa.selenium.By
+<span style=color:#719e07>import</span> org.openqa.selenium.Keys
+<span style=color:#719e07>import</span> org.openqa.selenium.firefox.FirefoxDriver
 
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>() {
+  <span style=color:#719e07>val</span> driver = FirefoxDriver()
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>// Navega a la URL
+</span><span style=color:#586e75></span>    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://google.com&#34;</span>)
 
-<section id="kotlincode0" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.By
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys
-<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver
-
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#719e07">val</span> driver = FirefoxDriver()
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">// Navega a la URL
-</span><span style="color:#586e75"></span>    driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-
-    <span style="color:#586e75">// Inserta el texto &#34;q&#34; y ejecuta la accion del teclado &#34;Enter&#34;
-</span><span style="color:#586e75"></span>    driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;q&#34;</span> + Keys.ENTER)
-  } <span style="color:#719e07">finally</span> {
+    <span style=color:#586e75>// Inserta el texto &#34;q&#34; y ejecuta la accion del teclado &#34;Enter&#34;
+</span><span style=color:#586e75></span>    driver.findElement(By.name(<span style=color:#2aa198>&#34;q&#34;</span>)).sendKeys(<span style=color:#2aa198>&#34;q&#34;</span> + Keys.ENTER)
+  } <span style=color:#719e07>finally</span> {
     driver.quit()
   }
 }
-  </code></pre></div>
-</section>
-</div>
-</div>
-<h2 id="keydown">keyDown</h2>
-<p>KeyDown se usa para simular la acción de presionar una 
-tecla modificadora (CONTROL, SHIFT, ALT)</p>
+  </code></pre></div></section></div></div><h2 id=keydown>keyDown</h2><p>KeyDown se usa para simular la acción de presionar una
+tecla modificadora (CONTROL, SHIFT, ALT)</p><div class=tabset><input type=radio name=tabsetcode1 id=tab0code1 aria-controls=javacode1 checked>
+<label for=tab0code1>Java</label>
+<input type=radio name=tabsetcode1 id=tab1code1 aria-controls=pythoncode1>
+<label for=tab1code1>Python</label>
+<input type=radio name=tabsetcode1 id=tab2code1 aria-controls=cscode1>
+<label for=tab2code1>C#</label>
+<input type=radio name=tabsetcode1 id=tab3code1 aria-controls=rubycode1>
+<label for=tab3code1>Ruby</label>
+<input type=radio name=tabsetcode1 id=tab4code1 aria-controls=javascriptcode1>
+<label for=tab4code1>JavaScript</label>
+<input type=radio name=tabsetcode1 id=tab5code1 aria-controls=kotlincode1>
+<label for=tab5code1>Kotlin</label><div class=tab-panels><section id=javacode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> ChromeDriver<span style=color:#719e07>();</span>
+<span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
+  <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>  driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://google.com&#34;</span><span style=color:#719e07>);</span>
 
+  <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>  driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>name<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>)).</span>sendKeys<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;webdriver&#34;</span> <span style=color:#719e07>+</span> Keys<span style=color:#719e07>.</span>ENTER<span style=color:#719e07>);</span>
 
+  Actions actionProvider <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> Actions<span style=color:#719e07>(</span>driver<span style=color:#719e07>);</span>
+  Action keydown <span style=color:#719e07>=</span> actionProvider<span style=color:#719e07>.</span>keyDown<span style=color:#719e07>(</span>Keys<span style=color:#719e07>.</span>CONTROL<span style=color:#719e07>).</span>sendKeys<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;a&#34;</span><span style=color:#719e07>).</span>build<span style=color:#719e07>();</span>
+  keydown<span style=color:#719e07>.</span>perform<span style=color:#719e07>();</span>
+<span style=color:#719e07>}</span> <span style=color:#719e07>finally</span> <span style=color:#719e07>{</span>
+  driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.common.by <span style=color:#719e07>import</span> By
+<span style=color:#719e07>from</span> selenium.webdriver.common.keys <span style=color:#719e07>import</span> Keys
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Chrome()
 
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode1" id="tab0code1" aria-controls="javacode1" checked>
-    
-    <label for="tab0code1">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab1code1" aria-controls="pythoncode1">
-    
-    <label for="tab1code1">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab2code1" aria-controls="cscode1">
-    
-    <label for="tab2code1">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab3code1" aria-controls="rubycode1">
-    
-    <label for="tab3code1">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab4code1" aria-controls="javascriptcode1">
-    
-    <label for="tab4code1">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode1" id="tab5code1" aria-controls="kotlincode1">
-    
-    <label for="tab5code1">Kotlin</label>
-      
-  <div class="tab-panels">
-  
+<span style=color:#586e75>#  Navega a la URL</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.google.com&#34;</span>)
 
+<span style=color:#586e75># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
+driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>NAME, <span style=color:#2aa198>&#34;q&#34;</span>)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;webdriver&#34;</span> <span style=color:#719e07>+</span> Keys<span style=color:#719e07>.</span>ENTER)
 
-<section id="javacode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
-<span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-  <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
-
-  <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>  driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">)).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER<span style="color:#719e07">);</span>
-
-  Actions actionProvider <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
-  Action keydown <span style="color:#719e07">=</span> actionProvider<span style="color:#719e07">.</span>keyDown<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>CONTROL<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;a&#34;</span><span style="color:#719e07">).</span>build<span style="color:#719e07">();</span>
-  keydown<span style="color:#719e07">.</span>perform<span style="color:#719e07">();</span>
-<span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-  driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-<span style="color:#719e07">}</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
-<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
-<span style="color:#719e07">from</span> selenium.webdriver.common.keys <span style="color:#719e07">import</span> Keys
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
-
-<span style="color:#586e75">#  Navega a la URL</span>
-driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
-
-<span style="color:#586e75"># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
-driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;webdriver&#34;</span> <span style="color:#719e07">+</span> Keys<span style="color:#719e07">.</span>ENTER)
-
-<span style="color:#586e75"># Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página</span>
-webdriver<span style="color:#719e07">.</span>ActionChains(driver)<span style="color:#719e07">.</span>key_down(Keys<span style="color:#719e07">.</span>CONTROL)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;a&#34;</span>)<span style="color:#719e07">.</span>perform()
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
-<span style="color:#719e07">try</span>
+<span style=color:#586e75># Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página</span>
+webdriver<span style=color:#719e07>.</span>ActionChains(driver)<span style=color:#719e07>.</span>key_down(Keys<span style=color:#719e07>.</span>CONTROL)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;a&#34;</span>)<span style=color:#719e07>.</span>perform()
+  </code></pre></div></section><section id=csharpcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+IWebDriver driver = <span style=color:#719e07>new</span> ChromeDriver();
+<span style=color:#719e07>try</span>
 {
-  <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>  driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+  <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>  driver.Navigate().GoToUrl(<span style=color:#2aa198>&#34;https://google.com&#34;</span>);
 
-  <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>  driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>)).SendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.Enter);
+  <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>  driver.FindElement(By.Name(<span style=color:#2aa198>&#34;q&#34;</span>)).SendKeys(<span style=color:#2aa198>&#34;webdriver&#34;</span> + Keys.Enter);
 
-  <span style="color:#586e75">// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
-</span><span style="color:#586e75"></span>  Actions actionProvider = <span style="color:#719e07">new</span> Actions(driver);
-  IAction keydown = actionProvider.KeyDown(Keys.Control).SendKeys(<span style="color:#2aa198">&#34;a&#34;</span>).Build();
+  <span style=color:#586e75>// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
+</span><span style=color:#586e75></span>  Actions actionProvider = <span style=color:#719e07>new</span> Actions(driver);
+  IAction keydown = actionProvider.KeyDown(Keys.Control).SendKeys(<span style=color:#2aa198>&#34;a&#34;</span>).Build();
   keydown.Perform();
 }
-<span style="color:#719e07">finally</span>
+<span style=color:#719e07>finally</span>
 {
   driver.Quit();
 }
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=rubycode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:chrome</span>
+<span style=color:#719e07>begin</span>
+  <span style=color:#586e75>#  Navega a la URL</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://google.com&#39;</span>
 
+  <span style=color:#586e75># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
+  driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>name</span>: <span style=color:#2aa198>&#39;q&#39;</span>)<span style=color:#719e07>.</span>send_keys <span style=color:#2aa198>&#39;webdriver&#39;</span>, <span style=color:#2aa198>:return</span>
 
-<section id="rubycode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
-<span style="color:#719e07">begin</span>
-  <span style="color:#586e75">#  Navega a la URL</span>
-  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+  <span style=color:#586e75># Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página</span>
+  driver<span style=color:#719e07>.</span>action<span style=color:#719e07>.</span>key_down(<span style=color:#2aa198>:control</span>)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#39;a&#39;</span>)<span style=color:#719e07>.</span>perform
 
-  <span style="color:#586e75"># Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;</span>
-  driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)<span style="color:#719e07">.</span>send_keys <span style="color:#2aa198">&#39;webdriver&#39;</span>, <span style="color:#2aa198">:return</span>
+<span style=color:#719e07>ensure</span>
+  driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+(async <span style=color:#268bd2>function</span> example() {
+  <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder().forBrowser(<span style=color:#2aa198>&#39;chrome&#39;</span>).build();
 
-  <span style="color:#586e75"># Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página</span>
-  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>key_down(<span style="color:#2aa198">:control</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#39;a&#39;</span>)<span style="color:#719e07">.</span>perform
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    await driver.get(<span style=color:#2aa198>&#39;https://www.google.com&#39;</span>);
 
-<span style="color:#719e07">ensure</span>
-  driver<span style="color:#719e07">.</span>quit
-<span style="color:#719e07">end</span>
-  </code></pre></div>
-</section>
-  
+    <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>    await driver.findElement(By.name(<span style=color:#2aa198>&#39;q&#39;</span>)).sendKeys(<span style=color:#2aa198>&#39;webdriver&#39;</span>, Key.ENTER);
 
-
-<section id="javascriptcode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-(async <span style="color:#268bd2">function</span> example() {
-  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
-
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
-
-    <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>    await driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>)).sendKeys(<span style="color:#2aa198">&#39;webdriver&#39;</span>, Key.ENTER);
-
-    <span style="color:#586e75">// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
-</span><span style="color:#586e75"></span>    await driver.actions().keyDown(Key.CONTROL).sendKeys(<span style="color:#2aa198">&#39;a&#39;</span>).perform();
+    <span style=color:#586e75>// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
+</span><span style=color:#586e75></span>    await driver.actions().keyDown(Key.CONTROL).sendKeys(<span style=color:#2aa198>&#39;a&#39;</span>).perform();
   }
-  <span style="color:#719e07">finally</span> {
+  <span style=color:#719e07>finally</span> {
     await driver.quit();
   }
 })();
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=kotlincode1 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> org.openqa.selenium.By
+<span style=color:#719e07>import</span> org.openqa.selenium.Keys
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style=color:#719e07>import</span> org.openqa.selenium.interactions.Actions
 
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>() {
+  <span style=color:#719e07>val</span> driver = ChromeDriver()
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://google.com&#34;</span>)
 
-<section id="kotlincode1" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.By
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
-<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions
+    <span style=color:#586e75>// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
+</span><span style=color:#586e75></span>    driver.findElement(By.name(<span style=color:#2aa198>&#34;q&#34;</span>)).sendKeys(<span style=color:#2aa198>&#34;webdriver&#34;</span> + Keys.ENTER)
+    <span style=color:#719e07>val</span> action = Actions(driver)
 
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#719e07">val</span> driver = ChromeDriver()
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-
-    <span style="color:#586e75">// Inserta el texto &#34;Webdriver&#34; y ejecuta la accion del teclado &#34;ENTER&#34;
-</span><span style="color:#586e75"></span>    driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>)).sendKeys(<span style="color:#2aa198">&#34;webdriver&#34;</span> + Keys.ENTER)
-    <span style="color:#719e07">val</span> action = Actions(driver)
-
-    <span style="color:#586e75">// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
-</span><span style="color:#586e75"></span>    action.keyDown(Keys.CONTROL).sendKeys(<span style="color:#2aa198">&#34;a&#34;</span>).build().perform()
-  } <span style="color:#719e07">finally</span> {
+    <span style=color:#586e75>// Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
+</span><span style=color:#586e75></span>    action.keyDown(Keys.CONTROL).sendKeys(<span style=color:#2aa198>&#34;a&#34;</span>).build().perform()
+  } <span style=color:#719e07>finally</span> {
     driver.quit()
   }
 }
-  </code></pre></div>
-</section>
-</div>
-</div>
-<h2 id="keyup">keyUp</h2>
-<p>KeyUp se usa para simular la acción de liberar (o) 
-desbloqueo de una tecla modificadora (CONTROL, SHIFT, ALT)</p>
+  </code></pre></div></section></div></div><h2 id=keyup>keyUp</h2><p>KeyUp se usa para simular la acción de liberar (o)
+desbloqueo de una tecla modificadora (CONTROL, SHIFT, ALT)</p><div class=tabset><input type=radio name=tabsetcode2 id=tab0code2 aria-controls=javacode2 checked>
+<label for=tab0code2>Java</label>
+<input type=radio name=tabsetcode2 id=tab1code2 aria-controls=pythoncode2>
+<label for=tab1code2>Python</label>
+<input type=radio name=tabsetcode2 id=tab2code2 aria-controls=cscode2>
+<label for=tab2code2>C#</label>
+<input type=radio name=tabsetcode2 id=tab3code2 aria-controls=rubycode2>
+<label for=tab3code2>Ruby</label>
+<input type=radio name=tabsetcode2 id=tab4code2 aria-controls=javascriptcode2>
+<label for=tab4code2>JavaScript</label>
+<input type=radio name=tabsetcode2 id=tab5code2 aria-controls=kotlincode2>
+<label for=tab5code2>Kotlin</label><div class=tab-panels><section id=javacode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import</span> org.openqa.selenium.By<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.Keys<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.WebDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.WebElement<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.firefox.FirefoxDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.interactions.Actions<span style=color:#719e07>;</span>
 
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>HelloSelenium</span> <span style=color:#719e07>{</span>
+  <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>main</span><span style=color:#719e07>(</span>String<span style=color:#719e07>[]</span> args<span style=color:#719e07>)</span> <span style=color:#719e07>{</span>
+    WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> FirefoxDriver<span style=color:#719e07>();</span>
+    <span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
+      <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>      driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://google.com&#34;</span><span style=color:#719e07>);</span>
+      Actions action <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> Actions<span style=color:#719e07>(</span>driver<span style=color:#719e07>);</span>
 
+      <span style=color:#586e75>// Almacena el WebElement del cuadro de búsqueda de Google 
+</span><span style=color:#586e75></span>      WebElement search <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>name<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>));</span>
 
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode2" id="tab0code2" aria-controls="javacode2" checked>
-    
-    <label for="tab0code2">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab1code2" aria-controls="pythoncode2">
-    
-    <label for="tab1code2">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab2code2" aria-controls="cscode2">
-    
-    <label for="tab2code2">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab3code2" aria-controls="rubycode2">
-    
-    <label for="tab3code2">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab4code2" aria-controls="javascriptcode2">
-    
-    <label for="tab4code2">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode2" id="tab5code2" aria-controls="kotlincode2">
-    
-    <label for="tab5code2">Kotlin</label>
-      
-  <div class="tab-panels">
-  
+      <span style=color:#586e75>// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty) 
+</span><span style=color:#586e75></span>      action<span style=color:#719e07>.</span>keyDown<span style=color:#719e07>(</span>Keys<span style=color:#719e07>.</span>SHIFT<span style=color:#719e07>).</span>sendKeys<span style=color:#719e07>(</span>search<span style=color:#719e07>,</span><span style=color:#2aa198>&#34;qwerty&#34;</span><span style=color:#719e07>).</span>keyUp<span style=color:#719e07>(</span>Keys<span style=color:#719e07>.</span>SHIFT<span style=color:#719e07>).</span>sendKeys<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;qwerty&#34;</span><span style=color:#719e07>).</span>perform<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span> <span style=color:#719e07>finally</span> <span style=color:#719e07>{</span>
+      driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span>
+  <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.common.by <span style=color:#719e07>import</span> By
+<span style=color:#719e07>from</span> selenium.webdriver.common.keys <span style=color:#719e07>import</span> Keys
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Chrome()
 
+<span style=color:#586e75>#  Navega a la URL</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.google.com&#34;</span>)
 
-<section id="javacode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.firefox.FirefoxDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions<span style="color:#719e07">;</span>
+<span style=color:#586e75># Almacena el WebElement del cuadro de búsqueda de Google </span>
+search <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>NAME, <span style=color:#2aa198>&#34;q&#34;</span>)
 
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">HelloSelenium</span> <span style="color:#719e07">{</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> FirefoxDriver<span style="color:#719e07">();</span>
-    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-      <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://google.com&#34;</span><span style="color:#719e07">);</span>
-      Actions action <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> Actions<span style="color:#719e07">(</span>driver<span style="color:#719e07">);</span>
+action <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>ActionChains(driver)
 
-      <span style="color:#586e75">// Almacena el WebElement del cuadro de búsqueda de Google 
-</span><span style="color:#586e75"></span>      WebElement search <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
+<span style=color:#586e75># Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)</span>
+action<span style=color:#719e07>.</span>key_down(Keys<span style=color:#719e07>.</span>SHIFT)<span style=color:#719e07>.</span>send_keys_to_element(search, <span style=color:#2aa198>&#34;qwerty&#34;</span>)<span style=color:#719e07>.</span>key_up(Keys<span style=color:#719e07>.</span>SHIFT)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;qwerty&#34;</span>)<span style=color:#719e07>.</span>perform()
+  </code></pre></div></section><section id=csharpcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> OpenQA.Selenium;
+<span style=color:#719e07>using</span> OpenQA.Selenium.Chrome;
+<span style=color:#719e07>using</span> OpenQA.Selenium.Interactions;
 
-      <span style="color:#586e75">// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty) 
-</span><span style="color:#586e75"></span>      action<span style="color:#719e07">.</span>keyDown<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>SHIFT<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span>search<span style="color:#719e07">,</span><span style="color:#2aa198">&#34;qwerty&#34;</span><span style="color:#719e07">).</span>keyUp<span style="color:#719e07">(</span>Keys<span style="color:#719e07">.</span>SHIFT<span style="color:#719e07">).</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;qwerty&#34;</span><span style="color:#719e07">).</span>perform<span style="color:#719e07">();</span>
-    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-    <span style="color:#719e07">}</span>
-  <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
-<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
-<span style="color:#719e07">from</span> selenium.webdriver.common.keys <span style="color:#719e07">import</span> Keys
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
-
-<span style="color:#586e75">#  Navega a la URL</span>
-driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
-
-<span style="color:#586e75"># Almacena el WebElement del cuadro de búsqueda de Google </span>
-search <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)
-
-action <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>ActionChains(driver)
-
-<span style="color:#586e75"># Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)</span>
-action<span style="color:#719e07">.</span>key_down(Keys<span style="color:#719e07">.</span>SHIFT)<span style="color:#719e07">.</span>send_keys_to_element(search, <span style="color:#2aa198">&#34;qwerty&#34;</span>)<span style="color:#719e07">.</span>key_up(Keys<span style="color:#719e07">.</span>SHIFT)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;qwerty&#34;</span>)<span style="color:#719e07">.</span>perform()
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#719e07">using</span> OpenQA.Selenium;
-<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
-<span style="color:#719e07">using</span> OpenQA.Selenium.Interactions;
-
-<span style="color:#719e07">namespace</span> HelloSelenium
+<span style=color:#719e07>namespace</span> HelloSelenium
 {
-  <span style="color:#719e07">class</span> <span style="color:#268bd2">HelloSelenium</span>
+  <span style=color:#719e07>class</span> <span style=color:#268bd2>HelloSelenium</span>
   {
-    <span style="color:#719e07">public</span> <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args)
+    <span style=color:#719e07>public</span> <span style=color:#719e07>static</span> <span style=color:#719e07>void</span> Main(<span style=color:#dc322f>string</span>[] args)
     {
-      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
-      <span style="color:#719e07">try</span>
+      IWebDriver driver = <span style=color:#719e07>new</span> ChromeDriver();
+      <span style=color:#719e07>try</span>
       {
-        <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>        driver.Navigate().GoToUrl(<span style="color:#2aa198">&#34;https://google.com&#34;</span>);
+        <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>        driver.Navigate().GoToUrl(<span style=color:#2aa198>&#34;https://google.com&#34;</span>);
 
-        Actions action = <span style="color:#719e07">new</span> Actions(driver);
-        <span style="color:#586e75">// Almacena el WebElement del cuadro de búsqueda de Google 
-</span><span style="color:#586e75"></span>        IWebElement search = driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>));
+        Actions action = <span style=color:#719e07>new</span> Actions(driver);
+        <span style=color:#586e75>// Almacena el WebElement del cuadro de búsqueda de Google 
+</span><span style=color:#586e75></span>        IWebElement search = driver.FindElement(By.Name(<span style=color:#2aa198>&#34;q&#34;</span>));
 
-        <span style="color:#586e75">// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
-</span><span style="color:#586e75"></span>        action.KeyDown(Keys.Shift).SendKeys(search, <span style="color:#2aa198">&#34;qwerty&#34;</span>).KeyUp(Keys.Shift).SendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).Perform();
+        <span style=color:#586e75>// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
+</span><span style=color:#586e75></span>        action.KeyDown(Keys.Shift).SendKeys(search, <span style=color:#2aa198>&#34;qwerty&#34;</span>).KeyUp(Keys.Shift).SendKeys(<span style=color:#2aa198>&#34;qwerty&#34;</span>).Perform();
 
       }
-      <span style="color:#719e07">finally</span> {
+      <span style=color:#719e07>finally</span> {
         driver.Quit();
       }
     }
@@ -2736,199 +394,134 @@ action<span style="color:#719e07">.</span>key_down(Keys<span style="color:#719e0
 }
 
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=rubycode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:chrome</span>
+<span style=color:#719e07>begin</span>
+  <span style=color:#586e75>#  Navega a la URL</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://google.com&#39;</span>
 
+  <span style=color:#586e75># Almacena el WebElement del cuadro de búsqueda de Google </span>
+  search <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>name</span>: <span style=color:#2aa198>&#39;q&#39;</span>)
 
-<section id="rubycode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
-<span style="color:#719e07">begin</span>
-  <span style="color:#586e75">#  Navega a la URL</span>
-  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
+  <span style=color:#586e75># Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)</span>
+  driver<span style=color:#719e07>.</span>action<span style=color:#719e07>.</span>key_down(<span style=color:#2aa198>:shift</span>)<span style=color:#719e07>.</span>send_keys(search,<span style=color:#2aa198>&#39;qwerty&#39;</span>)<span style=color:#719e07>.</span>key_up(<span style=color:#2aa198>:shift</span>)<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;qwerty&#34;</span>)<span style=color:#719e07>.</span>perform
 
-  <span style="color:#586e75"># Almacena el WebElement del cuadro de búsqueda de Google </span>
-  search <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)
+<span style=color:#719e07>ensure</span>
+  driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> {Builder, By, Key} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
+(async <span style=color:#268bd2>function</span> example() {
+  <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder().forBrowser(<span style=color:#2aa198>&#39;firefox&#39;</span>).build();
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    await driver.get(<span style=color:#2aa198>&#39;https://www.google.com&#39;</span>);
 
-  <span style="color:#586e75"># Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)</span>
-  driver<span style="color:#719e07">.</span>action<span style="color:#719e07">.</span>key_down(<span style="color:#2aa198">:shift</span>)<span style="color:#719e07">.</span>send_keys(search,<span style="color:#2aa198">&#39;qwerty&#39;</span>)<span style="color:#719e07">.</span>key_up(<span style="color:#2aa198">:shift</span>)<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;qwerty&#34;</span>)<span style="color:#719e07">.</span>perform
+    <span style=color:#586e75>// Almacena el WebElement del cuadro de búsqueda de Google 
+</span><span style=color:#586e75></span>    <span style=color:#268bd2>let</span> search <span style=color:#719e07>=</span> driver.findElement(By.name(<span style=color:#2aa198>&#39;q&#39;</span>));
 
-<span style="color:#719e07">ensure</span>
-  driver<span style="color:#719e07">.</span>quit
-<span style="color:#719e07">end</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> {Builder, By, Key} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-(async <span style="color:#268bd2">function</span> example() {
-  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;firefox&#39;</span>).build();
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
-
-    <span style="color:#586e75">// Almacena el WebElement del cuadro de búsqueda de Google 
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> search <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
-
-    <span style="color:#586e75">// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
-</span><span style="color:#586e75"></span>    await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Key.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).perform();
+    <span style=color:#586e75>// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
+</span><span style=color:#586e75></span>    await driver.actions().click(search).keyDown(Key.SHIFT).sendKeys(<span style=color:#2aa198>&#34;qwerty&#34;</span>).keyUp(Key.SHIFT).sendKeys(<span style=color:#2aa198>&#34;qwerty&#34;</span>).perform();
   }
-  <span style="color:#719e07">finally</span> {
+  <span style=color:#719e07>finally</span> {
     await driver.quit();
   }
 })();
   
-</code></pre></div>
-</section>
-  
+</code></pre></div></section><section id=kotlincode2 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> org.openqa.selenium.By
+<span style=color:#719e07>import</span> org.openqa.selenium.Keys
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style=color:#719e07>import</span> org.openqa.selenium.interactions.Actions
 
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>() {
+  <span style=color:#719e07>val</span> driver = ChromeDriver()
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://google.com&#34;</span>)
 
-<section id="kotlincode2" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.By
-<span style="color:#719e07">import</span> org.openqa.selenium.Keys
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
-<span style="color:#719e07">import</span> org.openqa.selenium.interactions.Actions
+    <span style=color:#586e75>// Almacena el WebElement del cuadro de búsqueda de Google 
+</span><span style=color:#586e75></span>    <span style=color:#719e07>val</span> search = driver.findElement(By.name(<span style=color:#2aa198>&#34;q&#34;</span>))
+    <span style=color:#719e07>val</span> action = Actions(driver)
 
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#719e07">val</span> driver = ChromeDriver()
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://google.com&#34;</span>)
-
-    <span style="color:#586e75">// Almacena el WebElement del cuadro de búsqueda de Google 
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">val</span> search = driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>))
-    <span style="color:#719e07">val</span> action = Actions(driver)
-
-    <span style="color:#586e75">// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
-</span><span style="color:#586e75"></span>    action.keyDown(Keys.SHIFT).sendKeys(search, <span style="color:#2aa198">&#34;qwerty&#34;</span>).keyUp(Keys.SHIFT).sendKeys(<span style="color:#2aa198">&#34;qwerty&#34;</span>).build().perform()
-  } <span style="color:#719e07">finally</span> {
+    <span style=color:#586e75>// Ingresa el texto &#34;qwerty&#34; con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
+</span><span style=color:#586e75></span>    action.keyDown(Keys.SHIFT).sendKeys(search, <span style=color:#2aa198>&#34;qwerty&#34;</span>).keyUp(Keys.SHIFT).sendKeys(<span style=color:#2aa198>&#34;qwerty&#34;</span>).build().perform()
+  } <span style=color:#719e07>finally</span> {
     driver.quit()
   }
 }
-  </code></pre></div>
-</section>
-</div>
-</div>
-<h2 id="clear">clear</h2>
-<p>Borra el contenido de un elemento editable.
+  </code></pre></div></section></div></div><h2 id=clear>clear</h2><p>Borra el contenido de un elemento editable.
 Esto solo se aplica a los elementos que son editables e interactuables,
-de lo contrario, Selenium devuelve el error 
-(invalid element state (or) Element not interactable)</p>
+de lo contrario, Selenium devuelve el error
+(invalid element state (or) Element not interactable)</p><div class=tabset><input type=radio name=tabsetcode3 id=tab0code3 aria-controls=javacode3 checked>
+<label for=tab0code3>Java</label>
+<input type=radio name=tabsetcode3 id=tab1code3 aria-controls=pythoncode3>
+<label for=tab1code3>Python</label>
+<input type=radio name=tabsetcode3 id=tab2code3 aria-controls=cscode3>
+<label for=tab2code3>C#</label>
+<input type=radio name=tabsetcode3 id=tab3code3 aria-controls=rubycode3>
+<label for=tab3code3>Ruby</label>
+<input type=radio name=tabsetcode3 id=tab4code3 aria-controls=javascriptcode3>
+<label for=tab4code3>JavaScript</label>
+<input type=radio name=tabsetcode3 id=tab5code3 aria-controls=kotlincode3>
+<label for=tab5code3>Kotlin</label><div class=tab-panels><section id=javacode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java>
+<span style=color:#719e07>import</span> org.openqa.selenium.By<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.WebDriver<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.WebElement<span style=color:#719e07>;</span>
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver<span style=color:#719e07>;</span>
 
+<span style=color:#268bd2>public</span> <span style=color:#268bd2>class</span> <span style=color:#268bd2>clear</span> <span style=color:#719e07>{</span>
+  <span style=color:#268bd2>public</span> <span style=color:#268bd2>static</span> <span style=color:#dc322f>void</span> <span style=color:#268bd2>main</span><span style=color:#719e07>(</span>String<span style=color:#719e07>[]</span> args<span style=color:#719e07>)</span> <span style=color:#719e07>{</span>
+    WebDriver driver <span style=color:#719e07>=</span> <span style=color:#719e07>new</span> ChromeDriver<span style=color:#719e07>();</span>
+    <span style=color:#719e07>try</span> <span style=color:#719e07>{</span>
+      <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>      driver<span style=color:#719e07>.</span>get<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;https://www.google.com&#34;</span><span style=color:#719e07>);</span>
+      <span style=color:#586e75>// Almacena el elemento  &#39;SearchInput&#39;
+</span><span style=color:#586e75></span>      WebElement searchInput <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>findElement<span style=color:#719e07>(</span>By<span style=color:#719e07>.</span>name<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;q&#34;</span><span style=color:#719e07>));</span>
+      searchInput<span style=color:#719e07>.</span>sendKeys<span style=color:#719e07>(</span><span style=color:#2aa198>&#34;selenium&#34;</span><span style=color:#719e07>);</span>
+      <span style=color:#586e75>// Borra el texto ingresado
+</span><span style=color:#586e75></span>      searchInput<span style=color:#719e07>.</span>clear<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span> <span style=color:#719e07>finally</span> <span style=color:#719e07>{</span>
+      driver<span style=color:#719e07>.</span>quit<span style=color:#719e07>();</span>
+    <span style=color:#719e07>}</span>
+  <span style=color:#719e07>}</span>
+<span style=color:#719e07>}</span>
+  </code></pre></div></section><section id=pythoncode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>
+<span style=color:#719e07>from</span> selenium <span style=color:#719e07>import</span> webdriver
+<span style=color:#719e07>from</span> selenium.webdriver.common.by <span style=color:#719e07>import</span> By
+driver <span style=color:#719e07>=</span> webdriver<span style=color:#719e07>.</span>Chrome()
 
+<span style=color:#586e75>#  Navega a la URL</span>
+driver<span style=color:#719e07>.</span>get(<span style=color:#2aa198>&#34;http://www.google.com&#34;</span>)
+<span style=color:#586e75># Almacena el elemento  &#39;SearchInput&#39;</span>
+SearchInput <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(By<span style=color:#719e07>.</span>NAME, <span style=color:#2aa198>&#34;q&#34;</span>)
+SearchInput<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#34;selenium&#34;</span>)
+<span style=color:#586e75># Borra el texto ingresado</span>
+SearchInput<span style=color:#719e07>.</span>clear()
+  </code></pre></div></section><section id=csharpcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-csharp data-lang=csharp>
+<span style=color:#719e07>using</span> OpenQA.Selenium;
+<span style=color:#719e07>using</span> OpenQA.Selenium.Chrome;
+<span style=color:#719e07>using</span> System;
 
-<div class="tabset">
-  
-    
-      <input type="radio" name="tabsetcode3" id="tab0code3" aria-controls="javacode3" checked>
-    
-    <label for="tab0code3">Java</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab1code3" aria-controls="pythoncode3">
-    
-    <label for="tab1code3">Python</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab2code3" aria-controls="cscode3">
-    
-    <label for="tab2code3">C#</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab3code3" aria-controls="rubycode3">
-    
-    <label for="tab3code3">Ruby</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab4code3" aria-controls="javascriptcode3">
-    
-    <label for="tab4code3">JavaScript</label>
-    
-    
-      <input type="radio" name="tabsetcode3" id="tab5code3" aria-controls="kotlincode3">
-    
-    <label for="tab5code3">Kotlin</label>
-      
-  <div class="tab-panels">
-  
-
-
-<section id="javacode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">
-<span style="color:#719e07">import</span> org.openqa.selenium.By<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebDriver<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.WebElement<span style="color:#719e07">;</span>
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver<span style="color:#719e07">;</span>
-
-<span style="color:#268bd2">public</span> <span style="color:#268bd2">class</span> <span style="color:#268bd2">clear</span> <span style="color:#719e07">{</span>
-  <span style="color:#268bd2">public</span> <span style="color:#268bd2">static</span> <span style="color:#dc322f">void</span> <span style="color:#268bd2">main</span><span style="color:#719e07">(</span>String<span style="color:#719e07">[]</span> args<span style="color:#719e07">)</span> <span style="color:#719e07">{</span>
-    WebDriver driver <span style="color:#719e07">=</span> <span style="color:#719e07">new</span> ChromeDriver<span style="color:#719e07">();</span>
-    <span style="color:#719e07">try</span> <span style="color:#719e07">{</span>
-      <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>      driver<span style="color:#719e07">.</span>get<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;https://www.google.com&#34;</span><span style="color:#719e07">);</span>
-      <span style="color:#586e75">// Almacena el elemento  &#39;SearchInput&#39;
-</span><span style="color:#586e75"></span>      WebElement searchInput <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>findElement<span style="color:#719e07">(</span>By<span style="color:#719e07">.</span>name<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;q&#34;</span><span style="color:#719e07">));</span>
-      searchInput<span style="color:#719e07">.</span>sendKeys<span style="color:#719e07">(</span><span style="color:#2aa198">&#34;selenium&#34;</span><span style="color:#719e07">);</span>
-      <span style="color:#586e75">// Borra el texto ingresado
-</span><span style="color:#586e75"></span>      searchInput<span style="color:#719e07">.</span>clear<span style="color:#719e07">();</span>
-    <span style="color:#719e07">}</span> <span style="color:#719e07">finally</span> <span style="color:#719e07">{</span>
-      driver<span style="color:#719e07">.</span>quit<span style="color:#719e07">();</span>
-    <span style="color:#719e07">}</span>
-  <span style="color:#719e07">}</span>
-<span style="color:#719e07">}</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="pythoncode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">
-<span style="color:#719e07">from</span> selenium <span style="color:#719e07">import</span> webdriver
-<span style="color:#719e07">from</span> selenium.webdriver.common.by <span style="color:#719e07">import</span> By
-driver <span style="color:#719e07">=</span> webdriver<span style="color:#719e07">.</span>Chrome()
-
-<span style="color:#586e75">#  Navega a la URL</span>
-driver<span style="color:#719e07">.</span>get(<span style="color:#2aa198">&#34;http://www.google.com&#34;</span>)
-<span style="color:#586e75"># Almacena el elemento  &#39;SearchInput&#39;</span>
-SearchInput <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(By<span style="color:#719e07">.</span>NAME, <span style="color:#2aa198">&#34;q&#34;</span>)
-SearchInput<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#34;selenium&#34;</span>)
-<span style="color:#586e75"># Borra el texto ingresado</span>
-SearchInput<span style="color:#719e07">.</span>clear()
-  </code></pre></div>
-</section>
-  
-
-
-<section id="csharpcode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">
-<span style="color:#719e07">using</span> OpenQA.Selenium;
-<span style="color:#719e07">using</span> OpenQA.Selenium.Chrome;
-<span style="color:#719e07">using</span> System;
-
-<span style="color:#719e07">namespace</span> SnipetProjectDelete
+<span style=color:#719e07>namespace</span> SnipetProjectDelete
 {
-  <span style="color:#719e07">class</span> <span style="color:#268bd2">Program</span>
+  <span style=color:#719e07>class</span> <span style=color:#268bd2>Program</span>
   {
-    <span style="color:#719e07">static</span> <span style="color:#719e07">void</span> Main(<span style="color:#dc322f">string</span>[] args)
+    <span style=color:#719e07>static</span> <span style=color:#719e07>void</span> Main(<span style=color:#dc322f>string</span>[] args)
     {
-      IWebDriver driver = <span style="color:#719e07">new</span> ChromeDriver();
-      <span style="color:#719e07">try</span>
+      IWebDriver driver = <span style=color:#719e07>new</span> ChromeDriver();
+      <span style=color:#719e07>try</span>
       {
-        <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>        driver.Navigate().GoToUrl(<span style="color:#2aa198">@&#34;https://www.google.com&#34;</span>);
-        <span style="color:#586e75">// Almacena el elemento  &#39;SearchInput&#39;
-</span><span style="color:#586e75"></span>        IWebElement searchInput = driver.FindElement(By.Name(<span style="color:#2aa198">&#34;q&#34;</span>));
-        searchInput.SendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>);
-        <span style="color:#586e75">// Borra el texto ingresado
-</span><span style="color:#586e75"></span>        searchInput.Clear();
+        <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>        driver.Navigate().GoToUrl(<span style=color:#2aa198>@&#34;https://www.google.com&#34;</span>);
+        <span style=color:#586e75>// Almacena el elemento  &#39;SearchInput&#39;
+</span><span style=color:#586e75></span>        IWebElement searchInput = driver.FindElement(By.Name(<span style=color:#2aa198>&#34;q&#34;</span>));
+        searchInput.SendKeys(<span style=color:#2aa198>&#34;selenium&#34;</span>);
+        <span style=color:#586e75>// Borra el texto ingresado
+</span><span style=color:#586e75></span>        searchInput.Clear();
       }
-      <span style="color:#719e07">finally</span>
+      <span style=color:#719e07>finally</span>
       {
         driver.Quit();
       }
@@ -2936,1367 +529,53 @@ SearchInput<span style="color:#719e07">.</span>clear()
   }
 }
   
-</code></pre></div>
-</section>
-  
-
-
-<section id="rubycode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">
-<span style="color:#b58900">require</span> <span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>
-driver <span style="color:#719e07">=</span> <span style="color:#cb4b16">Selenium</span><span style="color:#719e07">::</span><span style="color:#cb4b16">WebDriver</span><span style="color:#719e07">.</span>for <span style="color:#2aa198">:chrome</span>
-<span style="color:#719e07">begin</span>
-  <span style="color:#586e75">#  Navega a la URL</span>
-  driver<span style="color:#719e07">.</span>get <span style="color:#2aa198">&#39;https://google.com&#39;</span>
-  <span style="color:#586e75"># Almacena el elemento  &#39;SearchInput&#39;t</span>
-  search_input <span style="color:#719e07">=</span> driver<span style="color:#719e07">.</span>find_element(<span style="color:#b58900">name</span>: <span style="color:#2aa198">&#39;q&#39;</span>)
-  search_input<span style="color:#719e07">.</span>send_keys(<span style="color:#2aa198">&#39;selenium&#39;</span>)
-  <span style="color:#586e75"># Borra el texto ingresado</span>
-  search_input<span style="color:#719e07">.</span>clear
-<span style="color:#719e07">ensure</span>
-  driver<span style="color:#719e07">.</span>quit
-<span style="color:#719e07">end</span>
-  </code></pre></div>
-</section>
-  
-
-
-<section id="javascriptcode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">
-<span style="color:#268bd2">const</span> {Builder, By} <span style="color:#719e07">=</span> require(<span style="color:#2aa198">&#39;selenium-webdriver&#39;</span>);
-(async <span style="color:#268bd2">function</span> example() {
-  <span style="color:#268bd2">let</span> driver <span style="color:#719e07">=</span> await <span style="color:#719e07">new</span> Builder().forBrowser(<span style="color:#2aa198">&#39;chrome&#39;</span>).build();
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    await driver.get(<span style="color:#2aa198">&#39;https://www.google.com&#39;</span>);
-    <span style="color:#586e75">// Almacena el elemento  &#39;SearchInput&#39;
-</span><span style="color:#586e75"></span>    <span style="color:#268bd2">let</span> searchInput <span style="color:#719e07">=</span> driver.findElement(By.name(<span style="color:#2aa198">&#39;q&#39;</span>));
-    await searchInput.sendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>);
-    <span style="color:#586e75">// Borra el texto ingresado
-</span><span style="color:#586e75"></span>    await searchInput.clear();
+</code></pre></div></section><section id=rubycode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-ruby data-lang=ruby>
+<span style=color:#b58900>require</span> <span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>
+driver <span style=color:#719e07>=</span> <span style=color:#cb4b16>Selenium</span><span style=color:#719e07>::</span><span style=color:#cb4b16>WebDriver</span><span style=color:#719e07>.</span>for <span style=color:#2aa198>:chrome</span>
+<span style=color:#719e07>begin</span>
+  <span style=color:#586e75>#  Navega a la URL</span>
+  driver<span style=color:#719e07>.</span>get <span style=color:#2aa198>&#39;https://google.com&#39;</span>
+  <span style=color:#586e75># Almacena el elemento  &#39;SearchInput&#39;t</span>
+  search_input <span style=color:#719e07>=</span> driver<span style=color:#719e07>.</span>find_element(<span style=color:#b58900>name</span>: <span style=color:#2aa198>&#39;q&#39;</span>)
+  search_input<span style=color:#719e07>.</span>send_keys(<span style=color:#2aa198>&#39;selenium&#39;</span>)
+  <span style=color:#586e75># Borra el texto ingresado</span>
+  search_input<span style=color:#719e07>.</span>clear
+<span style=color:#719e07>ensure</span>
+  driver<span style=color:#719e07>.</span>quit
+<span style=color:#719e07>end</span>
+  </code></pre></div></section><section id=javascriptcode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>
+<span style=color:#268bd2>const</span> {Builder, By} <span style=color:#719e07>=</span> require(<span style=color:#2aa198>&#39;selenium-webdriver&#39;</span>);
+(async <span style=color:#268bd2>function</span> example() {
+  <span style=color:#268bd2>let</span> driver <span style=color:#719e07>=</span> await <span style=color:#719e07>new</span> Builder().forBrowser(<span style=color:#2aa198>&#39;chrome&#39;</span>).build();
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    await driver.get(<span style=color:#2aa198>&#39;https://www.google.com&#39;</span>);
+    <span style=color:#586e75>// Almacena el elemento  &#39;SearchInput&#39;
+</span><span style=color:#586e75></span>    <span style=color:#268bd2>let</span> searchInput <span style=color:#719e07>=</span> driver.findElement(By.name(<span style=color:#2aa198>&#39;q&#39;</span>));
+    await searchInput.sendKeys(<span style=color:#2aa198>&#34;selenium&#34;</span>);
+    <span style=color:#586e75>// Borra el texto ingresado
+</span><span style=color:#586e75></span>    await searchInput.clear();
   }
-  <span style="color:#719e07">finally</span> {
+  <span style=color:#719e07>finally</span> {
     await driver.quit();
   }
 })();
   
-</code></pre></div>
-</section>
-  
-
-
-<section id="kotlincode3" class="tab-panel">
-  <div class="highlight"><pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-kotlin" data-lang="kotlin">
-<span style="color:#719e07">import</span> org.openqa.selenium.By
-<span style="color:#719e07">import</span> org.openqa.selenium.chrome.ChromeDriver
-<span style="color:#719e07">fun</span> <span style="color:#268bd2">main</span>() {
-  <span style="color:#719e07">val</span> driver =  ChromeDriver()
-  <span style="color:#719e07">try</span> {
-    <span style="color:#586e75">//  Navega a la URL
-</span><span style="color:#586e75"></span>    driver.<span style="color:#719e07">get</span>(<span style="color:#2aa198">&#34;https://www.google.com&#34;</span>)
-    <span style="color:#586e75">// Almacena el elemento  &#39;SearchInput&#39;
-</span><span style="color:#586e75"></span>    <span style="color:#719e07">val</span> searchInput = driver.findElement(By.name(<span style="color:#2aa198">&#34;q&#34;</span>))
-    searchInput.sendKeys(<span style="color:#2aa198">&#34;selenium&#34;</span>)
-    <span style="color:#586e75">// Borra el texto ingresado
-</span><span style="color:#586e75"></span>    searchInput.clear()
-  } <span style="color:#719e07">finally</span> {
+</code></pre></div></section><section id=kotlincode3 class=tab-panel><div class=highlight><pre style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-kotlin data-lang=kotlin>
+<span style=color:#719e07>import</span> org.openqa.selenium.By
+<span style=color:#719e07>import</span> org.openqa.selenium.chrome.ChromeDriver
+<span style=color:#719e07>fun</span> <span style=color:#268bd2>main</span>() {
+  <span style=color:#719e07>val</span> driver =  ChromeDriver()
+  <span style=color:#719e07>try</span> {
+    <span style=color:#586e75>//  Navega a la URL
+</span><span style=color:#586e75></span>    driver.<span style=color:#719e07>get</span>(<span style=color:#2aa198>&#34;https://www.google.com&#34;</span>)
+    <span style=color:#586e75>// Almacena el elemento  &#39;SearchInput&#39;
+</span><span style=color:#586e75></span>    <span style=color:#719e07>val</span> searchInput = driver.findElement(By.name(<span style=color:#2aa198>&#34;q&#34;</span>))
+    searchInput.sendKeys(<span style=color:#2aa198>&#34;selenium&#34;</span>)
+    <span style=color:#586e75>// Borra el texto ingresado
+</span><span style=color:#586e75></span>    searchInput.clear()
+  } <span style=color:#719e07>finally</span> {
     driver.quit()
   }
 }
-  </code></pre></div>
-</section>
-</div>
-</div>
-
-
-<footer class=" footline" >
-	
-</footer>
-
-<h5 class="meta-data">
-    <a href="https://www.selenium.dev/documentation/es/webdriver/keyboard/">
-      “Teclado”
-    </a> was last updated on: 15 Aug 2020 21:20:38 &#43;0530: <a href="https://github.com/SeleniumHQ/site/commit/7664325ee6b0ddd9807d0070ade6d61a16b04c92">Modify: Adding FF support note for samesite cookie [deploy site] (7664325)</a>
-</h5>
-        
-        </div> 
-        
-
-      </div>
-
-    <div id="navigation">
-        
-        
-        
-        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-        
-        
-
-
-	 
-	 
-		
-			<a class="nav nav-prev" href="https://www.selenium.dev/documentation/es/webdriver/web_element/" title="Elemento web"> <i class="fa fa-chevron-left"></i></a>
-		
-		
-			<a class="nav nav-next" href="https://www.selenium.dev/documentation/es/remote_webdriver/" title="WebDriver remoto" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
-		
-	
-    </div>
-
-    </section>
-    
-    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
-      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
-    </div>
-    <script src="https://www.selenium.dev/documentation/es/js/clipboard.min.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/featherlight.min.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/highlight.pack.js?1597506667"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/learn.js?1597506667"></script>
-    <script src="https://www.selenium.dev/documentation/es/js/hugo-learn.js?1597506667"></script>
-
-    <link href="https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1597506667" rel="stylesheet" />
-    <script src="https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1597506667"></script>
-    <script>
-        mermaid.initialize({ startOnLoad: true });
-    </script>
-    
-
-  </body>
-</html>
-
+  </code></pre></div></section></div></div><footer class=footline></footer><h5 class=meta-data><a href=https://www.selenium.dev/documentation/es/webdriver/keyboard/>“Teclado”</a> was last updated on: 16 Aug 2020 15:14:49 +0530: <a href=https://github.com/SeleniumHQ/site/commit/07193d494acfe1b5f768772148efdbf5dc43bb34>Adding sample ruby code for is element enabled (#499)[deploy site] (07193d4)</a></h5></div></div><div id=navigation><a class="nav nav-prev" href=https://www.selenium.dev/documentation/es/webdriver/web_element/ title="Elemento web"><i class="fa fa-chevron-left"></i></a><a class="nav nav-next" href=https://www.selenium.dev/documentation/es/remote_webdriver/ title="WebDriver remoto" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=https://www.selenium.dev/documentation/es/js/clipboard.min.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/perfect-scrollbar.min.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/perfect-scrollbar.jquery.min.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/jquery.sticky.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/featherlight.min.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/highlight.pack.js?1597571110></script><script>hljs.initHighlightingOnLoad();</script><script src=https://www.selenium.dev/documentation/es/js/modernizr.custom-3.6.0.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/learn.js?1597571110></script><script src=https://www.selenium.dev/documentation/es/js/hugo-learn.js?1597571110></script><link href=https://www.selenium.dev/documentation/es/mermaid/mermaid.css?1597571110 rel=stylesheet><script src=https://www.selenium.dev/documentation/es/mermaid/mermaid.js?1597571110></script><script>mermaid.initialize({startOnLoad:true});</script></body></html>

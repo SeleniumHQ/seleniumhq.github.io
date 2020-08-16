@@ -1,46 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Selenium installieren on Dokumentation für Selenium</title>
-    <link>https://www.selenium.dev/documentation/de/selenium_installation/</link>
-    <description>Recent content in Selenium installieren on Dokumentation für Selenium</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2013-{year}</copyright>
-    
-	<atom:link href="https://www.selenium.dev/documentation/de/selenium_installation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Bibliotheken installieren</title>
-      <link>https://www.selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</guid>
-      <description>Zu Beginn ist es notwendig das die Selenium Bindings für Dein Automationsprojekt installiert werden. Der Installationsprozess ist von der gewählten Programmiersprache abhängig.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Selenium installieren on Dokumentation für Selenium</title><link>https://www.selenium.dev/documentation/de/selenium_installation/</link><description>Recent content in Selenium installieren on Dokumentation für Selenium</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/de/selenium_installation/index.xml" rel="self" type="application/rss+xml"/><item><title>Bibliotheken installieren</title><link>https://www.selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_selenium_libraries/</guid><description>Zu Beginn ist es notwendig das die Selenium Bindings für Dein Automationsprojekt installiert werden. Der Installationsprozess ist von der gewählten Programmiersprache abhängig.
 Java Die Installation der Selenium Bibliotheken für Java kann mit Hilfe von Maven erfolgen. Füge in Deinem Projekt in die pom.xml die selenium-java dependecy hinzu.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Mit der selenium-java dependency ist es möglich Tests laufen zu lassen in allen von Selenium unterstützen Browsern. Falls Du Test nur in einem spezifischen Browser ausführen möchtest, ist es möglich auch nur die dependecy für den gewählten Browser in der pom.</description>
-    </item>
-    
-    <item>
-      <title>WebDriver Binaries installieren</title>
-      <link>https://www.selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</guid>
-      <description>Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.
-Downloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.</description>
-    </item>
-    
-    <item>
-      <title>Standalone Server installieren</title>
-      <link>https://www.selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid>
-      <description>Wenn Du vorhast Grid zu verwenden, dann solltest Du Dir selenium-server-standalone JAR downloaden. Alle benötigten Komponenten sind via selenium-server verfügbar. Die standalone JAR beinhaltet den Remote Selenium Server als auch die Client-side Implementierungen. Das bedeutet wenn die selenium-server-standalone JAR in Deinem Projekt verwendet wird, dann ist es nicht notwendig selenium-java oder browserspezifische JAR hinzuzufügen.
-&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; </description>
-    </item>
-    
-  </channel>
-</rss>
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-java&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; Mit der selenium-java dependency ist es möglich Tests laufen zu lassen in allen von Selenium unterstützen Browsern. Falls Du Test nur in einem spezifischen Browser ausführen möchtest, ist es möglich auch nur die dependecy für den gewählten Browser in der pom.</description></item><item><title>WebDriver Binaries installieren</title><link>https://www.selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_webdriver_binaries/</guid><description>Um Tests auszuführen und einen Browser zu steuern ist es notwendig die browserspezifischen WebDriver Binaries zu installieren.
+Downloade die entsprechende WebDriver binary für den Browser den Du verwenden willst und speichere die Datei in Deinem System PFAD.</description></item><item><title>Standalone Server installieren</title><link>https://www.selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid><description>Wenn Du vorhast Grid zu verwenden, dann solltest Du Dir selenium-server-standalone JAR downloaden. Alle benötigten Komponenten sind via selenium-server verfügbar. Die standalone JAR beinhaltet den Remote Selenium Server als auch die Client-side Implementierungen. Das bedeutet wenn die selenium-server-standalone JAR in Deinem Projekt verwendet wird, dann ist es nicht notwendig selenium-java oder browserspezifische JAR hinzuzufügen.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description></item></channel></rss>

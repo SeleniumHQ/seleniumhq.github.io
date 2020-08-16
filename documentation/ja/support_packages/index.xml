@@ -1,75 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>サポートパッケージ on Seleniumドキュメント</title>
-    <link>https://www.selenium.dev/documentation/ja/support_packages/</link>
-    <description>Recent content in サポートパッケージ on Seleniumドキュメント</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
-    <copyright>2013-{year}</copyright>
-    
-	<atom:link href="https://www.selenium.dev/documentation/ja/support_packages/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>色を扱う</title>
-      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</guid>
-      <description>テストの一部として何かの色を検証したい場合があります。 問題は、ウェブ上の色の定義が一定ではないことです。 色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>サポートパッケージ on Seleniumドキュメント</title><link>https://www.selenium.dev/documentation/ja/support_packages/</link><description>Recent content in サポートパッケージ on Seleniumドキュメント</description><generator>Hugo -- gohugo.io</generator><language>en-US</language><copyright>2013-{year}</copyright><atom:link href="https://www.selenium.dev/documentation/ja/support_packages/index.xml" rel="self" type="application/rss+xml"/><item><title>色を扱う</title><link>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_colours/</guid><description>テストの一部として何かの色を検証したい場合があります。 問題は、ウェブ上の色の定義が一定ではないことです。 色のHEX表現を色のRGB表現と比較する簡単な方法、または色のRGBA表現を色のHSLA表現と比較する簡単な方法があったらいいのではないでしょうか？
 心配しないでください。解決策があります。: Color クラスです！
 まず、クラスをインポートする必要があります。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color;   from selenium.webdriver.support.color import Color   // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR    include Selenium::WebDriver::Support   // This feature is not supported in JS bindings    import org.openqa.selenium.support.Color    これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。
-Java Python C# Ruby JavaScript Kotlin private final Color HEX_COLOUR = Color.</description>
-    </item>
-    
-    <item>
-      <title>選択要素の操作</title>
-      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid>
-      <description>一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。 これを減らしてテストをきれいにするために、Seleniumサポートパッケージに Select クラスがあります。 それを使用するには、次のimportステートメントが必要です。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select;   from selenium.webdriver.support.select import Select   using OpenQA.Selenium.Support.UI   include Selenium::WebDriver::Support   // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR    import org.openqa.selenium.support.ui.Select     そして、 &amp;lt;select&amp;gt; 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
-Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement);   select_element = driver.</description>
-    </item>
-    
-    <item>
-      <title>マウスアクションの詳細</title>
-      <link>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid>
-      <description>マウスは、マウスイベントを表します。 マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.Color; from selenium.webdriver.support.color import Color // We don&amp;#39;t have a C# code sample yet - Help us out and raise a PR include Selenium::WebDriver::Support // This feature is not supported in JS bindings import org.openqa.selenium.support.Color これで、カラーオブジェクトの作成を開始できます。 すべての色オブジェクトは、色の文字列表現から作成する必要があります。 サポートされている色表現は、以下のとおりです。
+Java Python C# Ruby JavaScript Kotlin private final Color HEX_COLOUR = Color.</description></item><item><title>選択要素の操作</title><link>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_select_elements/</guid><description>一部の要素では、自動化するためにかなりのボイラープレートコードが必要になる場合があります。 これを減らしてテストをきれいにするために、Seleniumサポートパッケージに Select クラスがあります。 それを使用するには、次のimportステートメントが必要です。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.support.ui.Select; from selenium.webdriver.support.select import Select using OpenQA.Selenium.Support.UI include Selenium::WebDriver::Support // We don&amp;#39;t have a JavaScript code sample yet - Help us out and raise a PR import org.openqa.selenium.support.ui.Select そして、 &amp;lt;select&amp;gt; 要素を参照するWebElementを使用してSelectオブジェクトを作成できます。
+Java Python C# Ruby JavaScript Kotlin WebElement selectElement = driver.findElement(By.id(&amp;#34;selectElementID&amp;#34;)); Select selectObject = new Select(selectElement); select_element = driver.</description></item><item><title>マウスアクションの詳細</title><link>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/support_packages/mouse_and_keyboard_actions_in_detail/</guid><description>マウスは、マウスイベントを表します。 マウスアクションは低レベルインターフェイスを使用して実行され、仮想化されたデバイス入力アクションをWebブラウザーに提供できます。
 クリックとホールド 要素に移動し、指定された要素の中央で（解放せずに）クリックします。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url  driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element  WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element  actionProvider.clickAndHold(searchBtn).build().perform(); } finally { driver.</description>
-    </item>
-    
-    <item>
-      <title>クッキーの使用</title>
-      <link>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid>
-      <description>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。 Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.By; import org.openqa.selenium.WebDriver; import org.openqa.selenium.WebElement; import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.interactions.Actions; public class clickAndHold { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { // Navigate to Url driver.get(&amp;#34;https://google.com&amp;#34;); // Store &amp;#39;google search&amp;#39; button web element WebElement searchBtn = driver.findElement(By.linkText(&amp;#34;Sign in&amp;#34;)); Actions actionProvider = new Actions(driver); // Perform click-and-hold action on the element actionProvider.clickAndHold(searchBtn).build().perform(); } finally { driver.</description></item><item><title>クッキーの使用</title><link>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/support_packages/working_with_cookies/</guid><description>Cookieは、Webサイトから送信され、コンピューターに保存される小さなデータです。 Cookieは、主にユーザーを認識し、保存されている情報を読み込むために使用されます。
 WebDriver APIは、組み込みメソッドでCookieと対話するメソッドを提供します。
 クッキーの追加 現在のブラウジングコンテキストにCookieを追加するために使用されます。 Cookieの追加では、一連の定義済みのシリアル化可能なJSONオブジェクトのみを受け入れます。 受け入れられたJSONキー値のリストへのリンクはこちらにあります。
 まず、Cookieが有効になるドメインにいる必要があります。 サイトとの対話を開始する前にCookieを事前設定しようとしていて、ホームページが大きい場合/代替の読み込みに時間がかかる場合は、サイトで小さいページを見つけることです。（通常、たとえば http://example.com/some404page のような、404ページは小さいです。）
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context  driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } }   from selenium import webdriver driver = webdriver.Chrome() driver.get(&amp;#34;http://www.example.com&amp;#34;) # Adds the cookie into current browser context driver.</description>
-    </item>
-    
-    <item>
-      <title>Chrome デベロッパーツール</title>
-      <link>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</guid>
-      <description>Selenium 4 alphaバージョンには、&amp;ldquo;DevTools&amp;rdquo; インターフェースを介した Chrome Dev Protocolのネイティブサポートが待望されています。 これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、 プロファイラー、リソースタイミング、セキュリティ、 ターゲットCDPドメインなどのChrome開発プロパティを取得できます。
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.*; import org.openqa.selenium.chrome.ChromeDriver; public class addCookie { public static void main(String[] args) { WebDriver driver = new ChromeDriver(); try { driver.get(&amp;#34;http://www.example.com&amp;#34;); // Adds the cookie into current browser context driver.manage().addCookie(new Cookie(&amp;#34;key&amp;#34;, &amp;#34;value&amp;#34;)); } finally { driver.quit(); } } } from selenium import webdriver driver = webdriver.Chrome() driver.get(&amp;#34;http://www.example.com&amp;#34;) # Adds the cookie into current browser context driver.</description></item><item><title>Chrome デベロッパーツール</title><link>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ja/support_packages/chrome_devtools/</guid><description>Selenium 4 alphaバージョンには、&amp;ldquo;DevTools&amp;rdquo; インターフェースを介した Chrome Dev Protocolのネイティブサポートが待望されています。 これにより、アプリケーションキャッシュ、フェッチ、ネットワーク、パフォーマンス、 プロファイラー、リソースタイミング、セキュリティ、 ターゲットCDPドメインなどのChrome開発プロパティを取得できます。
 Chrome デベロッパーツールは、Google Chromeブラウザに直接組み込まれた一連のWeb開発ツールです。 DevToolsは、ページをすぐに編集して問題をすばやく診断するのに役立ち、 最終的にはより優れたWebサイトをより速く構築するのに役立ちます。
 ジオロケーションをエミュレート 一部のアプリケーションには、場所によって特徴や機能性が異なります。 このようなアプリケーションの自動化は、ブラウザでSeleniumを使用して 地理的位置をエミュレートすることが難しいため、困難です。 しかし、デベロッパーツールの助けを借りて、それらを簡単にエミュレートできます。 以下のコードスニペットはそのことを示しています。
-Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.devtools.DevTools; public void geoLocationTest(){ ChromeDriver driver = new ChromeDriver(); Map coordinates = new HashMap() {{ put(&amp;#34;latitude&amp;#34;, 50.2334); put(&amp;#34;longitude&amp;#34;, 0.2334); put(&amp;#34;accuracy&amp;#34;, 1); }}; driver.executeCdpCommand(&amp;#34;Emulation.setGeolocationOverride&amp;#34;, coordinates); driver.get(&amp;#34;&amp;lt;your site url&amp;gt;&amp;#34;); }   # Please raise a PR to add code sample   // Please raise a PR to add code sample    # Please raise a PR to add code sample   // Please raise a PR to add code sample    import org.</description>
-    </item>
-    
-  </channel>
-</rss>
+Java Python C# Ruby JavaScript Kotlin import org.openqa.selenium.chrome.ChromeDriver; import org.openqa.selenium.devtools.DevTools; public void geoLocationTest(){ ChromeDriver driver = new ChromeDriver(); Map coordinates = new HashMap() {{ put(&amp;#34;latitude&amp;#34;, 50.2334); put(&amp;#34;longitude&amp;#34;, 0.2334); put(&amp;#34;accuracy&amp;#34;, 1); }}; driver.executeCdpCommand(&amp;#34;Emulation.setGeolocationOverride&amp;#34;, coordinates); driver.get(&amp;#34;&amp;lt;your site url&amp;gt;&amp;#34;); } # Please raise a PR to add code sample // Please raise a PR to add code sample # Please raise a PR to add code sample // Please raise a PR to add code sample import org.</description></item></channel></rss>
