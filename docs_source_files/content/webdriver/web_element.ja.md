@@ -557,7 +557,11 @@ Returns a boolean value, True if the connected element is
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-   # Please raise a PR for code sample
+# Navigate to url
+driver.get("http://www.google.com")
+   
+# Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
     // Please raise a PR for code sample
