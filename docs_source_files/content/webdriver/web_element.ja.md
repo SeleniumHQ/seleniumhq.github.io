@@ -567,7 +567,11 @@ value = driver.find_element(By.NAME, 'btnK').is_enabled()
     // Please raise a PR for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR for code sample
+# Navigate to url
+driver.get 'http://www.google.com/'
+
+# Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR for code sample
