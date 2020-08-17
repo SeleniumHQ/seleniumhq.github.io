@@ -561,7 +561,8 @@ Returns a boolean value, True if the connected element is
   {{< code-panel language="java" >}}
   //navigates to url 
   driver.get("https://www.google.com/");
-  //returns true if element is enabled else returns false
+  
+  // Returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
@@ -589,7 +590,11 @@ driver.get 'http://www.google.com/'
 ele = driver.find_element(name: 'btnK').enabled?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR for code sample
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
  //navigates to url 
