@@ -579,7 +579,14 @@ driver.get 'http://www.google.com/'
 ele = driver.find_element(name: 'btnK').enabled?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR for code sample
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
  //navigates to url 
