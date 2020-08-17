@@ -2,12 +2,12 @@
 set -x
 
 if [[ -z "${DEPLOY_PRIME_URL}" ]]; then
-  USE_BASE_URL_SITE=""  
+  USE_BASE_URL_SITE=""
   USE_BASE_URL_DOCS=""
 else
   echo -e "\033[0;32mNetlify DEPLOY_PRIME_URL detected, this seems to be a PR, deployment happening at ${DEPLOY_PRIME_URL}...\033[0m"
-  USE_BASE_URL_SITE="-b ${DEPLOY_PRIME_URL}"
-  USE_BASE_URL_DOCS="-b ${DEPLOY_PRIME_URL}/documentation"
+  USE_BASE_URL_SITE="--baseURL ${DEPLOY_PRIME_URL}"
+  USE_BASE_URL_DOCS="--baseURL ${DEPLOY_PRIME_URL}/documentation"
 fi
 
 echo -e "\033[0;32mDeleting Hugo previously generated directories for docs and main site...\033[0m"

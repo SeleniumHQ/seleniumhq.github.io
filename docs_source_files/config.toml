@@ -37,7 +37,7 @@ home = [ "HTML", "RSS", "JSON"]
 title = "Documentation for Selenium"
 weight = 1
 languageName = "English"
-baseURL = "https://www.selenium.dev/documentation/en"
+#baseURL = "https://www.selenium.dev/documentation/en"
 
 [[Languages.en.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
@@ -69,7 +69,7 @@ weight = 30
 title = "Documentación de Selenium"
 weight = 2
 languageName = "Español"
-baseURL = "https://www.selenium.dev/documentation/es"
+#baseURL = "https://www.selenium.dev/documentation/es"
 
 [[Languages.es.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
@@ -101,7 +101,7 @@ weight = 30
 title = "Selenium documentatie"
 weight = 3
 languageName = "Nederlands"
-baseURL = "https://www.selenium.dev/documentation/nl"
+#baseURL = "https://www.selenium.dev/documentation/nl"
 
 [[Languages.nl.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
@@ -133,7 +133,7 @@ weight = 30
 title = "Selenium 文档"
 weight = 4
 languageName = "中文简体"
-baseURL = "https://www.selenium.dev/documentation/zh-cn"
+#baseURL = "https://www.selenium.dev/documentation/zh-cn"
 
 [[Languages.zh-cn.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
@@ -165,7 +165,7 @@ weight = 30
 title = "Documentation Selenium"
 weight = 5
 languageName = "Français"
-baseURL = "https://www.selenium.dev/documentation/fr"
+#baseURL = "https://www.selenium.dev/documentation/fr"
 
 [[Languages.fr.menu.shortcuts]]
 name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Signaler un problème"
@@ -197,7 +197,7 @@ weight = 10
 title = "Seleniumドキュメント"
 weight = 6
 languageName = "日本語"
-baseURL = "https://www.selenium.dev/documentation/ja"
+#baseURL = "https://www.selenium.dev/documentation/ja"
 
 [[Languages.ja.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
@@ -229,7 +229,7 @@ weight = 30
 title = "Selenium 문서"
 weight = 7
 languageName = "한국어"
-baseURL = "https://www.selenium.dev/documentation/ko"
+#baseURL = "https://www.selenium.dev/documentation/ko"
 
 [[Languages.ko.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium 홈"
@@ -261,7 +261,7 @@ weight = 30
 title = "Dokumentation für Selenium"
 weight = 1
 languageName = "Deutsch"
-baseURL = "https://www.selenium.dev/documentation/de"
+#baseURL = "https://www.selenium.dev/documentation/de"
 
 [[Languages.de.menu.shortcuts]]
 name = "<i class='fas fa-home'></i> Selenium Home"
