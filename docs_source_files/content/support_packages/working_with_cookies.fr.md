@@ -629,7 +629,8 @@ de cookie sur **Lax**,
 le cookie sera envoyé avec le GET
 demande initiée par un site Web tiers.
 
-**Remarque**: **À partir de maintenant, cette fonctionnalité est livrée en chrome (version 80 +) et fonctionne avec Selenium 4 et versions ultérieures.**
+**Note**: **As of now this feature is landed in chrome(80+version), 
+Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

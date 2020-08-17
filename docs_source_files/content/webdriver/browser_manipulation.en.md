@@ -1143,8 +1143,8 @@ driver.quit()
 
   var driver = new ChromeDriver();
   driver.Navigate().GoToUrl("http://www.example.com");
-  var screenshot = (driver as ITakesScreenshot).GetScreenshot();
-  screenshot.SaveAsFile("screenshot.png");
+  Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
+  screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}} 
 require 'selenium-webdriver'
@@ -1244,7 +1244,7 @@ driver.quit()
     var webElement = driver.FindElement(By.CssSelector("h1"));
     
     // Screenshot for the element
-    var elementScreenshot = (lastMessage as ITakesScreenshot).GetScreenshot();
+    var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
     elementScreenshot.SaveAsFile("screenshot_of_element.png");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}

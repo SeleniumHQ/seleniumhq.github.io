@@ -559,21 +559,46 @@ Returns a boolean value, True if the connected element is
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  // Please raise a PR for code sample
+  //navigates to url 
+  driver.get("https://www.google.com/");
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-   # Please raise a PR for code sample
+# Navigate to url
+driver.get("http://www.google.com")
+   
+# Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // Please raise a PR for code sample
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR for code sample
+# Navigate to url
+driver.get 'http://www.google.com/'
+
+# Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please raise a PR for code sample
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a PR for code sample
+ //navigates to url 
+ driver.get("https://www.google.com/")
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
 {{< / code-tab >}}
