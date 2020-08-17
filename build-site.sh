@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 if [[ -z "${DEPLOY_PRIME_URL}" ]]; then
   USE_BASE_URL_SITE=""  
