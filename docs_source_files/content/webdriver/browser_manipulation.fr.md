@@ -1247,7 +1247,7 @@ driver.quit()
     var webElement = driver.FindElement(By.CssSelector("h1"));
 
     // Screenshot for the element
-    var elementScreenshot = (lastMessage as ITakesScreenshot).GetScreenshot();
+    var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
     elementScreenshot.SaveAsFile("screenshot_of_element.png");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
