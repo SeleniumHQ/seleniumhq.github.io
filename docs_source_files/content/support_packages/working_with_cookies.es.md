@@ -618,8 +618,8 @@ Cuando el atributo sameSite se fija como **Lax** (Laxo en español),
 la cookie será enviada junto con la petición GET iniciada por paginas web externas.
 
 
-**Nota**: **Ahora mismo esta característica esta disponible en la versión 80 y 
-superiores de chrome funcionando con Selenium 4 y versiones posteriores.**
+**Note**: **As of now this feature is landed in chrome(80+version), 
+Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

@@ -263,7 +263,7 @@ Whether to skip the _Protected Mode_ check while launching
 a new IE session.
 
 If not set and _Protected Mode_ settings are not same for 
-for all zones, an exception will be thrown by the driver.
+all zones, an exception will be thrown by the driver.
 
 If capability is set to `true`, tests may 
 become flaky, unresponsive, or browsers may hang.

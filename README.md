@@ -44,10 +44,10 @@ is executed for deployment. This script checks for the string `[deploy site]` in
 If the commit message contains that string, and the commit is in `dev`, a 
 [GitHub action](./.github/workflows/deploy.yml) is triggered to build and deploy the site. 
 The site and docs will be built, and the changes will
-be committed to master by the user [Selenium-CI](https://github.com/selenium-ci/).
+be committed to the branch `publish` by the user [Selenium-CI](https://github.com/selenium-ci/).
 
 *What is important to take into account is that the source files for the site are in the `dev`
-branch, and the files that get deployed are pushed to the `master` branch.*
+branch, and the files that get deployed are pushed to the `publish` branch.*
 
 The site and docs are deployed using GitHub pages, and the configuration for this can be seen at the
 repo [settings](https://github.com/SeleniumHQ/seleniumhq.github.io/settings) (if you are a maintainer

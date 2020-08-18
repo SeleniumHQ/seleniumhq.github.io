@@ -68,7 +68,7 @@ Selenium项目欢迎新的贡献者.
 % git checkout -b my-feature-branch
 ```
 
-我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在master之上.
+我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在trunk之上.
 
 ### 步骤 3: 做出改变
 
@@ -159,7 +159,7 @@ Fixes #141
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
 ### 步骤 6: 测试
@@ -183,8 +183,8 @@ Pull requests通常会在几天内进行审核.
 
 ### 步骤 8: 集成
 
-代码审查完成后, 提交者将获取您的PR并将其集成到项目的master分支中. 
-因为我们希望在master分支上保持线性历史记录, 
+代码审查完成后, 提交者将获取您的PR并将其集成到项目的trunk分支中. 
+因为我们希望在trunk分支上保持线性历史记录, 
 所以我们通常会squash并rebase您的分支历史记录.
 
 ## 沟通
