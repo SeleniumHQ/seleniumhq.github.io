@@ -1033,3 +1033,187 @@ __注意: 此功能适用于Selenium 4以及更高版本.__
   {{<code-panel language="javascript">}}await driver.manage().window().fullscreen();{{< / code-panel>}}
   {{<code-panel language="kotlin">}}driver.manage().window().fullscreen(){{< / code-panel>}}
 {{</ code-tab>}}
+
+### 屏幕截图
+
+用于捕获当前浏览上下文的屏幕截图.
+WebDriver端点 
+[屏幕截图](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+返回以Base64格式编码的屏幕截图.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.*;
+import org.openqa.selenium.*;
+  
+public class SeleniumTakeScreenshot {
+    public static void main(String args[]) throws IOException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.example.com");
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./image.png"));
+        driver.quit();
+    }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}} 
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+# Returns and base64 encoded string into image
+driver.save_screenshot('./image.png')
+
+driver.quit()
+{{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Support.UI;
+
+    var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
+    Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
+    screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} 
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://example.com/'
+
+  # Takes and Stores the screenshot in specified path
+  driver.save_screenshot('./image.png')
+
+end   
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}} 
+let {Builder} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    await driver.get('https://www.example.com');
+    // Returns base64 encoded string
+    let encodedString = driver.takeScreenshot();
+    await fs.writeFileSync('./image.png', encodedString, 'base64');
+    await driver.quit();
+}())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import com.oracle.tools.packager.IOUtils.copyFile
+import org.openqa.selenium.*
+import org.openqa.selenium.chrome.ChromeDriver
+import java.io.File
+
+fun main(){
+    val driver =  ChromeDriver()
+    driver.get("https://www.example.com")
+    val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
+    copyFile(scrFile, File("./image.png"))
+    driver.quit()
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+###  元素屏幕截图
+
+用于捕获当前浏览上下文的元素的屏幕截图.
+WebDriver端点
+[屏幕截图](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
+返回以Base64格式编码的屏幕截图.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.File;
+import java.io.IOException;
+
+public class SeleniumelementTakeScreenshot {
+  public static void main(String args[]) throws IOException {
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://www.example.com");
+    WebElement element = driver.findElement(By.cssSelector("h1"));
+    File scrFile = element.getScreenshotAs(OutputType.FILE);
+    FileUtils.copyFile(scrFile, new File("./image.png"));
+    driver.quit();
+  }
+}
+ {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+ele = driver.find_element(By.CSS_SELECTOR, 'h1')
+
+# Returns and base64 encoded string into image
+ele.screenshot('./image.png')
+
+driver.quit()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Support.UI;
+
+    // Webdriver
+    var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
+
+    // Fetch element using FindElement
+    var webElement = driver.FindElement(By.CssSelector("h1"));
+
+    // Screenshot for the element
+    var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
+    elementScreenshot.SaveAsFile("screenshot_of_element.png");
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder, By} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+   let driver = await new Builder()
+       .forBrowser('chrome')
+       .build();
+
+   await driver.get('https://www.example.com');
+   let ele = await driver.findElement(By.css("h1"));
+   // Captures the element screenshot
+   let encodedString = await ele.takeScreenshot(true);
+   await fs.writeFileSync('./image.png', encodedString, 'base64');
+   await driver.quit();
+}())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.apache.commons.io.FileUtils
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.*
+import java.io.File
+
+fun main() {
+    val driver = ChromeDriver()
+    driver.get("https://www.example.com")
+    val element = driver.findElement(By.cssSelector("h1"))
+    val scrFile: File = element.getScreenshotAs(OutputType.FILE)
+    FileUtils.copyFile(scrFile, File("./image.png"))
+    driver.quit()
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}

@@ -221,7 +221,7 @@ fun main() {
     val action = Actions(driver)
 
     // Ejecuta la acción ctrl + A (modificador CONTROL + Alfabeto A) para seleccionar la página
-    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform()
   } finally {
     driver.quit()
   }
@@ -365,7 +365,7 @@ fun main() {
     val action = Actions(driver)
 
     // Ingresa el texto "qwerty" con keyDown en la tecla SHIFT y después de keyUp a la tecla SHIFT (QWERTYqwerty)
-    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform();
+    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform()
   } finally {
     driver.quit()
   }

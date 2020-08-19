@@ -267,7 +267,7 @@ Whether to skip the _Protected Mode_ check while launching
 a new IE session.
 
 If not set and _Protected Mode_ settings are not same for 
-for all zones, an exception will be thrown by the driver.
+all zones, an exception will be thrown by the driver.
 
 If capability is set to `true`, tests may 
 become flaky, unresponsive, or browsers may hang.
@@ -489,21 +489,21 @@ driver = await env.builder()
           .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    options.addCommandSwitches("-k");
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    options.addCommandSwitches("-k")
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
-        println(caps);
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
+        println(caps)
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
   {{< / code-panel >}}
@@ -590,20 +590,20 @@ driver = await env.builder()
           .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
         println(caps)
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
   {{< / code-panel >}}

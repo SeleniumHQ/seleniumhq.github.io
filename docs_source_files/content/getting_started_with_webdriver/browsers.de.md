@@ -11,6 +11,7 @@ Folgende Browser werden offiziell vom Selenium Framework unterstützt:
 | -------- | ---------- | ------------------ |
 | Chrome | [Chromium](//sites.google.com/a/chromium.org/chromedriver/) | Alle Versionen |
 | Firefox | [Mozilla](//github.com/mozilla/geckodriver/) | 54 und neuer |
+| Edge | [Microsoft](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) | 84 und neuer |
 | Internet Explorer | Selenium | 6 und neuer |
 | Opera | [Opera Chromium](//github.com/operasoftware/operachromiumdriver/) / [Presto](//github.com/operasoftware/operaprestodriver) | 10.5 und neuer |
 | Safari | [Apple](//webkit.org/blog/6900/webdriver-support-in-safari-10/) | 10 und neuer |

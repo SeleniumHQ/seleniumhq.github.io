@@ -188,7 +188,7 @@ synchroniser votre travail de temps en temps.
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
 ### Step 6: Test

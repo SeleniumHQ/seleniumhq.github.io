@@ -8,6 +8,6 @@ ClientVersion = "3.14.0"
 AlphaClientVersion = "4.0.0-alpha05"
 DownloadLink = "https://goo.gl/uJJ5Sc"
 AlphaDownloadLink = "https://www.nuget.org/api/v2/package/Selenium.WebDriver/4.0.0-alpha05"
-ChangelogLink = "https://goo.gl/t3faSQ"
+ChangelogLink = "https://raw.githubusercontent.com/SeleniumHQ/selenium/trunk/dotnet/CHANGELOG"
 DocsLink = "https://goo.gl/uutZjZ"
 +++

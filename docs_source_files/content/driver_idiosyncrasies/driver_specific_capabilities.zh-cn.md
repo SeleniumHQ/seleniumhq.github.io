@@ -150,16 +150,16 @@ val driver = RemoteWebDriver(options)
 
 ### ensureCleanSession
 
-When set to `true`, this capability clears the _Cache, 
-Browser History and Cookies_ for all running instances 
-of InternetExplorer including those started manually 
-or by the driver. By default, it is set to `false`.
+设置为 `true`时, 
+此功能将清除InternetExplorer所有正在运行实例的
+ _缓存, 浏览器历史记录和Cookies_ 
+ (包括手动启动或由驱动程序启动的实例) .
+默认情况下，此设置为 `false`.
 
-Using this capability will cause performance drop while 
-launching the browser, as the driver will wait until the cache 
-gets cleared before launching the IE browser.  
+使用此功能将导致启动浏览器时性能下降, 
+因为驱动程序将等待直到缓存清除后再启动IE浏览器.   
 
-This capability accepts a Boolean value as parameter.
+此功能接受一个布尔值作为参数.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -205,11 +205,12 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreZoomSetting
 
-InternetExplorer driver expects the browser zoom level to be 100%, 
-else the driver will throw an exception. This default behaviour 
-can be disabled by setting the _ignoreZoomSetting_ to _true_.
+InternetExplorer驱动程序期望浏览器的缩放级别为100%,
+否则驱动程序将可能抛出异常.
+通过将 _ignoreZoomSetting_ 设置为 _true_,
+可以禁用此默认行为.
 
-This capability accepts a Boolean value as parameter.
+此功能接受一个布尔值作为参数. 
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -255,21 +256,21 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreProtectedModeSettings
 
-Whether to skip the _Protected Mode_ check while launching 
-a new IE session.
+启动新的IE会话时是否跳过 _保护模式_ 检查.
 
-If not set and _Protected Mode_ settings are not same for 
-for all zones, an exception will be thrown by the driver.
+如果未设置, 
+并且所有区域的 _保护模式_ 设置都不同, 
+则驱动程序将可能引发异常.
 
-If capability is set to `true`, tests may 
-become flaky, unresponsive, or browsers may hang.
-However, this is still by far a second-best choice, 
-and the first choice should *always* be to actually 
-set the Protected Mode settings of each zone manually. 
-If a user is using this property, 
-only a "best effort" at support will be given.
+如果将功能设置为 `true`, 
+则测试可能会变得不稳定, 无响应, 或者浏览器可能会挂起.
+但是, 到目前为止, 
+这仍然是第二好的选择, 
+并且第一选择应该 *始终* 是手动实际设置每个区域的保护模式设置.
+如果用户正在使用此属性，
+则只会给予 "尽力而为" 的支持.
 
-This capability accepts a Boolean value as parameter.
+此功能接受一个布尔值作为参数. 
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -315,10 +316,10 @@ val driver = RemoteWebDriver(options)
 
 ### silent
 
-When set to `true`, this capability suppresses the
-diagnostic output of the IEDriverServer.
+设置为 `true`时, 
+此功能将禁止IEDriverServer的诊断输出.
 
-This capability accepts a Boolean value as parameter.
+此功能接受一个布尔值作为参数. 
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -384,22 +385,26 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### IE Command-Line Options
+### IE 命令行选项
 
-Internet Explorer includes several command-line options 
-that enable you to troubleshoot and configure the browser.
+Internet Explorer包含几个命令行选项, 
+使您可以进行故障排除和配置浏览器.
 
-The following describes few supported command-line options 
+下面介绍了一些受支持的命令行选项
 
-* _-private_ : Used to start IE in private browsing mode. This works for IE 8 and later versions.
+* _-private_ : 用于在私有浏览模式下启动IE.
+这适用于IE 8和更高版本.
 
-* _-k_ : Starts Internet Explorer in kiosk mode. 
-The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.
+* _-k_ : 在kiosk模式下启动Internet Explorer. 
+浏览器在一个最大化的窗口中打开, 
+该窗口不显示地址栏, 导航按钮或状态栏.
 
-* _-extoff_ : Starts IE in no add-on mode. 
-This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.
+* _-extoff_ : 在无附加模式下启动IE.
+此选项专门用于解决浏览器加载项问题.
+在IE 7和更高版本中均可使用.
 
-Note: __forceCreateProcessApi__ should to enabled in-order for command line arguments to work.
+注意: __forceCreateProcessApi__ 
+应该启用命令行参数才能正常工作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -481,21 +486,21 @@ driver = await env.builder()
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    options.addCommandSwitches("-k");
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    options.addCommandSwitches("-k")
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
-        println(caps);
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
+        println(caps)
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
   {{< / code-panel >}}
@@ -503,11 +508,11 @@ fun main() {
 
 ### forceCreateProcessApi
 
-Forces launching Internet Explorer 
-using the CreateProcess API. The default value is false.
+强制使用CreateProcess API启动Internet Explorer.
+默认值为false. 
 
-For IE 8 and above, this option requires the 
-"TabProcGrowth" registry value to be set to 0.
+对于IE 8及更高版本, 
+此选项要求将 "TabProcGrowth" 注册表值设置为0.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -582,20 +587,20 @@ driver = await env.builder()
           .build();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.Capabilities
+import org.openqa.selenium.ie.InternetExplorerDriver
+import org.openqa.selenium.ie.InternetExplorerOptions
 
 fun main() {
-    val options = InternetExplorerOptions();
-    options.useCreateProcessApiToLaunchIe();
-    val driver = InternetExplorerDriver(options);
+    val options = InternetExplorerOptions()
+    options.useCreateProcessApiToLaunchIe()
+    val driver = InternetExplorerDriver(options)
     try {
-        driver.get("https://google.com/ncr");
-        val caps = driver.getCapabilities();
+        driver.get("https://google.com/ncr")
+        val caps = driver.getCapabilities()
         println(caps)
     } finally {
-        driver.quit();
+        driver.quit()
     }
 }
   {{< / code-panel >}}

@@ -8,8 +8,7 @@ Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许�
 ## sendKeys
 
 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
-[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
-possible keystrokes that WebDriver Supports.
+[这里](https://www.w3.org/TR/webdriver/#keyboard-actions) 是WebDriver能够支持的键位列表.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -216,7 +215,7 @@ fun main() {
     val action = Actions(driver)
 
     // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
-    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform()
   } finally {
     driver.quit()
   }
@@ -359,7 +358,7 @@ fun main() {
     val action = Actions(driver)
 
     // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
-    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform();
+    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform()
   } finally {
     driver.quit()
   }

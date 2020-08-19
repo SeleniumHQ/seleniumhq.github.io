@@ -4,19 +4,15 @@ chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Grid 4
 
-_Selenium Grid 4_ is a fresh implementation and does not share the codebase
-the previous version had.
+_Selenium Grid 4_ est une nouvelle implémentation et 
+ne partage pas la base de code la version précédente avait.
 
-Grid 4 has an approach to take advantage of a number of new technologies in order 
-to facilitate scaling up, while still allowing local execution.
+Grid 4 a une approche pour tirer parti d'un 
+certain nombre de nouvelles technologies afin
+pour faciliter la mise à l'échelle, tout en permettant l'exécution locale.
 
-To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse the sections below.
+Pour obtenir tous les détails des composants de Grid 4, 
+comprendre comment cela fonctionne et comment définir
+vous possédez, veuillez parcourir les sections ci-dessous.

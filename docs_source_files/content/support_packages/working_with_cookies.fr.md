@@ -111,7 +111,7 @@ fun main() {
         driver.get("https://example.com")
 
         // Adds the cookie into current browser context
-        driver.manage().addCookie(Cookie("key", "value"));
+        driver.manage().addCookie(Cookie("key", "value"))
     } finally {
         driver.quit()
     }
@@ -222,11 +222,11 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("foo", "bar"));
+        driver.manage().addCookie(Cookie("foo", "bar"))
 
         // Get cookie details with named cookie 'foo'
-        val cookie = driver.manage().getCookieNamed("foo");
-        println(cookie);
+        val cookie = driver.manage().getCookieNamed("foo")
+        println(cookie)
     } finally {
         driver.quit()
     }
@@ -343,12 +343,12 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // Get All available cookies
-        val cookies = driver.manage().cookies;
-        println(cookies);
+        val cookies = driver.manage().cookies
+        println(cookies)
     } finally {
         driver.quit()
     }
@@ -475,15 +475,15 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
         val cookie1 = Cookie("test2", "cookie2")
-        driver.manage().addCookie(cookie1);
+        driver.manage().addCookie(cookie1)
 
         // delete a cookie with name 'test1'
-        driver.manage().deleteCookieNamed("test1");
+        driver.manage().deleteCookieNamed("test1")
 
         // delete cookie by passing cookie object of current browsing context.
-        driver.manage().deleteCookie(cookie1);
+        driver.manage().deleteCookie(cookie1)
     } finally {
         driver.quit()
     }
@@ -593,11 +593,11 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // deletes all cookies
-        driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies()
     } finally {
         driver.quit()
     }
@@ -629,7 +629,8 @@ de cookie sur **Lax**,
 le cookie sera envoyé avec le GET
 demande initiée par un site Web tiers.
 
-**Remarque**: **À partir de maintenant, cette fonctionnalité est livrée en chrome (version 80 +) et fonctionne avec Selenium 4 et versions ultérieures.**
+**Note**: **As of now this feature is landed in chrome(80+version), 
+Firefox(79+version) and works with Selenium 4 and later versions.**
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

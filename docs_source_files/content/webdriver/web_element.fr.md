@@ -535,11 +535,66 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title");
-          print(attr);
+          val attr = driver.switchTo().activeElement().getAttribute("title")
+          print(attr)
       } finally {
           driver.quit()
       }
   }
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Is Element Enabled
+
+This method is used to check if the connected Element 
+is enabled or disabled on a webpage.
+Returns a boolean value, True if the connected element is 
+`enabled` in the current browsing context else returns `false`.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+  //navigates to url 
+  driver.get("https://www.google.com/");
+  
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("http://www.google.com")
+   
+# Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'http://www.google.com/'
+
+# Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://www.google.com/")
+ 
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
 {{< / code-tab >}}
