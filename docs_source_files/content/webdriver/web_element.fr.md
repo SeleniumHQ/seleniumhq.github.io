@@ -548,8 +548,8 @@ Il est utilisé pour suivre (ou) trouver l'élément DOM qui a le focus dans le 
 
 This method is used to check if the connected Element 
 is enabled or disabled on a webpage.
-Returns a boolean value, True if the connected element is 
-`enabled` in the current browsing context else returns `false`.
+Returns a boolean value, **True** if the connected element is 
+**enabled** in the current browsing context else returns **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
