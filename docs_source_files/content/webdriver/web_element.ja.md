@@ -596,3 +596,33 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
  val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Is Element Selected
+
+This method determines if the referenced Element 
+is _Selected_ or not. This method is widely used on 
+Check boxes, radio buttons, input elements, and option elements.
+
+Returns a boolean value, **True** if referenced element is 
+**selected** in the current browsing context else returns **false**.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please raise a pr code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a pr code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a pr code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a pr code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please raise a pr code sample
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please raise a pr code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
