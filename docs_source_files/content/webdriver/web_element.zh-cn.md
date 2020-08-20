@@ -613,7 +613,11 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr code sample
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is selected else returns false
+ boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a pr code sample
