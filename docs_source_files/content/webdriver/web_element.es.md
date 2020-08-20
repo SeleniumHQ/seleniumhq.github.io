@@ -620,7 +620,11 @@ Returns a boolean value, **True** if referenced element is
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please raise a pr code sample
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is selected else returns false
+ boolean value =  driver.findElement(By.xpath("//*[@id="checkboxes"]/input[1]")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please raise a pr code sample
