@@ -604,12 +604,12 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
 
 ## Is Element Selected
 
-This method determines if the referenced Element 
-is _Selected_ or not. This method is widely used on 
-Check boxes, radio buttons, input elements, and option elements.
+此方法确定是否 _已选择_ 引用的元素.
+此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
 
-Returns a boolean value, **True** if referenced element is 
-**selected** in the current browsing context else returns **false**.
+返回一个布尔值, 
+如果在当前浏览上下文中 **已选择** 引用的元素, 
+则返回 **True**, 否则返回 **False**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
