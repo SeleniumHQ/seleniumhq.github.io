@@ -636,6 +636,10 @@ await driver.get('https://the-internet.herokuapp.com/checkboxes');
 let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please raise a pr code sample
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes")
+ 
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
 {{< / code-tab >}}
