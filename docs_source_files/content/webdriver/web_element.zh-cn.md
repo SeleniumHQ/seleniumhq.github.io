@@ -630,7 +630,11 @@ value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-ty
 // Please raise a pr code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a pr code sample
+# Navigate to url
+driver.get 'https://the-internet.herokuapp.com/checkboxes'
+
+# Returns true if element is checked else returns false
+ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Navigate to url
