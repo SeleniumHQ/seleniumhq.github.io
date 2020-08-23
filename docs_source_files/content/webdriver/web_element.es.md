@@ -634,7 +634,11 @@ driver.get("https://the-internet.herokuapp.com/checkboxes")
 value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a pr code sample
+// Navigate to Url
+driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+  
+// Returns true if element ins checked else returns false
+bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url
