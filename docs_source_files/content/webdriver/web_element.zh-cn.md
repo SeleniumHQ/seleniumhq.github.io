@@ -601,3 +601,57 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
  val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Is Element Selected
+
+此方法确定是否 _已选择_ 引用的元素.
+此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
+
+返回一个布尔值, 
+如果在当前浏览上下文中 **已选择** 引用的元素, 
+则返回 **True**, 否则返回 **False**.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is checked else returns false
+ boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://the-internet.herokuapp.com/checkboxes")
+
+# Returns true if element is checked else returns false
+value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+  
+// Returns true if element ins checked else returns false
+bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://the-internet.herokuapp.com/checkboxes'
+
+# Returns true if element is checked else returns false
+ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://the-internet.herokuapp.com/checkboxes');
+
+// Returns true if element ins checked else returns false
+let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes")
+ 
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
+  {{< / code-panel >}}
+{{< / code-tab >}}

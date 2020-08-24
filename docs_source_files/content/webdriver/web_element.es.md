@@ -558,8 +558,8 @@ que tiene el foco en el contexto de navegación actual.
 
 This method is used to check if the connected Element 
 is enabled or disabled on a webpage.
-Returns a boolean value, True if the connected element is 
-`enabled` in the current browsing context else returns `false`.
+Returns a boolean value, **True** if the connected element is 
+**enabled** in the current browsing context else returns **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -606,5 +606,59 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
  
  //returns true if element is enabled else returns false
  val attr = driver.findElement(By.name("btnK")).isEnabled()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Is Element Selected
+
+This method determines if the referenced Element 
+is _Selected_ or not. This method is widely used on 
+Check boxes, radio buttons, input elements, and option elements.
+
+Returns a boolean value, **True** if referenced element is 
+**selected** in the current browsing context else returns **false**.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is checked else returns false
+ boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://the-internet.herokuapp.com/checkboxes")
+
+# Returns true if element is checked else returns false
+value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+  
+// Returns true if element ins checked else returns false
+bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://the-internet.herokuapp.com/checkboxes'
+
+# Returns true if element is checked else returns false
+ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://the-internet.herokuapp.com/checkboxes');
+
+// Returns true if element ins checked else returns false
+let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes")
+ 
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
 {{< / code-tab >}}
