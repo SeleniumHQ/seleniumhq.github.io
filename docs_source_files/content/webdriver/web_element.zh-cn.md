@@ -655,3 +655,29 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
  val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Get Element TagName
+
+It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) 
+of the referenced Element which has the focus in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please provide a PR for code
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please provide a PR for code
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please provide a PR for code
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please provide a PR for code
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Please provide a PR for code
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please provide a PR for code
+  {{< / code-panel >}}
+{{< / code-tab >}}
