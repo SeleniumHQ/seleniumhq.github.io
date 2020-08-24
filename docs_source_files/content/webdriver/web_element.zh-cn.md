@@ -663,7 +663,11 @@ of the referenced Element which has the focus in the current browsing context.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please provide a PR for code
+ //navigates to url 
+ driver.get("https://www.example.com");
+
+ //returns TagName of the element
+ String value = driver.findElement(By.cssSelector("h1")).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Please provide a PR for code
