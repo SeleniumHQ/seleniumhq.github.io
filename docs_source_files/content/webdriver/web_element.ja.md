@@ -677,6 +677,10 @@ of the referenced Element which has the focus in the current browsing context.
 // Please provide a PR for code
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please provide a PR for code
+ //navigates to url 
+ driver.get("https://www.example.com")
+ 
+ //returns TagName of the element
+ val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
   {{< / code-panel >}}
 {{< / code-tab >}}
