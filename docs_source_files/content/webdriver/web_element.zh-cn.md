@@ -679,7 +679,11 @@ of the referenced Element which has the focus in the current browsing context.
 # Please provide a PR for code
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please provide a PR for code
+// Navigate to URL
+await driver.get('https://www.example.com');
+
+// Returns TagName of the element
+let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
  //navigates to url 
