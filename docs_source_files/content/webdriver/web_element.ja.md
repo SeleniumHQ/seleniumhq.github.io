@@ -671,7 +671,11 @@ of the referenced Element which has the focus in the current browsing context.
 // Please provide a PR for code
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please provide a PR for code
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Returns TagName of the element
+attr = driver.find_element(css: "h1").tag_name
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Navigate to URL
