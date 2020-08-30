@@ -674,7 +674,11 @@ driver.get("https://www.example.com")
 attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please provide a PR for code
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+  
+// Returns TagName of the element
+string attr = driver.FindElement(By.CssSelector("h1")).TagName;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url
