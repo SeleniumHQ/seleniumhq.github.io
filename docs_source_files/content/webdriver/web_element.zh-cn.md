@@ -705,3 +705,29 @@ let value = await driver.findElement(By.css('h1')).getTagName();
  val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Get Element Rect
+
+It is used to fetch the dimensions and coordinates 
+of the referenced element. 
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+  # Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+ // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+ # Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+   // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+  // Please raise a PR for code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
