@@ -234,9 +234,9 @@ Failure to protect your Grid could result in one or more of the following occurr
 * You allow third parties to access internal web applications and files
 * You allow third parties to run custom binaries
 
-See this blog post on [Detectify](//labs.detectify.com), which gives a good 
+See this blog post on [Detectify Labs](//labs.detectify.com), which gives a good 
 overview of how a publicly exposed Grid could be misused: 
-[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/).
+[Don't Leave your Grid Wide Open](//labs.detectify.com/2017/10/06/guest-blog-dont-leave-your-grid-wide-open/). This was written by [Detectify Crowdsource](//cs.detectify.com) hacker, [Peter Jaric](//twitter.com/peterjaric).
 
 
 ## Docker Selenium
