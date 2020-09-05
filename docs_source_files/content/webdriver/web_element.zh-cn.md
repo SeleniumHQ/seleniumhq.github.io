@@ -658,8 +658,9 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
 
 ## Get Element TagName
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) 
-of the referenced Element which has the focus in the current browsing context.
+此方法用于获取在当前浏览上下文中
+具有焦点的被引用元素的
+[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) .
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -708,14 +709,13 @@ let value = await driver.findElement(By.css('h1')).getTagName();
 
 ## Get Element Rect
 
-It is used to fetch the dimensions and coordinates 
-of the referenced element. 
+用于获取参考元素的尺寸和坐标. 
 
-The fetched data body contain the following details:
-* X-axis position from the top-lef corner of the element
-* y-axis position from the top-lef corner of the element
-* Height of the element
-* Width of the element
+提取的数据主体包含以下详细信息:
+* 元素左上角的X轴位置
+* 元素左上角的y轴位置
+* 元素的高度
+* 元素宽度
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
