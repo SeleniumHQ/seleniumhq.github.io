@@ -3,8 +3,6 @@ title: "Components"
 weight: 1
 ---
 
-![Grid](/images/grid4.png)
-
 ## Router
 * Routes request each request to the corresponding handler.
 
