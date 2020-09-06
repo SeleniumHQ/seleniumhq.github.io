@@ -673,16 +673,32 @@ of the referenced Element which has the focus in the current browsing context.
  String value = driver.findElement(By.cssSelector("h1")).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please provide a PR for code
+# Navigate to url
+driver.get("https://www.example.com")
+
+# Returns TagName of the element
+attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please provide a PR for code
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+  
+// Returns TagName of the element
+string attr = driver.FindElement(By.CssSelector("h1")).TagName;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please provide a PR for code
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Returns TagName of the element
+attr = driver.find_element(css: "h1").tag_name
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// Please provide a PR for code
+// Navigate to URL
+await driver.get('https://www.example.com');
+
+// Returns TagName of the element
+let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
  //navigates to url 
@@ -690,5 +706,41 @@ of the referenced Element which has the focus in the current browsing context.
  
  //returns TagName of the element
  val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element Rect
+
+It is used to fetch the dimensions and coordinates 
+of the referenced element. 
+
+The fetched data body contain the following details:
+* X-axis position from the top-lef corner of the element
+* y-axis position from the top-lef corner of the element
+* Height of the element
+* Width of the element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+  # Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+ // Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+ # Please raise a PR for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://www.example.com');
+
+// Returns height, width, x and y coordinates referenced element
+let element =  await driver.findElement(By.css("h1")).getRect();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+  // Please raise a PR for code sample
   {{< / code-panel >}}
 {{< / code-tab >}}

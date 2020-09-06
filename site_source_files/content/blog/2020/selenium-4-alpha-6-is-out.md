@@ -3,7 +3,7 @@ Description = "We are very pleased to announce the release of Selenium 4.0 Alpha
 Title = "Selenium 4.0 Alpha 6 is out!"
 Date = 2020-06-01
 Author = "diemol"
-AuthorLink = "https://twitter.com/diemol"
+AuthorLink = "https://twitter.com/diegofmolina"
 tags = ["selenium"]
 categories = ["general","releases"]
 +++
