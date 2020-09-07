@@ -27,3 +27,10 @@ The Router aims to balance the load in the Grid by sending the requests to the
 component that is able to handle them better, without overloading any component
 that is not needed in the process.
 
+## Distributor
+
+The Distributor is aware of all the Nodes and their capabilities. Its main role is
+to receive a new session request and find a suitable Node where the session can be
+created. After the session is created, the Distributor stores in the Session Map
+the relation between the session id and Node where the session is being executed. 
+

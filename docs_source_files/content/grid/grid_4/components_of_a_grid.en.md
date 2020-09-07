@@ -22,11 +22,11 @@ component that is able to handle them better, without overloading any component
 that is not needed in the process.
 
 ## Distributor
-* Contains information on nodes and its capabilities.
-* Selects node on which session is run.
 
-__Distributor__ is responsible for selecting the node on which your session will be run.
-It has all the information related to nodes and is aware of each node's capabilities.
+The Distributor is aware of all the Nodes and their capabilities. Its main role is
+to receive a new session request and find a suitable Node where the session can be
+created. After the session is created, the Distributor stores in the Session Map
+the relation between the session id and Node where the session is being executed. 
 
 ## SessionMap
 * Datastore mapping for session id and the node.
