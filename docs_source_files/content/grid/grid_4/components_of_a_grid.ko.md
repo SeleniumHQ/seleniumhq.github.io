@@ -46,7 +46,7 @@ By default, the Node auto-registers all browser drivers available on the path of
 the machine where it runs. It also creates one slot per available CPU for Chromium
 based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
 Through a specific configuration, it can run sessions in Docker containers. You can see
-more configuration details in the next [section]({{< ref "/grid/grid_4/components_of_a_grid.ko.md" >}}).
+more configuration details in the next [section]({{< ref "/grid/grid_4/setting_up_your_own_grid.ko.md" >}}).
 
 A Node only executes the received commands, it does not evaluate, make judgments,
 or control anything. The machines where the Node is running does not need to have
