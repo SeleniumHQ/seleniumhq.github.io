@@ -726,7 +726,11 @@ The fetched data body contain the following details:
  # Please raise a PR for code sample
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-   // Please raise a PR for code sample
+// Navigate to url
+await driver.get('https://www.example.com');
+
+// Returns height, width, x and y coordinates referenced element
+let element =  await driver.findElement(By.css("h1")).getRect();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
   // Please raise a PR for code sample

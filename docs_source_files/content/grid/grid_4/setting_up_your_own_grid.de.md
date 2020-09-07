@@ -1,5 +1,5 @@
 ---
-title: "Aufsetzen eines Grid"
+title: "Aufsetzen"
 weight: 2
 ---
 
