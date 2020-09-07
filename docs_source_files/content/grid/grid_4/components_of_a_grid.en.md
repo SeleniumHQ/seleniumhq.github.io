@@ -79,7 +79,7 @@ Hub is the union of the following components:
 
 It enables the classic Hub & Node(s) setup.
 
-## Standalone
+### Standalone
 
 As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
 executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
