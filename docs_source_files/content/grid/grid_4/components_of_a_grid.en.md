@@ -48,26 +48,39 @@ the same operating system as the other components. For example, A Windows Node
 might have the capability of offering Internet Explorer as a browser option,
 whereas this would not be possible on Linux or Mac.
 
-## SessionMap
-* Datastore mapping for session id and the node.
+## Session Map
 
-__SessionMap__ is data store used to store the map of session id and the node on which the session is running.
+The Session Map is a data store that keeps the information of the session id and the Node 
+where the session is running. It serves as a support for the Router in the process of 
+forwarding a request to the Node. The Router will ask the Session Map for the Node 
+associated to a session id. When starting the Grid in its fully distributed mode, the
+Session Map is the first component that should be started.
 
+## Event Bus
 
-## Hub
-* Accepts requests to run tests
-* Acts as a Router
-* Acts as a Distributor
-* Acts as a SessionMap
-* Takes instructions from client and executes them remotely on the nodes
+The Event Bus serves as a communication path between the Nodes, Distributor, and Session Map. 
+The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 
-A __Hub__ is a central point where all your tests are sent.
-It allows you to run a Router, Distributor and a SessionMap on the same machine using a single command. 
-The hub needs to be reachable from the respective clients (i.e. CI server, Developer machine etc.). 
-It communicates with the node to run your selenium sessions. Instead of running each component separately, 
-you can use _hub_ role to run all 3 together.
+## Roles in Grid
+
+In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
+Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
+grouping some of the components described above, and it is also possible to run all components
+together in a Standalone mode. 
+
+### Hub
+
+Hub is the union of the following components:
+
+* Router
+* Distributor
+* Session Map
+* Event Bus
+
+It enables the classic Hub & Node(s) setup.
 
 ## Standalone
 
-A __Standalone__ version of Grid consists of all components running as single process, including the node.
-You can directly start running sessions after starting the standalone version of the Grid.
+As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
+executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
+functional Grid of one is available after starting it in the Standalone mode.

@@ -53,3 +53,40 @@ or control anything. The machines where the Node is running does not need to hav
 the same operating system as the other components. For example, A Windows Node 
 might have the capability of offering Internet Explorer as a browser option,
 whereas this would not be possible on Linux or Mac.
+
+## Session Map
+
+The Session Map is a data store that keeps the information of the session id and the Node 
+where the session is running. It serves as a support for the Router in the process of 
+forwarding a request to the Node. The Router will ask the Session Map for the Node 
+associated to a session id. When starting the Grid in its fully distributed mode, the
+Session Map is the first component that should be started.
+
+## Event Bus
+
+The Event Bus serves as a communication path between the Nodes, Distributor, and Session Map. 
+The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
+
+## Roles in Grid
+
+In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
+Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
+grouping some of the components described above, and it is also possible to run all components
+together in a Standalone mode. 
+
+### Hub
+
+Hub is the union of the following components:
+
+* Router
+* Distributor
+* Session Map
+* Event Bus
+
+It enables the classic Hub & Node(s) setup.
+
+## Standalone
+
+As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
+executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
+functional Grid of one is available after starting it in the Standalone mode.
