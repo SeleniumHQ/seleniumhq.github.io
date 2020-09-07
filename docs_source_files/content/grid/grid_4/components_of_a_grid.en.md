@@ -28,25 +28,31 @@ to receive a new session request and find a suitable Node where the session can 
 created. After the session is created, the Distributor stores in the Session Map
 the relation between the session id and Node where the session is being executed. 
 
+## Node
+
+A Node can be present several times in a Grid. Each Node takes care of managing
+the slots for the available browsers of the machine where it is running.
+
+The Node registers itself to the Distributor through the Event Bus, and its
+configuration is sent as part of the registration message.
+
+By default, the Node auto-registers all browser drivers available on the path of
+the machine where it runs. It also creates one slot per available CPU for Chromium
+based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
+Through a specific configuration, it can run sessions in Docker containers. You can see
+more configuration details in the next [section]({{< ref "/grid/grid_4/components_of_a_grid.en.md" >}}).
+
+A Node only executes the received commands, it does not evaluate, make judgments,
+or control anything. The machines where the Node is running does not need to have
+the same operating system as the other components. For example, A Windows Node 
+might have the capability of offering Internet Explorer as a browser option,
+whereas this would not be possible on Linux or Mac.
+
 ## SessionMap
 * Datastore mapping for session id and the node.
 
 __SessionMap__ is data store used to store the map of session id and the node on which the session is running.
 
-## Nodes
-
-* Where the browsers live
-* Registers itself to the hub and communicates its capabilities
-* Receives requests from the hub and executes them
-
-__Nodes__ are different Selenium instances
-that will execute tests on individual computer systems.
-There can be many nodes in a grid.
-The machines which are nodes do not need to be the same platform
-or have the same browser selection as that of the hub or the other nodes.
-A node on Windows might have the capability of
-offering Internet Explorer as a browser option,
-whereas this wouldn't be possible on Linux or Mac.
 
 ## Hub
 * Accepts requests to run tests
