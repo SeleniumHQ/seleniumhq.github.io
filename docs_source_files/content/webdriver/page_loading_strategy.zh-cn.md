@@ -16,7 +16,7 @@ WebDriver都将延迟 `driver.get()` 的响应或
  `driver.navigate().to()` 的调用.
 
 
-在单页应用程序中 (例如Angular, react, Ember) , 
+在单页应用程序中 (例如Angular, React, Ember) , 
 一旦动态内容加载完毕 (即pageLoadStrategy状态为COMPLETE) , 
 则点击链接或在页面内执行某些操作的行为将不会向服务器发出新请求, 
 因为内容在客户端动态加载, 

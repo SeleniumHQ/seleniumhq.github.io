@@ -14,7 +14,7 @@ de carga del documento actual. Por defecto, WebDriver esperará responder
 a una llamada `driver.get()` (o) `driver.navigate().to()` hasta que el 
 estado de documento listo esté `completo` 
 
-En aplicaciones SPA (como Angular, react, Ember) una vez que el 
+En aplicaciones SPA (como Angular, React, Ember) una vez que el 
 contenido dinámico ya está cargado (es decir, una vez que el estado 
 de pageLoadStrategy es COMPLETO), hacer clic en un enlace o realizar 
 alguna acción dentro de la página no hará una nueva solicitud al 
