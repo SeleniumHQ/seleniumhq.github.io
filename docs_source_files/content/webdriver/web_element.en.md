@@ -742,6 +742,13 @@ await driver.get('https://www.example.com');
 let element =  await driver.findElement(By.css("h1")).getRect();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-  // Please raise a PR for code sample
+// Navigate to url
+driver.get("https://www.example.com")
+
+// Returns height, width, x and y coordinates referenced element
+val res = driver.findElement(By.cssSelector("h1")).rect
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
