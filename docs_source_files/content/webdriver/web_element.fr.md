@@ -726,7 +726,11 @@ Rectangle res =  driver.findElement(By.cssSelector("h1")).getRect();
 System.out.println(res.getX());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-  # Please raise a PR for code sample
+# Navigate to url
+driver.get("https://www.example.com")
+    
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
  // Please raise a PR for code sample
