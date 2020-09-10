@@ -3,90 +3,80 @@ title: "グリッドのコンポーネント"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ![Grid](/images/grid_4.png)
 
-## Router
+## ルーター
 
-The Router takes care of forwarding the request to the correct component.
+ルーターがリクエストを正しいコンポーネントに転送します。
 
-It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the Distributor (where the new session 
-creation will be handled). If the request belongs to an existing session, the
-Router will send the session id to the Session Map, and the Session Map will 
-return the Node where the session is running. After this, the Router will
-forward the request to the Node.
+これはGridのエントリポイントであり、すべての外部リクエストはGridによって受信されます。
+ルーターの動作は、リクエストによって異なります。
+新しいセッション要求の場合、ルーターはそれをディストリビュータに転送します（新しいセッションの作成が処理されます）。
+リクエストが既存のセッションに属している場合、ルーターはセッションIDをセッションマップに送信し、
+セッションマップはセッションが実行されているノードを返します。
+この後、ルーターはリクエストをノードに転送します。
 
-The Router aims to balance the load in the Grid by sending the requests to the
-component that is able to handle them better, without overloading any component
-that is not needed in the process.
+ルーターは、プロセスで不要なコンポーネントをオーバーロードすることなく、
+より適切に処理できるコンポーネントにリクエストを送信することにより、
+Grid内の負荷のバランスをとることを目的としています。
 
-## Distributor
 
-The Distributor is aware of all the Nodes and their capabilities. Its main role is
-to receive a new session request and find a suitable Node where the session can be
-created. After the session is created, the Distributor stores in the Session Map
-the relation between the session id and Node where the session is being executed. 
+## ディストリビューター
 
-## Node
+ディストリビューターは、すべてのノードとそのケイパビリティを認識しています。
+その主な役割は、新しいセッション要求を受け取り、セッションを作成できる適切なノードを見つけることです。
+セッションが作成されると、ディストリビューターは、
+セッションIDとセッションが実行されているノードとの関係をセッションマップに格納します。
 
-A Node can be present several times in a Grid. Each Node takes care of managing
-the slots for the available browsers of the machine where it is running.
+## ノード
 
-The Node registers itself to the Distributor through the Event Bus, and its
-configuration is sent as part of the registration message.
+ノードはGrid内に数回存在することができます。
+各ノードは、それが実行されているマシンの利用可能なブラウザのスロットを管理します。
 
-By default, the Node auto-registers all browser drivers available on the path of
-the machine where it runs. It also creates one slot per available CPU for Chromium
-based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
-Through a specific configuration, it can run sessions in Docker containers. You can see
-more configuration details in the next [section]({{< ref "/grid/grid_4/setting_up_your_own_grid.ja.md" >}}).
+ノードは、イベントバスを介して自身をディストリビューターに登録し、その構成は登録メッセージの一部として送信されます。
 
-A Node only executes the received commands, it does not evaluate, make judgments,
-or control anything. The machines where the Node is running does not need to have
-the same operating system as the other components. For example, A Windows Node 
-might have the capability of offering Internet Explorer as a browser option,
-whereas this would not be possible on Linux or Mac.
+デフォルトでは、ノードは、実行されているマシンのパスで使用可能なすべてのブラウザードライバーを自動登録します。
+また、ChromiumベースのブラウザーとFirefoxで使用可能なCPUごとに1つのスロットを作成します。
+SafariおよびInternet Explorerの場合、作成されるスロットは1つだけです。
+特定の構成を通じて、Dockerコンテナーでセッションを実行できます。
+次の[セクション]({{< ref "/grid/grid_4/setting_up_your_own_grid.ja.md" >}})で構成の詳細を確認できます。
 
-## Session Map
+ノードは受信したコマンドを実行するだけで、評価、判断、制御は行いません。
+ノードが実行されているマシンは、他のコンポーネントと同じオペレーティングシステムを持つ必要はありません。
+たとえば、WindowsノードにはInternet Explorerをブラウザーオプションとして提供する機能がありますが、
+これはLinuxまたはMacでは不可能です。
 
-The Session Map is a data store that keeps the information of the session id and the Node 
-where the session is running. It serves as a support for the Router in the process of 
-forwarding a request to the Node. The Router will ask the Session Map for the Node 
-associated to a session id. When starting the Grid in its fully distributed mode, the
-Session Map is the first component that should be started.
+## セッションマップ
 
-## Event Bus
+セッションマップは、セッションIDとセッションが実行されているノードの情報を保持するデータストアです。 
+これは、リクエストをノードに転送するプロセスにおけるルーターのサポートとして機能します。 
+ルーターは、セッションIDに関連付けられたノードをセッションマップに要求します。 
+完全分散モードでGridを開始する場合、セッションマップは、開始する必要がある最初のコンポーネントです。
 
-The Event Bus serves as a communication path between the Nodes, Distributor, and Session Map. 
-The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
+## イベントバス
 
-## Roles in Grid
+イベントバスは、ノード、ディストリビュータ、およびセッションマップ間の通信パスとして機能します。 
+Gridは、メッセージを介して内部通信の大部分を行い、高価なHTTP呼び出しを回避します。
 
-In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
-Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
-grouping some of the components described above, and it is also possible to run all components
-together in a Standalone mode. 
+## Gridの役割
 
-### Hub
+Grid3では、コンポーネントはハブとノードであり、スタンドアロンモードでGridを起動することでそれらを一緒に実行することが可能でした。 
+同じ概念がGrid4でも利用可能であり、上記のコンポーネントのいくつかをグループ化することでハブを実行することが可能です。
+また、スタンドアロンモードですべてのコンポーネントを一緒に実行することも可能です。
 
-Hub is the union of the following components:
+### ハブ
 
-* Router
-* Distributor
-* Session Map
-* Event Bus
+ハブは、次のコンポーネントの結合です。
 
-It enables the classic Hub & Node(s) setup.
+* ルーター
+* ディストリビューター
+* セッションマップ
+* イベントバス
 
-### Standalone
+従来のハブとノードのセットアップを可能にします。
 
-As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
-executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
-functional Grid of one is available after starting it in the Standalone mode.
+### スタンドアロン
+
+前述のように、スタンドアロンはすべてのコンポーネントの結合であり、ユーザーの目には、それらは1つのコンポーネントとして実行されます。 
+これには、ハブの一部であるすべてのコンポーネントと1つのノードが含まれます。 
+スタンドアロンモードで起動すると、1つの完全に機能するGridを使用できます。
