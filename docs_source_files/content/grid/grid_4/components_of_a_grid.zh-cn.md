@@ -3,90 +3,96 @@ title: "服务网格的组件"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from  
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 ![Grid](/images/grid_4.png)
 
 ## Router
 
-The Router takes care of forwarding the request to the correct component.
+路由器负责将请求转发到正确的组件.
 
-It is the entry point of the Grid, all external requests will be received by it.
-The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the Distributor (where the new session 
-creation will be handled). If the request belongs to an existing session, the
-Router will send the session id to the Session Map, and the Session Map will 
-return the Node where the session is running. After this, the Router will
-forward the request to the Node.
+它是网格的入口,所有外部请求都将借此被网格接收.
+路由器的行为取决于请求.
+如果是新的会话请求,
+则路由器会将其转发到分发服务器 (将在其中处理并创建新的会话). 
+如果请求属于存量会话,则路由器会将会话ID发送到会话集合,
+会话集合将返回会话正在运行的节点.
+此后, 路由器会将请求转发到节点.
 
-The Router aims to balance the load in the Grid by sending the requests to the
-component that is able to handle them better, without overloading any component
-that is not needed in the process.
+路由器旨在通过将请求发送到能够更好地处理请求的组件,
+来平衡网格中的负载,
+从而避免过程中任何组件无谓地过载.
 
 ## Distributor
 
-The Distributor is aware of all the Nodes and their capabilities. Its main role is
-to receive a new session request and find a suitable Node where the session can be
-created. After the session is created, the Distributor stores in the Session Map
-the relation between the session id and Node where the session is being executed. 
+分发器知道所有节点及其功能. 
+它的主要作用是接收新的会话请求
+并找到可以在其中创建会话的适当节点. 
+创建会话后, 分发器在会话集合中存储会话ID与正在执行会话的节点之间的关系. 
 
 ## Node
 
-A Node can be present several times in a Grid. Each Node takes care of managing
-the slots for the available browsers of the machine where it is running.
+一个节点可以在网格中出现多次.
+每个节点负责管理其运行机器的可用浏览器的插槽.
 
-The Node registers itself to the Distributor through the Event Bus, and its
-configuration is sent as part of the registration message.
+节点通过事件总线将其自身注册到分发服务器,
+并且将其配置作为注册消息的组成部分一起发送.
 
-By default, the Node auto-registers all browser drivers available on the path of
-the machine where it runs. It also creates one slot per available CPU for Chromium
-based browsers and Firefox. For Safari and Internet Explorer, only one slot is created.
-Through a specific configuration, it can run sessions in Docker containers. You can see
-more configuration details in the next [section]({{< ref "/grid/grid_4/setting_up_your_own_grid.zh-cn.md" >}}).
+默认情况下, 
+节点会自动注册运行它的计算机路径上所有可用的浏览器驱动程序.
+它还为基于Chromium的浏览器和Firefox的每个可用的CPU都创建插槽.
+对于Safari和Internet Explorer,
+则仅创建一个插槽。
+通过特定的配置, 
+它可以在Docker容器中运行会话.
+您可以在下一 [章节]({{< ref "/grid/grid_4/setting_up_your_own_grid.zh-cn.md" >}}) 
+中查看更多配置详细信息. 
 
-A Node only executes the received commands, it does not evaluate, make judgments,
-or control anything. The machines where the Node is running does not need to have
-the same operating system as the other components. For example, A Windows Node 
-might have the capability of offering Internet Explorer as a browser option,
-whereas this would not be possible on Linux or Mac.
+节点仅执行接收到的命令, 
+它不进行评估、做出判断或控制任何事情.
+运行节点的计算机不需要与其他组件具有相同的操作系统.
+例如, Windows节点可以具有将Internet Explorer作为浏览器选项的功能,
+而在Linux或Mac上则无法实现.
 
 ## Session Map
 
-The Session Map is a data store that keeps the information of the session id and the Node 
-where the session is running. It serves as a support for the Router in the process of 
-forwarding a request to the Node. The Router will ask the Session Map for the Node 
-associated to a session id. When starting the Grid in its fully distributed mode, the
-Session Map is the first component that should be started.
+会话集合是一种数据存储的形式,
+用于保存会话ID和会话正在运行的节点的信息.
+它在将请求转发到节点的过程中为路由器提供支持.
+路由器将向会话集合询问与会话ID关联的节点.
+当以完全分布式模式启动Grid时,
+Session Map是应该启动的第一个组件.
 
 ## Event Bus
 
-The Event Bus serves as a communication path between the Nodes, Distributor, and Session Map. 
-The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
+事件总线作为一种通讯的路径,
+服务于节点、分发服务器和会话集合之间.
+网格通过消息进行大部分内部通信,
+从而避免了昂贵的HTTP调用.
 
 ## Roles in Grid
 
-In Grid 3, the components were Hub and Node, and it was possible to run them together by starting the
-Grid in Standalone mode. The same concept is available in Grid 4, it is possible to run a Hub by
-grouping some of the components described above, and it is also possible to run all components
-together in a Standalone mode. 
+在网格3中, 组件是集线器和节点, 
+可以通过以独立模式启动网格来一起运行它们.
+Grid 4中提供了相同的概念, 
+可以通过对上述某些组件进行分组来运行集线器, 
+也可以在独立模式下一起运行所有组件.
 
 ### Hub
 
-Hub is the union of the following components:
+集线器是以下组件的结合:
 
-* Router
-* Distributor
-* Session Map
-* Event Bus
+* 路由器
+* 分发器
+* 会话集合
+* 事件总线
 
-It enables the classic Hub & Node(s) setup.
+它启用传统集线器和节点(们)的设置.
 
 ### Standalone
 
-As mentioned before, Standalone is the union of all components, and to the user's eyes, they are
-executed as one. This includes all the components which are part of the Hub, plus one Node. A fully
-functional Grid of one is available after starting it in the Standalone mode.
+如前所述, 独立模式是所有组件的结合, 
+并且在用户看来, 它们作为一个组件执行.
+这包括集线器的部分组件, 
+再加上一个节点.
+在独立模式下启动后, 
+可以使用一个功能齐全的网格.
