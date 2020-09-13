@@ -736,7 +736,11 @@ res = driver.find_element(By.CSS_SELECTOR, "h1").rect
  // Please raise a PR for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
- # Please raise a PR for code sample
+# Navigate to url
+driver.get 'https://www.example.com'
+  
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(css: "h1").rect
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Navigate to url
