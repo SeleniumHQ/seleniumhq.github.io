@@ -556,10 +556,11 @@ que tiene el foco en el contexto de navegación actual.
 
 ## Is Element Enabled
 
-This method is used to check if the connected Element 
-is enabled or disabled on a webpage.
-Returns a boolean value, **True** if the connected element is 
-**enabled** in the current browsing context else returns **false**.
+Este método se utiliza para comprobar si el elemento conectado
+está habilitado o deshabilitado en una página web.
+Devuelve un valor booleano, **True** si el elemento conectado es
+**habilitado** en el contexto de navegación actual, 
+de lo contrario, devuelve **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
