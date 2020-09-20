@@ -736,7 +736,14 @@ driver.get("https://www.example.com")
 res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
- // Please raise a PR for code sample
+// Navigate to Url
+driver.Navigate().GoToUrl("https://example.com");
+
+var res = driver.FindElement(By.CssSelector("h1"));
+// Return x and y coordinates referenced element
+System.Console.WriteLine(res.Location);
+// Returns height, width
+System.Console.WriteLine(res.Size);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Navigate to url
