@@ -765,3 +765,29 @@ val res = driver.findElement(By.cssSelector("h1")).rect
 println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Get Element CSS Value
+
+Returns the CSS value of the specified element 
+in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+    {{< code-panel language="javascript" >}}
+// Please provide a pr for the code sample
+    {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
