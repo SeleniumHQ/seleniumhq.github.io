@@ -778,16 +778,40 @@ of an element in the current browsing context.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please provide a pr for the code sample
+
+// Navigate to Url
+driver.get("https://www.example.com");
+
+// Retrieves the computed style property 'color' of linktext
+String cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color");
+
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-// Please provide a pr for the code sample
+
+# Navigate to Url
+driver.get('https://www.example.com')
+
+# Retrieves the computed style property 'color' of linktext
+cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
+
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please provide a pr for the code sample
+
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+
+// Retrieves the computed style property 'color' of linktext
+String cssValue = driver.FindElement(By.LinkText("More information...")).GetCssValue("color");
+
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-// Please provide a pr for the code sample
+
+# Navigate to Url
+driver.get 'https://www.example.com'
+
+# Retrieves the computed style property 'color' of linktext
+cssValue = driver.find_element(:link_text, 'More information...').css_value('color')
+
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
 // Navigate to Url
@@ -797,6 +821,12 @@ await driver.get('https://www.example.com');
 let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please provide a pr for the code sample
+
+// Navigate to Url
+driver.get("https://www.example.com")
+
+// Retrieves the computed style property 'color' of linktext
+val cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color")
+
   {{< / code-panel >}}
 {{< / code-tab >}}
