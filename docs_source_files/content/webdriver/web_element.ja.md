@@ -768,8 +768,8 @@ println(res.getX())
 
 ## Get Element CSS Value
 
-Returns the CSS value of the specified element 
-in the current browsing context.
+Retrieves the value of specified computed style property 
+of an element in the current browsing context.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -785,7 +785,11 @@ in the current browsing context.
 // Please provide a pr for the code sample
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
-// Please provide a pr for the code sample
+// Navigate to Url
+await driver.get('https://www.example.com');
+    
+// Retrieves the computed style property 'color' of linktext
+let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please provide a pr for the code sample
