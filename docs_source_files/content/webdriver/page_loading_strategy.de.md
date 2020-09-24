@@ -13,7 +13,7 @@ The `document.readyState` property of a document describes the loading state of 
 By default, WebDriver will hold off on responding to a `driver.get()` (or) `driver.navigate().to()` 
 call until the document ready state is `complete`
 
-In SPA applications (like Angular, react, Ember) once the dynamic content 
+In SPA applications (like Angular, React, Ember) once the dynamic content 
 is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
 clicking on a link or performing some action within the page will not make a new request 
 to the server as the content is dynamically loaded at the client side without a pull page refresh. 

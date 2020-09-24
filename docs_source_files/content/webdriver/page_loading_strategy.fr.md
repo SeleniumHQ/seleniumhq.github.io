@@ -13,7 +13,7 @@ La propriété `document.readyState` d'un document décrit l'état de chargement
 Par défaut, WebDriver ne répondra pas à un `driver.get()` (ou) `driver.navigate().to()`
 appeler jusqu'à ce que l'état prêt du document soit `complete`
 
-Dans les applications SPA (comme Angular, react, Ember) une fois le contenu dynamique
+Dans les applications SPA (comme Angular, React, Ember) une fois le contenu dynamique
 est déjà chargé (c'est-à-dire une fois que le statut de pageLoadStrategy est COMPLETE),
 cliquer sur un lien ou effectuer une action dans la page ne fera pas de nouvelle demande
 sur le serveur car le contenu est chargé dynamiquement côté client sans actualisation de la page d'extraction. 

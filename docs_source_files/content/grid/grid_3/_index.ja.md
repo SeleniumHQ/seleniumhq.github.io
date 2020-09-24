@@ -4,11 +4,6 @@ chapter: true
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 # Grid 3
 
@@ -22,7 +17,7 @@ Selenium Gridでは、1つのサーバーが、JSON形式のテストコマン�
 Selenium Gridを使用すると、複数のマシンで並行してテストを実行し、さまざまなブラウザーバージョンとブラウザー構成を（個々のテストではなく）一元的に管理できます。
 
 Selenium Gridは特効薬ではありません。
-一般的な委任および配布の問題のサブセットを解決しますが、たとえばインフラストラクチャを管理せず、特定のニーズに適さない場合があります。
+一般的な委譲および配布の問題のサブセットを解決しますが、たとえばインフラストラクチャを管理せず、特定のニーズに適さない場合があります。
 
-**Please note Grid 3 is not supported anymore and the Selenium project
-recommends to use [Grid 4]({{<ref "/grid/grid_4/_index.ja.md">}})**
+**Grid 3はもうサポートされておらず、Seleniumプロジェクトはサポートされていません。
+[Grid 4]({{<ref "/grid/grid_4/_index.ja.md">}}) の使用を推奨します。**

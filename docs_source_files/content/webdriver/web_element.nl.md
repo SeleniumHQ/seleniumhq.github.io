@@ -554,8 +554,8 @@ It is used to track (or) find DOM element which has the focus in the current bro
 
 This method is used to check if the connected Element 
 is enabled or disabled on a webpage.
-Returns a boolean value, True if the connected element is 
-`enabled` in the current browsing context else returns `false`.
+Returns a boolean value, **True** if the connected element is 
+**enabled** in the current browsing context else returns **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -602,5 +602,204 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
  
  //returns true if element is enabled else returns false
  val attr = driver.findElement(By.name("btnK")).isEnabled()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Is Element Selected
+
+This method determines if the referenced Element 
+is _Selected_ or not. This method is widely used on 
+Check boxes, radio buttons, input elements, and option elements.
+
+Returns a boolean value, **True** if referenced element is 
+**selected** in the current browsing context else returns **false**.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is checked else returns false
+ boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://the-internet.herokuapp.com/checkboxes")
+
+# Returns true if element is checked else returns false
+value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+  
+// Returns true if element ins checked else returns false
+bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://the-internet.herokuapp.com/checkboxes'
+
+# Returns true if element is checked else returns false
+ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://the-internet.herokuapp.com/checkboxes');
+
+// Returns true if element ins checked else returns false
+let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes")
+ 
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element TagName
+
+It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) 
+of the referenced Element which has the focus in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://www.example.com");
+
+ //returns TagName of the element
+ String value = driver.findElement(By.cssSelector("h1")).getTagName();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://www.example.com")
+
+# Returns TagName of the element
+attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+  
+// Returns TagName of the element
+string attr = driver.FindElement(By.CssSelector("h1")).TagName;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Returns TagName of the element
+attr = driver.find_element(css: "h1").tag_name
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to URL
+await driver.get('https://www.example.com');
+
+// Returns TagName of the element
+let value = await driver.findElement(By.css('h1')).getTagName();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://www.example.com")
+ 
+ //returns TagName of the element
+ val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element Rect
+
+It is used to fetch the dimensions and coordinates 
+of the referenced element. 
+
+The fetched data body contain the following details:
+* X-axis position from the top-lef corner of the element
+* y-axis position from the top-lef corner of the element
+* Height of the element
+* Width of the element
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Navigate to url
+driver.get("https://www.example.com");
+
+// Returns height, width, x and y coordinates referenced element
+Rectangle res =  driver.findElement(By.cssSelector("h1")).getRect();
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+System.out.println(res.getX());
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://www.example.com")
+    
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(By.CSS_SELECTOR, "h1").rect
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://example.com");
+
+var res = driver.FindElement(By.CssSelector("h1"));
+// Return x and y coordinates referenced element
+System.Console.WriteLine(res.Location);
+// Returns height, width
+System.Console.WriteLine(res.Size);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://www.example.com'
+  
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(css: "h1").rect
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://www.example.com');
+
+// Returns height, width, x and y coordinates referenced element
+let element =  await driver.findElement(By.css("h1")).getRect();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Navigate to url
+driver.get("https://www.example.com")
+
+// Returns height, width, x and y coordinates referenced element
+val res = driver.findElement(By.cssSelector("h1")).rect
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+println(res.getX())
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element CSS Value
+
+Retrieves the value of specified computed style property 
+of an element in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+// Please provide a pr for the code sample
+  {{< / code-panel >}}
+    {{< code-panel language="javascript" >}}
+// Navigate to Url
+await driver.get('https://www.example.com');
+    
+// Retrieves the computed style property 'color' of linktext
+let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
+    {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please provide a pr for the code sample
   {{< / code-panel >}}
 {{< / code-tab >}}

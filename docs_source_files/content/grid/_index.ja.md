@@ -4,27 +4,17 @@ chapter: true
 weight: 9
 ---
 
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Grid
 
-_Selenium Grid_ allows the execution of WebDriver scripts on remote machines (virtual
-or real) by routing commands sent by the client to remote browser instances.
-It aims to provide an easy way to run tests in parallel on multiple machines.
+_Selenium Grid_ では、クライアントからリモートブラウザーインスタンスに送信されたコマンドを
+ルーティングすることにより、（仮想または実）リモートマシン上でWebDriverスクリプトを実行できます。 
+複数のマシンで並行してテストを実行する簡単な方法を提供することを目的としています。
 
-Selenium Grid allows us to run tests in parallel on multiple machines,
-and to manage different browser versions and browser configurations centrally
-(instead of in each individual test).
+Selenium Gridは、複数のマシンで並行してテストを実行し、異なるブラウザーバージョンと
+ブラウザーの設定を（個別のテストではなく）一元的に管理することができます。
 
-Selenium Grid is not a silver bullet.
-It solves a subset of common delegation and distribution problems,
-but will for example not manage your infrastructure,
-and might not suit your specific needs.
+Selenium Gridは特効薬ではありません。 
+一般的な委譲および配布の問題のサブセットを解決しますが、たとえばインフラストラクチャを管理せず、特定のニーズに適さない場合があります。
 
-**Please note Grid 3 is not supported anymore and the Selenium project
-recommends to use [Grid 4]({{<ref "/grid/grid_4/_index.ja.md">}})**
+**Grid 3はもうサポートされておらず、Seleniumプロジェクトはサポートされていません。
+[Grid 4]({{<ref "/grid/grid_4/_index.ja.md">}}) の使用を推奨します。**

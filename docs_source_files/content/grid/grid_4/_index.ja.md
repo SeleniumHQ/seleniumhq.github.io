@@ -4,20 +4,12 @@ chapter: true
 weight: 4
 ---
 
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 # Grid 4
 
-_Selenium Grid 4_ is a fresh implementation and does not share the codebase
-the previous version had.
+_Selenium Grid 4_ は新しい実装であり、以前のバージョンのコードベースを共有していません。
 
-Grid 4 has an approach to take advantage of a number of new technologies in order 
-to facilitate scaling up, while still allowing local execution.
+Grid 4には、ローカルでの実行を可能にしながら、スケールアップを容易にするために、
+いくつかの新しいテクノロジーを利用するアプローチがあります。
 
-To get all the details of Grid 4 components, understand how it works, and how to set
-up you own, please browse the sections below.
+Grid 4コンポーネントの詳細をすべて取得し、その仕組みと独自の設定方法を理解するには、
+次のセクションを参照してください。
