@@ -24,7 +24,7 @@ using OpenQA.Selenium.Support.UI
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.support.ui.Select
@@ -52,7 +52,7 @@ select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -118,7 +118,7 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Selecciona una <option> basándose en el indice interno del elemento <select>
@@ -164,7 +164,7 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Devuelve una Lista de <WebElements> con las opciones que han sido seleccionadas
@@ -197,7 +197,7 @@ IList<IWebElement> allAvailableOptions = selectObject.Options;
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Devuelve una lista de <WebElements> que contiene las opciones de un elemento <select>
@@ -261,7 +261,7 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Deseleccionar una <option> basándose en el indice interno de un elemento <select>
@@ -296,7 +296,7 @@ bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// No disponemos del ejemplo de código en Javascript aun - Ayudanos a ello abriendo un PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple
