@@ -34,7 +34,7 @@ java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
 In Selenium 4, we've also added GraphQL, a new way to query the necessary data easily and get exactly the same.
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data 'query { grid { url} }' -s http://localhost:4444/graphql | jq .
+curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
 ```
 <br><br>
 
