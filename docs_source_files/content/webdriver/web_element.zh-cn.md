@@ -849,7 +849,11 @@ Retrieves the rendered text of the specified element.
 # Please provide a pr for code sample
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
-// Please provide a pr for code sample
+// Navigate to URL
+await driver.get('http://www.example.com');
+
+// retrieves the text of the element
+let text = await driver.findElement(By.css('h1')).getText();
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Please provide a pr for code sample
