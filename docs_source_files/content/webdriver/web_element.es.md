@@ -838,3 +838,28 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
 
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Get Element Text
+
+Retrieves the rendered text of the specified element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Please provide a pr for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please provide a pr for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please provide a pr for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please provide a pr for code sample
+  {{< / code-panel >}}
+    {{< code-panel language="javascript" >}}
+// Please provide a pr for code sample
+    {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Please provide a pr for code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
