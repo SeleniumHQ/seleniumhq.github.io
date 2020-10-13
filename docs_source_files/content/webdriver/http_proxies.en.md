@@ -87,7 +87,16 @@ driver = Selenium::WebDriver.for(:chrome, capabilities: cap)
 driver.get('http://google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// need PR
+  var webdriver = require('selenium-webdriver'),
+     proxy = require('selenium-webdriver/proxy');
+
+ var driver = new webdriver.Builder()
+     .withCapabilities(webdriver.Capabilities.chrome())
+     .setProxy(proxy.manual({http: 'host:1234'}))
+     .build();
+     
+     driver.get("https://selenium.dev");
+
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.Proxy
