@@ -853,7 +853,11 @@ text = driver.find_element(By.CSS_SELECTOR, "h1").text
 // Please provide a pr for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please provide a pr for code sample
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Retrieves the text of the element
+text = driver.find_element(:css, 'h1').text
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
 // Navigate to URL
