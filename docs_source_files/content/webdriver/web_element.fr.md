@@ -834,7 +834,11 @@ Retrieves the rendered text of the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please provide a pr for code sample
+// Navigate to url
+driver.get("https://example.com");
+
+// Retrieves the text of the element
+String text = driver.findElement(By.cssSelector("h1")).getText();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
