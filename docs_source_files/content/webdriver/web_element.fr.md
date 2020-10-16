@@ -865,6 +865,10 @@ await driver.get('http://www.example.com');
 let text = await driver.findElement(By.css('h1')).getText();
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please provide a pr for code sample
+// Navigate to URL
+driver.get("https://www.example.com")
+
+// retrieves the text of the element
+val text = driver.findElement(By.cssSelector("h1")).getText()
   {{< / code-panel >}}
 {{< / code-tab >}}
