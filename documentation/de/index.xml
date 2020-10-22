@@ -184,7 +184,7 @@ Java Python C# Ruby JavaScript Kotlin FirefoxOptions options = new FirefoxOption
       
       <guid>https://selenium.dev/documentation/de/webdriver/driver_requirements/</guid>
       <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrome/Chromium, Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
+ Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.</description>
     </item>
     
     <item>
@@ -338,8 +338,8 @@ Common information  Combination of releases of geckodriver / firefox / selenium-
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/de/selenium_installation/installing_standalone_server/</guid>
-      <description>Diese Seite wird von Englisch auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite zu übersetzen indem Du uns einen Pull Reqeust schickst!
- If you plan to use Grid then you should download the selenium-server-standalone JAR file. All the components are available via selenium-server. The standalone JAR contains everything, including the remote Selenium server and the client-side bindings. This means that if you use the selenium-server-standalone jar in your project, you do not have to add selenium-java or a browser specific jar.</description>
+      <description>Wenn Du vorhast Grid zu verwenden, dann solltest Du Dir selenium-server-standalone JAR downloaden. Alle benötigten Komponenten sind via selenium-server verfügbar. Die standalone JAR beinhaltet den Remote Selenium Server als auch die Client-side Implementierungen. Das bedeutet wenn die selenium-server-standalone JAR in Deinem Projekt verwendet wird, dann ist es nicht notwendig selenium-java oder browserspezifische JAR hinzuzufügen.
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;org.seleniumhq.selenium&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;selenium-server&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.X&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt;</description>
     </item>
     
     <item>
@@ -559,8 +559,7 @@ Let us say there is a content management system with which you can create some c
       
       <guid>https://selenium.dev/documentation/de/webdriver/page_loading_strategy/</guid>
       <description>Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:
-normal This will make Selenium WebDriver to wait for the entire page is loaded. When set to normal, Selenium WebDriver waits until the load event fire is returned.</description>
+The document.readyState property of a document describes the loading state of the current document. By default, WebDriver will hold off on responding to a driver.get() (or) driver.navigate().to() call until the document ready state is complete</description>
     </item>
     
     <item>

@@ -1,14 +1,20 @@
 ---
-title: "Instalación de las librerías Selenium"
+title: "Installing Selenium libraries"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Primero debe instalar las librerías de Selenium para su proyecto de automatización. El proceso de instalación de las librerías depende del lenguaje que elija usar.
+First you need to install the Selenium bindings for your automation project.
+The installation process for libraries depends on the language you choose to use.
 
 ## _Java_
-La instalación de las bibliotecas Selenium para Java se puede hacer usando Maven.
-Agregue la dependencia _selenium-java_ en el archivo *pom.xml* de su proyecto:
+Installation of Selenium libraries for Java can be done using Maven.
+Add the _selenium-java_ dependency in your project pom.xml:
 
 ```xml
 <dependency>
@@ -18,7 +24,12 @@ Agregue la dependencia _selenium-java_ en el archivo *pom.xml* de su proyecto:
 </dependency>
 ```
 
-La dependencia de _selenium-java_ admite la ejecución de su proyecto de automatización con todos los navegadores compatibles con Selenium. Si desea ejecutar pruebas solo en un navegador específico, puede agregar la dependencia para ese navegador en su archivo _pom.xml_. Por ejemplo, debe agregar la siguiente dependencia en su archivo _pom.xml_ para ejecutar sus pruebas solo en Firefox:
+The _selenium-java_ dependency supports running your automation
+project with all Selenium supported browsers. If you want to run tests
+only in a specific browser, you can add the dependency for that browser
+in your _pom.xml_ file.
+For example, you should add following dependency in your _pom.xml_
+file to run your tests only in Firefox:
 
 ```xml
 <dependency>
@@ -28,7 +39,8 @@ La dependencia de _selenium-java_ admite la ejecución de su proyecto de automat
 </dependency>
 ```
    
-De manera similar, si desea ejecutar pruebas solo en Chrome, debe agregar la siguiente dependencia:
+In a similar manner, if you want to run tests only in Chrome,
+you should add the following dependency:
 
 ```xml
 <dependency>
@@ -39,21 +51,21 @@ De manera similar, si desea ejecutar pruebas solo en Chrome, debe agregar la sig
 ```
 
 ## _Python_
-La instalación de las librerías de Selenium en Python se puede hacer usando pip:
+Installation of Selenium libraries for Python can be done using pip:
 
 ```shell
 pip install selenium
 ```
 
-Alternativamente, puede descargar el [archivo fuente PyPI](https://pypi.org/project/selenium/#files)
-(selenium-x.x.x.tar.gz) e instalarlo usando _setup.py_:
+Alternatively you can download the [PyPI source archive](https://pypi.org/project/selenium/#files)
+(selenium-x.x.x.tar.gz) and install it using _setup.py_:
 
 ```shell
 python setup.py install
 ```
 
 ## _C#_
-La instalación de las librerías de Selenium para C# se puede hacer usando NuGet:
+Installation of Selenium libraries for C# can be done using NuGet:
 
 ```shell
 # Using package manager
@@ -63,16 +75,19 @@ dotnet add package Selenium.WebDriver
 ```
 
 ## _Ruby_
-La instalación de las librerías de Selenium para Ruby se puede hacer usando gem:
+Installation of Selenium libraries for Ruby can be done using gem:
 
 ```shell
 gem install selenium-webdriver
 ```
 
 ## _JavaScript_
-La instalación de las librerías de Selenium para JavaScript se puede hacer usando npm:
+Installation of Selenium libraries for JavaScript can be done using npm:
 
 ```shell
 npm install selenium-webdriver
 ```
+
+## _Kotlin_
+Due to missing native language bindings for Kotlin, you have to use the Java Bindings, e.g. with maven [Java](#java)
 

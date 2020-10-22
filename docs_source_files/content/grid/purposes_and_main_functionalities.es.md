@@ -1,14 +1,18 @@
 ---
-title: "Propósitos y funcionalidades principales"
-menuTitle: "Propósitos y funcionalidades"
+title: "Purposes and main functionalities"
+menuTitle: "Purposes and functionalities"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-* Punto de entrada central para todas las pruebas
-* Gestión y control de los nodos / entorno donde se ejecutan los navegadores
-* Ejecución de pruebas a gran escala
-* Ejecución de pruebas en paralelo
-* Pruebas de diferentes plataformas (_Cross-platform and cross-browser_)
-* Balanceo de carga
-
+* Central entry point for all tests
+* Management and control of the nodes / environment where the browsers run
+* Scaling
+* Running tests in parallel
+* Cross platform testing
+* Load balancing

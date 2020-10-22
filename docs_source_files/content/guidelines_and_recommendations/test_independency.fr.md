@@ -3,25 +3,19 @@ title: "Indépendence des tests"
 weight: 7
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Écrivez chaque test comme sa propre unité. Écrivez les tests d'une manière qui ne sera pas
+dépendant d'autres tests pour effectuer:
 
-Write each test as its own unit. Write the tests in a way that will not be
-reliant on other tests to complete:
-
-Let us say there is a content management system with which you can create
-some custom content which then appears on your website as a module after 
-publishing, and it may take some time to sync between the CMS and the 
+Disons qu'il existe un système de gestion de contenu avec lequel vous pouvez créer
+du contenu personnalisé qui apparaît ensuite sur votre site Web sous forme de module après
+la publication et la synchronisation entre le CMS et le serveur peut prendre un certain temps.
 application.
 
-A wrong way of testing your module is that the content is created and 
-published in one test, and then checking the module in another test. This 
-is not feasible as the content may not be available immediately for the 
-other test after publishing.
+Une mauvaise façon de tester votre module est que le contenu est créé et
+publié dans un test, puis vérifier le module dans un autre test. Cette
+n'est pas réalisable car le contenu peut ne pas être disponible immédiatement pour le
+autre test après publication.
 
-Instead, you can create a stub content which can be turned on and off 
-within the affected test, and use that for validating the module. However,
-for content creation, you can still have a separate test.
+Au lieu de cela, vous pouvez créer un contenu de stub qui peut être activé et désactivé
+dans le test affecté, et utilisez-le pour valider le module. cependant,
+pour la création de contenu, vous pouvez toujours avoir un test séparé.

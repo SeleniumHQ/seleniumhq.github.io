@@ -1,28 +1,27 @@
 ---
-title: "Page loading strategy"
+title: "ページ読み込み戦略"
 weight: 8
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> ページは英語から日本語へ訳されています。
-日本語は話せますか？プルリクエストをして翻訳を手伝ってください!
-{{% /notice %}}
+現在のセッションのページ読み込み戦略を定義します。
+デフォルトでは、Selenium WebDriverがページを読み込む場合、 pageLoadStrategy は _normal_ となります。
+ページの読み込みに時間がかかる場合は、追加のリソース（画像、CSS、JSなど）のダウンロードを停止することを常にお勧めします。
 
-Defines the current session's page loading strategy. 
-By default, when Selenium WebDriver loads a page, 
-it follows the _normal_ pageLoadStrategy. 
-It is always recommended to stop downloading additional 
-resources (like images, css, js) when the page loading takes lot of time.
+ドキュメントの `document.readyState` プロパティは、現在のドキュメントの読み込み状態を記述します。
+デフォルトでは、WebDriverは、ドキュメントの準備完了状態が `complete` になるまで、 `driver.get()`（または）`driver.navigate().to()` の呼び出しへの応答を保留します。
 
-WebDriver _pageLoadStrategy_ supports the following values:
+SPAアプリケーション（Angular、react、Emberなど）では、動的コンテンツが既にロードされている（つまり、一度 pageLoadStrategy のステータスがCOMPLETEになっている）場合、リンクをクリックするか、ページ内で何らかのアクションを実行しても、コンテンツは、プルページの更新なしでクライアント側で動的に読み込まれるので、サーバーに新しいリクエストは行われません。
+
+SPAアプリケーションはサーバーのリクエストなしで多くのビューを動的にロードできるため、新たに `driver.get()` および  `driver.naviagte().to()` を実行するまで、pageLoadStrategyは常に `COMPLETE` ステータスを表示します。
+
+WebDriverの _pageLoadStrategy_ は以下の値をサポートします。
 
 ## normal
 
-This will make Selenium WebDriver to wait for the entire page is loaded. 
-When set to **normal**, Selenium WebDriver waits until the 
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) event fire is returned.
+この値は、Selenium WebDriverはページ全体がロードされるまで待機します。
+**normal** に設定すると、Selenium WebDriverは、[ロード](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)イベントの発生が返却されるまで待機します。
 
-By default **normal** is set to browser if none is provided.
+何も指定されていない場合、デフォルトでは、 **normal** がブラウザに設定されます。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -49,10 +48,31 @@ public class pageLoadStrategy {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
- // Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Normal;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='normal'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');
@@ -93,12 +113,9 @@ fun main() {
 
 ## eager
 
-This will make Selenium WebDriver to wait until the 
-initial HTML document has been completely loaded and parsed, 
-and discards loading of stylesheets, images and subframes.
+この値は、Selenium WebDriverは最初のHTMLドキュメントが完全に読み込まれて解析されるまで待機し、スタイルシート、画像、およびサブフレームの読み込みを破棄します。
 
-When set to **eager**, Selenium WebDriver waits until 
-[DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) event fire is returned.
+**eager** に設定すると、Selenium WebDriverは [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) イベントの発生が返却されるまで待機します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -125,10 +142,31 @@ public class pageLoadStrategy {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
- // Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.Eager;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='eager'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');
@@ -169,7 +207,7 @@ fun main() {
 
 ## none
 
-When set to **none** Selenium WebDriver only waits until the initial page is downloaded.
+**none** に設定すると、Selenium WebDriverは最初のページがダウンロードされるまで待機します。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -196,10 +234,31 @@ public class pageLoadStrategy {
 # Please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
- // Please raise a PR
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+
+namespace pageLoadStrategy {
+  class pageLoadStrategy {
+    public static void Main(string[] args) {
+      var chromeOptions = new ChromeOptions();
+      chromeOptions.PageLoadStrategy = PageLoadStrategy.None;
+      IWebDriver driver = new ChromeDriver(chromeOptions);
+      try {
+        driver.Navigate().GoToUrl("https://example.com");
+      } finally {
+        driver.Quit();
+      }
+    }
+  }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR
+require 'selenium-webdriver'
+caps = Selenium::WebDriver::Remote::Capabilities.chrome
+caps.page_load_strategy='none'
+
+driver = Selenium::WebDriver.for :chrome, :desired_capabilities => caps
+driver.get('https://www.google.com')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, Capabilities} = require('selenium-webdriver');

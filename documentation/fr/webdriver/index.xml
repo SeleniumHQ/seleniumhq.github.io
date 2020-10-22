@@ -27,9 +27,8 @@ Terminologie  API: Interface de programmation d&amp;rsquo;application. Il s&amp;
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/driver_requirements/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Through WebDriver, Selenium supports all major browsers on the market such as Chrom(ium), Firefox, Internet Explorer, Opera, and Safari. Where possible, WebDriver drives the browser using the browser&amp;rsquo;s built-in support for automation, although not all browsers have official support for remote control.
-WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with the browser as closely as possible.</description>
+      <description>Grâce à WebDriver, Selenium prend en charge tous les principaux navigateurs du marché tels que Chrom(ium), Firefox, Internet Explorer, Opera et Safari. Dans la mesure du possible, WebDriver pilote le navigateur en utilisant la prise en charge intégrée du navigateur pour l&amp;rsquo;automatisation, bien que tous les navigateurs n&amp;rsquo;aient pas de support officiel pour la télécommande.
+L&amp;rsquo;objectif de WebDriver est d&amp;rsquo;émuler l&amp;rsquo;interaction d&amp;rsquo;un utilisateur réel avec le navigateur le plus près possible.</description>
     </item>
     
     <item>
@@ -58,9 +57,10 @@ WebDriver&amp;rsquo;s aim is to emulate a real user&amp;rsquo;s interaction with
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/support_classes/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- WebDriver support classes are provided to simplify maintaining your code. They provide a nice abstraction to make modeling HTML element(s) as domain objects easier, also providing helper methods to make using such objects easy to reason about. We will learn about:
- Locator Strategies Events LoadableComponent ThreadGuard etc.</description>
+      <description>Les classes de support WebDriver sont fournies pour simplifier la maintenance de votre code.Elles fournissent une belle abstraction pour faciliter la modélisation des éléments HTML en tant qu&amp;rsquo;objets de domaine, ainsi que des méthodes d&amp;rsquo;aide pour rendre l&amp;rsquo;utilisation de ces objets facile à raisonner.
+ Stratégies de localisation Événements LoadableComponent ThreadGuard etc.  Commençons:
+ThreadGuard  Cette classe est uniquement disponible dans la liaison Java
+ ThreadGuard vérifie qu&amp;rsquo;un pilote est appelé uniquement à partir du même thread qui l&amp;rsquo;a créé.</description>
     </item>
     
     <item>
@@ -89,9 +89,8 @@ Alerts Le plus simple d&amp;rsquo;entre eux est appelé une alerte, qui montre u
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://selenium.dev/documentation/fr/webdriver/page_loading_strategy/</guid>
-      <description>Page being translated from English to French. Do you speak French? Help us to translate it by sending us pull requests!
- Defines the current session&amp;rsquo;s page loading strategy. By default, when Selenium WebDriver loads a page, it follows the normal pageLoadStrategy. It is always recommended to stop downloading additional resources (like images, css, js) when the page loading takes lot of time.
-WebDriver pageLoadStrategy supports the following values:</description>
+      <description>Définit la stratégie de chargement des pages de la session en cours. Par défaut, lorsque Selenium WebDriver charge une page, il suit le normal pageLoadStrategy. Il est toujours recommandé d&amp;rsquo;arrêter le téléchargement de ressources (comme les images, css, js) lorsque le chargement de la page prend beaucoup de temps.
+La propriété document.readyState d&amp;rsquo;un document décrit l&amp;rsquo;état de chargement du document actuel. Par défaut, WebDriver ne répondra pas à un driver.</description>
     </item>
     
     <item>

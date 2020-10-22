@@ -14,4 +14,4 @@ zoals hieronder beschreven:
 | -------- | ----------- | ----- |
 | normal | complete | Standaard, wacht tot alle resources gedownload zijn |
 | eager | interactive | DOM access is gereed, maar andere resources, zoals grafische elementen, zijn mogelijks nog niet volledig ingeladen. |
-| none | Any | Webdriver houdt geen rekening met wachttijden |
+| none | Any | WebDriver houdt geen rekening met wachttijden |

@@ -1,11 +1,17 @@
 ---
-title: "Instalación de las librerías WebDriver"
+title: "Installing WebDriver binaries"
 weight: 2
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Para ejecutar su proyecto y controlar el navegador, debe tener instalados los binarios de WebDriver específicos del navegador.
+To execute your project and control the browser you need to have
+browser-specific WebDriver binaries installed.
 
-Descargue el [binario del WebDriver]({{< ref "/webdriver/driver_requirements.es.md#quick-reference" >}})
-compatible con su navegador y colóquelo en el [RUTA o PATH del sistema]({{< ref "/webdriver/driver_requirements.es.md#adding-executables-to-your-path" >}}).
-
+Download the [WebDriver binary]({{< ref "/webdriver/driver_requirements.es.md#quick-reference" >}})
+supported by your browser and place it in the 
+[System PATH]({{< ref "/webdriver/driver_requirements.es.md#adding-executables-to-your-path" >}}).
