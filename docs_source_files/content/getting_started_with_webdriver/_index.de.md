@@ -7,30 +7,28 @@ weight: 4
 # Erste Schritte mit WebDriver
 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+Selenium unterstützt das Automatisieren aller wichtigsten Webbrowser 
+durch die Verwendung von _WebDriver_.
 
-Selenium supports automation of all the major browsers in the market
-through the use of _WebDriver_.
-WebDriver is an API and protocol that defines a language-neutral interface
-for controlling the behaviour of web browsers.
-Each browser is backed by a specific WebDriver implementation, called a *driver*.
-The driver is the component responsible for delegating down to the browser,
-and handles communication to and from Selenium and the browser.
+WebDriver ist eine API und ein Protokoll, das eine programmiersprachen 
+unabhängige Schnittstelle definiert um den Webrowser zu steuern.
+Jeder Browser ist mit einer spezifischen Implementierung des Webdriver
+ausgestattet, auch *driver* genannt. Dieser driver ist die Komponente
+die verantwortlich ist um den Browser fernzusteuern, weiters handabt dieser 
+die Kommunikation zwischen Selenium und dem Webbrowser.
 
-This separation is part of a conscious effort to have browser vendors
-take responsibility for the implementation for their browsers.
-Selenium makes use of these third party drivers where possible,
-but also provides its own drivers maintained by the project
-for the cases when this is not a reality.
+Diese Trennung wurde bewusst gemacht, um die Verantwortung der 
+browserspezifischen Implementierung in die Hände der Browserhersteller
+zu legen. Selenium ermöglicht es diese Drittanbieter driver zu verwenden.
+Weiters werden auch eigene driver zur Verfügung gestellt die durch
+das Projekt gewartet werden, für den Fall das der Browserhersteller
+keine zur Verfügung stellt.
 
-The Selenium framework ties all of these pieces together
-through a user-facing interface that enables the different browser backends
-to be used transparently,
-enabling cross-browser and cross-platform automation.
+Das Seleniumframework verbindet diese einzelnen Komponenten zu einer
+benutzerfreundlichen Schnittstelle die es ermöglicht, die verschiedenen 
+Browserbackends einheitlich und browser- als auch plattform-unabhängig 
+zu automatisieren.
 
-More details about drivers can be found in 
-[Driver Idiosyncrasies]({{< ref "/driver_idiosyncrasies/_index.md" >}}).
+Weitere Details zu den drivers können unter 
+[Driver Eigenheiten]({{< ref "/driver_idiosyncrasies/_index.md" >}}) 
+aufgerufen werden.

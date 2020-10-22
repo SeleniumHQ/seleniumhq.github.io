@@ -1,28 +1,24 @@
 ---
-title: "Geteilte capabilities"
+title: "Allgemeine capabilities"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-### pageLoadStrategy
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
+### Strategien das Websitenladehaltens betreffend
 
-The page load strategy queries the
-[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
-as described in the table below:
+Standarmässig wartet Selenium bis eine Seite vollständig geladen ist wenn 
+zu einer neuen Seiten via URL navigiert wird. Dies funktioniert wunderbar
+für Anfänger, kann jedoch lange Wartezeiten verursachen, für Webseiten die
+mehrere Drittanbieter Ressourcen beinhalten. Dies kann in einem solchen Fall
+ beschleunigt werden, wenn keine Standardstrategie verwendet wird. Jedoch 
+ können dadurch die Tests instabil werden, da Elemente auf der Website sowohl
+ die Position, als auch die Größe, während des Ladens verändern können. 
+ 
+ Die definierte Wartestrategie prüft den 
+ [document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
+wie in der Tabelle angeführt:
 
-| Strategy | Ready State | Notes |
+| Strategie | Status  | Bemerkung |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | komplett | Standardwert, wartet bis alle Ressourcen geladen wurden |
+| eager | interaktiv | DOM Zugriff ist bereit, allerdings können andere Elemente wie Bilder noch unvollständig geladen sein |
+| none | beliebig | Blockiert den WebDriver gar nicht |

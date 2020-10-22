@@ -3,17 +3,13 @@ title: "Driver spezifische Capabilities"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### Definerte Capabilities in den `FirefoxOptions`
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` ist die neue Methode um Capabilities für den Firefoxbrowser 
+zu definieren und sollte bevorzugt verwendet werden statt den DesiredCapabilities
+and should generally be used in preference to DesiredCapabilities.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -56,9 +52,10 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### Erstellen eines benutzerdefinierten Profils
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+Wie hier demonstriert ist es möglich ein benutzerdefiniertes 
+Profil für Firefox zu erstellen.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -108,11 +105,13 @@ driver = RemoteWebDriver(options)
 
 ## Internet Explorer
 
-### fileUploadDialogTimeout
+### Timeout betreffend Dateiupload
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+Unter Umständen kann es vorkommen das der Internet Explorer in ein
+Timout läuft während der Dateiupload-Dialog geöffnet wird. Der IEDriver
+hat ein standardmässiges Timeout von 1000ms, jedoch dieses kann 
+erhöht werden indem die capability mit dem Namen fileUploadDialogTimeout
+definiert wird.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
