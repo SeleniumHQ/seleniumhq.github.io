@@ -203,7 +203,7 @@ assert(foo == "Hello from JavaScript");
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 driver.get("file:///race_condition.html")
-val ele = WebDriverWait(getWebDriver(), Duration.ofSeconds(10))
+val ele = WebDriverWait(driver, Duration.ofSeconds(10))
             .until(ExpectedConditions.presenceOfElementLocated(By.tagName("p")))
 assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
@@ -404,7 +404,7 @@ const {Builder, until} = require('selenium-webdriver');
 })(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val wait = FluentWait<WebDriver>(getWebDriver())
+val wait = FluentWait<WebDriver>(driver)
         .withTimeout(Duration.ofSeconds(30))
         .pollingEvery(Duration.ofSeconds(3))
         .ignoring(NoSuchElementException::class.java)

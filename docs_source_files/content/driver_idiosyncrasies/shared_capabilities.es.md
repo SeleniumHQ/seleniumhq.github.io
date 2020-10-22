@@ -1,18 +1,29 @@
 ---
-title: "Capacidades compartidas"
+title: "Shared capabilities"
 weight: 1
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from 
+English to Spanish. Do you speak Spanish? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-## Estrategia de carga de la página (_pageLoadStrategy_)
+### pageLoadStrategy
+When navigating to a new page via URL, by default Selenium will wait
+until the page has fully loaded before responding. This works well for
+beginners, but can cause long wait times on pages that load a large
+number of third party resources. Using a non default strategy can make
+test execution faster in cases like this, but can also introduce flakiness
+where elements on the page change position as elements load in and change
+size.
 
-Al navegar a una nueva página a través de URL, por defecto Selenium esperará hasta que la página se haya cargado completamente antes de responder. Esto funciona bien para principiantes, pero puede causar largos tiempos de espera en páginas que cargan una gran cantidad de recursos de terceros. El uso de una estrategia no predeterminada puede hacer que la ejecución de la prueba sea más rápida en casos como este, pero también puede introducir inestabilidad donde los elementos en la página cambian de posición a medida que los elementos se cargan y cambian de tamaño.
+The page load strategy queries the
+[document.readyState](//developer.mozilla.org/en-US/docs/Web/API/Document/readyState)
+as described in the table below:
 
-La estrategia de carga de la página consulta el [document.readyState](// developer.mozilla.org/en-US/docs/Web/API/Document/readyState) como se describe en la tabla a continuación:
-
-| Estrategia | Ready State | Notas |
+| Strategy | Ready State | Notes |
 | -------- | ----------- | ----- |
-| normal | complete | Usado por defecto, espera a que se descarguen todos los recursos |
-| eager | interactive | El acceso DOM está listo, pero otros recursos como las imágenes aún pueden estar cargando |
-| none | Any | No bloquea WebDriver en absoluto |
-
+| normal | complete | Used by default, waits for all resources to download |
+| eager | interactive | DOM access is ready, but other resources like images may still be loading |
+| none | Any | Does not block WebDriver at all |

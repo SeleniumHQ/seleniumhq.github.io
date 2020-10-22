@@ -3,12 +3,6 @@ title: "关于测试自动化"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 
 首先，问问自己是否真的需要使用浏览器。
 在某些情况下，如果您正在开发一个复杂的 web 应用程序，
@@ -82,9 +76,9 @@ c) 如果失败，它不会给出一个简洁的、“可检查”的方法来�
 
 首先，您需要创建一个帐户。在这里您可以做出一些选择：
 
-* 您想使用现有帐户吗？
-* 您想创建一个新帐户吗？
-* 在配置开始之前，是否需要考虑有任何特殊属性的用户需要吗？
+* 您想使用现有帐户吗?
+* 您想创建一个新帐户吗?
+* 在配置开始之前，是否需要考虑有任何特殊属性的用户需要吗?
 
 不管您如何回答这个问题，
 解决方案是让它成为测试中“设置数据”部分的一部分 - 如果 Larry 公开了一个 API，
@@ -197,11 +191,11 @@ val accountPage = loginAs(user.getEmail(), user.getPassword())
 这些页面被存储为对象，
 其中包含关于 web 页面如何组成以及如何执行操作的特定信息 — 作为测试人员，您应该很少关注这些信息。
 
-您想要什么样的独角兽？
+您想要什么样的独角兽?
 您可能想要粉红色，但不一定。
 紫色最近很流行。
-她需要太阳镜吗？
-明星纹身？
+她需要太阳镜吗?
+明星纹身?
 这些选择虽然困难，但是作为测试人员，
 您的主要关注点是 — 您需要确保您的订单履行中心将正确的独角兽发送给正确的人，而这就要从这些选择开始。
 
@@ -364,25 +358,17 @@ assertTrue("Sparkles should have been created, with all attributes intact", unic
 采用这一基本设计，您将希望继续使用尽可能少的面向浏览器的步骤来完成您的工作流。
 您的下一个工作流程将包括在购物车中添加独角兽。
 您可能需要多次迭代此测试，以确保购物车正确地保持其状态：
-在开始之前，购物车中是否有多个独角兽？
-购物车能装多少？
-如果您创建多个具有相同名称或特性，它会崩溃吗？
+在开始之前，购物车中是否有多个独角兽?
+购物车能装多少?
+如果您创建多个具有相同名称或特性，它会崩溃吗?
 它将只保留现有的一个还是添加另一个?
 
 每次通过工作流时，您都希望尽量避免创建帐户、以用户身份登录和配置独角兽。
 理想情况下，您将能够创建一个帐户，并通过 API 或数据库预先配置独角兽。
 然后，您只需作为用户登录，找到 Sparkles，并将它添加到购物车中。
 
-### To automate or not to automate?
+### 是否自动化?
 
-Is automation always advantageous? When should one decide to automate test
-cases?
+自动化总是有优势吗? 什么时候应该决定去自动化测试用例?
 
-It is not always advantageous to automate test cases. There are times when
-manual testing may be more appropriate. For instance, if the application’s user
-interface will change considerably in the near future, then any automation
-might need to be rewritten anyway. Also, sometimes there simply is not enough
-time to build test automation. For the short term, manual testing may be more
-effective. If an application has a very tight deadline, there is currently no
-test automation available, and it’s imperative that the testing get done within
-that time frame, then manual testing is the best solution.
+自动化测试用例并不总是有利的. 有时候手动测试可能更合适. 例如，如果应用程序的用户界面，在不久的将来会发生很大变化，那么任何自动化都可能需要重写. 此外，有时根本没有足够的时间来构建自动化测试. 从短期来看，手动测试可能更有效. 如果应用程序的截止日期非常紧迫，当前没有可用的自动化测试，并且必须在特定时间范围内完成，那么手动测试是最好的解决方案.
