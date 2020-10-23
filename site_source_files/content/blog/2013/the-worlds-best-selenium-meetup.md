@@ -4,6 +4,8 @@ Title = "The World’s Best Selenium Meetup"
 Date = 2013-08-09
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["meetup"]
+categories = ["general","meetup"]
 +++
 
 <p>Note from Adam: This is a guest post from <a href="http://twitter.com/tourdedave">Dave Haeffner</a> who, along with <a href="http://www.theautomatedtester.co.uk/">David Burns</a> hatched this idea at SeConf2013.</p>

@@ -16,4 +16,4 @@ weight: 4
 테스트 실패의 위험이 증가한다. 일반적인 경험의 법칙은 긴 테스트가 더 취약하고 신뢰할 수 없다는 것이다.
 
 WebDriver 구현[W3C conformant]//w3c.github.io/webdriver/webdriver-spec.html)
-또한 서비스 거부 공격이 완화될 수 있도록 `웹 드라이버` 속성으로 `navigator` 물체에 주석을 달아야 한다.
+또한 서비스 거부 공격이 완화될 수 있도록 `WebDriver` 속성으로 `navigator` 물체에 주석을 달아야 한다.

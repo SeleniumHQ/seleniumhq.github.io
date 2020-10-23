@@ -4,6 +4,8 @@ Title = "Bug Bash: 24-30 January"
 Date = 2011-01-21
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["bug-bash"]
+categories = ["general"]
 +++
 
 <p>When the <a href="http://selenium.googlecode.com/">Selenium</a> and WebDriver projects merged, all those moons ago, we moved the infrastructure from something we hosted to Google Code. One reason for doing this was to make it easier for people to file bugs and feature requests. And it looks like people have been filing a <em>lot</em> of bugs and feature requests.</p>

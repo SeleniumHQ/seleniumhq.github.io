@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #91"
 Date = 2012-06-20
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>As you&#8217;ll start to see by the timestamps of things towards the end, I&#8217;m running out of &#8216;new&#8217; stuff and am pulling from the queue now.</p>
 <ul>
 <li>Fairly certain I&#8217;ve linked to this before, but <a href="http://pypi.python.org/pypi/seleniumwrapper/0.3.4">seleniumwrapper</a> adds some syntacitcal sugar around the Python bindings. Though not sure that it makes it clearer to me.</li>

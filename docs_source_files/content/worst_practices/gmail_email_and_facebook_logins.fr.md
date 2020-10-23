@@ -4,35 +4,34 @@ menuTitle: "Gmail, email and Facebook"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Pour plusieurs raisons, vous connecter à des 
+sites comme Gmail et Facebook
+l'utilisation de WebDriver n'est pas recommandée.
+En plus d'être contre les conditions d'utilisation de ces sites
+(où vous risquez de fermer le compte),
+c'est lent et peu fiable.
 
-For multiple reasons, logging into sites like Gmail and Facebook
-using WebDriver is not recommended.
-Aside from being against the usage terms for these sites
-(where you risk having the account shut down),
-it is slow and unreliable.
+La pratique idéale consiste à utiliser les API 
+proposées par les fournisseurs de messagerie,
+ou dans le cas de Facebook le service des outils de développement
+qui expose une API pour créer des comptes de test, des amis, etc.
+Bien que l'utilisation d'une API puisse 
+sembler un peu plus difficile,
+vous serez récompensé en vitesse, fiabilité et stabilité.
+L'API est également peu susceptible de changer
+alors que les pages Web et les localisateurs 
+HTML changent souvent et vous obliger à mettre 
+à jour votre framework de test.
 
-The ideal practice is to use the APIs that email providers offer,
-or in the case of Facebook the developer tools service
-which exposes an API for creating test accounts, friends and so forth.
-Although using an API might seem like a bit of extra hard work,
-you will be paid back in speed, reliability, and stability.
-The API is also unlikely to change
-whereas webpages and HTML locators change often
-and require you to update your test framework.
+Se connecter à des sites tiers à l'aide de WebDriver
+à tout moment de votre test augmente le risque
+de l'échec de votre test car cela rallonge votre test.
+Une règle générale est que des tests plus longs
+sont plus fragiles et peu fiables.
 
-Logging in to third party sites using WebDriver
-at any point of your test increases the risk
-of your test failing because it makes your test longer.
-A general rule of thumb is that longer tests
-are more fragile and unreliable.
-
-WebDriver implementations that are
+Les implémentations WebDriver qui sont
 [W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
-also annotate the `navigator` object
-with a `webdriver` property
-so that Denial of Service attacks can be mitigated.
+annoter également l'objet `navigator`
+avec une propriété `WebDriver`
+afin que les attaques par déni de service 
+puissent être atténuées.

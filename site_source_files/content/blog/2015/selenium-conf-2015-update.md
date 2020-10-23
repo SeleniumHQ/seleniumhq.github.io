@@ -4,6 +4,8 @@ Title = "Selenium Conf 2015 Update"
 Date = 2015-08-08
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>Selenium 2015 is just around the corner (September 8-10). Since <a href="https://seleniumhq.wordpress.com/2015/06/11/selenium-conf-2015-details/">our last post</a> we have:</p>

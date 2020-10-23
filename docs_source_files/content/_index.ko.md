@@ -55,7 +55,7 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 with webdriver.Firefox() as driver:
     wait = WebDriverWait(driver, 10)
     driver.get("https://google.com/ncr")
-    driver.find_element_by_name("q").send_keys("cheese" + Keys.RETURN)
+    driver.find_element(By.NAME, "q").send_keys("cheese" + Keys.RETURN)
     first_result = wait.until(presence_of_element_located((By.CSS_SELECTOR, "h3>div")))
     print(first_result.get_attribute("textContent"))
   {{< / code-panel >}}
@@ -64,21 +64,18 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
-using SeleniumExtras.WaitHelpers;
 
-class HelloSelenium
-{
-    static void Main()
-    {
-        using (IWebDriver driver = new FirefoxDriver())
-        {
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            driver.Navigate().GoToUrl("https://www.google.com/ncr");
-            driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
-            IWebElement firstResult = wait.Until(ExpectedConditions.ElementExists(By.CssSelector("h3>div")));
-            Console.WriteLine(firstResult.GetAttribute("textContent"));
-        }
+class HelloSelenium {
+  static void Main() {
+    using(IWebDriver driver = new FirefoxDriver()) {
+      WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+      driver.Navigate().GoToUrl("https://www.google.com/ncr");
+      driver.FindElement(By.Name("q")).SendKeys("cheese" + Keys.Enter);
+      wait.Until(driver =>driver.FindElement(By.CssSelector("h3>div")).Displayed);
+      IWebElement firstResult = driver.FindElement(By.CssSelector("h3>div"));
+      Console.WriteLine(firstResult.GetAttribute("textContent"));
     }
+  }
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}

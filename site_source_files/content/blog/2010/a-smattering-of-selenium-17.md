@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #17"
 Date = 2010-06-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Here are the posts dealing with Se, and/or automation in general that caught my eye and interest.<br />

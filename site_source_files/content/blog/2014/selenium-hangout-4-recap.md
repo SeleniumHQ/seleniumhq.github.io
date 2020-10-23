@@ -4,6 +4,8 @@ Title = "Selenium Hangout 4 Recap"
 Date = 2014-02-07
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["hangout"]
+categories = ["general","governance"]
 +++
 
 <p>Here&#8217;s a recap from the latest Selenium Hangout panel discussion. To submit questions for future hangouts, you can message us on Twitter (<a href="https://twitter.com/seleniumhangout">@seleniumhangout</a>) or e-mail us (<a href="mailto:questions@seleniumhangout.com">questions@seleniumhangout.com</a>).</p>

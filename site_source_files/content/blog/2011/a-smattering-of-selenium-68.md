@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #68"
 Date = 2011-11-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Its been almost a month, so time for a flurry of Smatterings.</p>
 <ul>
 <li>Maven has a bad reputation in some circles (ignoring for a second that you are using Java&#8230;), but should you be using it the <a href="https://github.com/sebarmeli/Selenium2-Java-QuickStart-Archetype">QuickStart Archetype</a> looks interesting.</li>

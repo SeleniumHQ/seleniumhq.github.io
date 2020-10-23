@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #34"
 Date = 2010-11-29
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>We&#8217;ll start this week with the <a href="http://www.theautomatedtester.co.uk/blog/2010/selenium-book-published.htm">official announcement of &#8216;Selenium 1.0 Testing Tools: Beginner’s Guide&#8217; being available</a>. Congrats David! (Still waiting for my copy&#8230;)<br />
 </p>
 <ul>

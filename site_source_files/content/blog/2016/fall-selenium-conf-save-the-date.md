@@ -4,6 +4,8 @@ Title = "Fall Selenium Conf, Save the Date & Call for Speakers!"
 Date = 2016-06-23
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>We&#8217;re excited to announce that we&#8217;ve finally determined where and when Selenium Conf will be happening this Fall.</p>

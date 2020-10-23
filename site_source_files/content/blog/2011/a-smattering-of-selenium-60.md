@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #60"
 Date = 2011-09-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>This instalment of catch-up week is brought to you by the letters C and I.</p>
 <ul>
 <li>The <a href="https://wiki.jenkins-ci.org/display/JENKINS/pre-scm-buildstep">pre-scm-buildstep</a> plugin for jenkins adds a useful step into the job workflow.</li>

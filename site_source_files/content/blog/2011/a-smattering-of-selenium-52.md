@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #52"
 Date = 2011-07-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Welcome to the Canada Day edition of the less-than-weekly-now collection of Selenium / Automation links that is the Smattering of Selenium.</p>
 <ul>
 <li><a href="http://www.theautomatedtester.co.uk/blog/2011/selenium-advanced-user-interactions.html">Selenium Advanced User Interactions</a> illustrates how this new API (which is part of WebDriver) can use used to do things like drag-and-drop on Canvas elements.</li>

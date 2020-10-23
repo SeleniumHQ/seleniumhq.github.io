@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #129"
 Date = 2012-11-26
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>A hardy welcome back to work to our American friends who spent Thursday being thankful for what they had, then getting into fist fights at stores for things they thought they didn&#8217;t need the next day.</p>
 <ul>
 <li>You know what would be grand? If various widget makers would provide automation hooks for their stuff so we, as automators, don&#8217;t have to write them ourselves. Like for High Charts (<a href="https://github.com/Ardesco/Powder-Monkey/tree/master/src/main/java/com/lazerycode/selenium/graphs">in Java</a>)</li>

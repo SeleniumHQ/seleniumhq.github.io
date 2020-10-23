@@ -26,7 +26,7 @@ from selenium.webdriver.support.color import Color
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
@@ -67,7 +67,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -102,7 +102,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -128,7 +128,7 @@ TRANSPARENT = Color.from_string('transparent')
 TRANSPARENT = Color.from_string('transparent')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
@@ -139,26 +139,30 @@ private val TRANSPARENT = Color.fromString("transparent")
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");
+Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
+
+Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-login_button_colour = driver.find_element_by_id('login').value_of_css_property('color')
-login_button_background_colour = driver.find_element_by_id('login').value_of_css_property('background-color');
+login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-login_button_colour = driver.find_element(id: 'login').css_value('color')
-login_button_background_colour = driver.find_element(id: 'login').css_value('background-color');
+login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val loginButtonColour = driver.findElement(By.id("login")).getCssValue("color")
-val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color")
+val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
+
+val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -178,7 +182,7 @@ assert login_button_background_colour == HOTPINK
 assert(login_button_background_colour == HOTPINK)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
@@ -207,7 +211,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))

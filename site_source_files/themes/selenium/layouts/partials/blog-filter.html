@@ -25,6 +25,7 @@
     <div class="filter-section">
         <h3>Archive</h3>
         <div class="archive-link-container">
+            <a href="{{"blog/2020" | relURL}}">2020</a>
             <a href="{{"blog/2019" | relURL}}">2019</a>
             <a href="{{"blog/2018" | relURL}}">2018</a>
             <a href="{{"blog/2017" | relURL}}">2017</a>
@@ -38,12 +39,19 @@
         </div>
     </div>
     <div class="filter-section">
-        <h3>Support the Selenium project</h3>
-        <p>Want to support the Selenium project? Learn more about sponsorship or view the full list of sponsors.</p>
-        <div class="learn-more button-container">
-            <a href="{{"sponsors" | relURL}}">
-                <div class="button support-button"><b>LEARN MORE</b></div>
-            </a>
+        <h3>Tags</h3>
+        <div class="links-container">
+            {{ range .Site.Taxonomies.tags }}
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>({{ .Count }})
+            {{ end }}
+        </div>
+    </div>
+    <div class="filter-section">
+        <h3>Categories</h3>
+        <div class="links-container">
+            {{ range .Site.Taxonomies.categories }}
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>({{ .Count }})
+            {{ end }}
         </div>
     </div>
 </div>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #50"
 Date = 2011-05-24
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Half a century!</p>
 <p>And because I am late doing this, the <a href="http://www.theautomatedtester.co.uk/blog/2011/selenium-test-day-amo-240511.html">Selenium Test Day for Addons.Mozilla.org</a> &#8212; which is <i>today!</i> gets top billing. Its actually going on Right Now. Looking to practice script writing and/or up your profile? This is a great way.</p>
 <p>And now for the usual stuff.</p>

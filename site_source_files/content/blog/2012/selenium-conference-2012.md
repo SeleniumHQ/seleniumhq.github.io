@@ -4,6 +4,8 @@ Title = "Selenium Conference 2012"
 Date = 2012-02-24
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>Good news, everybody! <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a> is getting closer! We recently <a href="http://www.seleniumconf.org/speakers/">selected the speakers</a> for the conference, and it&#8217;s going to be a great mix of talks, spanning the full range of subjects from the very practical to the deeply technical. I&#8217;m promised that there will be robots.</p>

@@ -3,30 +3,22 @@ title: "HTML runner"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+_Selenium HTML-runner_ te permite ejecutar Test Suites desde una
+línea de comando. Las suites de prueba son exportaciones HTML de
+Selenium IDE o herramientas de compatibles.
 
-_Selenium HTML-runner_ allows you to run Test Suites from a
-command line. Test Suites are HTML exports from Selenium IDE or
-campatible tools.
+## Información común
 
+* Combinaciónes de versiones de geckodriver / firefox / selenium-html-runner importan. Puede haber una matriz de compatibilidad de software
+en alguna parte.
+* selenium-html-runner solo ejecuta Test Suites (no Test Cases -
+por ejemplo, una exportación desde Monitis Transaction Monitor). 
+Asegurate que cumples con esto.
+* Para usuarios de Linux sin INTERFAZ: debes iniciar html-runner
+con pantalla virtual (buscar xvfb)
 
-## Common information
-
-* Combination of releases of geckodriver / firefox /
-selenium-html-runner matters. There might be a software
-compatibility matrix somewhere.
-* selenium-html-runner runs only Test Suite (not Test Case - 
-for example an export from Monitis Transaction Monitor). Be
-sure you comply with this.
-* For Linux users with no DISPLAY - you need to start html-runner
-with Virtual display (search for xvfb)
-
-## Example Linux environment
-Install / download following software packages:
+## Ejemplo en un ambiente Linux 
+Instala / descarga los siguientes paquetes de software:
 
 ```shell
 [user@localhost ~]$ cat /etc/redhat-release
@@ -39,7 +31,7 @@ java-1.8.0-openjdk-1.8.0.151-1.b12.el7_4.x86_64
 java-1.8.0-openjdk-headless-1.8.0.151-1.b12.el7_4.x86_64
 ```
 
-Test Suite example:
+Ejemplo de Test Suite:
 
 ```html
 [user@localhost ~]$ cat testsuite.html
@@ -60,11 +52,11 @@ Test Suite example:
 ```
 
 
-## How to run selenium-html-runner headless
+## Como ejecutar headless (sin interfaz visual) selenium-html-runner
 
-Now, the most important part, an example of how to run the
-selenium-html-runner! Your experience might vary depending on software
-combinations - geckodriver/FF/html-runner releases.
+Ahora, la parte más importante, un ejemplo de cómo ejecutar el
+selenium-html-runner! Tu experiencia puede variar según
+combinaciones de las versiones del software - geckodriver / FF / html-runner.
 
 ```shell
 xvfb-run java -Dwebdriver.gecko.driver=/home/mmasek/geckodriver.0.18.0 -jar selenium-html-runner-3.7.1.jar -htmlSuite "firefox" "https://YOUR-BASE-URL" "$(pwd)/testsuite.html" "results.html" ; grep result: -A1 results.html/firefox.results.html

@@ -3,101 +3,99 @@ title: "Lenguage de dominio específico"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Un lenguaje de dominio específico (DSL) es un sistema que 
+proporciona al usuario un medio expresivo para resolver un 
+problema. Permite a un usuario interactuar con el sistema en sus 
+términos, no solo en jerga del programador. 
 
-A domain specific language (DSL) is a system which provides the user with
-an expressive means of solving a problem. It allows a user to
-interact with the system on their terms – not just programmer-speak.
+A tus usuarios, en general, no les importa cómo se ve su sitio. 
+Ellos no se preocupan por la decoración, animaciones o gráficos. 
+Ellos desean utilizar tu sistema para impulsar a sus nuevos 
+empleados a través del proceso con mínima dificultad; quieren 
+reservar un viaje a Alaska; quieren configurar y comprar 
+unicornios con descuento. Tu trabajo como el probador debe 
+acercarse lo más que pueda a "capturar" esta mentalidad. Con eso 
+en mente, nos propusimos "modelar" la aplicación con que 
+estas trabajando, de modo que los scripts de prueba (el único 
+proxy pre-lanzamiento del usuario ) "hablen"  por, y representen al 
+usuario. 
 
-Your users, in general, do not care how your site looks. They do not
-care about the decoration, animations, or graphics. They
-want to use your system to push their new employees through the
-process with minimal difficulty; they want to book travel to Alaska; 
-they want to configure and buy unicorns at a discount. Your job as
-tester is to come as close as you can to “capturing” this mind-set.
-With that in mind, we set about “modeling” the application you are
-working on, such that the test scripts (the user's only pre-release
-proxy) “speak” for, and represent the user.
+Con Selenium, el DSL generalmente se representa por métodos, 
+escritos para hacer la API simple y legible: permiten un informe 
+entre desarrolladores y partes interesadas (usuarios, dueños
+de producto, especialistas en inteligencia de negocios, etc).
 
-With Selenium, DSL is usually represented by methods, written to make
-the API simple and readable – they enable a report between the
-developers and the stakeholders (users, product owners, business
-intelligence specialists, etc.).
+## Beneficios
 
-## Benefits
-
-* **Readable:** Business stakeholders can understand it.
-* **Writable:** Easy to write, avoids unnecessary duplication.
-* **Extensible:** Functionality can (reasonably) be added
-  without breaking contracts and existing functionality.
-* **Maintainable:** By leaving the implementation details out of test
-  cases, you are well-insulated against changes to the AUT*.
+* **Legible:** Las partes interesadas del negocio pueden entenderlo.
+* **Escribible:** Fácil de escribir, evita duplicaciones innecesarias.
+* **Extensible:** Se puede agregar funcionalidad (razonablemente) 
+sin romper los contratos y la funcionalidad existente.
+* **Mantenible:** Al dejar los detalles de implementación fuera de 
+casos de prueba, está bien aislado contra cambios en el AUT*.
 
 
 ## Java
 
-Here is an example of a reasonable DSL method in Java.
-For brevity's sake, it assumes the `driver` object is pre-defined
-and available to the method.
+Aquí hay un ejemplo de un método DSL razonable en Java.
+En aras de la brevedad, se supone que el objeto `driver` está predefinido
+y disponible para el método.
 
 ```java
 /**
- * Takes a username and password, fills out the fields, and clicks "login".
- * @return An instance of the AccountPage
+ * Toma un nombre de usuario y una contraseña, completa los campos y hace clic en "iniciar sesión".
+ * @return Una instancia de AccountPage
  */
 public AccountPage loginAsUser(String username, String password) {
   WebElement loginField = driver.findElement(By.id("loginField"));
   loginField.clear();
   loginField.sendKeys(username);
-
-  // Fill out the password field. The locator we're using is "By.id", and we should
-  // have it defined elsewhere in the class.
+  
+  // Completa el campo de contraseña. El localizador que estamos usando es "By.id", y deberíamos
+  // tenerlo definido en otra parte de la clase.
   WebElement passwordField = driver.findElement(By.id("password"));
   passwordField.clear();
   passwordField.sendKeys(password);
 
-  // Click the login button, which happens to have the id "submit".
+  // Haz clic en el botón de inicio de sesión, que tiene el id "enviar".
   driver.findElement(By.id("submit")).click();
 
-  // Create and return a new instance of the AccountPage (via the built-in Selenium
-  // PageFactory).
+  // Crea y devuelve una nueva instancia de AccountPage (a través del PageFactory
+  // incorporado a Selenium).
   return PageFactory.newInstance(AccountPage.class);
 }
 ```
 
-This method completely abstracts the concepts of input fields,
-buttons, clicking, and even pages from your test code. Using this
-approach, all a tester has to do is call this method. This gives
-you a maintenance advantage: if the login fields ever changed, you
-would only ever have to change this method - not your tests.
+Este método abstrae completamente los conceptos de campos de entrada,
+botones, clics e incluso páginas de tu código de prueba. Usando este
+enfoque, todo lo que un probador tiene que hacer es llamar a este método. 
+Esto da una ventaja de mantenimiento: si los campos de inicio de sesión 
+alguna vez cambian, solo tendrías que cambiar este método, no tus pruebas.
 
 ```java
 public void loginTest() {
     loginAsUser("cbrown", "cl0wn3");
 
-    // Now that we're logged in, do some other stuff--since we used a DSL to support
-    // our testers, it's as easy as choosing from available methods.
+   // Ahora que hemos iniciado sesión, haz otras cosas, ya que utilizamos un DSL para admitir
+   // nuestros probadore, es tan fácil como elegir entre los métodos disponibles.
     do.something();
     do.somethingElse();
     Assert.assertTrue("Something should have been done!", something.wasDone());
 
-    // Note that we still haven't referred to a button or web control anywhere in this
+    // Ten en cuenta que todavía no nos hemos referido a un botón o control web en ninguna parte de este
     // script...
 }
 ```
 
-It bears repeating: one of your primary goals should be writing an
-API that allows your tests to address **the problem at hand, and NOT
-the problem of the UI**. The UI is a secondary concern for your
-users – they do not care about the UI, they just want to get their job
-done. Your test scripts should read like a laundry list of things
-the user wants to DO, and the things they want to KNOW. The tests
-should not concern themselves with HOW the UI requires you to go
-about it.
+Vale la pena repetirlo: uno de tus objetivos principales debe ser escribir un
+API que permite que tus pruebas aborden **el problema en cuestión, y NO
+el problema de la interfaz de usuario**. La interfaz de usuario es una 
+preocupación secundaria para tus usuarios: no les importa la interfaz de usuario, 
+solo quieren obtener su trabajo hecho. 
+Tus scripts de prueba deben leerse como una lista de cosas
+el usuario quiere HACER, y las cosas que quiere SABER. Las pruebas
+no deben preocuparse por CÓMO la IU requiere que vayas
+al respecto.
 
 ***AUT**: Application under test
 

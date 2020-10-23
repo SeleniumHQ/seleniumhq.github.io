@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #37A"
 Date = 2011-01-17
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>My scheme for catching up with links last week ran afoul of 900 geeks and their families melting the internets at <a href="http://codemash.org">CodeMash 2.0.1.1</a>. So let&#8217;s try it again this week.</p>
 <ul>
 <li>Capturing screenshots on script failure is a common trick and <a href="http://deanhume.com/Home/BlogPost/capturing-web-page-screenshots-with-selenium-2/48">Capturing Web Page Screenshots with Selenium 2</a> is the first post I have seen that explains how to do with with Selenium WebDriver</li>

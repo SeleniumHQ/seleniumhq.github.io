@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #97"
 Date = 2012-06-29
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Yes. I know. I missed a day. But 13 in a row was a good run!</p>
 <ul>
 <li><a href="http://blog.parse.com/2012/06/28/free-automated-cross-browser-javascript-testing/">Free Automated Cross-Browser JavaScript Testing</a> is a pretty standard &#8216;here is how you do it&#8217; article &#8212; until you get to the IE section. It has a trick I don&#8217;t think I&#8217;ve seen yet.</a></li>

@@ -14,7 +14,8 @@
       {{ .Date.Format "January 2, 2006"}} by <a href="{{ .Params.AuthorLink }}">{{ .Params.Author }}</a>
       <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
       {{ .Content }}
-
+      {{ partial "tags.html" .}}
+      {{ partial "categories.html" .}}
       <div class="share-container">
         <h3>Share this: </h3>
 
@@ -24,11 +25,9 @@
       </div>
     </div>
   </div>
-
-
-  <div class="filter-container">
-    {{ partial "blog-filter.html" . }}
-  </div>
+</div>
+<div class="filter-container">
+  {{ partial "blog-filter.html" . }}
 </div>
 
 </body>

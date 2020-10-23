@@ -1,22 +1,15 @@
 ---
-title: "Acciones del mouse en detalle"
+title: "Acciones del ratón en detalle"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-
-Mouse represents a mouse event. Mouse actions are performed 
-by using low-level interface which allows us to 
-provide virtualized device input action to the web browser.
+El ratón representa eventos del ratón. Las acciones del ratón son realizadas
+a través de una interfaz de bajo nivel la cual nos permite introducir acciones de
+dispositivos virtualizados al navegador web.
 
 ## clickAndHold
 
-It will move to the element and clicks (without releasing) in the middle of the given element.
+Moverá el ratón al elemento y hará clic (sin soltar) en medio del elemento dado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -30,13 +23,13 @@ public class clickAndHold {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
+      // Guarda el elemento web del botón 'Sign in'
       WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
-      // Perform click-and-hold action on the element
+      // Realiza la acción click-and-hold en el elemento
       actionProvider.clickAndHold(searchBtn).build().perform();
     } finally {
       driver.quit();
@@ -48,13 +41,13 @@ public class clickAndHold {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
-searchBtn = driver.find_element_by_link_text("Sign in")
+# Guarda el elemento web del botón 'Sign in'
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform click-and-hold action on the element
+# Realiza la acción click-and-hold en el elemento
 webdriver.ActionChains(driver).click_and_hold(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -71,12 +64,12 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
-        // Perform click-and-hold action on the element
+        // Realiza la acción click-and-hold en el elemento
         actionProvider.ClickAndHold(searchBtn).Build().Perform();
       }
       finally
@@ -92,11 +85,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+  # Guarda el elemento web del botón 'Sign in'
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform click-and-hold action on the element
+  # Realiza la acción click-and-hold en el elemento
   driver.action.click_and_hold(sign_in).perform
 ensure
   driver.quit
@@ -108,12 +101,12 @@ const {Builder, By} = require('selenium-webdriver');
 (async function clickAndHold() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://www.google.com');
-    // Store 'google search' button web element
+    // Guarda el elemento web del botón 'Sign in'
     let searchBtn = driver.findElement(By.linkText("Sign in"));
     const actions = driver.actions({async: true});
-    // Perform mouseMove to element and mouseDown (press) action on the element
+    // Realiza la acción click-and-hold en el elemento
     await actions.move({origin:searchBtn}).press().perform();
   }
   finally {
@@ -129,12 +122,12 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://google.com")
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         val searchBtn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
-        // Perform click-and-hold action on the element
+        // Realiza la acción click-and-hold en el elemento
         actionProvider.clickAndHold(searchBtn).build().perform()
     } finally {
         driver.quit()
@@ -144,7 +137,8 @@ fun main() {
 {{< / code-tab >}}
 
 ## contextClick
-This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
+Este método en primer lugar realiza un movimiento del ratón a la localización del
+elemento y realiza un clic contextual (clic derecho) en el elemento dado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -158,13 +152,13 @@ public class contextClick {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
+      // Guarda el elemento web del botón 'Sign in'
       WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
-      // Perform context-click action on the element
+      // Realiza la acción context-click en el elemento
       actionProvider.contextClick(searchBtn).build().perform();
     } finally {
       driver.quit();
@@ -176,13 +170,13 @@ public class contextClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
-searchBtn = driver.find_element_by_link_text("Sign in")
+# Guarda el elemento web del botón 'Sign in'
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform context-click action on the element
+# Realiza la acción context-click en el elemento
 webdriver.ActionChains(driver).context_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -199,12 +193,12 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
-        // Perform context-click action on the element
+        // Realiza la acción context-click en el elemento
         actionProvider.ContextClick(searchBtn).Build().Perform();
       }
       finally
@@ -220,11 +214,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+  #  Guarda el elemento web del botón 'Sign in'
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform context-click action on the element
+  # Realiza la acción context-click en el elemento
   driver.action.context_click(sign_in).perform
 ensure
   driver.quit
@@ -236,12 +230,12 @@ const {Builder, By} = require('selenium-webdriver');
 (async function contextClick() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://www.google.com');
-    // Store 'google search' button web element
+    // Guarda el elemento web del botón 'Sign in'
     let searchBtn = driver.findElement(By.linkText("Sign in"));
     const actions = driver.actions({async: true});
-    // Perform context-click action on the element
+    // Realiza la acción context-click en el elemento
     await actions.contextClick(searchBtn).perform();
   }
   finally {
@@ -257,12 +251,12 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://google.com")
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         val searchBtn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
-        // Perform context-click action on the element
+        // Realiza la acción context-click en el elemento
         actionProvider.contextClick(searchBtn).build().perform()
     } finally {
         driver.quit()
@@ -272,7 +266,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## doubleClick
-It will move to the element and performs a double-click in the middle of the given element.
+Moverá el ratón al elemento y realizará un clic doble en medio del elemento dado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -286,13 +280,13 @@ public class doubleClick {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://google.com");
 
-      // Store 'google search' button web element
+      // Guarda el elemento web del botón 'Sign in'
       WebElement searchBtn = driver.findElement(By.linkText("Sign in"));
       Actions actionProvider = new Actions(driver);
-      // Perform double-click action on the element
+      // Realiza la acción double-click en el elemento
       actionProvider.doubleClick(searchBtn).build().perform();
     } finally {
       driver.quit();
@@ -304,13 +298,13 @@ public class doubleClick {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
-searchBtn = driver.find_element_by_link_text("Sign in")
+# Guarda el elemento web del botón 'Sign in'
+searchBtn = driver.find_element(By.LINK_TEXT, "Sign in")
 
-# Perform double-click action on the element
+# Realiza la acción double-click en el elemento
 webdriver.ActionChains(driver).double_click(searchBtn).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -327,12 +321,12 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         IWebElement searchBtn = driver.FindElement(By.LinkText("Sign in"));
         Actions actionProvider = new Actions(driver);
-        // Perform double-click action on the element
+        // Realiza la acción double-click en el elemento
         actionProvider.DoubleClick(searchBtn).Build().Perform();
       }
       finally
@@ -348,11 +342,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://www.google.com'
-  # Store 'Sign In' button web element
+  # Guarda el elemento web del botón 'Sign in'
   sign_in = driver.find_element(link_text: 'Sign in')
-  # Perform double-click action on the element
+  # Realiza la acción double-click en el elemento
   driver.action.double_click(sign_in).perform
 ensure
   driver.quit
@@ -364,12 +358,12 @@ const {Builder, By} = require('selenium-webdriver');
 (async function doubleClick() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://www.google.com');
-    // Store 'google search' button web element
+    // Guarda el elemento web del botón 'Sign in'
     let searchBtn = driver.findElement(By.linkText("Sign in"));
     const actions = driver.actions({async: true});
-    // Perform double-click action on the element
+    // Realiza la acción double-click en el elemento
     await actions.doubleClick(searchBtn).perform();
   }
   finally {
@@ -385,12 +379,12 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://google.com")
-        // Store 'google search' button web element
+        // Guarda el elemento web del botón 'Sign in'
         val searchBtn = driver.findElement(By.linkText("Sign in"))
         val actionProvider = Actions(driver)
-        // Perform double-click action on the element
+        // Realiza la acción double-click en el elemento
         actionProvider.doubleClick(searchBtn).build().perform()
     } finally {
         driver.quit()
@@ -400,7 +394,8 @@ fun main() {
 {{< / code-tab >}}
 
 ## moveToElement
-This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
+Este método mueve el ratón en medio del elemento dado. El elemento ademas es
+desplazado hacia la vista al realizar la acción.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -414,13 +409,13 @@ public class moveToElement {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://google.com");
 
-      // Store 'Gmail' anchor web element
+      // Guarda el elemento web del enlace 'Gmail'
       WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
       Actions actionProvider = new Actions(driver);
-      // Performs mouse move action onto the element
+      // Realiza la acción move hacia el elemento
       actionProvider.moveToElement(gmailLink).build().perform();
     } finally {
       driver.quit();
@@ -432,13 +427,13 @@ public class moveToElement {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
-gmailLink = driver.find_element_by_link_text("Gmail")
+# Guarda el elemento web del enlace 'Gmail'
+gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
 
-# Performs mouse move action onto the element
+# Realiza la acción move hacia el elemento
 webdriver.ActionChains(driver).move_to_element(gmailLink).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -455,12 +450,12 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
+        // Guarda el elemento web del enlace 'Gmail'
         IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
         Actions actionProvider = new Actions(driver);
-        // Performs mouse move action onto the element
+        // Realiza la acción move hacia el elemento
         actionProvider.MoveToElement(gmailLink).Build().Perform();
       }
       finally
@@ -476,11 +471,11 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
+  # Guarda el elemento web del enlace 'Gmail'
   gmail_link = driver.find_element(link_text: 'Gmail')
-  # Performs mouse move action onto the element
+  # Realiza la acción move hacia el elemento
   driver.action.move_to(gmail_link).perform
 ensure
   driver.quit
@@ -492,12 +487,12 @@ const {Builder, By} = require('selenium-webdriver');
 (async function moveToElement() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://www.google.com');
-    // Store 'Gmail' anchor web element
+    // Guarda el elemento web del enlace 'Gmail'
     let gmailLink = driver.findElement(By.linkText("Gmail"));
     const actions = driver.actions({async: true});
-    // Performs mouse move action onto the element
+    // Realiza la acción move hacia el elemento
     await actions.move({origin:gmailLink}).perform();
   }
   finally {
@@ -513,12 +508,12 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://google.com")
-        // Store 'Gmail' anchor web element
+        // Guarda el elemento web del enlace 'Gmail'
         val gmailLink = driver.findElement(By.linkText("Gmail"))
         val actionProvider = Actions(driver)
-        // Performs mouse move action onto the element
+        // Realiza la acción move hacia el elemento
         actionProvider.moveToElement(gmailLink).build().perform()
     } finally {
         driver.quit()
@@ -529,7 +524,9 @@ fun main() {
 
 ## moveByOffset:
 
-This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
+Este método mueve el ratón desde su posición actual (o desde 0,0) hasta un 
+desplazamiento dado. Si las coordenadas están fuera de la vista de la ventana,
+entonces el ratón terminará fuera de la ventana del navegador.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -543,16 +540,16 @@ public class moveByOffset {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://google.com");
 
-      // Store 'Gmail' anchor web element
+      // Guarda el elemento web del enlace 'Gmail'
       WebElement gmailLink = driver.findElement(By.linkText("Gmail"));
-      // Capture x and y offset positions of element
+      // Captura el desplazamiento de las posiciones x e y del elemento
       int xOffset = gmailLink.getRect().getX();
       int yOffset = gmailLink.getRect().getY();
       Actions actionProvider = new Actions(driver);
-      // Performs mouse move action onto the offset position
+      // Realiza la acción move hacia la posición del desplazamiento
       actionProvider.moveByOffset(xOffset, yOffset).build().perform();
     } finally {
       driver.quit();
@@ -564,15 +561,15 @@ public class moveByOffset {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("http://www.google.com")
 
-# Store 'google search' button web element
-gmailLink = driver.find_element_by_link_text("Gmail")
-#Set x and y offset positions of element
+# Guarda el elemento web del enlace 'Gmail'
+gmailLink = driver.find_element(By.LINK_TEXT, "Gmail")
+# Captura el desplazamiento de las posiciones x e y del elemento
 xOffset = 100
 yOffset = 100
-# Performs mouse move action onto the element
+# Realiza la acción move hacia la posición del desplazamiento
 webdriver.ActionChains(driver).move_by_offset(xOffset,yOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -589,15 +586,15 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://google.com");
-        // Store 'google search' button web element
+        // Guarda el elemento web del enlace 'Gmail'
         IWebElement gmailLink = driver.FindElement(By.LinkText("Gmail"));
-        // Set x and y offset positions of element
+        // Captura el desplazamiento de las posiciones x e y del elemento
         int xOffset = 100;
         int yOffset = 100;
         Actions actionProvider = new Actions(driver);
-        // Performs mouse move action onto the offset position
+        // Realiza la acción move hacia la posición del desplazamiento
         actionProvider.MoveByOffset(xOffset, yOffset).Build().Perform();
       }
       finally
@@ -613,14 +610,14 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://www.google.com'
-  # Store 'Gmail' anchor web element
+  # Guarda el elemento web del enlace 'Gmail'
   gmail_link = driver.find_element(link_text: 'Gmail')
-  # Capture x and y offset positions of element
+  # Captura el desplazamiento de las posiciones x e y del elemento
   x_offset = gmail_link.rect.x
   y_offset = gmail_link.rect.y
-  # Performs mouse move action onto the offset position
+  # Realiza la acción move hacia la posición del desplazamiento
   driver.action.move_to_location(x_offset, y_offset).perform
 ensure
   driver.quit
@@ -632,16 +629,16 @@ const {Builder, By} = require('selenium-webdriver');
 (async function moveByOffset() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://www.google.com');
-    // Store 'Gmail' anchor web element
+    // Guarda el elemento web del enlace 'Gmail'
     let gmailLink = driver.findElement(By.linkText("Gmail"));
-    // Capture offset positions of element
+    // Captura el desplazamiento de las posiciones x e y del elemento
     let offset = await gmailLink.getRect();
     let x = await offset.x;
     let y = await offset.y;
     const actions = driver.actions({async: true});
-    // Performs mouse move action onto the element
+    // Realiza la acción move hacia la posición del desplazamiento
     await actions.move({x:parseInt(x),y:parseInt(y)}).pause(3000).perform();
   }
   finally {
@@ -657,15 +654,15 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://google.com")
-        // Store 'Gmail' anchor web element
+        // Guarda el elemento web del enlace 'Gmail'
         val gmailLink = driver.findElement(By.linkText("Gmail"))
-        // Capture x and y offset positions of element
+        // Captura el desplazamiento de las posiciones x e y del elemento
         val xOffset = gmailLink.rect.getX()
         val yOffset = gmailLink.rect.getY()
         val actionProvider = Actions(driver)
-        // Performs mouse move action onto the element
+        // Realiza la acción move hacia la posición del desplazamiento
         actionProvider.moveByOffset(xOffset, yOffset).build().perform()
     } finally {
         driver.quit()
@@ -676,8 +673,9 @@ fun main() {
 
 ## dragAndDrop
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+Este método en primer lugar realiza una acción click-and-hold en el elemento de
+origen, después lo mueve a la localización del elemento de destino y por ultimo
+suelta el clic. 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -691,14 +689,14 @@ public class dragAndDrop {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
+      // Guarda 'sourceEle' como elemento de origen
       WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
+      // Guarda 'targetEle' como elemento de destino
       WebElement targetEle = driver.findElement(By.id("droppable"));
       Actions actionProvider = new Actions(driver);
-      // Performs drag and drop action of sourceEle onto the targetEle
+      // Realiza la acción dragAndDrop desde el origen hacia el destino
       actionProvider.dragAndDrop(sourceEle, targetEle).build().perform();
     } finally {
       driver.quit();
@@ -710,14 +708,14 @@ public class dragAndDrop {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
-sourceEle = driver.find_element_by_id("draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element_by_id("droppable")
-# Performs drag and drop action of sourceEle onto the targetEle
+# Guarda 'sourceEle' como elemento de origen
+sourceEle = driver.find_element(By.ID, "draggable")
+# Guarda 'targetEle' como elemento de destino
+targetEle  = driver.find_element(By.ID, "droppable")
+# Realiza la acción dragAndDrop desde el origen hacia el destino
 webdriver.ActionChains(driver).drag_and_drop(sourceEle,targetEle).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -734,14 +732,14 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
+        // Guarda 'targetEle' como elemento de destino
         IWebElement targetEle = driver.FindElement(By.Id("droppable"));
         Actions actionProvider = new Actions(driver);
-        // Performs drag and drop action of sourceEle onto the targetEle
+        // Realiza la acción dragAndDrop desde el origen hacia el destino
         actionProvider.DragAndDrop(sourceEle, targetEle).Build().Perform();
       }
       finally
@@ -757,13 +755,13 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
+  # Guarda 'source_ele' como elemento de origen
   source_ele = driver.find_element(id: 'draggable')
-  # Store 'box B' as source element
+  # Guarda 'target_ele' como elemento de destino
   target_ele = driver.find_element(id: 'droppable')
-  # Performs drag and drop action of sourceEle onto the targetEle
+  # Realiza la acción dragAndDrop desde el origen hacia el destino
   driver.action.drag_and_drop(source_ele, target_ele).perform
 ensure
   driver.quit
@@ -775,14 +773,14 @@ const {Builder, By} = require('selenium-webdriver');
 (async function dragAndDrop() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
+    // Guarda 'sourceEle' como elemento de origen
     let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
+    // Guarda 'targetEle' como elemento de destino
     let targetEle = driver.findElement(By.id("droppable"));
     const actions = driver.actions({async: true});
-    // Performs drag and drop action of sourceEle onto the targetEle
+    // Realiza la acción dragAndDrop desde el origen hacia el destino
     await actions.dragAndDrop(sourceEle, targetEle).perform();
   }
   finally {
@@ -798,14 +796,14 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
+        // Guarda 'targetEle' como elemento de destino
         val targetEle = driver.findElement(By.id("droppable"))
         val actionProvider = Actions(driver)
-        // Performs drag and drop action of sourceEle onto the targetEle
+        // Realiza la acción dragAndDrop desde el origen hacia el destino
         actionProvider.dragAndDrop(sourceEle, targetEle).build().perform()
     } finally {
         driver.quit()
@@ -816,8 +814,9 @@ fun main() {
 
 ## dragAndDropBy
 
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
-
+Este metodo en primer lugar realiza un click-and-hold en el elemento origen,
+mueve el ratón al desplacamiento dado y luego suelta el raton.
+ 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 import org.openqa.selenium.By;
@@ -830,16 +829,16 @@ public class dragAndDropBy {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
+      // Guarda 'sourceEle' como elemento de origen
       WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
+      // Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
       WebElement targetEle = driver.findElement(By.id("droppable"));
       int targetEleXOffset = targetEle.getLocation().getX();
       int targetEleYOffset = targetEle.getLocation().getY();
       Actions actionProvider = new Actions(driver);
-      // Performs dragAndDropBy onto the  target element offset position
+      // Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
       actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform();
     } finally {
       driver.quit();
@@ -851,17 +850,17 @@ public class dragAndDropBy {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
-sourceEle = driver.find_element_by_id("draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element_by_id("droppable")
+# Guarda 'sourceEle' como elemento de origen
+sourceEle = driver.find_element(By.ID, "draggable")
+# Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
+targetEle  = driver.find_element(By.ID, "droppable")
 targetEleXOffset = targetEle.location.get("x")
 targetEleYOffset = targetEle.location.get("y")
 
-# Performs dragAndDropBy onto the target element offset position
+# Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
 webdriver.ActionChains(driver).drag_and_drop_by_offset(sourceEle, targetEleXOffset, targetEleYOffset).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -878,16 +877,16 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
+        // Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
         IWebElement targetEle = driver.FindElement(By.Id("droppable"));
         int targetEleXOffset = targetEle.Location.X;
         int targetEleYOffset = targetEle.Location.Y;
         Actions actionProvider = new Actions(driver);
-        // Performs drag and drop action of sourceEle onto the targetEle
+        // Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
         actionProvider.DragAndDropToOffset(sourceEle, targetEleXOffset, targetEleYOffset).Build().Perform();
       }
       finally
@@ -903,15 +902,15 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
-  # Store 'box A' as source element
+  # Guarda 'source_ele' como elemento de origen
   source_ele = driver.find_element(id: 'draggable')
   target_ele = driver.find_element(id: 'droppable')
-  # Capture x and y offset positions of element
+  # Guarda 'target_ele' como elemento de destino y obtiene las coordenadas
   x_offset = target_ele.rect.x
   y_offset = target_ele.rect.y
-  # Performs dragAndDropBy onto the  target element offset position
+  # Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
   driver.action.drag_and_drop_by(source_ele, x_offset, y_offset).perform
 ensure
   driver.quit
@@ -923,17 +922,17 @@ const {Builder, By} = require('selenium-webdriver');
 (async function dragAndDropBy() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
+    // Guarda 'sourceEle' como elemento de origen
     let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
+    // Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
     let targetEle = driver.findElement(By.id("droppable"));
     let offset = await targetEle.getRect();
     let x = await offset.x;
     let y = await offset.y;
     const actions = driver.actions({async: true});
-    // Performs dragAndDropBy onto the  target element offset position
+    // Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
     await actions.dragAndDrop(sourceEle, {x:parseInt(x), y:parseInt(y)}).perform();
   }
   finally {
@@ -949,16 +948,16 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
+        // Guarda 'targetEle' como elemento de destino y obtiene las coordenadas
         val targetEle = driver.findElement(By.id("droppable"))
         val targetEleXOffset = targetEle.location.getX()
         val targetEleYOffset = targetEle.location.getY()
         val actionProvider = Actions(driver)
-        // Performs dragAndDropBy onto the  target element offset position
+        // Realiza la acción de  dragAndDropBy hacia el desplazamiento destino
         actionProvider.dragAndDropBy(sourceEle, targetEleXOffset, targetEleYOffset).build().perform()
     } finally {
         driver.quit()
@@ -969,8 +968,8 @@ fun main() {
 
 ## release
 
-This action releases the depressed left mouse button. If WebElement is passed, 
-it will release depressed left mouse button on the given WebElement
+Esta acción suelta el botón izquierdo del ratón. Si se le pasa un WebElement,
+soltará el botón izquierdo del ratón en el elemento dado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -984,15 +983,15 @@ public class release {
   public static void main(String[] args) {
     WebDriver driver = new ChromeDriver();
     try {
-      // Navigate to Url
+      // Navega a la URL
       driver.get("https://crossbrowsertesting.github.io/drag-and-drop");
-      // Store 'box A' as source element
+      // Guarda 'sourceEle' como elemento de origen
       WebElement sourceEle = driver.findElement(By.id("draggable"));
-      // Store 'box B' as source element
+      // Guarda 'targetEle' como elemento de destino
       WebElement targetEle = driver.findElement(By.id("droppable"));
       Actions actionProvider = new Actions(driver);
       actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform();
-      // Performs release event
+      // Realiza la acción release
       actionProvider.release().build().perform();
     } finally {
       driver.quit();
@@ -1004,17 +1003,15 @@ public class release {
 from selenium import webdriver
 driver = webdriver.Chrome()
 
-# Navigate to url
+# Navega a la URL
 driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
 
-# Store 'box A' as source element
-sourceEle = driver.find_element_by_id("draggable")
-# Store 'box B' as source element
-targetEle  = driver.find_element_by_id("droppable")
-
-# Performs dragAndDropBy onto the target element offset position
+# Guarda 'sourceEle' como elemento de origen
+sourceEle = driver.find_element(By.ID, "draggable")
+# Guarda 'targetEle' como elemento de destino
+targetEle  = driver.find_element(By.ID, "droppable")
 webdriver.ActionChains(driver).click_and_hold(sourceEle).move_to_element(targetEle).perform()
-#Performs release event
+# Realiza la acción release
 webdriver.ActionChains(driver).release().perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -1031,15 +1028,15 @@ namespace SeleniumApp
       IWebDriver driver = new ChromeDriver();
       try
       {
-        // Navigate to Url
+        // Navega a la URL
         driver.Navigate().GoToUrl("https://crossbrowsertesting.github.io/drag-and-drop");
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         IWebElement sourceEle = driver.FindElement(By.Id("draggable"));
-        // Store 'box B' as source element
+        // Guarda 'targetEle' como elemento de destino
         IWebElement targetEle = driver.FindElement(By.Id("droppable"));
         Actions actionProvider = new Actions(driver);
         actionProvider.ClickAndHold(sourceEle).MoveToElement(targetEle).Build().Perform();
-        // Performs release event              
+        // Realiza la acción release       
         actionProvider.Release().Build().Perform();
       }
       finally
@@ -1055,12 +1052,12 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  # Navigate to Url
+  # Navega a la URL
   driver.get 'https://crossbrowsertesting.github.io/drag-and-drop'
   source_ele = driver.find_element(id: 'draggable')
   target_ele = driver.find_element(id: 'droppable')
   driver.action.click_and_hold(source_ele).move_to(target_ele).perform
-  # Performs release event
+  # Realiza la acción release
   driver.action.release.perform
 ensure
   driver.quit
@@ -1072,15 +1069,15 @@ const {Builder, By} = require('selenium-webdriver');
 (async function release() {
   let driver = await new Builder().forBrowser('chrome').build();
   try {
-    // Navigate to Url
+    // Navega a la URL
     await driver.get('https://crossbrowsertesting.github.io/drag-and-drop');
-    // Store 'box A' as source element
+    // Guarda 'sourceEle' como elemento de origen
     let sourceEle = driver.findElement(By.id("draggable"));
-    // Store 'box B' as source element
+    // Guarda 'targetEle' como elemento de destino
     let targetEle = driver.findElement(By.id("droppable"));
     const actions = driver.actions({async: true});
     await actions.move({origin:sourceEle}).press().perform();
-    // Performs release event on target element
+    // Realiza la acción release
     await actions.move({origin:targetEle}).release().perform();
   }
   finally {
@@ -1096,15 +1093,15 @@ import org.openqa.selenium.interactions.Actions
 fun main() {
     val driver =  ChromeDriver()
     try {
-        // Navigate to Url
+        // Navega a la URL
         driver.get("https://crossbrowsertesting.github.io/drag-and-drop")
-        // Store 'box A' as source element
+        // Guarda 'sourceEle' como elemento de origen
         val sourceEle = driver.findElement(By.id("draggable"))
-        // Store 'box B' as source element
+        //Guarda 'targetEle' como elemento de destino
         val targetEle = driver.findElement(By.id("droppable"))
         val actionProvider = Actions(driver)
         actionProvider.clickAndHold(sourceEle).moveToElement(targetEle).build().perform()
-        // Performs release event
+        // Realiza la acción release
         actionProvider.release().build().perform()
     } finally {
         driver.quit()

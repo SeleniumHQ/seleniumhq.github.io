@@ -4,6 +4,8 @@ Title = "Selenium 2.0a6 Released"
 Date = 2010-10-08
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>We are extremely pleased to announce the release of Selenium 2.0a6! Head over to the <a href="http://code.google.com/p/selenium/downloads/list">downloads page</a> to get it while it&#8217;s hot, or wait just a little bit longer for it to appear in a maven repo near you. The .Net version will also be updated soon too, and the python and <a href="http://rubygems.org/gems/selenium-webdriver">ruby libraries</a> have been having smaller, more frequent releases all this time.</p>

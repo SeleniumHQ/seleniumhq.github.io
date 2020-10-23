@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #40"
 Date = 2011-02-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>You would think by now that I wouldn&#8217;t be surprised by the number of links I collect in a week.</p>
 <ul>
 <li>The big news last week is that we (Selenium) have successfully avoided the whole Hudson/Jenkins drama by joining the <a href="http://sfconservancy.org/">Software Freedom Conservancy</a>.

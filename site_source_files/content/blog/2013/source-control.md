@@ -4,6 +4,8 @@ Title = "Source Control"
 Date = 2013-01-14
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["source-control","decisions"]
+categories = ["general","technical"]
 +++
 
 <p>This short technical note is to announce that the Selenium project is now using <a href="https://code.google.com/p/selenium/source/checkout">git on Google Code</a> in place of subversion.</p>

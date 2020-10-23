@@ -4,6 +4,8 @@ Title = "OperaDriver Released"
 Date = 2011-02-09
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["operadriver"]
+categories = ["releases"]
 +++
 
 <p>I think the word that I&#8217;m looking for is &#8220;wow&#8221;. Perhaps &#8220;Wow!&#8221; would express the concept a little more clearly. Perhaps &#8220;WOW!&#8221; would be even clearer.  Yes, definitely. &#8220;WOW!&#8221; is a good way of describing <a href="http://www.opera.com/press/releases/2011/02/09/">this</a>.</p>

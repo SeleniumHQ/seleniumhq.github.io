@@ -4,6 +4,8 @@ Title = "Curious to know how we picked speakers for the 2013 SeConf? Read on…"
 Date = 2013-03-25
 Author = "Ashley"
 AuthorLink = "https://twitter.com/awilson820"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p><strong>This is a guest post by Marcus Merrell, one of the organizers of the 2013 <a href="http://seleniumconf.org">Selenium Conference</a>. </strong></p>

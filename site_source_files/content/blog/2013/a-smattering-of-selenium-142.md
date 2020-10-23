@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #142"
 Date = 2013-02-05
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Its a <a href="http://www.youtube.com/watch?v=vHl24Kjp5Vs">Wiggle your brain</a> kind of morning&#8230;</p>
 <ul>
 <li><a href="http://arrgyle.com/blog/automated-web-testing-is-hard/">Automated Web Testing Is Hard</a> is the launch announcement of <a href="https://github.com/arrgyle/chemistrykit">ChemistryKit</a></li>

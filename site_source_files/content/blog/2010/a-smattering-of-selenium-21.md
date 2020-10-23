@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #21"
 Date = 2010-07-26
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I thought it had been a slow week &#8212; until I looked at how many browser windows I had open. I wonder if that was why things were feeling a bit sluggish&#8230;<br />
 </p>
 <li>Some bits of history from Simon Stewart

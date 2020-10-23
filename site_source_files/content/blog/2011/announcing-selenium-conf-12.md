@@ -4,6 +4,8 @@ Title = "Announcing Selenium Conf ’12"
 Date = 2011-12-09
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>The community around Selenium is the thing that really makes the Selenium project special. Last year, we held the first official Selenium Conference in San Francisco, and it was both great fun and a huge success. It is therefore with great pleasure that we are announcing <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a>! It&#8217;ll be taking place in <strong>London</strong> from the<strong> 16th to the 18th April</strong>, and we&#8217;re really looking forward to seeing you all there!</p>

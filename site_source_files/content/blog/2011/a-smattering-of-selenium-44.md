@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #44"
 Date = 2011-03-07
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>What started out as the week of Capybara rounded itself out fairly nicely</p>
 <li>I&#8217;m not a fan of using 3rd party abstraction layers (1st party are full win though) but Capybara has a large marketshare so <a href="http://opinionated-programmer.com/2011/02/capybara-and-selenium-with-rspec-and-rails-3">Capybara (and Selenium) with RSpec &amp; Rails 3: quick tutorial</a> is likely going to be of interest to people.</li>
 <li>And while on the subject of Capybara, here is a post on <a href="http://testobsessed.com/2011/03/01/checking-invisible-elements/">Checking Invisible Elements</a> in it.</li>

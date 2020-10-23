@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #102"
 Date = 2012-07-17
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Apparently my body isn&#8217;t quite on left coast time&#8230;</p>
 <ul>
 <li><a href="http://blog.streak.com/2012/07/butter-performance.html?m=1">Butter Performance</a> is a nice experience report on making a [big] html table behave. All sorts of headaches this would cause for automation.</li>

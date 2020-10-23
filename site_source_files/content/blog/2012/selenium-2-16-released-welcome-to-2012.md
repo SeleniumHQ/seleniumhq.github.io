@@ -4,6 +4,8 @@ Title = "Selenium 2.16 Released: Welcome to 2012!"
 Date = 2012-01-05
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>It&#8217;s been a while since we last blogged about a Selenium release. Since the release of 2.0, we&#8217;ve been attempting to give you a fresh and shiny Selenium release every week (though, in reality, we&#8217;re managing to get you one every 10 days on average). This allows you to pick the version that&#8217;s most suitable for you and your teams, but provides a route for quick feedback on how we&#8217;re doing. I think we&#8217;ve now ironed out a lot of the initial problems and bumps we ran into, so we are extremely proud to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.16</a>.</p>

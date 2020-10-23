@@ -4,6 +4,8 @@ Title = "Selenium Conf Keynotes: Liz Keogh"
 Date = 2012-03-25
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>The tickets for <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a> are still on sale for about another week, so there&#8217;s still time for you to <a href="http://www.seleniumconf.org/tickets/">buy your tickets</a>. In case you&#8217;ve not already gone to the <a href="http://www.seleniumconf.org">conference site</a> to see the great line up, this week we&#8217;ll be letting you know what to expect!</p>

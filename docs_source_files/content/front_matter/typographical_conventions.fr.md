@@ -3,42 +3,44 @@ title: "Conventions typographique"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## Capitalisation des titres
 
-## Capitalisation of titles
+Il faut éviter la capitalisation du titre,
+comme _A Very Fine Heading_,
+et optez plutôt pour un titre très fin.
+Capitalisation gratuite ou casse de titre,
+montrent souvent un malentendu - ou un mépris pour -
+conventions orthographiques.
+Nous préférons ce que l'on appelle le "cas de peine",
+avec un seul capital initial pour démarrer les en-têtes.
 
-One should avoid title capitalisation,
-such as _A Very Fine Heading_,
-and instead go for _A very fine heading_.
-Gratutious capitalisation, or title case,
-often show a misunderstanding of – or a disregard for –
-orthographic conventions.
-We prefer what is known as _sentence case_,
-with a single initial capital to start headers.
+## Longueur de la ligne
 
-## Line length
+Lors de la modification de la 
+source de la documentation,
+qui est écrit en HTML simple,
+limitez la longueur de vos lignes 
+à environ 72 caractères.
 
-When editing the documentation’s source,
-which is written in plain HTML,
-limit your line lengths to around 72 characters.
-
-Some of us take this one step further
-and use what is called
+Certains d'entre nous vont encore plus loin
+et utiliser ce qu'on appelle
 [_semantic linefeeds_](//rhodesmill.org/brandon/2012/one-sentence-per-line),
-which is a technique whereby the HTML source lines,
-which are not read by the public,
-are split at ‘natural breaks’ in the prose.
-In other words, sentences are split
-at natural breaks between clauses.
-Instead of fussing with the lines of each paragraph
-so that they all end near the right margin,
-linefeeds can be added anywhere
-that there is a break between ideas.
+qui est une technique par laquelle les 
+lignes source HTML,
+qui ne sont pas lus par le public,
+sont divisés à des "ruptures naturelles" 
+dans la prose. En d'autres termes, 
+les phrases sont divisées
+aux pauses naturelles entre les clauses.
+Au lieu de s'embêter avec les 
+lignes de chaque paragraphe
+de sorte qu'ils se terminent tous 
+près de la marge droite,
+les sauts de ligne peuvent être 
+ajoutés n'importe où qu'il y a une 
+rupture entre les idées.
 
-This can make diffs very easy to read
-when collaborating through git,
-but it is not something we enforce contributors to use.
+Cela peut rendre les différences très 
+faciles à lire lors de la collaboration via git,
+mais ce n'est pas quelque chose que 
+nous imposons aux contributeurs d'utiliser.

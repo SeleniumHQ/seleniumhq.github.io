@@ -111,7 +111,7 @@ fun main() {
         driver.get("https://example.com")
 
         // Adds the cookie into current browser context
-        driver.manage().addCookie(Cookie("key", "value"));
+        driver.manage().addCookie(Cookie("key", "value"))
     } finally {
         driver.quit()
     }
@@ -156,7 +156,7 @@ driver.get("http://www.example.com")
 driver.add_cookie({"name": "foo", "value": "bar"})
 
 # Get cookie details with named cookie 'foo'
-print driver.get_cookie("foo")
+print(driver.get_cookie("foo"))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -221,11 +221,11 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("foo", "bar"));
+        driver.manage().addCookie(Cookie("foo", "bar"))
 
         // Get cookie details with named cookie 'foo'
-        val cookie = driver.manage().getCookieNamed("foo");
-        println(cookie);
+        val cookie = driver.manage().getCookieNamed("foo")
+        println(cookie)
     } finally {
         driver.quit()
     }
@@ -274,7 +274,7 @@ driver.add_cookie({"name": "test1", "value": "cookie1"})
 driver.add_cookie({"name": "test2", "value": "cookie2"})
 
 # Get all available cookies
-print driver.get_cookies()
+print(driver.get_cookies())
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -341,12 +341,12 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // Get All available cookies
-        val cookies = driver.manage().cookies;
-        println(cookies);
+        val cookies = driver.manage().cookies
+        println(cookies)
     } finally {
         driver.quit()
     }
@@ -472,15 +472,15 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
         val cookie1 = Cookie("test2", "cookie2")
-        driver.manage().addCookie(cookie1);
+        driver.manage().addCookie(cookie1)
 
         // delete a cookie with name 'test1'
-        driver.manage().deleteCookieNamed("test1");
+        driver.manage().deleteCookieNamed("test1")
 
         // delete cookie by passing cookie object of current browsing context.
-        driver.manage().deleteCookie(cookie1);
+        driver.manage().deleteCookie(cookie1)
     } finally {
         driver.quit()
     }
@@ -589,14 +589,125 @@ fun main() {
     val driver = ChromeDriver()
     try {
         driver.get("https://example.com")
-        driver.manage().addCookie(Cookie("test1", "cookie1"));
-        driver.manage().addCookie(Cookie("test2", "cookie2"));
+        driver.manage().addCookie(Cookie("test1", "cookie1"))
+        driver.manage().addCookie(Cookie("test2", "cookie2"))
 
         // deletes all cookies
-        driver.manage().deleteAllCookies();
+        driver.manage().deleteAllCookies()
     } finally {
         driver.quit()
     }
 }  
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Same-Site Cookie Attribute
+
+It allows a user to instruct browsers to control whether cookies 
+are sent along with the request initiated by third party sites. 
+It is introduced to prevent CSRF (Cross-Site Request Forgery) attacks.
+
+Same-Site cookie attribute accepts two parameters as instructions
+
+## Strict:
+When the sameSite attribute is set as **Strict**, 
+the cookie will not be sent along with 
+requests initiated by third party websites.
+
+## Lax:
+When you set a cookie sameSite attribute to **Lax**, 
+the cookie will be sent along with the GET 
+request initiated by third party website.
+
+**Note**: **As of now this feature is landed in chrome(80+version), 
+Firefox(79+version) and works with Selenium 4 and later versions.**
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class cookieTest {
+  public static void main(String[] args) {
+    WebDriver driver = new ChromeDriver();
+    try {
+      driver.get("http://www.example.com");
+      Cookie cookie = new Cookie.Builder("key", "value").sameSite("Strict").build();
+      Cookie cookie1 = new Cookie.Builder("key", "value").sameSite("Lax").build();
+      driver.manage().addCookie(cookie);
+      driver.manage().addCookie(cookie1);
+      System.out.println(cookie.getSameSite());
+      System.out.println(cookie1.getSameSite());
+    } finally {
+      driver.quit();
+    }
+  }
+}
+  {{< / code-panel >}}
+ {{< code-panel language="python" >}}
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+driver.get("http://www.example.com")
+# Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+driver.add_cookie({"name": "foo", "value": "value", 'sameSite': 'Strict'})
+driver.add_cookie({"name": "foo1", "value": "value", 'sameSite': 'Lax'})
+cookie1 = driver.get_cookie('foo')
+cookie2 = driver.get_cookie('foo1')
+print(cookie1)
+print(cookie2)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://www.example.com'
+  # Adds the cookie into current browser context with sameSite 'Strict' (or) 'Lax'
+  driver.manage.add_cookie(name: "foo", value: "bar", same_site: "Strict")
+  driver.manage.add_cookie(name: "foo1", value: "bar", same_site: "Lax")
+  puts driver.manage.cookie_named('foo')
+  puts driver.manage.cookie_named('foo1')
+ensure
+  driver.quit
+end
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder} = require('selenium-webdriver');
+(async function example() {
+    let driver = new Builder()
+        .forBrowser('chrome')
+        .build();
+        
+    await driver.get('https://www.example.com');
+    
+    // set a cookie on the current domain with sameSite 'Strict' (or) 'Lax'
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Strict'});
+    await driver.manage().addCookie({name:'key', value: 'value', sameSite:'Lax'});
+    console.log(await driver.manage().getCookie('key'));
+})();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.openqa.selenium.Cookie
+import org.openqa.selenium.chrome.ChromeDriver
+
+fun main() {
+    val driver = ChromeDriver()
+    try {
+        driver.get("http://www.example.com")
+        val cookie = Cookie.Builder("key", "value").sameSite("Strict").build()
+        val cookie1 = Cookie.Builder("key", "value").sameSite("Lax").build()
+        driver.manage().addCookie(cookie)
+        driver.manage().addCookie(cookie1)
+        println(cookie.getSameSite())
+        println(cookie1.getSameSite())
+    } finally {
+        driver.quit()
+    }
+} 
   {{< / code-panel >}}
 {{< / code-tab >}}

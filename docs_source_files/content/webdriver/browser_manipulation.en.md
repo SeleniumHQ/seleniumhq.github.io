@@ -108,7 +108,7 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="csharp" >}}driver.Url;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.current_url{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getCurrentUrl();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getCurrentUrl();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.currentUrl{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Back
@@ -134,7 +134,7 @@ Pressing the browser's forward button:
   {{< code-panel language="csharp" >}}driver.Navigate().Forward();{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.navigate.forward{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.navigate().forward();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.navigate().forward();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.navigate().forward(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Refresh
@@ -160,7 +160,7 @@ You can read the current page title from the browser:
   {{< code-panel language="csharp" >}}driver.Title;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.title{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getTitle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getTitle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.title{{< / code-panel >}}
 {{< / code-tab >}}
 
 
@@ -180,7 +180,7 @@ current window by using:
   {{< code-panel language="csharp" >}}driver.CurrentWindowHandle;{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.window_handle{{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.getWindowHandle();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.getWindowHandle(){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.windowHandle{{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Switching windows or tabs
@@ -243,7 +243,7 @@ with webdriver.Firefox() as driver:
     assert len(driver.window_handles) == 1
 
     # Click the link which opens in a new window
-    driver.find_element_by_link_text("new window").click()
+    driver.find_element(By.LINK_TEXT, "new window").click()
 
     # Wait for the new window or tab
     wait.until(EC.number_of_windows_to_be(2))
@@ -348,10 +348,10 @@ wait.until(numberOfWindowsToBe(2))
 
 //Loop through until we find a new window handle
 for (windowHandle in driver.getWindowHandles()) {
-      if (!originalWindow.contentEquals(windowHandle)) {
-          driver.switchTo().window(windowHandle)
-           break
-      }
+    if (!originalWindow.contentEquals(windowHandle)) {
+        driver.switchTo().window(windowHandle)
+        break
+    }
 }
 
 //Wait for the new tab to finish loading content
@@ -533,7 +533,11 @@ public void TearDown()
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+# UnitTest Teardown
+# https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
+def teardown
+    @driver.quit
+end 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 /**
@@ -646,7 +650,7 @@ driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # This Wont work
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //This won't work
@@ -691,13 +695,13 @@ driver.findElement(By.tagName("button")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Store iframe web element
-iframe = driver.find_element_by_css_selector("#modal > iframe")
+iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
 
 # switch to selected iframe
 driver.switch_to.frame(iframe)
 
 # Now click on button
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Store the web element
@@ -731,7 +735,7 @@ await driver.findElement(By.css('button')).click();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Store the web element
-WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"))
+val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
 //Switch to the frame
 driver.switchTo().frame(iframe)
@@ -762,7 +766,7 @@ driver.findElement(By.tagName("button")).click();
 driver.switch_to.frame('buttonframe')
 
 # Now, Click on the button
-driver.find_element_by_tag_name('button').click()
+driver.find_element(By.TAG_NAME, 'button').click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 //Using the ID
@@ -931,13 +935,13 @@ const height1 = rect.height;
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 //Access each dimension individually
-val width = driver.manage().window().getSize().getWidth()
-val height = driver.manage().window().getSize().getHeight()
+val width = driver.manage().window().size.width
+val height = driver.manage().window().size.height
 
 //Or store the dimensions and query them later
-val size = driver.manage().window().getSize()
-val width1 = size.getWidth()
-val height1 = size.getHeight()
+val size = driver.manage().window().size
+val width1 = size.width
+val height1 = size.height
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -950,7 +954,7 @@ Restores the window and sets the window size.
   {{< code-panel language="csharp" >}}driver.Manage().Window.Size = new Size(1024, 768);{{< / code-panel >}}
   {{< code-panel language="ruby" >}}driver.manage.window.resize_to(1024,768){{< / code-panel >}}
   {{< code-panel language="javascript" >}}await driver.manage().window().setRect({ width: 1024, height: 768 });{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().size(Dimension(1024, 768)){{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().size = Dimension(1024, 768){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### Get window position
@@ -989,7 +993,14 @@ int x1 = position.X;
 int y1 = position.Y;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# We don't have a Ruby code sample yet -  Help us out and raise a PR  
+#Access each dimension individually
+x = driver.manage.window.position.x
+y = driver.manage.window.position.y
+
+# Or store the dimensions and query them later
+rect  = driver.manage.window.rect
+x1 = rect.x
+y1 = rect.y 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
@@ -1008,7 +1019,7 @@ val y = driver.manage().window().position.y
 // Or store the dimensions and query them later
 val position = driver.manage().window().position
 val x1 = position.x
-int y1 = position.y
+val y1 = position.y
   
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -1057,6 +1068,24 @@ toolbars.
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
+### Minimize window
+Minimizes the window of current browsing context. 
+The exact behavior of this command is specific to 
+individual window managers. 
+ 
+Minimize Window typically hides the window in the system tray.
+
+__Note: This feature works with Selenium 4 and later versions.__
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
+  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
+{{< / code-tab >}}
+
 ### Fullscreen window
 
 Fills the entire screen, similar to pressing F11 in most browsers.
@@ -1069,3 +1098,187 @@ Fills the entire screen, similar to pressing F11 in most browsers.
   {{< code-panel language="javascript" >}}await driver.manage().window().fullscreen();{{< / code-panel >}}
   {{< code-panel language="kotlin" >}}driver.manage().window().fullscreen(){{< / code-panel >}}
 {{< / code-tab >}}
+
+### TakeScreenshot
+
+Used to capture screenshot for current browsing context. 
+The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+returns screenshot which is encoded in Base64 format.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.*;
+import org.openqa.selenium.*;
+  
+public class SeleniumTakeScreenshot {
+    public static void main(String args[]) throws IOException {
+        WebDriver driver = new ChromeDriver();
+        driver.get("http://www.example.com");
+        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        FileUtils.copyFile(scrFile, new File("./image.png"));
+        driver.quit();
+    }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+# Returns and base64 encoded string into image
+driver.save_screenshot('./image.png')
+
+driver.quit()
+
+{{< / code-panel >}}
+  {{< code-panel language="csharp" >}} 
+  using OpenQA.Selenium;
+  using OpenQA.Selenium.Chrome;
+  using OpenQA.Selenium.Support.UI;
+
+  var driver = new ChromeDriver();
+  driver.Navigate().GoToUrl("http://www.example.com");
+  Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
+  screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} 
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://example.com/'
+
+  # Takes and Stores the screenshot in specified path
+  driver.save_screenshot('./image.png')
+
+end   
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}} 
+let {Builder} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+    let driver = await new Builder()
+      .forBrowser('chrome')
+      .build();
+
+    await driver.get('https://www.example.com');
+    // Returns base64 encoded string
+    let encodedString = driver.takeScreenshot();
+    await fs.writeFileSync('./image.png', encodedString, 'base64');
+    await driver.quit();
+}())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}} 
+import com.oracle.tools.packager.IOUtils.copyFile
+import org.openqa.selenium.*
+import org.openqa.selenium.chrome.ChromeDriver
+import java.io.File
+
+fun main(){
+    val driver =  ChromeDriver()
+    driver.get("https://www.example.com")
+    val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
+    copyFile(scrFile, File("./image.png"))
+    driver.quit()
+}   
+   {{< / code-panel >}}
+{{< / code-tab >}}
+
+###  TakeElementScreenshot
+
+Used to capture screenshot of an element for current browsing context. 
+The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
+returns screenshot which is encoded in Base64 format.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
+import org.openqa.selenium.chrome.ChromeDriver;
+import java.io.File;
+import java.io.IOException;
+
+public class SeleniumelementTakeScreenshot {
+  public static void main(String args[]) throws IOException {
+    WebDriver driver = new ChromeDriver();
+    driver.get("https://www.example.com");
+    WebElement element = driver.findElement(By.cssSelector("h1"));
+    File scrFile = element.getScreenshotAs(OutputType.FILE);
+    FileUtils.copyFile(scrFile, new File("./image.png"));
+    driver.quit();
+  }
+}
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Chrome()
+
+# Navigate to url
+driver.get("http://www.example.com")
+
+ele = driver.find_element(By.CSS_SELECTOR, 'h1')
+
+# Returns and base64 encoded string into image
+ele.screenshot('./image.png')
+
+driver.quit()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using OpenQA.Selenium.Support.UI;
+
+    // Webdriver
+    var driver = new ChromeDriver();
+    driver.Navigate().GoToUrl("http://www.example.com");
+    
+    // Fetch element using FindElement
+    var webElement = driver.FindElement(By.CssSelector("h1"));
+    
+    // Screenshot for the element
+    var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
+    elementScreenshot.SaveAsFile("screenshot_of_element.png");
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const {Builder, By} = require('selenium-webdriver');
+let fs = require('fs');
+
+(async function example() {
+   let driver = await new Builder()
+       .forBrowser('chrome')
+       .build();
+
+   await driver.get('https://www.example.com');
+   let ele = await driver.findElement(By.css("h1"));
+   // Captures the element screenshot
+   let encodedString = await ele.takeScreenshot(true);
+   await fs.writeFileSync('./image.png', encodedString, 'base64');
+   await driver.quit();
+}())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+import org.apache.commons.io.FileUtils
+import org.openqa.selenium.chrome.ChromeDriver
+import org.openqa.selenium.*
+import java.io.File
+
+fun main() {
+    val driver = ChromeDriver()
+    driver.get("https://www.example.com")
+    val element = driver.findElement(By.cssSelector("h1"))
+    val scrFile: File = element.getScreenshotAs(OutputType.FILE)
+    FileUtils.copyFile(scrFile, File("./image.png"))
+    driver.quit()
+}
+  {{< / code-panel >}}
+{{< / code-tab >}}
+

@@ -1,6 +1,6 @@
 ---
 title: "When to use Grid"
-weight: 4
+weight: 2
 ---
 
 Generally speaking, there’s two reasons why you might want to use Grid.

@@ -4,6 +4,8 @@ Title = "The Current Status of Selenium 1 and Selenium 2"
 Date = 2010-07-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["selenium","status"]
+categories = ["general"]
 +++
 
 <p>In the beginning there was Se1, and it was good. But it could have been better &#8212; in ways that WebDriver was starting to be good at. Thus the brilliant idea was hatched to merge the two projects.</p>

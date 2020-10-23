@@ -28,5 +28,5 @@ are more fragile and unreliable.
 WebDriver implementations that are
 [W3C conformant](//w3c.github.io/webdriver/webdriver-spec.html)
 also annotate the `navigator` object
-with a `webdriver` property
+with a `WebDriver` property
 so that Denial of Service attacks can be mitigated.

@@ -122,7 +122,6 @@ driver = Selenium::WebDriver.for :chrome
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
 
 (async function myFunction() {
     let driver = await new Builder().forBrowser('chrome').build();
@@ -322,7 +321,15 @@ new EdgeDriver("/path/to/MicrosoftWebDriver.exe");
 Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const {Builder} = require("selenium-webdriver");
+const edge = require('selenium-webdriver/edge');
+let service = new edge.ServiceBuilder("/path/to/msedgedriver.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setEdgeService(service)
+                .forBrowser('MicrosoftEdge')
+                .build();
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
@@ -398,7 +405,15 @@ new InternetExplorerDriver("C:/path/to/IEDriver.exe");
 Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const {Builder} = require("selenium-webdriver");
+const ie = require('selenium-webdriver/ie');
+let service = new ie.ServiceBuilder("/path/to/IEDriverServer.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setIeService(service)
+                .forBrowser('internet explorer')
+                .build();
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
@@ -443,7 +458,13 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+const {Builder} = require("selenium-webdriver");
+const opera = require('selenium-webdriver/opera');
+(async function test() {
+    let driver = await new Builder()
+        .forBrowser('opera')
+        .build();
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.WebDriver

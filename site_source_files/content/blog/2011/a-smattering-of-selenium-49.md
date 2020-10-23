@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #49"
 Date = 2011-05-09
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Here is the next 10 links as I play catch-up.</p>
 <ul>
 <li>First up is the <a href="http://www.seleniumconf.com/videos/">Selenium Conf videos</a>. There are only seven up currently, but as they are processed they will be posted</li>

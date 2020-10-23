@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #36B"
 Date = 2011-01-11
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Second in a week-long series of catch-up posts. But before I get to the next batch of links, don&#8217;t forget to submit your proposals to speak at the first <a href="http://www.seleniumconf.com/">Selenium Conference</a>. I&#8217;m pretty sure we&#8217;re going to be trying to pick out the talks next week.</p>
 <ul>
 <li>Can we <em>please</em> adopt this as <a href="http://www.geneticanomaly.com/RPG-Motivational/slides/lawfulevil.html">the official poster</a> for Selenium? Please?</li>

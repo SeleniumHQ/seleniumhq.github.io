@@ -4,6 +4,8 @@ Title = "Selenium 2.2 Released"
 Date = 2011-07-26
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>The feedback from the last release was heard loud and clear: little and often it is!</p>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #58"
 Date = 2011-08-15
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>And here we go again with more links than I thought I had collected&#8230;</p>
 <ul>
 <li>There are a metric tonne of site on the internets which are on how to scam your way through a Se interview. <a href="http://paulhammant.com/2011/08/04/hiring-selenium-quality-assurance-peope/">Hiring Selenium QA people</a> provides some fodder on how one could look for and hire Se folk.</li>

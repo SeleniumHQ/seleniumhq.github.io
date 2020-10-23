@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #78"
 Date = 2012-02-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Look! A light at the end of the tunnel!</p>

@@ -3,200 +3,204 @@ title: "Selenium 1 (Selenium RC)"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+## Introducción
 
+Selenium RC fue el principal proyecto de Selenium durante mucho tiempo,
+antes de que la union de WebDriver/Selenium resultaran en Selenium 2,
+una herramienta más poderosa.
+Vale la pena resaltar que Selenium 1 ya no es soportado.
 
-## Introduction
-Selenium RC was the main Selenium project for a long time, before the
-WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.
-It is worth to highlight that Selenium 1 is not supported anymore.
+## Como funciona Selenium RC
 
-## How Selenium RC Works
-First, we will describe how the components of Selenium RC operate and the role each plays in running 
-your test scripts.
+Primero, describiremos cómo funcionan los componentes de Selenium RC
+y el papel que desempeña cada uno en la ejecución tus scripts de prueba.
 
-### RC Components
+### Componentes de RC
 
-Selenium RC components are:
+Los componentes de Selenium RC son:
 
-* The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an *HTTP proxy*, intercepting and verifying HTTP messages passed between the browser and the AUT.
-* Client libraries which provide the interface between each programming language and the Selenium RC Server.
+* El servidor Selenium que inicia y finaliza navegadores,
+interpreta y ejecuta los comandos Selenese pasados del programa
+de prueba, y actúa como un *proxy HTTP*, interceptando y verificando
+los mensajes HTTP pasados entre el navegador y el AUT.
+* Librerías de clientes que proporcionan la interfaz entre cada lenguaje de programación y Selenium RC Server.
 
-Here is a simplified architecture diagram:
+Aquí hay un diagrama simplificado de la arquitectura:
 
-![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
+![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png)
 
-The diagram shows the client libraries communicate with the
-Server passing each Selenium command for execution. Then the server passes the 
-Selenium command to the browser using Selenium-Core JavaScript commands. The 
-browser, using its JavaScript interpreter, executes the Selenium command. This
-runs the Selenese action or verification you specified in your test script.
+El diagrama muestra que las librerías del cliente se comunican con el
+el servidor pasando cada comando Selenium para su ejecución.
+Entonces el servidor pasa el comando Selenium al navegador utilizando
+los comandos JavaScript de Selenium-Core.
+El navegador, utilizando su intérprete de JavaScript, ejecuta el comando Selenium. Esta ejecuta la acción o verificación de Selenese que
+especificas en tu script de prueba.
 
 ### Selenium Server
 
-Selenium Server receives Selenium commands from your test program,
-interprets them, and reports back to your program the results of
-running those tests.
+Selenium Server recibe comandos de Selenium de tu programa
+de prueba, los interpreta e informa a tu programa los
+resultados de ejecutar esas pruebas.
 
-The RC server bundles Selenium Core and automatically injects
-it into the browser. This occurs when your test program opens the
-browser (using a client library API function).
-Selenium-Core is a JavaScript program, actually a set of JavaScript
-functions which interprets and executes Selenese commands using the
-browser's built-in JavaScript interpreter.
+El servidor RC agrupa Selenium Core y automáticamente
+lo inyecta en el navegador. Esto ocurre cuando tu
+programa de prueba abre el navegador (utilizando una
+función del API de la librería del cliente). Selenium-Core es un
+programa de JavaScript, en realidad un conjunto de funciones
+JavaScript que interpretan y ejecutan comandos
+Selenese utilizando el intérprete de JavaScript incorporado
+en el navegador.
 
-The Server receives the Selenese commands from your test program
-using simple HTTP GET/POST requests. This means you can use any
-programming language that can send HTTP requests to automate
-Selenium tests on the browser.
+El servidor recibe los comandos Selenese de tu programa de
+prueba utilizando simples solicitudes HTTP GET/POST.
+Esto significa que puedes usar cualquier lenguaje de programación
+que pueda enviar solicitudes HTTP para automatizar pruebas
+de Selenium en el navegador.
 
-### Client Libraries
+### Librerías de Clientes
 
-The client libraries provide the programming support that allows you to
-run Selenium commands from a program of your own design.  There is a 
-different client library for each supported language.  A Selenium client 
-library provides a programming interface (API), i.e., a set of functions,
-which run Selenium commands from your own program. Within each interface,
-there is a programming function that supports each Selenese command.
+Las librerías del cliente proporcionan el soporte de
+programación que te permiten ejecutar comandos Selenium desde
+un programa de tu propio diseño. Hay una librería cliente
+diferente para cada lenguaje compatible. Una librería
+cliente de Selenium proporciona una interfaz de
+programación (API), es decir, un conjunto de funciones,
+que ejecuta comandos de Selenium desde tu propio programa.
+Dentro de cada interfaz, hay una función de programación
+que soporta cada comando de Selenese.
 
-The client library takes a Selenese command and passes it to the Selenium Server
-for processing a specific action or test against the application under test 
-(AUT).  The client library
-also receives the result of that command and passes it back to your program.
-Your program can receive the result and store it into a program variable and
-report it as a success or failure, 
-or possibly take corrective action if it was an unexpected error. 
+La librería del cliente toma un comando Selenese y lo
+pasa al servidor Selenium para procesar una acción o prueba
+específica contra la aplicación bajo prueba (AUT). La
+librería del cliente también recibe el resultado de ese
+comando y lo devuelve a tu programa. Tu programa puede
+recibir el resultado y almacenarlo en una variable del
+programa e informarlo como un éxito o un fracaso, o
+posiblemente tomar medidas correctivas si fue un error
+inesperado.
 
-So to create a test program, you simply write a program that runs 
-a set of Selenium commands using a client library API.  And, optionally, if 
-you already have a Selenese test script created in the Selenium-IDE, you can 
-*generate the Selenium RC code*. The Selenium-IDE can translate (using its 
-Export menu item) its Selenium commands into a client-driver's API function 
-calls.  See the Selenium-IDE chapter for specifics on exporting RC code from 
-Selenium-IDE.
+Entonces, para crear un programa de prueba, simplemente
+escribe un programa que ejecute un conjunto de comandos
+de Selenium utilizando una API de la librería del cliente.
+Y, opcionalmente, si ya tienes un script de prueba Selenese
+creado en Selenium-IDE, puedes *generar el código Selenium RC*.
+Selenium-IDE puede traducir (utilizando los elementos del
+menú  Exportar) tus comandos Selenium en las llamadas
+a la función API de un cliente-controlador. Consulta el capítulo
+Selenium-IDE para obtener información específica sobre la
+exportación de código RC de Selenium-IDE.
 
-## Installation
+## Instalación
 
-Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the [downloads page](https://selenium.dev/downloads/).
+La instalación es más bien un nombre inapropiado para Selenium.
+Selenium tiene un conjunto de librerías disponibles
+en el lenguaje de programación que elijas. Puedes descargarlos desde la
+[pagina de descarga](https://selenium.dev/downloads/).
 
-Once you've chosen a language to work with, you simply need to:
+Una vez que hayas elegido un lenguaje para trabajar, simplemente necesitas:
 
-* Install the Selenium RC Server.
-* Set up a programming project using a language specific client driver.
+* Instalar el servidor Selenium RC.
+* Configurar un proyecto de programación utilizando un controlador de cliente específico del lenguaje.
 
-### Installing Selenium Server
+### Instalando Selenium Server
 
-The Selenium RC server is simply a Java *jar* file (*selenium-server-standalone-<version-number>.jar*), which doesn't
-require any special installation. Just downloading the zip file and extracting the 
-server in the desired directory is sufficient. 
+El servidor Selenium RC es simplemente un archivo Java *jar*
+(*selenium-server-standalone-<version-number>.jar*), que no
+requiere una instalación especial. Simplemente descargando el archivo zip y extrayendo el servidor en el directorio deseado es suficiente.
 
-### Running Selenium Server
+### Ejecutando Selenium Server
 
-Before starting any tests you must start the server.  Go to the directory
-where Selenium RC's server is located and run the following from a command-line 
-console.
+Antes de comenzar cualquier prueba, debes iniciar el servidor.
+Ve al directorio donde se encuentra el servidor de Selenium RC 
+y ejecuta lo siguiente desde una consola línea de comandos.
 
 ```shell
     java -jar selenium-server-standalone-<version-number>.jar
 ```
 
-This can be simplified by creating
-a batch or shell executable file (.bat on Windows and .sh on Linux) containing the command
-above. Then make a shortcut to that executable on your
-desktop and simply double-click the icon to start the server.
+Esto se puede simplificar creando un archivo ejecutable
+batch o shell (.bat en Windows y .sh en Linux) que contiene el comando
+anterior. Luego haz un acceso directo a ese ejecutable en tu
+escritorio y simplemente haz doble clic en el icono para iniciar el servidor.
 
-For the server to run you'll need Java installed 
-and the PATH environment variable correctly configured to run it from the console.
-You can check that you have Java correctly installed by running the following
-on a console.
+Para que el servidor se ejecute, necesitarás Java instalado
+y la variable de entorno PATH configurada correctamente para ejecutarla desde la consola.
+Puedes verificar que tienes Java instalado correctamente ejecutando lo siguiente
+en una consola
 
 ```shell
        java -version
 ```
 
-If you get a version number (which needs to be 1.5 or later), you're ready to start using Selenium RC.
+Si obtienes un número de versión (que debe ser 1.5 o posterior), estás listo para comenzar a usar Selenium RC.
 
-### Using the Java Client Driver
+### Utilizando el controlador de cliente Java
 
-* Download Selenium java client driver zip from the SeleniumHQ [downloads page](https://selenium.dev/downloads/).
-* Extract selenium-java-<version-number>.jar file
-* Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
-* Create a java project.
-* Add the selenium-java-<version-number>.jar files to your project as references.
-* Add to your project classpath the file selenium-java-<version-number>.jar.
-* From Selenium-IDE, export a script to a Java file and include it in your Java
-  project, or write your Selenium test in Java using the selenium-java-client API.
-  The API is presented later in this chapter.  You can either use JUnit, or TestNg
-  to run your test, or you can write your own simple main() program.  These concepts are
-  explained later in this section.
-* Run Selenium server from the console.
-* Execute your test from the Java IDE or from the command-line.
+* Descarga el zip del controlador del cliente Java de Selenium desde
+SeleniumHQ [página de descargas](https://selenium.dev/downloads/).
+* Extrae el archivo selenium-java-<version-number>.jar
+* Abra tu IDE de Java deseado (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
+* Crea un proyecto java.
+* Agregaa los archivos selenium-java-<version-number>.jar a tu proyecto como referencias.
+* Agrega a tu classpath de proyecto el archivo selenium-java-<version-number>jar.
+* Desde Selenium-IDE, exporta un script a un archivo Java e inclúyelo en tu
+proyecto Java, o escribe tu prueba de Selenium en Java usando la API selenium-java-client. La API se presenta más adelante en este capítulo.
+Puedes usar JUnit o TestNg para ejecutar tu prueba, o puedes escribir tu propio programa main() simple. Estos conceptos son explicados más adelante en esta sección.
+* Ejecuta el servidor Selenium desde la consola.
+* Ejecuta tu prueba desde el IDE de Java o desde la línea de comandos.
 
-For details on Java test project configuration, see the Appendix sections
-Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.
+Para obtener detalles sobre la configuración del proyecto de prueba Java, consulta las secciones del Apéndice: Configuración de Selenium RC con Eclipse y Configuración de Selenium RC con IntelliJ.
 
-### Using the Python Client Driver 
+### Utilizando el controlador de cliente Python
 
-* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](https://selenium.dev/downloads/) 
-* Either write your Selenium test in Python or export
-  a script from Selenium-IDE to a python file.
-* Run Selenium server from the console
-* Execute your test from a console or your Python IDE 
+* Instala Selenium via PIP, las instrucciones están en SeleniumHQ
+[pagina de descargas](https://selenium.dev/downloads/) 
+* Escribe tu prueba de Selenium en Python o exporta
+un script de Selenium-IDE a un archivo de Python.
+* Ejecuta el servidor Selenium desde la consola.
+* Ejecuta tu prueba desde una consola o tu IDE de Python.
 
-For details on Python client driver configuration, see the appendix Python Client Driver Configuration.
+Para obtener detalles sobre la configuración del controlador del cliente Python, consulte el Apéndice: Configuración del controlador del cliente Python.
 
-### Using the .NET Client Driver
+### Utlizando el Controlador de Cliente .NET
 
-* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
-* Extract the folder
-* Download and install [NUnit](https://nunit.org/download/) (
-  Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
-  NUnit, you can also write a simple main() function to run your tests; 
-  however NUnit is very useful as a test engine.)
-* Open your desired .Net IDE (Visual Studio, SharpDevelop, MonoDevelop)
-* Create a class library (.dll)
-* Add references to the following DLLs: nmock.dll, nunit.core.dll, nunit.
-  framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll
-  and ThoughtWorks.Selenium.UnitTests.dll
-* Write your Selenium test in a .Net language (C#, VB.Net), or export
-  a script from Selenium-IDE to a C# file and copy this code into the class file 
-  you just created.
-* Write your own simple main() program or you can include NUnit in your project 
-  for running your test.  These concepts are explained later in this chapter.
-* Run Selenium server from console
-* Run your test either from the IDE, from the NUnit GUI or from the command line
+* Descarga Selenium RC desde SeleniumHQ [página de descargas](https://selenium.dev/downloads/)
+* Extrae la carpeta
+* Descargua e instala [NUnit](https://nunit.org/download/) 
+(Nota: Puedes usar NUnit como tu motor de prueba. Si aún no estás familiarizado con NUnit, también puedes escribir una función main() simple para ejecutar tus pruebas; sin embargo, NUnit es muy útil como motor de prueba).
+* Abre tu IDE .Net deseado (Visual Studio, SharpDevelop, MonoDevelop)
+* Crea una biblioteca de clases (.dll)
+* Agrega referencias a las siguientes DLL: nmock.dll, nunit.core.dll, nunit.
+framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll y ThoughtWorks.Selenium.UnitTests.dll
+* Escribe tu prueba de Selenium en un lenguaje .Net (C #, VB.Net), o exporta
+un script de Selenium-IDE a un archivo C# y copia este código en el archivo de clase acabas de crear.
+* Escribe tu  propio programa main() simple o puedes incluir NUnit en tu proyecto para ejecutar tu prueba. Estos conceptos se explican más adelante en este capítulo.
+* Ejecuta el servidor Selenium desde la consola
+* Ejecuta tu prueba desde el IDE, desde la GUI de NUnit o desde la línea de comandos.
 
-For specific details on .NET client driver configuration with Visual Studio, see the appendix 
-.NET client driver configuration. 
+Para obtener detalles específicos sobre la configuración del controlador del cliente .NET con Visual Studio, consulte el apéndice
+Configuración del controlador del cliente .NET
 
-### Using the Ruby Client Driver
+### Utilizando el Controlador de Cliente Ruby
 
-* If you do not already have RubyGems, install it from RubyForge.
-* Run ``gem install selenium-client``
-* At the top of your test script, add ``require "selenium/client"``
-* Write your test script using any Ruby test harness (eg Test::Unit,
-  Mini::Test or RSpec).
-* Run Selenium RC server from the console.
-* Execute your test in the same way you would run any other Ruby
-  script.
+* Si aún no tiene RubyGems, instálalo desde RubyForge.
+* Ejecuta ``gem install selenium-client``
+* En la parte superior de tu script de prueba, agrega ``require "selenium/client"``
+* Escribe tu script de prueba usando cualquier arnés de prueba Ruby (por ejemplo, Test::Unit Mini::Test o RSpec).
+* Ejecuta el servidor Selenium RC desde la consola.
+* Ejecuta tu prueba de la misma manera que ejecutarías cualquier otro script de Ruby.
 
+Para obtener detalles sobre la configuración del controlador del cliente Ruby, consulta la `Documentación de Selenium-Client`_
 
-For details on Ruby client driver configuration, see the `Selenium-Client documentation`_
+## De Selenese a un Programa
 
-## From Selenese to a Program
+La tarea principal para usar Selenium RC es convertir tu Selenese en un lenguaje de programación. En esta sección, proporcionamos varios ejemplos
+lenguaje-específico diferentes.
 
-The primary task for using Selenium RC is to convert your Selenese into a programming 
-language. In this section, we provide several different language-specific examples.
+### Muestra de un Script de prueba
 
-### Sample Test Script
-
-Let's start with an example Selenese test script.  Imagine recording
-the following test with Selenium-IDE.
+Comencemos con un ejemplo de un script de prueba de Selenese. Imagina grabar
+la siguiente prueba con Selenium-IDE.
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
@@ -205,16 +209,11 @@ the following test with Selenium-IDE.
 | clickAndWait       | btnG                          |             |
 | assertTextPresent  | Results * for selenium rc     |             |
 
+Nota: este ejemplo funcionaría con la página de búsqueda de Google <http://www.google.com>
 
-Note: This example would work with the Google search page http://www.google.com
+### Selenese Como Código de Programación
 
-### Selenese as Programming Code
-
-Here is the test script exported (via Selenium-IDE) to each of the supported
-programming languages.  If you have at least basic knowledge of an object-
-oriented programming language, you will understand how Selenium 
-runs Selenese commands by reading one of these 
-examples.  To see an example in a specific language, select one of these buttons.
+Aquí está el script de prueba exportado (a través de Selenium-IDE) a cada uno de los lenguajes de programación soportados. Si tienes al menos un conocimiento básico de un lenguaje de programación orientado a objetos, comprenderás cómo Selenium ejecuta comandos Selenese leyendo uno de estos ejemplos. Para ver un ejemplo en un lenguaje específico, seleccione uno de estos botones.
 
 #### CSharp
 ``` csharp
@@ -388,23 +387,25 @@ examples.  To see an example in a specific language, select one of these buttons
 
 ```
 
-In the next section we'll explain how to build a test program using the generated code.
+En la siguiente sección explicaremos cómo construir un programa de prueba usando el código generado.
 
-## Programming Your Test
+## Programando Tu Prueba
 
-Now we'll illustrate how to program your own tests using examples in each of the
-supported programming languages.
-There are essentially two tasks:
+Ahora ilustraremos cómo programar tus propias pruebas usando
+ejemplos en cada uno de las lenguajes de programación
+compatibles. Hay esencialmente dos tareas:
 
-* Generate your script into a programming 
-  language from Selenium-IDE, optionally modifying the result.  
-* Write a very simple main program that executes the generated code.  
+* Generar tu script a un lenguaje de programación desde Selenium-IDE,
+opcionalmente modificando el resultado.
+* Escribir un programa principal muy simple que ejecute el código generado.
 
-Optionally, you can adopt a test engine platform like JUnit or TestNG for Java, 
-or NUnit for .NET if you are using one of those languages.
+Opcionalmente, puedes adoptar una plataforma de prueba
+como JUnit o TestNG para Java, o NUnit para .NET si estás
+utilizando uno de esos lenguajes.
 
-Here, we show language-specific examples.  The language-specific APIs tend to 
-differ from one to another, so you'll find a separate explanation for each.  
+Aquí, mostramos ejemplos específicos del lenguaje. Las API
+específicas del lenguaje tienden a diferir uno de otro, por lo
+que encontrarás una explicación separada para cada uno.
 
 * Java
 * C#
@@ -412,26 +413,29 @@ differ from one to another, so you'll find a separate explanation for each.
 * Ruby
 * Perl, PHP
 
-
 ### Java
 
-For Java, people use either JUnit or TestNG as the test engine.  
-Some development environments like Eclipse have direct support for these via 
-plug-ins.  This makes it even easier. Teaching JUnit or TestNG is beyond the scope of 
-this document however materials may be found online and there are publications
-available.  If you are already a "java-shop" chances are your developers will 
-already have some experience with one of these test frameworks.
+Para Java, las personas utilizan JUnit o TestNG como plataforma de
+prueba.
+Algunos entornos de desarrollo como Eclipse tienen
+soporte directo para estos a través de complementos.
+Esto lo hace aún más fácil. Enseñar JUnit o TestNG está más allá del alcance
+de este documento, sin embargo, los materiales se pueden
+encontrar en línea y hay publicaciones disponibles. Si ya eres
+una "tienda de Java", es probable que tus desarrolladores lo
+hagan ya tengan algo de experiencia con uno de estos frameworks de
+prueba.
 
-You will probably want to rename the test class from "NewTest" to something 
-of your own choosing.  Also, you will need to change the browser-open 
-parameters in the statement:
+Probablemente desees cambiar el nombre de la clase de prueba de
+"NewTest" a algo de tu propia elección. Además, deberás cambiar
+los parámetros abrir-navegador en la declaración:
 
 ```java
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ``` 
 
-The Selenium-IDE generated code will look like this.  This example 
-has comments added manually for additional clarity.
+El código generado por Selenium-IDE se verá así. Este ejemplo
+tiene comentarios agregados manualmente para mayor claridad.
 
 ```java
    package com.example.tests;
@@ -468,24 +472,25 @@ has comments added manually for additional clarity.
 
 ### `C#`
 
-The .NET Client Driver works with Microsoft.NET.
-It can be used with any .NET testing framework 
-like NUnit or the Visual Studio 2005 Team System.
+El .NET Client Driver funciona con Microsoft.NET. Se puede usar con
+cualquier framework de prueba .NET como NUnit o Visual Studio 2005
+Team System.
 
-Selenium-IDE assumes you will use NUnit as your testing framework.
-You can see this in the generated code below.  It includes the *using* statement
-for NUnit along with corresponding NUnit attributes identifying 
-the role for each member function of the test class.  
+Selenium-IDE asume que usará NUnit como framework de prueba. Puedes
+ver esto en el código generado a continuación. Incluye la
+declaración *using* para NUnit junto con los atributos de
+NUnit correspondientes que identifican el rol de cada función
+miembro de la clase de prueba.
 
-You will probably have to rename the test class from "NewTest" to 
-something of your own choosing.  Also, you will need to change the browser-open
-parameters in the statement:
+Probablemente desees cambiar el nombre de la clase de prueba de
+"NewTest" a algo de tu propia elección. Además, deberás cambiar
+los parámetros abrir-navegador en la declaración:
 
 ```csharp
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ```
 
-The generated code will look similar to this.
+El codigo generado se vera similar a esto.
 
 ```csharp
 
@@ -570,17 +575,17 @@ The generated code will look similar to this.
     }
 ```
 
-You can allow NUnit to manage the execution 
-of your tests. Or alternatively, you can write a simple `main()` program that 
-instantiates the test object and runs each of the three methods, `SetupTest()`, 
-`TheNewTest()`, and `TeardownTest()` in turn.
-
+Puedes permitir que NUnit gestione la ejecución
+de tus pruebas. O, alternativamente, puedes escribir un simple programa
+`main()` que crea una instancia del objeto de prueba y ejecuta
+cada uno de los tres métodos, `SetupTest()`,
+`TheNewTest()` y `TeardownTest()` a su vez.
 
 ### Python
 
-Pyunit is the test framework to use for Python.
+Pyunit es el framework de prueba para usar en Python.
 
-The basic test structure is:
+La estructura de una prueba básica es:
 
 ```python
 
@@ -632,23 +637,23 @@ The basic test structure is:
 
 ### Ruby
 
+Las versiones anteriores (anteriores a 2.0) de Selenium-IDE generan
+código Ruby que requiere el antiguo gem de Selenium.
+Por lo tanto, es recomendable actualizar cualquier script Ruby 
+generado por IDE de la siguiente manera:
 
-Old (pre 2.0) versions of Selenium-IDE generate Ruby code that requires the old Selenium
-gem. Therefore, it is advisable to update any Ruby scripts generated by the
-IDE as follows:
-
-1. On line 1, change ``require "selenium"`` to ``require
+1. En la línea 1, cambia ``require "selenium"`` a ``require
 "selenium/client"``
 
-2. On line 11, change ``Selenium::SeleniumDriver.new`` to
+2. En la línea 11, cambia ``Selenium::SeleniumDriver.new`` a
 ``Selenium::Client::Driver.new``
 
-You probably also want to change the class name to something more
-informative than "Untitled," and change the test method's name to
-something other than "test_untitled."
+Probablemente también quieras cambiar el nombre de la clase a algo más
+informativo que "Sin título", y cambiar el nombre del método de prueba a
+algo diferente de "test_untitled".
 
-Here is a simple example created by modifying the Ruby code generated
-by Selenium IDE, as described above.
+Aquí hay un ejemplo simple creado al modificar el código Ruby generado
+por Selenium IDE, como se describió anteriormente.
 
 ```ruby
 
@@ -734,20 +739,19 @@ by Selenium IDE, as described above.
 
 ### Perl, PHP
 
-The members of the documentation team
-have not used Selenium RC with Perl or PHP. If you are using Selenium RC with either of
-these two languages please contact the Documentation Team (see the chapter on contributing).
-We would love to include some examples from you and your experiences, to support Perl and PHP users.
+Los miembros del equipo de documentación.
+no han utilizado Selenium RC con Perl o PHP. Si estás utilizando Selenium RC con cualquiera de estos dos lenguajes, póngase en contacto con el equipo de documentación (consulta el capítulo sobre contribuciones).
+Nos encantaría incluir algunos ejemplos tuyos y de tus experiencias, para apoyar a los usuarios de Perl y PHP.
 
 
-## Learning the API
+## Aprendiendo el API
 
-The Selenium RC API uses naming conventions 
-that, assuming you understand Selenese, much of the interface  
-will be self-explanatory. Here, however, we explain the most critical and 
-possibly less obvious aspects.
+La API de Selenium RC utiliza convenciones de nomenclatura
+suponiendo que entiendes a Selenese, gran parte de la interfaz
+se explicará por sí misma. Aquí, sin embargo, explicamos los
+aspectos más críticos y posiblemente menos obvios.
 
-### Starting the Browser 
+### Iniciando el Navegador
 
 #### CSharp
 ```csharp
@@ -788,156 +792,177 @@ possibly less obvious aspects.
       @selenium.start
 ```
 
-Each of these examples opens the browser and represents that browser 
-by assigning a "browser instance" to a program variable.  This 
-program variable is then used to call methods from the browser. 
-These methods execute the Selenium commands, i.e. like *open* or *type* or the *verify* 
-commands.
+Cada uno de estos ejemplos abre el navegador y representa ese
+navegador asignando una "instancia del navegador" a una variable
+de programa. Esta variable de programa se utiliza entonces para
+llamar a los métodos desde el navegador. Estos métodos ejecutan los
+comandos de Selenium, es decir, comandos como *open* o *type*
+o *verify*.
 
-The parameters required when creating the browser instance
-are: 
+Los parámetros necesarios al crear la instancia del navegador
+son:
 
-* **host**
-    Specifies the IP address of the computer where the server is located. Usually, this is
-    the same machine as where the client is running, so in this case *localhost* is passed.  In some clients this is an optional parameter.
-	
-* **port**
-    Specifies the TCP/IP socket where the server is listening waiting
-    for the client to establish a connection.  This also is optional in some
-    client drivers.
-	
-* **browser**
-    The browser in which you want to run the tests. This is a required 
-    parameter.
-	
-* **url**
-    The base url of the application under test. This is required by all the
-    client libs and is integral information for starting up the browser-proxy-AUT communication.
+* **host** Especifica la dirección IP de la computadora
+donde se encuentra el servidor. Por lo general, esta es la misma
+máquina donde se ejecuta el cliente, por lo que en este caso se
+pasa *localhost*. En algunos clientes, este es un parámetro
+opcional.
 
-Note that some of the client libraries require the browser to be started explicitly by calling
-its `start()` method.
+* **port** Especifica el socket TCP/IP donde el servidor
+está escuchando y esperando que el cliente establezca una
+conexión. Esto también es opcional en algunos controladores de
+clientes.
 
-### Running Commands 
+* **browser** El navegador en el que deseas ejecutar las
+pruebas. Este es un parámetro requerido.
 
-Once you have the browser initialized and assigned to a variable (generally
-named "selenium") you can make it run Selenese commands by calling the respective 
-methods from the browser variable. For example, to call the *type* method
-of the selenium object:
+* **url** La url base de la aplicación bajo prueba. Esto es
+requerido por todos las librerías de cliente y es información
+integral para iniciar la comunicación navegador-proxy-AUT.
+
+Ten en cuenta que algunas de las librerías de cliente
+requieren que el navegador se inicie explícitamente llamando a
+su método `start()`.
+
+### Ejecutando Comandos
+
+Una vez que tienes el navegador inicializado y asignado a una variable (generalmente llamada "Selenium") puedes hacer que ejecute comandos Selenese llamando los métodos respectivos de la variable del navegador. Por ejemplo, para llamar al método *type* del objeto Selenium:
 
 ```
     selenium.type("field-id","string to type")
 ```
 
-In the background the browser will actually perform a *type* operation, 
-essentially identical to a user typing input into the browser, by  
-using the locator and the string you specified during the method call.
+En segundo plano, el navegador realmente realizará una operación *type*,
+esencialmente idéntica a la entrada de un usuario escribiendo en el navegador,
+utilizando el localizador y la cadena que especificaste durante la llamada al método.
 
-## Reporting Results
+## Reportando Resultados
 
-Selenium RC does not have its own mechanism for reporting results. Rather, it allows
-you to build your reporting customized to your needs using features of your
-chosen programming language.  That's great, but what if you simply want something
-quick that's already done for you?  Often an existing library or test framework can 
-meet your needs faster than developing your own test reporting code.
+Selenium RC no tiene su propio mecanismo para reportar
+resultados. Más bien, te permite crear tus reportes
+personalizados según tus necesidades utilizando las funciones de
+tu lenguaje de programación elegido. Eso es genial, pero ¿y si
+simplemente quieres algo rápido que ya está hecho para ti? A
+menudo, una librería existente o un framework de prueba puede
+satisfacer tus necesidades más rápido que desarrollar tu propio
+código de reportes de prueba.
 
-### Test Framework Reporting Tools 
+### Herramientas de Reportes del Framework de Prueba
 
-Test frameworks are available for many programming languages. These, along with
-their primary function of providing a flexible test engine for executing your tests, 
-include library code for reporting results.  For example, Java has two 
-commonly used test frameworks, JUnit and TestNG.  .NET also has its own, NUnit.
+Los frameworks de prueba están disponibles para muchos lenguajes de
+programación. Estos, junto con su función principal de
+proporcionar un motor de prueba flexible para ejecutar tus
+pruebas, tambien incluyen código de librerías para reportar resultados.
+Por ejemplo, Java tiene dos frameworks de prueba de uso común, JUnit
+y TestNG. .NET también tiene el suyo, NUnit.
 
-We won't teach the frameworks themselves here; that's beyond the scope of this
-user guide.  We will simply introduce the framework features that relate to Selenium
-along with some techniques you can apply.  There are good books available on these
-test frameworks however along with information on the internet.
+Aquí no enseñaremos los frameworks por sí mismos; eso está más allá
+del alcance de esta guía del usuario. Simplemente presentaremos
+las características del framework que se relacionan con Selenium
+junto con algunas técnicas que puedes aplicar. Hay buenos libros
+disponibles sobre estos frameworks prueba junto con su
+información en internet.
 
-### Test Report Libraries 
+### Librerías de Reportes de Pruebas
 
-Also available are third-party libraries specifically created for reporting
-test results in your chosen programming language.  These often support a 
-variety of formats such as HTML or PDF.
+También están disponibles las librerías de terceros creadas
+específicamente para generar los reportes de las pruebas en el
+lenguaje de programación elegido. Estos a menudo sportan una
+variedad de formatos como HTML o PDF.
 
-### What's The Best Approach? 
+### Cuál Es El Mejor Enfoque?
 
-Most people new to the testing frameworks will begin with the framework's
-built-in reporting features.  From there most will examine any available libraries
-as that's less time consuming than developing your own.  As you begin to use
-Selenium no doubt you will start putting in your own "print statements" for 
-reporting progress.  That may gradually lead to you developing your own 
-reporting, possibly in parallel to using a library or test framework.  Regardless,
-after the initial, but short, learning curve you will naturally develop what works
-best for your own situation.
+La mayoría de las personas cuando son nuevas en los frameworks
+de prueba comenzarán con las funciones de reporteria integradas
+en el framework.
+A partir de ahí, la mayoría examinará las
+librerías disponibles, ya que requiere menos tiempo que
+desarrollar una propia.
+Cuando comiences a usar Selenium, sin duda
+comenzarás a poner tus propias "declaraciones impresas" para
+reportar sobre el progreso.
+Eso puede llevarte gradualmente a desarrollar tus propios reportes, posiblemente en paralelo al uso de una librería o framework de prueba.
+De todos modos, después de la curva de aprendizaje inicial, naturalmente
+desarrollarás lo que funciona mejor para tu propia situación.
 
-### Test Reporting Examples
+### Ejemplos de Reportes de Pruebas
 
-To illustrate, we'll direct you to some specific tools in some of the other languages 
-supported by Selenium.  The ones listed here are commonly used and have been used 
-extensively (and therefore recommended) by the authors of this guide.
+Para ilustrarlte, te guiaremos a algunas herramientas específicas
+en algunos de los lenguajes soportados por Selenium. Los que se enumeran
+aquí son de uso común y los autores de esta guía los han usado ampliamente
+(y, por lo tanto, los recomiendan).
 
-#### Test Reports in Java
+#### Reportes de Pruebas en Java
 
-* If Selenium Test cases are developed using JUnit then JUnit Report can be used
-  to generate test reports. 
+* Si los casos de prueba de Selenium se desarrollan utilizando JUnit,
+se puede utilizar JUnit Report para generar reportes de prueba.
 
-* If Selenium Test cases are developed using TestNG then no external task 
-  is required to generate test reports. The TestNG framework generates an 
-  HTML report which list details of tests. 
+* Si los casos de prueba de Selenium se desarrollan usando TestNG,
+entonces no se necesita ninguna tarea externa para generar reportes
+de prueba.
+El framework de TestNG genera un reporte HTML que enumera los detalles
+de las pruebas.
 
-* ReportNG is a HTML reporting plug-in for the TestNG framework. 
-  It is intended as a replacement for the default TestNG HTML report. 
-  ReportNG provides a simple, colour-coded view of the test results. 
+* ReportNG es un complemento de reportes HTML para el framework de TestNG.
+Está destinado a reemplazar el reporte HTML predeterminado de TestNG.
+ReportNG proporciona una vista simple y codificada por colores de los resultados de las pruebas.
   
-##### Logging the Selenese Commands
+##### Registrar los Comandos Selenese
 
-* Logging Selenium can be used to generate a report of all the Selenese commands
-  in your test along with the success or failure of each. Logging Selenium extends
-  the Java client driver to add this Selenese logging ability.
+* Logging Selenium se puede utilizar para generar un reporte de todos los comandos de Selenese en tu prueba junto con el resultado exitoso o no
+de cada uno. Logging Selenium extiende el controlador del cliente Java para agregar esta capacidad de registro de Selenese.
 
-#### Test Reports for Python
+#### Reportes de Pruebas para Python
 
-* When using Python Client Driver then HTMLTestRunner can be used to
-  generate a Test Report.
+* Al utilizar Python Client Driver, HTMLTestRunner se puede utilizar para
+generar un reporte de prueba.
 
-#### Test Reports for Ruby
+#### Reportes de Pruebas para Ruby
 
-* If RSpec framework is used for writing Selenium Test Cases in Ruby
-  then its HTML report can be used to generate a test report.
+* Si el framework RSpec se utiliza para escribir los casos de prueba de
+Selenium en Ruby, entonces su reporte HTML se puede utilizar para generar
+un reporte de prueba.
 
+## Agregando Sabor a Tus Pruebas
 
-## Adding Some Spice to Your Tests
+Ahora llegaremos a la razón de por que utilizar Selenium RC,
+agregando lógica de programación a tus pruebas. Es lo mismo que
+para cualquier programa.
+El flujo del programa se controla mediante declaraciones de condición e iteración.
+Además, puedes reportar la información de progreso mediante I/O.
+En esta sección mostraremos algunos ejemplos de cómo las construcciones
+del lenguaje de programación se pueden combinar con Selenium para
+resolver problemas comunes en las pruebas.
 
-Now we'll get to the whole reason for using Selenium RC, adding programming logic to your tests.
-It's the same as for any program.  Program flow is controlled using condition statements
-and iteration.  In addition you can report progress information using I/O.  In this section
-we'll show some examples of how programming language constructs can be combined with 
-Selenium to solve common testing problems. 
+Encontrarás que a medida que transicionas de pruebas simples
+como la existencia de elementos en una página, a pruebas de funcionalidad
+dinámica que involucran múltiples páginas web y datos variables, que
+vas a necesitar la lógica de programación para verificar los resultados
+esperados.
+Básicamente, Selenium-IDE no soporta declaraciones estándar de iteracion
+y de condición.
+Puede hacer algunas condiciones incrustando JavaScript en los parámetros
+Selenese, sin embargo la iteración es imposible, y la mayoría
+de las condiciones serán mucho más fáciles en un lenguaje de
+programación.
+Además, es posible que necesites manejo de excepciones para
+errores de recuperación.
+Por esta y otras razones, hemos escrito esta sección para ilustrar el uso de técnicas comunes de programación para brindarte mayor 'poder de verificación' en tus pruebas automatizadas.
 
-You will find as you transition from the simple tests of the existence of 
-page elements to tests of dynamic functionality involving multiple web-pages and 
-varying data that you will require programming logic for verifying expected 
-results.  Basically, the Selenium-IDE does not support iteration and 
-standard condition statements.  You can do some conditions by embedding javascript
-in Selenese parameters, however 
-iteration is impossible, and most conditions will be much easier in a  
-programming language.  In addition, you may need exception handling for
-error recovery.  For these reasons and others, we have written this section
-to illustrate the use of common programming techniques to
-give you greater 'verification power' in your automated testing.
+Los ejemplos en esta sección están escritos en C # y Java,
+aunque el código es simple y se puede adaptar fácilmente otros
+lenguajes soportados. Si tienes algún conocimiento básico de un
+lenguaje de programación orientado a objetos no deberías tener
+dificultades para comprender esta sección.
 
-The examples in this section are written
-in C# and Java, although the code is simple and can be easily adapted to the other supported
-languages.  If you have some basic knowledge
-of an object-oriented programming language you shouldn't have difficulty understanding this section.
+### Iteración
 
-### Iteration
+La iteración es una de las cosas más comunes que las personas
+necesitan hacer en sus pruebas.
+Por ejemplo, es posible que desees ejecutar una búsqueda varias veces.
+O tal vez para verificar los resultados de las pruebas debs procesar un "conjunto de resultados" retornado por una base de datos.
 
-Iteration is one of the most common things people need to do in their tests.
-For example, you may want to to execute a search multiple times.  Or, perhaps for
-verifying your test results you need to process a "result set" returned from a database.
-
-Using the same Google search example we used earlier, let's 
-check the Selenium search results. This test could use the Selenese:
+Utilizando el mismo ejemplo anterior de la búsqueda en Google, vamos a verificar los resultados de la búsqueda de Selenium. Esta prueba podría usar Selenese:
 
 |                    |                               |               |
 | --------           | ----------------------------  | ------------- |
@@ -952,13 +977,9 @@ check the Selenium search results. This test could use the Selenese:
 | clickAndWait       | btnG                          |               |
 | assertTextPresent  | Results * for selenium grid   |               |
 
+El código se ha repetido para ejecutar 3 veces los mismos pasos. Pero varias copias del mismo código no es una buena práctica de programacion ya que es más difícil de mantener. Al usar un lenguaje de programación, podemos iterar sobre los resultados de las búsquedas para obtener una solución más flexible y fácil de mantener.
 
-The code has been repeated to run the same steps 3 times.  But multiple
-copies of the same code is not good program practice because it's more
-work to maintain.  By using a programming language, we can iterate
-over the search results for a more flexible and maintainable solution. 
-
-#### In `C#`   
+#### En `C#`   
    
 ```csharp
    // Collection of String values.
@@ -975,30 +996,27 @@ over the search results for a more flexible and maintainable solution.
     }
 ```
 
-### Condition Statements
+### Declaraciones de Condición
 
-To illustrate using conditions in tests we'll start with an example.
-A common problem encountered while running Selenium tests occurs when an 
-expected element is not available on page.  For example, when running the 
-following line:
+Para ilustrar el uso de condiciones en las pruebas comenzaremos con un
+ejemplo. Un problema común encontrado al ejecutar las pruebas de Selenium
+ocurre cuando un elemento esperado no está disponible en la página. Por
+ejemplo, al ejecutar la siguiente línea:
 
 ```
    selenium.type("q", "selenium " +s);
 ```
    
-If element 'q' is not on the page then an exception is
-thrown:
+Si el elemento 'q' no está en la pagina entonces se lanza una excepción:
 
 ```java
    com.thoughtworks.selenium.SeleniumException: ERROR: Element q not found
 ```
 
-This can cause your test to abort.  For some tests that's what you want.  But
-often that is not desirable as your test script has many other subsequent tests
-to perform.
+Esto puede hacer que tu prueba sea abortada. Para algunas pruebas eso es lo que quieres. Pero a menudo eso no es deseable ya que tu script de prueba tiene que ejecutar posteriormente muchas otras pruebas.
 
-A better approach is to first validate whether the element is really present
-and then take alternatives when it it is not.  Let's look at this using Java.
+Un mejor enfoque es validar primero si el elemento está realmente presente
+y luego tomar alternativas cuando no lo está. Observemos esto utilizando Java.
 
 ```java
    // If element is available on page then perform type operation.
@@ -1008,20 +1026,15 @@ and then take alternatives when it it is not.  Let's look at this using Java.
        System.out.printf("Element: " +q+ " is not available on page.")
    }
 ```
-   
-The advantage of this approach is to continue with test execution even if some UI 
-elements are not available on page.
 
+La ventaja de este enfoque es que continua con la ejecución de la prueba, incluso si algunos elementos de la interfaz de usuario no están disponibles en la página.
 
-### Executing JavaScript from Your Test
+### Ejecutando JavaScript Desde tus Pruebas
 
-JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
-Selenium RC. 
+JavaScript es muy útil para utilizar una aplicación que no es directamente compatible con Selenium. El método **getEval** de Selenium API se puede utilizar para ejecutar JavaScript desde Selenium RC.
 
-Consider an application having check boxes with no static identifiers. 
-In this case one could evaluate JavaScript from Selenium RC to get ids of all 
-check boxes and then exercise them. 
+Considera una aplicación que tiene casillas de verificación sin identificadores estáticos.
+En este caso, uno podría evaluar JavaScript desde Selenium RC para obtener los identificadores de todas las casillas de verificación y luego utilizarles.
 
 ```java
    public static String[] getAllCheckboxIds () { 
@@ -1043,21 +1056,22 @@ check boxes and then exercise them.
     }
 ```
 
-To count number of images on a page:
+Para contar el número de imágenes en una página:
 
 ```java   
    selenium.getEval("window.document.images.length;");
 ```
 
-Remember to use window object in case of DOM expressions as by default selenium
-window is referred to, not the test window.
+Recuerde usar un objeto window en caso de expresiones DOM ya que por
+defecto se hace referencia a la ventana de Selenium,
+no a la ventana de prueba.
 
-## Server Options
+## Opciones del Servidor
 
-When the server is launched, command line options can be used to change the
-default server behaviour.
+Cuando se inicia el servidor,se pueden utilizar opciones de línea
+de comando para cambiar el comportamiento predeterminado del servidor.
 
-Recall, the server is started by running the following.
+Recuerda, el servidor se inicia ejecutando lo siguiente.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar
@@ -1069,64 +1083,52 @@ To see the list of options, run the server with the ``-h`` option.
    $ java -jar selenium-server-standalone-<version-number>.jar -h
 ``` 
 
-You'll see a list of all the options you can use with the server and a brief
-description of each. The provided descriptions will not always be enough, so we've
-provided explanations for some of the more important options.
+Verás una lista de todas las opciones que puedes utilizar con el servidor
+y un breve descripción de cada una. Las descripciones proporcionadas no
+siempre serán suficientes, así que hemos proporcionado explicaciones
+para algunas de las opciones más importantes.
 
+### Configuración del Proxy
 
-### Proxy Configuration
-
-If your AUT is behind an HTTP proxy which requires authentication then you should 
-configure http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
-using the following command. 
+Si tu AUT está detrás de un proxy HTTP que requiere autenticación, entonces deberías configurar http.proxyHost, http.proxyPort, http.proxyUser y
+http.proxyPassword usando el siguiente comando.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -Dhttp.proxyHost=proxy.com -Dhttp.proxyPort=8080 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ``` 
 
-### Multi-Window Mode
+### Modo Multi-Window 
 
-If you are using Selenium 1.0 you can probably skip this section, since multiwindow mode is 
-the default behavior.  However, prior to version 1.0, Selenium by default ran the 
-application under test in a sub frame as shown here.
+Si estás utilizando Selenium 1.0, probablemente puedas omitir esta sección,
+ya que el modo de ventanas múltiples es el comportamiento predeterminado.
+Sin embargo, antes de la versión 1.0, Selenium ejecutaba la aplicación bajo prueba en un sub-marco como se muestra aquí:
 
 ![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
 
-Some applications didn't run correctly in a sub frame, and needed to be 
-loaded into the top frame of the window. The multi-window mode option allowed
-the AUT to run in a separate window rather than in the default 
-frame where it could then have the top frame it required.
+Algunas aplicaciones no se ejecutaban correctamente en un sub-marcoo y debían ser cargadas en el marco superior de la ventana. La opción modo de ventana múltiple permitia al AUT ejecutarse en una ventana separada en lugar de en el marco predeterminado donde entonces podía tener el marco superior requerido.
 
 ![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
 
-For older versions of Selenium you must specify multiwindow mode explicitly
-with the following option:
+Para versiones anteriores de Selenium, debes especificar explícitamente el modo de ventanas múltiples con la siguiente opción:
 
 ```bash   
    -multiwindow 
 ``` 
 
-As of Selenium RC 1.0, if you want to run your test within a
-single frame (i.e. using the standard for earlier Selenium versions) 
-you can state this to the Selenium Server using the option
+A partir de Selenium RC 1.0, si deseas ejecutar tu prueba dentro de un
+marco único (es decir, utilizando el estándar para versiones anteriores de Selenium) puedes indicar esto al servidor Selenium utilizando la opción
 
 ```bash   
    -singlewindow 
 ``` 
 
-### Specifying the Firefox Profile
+### Especificando el Perfil de Firefox
 
-Firefox will not run two instances simultaneously unless you specify a 
-separate profile for each instance. Selenium RC 1.0 and later runs in a 
-separate profile automatically, so if you are using Selenium 1.0, you can 
-probably skip this section.  However, if you're using an older version of 
-Selenium or if you need to use a specific profile for your tests
-(such as adding an https certificate or having some addons installed), you will 
-need to explicitly specify the profile. 
+Firefox no ejecutará dos instancias simultáneamente a menos que especifiques un
+perfil separado para cada instancia. Selenium RC 1.0 y posteriores se ejecutan en un perfil separado automáticamente, por lo que si estás utilizando Selenium 1.0, probablemente puedes omitir esta sección. Sin embargo, si estás utilizando una versión anterior de Selenium o si necesitas usar un perfil específico para tus pruebas (como agregar un certificado https o tener algunos complementos instalados), necesitas especificar explícitamente el perfil.
 
-First, to create a separate Firefox profile, follow this procedure.
-Open the Windows Start menu, select "Run", then type and enter one of the 
-following:
+Primero, para crear un perfil separado de Firefox, sigue este procedimiento.
+Abre el menú Inicio de Windows, seleccione "Ejecutar", luego escriba e ingrese uno de los siguientes:
 
 ```bash   
    firefox.exe -profilemanager 
@@ -1136,25 +1138,19 @@ following:
    firefox.exe -P 
 ``` 
 
-Create the new profile using the dialog. Then when you run Selenium Server, 
-tell it to use this new Firefox profile with the server command-line option 
-*\-firefoxProfileTemplate* and specify the path to the profile using its filename 
-and directory path.
+Crea el nuevo perfil utilizando el cuadro de diálogo. Luego, cuando ejecutes Selenium Server, especificale que use este nuevo perfil de Firefox con la opción de línea de comandos del servidor *\-firefoxProfileTemplate* y especifique la ruta del perfil utilizando el nombre del archivo y la ruta del directorio.
 
 ```bash   
-   -firefoxProfileTemplate "path to the profile" 
+   -firefoxProfileTemplate "ruta del perfil" 
 ``` 
 
-**Warning**:  Be sure to put your profile in a new folder separate from the default!!! 
-   The Firefox profile manager tool will delete all files in a folder if you 
-   delete a profile, regardless of whether they are profile files or not. 
-   
-More information about Firefox profiles can be found in [Mozilla's Knowledge Base](http://support.mozilla.com/en/kb/Managing+profiles)
+**Advertencia**: Asegúrate de poner tu perfil en una nueva carpeta separada de la predeterminada. La herramienta de administrador de perfiles de Firefox eliminará todos los archivos de una carpeta si eliminas un perfil, independientemente de si son archivos de perfil o no.
 
-### Run Selenese Directly Within the Server Using -htmlSuite
+Puedes encontrar más información sobre los perfiles de Firefox en la [Base de conocimiento de Mozilla](http://support.mozilla.com/en/kb/Managing+profiles)
 
-You can run Selenese html files directly within the Selenium Server
-by passing the html file to the server's command line.  For instance:
+### Ejecuta Selenese Directamente Dentro del Servidor Utilizando -htmlSuite
+
+Puedes ejecutar archivos html de Selenese directamente dentro del servidor Selenium pasando el archivo html a la línea de comandso del servidor. Por ejemplo:
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -htmlSuite "*firefox" 
@@ -1162,280 +1158,340 @@ by passing the html file to the server's command line.  For instance:
    "c:\absolute\path\to\my\results.html"
 ``` 
 
-This will automatically launch your HTML suite, run all the tests and save a
-nice HTML report with the results.
+Esto iniciará automáticamente tu suite HTML, ejecutará todas las pruebas y guardará un bonito reporte HTML con los resultados.
 
-*Note:*  When using this option, the server will start the tests and wait for a
-   specified number of seconds for the test to complete; if the test doesn't 
-   complete within that amount of time, the command will exit with a non-zero 
-   exit code and no results file will be generated.
+  *Nota:* Al usar esta opción, el servidor comenzará las pruebas y
+   esperará un número especificado de segundos a que la prueba se
+   complete; si la prueba no se completa dentro de ese período de
+   tiempo, el comando saldrá con un código distinto de cero y no se
+   generará ningún reporte de resultados.
 
-This command line is very long so be careful when 
-you type it. Note this requires you to pass in an HTML 
-Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with ``-interactive``
-You cannot run both at the same time.
+Esta línea de comandos es muy larga, así que ten cuidado cuando
+la escribas. Ten en cuenta que esto requiere que pases una suite
+HTML Selenese, no una sola prueba. También ten en cuenta que la
+opción -htmlSuite es incompatible con ``-interactive`` No puedes
+ejecutar ambas al mismo tiempo.
 
-### Selenium Server Logging
+### Registros de Selenium Server
 
-#### Server-Side Logs
+#### Registros del Lado del servidor
 
-When launching Selenium server the **-log** option can be used to record
-valuable debugging information reported by the Selenium Server to a text file.
+Al iniciar el servidor de Selenium, la opción **-log** puede usarse para
+grabar informaciónes valiosas de depuración reportadas por el servidor
+Selenium a un archivo de texto.
 
-```bash   
+```bash
    java -jar selenium-server-standalone-<version-number>.jar -log selenium.log
-``` 
-   
-This log file is more verbose than the standard console logs (it includes DEBUG 
-level logging messages). The log file also includes the logger name, and the ID
-number of the thread that logged the message. For example:   
+```
+
+Este archivo de registro es más detallado que los registros de
+consola estándar(incluye mensajes de registro de nivel DEBUG).
+El archivo de registro también incluye el nombre del registrador
+y la ID del número del hilo que registró el mensaje. Por ejemplo:
 
 ```bash   
    20:44:25 DEBUG [12] org.openqa.selenium.server.SeleniumDriverResourceHandler - 
    Browser 465828/:top frame1 posted START NEW
 ``` 
    
-The message format is 
+El formato del mensaje es
 
 ```bash   
    TIMESTAMP(HH:mm:ss) LEVEL [THREAD] LOGGER - MESSAGE
 ``` 
    
-This message may be multiline.
+Este mensaje puede ser de multiples lineas.
 
-#### Browser-Side Logs
+#### Registros del Lado del Navegador
 
-JavaScript on the browser side (Selenium Core) also logs important messages; 
-in many cases, these can be more useful to the end-user than the regular Selenium 
-Server logs. To access browser-side logs, pass the **-browserSideLog**
-argument to the Selenium Server.
+JavaScript en el lado del navegador (Selenium Core) también
+registra mensajes importantes; en muchos casos, estos pueden ser
+más útiles para el usuario final que los registros normales de
+Selenium Server. Para acceder a los registros del lado del
+navegador, pase el argumento **-browserSideLog** al servidor
+Selenium.
 
 
-```bash   
+```bash
    java -jar selenium-server-standalone-<version-number>.jar -browserSideLog
-``` 
-   
-**-browserSideLog** must be combined with the **-log** argument, to log 
-browserSideLogs (as well as all other DEBUG level logging messages) to a file.
+```
+
+**-browserSideLog** debe combinarse con el argumento **-log**,
+para registrar browserSideLogs (así como todos los demás
+mensajes de registro de nivel DEBUG) en un archivo.
 
 
-## Specifying the Path to a Specific Browser 
+## Especificando la Ruta a un Navegador Específico
 
-You can specify to Selenium RC a path to a specific browser. This is useful if 
-you have different versions of the same browser and you wish to use a specific
-one. Also, this is used to allow your tests to run against a browser not 
-directly supported by Selenium RC. When specifying the run mode, use the 
-\*custom specifier followed by the full path to the browser's executable:
+Puede especificarle a Selenium RC una ruta a un navegador
+específico.
+Esto es útil si tienes diferentes versiones del
+mismo navegador y deseas utilizar una en específico.
+Además, esto se utiliza para permitir que tus pruebas se ejecuten en un
+navegador no directamente apoyado por Selenium RC.
+Al especificar el modo de ejecución, use el especificador \*custom
+seguido de la ruta completa al ejecutable del navegador:
 
-```bash   
-   *custom <path to browser> 
-``` 
+```bash
+   *custom <ruta al navegador>
+```
 
-   
-## Selenium RC Architecture
+## Arquitectura de Selenium RC
 
-*Note:* This topic tries to explain the technical implementation behind 
-   Selenium RC. It's not fundamental for a Selenium user to know this, but 
-   could be useful for understanding some of the problems you might find in the
-   future.
-   
-To understand in detail how Selenium RC Server works  and why it uses proxy injection
-and heightened privilege modes you must first understand `the same origin policy`_.
-   
-### The Same Origin Policy
+*Nota:* Este tema trata de explicar la implementación técnica
+   detrás de Selenium RC. No es fundamental para un usuario de
+   Selenium saber esto, pero podría ser útil para comprender
+   algunos de los problemas que pueda encontrar en el futuro.
 
-The main restriction that Selenium faces is the 
-Same Origin Policy. This security restriction is applied by every browser
-in the market and its objective is to ensure that a site's content will never
-be accessible by a script from another site.  The Same Origin Policy dictates that
-any code loaded within the browser can only operate within that website's domain.
-It cannot perform functions on another website.  So for example, if the browser
-loads JavaScript code when it loads www.mysite.com, it cannot run that loaded code
-against www.mysite2.com--even if that's another of your sites. If this were possible, 
-a script placed on any website you open would be able to read information on 
-your bank account if you had the account page
-opened on other tab. This is called XSS (Cross-site Scripting).
+Para comprender en detalle cómo funciona Selenium RC Server y
+por qué utiliza la inyección proxy y modos aumentados de
+privilegios, primero debes entender `la politica del mismo
+origen`_.
 
-To work within this policy, Selenium-Core (and its JavaScript commands that
-make all the magic happen) must be placed in the same origin as the Application
-Under Test (same URL). 
+### La Política del Mismo Origen
 
-Historically, Selenium-Core was limited by this problem since it was implemented in
-JavaScript.  Selenium RC is not, however, restricted by the Same Origin Policy.  Its 
-use of the Selenium Server as a proxy avoids this problem.  It, essentially, tells the 
-browser that the browser is working on a single "spoofed" website that the Server
-provides. 
+La principal restricción que enfrenta Selenium es la politica del
+mismo origen.
+Todos los navegadores en el mercado aplican esta
+restricción de seguridad y su objetivo es asegurar que el
+contenido de un sitio nunca sera accesible por un script desde
+otro sitio.
+La Política del Mismo Origen dicta que cualquier
+código cargado dentro de un navegador solo puede operar dentro
+del dominio de ese sitio web.
+No puede realizar funciones en otro sitio web.
+Entonces, por ejemplo, si el navegador carga el código JavaScript
+cuando carga www.mysite.com, no puede ejecutar ese código cargado
+contra www.mysite2.com, incluso si ese es otro de tus sitios.
+Si esto fuera posible, un script colocado en cualquier sitio web
+que abras podría leer información sobre tu cuenta bancaria
+si tuviera la página de la cuenta abierta en otra pestaña.
+Esto se llama XSS (Cross-site Scripting).
 
-*Note:* You can find additional information about this topic on Wikipedia
-   pages about Same Origin Policy and XSS. 
+Para trabajar dentro de esta política, Selenium-Core (y sus
+comandos JavaScript que hacen que ocurra toda la magia) debe
+colocarse en el mismo origen que la Aplicación Bajo prueba
+(misma URL).
 
+Históricamente, Selenium-Core estaba limitado por este problema
+ya que se implementó en JavaScript Sin embargo, Selenium RC no
+está restringido por la Política del Mismo Origen. Su uso de
+Selenium Server como proxy evita este problema. Esencialmente,
+le dice al navegador quq está trabajando en un único sitio web
+"falso" que el servidor proporciona.
 
-### Proxy Injection
+*Nota:* Puedes encontrar información adicional sobre este tema
+   en paginas Wikipedia sobre la Política del mismo origen y XSS.
 
-The first method Selenium used to avoid the The Same Origin Policy was Proxy Injection.
-In Proxy Injection Mode, the Selenium Server acts as a client-configured **HTTP 
-proxy**[^1], that sits between the browser and the Application Under Test[^2].
-It then masks the AUT under a fictional URL (embedding
-Selenium-Core and the set of tests and delivering them as if they were coming
-from the same origin). 
+### Inyección de Proxy
 
-[^1]: The proxy is a third person in the middle that passes the ball between the two parts. It acts as a "web server" that delivers the AUT to the browser. Being a proxy gives Selenium Server the capability of "lying" about the AUT's real URL.  
-   
-[^2]: The browser is launched with a configuration profile that has set localhost:4444 as the HTTP proxy, this is why any HTTP request that the browser does will pass through Selenium server and the response will pass through it and not from the real server.
+El primer método utilizado por Selenium para evitar la Política
+del Mismo Origen fue la Inyección de Proxy.
+En el modo de inyección de proxy, el servidor Selenium actúa como un
+**proxy HTTP** configurado por el cliente[^1], que se encuentra
+entre el navegador y la aplicación bajo prueba [^2].
+Luego enmascara el AUT bajo una URL ficticia (incrustando Selenium-
+Core y el conjunto de pruebas y entregandolas como si vinieran del
+mismo origen).
 
-Here is an architectural diagram. 
+[^1]: El proxy es una tercera persona situada en el medio que pasa la
+pelota entre las dos partes. Actúa como un "servidor web" que
+entrega el AUT al navegador. Ser un proxy le da al Selenium
+Server la capacidad de "mentir" sobre la URL real del AUT.  
+
+[^2]: El navegador se inicia con un perfil de configuración que
+establece localhost:4444 como el proxy HTTP, es por eso que
+cualquier solicitud HTTP que haga el navegador pasará a través
+del servidor Selenium y la respuesta pasará a través de él y no
+desde el servidor real.
+
+Aquí hay un diagrama arquitectónico.
 
 ![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
 
-As a test suite starts in your favorite language, the following happens:
+Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that injects Selenium-Core's JavaScript into the browser-loaded web page.
-3. The client-driver passes a Selenese command to the server.
-4. The Server interprets the command and then triggers the corresponding 
-   JavaScript execution to execute that command within the browser.
-   Selenium-Core instructs the browser to act on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks for the website's content from
-   the Selenium RC server (set as the HTTP proxy for the browser to use).
-6. Selenium RC server communicates with the Web server asking for the page and once
-   it receives it, it sends the page to the browser masking the origin to look
-   like the page comes from the same server as Selenium-Core (this allows 
-   Selenium-Core to comply with the Same Origin Policy).
-7. The browser receives the web page and renders it in the frame/window reserved
-   for it.
+1. El cliente/controlador establece una conexión con el
+   servidor selenium-RC.
+2. El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+   con una URL que inyecta el JavaScript de Selenium-Core en la página webcargada por el navegador.
+3. El controlador de cliente pasa un comando Selenese al servidor.
+4. El servidor interpreta el comando y luego activa la ejecucion
+   JavaScript correspondiente para ejecutar ese comando dentro del
+   navegador. Selenium-Core indica al navegador que actúe según esa
+   primera instrucción, normalmente abriendo una página del AUT.
+5. El navegador recibe la solicitud abierta y solicita el contenido
+   proxy HTTP para que lo use el navegador).
+6. El servidor Selenium RC se comunica con el servidor web
+   solicitando la página y una vez lo recibe, envía la página al
+   navegador enmascarando el origen para buscar como si la página
+   viniera del mismo servidor que Selenium-Core (esto permite
+   a Selenium-Core cumplir con la Política del mismo origen).  
+7. El navegador recibe la página web y la muestra en el marco/ventana
+   reservada para ello.
    
-### Heightened Privileges Browsers
+### Navegadores con Privilegios Aumentados
 
-This workflow in this method is very similar to Proxy Injection but the main
-difference is that the browsers are launched in a special mode called *Heightened
-Privileges*, which allows websites to do things that are not commonly permitted
-(as doing XSS_, or filling file upload inputs and pretty useful stuff for 
-Selenium). By using these browser modes, Selenium Core is able to directly open
-the AUT and read/interact with its content without having to pass the whole AUT
-through the Selenium RC server.
+Este flujo de trabajo en este método es muy similar a la
+Inyección de Proxy pero la principal diferencia es que los
+navegadores se inician en un modo especial llamado *Privilegios
+Aumentados*, que permite a los sitios web hacer cosas que
+normalmente no están permitidas (como hacer XSS_ o llenar
+entradas de carga de archivos y cosas bastante útiles para
+Selenium). Al usar estos modos de navegador, Selenium Core puede
+abrir directamente el AUT y leer/interactúar con su contenido
+sin tener que pasar todo el AUT a través del servidor Selenium
+RC.
 
-Here is the architectural diagram. 
+Aquí hay un diagrama arquitectónico.
 
 ![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
 
-As a test suite starts in your favorite language, the following happens:
+Cuando comienza un conjunto de pruebas en tu lenguaje favorito,
+sucede lo siguiente:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that will load Selenium-Core in the web page.
-3. Selenium-Core gets the first instruction from the client/driver (via another 
-   HTTP request made to the Selenium RC Server).
-4. Selenium-Core acts on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks the Web Server for the page.
-   Once the browser receives the web page, renders it in the frame/window reserved
-   for it.
+1. El cliente/controlador establece una conexión con el servidor
+   Selenium-RC.
+2. El servidor Selenium RC inicia un navegador (o reutiliza uno antiguo)
+   conuna URL eso cargará Selenium-Core en la página web.
+3. Selenium-Core obtiene la primera instrucción del cliente/controlador
+   (a través de otra solicitud HTTP realizada al servidor Selenium RC)
+4. Selenium-Core actúa en esa primera instrucción, generalmente abriendo una
+   página del AUT.
+5. El navegador recibe la solicitud de apertura y le pide al servidor web
+   página. Una vez que el navegador recibe la página web, la muestra en el marco/ventana reservada para ello.
 
-## Handling HTTPS and Security Popups 
+## Manejo de HTTPS y Ventanas Emergentes de Seguridad
 
-Many applications switch from using HTTP to HTTPS when they need to send 
-encrypted information such as passwords or credit card information. This is 
-common with many of today's web applications. Selenium RC supports this. 
+Muchas aplicaciones cambian de HTTP a usar HTTPS cuando
+necesitan enviar información encriptada como contraseñas o
+informaciónes de tarjetas de crédito. Esto es común con muchas de
+las aplicaciones web actuales. Selenium RC apoya esto.
 
-To ensure the HTTPS site is genuine, the browser will need a security 
-certificate. Otherwise, when the browser accesses the AUT using HTTPS, it will
-assume that application is not 'trusted'. When this occurs the browser
-displays security popups, and these popups cannot be closed using Selenium RC. 
+Para garantizar que el sitio HTTPS sea genuino, el navegador
+necesitará un certificado de seguridad .De lo contrario, cuando el
+navegador acceda al AUT usando HTTPS, lo hará suponiendo que la
+aplicación no es "confiable". Cuando esto ocurre, el navegador
+muestra ventanas emergentes de seguridad, y estas ventanas
+emergentes no se pueden cerrar con Selenium RC.
 
-When dealing with HTTPS in a Selenium RC test, you must use a run mode that supports this and handles
-the security certificate for you. You specify the run mode when your test program
-initializes Selenium. 
+Cuando se trata de HTTPS en una prueba de Selenium RC, debes usar
+un modo de ejecución que lo admita y maneje el certificado de
+seguridad por ti. Especificas el modo de ejecución
+cuando tu programa de prueba inicializa Selenium.
 
-In Selenium RC 1.0 beta 2 and later use \*firefox or \*iexplore for the run 
-mode. In earlier versions, including Selenium RC 1.0 beta 1, use \*chrome or 
-\*iehta, for the run mode. Using these run modes, you will not need to install
-any special security certificates; Selenium RC will handle it for you.
+En Selenium RC 1.0 beta 2 y posteriores, utiliza \*firefox o
+\*iexplore para el modo de ejecución. En versiones anteriores,
+incluida Selenium RC 1.0 beta 1, utiliza \*chrome o \*iehta,
+para el modo de ejecución. Con estos modos de ejecución, no
+necesitarás instalar ningun certificado de seguridad especial;
+Selenium RC lo manejará por ti.
 
-In version 1.0 the run modes \*firefox or \*iexplore are 
-recommended. However, there are additional run modes of \*iexploreproxy and 
-\*firefoxproxy. These are provided for backwards compatibility only, and 
-should not be used unless required by legacy test programs. Their use will 
-present limitations with security certificate handling and with the running 
-of multiple windows if your application opens additional browser windows. 
+En la versión 1.0, los modos de ejecución \*firefox o
+\*iexplore son recomendados. Sin embargo, hay modos de ejecución
+adicionales de \*iexploreproxy y \*firefoxproxy.
+Estos se proporcionan solo para compatibilidad con versiones anteriores,
+y no deben usarse a menos que lo requieran los programas de
+prueba heredados.
+Su uso lo presentará limitaciones con el manejo del certificado de
+seguridad y con la ejecución de varias ventanas si tu aplicación abre
+ventanas adicionales del navegador.
 
-In earlier versions of Selenium RC, \*chrome or \*iehta were the run modes that 
-supported HTTPS and the handling of security popups. These were considered ‘experimental
-modes although they became quite stable and many people used them.  If you are using
-Selenium 1.0 you do not need, and should not use, these older run modes.
+En versiones anteriores de Selenium RC, \*chrome o \*iehta
+eran los modos de ejecución que soportaban HTTPS y el manejo de
+ventanas de seguridad emergentes. Estos fueron considerados
+modos ‘experimentales aunque se volvieron bastante estables y
+muchas personas los usaron. Si estas usando Selenium 1.0 no
+necesitas, y no debes usar, estos modos de ejecución más antiguos.
 
-### Security Certificates Explained
+### Certificados de Seguridad Explicados
 
-Normally, your browser will trust the application you are testing
-by installing a security certificate which you already own. You can 
-check this in your browser's options or Internet properties (if you don't 
-know your AUT's security certificate ask your system administrator). 
-When Selenium loads your browser it injects code to intercept 
-messages between the browser and the server. The browser now thinks 
-untrusted software is trying to look like your application.  It responds by alerting you with popup messages. 
+Normalmente, tu navegador confiará en la aplicación que está
+probando instalando un certificado de seguridad que ya posee.
+Puedes verificar esto en las opciones de tu navegador o en
+las propiedades de Internet (si no conoces el certificado de
+seguridad de tu AUT, consulta al administrador del sistema).
+Cuando Selenium carga tu navegador, inyecta código para interceptar
+mensajes entre el navegador y el servidor.
+El navegador ahora piensa el software no confiable está tratando de
+parecerse a su aplicación. Responde alertándote con ventanas emergentes.
 
-To get around this, Selenium RC, (again when using a run mode that support 
-this) will install its own security certificate, temporarily, to your 
-client machine in a place where the browser can access it. This tricks the 
-browser into thinking it's accessing a site different from your AUT and effectively suppresses the popups.  
+Para evitar esto, Selenium RC, (nuevamente cuando se utiliza un
+modo de ejecución que permite esto) instalará su propio
+certificado de seguridad, temporalmente, en tu máquina cliente
+en un lugar donde el navegador pueda acceder a ella. Esto engaña
+al navegador haciendole creer que está accediendo a un sitio
+diferente de su AUT y suprime efectivamente las ventanas
+emergentes.
 
-Another method used with earlier versions of Selenium was to 
-install the Cybervillians security certificate provided with your Selenium 
-installation. Most users should no longer need to do this however; if you are
-running Selenium RC in proxy injection mode, you may need to explicitly install this
-security certificate. 
+Otro método utilizado con versiones anteriores de Selenium era
+instalar el certificado de seguridad de Cybervillians incluido
+con tu instalación de Selenium. Sin embargo, la mayoría de los
+usuarios ya no deberían de necesitar hacer esto; si estas
+ejecutando Selenium RC en modo de inyección proxy, es posible
+que debas instalar explícitamente este certificado de seguridad.
 
 
-## Supporting Additional Browsers and Browser Configurations
+## Soportando Navegadores y Configuraciones de Navegador Adicionales
 
-The Selenium API supports running against multiple browsers in addition to 
-Internet Explorer and Mozilla Firefox.  See the https://selenium.dev website for
-supported browsers.  In addition, when a browser is not directly supported,
-you may still run your Selenium tests against a browser of your choosing by
-using the "\*custom" run-mode (i.e. in place of \*firefox or \*iexplore) when 
-your test application starts the browser.  With this, you pass in the path to
-the browsers executable within the API call. This can also be done from the 
-Server in interactive mode.
+La API de Selenium permite la ejecución en múltiples navegadores
+además de Internet Explorer y Mozilla Firefox.
+Consulta el sitio web https://selenium.dev para ver los navegadores compatibles.
+Además, cuando un navegador no es directamente compatible, aún puede
+ejecutar tus pruebas de Selenium en un navegador de tu elección
+usando el modo de ejecución "\*custom" (es decir, en lugar de \*firefox
+o \*iexplore) cuando tu aplicación de prueba inicia el navegador.
+Con esto,pasas la ruta a los navegadores ejecutables dentro de la llamada
+al API. Esto también se puede hacer desde el Servidor en modo
+interactivo.
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\MyBrowser.exe&2=http://www.google.com
 ```
 
+### Ejecución de Pruebas con Diferentes Configuraciones de Navegador
 
-### Running Tests with Different Browser Configurations
+Normalmente, Selenium RC configura automáticamente el navegador,
+pero si inicias el navegador que utilizando modo de ejecución
+"\*custom", puedes forzar a Selenium RC a iniciar el navegador
+tal cual, sin usar una configuración automática.
 
-Normally Selenium RC automatically configures the browser, but if you launch 
-the browser using the "\*custom" run mode, you can force Selenium RC
-to launch the browser as-is, without using an automatic configuration.
-
-For example, you can launch Firefox with a custom configuration like this:
+Por ejemplo, puedes iniciar Firefox con una configuración
+personalizada como esta:
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\firefox.exe&2=http://www.google.com
 ```
 
-Note that when launching the browser this way, you must manually 
-configure the browser to use the Selenium Server as a proxy. Normally this just 
-means opening your browser preferences and specifying "localhost:4444" as 
-an HTTP proxy, but instructions for this can differ radically from browser to 
-browser.  Consult your browser's documentation for details.
+Ten en cuenta que al iniciar el navegador de esta manera, debes
+configurar el navegador para que use el servidor Selenium como
+un proxy. Normalmente esto solo significa abrir las preferencias
+del navegador y especificar "localhost:4444" como un proxy
+HTTP, pero las instrucciones para esto pueden diferir
+radicalmente de un navegador a otro. Consulte la
+documentación de tu navegador para más detalles.
 
-Be aware that Mozilla browsers can vary in how they start and stop. 
-One may need to set the MOZ_NO_REMOTE environment variable to make Mozilla browsers 
-behave a little more predictably. Unix users should avoid launching the browser using 
-a shell script; it's generally better to use the binary executable (e.g. firefox-bin) directly.
+Ten en cuenta que los navegadores Mozilla pueden variar en
+cómo se inician y se detienen. Es posible que sea necesario
+configurar la variable de entorno MOZ_NO_REMOTE para hacer
+que los navegadores Mozilla se comporten un poco más previsiblemente.
+Los usuarios de Unix deben evitar iniciar el navegador usando un
+script de shell; generalmente es mejor usar el ejecutable
+binario (por ejemplo, firefox-bin) directamente.
 
-   
-## Troubleshooting Common Problems
 
-When getting started with Selenium RC there's a few potential problems
-that are commonly encountered.  We present them along with their solutions here.
+## Solucionando Problemas Comunes
 
-### Unable to Connect to Server 
+Al comenzar con Selenium RC, potencialmente hay algunos problemas
+que comúnmente se pueden encontrar. Aquí los presentamos junto con sus
+soluciones .
 
-When your test program cannot connect to the Selenium Server, Selenium throws an exception in your test program. 
-It should display this message or a similar one:
+### Incapaz de Conectarse al Servidor
+
+Cuando tu programa de prueba no puede conectarse al servidor
+Selenium, Selenium lanza una excepción en tu programa de prueba.
+Debería mostrar este mensaje o uno similar:
 
 ```bash
     "Unable to connect to remote server (Inner Exception Message: 
@@ -1445,68 +1501,81 @@ It should display this message or a similar one:
 	(using .NET and XP Service Pack 2) 
 ```
 
-If you see a message like this, be sure you started the Selenium Server. If 
-so, then there is a problem with the connectivity between the Selenium Client 
-Library and the Selenium Server. 
+Si ves un mensaje como este, asegúrate de haber iniciado Selenium
+Server. Si es asi, entonces hay un problema con la conectividad entre
+la Librería Selenium Client y el servidor Selenium.
 
-When starting with Selenium RC, most people begin by running their test program
-(with a Selenium Client Library) and the Selenium Server on the same machine.  To
-do this use "localhost" as your connection parameter.
-We recommend beginning this way since it reduces the influence of potential networking problems
-which you're getting started.  Assuming your operating system has typical networking
-and TCP/IP settings you should have little difficulty.  In truth, many people
-choose to run the tests this way.  
+Al comenzar con Selenium RC, la mayoría de las personas
+comienzan ejecutando su programa de prueba (con una Librería
+Cliente de Selenium) y el servidor Selenium en la misma máquina.
+Para hacer esto utiliza "localhost" como parámetro de conexión.
+Recomendamos comenzar de esta manera, ya que reduce la influencia
+de posibles problemas de red  ya que estás empezando. Asumiendo que tu
+sistema operativo tiene una red típica y la configuración de TCP/IP
+debería tener poca dificultad. En verdad, mucha gente elige
+ejecutar las pruebas de esta manera.
 
-If, however, you do want to run Selenium Server
-on a remote machine, the connectivity should be fine assuming you have valid TCP/IP
-connectivity between the two machines.    
+Sin embargo, si desea ejecutar Selenium Server en una máquina
+remota, la conectividad debería estar bien suponiendo que tenga
+una conectividad TCP/IP válida entre las dos máquinas.
 
-If you have difficulty connecting, you can use common networking tools like *ping*,
-*telnet*, *ifconfig(Unix)/ipconfig* (Windows), etc to ensure you have a valid 
-network connection.  If unfamilar with these, your system administrator can assist you.
+Si tiene dificultades para conectarse, puedes usar herramientas
+de red comunes como *ping*, *telnet*, *ifconfig(Unix)/ipconfig*
+(Windows), etc. para garantizar que tenga una conexión de red.
+Si no estás familiarizado con estos, el administrador del sistema
+puede ayudarte.
  
-### Unable to Load the Browser 
+### Incapaz de Cargar el Navegador 
 
-Ok, not a friendly error message, sorry, but if the Selenium Server cannot load the browser 
-you will likely see this error.
+Ok, no es un mensaje de error amigable, lo siento, pero si el
+servidor Selenium no puede cargar el navegador es probable que
+veas este error.
 
 ```bash
     (500) Internal Server Error
 ```
 
-This could be caused by
+Esto podria ser causado por
 
-* Firefox (prior to Selenium 1.0) cannot start because the browser is already open and you did 
-  not specify a separate profile.   See the section on Firefox profiles under Server Options.
-* The run mode you're using doesn't match any browser on your machine.  Check the parameters you 
-  passed to Selenium when you program opens the browser. 
-* You specified the path to the browser explicitly (using "\*custom"--see above) but the path is 
-  incorrect.  Check to be sure the path is correct.  Also check the user group to be sure there are
-  no known issues with your browser and the "\*custom" parameters.
+* Firefox (anterior a Selenium 1.0) no puede iniciarse porque el
+  navegador ya está abierto y no espicificaste un perfil separado.
+  Consulte la sección sobre perfiles de Firefox en Opciones del
+  Servidor.
+* El modo de ejecución que está utilizando no coincide con ningún
+  navegador en su máquina. Comprueba los parámetros que pasó a Selenium
+  cuando tu programa abre el navegador.
+* Espicificaste la ruta al navegador explícitamente (usando
+  "\*custom" -ver arriba) pero la ruta es incorrecta. Verifique
+  que la ruta sea correcta.Tambien comprueba el grupo de usuarios
+  para asegurarte de que no haya ningun problema conocids con tu
+  navegador y los parámetros "\*custom".
 
-### Selenium Cannot Find the AUT 
+### Selenium no Puede Encontrar el AUT
 
-If your test program starts the browser successfully, but the browser doesn't
-display the website you're testing, the most likely cause is your test 
-program is not using the correct URL. 
+Si tu programa de prueba inicia el navegador con éxito, pero el
+navegador no muestra el sitio web que está probando, la causa
+más probable es que tu programa de prueba no está utilizando la URL
+correcta.
 
-This can easily happen. When you use Selenium-IDE to export your script,
-it inserts a dummy URL. You must manually change the URL to the correct one
-for your application to be tested. 
+Esto puede suceder fácilmente. Cuando uitlizas Selenium-IDE para
+exportar tu script, este inserta una URL ficticia. Debes cambiar
+manualmente la URL a la correcta para que tu aplicación sea
+probada.
 
-### Firefox Refused Shutdown While Preparing a Profile 
+### Firefox Rechazó Apagarse Mientras Preparaba un Perfil
 
-This most often occurs when you run your Selenium RC test program against Firefox,
-but you already have a Firefox browser session running and, you didn't specify
-a separate profile when you started the Selenium Server. The error from the 
-test program looks like this:
+Esto ocurre con mayor frecuencia cuando ejecutas tu programa de
+pruebas de Selenium RC contra Firefox, pero ya tienes una sesión del
+navegador Firefox ejecutándose y no especificaste un perfil
+separado cuando inició el servidor Selenium. El error del
+programa de prueba se parece a esto:
 
 ```bash
     Error:  java.lang.RuntimeException: Firefox refused shutdown while 
     preparing a profile 
 ```
 
-Here's the complete error message from the server:
+Aqui está el error completo del servidor:
 
 ```bash
     16:20:03.919 INFO - Preparing Firefox profile... 
@@ -1521,29 +1590,31 @@ Here's the complete error message from the server:
     ~1\Temp\customProfileDir203138\parent.lock 
 ```
 
-To resolve this, see the section on Specifying a Separate Firefox Profile
+Para resolver esto, ve a la sección Especificando el Perfil de Firefox
 
-### Versioning Problems 
+### Problemas de Versionamiento
 
-Make sure your version of Selenium supports the version of your browser. For
-example, Selenium RC 0.92 does not support Firefox 3. At times you may be lucky
-(I was). But don't forget to check which
-browser versions are supported by the version of Selenium you are using. When in
-doubt, use the latest release version of Selenium with the most widely used version
-of your browser.
+Asegúrate de que tu versión de Selenium sea compatible con la
+versión de tu navegador. Por ejemplo, Selenium RC 0.92 no es
+compatible con Firefox 3. A veces puedes ser afortunado (Yo lo era).
+Pero no olvides comprobar qué las versiones del navegador son
+compatibles con la versión de Selenium que estás utilizando.
+Cuando estes en duda, utiliza la última versión de lanzamiento de Selenium
+con la versión más utilizada de su navegador
 
-### Error message: "(Unsupported major.minor version 49.0)" while starting server
+### Mensaje de Error: "(Unsupported major.minor version 49.0)" Iniciando el Servidor
 
-This error says you're not using a correct version of Java. 
-The Selenium Server requires Java 1.5 or higher. 
+Este error dice que no estás utilizando una versión correcta de Java.
+El servidor Selenium requiere Java 1.5 ó superior.
 
-To check double-check your java version, run this from the command line.
+Para verificar tu versión de Java, ejecuta esto desde la línea
+de comandos.
 
 ```bash
    java -version
 ```
 
-You should see a message showing the Java version.
+Deberias ver un mensaje mostrando la version de Java.
 
 ```bash
    java version "1.5.0_07"
@@ -1551,177 +1622,210 @@ You should see a message showing the Java version.
    Java HotSpot(TM) Client VM (build 1.5.0_07-b03, mixed mode)
 ```
 
-If you see a lower version number, you may need to update the JRE,
-or you may simply need to add it to your PATH environment variable.
+Si ves un número de versión inferior, es posible que debas actualizar
+el JRE, o simplemente necesitas agregarlo a tu variable de entorno PATH.
+
+### Error 404 ejecutando el comando getNewBrowserSession
+
+Si recibes un error 404 al intentar abrir una página en
+"http://www.google.com/selenium-server/", entonces debe ser porque el
+Selenium Server no se configuró correctamente como proxy.
+El directorio “selenium-server” no existe en google.com; solo
+parece existir cuando el proxy es debidamente configurado.
+La configuración del proxy depende en gran medida de cómo es
+lanzado el navegador con Firefox, iexplore, Opera o custom.
+
+* iexplore: si el navegador se inicia usando \*iexplore, podrías
+tener un problema con la configuración del proxy de Internet
+Explorer.
+Selenium Server intenta configurar la configuración
+global del proxy en el Panel de Control de Opciones de Internet.
+Debes asegurarte de que estén correctamente configurados cuando
+Selenium Server inicia el navegador. Intenta mirar en tu panel
+de control de Opciones de Internet. Haz clic en la pestaña
+"Conexiones" y haz clic en "Configuración de LAN".
+
+  * Si necesitas usar un proxy para acceder a la aplicación que
+  deseas probar, deberás iniciar Selenium Server con
+  "-Dhttp.proxyHost"; consulta la `Configuración de proxy`_ para
+  obtener más detalles.
+  * También puedes intentar configurar tu proxy manualmente y luego
+  iniciar el navegador con \*custom, o con el lanzador de navegadores \*iehta.
+
+* custom: cuando se usa \*custom, debes configurar el proxy
+correctamente (manualmente), de lo contrario, obtendrás un error 404.
+Verifica que hayas configuraste tus ajustes de proxy
+correctamente. Para verificar si se ha configurado el proxy
+correctamente intenta configurar intencionalmente el navegador
+de manera incorrecta. Intenta configurar el navegador para
+utilizar el nombre de host del servidor proxy incorrecto o el
+puerto incorrecto. Si configuraste correctamente la
+configuración del proxy incorrecto del navegador, entonces el
+navegador no podrá conectarse a Internet, lo que es una de las
+formas de asegurarse de que uno está ajustando las
+configuraciones relevantes.
+
+* Para otros navegadores (\*firefox, \*opera) automáticamente
+codificamos el proxy por ti, por lo que no hay problemas
+conocidos con esta funcionalidad. Si encuentras errores 404 y
+has seguido cuidadosamente esta guía del usuario publica tus
+resultados en el grupo de usuarios para obtener ayuda de la
+comunidad de usuarios.
+
+### Error Permiso Denegado
+
+La razón más común para este error es que tu sesión intenta
+violar la política del mismo origen al cruzar los límites
+del dominio (por ejemplo, accede a una página desde
+http://dominio1 y luego accede a una página desde http://dominio2)
+o al cambiar de protocolos (pasar de http://dominioX a https:// dominioX).
+
+Este error también puede ocurrir cuando JavaScript intenta
+encontrar objetos de la IU que aún no están disponibles (antes de
+que la página haya cargado completamente), o ya no están
+disponibles (después de que la página ha comenzado a descargarse).
+Esto se encuentra con mayor frecuencia con páginas AJAX que
+trabajan con secciones de una página o subtramas que se cargan y/o
+recargan independientemente de la página.
+
+Este error puede ser intermitente. A menudo es imposible
+reproducir el problema con un depurador porque el problema surge
+por condiciones de carrera que no son reproducibles cuando la
+sobrecarga del depurador se agrega al sistema. Problemas de
+permisos están cubiertos con algún detalle en el tutorial.
+Lee la sección sobre la `La Politica del Mismo Origen`_,
+y tambien la sección `Inyección de proxy`_ cuidadosamente.
 
 
-### 404 error when running the getNewBrowserSession command
+### Manejo de Ventanas Emergentes del Navegador
 
-If you're getting a 404 error while attempting to open a page on 
-"http://www.google.com/selenium-server/", then it must be because the Selenium
-Server was not correctly configured as a proxy. The "selenium-server" directory 
-doesn't exist on google.com; it only appears to exist when the proxy is 
-properly configured. Proxy Configuration highly depends on how the browser is 
-launched with firefox, iexplore, opera, or custom.
+Hay varios tipos de "ventanas emergentes" que puedse obtener
+durante una prueba de Selenium. Es posible que no puedas cerrar
+estas ventanas emergentes ejecutando comandos de Selenium si son
+iniciados por el navegador y no por tu AUT. Puedes necesitar
+saber cómo gestionarlos. Cada tipo de ventana emergente debe
+abordarse de manera diferente.
 
-* iexplore: If the browser is launched using \*iexplore, you could be 
-  having a problem with Internet Explorer's proxy settings.  Selenium
-  Server attempts To configure the global proxy settings in the Internet
-  Options Control Panel. You must make sure that those are correctly
-  configured when Selenium Server launches the browser. Try looking at
-  your Internet Options control panel. Click on the "Connections" tab
-  and click on "LAN Settings".     
-  * If you need to use a proxy to access the application you want to test,
-    you'll need to start Selenium Server with "-Dhttp.proxyHost"; 
-    see the `Proxy Configuration`_ for more details.
-  * You may also try configuring your proxy manually and then launching
-    the browser with \*custom, or with \*iehta browser launcher.
-      	   
-* custom: When using \*custom you must configure the proxy correctly(manually),
-  otherwise you'll get a 404 error. Double-check that you've configured your proxy
-  settings correctly. To check whether you've configured the proxy correctly is to
-  attempt to intentionally configure the browser incorrectly. Try configuring the
-  browser to use the wrong proxy server hostname, or the wrong port.  If you had
-  successfully configured the browser's proxy settings incorrectly, then the
-  browser will be unable to connect to the Internet, which is one way to make
-  sure that one is adjusting the relevant settings.
-  
-* For other browsers (\*firefox, \*opera) we automatically hard-code
-  the proxy for you, and so there are no known issues with this functionality.
-  If you're encountering 404 errors and have followed this user guide carefully 
-  post your results to user group for some help from the user community.
-      
-### Permission Denied Error
+* Diálogos de autenticación básica HTTP: estos diálogos solicitan
+  un nombre de usuario/contraseña para iniciar sesión en el sitio.
+  Para iniciar sesión en un sitio que requiere autenticación HTTP básica,
+  use un nombre de usuario y contraseña en la URL, como esta descrito en
+  `RFC 1738`_, así: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
 
-The most common reason for this error is that your session is attempting to violate
-the same-origin policy by crossing domain boundaries (e.g., accesses a page from 
-http://domain1 and then accesses a page from http://domain2) or switching protocols 
-(moving from http://domainX to https://domainX).
+* Advertencias del certificado SSL: Selenium RC intenta
+  falsificar automáticamente los certificados SSL cuando está
+  habilitado como proxy; ver más sobre esto en la sección sobre
+  HTTPS. Si tu navegador está configurado correctamente, nunca
+  deberías ver las advertencias del certificado SSL, pero es
+  posible que debas configursr tu navegador para confiar en nuestra
+  autoridad peligrosa de certificado SSL "CyberVillains".
+  Nuevamente, consulte la sección HTTPS para saber cómo hacer esto.
 
-This error can also occur when JavaScript attempts to find UI objects 
-which are not yet available (before the page has completely loaded), or 
-are no longer available (after the page has started 
-to be unloaded). This is most typically encountered with AJAX pages
-which are working with sections of a page or subframes that load and/or reload 
-independently of the larger page. 
+* cuadros de diálogo de alerta/confirmación/aviso modal de
+  JavaScript: Selenium intenta ocultarte esos diálogos
+  (reemplazando window.alert, window.confirm y window.prompt)
+  para que no detengan la ejecución de tu página. Si ves una
+  ventana de alerta emergente, probablemente se deba a que se
+  disparó durante el proceso de carga de la página, que suele ser
+  demasiado pronto para que podamos proteger la página. Selenese
+  contiene comandos para afirmar o verificar alertas y ventanas
+  emergentes de confirmación. Ver las secciones sobre estos temas
+  en el Capítulo 4.
 
-This error can be intermittent. Often it is impossible to reproduce the problem 
-with a debugger because the trouble stems from race conditions which 
-are not reproducible when the debugger's overhead is added to the system.
-Permission issues are covered in some detail in the tutorial. Read the section 
-about the `The Same Origin Policy`_, `Proxy Injection`_ carefully. 
+### En Linux, ¿por qué no se cierra la sesión de mi navegador Firefox?
 
+En Unix/Linux debes invocar "firefox-bin" directamente, así que
+asegúrate de que el ejecutable está en la ruta. Si ejecutas
+Firefox a través de un script de shell, cuando llega el momento
+de matar el navegador Selenium RC matará el script de shell,
+dejando el navegador en ejecución. Puedes especificar la ruta a
+firefox-bin directamente, de esta forma.
 
-### Handling Browser Popup Windows
-
-There are several kinds of "Popups" that you can get during a Selenium test.
-You may not be able to close these popups by running Selenium commands if 
-they are initiated by the browser and not your AUT.  You may
-need to know how to manage these.  Each type of popup needs to be addressed differently.
-
-* HTTP basic authentication dialogs: These dialogs prompt for a 
-  username/password to login to the site. To login to a site that requires 
-  HTTP basic authentication, use a username and password in the URL, as 
-  described in `RFC 1738`_, like this: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
-
-* SSL certificate warnings: Selenium RC automatically attempts to spoof SSL 
-  certificates when it is enabled as a proxy; see more on this 
-  in the section on HTTPS. If your browser is configured correctly,
-  you should never see SSL certificate warnings, but you may need to 
-  configure your browser to trust our dangerous "CyberVillains" SSL certificate 
-  authority. Again, refer to the HTTPS section for how to do this.
-
-* modal JavaScript alert/confirmation/prompt dialogs: Selenium tries to conceal
-  those dialogs from you (by replacing window.alert, window.confirm and 
-  window.prompt) so they won't stop the execution of your page. If you're 
-  seeing an alert pop-up, it's probably because it fired during the page load process,
-  which is usually too early for us to protect the page.  Selenese contains commands
-  for asserting or verifying alert and confirmation popups. See the sections on these
-  topics in Chapter 4.
-
-      
-### On Linux, why isn't my Firefox browser session closing?
-
-On Unix/Linux you must invoke "firefox-bin" directly, so make sure that
-executable is on the path. If executing Firefox through a 
-shell script, when it comes time to kill the browser Selenium RC will kill
-the shell script, leaving the browser running.   You can specify the path
-to firefox-bin directly, like this.
-      
 ```bash
    cmd=getNewBrowserSession&1=*firefox /usr/local/firefox/firefox-bin&2=http://www.google.com
 ```
 
-### Firefox \*chrome doesn't work with custom profile
+### Firefox \*chrome no funciona con un perfil personalizado
 
-Check Firefox profile folder -> prefs.js -> user_pref("browser.startup.page", 0);
-Comment this line like this: "//user_pref("browser.startup.page", 0);" and try again.
+Verifica el folder del perfil Firefox ->
+prefs.js -> user_pref("browser.startup.page", 0);
+Comenta esta linea de esta forma:
+"//user_pref("browser.startup.page", 0);"
+e intenta de nuevo.
 
+### Está bien cargar una ventana emergente personalizada mientras se carga la página principal (es decir, antes de que se ejecute la función JavaScript window.onload() de la página principal)?
 
-### Is it ok to load a custom pop-up as the parent page is loading (i.e., before the parent page's javascript window.onload() function runs)?
-
-No. Selenium relies on interceptors to determine window names as they are being loaded.
-These interceptors work best in catching new windows if the windows are loaded AFTER 
-the onload() function. Selenium may not recognize windows loaded before the onload function.
+No. Selenium depende de los interceptores para determinar los
+nombres de las ventanas a medida que se cargan. Estos
+interceptores funcionan mejor en la captura de nuevas ventanas
+si las ventanas se cargan DESPUÉS la función onload(). Selenium
+pueda que no reconozca ventanas cargadas antes de la función onload.
   
-### Firefox on Linux 
+### Firefox en Linux
 
-On Unix/Linux, versions of Selenium before 1.0 needed to invoke "firefox-bin" 
-directly, so if you are using a previous version, make sure that the real 
-executable is on the path. 
+En Unix/Linux, las versiones de Selenium anteriores a la 1.0
+necesitaban invocar "firefox-bin" directamente, por lo que si
+estás utilizando una versión anterior, asegúrate de que el
+ejecutable verdadero está en la ruta.
 
-On most Linux distributions, the real *firefox-bin* is located on:
+En la mayoría de las distribuciones de Linux, el verdadero
+*firefox-bin* se encuentra en:
 
 ```bash
-   /usr/lib/firefox-x.x.x/ 
+   /usr/lib/firefox-x.x.x/
 ```
 
-Where the x.x.x is the version number you currently have. So, to add that path 
-to the user's path. you will have to add the following to your .bashrc file:
+Donde x.x.x es el número de la versión que tiene actualmente.
+Entonces, para agregar esa ruta a la ruta del usuario, deberás
+agregar lo siguiente a tu archivo .bashrc:
 
 ```bash
    export PATH="$PATH:/usr/lib/firefox-x.x.x/"
 ```
 
-If necessary, you can specify the path to firefox-bin directly in your test,
-like this:
+Si es necesario, puedes especificar la ruta a firefox-bin
+directamente en tu prueba, de esta forma:
 
 ```bash
    "*firefox /usr/lib/firefox-x.x.x/firefox-bin"
 ```
 
-### IE and Style Attributes
+### IE y Atributos de Estilo
 
-If you are running your tests on Internet Explorer and you cannot locate
-elements using their `style` attribute.
-For example:
+Si estás ejecutando tus pruebas en Internet Explorer y no puedes
+localizar elementos que usan tu atributo `style`. Por ejemplo:
 
 ```bash
     //td[@style="background-color:yellow"]
 ```
 
-This would work perfectly in Firefox, Opera or Safari but not with IE. 
-IE interprets the keys in  `@style` as uppercase. So, even if the
-source code is in lowercase, you should use:
+Esto funcionaría perfectamente en Firefox, Opera o Safari
+pero no con IE. IE interpreta las teclas en `@style` como
+mayúsculas. Entonces, incluso si el código fuente está en
+minúsculas, debes usar:
 
 ```bash
     //td[@style="BACKGROUND-COLOR:yellow"]
 ```
 
-This is a problem if your test is intended to work on multiple browsers, but
-you can easily code your test to detect the situation and try the alternative
-locator that only works in IE.
+Esto es un problema si tu prueba está diseñada para funcionar en
+múltiples navegadores, pero puedes codificar fácilmente tu prueba
+para detectar la situación y probar el localizador alternativo
+que solo funciona en IE.
 
-### Error encountered - "Cannot convert object to primitive value" with shut down of  \*googlechrome  browser
+### Error encontrado - "Cannot convert object to primitive value" con el apagado del navegador *googlechrome
 
-To avoid this error you have to start browser with an option that disables same origin policy checks: 
+Para evitar este error, debes iniciar el navegador con una opción
+que deshabilite las mismas verificaciones de políticas de origen:
 
 ```bash
    selenium.start("commandLineFlags=--disable-web-security");
 ```
    
 
-### Error encountered in IE - "Couldn't open app window; is the pop-up blocker enabled?"
+### Error encontrado en IE - "Couldn't open app window; is the pop-up blocker enabled?"
 
-To avoid this error you have to configure the browser: disable the popup blocker 
-AND uncheck 'Enable Protected Mode' option in Tools >> Options >> Security.
+Para evitar este error, debes configurar el navegador: desactiva
+el bloqueador de ventanas emergentes Y desmarque la opción
+'Habilitar modo protegido' en Herramientas >> Opciones >>
+Seguridad.

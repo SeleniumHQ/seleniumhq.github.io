@@ -4,11 +4,6 @@ chapter: true
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
 # WebDriver 入门
 
 Selenium 通过使用 _WebDriver_ 支持市场上所有主流浏览器的自动化。

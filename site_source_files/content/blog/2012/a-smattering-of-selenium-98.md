@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #98"
 Date = 2012-07-02
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Happy day off Canuckistan! I&#8217;ll be in California in two weeks; here is <a href="http://element34.ca/blog/california-tour-summer-2012">my schedule</a> &#8212; come by and chat</a></p>

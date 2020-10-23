@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #87"
 Date = 2012-06-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Avoiding punching things about software packaging by doing the 4th!!!! smattering in row.</p>
 <ul>
 <li><a href="http://pythonconquerstheuniverse.wordpress.com/2012/04/29/python-decorators/">Python Decorators</a> is an attempt at picking up a stick the right way</li>

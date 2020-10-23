@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #105"
 Date = 2012-07-30
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>This was supposed to go out Friday, but the flu bug I picked up decided to move the schedule about somewhat.</p>

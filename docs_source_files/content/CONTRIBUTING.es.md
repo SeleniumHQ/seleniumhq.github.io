@@ -82,7 +82,7 @@ Create a feature branch and start hacking:
 ```
 
 We practice HEAD-based development, which means all changes are applied
-directly on top of master.
+directly on top of `trunk`.
 
 ### Step 3: Make changes
 
@@ -176,7 +176,7 @@ Use `git rebase` (not `git merge`) to sync your work from time to time.
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
 ### Step 6: Test
@@ -202,8 +202,8 @@ branch.
 ### Step 8: Integration
 
 When code review is complete, a committer will take your PR and
-integrate it on the repository's master branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
+integrate it on the repository's trunk branch. Because we like to keep a
+linear history on the trunk branch, we will normally squash and rebase
 your branch history.
 
 ## Communication

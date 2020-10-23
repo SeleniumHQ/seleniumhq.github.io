@@ -4,6 +4,8 @@ Title = "Selenium Grid 1.0.6 Released"
 Date = 2010-04-13
 Author = "Kevin Menard"
 AuthorLink = "https://twitter.com/nirvdrum"
+tags = ["selenium","grid"]
+categories = ["releases"]
 +++
 
 <p>Following up on the Selenium Grid 1.0.5 release, which added <a href="http://selenium-grid.seleniumhq.org/self-healing.html">self-healing features</a> to ease grid management, we&#8217;re pleased to announce the release of Selenium Grid 1.0.6.  This is a bug fix release for 1.0.5 with some minor new additions.</p>

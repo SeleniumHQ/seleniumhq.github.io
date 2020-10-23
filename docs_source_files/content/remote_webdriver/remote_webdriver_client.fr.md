@@ -109,33 +109,33 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome")
-var capabilities = Capabilities.chrome();
-//To avoid InsecureCertificateError for selenium4-aplha5
-capabilities.setAcceptInsecureCerts(true);
-capabilities.set("browserVersion", "67");
-capabilities.set("platformName", "Windows XP");
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+let opts = new chrome.Options();
+opts.setAcceptInsecureCerts(true);
+opts.setBrowserVersion('67');
+opts.setPlatform('Windows XP');
 (async function helloSelenium() {
     let driver = new Builder()
-        .usingServer("http://example.com")   
-        .withCapabilities(capabilities)
+        .usingServer("http://example.com")
+        .forBrowser('chrome')
+        .setChromeOptions(opts)
         .build();
     try {
         await driver.get('http://www.google.com');
-    }    
-    finally {       
+    }
+    finally {
         await driver.quit();
     }
-})();  
+})(); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val chromeOptions = ChromeOptions()
-chromeOptions.setCapability("browserVersion", "67");
-chromeOptions.setCapability("platformName", "Windows XP");
+chromeOptions.setCapability("browserVersion", "67")
+chromeOptions.setCapability("platformName", "Windows XP")
 val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
 driver.get("http://www.google.com")
-driver.quit();
+driver.quit()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -155,9 +155,9 @@ de la manière suivante:
 driver.setFileDetector(new LocalFileDetector());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-from selenium.webdriver.remote.file_detector import UselessFileDetector
+from selenium.webdriver.remote.file_detector import LocalFileDetector
 
-driver.file_detector = UselessFileDetector()
+driver.file_detector = LocalFileDetector()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var allowsDetection = this.driver as IAllowsFileDetection;
@@ -193,7 +193,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< code-panel language="python" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
 
-driver.find_element_by_id("myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
+driver.find_element(By.ID, "myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");

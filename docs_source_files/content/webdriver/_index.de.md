@@ -6,26 +6,20 @@ weight: 5
 
 # WebDriver
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+WebDriver bestuurt native een browser, zoals een gebruiker dat lokaal zou doen
+of op een externe machine met behulp van de Selenium-server,
+markeert een sprong voorwaarts in termen van browserautomatisering.
 
-WebDriver drives a browser natively, as a user would, either locally
-or on a remote machine using the Selenium server,
-marks a leap forward in terms of browser automation.
+Selenium WebDriver verwijst naar beide taalbindingen
+en de implementaties van de individuele browserbesturingscode.
+Dit wordt gewoonlijk alleen _WebDriver_ genoemd.
 
-Selenium WebDriver refers to both the language bindings
-and the implementations of the individual browser controlling code.
-This is commonly referred to as just _WebDriver_.
+Selenium WebDriver is een [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
 
-Selenium WebDriver is a [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
+* WebDriver is ontworpen als een eenvoudig
+  en meer beknopte programmeerinterface.
 
-* WebDriver is designed as a simple
-  and more concise programming interface.
+* WebDriver is een compacte objectgeoriënteerde API.
 
-* WebDriver is a compact object-oriented API.
-
-* It drives the browser effectively.
+* Het stuurt de browser effectief aan.
 

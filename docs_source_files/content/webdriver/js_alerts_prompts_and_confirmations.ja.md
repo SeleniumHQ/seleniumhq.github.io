@@ -30,7 +30,7 @@ alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Click the link to activate the alert
-driver.find_element_by_link_text("See an example alert").click()
+driver.find_element(By.LINK_TEXT, "See an example alert").click()
 
 # Wait for the alert to be displayed and store it in a variable
 alert = wait.until(expected_conditions.alert_is_present())
@@ -126,7 +126,7 @@ alert.dismiss();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Click the link to activate the alert
-driver.find_element_by_link_text("See a sample confirm").click()
+driver.find_element(By.LINK_TEXT, "See a sample confirm").click()
 
 # Wait for the alert to be displayed
 wait.until(expected_conditions.alert_is_present())
@@ -229,7 +229,7 @@ alert.accept();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Click the link to activate the alert
-driver.find_element_by_link_text("See a sample prompt").click()
+driver.find_element(By.LINK_TEXT, "See a sample prompt").click()
 
 # Wait for the alert to be displayed
 wait.until(expected_conditions.alert_is_present())

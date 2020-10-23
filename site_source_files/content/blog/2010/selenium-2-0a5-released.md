@@ -4,6 +4,8 @@ Title = "Selenium 2.0a5 Released"
 Date = 2010-07-14
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>I&#8217;m pleased to announce the release of Selenium 2.0a5, available for <a href="http://code.google.com/p/selenium/downloads/list">immediate download</a>. This release brings a host of changes under the hood, and represents the efforts of many contributors. Highlights include:</p>

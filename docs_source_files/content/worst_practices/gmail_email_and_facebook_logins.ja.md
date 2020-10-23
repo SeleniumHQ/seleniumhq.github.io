@@ -15,4 +15,4 @@ APIの使用は少し大変な作業のように思えるかもしれません�
 テストの任意の時点でWebDriverを使用してサードパーティのサイトにログインすると、テストが長くなるため、テストが失敗するリスクが高くなります。
 一般的な経験則として、テストが長くなるほど脆弱で信頼性が低くなります。
 
-[W3C準拠](//w3c.github.io/webdriver/webdriver-spec.html) のWebDriver実装は、サービス拒否攻撃を軽減できるように、`navigator`オブジェクトに`webdriver`プロパティで注釈を付けます。
+[W3C準拠](//w3c.github.io/webdriver/webdriver-spec.html) のWebDriver実装は、サービス拒否攻撃を軽減できるように、`navigator`オブジェクトに`WebDriver`プロパティで注釈を付けます。

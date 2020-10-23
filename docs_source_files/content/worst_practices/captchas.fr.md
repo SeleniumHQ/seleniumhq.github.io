@@ -3,16 +3,10 @@ title: "Captchas"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-CAPTCHA, short for _Completely Automated Public Turing test
+CAPTCHA, abréviation de _Completely Automated Public Turing test
 to tell Computers and Humans Apart_,
-is explicitly designed to prevent automation, so don’t try!
-There are two primary strategies to get around CAPTCHA checks:
+est explicitement conçu pour empêcher l'automatisation, alors n'essayez pas!
+Il existe deux stratégies principales pour contourner les chèques CAPTCHA:
 
-* Disable CAPTCHAs in your test environment
-* Add a hook to allow tests to bypass the CAPTCHA
+* Désactivez CAPTCHA dans votre environnement de test
+* Ajoutez un crochet pour permettre aux tests de contourner le CAPTCHA

@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #95"
 Date = 2012-06-26
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Ok twitterverse. After 2 weeks of very few links a day you explode.</p>

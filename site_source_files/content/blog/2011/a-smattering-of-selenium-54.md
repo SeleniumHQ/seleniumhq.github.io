@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #54"
 Date = 2011-07-15
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Two Smatterings in two days?!!? That never happens. Well, except when I get behind and have a metric tonne of links queued up.</p>
 <ul>
 <li>Next week appears to be Meetup week with ones in <a href="http://www.meetup.com/seleniumlondon/events/25582321/">London</a> on Tuesday, <a href="http://www.meetup.com/Toronto-Selenium-Meetup-Group/events/25352281/">Toronto</a> on Wednesday and <a href="http://www.meetup.com/seleniumsanfrancisco/events/25062091/">San Francisco</a> on Thursday. It&#8217;s like we coordinated or something. (But didn&#8217;t.)</li>

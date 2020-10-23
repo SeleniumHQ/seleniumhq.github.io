@@ -4,6 +4,8 @@ Title = "Android and iOS Support"
 Date = 2013-12-24
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","mobile"]
+categories = ["general"]
 +++
 
 <p>TL;DR: We&#8217;re retiring Selenium&#8217;s own AndroidDriver and iPhoneDriver in favour of any of <a href="http://selendroid.io/">Selendroid</a>, <a href="http://ios-driver.github.io/ios-driver/">iosdriver</a> and <a href="http://appium.io/">Appium</a>. If you&#8217;re using one of Selenium&#8217;s own mobile drivers, please evaluate one of these alternatives.</p>

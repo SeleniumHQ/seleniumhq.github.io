@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #114"
 Date = 2012-08-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Hurray for having fillings done on both sides of my face. Don&#8217;t expect me to speak without drolling for rest of the day.</p>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #120"
 Date = 2012-09-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li><a href="http://www.telerik.com/automated-testing-tools/blog/christophereyhorn/12-09-10/here-we-grow-again-telerik-acquires-fiddler-what-s-next.aspx">Here we grow again. Telerik acquires Fiddler. What’s next?</a>. So. When can we look for nice Se integration with Fiddler then?</li>
 <li><a href="http://blog.dynatrace.com/2012/09/12/third-party-issues-and-the-performance-ripple-effect/">Third-Party Issues and the Performance Ripple Effect</a> is interesting, and something I&#8217;ve harped on consistently.</li>

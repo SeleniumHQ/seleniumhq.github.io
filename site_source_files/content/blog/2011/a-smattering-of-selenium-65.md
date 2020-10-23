@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #65"
 Date = 2011-10-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Trying something new; queuing up the catch-up post while I have time to catch-up.</p>
 <ul>
 <li>I&#8217;ve been lead to believe that <a href="http://community.jboss.org/en/arquillian/blog/2011/09/17/functional-testing-with-arquillian">Functional Testing with Arquillian</a> is a Big Deal&amp;tm;. Of course, I just see a lot of Java&#8230;</li>

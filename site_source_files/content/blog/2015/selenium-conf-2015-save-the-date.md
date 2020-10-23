@@ -4,6 +4,8 @@ Title = "Selenium Conf 2015 – Save The Date"
 Date = 2015-05-13
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>Selenium Conf is coming to Portland, Oregon this year!</p>

@@ -4,6 +4,8 @@ Title = "Selenium Grid 1.0.8 Released"
 Date = 2010-06-10
 Author = "Kevin Menard"
 AuthorLink = "https://twitter.com/nirvdrum"
+tags = ["selenium","grid"]
+categories = ["releases"]
 +++
 
 <p>We&#8217;re pleased to announce the release of Selenium Grid 1.0.8.  This release fixes multithreaded issues with the Selenium Grid hub that appeared randomly under heavy load.  If you&#8217;ve ever seen a log message about HttpClient being accessed by multiple threads, you definitely want to upgrade.  Even if you haven&#8217;t, this release is highly recommended for all.</p>

@@ -4,6 +4,8 @@ Title = "Selenium IDE 1.0.12 – now with Firefox 5 support"
 Date = 2011-07-04
 Author = "Samit Badle"
 AuthorLink = "https://twitter.com/samitbadle"
+tags = ["selenium","ide"]
+categories = ["releases"]
 +++
 
 <p>Last week we quietly released Selenium IDE 1.0.12 on the website. It has Firefox 5 support along with other improvements. See the <a href="http://code.google.com/p/selenium/wiki/SeIDEReleaseNotes">release notes</a> and <a href="http://blog.reallysimplethoughts.com/2011/06/23/selenium-ide-v1-0-12-is-now-here/">unofficial announcement</a>. Download it <a href="http://seleniumhq.org/download/">here</a> or ask Firefox to check for plugins updates.</p>
