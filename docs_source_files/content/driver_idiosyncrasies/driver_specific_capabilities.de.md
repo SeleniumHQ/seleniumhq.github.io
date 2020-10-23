@@ -3,17 +3,13 @@ title: "Driver spezifische Capabilities"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
 ## Firefox
 
-### Define Capabilities using `FirefoxOptions`
+### Definerte Capabilities in den `FirefoxOptions`
 
-`FirefoxOptions` is the new way to define capabilities for the Firefox 
-browser and should generally be used in preference to DesiredCapabilities.
+`FirefoxOptions` ist die neue Methode um Capabilities für den Firefoxbrowser 
+zu definieren und sollte bevorzugt verwendet werden statt den DesiredCapabilities
+and should generally be used in preference to DesiredCapabilities.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -56,9 +52,10 @@ driver = RemoteWebDriver(options)
 {{< / code-tab >}}
 
 
-### Setting a custom profile
+### Erstellen eines benutzerdefinierten Profils
 
-It is possible to create a custom profile for Firefox as demonstrated below.
+Wie hier demonstriert ist es möglich ein benutzerdefiniertes 
+Profil für Firefox zu erstellen.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -108,11 +105,13 @@ driver = RemoteWebDriver(options)
 
 ## Internet Explorer
 
-### fileUploadDialogTimeout
+### Timeout betreffend Dateiupload
 
-In some environments, Internet Explorer may timeout when opening the
-File Upload dialog. IEDriver has a default timeout of 1000ms, but you
-can increase the timeout using the fileUploadDialogTimeout capability.
+Unter Umständen kann es vorkommen das der Internet Explorer in ein
+Timout läuft während der Dateiupload-Dialog geöffnet wird. Der IEDriver
+hat ein standardmässiges Timeout von 1000ms, jedoch dieses kann 
+erhöht werden indem die capability mit dem Namen fileUploadDialogTimeout
+definiert wird.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -158,16 +157,16 @@ val driver = RemoteWebDriver(options)
 
 ### ensureCleanSession
 
-When set to `true`, this capability clears the _Cache, 
-Browser History and Cookies_ for all running instances 
-of InternetExplorer including those started manually 
-or by the driver. By default, it is set to `false`.
+Ist die Capability auf `true` gesetzt, wird der _Cache, 
+Browser History and Cookies_ für alle laufenden Instanzen des
+InternetExplorer inklusive aller die manuell oder vom WebDriver 
+gestartet werden. Standardmäßig ist der Wert mit _false_ vorbelegt.
 
-Using this capability will cause performance drop while 
-launching the browser, as the driver will wait until the cache 
-gets cleared before launching the IE browser.  
+Die Verwendung dieser Capability führt zu Performanceeinbußen
+während des starten des Browsers, da der driver wartet bis
+der Cache geleert wird bevor der InternetExplorer gestartet wird.
 
-This capability accepts a Boolean value as parameter.
+Es wird ein Wert vom Typ Boolean erwartet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -213,11 +212,12 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreZoomSetting
 
-InternetExplorer driver expects the browser zoom level to be 100%, 
-else the driver will throw an exception. This default behaviour 
-can be disabled by setting the _ignoreZoomSetting_ to _true_.
- 
-This capability accepts a Boolean value as parameter.
+Der InternetExplorer erwartet das das Browser Zoomlevel auf 100% 
+eingestellt ist, andernfalls wird eine Fehlermeldung (=Exception)
+ausgelöst. Dieses Standardverhalten kann deaktiviert werden in dem
+die Einstellung _ignoreZoomSetting_ auf _true_ gesetzt wird.
+
+Die Capability erwartet einen Booleanwert als Parameter.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -263,21 +263,21 @@ val driver = RemoteWebDriver(options)
 
 ### ignoreProtectedModeSettings
 
-Whether to skip the _Protected Mode_ check while launching 
-a new IE session.
+Legt fest ob die Prüfung des _Protected Mode_ beim Starten
+einer neuen IE Sitzung übersprungen werden soll.
 
-If not set and _Protected Mode_ settings are not same for 
-all zones, an exception will be thrown by the driver.
+Der driver löst eine Exception aus falls der _Proteced Mode_
+nicht definiert wurde oder nicht für alle Umgebungen gleich ist.
 
-If capability is set to `true`, tests may 
-become flaky, unresponsive, or browsers may hang.
-However, this is still by far a second-best choice, 
-and the first choice should *always* be to actually 
-set the Protected Mode settings of each zone manually. 
-If a user is using this property, 
-only a "best effort" at support will be given.
+Wenn diese capability auf `true` gesetzt wird, können Tests
+instabil werden, bzw. kann der Browser abstürzen oder nicht
+reagieren. Diese Einstellung ist nicht zu bevorzugen und sollte
+nur als zweite Wahl genutzt werden. Mit Sicherheit sollte
+der Protected Mode für jede Zone *immer* manuell definiert werden.
+Falls jemand diese Einstellung nutzt kann kein umfassender Support
+garantiert werden.
 
-This capability accepts a Boolean value as parameter.
+Die capability erwartet einen Booleanwert als Parameter.
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -323,10 +323,10 @@ val driver = RemoteWebDriver(options)
 
 ### silent
 
-When set to `true`, this capability suppresses the
-diagnostic output of the IEDriverServer.
+Ist diese capability auf `true` gesetzt, werden alle 
+Diagnosemeldungen des IEDriverServer unterdrückt.
 
-This capability accepts a Boolean value as parameter.
+Als Parameter wird ein Booleanwert erwartet.
  
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -395,20 +395,20 @@ fun main() {
 
 ### IE Command-Line Options
 
-Internet Explorer includes several command-line options 
-that enable you to troubleshoot and configure the browser.
+Der Internet Explorer akzeptiert eine Reihe von Kommandozeilenparameter
+die die Fehlersuche erleichtern und um den Browser zu konfigurieren.
 
-The following describes few supported command-line options 
+Folgend sind einige der Kommandozeilenparameter angeführt
 
-* _-private_ : Used to start IE in private browsing mode. This works for IE 8 and later versions.
+* _-private_ : Wird genutzt um den IE im Inkognitomodus zu starten. Diese Option wird ab IE Version 8 unterstützt.
 
-* _-k_ : Starts Internet Explorer in kiosk mode. 
-The browser opens in a maximized window that does not display the address bar, the navigation buttons, or the status bar.
+* _-k_ : Startet den Internet Explorer im Kiosk Modus.  
+Der Browser öffnet sich mit maximerten Fenster, indem die Navigationsleiste, das Adressfeld und die Statusbar verborgen sind. 
 
-* _-extoff_ : Starts IE in no add-on mode. 
-This option specifically used to troubleshoot problems with browser add-ons. Works in IE 7 and later versions.
+* _-extoff_ : Startet den IE ohne Addons.
+Diese Option wird verwendet um Problemen mit Browser Addons vorzubeugen. Dies wird ab Version 7 unterstützt.  
 
-Note: __forceCreateProcessApi__ should to enabled in-order for command line arguments to work.
+Bemerkung: __forceCreateProcessApi__ sollte aktiviert werden damit die Kommandozeilenparameter unterstützt werden.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -511,11 +511,11 @@ fun main() {
 
 ### forceCreateProcessApi
 
-Forces launching Internet Explorer 
-using the CreateProcess API. The default value is false.
+Forciert beim Starten des Internet Explorers die Verwendung der 
+CreateProcess API. Standardwert ist false (=deaktiviert).
 
-For IE 8 and above, this option requires the 
-"TabProcGrowth" registry value to be set to 0.
+Ab IE Version 8 ist für diese Einstellung es notwendig den 
+"TabProcGrowth" Wert auf 0 zu setzen. 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
