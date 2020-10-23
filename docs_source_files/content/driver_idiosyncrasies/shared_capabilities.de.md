@@ -1,150 +1,153 @@
 ---
-title: "Geteilte capabilities"
+title: "Allgemeine capabilities"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
- 
-In-order to create a new session by Selenium WebDriver, 
-local end should provide the basic capabilities to remote end. 
-The remote end uses the same set of capabilities to 
-create a session and describes the current session features. 
+Um eine neue Sitzung mit dem Selenium WebDriver zu erstellen,
+ist es notwendig das die Grundlegenden capabilites zur Verfügung 
+gestellt werden.
 
-WebDriver provides capabilities that each remote 
-end will/should support the implementation. 
-Following are the capabilities that WebDriver supports:
+Das Zielsystem benutzt dabei die gleichen Einstellungen in den 
+capabilities um eine Sitzung zu erstellen und ermöglich Details 
+dieser Sitzung abzufragen.
+ 
+WebDriver stellt capabilites zur Verfügung und jeder Adapter
+sollte diese Implementierung unterstützen. Folgende capabilites 
+werden von WebDriver unterstützt:
 
 ## browserName:
 
-This capability is used to set the `browserName` for a given session. 
-If the specified browser is not installed at the 
-remote end, the session creation will fail
+Diese Capability wird verwendet um den `browserName` für eine 
+Sitzung zu definieren. Ist der Browser auf dem Zielsystem nicht 
+installiert, schlägt die Erstellung der Sitzung fehl.
 
 ## browserVersion: 
 
-This capability is optional, this is used to 
-set the available browser version at remote end. 
-For Example, if ask for Chrome version 75 on a system that 
-only has 80 installed, the session creation will fail
+Diese capability ist optional, sie dient dazu die Version
+des Webbrowsers am Zielsystem zu definieren. Wird versucht 
+eine Sitzung z.B. mit Chrome in der Version 75 zu initialisieren, 
+auf dem lediglich Version 80 installiert ist, wird dies fehlschlagen.
 
-## pageLoadStrategy:
+## Strategien das Websitenladehaltens betreffend (pageLoadingStrategy)
 
-When navigating to a new page via URL, by default Selenium will wait
-until the page has fully loaded before responding. This works well for
-beginners, but can cause long wait times on pages that load a large
-number of third party resources. Using a non default strategy can make
-test execution faster in cases like this, but can also introduce flakiness
-where elements on the page change position as elements load in and change
-size.
+Standarmäßig wartet Selenium bis eine Seite vollständig geladen ist wenn 
+zu einer neuen Seiten via URL navigiert wird. Dies funktioniert wunderbar
+für Anfänger, kann jedoch lange Wartezeiten verursachen, für Webseiten die
+mehrere Drittanbieter Ressourcen beinhalten. Dies kann jedoch in einem 
+solchen Fall beschleunigt werden, wenn nicht die Standardstrategie verwendet 
+wird. Jedoch können dadurch die Tests instabil werden, da Elemente auf der Website sowohl
+ die Position, als auch die Größe, während des Ladens verändern können. 
+ 
+ Die definierte Wartestrategie prüft den 
+ [document.readyState](//developer.mozilla.org/de/docs/Web/API/Document/readyState)
+wie in der Tabelle angeführt:
 
-The page load strategy queries the
-[document.readyState](//developer.mozilla.org/de/docs/Web/API/Document/readyState)
-as described in the table below:
-
-| Strategy | Ready State | Notes |
+| Strategie | Status  | Bemerkung |
 | -------- | ----------- | ----- |
-| normal | complete | Used by default, waits for all resources to download |
-| eager | interactive | DOM access is ready, but other resources like images may still be loading |
-| none | Any | Does not block WebDriver at all |
+| normal | komplett | Standardwert, wartet bis alle Ressourcen geladen wurden |
+| eager | interaktiv | DOM Zugriff ist bereit, allerdings können andere Elemente wie Bilder noch unvollständig geladen sein |
+| none | beliebig | Blockiert den WebDriver gar nicht |
+
 
 ## platformName
 
-This identifies the operating system at the remote-end, 
-fetching the `platformName` returns the OS name. 
+Dient zur Definition des Betriebssystems am Zielsystem. Wird
+die capability abgefragt erhält man den Namen des Betriebssystems.
 
-In cloud-based providers, 
-setting `platformName` sets the OS at the remote-end.
+Auf cloud-basierten Systemen wird mittels `platformName` das
+Betriebssystem des Zielsystems definiert.
 
 ## acceptInsecureCerts
 
-This capability checks whether an expired (or) 
-invalid `TLS Certificate` is used while navigating 
-during a session.
+Diese capability legt fest ob abgelaufene oder ungültige 
+`TLS Certificate` verwendet werden benutzt werden können.
 
-If the capability is set to `false`, an 
+Wenn die capability den Wert `false` gesetzt hat, wird ein
 [insecure certificate error](//developer.mozilla.org/de/docs/Web/WebDriver/Errors/InsecureCertificate) 
-will be returned as navigation encounters any domain 
-certificate problems. If set to `true`, invalid certificate will be 
-trusted by the browser.
+als Rückgabewert geliefert falls Domain Zertifikatsprobleme 
+auftauchen. Ist der Wert auf `true` gesetzt, werden ungültige
+ Zertifikate vom Webbrowser akzeptiert.
+ 
+Allen selbstsignierten Zertifikaten werden standardmässig vertraut
+mit dieser capability. Ist die capability `acceptInsecureCerts`
+gesetzt, hat dies für die gesamte Sitzung Auswirkungen.
 
-All self-signed certificates will be trusted by this capability by default. 
-Once set, `acceptInsecureCerts` capability will have an 
-effect for the entire session.
+## Sitzungstimeouts (Session timeouts)
 
-## Session timeouts
+Einer WebDriver `session` ist ein bestimmtes `session timeout`
+Intervall zugeordnet, während diesem kann der Benutzer 
+kontrollieren ob Scripts ausgeführen werden oder Informationen
+vom Webbrowser empfangen werden sollen.
 
-A WebDriver `session` is imposed with a certain `session timeout`
-interval, during which the user can control the behaviour
-of executing scripts or retrieving information from the browser.
-
-Each session timeout is configured with
-combination of different `timeouts` as described below:
+Jedes Session Timeout is mittels einer Kombination
+der folgenden unterschiedlichen `timeouts` definiert:
 
 ### Script Timeout:
-Specifies when to interrupt an executing script in
-a current browsing context. The default timeout **30,000**
-is imposed when a new session is created by WebDriver.
+Spezifiziert wann die Ausführung eines Scriptes im aktuellen
+Browserkontext abgebrochen werden soll. Standardmäßig ist das
+Timeout auf **30** Sekunden festgelegt und wird festgelegt
+sobald eine neue Sitzung des WebDrivers erstellt wird.
 
-### Page Load Timeout:
-Specifies the time interval in which web page
-needs to be loaded in a current browsing context.
-The default timeout **300,000** is imposed when a
-new session is created by WebDriver. If page load limits
-a given/default time frame, the script will be stopped by
-_TimeoutException_.
+### Seitenlade Timeout:
+Damit wird die Zeitspanne festgelegt in dem die Webseite
+geladen werden muss im aktuellen Webbrowser Kontext.
+Der Standardwert liegt bei **300** Sekunden und wird 
+beim Erstellen einer WebDriver Sitzung festgelegt. Wird das 
+festgelegte Zeitfenster überschritten wird das Script mit einer
+_TimeoutException_ gestoppt.
 
-### Implicit Wait Timeout
-This specifies the time to wait for the
-implicit element location strategy when
-locating elements. The default timeout **0**
-is imposed when a new session is created by WebDriver.
+### Impliziertes Wait Timeout
+
+Spezifiziert die Zeitspanne die gewartet wird um
+bei der implizierten Suche nach Elementen. Der Standard 
+Wert ist **0** und wird festgelegt bei der Initialisierung
+des WebDrivers.
 
 ## unhandledPromptBehavior
 
-Specifies the state of current session's `user prompt handler`. 
-Defaults to **dismiss and notify state**
+Legt den Status der aktullen Sitzung fest `user prompt handler`.
+Standardwert ist **dismiss and notify state** (=Verwerfen und Status melden)
 
-### User Prompt Handler
+### unhandledPromptBehaviour
 
-This defines what action must take when a 
-user prompt encounters at remote-end. This is defined by 
-`unhandledPromptBehavior` capability and has the following states:
+Definiert welche Aktion wenn eine Anfrage auf dem Zielsystem
+eine Aktion erfordert. Dies wird mittels `unhandledPromptBehavior` 
+capability definiert und hat einen der folgenden Stati:
 
-* dismiss
-* accept
-* dismiss and notify
-* accept and notify
-* ignore
+* dismiss (=verwerfen)
+* accept (=akzeptieren)
+* dismiss and notify (=verwerfen und benachrichtigen)
+* accept and notify (=akzeptieren und benachrichtigen)
+* ignore (=ignorieren)
  
 ## setWindowRect
 
-This command alters the size and position of the current 
-browsing context window. This command acts as setter 
-to `getWindowRect` command which accepts **width**, **height**,
-**x**, **y** as _optional_ arguments.
+Mit Hilfe dieses Kommandos wird die Größe und die Position
+des Webbrowserfensters verändert. Der Befehl agiert als setter
+für `getWindowRect` und hat als Parameter **breite**, **höhe**, 
+**x**, **y** als _optionale_ Parameter.
 
-During automation, the current browsing context will be associated 
-with window states, that describe visibility 
-state of the browser window. The window states are
 
-* maximized
-* minimized
+Während der Automatisierung, wird der aktuelle Webbrowserkontext
+mit Status des Fensters assoziert, welcher die Sichtbarkeit des
+Webbrowserfensters beschreibt. Folgende Statis des Fensters gibt es:
+
+* maximized (= maximiert)
+* minimized (= minimiert)
 * normal
-* fullscreen
+* fullscreen (=Vollbild)
 
-Setting _Width_ or _Height_ does not guaranteed that the resulting 
-window size will exactly match that which was quested. This is because 
-some drivers may not be able to resize in single-pixel increments.
-Due to this, fetching the window state/details by `getWindowRect` 
-may not equally match the values set to the browser.
+Allerdings kann das festlegen der _Breite_ oder _Höhe_ des 
+Fensters nicht garantieren das dieses die exakte Größe aufweist.
+Grund dafür ist, dass manche driver es nicht ermöglichen 
+Größenänderungen für einzelne Pixel vorzunehmen. Dadurch können
+auch Ungenauigkeiten beim Abrufen der Fensterdetails mit `getWindowRect`
+auftreten, wenn diese Werte zuvor gesetzt wurden.
 
 ## strictFileInteractability
 
-The new capabilitiy indicates if strict interactability checks 
-should be applied to _input type=file_ elements. As strict interactability 
-checks are off by default, there is a change in behaviour 
-when using _Element Send Keys_ with hidden file upload controls.
+Mit dieser neuen Capability kann festgelegt werden ob die 
+strikte Methode für Eingabefelder die das Tag _input type=file_ haben 
+angewandt wird. Die strike Methode ist standardmäßig nicht aktiv. 
+Das Verhalten hat sich disbezüglich geändert wenn die _Element Send Keys_ 
+Funktion auf versteckte Dateiuploads Kontrollfelder angewandt wird.
