@@ -1,24 +1,20 @@
 ---
-title: "Web element"
+title: "网络元素"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
-WebElement represents a DOM element. WebElements can be found by searching from the
-document root using a WebDriver instance, or by searching under another
-WebElement.
+WebElement表示DOM元素.
+可以通过使用WebDriver实例从文档根节点进行搜索, 
+或者在另一个WebElement下进行搜索来找到WebElement.
 
-WebDriver API provides built-in methods to find the WebElements which are
-based on different properties like ID, Name, Class, XPath, CSS Selectors, link Text, etc.
+WebDriver API提供了内置方法来查找基于不同属性的WebElement
+(例如ID, Name, Class, XPath, CSS选择器, 链接文本等).
 
 ## Find Element
 
-It is used to find an element and returns a first matching single WebElement reference,
-that can be used for future element actions
+此方法用于查找元素并返回第一个匹配的单个WebElement引用,
+该元素可用于进一步的元素操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -32,12 +28,15 @@ WebElement searchBox = driver.findElement(By.name("q"));
 searchBox.sendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver = Firefox()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox()
 
 driver.get("http://www.google.com")
 
 # Get search box element from webElement 'q' using Find Element
-search_box = driver.find_element_by_name("q")
+search_box = driver.find_element(By.NAME, "q")
 
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
@@ -98,8 +97,9 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar to 'Find Element', but returns a list of matching WebElements. To use a particular WebElement from the list,
-you need to loop over the list of elements to perform action on selected element.
+与"Find Element"相似, 但返回的是匹配WebElement列表.
+要使用列表中的特定WebElement, 
+您需要遍历元素列表以对选定元素执行操作.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -127,6 +127,7 @@ public class findElementsExample {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 
 driver = webdriver.Firefox()
 
@@ -134,10 +135,10 @@ driver = webdriver.Firefox()
 driver.get("https://www.example.com")
 
 # Get all the elements available with tag name 'p'
-elements = driver.find_elements_by_tag_name('p')
+elements = driver.find_elements(By.TAG_NAME, 'p')
 
 for e in elements:
-    print e.text
+    print(e.text)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -190,8 +191,8 @@ const {Builder, By} = require('selenium-webdriver');
         // Navigate to Url
         await driver.get('https://www.example.com');
 
-        // Get all the elements available with tag name 'p'
-        let elements = await driver.findElements(By.tagName('p'));
+        // Get all the elements available with tag 'p'
+        let elements = await driver.findElements(By.css('p'));
         for(let e of elements) {
             console.log(await e.getText());
         }
@@ -223,8 +224,9 @@ fun main() {
 
 ## Find Element From Element
 
-It is used to find a child element within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElement' to access child elements
+此方法用于在父元素的上下文中查找子元素.
+为此, 父WebElement与"findElement"链接并访问子元素.
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -235,10 +237,13 @@ WebElement searchBox = searchForm.findElement(By.name("q"));
 searchBox.sendKeys("webdriver");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver = Firefox()
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+driver = webdriver.Firefox()
 driver.get("http://www.google.com")
-search_form = driver.find_element_by_tag_name("form")
-search_box = search_form.find_element_by_name("q")
+search_form = driver.find_element(By.TAG_NAME, "form")
+search_box = search_form.find_element(By.NAME, "q")
 search_box.send_keys("webdriver")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -298,8 +303,8 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements From Element
 
-It is used to find the list of matching child WebElements within the context of parent element.
-To achieve this, the parent WebElement is chained with 'findElements' to access child elements
+此方法用于在父元素的上下文中查找匹配子WebElement的列表.
+为此, 父WebElement与"findElements"链接并访问子元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -330,18 +335,19 @@ To achieve this, the parent WebElement is chained with 'findElements' to access 
   }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-  from selenium import webdriver
+from selenium import webdriver
+from selenium.webdriver.common.by import By
 
-  driver = webdriver.Chrome()
-  driver.get("https://www.example.com")
+driver = webdriver.Chrome()
+driver.get("https://www.example.com")
 
-  # Get element with tag name 'div'
-  element = driver.find_element_by_tag_name('div')
+# Get element with tag name 'div'
+element = driver.find_element(By.TAG_NAME, 'div')
 
-  # Get all the elements available with tag name 'p'
-  elements = element.find_elements_by_tag_name('p')
-  for e in elements:
-      print e.text
+# Get all the elements available with tag name 'p'
+elements = element.find_elements(By.TAG_NAME, 'p')
+for e in elements:
+    print(e.text)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using OpenQA.Selenium;
@@ -401,10 +407,10 @@ namespace FindElementsFromElement {
       await driver.get('https://www.example.com');
 
       // Get element with tag name 'div'
-      let element = driver.findElement(By.tagName("div"));
+      let element = driver.findElement(By.css("div"));
 
       // Get all the elements available with tag name 'p'
-      let elements = await element.findElements(By.tagName("p"));
+      let elements = await element.findElements(By.css("p"));
       for(let e of elements) {
           console.log(await e.getText());
       }
@@ -436,7 +442,7 @@ namespace FindElementsFromElement {
 
 ## Get Active Element
 
-It is used to track (or) find DOM element which has the focus in the current browsing context.
+此方法用于追溯或查找当前页面上下文中具有焦点的DOM元素.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -461,14 +467,15 @@ It is used to track (or) find DOM element which has the focus in the current bro
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
   from selenium import webdriver
+  from selenium.webdriver.common.by import By
 
   driver = webdriver.Chrome()
   driver.get("https://www.google.com")
-  driver.find_element_by_css_selector('[name="q"]').send_keys("webElement")
+  driver.find_element(By.CSS_SELECTOR, '[name="q"]').send_keys("webElement")
 
   # Get attribute of current active element
   attr = driver.switch_to.active_element.get_attribute("title")
-  print attr
+  print(attr)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
     using OpenQA.Selenium;
@@ -531,11 +538,340 @@ It is used to track (or) find DOM element which has the focus in the current bro
           driver.findElement(By.cssSelector("[name='q']")).sendKeys("webElement")
 
           // Get attribute of current active element
-          val attr = driver.switchTo().activeElement().getAttribute("title");
-          print(attr);
+          val attr = driver.switchTo().activeElement().getAttribute("title")
+          print(attr)
       } finally {
           driver.quit()
       }
   }
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Is Element Enabled
+
+此方法用于检查网页上连接的元素是否被启用或禁用.
+返回一个布尔值, 
+如果在当前浏览上下文中`启用`了连接的元素, 则返回True；
+否则返回`false` .
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+  //navigates to url 
+  driver.get("https://www.google.com/");
+  
+  //returns true if element is enabled else returns false
+  boolean value = driver.findElement(By.name("btnK")).isEnabled();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("http://www.google.com")
+   
+# Returns true if element is enabled else returns false
+value = driver.find_element(By.NAME, 'btnK').is_enabled()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://google.com");
+
+// Store the WebElement
+IWebElement element = driver.FindElement(By.Name("btnK"));
+
+// Prints true if element is enabled else returns false
+System.Console.WriteLine(element.Enabled);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'http://www.google.com/'
+
+# Returns true if element is enabled else returns false
+ele = driver.find_element(name: 'btnK').enabled?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://www.google.com');
+
+// Resolves Promise and returns boolean value
+let element =  await driver.findElement(By.name("btnK")).isEnabled();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://www.google.com/")
+ 
+ //returns true if element is enabled else returns false
+ val attr = driver.findElement(By.name("btnK")).isEnabled()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Is Element Selected
+
+此方法确定是否 _已选择_ 引用的元素.
+此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
+
+返回一个布尔值, 
+如果在当前浏览上下文中 **已选择** 引用的元素, 
+则返回 **True**, 否则返回 **False**.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes");
+  
+ //returns true if element is checked else returns false
+ boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://the-internet.herokuapp.com/checkboxes")
+
+# Returns true if element is checked else returns false
+value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-type").is_selected()
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
+  
+// Returns true if element ins checked else returns false
+bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://the-internet.herokuapp.com/checkboxes'
+
+# Returns true if element is checked else returns false
+ele = driver.find_element(css: "input[type='checkbox']:last-of-type").selected?
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://the-internet.herokuapp.com/checkboxes');
+
+// Returns true if element ins checked else returns false
+let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://the-internet.herokuapp.com/checkboxes")
+ 
+ //returns true if element is checked else returns false
+ val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element TagName
+
+此方法用于获取在当前浏览上下文中
+具有焦点的被引用元素的
+[TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) .
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+ //navigates to url 
+ driver.get("https://www.example.com");
+
+ //returns TagName of the element
+ String value = driver.findElement(By.cssSelector("h1")).getTagName();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://www.example.com")
+
+# Returns TagName of the element
+attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+  
+// Returns TagName of the element
+string attr = driver.FindElement(By.CssSelector("h1")).TagName;
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Returns TagName of the element
+attr = driver.find_element(css: "h1").tag_name
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to URL
+await driver.get('https://www.example.com');
+
+// Returns TagName of the element
+let value = await driver.findElement(By.css('h1')).getTagName();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+ //navigates to url 
+ driver.get("https://www.example.com")
+ 
+ //returns TagName of the element
+ val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element Rect
+
+用于获取参考元素的尺寸和坐标. 
+
+提取的数据主体包含以下详细信息:
+* 元素左上角的X轴位置
+* 元素左上角的y轴位置
+* 元素的高度
+* 元素宽度
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Navigate to url
+driver.get("https://www.example.com");
+
+// Returns height, width, x and y coordinates referenced element
+Rectangle res =  driver.findElement(By.cssSelector("h1")).getRect();
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+System.out.println(res.getX());
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://www.example.com")
+    
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(By.CSS_SELECTOR, "h1").rect
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Navigate to Url
+driver.Navigate().GoToUrl("https://example.com");
+
+var res = driver.FindElement(By.CssSelector("h1"));
+// Return x and y coordinates referenced element
+System.Console.WriteLine(res.Location);
+// Returns height, width
+System.Console.WriteLine(res.Size);
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://www.example.com'
+  
+# Returns height, width, x and y coordinates referenced element
+res = driver.find_element(css: "h1").rect
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+// Navigate to url
+await driver.get('https://www.example.com');
+
+// Returns height, width, x and y coordinates referenced element
+let element =  await driver.findElement(By.css("h1")).getRect();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Navigate to url
+driver.get("https://www.example.com")
+
+// Returns height, width, x and y coordinates referenced element
+val res = driver.findElement(By.cssSelector("h1")).rect
+
+// Rectangle class provides getX,getY, getWidth, getHeight methods
+println(res.getX())
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element CSS Value
+
+Retrieves the value of specified computed style property 
+of an element in the current browsing context.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+
+// Navigate to Url
+driver.get("https://www.example.com");
+
+// Retrieves the computed style property 'color' of linktext
+String cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color");
+
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+
+# Navigate to Url
+driver.get('https://www.example.com')
+
+# Retrieves the computed style property 'color' of linktext
+cssValue = driver.findElement(By.LINK_TEXT, "More information...").value_of_css_property('color')
+
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+
+// Navigate to Url
+driver.Navigate().GoToUrl("https://www.example.com");
+
+// Retrieves the computed style property 'color' of linktext
+String cssValue = driver.FindElement(By.LinkText("More information...")).GetCssValue("color");
+
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+
+# Navigate to Url
+driver.get 'https://www.example.com'
+
+# Retrieves the computed style property 'color' of linktext
+cssValue = driver.find_element(:link_text, 'More information...').css_value('color')
+
+  {{< / code-panel >}}
+    {{< code-panel language="javascript" >}}
+// Navigate to Url
+await driver.get('https://www.example.com');
+    
+// Retrieves the computed style property 'color' of linktext
+let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
+    {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+
+// Navigate to Url
+driver.get("https://www.example.com")
+
+// Retrieves the computed style property 'color' of linktext
+val cssValue = driver.findElement(By.linkText("More information...")).getCssValue("color")
+
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Get Element Text
+
+Retrieves the rendered text of the specified element.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+// Navigate to url
+driver.get("https://example.com");
+
+// Retrieves the text of the element
+String text = driver.findElement(By.cssSelector("h1")).getText();
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Navigate to url
+driver.get("https://www.example.com")
+
+# Retrieves the text of the element
+text = driver.find_element(By.CSS_SELECTOR, "h1").text
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+// Please provide a pr for code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Retrieves the text of the element
+text = driver.find_element(:css, 'h1').text
+  {{< / code-panel >}}
+    {{< code-panel language="javascript" >}}
+// Navigate to URL
+await driver.get('http://www.example.com');
+
+// retrieves the text of the element
+let text = await driver.findElement(By.css('h1')).getText();
+    {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+// Navigate to URL
+driver.get("https://www.example.com")
+
+// retrieves the text of the element
+val text = driver.findElement(By.cssSelector("h1")).getText()
   {{< / code-panel >}}
 {{< / code-tab >}}

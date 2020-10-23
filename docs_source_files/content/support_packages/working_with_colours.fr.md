@@ -3,21 +3,17 @@ title: "Travailler avec les couleurs"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Vous voudrez parfois valider la couleur de quelque 
+chose dans le cadre de vos tests; le problème est que 
+les définitions de couleurs sur le Web ne sont pas constantes.
+Ne serait-ce pas bien s'il y avait un moyen facile de comparer
+une représentation HEX d'une couleur avec une représentation 
+RGB d'une couleur, ou une représentation RGBA d'une couleur 
+avec une représentation HSLA d'une couleur?
 
-You will occasionally want to validate the colour of something as part of your tests;
-the problem is that colour definitions on the web are not constant.
-Would it not be nice if there was an easy way to compare
-a HEX representation of a colour with a RGB representation of a colour,
-or a RGBA representation of a colour with a HSLA representation of a colour?
+Ne t'inquiètes pas. Il y a une solution: la classe _Color_!
 
-Worry not. There is a solution: the _Color_ class!
-
-First of all, you will need to import the class:
+Tout d'abord, vous devrez importer la classe:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -33,15 +29,15 @@ from selenium.webdriver.support.color import Color
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}import org.openqa.selenium.support.Color{{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now start creating colour objects.
-Every colour object will need to be created from a string representation of 
-your colour.
-Supported colour representations are:
+Vous pouvez maintenant commencer à créer des objets de couleur.
+Chaque objet de couleur devra être créé à partir d'une 
+représentation sous forme de chaîne de votre couleur.
+Les représentations de couleurs prises en charge sont:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -75,7 +71,7 @@ HSL_COLOUR = Color.from_string('hsl(100, 0%, 50%)')
 HSLA_COLOUR = Color.from_string('hsla(100, 0%, 50%, 0.5)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val HEX_COLOUR = Color.fromString("#2F7ED8")
@@ -88,8 +84,8 @@ private val HSLA_COLOUR = Color.fromString("hsla(100, 0%, 50%, 0.5)")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Color class also supports all of the base colour definitions
-specified in 
+La classe Color prend également en charge toutes les 
+définitions de couleurs de base spécifié dans
 [http://www.w3.org/TR/css3-color/#html4](//www.w3.org/TR/css3-color/#html4).
 
 {{< code-tab >}}
@@ -112,7 +108,7 @@ CHOCOLATE = Color.from_string('chocolate')
 HOTPINK = Color.from_string('hotpink')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val BLACK = Color.fromString("black")
@@ -121,9 +117,9 @@ private val HOTPINK = Color.fromString("hotpink")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Sometimes browsers will return a colour value of "transparent"
-if no colour has been set on an element.
-The Color class also supports this:
+Parfois, les navigateurs renvoient une valeur de couleur "transparente"
+si aucune couleur n'a été définie sur un élément.
+La classe Color prend également en charge ceci:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -139,45 +135,48 @@ TRANSPARENT = Color.from_string('transparent')
 TRANSPARENT = Color.from_string('transparent')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 private val TRANSPARENT = Color.fromString("transparent")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can now safely query an element
-to get its colour/background colour knowing that
-any response will be correctly parsed
-and converted into a valid Color object:
+Vous pouvez désormais interroger un élément en toute sécurité
+pour obtenir sa couleur / couleur de fond sachant que
+toute réponse sera correctement analysée
+et converti en un objet Color valide:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-Color loginButtonColour = driver.findElement(By.id("login")).getCssValue("color");
-Color loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color");
+Color loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"));
+
+Color loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-login_button_colour = driver.find_element_by_id('login').value_of_css_property('color')
-login_button_background_colour = driver.find_element_by_id('login').value_of_css_property('background-color');
+login_button_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element(By.ID,'login').value_of_css_property('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 // We don't have a C# code sample yet -  Help us out and raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-login_button_colour = driver.find_element(id: 'login').css_value('color')
-login_button_background_colour = driver.find_element(id: 'login').css_value('background-color');
+login_button_colour = Color.from_string(driver.find_element(id: 'login').css_value('color'))
+
+login_button_background_colour = Color.from_string(driver.find_element(id: 'login').css_value('background-color'))
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val loginButtonColour = driver.findElement(By.id("login")).getCssValue("color")
-val loginButtonBackgroundColour = driver.findElement(By.id("login")).getCssValue("background-color")
+val loginButtonColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("color"))
+
+val loginButtonBackgroundColour = Color.fromString(driver.findElement(By.id("login")).getCssValue("background-color"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then directly compare colour objects:
-
+Vous pouvez ensuite comparer directement les objets de couleur:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -193,15 +192,15 @@ assert login_button_background_colour == HOTPINK
 assert(login_button_background_colour == HOTPINK)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.equals(HOTPINK))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Or you can convert the colour into one of the following formats
-and perform a static validation:
+Ou vous pouvez convertir la couleur dans l'un des formats suivants
+et effectuer une validation statique:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -223,7 +222,7 @@ assert(login_button_background_colour.rgba == 'rgba(255, 105, 180, 1)')
 assert(login_button_background_colour.rgb == 'rgb(255, 105, 180)')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 assert(loginButtonBackgroundColour.asHex().equals("#ff69b4"))
@@ -232,4 +231,4 @@ assert(loginButtonBackgroundColour.asRgb().equals("rgb(255, 105, 180)"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Colours are no longer a problem.
+Les couleurs ne sont plus un problème.

@@ -4,6 +4,8 @@ Title = "Selenium 2.0b2 Released"
 Date = 2011-02-15
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>We&#8217;ve just released Selenium 2.0b2. If you&#8217;re the impatient sort who loves to have the latest and greatest, head over to the<a href="http://code.google.com/p/selenium/downloads/list"> download site</a> and get it while it&#8217;s hot. If you&#8217;re a Python user, then all you need to do is a simple &#8220;pip install -U selenium&#8221;. Ruby users can, as ever, simply run &#8220;gem install selenium-webdriver&#8221;. Maven users need to wait just a little bit longer: we&#8217;re going to be checking the release in ASAP.</p>

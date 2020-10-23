@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #100"
 Date = 2012-07-09
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Century!</p>
 <ul>
 <li><a href="http://msdn.microsoft.com/en-us/library/dd565669(v=vs.85).aspx">Event 1028 &#8211; Automatic Download Blocking</a> looks like something that could be useful to have tucked away in your head somewhere</li>

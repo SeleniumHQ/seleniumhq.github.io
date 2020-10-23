@@ -4,6 +4,8 @@ Title = "Announcing Selenium 2.26: the “It’s Really Real” Release"
 Date = 2012-11-02
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>It&#8217;s been a long time since we announced a new Selenium release on this blog, as we moved to a model of quicker releases, but we&#8217;ve been working on 2.26 for far longer than normal &#8212; it&#8217;s out! <a href="http://seleniumhq.org/download/">Download</a> it now! &#8212; so I thought it best to let you know. We&#8217;re aiming to head back to faster releases, so hopefully you won&#8217;t see another blog post about the release for a while (though I&#8217;m sure they&#8217;ll appear in the &#8220;Smatterings of Selenium&#8221; posts)</p>

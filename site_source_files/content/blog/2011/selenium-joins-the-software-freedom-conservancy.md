@@ -4,6 +4,8 @@ Title = "Selenium Joins the Software Freedom Conservancy"
 Date = 2011-02-02
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","sfc"]
+categories = ["general"]
 +++
 
 <p>It doesn&#8217;t seem that long ago that we announced on the mailing list that the Selenium project planned to join the <a href="http://sfconservancy.org/">Software Freedom Conservancy</a>. I&#8217;m very pleased to announce that as of Friday, 21st January, our application was approved. We&#8217;re now under the aegis of the SFC.</p>

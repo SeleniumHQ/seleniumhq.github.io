@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #143"
 Date = 2013-02-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>If you had anything interesting last week I should have seen, you&#8217;ll have to resend it to me or @seleniumhq &#8212; things were a bit crashy.</p>
 <ul>
 <li>So &#8230; <a href="http://www.quirksmode.org/blog/archives/2013/02/opera_switching.html">Opera switching to WebKit</a>. That doesn&#8217;t mean you can write off automation with Opera though. <a href="http://blog.methvin.com/2013/02/tragedy-of-webkit-commons.html">Tragedy of the WebKit Commons</a></li>

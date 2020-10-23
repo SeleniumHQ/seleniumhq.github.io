@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #38B"
 Date = 2011-01-25
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Will today be the day I finish three weeks of catch-up? Well, no..</p>
 <ul>
 <li><a href="http://www.cheezyworld.com/2010/12/16/ui-tests-putting-it-all-together/">UI Tests – putting it all together</a> summarizes the series of posts using Watir and Cucumber, but the ideas could be converted to Se pretty easily.</li>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #24"
 Date = 2010-08-24
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>A bit late, but I&#8217;m in California for a Selenium Developers Meetup and my body doesn&#8217;t quite know where it is temporally.<br />
 </p>
 <ul>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #132"
 Date = 2012-12-06
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>2.27.0 is now out which means you can close the browser tab that points to the old Firefox installers.</p>
 <ul>
 <li><a href="http://jimevansmusic.blogspot.ca/2012/12/not-providing-html-page-is-bogus.html">Not Providing an HTML Page? Think of the Kittens!</a> is important to remember. We <i>want</i> to fix your bugs. Help us help you!</li>

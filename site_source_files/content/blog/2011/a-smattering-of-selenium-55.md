@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #55"
 Date = 2011-07-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Last week we released Se-IDE 1.1.0 which now features WebDriver formats and Se 2.1.0 was released about an hour ago. Simon will post something shortly-ish on what&#8217;s changed.</p>
 <ul>
 <li>I haven&#8217;t messed around with HTML5 goodies yes, but <a href="http://code.google.com/p/fake-html5/">fake-html5</a> seems like it could be interesting.</li>

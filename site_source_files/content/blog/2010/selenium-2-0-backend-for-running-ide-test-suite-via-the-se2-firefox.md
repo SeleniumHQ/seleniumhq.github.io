@@ -4,6 +4,8 @@ Title = "Selenium 2.0 backend for running IDE test suite via the Se2 Firefox"
 Date = 2010-08-09
 Author = "raynatou"
 AuthorLink = "https://twitter.com/RaynatouD"
+tags = ["stories","ide"]
+categories = ["general"]
 +++
 
 <p>The  GSoC 2010, it’s a great adventure.<br />

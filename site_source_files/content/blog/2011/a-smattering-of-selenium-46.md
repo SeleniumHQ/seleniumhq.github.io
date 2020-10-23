@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #46"
 Date = 2011-04-11
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Let&#8217;s put <a href="http://blog.reallysimplethoughts.com/2011/04/07/selenium-ide-on-firefox-4-is-available-for-testing-now/">Selenium IDE on Firefox 4 is Available for Testing! Now!</a> outside of the normal list. We have a &#8216;working&#8217; version of Se-IDE for FF4, but don&#8217;t really have too too much faith in it (or at least I don&#8217;t). Please help test it.</p>
 <ul>
 <li><a href="http://www.pragprog.com/magazines/2011-04/test-abstraction">Eight Techniques to Improve Your Tests</a> is focused on unit tests, but I&#8217;m sure something can be gained from them</li>

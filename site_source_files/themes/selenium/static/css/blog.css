@@ -27,6 +27,10 @@ h1 {
     flex: 3;
 }
 
+.filter-container {
+    flex: 3;
+}
+
 .container.dark-background {
     padding-top: 50px;
     margin-top: 0;
@@ -59,8 +63,8 @@ a {
 .blog-filter {
     flex: 1;
     background-color: #6f757a;
-    margin: 0 20px 20px 0px;
-    padding: 20px;
+    margin: 10px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     color: white;
     line-height: 30px;
     height: 100%;
@@ -97,7 +101,11 @@ a {
   border-bottom: solid;
   border-bottom-width: 1px;
   border-bottom-color: #939bA1;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.filter-section h3 {
+    margin: 5px;
 }
 
 .filter-section .gsc-input {
@@ -106,13 +114,35 @@ a {
 }
 
 .archive-link-container {
-  justify-content: space-around;
-  text-decoration: underline;
-  color: white;
+    justify-content: space-around;
 }
 
 .archive-link-container a {
-  color: white;
+    color: white;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+.links-container {
+    justify-content: space-around;
+    color: white;
+}
+
+.links-container a {
+    color: white;
+    text-decoration: underline;
+    padding: 3px;
+}
+
+.links-container-taxonomy {
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.links-container-taxonomy a {
+    color: #6f757a;
+    text-decoration: underline;
+    padding: 3px;
 }
 
 .search-container {

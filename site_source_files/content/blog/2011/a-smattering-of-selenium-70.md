@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #70"
 Date = 2011-11-23
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>That&#8217;s it for this week. 🙂</p>
 <ul>
 <li>For TestMate / Java folks, <a href="https://github.com/jrock2004/TextMate-Bundle-Selenium-Java">TextMate-Bundle-Selenium-Java</a> could be interesting.</li>

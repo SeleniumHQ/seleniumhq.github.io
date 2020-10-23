@@ -3,52 +3,51 @@ title: "Test de performance"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Test de performances avec Selenium et WebDriver
+n'est généralement pas conseillé.
+Pas parce qu'il est incapable
+mais parce qu'il n'est pas optimisé pour le travail
+et il est peu probable que vous obteniez de bons résultats.
 
-Performance testing using Selenium and WebDriver
-is generally not advised.
-Not because it is incapable
-but because it is not optimised for the job
-and you are unlikely to get good results.
+Cela peut sembler idéal pour tester les performances
+dans le contexte de l'utilisateur mais une suite 
+de tests WebDriver sont soumis à de nombreux 
+points de fragilité externe et interne
+qui échappent à votre contrôle;
+par exemple la vitesse de démarrage du navigateur,
+vitesse des serveurs HTTP,
+réponse des serveurs tiers qui hébergent JavaScript ou CSS,
+et la pénalité d'instrumentation
+de l'implémentation WebDriver elle-même.
+Une variation à ces points entraînera une 
+variation de vos résultats.
+Il est difficile de séparer la différence
+entre les performances de votre site web
+et la performance des ressources externes,
+et il est également difficile de dire quelle 
+est la pénalité de performance
+pour utiliser WebDriver dans le navigateur,
+surtout si vous injectez des scripts.
 
-It may seem ideal to performance test
-in the context of the user but a suite of WebDriver tests
-are subjected to many points of external and internal fragility
-which are beyond your control;
-for example browser startup speed,
-speed of HTTP servers,
-response of third party servers that host JavaScript or CSS,
-and the instrumentation penalty
-of the WebDriver implementation itself.
-Variation at these points will cause variation in your results.
-It is difficult to separate the difference
-between the performance of your website
-and the performance of external resources,
-and it is also hard to tell what the performance penalty is
-for using WebDriver in the browser,
-especially if you are injecting scripts.
+L'autre attraction potentielle est "gagner du temps" -
+effectuer des tests fonctionnels et de performance en 
+même temps. Cependant, les tests fonctionnels et 
+de performance ont des objectifs opposés.
+Pour tester la fonctionnalité, un testeur 
+peut devoir être patient et attendre le chargement,
+mais cela obscurcira les résultats des 
+tests de performances et vice versa.
 
-The other potential attraction is "saving time" —
-carrying out functional and performance tests at the same time.
-However, functional and performance tests have opposing objectives.
-To test functionality, a tester may need to be patient
-and wait for loading,
-but this will cloud the performance testing results and vice versa.
+Pour améliorer les performances de votre site Web,
+vous devrez être en mesure d'analyser les performances globales
+indépendamment des différences d'environnement,
+identifier les mauvaises pratiques de code,
+ventilation des performances des ressources individuelles
+(i.e. CSS ou JavaScript)
+afin de savoir quoi améliorer.
+Il existe des outils de test de performance disponibles
+qui peut déjà faire ce travail,
+et qui fournissent des rapports et des analyses
+qui peut même faire des suggestions d'amélioration.
 
-To improve the performance of your website,
-you will need to be able to analyse overall performance
-independent of environment differences,
-identify poor code practices,
-breakdown of performance of individual resources
-(i.e. CSS or JavaScript)
-in order to know what to improve.
-There are performance testing tools available
-that can do this job already,
-and which provide reporting and analysis
-which can even make improvement suggestions.
-
-Example (open source) packages to use are: [JMeter](//jmeter.apache.org/)
+Exemples de packages (open source) à utiliser: [JMeter](//jmeter.apache.org/)

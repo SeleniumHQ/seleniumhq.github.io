@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #20"
 Date = 2010-07-19
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>12 hours late, but I was driving draft horses all day so that&#8217;s my excuse and I&#8217;m sticking with it. Enjoy. I&#8217;m going for a nap.<br />

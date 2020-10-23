@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #99"
 Date = 2012-07-06
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>With the queue flushed we&#8217;ll go back to our regular random posting schedule</p>
 <ul>
 <li><a href="http://www.livestream.com/etsy/video?clipId=pla_780bfe22-12e8-4c7f-8c7b-06cc6cac9c49">Etsy Code as Craft: The Other Part of Software Architecture with Coda Hale</a> &#8211; Code as Craft talks are generally good</li>

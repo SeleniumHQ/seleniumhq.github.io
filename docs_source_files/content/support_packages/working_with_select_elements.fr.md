@@ -3,16 +3,12 @@ title: "Travailler avec les éléments select"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
-`Select` class in the Selenium support package.
-To use it, you will need the following import statement:
+Certains éléments peuvent nécessiter un peu de 
+code de plaque de chaudière pour automatiser.
+Pour réduire cela et rendre vos tests plus propres, 
+il existe un Classe `Select` dans le package de support Selenium.
+Pour l'utiliser, vous aurez besoin de 
+l'instruction d'importation suivante:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -28,15 +24,16 @@ using OpenQA.Selenium.Support.UI
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.support.ui.Select
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You are then able to create a Select object using a WebElement that
-references a `<select>` element.
+Vous pouvez ensuite créer un objet 
+Select à l'aide d'un WebElement qui
+référence un élément `<select>`.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -44,7 +41,7 @@ WebElement selectElement = driver.findElement(By.id("selectElementID"));
 Select selectObject = new Select(selectElement);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-select_element = driver.find_element_by_id('selectElementID')
+select_element = driver.find_element(By.ID,'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -64,10 +61,10 @@ val selectObject = new Select(selectElement)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
-First of all, there are different ways of selecting an option
-from the `<select>` element.
+L'objet Select va maintenant vous donner une série de commandes
+qui vous permettent d'interagir avec un élément `<select>`.
+Tout d'abord, il existe différentes façons de sélectionner une option
+de l'élément `<select>`.
 
 ```html
 <select>
@@ -77,7 +74,8 @@ from the `<select>` element.
 </select>
 ```
 
-There are three ways to select the first option from the above element:
+Il existe trois façons de sélectionner la 
+première option dans l'élément ci-dessus:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -121,7 +119,7 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Select an <option> based upon the <select> element's internal index
@@ -135,7 +133,8 @@ selectObject.selectByVisibleText("Bread")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then check which options are selected by using:
+Vous pouvez ensuite vérifier les 
+options sélectionnées en utilisant:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -153,7 +152,11 @@ all_selected_options = select_object.all_selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Return a List<WebElement> of options that have been selected
+var allSelectedOptions = selectObject.AllSelectedOptions;
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+var firstSelectedOption = selectObject.AllSelectedOptions.FirstOrDefault();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Return an Array[Element] of options that have been selected
@@ -163,7 +166,7 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that have been selected
@@ -175,8 +178,8 @@ val firstSelectedOption = selectObject.firstSelectedOption
 {{< / code-tab >}}
 
 
-Or you may just be interested in what `<option>` elements
-the `<select>` element contains:
+Ou vous pouvez simplement être intéressé par les éléments <option>
+l'élément `<select>` contient:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -196,7 +199,7 @@ IList<IWebElement> allAvailableOptions = selectObject.Options;
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that the <select> element contains
@@ -204,7 +207,8 @@ val allAvailableOptions = selectObject.options
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you want to deselect any elements, you now have four options:
+Si vous souhaitez désélectionner des éléments, 
+vous avez maintenant quatre options:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -260,7 +264,7 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Deselect an <option> based upon the <select> element's internal index
@@ -277,8 +281,10 @@ selectObject.deselectAll()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Finally, some `<select>` elements allow you to select more than one option.
-You can find out if your `<select>` element is one of these by using:
+Enfin, certains éléments `<select>` vous permettent 
+de sélectionner plusieurs options.
+Vous pouvez savoir si votre 
+élément `<select>` en fait partie en utilisant:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -294,7 +300,7 @@ bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple

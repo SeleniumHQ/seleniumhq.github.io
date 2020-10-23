@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #43"
 Date = 2011-02-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li>The big thing in the new last week was ColdFusion. Yes, ColdFusion. I was amazed how much mention it got on Twitter.
 <ul>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #80"
 Date = 2012-02-08
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I should have learned not to boast about getting caught up with links.</p>
 <ul>
 <li><a href="http://blargon7.com/2012/02/automating-browserid-with-selenium/">Automating BrowserID with Selenium</a> is pretty awesome. (As is BrowserID.) Now if this was only installable via pip or easy_install&#8230;</li>

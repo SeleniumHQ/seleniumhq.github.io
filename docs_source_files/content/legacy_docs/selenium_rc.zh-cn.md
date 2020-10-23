@@ -3,199 +3,211 @@ title: "Selenium 1 (Selenium RC)"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
 
+## 介绍
+在WebDriver / Selenium合并产生功能更强大的Selenium 2之前, 
+Selenium RC一直是Selenium的主要项目. 
+再次特意强调的是, Selenium 1不再享有技术支持.
 
-## Introduction
-Selenium RC was the main Selenium project for a long time, before the
-WebDriver/Selenium merge brought up Selenium 2, a more powerful tool.
-It is worth to highlight that Selenium 1 is not supported anymore.
+## Selenium RC 的工作原理
+首先, 我们将描述Selenium RC的组件如何运行
+以及每个组件在运行测试脚本中所扮演的角色.
 
-## How Selenium RC Works
-First, we will describe how the components of Selenium RC operate and the role each plays in running 
-your test scripts.
+### RC 组件
 
-### RC Components
+Selenium RC 组件包括:
 
-Selenium RC components are:
+* Selenium 服务器, 用于启动并关闭浏览器, 
+解释运行从测试程序传递来的Selenese命令, 
+并充当 *HTTP代理* , 
+拦截和验证在浏览器和AUT之间传递的HTTP消息. 
+* 客户端库, 提供每种编程语言和
+Selenium RC 服务器之间的接口. 
 
-* The Selenium Server which launches and kills browsers, interprets and runs the Selenese commands passed from the test program, and acts as an *HTTP proxy*, intercepting and verifying HTTP messages passed between the browser and the AUT.
-* Client libraries which provide the interface between each programming language and the Selenium RC Server.
-
-Here is a simplified architecture diagram:
+以下是一个简化的架构图:
 
 ![Architecture Diagram Simple](/images/legacy_docs/selenium_rc_architecture_diagram_simple.png) 
 
-The diagram shows the client libraries communicate with the
-Server passing each Selenium command for execution. Then the server passes the 
-Selenium command to the browser using Selenium-Core JavaScript commands. The 
-browser, using its JavaScript interpreter, executes the Selenium command. This
-runs the Selenese action or verification you specified in your test script.
+该图显示了客户端库与服务器通信, 
+并传递了用来执行的每个Selenium命令. 
+然后, 服务器使用Selenium-Core的JavaScript命令
+将Selenium命令传递到浏览器. 
+浏览器使用其JavaScript解释器执行Selenium命令. 
+这将运行您在测试脚本中指定的Selenese操作或验证行为.
 
-### Selenium Server
+### Selenium 服务器
 
-Selenium Server receives Selenium commands from your test program,
-interprets them, and reports back to your program the results of
-running those tests.
+Selenium 服务器从您的测试程序接收Selenium命令, 
+对其进行解释, 
+然后将运行这些测试的结果报告给您的程序.
 
-The RC server bundles Selenium Core and automatically injects
-it into the browser. This occurs when your test program opens the
-browser (using a client library API function).
-Selenium-Core is a JavaScript program, actually a set of JavaScript
-functions which interprets and executes Selenese commands using the
-browser's built-in JavaScript interpreter.
+RC服务器捆绑了Selenium Core并将其自动注入浏览器. 
+当您的测试程序打开浏览器(使用客户端库API函数)时, 
+会发生这种情况. 
+Selenium-Core是一个JavaScript程序, 
+实际上是一组JavaScript函数, 
+这些函数使用浏览器的内置JavaScript解释器来解释
+和执行Selenese命令.
 
-The Server receives the Selenese commands from your test program
-using simple HTTP GET/POST requests. This means you can use any
-programming language that can send HTTP requests to automate
-Selenium tests on the browser.
+服务器使用简单的HTTP GET / POST请求从您的测试程序接收Selenese命令. 
+这意味着您可以使用任何可以发送HTTP请求的编程语言
+来自动执行浏览器中的Selenium测试.
 
-### Client Libraries
+### 客户端库
 
-The client libraries provide the programming support that allows you to
-run Selenium commands from a program of your own design.  There is a 
-different client library for each supported language.  A Selenium client 
-library provides a programming interface (API), i.e., a set of functions,
-which run Selenium commands from your own program. Within each interface,
-there is a programming function that supports each Selenese command.
+客户端库提供了编程支持, 
+使您可以从自己设计的程序中运行Selenium命令. 
+每种受支持的语言都有一个不同的客户端库. 
+Selenium客户端库提供了一个编程接口(API), 
+即一组函数, 可从您自己的程序中运行Selenium命令. 
+在每个界面中, 都有一个支持每个Selenese命令的编程功能.
 
-The client library takes a Selenese command and passes it to the Selenium Server
-for processing a specific action or test against the application under test 
-(AUT).  The client library
-also receives the result of that command and passes it back to your program.
-Your program can receive the result and store it into a program variable and
-report it as a success or failure, 
-or possibly take corrective action if it was an unexpected error. 
+客户端库接受Selenese命令, 
+并将其传递给Selenium 服务器, 
+以针对被测应用程序(AUT)处理特定操作或测试. 
+客户端库还接收该命令的结果, 并将其传递回您的程序. 
+您的程序可以接收结果并将其存储到程序变量中, 
+并将其报告为成功或失败, 
+或者如果是意外错误, 
+则可以采取纠正措施. 
 
-So to create a test program, you simply write a program that runs 
-a set of Selenium commands using a client library API.  And, optionally, if 
-you already have a Selenese test script created in the Selenium-IDE, you can 
-*generate the Selenium RC code*. The Selenium-IDE can translate (using its 
-Export menu item) its Selenium commands into a client-driver's API function 
-calls.  See the Selenium-IDE chapter for specifics on exporting RC code from 
-Selenium-IDE.
+因此, 要创建测试程序, 
+只需编写一个使用客户端库API运行一组Selenium命令的程序. 
+并且, 可选地, 如果您已经在Selenium-IDE中创建了Selenese测试脚本, 
+则可以 *生成Selenium RC代码* . 
+Selenium-IDE可以(使用其"导出"菜单项)
+将其Selenium命令转换为客户端驱动程序的API函数调用. 
+有关从Selenium-IDE导出RC代码的详细信息, 
+请参见Selenium-IDE章节.
 
-## Installation
+## 安装
 
-Installation is rather a misnomer for Selenium. Selenium has a set of libraries available
-in the programming language of your choice. You could download them from the [downloads page](https://selenium.dev/downloads/).
+安装对于Selenium来说是谬称. 
+Selenium具有一组可用您选择的编程语言提供的库. 您可以从 [下载页面](https://selenium.dev/downloads/)下载它们.
 
-Once you've chosen a language to work with, you simply need to:
+选择了要使用的语言后, 您只需要:
 
-* Install the Selenium RC Server.
-* Set up a programming project using a language specific client driver.
+* 安装Selenium RC服务器.
+* 使用特定语言的客户端驱动程序设置编程项目.
 
-### Installing Selenium Server
+### 安装Selenium服务器
 
-The Selenium RC server is simply a Java *jar* file (*selenium-server-standalone-<version-number>.jar*), which doesn't
-require any special installation. Just downloading the zip file and extracting the 
-server in the desired directory is sufficient. 
+Selenium RC服务器只是一个Java *jar* 文件
+( *selenium-server-standalone-<version-number>.jar* ), 
+不需要任何特殊的安装. 
+只需下载zip文件并将服务器提取到所需目录中就足够了. 
 
-### Running Selenium Server
+### 运行Selenium服务器
 
-Before starting any tests you must start the server.  Go to the directory
-where Selenium RC's server is located and run the following from a command-line 
-console.
+在开始任何测试之前, 您必须启动服务器. 
+转到Selenium RC服务器所在的目录, 
+然后从命令行控制台运行以下命令.
 
 ```shell
     java -jar selenium-server-standalone-<version-number>.jar
 ```
 
-This can be simplified by creating
-a batch or shell executable file (.bat on Windows and .sh on Linux) containing the command
-above. Then make a shortcut to that executable on your
-desktop and simply double-click the icon to start the server.
+通过创建包含上述命令的批处理或Shell可执行文件
+(Windows上为.bat, Linux上为.sh), 
+可以简化此操作. 
+然后在桌面上对该可执行文件创建快捷方式, 
+只需双击该图标即可启动服务器.
 
-For the server to run you'll need Java installed 
-and the PATH environment variable correctly configured to run it from the console.
-You can check that you have Java correctly installed by running the following
-on a console.
+为了使服务器运行, 
+您需要安装Java并正确配置PATH环境变量才能从控制台运行它. 
+您可以通过在控制台上运行以下命令来检查是否正确安装了Java.
 
 ```shell
        java -version
 ```
 
-If you get a version number (which needs to be 1.5 or later), you're ready to start using Selenium RC.
+如果您查看到预期的版本号(必须为1.5或更高版本), 
+就可以开始使用Selenium RC了. 
 
-### Using the Java Client Driver
+### 使用Java客户端驱动程序
 
-* Download Selenium java client driver zip from the SeleniumHQ [downloads page](https://selenium.dev/downloads/).
-* Extract selenium-java-<version-number>.jar file
-* Open your desired Java IDE (Eclipse, NetBeans, IntelliJ, Netweaver, etc.)
-* Create a java project.
-* Add the selenium-java-<version-number>.jar files to your project as references.
-* Add to your project classpath the file selenium-java-<version-number>.jar.
-* From Selenium-IDE, export a script to a Java file and include it in your Java
-  project, or write your Selenium test in Java using the selenium-java-client API.
-  The API is presented later in this chapter.  You can either use JUnit, or TestNg
-  to run your test, or you can write your own simple main() program.  These concepts are
-  explained later in this section.
-* Run Selenium server from the console.
-* Execute your test from the Java IDE or from the command-line.
+* 从SeleniumHQ [下载页面](https://selenium.dev/downloads/) 下载Selenium Java客户端驱动程序zip
+* 解压 selenium-java-<version-number>.jar 文件
+* 打开所需的Java IDE(Eclipse, NetBeans, IntelliJ, Netweaver等)
+* 创建一个Java项目.
+* 将selenium-java-.jar文件添加到您的项目中作为依赖.
+* 将文件selenium-java-.jar添加到您的项目类路径中.
+* 从Selenium-IDE中, 将脚本导出到Java文件并将其包含在Java项目中, 
+或者使用selenium-java-client API用Java编写Selenium测试. 
+该API将在本章稍后介绍. 
+您可以使用JUnit或TestNg来运行测试, 
+也可以编写自己的简单main()程序. 
+这些概念将在本节稍后说明. 
+* 从控制台运行Selenium服务器.
+* 从Java IDE或命令行执行测试.
 
-For details on Java test project configuration, see the Appendix sections
-Configuring Selenium RC With Eclipse and Configuring Selenium RC With Intellij.
+有关Java测试项目配置的详细信息, 
+请参阅附录部分. 
+使用Eclipse配置Selenium RC和使用Intellij配置Selenium RC. 
 
-### Using the Python Client Driver 
+### 使用Python客户端驱动程序
 
-* Install Selenium via PIP, instructions linked at SeleniumHQ [downloads page](https://selenium.dev/downloads/) 
-* Either write your Selenium test in Python or export
-  a script from Selenium-IDE to a python file.
-* Run Selenium server from the console
-* Execute your test from a console or your Python IDE 
+* 通过PIP安装Selenium, 说明链接在SeleniumHQ [下载页面](https://selenium.dev/downloads/) 
+* 用Python编写Selenium测试
+或将脚本从Selenium-IDE导出到python文件.
+* 从控制台运行Selenium服务器
+* 从控制台或Python IDE执行测试 
 
-For details on Python client driver configuration, see the appendix Python Client Driver Configuration.
+有关Python客户端驱动程序配置的详细信息, 
+请参见附录Python客户端驱动程序配置.
 
-### Using the .NET Client Driver
+### 使用.NET客户端驱动程序
 
-* Download Selenium RC from the SeleniumHQ [downloads page](https://selenium.dev/downloads/)
-* Extract the folder
-* Download and install [NUnit](https://nunit.org/download/) (
-  Note:  You can use NUnit as your test engine.  If you're not familiar yet with 
-  NUnit, you can also write a simple main() function to run your tests; 
-  however NUnit is very useful as a test engine.)
-* Open your desired .Net IDE (Visual Studio, SharpDevelop, MonoDevelop)
-* Create a class library (.dll)
-* Add references to the following DLLs: nmock.dll, nunit.core.dll, nunit.
-  framework.dll, ThoughtWorks.Selenium.Core.dll, ThoughtWorks.Selenium.IntegrationTests.dll
-  and ThoughtWorks.Selenium.UnitTests.dll
-* Write your Selenium test in a .Net language (C#, VB.Net), or export
-  a script from Selenium-IDE to a C# file and copy this code into the class file 
-  you just created.
-* Write your own simple main() program or you can include NUnit in your project 
-  for running your test.  These concepts are explained later in this chapter.
-* Run Selenium server from console
-* Run your test either from the IDE, from the NUnit GUI or from the command line
+* 从SeleniumHQ [下载页面](https://selenium.dev/downloads/) 下载Selenium RC
+* 解压缩文件夹
+* 下载并安装[NUnit](https://nunit.org/download/)
+(注意：您可以将NUnit用作测试引擎. 
+如果您还不熟悉NUnit, 
+还可以编写一个简单的main()函数来运行测试；
+但是NUnit作为测试引擎非常有用)
+* 打开所需的.Net IDE(Visual Studio, SharpDevelop, MonoDevelop)
+* 创建一个类库(.dll)
+* 添加对以下DLL的引用：
+nmock.dll, 
+nunit.core.dll, 
+nunit.framework.dll, 
+ThoughtWorks.Selenium.Core.dll, 
+ThoughtWorks.Selenium.IntegrationTests.dll
+和ThoughtWorks.Selenium.UnitTests.dll
+* 用.Net语言(C＃, VB.Net)编写Selenium测试, 
+或将脚本从Selenium-IDE导出到C＃文件, 
+然后将此代码复制到刚创建的类文件中.
+* 编写自己的简单main()程序, 
+或者可以在项目中包含NUnit来运行测试. 
+这些概念将在本章稍后说明. 
+* 从控制台运行Selenium服务器
+* 从IDE, NUnit GUI或命令行运行测试
 
-For specific details on .NET client driver configuration with Visual Studio, see the appendix 
-.NET client driver configuration. 
+有关使用Visual Studio配置.NET客户端驱动程序的详细信息, 
+请参阅附录.NET客户端驱动程序配置. 
 
-### Using the Ruby Client Driver
+### 使用Ruby客户端驱动程序
 
-* If you do not already have RubyGems, install it from RubyForge.
-* Run ``gem install selenium-client``
-* At the top of your test script, add ``require "selenium/client"``
-* Write your test script using any Ruby test harness (eg Test::Unit,
-  Mini::Test or RSpec).
-* Run Selenium RC server from the console.
-* Execute your test in the same way you would run any other Ruby
-  script.
+* 如果您还没有RubyGems, 请从RubyForge安装它.
+* 运行 ``gem install selenium-client``
+* 在测试脚本的顶部, 添加 ``require "selenium/client"``
+* 使用任何Ruby测试工具
+(例如Test::Unit, Mini::Test或RSpec)编写测试脚本.
+* 从控制台运行Selenium RC服务器.
+* 以与运行其他任何Ruby脚本相同的方式执行测试.
 
 
-For details on Ruby client driver configuration, see the `Selenium-Client documentation`_
+有关Ruby客户端驱动程序配置的详细信息, 请参见 `Selenium-Client documentation`_
 
-## From Selenese to a Program
+## 从 Selenese 到程序
 
-The primary task for using Selenium RC is to convert your Selenese into a programming 
-language. In this section, we provide several different language-specific examples.
+使用Selenium RC的主要任务
+是将您的Selenese转换为编程语言. 
+在本节中, 我们提供了几种不同的特定于语言的示例. 
 
-### Sample Test Script
+### 示例测试脚本
 
-Let's start with an example Selenese test script.  Imagine recording
-the following test with Selenium-IDE.
+让我们从一个Selenese测试脚本示例开始. 试想用Selenium-IDE录制以下测试.
 
 |                    |                               |             |
 | --------           | ----------------------------  | ----------- |
@@ -205,15 +217,16 @@ the following test with Selenium-IDE.
 | assertTextPresent  | Results * for selenium rc     |             |
 
 
-Note: This example would work with the Google search page http://www.google.com
+注意：此示例适用于Google搜索页面 http://www.google.com
 
-### Selenese as Programming Code
+### Selenese作为编程代码
 
-Here is the test script exported (via Selenium-IDE) to each of the supported
-programming languages.  If you have at least basic knowledge of an object-
-oriented programming language, you will understand how Selenium 
-runs Selenese commands by reading one of these 
-examples.  To see an example in a specific language, select one of these buttons.
+这是(通过Selenium-IDE)导出到每种支持的编程语言的测试脚本. 
+如果您具有基本的面向对象编程语言的基础知识, 
+则可以通过阅读以下示例之一
+来了解Selenium如何运行Selenese命令. 
+要查看特定语言的示例, 
+请选择以下按钮之一. 
 
 #### CSharp
 ``` csharp
@@ -387,23 +400,27 @@ examples.  To see an example in a specific language, select one of these buttons
 
 ```
 
-In the next section we'll explain how to build a test program using the generated code.
+在下一节中, 
+我们将说明如何使用生成的代码来构建测试程序.
 
-## Programming Your Test
+## 编写测试程序
 
-Now we'll illustrate how to program your own tests using examples in each of the
-supported programming languages.
-There are essentially two tasks:
+现在, 我们将使用每种受支持的编程语言的示例
+来说明如何对自己的测试进行编程. 
+本质上有两个任务:
 
-* Generate your script into a programming 
-  language from Selenium-IDE, optionally modifying the result.  
-* Write a very simple main program that executes the generated code.  
+* 从Selenium-IDE将脚本生成为代码, 
+可以选择修改结果.  
+* 编写一个非常简单的执行生成代码的主程序.  
 
-Optionally, you can adopt a test engine platform like JUnit or TestNG for Java, 
-or NUnit for .NET if you are using one of those languages.
+(可选)您可以采用测试引擎平台, 
+例如JUnit或Java的TestNG, 
+或使用NUnit的.NET
+(如果使用的是其中一种语言).
 
-Here, we show language-specific examples.  The language-specific APIs tend to 
-differ from one to another, so you'll find a separate explanation for each.  
+在这里, 我们显示特定于语言的示例. 
+特定语言的API彼此之间往往有所不同, 
+因此您会为每个API找到单独的解释
 
 * Java
 * C#
@@ -414,23 +431,25 @@ differ from one to another, so you'll find a separate explanation for each.
 
 ### Java
 
-For Java, people use either JUnit or TestNG as the test engine.  
-Some development environments like Eclipse have direct support for these via 
-plug-ins.  This makes it even easier. Teaching JUnit or TestNG is beyond the scope of 
-this document however materials may be found online and there are publications
-available.  If you are already a "java-shop" chances are your developers will 
-already have some experience with one of these test frameworks.
+对于Java, 人们使用JUnit或TestNG作为测试引擎.  
+某些开发环境(如Eclipse)通过插件直接支持这些环境. 
+这使它变得更加容易. 
+讲授JUnit或TestNG不在本文档的范围之内, 
+但是可以在网上找到资料, 
+并且可以找到出版物. 
+如果您恰巧熟悉Java全家桶, 
+那么您的开发人员将已经具有使用某种测试框架的经验. 
 
-You will probably want to rename the test class from "NewTest" to something 
-of your own choosing.  Also, you will need to change the browser-open 
-parameters in the statement:
+您可能需要将测试类从" NewTest"重命名为您自己选择的名称. 
+另外, 您将需要在语句中更改浏览器打开参数:
 
 ```java
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ``` 
 
-The Selenium-IDE generated code will look like this.  This example 
-has comments added manually for additional clarity.
+Selenium-IDE生成的代码将如下所示. 
+此示例具有手动添加的注释, 
+以提高清晰度.
 
 ```java
    package com.example.tests;
@@ -467,24 +486,23 @@ has comments added manually for additional clarity.
 
 ### `C#`
 
-The .NET Client Driver works with Microsoft.NET.
-It can be used with any .NET testing framework 
-like NUnit or the Visual Studio 2005 Team System.
+.NET客户端驱动程序可与Microsoft.NET一起使用. 
+它可以与任何.NET测试框架(
+如NUnit或Visual Studio 2005 Team System)一起使用.
 
-Selenium-IDE assumes you will use NUnit as your testing framework.
-You can see this in the generated code below.  It includes the *using* statement
-for NUnit along with corresponding NUnit attributes identifying 
-the role for each member function of the test class.  
+Selenium-IDE假定您将使用NUnit作为测试框架. 
+您可以在下面的生成的代码中看到这一点. 
+它包含NUnit的using语句以及相应的NUnit属性, 
+这些属性标识测试类的每个成员函数的角色.  
 
-You will probably have to rename the test class from "NewTest" to 
-something of your own choosing.  Also, you will need to change the browser-open
-parameters in the statement:
+您可能必须将测试类从" NewTest"重命名为您自己选择的名称. 
+另外, 您将需要在语句中更改浏览器打开参数:
 
 ```csharp
     selenium = new DefaultSelenium("localhost", 4444, "*iehta", "http://www.google.com/");
 ```
 
-The generated code will look similar to this.
+生成的代码将类似于此.
 
 ```csharp
 
@@ -569,17 +587,17 @@ The generated code will look similar to this.
     }
 ```
 
-You can allow NUnit to manage the execution 
-of your tests. Or alternatively, you can write a simple `main()` program that 
-instantiates the test object and runs each of the three methods, `SetupTest()`, 
-`TheNewTest()`, and `TeardownTest()` in turn.
+您可以允许NUnit管理测试的执行. 
+或者, 您可以编写一个简单的 `main()` 程序, 
+该程序实例化测试对象并依次运行三个方法 `SetupTest()`, 
+`TheNewTest()`和 `TeardownTest()` .
 
 
 ### Python
 
-Pyunit is the test framework to use for Python.
+Pyunit是用于Python的测试框架.
 
-The basic test structure is:
+基本测试结构是:
 
 ```python
 
@@ -632,22 +650,23 @@ The basic test structure is:
 ### Ruby
 
 
-Old (pre 2.0) versions of Selenium-IDE generate Ruby code that requires the old Selenium
-gem. Therefore, it is advisable to update any Ruby scripts generated by the
-IDE as follows:
+Selenium-IDE的旧版本(2.0之前的版本)生成
+需要旧Selenium gem的Ruby代码. 
+因此, 建议如下更新IDE生成的所有Ruby脚本:
 
-1. On line 1, change ``require "selenium"`` to ``require
+1. 在第一行, 修改 ``require "selenium"`` 为 ``require
 "selenium/client"``
 
-2. On line 11, change ``Selenium::SeleniumDriver.new`` to
+2. 在第十一行, 修改 ``Selenium::SeleniumDriver.new`` 为
 ``Selenium::Client::Driver.new``
 
-You probably also want to change the class name to something more
-informative than "Untitled," and change the test method's name to
-something other than "test_untitled."
+您可能还希望将类名更改为比"无标题"更具信息性的名称, 
+并将测试方法的名称更改为
+"test_untitled"以外的名称. 
 
-Here is a simple example created by modifying the Ruby code generated
-by Selenium IDE, as described above.
+这是一个通过修改Selenium IDE
+生成的Ruby代码创建的简单示例, 
+如上所述.
 
 ```ruby
 
@@ -733,20 +752,21 @@ by Selenium IDE, as described above.
 
 ### Perl, PHP
 
-The members of the documentation team
-have not used Selenium RC with Perl or PHP. If you are using Selenium RC with either of
-these two languages please contact the Documentation Team (see the chapter on contributing).
-We would love to include some examples from you and your experiences, to support Perl and PHP users.
+文档团队的成员尚未将Selenium RC与Perl或PHP一起使用. 
+如果您将Selenium RC和这两种语言一起使用, 
+请联系文档团队(请参阅贡献一章). 
+我们很乐意提供一些您的经验和示例, 以支持Perl和PHP用户.
 
 
-## Learning the API
+## 学习 API
 
-The Selenium RC API uses naming conventions 
-that, assuming you understand Selenese, much of the interface  
-will be self-explanatory. Here, however, we explain the most critical and 
-possibly less obvious aspects.
+Selenium RC API使用命名约定, 
+假设您了解Selenese, 
+则大部分接口将是不言自明的. 
+但是, 在这里, 
+我们解释了最关键且可能不太明显的方面.
 
-### Starting the Browser 
+### 启动浏览器
 
 #### CSharp
 ```csharp
@@ -787,156 +807,169 @@ possibly less obvious aspects.
       @selenium.start
 ```
 
-Each of these examples opens the browser and represents that browser 
-by assigning a "browser instance" to a program variable.  This 
-program variable is then used to call methods from the browser. 
-These methods execute the Selenium commands, i.e. like *open* or *type* or the *verify* 
-commands.
+这些示例中的每一个都打开浏览器
+并通过为程序变量分配"浏览器实例"来表示该浏览器. 
+然后, 该程序变量用于从浏览器调用方法. 
+这些方法执行Selenium命令, 
+即 *open* 或 *type* 或 *verify* 命令.
 
-The parameters required when creating the browser instance
-are: 
+创建浏览器实例时所需的参数是: 
 
 * **host**
-    Specifies the IP address of the computer where the server is located. Usually, this is
-    the same machine as where the client is running, so in this case *localhost* is passed.  In some clients this is an optional parameter.
-	
+    指定服务器所在计算机的IP地址. 
+    通常, 这是与客户端运行所在的计算机相同的主机, 
+    因此在这种情况下, 
+    将传递本地主机. 
+    在某些客户端中, 
+    这是可选参数	
+    
 * **port**
-    Specifies the TCP/IP socket where the server is listening waiting
-    for the client to establish a connection.  This also is optional in some
-    client drivers.
+    指定服务器正在侦听的TCP/IP套接字, 
+    以等待客户端建立连接. 
+    在某些客户端驱动程序中这也是可选的.
 	
 * **browser**
-    The browser in which you want to run the tests. This is a required 
-    parameter.
+    您要在其中运行测试的浏览器. 
+    这是一个必需的参数.
 	
 * **url**
-    The base url of the application under test. This is required by all the
-    client libs and is integral information for starting up the browser-proxy-AUT communication.
+    被测应用程序的基本URL. 
+    这是所有客户端库所必需的, 
+    并且是启动浏览器-代理-AUT通信所必需的信息
 
-Note that some of the client libraries require the browser to be started explicitly by calling
-its `start()` method.
+请注意, 某些客户端库要求通过调用浏览器的 `start()` 方法
+来明确启动浏览器.
 
-### Running Commands 
+### 运行命令
 
-Once you have the browser initialized and assigned to a variable (generally
-named "selenium") you can make it run Selenese commands by calling the respective 
-methods from the browser variable. For example, to call the *type* method
-of the selenium object:
+将浏览器初始化并分配给变量(通常称为"Selenium")后, 
+可以通过从浏览器变量调用相应的方法来使其运行Selenese命令. 
+例如, 调用Selenium对象的 *type* 方法:
 
 ```
     selenium.type("field-id","string to type")
 ```
 
-In the background the browser will actually perform a *type* operation, 
-essentially identical to a user typing input into the browser, by  
-using the locator and the string you specified during the method call.
+在后台, 浏览器实际上将执行 *type* 操作, 
+该操作基本上与用户通过以下方式在浏览器中键入输入相同：
+使用定位符和您在方法调用期间指定的字符串.
 
-## Reporting Results
+## 报告结果
 
-Selenium RC does not have its own mechanism for reporting results. Rather, it allows
-you to build your reporting customized to your needs using features of your
-chosen programming language.  That's great, but what if you simply want something
-quick that's already done for you?  Often an existing library or test framework can 
-meet your needs faster than developing your own test reporting code.
+Selenium RC没有自己的报告结果机制. 
+相反, 它允许您使用所选编程语言的功能来构建根据需要定制的报告. 
+太好了, 但是如果您只是想快速地为您完成某件事, 该怎么办？
+与开发自己的测试报告代码相比, 
+现有的库或测试框架通常可以更快地满足您的需求.
 
-### Test Framework Reporting Tools 
+### 测试框架报告工具
 
-Test frameworks are available for many programming languages. These, along with
-their primary function of providing a flexible test engine for executing your tests, 
-include library code for reporting results.  For example, Java has two 
-commonly used test frameworks, JUnit and TestNG.  .NET also has its own, NUnit.
+测试框架可用于许多编程语言. 
+这些功能以及提供用于执行测试的灵活测试引擎的主要功能, 
+包括用于报告结果的库代码. 
+例如, Java有两个常用的测试框架, 
+即JUnit和TestNG. 
+.NET也有自己的NUnit
 
-We won't teach the frameworks themselves here; that's beyond the scope of this
-user guide.  We will simply introduce the framework features that relate to Selenium
-along with some techniques you can apply.  There are good books available on these
-test frameworks however along with information on the internet.
+我们不会在这里教框架本身；
+这超出了本用户指南的范围. 
+我们将简单介绍与Selenium相关的框架功能以及您可以应用的一些技术. 
+这些测试框架上都有不错的书籍, 
+但是互联网上的信息也很多.
 
-### Test Report Libraries 
+### 测试报告库
 
-Also available are third-party libraries specifically created for reporting
-test results in your chosen programming language.  These often support a 
-variety of formats such as HTML or PDF.
+还提供了专门创建的第三方库, 
+用于以您选择的编程语言报告测试结果. 
+这些通常支持多种格式, 例如HTML或PDF.
 
-### What's The Best Approach? 
+### 最好的方法是什么? 
 
-Most people new to the testing frameworks will begin with the framework's
-built-in reporting features.  From there most will examine any available libraries
-as that's less time consuming than developing your own.  As you begin to use
-Selenium no doubt you will start putting in your own "print statements" for 
-reporting progress.  That may gradually lead to you developing your own 
-reporting, possibly in parallel to using a library or test framework.  Regardless,
-after the initial, but short, learning curve you will naturally develop what works
-best for your own situation.
+大多数测试框架的新手都将从框架的内置报告功能开始. 
+从那里开始, 大多数人会检查任何可用的库, 
+因为与开发自己的库相比, 这样做所花的时间更少. 
+毫无疑问, 当您开始使用Selenium时, 
+您将开始输入自己的"打印报表"来报告进度. 
+这可能会逐渐导致您开发自己的报告, 
+这可能与使用库或测试框架同时进行. 
+无论如何, 经过最初但短暂的学习后, 
+您自然会开发出最适合自己情况的方法.
 
-### Test Reporting Examples
+### 测试报告示例
 
-To illustrate, we'll direct you to some specific tools in some of the other languages 
-supported by Selenium.  The ones listed here are commonly used and have been used 
-extensively (and therefore recommended) by the authors of this guide.
+为了说明, 我们将指导您使用Selenium支持的其他一些语言的一些特定工具. 
+此处列出的是常用的, 
+并且由本指南的作者广泛使用(因此建议使用).
 
-#### Test Reports in Java
+#### Java测试报告
 
-* If Selenium Test cases are developed using JUnit then JUnit Report can be used
-  to generate test reports. 
+* 如果使用JUnit开发了Selenium测试用例, 
+则可以使用JUnit报告生成测试报告. 
 
-* If Selenium Test cases are developed using TestNG then no external task 
-  is required to generate test reports. The TestNG framework generates an 
-  HTML report which list details of tests. 
+* 如果使用TestNG开发了Selenium测试用例, 
+则无需外部任务即可生成测试报告. 
+TestNG框架生成一个HTML报告, 
+其中列出了测试的详细信息. 
 
-* ReportNG is a HTML reporting plug-in for the TestNG framework. 
-  It is intended as a replacement for the default TestNG HTML report. 
-  ReportNG provides a simple, colour-coded view of the test results. 
+* ReportNG是用于TestNG框架的HTML报告插件. 
+它旨在替代默认的TestNG HTML报告. 
+ReportNG提供了简单的, 以颜色编码的测试结果视图. 
   
-##### Logging the Selenese Commands
+##### 记录Selenese命令
 
-* Logging Selenium can be used to generate a report of all the Selenese commands
-  in your test along with the success or failure of each. Logging Selenium extends
-  the Java client driver to add this Selenese logging ability.
+* 记录Selenium可以用于生成测试中所有Selenese命令
+以及每个命令的成功或失败的报告. 
+记录Selenium扩展了Java客户端驱动程序
+以添加此Selenese记录功能.
 
-#### Test Reports for Python
+#### Python测试报告
 
-* When using Python Client Driver then HTMLTestRunner can be used to
-  generate a Test Report.
+* 使用Python客户端驱动程序时, 
+可以使用HTMLTestRunner生成测试报告.
 
-#### Test Reports for Ruby
+#### Ruby测试报告
 
-* If RSpec framework is used for writing Selenium Test Cases in Ruby
-  then its HTML report can be used to generate a test report.
+* 如果RSpec框架用于在Ruby中编写Selenium测试用例, 
+则其HTML报告可用于生成测试报告.
 
 
-## Adding Some Spice to Your Tests
+## 为测试加料
 
-Now we'll get to the whole reason for using Selenium RC, adding programming logic to your tests.
-It's the same as for any program.  Program flow is controlled using condition statements
-and iteration.  In addition you can report progress information using I/O.  In this section
-we'll show some examples of how programming language constructs can be combined with 
-Selenium to solve common testing problems. 
+现在, 我们将介绍使用Selenium RC的全部原因, 
+并在测试中添加编程逻辑. 
+与任何程序相同. 
+程序流使用条件语句和迭代进行控制. 
+另外, 您可以使用I/O报告进度信息. 
+在本节中, 我们将展示一些示例, 
+说明如何将编程语言构造与Selenium结合以解决常见的测试问题. 
 
-You will find as you transition from the simple tests of the existence of 
-page elements to tests of dynamic functionality involving multiple web-pages and 
-varying data that you will require programming logic for verifying expected 
-results.  Basically, the Selenium-IDE does not support iteration and 
-standard condition statements.  You can do some conditions by embedding javascript
-in Selenese parameters, however 
-iteration is impossible, and most conditions will be much easier in a  
-programming language.  In addition, you may need exception handling for
-error recovery.  For these reasons and others, we have written this section
-to illustrate the use of common programming techniques to
-give you greater 'verification power' in your automated testing.
+当您从对页面元素存在的简单测试
+过渡到涉及多个网页和变化数据的动态功能测试时, 
+您将需要编程逻辑来验证预期结果. 
+基本上, Selenium-IDE不支持迭代和标准条件语句. 
+您可以通过将Javascript嵌入
+Selenese参数中来执行某些条件, 
+但是迭代是不可能的, 并且大多数条件在编程语言. 
+此外, 您可能需要进行异常处理才能恢复错误. 
+出于这些原因及其他原因, 
+我们在本节中进行了说明, 
+以说明如何使用常见的编程技术为您的自动化测试提供更大的"验证能力".
 
-The examples in this section are written
-in C# and Java, although the code is simple and can be easily adapted to the other supported
-languages.  If you have some basic knowledge
-of an object-oriented programming language you shouldn't have difficulty understanding this section.
+本节中的示例使用C＃和Java编写, 
+尽管代码很简单并且可以轻松地适应其他受支持的语言. 
+如果您对面向对象的编程语言有一些基本的了解, 
+那么本部分将不难理解.
 
-### Iteration
+### 迭代
 
-Iteration is one of the most common things people need to do in their tests.
-For example, you may want to to execute a search multiple times.  Or, perhaps for
-verifying your test results you need to process a "result set" returned from a database.
+迭代是人们在测试中需要做的最常见的事情之一. 
+例如, 您可能要多次执行搜索. 
+或者, 可能是为了验证测试结果, 
+您需要处理从数据库返回的"结果集".
 
-Using the same Google search example we used earlier, let's 
-check the Selenium search results. This test could use the Selenese:
+使用我们之前使用的相同Google搜索示例, 
+让我们检查Selenium搜索结果. 
+该测试可以使用Selenese:
 
 |                    |                               |               |
 | --------           | ----------------------------  | ------------- |
@@ -952,12 +985,13 @@ check the Selenium search results. This test could use the Selenese:
 | assertTextPresent  | Results * for selenium grid   |               |
 
 
-The code has been repeated to run the same steps 3 times.  But multiple
-copies of the same code is not good program practice because it's more
-work to maintain.  By using a programming language, we can iterate
-over the search results for a more flexible and maintainable solution. 
+该代码已重复执行3次相同的步骤. 
+但是, 同一代码的多个副本不是良好的编程习惯, 
+因为维护起来需要做更多的工作. 
+通过使用编程语言, 
+我们可以遍历搜索结果以提供更灵活和可维护的解决方案. 
 
-#### In `C#`   
+#### 在 `C#` 中  
    
 ```csharp
    // Collection of String values.
@@ -974,30 +1008,33 @@ over the search results for a more flexible and maintainable solution.
     }
 ```
 
-### Condition Statements
+### 条件陈述
 
-To illustrate using conditions in tests we'll start with an example.
-A common problem encountered while running Selenium tests occurs when an 
-expected element is not available on page.  For example, when running the 
-following line:
+为了说明在测试中的使用条件, 
+我们将从一个示例开始. 
+当页面上没有预期的元素时, 
+会发生运行Selenium测试时遇到的常见问题. 
+例如, 当运行以下行时:
 
 ```
    selenium.type("q", "selenium " +s);
 ```
    
-If element 'q' is not on the page then an exception is
-thrown:
+如果页面上没有元素"q", 
+则抛出异常:
 
 ```java
    com.thoughtworks.selenium.SeleniumException: ERROR: Element q not found
 ```
 
-This can cause your test to abort.  For some tests that's what you want.  But
-often that is not desirable as your test script has many other subsequent tests
-to perform.
+这可能会导致测试中止. 
+对于某些测试, 这就是您想要的. 
+但是通常这是不希望的, 
+因为您的测试脚本还有许多其他后续测试需要执行.
 
-A better approach is to first validate whether the element is really present
-and then take alternatives when it it is not.  Let's look at this using Java.
+更好的方法是先验证元素是否确实存在, 
+然后在元素不存在时采取替代方法. 
+让我们用Java看一下
 
 ```java
    // If element is available on page then perform type operation.
@@ -1008,19 +1045,21 @@ and then take alternatives when it it is not.  Let's look at this using Java.
    }
 ```
    
-The advantage of this approach is to continue with test execution even if some UI 
-elements are not available on page.
+这种方法的优点是即使页面上某些UI元素不可用, 
+也可以继续执行测试. 
 
 
-### Executing JavaScript from Your Test
+### 从测试中执行JavaScript
 
-JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
-Selenium RC. 
+在执行Selenium不直接支持的应用程序时, 
+JavaScript非常方便. 
+Selenium API的 **getEval** 方法. 
 
-Consider an application having check boxes with no static identifiers. 
-In this case one could evaluate JavaScript from Selenium RC to get ids of all 
-check boxes and then exercise them. 
+考虑具有复选框的应用程序, 
+该复选框没有静态标识符. 
+在这种情况下, 
+可以评估Selenium RC中的JavaScript以获取所有复选框的ID, 
+然后执行它们. 
 
 ```java
    public static String[] getAllCheckboxIds () { 
@@ -1042,90 +1081,100 @@ check boxes and then exercise them.
     }
 ```
 
-To count number of images on a page:
+计算页面上的图像数量:
 
 ```java   
    selenium.getEval("window.document.images.length;");
 ```
 
-Remember to use window object in case of DOM expressions as by default selenium
-window is referred to, not the test window.
+记住要在DOM表达式的情况下使用window对象, 
+因为默认情况下是指Selenium窗口, 
+而不是测试窗口.
 
-## Server Options
+## 服务器选项
 
-When the server is launched, command line options can be used to change the
-default server behaviour.
+启动服务器时, 
+命令行选项可用于更改默认服务器行为.
 
-Recall, the server is started by running the following.
+回想一下, 通过运行以下命令来启动服务器.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar
 ``` 
 
-To see the list of options, run the server with the ``-h`` option.
+要查看选项列表, 
+请使用 ``-h`` 选项运行服务器.
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -h
 ``` 
 
-You'll see a list of all the options you can use with the server and a brief
-description of each. The provided descriptions will not always be enough, so we've
-provided explanations for some of the more important options.
+您会看到服务器可以使用的所有选项的列表
+以及每个选项的简要说明. 
+提供的描述并不总是足够的, 
+因此我们提供了一些更重要选项的解释.
 
 
-### Proxy Configuration
+### 代理配置
 
-If your AUT is behind an HTTP proxy which requires authentication then you should 
-configure http.proxyHost, http.proxyPort, http.proxyUser and http.proxyPassword
-using the following command. 
+如果您的AUT在需要身份验证的HTTP代理后面, 
+则应使用以下命令配置http.proxyHost, 
+http.proxyPort, 
+http.proxyUser
+和http.proxyPassword. 
 
 ```bash   
    $ java -jar selenium-server-standalone-<version-number>.jar -Dhttp.proxyHost=proxy.com -Dhttp.proxyPort=8080 -Dhttp.proxyUser=username -Dhttp.proxyPassword=password
 ``` 
 
-### Multi-Window Mode
+### 多窗口模式
 
-If you are using Selenium 1.0 you can probably skip this section, since multiwindow mode is 
-the default behavior.  However, prior to version 1.0, Selenium by default ran the 
-application under test in a sub frame as shown here.
+如果您使用的是Selenium 1.0, 
+则可能会跳过本节, 因为多窗口模式是默认行为. 
+但是, 在版本1.0之前, 
+Selenium默认在子frame中运行测试中的应用程序, 
+如下所示.
 
-![Single window mode](/images/legacy_docs/selenium_rc_single_window_mode.png)
+![单窗口模式](/images/legacy_docs/selenium_rc_single_window_mode.png)
 
-Some applications didn't run correctly in a sub frame, and needed to be 
-loaded into the top frame of the window. The multi-window mode option allowed
-the AUT to run in a separate window rather than in the default 
-frame where it could then have the top frame it required.
+某些应用程序无法在子框架中正常运行, 
+需要将其加载到窗口的顶部框架中. 
+多窗口模式选项允许AUT在单独的窗口中运行, 
+而不是在默认帧中运行, 
+然后在默认帧中可以拥有所需的顶部帧.
 
-![Multiwindow Mode](/images/legacy_docs/selenium_rc_multi_window_mode.png)
+![多窗口模式](/images/legacy_docs/selenium_rc_multi_window_mode.png)
 
-For older versions of Selenium you must specify multiwindow mode explicitly
-with the following option:
+对于旧版本的Selenium, 
+您必须使用以下选项明确指定多窗口模式:
 
 ```bash   
    -multiwindow 
 ``` 
 
-As of Selenium RC 1.0, if you want to run your test within a
-single frame (i.e. using the standard for earlier Selenium versions) 
-you can state this to the Selenium Server using the option
+从Selenium RC 1.0开始, 
+如果您想在一个框架内运行测试(即使用早期Selenium版本的标准), 
+则可以使用选项将此状态指定给Selenium服务器
 
 ```bash   
    -singlewindow 
 ``` 
 
-### Specifying the Firefox Profile
+### 指定Firefox配置文件
 
-Firefox will not run two instances simultaneously unless you specify a 
-separate profile for each instance. Selenium RC 1.0 and later runs in a 
-separate profile automatically, so if you are using Selenium 1.0, you can 
-probably skip this section.  However, if you're using an older version of 
-Selenium or if you need to use a specific profile for your tests
-(such as adding an https certificate or having some addons installed), you will 
-need to explicitly specify the profile. 
+除非您为每个实例分别指定一个配置文件, 
+否则Firefox将不会同时运行两个实例. 
+Selenium RC 1.0和更高版本会自动在单独的配置文件中运行, 
+因此, 如果您使用的是Selenium 1.0, 则可以跳过本节. 
+但是, 如果您使用的是旧版本的Selenium, 
+或者需要使用特定的配置文件进行测试
+(例如添加https证书或安装了一些插件), 
+则需要明确指定配置文件. 
 
-First, to create a separate Firefox profile, follow this procedure.
-Open the Windows Start menu, select "Run", then type and enter one of the 
-following:
+首先, 要创建一个单独的Firefox配置文件, 
+请遵循以下步骤. 
+打开Windows"开始"菜单, 选择"运行", 
+然后键入并输入以下内容之一:
 
 ```bash   
    firefox.exe -profilemanager 
@@ -1135,25 +1184,28 @@ following:
    firefox.exe -P 
 ``` 
 
-Create the new profile using the dialog. Then when you run Selenium Server, 
-tell it to use this new Firefox profile with the server command-line option 
-*\-firefoxProfileTemplate* and specify the path to the profile using its filename 
-and directory path.
+使用对话框创建新的配置文件. 
+然后, 当您运行Selenium服务器时, 
+告诉它使用带有服务器命令行选项 *\-firefoxProfileTemplate* 的
+新Firefox配置文件, 
+并使用其文件名和目录路径指定配置文件的路径.
 
 ```bash   
    -firefoxProfileTemplate "path to the profile" 
 ``` 
 
-**Warning**:  Be sure to put your profile in a new folder separate from the default!!! 
-   The Firefox profile manager tool will delete all files in a folder if you 
-   delete a profile, regardless of whether they are profile files or not. 
+**注意**:  确保将您的个人资料放在默认文件夹之外的新文件夹中！！！！
+如果删除配置文件, 
+则Firefox配置文件管理器工具将删除文件夹中的所有文件, 
+无论它们是否是配置文件. 
    
-More information about Firefox profiles can be found in [Mozilla's Knowledge Base](http://support.mozilla.com/en/kb/Managing+profiles)
+有关Firefox配置文件的更多信息, 
+请参见 [Mozilla的知识库](http://support.mozilla.com/en/kb/Managing+profiles)
 
-### Run Selenese Directly Within the Server Using -htmlSuite
+### 使用-htmlSuite在服务器内直接运行Selenese
 
-You can run Selenese html files directly within the Selenium Server
-by passing the html file to the server's command line.  For instance:
+通过将html文件传递到服务器的命令行, 
+可以直接在Selenium 服务器中运行Selenese html文件. 例如:
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -htmlSuite "*firefox" 
@@ -1161,280 +1213,298 @@ by passing the html file to the server's command line.  For instance:
    "c:\absolute\path\to\my\results.html"
 ``` 
 
-This will automatically launch your HTML suite, run all the tests and save a
-nice HTML report with the results.
+这将自动启动您的HTML套件, 
+运行所有测试并保存带有结果的漂亮HTML报告.
 
-*Note:*  When using this option, the server will start the tests and wait for a
-   specified number of seconds for the test to complete; if the test doesn't 
-   complete within that amount of time, the command will exit with a non-zero 
-   exit code and no results file will be generated.
+*注意:* 使用此选项时, 
+服务器将启动测试并等待指定的秒数以完成测试；
+否则, 服务器将停止测试. 
+如果在这段时间内未完成测试, 
+则该命令将以非零的退出代码退出, 
+并且不会生成任何结果文件.
 
-This command line is very long so be careful when 
-you type it. Note this requires you to pass in an HTML 
-Selenese suite, not a single test. Also be aware the -htmlSuite option is incompatible with ``-interactive``
-You cannot run both at the same time.
+此命令行很长, 因此在键入时要小心. 
+请注意, 这要求您传递HTML Selenese套件, 
+而不是单个测试. 
+另请注意-htmlSuite选项与 ``-interactive``不兼容, 
+您不能同时运行两者e.
 
-### Selenium Server Logging
+### Selenium 服务器日志
 
-#### Server-Side Logs
+#### 服务端日志
 
-When launching Selenium server the **-log** option can be used to record
-valuable debugging information reported by the Selenium Server to a text file.
+启动Selenium服务器时,  **-log** 选项可用于
+将Selenium服务器报告的有价值的调试信息
+记录到文本文件中.
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -log selenium.log
 ``` 
    
-This log file is more verbose than the standard console logs (it includes DEBUG 
-level logging messages). The log file also includes the logger name, and the ID
-number of the thread that logged the message. For example:   
+该日志文件比标准控制台日志更详细
+(它包含DEBUG级别的日志消息). 
+日志文件还包括记录器名称和记录消息的线程的ID号. 例如:   
 
 ```bash   
    20:44:25 DEBUG [12] org.openqa.selenium.server.SeleniumDriverResourceHandler - 
    Browser 465828/:top frame1 posted START NEW
 ``` 
    
-The message format is 
+消息格式为
 
 ```bash   
    TIMESTAMP(HH:mm:ss) LEVEL [THREAD] LOGGER - MESSAGE
 ``` 
    
-This message may be multiline.
+此消息可能是多行.
 
-#### Browser-Side Logs
+#### 浏览器端日志
 
-JavaScript on the browser side (Selenium Core) also logs important messages; 
-in many cases, these can be more useful to the end-user than the regular Selenium 
-Server logs. To access browser-side logs, pass the **-browserSideLog**
-argument to the Selenium Server.
+浏览器端的JavaScript(Selenium Core)也记录重要消息. 
+在许多情况下, 这些对于最终用户比常规的Selenium 服务器日志更有用. 
+要访问浏览器端日志, 
+请将 **-browserSideLog**参数传递给Selenium服务器.
 
 
 ```bash   
    java -jar selenium-server-standalone-<version-number>.jar -browserSideLog
 ``` 
    
-**-browserSideLog** must be combined with the **-log** argument, to log 
-browserSideLogs (as well as all other DEBUG level logging messages) to a file.
+**-browserSideLog** 必须与 **-log** 参数结合使用, 
+以将browserSideLogs(以及所有其他DEBUG级别的日志记录消息)记录到文件中.
 
 
-## Specifying the Path to a Specific Browser 
+## 指定特定浏览器的路径
 
-You can specify to Selenium RC a path to a specific browser. This is useful if 
-you have different versions of the same browser and you wish to use a specific
-one. Also, this is used to allow your tests to run against a browser not 
-directly supported by Selenium RC. When specifying the run mode, use the 
-\*custom specifier followed by the full path to the browser's executable:
+您可以为Selenium RC指定到特定浏览器的路径. 
+如果您使用同一浏览器的不同版本, 
+并且希望使用特定的浏览器, 这将很有用. 
+另外, 它用于允许您的测试在Selenium RC不直接支持的浏览器上运行. 
+在指定运行模式时, 
+请使用*custom说明符, 
+后跟浏览器可执行文件的完整路径:
 
 ```bash   
    *custom <path to browser> 
 ``` 
 
    
-## Selenium RC Architecture
+## Selenium RC 架构
 
-*Note:* This topic tries to explain the technical implementation behind 
-   Selenium RC. It's not fundamental for a Selenium user to know this, but 
-   could be useful for understanding some of the problems you might find in the
-   future.
+*注意:* 本主题试图说明Selenium RC背后的技术实现. 
+Selenium用户了解这一点并不是基本知识, 
+但对于理解您将来可能会发现的一些问题可能很有用.
    
-To understand in detail how Selenium RC Server works  and why it uses proxy injection
-and heightened privilege modes you must first understand `the same origin policy`_.
+要详细了解Selenium RC Server的工作原理
+以及为什么使用代理注入和增强特权模式, 
+您必须首先了解 `同源政策`. 
    
-### The Same Origin Policy
+### 同源策略
 
-The main restriction that Selenium faces is the 
-Same Origin Policy. This security restriction is applied by every browser
-in the market and its objective is to ensure that a site's content will never
-be accessible by a script from another site.  The Same Origin Policy dictates that
-any code loaded within the browser can only operate within that website's domain.
-It cannot perform functions on another website.  So for example, if the browser
-loads JavaScript code when it loads www.mysite.com, it cannot run that loaded code
-against www.mysite2.com--even if that's another of your sites. If this were possible, 
-a script placed on any website you open would be able to read information on 
-your bank account if you had the account page
-opened on other tab. This is called XSS (Cross-site Scripting).
+Selenium面临的主要限制是同源策略. 
+此安全限制适用于市场上的每个浏览器, 
+其目的是确保一个站点的内容永远不会被另一个站点的脚本访问. 
+同源策略规定, 浏览器中加载的任何代码只能在该网站的域内运行. 
+它无法在其他网站上执行功能. 
+因此, 例如, 如果浏览器在加载www.mysite.com时加载了JavaScript代码, 
+则即使该网站是您的另一个网站, 
+也无法针对www.mysite2.com运行该加载的代码. 
+如果可能的话, 如果您在其他标签上打开了帐户页面, 
+则在您打开的任何网站上放置的脚本都将能够读取银行帐户上的信息. 
+这称为XSS(跨站点脚本).
 
-To work within this policy, Selenium-Core (and its JavaScript commands that
-make all the magic happen) must be placed in the same origin as the Application
-Under Test (same URL). 
+要在此政策下工作, 
+必须将Selenium-Core(及其实现所有魔术的JavaScript命令)
+放置在与被测应用程序相同的来源(相同的URL)中. 
 
-Historically, Selenium-Core was limited by this problem since it was implemented in
-JavaScript.  Selenium RC is not, however, restricted by the Same Origin Policy.  Its 
-use of the Selenium Server as a proxy avoids this problem.  It, essentially, tells the 
-browser that the browser is working on a single "spoofed" website that the Server
-provides. 
+从历史上看, Selenium-Core受此问题限制, 
+因为它是用JavaScript实现的. 
+但是, Selenium RC不受"同一来源"政策的限制. 
+它使用Selenium服务器作为代理可以避免此问题. 
+从本质上讲, 它告诉浏览器该浏览器正在服务器提供的单个"欺骗"网站上工作. 
 
-*Note:* You can find additional information about this topic on Wikipedia
-   pages about Same Origin Policy and XSS. 
+*注意:* 您可以在Wikipedia页面上找到有关此主题的其他信息, 
+这些信息与同源策略和XSS有关. 
 
 
-### Proxy Injection
+### 代理注入
 
-The first method Selenium used to avoid the The Same Origin Policy was Proxy Injection.
-In Proxy Injection Mode, the Selenium Server acts as a client-configured **HTTP 
-proxy**[^1], that sits between the browser and the Application Under Test[^2].
-It then masks the AUT under a fictional URL (embedding
-Selenium-Core and the set of tests and delivering them as if they were coming
-from the same origin). 
+Selenium用来避免"同源策略"的第一种方法是代理注入. 
+在代理注入模式下, 
+Selenium 服务器充当客户端配置的 **HTTP proxy** [^1]
+位于浏览器和Test[^2]中. 
+然后, 它在虚构的URL下掩盖AUT
+(嵌入Selenium-Core和测试集, 并像它们来自同一来源一样进行交付).    
 
-[^1]: The proxy is a third person in the middle that passes the ball between the two parts. It acts as a "web server" that delivers the AUT to the browser. Being a proxy gives Selenium Server the capability of "lying" about the AUT's real URL.  
+
+[^1]: 代理人是中间的第三人, 两人之间传球. 它充当将AUT传送到浏览器的"网络服务器". 作为代理, Selenium服务器可以"说谎"AUT的真实URL.      
    
-[^2]: The browser is launched with a configuration profile that has set localhost:4444 as the HTTP proxy, this is why any HTTP request that the browser does will pass through Selenium server and the response will pass through it and not from the real server.
+[^2]: 启动浏览器时使用的配置文件将localhost:4444设置为HTTP代理, 这就是为什么浏览器执行的任何HTTP请求都将通过Selenium服务器并且响应将通过它而不是真实服务器通过的原因.    
 
-Here is an architectural diagram. 
+以下是架构图. 
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
+![架构图 1](/images/legacy_docs/selenium_rc_architecture_diagram_1.png)
 
-As a test suite starts in your favorite language, the following happens:
+当测试套件以您喜欢的语言开始时, 会发生以下情况:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that injects Selenium-Core's JavaScript into the browser-loaded web page.
-3. The client-driver passes a Selenese command to the server.
-4. The Server interprets the command and then triggers the corresponding 
-   JavaScript execution to execute that command within the browser.
-   Selenium-Core instructs the browser to act on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks for the website's content from
-   the Selenium RC server (set as the HTTP proxy for the browser to use).
-6. Selenium RC server communicates with the Web server asking for the page and once
-   it receives it, it sends the page to the browser masking the origin to look
-   like the page comes from the same server as Selenium-Core (this allows 
-   Selenium-Core to comply with the Same Origin Policy).
-7. The browser receives the web page and renders it in the frame/window reserved
-   for it.
+1. 客户端/驱动程序与Selenium-RC服务器建立连接.
+2. Selenium RC服务器启动带有URL的浏览器(或重用旧的浏览器), 
+该URL将Selenium-Core的JavaScript注入浏览器加载的网页中.
+3. 客户端驱动程序将Selenese命令传递到服务器.
+4. 服务器解释命令, 然后触发相应的JavaScript执行以在浏览器中执行该命令. 
+Selenium-Core指示浏览器按照第一条指令操作, 
+通常会打开AUT的页面.
+5. 浏览器收到打开的请求, 
+并从Selenium RC服务器
+(设置为供浏览器使用的HTTP代理)
+中请求网站的内容.
+6. Selenium RC服务器与Web服务器进行通信以请求页面, 
+并在收到页面后将页面发送给浏览器, 
+以掩盖其来源, 以使页面看起来与Selenium-Core来自同一服务器
+(这使Selenium-Core可以遵从使用同源策略).
+7. 浏览器接收网页并将其呈现在为其保留的框架/窗口中.
    
-### Heightened Privileges Browsers
+### 特权浏览器
 
-This workflow in this method is very similar to Proxy Injection but the main
-difference is that the browsers are launched in a special mode called *Heightened
-Privileges*, which allows websites to do things that are not commonly permitted
-(as doing XSS_, or filling file upload inputs and pretty useful stuff for 
-Selenium). By using these browser modes, Selenium Core is able to directly open
-the AUT and read/interact with its content without having to pass the whole AUT
-through the Selenium RC server.
+此方法中的此工作流程与代理注入非常相似, 
+但主要区别在于浏览器以一种称为 *增强特权* 的特殊模式启动, 
+该模式允许网站执行通常不允许的操作
+(例如XSS_或填充文件上传输入)和对Selenium非常有用的东西). 
+通过使用这些浏览器模式, 
+Selenium Core能够直接打开AUT并与其内容进行读取/交互, 
+而不必将整个AUT传递给Selenium RC服务器.
 
-Here is the architectural diagram. 
+以下是架构图. 
 
-![Architectural Diagram 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
+![架构图 1](/images/legacy_docs/selenium_rc_architecture_diagram_2.png)
 
-As a test suite starts in your favorite language, the following happens:
+当测试套件以您喜欢的语言开始时, 
+会发生以下情况:
 
-1. The client/driver establishes a connection with the selenium-RC server.
-2. Selenium RC server launches a browser (or reuses an old one) with a URL 
-   that will load Selenium-Core in the web page.
-3. Selenium-Core gets the first instruction from the client/driver (via another 
-   HTTP request made to the Selenium RC Server).
-4. Selenium-Core acts on that first instruction, typically opening a page of the
-   AUT.
-5. The browser receives the open request and asks the Web Server for the page.
-   Once the browser receives the web page, renders it in the frame/window reserved
-   for it.
+1. 客户端/驱动程序与Selenium-RC服务器建立连接.
+2. Selenium RC服务器启动一个带有URL的浏览器(或重用旧的浏览器), 
+该URL将在网页中加载Selenium-Core.
+3. Selenium-Core从客户端/驱动程序获取第一条指令
+(通过向Selenium RC服务器发出的另一个HTTP请求).
+4. Selenium-Core对该第一条指令起作用, 
+通常会打开AUT的页面.
+5. 浏览器收到打开请求, 
+并向Web服务器询问该页面. 
+浏览器收到网页后, 将其呈现在为其保留的框架/窗口中.
 
-## Handling HTTPS and Security Popups 
+## 处理HTTPS和安全弹出窗口
 
-Many applications switch from using HTTP to HTTPS when they need to send 
-encrypted information such as passwords or credit card information. This is 
-common with many of today's web applications. Selenium RC supports this. 
+当许多应用程序需要发送加密的信息(例如密码或信用卡信息)时, 
+它们从使用HTTP切换到HTTPS. 
+这在当今的许多网络应用程序中很常见. 
+Selenium RC支持这一点. 
 
-To ensure the HTTPS site is genuine, the browser will need a security 
-certificate. Otherwise, when the browser accesses the AUT using HTTPS, it will
-assume that application is not 'trusted'. When this occurs the browser
-displays security popups, and these popups cannot be closed using Selenium RC. 
+为了确保HTTPS站点是真实的, 浏览器将需要安全证书. 
+否则, 当浏览器使用HTTPS访问AUT时, 
+将假定该应用程序不被"信任". 
+发生这种情况时, 浏览器将显示安全弹出窗口, 
+并且无法使用Selenium RC关闭这些弹出窗口
 
-When dealing with HTTPS in a Selenium RC test, you must use a run mode that supports this and handles
-the security certificate for you. You specify the run mode when your test program
-initializes Selenium. 
+在Selenium RC测试中处理HTTPS时, 
+必须使用支持该模式并为您处理安全证书的运行模式. 
+您在测试程序初始化Selenium时指定运行模式. 
 
-In Selenium RC 1.0 beta 2 and later use \*firefox or \*iexplore for the run 
-mode. In earlier versions, including Selenium RC 1.0 beta 1, use \*chrome or 
-\*iehta, for the run mode. Using these run modes, you will not need to install
-any special security certificates; Selenium RC will handle it for you.
+在Selenium RC 1.0 beta 2和更高版本中, 
+将\*firefox或\*iexplore用于运行模式. 
+在早期版本中, 包括Selenium RC 1.0 beta 1, 
+在运行模式中使用\*chrome或\*iehta. 
+使用这些运行模式, 您将不需要安装任何特殊的安全证书. 
+Selenium RC会为您处理.
 
-In version 1.0 the run modes \*firefox or \*iexplore are 
-recommended. However, there are additional run modes of \*iexploreproxy and 
-\*firefoxproxy. These are provided for backwards compatibility only, and 
-should not be used unless required by legacy test programs. Their use will 
-present limitations with security certificate handling and with the running 
-of multiple windows if your application opens additional browser windows. 
+在1.0版中, 建议使用运行模式\*firefox或\*iexplore. 
+但是, 还有\*iexploreproxy和\*firefoxproxy的其他运行模式. 
+提供这些仅是为了向后兼容, 
+除非传统测试程序要求, 否则不应使用它们. 
+如果您的应用程序打开其他浏览器窗口, 
+则它们的使用将对安全证书处理和多个窗口的运行产生限制. 
 
-In earlier versions of Selenium RC, \*chrome or \*iehta were the run modes that 
-supported HTTPS and the handling of security popups. These were considered ‘experimental
-modes although they became quite stable and many people used them.  If you are using
-Selenium 1.0 you do not need, and should not use, these older run modes.
+在早期版本的Selenium RC中, 
+\*chrome或\*iehta是支持HTTPS和安全弹出窗口处理的运行模式. 
+尽管它们变得相当稳定并且许多人使用了它们, 
+但这些被认为是"实验模式". 
+如果使用的是Selenium 1.0, 
+则不需要, 也不应使用这些较早的运行模式.
 
-### Security Certificates Explained
+### 安全证书说明
 
-Normally, your browser will trust the application you are testing
-by installing a security certificate which you already own. You can 
-check this in your browser's options or Internet properties (if you don't 
-know your AUT's security certificate ask your system administrator). 
-When Selenium loads your browser it injects code to intercept 
-messages between the browser and the server. The browser now thinks 
-untrusted software is trying to look like your application.  It responds by alerting you with popup messages. 
+通常, 浏览器将通过安装您已经拥有的安全证书来信任您正在测试的应用程序. 
+您可以在浏览器的选项或Internet属性中进行检查
+(如果您不知道AUT的安全证书, 请咨询系统管理员). 
+当Selenium加载浏览器时, 
+它将注入代码以拦截浏览器和服务器之间的消息. 
+浏览器现在认为不受信任的软件正试图看起来像您的应用程序. 
+它通过弹出消息提醒您. 
 
-To get around this, Selenium RC, (again when using a run mode that support 
-this) will install its own security certificate, temporarily, to your 
-client machine in a place where the browser can access it. This tricks the 
-browser into thinking it's accessing a site different from your AUT and effectively suppresses the popups.  
+为解决此问题, Selenium RC(再次使用支持此功能的运行模式时)
+将在浏览器可以访问它的位置临时将其自己的安全证书安装到客户端计算机上. 
+这会欺骗浏览器以使其正在访问的网站与您的AUT不同, 
+从而有效地抑制了弹出窗口. 
 
-Another method used with earlier versions of Selenium was to 
-install the Cybervillians security certificate provided with your Selenium 
-installation. Most users should no longer need to do this however; if you are
-running Selenium RC in proxy injection mode, you may need to explicitly install this
-security certificate. 
+Selenium早期版本使用的另一种方法是安装Selenium安装随附的Cybervillians安全证书. 
+但是, 大多数用户不再需要这样做. 
+如果您以代理注入模式运行Selenium RC, 
+则可能需要显式安装此安全证书. 
 
 
-## Supporting Additional Browsers and Browser Configurations
+## 支持其他浏览器和浏览器配置
 
-The Selenium API supports running against multiple browsers in addition to 
-Internet Explorer and Mozilla Firefox.  See the https://selenium.dev website for
-supported browsers.  In addition, when a browser is not directly supported,
-you may still run your Selenium tests against a browser of your choosing by
-using the "\*custom" run-mode (i.e. in place of \*firefox or \*iexplore) when 
-your test application starts the browser.  With this, you pass in the path to
-the browsers executable within the API call. This can also be done from the 
-Server in interactive mode.
+除了Internet Explorer和Mozilla Firefox外, 
+Selenium API还支持在多种浏览器上运行. 
+请访问https://selenium.dev网站以获取受支持的浏览器. 
+另外, 当不直接支持浏览器时, 
+您仍然可以在测试应用程序启动时通过使用
+"\*custom"运行模式(即代替\*firefox或\*iexplore)
+对所选浏览器运行Selenium测试. 
+这样, 您可以将路径传递到API调用内的浏览器可执行文件. 
+也可以从服务器以交互方式完成此操作.
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\MyBrowser.exe&2=http://www.google.com
 ```
 
 
-### Running Tests with Different Browser Configurations
+### 使用不同的浏览器配置运行测试
 
-Normally Selenium RC automatically configures the browser, but if you launch 
-the browser using the "\*custom" run mode, you can force Selenium RC
-to launch the browser as-is, without using an automatic configuration.
+通常, Selenium RC自动配置浏览器, 
+但是如果您使用"\*custom"运行模式启动浏览器, 
+则可以强制Selenium RC照原样启动浏览器, 
+而无需使用自动配置.
 
-For example, you can launch Firefox with a custom configuration like this:
+例如, 您可以使用这样的自定义配置启动Firefox:
 
 ```bash
    cmd=getNewBrowserSession&1=*custom c:\Program Files\Mozilla Firefox\firefox.exe&2=http://www.google.com
 ```
 
-Note that when launching the browser this way, you must manually 
-configure the browser to use the Selenium Server as a proxy. Normally this just 
-means opening your browser preferences and specifying "localhost:4444" as 
-an HTTP proxy, but instructions for this can differ radically from browser to 
-browser.  Consult your browser's documentation for details.
+请注意, 以这种方式启动浏览器时, 
+必须手动配置浏览器以将Selenium服务器用作代理. 
+通常, 这仅意味着打开浏览器首选项并将"localhost:4444"指定为HTTP代理, 
+但是不同浏览器的说明可能会有根本不同. 
+有关详细信息, 请查阅浏览器的文档.
 
-Be aware that Mozilla browsers can vary in how they start and stop. 
-One may need to set the MOZ_NO_REMOTE environment variable to make Mozilla browsers 
-behave a little more predictably. Unix users should avoid launching the browser using 
-a shell script; it's generally better to use the binary executable (e.g. firefox-bin) directly.
+请注意, Mozilla浏览器的启动和停止方式可能会有所不同. 
+可能需要设置MOZ_NO_REMOTE环境变量, 
+以使Mozilla浏览器的行为更加可预测. 
+Unix用户应避免使用Shell脚本启动浏览器. 
+通常最好直接使用二进制可执行文件(例如firefox-bin).
 
    
-## Troubleshooting Common Problems
+## 解决常见问题
 
-When getting started with Selenium RC there's a few potential problems
-that are commonly encountered.  We present them along with their solutions here.
+在开始使用Selenium RC时, 
+通常会遇到一些潜在的问题. 
+我们在这里介绍它们及其解决方案. 
 
-### Unable to Connect to Server 
+### 无法连接到服务器
 
-When your test program cannot connect to the Selenium Server, Selenium throws an exception in your test program. 
-It should display this message or a similar one:
+当您的测试程序无法连接到Selenium 服务器时, 
+Selenium会在您的测试程序中引发异常. 
+它应该显示此消息或类似的消息:
 
 ```bash
     "Unable to connect to remote server (Inner Exception Message: 
@@ -1444,68 +1514,75 @@ It should display this message or a similar one:
 	(using .NET and XP Service Pack 2) 
 ```
 
-If you see a message like this, be sure you started the Selenium Server. If 
-so, then there is a problem with the connectivity between the Selenium Client 
-Library and the Selenium Server. 
+如果看到这样的消息, 请确保已启动Selenium服务器. 
+如果是这样, 则Selenium客户端库和Selenium服务器之间的连接存在问题. 
 
-When starting with Selenium RC, most people begin by running their test program
-(with a Selenium Client Library) and the Selenium Server on the same machine.  To
-do this use "localhost" as your connection parameter.
-We recommend beginning this way since it reduces the influence of potential networking problems
-which you're getting started.  Assuming your operating system has typical networking
-and TCP/IP settings you should have little difficulty.  In truth, many people
-choose to run the tests this way.  
+从Selenium RC开始时, 
+大多数人开始是在同一台计算机上运行测试程序(带有Selenium客户端库)
+和Selenium服务器. 
+为此, 请使用"localhost"作为连接参数. 
+我们建议您以这种方式开始, 
+因为它可以减少您入门时可能出现的网络问题的影响. 
+假设您的操作系统具有典型的网络和TCP/IP设置, 
+那么您应该没有什么困难. 
+实际上, 许多人选择以这种方式运行测试.  
 
-If, however, you do want to run Selenium Server
-on a remote machine, the connectivity should be fine assuming you have valid TCP/IP
-connectivity between the two machines.    
+但是, 如果您确实想在远程计算机上运行Selenium服务器, 
+则假设两台计算机之间具有有效的TCP/IP连接, 
+则连接应该很好.    
 
-If you have difficulty connecting, you can use common networking tools like *ping*,
-*telnet*, *ifconfig(Unix)/ipconfig* (Windows), etc to ensure you have a valid 
-network connection.  If unfamilar with these, your system administrator can assist you.
+如果连接困难, 可以使用常用的网络工具, 
+例如*ping*,
+  *telnet*, *ifconfig(Unix)/ipconfig* (Windows) 等, 
+以确保您具有有效的网络连接. 
+如果不熟悉这些, 则系统管理员可以为您提供帮助.
  
-### Unable to Load the Browser 
+### 无法加载浏览器
 
-Ok, not a friendly error message, sorry, but if the Selenium Server cannot load the browser 
-you will likely see this error.
+好的, 这并非友好的错误消息, 
+很抱歉, 但是如果Selenium服务器无法加载浏览器, 
+您可能会看到此错误.
 
 ```bash
     (500) Internal Server Error
 ```
 
-This could be caused by
+这可能是由于
 
-* Firefox (prior to Selenium 1.0) cannot start because the browser is already open and you did 
-  not specify a separate profile.   See the section on Firefox profiles under Server Options.
-* The run mode you're using doesn't match any browser on your machine.  Check the parameters you 
-  passed to Selenium when you program opens the browser. 
-* You specified the path to the browser explicitly (using "\*custom"--see above) but the path is 
-  incorrect.  Check to be sure the path is correct.  Also check the user group to be sure there are
-  no known issues with your browser and the "\*custom" parameters.
+* Firefox(Selenium 1.0之前的版本)无法启动, 
+因为浏览器已经打开, 
+并且您未指定单独的配置文件. 
+请参阅"服务器选项"下有关Firefox配置文件的部分
+* 您使用的运行模式与您计算机上的任何浏览器都不匹配. 
+程序打开浏览器时检查您传递给Selenium的参数. 
+* 您已明确指定浏览器的路径(使用"\*custom" –参见上文), 
+但该路径不正确. 检查以确保路径正确. 
+还要检查用户组, 以确保浏览器和"\*custom"参数没有已知问题.
 
-### Selenium Cannot Find the AUT 
+### Selenium 找不到AUT
 
-If your test program starts the browser successfully, but the browser doesn't
-display the website you're testing, the most likely cause is your test 
-program is not using the correct URL. 
+如果您的测试程序成功启动了浏览器, 
+但是浏览器未显示您正在测试的网站, 
+则最可能的原因是您的测试程序未使用正确的URL. 
 
-This can easily happen. When you use Selenium-IDE to export your script,
-it inserts a dummy URL. You must manually change the URL to the correct one
-for your application to be tested. 
+这很容易发生. 
+当您使用Selenium-IDE导出脚本时, 
+它会插入一个虚拟URL. 
+您必须手动将URL更改为正确的URL才能测试您的应用程序. 
 
-### Firefox Refused Shutdown While Preparing a Profile 
+### Firefox在准备配置文件时拒绝关闭
 
-This most often occurs when you run your Selenium RC test program against Firefox,
-but you already have a Firefox browser session running and, you didn't specify
-a separate profile when you started the Selenium Server. The error from the 
-test program looks like this:
+最常见的情况是在Firefox上运行Selenium RC测试程序, 
+但是已经运行了Firefox浏览器会话, 
+并且在启动Selenium服务器时未指定单独的配置文件. 
+测试程序中的错误如下所示:
 
 ```bash
     Error:  java.lang.RuntimeException: Firefox refused shutdown while 
     preparing a profile 
 ```
 
-Here's the complete error message from the server:
+以下是来自服务器的完整错误消息:
 
 ```bash
     16:20:03.919 INFO - Preparing Firefox profile... 
@@ -1520,29 +1597,29 @@ Here's the complete error message from the server:
     ~1\Temp\customProfileDir203138\parent.lock 
 ```
 
-To resolve this, see the section on Specifying a Separate Firefox Profile
+要解决此问题, 
+请参阅"指定单独的Firefox配置文件"部分
 
-### Versioning Problems 
+### 版本问题
 
-Make sure your version of Selenium supports the version of your browser. For
-example, Selenium RC 0.92 does not support Firefox 3. At times you may be lucky
-(I was). But don't forget to check which
-browser versions are supported by the version of Selenium you are using. When in
-doubt, use the latest release version of Selenium with the most widely used version
-of your browser.
+确保您的Selenium版本支持您的浏览器版本. 
+例如, Selenium RC 0.92不支持Firefox3. 
+有时您可能很幸运(例如我). 
+但不要忘记检查您使用的Selenium版本支持哪些浏览器版本. 
+如有疑问, 请使用最新版本的Selenium和浏览器使用最广泛的版本.
 
-### Error message: "(Unsupported major.minor version 49.0)" while starting server
+### 启动服务器时出现错误消息: "(不支持的major.minor版本49.0)"
 
-This error says you're not using a correct version of Java. 
-The Selenium Server requires Java 1.5 or higher. 
+此错误表明您使用的Java版本不正确. 
+Selenium服务器需要Java 1.5或更高版本. 
 
-To check double-check your java version, run this from the command line.
+要检查您的Java版本, 请从命令行运行.
 
 ```bash
    java -version
 ```
 
-You should see a message showing the Java version.
+您应该看到一条消息, 显示Java版本.
 
 ```bash
    java version "1.5.0_07"
@@ -1550,177 +1627,193 @@ You should see a message showing the Java version.
    Java HotSpot(TM) Client VM (build 1.5.0_07-b03, mixed mode)
 ```
 
-If you see a lower version number, you may need to update the JRE,
-or you may simply need to add it to your PATH environment variable.
+如果看到较低的版本号, 则可能需要更新JRE, 
+或者只需将其添加到PATH环境变量中即可.
 
 
 ### 404 error when running the getNewBrowserSession command
 
-If you're getting a 404 error while attempting to open a page on 
-"http://www.google.com/selenium-server/", then it must be because the Selenium
-Server was not correctly configured as a proxy. The "selenium-server" directory 
-doesn't exist on google.com; it only appears to exist when the proxy is 
-properly configured. Proxy Configuration highly depends on how the browser is 
-launched with firefox, iexplore, opera, or custom.
+如果尝试打开" http://www.google.com/selenium-server/"上的页面时遇到404错误, 
+则一定是因为Selenium服务器未正确配置为代理. 
+Selenium-server"目录在google.com上不存在；
+仅当正确配置了代理后, 该目录才存在. 
+代理配置在很大程度上取决于如何使用firefox, 
+iexplore, opera或custom启动浏览器.
 
-* iexplore: If the browser is launched using \*iexplore, you could be 
-  having a problem with Internet Explorer's proxy settings.  Selenium
-  Server attempts To configure the global proxy settings in the Internet
-  Options Control Panel. You must make sure that those are correctly
-  configured when Selenium Server launches the browser. Try looking at
-  your Internet Options control panel. Click on the "Connections" tab
-  and click on "LAN Settings".     
-  * If you need to use a proxy to access the application you want to test,
-    you'll need to start Selenium Server with "-Dhttp.proxyHost"; 
-    see the `Proxy Configuration`_ for more details.
-  * You may also try configuring your proxy manually and then launching
-    the browser with \*custom, or with \*iehta browser launcher.
+* iexplore：如果使用\*iexplore启动浏览器, 
+则可能是Internet Explorer的代理设置有问题. 
+Selenium服务器尝试在Internet选项控制面板中配置全局代理设置. 
+您必须确保在Selenium服务器启动浏览器时正确配置了这些配置. 
+尝试查看" Internet选项"控制面板. 
+单击"连接"选项卡, 然后单击"局域网设置".     
+  * 如果您需要使用代理来访问要测试的应用程序, 
+  则需要使用" -Dhttp.proxyHost"启动Selenium服务器. 
+  有关更多详细信息, 请参见 `代理配置` .
+  * 您也可以尝试手动配置代理, 然后使用\*custom或\*iehta浏览器启动器启动浏览器.
       	   
-* custom: When using \*custom you must configure the proxy correctly(manually),
-  otherwise you'll get a 404 error. Double-check that you've configured your proxy
-  settings correctly. To check whether you've configured the proxy correctly is to
-  attempt to intentionally configure the browser incorrectly. Try configuring the
-  browser to use the wrong proxy server hostname, or the wrong port.  If you had
-  successfully configured the browser's proxy settings incorrectly, then the
-  browser will be unable to connect to the Internet, which is one way to make
-  sure that one is adjusting the relevant settings.
+* custom: 使用\*custom时, 必须正确(手动)配置代理, 
+否则会出现404错误. 
+仔细检查您是否正确配置了代理设置. 
+要检查您是否正确配置了代理, 
+则是试图故意不正确地配置浏览器. 
+尝试将浏览器配置为使用错误的代理服务器主机名或错误的端口. 
+如果您错误地成功配置了浏览器的代理设置, 
+则浏览器将无法连接到Internet, 
+这是一种确保正在调整相关设置的方法.
   
-* For other browsers (\*firefox, \*opera) we automatically hard-code
-  the proxy for you, and so there are no known issues with this functionality.
-  If you're encountering 404 errors and have followed this user guide carefully 
-  post your results to user group for some help from the user community.
+* 对于其他浏览器(\*firefox, \*opera), 
+我们会自动为您硬编码代理, 
+因此此功能没有已知问题. 
+如果您遇到404错误, 
+并已按照本用户指南进行操作, 
+请仔细将结果发布到用户组, 
+以获取用户社区的帮助.
       
-### Permission Denied Error
+### 权限被拒绝错误
 
-The most common reason for this error is that your session is attempting to violate
-the same-origin policy by crossing domain boundaries (e.g., accesses a page from 
-http://domain1 and then accesses a page from http://domain2) or switching protocols 
-(moving from http://domainX to https://domainX).
+发生此错误的最常见原因是您的会话试图跨域
+(例如, 从http://domain1访问页面, 
+然后从http://domain2访问页面)来违反同源策略. 
+协议(从http://domainX移至https://domainX).
 
-This error can also occur when JavaScript attempts to find UI objects 
-which are not yet available (before the page has completely loaded), or 
-are no longer available (after the page has started 
-to be unloaded). This is most typically encountered with AJAX pages
-which are working with sections of a page or subframes that load and/or reload 
-independently of the larger page. 
+当JavaScript尝试查找尚不可用
+(在页面完全加载之前)或不再可用
+(在页面开始卸载之后)的UI对象时, 
+也会发生此错误. 
+最常见的情况是AJAX页面正在处理页面的某些部分
+或独立于较大页面而加载和/或重新加载的子frame. 
 
-This error can be intermittent. Often it is impossible to reproduce the problem 
-with a debugger because the trouble stems from race conditions which 
-are not reproducible when the debugger's overhead is added to the system.
-Permission issues are covered in some detail in the tutorial. Read the section 
-about the `The Same Origin Policy`_, `Proxy Injection`_ carefully. 
+该错误可能是间歇性的. 
+通常, 用调试器不可能重现该问题, 
+因为问题是由于竞争条件引起的, 
+当将调试器的开销添加到系统中时, 
+这些竞争条件是无法再现的. 
+许可问题在本教程中进行了详细介绍. 
+仔细阅读有关`同源策略`, `代理注入`的部分. 
 
 
-### Handling Browser Popup Windows
+### 处理浏览器弹出窗口
 
-There are several kinds of "Popups" that you can get during a Selenium test.
-You may not be able to close these popups by running Selenium commands if 
-they are initiated by the browser and not your AUT.  You may
-need to know how to manage these.  Each type of popup needs to be addressed differently.
+在Selenium测试中可以得到几种"弹出窗口". 
+如果Selenium命令是由浏览器而不是AUT发起的, 
+则可能无法通过运行Selenium命令来关闭这些弹出窗口. 
+您可能需要知道如何进行管理. 
+每种类型的弹出窗口都需要以不同的方式处理.
 
-* HTTP basic authentication dialogs: These dialogs prompt for a 
-  username/password to login to the site. To login to a site that requires 
-  HTTP basic authentication, use a username and password in the URL, as 
-  described in `RFC 1738`_, like this: open("http://myusername:myuserpassword@myexample.com/blah/blah/blah").
+* HTTP基本身份验证对话框：
+这些对话框提示输入用户名/密码登录到站点. 
+要登录到需要HTTP基本身份验证的站点, 
+请使用 `RFC 1738`中所述的URL中的用户名和密码, 
+如下所示：open
+(" http//myusername:myuserpassword@myexample.com/blah/blah/blah"). 
 
-* SSL certificate warnings: Selenium RC automatically attempts to spoof SSL 
-  certificates when it is enabled as a proxy; see more on this 
-  in the section on HTTPS. If your browser is configured correctly,
-  you should never see SSL certificate warnings, but you may need to 
-  configure your browser to trust our dangerous "CyberVillains" SSL certificate 
-  authority. Again, refer to the HTTPS section for how to do this.
+* SSL证书警告：
+当Selenium RC启用为代理时, 
+它会自动尝试欺骗SSL证书. 
+请参阅HTTPS部分中的更多内容. 
+如果您的浏览器配置正确, 您将永远不会看到SSL证书警告, 
+但是您可能需要将浏览器配置为信任我们危险的"CyberVillains" SSL证书颁发机构. 
+再次, 请参阅HTTPS部分以了解如何执行此操作.
 
-* modal JavaScript alert/confirmation/prompt dialogs: Selenium tries to conceal
-  those dialogs from you (by replacing window.alert, window.confirm and 
-  window.prompt) so they won't stop the execution of your page. If you're 
-  seeing an alert pop-up, it's probably because it fired during the page load process,
-  which is usually too early for us to protect the page.  Selenese contains commands
-  for asserting or verifying alert and confirmation popups. See the sections on these
-  topics in Chapter 4.
+* 模态JavaScript警报/确认/提示对话框：
+Selenium试图向您隐藏这些对话框
+(通过替换window.alert, window.confirm和window.prompt), 
+以便它们不会停止您页面的执行. 
+如果您看到警告弹出窗口, 
+可能是因为它是在页面加载过程中触发的, 
+对于我们而言, 保护该页面通常为时过早. 
+Selenese包含用于断言或验证警报和确认弹出窗口的命令. 
+请参阅第4章中有关这些主题的部分.
 
       
-### On Linux, why isn't my Firefox browser session closing?
+### 在Linux上, 为什么我的Firefox浏览器会话没有关闭?
 
-On Unix/Linux you must invoke "firefox-bin" directly, so make sure that
-executable is on the path. If executing Firefox through a 
-shell script, when it comes time to kill the browser Selenium RC will kill
-the shell script, leaving the browser running.   You can specify the path
-to firefox-bin directly, like this.
+在Unix/Linux上, 您必须直接调用"firefox-bin", 
+因此请确保路径中包含可执行文件. 
+如果通过外壳程序脚本执行Firefox, 则该终止浏览器了. 
+SeleniumRC将终止该外壳程序脚本, 
+使浏览器保持运行状态. 
+您可以像这样直接指定firefox-bin的路径.
       
 ```bash
    cmd=getNewBrowserSession&1=*firefox /usr/local/firefox/firefox-bin&2=http://www.google.com
 ```
 
-### Firefox \*chrome doesn't work with custom profile
+### Firefox \*chrome不适用于自定义配置文件
 
-Check Firefox profile folder -> prefs.js -> user_pref("browser.startup.page", 0);
-Comment this line like this: "//user_pref("browser.startup.page", 0);" and try again.
+检查Firefox配置文件文件夹
+-> prefs.js->  "//user_pref("browser.startup.page", 0);" 
+像这样注释此行："//user_pref("browser.startup.page", 0);" 
+然后再试一次. 
 
 
-### Is it ok to load a custom pop-up as the parent page is loading (i.e., before the parent page's javascript window.onload() function runs)?
+### 是否可以在加载父页面时加载自定义弹出窗口(即, 在父页面的javascript window.onload()函数运行之前)
 
-No. Selenium relies on interceptors to determine window names as they are being loaded.
-These interceptors work best in catching new windows if the windows are loaded AFTER 
-the onload() function. Selenium may not recognize windows loaded before the onload function.
+否. Selenium依靠拦截器来确定正在加载的窗口名称. 
+如果在onload()函数之后加载窗口, 
+则这些拦截器最适合捕获新窗口. 
+Selenium可能无法识别在onload功能之前加载的Windows.
   
-### Firefox on Linux 
+### Linux上的Firefox
 
-On Unix/Linux, versions of Selenium before 1.0 needed to invoke "firefox-bin" 
-directly, so if you are using a previous version, make sure that the real 
-executable is on the path. 
+在Unix/Linux上, Selenium 1.0之前的版本需要直接调用"firefox-bin", 
+因此, 如果您使用的是以前的版本, 
+请确保路径中包含真正的可执行文件. 
 
-On most Linux distributions, the real *firefox-bin* is located on:
+在大多数Linux发行版中, 真正的 *firefox-bin* 位于:
 
 ```bash
    /usr/lib/firefox-x.x.x/ 
 ```
 
-Where the x.x.x is the version number you currently have. So, to add that path 
-to the user's path. you will have to add the following to your .bashrc file:
+其中x.x.x是您当前拥有的版本号. 
+因此, 要将该路径添加到用户的路径. 
+您将必须将以下内容添加到您的.bashrc文件中:
 
 ```bash
    export PATH="$PATH:/usr/lib/firefox-x.x.x/"
 ```
 
-If necessary, you can specify the path to firefox-bin directly in your test,
-like this:
+如有必要, 您可以在测试中直接指定firefox-bin的路径, 如下所示:
 
 ```bash
    "*firefox /usr/lib/firefox-x.x.x/firefox-bin"
 ```
 
-### IE and Style Attributes
+### IE和样式属性
 
-If you are running your tests on Internet Explorer and you cannot locate
-elements using their `style` attribute.
-For example:
+如果您在Internet Explorer上运行测试, 
+则无法使用其 `style` 属性来查找元素. 例如:
 
 ```bash
     //td[@style="background-color:yellow"]
 ```
 
-This would work perfectly in Firefox, Opera or Safari but not with IE. 
-IE interprets the keys in  `@style` as uppercase. So, even if the
-source code is in lowercase, you should use:
+这将在Firefox, Opera或Safari中完美运行, 但不适用于IE. 
+IE将  `@style` 中的键解释为大写. 
+因此, 即使源代码是小写的, 您也应该使用:
 
 ```bash
     //td[@style="BACKGROUND-COLOR:yellow"]
 ```
 
-This is a problem if your test is intended to work on multiple browsers, but
-you can easily code your test to detect the situation and try the alternative
-locator that only works in IE.
+如果您的测试打算在多个浏览器上运行, 
+那么这将是一个问题, 
+但是您可以轻松地对测试进行编码以检测情况
+并尝试仅在IE中运行的替代定位器.
 
-### Error encountered - "Cannot convert object to primitive value" with shut down of  \*googlechrome  browser
+### 遇到错误-随着\*googlechrome浏览器的关闭, "无法将对象转换为原始值"
 
-To avoid this error you have to start browser with an option that disables same origin policy checks: 
+为避免此错误, 您必须使用禁用
+同源策略检查的选项启动浏览器: 
 
 ```bash
    selenium.start("commandLineFlags=--disable-web-security");
 ```
    
 
-### Error encountered in IE - "Couldn't open app window; is the pop-up blocker enabled?"
+### IE中遇到的错误-"无法打开应用程序窗口；弹出窗口阻止程序已启用？"
 
-To avoid this error you have to configure the browser: disable the popup blocker 
-AND uncheck 'Enable Protected Mode' option in Tools >> Options >> Security.
+为避免此错误, 您必须配置浏览器：
+禁用弹出窗口阻止程序, 
+并取消选中工具>>选项>>安全中的"启用保护模式"选项.

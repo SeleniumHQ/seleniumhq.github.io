@@ -4,6 +4,8 @@ Title = "Selenium 2.0rc3: The “Next One’s The Big One” Release"
 Date = 2011-06-27
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium","beta"]
+categories = ["releases"]
 +++
 
 <p>When we pushed the 2.0rc1 live, we really hoped that the next release would be 2.0 final. We very quickly got some feedback that encouraged us to push a 2.0rc2. Now, after just under three weeks, we&#8217;re launching a third and final release candidate. You can download it from the <a href="http://seleniumhq.org/download/">Selenium HQ</a> site or directly from <a href="http://code.google.com/p/selenium/downloads/list">Google Code.</a></p>

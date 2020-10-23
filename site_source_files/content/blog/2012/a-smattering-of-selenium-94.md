@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #94"
 Date = 2012-06-25
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p># sudo wget coffee &gt; adam</p>
 <ul>
 <li><a href="http://compendiumdev.co.uk/selenium/mindmap/Selenium-RC_Commands.html">Selenium-RC Commands</a> is a mindmap of all the commands in Se-RC. (Unsurprising really.) I keep meaning to do this for WebDriver.</li>

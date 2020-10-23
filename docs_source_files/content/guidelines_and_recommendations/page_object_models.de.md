@@ -180,10 +180,16 @@ instantiating the page object. In the examples above, both the SignInPage and
 HomePage constructors check that the expected page is available and ready for
 requests from the test.
 
-A page object does not necessarily need to represent an entire page. The Page
-Object design pattern could be used to represent components on a page. If a
-page in the AUT has multiple components, it may improve maintainability if
-there is a separate page object for each component.
+A page object does not necessarily need to represent all the parts of a
+page itself. The same principles used for page objects can be used to
+create "Page _Component_ Objects" that represent discrete chunks of the
+page and can be included in page objects. These component objects can
+provide references the elements inside those discrete chunks, and
+methods to leverage the functionality provided by them. You can even
+nest component objects inside other component objects for more complex
+pages. If a page in the AUT has multiple components, or common
+components used throughout the site (e.g. a navigation bar), then it
+may improve maintainability and reduce code duplication.
 
 There are other design patterns that also may be used in testing. Some use a
 Page Factory for instantiating their page objects. Discussing all of these is

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #156"
 Date = 2013-08-12
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Brain fried from PyCon Canada 2013 and &#8216;some&#8217; browser tab is misbehaving which means its time to start closing some of these.</p>
 <ul>
 <li><a href="http://antecedent.github.io/patchwork/">Patchwork</a> seems like an awesome idea, but at the same time, I&#8217;ve had to work in heavily monkey-patched RoR apps before&#8230;</li>

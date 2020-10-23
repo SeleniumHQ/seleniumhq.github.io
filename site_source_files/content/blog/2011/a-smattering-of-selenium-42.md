@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #42"
 Date = 2011-02-21
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Is this week&#8217;s post the  Answer to the Ultimate Question of Life, the Universe, and Everything Selenium?</p>
 <ul>
 <li><a href="http://deanhume.com/Home/BlogPost/selenium-2---get-number-of-rows-in-a-table/52">Selenium 2 &#8211; Get Number of Rows in a Table</a> illustrates what is advertised, though it feels like there has to be a shorter way to do this along the lines of getXpathCount() or getCssCount()</li>

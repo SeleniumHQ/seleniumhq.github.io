@@ -117,7 +117,6 @@ driver = Selenium::WebDriver.for :chrome
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 const {Builder} = require('selenium-webdriver');
-const chrome = require('selenium-webdriver/chrome');
 
 (async function myFunction() {let driver = await new Builder().forBrowser('chrome').build();
     //你的代码放在这个块中
@@ -315,7 +314,15 @@ new EdgeDriver("/path/to/MicrosoftWebDriver.exe");
 Selenium::WebDriver::Edge.driver_path = "C:/path/to/MicrosoftWebDriver.exe"
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
-//我们还没有JavaScript代码，帮助我们并且提交一个PR
+const {Builder} = require("selenium-webdriver");
+const edge = require('selenium-webdriver/edge');
+let service = new edge.ServiceBuilder("/path/to/msedgedriver.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setEdgeService(service)
+                .forBrowser('MicrosoftEdge')
+                .build();
+})();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 System.setProperty("webdriver.edge.driver", "C:/path/to/MicrosoftWebDriver.exe")
@@ -394,7 +401,15 @@ new InternetExplorerDriver("C:/path/to/IEDriver.exe");
 Selenium::WebDriver::IE.driver_path = "C:/path/to/IEDriver.exe"
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
-//我们还没有JavaScript代码，帮助我们并且提交一个PR
+const {Builder} = require("selenium-webdriver");
+const ie = require('selenium-webdriver/ie');
+let service = new ie.ServiceBuilder("/path/to/IEDriverServer.exe");
+(async function test() {
+    let driver = await new Builder()
+                .setIeService(service)
+                .forBrowser('internet explorer')
+                .build();
+})();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
@@ -410,7 +425,7 @@ System.setProperty("webdriver.ie.driver", "C:/path/to/IEDriver.exe")
 
 Opera 的当前版本是建立在 Chromium 引擎之上的，而 WebDriver 现在是通过闭源的 
 [Opera Chromium 驱动程序](//github.com/operasoftware/operachromiumdriver/releases)来支持的，
-它可以被[添加到您的路径](#可执行文件添加到-PATH-中)或作为系统属性。
+它可以被[添加到您的路径](#将可执行文件添加到-path-中)或作为系统属性。
 
 实例化一个驱动程序会话类似于 Firefox 和 Chromium：
 
@@ -444,7 +459,13 @@ require "selenium-webdriver"
 driver = Selenium::WebDriver.for :opera
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
-//我们还没有JavaScript代码，帮助我们并且提交一个PR
+const {Builder} = require("selenium-webdriver");
+const opera = require('selenium-webdriver/opera');
+(async function test() {
+    let driver = await new Builder()
+        .forBrowser('opera')
+        .build();
+})();
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 import org.openqa.selenium.WebDriver

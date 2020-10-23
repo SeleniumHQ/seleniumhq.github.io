@@ -3,123 +3,133 @@ title: Contributing to the Selenium Site & Documentation
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to French. Do you speak French? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium est un gros projet logiciel, son 
+site et sa documentation sont essentiels
+comprendre comment les choses fonctionnent 
+et apprendre des moyens efficaces d'exploiter
+son potentiel.
 
-Selenium is a big software project, its site and documentation are key
-to understanding how things work and learning effective ways to exploit
-its potential.
+Ce projet contient à la fois le site et la documentation 
+de Selenium. C'est un effort continu 
+(qui ne vise aucune version spécifique) pour fournir
+des informations mises à jour sur la façon 
+d'utiliser efficacement le sélénium,
+impliqués et comment contribuer au sélénium.
 
-This project contains both Selenium's site and documentation. This is
-an ongoing effort (not targeted at any specific release) to provide
-updated information on how to use Selenium effectively, how to get
-involved and how to contribute to Selenium.
+Les contributions vers le site et les documents 
+suivent le processus décrit dans
+la section ci-dessous sur les contributions. 
+Tu devrais passer du temps
+vous familiariser avec la documentation en lisant
+[en savoir plus]({{<ref "/introduction/about_this_documentation.fr.md">}}).
 
-Contributions toward the site and docs follow the process described in
-the below section about contributions. You should spend some time
-familiarising yourself with the documentation by reading
-[more about it]({{< ref "/introduction/about_this_documentation.fr.md" >}}).
+Le projet Selenium accueille les contributions 
+de tous. Il y a un plusieurs façons d'aider:
 
----
+## Signaler un problème
 
-The Selenium project welcomes contributions from everyone. There are a
-number of ways you can help:
+Lorsque vous signalez un nouveau problème ou 
+commentez un problème existant, veuillez
+assurez-vous que les discussions sont liées à 
+des problèmes techniques concrets avec le
+Logiciel Selenium, son site et / ou sa documentation.
 
-## Report an issue
+Tous les composants Selenium changent assez rapidement 
+au fil du temps, donc cela peut rendre la documentation 
+obsolète. Si vous trouvez cela être le cas, comme mentionné, 
+ne doutez pas de créer un problème pour cela. Il est 
+également possible que vous sachiez comment mettre à jour
+documentation, merci de nous envoyer une pull 
+request avec les informations changements.
 
-When reporting a new issues or commenting on existing issues please 
-make sure discussions are related to concrete technical issues with the
-Selenium software, its site and/or documentation.
-
-All of the Selenium components change quite fast over time, so this
-might cause the documentation to be out of date. If you find this to
-be the case, as mentioned, don't doubt to create an issue for that.
-It also might be possible that you know how to bring up to date the
-documentation, so please send us a pull request with the related
-changes.
-
-If you are not sure about what you have found is an issue or not,
-If you are not sure about what you have found is an issue or not,
-please ask through the communication channels described at 
+Si vous n'êtes pas sûr que ce que vous avez trouvé soit un problème ou non,
+Si vous n'êtes pas sûr que ce que vous avez trouvé soit un problème ou non,
+veuillez demander par les canaux de communication décrits à
 https://selenium.dev/support.
 
 ## Contributions
 
-The Selenium project welcomes new contributors. Individuals making
-significant and valuable contributions over time are made _Committers_
-and given commit-access to the project.
+Le projet Selenium accueille de nouveaux contributeurs. Les individus qui font
+des contributions importantes et précieuses au fil du temps sont faites _Committers_
+et donné un accès de validation au projet.
 
-This guide will guide you through the contribution process.
+Ce guide vous guidera tout au long du processus de contribution.
 
 ### Step 1: Fork
 
-Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
-and check out your copy locally.
+Fork le projet [sur Github](https://github.com/seleniumhq/seleniumhq.github.io)
+et vérifiez votre copie localement.
 
 ```shell
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
-#### Dependencies: Hugo
+#### Dépendances: Hugo
 
-We use [Hugo](https://gohugo.io/) to build and render the site and docs.
-To verify everything locally before even committing any changes, please
-[install Hugo](https://gohugo.io/getting-started/installing/), get familiar
-with it and [run the local server](https://gohugo.io/getting-started/usage/#livereload)
-to render the site locally (detailed instructions can be found in the 
-next steps).
+Nous utilisons [Hugo](https://gohugo.io/) pour construire et rendre le site et les documents.
+Pour tout vérifier localement avant même de commettre des modifications, veuillez
+[installez Hugo](https://gohugo.io/getting-started/installing/), familiarisez-vous
+avec elle et [exécutez le serveur local](https://gohugo.io/getting-started/usage/#livereload)
+pour rendre le site localement (des instructions détaillées peuvent être trouvées dans le
+prochaines étapes).
 
 ### Step 2: Branch
 
-Create a feature branch and start hacking:
+Créez une branche de fonctionnalité et lancez le piratage:
 
 ```shell
 % git checkout -b my-feature-branch
 ```
 
-We practice HEAD-based development, which means all changes are applied
-directly on top of master.
+Nous pratiquons le développement basé sur HEAD, ce qui 
+signifie que tous les changements sont appliqués
+directement sur le dessus du maître.
 
-### Step 3: Make changes
+### Step 3: Faire des changements
 
-The repository contains the site and docs, which are two separate Hugo 
-projects. If you want to make changes to the site, work on the
-`site_source_files` directory. To see a live preview of your changes,
-run `hugo server` on the site's root directory.
+Le référentiel contient le site et les documents, 
+qui sont deux Hugo séparés projets. Si vous souhaitez 
+apporter des modifications au site, travaillez sur le
+répertoire `site_source_files`. Pour voir un aperçu 
+en direct de vos modifications,
+exécutez `hugo server` sur le répertoire racine du site.
 
 ```shell
 % cd site_source_files
 % hugo server
 ```
 
-To make changes to the docs, switch to the `docs_source_files` directory. 
+Pour apporter des modifications aux documents, 
+basculez vers le répertoire `docs_source_files`.
 
 ```shell
 % cd docs_source_files
 % hugo server
 ```
 
-The docs are translated into several languages, and translations are based on
-the English content. When you are changing a file, **be sure** to make your
-changes in all the other translated files as well. This might differ depending
-on the change, for example:
+Les documents sont traduits en plusieurs langues et 
+les traductions sont basées sur
+le contenu anglais. Lorsque vous modifiez un fichier, 
+**assurez-vous** de changements dans tous les autres 
+fichiers traduits également. Cela peut différer selon
+sur le changement, par exemple:
  
-* If you add a code example to the `browser_manipulation.en.md` file,
-also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md`, and all other translated files.
-* If you find a translation that can be improved, only change the translated
-file.
-* If you are adding a new language translation, add the new files with the
-appropriate suffix. There is no need to have everything translated to submit a
-PR, it can be done iteratively. Don't forget to check some needed configuration
-values in the `config.toml` file.
-* If you make text changes in the English version, replace the same section in
-the translated files with your change (yes, in English), and add the following
-notice at the top of the file. 
+* Si vous ajoutez un exemple de code au fichier `browser_manipulation.en.md`,
+ajoutez-le également à `browser_manipulation.es.md`,` browser_manipulation.ef.md`,
+`browser_manipulation.ja.md`, et tous les autres fichiers traduits.
+* Si vous trouvez une traduction qui peut être améliorée, ne modifiez que la traduction
+fichier.
+* Si vous ajoutez une nouvelle traduction linguistique, ajoutez les nouveaux fichiers avec le
+suffixe approprié. Il n'est pas nécessaire de tout traduire pour soumettre un
+PR, cela peut être fait de manière itérative. N'oubliez pas de 
+vérifier certaines configurations nécessaires
+dans le fichier `config.toml`.
+* Si vous apportez des modifications au texte dans la version 
+anglaise, remplacez la même section dans
+les fichiers traduits avec votre modification 
+(oui, en anglais), et ajoutez ce qui suit
+remarquez en haut du fichier.
 
 ```
 {{%/* notice info */%}}
@@ -131,25 +141,26 @@ it by sending us pull requests!
 
 ### Step 4: Commit
 
-First make sure git knows your name and email address:
+Assurez-vous d'abord que git connaît 
+votre nom et votre adresse e-mail:
 
 ```shell
 % git config --global user.name 'Santa Claus'
 % git config --global user.email 'santa@example.com'
 ```
 
-**Writing good commit messages is important.** A commit message
-should describe what changed, why, and reference issues fixed (if
-any). Follow these guidelines when writing one:
+**Il est important d'écrire de bons messages de validation.** Un message de validation
+devrait décrire ce qui a changé, pourquoi et les problèmes de référence résolus (si
+tout). Suivez ces directives lorsque vous en rédigez une:
 
-1. The first line should be around 50 characters or less and contain a
-    short description of the change.
-2. Keep the second line blank.
-3. Wrap all other lines at 72 columns.
-4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+1. La première ligne doit contenir environ 50 caractères ou moins et contenir un
+    brève description du changement.
+2. Laissez la deuxième ligne vierge.
+3. Enveloppez toutes les autres lignes sur 72 colonnes.
+4. Incluez `Fixes #N`, où _N_ est le numéro de problème du commit
+    corrections, le cas échéant.
 
-A good commit message can look like this:
+Un bon message de validation peut ressembler à ceci:
 
 ```text
 explain commit normatively in one line
@@ -166,22 +177,24 @@ nicely even when it is indented.
 Fixes #141
 ```
 
-The first line must be meaningful as it's what people see when they
-run `git shortlog` or `git log --oneline`.
+La première ligne doit être significative car c'est 
+ce que les gens voient lorsqu'ils
+exécutez `git shortlog` ou` git log --oneline`.
 
 ### Step 5: Rebase
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+Utilisez `git rebase` (et non` git merge`) pour 
+synchroniser votre travail de temps en temps.
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
 ### Step 6: Test
 
-Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
-with this you can be safe that your changes have not broken anything.
+N'oubliez pas de [exécuter le serveur local](https://gohugo.io/getting-started/usage/#livereload),
+avec cela, vous pouvez être sûr que vos modifications n'ont rien cassé.
 
 ### Step 7: Push
 
@@ -189,23 +202,23 @@ with this you can be safe that your changes have not broken anything.
 % git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/seleniumhq.github.io.git and
-press the _Pull Request_ and fill out the form. **Please indicate
-that you've signed the CLA** (see Step 7).
+Accédez à _https://github.com/yourusername/seleniumhq.github.io.git_ et
+appuyez sur la _Pull Request_ et remplissez le formulaire. **Indiquez s'il vous plait
+que vous avez signé le CLA** (voir l'étape 7).
 
-Pull requests are usually reviewed within a few days. If there are
-comments to address, apply your changes in new commits (preferably
-[fixups](http://git-scm.com/docs/git-commit)) and push to the same
-branch.
+Les demandes d'extraction sont généralement examinées en quelques jours. S'il y a
+commentaires à adresser, appliquez vos modifications dans les nouveaux commits (de préférence
+[fixups](http://git-scm.com/docs/git-commit)) et pousser à la même chose
+branche.
 
 ### Step 8: Integration
 
-When code review is complete, a committer will take your PR and
-integrate it on the repository's master branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
-your branch history.
+Lorsque la révision du code est terminée, un committer prendra votre PR et
+l'intégrer dans la branche principale du référentiel. Parce que nous aimons garder un
+histoire linéaire sur la branche principale, nous allons normalement écraser et rebaser
+l'historique de votre succursale.
 
 ## Communication
 
-All details on how to communicate with the project contributors
-and the community overall can be found at https://selenium.dev/support
+Tous les détails sur la façon de communiquer avec les contributeurs du projet
+et la communauté dans son ensemble se trouve sur https://selenium.dev/support

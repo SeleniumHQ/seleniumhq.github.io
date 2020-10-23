@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #59"
 Date = 2011-09-26
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Its been a month and a half since the last one of these, and the volume of links I have collected illustrates that. So this week is now a cleanup week.</p>
 <ul>
 <li><a href="http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/">How Browsers Work: Behind the Scenes of Modern Web Browsers</a> seems to be one of those articles that people who automate browsers for a living should be familiar with.</li>

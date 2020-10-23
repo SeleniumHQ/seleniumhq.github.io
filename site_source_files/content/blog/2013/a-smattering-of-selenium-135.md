@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #135"
 Date = 2013-01-04
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Three in a row &#8230; of course, these are the easy three.</p>

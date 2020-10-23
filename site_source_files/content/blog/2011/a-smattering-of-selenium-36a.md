@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #36A"
 Date = 2011-01-10
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I have drastically fallen behind on the link reporting, but not the collecting, so this week&#8217;s Smattering will be multi-part.<br />
 <br />
 The &#8216;big&#8217; news falls for this edition is two fold &#8211;</p>

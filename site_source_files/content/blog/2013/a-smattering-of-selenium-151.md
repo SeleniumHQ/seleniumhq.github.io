@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #151"
 Date = 2013-07-10
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Almost a month after the last one. Though it did nice to have it at 150 when people go to the blog &#8230; but a greater number is nicer.</p>
 <ul>
 <li>So I was trying to find <a href="http://requests.ryanmccue.info/">Requests for PHP</a> whilst talking to <a href="http://grumpy-phpunit.com/">the grumpy programmer</a> and he pointed me out to <a href="http://guzzlephp.org/index.html">Guzzle</a> which looks equally cool</li>

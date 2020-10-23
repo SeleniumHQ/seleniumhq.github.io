@@ -1,123 +1,68 @@
 ---
-title: "The Selenium project and tools"
+title: "Selenium 프로젝트와 도구들"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-### Selenium controls web browsers
-
-_Selenium_ is many things 
-but at its core, it is a toolset for web browser automation
-that uses the best techniques available
-to remotely control browser instances
-and emulate a user's interaction with the browser.
-
-It allows users to simulate common activities performed by end-users;
-entering text into fields,
-selecting drop-down values and checking boxes,
-and clicking links in documents.
-It also provides many other controls such as mouse movement,
-arbitrary JavaScript execution, and much more.
-
-Although used primarily for front-end testing of websites,
-Selenium is at its core a browser user agent _library_.
-The interfaces are ubiquitous to their application,
-which encourages composition with other libraries to suit your purpose.
+### Selenium 은 웹브라우저를 제어합니다.
+  
+_Selenium_ 은 여러 프로젝트를 포함하지만, 웹 브라우저 자동화를 위한 도구가 핵심입니다.  
+브라우저 인스턴스를 원격으로 제어하고, 사용자와 브라우저와의   상호작용을 에뮬레이트 하기 위한 최고의 기술들이 적용되어 있습니다.  
+  
+최종 사용자가 수행하는 일반적인 활동들을 시뮬레이션 할 수 있습니다.  
+필드에 텍스트 입력, 드롭 다운 및 체크 박스 선택, 링크 클릭, 마우스 이동, 임의의 JavaScript 실행 등의 기능이 제공됩니다.
 
 
-### One interface to rule them all
-
-One of the project's guiding principles
-is to support a common interface for all (major) browser technologies.
-Web browsers are incredibly complex, highly engineered applications,
-performing their operations in completely different ways
-but which frequently look the same while doing so.
-Even though the text is rendered in the same fonts,
-the images are displayed in the same place
-and the links take you to the same destination.
-What is happening underneath is as different as night and day.
-Selenium “abstracts” these differences,
-hiding their details and intricacies from the person writing the code.
-This allows you to write several lines of code to perform a complicated workflow,
-but these same lines will execute on Firefox,
-Internet Explorer, Chrome, and all other supported browsers.
+웹 사이트의 프론트-엔드 테스트에 주로 사용되지만, Selenium은 브라우저 사용자 에이전트 _라이브러리_ 의 핵심입니다.
+인터페이스는 응용 프로그램에 맞게 어디서나 사용될 수 있도록 최적화 되어있고, 당신의 목적에 맞게 다른 라이브러리와의 구성을 장려합니다.
 
 
-### Tools and support
+### 모든것을 지배하는 하나의 인터페이스
 
-Selenium's minimalist design approach gives it the 
-versatility to be included as a component in bigger applications.
-The surrounding infrastructure provided under the Selenium umbrella
-gives you the tools to put together
-your [grid of browsers]({{< ref "/grid/_index.md" >}})
-so tests can be run on different browsers and multiple operating systems
-across a range of machines.
-
-Imagine a bank of computers in your server room or data center
-all firing up browsers at the same time
-hitting your site's links, forms,
-and tables&mdash;testing your application 24 hours a day.
-Through the simple programming interface
-provided for the most common languages,
-these tests will run tirelessly in parallel,
-reporting back to you when errors occur.
-
-It is an aim to help make this a reality for you,
-by providing users with tools and documentation to not only control browsers,
-but to make it easy to scale and deploy such grids.
+프로젝트의 대원칙 중 하나는 모든 (주요) 브라우저 기술에 대한 공통 인터페이스를 지원하는 것입니다.
+웹 브라우저는 매우 복잡하고 고도의 공학이 적용된 응용 프로그램으로, 완전히 다른 방식으로 작업을 수행하지만, 종종 실행 결과는 똑같이 보입니다.  
+  
+텍스트가 동일한 글꼴로 렌더링 되더라도 이미지는 같은 곳에 표시되고, 링크는 같은 목적지로 이동합니다.
+보이지 않는 내부에서 일어나는 일은 낮과 밤처럼 아예 다릅니다.  
+  
+Selenium은 이러한 차이점들을 "추상화"하여, 코드를 작성하는 사람으로부터 웹 브라우저의 세부 사항과 복잡성을 숨깁니다. 이를 통해 몇 줄의 코드만으로 복잡한 워크플로를 수행할 수 있으며, 이 코드는 Firefox, Internet Explorer, Chrome 및 기타 지원하는 모든 브라우저에서 작동합니다.  
 
 
-### Who uses Selenium
 
-Many of the most important companies in the world
-have adopted Selenium for their browser-based testing,
-often replacing years-long efforts involving other proprietary tools.
-As it has grown in popularity, so have its requirements and challenges multiplied.
+### 도구 및 지원
 
-As the web becomes more complicated
-and new technologies are added to websites,
-it's the mission of this project to keep up with them where possible.
-Being an open source project,
-this support is provided through the generous donation of time from many volunteers,
-every one of which has a “day job”.
+Selenium의 미니멀리스트 디자인 접근방식은 대규모 어플리케이션의 구성요소로 포함되는 다용도성을 제공합니다.
+Selenium umbrella 프로젝트의 이름 하에 제공되는 인프라는 
+당신의 [웹 브라우저의 그리드]({{< ref "/grid/_index.md" >}})를 결합할 수 있는 도구들을 제공합니다.
+여러 장치에 걸친 색다른 브라우저들과 여러 운영 체제에서 테스트를 할 수 있도록 돕습니다.
 
-Another mission of the project is to encourage
-more volunteers to partake in this effort,
-and build a strong community
-so that the project can continue to keep up with emerging technologies
-and remain a dominant platform for functional test automation.
+서버실이나 데이터 센터에 있는 컴퓨터 뱅크가 하루종일 응용프로그램을 테스트하는 환경에서 사이트의 링크, 양식 및 테이블을 동시에 작동한다고 상상해 보십시오.
+간단한 프로그래밍 인터페이스가 가장 대중적인 언어로 제공되므로, 이 테스트는 지칠 줄 모르게 병렬로 실행되고, 오류가 발생하면 다시 보고합니다.
+
+브라우저를 제어할 뿐만 아니라, 도구와 문서를 사용자에게 제공하여, 이러한 그리드를 쉽게 확장하고 배포 할 수 있도록 하는것이 목표입니다.
 
 
-### History
+### Selenium을 사용하는 사람들에게
 
-When Selenium 1 was released in 2004,
-it was out of the necessity to reduce time spent
-manually verifying consistent behaviour in the front-end of a web application.
-It made use of what tools were available at the time 
-and relied heavily on the injection of JavaScript to the web page under test
-to emulate a user's interaction.
+세계에서 가장 중요한 회사들이 브라우저 기반 테스트를 위해 Selenium을 채택했고,
+종종 다른 독점 도구와 관련된 수년간의 노력을 대체했습니다.
+Selenium이 인기를 얻으며, 요구 사항과 해결할 과제도 배가 되었습니다.
 
-Whilst JavaScript is a good tool to let you introspect the properties of the DOM
-and to do certain client-side observations that you would otherwise not be able to do,
-it falls short on the ability to naturally replicate a user's interactions
-as if the mouse and keyboard are being used.
+웹이 더욱 복잡해지고 새로운 기술이 웹사이트에 추가됨에 따라, 이 프로젝트의 사명은 가능한 한 최신 기술을 따라잡는 것입니다.
+오픈소스 프로젝트인 만큼, 이 지원은 각자의 일이 있는 수많은 기여자들의 아낌없는 시간 기부를 통해 제공됩니다.
 
-Since then, Selenium has grown and matured a lot,
-into a tool widely used by many&mdash;if not most&mdash;of
-the largest organisations around the world.
-Selenium has gone from a homebrewed test automation toolkit developed at Thoughtworks
-for a niché audience and a specific use case,
-to the world's _de facto_ browser automation library.
+이 프로젝트의 또 다른 임무는 더 많은 기여자들이 이 노력에 합세하여 더 강력한 커뮤니티를 구축하고, 프로젝트가 새로운 기술을 계속 유지하여 기능 테스트 자동화를 위한 주요 플랫폼으로 남아 있는 것입니다.
 
-Just as Selenium RC made use of the tools of the trade available at the time,
-[Selenium WebDriver]({{< ref "/webdriver/_index.md" >}}) drives that tradition on by taking
-the browser interaction part to the browser vendor's home turf 
-and asking them to take responsibility of the backend, browser-facing implementations.
-Recently this work has evolved into a W3C standardisation process
-where the goal is to turn the WebDriver component in Selenium
-into the _du jour_ remote control library for user agents.
+
+### 역사
+
+Selenium 1이 출시 되었던 2004년에는, 웹 응용프로그램의 프론트-엔드에서 일관된 동작을 수동으로 확인하는 데 소요되는 시간을 줄일 필요가 없었습니다. 버전 1은 그 당시 사용가능한 도구를 이용하여 사용자의 상호작용을 모방하기 위해 시험 중인 웹 페이지에 JavaScript를 주입하는 것에 크게 의존했습니다.
+
+JavaScript는 DOM의 속성을 조사하고, 특정 클라이언트측을 관찰할 수 있는 좋은 도구이지만, 마우스와 키보드를 사용하는 것처럼 사용자의 상호작용을 자연스럽게 복제할 수 있는 능력은 부족합니다.
+
+그 이후로, Selenium은 많이 발전하고 성숙해졌습니다.
+&mdash;전 세계 대부분의 거대 조직은 아니지만&mdash; 많은 사람들이 널리 사용하는 도구로 성장했습니다.
+Selenium 은 틈새시장의 잠재 고객들과 특정한 사용 사례를 위해 Thinkworks에서 개발한 가정용 테스트 자동화 툴킷에서, _사실상_ 세계 최고의 브라우저 자동화 라이브러리로 발전했습니다..
+
+Selenium RC 당시 이용가능한 거래 도구를 활용한 것처럼, [Selenium WebDriver]({{< ref "/webdriver/_index.md" >}})는 브라우저 공급 업체의 앞마당을 사용하듯 브라우저 상호 작용 부분이 백-엔드 브라우저를 향한 구현을 책임지도록 요구함으로써 전통을 이어갑니다.
+최근 이 작업은 W3C 표준화 프로세스로 발전하여, Selenium의 WebDriver 구성 요소를 사용자 에이전트를 위한 _오늘날의_  원격 제어 라이브러리로 전환하는 것이 목표입니다.

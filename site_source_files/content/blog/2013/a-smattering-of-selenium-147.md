@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #147"
 Date = 2013-03-14
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>My. Get. Productive. I know! I&#8217;ll push out a smattering. Oh. &#8230;</p>
 <ul>
 <li><a href="https://speakerdeck.com/mleone/python-for-ruby-programmers">Python for Ruby Programmers</a> is a pretty good deck, with the requisite snark at the end that you can safely ignore.</li>

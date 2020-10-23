@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #141"
 Date = 2013-02-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Its -12 Celsius plus windchill out. Why the heck is the office air conditioning on. Feel like I need a Mr. Rogers cardigan or something.</p>

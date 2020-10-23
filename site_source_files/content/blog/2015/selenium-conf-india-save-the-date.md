@@ -4,6 +4,8 @@ Title = "Selenium Conf India — Save The Date!"
 Date = 2015-12-21
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>In <a href="http://year-2015.seleniumconf.org/next-year/" target="_blank">our last update</a> we mentioned there will be 2 Selenium Confs in 2016 &#8212; one in India, another somewhere else (TBD).</p>

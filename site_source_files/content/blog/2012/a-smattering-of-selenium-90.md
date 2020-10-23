@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #90"
 Date = 2012-06-19
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Eventually I&#8217;ll get back on the once-a-week schedule. But not today!</p>
 <ul>
 <li><a href="http://news.ycombinator.com/item?id=4128208">Falsehoods Programmers believe about Time</a>. Time is hard; let&#8217;s go shopping!</li>

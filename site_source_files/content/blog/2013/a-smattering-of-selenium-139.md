@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #139"
 Date = 2013-01-23
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Posting from the past into the future. Or something&#8230; (its a scheduled post).</p>
 <ul>
 <li><a href="https://github.com/ericminio/webdriverjs-with-jasmine">webdriverjs-with-jasmine</a> appears appropriately named since it claims to be <i>A standalone (includes standalone Selenium server (30Mo) + includes Jasmine) working example of a test with WebDriverJS and Jasmine.</i></li>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #113"
 Date = 2012-08-22
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>/me is not looking forward to when the jet lag whallops him</p>
 <ul>
 <li><a href="https://sites.google.com/a/van-steenbeek.net/archive/php_pcntl_fork?q=php_pcntl_fork">Thorough look at PHP&#8217;s pcntl_fork()</a> is how we have to do parallel tests with phpunit until it grows it proper</li>

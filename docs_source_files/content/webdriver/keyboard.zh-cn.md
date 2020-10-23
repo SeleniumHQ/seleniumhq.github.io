@@ -8,10 +8,11 @@ Keyboard代表一个键盘事件. Keyboard操作通过使用底层接口允许�
 ## sendKeys
 
 即使遇到修饰符键序列, sendKeys也会在DOM元素中键入键序列.
+[这里](https://www.w3.org/TR/webdriver/#keyboard-actions) 是WebDriver能够支持的键位列表.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-import org.openqa.selenium.By;
+import org.openqa.selenium.By;  
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -33,6 +34,7 @@ public class HelloSelenium {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Firefox()
 
@@ -40,7 +42,7 @@ driver = webdriver.Firefox()
 driver.get("http://www.google.com")
 
 # Enter "webdriver" text and perform "ENTER" keyboard action
-driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
+driver.find_element(By.NAME, "q").send_keys("webdriver" + Keys.ENTER)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using (var driver = new FirefoxDriver())
@@ -127,6 +129,7 @@ try {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
@@ -134,7 +137,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Enter "webdriver" text and perform "ENTER" keyboard action
-driver.find_element_by_name("q").send_keys("webdriver"+Keys.ENTER)
+driver.find_element(By.NAME, "q").send_keys("webdriver" + Keys.ENTER)
 
 # Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
 webdriver.ActionChains(driver).key_down(Keys.CONTROL).send_keys("a").perform()
@@ -212,7 +215,7 @@ fun main() {
     val action = Actions(driver)
 
     // Perform action ctrl + A (modifier CONTROL + Alphabet A) to select the page
-    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform();
+    action.keyDown(Keys.CONTROL).sendKeys("a").build().perform()
   } finally {
     driver.quit()
   }
@@ -254,6 +257,7 @@ public class HelloSelenium {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 driver = webdriver.Chrome()
 
@@ -261,7 +265,7 @@ driver = webdriver.Chrome()
 driver.get("http://www.google.com")
 
 # Store google search box WebElement
-search = driver.find_element_by_name("q")
+search = driver.find_element(By.NAME, "q")
 
 action = webdriver.ActionChains(driver)
 
@@ -354,7 +358,7 @@ fun main() {
     val action = Actions(driver)
 
     // Enters text "qwerty" with keyDown SHIFT key and after keyUp SHIFT key (QWERTYqwerty)
-    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform();
+    action.keyDown(Keys.SHIFT).sendKeys(search, "qwerty").keyUp(Keys.SHIFT).sendKeys("qwerty").build().perform()
   } finally {
     driver.quit()
   }
@@ -391,12 +395,13 @@ public class clear {
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 driver = webdriver.Chrome()
 
 # Navigate to url
 driver.get("http://www.google.com")
 # Store 'SearchInput' element
-SearchInput = driver.find_element_by_name("q")
+SearchInput = driver.find_element(By.NAME, "q")
 SearchInput.send_keys("selenium")
 # Clears the entered text
 SearchInput.clear()

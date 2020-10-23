@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #74"
 Date = 2012-01-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>It is kinda hard to do these without reliable internet&#8230; dear hotels, fix. your. internet.</p>
 <ul>
 <li><a href="http://blog.pamelafox.org/2012/01/testing-facebook-login-with-selenium.html">Testing Facebook Login with Selenium</a> has some nice Python helpers to dealing with Facebook auth</li>

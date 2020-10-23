@@ -88,20 +88,30 @@ h1.sub-header {
 
 /* Banner Notification */
 
+.banner-notification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
 .banner-message-container {
     position: relative;
     text-align: center;
-    padding: 1em 100px;
-    margin-bottom: 30px;
+    padding: 1em 20px;
     font-size: 100%;
     font-family: "Encode Sans", sans-serif;
     color: #363636;
-    background-color:#BAF3AE;
+    background-color: #f7f8f8;
+    border-color: #43B02A;
+    border-style: solid;
   }
-  .banner-message-container a {
+
+.banner-message-container a {
     color:#0033a0;
-  }
-  .banner-message-container .dismiss {
+}
+
+.banner-message-container .dismiss {
     position: absolute;
     top: 0;
     right: 0;
@@ -110,8 +120,8 @@ h1.sub-header {
     line-height: 2em;
     background: none;
     border: 0;
-  }
-  
+}
+
   /***/
 
 /*Supporters*/
@@ -120,7 +130,7 @@ h1.sub-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 75px;
+    margin: 20px;
 }
 
 .selenium-backers h2 {
@@ -364,6 +374,15 @@ h1.sub-header {
     font-size: 50px;
     font-weight: bold;
     color: #cf0a2c;
+}
+
+.banner-notification {
+    filter: grayscale(100%);
+}
+
+.banner-notification h2 {
+    color: black !important;
+    font-weight: 700;
 }
 
 /* Mobile-only styles */

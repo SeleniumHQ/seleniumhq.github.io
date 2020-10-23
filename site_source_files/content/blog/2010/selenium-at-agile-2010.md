@@ -4,8 +4,9 @@ Title = "Selenium at Agile 2010"
 Date = 2010-08-10
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["conference"]
+categories = ["conference","general"]
 +++
-
 <p>The Selenium project does not have an &#8216;official&#8217; presence here at <a href="http://agile2010.agilealliance.org">Agile</a> as it is seen as a &#8216;test after&#8217; tool rather than &#8216;test first&#8217; &#8212; even though it provides the magic of the &#8216;test first&#8217; frameworks&#8230; But there is a small, unofficial contingent of recognizable faces around that can help people out and some sessions on it.<br />
 <br />
 <b>Sessions</b><br />

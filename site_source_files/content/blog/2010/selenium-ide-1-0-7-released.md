@@ -4,6 +4,8 @@ Title = "Selenium IDE 1.0.7 – Now with Drag-and-Drop!"
 Date = 2010-05-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["selenium","ide"]
+categories = ["releases"]
 +++
 
 <p>So its a month later than planned, but Selenium IDE 1.0.7 is now available. The delay was due to some internal build changes and not code, but one of the code changes that is there more than makes up for the delay.<br />

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #104"
 Date = 2012-07-24
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I think everyone is on holidays right now&#8230;</p>
 <ul>
 <li><a href="https://blog.mozilla.org/nnethercote/2012/07/19/firefox-15-plugs-the-add-on-leaks/">Firefox 15 plugs the add-on leaks</a> &#8212; Hey look! Openness from Mozilla! I&#8217;m not kidding when I say I want to see more of these; from all browser vendors.</li>

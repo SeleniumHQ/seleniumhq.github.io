@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #73"
 Date = 2012-01-05
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <ul>
 <li>Two Ruby gems
 <ul>

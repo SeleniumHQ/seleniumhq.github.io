@@ -79,20 +79,20 @@ The list of Selenium Client & WebDriver Language Bindings on the Downloads page 
 To add a new row to the section, simply add a new file to `/content/downloads`. Conform to the format found in, for example,
 `/content/downloads/java.md`, and the new content will automatically be shown on the Downloads page.
 
-### Third Party
-List content for the Third Party page is stored in `/content/thirdparty`. Hugo determines which list the content belongs in
+### Ecosystem
+List content for the Ecosystem page is stored in `/content/ecosystem`. Hugo determines which list the content belongs in
 based on the `Key` attribute found in the markdown file.
 
 #### Browser drivers
-Look to `/content/thirdparty/chromedriver.md` for an example here. Hugo will add any `/content/thirdparty/*.md` file 
+Look to `/content/ecosystem/chromedriver.md` for an example here. Hugo will add any `/content/ecosystem/*.md` file 
 containing the `Key = "drivers"` field to the Third Party Browser Drivers list.
 
 #### Language bindings
-Look to `/content/thirdparty/perl.md` for an example here. Hugo will add any `/content/thirdparty/*.md` file 
+Look to `/content/ecosystem/perl.md` for an example here. Hugo will add any `/content/ecosystem/*.md` file 
 containing the `Key = "bindings"` field to the Third Party Browser Drivers list.
 
 #### Selenium Plugins
-Look to `/content/thirdparty/flex-pilot.md` for an example here. Hugo will add any `/content/thirdparty/*.md` file 
+Look to `/content/ecosystem/flex-pilot.md` for an example here. Hugo will add any `/content/ecosystem/*.md` file 
 containing the `Key = "selenium-plugins"` field to the Third Party Browser Drivers list.
 
 ## Hosting solutions

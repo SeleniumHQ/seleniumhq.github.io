@@ -4,6 +4,8 @@ Title = "Selenium 2.3 Released"
 Date = 2011-08-02
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>Continuing our new tradition of weekly releases, we&#8217;re very pleased to announce the <a href="http://seleniumhq.org/download/">release of Selenium 2.3</a>. The release notes for this version are pretty slim:</p>

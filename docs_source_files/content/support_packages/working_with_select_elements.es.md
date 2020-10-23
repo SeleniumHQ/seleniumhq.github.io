@@ -3,17 +3,12 @@ title: "Trabajando con elementos select"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-
-Select elements can require quite a bit of boiler plate code to automate.
-To reduce this and make your tests cleaner, there is a
-`Select` class in the Selenium support package.
-To use it, you will need the following import statement:
+A la hora de seleccionar elementos puede ser necesario código repetitivo 
+para poder ser automatizado.
+Para reducir esto y hacer tus test mas limpios, existe un clase _Select_ en los
+paquetes de soporte de Selenium.
+Para usarla, necesitarás importarla de la siguiente forma:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -29,15 +24,15 @@ using OpenQA.Selenium.Support.UI
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.support.ui.Select
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You are then able to create a Select object using a WebElement that
-references a `<select>` element.
+Una vez importado, ya podrás crear un objeto _Select_ usando un WebElement que
+referencie a un elemento `<select>`.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -45,7 +40,7 @@ WebElement selectElement = driver.findElement(By.id("selectElementID"));
 Select selectObject = new Select(selectElement);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-select_element = driver.find_element_by_id('selectElementID')
+select_element = driver.find_element(By.ID,'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -57,7 +52,7 @@ select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -65,10 +60,10 @@ val selectObject = new Select(selectElement)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
-First of all, there are different ways of selecting an option
-from the `<select>` element.
+El objeto _Select_ te proporcionará una serie de comandos que te permitirán
+interactuar con los elementos `<select>`.
+Lo primero de todo, existen diferentes formas de seleccionar una opción de un
+elemento `<select>`.
 
 ```html
 <select>
@@ -78,208 +73,214 @@ from the `<select>` element.
 </select>
 ```
 
-There are three ways to select the first option from the above element:
+Existen tres formas de seleccionar la primera opción del ejemplo que se muestra
+arriba.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Select an <option> based upon the <select> element's internal index
+// Selecciona una <option> basándose en el indice interno del elemento <select>
 selectObject.selectByIndex(1);
 
-// Select an <option> based upon its value attribute
+// Selecciona una <option> basándose en su atributo value
 selectObject.selectByValue("value1");
 
-// Select an <option> based upon its text
+// Selecciona una <option> basándose en el texto que muestra
 selectObject.selectByVisibleText("Bread");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Select an <option> based upon the <select> element's internal index
+# Selecciona una <option> basándose en el indice interno del elemento <select>
 select_object.select_by_index(1)
 
-# Select an <option> based upon its value attribute
+# Selecciona una <option> basándose en su atributo value
 select_object.select_by_value('value1')
 
-# Select an <option> based upon its text
+# Selecciona una <option> basándose en el texto que muestra
 select_object.select_by_visible_text('Bread')
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Select an <option> based upon the <select> element's internal index
+// Selecciona una <option> basándose en el indice interno del elemento <select>
 selectObject.SelectByIndex(1);
 
-// Select an <option> based upon its value attribute
+// Selecciona una <option> basándose en su atributo value
 selectObject.SelectByValue("value1");
 
-// Select an <option> based upon its text
- selectObject.SelectByText("Bread");
+// Selecciona una <option> basándose en el texto que muestra
+selectObject.SelectByText("Bread");
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Select an <option> based upon the <select> element's internal index
+# Selecciona una <option> basándose en el indice interno del elemento <select>
 select_object.select_by(:index, 1)
 
-# Select an <option> based upon its value attribute
+# Selecciona una <option> basándose en su atributo value
 select_object.select_by(:value, 'value1')
 
-# Select an <option> based upon its text
+# Selecciona una <option> basándose en el texto que muestra
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Select an <option> based upon the <select> element's internal index
+// Selecciona una <option> basándose en el indice interno del elemento <select>
 selectObject.selectByIndex(1)
 
-// Select an <option> based upon its value attribute
+// Selecciona una <option> basándose en su atributo value
 selectObject.selectByValue("value1")
 
-// Select an <option> based upon its text
+// Selecciona una <option> basándose en el texto que muestra
 selectObject.selectByVisibleText("Bread")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can then check which options are selected by using:
+Puedes revisar que opciones están seleccionadas usando:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Return a List<WebElement> of options that have been selected
+// Devuelve una Lista de <WebElements> con las opciones que han sido seleccionadas
 List<WebElement> allSelectedOptions = selectObject.getAllSelectedOptions();
 
-// Return a WebElement referencing the first selection option found by walking down the DOM
+// Devuelve un WebElement que referencia a la primera opción seleccionada que se encontró en el DOM
 WebElement firstSelectedOption = selectObject.getFirstSelectedOption();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Return a list[WebElement] of options that have been selected
+# Devuelve una Lista de [WebElements] con las opciones que han sido seleccionadas
 all_selected_options = select_object.all_selected_options
 
-# Return a WebElement referencing the first selection option found by walking down the DOM
+# Devuelve un WebElement que referencia a la primera opción seleccionada que se encontró en el DOM
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Return a List<WebElement> of options that have been selected
+var allSelectedOptions = selectObject.AllSelectedOptions;
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+var firstSelectedOption = selectObject.AllSelectedOptions.FirstOrDefault();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Return an Array[Element] of options that have been selected
+# Devuelve un Array de <WebElements> con las opciones que han sido seleccionadas
 all_selected_options = select_object.selected_options
 
-# Return a WebElement referencing the first selection option found by walking down the DOM
+# Devuelve un WebElement que referencia a la primera opción seleccionada que se encontró en el DOM
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Return a List<WebElement> of options that have been selected
+// Devuelve una Lista de <WebElements> con las opciones que han sido seleccionadas
 val allSelectedOptions = selectObject.allSelectedOptions
 
-// Return a WebElement referencing the first selection option found by walking down the DOM
+// Devuelve un WebElement que referencia a la primera opción seleccionada que se encontró en el DOM
 val firstSelectedOption = selectObject.firstSelectedOption
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 
-Or you may just be interested in what `<option>` elements
-the `<select>` element contains:
+Tambien existe una forma de obtener que elementos `<option>` contiene un 
+`<select>`: 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Return a List<WebElement> of options that the <select> element contains
+// Devuelve una lista de <WebElements> que contiene las opciones de un elemento <select>
 List<WebElement> allAvailableOptions = selectObject.getOptions();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Return a list[WebElement] of options that the &lt;select&gt; element contains
+# Devuelve una lista de [WebElements] que contiene las opciones de un elemento &lt;select&gt;
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Return a IList<IWebElement> of options that the <select> element contains
+// Devuelve una IList de <IWebElements> que contiene las opciones de un elemento <select>
 IList<IWebElement> allAvailableOptions = selectObject.Options;
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Return an Array[Element] of options that the &lt;select&gt; element contains
+# Devuelve un array de [WebElements] que contiene las opciones de un elemento &lt;select&gt;
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Return a List<WebElement> of options that the <select> element contains
+// Devuelve una lista de <WebElements> que contiene las opciones de un elemento <select>
 val allAvailableOptions = selectObject.options
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you want to deselect any elements, you now have four options:
+A la hora de deseleccionar elementos dispones de cuatro opciones:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Deselect an <option> based upon the <select> element's internal index
+// Deseleccionar una <option> basándose en el indice interno de un elemento <select>
 selectObject.deselectByIndex(1);
 
-// Deselect an <option> based upon its value attribute
+// Deseleccionar una <option> basándose en su atributo `value`
 selectObject.deselectByValue("value1");
 
-// Deselect an <option> based upon its text
+// Deseleccionar una <option> basándose en el texto que muestra
 selectObject.deselectByVisibleText("Bread");
 
-// Deselect all selected <option> elements
+// Deseleccionar todos los elementos <option> que estan seleccionados
 selectObject.deselectAll();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Deselect an <option> based upon the <select> element's internal index
+# Deseleccionar una <option> basándose en el indice interno de un elemento <select>
 select_object.deselect_by_index(1)
 
-# Deselect an <option> based upon its value attribute
+# Deseleccionar una <option> basándose en su atributo `value`
 select_object.deselect_by_value('value1')
 
-# Deselect an <option> based upon its text
+# Deseleccionar una <option> basándose en el texto que muestra
 select_object.deselect_by_visible_text('Bread')
 
-# Deselect all selected <option> elements
+# Deseleccionar todos los elementos <option> que estan seleccionados
 select_object.deselect_all()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Deselect an <option> based upon the <select> element's internal index
+// Deseleccionar una <option> basándose en el indice interno de un elemento <select>
 selectObject.DeselectByIndex(1);
 
-// Deselect an <option> based upon its value attribute
+// Deseleccionar una <option> basándose en su atributo `value`
 selectObject.DeselectByValue("value1");
 
-// Deselect an <option> based upon its text
+// Deseleccionar una <option> basándose en el texto que muestra
 selectObject.DeselectByText("Bread");
 
-// Deselect all selected <option> elements
+// Deseleccionar todos los elementos <option> que estan seleccionados
 selectObject.DeselectAll();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Deselect an <option> based upon the <select> element's internal index
+# Deseleccionar una <option> basándose en el indice interno de un elemento <select>
 select_object.deselect_by(:index, 1)
 
-# Deselect an <option> based upon its value attribute
+# Deseleccionar una <option> basándose en su atributo `value`
 select_object.deselect_by(:value, 'value1')
 
-# Deselect an <option> based upon its text
+# Deseleccionar una <option> basándose en el texto que muestra
 select_object.deselect_by(:text, 'Bread')
 
-# Deselect all selected <option> elements
+# Deseleccionar todos los elementos <option> que estan seleccionados
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Deselect an <option> based upon the <select> element's internal index
+// Deseleccionar una <option> basándose en el indice interno de un elemento <select>
 selectObject.deselectByIndex(1)
 
-// Deselect an <option> based upon its value attribute
+// Deseleccionar una <option> basándose en su atributo `value`
 selectObject.deselectByValue("value1")
 
-// Deselect an <option> based upon its text
+// Deseleccionar una <option> basándose en el texto que muestra
 selectObject.deselectByVisibleText("Bread")
 
-// Deselect all selected <option> elements
+// Deseleccionar todos los elementos <option> que estan seleccionados
 selectObject.deselectAll()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Finally, some `<select>` elements allow you to select more than one option.
-You can find out if your `<select>` element is one of these by using:
+Finalmente, existen algunos elementos `<select>` que te permiten seleccionar
+mas de una opción.
+Puedes comprobar si tu elemento `<select>` es uno de estos usando: 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -295,7 +296,7 @@ bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple

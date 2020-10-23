@@ -12,7 +12,7 @@ driver.findElement(By.name("name")).sendKeys(name);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 name = "Charles"
-driver.find_element_by_name("name").send_keys(name)
+driver.find_element(By.NAME, "name").send_keys(name)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 string name = "Charles";
@@ -43,8 +43,8 @@ WebElement target = driver.findElement(By.id("target"));
 new Actions(driver).dragAndDrop(source, target).build().perform();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-source = driver.find_element_by_id("source")
-target = driver.find_element_by_id("target")
+source = driver.find_element(By.ID, "source")
+target = driver.find_element(By.ID, "target")
 ActionChains(driver).drag_and_drop(source, target).perform()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -79,7 +79,7 @@ Je kan op een element klikken door middel van de click methode:
 driver.findElement(By.cssSelector("input[type='submit']")).click();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver.find_element_by_css_selector("input[type='submit']").click()
+driver.find_element(By.CSS_SELECTOR, "input[type='submit']").click()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.FindElement(By.CssSelector("input[type='submit']")).Click();

@@ -28,7 +28,7 @@ using OpenQA.Selenium.Support.UI
 include Selenium::WebDriver::Support
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR  
+// This feature is not implemented - Help us by sending a pr to implement this feature 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 import org.openqa.selenium.support.ui.Select
@@ -44,7 +44,7 @@ WebElement selectElement = driver.findElement(By.id("selectElementID"));
 Select selectObject = new Select(selectElement);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-select_element = driver.find_element_by_id('selectElementID')
+select_element = driver.find_element(By.ID,'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -56,7 +56,7 @@ select_element = driver.find_element(id: 'selectElementID')
 select_object = Select(select_element)
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val selectElement = driver.findElement(By.id("selectElementID"))
@@ -121,7 +121,7 @@ select_object.select_by(:value, 'value1')
 select_object.select_by(:text, 'Bread')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Select an <option> based upon the <select> element's internal index
@@ -153,7 +153,11 @@ all_selected_options = select_object.all_selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// We don't have a C# code sample yet -  Help us out and raise a PR
+// Return a List<WebElement> of options that have been selected
+var allSelectedOptions = selectObject.AllSelectedOptions;
+
+// Return a WebElement referencing the first selection option found by walking down the DOM
+var firstSelectedOption = selectObject.AllSelectedOptions.FirstOrDefault();
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Return an Array[Element] of options that have been selected
@@ -163,7 +167,7 @@ all_selected_options = select_object.selected_options
 first_selected_option = select_object.first_selected_option
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that have been selected
@@ -196,7 +200,7 @@ IList<IWebElement> allAvailableOptions = selectObject.Options;
 all_available_options = select_object.options
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Return a List<WebElement> of options that the <select> element contains
@@ -260,7 +264,7 @@ select_object.deselect_by(:text, 'Bread')
 select_object.deselect_all
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 // Deselect an <option> based upon the <select> element's internal index
@@ -294,7 +298,7 @@ bool doesThisAllowMultipleSelections = selectObject.IsMultiple;
 does_this_allow_multiple_selections = select_object.multiple?
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-// We don't have a JavaScript code sample yet -  Help us out and raise a PR
+// This feature is not implemented - Help us by sending a pr to implement this feature
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val doesThisAllowMultipleSelections = selectObject.isMultiple

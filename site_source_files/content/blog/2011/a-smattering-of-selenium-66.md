@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #66"
 Date = 2011-10-19
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Aside from one of the dog&#8217;s tummy making noises that imply a big mess to clean up later, this scheduling thing seems to be working out.</p>

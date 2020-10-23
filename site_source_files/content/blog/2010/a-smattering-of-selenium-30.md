@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #30"
 Date = 2010-11-01
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>I&#8217;ve missed a couple weeks due to travel and a complete system lock which meant I lost all the links I had open but not saved. So these are the ones I have recovered.</p>
 <ul>
 <li>I have written a series of posts on how to do parallel execution of tests in JUnit 4 up on the Sauce Labs blog. <a href="http://saucelabs.com/blog/index.php/2010/10/parallel-junit-4-and-selenium-part-one-parameters/">Part One</a>, <a href="http://saucelabs.com/blog/index.php/2010/10/parallel-junit-4-and-selenium-part-two-external-properties/">Part 2</a> and <a href="http://saucelabs.com/blog/index.php/2010/10/parallel-junit-4-and-selenium-part-three-parallelism-and-ondemand/">Part Three</a></li>

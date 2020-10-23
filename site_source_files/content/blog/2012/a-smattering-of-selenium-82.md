@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #82"
 Date = 2012-03-13
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Someone explain to me why I&#8217;m in Toronto and not Florida?</p>
 <ul>
 <li>Couldn&#8217;t make it to Pycon last week? There <a href="http://pyvideo.org/category/17/pycon-us-2012">are videos</a> of the session!</li>

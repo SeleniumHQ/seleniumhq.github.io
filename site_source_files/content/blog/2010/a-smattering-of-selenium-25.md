@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #25"
 Date = 2010-08-31
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>A day late, but that sort of thing happens when you have family.<br />
 </p>
 <ul>

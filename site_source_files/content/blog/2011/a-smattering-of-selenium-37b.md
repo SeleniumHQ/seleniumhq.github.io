@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #37B"
 Date = 2011-01-19
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Let&#8217;s see how many announcements there were that didn&#8217;t get pushed out in a timely manner today shall we?</p>
 <ul>
 <li>Well, there is of course <a href="https://seleniumhq.wordpress.com/2011/01/17/selenium-conf-is-coming-get-your-proposals-in/">Selenium Conf is coming</a> and you have until Friday to get your proposals in. Last I heard we had 37 which is impressive, but I think 50 should be doable.</li>

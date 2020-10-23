@@ -13,7 +13,7 @@ La propriété `document.readyState` d'un document décrit l'état de chargement
 Par défaut, WebDriver ne répondra pas à un `driver.get()` (ou) `driver.navigate().to()`
 appeler jusqu'à ce que l'état prêt du document soit `complete`
 
-Dans les applications SPA (comme Angular, react, Ember) une fois le contenu dynamique
+Dans les applications SPA (comme Angular, React, Ember) une fois le contenu dynamique
 est déjà chargé (c'est-à-dire une fois que le statut de pageLoadStrategy est COMPLETE),
 cliquer sur un lien ou effectuer une action dans la page ne fera pas de nouvelle demande
 sur le serveur car le contenu est chargé dynamiquement côté client sans actualisation de la page d'extraction. 
@@ -21,7 +21,7 @@ sur le serveur car le contenu est chargé dynamiquement côté client sans actua
 Les applications SPA peuvent charger de nombreuses vues dynamiquement
 sans aucune demande de serveur, donc pageLoadStrategy
 affichera toujours l'état `COMPLETE` jusqu'à
-nous faisons un nouveau `driver.get()` et `driver.naviagte().to()`
+nous faisons un nouveau `driver.get()` et `driver.navigate().to()`
 
 WebDriver _pageLoadStrategy_ prend en charge les valeurs suivantes:
 
@@ -29,7 +29,7 @@ WebDriver _pageLoadStrategy_ prend en charge les valeurs suivantes:
 
 Cela obligera Selenium WebDriver à attendre que la page entière soit chargée.
 Lorsqu'il est réglé sur **normal**, Selenium WebDriver attend que le
-[load](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) le feu d'événement est renvoyé.
+[load](https://developer.mozilla.org/fr/docs/Web/Events/load) le feu d'événement est renvoyé.
 
 Par défaut, **normal** est défini sur le navigateur si aucun n'est fourni.
 
@@ -55,7 +55,15 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'normal'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
+
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -128,7 +136,7 @@ le document HTML initial a été complètement chargé et analysé,
 et supprime le chargement des feuilles de style, des images et des sous-trames.
 
 Lorsqu'il est réglé sur **eager**, Selenium WebDriver attend jusqu'à
-Le feu d'événement [DOMContentLoaded](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) est renvoyé.
+Le feu d'événement [DOMContentLoaded](https://developer.mozilla.org/fr/docs/Web/API/Document/DOMContentLoaded_event) est renvoyé.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -152,7 +160,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'eager'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;
@@ -244,7 +259,14 @@ public class pageLoadStrategy {
 }
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+options = Options()
+options.page_load_strategy = 'none'
+driver = webdriver.Chrome(options=options)
+# Navigate to url
+driver.get("http://www.google.com")
+driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="c#" >}}
 using OpenQA.Selenium;

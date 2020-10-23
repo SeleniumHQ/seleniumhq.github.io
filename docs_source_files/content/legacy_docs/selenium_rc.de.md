@@ -1014,7 +1014,7 @@ elements are not available on page.
 ### Executing JavaScript from Your Test
 
 JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
+by Selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
 Selenium RC. 
 
 Consider an application having check boxes with no static identifiers. 

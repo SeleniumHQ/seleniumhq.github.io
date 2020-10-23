@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #86"
 Date = 2012-06-13
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Look at that! 3 days in a row, and the boy isn&#8217;t even gone to school yet and I&#8217;ve hit &#8216;publish&#8217;</p>
 <ul>
 <li>Most people know about this already, but <a href="http://www.youtube.com/seleniumconf">SeleniumConf</a> has its own YouTube channel &#8212; which has all of the 2012 videos on it now.</li>

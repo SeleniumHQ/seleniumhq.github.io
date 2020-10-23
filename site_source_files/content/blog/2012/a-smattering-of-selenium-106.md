@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #106"
 Date = 2012-07-31
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>In case you are curious, the train just went past my old neighbourhood.</p>
 <ul>
 <li><a href="http://www.theautomatedtester.co.uk/blog/2012/marionette-the-future-of-firefoxdriver-in-selenium.html">Marionette &#8211; The Future of FirefoxDriver in Selenium</a> is a project that has been hinted at here before I think, but this is its coming out party. Oh. And its the future of the Firefox driver. Now, what I need is an A-Team t-shirt&#8230;</li>

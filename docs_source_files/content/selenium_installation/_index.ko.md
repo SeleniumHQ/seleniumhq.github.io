@@ -1,5 +1,5 @@
 ---
-title: "Selenium installation"
+title: "Selenium 설치"
 chapter: true
 weight: 3
 ---

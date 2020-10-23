@@ -4,6 +4,8 @@ Title = "Selenium Conf 2016"
 Date = 2015-11-06
 Author = "Tour de Dave"
 AuthorLink = "https://twitter.com/TourDeDave"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>Interested in learning what&#8217;s in store for Se Conf 2016? Then be sure to read <a href="http://year-2015.seleniumconf.org/next-year/">this write-up from the Conference Organizers</a>.</p>

@@ -4,6 +4,8 @@ Title = "Selenium Conf is coming… get your proposals in!"
 Date = 2011-01-17
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>It has been mentioned at and hinted upon a couple times in the Smattering posts, but nothing has &#8216;officially&#8217; been mentioned here, so it is time we fix that.</p>

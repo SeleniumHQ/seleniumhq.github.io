@@ -4,6 +4,8 @@ Title = "Selenium 2.6 Released"
 Date = 2011-09-16
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["selenium"]
+categories = ["releases"]
 +++
 
 <p>If you&#8217;ve been watching this blog carefully you&#8217;ll have noticed that the last release announcement we made was for 2.3, so it may come as a surprise that we&#8217;re announcing that <a href="http://seleniumhq.org/download/">2.6 has been released</a> (even on Maven!). Don&#8217;t worry: 2.4 and 2.5 were released on time and without muss or fuss. 2.6, on the other hand has been almost three weeks brewing.</p>

@@ -1,19 +1,14 @@
 ---
-title: "Remote WebDriver client"
+title: "远程WebDriver客户端"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
-
-To run a remote WebDriver client, we first need to connect to the RemoteWebDriver.
-We do this by pointing the URL to the address of the server running our tests.
-In order to customize our configuration, we set desired capabilities.
-Below is an example of instantiating a remote WebDriver object
-pointing to our remote web server, _www.example.com_,
-running our tests on Firefox.
+要运行远程WebDriver客户端, 我们首先需要连接到RemoteWebDriver.
+为此, 我们将URL指向运行测试的服务器的地址. 
+为了自定义我们的配置, 我们设置了既定的功能. 
+下面是一个实例化样例, 
+其指向我们的远程Web服务器 _www.example.com_ 的远程WebDriver对象, 
+并在Firefox上运行测试.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -70,13 +65,13 @@ driver.quit()
 {{< / code-tab >}}
 
 
-To further customize our test configuration, we can add other desired capabilities.
+为了进一步自定义测试配置, 我们可以添加其他既定的功能.
 
 
-## Browser options
+## 浏览器选项
 
-For example, suppose you wanted to run Chrome on Windows XP,
-using Chrome version 67:
+例如, 假设您想使用Chrome版本67
+在Windows XP上运行Chrome:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -116,55 +111,54 @@ caps.version = 67
 driver = Selenium::WebDriver.for :remote, :url => "http://www.example.com", :desired_capabilities => caps
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-const { Builder, Capabilities } = require("selenium-webdriver");
-const chrome = require("selenium-webdriver/chrome")
-var capabilities = Capabilities.chrome();
-//To avoid InsecureCertificateError for selenium4-aplha5
-capabilities.setAcceptInsecureCerts(true);
-capabilities.set("browserVersion", "67");
-capabilities.set("platformName", "Windows XP");
+const { Builder } = require("selenium-webdriver");
+const chrome = require("selenium-webdriver/chrome");
+let opts = new chrome.Options();
+opts.setAcceptInsecureCerts(true);
+opts.setBrowserVersion('67');
+opts.setPlatform('Windows XP');
 (async function helloSelenium() {
     let driver = new Builder()
-        .usingServer("http://example.com")   
-        .withCapabilities(capabilities)
+        .usingServer("http://example.com")
+        .forBrowser('chrome')
+        .setChromeOptions(opts)
         .build();
     try {
         await driver.get('http://www.google.com');
-    }    
-    finally {       
+    }
+    finally {
         await driver.quit();
     }
-})(); 
+})();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 val chromeOptions = ChromeOptions()
-chromeOptions.setCapability("browserVersion", "67");
-chromeOptions.setCapability("platformName", "Windows XP");
+chromeOptions.setCapability("browserVersion", "67")
+chromeOptions.setCapability("platformName", "Windows XP")
 val driver: WebDriver = new RemoteWebDriver(new URL("http://www.example.com"), chromeOptions)
 driver.get("http://www.google.com")
-driver.quit();
+driver.quit()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 
-## Local file detector
+## 本地文件检测器
 
-The Local File Detector allows the transfer of files from the client
-machine to the remote server.  For example, if a test needs to upload a
-file to a web application, a remote WebDriver can automatically transfer
-the file from the local machine to the remote web server during
-runtime. This allows the file to be uploaded from the remote machine
-running the test. It is not enabled by default and can be enabled in
-the following way:
+本地文件检测器允许将文件从客户端计算机传输到远程服务器. 
+例如, 如果测试需要将文件上传到Web应用程序, 
+则远程WebDriver可以在运行时
+将文件从本地计算机自动传输到远程Web服务器. 
+这允许从运行测试的远程计算机上载文件. 
+默认情况下未启用它, 可以通过以下方式启用:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 driver.setFileDetector(new LocalFileDetector());
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-from selenium.webdriver.remote.file_detector import UselessFileDetector
+from selenium.webdriver.remote.file_detector import LocalFileDetector
 
-driver.file_detector = UselessFileDetector()
+driver.file_detector = LocalFileDetector()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 var allowsDetection = this.driver as IAllowsFileDetection;
@@ -189,7 +183,8 @@ driver.fileDetector = LocalFileDetector()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Once the above code is defined, you can upload a file in your test in the following way:
+定义上述代码后, 
+您可以通过以下方式在测试中上传文件:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -200,7 +195,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
   {{< code-panel language="python" >}}
 driver.get("http://sso.dev.saucelabs.com/test/guinea-file-upload")
 
-driver.find_element_by_id("myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
+driver.find_element(By.ID, "myfile").send_keys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 driver.Navigate().GoToUrl("http://sso.dev.saucelabs.com/test/guinea-file-upload");

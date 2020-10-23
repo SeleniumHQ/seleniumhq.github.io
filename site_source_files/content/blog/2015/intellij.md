@@ -4,6 +4,8 @@ Title = "IntelliJ"
 Date = 2015-02-08
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["jetbrains","intellij"]
+categories = ["general"]
 +++
 
 <p>Every year, Jetbrains are kind enough to donate an OSS license for IntelliJ to the Selenium project. As part of that process, they&#8217;ve asked that we review the product and (kudos to them!) have been clear that they hope we&#8217;re open and honest. So, I&#8217;ll be open and honest.</p>

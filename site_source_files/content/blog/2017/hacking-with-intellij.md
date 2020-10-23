@@ -4,6 +4,8 @@ Title = "Hacking with IntelliJ"
 Date = 2017-02-08
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["jetbrains","intellij"]
+categories = ["general"]
 +++
 
 <p><a href="https://www.jetbrains.com/">Jetbrains</a> have a <a href="https://www.jetbrains.com/buy/opensource/">programme for Open Source projects</a> which allows them to receive <a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> licenses. As part of that programme, which the Selenium project has participated in for many years, they&#8217;ve asked us to provide a fair and balanced review of IntelliJ. I&#8217;ll attempt to do that, and I&#8217;ll try and state my biases up-front so you&#8217;re aware of them.</p>

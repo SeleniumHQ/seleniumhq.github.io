@@ -911,7 +911,7 @@ You will find as you transition from the simple tests of the existence of
 page elements to tests of dynamic functionality involving multiple web-pages and 
 varying data that you will require programming logic for verifying expected 
 results.  Basically, the Selenium-IDE does not support iteration and 
-standard condition statements.  You can do some conditions by embedding javascript
+standard condition statements.  You can do some conditions by embedding JavaScript
 in Selenese parameters, however 
 iteration is impossible, and most conditions will be much easier in a  
 programming language.  In addition, you may need exception handling for
@@ -1010,7 +1010,7 @@ elements are not available on page.
 ### Executing JavaScript from Your Test
 
 JavaScript comes very handy in exercising an application which is not directly supported
-by selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
+by Selenium. The **getEval** method of Selenium API can be used to execute JavaScript from
 Selenium RC. 
 
 Consider an application having check boxes with no static identifiers. 

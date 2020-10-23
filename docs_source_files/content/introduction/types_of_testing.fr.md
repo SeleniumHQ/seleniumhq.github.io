@@ -3,25 +3,35 @@ title: "Types  de test"
 weight: 3
 ---
 
-## Test d'acceptation
-Ce type de test est effectué pour déterminer si un produit
-fonction correspond à ses besoins.
-Cela implique généralement les commentaires ou les spécifications du client.
+### Test d'acceptation
+
+Ce type de test est effectué pour déterminer si 
+une fonctionnalité ou un système
+répond aux attentes et exigences du client.
+Ce type de test implique généralement le client
+la coopération ou la rétroaction, étant une activité de validation qui
+répond à la question:
+> Construisons-nous le produit **_non?_**.
 
 Pour les applications web, l'automatisation de ces tests peut se faire
 directement avec Selenium en simulant le comportement attendu de l'utilisateur.
 Cette simulation peut être effectuée par enregistrement / lecture ou par
 différentes langues prises en charge comme expliqué dans cette documentation.
-Remarque: les tests d'acceptation sont un sous-type de **_tests fonctionnels_**,
+Remarque: Les tests d'acceptation sont un sous-type de **_tests fonctionnels_**,
 auquel certaines personnes pourraient également se référer.
             
 ### Test fonctionel
 
-Ce type de test est effectué pour déterminer si un produit est
-la fonctionnalité fonctionne bien, sans problèmes.
+Ce type de test est effectué pour déterminer si un
+fonction ou le système fonctionne correctement sans problèmes. Il vérifie
+le système à différents niveaux pour garantir que tous les scénarios
+sont couverts et que le système fait
+censé faire. C'est une activité de vérification qui
+répond à la question:
+> Construisons-nous le produit **_non?_**.
              
 Cela comprend généralement: les tests fonctionnent sans erreur
-(404, exceptions ...), de manière utilisable (redirection droite),
+(404, exceptions ...), de manière utilisable (redirections correctes),
 de manière accessible et correspondant à ses spécifications
 (voir **_test d'acceptation_** ci-dessus).
 

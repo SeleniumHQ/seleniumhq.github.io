@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #61"
 Date = 2011-09-28
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>&#8216;These are the people in your neighbourhood&#8230;&#8217;</p>
 <ul>
 <li>Like the power of WebDriver, but not the API? <a href="http://watirwebdriver.com/">Watir WebDriver</a> will get you going with the Watir API. Lots of useful stuff there.</li>

@@ -1,23 +1,22 @@
 ---
-title: "Improved reporting"
+title: "改善报告"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> 页面需要从英语翻译为简体中文。
-您熟悉英语与简体中文吗？帮助我们翻译它，通过 pull requests 给我们！
-{{% /notice %}}
+Selenium并非旨在报告测试用例的运行状态. 
+利用单元测试框架的内置报告功能是一个好的开始.
+大多数单元测试框架都有可以生成xUnit或HTML格式的报告. 
+xUnit报表很受欢迎, 可以将其结果导入到持续集成（CI）服务器, 
+例如Jenkins、Travis、Bamboo等.
+以下是一些链接, 可获取关于几种语言报表输出的更多信息.
 
-Selenium is not designed to report on the status of test cases
-run. Taking advantage of the built-in reporting capabilities of unit
-test frameworks is a good start.  Most unit test frameworks have
-reports that can generate xUnit or HTML formatted reports.  xUnit
-reports are popular for importing results to a Continuous Integration
-(CI) server like Jenkins, Travis, Bamboo, etc.  Here are some links
-for more information regarding report outputs for several languages.
 <!-- TODO: Add links.-->
 [NUnit 3 Console Runner](//github.com/nunit/docs/wiki/Console-Runner)
+
 [NUnit 3 Console Command Line](//github.com/nunit/docs/wiki/Console-Command-Line)
+
 [xUnit getting test results in TeamCity](//xunit.net/docs/getting-test-results-in-teamcity)
+
 [xUnit getting test results in CruiseControl.NET](//xunit.net/docs/getting-test-results-in-ccnet)
+
 [xUnit getting test results in Azure DevOps](//xunit.net/docs/getting-test-results-in-azure-devops)

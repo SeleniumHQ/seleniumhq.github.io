@@ -4,6 +4,8 @@ Title = "Selenium 1.0.3 Released"
 Date = 2010-02-23
 Author = "plightbo"
 AuthorLink = "https://twitter.com/plightbo"
+tags = ["selenium","selenium-rc"]
+categories = ["releases"]
 +++
 
 <p>Hot off the heals of <a href="http://seleniumhq.wordpress.com/2010/02/22/selenium-1-0-2-release-firefox-3-6-and-snow-leopard-support/">1.0.2</a>, we&#8217;re releasing Selenium Remote Control 1.0.3. You can <a href="http://selenium.googlecode.com/files/selenium-remote-control-1.0.3.zip">download it now</a>.</p>

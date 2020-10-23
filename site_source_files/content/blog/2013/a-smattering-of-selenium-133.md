@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #133"
 Date = 2013-01-02
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Since today is the start of &#8216;find a new contract&#8217; I guess I don&#8217;t have an excuse to miss these for the next week or so.</p>
 <p>(Oh, and Happy New Year, etc.)</p>
 <ul>

@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #84"
 Date = 2012-06-11
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>What? Its only been 3 months since the last one. Sheesh.</p>
 <ul>
 <li>Sorry about being a G+ article, but <a href="https://plus.google.com/116910304844117268718/posts/UkaymyuTzaF">DOM Ready</a> discusses briefly about how to build your page in terms of order of events. Of course, if you read the comments it is very much buyer beware, but&#8230;</li>

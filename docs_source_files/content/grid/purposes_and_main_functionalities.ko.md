@@ -1,18 +1,12 @@
 ---
-title: "Purposes and main functionalities"
-menuTitle: "Purposes and functionalities"
+title: "목적 및 주요 기능"
+menuTitle: "목적 및 기능"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-* Central entry point for all tests
-* Management and control of the nodes / environment where the browsers run
-* Scaling
-* Running tests in parallel
-* Cross platform testing
-* Load balancing
+* 모든 테스트의 중앙 진입 지점
+* 브라우저가 실행되는 환경과 노드의 관리 및 제어
+* 스케일링
+* 병렬로 테스트 실행
+* 교차 플랫폼 테스트
+* 부하분산

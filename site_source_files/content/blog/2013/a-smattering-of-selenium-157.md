@@ -4,8 +4,9 @@ Title = "A Smattering of Selenium #157"
 Date = 2013-08-18
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
-
 <p>Trying to find every excuse not to cut the grass &#8230; including apparently closing some browser tabs.</p>
 <ul>
 <li><a href="http://idtus.com/blog/interoperability-standardized-test-information-interchange/">Interoperability – Standardized Test Information Interchange</a> has me so full of &#8216;meh&#8217; as to be hilarious. Commercially driven standards rarely are and/or I am just too much of an open source person to accept this model for standards development</li>

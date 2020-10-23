@@ -13,7 +13,7 @@ weight: 3
 WebElement cheese = driver.findElement(By.id("cheese"));  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-driver.find_element_by_id("cheese")
+driver.find_element(By.ID, "cheese")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 IWebElement element = driver.FindElement(By.Id("cheese"));  
@@ -42,7 +42,7 @@ WebElement cheese = driver.findElement(By.id("cheese"));
 WebElement cheddar = cheese.findElement(By.id("cheddar"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-cheese = driver.find_element_by_id("cheese")
+cheese = driver.find_element(By.ID, "cheese")
 cheddar = cheese.find_elements_by_id("cheddar")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
@@ -125,7 +125,7 @@ List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"))
 mucho_cheese = driver.find_elements_by_css_selector("#cheese li")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector(“#cheese li”));
+IReadOnlyList<IWebElement> muchoCheese = driver.FindElements(By.CssSelector("#cheese li"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 mucho_cheese = driver.find_elements(css: '#cheese li')
@@ -162,7 +162,7 @@ idは動作がとても速い傾向があり、複雑なDOMトラバースに伴
 XPathはCSSセレクタと同様に動作しますが、シンタックスは複雑で大抵の場合デバッグが困難です。
 XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。
 
-link textセレクタとpartial link textセレクタはa要素でしか動作しないという欠点があります。
+link textセレクタとpartial _linkText_ セレクタはa要素でしか動作しないという欠点があります。
 加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。
 
 タグ名によるロケータは危険な方法になり得ます。
@@ -171,3 +171,212 @@ link textセレクタとpartial link textセレクタはa要素でしか動作�
 ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
 WebDriverでDOM構造のトラバースを行うのは重い処理となります。
 検索の範囲を狭めた方がより良い結果を得られます。
+
+## レラティブ（相対）ロケーター
+
+**Selenium 4** は、以前は _Friendly Locators_ と呼ばれていたレラティブ ロケーターをもたらします。
+この機能は、他の要素の近くにある要素を見つけるのに役立つように追加されました。
+使用可能なレラティブ ロケーターは次のとおりです。
+
+* *above*
+* *below*
+* *toLeftOf*
+* *toRightOf*
+* *near*
+
+_findElement_ メソッドは、レラティブ ロケーター を返す新しいメソッド `withTagName（）` を受け入れるようになりました。
+
+### どのように機能するか
+
+Seleniumは、JavaScript関数 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) を使用して相対要素を見つけます。
+この関数は、right、left、bottom、topなどの要素のプロパティを返します。
+
+レラティブ ロケーターを理解するために、以下の例を考えてみましょう。
+
+![Relative Locators](/images/relative_locators.png?width=400px)
+
+### above()
+
+指定された要素の上に表示されるWebElementを返します。
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement passwordField= driver.findElement(By.id("password"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .above(passwordField));
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+#from selenium.webdriver.support.relative_locator import with_tag_name
+passwordField = driver.find_element(By.ID, "password")
+emailAddressField = driver.find_element(with_tag_name("input").above(passwordField))
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement passwordField = driver.FindElement(By.Id("password"));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input")
+                                                   .Above(passwordField));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+password_field= driver.find_element(:id, "password")
+email_address_field = driver.find_element(relative: {tag_name: 'input', above:password_field})
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let passwordField = driver.findElement(By.id('password'));
+let emailAddressField = await driver.findElements(withTagName('input').above(passwordField));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val passwordField = driver.findElement(By.id("password"))
+val emailAddressField = driver.findElement(withTagName("input").above(passwordField))
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### below()
+
+指定された要素の下に表示されるWebElementを返します。
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressField= driver.findElement(By.id("email"));
+WebElement passwordField = driver.findElement(withTagName("input")
+	                                          .below(emailAddressField));
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+#from selenium.webdriver.support.relative_locator import with_tag_name
+emailAddressField = driver.find_element(By.ID, "email")
+passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+//using static OpenQA.Selenium.RelativeBy;  
+IWebElement emailAddressField = driver.FindElement(By.Id("email"));
+IWebElement passwordField = driver.FindElement(WithTagName("input")
+                                               .Below(emailAddressField));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+email_address_field= driver.find_element(:id, "email")
+password_field = driver.find_element(relative: {tag_name: 'input', below: email_address_field})
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let emailAddressField = driver.findElement(By.id('email'));
+let passwordField = await driver.findElements(withTagName('input').below(emailAddressField));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val emailAddressField = driver.findElement(By.id("email"))
+val passwordField = driver.findElement(withTagName("input").below(emailAddressField))
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toLeftOf()
+
+指定された要素の左側に表示されるWebElementを返します。
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement submitButton= driver.findElement(By.id("submit"));
+WebElement cancelButton= driver.findElement(withTagName("button")
+                                            .toLeftOf(submitButton));   
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+#from selenium.webdriver.support.relative_locator import with_tag_name
+submitButton = driver.find_element(By.ID, "submit")
+cancelButton = driver.find_element(with_tag_name("button").
+                                   to_left_of(submitButton))
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement submitButton = driver.FindElement(By.Id("submit"));
+IWebElement cancelButton = driver.FindElement(WithTagName("button")
+                                              .LeftOf(submitButton));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+submit_button= driver.find_element(:id, "submit")
+cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_button})
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let submitButton = driver.findElement(By.id("submit"));
+let cancelButton = await driver.findElements(withTagName("button").toLeftOf(submitButton));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val submitButton= driver.findElement(By.id("submit"))
+val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton))
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+
+### toRightOf()
+
+指定された要素の右側に表示されるWebElementを返します。
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement cancelButton= driver.findElement(By.id("cancel"));
+WebElement submitButton= driver.findElement(withTagName("button")
+                                            .toRightOf(cancelButton));
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+#from selenium.webdriver.support.relative_locator import with_tag_name
+cancelButton = driver.find_element(By.ID, "cancel")
+submitButton = driver.find_element(with_tag_name("button").
+                                   to_right_of(cancelButton))
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
+IWebElement submitButton = driver.FindElement(WithTagName("button")
+                                              .RightOf(cancelButton));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+cancel_button = driver.find_element(:id, "cancel")
+submit_button = driver.find_element(relative: {tag_name: 'button', right:cancel_button})
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let cancelButton = driver.findElement(By.id('cancel'));
+let submitButton = await driver.findElements(withTagName('button').toRightOf(cancelButton));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val cancelButton= driver.findElement(By.id("cancel"))
+val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButton))
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### near()
+
+指定した要素から最大 `50px` 離れたWebElementを返します。
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
+WebElement emailAddressField = driver.findElement(withTagName("input")
+                                                  .near(emailAddressLabel));
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+#from selenium.webdriver.support.relative_locator import with_tag_name
+emailAddressLabel = driver.find_element(By.ID, "lbl-email") 
+emailAddressField = driver.find_element(with_tag_name("input").
+                                       near(emailAddressLabel))
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+//using static OpenQA.Selenium.RelativeBy;
+IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
+IWebElement emailAddressField = driver.FindElement(WithTagName("input")
+                                                   .Near(emailAddressLabel));
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+email_address_label = driver.find_element(:id, "lbl-email")
+email_address_field = driver.find_element(relative: {tag_name: 'input', near: email_address_label})
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+let emailAddressLabel = driver.findElement(By.id("lbl-email"));
+let emailAddressField = await driver.findElements(withTagName("input").near(emailAddressLabel));
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+val emailAddressLabel = driver.findElement(By.id("lbl-email"))
+val emailAddressField = driver.findElement(withTagName("input").near(emailAddressLabel))
+  {{< / code-panel >}}
+{{< / code-tab >}}

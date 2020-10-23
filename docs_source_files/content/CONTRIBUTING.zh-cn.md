@@ -3,123 +3,109 @@ title: 为 Selenium 文档做贡献
 disableToc: true
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Selenium是一个大型软件项目, 
+其网站和文档是了解事情如何工作以及学习有效利用其潜力的关键.
 
-Selenium is a big software project, its site and documentation are key
-to understanding how things work and learning effective ways to exploit
-its potential.
+该项目包含Selenium的网站和文档. 
+这是一项持续的工作(不针对任何特定版本), 
+用于提供有效使用Selenium、
+如何参与以及如何为Selenium做出贡献的更新信息.
 
-This project contains both Selenium's site and documentation. This is
-an ongoing effort (not targeted at any specific release) to provide
-updated information on how to use Selenium effectively, how to get
-involved and how to contribute to Selenium.
-
-Contributions toward the site and docs follow the process described in
-the below section about contributions. You should spend some time
-familiarising yourself with the documentation by reading
-[more about it]({{< ref "/introduction/about_this_documentation.zh-cn.md" >}}).
+对网站和文档的贡献遵循以下部分中有关贡献的描述. 
+您应该花一些时间来熟悉以下文档
+[查看更多]({{< ref "/introduction/about_this_documentation.zh-cn.md" >}}).
 
 ---
 
-The Selenium project welcomes contributions from everyone. There are a
-number of ways you can help:
+Selenium项目欢迎每一个人的贡献. 
+您可以通过多种方式提供帮助:
 
-## Report an issue
+## 上报问题
 
-When reporting a new issues or commenting on existing issues please 
-make sure discussions are related to concrete technical issues with the
-Selenium software, its site and/or documentation.
+在报告新问题或评论现有问题时, 
+请确保讨论与Selenium的软件、
+其站点与文档的具体技术问题相关.
 
-All of the Selenium components change quite fast over time, so this
-might cause the documentation to be out of date. If you find this to
-be the case, as mentioned, don't doubt to create an issue for that.
-It also might be possible that you know how to bring up to date the
-documentation, so please send us a pull request with the related
-changes.
+随着时间的推移, 所有Selenium组件的变化都非常快, 
+因此这可能会导致文档过时. 
+如前所述, 如果您确实遇到这种情况, 请不要为此担心. 
+您也可能知道如何更新文档, 因此请向我们发送包含相关更改的Pull Request.
 
-If you are not sure about what you have found is an issue or not,
-If you are not sure about what you have found is an issue or not,
-please ask through the communication channels described at 
+如果不确定所发现的问题是否存在, 请通过以下沟通渠道进行描述 
 https://selenium.dev/support.
 
-## Contributions
+## 贡献
 
-The Selenium project welcomes new contributors. Individuals making
-significant and valuable contributions over time are made _Committers_
-and given commit-access to the project.
+Selenium项目欢迎新的贡献者. 
+随时间做出重大贡献的个人将成为 _提交者_ , 并获得对该项目的提交权限.
 
-This guide will guide you through the contribution process.
+本指南将指导您完成贡献的过程.
 
-### Step 1: Fork
+### 步骤 1: Fork
 
-Fork the project [on Github](https://github.com/seleniumhq/seleniumhq.github.io)
-and check out your copy locally.
+在 [Github](https://github.com/seleniumhq/seleniumhq.github.io)上Fork本项目, 
+并check out到您的本地
+
 
 ```shell
 % git clone git@github.com:seleniumhq/seleniumhq.github.io.git
 % cd seleniumhq.github.io
 ```
 
-#### Dependencies: Hugo
+#### 依赖: Hugo
 
-We use [Hugo](https://gohugo.io/) to build and render the site and docs.
-To verify everything locally before even committing any changes, please
-[install Hugo](https://gohugo.io/getting-started/installing/), get familiar
-with it and [run the local server](https://gohugo.io/getting-started/usage/#livereload)
-to render the site locally (detailed instructions can be found in the 
-next steps).
+我们使用 [Hugo](https://gohugo.io/) 来构建和渲染网站和文档. 
+需要在提交任何更改之前, 在本地验证所有内容, 
+请[安装 Hugo](https://gohugo.io/getting-started/installing/), 
+熟悉它并[运行本地服务器](https://gohugo.io/getting-started/usage/#livereload)
+以在本地呈现该网站(详细说明可在后续步骤中找到).
 
-### Step 2: Branch
+### 步骤 2: 分支
 
-Create a feature branch and start hacking:
+创建一个功能分支并开始工作:
 
 ```shell
 % git checkout -b my-feature-branch
 ```
 
-We practice HEAD-based development, which means all changes are applied
-directly on top of master.
+我们实践基于HEAD的开发模式, 这意味着所有更改都直接应用在trunk之上.
 
-### Step 3: Make changes
+### 步骤 3: 做出改变
 
-The repository contains the site and docs, which are two separate Hugo 
-projects. If you want to make changes to the site, work on the
-`site_source_files` directory. To see a live preview of your changes,
-run `hugo server` on the site's root directory.
+仓库包含站点和文档, 这是两个独立的Hugo项目. 
+如果要更改站点, 请在 `site_source_files` 目录上工作. 
+要查看更改的实时预览, 请在网站的根目录上运行 `hugo server` 命令.
 
 ```shell
 % cd site_source_files
 % hugo server
 ```
 
-To make changes to the docs, switch to the `docs_source_files` directory. 
+要更改文档, 请切换到 `docs_source_files` 目录. 
 
 ```shell
 % cd docs_source_files
 % hugo server
 ```
 
-The docs are translated into several languages, and translations are based on
-the English content. When you are changing a file, **be sure** to make your
-changes in all the other translated files as well. This might differ depending
-on the change, for example:
+本文档基于英语内容, 被翻译成多种语言. 
+更改文件时, 请 **确保** 也对所有其他翻译文件进行更改. 
+这可能会略有不同, 例如:
  
-* If you add a code example to the `browser_manipulation.en.md` file,
-also add it to `browser_manipulation.es.md`, `browser_manipulation.ef.md`, 
-`browser_manipulation.ja.md`, and all other translated files.
-* If you find a translation that can be improved, only change the translated
-file.
-* If you are adding a new language translation, add the new files with the
-appropriate suffix. There is no need to have everything translated to submit a
-PR, it can be done iteratively. Don't forget to check some needed configuration
-values in the `config.toml` file.
-* If you make text changes in the English version, replace the same section in
-the translated files with your change (yes, in English), and add the following
-notice at the top of the file. 
+* 如果将代码示例添加到 `browser_manipulation.en.md` 文件中后, 
+则还需将其添加到 `browser_manipulation.es.md`, 
+`browser_manipulation.ef.md`, 
+`browser_manipulation.ja.md` 以及所有其他的已翻译文件.
+
+* 如果您发现可以改进的翻译, 请仅更改翻译的文件. 
+
+* 如果要添加新的语言翻译, 请添加具有适当后缀的新文件. 
+无需翻译所有内容即可提交PR, 可以迭代完成. 
+不要忘记在 `config.toml` 文件中检查一些必要的配置. 
+
+* 如果您用英语版本更改了文本, 
+请用您的更改替换翻译文件中的同一部分(是的, 用英语), 
+然后在文件顶部添加以下注意事项. 
 
 ```
 {{%/* notice info */%}}
@@ -129,27 +115,26 @@ it by sending us pull requests!
 {{%/* /notice */%}}
 ```
 
-### Step 4: Commit
+### 步骤 4: 提交
 
-First make sure git knows your name and email address:
+首先确保git知道您的姓名和电子邮件地址:
 
 ```shell
 % git config --global user.name 'Santa Claus'
 % git config --global user.email 'santa@example.com'
 ```
 
-**Writing good commit messages is important.** A commit message
-should describe what changed, why, and reference issues fixed (if
-any). Follow these guidelines when writing one:
+**编写良好的提交信息很重要.** 
+提交信息应描述更改的内容, 
+原因以及已解决的参考问题(如果有). 
+撰写时应遵循以下规则:
 
-1. The first line should be around 50 characters or less and contain a
-    short description of the change.
-2. Keep the second line blank.
-3. Wrap all other lines at 72 columns.
-4. Include `Fixes #N`, where _N_ is the issue number the commit
-    fixes, if any.
+1. 第一行应少于或等于50个字符, 并包含对该更改的简短说明.
+2. 保持第二行空白.
+3. 在所有72列处换行.
+4. 包括 `Fixes #N`, 其中 _N_ 是提交修复的问题编号(如果有).
 
-A good commit message can look like this:
+一个好的提交信息可能看起来像这样:
 
 ```text
 explain commit normatively in one line
@@ -166,46 +151,43 @@ nicely even when it is indented.
 Fixes #141
 ```
 
-The first line must be meaningful as it's what people see when they
-run `git shortlog` or `git log --oneline`.
+第一行必须有意义, 因为这是人们在运行 `git shortlog` 或 `git log --oneline` 时看到的内容.
 
-### Step 5: Rebase
+### 步骤 5: Rebase
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+使用 `git rebase` (并非 `git merge`) 同步实时的工作.
 
 ```shell
 % git fetch upstream
-% git rebase upstream/master
+% git rebase upstream/trunk
 ```
 
-### Step 6: Test
+### 步骤 6: 测试
 
-Always remember to [run the local server](https://gohugo.io/getting-started/usage/#livereload),
-with this you can be safe that your changes have not broken anything.
+永远记住要[运行本地服务](https://gohugo.io/getting-started/usage/#livereload), 
+这样做可以确保您的更改没有破坏任何事情. 
 
-### Step 7: Push
+### 步骤 7: Push
 
 ```shell
 % git push origin my-feature-branch
 ```
 
-Go to https://github.com/yourusername/seleniumhq.github.io.git and
-press the _Pull Request_ and fill out the form. **Please indicate
-that you've signed the CLA** (see Step 7).
+访问 https://github.com/yourusername/seleniumhq.github.io.git
+并点击 _Pull Request_ 以及填写表格.
+ **请明确您已经签署了CLA** (详见步骤 7).
 
-Pull requests are usually reviewed within a few days. If there are
-comments to address, apply your changes in new commits (preferably
-[fixups](http://git-scm.com/docs/git-commit)) and push to the same
-branch.
+Pull requests通常会在几天内进行审核. 
+如果有评论要解决, 请在新提交(最好是[修正](http://git-scm.com/docs/git-commit))中应用您的更改, 
+然后推push到同一分支.
 
-### Step 8: Integration
+### 步骤 8: 集成
 
-When code review is complete, a committer will take your PR and
-integrate it on the repository's master branch. Because we like to keep a
-linear history on the master branch, we will normally squash and rebase
-your branch history.
+代码审查完成后, 提交者将获取您的PR并将其集成到项目的trunk分支中. 
+因为我们希望在trunk分支上保持线性历史记录, 
+所以我们通常会squash并rebase您的分支历史记录.
 
-## Communication
+## 沟通
 
-All details on how to communicate with the project contributors
-and the community overall can be found at https://selenium.dev/support
+有关如何与项目贡献者和整个社区进行沟通的所有详细信息, 
+请访问以下网址 https://selenium.dev/support

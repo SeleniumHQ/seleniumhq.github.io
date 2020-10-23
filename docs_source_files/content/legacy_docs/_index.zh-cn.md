@@ -4,15 +4,9 @@ chapter: true
 weight: 12
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 
 # Legacy
 
-Under this section you can find all the documentation related to the legacy components of Selenium.
-This is meant to be kept purely for historical reasons and not as a incentive to use deprecated
-components. 
+在此部分，您可以找到与Selenium的旧组件有关的所有文档.
+这样做纯粹是出于历史原因，而不是鼓励使用已废弃的组件. 

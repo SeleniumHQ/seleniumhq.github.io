@@ -4,6 +4,8 @@ Title = "Selenium Conf: Speakers"
 Date = 2012-03-26
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
+tags = ["conference"]
+categories = ["general","conference"]
 +++
 
 <p>I may be biased, but I think <a href="http://www.seleniumconf.org/">Selenium Conf &#8217;12</a> is going to be great. There are talks aimed at every level of Selenium user. We&#8217;ve got<a href="http://www.seleniumconf.org/speakers/#MD"> experience</a> <a href="http://www.seleniumconf.org/speakers/#NS">reports</a>, so you can learn from the trials and tribulations of others. There are talks about using Selenium in unusual ways, such as <a href="http://www.seleniumconf.org/speakers/#MK">performance testing</a>, or<a href="http://www.seleniumconf.org/speakers/#AP"> automated security testing</a>, so you can see new ideas and approaches.</p>

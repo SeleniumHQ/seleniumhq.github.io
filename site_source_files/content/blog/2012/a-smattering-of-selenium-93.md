@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #93"
 Date = 2012-06-22
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>Did I say 8 days in a row yesterday? I meant 9. Good thing programming doesn&#8217;t require counting&#8230;</p>

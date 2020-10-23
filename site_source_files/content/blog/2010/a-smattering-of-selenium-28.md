@@ -4,6 +4,8 @@ Title = "A Smattering of Selenium #28"
 Date = 2010-09-27
 Author = "adam goucher"
 AuthorLink = "https://twitter.com/adamgoucher"
+tags = ["smattering"]
+categories = ["general"]
 +++
 
 <p>So we go from not-enough-stuff-to-do-one to wow-this-will-take-awhile. And we&#8217;re off..<br />
