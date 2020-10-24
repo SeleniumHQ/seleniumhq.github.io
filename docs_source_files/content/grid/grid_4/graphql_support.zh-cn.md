@@ -1,29 +1,24 @@
 ---
-title: "GraphQL querying support"
+title: "GraphQL查询支持"
 weight: 1
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+GraphQL 是一种用于API的查询语言, 也是用于使用现有数据完成这些查询的运行时. 其仅仅是使用户能够准确地获取所需. 
 
-GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It gives users the power to ask for exactly what they need and nothing more.
+## 枚举
+枚举是表示字段的可能值的集合.
 
-## Enums
-Enums represent possible sets of values for a field.
+例如, `Node`对象具有一个称为`status`的字段. 状态是一个枚举 (特别是`Status`类型) , 因为它可能是`UP` , `DRAINING` 或 `UNAVAILABLE`.
 
-For example, the `Node` object has a field called `status`. The state is an enum (specifically, of type `Status`) because it may be `UP` , `DRAINING` or `UNAVAILABLE`.
+## 标量
+标量是基本类型的值: `Int`, `Float`, `String`, `Boolean`, 或 `ID`.
 
-## Scalars
-Scalars are primitive values: `Int`, `Float`, `String`, `Boolean`, or `ID`.
-
-When calling the GraphQL API, you must specify nested subfield until you return only scalars.
+在调用GraphQL API时, 必须指定嵌套子字段, 直到只返回标量.
 
 
-## Structure of the Schema
-The structure of grid schema is as follows:
+## 模式的结构
+网格模式的结构如下:
 
 ```shell
 {
@@ -44,33 +39,33 @@ The structure of grid schema is as follows:
 }
 ```
 
-## Querying GraphQL
+## 查询 GraphQL
 
-The best way to query GraphQL is by using `curl` requests. GraphQL allows you to fetch only the data that you want, nothing more nothing less.
+查询GraphQL的最佳方法是使用`curl`请求. GraphQL允许您仅获取所需的数据, 仅此而已. 
 
-Some of the example GraphQL queries are given below. You can build your own queries as you like.
+下面给出了一些GraphQL查询的示例. 您可以根据需要构建自己的查询. 
 
-### Querying the number of `totalSlots` and `usedSlots` in the grid :
+### 查询网格中 `totalSlots` 和 `usedSlots` 的数量:
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { totalSlots, usedSlots } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-Generally on local machine the `<LINK_TO_GRAPHQL_ENDPOINT>` would be `http://localhost:4444/graphql`
+通常在本地机器上 `<LINK_TO_GRAPHQL_ENDPOINT>` 会是 `http://localhost:4444/graphql`
 
-### Querying the capabilities of each node in the grid :
+### 查询网格中每个节点的功能 :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { capabilities } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Querying the status of each node in the grid :
+### 查询网格中每个节点的状态 :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Querying the URI of each node and the grid :
+### 查询每个节点和网格的 URI :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { uri }, uri } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>

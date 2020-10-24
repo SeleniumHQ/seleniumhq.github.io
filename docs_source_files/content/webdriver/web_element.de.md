@@ -840,7 +840,11 @@ Retrieves the rendered text of the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please provide a pr for code sample
+// Navigate to url
+driver.get("https://example.com");
+
+// Retrieves the text of the element
+String text = driver.findElement(By.cssSelector("h1")).getText();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
@@ -853,7 +857,11 @@ text = driver.find_element(By.CSS_SELECTOR, "h1").text
 // Please provide a pr for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please provide a pr for code sample
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Retrieves the text of the element
+text = driver.find_element(:css, 'h1').text
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
 // Navigate to URL
@@ -863,6 +871,10 @@ await driver.get('http://www.example.com');
 let text = await driver.findElement(By.css('h1')).getText();
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please provide a pr for code sample
+// Navigate to URL
+driver.get("https://www.example.com")
+
+// retrieves the text of the element
+val text = driver.findElement(By.cssSelector("h1")).getText()
   {{< / code-panel >}}
 {{< / code-tab >}}
