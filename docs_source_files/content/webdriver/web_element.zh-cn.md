@@ -771,10 +771,9 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## 获取元素CSS值
 
-Retrieves the value of specified computed style property 
-of an element in the current browsing context.
+获取当前浏览上下文中元素的特定计算样式属性的值.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -831,9 +830,9 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## 获取元素文本
 
-Retrieves the rendered text of the specified element.
+获取特定元素渲染后的文本.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
