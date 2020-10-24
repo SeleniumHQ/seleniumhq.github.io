@@ -106,8 +106,6 @@ let opts = new chrome.Options();
     .build();
   try {
     await driver.get("https://selenium.dev");
-
-    console.log(await driver.getCapabilities())
   }
   finally {
    await driver.quit();
