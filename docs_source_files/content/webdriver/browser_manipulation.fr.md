@@ -1284,3 +1284,29 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+### Execute Script
+
+Executes JavaScript code snippet in the 
+current context of a selected frame or window.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+    // code sample not available please raise a PR 
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    # code sample not available please raise a PR 
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // code sample not available please raise a PR 
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} 
+    # code sample not available please raise a PR 
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+    // code sample not available please raise a PR 
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // code sample not available please raise a PR 
+  {{< / code-panel >}}
+{{< / code-tab >}}
