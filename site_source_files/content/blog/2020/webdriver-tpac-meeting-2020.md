@@ -1,6 +1,11 @@
 ---
-title: "Browser Testing and Tools WG Meeting @ TPAC 2020"
-publishDate: 2020-10-29
+Description = "Browser Testing and Tools WG Meeting @ TPAC 2020"
+Title = "Browser Testing and Tools WG Meeting @ TPAC 2020"
+Date = 2020-10-29
+Author = "AutomatedTester"
+AuthorLink = "https://twitter.com/AutomatedTester"
+tags = ["webdriver"]
+categories = ["general", "technical"]
 ---
 
 It's that time of the year where working groups from the W3C meet up to discuss the various standards that
