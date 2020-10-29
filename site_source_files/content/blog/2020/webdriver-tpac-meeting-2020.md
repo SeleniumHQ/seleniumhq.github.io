@@ -6,7 +6,7 @@ Author = "AutomatedTester"
 AuthorLink = "https://twitter.com/AutomatedTester"
 tags = ["webdriver"]
 categories = ["general", "technical"]
----
++++
 
 It's that time of the year where working groups from the W3C meet up to discuss the various standards that
 are being worked on.
