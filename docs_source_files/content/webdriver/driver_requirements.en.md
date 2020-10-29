@@ -632,4 +632,25 @@ so whilst the web will continue to change, PhantomJS will not be updated.
 This was after Google announced the ability to run Chrome headlessly, 
 something also now offered by Mozilla's Firefox.
 
+### Chocolatey
 
+On Windows systems the driver binaries can be installed individually, or as a collection using [chocolatey](https://chocolatey.org/).
+
+* To find the available drivers, use choco list:
+
+```shell
+choco list selenium
+```
+
+* you will be given a list of all the selenium related downloads avialble through chocolatey. Be aware that this is a keyword search, so there may be results that use the word selenium that are not directly related to the project.
+* individual binaries can be installed thus:
+
+```shell
+choco install selenium-chrome-driver selenium-gecko-driver
+```
+* all of the available drivers can be installed using:
+
+```shell
+ choco install selenium-all-drivers
+ ```
+ This will automatically update the `PATH`.
