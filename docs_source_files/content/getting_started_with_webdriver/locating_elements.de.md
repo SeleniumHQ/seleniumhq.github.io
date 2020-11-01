@@ -5,12 +5,7 @@ weight: 3
 
 ### Locating one element
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-
+Eine der wichtigsten Themen 
 One of the most fundamental techniques to learn when using WebDriver is
 how to find elements on the page. WebDriver offers a number of built-in selector
 types, amongst them finding an element by its ID attribute:
