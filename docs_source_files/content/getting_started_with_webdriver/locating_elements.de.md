@@ -5,10 +5,10 @@ weight: 3
 
 ### Locating one element
 
-Eine der wichtigsten Themen 
-One of the most fundamental techniques to learn when using WebDriver is
-how to find elements on the page. WebDriver offers a number of built-in selector
-types, amongst them finding an element by its ID attribute:
+Eine der grundlegendsten Techniken, die bei der Verwendung des WebDriver 
+erlernt werden müssen, ist wie man Elemente auf der Webseite findet. WebDriver 
+bietet eine Reihe von verschiedenen Möglichkeiten um Elemente zu finden,
+darunter die Suche nach einem Element anhand des ID-Attributs:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -31,13 +31,14 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-As seen in the example, locating elements in WebDriver is done on the
-`WebDriver` instance object. The `findElement(By)` method returns
-another fundamental object type, the `WebElement`.
+Wie das Beispiel zeigt, wird die Lokalisierung der Elemente 
+mit dem WebDriver direkt an einer Instanz des `WebDriver` Objektes
+durchgeführt. Die `findElement(By)` Methode liefert ein Objekt des
+Types `ẀebElement`.
 
-* `WebDriver` represents the browser
-* `WebElement` represents a particular DOM node
-  (a control, e.g. a link or input field, etc.)
+* `WebDriver` repräsentiert den Browser
+* `WebElement` repräsentiert einen bestimmten DOM Knoten
+  (z.B. einen Link, ein Eingabefeld, etc.)
 
 Once you have a reference to a web element that's been “found”,
 you can narrow the scope of your search
