@@ -11,7 +11,64 @@ navbarElements.forEach(element=>{if(element.className==="nav-item"){element.clas
 subnavElements.forEach(element=>{element.className="about-subnav";});aboutArrow.className="arrow-down";logoElements.forEach(element=>{if(element.className.includes("logo-hide")){element.className="logo logo-small"}else{element.className+=" logo-hide"}})
 if(header.className==="header"){header.className+=" dropdown-active"}else{header.className="header"}}
 function toggleAboutNav(){const aboutSubnav=document.getElementById("aboutSubnav");const aboutArrow=document.getElementById("aboutArrow");if(aboutSubnav.className==="about-subnav"){aboutSubnav.className+=" about-subnav-active";}else{aboutSubnav.className="about-subnav"}
-if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else aboutArrow.className="arrow-up";}</script><link rel=stylesheet href=/css/blog.css><link rel=stylesheet href=/css/main.css><link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel=stylesheet><body><section class=hero><a href=/blog><h1>Selenium Blog - 2020 Archive</h1></a></section><div class=blog-container><div class=blog-content><div class="container dark-background">October 29, 2020 by <a href=https://twitter.com/AutomatedTester>AutomatedTester</a>
+if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else aboutArrow.className="arrow-up";}</script><link rel=stylesheet href=/css/blog.css><link rel=stylesheet href=/css/main.css><link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel=stylesheet><body><section class=hero><a href=/blog><h1>Selenium Blog - 2020 Archive</h1></a></section><div class=blog-container><div class=blog-content><div class="container dark-background">November 2, 2020 by <a href=https://twitter.com/shs96c>shs96c</a>
+<a href=https://selenium.dev/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute/><h2>What’s Coming in Selenium 4: How Can I Contribute?</h2></a><blockquote><p>In this new blog series all about the upcoming release of Selenium 4, Simon Stewart will
+cover how the Selenium project works, who is involved, how you can get involved, and a
+sneak peek at what’s new in Selenium 4.</p></blockquote><p>As the lead of the Selenium project, I wanted to kick off a new blog series leading up to
+the release of Selenium 4. During this series, I’ll talk all about how the Selenium project
+works, who is involved, how you—yes, you!—can get involved, and we’ll get a sneak peek at
+what’s new in Selenium 4. I&rsquo;ve been speaking about this off and on for a while, but now
+the 4.0 release is looming I wanted to start sharing in more depth.</p><p>In this first post, we’ll start off with a brief discussion about how the Selenium project
+itself runs and who does what, because that’s a really helpful piece to understand how and
+why things happen the way they do on the project. In future posts, we’ll look at the new IDE,
+and then we’ll talk about Selenium 4 in more depth, including the fact that it should be a
+drop-in replacement for you. I’ll also review some new features that we’ve added to Selenium
+4, and talk a bit about the modernized Selenium Grid. So let’s get started!</p><h2 id=about-the-selenium-project>About the Selenium Project</h2><p>Selenium is an Open Source project. It&rsquo;s run under the aegis of the Software Freedom
+Conservancy (SFC). The SFC is a group dedicated to pushing forward Free and Open Source
+software. Besides Selenium, they have a handful of projects you may have heard of, including
+Samba, Mercurial and Git. The SFC allows us to focus on writing code and fixing bugs by
+handling all the legal and financial stuff we’re not good at. They’re the ones that help
+us negotiate contracts for when we want to run SeleniumConf, for example.</p><p>Acting as a bridge between the project and the SFC is the Project Leadership Committee
+(PLC). Currently, it’s made up of Jim Evans, Alexei Barantsev, Marcus Merrell, Manoj Kumar,
+and myself. What do we do? Effectively, the PLC is about providing a smaller group of people
+for the SFC to talk to when decisions need to be made about funding a conference, or how
+best to respond to sponsorship agreements. Because we like to do as much work in the open
+as possible, you can find us on the <code>#selenium-plc</code> Slack channel, and almost every
+conversation and topic is discussed here.</p><p>One of the key qualifications for being on the PLC is a demonstrated commitment to helping
+the Selenium project improve and succeed, and we recognise that the project is more than just
+“code.” It’s a community, and the make up of the PLC reflects that.</p><p>The Technical Leadership Committee (TLC) includes the people who set the technical direction
+for the project. If you come over to the Selenium Slack, you can find the <code>#selenium-tlc</code> channel,
+which is where a lot of the technical conversations happen for the project. The TLC includes Jim
+Evans, Alexei Barantsev, David Burns, Diego Molina, Titus Fortner, and me.</p><p>How do you get on the TLC? Although the project governance document goes into more detail,
+it can be summed up as simply as someone who’s demonstrated technical leadership on the project,
+over an extended period of time. Just as with the PLC, being on the TLC doesn’t give someone more
+authority, but they’re the ones who can merge PRs, and who can (if need be) commit directly to the tree.</p><p>Again, the TLC tries to do as much work as possible in the open. If you’re ever interested in watching
+the design discussions, or asking why a bit of the Selenium code base is structured the way it is, then
+come and join us in the <code>#selenium-tlc</code> Slack channel. There’s normally someone from the project there
+who’ll be able to answer your questions!</p><p>I wanted to share how the project works for one simple reason: to highlight one of the really important
+things with Open Source, which is that anyone can contribute! You don&rsquo;t need to be throwing code around
+in order to be contributing, and <a href="https://www.youtube.com/watch?v=PZ-BfM97PZk">you don’t need to be special</a>
+in order to contribute your time and effort.</p><p>So obviously there&rsquo;s the people running the projects and writing code, but we couldn&rsquo;t do that all on our own.
+Every release includes contributions from a variety of people, not just the core development team. Also, we&rsquo;re
+always happy to accept patches. If you&rsquo;re not quite sure where to start, I recommend you head to our
+<a href=https://github.com/seleniumhq/selenium/>GitHub page</a> and take a look at the project tab. That’s where you
+can see the things that need to be done and what we&rsquo;re working on.</p><p>The other way to get involved is the way that everyone used to get involved with Open Source, which is by
+what&rsquo;s known as “scratching your own itch”. It&rsquo;s if there&rsquo;s something about the project, something about the
+product you think could be a little bit better, download the source, edit it, and then send us a PR.</p><p>We encourage you to get involved and contribute! On the Selenium website, there is a
+<a href=https://www.selenium.dev/governance/>page</a> that outlines in detail the steps to join the Selenium team.
+Join the Selenium Slack channel to interact with us and ask questions. If you want to discuss something,
+or if you don&rsquo;t understand why the code is written the way it is, feel free to come on to that Slack channel
+and talk to us. Also, if you&rsquo;d like to see how the decision making is made, then please do feel free to come
+on to the <code>#selenium-tlc</code> or the <code>#selenium-plc</code> channels to see those groups. Because we&rsquo;re Open Source, we
+try and do everything in the open.</p><p>If you’d like to put faces to people’s Slack or IRC handles, then please note that there’s a regular team
+meeting every other Thursday on Google Meet at 4:30pm (UK time!) We tend to just chat and discuss everything
+from the project to the weather, but that’s a great way to get to know people a little better! :)</p><p>Finally, if you’re having trouble getting to grips with the Selenium code base, then please do come and ask us
+for help. We’ve done our best to make the on-ramp as easy to take as possible, but the project can seem complicated
+and daunting when you’re getting started. We’re here to help!</p><p>I hope you enjoyed this intro to the Selenium project. Next week, we’ll talk about why the major version bump to
+Selenium 4. Stay tuned!</p><p><em>This was originally posted at <a href=https://saucelabs.com/blog/whats-coming-in-selenium-4-how-can-i-contribute>https://saucelabs.com/blog/whats-coming-in-selenium-4-how-can-i-contribute</a></em></p><p><b>Tags</b></p><divs><a href=https://selenium.dev/tags/selenium/>selenium</a></divs><p><b>Categories</b></p><div><a href=https://selenium.dev/categories/general/>general</a>
+<a href=https://selenium.dev/categories/releases/>releases</a></div><div class=share-container><h3>Share this:</h3><a href="mailto:?&subject=Selenium Blog - What%e2%80%99s%20Coming%20in%20Selenium%204%3a%20How%20Can%20I%20Contribute%3f&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fwhat-is-coming-in-selenium-4-how-can-i-contribute%2f"><img class=social-icon src=/images/mail.png></a>
+<a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fwhat-is-coming-in-selenium-4-how-can-i-contribute%2f"><img class=social-icon src=/images/twitter.png></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class=social-icon src=/images/facebook.png></a></div></div><div class="container dark-background">October 29, 2020 by <a href=https://twitter.com/AutomatedTester>AutomatedTester</a>
 <a href=https://selenium.dev/blog/2020/webdriver-tpac-meeting-2020/><h2>Browser Testing and Tools WG Meeting @ TPAC 2020</h2></a><p>It&rsquo;s that time of the year where working groups from the W3C meet up to discuss the various standards that
 are being worked on.</p><p>Within the Browser Testing and Tools Working Group, there are 2 different standards.</p><p>We have:</p><ul><li><a href=https://w3c.github.io/webdriver/>WebDriver</a></li><li><a href=https://w3c.github.io/webdriver-bidi>WebDriver-Bidi</a></li></ul><p>The first is what is commonly supported by the Selenium Project and has support from Apple, Mozilla, Microsoft, and Google in their browsers. It is also supported by various Selenium in the cloud providers like Sauce Labs and BrowserStack.</p><p>As the world has moved on we have felt the need to add new APIs and move Selenium to be more event-driven. This is where we are learning, and collaborating, with projects like Puppeteer to make sure that we can improve the Browser Automation space. This is where the <a href=https://w3c.github.io/webdriver-bidi>WebDriver-Bidi</a> Specification comes in. It has broad support from the browser vendors so you can use official browsers and not be limited by the JavaScript sandbox. Some of the newer frameworks can&rsquo;t guarantee that.</p><p>If you&rsquo;re curious about we discussed this week, feel free to read it up on the <a href=https://www.w3.org/wiki/WebDriver/2020-TPAC>W3 Wiki</a>.</p><p>This post was originally shared on David Burns&rsquo; <a href=https://www.theautomatedtester.co.uk/blog/2020/webdriver-tpac-meeting-2020/>Blog</a></p><p><b>Tags</b></p><divs><a href=https://selenium.dev/tags/webdriver/>webdriver</a></divs><p><b>Categories</b></p><div><a href=https://selenium.dev/categories/general/>general</a>
 <a href=https://selenium.dev/categories/technical/>technical</a></div><div class=share-container><h3>Share this:</h3><a href="mailto:?&subject=Selenium Blog - Browser%20Testing%20and%20Tools%20WG%20Meeting%20%40%20TPAC%202020&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fwebdriver-tpac-meeting-2020%2f"><img class=social-icon src=/images/mail.png></a>
