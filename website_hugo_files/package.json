@@ -1,0 +1,15 @@
+{
+  "name": "website_source_files",
+  "version": "0.1.0",
+  "description": "SeleniumHQ website & documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SeleniumHQ",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "postcss-cli": "^8.1.0"
+  }
+}
