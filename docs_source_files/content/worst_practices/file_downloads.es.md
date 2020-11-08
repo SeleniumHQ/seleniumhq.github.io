@@ -14,7 +14,7 @@ como [libcurl](//curl.haxx.se/libcurl/).
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
+English to Spanish. Do you speak Spanish? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
