@@ -61,3 +61,15 @@ If for any reason, you need to setup the domain redirection again,
 we followed this [guide](http://spector.io/how-to-set-up-github-pages-with-a-custom-domain-on-gandi/),
 but any tutorial/guide showing how to redirect a domain to GitHub pages should do.   
 
+## (WIP) Moving to Hugo [Docsy theme](https://www.docsy.dev/)
+
+Files are living under [website_hugo_files](website_hugo_files).
+ 
+Steps needed to have this working locally and work on it:
+
+- Clone this repository
+- Run `git submodule update --init --recursive`
+- `cd website_hugo_files`
+- `npm install`
+
+

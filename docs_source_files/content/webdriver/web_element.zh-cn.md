@@ -771,10 +771,9 @@ println(res.getX())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element CSS Value
+## 获取元素CSS值
 
-Retrieves the value of specified computed style property 
-of an element in the current browsing context.
+获取当前浏览上下文中元素的特定计算样式属性的值.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -831,13 +830,17 @@ val cssValue = driver.findElement(By.linkText("More information...")).getCssValu
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Get Element Text
+## 获取元素文本
 
-Retrieves the rendered text of the specified element.
+获取特定元素渲染后的文本.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Please provide a pr for code sample
+// Navigate to url
+driver.get("https://example.com");
+
+// Retrieves the text of the element
+String text = driver.findElement(By.cssSelector("h1")).getText();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
@@ -850,7 +853,11 @@ text = driver.find_element(By.CSS_SELECTOR, "h1").text
 // Please provide a pr for code sample
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please provide a pr for code sample
+# Navigate to url
+driver.get 'https://www.example.com'
+
+# Retrieves the text of the element
+text = driver.find_element(:css, 'h1').text
   {{< / code-panel >}}
     {{< code-panel language="javascript" >}}
 // Navigate to URL
@@ -860,6 +867,10 @@ await driver.get('http://www.example.com');
 let text = await driver.findElement(By.css('h1')).getText();
     {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Please provide a pr for code sample
+// Navigate to URL
+driver.get("https://www.example.com")
+
+// retrieves the text of the element
+val text = driver.findElement(By.cssSelector("h1")).getText()
   {{< / code-panel >}}
 {{< / code-tab >}}
