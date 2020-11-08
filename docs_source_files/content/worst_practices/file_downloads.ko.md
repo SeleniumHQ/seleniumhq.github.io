@@ -9,7 +9,7 @@ Selenium의 제어 하에 브라우저로 링크를 클릭하면 다운로드를
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
+English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
