@@ -18,7 +18,7 @@ et le passer à une bibliothèque de requêtes HTTP comme
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
+English to French. Do you speak French? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
