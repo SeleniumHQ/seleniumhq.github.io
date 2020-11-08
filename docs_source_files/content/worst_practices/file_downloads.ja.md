@@ -10,7 +10,7 @@ Seleniumの管理下にあるブラウザーでリンクをクリックしてダ
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to {LANGUAGE}. Do you speak {LANGUAGE}? Help us to translate
+English to Japanese. Do you speak Japanese? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
