@@ -88,7 +88,7 @@ receives the event.
 
 ## Event Bus
 
-The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer and Session Map. 
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 
 ## Roles in Grid
