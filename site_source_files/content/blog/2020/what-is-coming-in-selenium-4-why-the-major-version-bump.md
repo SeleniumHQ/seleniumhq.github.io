@@ -1,6 +1,6 @@
 +++
-Description = "What’s Coming in Selenium 4: Why The Major Version Bump?"
-Title = "In the second post in this series, Simon Stewart continues talking about what's coming in Selenium 4 and why this release has a major version bump."
+Description = "In the second post in this series, Simon Stewart continues talking about what's coming in Selenium 4 and why this release has a major version bump."
+Title = "What’s Coming in Selenium 4: Why The Major Version Bump?"
 Date = 2020-11-10
 Author = "shs96c"
 AuthorLink = "https://twitter.com/shs96c"
