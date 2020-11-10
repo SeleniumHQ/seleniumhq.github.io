@@ -11,7 +11,40 @@ navbarElements.forEach(element=>{if(element.className==="nav-item"){element.clas
 subnavElements.forEach(element=>{element.className="about-subnav";});aboutArrow.className="arrow-down";logoElements.forEach(element=>{if(element.className.includes("logo-hide")){element.className="logo logo-small"}else{element.className+=" logo-hide"}})
 if(header.className==="header"){header.className+=" dropdown-active"}else{header.className="header"}}
 function toggleAboutNav(){const aboutSubnav=document.getElementById("aboutSubnav");const aboutArrow=document.getElementById("aboutArrow");if(aboutSubnav.className==="about-subnav"){aboutSubnav.className+=" about-subnav-active";}else{aboutSubnav.className="about-subnav"}
-if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else aboutArrow.className="arrow-up";}</script><link rel=stylesheet href=/css/blog.css><link rel=stylesheet href=/css/main.css><link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel=stylesheet><body><section class=hero><a href=/blog><h1>Selenium Blog - 2020 Archive</h1></a></section><div class=blog-container><div class=blog-content><div class="container dark-background">November 2, 2020 by <a href=https://twitter.com/shs96c>shs96c</a>
+if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else aboutArrow.className="arrow-up";}</script><link rel=stylesheet href=/css/blog.css><link rel=stylesheet href=/css/main.css><link href="https://fonts.googleapis.com/css?family=Encode+Sans" rel=stylesheet><body><section class=hero><a href=/blog><h1>Selenium Blog - 2020 Archive</h1></a></section><div class=blog-container><div class=blog-content><div class="container dark-background">November 10, 2020 by <a href=https://twitter.com/shs96c>shs96c</a>
+<a href=https://selenium.dev/blog/2020/what-is-coming-in-selenium-4-why-the-major-version-bump/><h2>What’s Coming in Selenium 4: Why The Major Version Bump?</h2></a><blockquote><p>In the second post in this series, Simon Stewart continues talking about
+what&rsquo;s coming in Selenium 4 and why this release has a major version bump.</p></blockquote><p>In my <a href=https://www.selenium.dev/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute/>last post</a>,
+I shared a bit about how the Selenium project works overall. Now, let’s start talking about Selenium 4
+and what’s coming. One thing I think I should clear up is &ldquo;why the major version number bump?&rdquo;</p><p>Sometimes I joke that the major reason for the version number bump is that while the digits of Pi are
+infinite, when we went from 3.14 to 3.141, people got a little bit upset. Moving to 3.141.5 and then
+3.141.59 was as far as we wanted to push that particular idea :)</p><p>More seriously, the first reason is that we have a revised Selenium IDE. Years ago, this used to be
+Firefox only because it used the XPI extension mechanism (which was specific to Firefox). It’s now a
+web component, and you can download it for Chrome, Firefox, and anything else that supports Web
+Components. There is currently work to rewrite it as an Electron app, which will allow us to make
+better use of the native OS the IDE is running on. That work was largely pushed forward by developers
+working at Applitools. They started from a base of the original Selenium IDE that had been migrated
+to use Web Components by a company called SideX. It’s been a fantastic example of the community
+working together well.</p><p>Secondly, we have fully adopted the W3C WebDriver protocol, and have dropped support for the original
+home-grown wire protocol. The way that Selenium communicates with a web browser is via a wire protocol
+that’s effectively just JSON over HTTP. Originally this grew organically as we figured things out,
+and we tried to make browsers do what we needed them to. That original protocol is known as the JSON
+wire protocol because it spoke JSON over the wire (and we’re not great at coming up with very original names).</p><p>That original protocol was the base for the W3C WebDriver protocol, which smoothed some of the rough
+edges, and brought some much needed consistency to the protocol. The two major areas the standardised
+protocol improved on included session creation, where we removed considerable ambiguity, and by providing
+a far richer API for specifying user actions.</p><p>So what does this adoption of the W3C protocol mean for you? I&rsquo;ll be honest: it probably doesn’t mean
+much to you at all. If you&rsquo;re using a modern browser (released over the past couple of years), you will
+find that actually you already speak the W3C protocol with Selenium 3.</p><p>So who does care about the protocol dialects? When we talk about companies like Sauce Labs who provide
+Selenium as a service—they care about it. The ecosystem is ready for this next step, because the
+technical folks at these companies have ensured that they understand and comply with the W3C protocol,
+and folks from the Selenium project have been there offering help and advice as needed.</p><p>One of the other nice things about Selenium 4 is that we&rsquo;ve done our best to ensure a stable user-facing
+API. That means when you upgrade your project from Selenium 3 to Selenium 4, it should be a drop-in
+upgrade. You just change the version number, recompile and you should be done.</p><p>There are a few caveats that you should be aware of, however! The major one is that if in the last version
+of Selenium 3 a method was deprecated, it’s now probably gone. We’ve taken the opportunity of a major
+version bump to delete them and clean up the behind-the-scenes internals people don’t normally get to see.
+If you’re a software developer, you may recognise this as us paying off some of our technical debt :)</p><p>Stay tuned for the next post, where I’ll go over some new tricks in Selenium 4.</p><p><em>This was originally posted at <a href=https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump>https://saucelabs.com/blog/whats-coming-in-selenium-4-why-the-major-version-bump</a></em></p><p><b>Tags</b></p><divs><a href=https://selenium.dev/tags/selenium/>selenium</a></divs><p><b>Categories</b></p><div><a href=https://selenium.dev/categories/general/>general</a>
+<a href=https://selenium.dev/categories/releases/>releases</a></div><div class=share-container><h3>Share this:</h3><a href="mailto:?&subject=Selenium Blog - What%e2%80%99s%20Coming%20in%20Selenium%204%3a%20Why%20The%20Major%20Version%20Bump%3f&body=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fwhat-is-coming-in-selenium-4-why-the-major-version-bump%2f"><img class=social-icon src=/images/mail.png></a>
+<a href="https://twitter.com/home?status=https%3a%2f%2fselenium.dev%2fblog%2f2020%2fwhat-is-coming-in-selenium-4-why-the-major-version-bump%2f"><img class=social-icon src=/images/twitter.png></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://selenium.dev"><img class=social-icon src=/images/facebook.png></a></div></div><div class="container dark-background">November 2, 2020 by <a href=https://twitter.com/shs96c>shs96c</a>
 <a href=https://selenium.dev/blog/2020/what-is-coming-in-selenium-4-how-can-i-contribute/><h2>What’s Coming in Selenium 4: How Can I Contribute?</h2></a><blockquote><p>In this new blog series all about the upcoming release of Selenium 4, Simon Stewart will
 cover how the Selenium project works, who is involved, how you can get involved, and a
 sneak peek at what’s new in Selenium 4.</p></blockquote><p>As the lead of the Selenium project, I wanted to kick off a new blog series leading up to
