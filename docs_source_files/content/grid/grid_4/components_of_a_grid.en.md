@@ -61,7 +61,7 @@ Session Map is the first component that should be started.
 
 ## New Session Queuer, New Session Queue
 
-The New Session Queuer essentially queues requests. The New Session Queuer is the only
+The New Session Queuer is the only
 component which can communicate with the New Session Queue. It handles all queue operations like
 add to front/end, remove request and clear queue. It has configurable parameters for setting 
 the request timeout and request retry interval.
