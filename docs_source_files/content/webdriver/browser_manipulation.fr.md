@@ -1057,7 +1057,7 @@ driver.manage().window().position = Point(0,0)
     {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Maximise window
+### Maximize window
 Enlarges the window. For most operating systems, the window will fill
 the screen, without blocking the operating system's own menus and
 toolbars.
