@@ -1061,7 +1061,7 @@ driver.manage().window().position = Point(0,0)
     {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Maximise window
+### Maximize window
 Enlarges the window. For most operating systems, the window will fill
 the screen, without blocking the operating system's own menus and
 toolbars.
@@ -1254,7 +1254,19 @@ driver.quit()
     var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
     elementScreenshot.SaveAsFile("screenshot_of_element.png");
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} // code sample not available please raise a PR {{< / code-panel >}}
+  {{< code-panel language="ruby" >}} 
+# Works with Selenium4-alpha7 Ruby bindings and above
+require 'selenium-webdriver'
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  driver.get 'https://example.com/'
+  ele = driver.find_element(:css, 'h1')
+
+  # Takes and Stores the element screenshot in specified path
+  ele.save_screenshot('./image.jpg')
+end
+  {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
 let fs = require('fs');
