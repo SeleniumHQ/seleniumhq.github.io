@@ -58,19 +58,25 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
         java -jar selenium-server-4.0.0-alpha-6.jar sessions
     ```
 
-* Step 3: Start the Distributor. All the nodes are attached as part of Distributor process. It is responsible for assigning a node, when a create session request in invoked.
-
+* Step 3: Start the new session queuer, it adds the new session request to a local queue. The distributor picks up the request from the queue.
+        
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-6.jar sessionqueuer
     ```
 
-* Step 4: Next step is to start the Router, an address that you'd expose to web
+* Step 4: Start the Distributor. All the nodes are attached as part of Distributor process. It is responsible for assigning a node, when a create session request in invoked.
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553
+        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
     ```
 
-* Step 5: Finally, add a Node
+* Step 5: Next step is to start the Router, an address that you'd expose to web
+
+    ```shell 
+        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
+    ```
+
+* Step 6: Finally, add a Node
 
     ```shell 
         java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
