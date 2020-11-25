@@ -26,7 +26,7 @@ A single request or transaction spans multiple services and components.  Tracing
 Some key terms used in tracing context are: 
 
 **Trace**
-Tracing allows tracing a request through multiple services, starting from its origin to its final destination. This request's journey helps in debugging, monitoring the end-to-end flow and identifying failures. A trace depicts the end-to-end request flow. Each trace has a unique id as its identifier.
+Tracing allows one to trace a request through multiple services, starting from its origin to its final destination. This request's journey helps in debugging, monitoring the end-to-end flow, and identifying failures. A trace depicts the end-to-end request flow. Each trace has a unique id as its identifier.
 
 **Span**
 Each trace is made up of timed operations called spans. A span has a start and end time and it represents operations done by a service. The granularity of span depends on how it is instrumented. Each span has a unique identifier.  All spans within a trace have the same trace id.
@@ -67,10 +67,14 @@ Running Selenium server
 All spans, events and their respective attributes are part of a trace. Tracing works while running the server in all of the above-mentioned modes.
 
 By default, tracing is enabled in the Selenium server. Selenium server exports the traces via two exporters:
-1. Console - Logs all traces and their included spans at FINE level. By default, Selenium server prints logs at INFO level and above. As per need, this can be changed via [LoggingOptions.java](https://github.com/SeleniumHQ/selenium/blob/738dd0ee18a142d3fe69fc5f16889ac770188c93/java/server/src/org/openqa/selenium/grid/log/LoggingOptions.java). Add a line `logger.setLevel(Level.FINE);` Pick a logging level of choice.
+1. Console - Logs all traces and their included spans at FINE level. By default, Selenium server prints logs at INFO level and above.
 2. Jaeger UI - OpenTelemetry provides the APIs and SDKs to instrument traces in the code. Whereas Jaeger is a tracing backend, that aids in collecting the tracing telemetry data and providing querying, filtering and visualizing features for the data.
 
-[Detailed instructions of visualizing traces using Jaeger UI](https://github.com/SeleniumHQ/selenium/blob/a28b4beeeed965a352025a09f26fe2a9567cdeb3/java/server/src/org/openqa/selenium/grid/commands/tracing.txt)
+Detailed instructions of visualizing traces using Jaeger UI can be obtained by running the command :
+
+```shell
+java -jar selenium-server-4.0.0-<selenium-version>.jar info tracing
+```
 
 [A very good example and scripts to run the server and send traces to Jaeger](https://github.com/manoj9788/tracing-selenium-grid)
 
@@ -128,7 +132,7 @@ Sample error log
       "attributes": {
         "exception.type": "org.openqa.selenium.ScriptTimeoutException",
         "exception.message": "Unable to execute request: java.sql.SQLSyntaxErrorException: Table 'mysql.sessions_mappa' doesn't exist ..." (full message will be printed),
-        "exception.stacktrace": "org.openqa.selenium.ScriptTimeoutException: java.sql.SQLSyntaxErrorException: Table 'mysql.sessions_mappa' doesn't exist\nBuild info: version: '4.0.0-alpha-7', revision: 'Unknown'\nSystem info: host: 'Puja-Jaganis-MacBook-Pro.local', ip: 'fe80:0:0:0:10d5:b63a:bdc6:1aff%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.7'\nDriver info: driver.version: unknown ...." (full stack will be printed),
+        "exception.stacktrace": "org.openqa.selenium.ScriptTimeoutException: java.sql.SQLSyntaxErrorException: Table 'mysql.sessions_mappa' doesn't exist\nBuild info: version: '4.0.0-alpha-7', revision: 'Unknown'\nSystem info: host: 'XYZ-MacBook-Pro.local', ip: 'fe80:0:0:0:10d5:b63a:bdc6:1aff%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '11.0.7'\nDriver info: driver.version: unknown ...." (full stack will be printed),
         "http.handler_class": "org.openqa.selenium.grid.distributor.remote.RemoteDistributor",
         "http.url": "\u002fsession",
         "http.method": "POST"
