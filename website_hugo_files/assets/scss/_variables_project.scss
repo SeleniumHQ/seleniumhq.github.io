@@ -1,0 +1,53 @@
+/*
+
+Add styles or override variables from the theme here.
+
+*/
+
+$white: #fff !default;
+$primary: $white !default;
+
+.h1-header {
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+.h2-header {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 100;
+}
+
+.body-large {
+  font-size: 18px;
+  line-height: 30px;
+  margin: 5px;
+  font-weight: 400;
+}
+
+.sub-header {
+  font-weight: 100;
+}
+
+.homepage {
+  background-image: url("/seleniumhq-featured-background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //position: relative;
+  color: $white;
+  //padding: 20px 20px;
+  //margin: 20px;
+  //text-align: center;
+}
+
+// Styling for section boxes
+.td-box {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+  .row {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

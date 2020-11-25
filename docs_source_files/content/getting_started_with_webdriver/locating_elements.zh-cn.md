@@ -157,7 +157,7 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 ## 相对定位
 
-在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Firendly Locators)"。
+在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Friendly Locators)"。
 它可以帮助你通过某些元素作为参考来定位其附近的元素。
 现在可用的相对定位有：
 

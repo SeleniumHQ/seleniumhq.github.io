@@ -6,20 +6,19 @@ weight: 5
 
 # WebDriver
 
-WebDriver bestuurt native een browser, zoals een gebruiker dat lokaal zou doen
-of op een externe machine met behulp van de Selenium-server,
-markeert een sprong voorwaarts in termen van browserautomatisering.
+Der WebDriver steuert einen Browser so, wie es ein Benutzer tun würde, 
+entweder lokal oder auf einem entfernten Rechner unter Verwendung des 
+Selenium Servers. Dies ist ein Meilenstein in der Automatisierung von Browsern.
 
-Selenium WebDriver verwijst naar beide taalbindingen
-en de implementaties van de individuele browserbesturingscode.
-Dit wordt gewoonlijk alleen _WebDriver_ genoemd.
+Selenium WebDriver gilt als Synonym sowohl für die 
+Programmiersprachimplementierungen als auch für das Steuerprogramm das 
+den Browser steuert. Dies wird allgemein als _WebDriver_ bezeichnet.
 
-Selenium WebDriver is een [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
+Selenium WebDriver ist eine [W3C Recommendation](https://www.w3.org/TR/webdriver1/)
 
-* WebDriver is ontworpen als een eenvoudig
-  en meer beknopte programmeerinterface.
+* WebDriver ist eine einfache und
+übersichtliche Schnittstelle.
 
-* WebDriver is een compacte objectgeoriënteerde API.
+* WebDriver ist eine kompakte objektorientierte API. 
 
-* Het stuurt de browser effectief aan.
-
+* WebDriver steuert den Browser effektiv.
