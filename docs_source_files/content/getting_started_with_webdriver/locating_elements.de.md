@@ -40,9 +40,10 @@ Types `ẀebElement`.
 * `WebElement` repräsentiert einen bestimmten DOM Knoten
   (z.B. einen Link, ein Eingabefeld, etc.)
 
-Once you have a reference to a web element that's been “found”,
-you can narrow the scope of your search
-by using the same call on that object instance:
+Ab dem Zeitpunkt, ab dem eine Referenz zu einem WebElement "gefunden" 
+wurde, kann der Suchumfang auf dieses Element eingeschränkt werden. Es 
+können weitere eingegrenzte Suchen auf Basis des ausgewählten Elements 
+durchgeführt werden, indem die gleiche Methode angewandt wird:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -71,28 +72,26 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You can do this because both the _WebDriver_ and _WebElement_ types
-implement the [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
-interface. In WebDriver, this is known as a _role-based interface_.
-Role-based interfaces allow you to determine whether a particular
-driver implementation supports a given feature. These interfaces are
-clearly defined and try to adhere to having only a single role of
-responsibility.  You can read more about WebDriver's design and what
-roles are supported in which drivers in the [Some Other Section Which
-Must Be Named](#).
-<!-- TODO: A new section needs to be created for the above.-->
+Dies wird ermöglicht weil sowohl der _WebDriver_ als auch das 
+_WebElement_ das Interface [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
+implementieren. Wir verstehen dies im WebDriver als _role-based interface_ 
+(rollenbasiertes Interface). Dieses Interface ermöglicht um herauszufinden ob eine
+driver Implementierung ein bestimmtes Feature unterstützt oder nicht.
+Diese Schnittstellen (Interface) sind klar definiert und versuchen daran festzuhalten, dass
+es nur eine Verantwortlichkeit dafür gibt. Mehr über den Aufbau und die 
+Verantwortlichkeiten der Driver können hier nachgelesen werden [Link zu einer Sektion die noch definiert werden muss](#)
+<!--TODO Eine neue Sektion muss erstellt werden. (see English version) --> 
 
-Consequently, the _By_ interface used above also supports a
-number of additional locator strategies.  A nested lookup might not be
-the most effective cheese location strategy since it requires two
-separate commands to be issued to the browser; first searching the DOM
-for an element with ID “cheese”, then a search for “cheddar” in a
-narrowed context.
+Folglich untersützt das _By_ Interface zahlreich zusätzliche Suchstrategien.
+Eine verschachtelte Suche ist nicht die effektivste Methode um die den gewünschten 
+Käse zu finden. Es werden zwei getrennte Befehle an den Browser gesendet. Der 
+erste der den gesamten DOM nach dem Element mit der ID "cheese" sucht, gefolgt 
+von der Suche nach "cheddar" mit einem eingeschränkten Kontext.
 
-To improve the performance slightly, we should try to use a more
-specific locator: WebDriver supports looking up elements
-by CSS locators, allowing us to combine the two previous locators into
-one search:
+Um die Effektivität zu erhöhen sollte ein präziserer Locator (Identifizierungsstrategie) 
+gewählt werden; WebDriver unterstützt die Suche nach Elementen auch mit Hilfe eines 
+CSS-locators, mit dem es auch möglich ist Kombinationen in einer einzelnen Suche 
+durchzuführen:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -115,10 +114,10 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Locating multiple elements
+### Finden mehrerer Elemente
 
-It is possible that the document we are working with may turn out to have an
-ordered list of the cheese we like the best:
+Angenommen das Dokument in dem wir suchen wollen beinhaltet eine sortierte
+Liste mit Käsesorten die uns am besten schmecken:
 
 ```html
 <ol id=cheese>
@@ -129,13 +128,12 @@ ordered list of the cheese we like the best:
 </ul>
 ```
 
-Since more cheese is undisputably better, and it would be cumbersome
-to have to retrieve each of the items individually, a superior
-technique for retrieving cheese is to make use of the pluralized
-version `findElements(By)`. This method returns a collection of web
-elements. If only one element is found, it will still return a
-collection (of one element). If no element matches the locator, an
-empty list will be returned.
+Es steht außer Frage, je mehr Käse desto besser, es wäre aber umständlich 
+jedes Element einzeln abrufen zu müssen. Daher gibt es die Möglichkeit
+mit `findElements(By)` mehrere Elemente gleichzeitig zu finden. Diese Methode liefert 
+eine Sammlung (Collection) von WebElementen. Wird nur ein Element gefunden, wird trotzdem
+eine Sammlung (mit einem Element) retourniert. Wird kein Element gefunden 
+ist die Liste leer.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -158,80 +156,84 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element selection strategies
+### Strategien der Elementsuche
 
-There are eight different built-in element location strategies in WebDriver:
+Im WebDriver existieren acht unterschiedliche Möglichkeiten um Elemente zu lokalisieren:
 
-| Locator | Description |
+| Lokator/Suchmethode (locator) | Beschreibung |
 | -------- | ---------- |
-| class name | Locates elements whose class name contains the search value (compound class names are not permitted) |
-| css selector | Locates elements matching a CSS selector |
-| id | Locates elements whose ID attribute matches the search value |
-| name | Locates elements whose NAME attribute matches the search value |
-| link text | Locates anchor elements whose visible text matches the search value |
-| partial link text | Locates anchor elements whose visible text matches the search value |
-| tag name | Locates elements whose tag name matches the search value |
-| xpath | Locates elements matching an XPath expression |
+| class name | Lokalisiert Elemente mit dem gewünschten Klassennamen (Zusammengesetzte Klassennamen sind nicht erlaubt) |
+| css selector | Lokalisiert Elemente die dem CSS-Selektor entsprechen |
+| id | Lokalisiert Elemente deren ID dem Suchwert entsprechen |
+| name | Lokalisiert Elemente die den entsprechenden Wert im NAME Attribut haben |
+| link text | Lokalisiert Link-Elemente deren sichtbarer Text dem Suchwert entsprechen |
+| partial link text | Lokalisiert Link-Elemente die den Suchwert im sichtbaren Text vorkommt |
+| tag name | Lokalisiert Elemente mit den entsprechenden HTML-Tags |
+| xpath | Lokalisiert Elemente die auf dem xpath-Selektor entsprechen |
 
-### Tips on using selectors
+### Tips zur Verwendung von Selektoren
 
-In general, if HTML IDs are available, unique, and consistently
-predictable, they are the preferred method for locating an element on
-a page. They tend to work very quickly, and forego much processing
-that comes with complicated DOM traversals.
+Die bevorzugte Methode um Elemente zu identifizieren ist mit Sicherheit
+mit Hilfe der HTML IDs. Diese sind eindeutig, konsitent und vorhersehbar, 
+weiters arbeitet diese Methode sehr schnell, da hierbei auf komplizierte
+DOM Verarbeitungen verzichtet wird.
 
-If unique IDs are unavailable, a well-written CSS selector is the
-preferred method of locating an element. XPath works as well as CSS
-selectors, but the syntax is complicated and frequently difficult to
-debug. Though XPath selectors are very flexible, they are typically
-not performance tested by browser vendors and tend to be quite slow.
+Wenn eindeutige IDs nicht verfügbar sind, ist ein gut definierter
+CSS selector die bevorzugte Methode um Elemente zu lokalisieren. 
+XPath-Suchen funktionieren gleich dem CSS-Selektoren, allerdings ist die
+Syntax komplizierter und schwieriger zu debuggen. Obwohl XPath-Selektoren 
+sehr flexibel sind, sind sie in der Regel nicht von den Browser-Herstellern 
+auf Leistung getestet und sind tendenziell recht langsam.
 
-Selection strategies based on _linkText_ and _partialLinkText_ have
-drawbacks in that they only work on link elements. Additionally, they
-call down to XPath selectors internally in WebDriver.
+Selektorstrategien die _linkText_ oder _partialLinkText_ verwenden 
+haben den Nachteil das diese nur für Link-Elemente angewandt werden 
+können. Weiters werden diese Selektoren intern im WebDriver als 
+XPath-Selektoren aufgelöst.
 
-Tag name can be a dangerous way to locate elements. There are
-frequently multiple elements of the same tag present on the page.
-This is mostly useful when calling the _findElements(By)_ method which
-returns a collection of elements.
+Den HTML-Tag als Identifizierungsmerkmal zu verwenden kann gefährlich 
+sein. Meistens sind viele Elemente mit dem gleichen HTML-Tag auf einer
+Webseite. Eine sinnvolle Verwendung könnte sein, diese Strategie mit der
+_findElements(By)_ Methode zu verwenden, die eine Sammlung von WebElementen
+retourniert.
 
-The recommendation is to keep your locators as compact and
-readable as possible. Asking WebDriver to traverse the DOM structure
-is an expensive operation, and the more you can narrow the scope of
-your search, the better.
+Empfohlen wird die Suchen so kompackt und einfach lesbar wie möglich zu halten. 
+Den DOM abzufragen ist eine aufwändige Operation für den WebDriver, 
+und je präziser der Suchbegriff ist, desto besser.
 
-## Relative Locators
+## Relative Suchstrategien
+**Selenium 4** führt relative Locators ein, die zuvor als 
+_Friendly Locators_ bekannt waren. Diese Funktionalität wurde
+hinzugefügt um Elemente zu finden, die sicht in der Nähe zu anderen
+Elementen befinden.
+Folgende relative Locators sind verfügbar:
 
-**Selenium 4** brings Relative Locators which are previously 
-called as _Friendly Locators_. This functionality was 
-added to help you locate elements that are nearby other elements.
-The Available Relative Locators are:
+* *above*  (oberhalb)
+* *below*  (unterhalb)
+* *toLeftOf*  (links)
+* *toRightOf*  (rechts)
+* *near*  (nahe/nächst)
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+_findElement_ Methode akzeptiert nun eine weitere Möglichkeit
+`withTagName()` die einen relativen Locator liefert.
 
 _findElement_ method now accepts a new method `withTagName()` 
 which returns a RelativeLocator. 
 
-### How does it work
-
-Selenium uses the JavaScript function 
+### Wie funktionieren die relativen Suchemethoden 
+Selenium verwendet folgende JavaScript Funktion
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-to find the relative elements. This function returns 
-properties of an element such as 
-right, left, bottom, and top.
+um das entsprechende Element zu finden. Diese
+Funktion retourniert Eigenschaften eines Elements
+wie z.B right, left, bottom und top (links, rechts, oben, unten)
 
-Let us consider the below example for understanding the relative locators.
+Betrachten wir das folgende Beispiel um die
+Funktionalität der relativen Locators besser zu verstehen:
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
-### above()
+### above() - oberhalb
 
-Returns the WebElement, which appears 
-above to the specified element
+Liefert das WebElement, welches sich über dem spezifiziertem Element befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -266,10 +268,9 @@ val emailAddressField = driver.findElement(withTagName("input").above(passwordFi
 {{< / code-tab >}}
 
 
-### below()
-
-Returns the WebElement, which appears 
-below to the specified element
+### below() - unterhalb
+Findet das WebElement, welches sich unter dem 
+spezifiziertem Element befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -304,10 +305,9 @@ val passwordField = driver.findElement(withTagName("input").below(emailAddressFi
 {{< / code-tab >}}
 
 
-### toLeftOf()
-
-Returns the WebElement, which appears 
-to left of specified element
+### toLeftOf() - links davon
+Liefert das WebElement, welches sich links vom spezifizierten Element
+befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -343,10 +343,9 @@ val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton
 {{< / code-tab >}}
 
 
-### toRightOf()
+### toRightOf() - rechts davon
 
-Returns the WebElement, which appears 
-to right of the specified element
+Liefert das WebElement, das sich rechts des spezifierten Elements befindet.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -381,10 +380,10 @@ val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButto
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### near()
+### near() - in der Nähe von
 
-Returns the WebElement, which is
-at most `50px` away from the specified element.
+Liefert das WebElement, welches maximal `50px` vom spezifizierten 
+Element entfernt ist.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
