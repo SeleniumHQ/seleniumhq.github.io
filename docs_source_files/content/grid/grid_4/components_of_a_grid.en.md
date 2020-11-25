@@ -11,8 +11,11 @@ The Router takes care of forwarding the request to the correct component.
 
 It is the entry point of the Grid, all external requests will be received by it.
 The Router behaves differently depending on the request. If it is a new session
-request, the Router will forward it to the Distributor (where the new session 
-creation will be handled). If the request belongs to an existing session, the
+request, the Router will forward it to the New Session Queuer, which will add it to
+the New Session Queue. The New Session Queuer will trigger an event through the Event Bus. 
+The Distributor (where the new session creation will be handled) 
+will receive the event and poll the New Session Queuer to get the new session request.
+If the request belongs to an existing session, the
 Router will send the session id to the Session Map, and the Session Map will 
 return the Node where the session is running. After this, the Router will
 forward the request to the Node.
@@ -56,9 +59,36 @@ forwarding a request to the Node. The Router will ask the Session Map for the No
 associated to a session id. When starting the Grid in its fully distributed mode, the
 Session Map is the first component that should be started.
 
+## New Session Queuer, New Session Queue
+
+The New Session Queuer is the only
+component which can communicate with the New Session Queue. It handles all queue operations like
+add to manipulate the queue. It has configurable parameters for setting 
+the request timeout and request retry interval.
+
+The New Session Queuer receives the new session request from the Router and adds it to the queue. 
+The queuer waits until it receives the response for the request. 
+If the request times out, the request is rejected immediately and not added to the queue. 
+
+Upon successfully adding the request to the queue, Event Bus triggers an event. 
+The Distributor picks up this event and polls the queue. It now attempts to create a session.
+
+If the requested capabilities do not exist in any of the registered Nodes, then the request is rejected
+immediately and the client receives a response.
+
+If the requested capabilities match the capabilities of any of Node slots, Distributor attempts to get the
+available slot. If all the slots are busy, the Distributor will ask the queuer to add the request 
+to the front of the queue. The Distributor receives the request again after the request retry interval. 
+It will attempt retries until the request is successful or has timed out. 
+If request times out while retrying or adding to the front of the queue its rejected.
+
+After getting an available slot and session creation, the Distributor passes the new session response 
+to the New Session Queuer via the Event Bus. The New Session Queuer will respond to the client when it
+receives the event.
+
 ## Event Bus
 
-The Event Bus serves as a communication path between the Nodes, Distributor, and Session Map. 
+The Event Bus serves as a communication path between the Nodes, Distributor, New Session Queuer, and Session Map. 
 The Grid does most of its internal communication through messages, avoiding expensive HTTP calls.
 
 ## Roles in Grid
@@ -75,6 +105,7 @@ Hub is the union of the following components:
 * Router
 * Distributor
 * Session Map
+* New Session Queuer
 * Event Bus
 
 It enables the classic Hub & Node(s) setup.
