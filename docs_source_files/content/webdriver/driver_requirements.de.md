@@ -380,7 +380,7 @@ ist der einzige Driver der vom Selenium Projekt mit Releases versorgt wird
 Ältere Releases können weiterhin funktionieren, werden jedoch offiziell nicht
 weiter unterstützt.
 
-Das Seleniumprojekt stellt die Driver für 32-bit und 64-bit Versionen des Internet
+Das Selenium-Projekt stellt die Driver für 32-bit und 64-bit Versionen des Internet
 Explorer zur Verfügung, es gibt jedoch einige [Einschränkungen](//jimevansmusic.blogspot.co.uk/2014/09/screenshots-sendkeys-and-sixty-four.html)
 mit dem Internet Explorer 10 & 11 mit dem 64-bit Driver, jeodch funktioniert
 die 32-bit Version des Drivers weiterhin. Zu Beachten ist, dass die Einstellungen
