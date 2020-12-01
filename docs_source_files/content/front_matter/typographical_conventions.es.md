@@ -14,7 +14,7 @@ it by sending us pull requests!
 One should avoid title capitalisation,
 such as _A Very Fine Heading_,
 and instead go for _A very fine heading_.
-Gratutious capitalisation, or title case,
+Gratuitous capitalisation, or title case,
 often show a misunderstanding of – or a disregard for –
 orthographic conventions.
 We prefer what is known as _sentence case_,
