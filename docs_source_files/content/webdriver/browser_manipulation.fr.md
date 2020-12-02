@@ -1316,7 +1316,11 @@ current context of a selected frame or window.
     # code sample not available please raise a PR 
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-    // code sample not available please raise a PR 
+// Stores the header element
+let header = await driver.findElement(By.css('h1'));
+
+// Executing JavaScript to capture innerText of header element
+let text = await driver.executeScript('return arguments[0].innerText', header); 
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
     // code sample not available please raise a PR 
