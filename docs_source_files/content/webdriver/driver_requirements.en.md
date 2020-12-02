@@ -41,7 +41,7 @@ requiring your test code to locate the exact location of the driver.
 _C:\WebDriver\bin_ or _/opt/WebDriver/bin_
 * Add the directory to your PATH:
   * On Windows - Open a command prompt as administrator
-     and the run the following command
+     and run the following command
      to permanently add the directory to your path
      for all users on your machine:
 
