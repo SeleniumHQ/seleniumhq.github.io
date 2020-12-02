@@ -3,8 +3,11 @@ title: "JavaScript-Warnungen, Fragen und Bestätigungen"
 weight: 6
 ---
 
-WebDriver stellt eine API zur Verfügung, die es ermöglicht drei
-unterschiedliche Arten von Popup Nachrichten zu behandeln
+{{% notice info %}}
+<i class="fas fa-language"></i> Diese Seite wird von Englisch 
+auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
+zu übersetzen indem Du uns einen Pull Reqeust schickst!
+ {{% /notice %}}
 WebDriver provides an API for working with the three types of native
 popup messages offered by JavaScript. These popups are styled by the
 browser and offer limited customisation.
