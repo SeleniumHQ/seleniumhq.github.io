@@ -1,9 +1,9 @@
 ---
-title: "Eigenheiten des Drivers"
+title: "Eigenheiten der Driver"
 chapter: true
 weight: 10
 ---
 
-# Eigenheiten des Drivers
+# Eigenheiten der Driver
 
 
