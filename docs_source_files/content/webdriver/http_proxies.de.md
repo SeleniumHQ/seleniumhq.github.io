@@ -7,7 +7,7 @@ Ein Proxy-Server fungiert als Zwischenstation für Anfragen zwischen
 Client und Server. Simpel erklärt werden die Daten über den Proxy zu der
 gewünschten Internetadresse und wieder retour geleitet.
 
-Ein Proxy Server für die automatisierten Seleniumskripte kann hilfreich 
+Ein Proxy Server für die automatisierten Selenium-Skripte kann hilfreich 
 sein bei:
 - Aufzeichnen des Netzwerkverkehrs
 - Mocken von Backend-Aufrufen die von der Website abgesetzt werden
