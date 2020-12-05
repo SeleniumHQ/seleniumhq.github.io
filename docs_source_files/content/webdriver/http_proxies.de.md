@@ -1,23 +1,25 @@
 ---
-title: "Http proxies"
+title: "Http Proxies"
 weight: 7
 ---
 
-A proxy server acts as an intermediary for requests between a client and a server.
-In simple, the traffic flows through the proxy server on its way to the address you
-requested and back.
+Ein Proxy-Server fungiert als Zwischenstation für Anfragen zwischen
+Client und Server. Simpel erklärt werden die Daten über den Proxy zu der
+gewünschten Internetadresse und wieder retour geleitet.
 
-A proxy server for automation scripts with Selenium could be helpful for:
-- Capture network traffic
-- Mock backend calls made by the website
-- Access the required website under complex network topologies or strict
-corporate restrictions/policies.
+Ein Proxy Server für die automatisierten Seleniumskripte kann hilfreich 
+sein bei:
+- Aufzeichnen des Netzwerkverkehrs
+- Mocken von Backend-Aufrufen die von der Website abgesetzt werden
+- Zugriff auf die gewünschte Website unter komplexen Netzwerkbedingungen oder 
+strengen Einschränkungen.
 
-If you are in a corporate environment, and a browser fails to connect to
-a URL, this is most likely because the environment needs a proxy to be
-accessed.
+Hat man Probleme bei der Verbindung zu einer URL aus einem Unternehmensnetzwerk, 
+deutet das meistens darauf hin, dass es notwendig ist die Verbindung über
+einen Proxy herzustellen.
 
-Selenium WebDriver provides a way to proxy settings
+Der Selenium WebDriver stellt die Möglichkeit zur Verfügung um
+Proxyeinstellungen vorzunehmen:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
