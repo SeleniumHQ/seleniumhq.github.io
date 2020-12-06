@@ -6,16 +6,12 @@ weight: 6
 
 # Remote WebDriver
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+Der WebDriver kann über eine Remoteverbindung genau so verwendet werden
+wie bei einer lokalen Verbindung. Der Hauptunterschied ist das der
+remote WebDriver konfiguriert werden muss, sodass die Testdurchführung
+auf einem anderen Rechner gestartet werden kann.
 
-You can use WebDriver remotely the same way you would use it
-locally. The primary difference is that a remote WebDriver needs to be
-configured so that it can run your tests on a separate machine.
-
-A remote WebDriver is composed of two pieces: a client and a
-server. The client is your WebDriver test and the server is simply a
-Java servlet, which can be hosted in any modern JEE app server.
+Der remote WebDriver besteht aus zwei Komponenten: Einem Client und
+einem Server. Der Client besteht aus dem WebDriver-Test und der Server 
+ist ein einfaches Java Servlet, welches auf jedem modernen JEE App Server
+gehostet werden kann.
