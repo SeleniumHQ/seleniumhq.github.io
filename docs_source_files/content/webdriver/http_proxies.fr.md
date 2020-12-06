@@ -21,7 +21,7 @@ le navigateur ne parvient pas à se connecter à une URL, c'est
 très probablement parce que l'environnement a besoin d'un
 proxy à accéder.
 
-Selenium WebDriver permet d'accéder aux paramètres du proxy
+Selenium WebDriver permet d'accéder aux paramètres du proxy:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
