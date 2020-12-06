@@ -26,7 +26,7 @@ If you are in a corporate environment, and a
 browser fails to connect to a URL, this is most 
 likely because the environment needs a proxy to be accessed.
 
-Selenium WebDriver provides a way to proxy settings
+Selenium WebDriver provides a way to proxy settings:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
