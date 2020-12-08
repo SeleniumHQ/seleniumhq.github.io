@@ -8,10 +8,7 @@ Seleniumの管理下にあるブラウザーでリンクをクリックしてダ
 これは、ファイルのダウンロードは、Webプラットフォームとのユーザーインタラクションをエミュレートする重要な側面とは見なされないためです。
 代わりに、Selenium（および必要なCookie）を使用してリンクを見つけ、 [libcurl](//curl.haxx.se/libcurl/) などのHTTPリクエストライブラリに渡します。
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-The [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) can download attachments by accessing them as input streams by implementing the [AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html) interface. The AttachmentHandler can the be added to the [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.
+[HtmlUnitドライバー](https://github.com/SeleniumHQ/htmlunit-driver)は、
+[AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html) インターフェイスを実装することで、
+入力ストリームとして添付ファイルにアクセスすることによって、添付ファイルをダウンロードできます。 
+AttachmentHandlerは、[HtmlUnit](https://htmlunit.sourceforge.io/) に追加できます。

@@ -1,29 +1,24 @@
 ---
-title: "GraphQL querying support"
+title: "GraphQLクエリのサポート"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+GraphQLは、APIのクエリ言語であり、既存のデータでこれらのクエリを実行するためのランタイムです。 
+これにより、ユーザーは必要なものだけを正確に要求することができます。
 
-GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. It gives users the power to ask for exactly what they need and nothing more.
+## 列挙型(Enum)
+列挙型は、フィールドの可能な値のセットを表します。
 
-## Enums
-Enums represent possible sets of values for a field.
+たとえば、 `Node` オブジェクトには `status` というフィールドがあります。 
+`UP` 、 `DRAINING` 、または `UNAVAILABLE` の可能性があるため、状態は、 列挙型（具体的には、`Status` タイプ）です。
 
-For example, the `Node` object has a field called `status`. The state is an enum (specifically, of type `Status`) because it may be `UP` , `DRAINING` or `UNAVAILABLE`.
+## スカラー
+スカラーはプリミティブ値です： `Int` 、 `Float` 、 `String` 、 `Boolean` 、または `ID` 。
 
-## Scalars
-Scalars are primitive values: `Int`, `Float`, `String`, `Boolean`, or `ID`.
+GraphQL APIを呼び出すときは、スカラーのみを返すまでネストされたサブフィールドを指定する必要があります。
 
-When calling the GraphQL API, you must specify nested subfield until you return only scalars.
-
-
-## Structure of the Schema
-The structure of grid schema is as follows:
+## スキーマの構造
+グリッドスキーマの構造は次のとおりです。
 
 ```shell
 {
@@ -44,33 +39,34 @@ The structure of grid schema is as follows:
 }
 ```
 
-## Querying GraphQL
+## GraphQLで照会する
 
-The best way to query GraphQL is by using `curl` requests. GraphQL allows you to fetch only the data that you want, nothing more nothing less.
+GraphQLをクエリする最良の方法は、 `curl` リクエストを使用することです。 
+GraphQLを使用すると、必要なデータのみをフェッチできます。それ以上でもそれ以下でもありません。
 
 Some of the example GraphQL queries are given below. You can build your own queries as you like.
 
-### Querying the number of `totalSlots` and `usedSlots` in the grid :
+### グリッド内の `totalSlots`と` usedSlots`の数を照会する
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { totalSlots, usedSlots } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-Generally on local machine the `<LINK_TO_GRAPHQL_ENDPOINT>` would be `http://localhost:4444/graphql`
+通常、ローカルマシンでは、 `<LINK_TO_GRAPHQL_ENDPOINT>` は `http://localhost:4444/graphql` になります。
 
-### Querying the capabilities of each node in the grid :
+### グリッド内の各ノードのcapabilityを照会する
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { capabilities } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Querying the status of each node in the grid :
+### グリッド内の各ノードのステータスを照会する
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Querying the URI of each node and the grid :
+### 各ノードとグリッドのURIを照会する
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { uri }, uri } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
