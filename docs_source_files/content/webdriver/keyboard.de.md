@@ -3,19 +3,16 @@ title: "Tastatur"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
-interface which allows us to provide virtualized device input to the web browser.
+Tastatur repräsentiert Tastaturaktionen. Tastatur "Actions" werden mit Hilfe
+eines low-level Interface durchgeführt, dass ein virtualisiertes Eingabegerät
+für den Webbrowser zur Verfügung stellt.
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
-possible keystrokes that WebDriver Supports.
+Die sendKeys-Methode sendet eine Tastensequenz in das DOM Element, selbst
+wenn eine modifizierte Tastensequenz angegeben wird.
+[Hier](https://www.w3.org/TR/webdriver/#keyboard-actions) ist eine Liste der
+möglichen Tastenanschläge die vom WebDriver unterstützt wird. 
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -115,7 +112,8 @@ fun main() {
 
 ## keyDown
 
-The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+Die keyDown-Methode wird verwendet um Aktionen zu simulieren bei denen 
+eine der modifizierenden Tasten gedrückt wird (STRG, SHIFT, ALT).
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -232,7 +230,8 @@ fun main() {
 
 ## keyUp
 
-The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+Die keyUp-Methode wird verwendet um das key-up oder loslassen einer modifizieren
+Tasten (STRG, SHIFT, ALT) zu simulieren.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -374,9 +373,9 @@ fun main() {
 {{< / code-tab >}}
 
 ## clear
-Clears the content of an editable element. 
-This is only applied for the elements which is editable and interactable, 
-otherwise Selenium returns the error (invalid element state (or) Element not interactable)
+Clear löscht den Inhalt von einem veränderbaren Element. Das gilt nur für Elemente
+die veränderbar und interaktionsfähig sind, sonst liefert Selenium eine Fehlermeldung 
+(ungültiger Elementstatus (= element state) order Element nicht interaktionsfähig (=interactable))
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
