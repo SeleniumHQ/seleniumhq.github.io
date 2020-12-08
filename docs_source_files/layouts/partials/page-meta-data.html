@@ -1,5 +1,11 @@
 <h5 class="meta-data">
-    <a href="{{ .Permalink }}">
-      “{{ .Title }}”
-    </a> was last updated on: {{ .Lastmod.Format "02 Jan 2006 15:04:05 -0700" }}{{ with .GitInfo }}: <a href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}
+  <a href="{{ .Permalink }}">
+    “{{ .Title }}”
+  </a> was last updated on: {{ .Lastmod.Format "02 Jan 2006 15:04:05 -0700" }}{{ with .GitInfo }}: <a
+    href="{{$.Site.Params.ghrepo}}commit/{{ .Hash }}">{{ .Subject }} ({{ .AbbreviatedHash }})</a>{{end }}
 </h5>
+<script type="text/javascript">
+  !function (e, t, r, n) { if (!e[n]) { for (var a = e[n] = [], i = ["survey", "reset", "config", "init", "set", "get", "event", "identify", "track", "page", "screen", "group", "alias"], s = 0; s < i.length; s++) { var c = i[s]; a[c] = a[c] || function (e) { return function () { var t = Array.prototype.slice.call(arguments); a.push([e, t]) } }(c) } a.SNIPPET_VERSION = "1.0.1"; var o = t.createElement("script"); o.type = "text/javascript", o.async = !0, o.src = "https://d2yyd1h5u9mauk.cloudfront.net/integrations/web/v1/library/" + r + "/" + n + ".js"; var p = t.getElementsByTagName("script")[0]; p.parentNode.insertBefore(o, p) } }(window, document, "YfQRjHbLimWCG6ZP", "delighted");
+
+  delighted.survey();
+</script>
