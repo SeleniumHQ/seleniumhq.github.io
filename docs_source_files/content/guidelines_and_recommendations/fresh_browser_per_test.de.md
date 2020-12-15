@@ -3,16 +3,11 @@ title: "Neuer Browser pro Test"
 weight: 9
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-Start each test from a clean known state.
-Ideally, spin up a new virtual machine for each test.
-If spinning up a new virtual machine is not practical,
-at least start a new WebDriver for each test.
-For Firefox, start a WebDriver with your known profile.
+Starte jeden Test mit einem definierten und "sauberen" Status.
+Idealerweise wird für jeden Test eine neue virtuelle Maschine gestartet.
+Sollte das starten einer virtuellen Maschine nicht praktikabel sein,
+sollte zumindest ein neuer WebDriver für jeden Test instanziert werden.
+Firefox sollte den WebDriver mit einem definierten Profil gestartet werden.
 
 ```java
 FirefoxProfile profile = new FirefoxProfile(new File("pathToFirefoxProfile"));
