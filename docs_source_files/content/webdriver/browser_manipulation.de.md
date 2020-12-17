@@ -1308,7 +1308,12 @@ current context of a selected frame or window.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    // code sample not available please raise a PR 
+    //Creating the JavascriptExecutor interface object by Type casting		
+      JavascriptExecutor js = (JavascriptExecutor)driver;
+    //Button Element  
+      WebElement button =driver.findElement(By.name("btnLogin"));
+    //Executing JavaScript to click on element
+      js.executeScript("arguments[0].click();", element); 
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
     # code sample not available please raise a PR 
