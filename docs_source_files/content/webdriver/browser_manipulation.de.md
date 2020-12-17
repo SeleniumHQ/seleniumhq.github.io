@@ -1313,7 +1313,7 @@ current context of a selected frame or window.
     //Button Element  
       WebElement button =driver.findElement(By.name("btnLogin"));
     //Executing JavaScript to click on element
-      js.executeScript("arguments[0].click();", element); 
+      js.executeScript("arguments[0].click();", element);
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
     # code sample not available please raise a PR 
