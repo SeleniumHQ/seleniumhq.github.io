@@ -1,37 +1,30 @@
 ---
-title: "Support classes"
+title: "Supporter Klassen"
 weight: 5
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
-WebDriver support classes are provided to simplify maintaining your code.
-They provide a nice abstraction to make modeling HTML element(s) as domain
-objects easier, also providing helper methods to make using such objects easy to
-reason about. We will learn about:
+Die WebDriver Supporter Klassen werden bereitgestellt um die Wartung des Codes
+einfacher zu gestalten. Es werden Abstraktionen angeboten die es ermöglichen 
+HTML-Elemente als Domänen-Objekte leichter darzustellen, ebenso Hilfsmethoden
+um die Verwendung dieser Objekte zu vereinfachen. In diesem Kapitel werden 
+folgende Themen erläutert:
 
-* Locator Strategies
+* Locator Strategien
 * Events
 * LoadableComponent
 * ThreadGuard
-* etc.
-
-Let's Start:
-
 
 ## **ThreadGuard**
 {{% notice info %}}
-This class is only available in the Java Binding
+Diese Klasse ist nur in den Java-Bindings enthalten
 {{% /notice %}}
-ThreadGuard checks that a driver is called only from the same thread that created it.
-Threading issues especially when running tests in Parallel may have mysterious
-and hard to diagnose errors. Using this wrapper prevents this category of errors
-and will raise an exception when it happens.
+ThreadGuard prüft ob alle Driver Aufrufe nur von dem Thread getätigt werden, der
+diesen Driver instanziert hat. Probleme mit Threading können, vor allem bei der
+parallelen Ausführung, zu mysteriösen Problemen führen, die schwer zu 
+diagnostizieren sind. Die Verwendung dieses Wrappers verhindert Fehler dieser 
+Kategorie und wirft eine Exception falls das Problem auftritt.
 
-The following example simulate a clash of threads:
+Das folgende Beispiel provoziert einen solchen Fehler:
 
 ```java
 public class DriverClash {
@@ -56,7 +49,7 @@ public class DriverClash {
 }
 ```
 
-The result shown below:
+Das Ergebnis sieht wie folgt aus:
 ```text
 Exception in thread "Thread-1" org.openqa.selenium.WebDriverException:
 Thread safety error; this instance of WebDriver was constructed
@@ -64,14 +57,18 @@ on thread main (id 1)and is being accessed by thread Thread-1 (id 24)
 This is not permitted and *will* cause undefined behaviour
 
 ```
-As seen in the example:
 
- * `protectedDriver` Will be created in Main thread
- *  We use Java `Runnable` to spin up a new process and a new `Thread` to run the process
- *  Both `Thread` will clash because the Main Thread does not have `protectedDriver` in it's memory.
- * `ThreadGuard.protect` will throw an exception.
- 
-#### Note:
+Im Beispiel ist zu sehen:
 
-This does not replace the need for using `ThreadLocal` to manage drivers when running parallel.
+* `protectedDriver` wird im Main-Thread erzeugt
+* Es wird ein Javaobjekt vom Typ `Runnable` verwendet um einen neuen 
+  Prozess zu erzeugen und ein neuer `Thread` gestartet
+* Beide `Threads` stürzen ab, weil der Main-Thread keinen 
+  `protectedDriver` in seinem Arbeitsspeicher hat.
+* `ThreadGruard.protect` wirft eine Exception.
+
+#### Bemerkung:
+
+Das ersetzt nicht die Notwendigkeit `ThreadLocal` zu verwenden um mehrere Drivers 
+zu koordinieren wenn diese parallel laufen sollen.
 
