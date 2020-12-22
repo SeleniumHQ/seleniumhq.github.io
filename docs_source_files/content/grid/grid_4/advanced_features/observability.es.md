@@ -74,6 +74,10 @@ All spans, events and their respective attributes are part of a trace. Tracing w
 
 By default, tracing is enabled in the Selenium server. Selenium server exports the traces via two exporters:
 1. Console - Logs all traces and their included spans at FINE level. By default, Selenium server prints logs at INFO level and above.
+The **log-level** flag can be used to pass a logging level of choice while running the Selenium Grid jar/s.
+```shell
+java -jar selenium-server-4.0.0-<selenium-version>.jar standalone --log-level FINE
+```
 2. Jaeger UI - OpenTelemetry provides the APIs and SDKs to instrument traces in the code. Whereas Jaeger is a tracing backend, that aids in collecting the tracing telemetry data and providing querying, filtering and visualizing features for the data.
 
 Detailed instructions of visualizing traces using Jaeger UI can be obtained by running the command :
