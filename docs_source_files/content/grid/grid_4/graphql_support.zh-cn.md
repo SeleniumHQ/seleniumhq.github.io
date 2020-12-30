@@ -22,17 +22,48 @@ GraphQL 是一种用于API的查询语言, 也是用于使用现有数据完成�
 
 ```shell
 {
+    session(id: "<session-id>") : {
+        id,
+        capabilities,
+        startTime,
+        uri,
+        nodeId,
+        nodeUri,
+        sessionDurationMillis
+        slot : {
+            id,
+            stereotype,
+            lastStarted
+        }
+    }
     grid: {
         uri,
         totalSlots,
         usedSlots,
+        sessionCount,
         nodes : [
             {
                 id,
                 uri,
                 status,
                 maxSession,
-                capabilities
+                sessions : [
+                       {
+                            id,
+                            capabilities,
+                            startTime,
+                            uri,
+                            nodeId,
+                            nodeUri,
+                            sessionDurationMillis
+                            slot : {
+                                id,
+                                stereotype,
+                                lastStarted
+                            }
+                        }
+                    ]
+               capabilities,
             }
         ]
     }

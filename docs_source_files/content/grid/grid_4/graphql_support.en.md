@@ -21,17 +21,48 @@ The structure of grid schema is as follows:
 
 ```shell
 {
+    session(id: "<session-id>") : {
+        id,
+        capabilities,
+        startTime,
+        uri,
+        nodeId,
+        nodeUri,
+        sessionDurationMillis
+        slot : {
+            id,
+            stereotype,
+            lastStarted
+        }
+    }
     grid: {
         uri,
         totalSlots,
         usedSlots,
+        sessionCount,
         nodes : [
             {
                 id,
                 uri,
                 status,
                 maxSession,
-                capabilities
+                sessions : [
+                       {
+                            id,
+                            capabilities,
+                            startTime,
+                            uri,
+                            nodeId,
+                            nodeUri,
+                            sessionDurationMillis
+                            slot : {
+                                id,
+                                stereotype,
+                                lastStarted
+                            }
+                        }
+                    ]
+               capabilities,
             }
         ]
     }
