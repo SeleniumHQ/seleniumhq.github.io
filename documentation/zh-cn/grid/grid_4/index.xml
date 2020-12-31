@@ -4,9 +4,7 @@
 标量 标量是基本类型的值: Int, Float, String, Boolean, 或 ID.
 在调用GraphQL API时, 必须指定嵌套子字段, 直到只返回标量.
 模式的结构 网格模式的结构如下:
-{ grid: { uri, totalSlots, usedSlots, nodes : [ { id, uri, status, maxSession, capabilities } ] } } 查询 GraphQL 查询GraphQL的最佳方法是使用curl请求. GraphQL允许您仅获取所需的数据, 仅此而已.
-下面给出了一些GraphQL查询的示例. 您可以根据需要构建自己的查询.
-查询网格中 totalSlots 和 usedSlots 的数量: curl -X POST -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#39;{&amp;#34;query&amp;#34;: &amp;#34;{ grid { totalSlots, usedSlots } }&amp;#34;}&amp;#39; -s &amp;lt;LINK_TO_GRAPHQL_ENDPOINT&amp;gt; 通常在本地机器上 &amp;lt;LINK_TO_GRAPHQL_ENDPOINT&amp;gt; 会是 http://localhost:4444/graphql</description></item><item><title>服务网格的组件</title><link>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</guid><description>Router 路由器负责将请求转发到正确的组件.
+{ session(id: &amp;#34;&amp;lt;session-id&amp;gt;&amp;#34;) : { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis slot : { id, stereotype, lastStarted } } grid: { uri, totalSlots, usedSlots, sessionCount, nodes : [ { id, uri, status, maxSession, sessions : [ { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis slot : { id, stereotype, lastStarted } } ] capabilities, } ] } } 查询 GraphQL 查询GraphQL的最佳方法是使用curl请求.</description></item><item><title>服务网格的组件</title><link>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/zh-cn/grid/grid_4/components_of_a_grid/</guid><description>Router 路由器负责将请求转发到正确的组件.
 它是网格的入口,所有外部请求都将借此被网格接收. 路由器的行为取决于请求. 如果是新的会话请求, 则路由器会将其转发到分发服务器 (将在其中处理并创建新的会话). 如果请求属于存量会话,则路由器会将会话ID发送到会话集合, 会话集合将返回会话正在运行的节点. 此后, 路由器会将请求转发到节点.
 路由器旨在通过将请求发送到能够更好地处理请求的组件, 来平衡网格中的负载, 从而避免过程中任何组件无谓地过载.
 Distributor 分发器知道所有节点及其功能. 它的主要作用是接收新的会话请求 并找到可以在其中创建会话的适当节点. 创建会话后, 分发器在会话集合中存储会话ID与正在执行会话的节点之间的关系.
