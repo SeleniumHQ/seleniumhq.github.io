@@ -84,39 +84,39 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { tot
 
 通常在本地机器上 `<LINK_TO_GRAPHQL_ENDPOINT>` 会是 `http://localhost:4444/graphql`
 
-### Querying all details for session, node and the Grid :
+### 查询全部会话、及节点以及网格的详情 :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { id, uri, status, sessions {id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot {id, stereotype, lastStarted } ,uri }, maxSession, capabilities }, uri, totalSlots, usedSlots , sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the current session count in the Grid :
+### 查询以获取当前网格的会话总数 :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the max session count in the Grid :
+### 查询以获取网格中的最大会话数量 :
 
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { maxSession } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting all session details for all nodes in the Grid :
+### 查询以获取网格中所有节点的全部会话详情 :
 
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get slot information for all sessions in each Node in the Grid :
+### 查询以获取网格中每个节点中所有会话的插槽信息 :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, slot { id, stereotype, lastStarted } } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get session information for a given session: 
+### 查询以获取给定会话的会话信息查询以获取给定会话的会话信息 : 
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri , slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
