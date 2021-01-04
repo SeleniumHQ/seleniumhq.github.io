@@ -58,7 +58,7 @@ través de uno de los métodos nombrados. El WebDriver no tiene que saber nada s
 testing: no sabe cómo comparar cosas, asegurar un _pass_ o _fail_, y ciertamente
 no sabe nada acerca de reportes o sobre la gramática _Given/When/Then_.
 
-Aquí es donde varios _frameworks_ entran en juego. Como mínimo neesitarás un
+Aquí es donde varios _frameworks_ entran en juego. Como mínimo necesitarás un
 _framework_ de test que compare los enlaces de idiomas, por ejempolo NUnit para .NET,
 JUnit para Java, RSpec para Ruby, etc.
 
