@@ -31,7 +31,7 @@ de datos, _test oracles_, etc
 
 Como mínimo, el WebDriver habla con un navegador a través del driver. La comunicación
 es bidireccional: el WebDriver pasa comandos al navegador a través del driver, y
-recive la información de vuelta por la misma ruta.
+recibe la información de vuelta por la misma ruta.
 
 ![Basic communication](/images/basic_comms.png?width=400px)
 
