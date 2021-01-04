@@ -1,6 +1,6 @@
 ---
 title: "GraphQLクエリのサポート"
-weight: 1
+weight: 3
 ---
 
 GraphQLは、APIのクエリ言語であり、既存のデータでこれらのクエリを実行するためのランタイムです。 
