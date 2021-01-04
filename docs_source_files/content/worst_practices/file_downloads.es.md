@@ -12,10 +12,4 @@ En lugar de ello, se recomienda encontrar el enlace con Selenium (y cualquier
 Cookie requerida) y pasarselo a una librería que permita hacer peticiones HTTP 
 como [libcurl](//curl.haxx.se/libcurl/).
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Spanish. Do you speak Spanish? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-The [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) can download attachments by accessing them as input streams by implementing the [AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html) interface. The AttachmentHandler can the be added to the [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.
+El [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) puede descargar archivos adjuntos accediendo a ellos como flujos de entrada mediante la implementación de la interfaz [AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html). El AttachmentHandler se puede agregar al  [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.
