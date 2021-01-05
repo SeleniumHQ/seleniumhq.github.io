@@ -73,7 +73,7 @@ cURL --request POST 'http://<Distributor-URL>/se/grid/distributor/node/<node-id>
 The endpoints in this section are applicable for Hub-Node mode and fully distributed Grid mode where the
 Node runs independently. 
 The default Node URL is http://localhost:5555 in case of one Node. 
-In case of multiple Nodes, use [Grid status](#Grid-status) to get all Node details and locate the Node address.
+In case of multiple Nodes, use [Grid status](#grid-status) to get all Node details and locate the Node address.
 
 ### Status 
 
@@ -87,7 +87,7 @@ cURL --request GET 'http://localhost:5555/status'
 
 ### Drain
 
-[Distributor](#Node-drain) passes the drain command to the appropriate node identified by the node-id.
+Distributor passes the [drain](#drain-node) command to the appropriate node identified by the node-id.
 To drain the Node directly, use the cuRL command enlisted below.
 Both endpoints are valid and produce the same result. Drain finishes the ongoing sessions before stopping the Node.
 
