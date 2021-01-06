@@ -1,6 +1,6 @@
 ---
 title: "GraphQL querying support"
-weight: 1
+weight: 3
 ---
 
 {{% notice info %}}

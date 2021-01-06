@@ -1,6 +1,6 @@
 ---
 title: "GraphQL查询支持"
-weight: 1
+weight: 3
 ---
  
 
