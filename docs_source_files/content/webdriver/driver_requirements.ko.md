@@ -168,7 +168,7 @@ geckodriver은 Firefox를 시작하는 기본적인 방법이기 때문에 Selen
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.Firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 WebDriver driver = new FirefoxDriver();
   {{< / code-panel >}}
