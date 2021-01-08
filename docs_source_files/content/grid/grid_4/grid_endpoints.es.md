@@ -1,6 +1,6 @@
 ---
 title: "Puntos finales de cuadrícula"
-weight: 4
+weight: 5
 ---
 
 {{% notice info %}}
