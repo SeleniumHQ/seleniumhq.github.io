@@ -14,7 +14,8 @@ Below is a summary of the Selenium survey that was collected.
 ### Browser Management
 
 Unsurprisingly, people find having to manage browsers a task they wish they didn’t have to do and wish that Selenium did this. 59.5% of respondents want Selenium to manage the browsers for them. This, though the question didn’t ask this, is to include the browser drivers.
-Frameworks
+
+### Frameworks
 
 The results show an interesting view into framework usage. 61% of users use a framework. When we look closer at some of the responses there could be a little language bias in there. Some responses in the “both” category are “depends on the language” or “depends on the project”. Frameworks, from a couple responses seem to be around JavaScript mostly.
 
