@@ -22,7 +22,7 @@ call until the document ready state is `complete`
 In SPA applications (like Angular, React, Ember) once the dynamic content 
 is already loaded (I.e once the pageLoadStrategy status is COMPLETE), 
 clicking on a link or performing some action within the page will not make a new request 
-to the server as the content is dynamically loaded at the client side without a pull page refresh. 
+to the server as the content is dynamically loaded at the client side without a full page refresh. 
 
 SPA applications can load many views dynamically 
 without any server requests, So pageLoadStrategy 

@@ -280,3 +280,34 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> Wie kann ich beitragen?"
 url = "contributing"
 weight = 30
+
+[Languages.pt-br]
+title = "Documentação do Selenium"
+weight = 1
+languageName = "Português (Brasileiro)"
+
+[[Languages.pt-br.menu.shortcuts]]
+name = "<i class='fas fa-home'></i> Selenium Home"
+url = "https://www.selenium.dev"
+weight = 8
+
+[[Languages.pt-br.menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/SeleniumHQ/seleniumhq.github.io"
+weight = 10
+
+[[Languages.pt-br.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-exclamation-triangle'></i> Reportar um bug"
+url = "https://github.com/seleniumhq/seleniumhq.github.io/issues"
+weight = 11
+
+[[Languages.pt-br.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-trophy'></i> Créditos"
+url = "front_matter/copyright_and_attributions"
+weight = 20
+
+[[Languages.pt-br.menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Como contribuir"
+url = "contributing"
+weight = 30
