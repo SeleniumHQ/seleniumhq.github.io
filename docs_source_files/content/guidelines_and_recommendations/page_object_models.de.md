@@ -74,7 +74,7 @@ import org.openqa.selenium.WebDriver;
  * Page Object encapsulates the Sign-in page.
  */
 public class SignInPage {
-  protected static WebDriver driver;
+  protected WebDriver driver;
 
   // <input name="user_name" type="text" value="">
   private By usernameBy = By.name("user_name");
@@ -113,7 +113,7 @@ import org.openqa.selenium.WebDriver;
  * Page Object encapsulates the Home Page
  */
 public class HomePage {
-  protected static WebDriver driver;
+  protected WebDriver driver;
 
   // <h1>Hello userName</h1>
   private By messageBy = By.tagName("h1");
