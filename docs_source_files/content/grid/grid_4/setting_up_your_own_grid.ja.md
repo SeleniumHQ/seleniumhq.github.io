@@ -17,20 +17,20 @@ Seleniumグリッドを起動するのも最も簡単なモードです。
 サーバーは、システムパスから使用できる使用可能なドライバーを検出します。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar standalone
+java -jar selenium-server-4.0.0-alpha-7.jar standalone
 ```
 
 ## ハブとノードモード
 
 ### ハブを開始する
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar hub
+java -jar selenium-server-4.0.0-alpha-7.jar hub
 ```
 
 ### ノードを登録する
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
 ```
 
 ### Seleniumグリッドをクエリする
@@ -48,21 +48,21 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 これは、後続のステップで他のグリッドコンポーネントへの通信パスとして機能します。
 
     ```shell
-    java -jar selenium-server-4.0.0-alpha-6.jar  event-bus
+    java -jar selenium-server-4.0.0-alpha-7.jar  event-bus
     ```
 
 * Step 2: セッションマップを開始します。
 これは、セッションIDをセッションが実行されているノードにマッピングする役割を果たします。
         
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar sessions
+        java -jar selenium-server-4.0.0-alpha-7.jar sessions
     ```
 
 * Step 3: 新しいセッションキューを起動すると、新しいセッション要求がローカルキューに追加されます。 
 ディストリビューターはキューからリクエストを受け取ります。
         
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar sessionqueuer
+        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer
     ```
 
 * Step 4: ディストリビューターを起動します。 
@@ -70,19 +70,19 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 セッションの作成要求が呼び出されたときに、ノードを割り当てる必要があります。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
     ```
 
 * Step 5: 次に、Webに公開するアドレスであるルーターを起動します。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
+        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
     ```
 
 * Step 6: 最後に、ノードを追加します。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
     ```
 
 ## Dockerイメージを介してスタンドアロングリッドを開始する
@@ -96,5 +96,5 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
   Seleniumサーバーを起動し、Dockerに新しいインスタンスを作成することを委任できます。
       
 ```shell 
-     java -jar selenium-server-4.0.0-alpha-6.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
+     java -jar selenium-server-4.0.0-alpha-7.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
 ```
