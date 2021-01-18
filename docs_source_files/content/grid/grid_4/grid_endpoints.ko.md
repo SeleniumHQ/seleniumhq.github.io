@@ -1,6 +1,6 @@
 ---
 title: "그리드 끝점"
-weight: 4
+weight: 5
 ---
 
 {{% notice info %}}

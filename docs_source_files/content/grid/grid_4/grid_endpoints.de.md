@@ -1,6 +1,6 @@
 ---
 title: "Rasterendpunkte"
-weight: 4
+weight: 5
 ---
 
 {{% notice info %}}
