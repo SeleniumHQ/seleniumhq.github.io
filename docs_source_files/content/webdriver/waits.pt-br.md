@@ -3,28 +3,22 @@ title: "Esperas"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+Geralmente, pode-se dizer que o WebDriver tem uma API de blocante.
+Porque é uma biblioteca fora de processo que
+_instrui_ ao navegador o que fazer,
+e porque a plataforma web tem uma natureza intrinsecamente assíncrona,
+O WebDriver não rastreia o estado ativo em tempo real do DOM.
+Isso traz alguns desafios que discutiremos aqui.
 
-WebDriver can generally be said to have a blocking API.
-Because it is an out-of-process library that
-_instructs_ the browser what to do,
-and because the web platform has an intrinsically asynchronous nature,
-WebDriver does not track the active, real-time state of the DOM.
-This comes with some challenges that we will discuss here.
+Por experiência,
+a maioria dos problemas intermitentes que surgem do uso de Selenium e WebDriver
+estão conectados a _condições de corrida_ que ocorrem entre
+o navegador e as instruções do usuário.
+Um exemplo pode ser que o usuário instrui o navegador a navegar para uma página,
+em seguida, obtém um erro **no such element**
+ao tentar encontrar um elemento.
 
-From experience,
-most intermittent issues that arise from use of Selenium and WebDriver
-are connected to _race conditions_ that occur between
-the browser and the user's instructions.
-An example could be that the user instructs the browser to navigate to a page,
-then gets a **no such element** error
-when trying to find an element.
-
-Consider the following document:
+Considere o seguinte documento:
 
 ```html
 <!doctype html>
@@ -42,7 +36,7 @@ Consider the following document:
 </script>
 ```
 
-The WebDriver instructions might look innocent enough:
+As instruções do WebDriver podem parecer inocentes:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -87,61 +81,61 @@ assert(element.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The issue here is that the default
-[page load strategy]({{< ref "/webdriver/page_loading_strategy.pt-br.md" >}})
-used in WebDriver listens for the `document.readyState`
-to change to `"complete"` before returning from the call to _navigate_.
-Because the `p` element is
-added _after_ the document has completed loading,
-this WebDriver script _might_ be intermittent.
-It “might” be intermittent because no guarantees can be made
-about elements or events that trigger asynchronously
-without explicitly waiting—or blocking—on those events.
+O problema aqui é que a
+[estratégia de carregamento de página padrão]({{<ref "/webdriver/page_loading_strategy.pt-br.md">}})
+usado no WebDriver escuta o `document.readyState`
+para mudar para `"complete"` antes de retornar da chamada para _navigate_.
+Porque o elemento `p` é
+adicionado _após_ o carregamento do documento concluído,
+este script WebDriver _pode_ ser intermitente.
+"Pode" ser intermitente porque nenhuma garantia pode ser feita
+sobre elementos ou eventos que disparam de forma assíncrona
+sem esperar explicitamente - ou bloquear - nesses eventos.
 
-Fortunately, the normal instruction set available on
-the [_WebElement_]({{< ref "/webdriver/web_element.pt-br.md" >}}) interface—such
- as _WebElement.click_ and _WebElement.sendKeys_—are
- guaranteed to be synchronous,
- in that the function calls will not return
- (or the callback will not trigger in callback-style languages)
- until the command has been completed in the browser.
- The advanced user interaction APIs,
- [_Keyboard_]({{< ref "/webdriver/keyboard.pt-br.md" >}})
- and [_Mouse_]({{< ref "/support_packages/mouse_and_keyboard_actions_in_detail.pt-br.md" >}}),
- are exceptions as they are explicitly intended as
- “do what I say” asynchronous commands.
+Felizmente, o conjunto normal de instruções disponível na interface
+[_WebElement _]({{<ref "/webdriver/web_element.pt-br.md">}}) - tal
+  como _WebElement.click_ e _WebElement.sendKeys_ — são
+  garantidamente síncrono,
+  em que as chamadas de função não retornarão
+  (ou o retorno de chamada não será acionado em linguagens de estilo de
+  retorno de chamada) até que o comando seja concluído no navegador.
+  As APIs avançadas de interação com o usuário,
+  [_Keyboard_]({{<ref "/webdriver/keyboard.pt-br.md">}})
+  e [_Mouse_]({{<ref "/support_packages/mouse_and_keyboard_actions_in_detail.pt-br.md">}}),
+  são exceções, pois são explicitamente pretendidas como
+  comandos assíncronos “faça o que eu digo”.
 
-Waiting is having the automated task execution
-elapse a certain amount of time before continuing with the next step.
+Esperar é fazer a execução de tarefa automatizada
+esperar passar um certo tempo antes de continuar com a próxima etapa.
 
-To overcome the problem of race conditions
-between the browser and your WebDriver script,
-most Selenium clients ship with a _wait_ package.
-When employing a wait,
-you are using what is commonly referred to
-as an [_explicit wait_](#explicit-wait).
+Para superar o problema das condições de corrida
+entre o navegador e o script WebDriver,
+a maioria dos clientes Selenium vem com um pacote _wait_.
+Ao empregar uma espera,
+você está usando o que é comumente referido
+como uma [_espera explícita_](#explicit-wait).
 
 
-## Explicit wait
+## Espera explícita
 
-_Explicit waits_ are available to Selenium clients
-for imperative, procedural languages.
-They allow your code to halt program execution,
-or freeze the thread,
-until the _condition_ you pass it resolves.
-The condition is called with a certain frequency
-until the timeout of the wait is elapsed.
-This means that for as long as the condition returns a falsy value,
-it will keep trying and waiting.
+_Esperas explícitas_ estão disponíveis para clientes Selenium
+para linguagens procedurais imperativas.
+Eles permitem que seu código interrompa a execução do programa,
+ou congelar o tópico,
+até que a _condição_ que você passe resolva.
+A condição é chamada com uma certa frequência
+até que o tempo limite de espera tenha decorrido.
+Isso significa que, enquanto a condição retornar um valor falso,
+ele continuará tentando e esperando.
 
-Since explicit waits allow you to wait for a condition to occur,
-they make a good fit for synchronising the state between the browser and its DOM,
-and your WebDriver script.
+Como as esperas explícitas permitem que você espere até que uma condição ocorra,
+eles são adequados para sincronizar o estado entre o navegador e seu DOM,
+e seu script WebDriver.
 
-To remedy our buggy instruction set from earlier,
-we could employ a wait to have the _findElement_ call
-wait until the dynamically added element from the script
-has been added to the DOM:
+Para remediar o nosso conjunto de instruções com erros de antes,
+poderíamos empregar um tempo de espera para que a chamada _findElement_
+espere até que o elemento adicionado dinamicamente do script
+seja adicionado ao DOM:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -212,19 +206,19 @@ println(firstResult.text)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-We pass in the _condition_ as a function reference
-that the _wait_ will run repeatedly until its return value is truthy.
-A “truthful” return value is anything that evaluates to boolean true
-in the language at hand, such as a string, number, a boolean,
-an object (including a _WebElement_),
-or a populated (non-empty) sequence or list.
-That means an _empty list_ evaluates to false.
-When the condition is truthful and the blocking wait is aborted,
-the return value from the condition becomes the return value of the wait.
+Passamos a _condição_ como uma referência de função
+que o _wait_ executará repetidamente até que seu valor de retorno seja verdadeiro.
+Um valor de retorno “verdadeiro” é qualquer coisa avaliada como booleana verdadeira
+na linguagem em questão, como string, número, booleano,
+um objeto (incluindo um _WebElement_),
+ou uma sequência ou lista preenchida (não vazia).
+Isso significa que uma _lista vazia_ é avaliada como falsa.
+Quando a condição é verdadeira e a espera de bloqueio é abortada,
+o valor de retorno da condição se torna o valor de retorno da espera.
 
-With this knowledge,
-and because the wait utility ignores _no such element_ errors by default,
-we can refactor our instructions to be more concise:
+Com este conhecimento,
+e como o utilitário de espera ignora erros _no such element_ por padrão,
+podemos refatorar nossas instruções para sermos mais concisos:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -267,32 +261,35 @@ assert(ele.text == "Hello from JavaScript!")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-In that example, we pass in an anonymous function
-(but we could also define it explicitly as we did earlier so it may be reused).
-The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_.
-In a multi-threaded environment, you should be careful
-to operate on the driver reference passed in to the condition
-rather than the reference to the driver in the outer scope.
+Nesse exemplo, passamos uma função anônima
+(mas também podemos definá-la explicitamente, como fizemos antes,
+para que possa ser reutilizado). O primeiro e único argumento que é
+passado para nossa condição é sempre uma referência ao nosso objeto
+driver, _WebDriver_. Em um ambiente multi-thread, você deve ter cuidado
+para operar na referência do driver passada para a condição
+em vez da referência ao driver no escopo externo.
 
-Because the wait will swallow _no such element_ errors
-that are raised when the element is not found,
-the condition will retry until the element is found.
-Then it will take the return value, a _WebElement_,
-and pass it back through to our script.
+Dado que a espera vai engolir erros _no such element_
+que são gerados quando o elemento não é encontrado,
+a condição tentará novamente até que o elemento seja encontrado.
+Em seguida, ele receberá o valor de retorno, um _WebElement_,
+e o passará de volta para o nosso script.
 
-If the condition fails,
-e.g. a truthful return value from the condition is never reached,
-the wait will throw/raise an error/exception called a _timeout error_.
+Se a condição falhar,
+por exemplo um valor de retorno verdadeiro da condição nunca for
+alcançado, a espera lançará/gerará um erro/exceção chamado
+_timeout error_.
 
 
-### Options
+### Opções
 
-The wait condition can be customised to match your needs.
-Sometimes it is unnecessary to wait the full extent of the default timeout,
-as the penalty for not hitting a successful condition can be expensive.
+A condição de espera pode ser personalizada para atender às suas
+necessidades. Às vezes, é desnecessário esperar todo o tempo limite
+padrão, já que a penalidade por não atingir uma condição de sucesso pode
+ser cara.
 
-The wait lets you pass in an argument to override the timeout:
+A espera permite que você passe um argumento para substituir o tempo
+limite:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -317,16 +314,16 @@ WebDriverWait(driver, Duration.ofSeconds(3)).until(ExpectedConditions.elementToB
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Expected conditions
+### Condições esperadas
 
-Because it is quite a common occurrence
-to have to synchronise the DOM and your instructions,
-most clients also come with a set of predefined _expected conditions_.
-As might be obvious by the name,
-they are conditions that are predefined for frequent wait operations.
+Já que é uma ocorrência bastante comum
+ter que sincronizar o DOM e suas instruções,
+a maioria dos clientes também vem com um conjunto de _condições esperadas_ predefinidas.
+Como pode ser óbvio pelo nome,
+são condições predefinidas para operações de espera frequentes.
 
-The conditions available in the different language bindings vary,
-but this is a non-exhaustive list of a few:
+As condições disponíveis nas diferentes linguagens variam,
+mas esta é uma lista não exaustiva de alguns:
 
 <!-- TODO(ato): Fill in -->
 * alert is present
@@ -337,41 +334,44 @@ but this is a non-exhaustive list of a few:
 * element staleness
 * visible text
 
-You can refer to the API documentation for each client binding
-to find an exhaustive list of expected conditions:
+Você pode consultar a documentação da API para cada biblioteca de cliente
+para encontrar uma lista exaustiva das condições esperadas:
 
-* Java's [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html) class
-* Python's [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected) class
-* .NET's [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm) type
+* Classe Java [org.openqa.selenium.support.ui.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html)
+* Classe Python [selenium.webdriver.support.expected_conditions](//seleniumhq.github.io/selenium/docs/api/py/webdriver_support/selenium.webdriver.support.expected_conditions.html?highlight=expected)
+* Tipo .NET [OpenQA.Selenium.Support.UI.ExpectedConditions](//seleniumhq.github.io/selenium/docs/api/dotnet/html/T_OpenQA_Selenium_Support_UI_ExpectedConditions.htm)
 
 
-## Implicit wait
+## Espera implícita
 
-There is a second type of wait that is distinct from
-[explicit wait](#explicit-wait) called _implicit wait_.
-By implicitly waiting, WebDriver polls the DOM
-for a certain duration when trying to find _any_ element.
-This can be useful when certain elements on the webpage
-are not available immediately and need some time to load.
+Há um segundo tipo de espera que é diferente de
+[espera explícita](#explicit-wait) chamada _espera implícita_.
+Esperando implicitamente, o WebDriver pesquisa o DOM
+por um certo período ao tentar encontrar _qualquer_ elemento.
+Isso pode ser útil quando certos elementos da página da web
+não estão disponíveis imediatamente e precisam de algum tempo para
+carregar.
 
-Implicit waiting for elements to appear is disabled by default
-and will need to be manually enabled on a per-session basis.
-Mixing [explicit waits](#explicit-wait) and implicit waits
-will cause unintended consequences, namely waits sleeping for the maximum
-time even if the element is available or condition is true.
+A espera implícita pelo aparecimento de elementos está desativada por
+padrão e precisará ser habilitada manualmente por sessão.
+Misturar [esperas explícitas](#explicit-wait) e esperas implícitas
+irá causar consequências não intencionais, ou seja, espera dormir pelo
+máximo tempo mesmo se o elemento estiver disponível ou a condição for
+verdadeira.
 
-*Warning:*
-Do not mix implicit and explicit waits.
-Doing so can cause unpredictable wait times.
-For example, setting an implicit wait of 10 seconds
-and an explicit wait of 15 seconds
-could cause a timeout to occur after 20 seconds.
+*Atenção:*
+Não misture esperas implícitas e explícitas.
+Isso pode causar tempos de espera imprevisíveis.
+Por exemplo, definir uma espera implícita de 10 segundos
+e uma espera explícita de 15 segundos
+pode causar um tempo limite após 20 segundos.
 
-An implicit wait is to tell WebDriver to poll the DOM
-for a certain amount of time when trying to find an element or elements
-if they are not immediately available.
-The default setting is 0, meaning disabled.
-Once set, the implicit wait is set for the life of the session.
+Uma espera implícita é dizer ao WebDriver para pesquisar o DOM
+por um certo período de tempo ao tentar encontrar um elemento ou
+elementos se não estiverem imediatamente disponíveis.
+A configuração padrão é 0, o que significa desativado.
+Depois de definida, a espera implícita é definida para a duração da
+sessão.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -427,11 +427,12 @@ val myDynamicElement = driver.findElement(By.id("myDynamicElement"))
 
 ## FluentWait
 
-FluentWait instance defines the maximum amount of time to wait for a condition,
-as well as the frequency with which to check the condition.
+A instância FluentWait define a quantidade máxima de tempo de espera por
+uma condição, bem como a frequência com que verificar a condição.
 
-Users may configure the wait to ignore specific types of exceptions whilst waiting,
-such as `NoSuchElementException` when searching for an element on the page.
+Os usuários podem configurar a espera para ignorar tipos específicos de
+exceções enquanto esperam, como `NoSuchElementException` ao pesquisar um
+elemento na página.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
