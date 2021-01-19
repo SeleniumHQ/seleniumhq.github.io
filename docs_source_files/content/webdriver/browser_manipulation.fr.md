@@ -1337,9 +1337,10 @@ let text = await driver.executeScript('return arguments[0].innerText', header);
 {{< / code-tab >}}
 
 ### Print Page
-{{% notice info %}} Page being translated from English to French. Do you speak Dutch? Help us to translate it by sending us pull requests! {{% /notice %}}
+
 Prints the current page within the browser
-Note: This requires Chromium Browsers to be in headless mode
+
+_Note: This requires Chromium Browsers to be in headless mode_
 
 
 {{< code-tab >}}

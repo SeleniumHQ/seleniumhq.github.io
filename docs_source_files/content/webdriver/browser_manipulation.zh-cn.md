@@ -7,6 +7,12 @@ weight: 3
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from
+English to Chinese. Do you speak Chinese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
 
 ## Ruby
 
@@ -1270,9 +1276,10 @@ let text = await driver.executeScript('return arguments[0].innerText', header);
 {{< / code-tab >}}
 
 ### Print Page
-{{% notice info %}} Page being translated from English. Do you speak Dutch? Help us to translate it by sending us pull requests! {{% /notice %}}
+
 Prints the current page within the browser
-Note: This requires Chromium Browsers to be in headless mode
+
+_Note: This requires Chromium Browsers to be in headless mode_
 
 
 {{< code-tab >}}

@@ -1339,8 +1339,8 @@ let text = await driver.executeScript('return arguments[0].innerText', header);
 ### Print Page
 
 Prints the current page within the browser
-Note: This requires Chromium Browsers to be in headless mode
 
+_Note: This requires Chromium Browsers to be in headless mode_
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
