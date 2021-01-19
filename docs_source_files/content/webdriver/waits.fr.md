@@ -274,8 +274,7 @@ Dans cet exemple, nous passons une fonction anonyme
 (mais nous pourrions également le définir explicitement
 comme nous l'avons fait précédemment afin qu'il puisse être réutilisé).
 Le premier et le seul argument qui est passé à notre condition
-est toujours une référence à notre objet pilote, _WebDriver_
-(appelé `d` dans l'exemple).
+est toujours une référence à notre objet pilote, _WebDriver_.
 Dans un environnement multi-thread, vous devez être prudent
 pour opérer sur la référence du conducteur transmise à la condition
 plutôt que la référence au pilote dans la portée externe.

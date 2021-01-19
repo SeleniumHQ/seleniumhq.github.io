@@ -267,8 +267,7 @@ En este ejemplo, pasamos una función anónima
 (pero también podríamos definirlo explícitamente como lo hicimos
 anteriormente para que pueda reutilizarse).
 El primer y único argumento que se pasa a nuestra condición
-siempre es una referencia a nuestro objeto controlador, _WebDriver_
-(llamado `d` en el ejemplo).
+siempre es una referencia a nuestro objeto controlador, _WebDriver_.
 En un entorno multiproceso, debes tener cuidado
 operando en la referencia del controlador pasada a la condición
 en lugar de la referencia al controlador en el ámbito externo.
