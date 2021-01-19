@@ -43,7 +43,7 @@ _selenium-java_ 의존성 라이브러리는 Selenium이 자동화할 수 있는
 ```shell
 pip install selenium
 ```
-혹은,  [PyPI source archive](https://pypi.org/project/selenium/#files)를 다운로드해서 _setup.py_ 를 통해 설치할 수 있습니다.
+또는,  [PyPI source archive](https://pypi.org/project/selenium/#files)를 다운로드해서 _setup.py_ 를 통해 설치할 수 있습니다.
 
 
 ```shell
