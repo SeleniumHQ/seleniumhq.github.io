@@ -11,8 +11,8 @@ weight: 3
 ## Ruby
 
 默认情况下，Ruby 没有安装在 Windows 上。下载最新[版本](//rubyinstaller.org/downloads)
-并运行安装程序。你可以保留所有设置的默认值，除要勾选 _安装位置和可选任务_ 屏幕上 
-_将 Ruby 可执行程序添加到您的系统路径_ 复选框外。想要驱动任何浏览器，你必须安装 `selenium-webdriver` 
+并运行安装程序。你可以保留所有设置的默认值，除要勾选 _安装位置和可选任务_ 屏幕上
+_将 Ruby 可执行程序添加到您的系统路径_ 复选框外。想要驱动任何浏览器，你必须安装 `selenium-webdriver`
 Ruby gem. 打开命令提示符并输入以下命令来安装它:
 
 ```shell
@@ -34,10 +34,10 @@ bundle install
 
 ## Internet Explorer
 
-IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的 
-[Internet Explorer 驱动程序](https://selenium.dev/downloads/) 并将文件放入 `PATH` 
+IE 浏览器默认安装在 Windows 上，不需要再次安装。要在 Windows 上驱动 IE，您必须下载最新的
+[Internet Explorer 驱动程序](https://selenium.dev/downloads/) 并将文件放入 `PATH`
 路径中的文件夹中。要查看 `PATH` 路径中的目录，在命令提示符中键入 `echo %PATH%`。
- 
+
 ```bat
 $ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
@@ -178,7 +178,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 要使用新窗口，您需要切换到它。 如果只有两个选项卡或窗口被打开，并且你知道从哪个窗口开始，
 则你可以遍历 WebDriver， 通过排除法可以看到两个窗口或选项卡，然后切换到你需要的窗口或选项卡。
 
-不过，Selenium 4 提供了一个新的 api 
+不过，Selenium 4 提供了一个新的 api
 <a href="https://selenium.dev/documentation/zh-cn/webdriver/browser_manipulation/#创建新窗口(或)新标签页并且切换"> NewWindow </a>，
 它创建一个新选项卡 (或) 新窗口并自动切换到它。
 
@@ -333,7 +333,7 @@ for (windowHandle in driver.getWindowHandles()) {
 
 // 等待新标签页完成加载内容
 wait.until(titleIs("Selenium documentation"))
- 
+
   {{</ code-panel>}}
 {{</ code-tab>}}
 
@@ -444,7 +444,7 @@ driver.switchTo().window(originalWindow)
   {{</ code-panel>}}
 {{</ code-tab>}}
 
-如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个 
+如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个
 **No Such Window Exception 无此窗口异常**。必须切换回有效的窗口句柄才能继续执行。
 
 ### 在会话结束时退出浏览器
@@ -511,7 +511,7 @@ after('Tear down', async function () {await driver.quit();
 });
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
-  
+
 /**
  * 使用 JUnit 的例子
  * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
@@ -568,7 +568,7 @@ with webdriver.Firefox() as driver:
 
 ## Frames and Iframes
 
-框架是一种现在已被弃用的方法，用于从同一域中的多个文档构建站点布局。除非你使用的是 HTML5 
+框架是一种现在已被弃用的方法，用于从同一域中的多个文档构建站点布局。除非你使用的是 HTML5
 之前的 webapp，否则你不太可能与他们合作。内嵌框架允许插入来自完全不同领域的文档，并且仍然经常使用。
 
 
@@ -776,7 +776,7 @@ driver.switch_to.frame(iframe)
 await driver.switchTo().frame(1);
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
-// 切换到第 2 个框架  
+// 切换到第 2 个框架
 driver.switchTo().frame(1)
   {{</ code-panel>}}
 {{</ code-tab>}}
@@ -937,7 +937,7 @@ y = driver.manage.window.position.y
 # Or store the dimensions and query them later
 rect  = driver.manage.window.rect
 x1 = rect.x
-y1 = rect.y 
+y1 = rect.y
   {{</ code-panel>}}
   {{<code-panel language="javascript">}}
 // 分别获取每个尺寸
@@ -957,7 +957,7 @@ val y = driver.manage().window().position.y
 val position = driver.manage().window().position
 val x1 = position.x
 val y1 = position.y
-  
+
   {{</ code-panel>}}
 {{</ code-tab>}}
 
@@ -1006,8 +1006,8 @@ driver.manage().window().position = Point(0,0)
 
 ### 最小化窗口
 最小化当前浏览上下文的窗口.
-这种命令的精准行为将作用于各个特定的窗口管理器. 
- 
+这种命令的精准行为将作用于各个特定的窗口管理器.
+
 最小化窗口通常将窗口隐藏在系统托盘中.
 
 __注意: 此功能适用于Selenium 4以及更高版本.__
@@ -1037,8 +1037,8 @@ __注意: 此功能适用于Selenium 4以及更高版本.__
 ### 屏幕截图
 
 用于捕获当前浏览上下文的屏幕截图.
-WebDriver端点 
-[屏幕截图](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+WebDriver端点
+[屏幕截图](https://www.w3.org/TR/webdriver/#dfn-take-screenshot)
 返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
@@ -1047,7 +1047,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import org.openqa.selenium.*;
-  
+
 public class SeleniumTakeScreenshot {
     public static void main(String args[]) throws IOException {
         WebDriver driver = new ChromeDriver();
@@ -1058,7 +1058,7 @@ public class SeleniumTakeScreenshot {
     }
 }
   {{< / code-panel >}}
-  {{< code-panel language="python" >}} 
+  {{< code-panel language="python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -1081,7 +1081,7 @@ driver.quit()
     Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
     screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
+  {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -1091,9 +1091,9 @@ begin
   # Takes and Stores the screenshot in specified path
   driver.save_screenshot('./image.png')
 
-end   
+end
   {{< / code-panel >}}
-  {{< code-panel language="javascript" >}} 
+  {{< code-panel language="javascript" >}}
 let {Builder} = require('selenium-webdriver');
 let fs = require('fs');
 
@@ -1129,7 +1129,7 @@ fun main(){
 
 用于捕获当前浏览上下文的元素的屏幕截图.
 WebDriver端点
-[屏幕截图](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
+[屏幕截图](https://www.w3.org/TR/webdriver/#take-element-screenshot)
 返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
@@ -1232,14 +1232,14 @@ fun main() {
 
 ### Execute Script
 
-Executes JavaScript code snippet in the 
+Executes JavaScript code snippet in the
 current context of a selected frame or window.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    //Creating the JavascriptExecutor interface object by Type casting		
+    //Creating the JavascriptExecutor interface object by Type casting
       JavascriptExecutor js = (JavascriptExecutor)driver;
-    //Button Element  
+    //Button Element
       WebElement button =driver.findElement(By.name("btnLogin"));
     //Executing JavaScript to click on element
       js.executeScript("arguments[0].click();", element);
@@ -1249,13 +1249,13 @@ current context of a selected frame or window.
       js.executeScript("console.log('hello world')");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-    # code sample not available please raise a PR 
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
-    # code sample not available please raise a PR 
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Stores the header element
@@ -1265,6 +1265,40 @@ let header = await driver.findElement(By.css('h1'));
 let text = await driver.executeScript('return arguments[0].innerText', header);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### Print Page
+{{% notice info %}} Page being translated from English. Do you speak Dutch? Help us to translate it by sending us pull requests! {{% /notice %}}
+Prints the current page within the browser
+Note: This requires Chromium Browsers to be in headless mode
+
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    from selenium.webdriver.common.print_page_options import PrintOptions
+
+    print_options = PrintOptions()
+    print_options.page_ranges = ['1-2']
+
+    pages.load("printPage.html")
+
+    base64code = driver.print_page(print_options)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+   // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // code sample not available please raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
