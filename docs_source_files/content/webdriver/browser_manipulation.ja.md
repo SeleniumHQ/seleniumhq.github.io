@@ -3,6 +3,13 @@ title: "ブラウザー操作"
 weight: 3
 ---
 
+{{% notice info %}}
+<i class="fas fa-language"></i> Page being translated from
+English to Japanese. Do you speak Japanese? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
+
+
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 
@@ -28,7 +35,7 @@ bundle install
 
 
 ## Internet Explorer
-Internet ExplorerはデフォルトでWindowsにインストールされるため、インストールは不要です。 
+Internet ExplorerはデフォルトでWindowsにインストールされるため、インストールは不要です。
 WindowsでInternet Explorerを動かすには、最新の[Internet Explorer Driver](https://selenium.dev/downloads/)をダウンロードし、ファイルを `PATH`にあるフォルダーに入れる必要があります。どのディレクトリが `PATH`にあるかを調べるには、コマンドプロンプトで` echo％PATH％ `と入力します。
 
 ```bat
@@ -199,7 +206,7 @@ for (String windowHandle : driver.getWindowHandles()) {
 }
 
 //Wait for the new tab to finish loading content
-wait.until(titleIs("Selenium documentation"));  
+wait.until(titleIs("Selenium documentation"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
@@ -334,7 +341,7 @@ for (windowHandle in driver.getWindowHandles()) {
 
 //Wait for the new tab to finish loading content
 wait.until(titleIs("Selenium documentation"))
- 
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -487,7 +494,7 @@ public static void tearDown() {
 # unittest teardown
 # https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
 def tearDown(self):
-    self.driver.quit() 
+    self.driver.quit()
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 /*
@@ -517,7 +524,7 @@ after('Tear down', async function () {
 });
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-  
+
 /**
  * Example using JUnit
  * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
@@ -583,10 +590,10 @@ with webdriver.Firefox() as driver:
   # WebDriver code here...
 
 # WebDriver will automatically quit after indentation
-```  
+```
 
 ## FrameとIframe
-frameは、同じドメイン上の複数のドキュメントからサイトレイアウトを構築する非推奨の手段となりました。 
+frameは、同じドメイン上の複数のドキュメントからサイトレイアウトを構築する非推奨の手段となりました。
 HTML5以前のWebアプリを使用している場合を除き、frameを使用することはほとんどありません。
 iframeは、まったく異なるドメインからのドキュメントの挿入を許可し、今でも一般的に使用されています。
 
@@ -769,7 +776,7 @@ JavaScriptの _window.frames_ を使用して照会できるように、frameの
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Switches to the second frame  
+// Switches to the second frame
 driver.switchTo().frame(1);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
@@ -792,7 +799,7 @@ driver.switch_to.frame(iframe)
 await driver.switchTo().frame(1);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Switches to the second frame  
+// Switches to the second frame
 driver.switchTo().frame(1)
   {{< / code-panel >}}
 {{< / code-tab >}}
@@ -955,7 +962,7 @@ y = driver.manage.window.position.y
 # Or store the dimensions and query them later
 rect  = driver.manage.window.rect
 x1 = rect.x
-y1 = rect.y   
+y1 = rect.y
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
@@ -975,7 +982,7 @@ val y = driver.manage().window().position.y
 val position = driver.manage().window().position
 val x1 = position.x
 val y1 = position.y
-  
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 
@@ -1025,7 +1032,7 @@ driver.manage().window().position = Point(0,0)
 ### ウィンドウを最小化
 現在のブラウジングコンテキストのウィンドウを最小化します。
 このコマンドの正確な動作は、個々のウィンドウマネージャーに固有のものです。
- 
+
 ウィンドウを最小化すると、通常、システムトレイのウィンドウが非表示になります。
 
 __注：この機能は、Selenium 4以降のバージョンで機能します。__
@@ -1054,8 +1061,8 @@ __注：この機能は、Selenium 4以降のバージョンで機能します�
 
 ### TakeScreenshot
 
-Used to capture screenshot for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
+Used to capture screenshot for current browsing context.
+The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot)
 returns screenshot which is encoded in Base64 format.
 
 {{< code-tab >}}
@@ -1064,7 +1071,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import org.openqa.selenium.*;
-  
+
 public class SeleniumTakeScreenshot {
     public static void main(String args[]) throws IOException {
         WebDriver driver = new ChromeDriver();
@@ -1099,7 +1106,7 @@ driver.quit()
   Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
   screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
+  {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -1109,9 +1116,9 @@ begin
   # Takes and Stores the screenshot in specified path
   driver.save_screenshot('./image.png')
 
-end   
+end
   {{< / code-panel >}}
-  {{< code-panel language="javascript" >}} 
+  {{< code-panel language="javascript" >}}
 let {Builder} = require('selenium-webdriver');
 let fs = require('fs');
 
@@ -1139,18 +1146,18 @@ fun main(){
     val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
     copyFile(scrFile, File("./image.png"))
     driver.quit()
-}  
+}
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 ###  TakeElementScreenshot
 
-Used to capture screenshot of an element for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
+Used to capture screenshot of an element for current browsing context.
+The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot)
 returns screenshot which is encoded in Base64 format.
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}} 
+  {{< code-panel language="java" >}}
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -1249,14 +1256,14 @@ fun main() {
 
 ### Execute Script
 
-Executes JavaScript code snippet in the 
+Executes JavaScript code snippet in the
 current context of a selected frame or window.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    //Creating the JavascriptExecutor interface object by Type casting		
+    //Creating the JavascriptExecutor interface object by Type casting
       JavascriptExecutor js = (JavascriptExecutor)driver;
-    //Button Element  
+    //Button Element
       WebElement button =driver.findElement(By.name("btnLogin"));
     //Executing JavaScript to click on element
       js.executeScript("arguments[0].click();", element);
@@ -1266,13 +1273,13 @@ current context of a selected frame or window.
       js.executeScript("console.log('hello world')");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-    # code sample not available please raise a PR 
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
-    # code sample not available please raise a PR 
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Stores the header element
@@ -1282,6 +1289,41 @@ let header = await driver.findElement(By.css('h1'));
 let text = await driver.executeScript('return arguments[0].innerText', header);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### Print Page
+
+Prints the current page within the browser
+
+_Note: This requires Chromium Browsers to be in headless mode_
+
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    from selenium.webdriver.common.print_page_options import PrintOptions
+
+    print_options = PrintOptions()
+    print_options.page_ranges = ['1-2']
+
+    pages.load("printPage.html")
+
+    base64code = driver.print_page(print_options)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+   // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // code sample not available please raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
