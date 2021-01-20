@@ -3,16 +3,10 @@ title: "Trabalhando com elementos select"
 weight: 3
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Select elements can require quite a bit of boiler plate code to automate.
-To reduce this, and make your tests cleaner, there is a
-`Select` class in the Selenium support package.
-To use it, you will need the following import statement:
+Os elementos *select* podem exigir um pouco de código padrão para serem automatizados.
+Para reduzir isso e tornar seus testes mais limpos, existe uma
+Classe `Select` no pacote de suporte do Selenium.
+Para usá-lo, você precisará da seguinte instrução de importação:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -35,8 +29,8 @@ import org.openqa.selenium.support.ui.Select
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-You are then able to create a Select object using a WebElement that
-references a `<select>` element.
+Você pode então criar um objeto Select usando um WebElement que
+faz referência a um elemento `<select>`.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -64,10 +58,10 @@ val selectObject = new Select(selectElement)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-The Select object will now give you a series of commands
-that allow you to interact with a `<select>` element.
-First of all, there are different ways of selecting an option
-from the `<select>` element.
+O objeto Select agora lhe dará uma série de comandos
+que permitem que você interaja com um elemento `<select>`.
+Em primeiro lugar, existem diferentes maneiras de selecionar uma opção
+do elemento `<select>`.
 
 ```html
 <select>
@@ -77,7 +71,7 @@ from the `<select>` element.
 </select>
 ```
 
-There are three ways to select the first option from the above element:
+Existem três maneiras de selecionar a primeira opção do elemento acima:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -179,8 +173,8 @@ val firstSelectedOption = selectObject.firstSelectedOption
 {{< / code-tab >}}
 
 
-Or you may just be interested in what `<option>` elements
-the `<select>` element contains:
+Ou você pode apenas estar interessado em quais elementos `<option>`
+o elemento `<select>` contém:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -208,7 +202,7 @@ val allAvailableOptions = selectObject.options
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If you want to deselect any elements, you now have four options:
+Se você deseja desmarcar qualquer elemento, agora você tem quatro opções:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -281,8 +275,8 @@ selectObject.deselectAll()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Finally, some `<select>` elements allow you to select more than one option.
-You can find out if your `<select>` element is one of these by using:
+Finalmente, alguns elementos `<select>` permitem que você selecione mais de uma opção.
+Você pode descobrir se o seu elemento `<select>` é um deles usando:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
