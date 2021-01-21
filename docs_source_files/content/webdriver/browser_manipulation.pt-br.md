@@ -1339,8 +1339,8 @@ _Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
   {{< code-panel language="java" >}}
     import org.openqa.selenium.print.PrintOptions;
 
-    printer = (PrintsPage) driver;
     driver.get("https://www.selenium.dev");
+    printer = (PrintsPage) driver;
 
     PrintOptions printOptions = new PrintOptions();
     printOptions.setPageRanges("1-2");
