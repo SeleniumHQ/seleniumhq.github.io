@@ -1356,7 +1356,16 @@ _Note: This requires Chromium Browsers to be in headless mode_
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    // code sample not available please raise a PR
+   import org.openqa.selenium.print.PrintOptions;
+
+    printer = (PrintsPage) driver;
+    driver.get("https://www.selenium.dev");
+
+    PrintOptions printOptions = new PrintOptions();
+    printOptions.setPageRanges("1-2");
+
+    Pdf pdf = printer.print(printOptions);
+    String content = pdf.getContent();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
     from selenium.webdriver.common.print_page_options import PrintOptions
