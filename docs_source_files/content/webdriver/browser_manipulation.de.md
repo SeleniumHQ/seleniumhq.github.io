@@ -1374,7 +1374,9 @@ _Note: This requires Chromium Browsers to be in headless mode_
     // code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # code sample not available please raise a PR
+    driver.navigate_to 'https://www.selenium.dev'
+
+    base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}} 
   const {Builder} = require('selenium-webdriver');
