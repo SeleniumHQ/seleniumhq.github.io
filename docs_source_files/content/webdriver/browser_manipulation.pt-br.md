@@ -1356,7 +1356,23 @@ _Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
     # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
-   // code sample not available please raise a PR
+  const {Builder} = require('selenium-webdriver');
+  const chrome = require('selenium-webdriver/chrome');
+  let opts = new chrome.Options();
+  let fs = require('fs');
+  (async function example() {
+  let driver = new Builder()
+  .forBrowser('chrome')
+  .setChromeOptions(opts.headless())
+  .build();
+  await driver.get('https://www.selenium.dev');
+  try {
+  let base64 = await driver.printPage({pageRanges:["1-2"]});
+  await fs.writeFileSync('./test.pdf', base64, 'base64');
+  } catch (e) {
+  console.log(e)
+  }
+  await driver.quit();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
     // code sample not available please raise a PR
