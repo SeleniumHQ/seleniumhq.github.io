@@ -1354,7 +1354,7 @@ _Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
     print_options = PrintOptions()
     print_options.page_ranges = ['1-2']
 
-    pages.load("printPage.html")
+    driver.get("printPage.html")
 
     base64code = driver.print_page(print_options)
   {{< / code-panel >}}
