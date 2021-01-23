@@ -3,26 +3,20 @@ title: "Alertas, prompts e confirmações JavaScript"
 weight: 6
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+WebDriver fornece uma API para trabalhar com os três tipos nativos de
+mensagens pop-up oferecidas pelo JavaScript. Esses pop-ups são estilizados pelo
+navegador e oferecem personalização limitada.
 
-WebDriver provides an API for working with the three types of native
-popup messages offered by JavaScript. These popups are styled by the
-browser and offer limited customisation.
+## Alertas
 
-## Alerts
+O mais simples deles é referido como um alerta, que mostra um
+mensagem personalizada e um único botão que dispensa o alerta, rotulado
+na maioria dos navegadores como OK. Ele também pode ser dispensado na maioria dos navegadores
+pressionando o botão Fechar, mas isso sempre fará a mesma coisa que
+o botão OK. <a onclick="window.alert('Sample alert')"> Veja um exemplo de alerta </a>.
 
-The simplest of these is referred to as an alert, which shows a
-custom message, and a single button which dismisses the alert, labelled
-in most browsers as OK. It can also be dismissed in most browsers by
-pressing the close button, but this will always do the same thing as
-the OK button. <a onclick="window.alert('Sample alert')">See an example alert</a>.
-
-WebDriver can get the text from the popup and accept or dismiss these
-alerts.
+O WebDriver pode obter o texto do pop-up e aceitar ou dispensar esses
+alertas.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -110,13 +104,13 @@ alert.accept()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Confirm
+## Confirmação
 
-A confirm box is similar to an alert, except the user can also choose
-to cancel the message. <a onclick="window.confirm('Are you sure?')">See
-a sample confirm</a>.
+Uma caixa de confirmação é semelhante a um alerta, exceto que o usuário também pode escolher
+cancelar a mensagem. <a onclick="window.confirm('Are you sure?')"> Veja
+uma amostra de confirmação </a>.
 
-This example also shows a different approach to storing an alert:
+Este exemplo também mostra uma abordagem diferente para armazenar um alerta:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -218,12 +212,12 @@ alert.dismiss()
 
 ## Prompt
 
-Prompts are similar to confirm boxes, except they also include a text
-input. Similar to working with form elements, you can use WebDriver's
-send keys to fill in a response. This will completely replace the placeholder
-text. Pressing the cancel button will not submit any text.
-<a onclick="window.prompt('What is your tool of choice?',navigator.appName)">
-See a sample prompt</a>.
+Os prompts são semelhantes às caixas de confirmação, exceto que também incluem um texto de
+entrada. Semelhante a trabalhar com elementos de formulário, você pode
+usar o sendKeys do WebDriver para preencher uma resposta. Isso substituirá
+completamente o espaço de texto de exemplo. Pressionar o botão Cancelar não enviará nenhum texto.
+<a onclick="window.prompt('What is your tool of choice?', navigator.appName)">
+Veja um exemplo de prompt </a>.
 
 
 {{< code-tab >}}

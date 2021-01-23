@@ -3,19 +3,13 @@ title: "Ações do mouse em detalhe"
 weight: 4
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Mouse represents a mouse event. Mouse actions are performed 
-by using low-level interface which allows us to 
-provide virtualized device input action to the web browser.
+Mouse representa um evento do mouse. Ações do mouse são realizadas
+usando interface de baixo nível que nos permite
+fornecer ação de entrada de dispositivo virtualizado para o navegador da web.
 
 ## clickAndHold
 
-It will move to the element and clicks (without releasing) in the middle of the given element.
+Ele se moverá para o elemento e clicar (sem soltar) no meio do elemento fornecido.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -144,7 +138,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## contextClick
-This method firstly performs a mouse-move to the location of the element and performs the context-click (right click) on the given element.
+Este método primeiro executa um movimento do mouse para a localização do elemento e executa o clique de contexto (clique com o botão direito) no elemento fornecido.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -272,7 +266,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## doubleClick
-It will move to the element and performs a double-click in the middle of the given element.
+Ele se moverá para o elemento e executará um clique duplo no meio do elemento fornecido.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -400,7 +394,7 @@ fun main() {
 {{< / code-tab >}}
 
 ## moveToElement
-This method moves the mouse to the middle of the element. The element is also scrolled into the view on performing this action.
+Este método move o mouse para o meio do elemento. O elemento também é rolado para a exibição ao executar esta ação.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -529,7 +523,7 @@ fun main() {
 
 ## moveByOffset:
 
-This method moves the mouse from its current position (or 0,0) by the given offset. If the coordinates are outside the view window, then the mouse will end up outside the browser window.
+Este método move o mouse de sua posição atual (ou 0,0) pelo deslocamento fornecido. Se as coordenadas estiverem fora da janela de visualização, o mouse ficará fora da janela do navegador.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -676,8 +670,8 @@ fun main() {
 
 ## dragAndDrop
 
-This method firstly performs a click-and-hold on the source element, 
-moves to the location of the target element and then releases the mouse.
+Este método primeiro executa um clique e segura no elemento de origem,
+move-se para o local do elemento de destino e, em seguida, libera o mouse.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -817,7 +811,7 @@ fun main() {
 
 ## dragAndDropBy
 
-This method firstly performs a click-and-hold on the source element, moves to the given offset and then releases the mouse.
+Este método primeiro executa um clique e segura no elemento de origem, move-se para o deslocamento fornecido e, em seguida, libera o mouse.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -970,8 +964,8 @@ fun main() {
 
 ## release
 
-This action releases the depressed left mouse button. If WebElement is passed, 
-it will release depressed left mouse button on the given WebElement
+Esta ação libera o botão esquerdo do mouse pressionado. Se WebElement for aprovado,
+ele irá liberar o botão esquerdo do mouse pressionado no WebElement fornecido
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}

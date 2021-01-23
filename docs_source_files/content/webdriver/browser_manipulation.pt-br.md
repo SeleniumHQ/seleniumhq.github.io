@@ -6,35 +6,27 @@ weight: 3
 <!-- #codeExamples -->
 <!-- Remember to cover profile and extensions here -->
 
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
 ## Ruby
 
-Ruby is not installed by default on Windows. Download the latest 
-[version](//rubyinstaller.org/downloads) and run the installer. You can
-leave all settings at default values, except at the 
-_Installation Destination and Optional Tasks_ screen check where you need to check the 
-_Add Ruby executables to your PATH_ checkbox. To drive any browser, you have
-to install `selenium-webdriver` Ruby gem. To install it, open command prompt 
-and type this:
+Ruby não está instalado por padrão no Windows. Baixe a [versão mais recente](//rubyinstaller.org/downloads)
+e execute o instalador. Você podedeixar todas as configurações com os valores padrão, exceto na
+tela _Installation Destination and Optional Tasks_ verifique onde você precisa marca a caixa de seleção
+_Add Ruby executables to your PATH_. Para utilizar qualquer navegador,
+você deve instalar a *gem* de Ruby `selenium-webdriver`. Para instalá-lo, abra o prompt de comando
+e digite isto:
 
 ```shell
 gem install selenium-webdriver
 ```
 
-Or, if you use [Bundler](//bundler.io), add this line to your application's 
+Ou, se você usa [Bundler](//bundler.io), adicione esta linha ao
 Gemfile:
 
 ```ruby
 gem "selenium-webdriver"
 ```
 
-And then execute the following command in command prompt:
+Em seguida, execute o seguinte comando no prompt de comando:
 
 ```shell
 bundle install
@@ -43,33 +35,33 @@ bundle install
 
 ## Internet Explorer
 
-Internet Explorer is installed by default on Windows, so no installation is 
-needed. To drive Internet Explorer on Windows, you have to download the latest
-[Internet Explorer Driver](https://selenium.dev/downloads/) and put the file 
-into a folder that is in `PATH`. To find out which directories are in `PATH`, 
-type `echo %PATH%` in command prompt.
+O Internet Explorer é instalado por padrão no Windows, portanto nenhuma instalação é
+necessária. Para utilizar o Internet Explorer no Windows, você deve baixar o
+[driver mais recente do Internet Explorer](https://selenium.dev/downloads/) e colocar o arquivo
+em uma pasta que está no `PATH`. Para descobrir quais diretórios estão no `PATH`,
+digite `echo% PATH%` no prompt de comando.
 
 ```bat
 $ echo %PATH%
 C:\Ruby200\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem
 ```
 
-`C:\Ruby200\bin` looks like a good place. Unzip `IEDriverServer` file and 
-move `IEDriverServer.exe` there.
+`C:\Ruby200\bin` parece um bom lugar. Descompacte o arquivo `IEDriverServer` e
+mova `IEDriverServer.exe` para lá.
 
-This should open a new Internet Explorer window:
+Isso deve abrir uma nova janela do Internet Explorer:
 
 ```ruby
 require "selenium-webdriver"
 driver = Selenium::WebDriver.for :internet_explorer
 ```
 
-## Browser navigation
+## Navegação
 
-### Navigate to
+### Navegar para
 
-The first thing you will want to do after launching a browser is to
-open your website. This can be achieved in a single line:
+A primeira coisa que você vai querer fazer depois de iniciar um navegador é
+abrir o seu site. Isso pode ser feito em uma única linha:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -104,9 +96,9 @@ driver.navigate().to("https://selenium.dev")
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get current URL
+### Coletar a URL atual
 
-You can read the current URL from the browser's address bar using:
+Você pode ler a URL atual na barra de endereço do navegador usando:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getCurrentUrl();{{< / code-panel >}}
@@ -117,9 +109,9 @@ You can read the current URL from the browser's address bar using:
   {{< code-panel language="kotlin" >}}driver.currentUrl{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Back
+### Voltar
 
-Pressing the browser's back button:
+Pressionando o botão Voltar do navegador:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().back();{{< / code-panel >}}
@@ -131,8 +123,8 @@ Pressing the browser's back button:
 {{< / code-tab >}}
 
 
-### Forward
-Pressing the browser's forward button:
+### Avançar
+Pressionando o botão Avançar do navegador:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().forward();{{< / code-panel >}}
@@ -143,9 +135,9 @@ Pressing the browser's forward button:
   {{< code-panel language="kotlin" >}}driver.navigate().forward(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Refresh
+### Atualizar
 
-Refresh the current page:
+Atualizando a página atual:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.navigate().refresh();{{< / code-panel >}}
@@ -156,9 +148,9 @@ Refresh the current page:
   {{< code-panel language="kotlin" >}}driver.navigate().refresh(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get title
+### Coletar título
 
-You can read the current page title from the browser:
+Você pode ler o título da página atual no navegador:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getTitle();{{< / code-panel >}}
@@ -170,15 +162,15 @@ You can read the current page title from the browser:
 {{< / code-tab >}}
 
 
-## Windows and tabs
+## Janelas e guias
 
-### Get window handle
+### Pega o puxador da janela
 
-WebDriver does not make the distinction between windows and tabs. If
-your site opens a new tab or window, Selenium will let you work with it
-using a window handle.  Each window has a unique identifier which remains
-persistent in a single session. You can get the window handle of the
-current window by using:
+O WebDriver não faz distinção entre janelas e guias. E se
+seu site abre uma nova guia ou janela, o Selenium permitirá que você trabalhe
+usando um puxador de janela. Cada janela tem um identificador único que permanece
+persistente em uma única sessão. Você pode pegar o puxador da
+janela atual usando:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.getWindowHandle();{{< / code-panel >}}
@@ -189,20 +181,20 @@ current window by using:
   {{< code-panel language="kotlin" >}}driver.windowHandle{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Switching windows or tabs
+### Alternando janelas ou guias
 
-Clicking a link which opens in a 
-<a href="https://seleniumhq.github.io" target="_blank"> new window</a>
-will focus the new window or tab on screen, but WebDriver will not know which
-window the Operating System considers active.  To work with the new window 
-you will need to switch to it. If you have only two tabs or windows open, 
-and you know which window you start with, by the process of elimination 
-you can loop over both windows or tabs that WebDriver can see, and switch 
-to the one which is not the original.
+Clicar em um link que abre em uma
+<a href="https://seleniumhq.github.io" target="_blank"> nova janela </a>
+focará a nova janela ou guia na tela, mas o WebDriver não saberá qual
+janela que o sistema operacional considera ativa. Para trabalhar com a nova janela
+você precisará mudar para ela. Se você tiver apenas duas guias ou janelas abertas,
+e você sabe com qual janela você começa, pelo processo de eliminação
+você pode percorrer as janelas ou guias que o WebDriver pode ver e alternar
+para aquela que não é o original.
 
-However, Selenium 4 provides a new api 
+No entanto, o Selenium 4 fornece uma nova API
 <a href="https://selenium.dev/documentation/en/webdriver/browser_manipulation/#create-new-window-or-new-tab-and-switch"> NewWindow </a>
-which creates a new tab (or) new window and automatically switches to it.
+que cria uma nova guia (ou) nova janela e muda automaticamente para ela.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -227,7 +219,7 @@ for (String windowHandle : driver.getWindowHandles()) {
 }
 
 //Wait for the new tab to finish loading content
-wait.until(titleIs("Selenium documentation"));  
+wait.until(titleIs("Selenium documentation"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 from selenium import webdriver
@@ -362,17 +354,17 @@ for (windowHandle in driver.getWindowHandles()) {
 
 //Wait for the new tab to finish loading content
 wait.until(titleIs("Selenium documentation"))
- 
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Create new window (or) new tab and switch
-Creates a new window (or) tab and will focus the new window or tab on screen.
-You don't need to switch to work with the new window (or) tab. If you have more than two windows
-(or) tabs opened other than the new window, you can loop over both windows or tabs that WebDriver can see,
-and switch to the one which is not the original.
+### Criar nova janela (ou) nova guia e alternar
+Cria uma nova janela (ou) guia e focará a nova janela ou guia na tela.
+Você não precisa mudar para trabalhar com a nova janela (ou) guia. Se você tiver mais de duas janelas
+(ou) guias abertas diferentes da nova janela, você pode percorrer as janelas ou guias que o WebDriver pode ver
+e mudar para aquela que não é a original.
 
-__Note: This feature works with Selenium 4 and later versions.__
+__Nota: este recurso funciona com Selenium 4 e versões posteriores.__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -423,13 +415,13 @@ driver.switchTo().newWindow(WindowType.WINDOW)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Closing a window or tab
+### Fechando uma janela ou guia
 
-When you are finished with a window or tab _and_ it is not the
-last window or tab open in your browser, you should close it and switch
-back to the window you were using previously.  Assuming you followed the
-code sample in the previous section you will have the previous window
-handle stored in a variable. Put this together and you will get:
+Quando você terminar com uma janela ou guia _e_ não é a
+última janela ou guia aberta em seu navegador, você deve fechá-la e alternar
+de volta para a janela que você estava usando anteriormente. Supondo que você seguiu a
+amostra de código na seção anterior, você terá o identificador da janela
+anterior armazenado em uma variável. Junte isso e você obterá:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -477,15 +469,15 @@ driver.switchTo().window(originalWindow)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Forgetting to switch back to another window handle after closing a
-window will leave WebDriver executing on the now closed page, and will
-trigger a **No Such Window Exception**. You must switch
-back to a valid window handle in order to continue execution.
+Esquecer de voltar para outro gerenciador de janela após fechar uma
+janela deixará o WebDriver em execução na página agora fechada e
+acionar uma **No Such Window Exception**. Você deve trocar
+de volta para um identificador de janela válido para continuar a execução.
 
-### Quitting the browser at the end of a session
+### Sair do navegador no final de uma sessão
 
-When you are finished with the browser session you should call quit,
-instead of close:
+Quando você terminar a sessão do navegador, você deve chamar quit,
+em vez de fechar:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.quit();{{< / code-panel >}}
@@ -496,19 +488,17 @@ instead of close:
   {{< code-panel language="kotlin" >}}driver.quit(){{< / code-panel >}}
 {{< / code-tab >}}
 
-* Quit will:
-  * Close all the windows and tabs associated with that WebDriver
-  session
-  * Close the browser process
-  * Close the background driver process
-  * Notify Selenium Grid that the browser is no longer in use so it can
-   be used by another session (if you are using Selenium Grid)
+* quit irá:
+   * Fechar todas as janelas e guias associadas a essa sessão do WebDriver
+   * Fechar o processo do navegador
+   * Fechar o processo do driver em segundo plano
+   * Notificar o Selenium Grid de que o navegador não está mais em uso para que possa
+    ser usado por outra sessão (se você estiver usando Selenium Grid)
 
-Failure to call quit will leave extra background processes and ports
-running on your machine which could cause you problems later. 
+A falha em encerrar deixará processos e portas extras em segundo plano
+rodando em sua máquina, o que pode causar problemas mais tarde.
 
-Some test frameworks offer methods and annotations which you can hook
-into to tear down at the end of a test.
+Algumas estruturas de teste oferecem métodos e anotações em que você pode ligar para derrubar no final de um teste.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -543,7 +533,7 @@ public void TearDown()
 # https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
 def teardown
     @driver.quit
-end 
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 /**
@@ -555,7 +545,7 @@ after('Tear down', async function () {
 });
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-  
+
 /**
  * Example using JUnit
  * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
@@ -567,9 +557,9 @@ fun tearDown() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-If not running WebDriver in a test context, you may consider using
-`try  / finally` which is offered by most languages so that an exception
-will still clean up the WebDriver session.
+Se não estiver executando o WebDriver em um contexto de teste, você pode considerar o uso do
+`try/finally` que é oferecido pela maioria das linguagens para que uma exceção
+ainda limpe a sessão do WebDriver.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -615,28 +605,28 @@ try {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Python's WebDriver now supports the python context manager,
-which when using the `with` keyword can automatically quit the driver at
-the end of execution.
+O WebDriver do Python agora suporta o gerenciador de contexto python,
+que ao usar a palavra-chave `with` pode encerrar automaticamente o
+driver no fim da execução.
 
 ```python
 with webdriver.Firefox() as driver:
   # WebDriver code here...
 
 # WebDriver will automatically quit after indentation
-```  
+```
 
-## Frames and Iframes
-Frames are a now deprecated means of building a site layout from
-multiple documents on the same domain. You are unlikely to work with
-them unless you are working with an pre HTML5 webapp.  Iframes allow
-the insertion of a document from an entirely different domain, and are
-still commonly used.
+## Frames e Iframes
+Frames são um meio obsoleto de construir um layout de site a partir de
+vários documentos no mesmo domínio. É improvável que você trabalhe com eles
+a menos que você esteja trabalhando com um webapp pré-HTML5. Iframes permitem
+a inserção de um documento de um domínio totalmente diferente, e são
+ainda comumente usado.
 
-If you need to work with frames or iframes, WebDriver allows you to
-work with them in the same way. Consider a button within an iframe.
-If we inspect the element using the browser development tools, we might
-see the following:
+Se você precisa trabalhar com frames ou iframes, o WebDriver permite que você
+trabalhe com eles da mesma maneira. Considere um botão dentro de um iframe.
+Se inspecionarmos o elemento usando as ferramentas de desenvolvimento do navegador, podemos
+ver o seguinte:
 
 ```html
 <div id="modal">
@@ -646,8 +636,8 @@ see the following:
 </div>
 ```
 
-If it was not for the iframe we would expect to click on the button
-using something like:
+Se não fosse pelo iframe, esperaríamos clicar no botão
+usando algo como:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -676,17 +666,17 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-However, if there are no buttons outside of the iframe, you might
-instead get a _no such element_ error. This happens because Selenium is
-only aware of the elements in the top level document. To interact with
-the button, we will need to first switch to the frame, in a similar way
-to how we switch windows. WebDriver offers three ways of switching to
-a frame.
+No entanto, se não houver botões fora do iframe, você pode
+em vez disso, obter um erro _no such element_. Isso acontece porque o Selenium é
+ciente apenas dos elementos no documento de nível superior. Para interagir com
+o botão, precisamos primeiro mudar para o quadro, de forma semelhante
+a como alternamos janelas. WebDriver oferece três maneiras de mudar para
+um frame.
 
-### Using a WebElement
+### Usando um WebElement
 
-Switching using a WebElement is the most flexible option. You can
-find the frame using your preferred selector and switch to it.
+Alternar usando um WebElement é a opção mais flexível. Você pode
+encontrar o quadro usando seu seletor preferido e mudar para ele.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -751,10 +741,10 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Using a name or ID
-If your frame or iframe has an id or name attribute, this can be used
-instead.  If the name or ID is not unique on the page, then the first
-one found will be switched to.
+### Usando um *name* ou ID
+Se o seu frame ou iframe tiver um atributo id ou name, ele pode ser
+usado alternativamente. Se o name ou ID não for exclusivo na página, o
+primeiro encontrado será utilizado.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -813,14 +803,14 @@ driver.findElement(By.tagName("button")).click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Using an index
+### Usando um índice
 
-It is also possible to use the index of the frame, such as can be
-queried using _window.frames_ in JavaScript.
+Também é possível usar o índice do frame, podendo ser
+consultado usando _window.frames_ em JavaScript.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-// Switches to the second frame  
+// Switches to the second frame
 driver.switchTo().frame(1);
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
@@ -843,16 +833,16 @@ driver.switch_to.frame(iframe)
 await driver.switchTo().frame(1);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-// Switches to the second frame  
+// Switches to the second frame
 driver.switchTo().frame(1)
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 
-### Leaving a frame
+### Deixando um frame
 
-To leave an iframe or frameset, switch back to the default content
-like so:
+Para deixar um iframe ou frameset, volte para o conteúdo padrão
+como a seguir:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -881,13 +871,12 @@ driver.switchTo().defaultContent()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Window management
-Screen resolution can impact how your web application renders, so
-WebDriver provides mechanisms for moving and resizing the browser
-window.
+## Gerenciamento de janelas
+A resolução da tela pode impactar como seu aplicativo da web é renderizado, então
+WebDriver fornece mecanismos para mover e redimensionar a janela do navegador.
 
-### Get window size
-Fetches the size of the browser window in pixels.
+### Coletar o tamanho da janela
+Obtém o tamanho da janela do navegador em pixels.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -951,9 +940,9 @@ val height1 = size.height
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Set window size
+### Definir o tamanho da janela
 
-Restores the window and sets the window size.
+Restaura a janela e define o tamanho da janela.
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().setSize(new Dimension(1024, 768));{{< / code-panel >}}
   {{< code-panel language="python" >}}driver.set_window_size(1024, 768){{< / code-panel >}}
@@ -963,9 +952,9 @@ Restores the window and sets the window size.
   {{< code-panel language="kotlin" >}}driver.manage().window().size = Dimension(1024, 768){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Get window position
+### Coletar posição da janela
 
-Fetches the coordinates of the top left coordinate of the browser window.
+Busca as coordenadas da coordenada superior esquerda da janela do navegador.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1006,7 +995,7 @@ y = driver.manage.window.position.y
 # Or store the dimensions and query them later
 rect  = driver.manage.window.rect
 x1 = rect.x
-y1 = rect.y 
+y1 = rect.y
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Access each dimension individually
@@ -1026,13 +1015,13 @@ val y = driver.manage().window().position.y
 val position = driver.manage().window().position
 val x1 = position.x
 val y1 = position.y
-  
+
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Set window position
+## Definir posição da janela
 
-Moves the window to the chosen position.
+Move a janela para a posição escolhida.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1060,10 +1049,10 @@ driver.manage().window().position = Point(0,0)
     {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Maximize window
-Enlarges the window. For most operating systems, the window will fill
-the screen, without blocking the operating system's own menus and
-toolbars.
+### Maximizar janela
+Aumenta a janela. Para a maioria dos sistemas operacionais, a janela irá preencher
+a tela, sem bloquear os próprios menus do sistema operacional e
+barras de ferramentas.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().maximize();{{< / code-panel >}}
@@ -1074,14 +1063,14 @@ toolbars.
   {{< code-panel language="kotlin" >}}driver.manage().window().maximize(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Minimize window
-Minimizes the window of current browsing context. 
-The exact behavior of this command is specific to 
-individual window managers. 
+### Minimizar janela
+Minimiza a janela do contexto de navegação atual.
+O comportamento exato deste comando é específico para
+gerenciadores de janela individuais.
  
-Minimize Window typically hides the window in the system tray.
+Minimizar Janela normalmente oculta a janela na bandeja do sistema.
 
-__Note: This feature works with Selenium 4 and later versions.__
+__Nota: este recurso funciona com Selenium 4 e versões posteriores.__
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
@@ -1092,9 +1081,9 @@ __Note: This feature works with Selenium 4 and later versions.__
   {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
 {{< / code-tab >}}
 
-### Fullscreen window
+### Janela em tamanho cheio
 
-Fills the entire screen, similar to pressing F11 in most browsers.
+Preenche a tela inteira, semelhante a pressionar F11 na maioria dos navegadores.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}driver.manage().window().fullscreen();{{< / code-panel >}}
@@ -1107,9 +1096,9 @@ Fills the entire screen, similar to pressing F11 in most browsers.
 
 ### TakeScreenshot
 
-Used to capture screenshot for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot) 
-returns screenshot which is encoded in Base64 format.
+Usado para capturar a tela do contexto de navegação atual.
+O endpoint WebDriver [screenshot](https://www.w3.org/TR/webdriver/#dfn-take-screenshot)
+retorna a captura de tela codificada no formato Base64.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1117,7 +1106,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import org.openqa.selenium.*;
-  
+
 public class SeleniumTakeScreenshot {
     public static void main(String args[]) throws IOException {
         WebDriver driver = new ChromeDriver();
@@ -1142,7 +1131,7 @@ driver.save_screenshot('./image.png')
 driver.quit()
 
 {{< / code-panel >}}
-  {{< code-panel language="csharp" >}} 
+  {{< code-panel language="csharp" >}}
   using OpenQA.Selenium;
   using OpenQA.Selenium.Chrome;
   using OpenQA.Selenium.Support.UI;
@@ -1152,7 +1141,7 @@ driver.quit()
   Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
   screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
+  {{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
@@ -1162,9 +1151,9 @@ begin
   # Takes and Stores the screenshot in specified path
   driver.save_screenshot('./image.png')
 
-end   
+end
   {{< / code-panel >}}
-  {{< code-panel language="javascript" >}} 
+  {{< code-panel language="javascript" >}}
 let {Builder} = require('selenium-webdriver');
 let fs = require('fs');
 
@@ -1180,7 +1169,7 @@ let fs = require('fs');
     await driver.quit();
 }())
   {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}} 
+  {{< code-panel language="kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
 import org.openqa.selenium.*
 import org.openqa.selenium.chrome.ChromeDriver
@@ -1192,15 +1181,15 @@ fun main(){
     val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
     copyFile(scrFile, File("./image.png"))
     driver.quit()
-}   
+}
    {{< / code-panel >}}
 {{< / code-tab >}}
 
 ###  TakeElementScreenshot
 
-Used to capture screenshot of an element for current browsing context. 
-The WebDriver endpoint [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot) 
-returns screenshot which is encoded in Base64 format.
+Usado para capturar a imagem de um elemento para o contexto de navegação atual.
+O endpoint WebDriver [screenshot](https://www.w3.org/TR/webdriver/#take-element-screenshot)
+retorna a captura de tela codificada no formato Base64.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -1245,10 +1234,10 @@ driver.quit()
     // Webdriver
     var driver = new ChromeDriver();
     driver.Navigate().GoToUrl("http://www.example.com");
-    
+
     // Fetch element using FindElement
     var webElement = driver.FindElement(By.CssSelector("h1"));
-    
+
     // Screenshot for the element
     var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
     elementScreenshot.SaveAsFile("screenshot_of_element.png");
@@ -1301,16 +1290,16 @@ fun main() {
 {{< / code-tab >}}
 
 
-### Execute Script
+### Executar Script
 
-Executes JavaScript code snippet in the 
-current context of a selected frame or window.
+Executa o snippet de código JavaScript no
+contexto atual de um frame ou janela selecionada.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    //Creating the JavascriptExecutor interface object by Type casting		
+    //Creating the JavascriptExecutor interface object by Type casting
       JavascriptExecutor js = (JavascriptExecutor)driver;
-    //Button Element  
+    //Button Element
       WebElement button =driver.findElement(By.name("btnLogin"));
     //Executing JavaScript to click on element
       js.executeScript("arguments[0].click();", element);
@@ -1320,13 +1309,13 @@ current context of a selected frame or window.
       js.executeScript("console.log('hello world')");
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-    # code sample not available please raise a PR 
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
   {{< / code-panel >}}
-  {{< code-panel language="ruby" >}} 
-    # code sample not available please raise a PR 
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Stores the header element
@@ -1336,7 +1325,56 @@ let header = await driver.findElement(By.css('h1'));
 let text = await driver.executeScript('return arguments[0].innerText', header);
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR 
+    // code sample not available please raise a PR
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+### Imprimir Página
+
+Imprime a página atual dentro do navegador
+
+_Nota: isto requer que navegadores Chromium estejam no modo sem cabeçalho_
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+    from selenium.webdriver.common.print_page_options import PrintOptions
+
+    print_options = PrintOptions()
+    print_options.page_ranges = ['1-2']
+
+    pages.load("printPage.html")
+
+    base64code = driver.print_page(print_options)
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+    # code sample not available please raise a PR
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+  const {Builder} = require('selenium-webdriver');
+  const chrome = require('selenium-webdriver/chrome');
+  let opts = new chrome.Options();
+  let fs = require('fs');
+  (async function example() {
+  let driver = new Builder()
+  .forBrowser('chrome')
+  .setChromeOptions(opts.headless())
+  .build();
+  await driver.get('https://www.selenium.dev');
+  try {
+  let base64 = await driver.printPage({pageRanges:["1-2"]});
+  await fs.writeFileSync('./test.pdf', base64, 'base64');
+  } catch (e) {
+  console.log(e)
+  }
+  await driver.quit();
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+    // code sample not available please raise a PR
+  {{< / code-panel >}}
+{{< / code-tab >}}
