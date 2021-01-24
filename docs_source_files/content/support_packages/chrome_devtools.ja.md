@@ -39,7 +39,18 @@ public void geoLocationTest(){
 }  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+def geoLocationTest():
+driver = webdriver.Chrome()
+Map_coordinates = dict({
+"latitude": 41.8781,
+"longitude": -87.6298,
+"accuracy": 100
+})
+driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
+driver.get("<your site url>")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
 using System.Threading.Tasks;

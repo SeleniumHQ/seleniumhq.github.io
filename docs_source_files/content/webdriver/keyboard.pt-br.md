@@ -3,20 +3,16 @@ title: "Teclado"
 weight: 10
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Brazilian Portuguese. Do you speak Brazilian Portuguese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-Keyboard represents a KeyBoard event. KeyBoard actions are performed by using low-level
-interface which allows us to provide virtualized device input to the web browser.
+Keyboard representa um evento do teclado. As ações do teclado são
+executadas usando uma interface de baixo nível que nos permite fornecer
+entrada de dispositivo virtualizado para o navegador da web.
 
 ## sendKeys
 
-The sendKeys types a key sequence in DOM element even if modifier key sequence is encountered.
-[Here](https://www.w3.org/TR/webdriver/#keyboard-actions) are the list of 
-possible keystrokes that WebDriver Supports.
+O sendKeys digita uma sequência de teclas no elemento DOM, mesmo se uma
+sequência de teclas modificadoras for encontrada.
+[Aqui](https://www.w3.org/TR/webdriver/#keyboard-actions) está a lista
+de possíveis teclas que WebDriver suporta.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -116,7 +112,7 @@ fun main() {
 
 ## keyDown
 
-The keyDown is used to simulate action of pressing a modifier key(CONTROL, SHIFT, ALT)
+O keyDown é usado para simular a ação de pressionar uma tecla modificadora (CONTROL, SHIFT, ALT)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -233,7 +229,7 @@ fun main() {
 
 ## keyUp
 
-The keyUp is used to simulate key-up (or) key-release action of a modifier key(CONTROL, SHIFT, ALT)
+O keyUp é usado para simular a liberação de uma tecla (ou) de uma tecla modificadora (CONTROL, SHIFT, ALT)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -375,9 +371,9 @@ fun main() {
 {{< / code-tab >}}
 
 ## clear
-Clears the content of an editable element. 
-This is only applied for the elements which is editable and interactable, 
-otherwise Selenium returns the error (invalid element state (or) Element not interactable)
+Limpa o conteúdo de um elemento editável.
+Isso é aplicado apenas para os elementos que são editáveis e interativos,
+caso contrário, o Selenium retorna o erro (invalid element state (ou) Element not interactable)
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
