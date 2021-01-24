@@ -11,3 +11,5 @@ de la emulación de las interacciones de los usuarios con las plataformas web.
 En lugar de ello, se recomienda encontrar el enlace con Selenium (y cualquier
 Cookie requerida) y pasarselo a una librería que permita hacer peticiones HTTP 
 como [libcurl](//curl.haxx.se/libcurl/).
+
+El [HtmlUnit driver](https://github.com/SeleniumHQ/htmlunit-driver) puede descargar archivos adjuntos accediendo a ellos como flujos de entrada mediante la implementación de la interfaz [AttachmentHandler](https://htmlunit.sourceforge.io/apidocs/com/gargoylesoftware/htmlunit/attachment/AttachmentHandler.html). El AttachmentHandler se puede agregar al  [HtmlUnit](https://htmlunit.sourceforge.io/) WebClient.

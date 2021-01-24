@@ -3,89 +3,98 @@ title: "独自のグリッドを設定する"
 weight: 2
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-## Different Modes of Grid setup in Selenium 4:
-* Standalone
-* Hub and Node
-* Distributed
+## Selenium4でのグリッド設定のさまざまなモード
+* スタンドアロン
+* ハブとノード
+* 分散
 * Docker
 
-## Standalone Mode:
-The new Selenium Server Jar contains everything you'd need to run a grid. It is also the easiest mode to spin up a Selenium Grid. By default the server will be listening on http://localhost:4444, and that's the URL you should point your RemoteWebDriver tests. The server will detect the available drivers that it can use from the System PATH
+## スタンドアロンモード
+新しいSeleniumServer Jarには、グリッドを実行するために必要なすべてのものが含まれています。 
+Seleniumグリッドを起動するのも最も簡単なモードです。 
+デフォルトでは、サーバーは http://localhost:4444 でリッスンします。
+これは、RemoteWebDriverテストを指定する必要があるURLです。 
+サーバーは、システムパスから使用できる使用可能なドライバーを検出します。
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar standalone
+java -jar selenium-server-4.0.0-alpha-7.jar standalone
 ```
 
-## Hub and Node Mode:
+## ハブとノードモード
 
-### Start the Hub:
+### ハブを開始する
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar hub
+java -jar selenium-server-4.0.0-alpha-7.jar hub
 ```
 
-### Register a Node:
+### ノードを登録する
 
 ```shell
-java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
 ```
 
-### Query Selenium Grid:
+### Seleniumグリッドをクエリする
 
-In Selenium 4, we've added GraphQL, a new way to query the necessary data easily and get exactly the same.
+Selenium 4では、必要なデータを簡単にクエリしてまったく同じものを取得する新しい方法であるGraphQLを追加しました。
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}" }' -s http://localhost:4444/graphql | jq .
 ```
 <br><br>
 
-## Distributed Mode:
+## 分散モード
 
-* Step 1: Firstly, start the Event Bus, it serves as a communication path to other Grid components in subsequent steps.
+* Step 1: まず、イベントバスを開始します。
+これは、後続のステップで他のグリッドコンポーネントへの通信パスとして機能します。
 
     ```shell
-    java -jar selenium-server-4.0.0-alpha-6.jar  event-bus
+    java -jar selenium-server-4.0.0-alpha-7.jar  event-bus
     ```
 
-* Step 2: Start the session map, which is responsible for mapping session IDs to the node the session is running on:
+* Step 2: セッションマップを開始します。
+これは、セッションIDをセッションが実行されているノードにマッピングする役割を果たします。
         
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar sessions
+        java -jar selenium-server-4.0.0-alpha-7.jar sessions
     ```
 
-* Step 3: Start the Distributor. All the nodes are attached as part of Distributor process. It is responsible for assigning a node, when a create session request in invoked.
+* Step 3: 新しいセッションキューを起動すると、新しいセッション要求がローカルキューに追加されます。 
+ディストリビューターはキューからリクエストを受け取ります。
+        
+    ```shell 
+        java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer
+    ```
+
+* Step 4: ディストリビューターを起動します。 
+すべてのノードは、ディストリビュータープロセスの一部として接続されます。 
+セッションの作成要求が呼び出されたときに、ノードを割り当てる必要があります。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar distributor --sessions http://localhost:5556 --bind-bus false
+        java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
     ```
 
-* Step 4: Next step is to start the Router, an address that you'd expose to web
+* Step 5: 次に、Webに公開するアドレスであるルーターを起動します。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar router --sessions http://localhost:5556 --distributor http://localhost:5553
+        java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
     ```
 
-* Step 5: Finally, add a Node
+* Step 6: 最後に、ノードを追加します。
 
     ```shell 
-        java -jar selenium-server-4.0.0-alpha-6.jar node --detect-drivers
+        java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
     ```
 
-## Start Standalone Grid via Docker Images
+## Dockerイメージを介してスタンドアロングリッドを開始する
 
-  You can just start a node by the following command:
+  次のコマンドでノードを起動できます。
       
 ```shell 
     java -jar selenium-server-4.0.0-alpha-1.jar node -D selenium/standalone-firefox:latest '{"browserName": "firefox"}'
 ```
 
-  You can start the Selenium server and delegate it to docker for creating new instances:
+  Seleniumサーバーを起動し、Dockerに新しいインスタンスを作成することを委任できます。
       
 ```shell 
-     java -jar selenium-server-4.0.0-alpha-6.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
+     java -jar selenium-server-4.0.0-alpha-7.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
 ```

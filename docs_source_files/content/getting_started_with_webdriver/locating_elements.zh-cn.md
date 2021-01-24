@@ -102,7 +102,7 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
  <li id=brie>…
  <li id=rochefort>…
  <li id=camembert>…
-</ul>
+</ol>
 ```
 
 因为有更多的奶酪无疑是更好的，但是单独检索每一个项目是很麻烦的，检索奶酪的一个更好的方式是使用复数版本 `findElements(By)` 。此方法返回 web 元素的集合。如果只找到一个元素，它仍然返回(一个元素的)集合。如果没有元素被定位器匹配到，它将返回一个空列表。
@@ -157,7 +157,7 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
 
 ## 相对定位
 
-在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Firendly Locators)"。
+在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Friendly Locators)"。
 它可以帮助你通过某些元素作为参考来定位其附近的元素。
 现在可用的相对定位有：
 

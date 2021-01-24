@@ -29,10 +29,50 @@ public void geoLocationTest(){
 }  
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-# Please raise a PR to add code sample
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+
+def geoLocationTest():
+    driver = webdriver.Chrome()
+    Map_coordinates = dict({
+        "latitude": 41.8781, 
+        "longitude": -87.6298,
+        "accuracy": 100
+        }) 
+    driver.execute_cdp_cmd("Emulation.setGeolocationOverride", Map_coordinates)
+    driver.get("<your site url>")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-// Please raise a PR to add code sample  
+using System.Threading.Tasks;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.DevTools;
+// Replace the version to match the Chrome version
+using OpenQA.Selenium.DevTools.V87.Emulation;
+
+namespace dotnet_test {
+  class Program {
+    public static void Main(string[] args) {
+      GeoLocation().GetAwaiter().GetResult();
+    }
+        
+    public static async Task GeoLocation() {
+      ChromeDriver driver = new ChromeDriver();
+      DevToolsSession devToolsSession = driver.CreateDevToolsSession();
+      var geoLocationOverrideCommandSettings = new SetGeolocationOverrideCommandSettings();
+
+      geoLocationOverrideCommandSettings.Latitude = 51.507351;
+      geoLocationOverrideCommandSettings.Longitude = -0.127758;
+      geoLocationOverrideCommandSettings.Accuracy = 1;
+
+      await devToolsSession
+        .GetVersionSpecificDomains<OpenQA.Selenium.DevTools.V87.DevToolsSessionDomains>()
+        .Emulation
+        .SetGeolocationOverride(geoLocationOverrideCommandSettings);
+
+        driver.Url = "<your site url>";
+        }
+    }
+}
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 # Please raise a PR to add code sample

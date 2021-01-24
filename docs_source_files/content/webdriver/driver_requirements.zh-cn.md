@@ -166,7 +166,7 @@ chromedriver 被实现为 WebDriver 远程服务器，该服务器通过公开 C
 {{<code-tab>}}
   {{<code-panel language="java">}}
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.Firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 WebDriver driver = new FirefoxDriver();
   {{</ code-panel>}}
