@@ -8,28 +8,22 @@ weight: 7
 
 # Anleitungen und Empfehlungen
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Diese Seite wird von Englisch 
-auf Deutsch übersetzt. Sprichst Du Deutsch? Hilf uns die Seite 
-zu übersetzen indem Du uns einen Pull Reqeust schickst!
- {{% /notice %}}
+Eine Bemerkung zu "Best Practices": Wir vermeiden absichtlich die Phrase 
+"Best Practices" in dieser Dokumentation. Es gibt schlicht keinen Ansatz
+der für alle Situationen die beste Wahl ist. Wir bevorzugen die Formulierung
+"Anleitungen und Empfehlungen". Wir ermutigen Euch gewissenhaft zu entscheiden
+welche die besten Ansätze für Euer Projekt sind, nachdem die Dokumentation 
+gelesen wurde.
 
-A note on "Best Practices": We've intentionally avoided the phrase "Best
-Practices" in this documentation. No one approach works for all situations.
-We prefer the idea of "Guidelines and Recommendations". We encourage
-you to read through these and thoughtfully decide what approaches
-will work for you in your particular environment.
+Funktionales Testen ist ohnehin schon schwierig genug.  Anwendungsstatus, 
+Komplexität und Abhängigkeiten machen das Testen schon schwierig genug. Dazu kommt
+das der Umgang mit Browsern (insbesondere mit Cross-Browser-Inkompatiblitäten)
+das Schreiben guter Tests zu einer Herausforderung macht.
 
-Functional testing is difficult to get right for many reasons.
-As if application state, complexity, and dependencies do not make testing difficult enough,
-dealing with browsers (especially with cross-browser incompatibilities)
-makes writing good tests a challenge.
+Selenium stellt Werkzeuge zur Verfügung, die die funktionale Benutzerinteraktion
+erleichtern. Allerdings kann Selenium nicht dabei helfen gut aufgebaute Testsuiten
+zu schreiben. In diesem Kapitel haben wir Ratschläge, Richtlinien und Empfehlungen
+zusammengefasst, zur funktionalen Automatisierung von Webseiten.
 
-Selenium provides tools to make functional user interaction easier,
-but does not help you write well-architected test suites.
-In this chapter we offer advice, guidelines, and recommendations.
-on how to approach functional web page automation.
-
-This chapter records software design patterns popular
-amongst many of the users of Selenium
-that have proven successful over the years.
+Dieses Kapitel verwendet viele bewährte Software-Patterns die sich für viele 
+Selenium Nutzer als erfolgreich erwiesen haben.

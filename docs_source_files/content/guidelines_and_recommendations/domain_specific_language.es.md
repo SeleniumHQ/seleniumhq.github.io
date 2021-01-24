@@ -1,5 +1,5 @@
 ---
-title: "Lenguage de dominio específico"
+title: "Lenguaje de dominio específico"
 weight: 2
 ---
 

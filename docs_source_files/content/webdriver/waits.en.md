@@ -264,8 +264,7 @@ assert(ele.text == "Hello from JavaScript!")
 In that example, we pass in an anonymous function
 (but we could also define it explicitly as we did earlier so it may be reused).
 The first and only argument that is passed to our condition
-is always a reference to our driver object, _WebDriver_
-(called `d` in the example).
+is always a reference to our driver object, _WebDriver_.
 In a multi-threaded environment, you should be careful
 to operate on the driver reference passed in to the condition
 rather than the reference to the driver in the outer scope.

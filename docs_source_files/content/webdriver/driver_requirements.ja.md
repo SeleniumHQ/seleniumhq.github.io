@@ -174,7 +174,7 @@ Selenium 2と同じ方法でFirefoxをインスタンス化できます。
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.Firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 WebDriver driver = new FirefoxDriver();
   {{< / code-panel >}}
