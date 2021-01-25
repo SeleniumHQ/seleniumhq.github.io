@@ -91,7 +91,7 @@ java -jar selenium-server-4.0.0-<selenium-version>.jar info tracing
 ## Leveraging event logs
 Tracing has to be enabled for event logging as well, even if one does not wish to export traces to visualize them.  
 **By default, tracing is enabled. No additional parameters need to be passed to see logs on the console.**
-All events within a span are logged at INFO level. Error events are logged at WARN level. This includes error events as well. 
+All events within a span are logged at FINE level. Error events are logged at WARN level.
 
 All event logs have the following fields :
  | Field | Field value | Description |
@@ -107,7 +107,7 @@ All event logs have the following fields :
 
  
 
-       INFO [LoggingOptions$1.lambda$export$1] - {
+    FINE [LoggingOptions$1.lambda$export$1] - {
       "traceId": "fc8aef1d44b3cc8bc09eb8e581c4a8eb",
       "spanId": "b7d3b9865d3ddd45",
       "spanKind": "INTERNAL",
