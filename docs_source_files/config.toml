@@ -311,3 +311,11 @@ weight = 20
 name = "<i class='fas fa-fw fa-bullhorn'></i> Como contribuir"
 url = "contributing"
 weight = 30
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
+[markup.highlight]
+# See a complete list of available styles at https://xyproto.github.io/splash/docs/all.html
+style = "tango"
