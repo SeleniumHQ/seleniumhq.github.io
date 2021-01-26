@@ -1347,7 +1347,16 @@ _Note: This requires Chromium Browsers to be in headless mode_
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-    // code sample not available please raise a PR
+    import org.openqa.selenium.print.PrintOptions;
+
+    driver.get("https://www.selenium.dev");
+    printer = (PrintsPage) driver;
+
+    PrintOptions printOptions = new PrintOptions();
+    printOptions.setPageRanges("1-2");
+
+    Pdf pdf = printer.print(printOptions);
+    String content = pdf.getContent();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
     from selenium.webdriver.common.print_page_options import PrintOptions
@@ -1355,7 +1364,7 @@ _Note: This requires Chromium Browsers to be in headless mode_
     print_options = PrintOptions()
     print_options.page_ranges = ['1-2']
 
-    pages.load("printPage.html")
+    driver.get("printPage.html")
 
     base64code = driver.print_page(print_options)
   {{< / code-panel >}}
@@ -1363,7 +1372,9 @@ _Note: This requires Chromium Browsers to be in headless mode_
     // code sample not available please raise a PR
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-    # code sample not available please raise a PR
+    driver.navigate_to 'https://www.selenium.dev'
+
+    base64encodedContent = driver.print_page(orientation: 'landscape')
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
   const {Builder} = require('selenium-webdriver');
