@@ -172,3 +172,33 @@ await driver.wait(until.elementIsVisible(revealed), 5000);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+## Listen to JS Exceptions on a web page
+
+Using Selenium's integration with CDP, one can listen to the JS Exceptions and register callbacks to process the exception details.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogException(cdpConnection, function(event) {
+  assert.equal(event['exceptionDetails']['stackTrace']['callFrames'][0]['functionName'], 'onmouseover')
+})
+await driver.get(test.Pages.javascriptPage)
+let element = driver.findElement({id: 'throwing-mouseover'})
+await element.click()
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
