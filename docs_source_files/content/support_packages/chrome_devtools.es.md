@@ -102,4 +102,32 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+## Register Basic Auth:
+
+Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
+With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const pageCdpConnection = await driver.createCDPConnection('page')
+
+await driver.register('username', 'password', pageCdpConnection)
+await driver.get(server.url())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
 

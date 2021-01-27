@@ -99,7 +99,7 @@ fun main() {
 ## Register Basic Auth:
 
 Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
-With selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
+With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -118,10 +118,9 @@ With selenium and devtools integration, you can automate the input of basic auth
 const pageCdpConnection = await driver.createCDPConnection('page')
 
 await driver.register('username', 'password', pageCdpConnection)
-await driver.get(server.url() + '/protected')
+await driver.get(server.url())
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
 # Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
-
