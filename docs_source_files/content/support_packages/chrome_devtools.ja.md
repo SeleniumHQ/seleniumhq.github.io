@@ -106,4 +106,128 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+## Register Basic Auth:
 
+Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
+With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const pageCdpConnection = await driver.createCDPConnection('page')
+
+await driver.register('username', 'password', pageCdpConnection)
+await driver.get(server.url())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Listen to DOM events on a web page
+
+Using Selenium's integration with CDP, one can listen to the DOM events and register callbacks to process the DOM event.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.logMutationEvents(cdpConnection, function(event) {
+  assert.equal(event['attribute_name'], 'style')
+  assert.equal(event['current_value'], '')
+  assert.equal(event['old_value'], 'display:none;')
+})
+
+await driver.get(test.Pages.dynamicPage)
+
+let element = driver.findElement({id: 'reveal'})
+await element.click()
+let revealed = driver.findElement({id: 'revealed'});
+await driver.wait(until.elementIsVisible(revealed), 5000);
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Listen to JS Exceptions on a web page
+
+Using Selenium's integration with CDP, one can listen to the JS Exceptions and register callbacks to process the exception details.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogException(cdpConnection, function(event) {
+  assert.equal(event['exceptionDetails']['stackTrace']['callFrames'][0]['functionName'], 'onmouseover')
+})
+await driver.get(test.Pages.javascriptPage)
+let element = driver.findElement({id: 'throwing-mouseover'})
+await element.click()
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## Listen to console.log events on a web page
+
+Using Selenium's integration with CDP, one can listen to the `console.log` events and register callbacks to process the event.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogEvent(cdpConnection, function(event) {
+  assert.equal(event['args'][0]['value'], 'here')
+})
+await driver.executeScript('console.log("here")')
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
