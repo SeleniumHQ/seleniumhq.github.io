@@ -198,3 +198,32 @@ await element.click()
 # Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Listen to console.log events on a web page
+
+Using Selenium's integration with CDP, one can listen to the `console.log` events and register callbacks to process the event.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogEvent(cdpConnection, function(event) {
+  assert.equal(event['args'][0]['value'], 'here')
+})
+await driver.executeScript('console.log("here")')
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
