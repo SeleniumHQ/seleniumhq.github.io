@@ -131,3 +131,40 @@ await driver.get(server.url())
 # Please raise a PR to add code sample
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Listen to DOM events on a web page
+
+Using Selenium's integration with CDP, one can listen to the DOM events and register callbacks to process the DOM event.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.logMutationEvents(cdpConnection, function(event) {
+  assert.equal(event['attribute_name'], 'style')
+  assert.equal(event['current_value'], '')
+  assert.equal(event['old_value'], 'display:none;')
+})
+
+await driver.get(test.Pages.dynamicPage)
+
+let element = driver.findElement({id: 'reveal'})
+await element.click()
+let revealed = driver.findElement({id: 'revealed'});
+await driver.wait(until.elementIsVisible(revealed), 5000);
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
