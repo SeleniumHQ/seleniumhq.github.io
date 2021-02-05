@@ -1100,7 +1100,7 @@ let driver = await new Builder()
 
     await driver.get('https://www.example.com');
     // Returns base64 encoded string
-    let encodedString = driver.takeScreenshot();
+    let encodedString = await driver.takeScreenshot();
     await fs.writeFileSync('./image.png', encodedString, 'base64');
     await driver.quit();
 }())
