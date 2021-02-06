@@ -4,16 +4,6 @@ weight: 3
 ---
 
 
-<!-- #codeExamples -->
-<!-- Remember to cover profile and extensions here -->
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-
 ## Ruby
 
 默认情况下，Ruby 没有安装在 Windows 上。下载最新[版本](//rubyinstaller.org/downloads)
@@ -65,36 +55,36 @@ driver = Selenium::WebDriver.for :internet_explorer
 启动浏览器后你要做的第一件事就是打开你的网站。这可以通过一行代码实现:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 简便的方法
 driver.get("https://selenium.dev");
 
 // 更长的方法
 driver.navigate().to("https://selenium.dev");
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 driver.get("https://selenium.dev")
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 driver.Navigate().GoToUrl(@"https://selenium.dev");
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 简便的方法
 driver.get 'https://selenium.dev'
 
 # 更长的方法
 driver.navigate.to 'https://selenium.dev'
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 await driver.get('https://selenium.dev');
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 简便的方法
 driver.get("https://selenium.dev")
 
 // 更长的方法
 driver.navigate().to("https://selenium.dev")
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 获取当前 URL
@@ -102,12 +92,12 @@ driver.navigate().to("https://selenium.dev")
 您可以从浏览器的地址栏读取当前的 URL，使用:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.getCurrentUrl();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.current_url{{</ code-panel>}}
-  {{<code-panel language="csharp">}}driver.Url;{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.current_url{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.getCurrentUrl();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.currentUrl{{< / code-panel>}}
+{{<code-panel language="java">}}driver.getCurrentUrl();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.current_url{{</ code-panel>}}
+{{<code-panel language="csharp">}}driver.Url;{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.current_url{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.getCurrentUrl();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.currentUrl{{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 后退
@@ -115,12 +105,12 @@ driver.navigate().to("https://selenium.dev")
 按下浏览器的后退按钮:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.navigate().back();{{</ code-panel>}}
-  {{<code-panel language="python">}}driver.back(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Navigate().Back();{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.navigate.back{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.navigate().back();{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.navigate().back() {{</ code-panel>}}
+{{<code-panel language="java">}}driver.navigate().back();{{</ code-panel>}}
+{{<code-panel language="python">}}driver.back(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Navigate().Back();{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.navigate.back{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.navigate().back();{{</ code-panel>}}
+{{<code-panel language="kotlin">}}driver.navigate().back() {{</ code-panel>}}
 {{</ code-tab>}}
 
 
@@ -128,24 +118,24 @@ driver.navigate().to("https://selenium.dev")
 按下浏览器的前进键:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.navigate().forward();{{</ code-panel>}}
-  {{<code-panel language="python">}}driver.forward(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Navigate().Forward();{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.navigate.forward{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.navigate().forward();{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.navigate().forward(){{</ code-panel>}}
+{{<code-panel language="java">}}driver.navigate().forward();{{</ code-panel>}}
+{{<code-panel language="python">}}driver.forward(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Navigate().Forward();{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.navigate.forward{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.navigate().forward();{{</ code-panel>}}
+{{<code-panel language="kotlin">}}driver.navigate().forward(){{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 刷新
 刷新当前页面:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.navigate().refresh();{{</ code-panel>}}
-  {{<code-panel language="python">}}driver.refresh(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Navigate().Refresh();{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.navigate.refresh{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.navigate().refresh();{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.navigate().refresh(){{</ code-panel>}}
+{{<code-panel language="java">}}driver.navigate().refresh();{{</ code-panel>}}
+{{<code-panel language="python">}}driver.refresh(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Navigate().Refresh();{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.navigate.refresh{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.navigate().refresh();{{</ code-panel>}}
+{{<code-panel language="kotlin">}}driver.navigate().refresh(){{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 获取标题
@@ -153,12 +143,12 @@ driver.navigate().to("https://selenium.dev")
 从浏览器中读取当前页面的标题:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.getTitle();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.title{{</ code-panel>}}
-  {{<code-panel language="csharp">}}driver.Title;{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.title{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.getTitle();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.title{{< / code-panel>}}
+{{<code-panel language="java">}}driver.getTitle();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.title{{</ code-panel>}}
+{{<code-panel language="csharp">}}driver.Title;{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.title{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.getTitle();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.title{{< / code-panel>}}
 {{</ code-tab>}}
 
 
@@ -168,12 +158,12 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 每个窗口都有一个唯一的标识符，该标识符在单个会话中保持持久性。你可以使用以下方法获得当前窗口的窗口句柄:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.getWindowHandle();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.current_window_handle{{</ code-panel>}}
-  {{<code-panel language="csharp">}}driver.CurrentWindowHandle;{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.window_handle{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.getWindowHandle();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.windowHandle{{< / code-panel>}}
+{{<code-panel language="java">}}driver.getWindowHandle();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.current_window_handle{{</ code-panel>}}
+{{<code-panel language="csharp">}}driver.CurrentWindowHandle;{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.window_handle{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.getWindowHandle();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.windowHandle{{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 切换窗口或标签页
@@ -189,7 +179,7 @@ WebDriver 没有区分窗口和标签页。如果你的站点打开了一个新�
 它创建一个新选项卡 (或) 新窗口并自动切换到它。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 存储原始窗口的 ID
 String originalWindow = driver.getWindowHandle();
 
@@ -204,22 +194,22 @@ wait.until(numberOfWindowsToBe(2));
 
 // 循环执行，直到找到一个新的窗口句柄
 for (String windowHandle : driver.getWindowHandles()) {if(!originalWindow.contentEquals(windowHandle)) {driver.switchTo().window(windowHandle);
-        break;
-    }
+break;
+}
 }
 
 // 等待新标签完成加载内容
 wait.until(titleIs("Selenium documentation"));
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # 启动驱动程序
 with webdriver.Firefox() as driver:
-    # 打开网址
-    driver.get("https://seleniumhq.github.io")
+# 打开网址
+driver.get("https://seleniumhq.github.io")
 
     # 设置等待
     wait = WebDriverWait(driver, 10)
@@ -244,8 +234,8 @@ with webdriver.Firefox() as driver:
 
     # 等待新标签页完成加载内容
     wait.until(EC.title_is("SeleniumHQ Browser Automation"))
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 存储原始窗口的 ID
 string originalWindow = driver.CurrentWindowHandle;
 
@@ -261,14 +251,14 @@ wait.Until(wd => wd.WindowHandles.Count == 2);
 // 循环执行，直到找到一个新的窗口句柄
 foreach(string window in driver.WindowHandles)
 {if(originalWindow != window)
-    {driver.SwitchTo().Window(window);
-        break;
-    }
+{driver.SwitchTo().Window(window);
+break;
+}
 }
 // 等待新标签页完成加载内容
 wait.Until(wd => wd.Title == "Selenium documentation");
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 存储原始窗口的 ID
 original_window = driver.window_handle
 
@@ -283,16 +273,16 @@ wait.until {driver.window_handles.length == 2}
 
 #循环执行，直到找到一个新的窗口句柄
 driver.window_handles.each do |handle|
-    if handle != original_window
-        driver.switch_to.window handle
-        break
-    end
+if handle != original_window
+driver.switch_to.window handle
+break
+end
 end
 
 #等待新标签页完成加载内容
 wait.until {driver.title =='Selenium documentation'}
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 存储原始窗口的 ID
 const originalWindow = await driver.getWindowHandle();
 
@@ -304,19 +294,19 @@ await driver.findElement(By.linkText('new window')).click();
 
 // 等待新窗口或标签页
 await driver.wait(async () => (await driver.getAllWindowHandles()).length === 2,
-    10000
-  );
+10000
+);
 
 // 循环执行，直到找到一个新的窗口句柄
 const windows = await driver.getAllWindowHandles();
 windows.forEach(async handle => {if (handle !== originalWindow) {await driver.switchTo().window(handle);
-  }
+}
 });
 
 // 等待新标签页完成加载内容
 await driver.wait(until.titleIs('Selenium documentation'), 10000);
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 存储原始窗口的 ID
 val originalWindow = driver.getWindowHandle()
 
@@ -331,16 +321,16 @@ wait.until(numberOfWindowsToBe(2))
 
 // 循环执行，直到找到一个新的窗口句柄
 for (windowHandle in driver.getWindowHandles()) {
-    if (!originalWindow.contentEquals(windowHandle)) {
-        driver.switchTo().window(windowHandle)
-        break
-    }
+if (!originalWindow.contentEquals(windowHandle)) {
+driver.switchTo().window(windowHandle)
+break
+}
 }
 
 // 等待新标签页完成加载内容
 wait.until(titleIs("Selenium documentation"))
 
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 创建新窗口(或)新标签页并且切换
@@ -351,28 +341,28 @@ wait.until(titleIs("Selenium documentation"))
 _注意: 该特性适用于 Selenium 4 及其后续版本。_
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 打开新标签页并切换到新标签页
 driver.switchTo().newWindow(WindowType.TAB);
 
 // 打开一个新窗口并切换到新窗口
 driver.switchTo().newWindow(WindowType.WINDOW);
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 打开新标签页并切换到新标签页
 driver.switch_to.new_window('tab')
 
 # 打开一个新窗口并切换到新窗口
 driver.switch_to.new_window('window')
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 打开新标签页并切换到新标签页
 driver.SwitchTo().NewWindow(WindowType.Tab)
 
 // 打开一个新窗口并切换到新窗口
 driver.SwitchTo().NewWindow(WindowType.Window)
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 注意：ruby 中的 new_window 只打开一个新标签页(或)窗口，不会自动切换
 # 用户必须切换到新选项卡 (或) 新窗口
 
@@ -381,22 +371,22 @@ driver.manage.new_window(:tab)
 
 # 打开一个新窗口并切换到新窗口
 driver.manage.new_window(:window)
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 打开新标签页并切换到新标签页
 await driver.switchTo().newWindow('tab');
 
 // 打开一个新窗口并切换到新窗口
 await driver.switchTo().newWindow('window');
 
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 打开新标签页并切换到新标签页
 driver.switchTo().newWindow(WindowType.TAB)
 
 // 打开一个新窗口并切换到新窗口
 driver.switchTo().newWindow(WindowType.WINDOW)
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 关闭窗口或标签页
@@ -405,49 +395,49 @@ driver.switchTo().newWindow(WindowType.WINDOW)
 假设您遵循了前一节中的代码示例，您将把前一个窗口句柄存储在一个变量中。把这些放在一起，你会得到:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 //关闭标签页或窗口
 driver.close();
 
 //切回到之前的标签页或窗口
 driver.switchTo().window(originalWindow);
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 #关闭标签页或窗口
 driver.close()
 
 #切回到之前的标签页或窗口
 driver.switch_to.window(original_window)
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 //关闭标签页或窗口
 driver.Close();
 
 //切回到之前的标签页或窗口
 driver.SwitchTo().Window(originalWindow);
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 #关闭标签页或窗口
 driver.close
 
 #切回到之前的标签页或窗口
 driver.switch_to.window original_window
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 //关闭标签页或窗口
 await driver.close();
 
 //切回到之前的标签页或窗口
 await driver.switchTo().window(originalWindow);
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 //关闭标签页或窗口
 driver.close()
 
 //切回到之前的标签页或窗口
 driver.switchTo().window(originalWindow)
 
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 如果在关闭一个窗口后忘记切换回另一个窗口句柄，WebDriver 将在当前关闭的页面上执行，并触发一个
@@ -457,12 +447,12 @@ driver.switchTo().window(originalWindow)
 
 当你完成了浏览器会话，你应该调用 quit 退出，而不是 close 关闭:
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.quit();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.quit(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Quit();{{< / code-panel>}}
-  {{<code-panel language="ruby">}}driver.quit{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.quit();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.quit(){{< / code-panel>}}
+{{<code-panel language="java">}}driver.quit();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.quit(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Quit();{{< / code-panel>}}
+{{<code-panel language="ruby">}}driver.quit{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.quit();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.quit(){{< / code-panel>}}
 {{</ code-tab>}}
 
 * 退出将会
@@ -476,91 +466,91 @@ driver.switchTo().window(originalWindow)
 有的测试框架提供了一些方法和注释，您可以在测试结束时放入 teardown() 方法中。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 /**
- * 使用 JUnit 的例子
- * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
- */
-@AfterAll
-public static void tearDown() {driver.quit();
-}
+* 使用 JUnit 的例子
+* https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+  */
+  @AfterAll
+  public static void tearDown() {driver.quit();
+  }
   {{</ code-panel>}}
   {{<code-panel language="python">}}
 # unittest teardown
 # https://docs.python.org/3/library/unittest.html?highlight=teardown#unittest.TestCase.tearDown
 def tearDown(self):
-    self.driver.quit()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+self.driver.quit()
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 /*
-    使用 Visual Studio 的 UnitTesting 的例子
-    https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
+使用 Visual Studio 的 UnitTesting 的例子
+https://msdn.microsoft.com/en-us/library/microsoft.visualstudio.testtools.unittesting.aspx
 */
 [TestCleanup]
 public void TearDown()
 {driver.Quit();
 }
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # UnitTest Teardown
 # https://www.rubydoc.info/github/test-unit/test-unit/Test/Unit/TestCase
 def teardown
-    @driver.quit
+@driver.quit
 end
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 /**
- * 使用 Mocha 的例子
- * https://mochajs.org/#hooks
- */
-after('Tear down', async function () {await driver.quit();
-});
+* 使用 Mocha 的例子
+* https://mochajs.org/#hooks
+  */
+  after('Tear down', async function () {await driver.quit();
+  });
   {{</ code-panel>}}
   {{<code-panel language="kotlin">}}
 
 /**
- * 使用 JUnit 的例子
- * https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
- */
-@AfterAll
-fun tearDown() {driver.quit()
-}
+* 使用 JUnit 的例子
+* https://junit.org/junit5/docs/current/api/org/junit/jupiter/api/AfterAll.html
+  */
+  @AfterAll
+  fun tearDown() {driver.quit()
+  }
   {{</ code-panel>}}
-{{</ code-tab>}}
+  {{</ code-tab>}}
 
 如果不在测试上下文中运行 WebDriver，您可以考虑使用 `try / finally`，这是大多数语言都提供的，
 这样一个异常处理仍然可以清理 WebDriver 会话。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 try {//WebDriver 代码…} finally {driver.quit();
 }
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 try:
-    #WebDriver 代码…
+#WebDriver 代码…
 finally:
-    driver.quit()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+driver.quit()
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 try {//WebDriver 代码…} finally {driver.Quit();
 }
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 begin
-    #WebDriver 代码…
+#WebDriver 代码…
 ensure
-    driver.quit
+driver.quit
 end
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 try {//WebDriver 代码…} finally {await driver.quit();
 }
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 try {//WebDriver 代码…} finally {driver.quit()
 }
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 Python 的 WebDriver 现在支持 Python 上下文管理器，当使用 with 关键字时，可以在执行结束时自动退出驱动程序。
@@ -592,30 +582,30 @@ with webdriver.Firefox() as driver:
 如果不是 iframe，我们可能会使用如下方式点击按钮:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 这不会工作
 driver.findElement(By.tagName("button")).click();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 这不会工作
 driver.find_element(By.TAG_NAME, 'button').click()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 这不会工作
 driver.FindElement(By.TagName("button")).Click();
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 这不会工作
 driver.find_element(:tag_name,'button').click
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 这不会工作
 await driver.findElement(By.css('button')).click();
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 这不会工作
 driver.findElement(By.tagName("button")).click()
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 但是，如果 iframe 之外没有按钮，那么您可能会得到一个 _no such element 无此元素_ 的错误。
@@ -627,7 +617,7 @@ driver.findElement(By.tagName("button")).click()
 使用 WebElement 进行切换是最灵活的选择。您可以使用首选的选择器找到框架并切换到它。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 存储网页元素
 WebElement iframe = driver.findElement(By.cssSelector("#modal>iframe"));
 
@@ -636,8 +626,8 @@ driver.switchTo().frame(iframe);
 
 // 现在可以点击按钮
 driver.findElement(By.tagName("button")).click();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 存储网页元素
 iframe = driver.find_element(By.CSS_SELECTOR, "#modal > iframe")
 
@@ -646,8 +636,8 @@ driver.switch_to.frame(iframe)
 
 # 单击按钮
 driver.find_element(By.TAG_NAME, 'button').click()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 存储网页元素
 IWebElement iframe = driver.FindElement(By.CssSelector("#modal>iframe"));
 
@@ -656,8 +646,8 @@ driver.SwitchTo().Frame(iframe);
 
 // 现在可以点击按钮
 driver.FindElement(By.TagName("button")).Click();
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # Store iframe web element
 iframe = driver.find_element(:css,'#modal> iframe')
 
@@ -666,8 +656,8 @@ driver.switch_to.frame iframe
 
 # 单击按钮
 driver.find_element(:tag_name,'button').click
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 存储网页元素
 const iframe = driver.findElement(By.css('#modal> iframe'));
 
@@ -676,8 +666,8 @@ await driver.switchTo().frame(iframe);
 
 // 现在可以点击按钮
 await driver.findElement(By.css('button')).click();
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 存储网页元素
 val iframe = driver.findElement(By.cssSelector("#modal>iframe"))
 
@@ -686,7 +676,7 @@ driver.switchTo().frame(iframe)
 
 // 现在可以点击按钮
 driver.findElement(By.tagName("button")).click()
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 使用 name 或 id
@@ -695,7 +685,7 @@ driver.findElement(By.tagName("button")).click()
 那么将切换到找到的第一个。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 使用 ID
 driver.switchTo().frame("buttonframe");
 
@@ -704,15 +694,15 @@ driver.switchTo().frame("myframe");
 
 // 现在可以点击按钮
 driver.findElement(By.tagName("button")).click();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 通过 id 切换框架
 driver.switch_to.frame('buttonframe')
 
 # 单击按钮
 driver.find_element(By.TAG_NAME, 'button').click()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 使用 ID
 driver.SwitchTo().Frame("buttonframe");
 
@@ -721,15 +711,15 @@ driver.SwitchTo().Frame("myframe");
 
 // 现在可以点击按钮
 driver.FindElement(By.TagName("button")).Click();
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # Switch by ID
 driver.switch_to.frame 'buttonframe'
 
 # 单击按钮
 driver.find_element(:tag_name,'button').click
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 使用 ID
 await driver.switchTo().frame('buttonframe');
 
@@ -738,8 +728,8 @@ await driver.switchTo().frame('myframe');
 
 // 现在可以点击按钮
 await driver.findElement(By.css('button')).click();
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 使用 ID
 driver.switchTo().frame("buttonframe")
 
@@ -748,43 +738,43 @@ driver.switchTo().frame("myframe")
 
 // 现在可以点击按钮
 driver.findElement(By.tagName("button")).click()
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 使用索引
 
 还可以使用frame的索引，
 例如可以使用JavaScript中的
- _window.frames_ 进行查询.
+_window.frames_ 进行查询.
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 切换到第 2 个框架
 driver.switchTo().frame(1);
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 切换到第 2 个框架
 driver.switch_to.frame(1)
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 切换到第 2 个框架
 driver.SwitchTo().Frame(1);
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 基于索引切换到第 2 个 iframe
 iframe = driver.find_elements_by_tag_name('iframe')[1]
 
 # 切换到选择的 iframe
 driver.switch_to.frame(iframe)
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 切换到第 2 个框架
 await driver.switchTo().frame(1);
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 切换到第 2 个框架
 driver.switchTo().frame(1)
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 
@@ -793,30 +783,30 @@ driver.switchTo().frame(1)
 离开 iframe 或 frameset，切换回默认内容，如下所示:
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 回到顶层
 driver.switchTo().defaultContent();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 切回到默认内容
 driver.switch_to.default_content()
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 回到顶层
 driver.SwitchTo().DefaultContent();
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 回到顶层
 driver.switch_to.default_content
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 回到顶层
 await driver.switchTo().defaultContent();
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 回到顶层
 driver.switchTo().defaultContent()
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ## 窗口管理
@@ -827,7 +817,7 @@ driver.switchTo().defaultContent()
 获取浏览器窗口的大小(以像素为单位)。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 分别获取每个尺寸
 int width = driver.manage().window().getSize().getWidth();
 int height = driver.manage().window().getSize().getHeight();
@@ -836,8 +826,8 @@ int height = driver.manage().window().getSize().getHeight();
 Dimension size = driver.manage().window().getSize();
 int width1 = size.getWidth();
 int height1 = size.getHeight();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 分别获取每个尺寸
 width = driver.get_window_size().get("width")
 height = driver.get_window_size().get("height")
@@ -846,8 +836,8 @@ height = driver.get_window_size().get("height")
 size = driver.get_window_size()
 width1 = size.get("width")
 height1 = size.get("height")
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 分别获取每个尺寸
 int width = driver.Manage().Window.Size.Width;
 int height = driver.Manage().Window.Size.Height;
@@ -856,8 +846,8 @@ int height = driver.Manage().Window.Size.Height;
 System.Drawing.Size size = driver.Manage().Window.Size;
 int width1 = size.Width;
 int height1 = size.Height;
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 # 分别获取每个尺寸
 width = driver.manage.window.size.width
 height = driver.manage.window.size.height
@@ -866,8 +856,8 @@ height = driver.manage.window.size.height
 size = driver.manage.window.size
 width1 = size.width
 height1 = size.height
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 分别获取每个尺寸
 const {width, height} = await driver.manage().window().getRect();
 
@@ -875,8 +865,8 @@ const {width, height} = await driver.manage().window().getRect();
 const rect = await driver.manage().window().getRect();
 const width1 = rect.width;
 const height1 = rect.height;
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 分别获取每个尺寸
 val width = driver.manage().window().size.width
 val height = driver.manage().window().size.height
@@ -885,19 +875,19 @@ val height = driver.manage().window().size.height
 val size = driver.manage().window().size
 val width1 = size.width
 val height1 = size.height
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 设置窗口大小
 
 恢复窗口并设置窗口大小。
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.manage().window().setSize(new Dimension(1024, 768));{{</ code-panel>}}
-  {{<code-panel language="python">}}driver.set_window_size(1024, 768){{</ code-panel>}}
-  {{<code-panel language="csharp">}}driver.Manage().Window.Size = new Size(1024, 768);{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.manage.window.resize_to(1024,768){{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.manage().window().setRect({width: 1024, height: 768});{{</ code-panel>}}
-  {{<code-panel language="kotlin">}}driver.manage().window().size = Dimension(1024, 768){{</ code-panel>}}
+{{<code-panel language="java">}}driver.manage().window().setSize(new Dimension(1024, 768));{{</ code-panel>}}
+{{<code-panel language="python">}}driver.set_window_size(1024, 768){{</ code-panel>}}
+{{<code-panel language="csharp">}}driver.Manage().Window.Size = new Size(1024, 768);{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.manage.window.resize_to(1024,768){{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.manage().window().setRect({width: 1024, height: 768});{{</ code-panel>}}
+{{<code-panel language="kotlin">}}driver.manage().window().size = Dimension(1024, 768){{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 得到窗口的位置
@@ -905,7 +895,7 @@ val height1 = size.height
 获取浏览器窗口左上角的坐标。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 分别获取每个尺寸
 int x = driver.manage().window().getPosition().getX();
 int y = driver.manage().window().getPosition().getY();
@@ -914,8 +904,8 @@ int y = driver.manage().window().getPosition().getY();
 Point position = driver.manage().window().getPosition();
 int x1 = position.getX();
 int y1 = position.getY();
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 分别获取每个尺寸
 x = driver.get_window_position().get('x')
 y = driver.get_window_position().get('y')
@@ -924,8 +914,8 @@ y = driver.get_window_position().get('y')
 position = driver.get_window_position()
 x1 = position.get('x')
 y1 = position.get('y')
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 分别获取每个尺寸
 int x = driver.Manage().Window.Position.X;
 int y = driver.Manage().Window.Position.Y;
@@ -934,8 +924,8 @@ int y = driver.Manage().Window.Position.Y;
 Point position = driver.Manage().Window.Position;
 int x1 = position.X;
 int y1 = position.Y;
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 #Access each dimension individually
 x = driver.manage.window.position.x
 y = driver.manage.window.position.y
@@ -944,8 +934,8 @@ y = driver.manage.window.position.y
 rect  = driver.manage.window.rect
 x1 = rect.x
 y1 = rect.y
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 分别获取每个尺寸
 const {x, y} = await driver.manage().window().getRect();
 
@@ -953,8 +943,8 @@ const {x, y} = await driver.manage().window().getRect();
 const rect = await driver.manage().window().getRect();
 const x1 = rect.x;
 const y1 = rect.y;
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 分别获取每个尺寸
 val x = driver.manage().window().position.x
 val y = driver.manage().window().position.y
@@ -964,7 +954,7 @@ val position = driver.manage().window().position
 val x1 = position.x
 val y1 = position.y
 
-  {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ## 设置窗口位置
@@ -972,29 +962,29 @@ val y1 = position.y
 将窗口移动到设定的位置。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}
+{{<code-panel language="java">}}
 // 将窗口移动到主显示器的左上角
 driver.manage().window().setPosition(new Point(0, 0));
-  {{</ code-panel>}}
-  {{<code-panel language="python">}}
+{{</ code-panel>}}
+{{<code-panel language="python">}}
 # 将窗口移动到主显示器的左上角
 driver.set_window_position(0, 0)
-  {{</ code-panel>}}
-  {{<code-panel language="csharp">}}
+{{</ code-panel>}}
+{{<code-panel language="csharp">}}
 // 将窗口移动到主显示器的左上角
 driver.Manage().Window.Position = new Point(0, 0);
-  {{</ code-panel>}}
-  {{<code-panel language="ruby">}}
+{{</ code-panel>}}
+{{<code-panel language="ruby">}}
 driver.manage.window.move_to(0,0)
-  {{</ code-panel>}}
-  {{<code-panel language="javascript">}}
+{{</ code-panel>}}
+{{<code-panel language="javascript">}}
 // 将窗口移动到主显示器的左上角
 await driver.manage().window().setRect({x: 0, y: 0});
-  {{</ code-panel>}}
-  {{<code-panel language="kotlin">}}
+{{</ code-panel>}}
+{{<code-panel language="kotlin">}}
 // 将窗口移动到主显示器的左上角
 driver.manage().window().position = Point(0,0)
-    {{</ code-panel>}}
+{{</ code-panel>}}
 {{</ code-tab>}}
 
 ### 最大化窗口
@@ -1002,12 +992,12 @@ driver.manage().window().position = Point(0,0)
 扩大窗口。对于大多数操作系统，窗口将填满屏幕，而不会阻挡操作系统自己的菜单和工具栏。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.manage().window().maximize();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.maximize_window(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Manage().Window.Maximize();{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.manage.window.maximize{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.manage().window().maximize();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
+{{<code-panel language="java">}}driver.manage().window().maximize();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.maximize_window(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Manage().Window.Maximize();{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.manage.window.maximize{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.manage().window().maximize();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.manage().window().maximize(){{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 最小化窗口
@@ -1019,12 +1009,12 @@ driver.manage().window().position = Point(0,0)
 __注意: 此功能适用于Selenium 4以及更高版本.__
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
-  {{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
-  {{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
-  {{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
-  {{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
+{{< code-panel language="java" >}}driver.manage().window().minimize();{{< / code-panel >}}
+{{< code-panel language="python" >}}driver.minimize_window(){{< / code-panel >}}
+{{< code-panel language="csharp" >}}driver.Manage().Window.Minimize();{{< / code-panel >}}
+{{< code-panel language="ruby" >}}driver.manage.window.minimize{{< / code-panel >}}
+{{< code-panel language="javascript" >}}await driver.manage().window().minimize();{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}driver.manage().window().minimize(){{< / code-panel >}}
 {{< / code-tab >}}
 
 ### 全屏窗口
@@ -1032,12 +1022,12 @@ __注意: 此功能适用于Selenium 4以及更高版本.__
 填充整个屏幕，类似于在大多数浏览器中按下 F11。
 
 {{<code-tab>}}
-  {{<code-panel language="java">}}driver.manage().window().fullscreen();{{< / code-panel>}}
-  {{<code-panel language="python">}}driver.fullscreen_window(){{< / code-panel>}}
-  {{<code-panel language="csharp">}}driver.Manage().Window.FullScreen();{{</ code-panel>}}
-  {{<code-panel language="ruby">}}driver.manage.window.full_screen{{</ code-panel>}}
-  {{<code-panel language="javascript">}}await driver.manage().window().fullscreen();{{< / code-panel>}}
-  {{<code-panel language="kotlin">}}driver.manage().window().fullscreen(){{< / code-panel>}}
+{{<code-panel language="java">}}driver.manage().window().fullscreen();{{< / code-panel>}}
+{{<code-panel language="python">}}driver.fullscreen_window(){{< / code-panel>}}
+{{<code-panel language="csharp">}}driver.Manage().Window.FullScreen();{{</ code-panel>}}
+{{<code-panel language="ruby">}}driver.manage.window.full_screen{{</ code-panel>}}
+{{<code-panel language="javascript">}}await driver.manage().window().fullscreen();{{< / code-panel>}}
+{{<code-panel language="kotlin">}}driver.manage().window().fullscreen(){{< / code-panel>}}
 {{</ code-tab>}}
 
 ### 屏幕截图
@@ -1048,23 +1038,23 @@ WebDriver端点
 返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}
+{{< code-panel language="java" >}}
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.chrome.ChromeDriver;
 import java.io.*;
 import org.openqa.selenium.*;
 
 public class SeleniumTakeScreenshot {
-    public static void main(String args[]) throws IOException {
-        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.example.com");
-        File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(scrFile, new File("./image.png"));
-        driver.quit();
-    }
+public static void main(String args[]) throws IOException {
+WebDriver driver = new ChromeDriver();
+driver.get("http://www.example.com");
+File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(scrFile, new File("./image.png"));
+driver.quit();
 }
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+}
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
 from selenium import webdriver
 
 driver = webdriver.Chrome()
@@ -1077,58 +1067,58 @@ driver.save_screenshot('./image.png')
 
 driver.quit()
 {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
-    using OpenQA.Selenium.Support.UI;
+{{< code-panel language="csharp" >}}
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
     var driver = new ChromeDriver();
     driver.Navigate().GoToUrl("http://www.example.com");
     Screenshot screenshot = (driver as ITakesScreenshot).GetScreenshot();
     screenshot.SaveAsFile("screenshot.png", ScreenshotImageFormat.Png); // Format values are Bmp, Gif, Jpeg, Png, Tiff
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  driver.get 'https://example.com/'
+driver.get 'https://example.com/'
 
-  # Takes and Stores the screenshot in specified path
-  driver.save_screenshot('./image.png')
+# Takes and Stores the screenshot in specified path
+driver.save_screenshot('./image.png')
 
 end
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
 let {Builder} = require('selenium-webdriver');
 let fs = require('fs');
 
 (async function example() {
-    let driver = await new Builder()
-      .forBrowser('chrome')
-      .build();
+let driver = await new Builder()
+.forBrowser('chrome')
+.build();
 
     await driver.get('https://www.example.com');
     // Returns base64 encoded string
-    let encodedString = driver.takeScreenshot();
+    let encodedString = await driver.takeScreenshot();
     await fs.writeFileSync('./image.png', encodedString, 'base64');
     await driver.quit();
 }())
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
 import com.oracle.tools.packager.IOUtils.copyFile
 import org.openqa.selenium.*
 import org.openqa.selenium.chrome.ChromeDriver
 import java.io.File
 
 fun main(){
-    val driver =  ChromeDriver()
-    driver.get("https://www.example.com")
-    val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
-    copyFile(scrFile, File("./image.png"))
-    driver.quit()
+val driver =  ChromeDriver()
+driver.get("https://www.example.com")
+val scrFile = (driver as TakesScreenshot).getScreenshotAs<File>(OutputType.FILE)
+copyFile(scrFile, File("./image.png"))
+driver.quit()
 }
-  {{< / code-panel >}}
+{{< / code-panel >}}
 {{< / code-tab >}}
 
 ###  元素屏幕截图
@@ -1139,7 +1129,7 @@ WebDriver端点
 返回以Base64格式编码的屏幕截图.
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}
+{{< code-panel language="java" >}}
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -1147,17 +1137,17 @@ import java.io.File;
 import java.io.IOException;
 
 public class SeleniumelementTakeScreenshot {
-  public static void main(String args[]) throws IOException {
-    WebDriver driver = new ChromeDriver();
-    driver.get("https://www.example.com");
-    WebElement element = driver.findElement(By.cssSelector("h1"));
-    File scrFile = element.getScreenshotAs(OutputType.FILE);
-    FileUtils.copyFile(scrFile, new File("./image.png"));
-    driver.quit();
-  }
+public static void main(String args[]) throws IOException {
+WebDriver driver = new ChromeDriver();
+driver.get("https://www.example.com");
+WebElement element = driver.findElement(By.cssSelector("h1"));
+File scrFile = element.getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(scrFile, new File("./image.png"));
+driver.quit();
 }
- {{< / code-panel >}}
-  {{< code-panel language="python" >}}
+}
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -1172,11 +1162,11 @@ ele = driver.find_element(By.CSS_SELECTOR, 'h1')
 ele.screenshot('./image.png')
 
 driver.quit()
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-    using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
-    using OpenQA.Selenium.Support.UI;
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 
     // Webdriver
     var driver = new ChromeDriver();
@@ -1188,103 +1178,102 @@ driver.quit()
     // Screenshot for the element
     var elementScreenshot = (webElement as ITakesScreenshot).GetScreenshot();
     elementScreenshot.SaveAsFile("screenshot_of_element.png");
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
 # Works with Selenium4-alpha7 Ruby bindings and above
 require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome
 
 begin
-  driver.get 'https://example.com/'
-  ele = driver.find_element(:css, 'h1')
+driver.get 'https://example.com/'
+ele = driver.find_element(:css, 'h1')
 
-  # Takes and Stores the element screenshot in specified path
-  ele.save_screenshot('./image.jpg')
+# Takes and Stores the element screenshot in specified path
+ele.save_screenshot('./image.jpg')
 end
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
 const {Builder, By} = require('selenium-webdriver');
 let fs = require('fs');
 
 (async function example() {
-   let driver = await new Builder()
-       .forBrowser('chrome')
-       .build();
+let driver = await new Builder()
+.forBrowser('chrome')
+.build();
 
-   await driver.get('https://www.example.com');
-   let ele = await driver.findElement(By.css("h1"));
-   // Captures the element screenshot
-   let encodedString = await ele.takeScreenshot(true);
-   await fs.writeFileSync('./image.png', encodedString, 'base64');
-   await driver.quit();
+await driver.get('https://www.example.com');
+let ele = await driver.findElement(By.css("h1"));
+// Captures the element screenshot
+let encodedString = await ele.takeScreenshot(true);
+await fs.writeFileSync('./image.png', encodedString, 'base64');
+await driver.quit();
 }())
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
 import org.apache.commons.io.FileUtils
 import org.openqa.selenium.chrome.ChromeDriver
 import org.openqa.selenium.*
 import java.io.File
 
 fun main() {
-    val driver = ChromeDriver()
-    driver.get("https://www.example.com")
-    val element = driver.findElement(By.cssSelector("h1"))
-    val scrFile: File = element.getScreenshotAs(OutputType.FILE)
-    FileUtils.copyFile(scrFile, File("./image.png"))
-    driver.quit()
+val driver = ChromeDriver()
+driver.get("https://www.example.com")
+val element = driver.findElement(By.cssSelector("h1"))
+val scrFile: File = element.getScreenshotAs(OutputType.FILE)
+FileUtils.copyFile(scrFile, File("./image.png"))
+driver.quit()
 }
-  {{< / code-panel >}}
+{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Execute Script
+### 执行脚本
 
-Executes JavaScript code snippet in the
-current context of a selected frame or window.
+在当前frame或者窗口的上下文中，执行JavaScript代码片段.
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}
-    //Creating the JavascriptExecutor interface object by Type casting
-      JavascriptExecutor js = (JavascriptExecutor)driver;
-    //Button Element
-      WebElement button =driver.findElement(By.name("btnLogin"));
-    //Executing JavaScript to click on element
-      js.executeScript("arguments[0].click();", element);
-    //Get return value from script
-      String text = (String) javascriptExecutor.executeScript("return arguments[0].innerText", element);
-    //Executing JavaScript directly
-      js.executeScript("console.log('hello world')");
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-    # code sample not available please raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-    # code sample not available please raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
+{{< code-panel language="java" >}}
+//Creating the JavascriptExecutor interface object by Type casting
+JavascriptExecutor js = (JavascriptExecutor)driver;
+//Button Element
+WebElement button =driver.findElement(By.name("btnLogin"));
+//Executing JavaScript to click on element
+js.executeScript("arguments[0].click();", element);
+//Get return value from script
+String text = (String) javascriptExecutor.executeScript("return arguments[0].innerText", element);
+//Executing JavaScript directly
+js.executeScript("console.log('hello world')");
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
+# code sample not available please raise a PR
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+// code sample not available please raise a PR
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
+# code sample not available please raise a PR
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
 // Stores the header element
 let header = await driver.findElement(By.css('h1'));
 
 // Executing JavaScript to capture innerText of header element
 let text = await driver.executeScript('return arguments[0].innerText', header);
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR
-  {{< / code-panel >}}
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
+// code sample not available please raise a PR
+{{< / code-panel >}}
 {{< / code-tab >}}
 
-### Print Page
+### 打印页面
 
-Prints the current page within the browser
+打印当前浏览器内的页面
 
-_Note: This requires Chromium Browsers to be in headless mode_
+_注意: 此功能需要无头模式下的Chromium浏览器_
 
 
 {{< code-tab >}}
-  {{< code-panel language="java" >}}
-    import org.openqa.selenium.print.PrintOptions;
+{{< code-panel language="java" >}}
+import org.openqa.selenium.print.PrintOptions;
 
     driver.get("https://www.selenium.dev");
     printer = (PrintsPage) driver;
@@ -1294,9 +1283,9 @@ _Note: This requires Chromium Browsers to be in headless mode_
 
     Pdf pdf = printer.print(printOptions);
     String content = pdf.getContent();
-  {{< / code-panel >}}
-  {{< code-panel language="python" >}}
-    from selenium.webdriver.common.print_page_options import PrintOptions
+{{< / code-panel >}}
+{{< code-panel language="python" >}}
+from selenium.webdriver.common.print_page_options import PrintOptions
 
     print_options = PrintOptions()
     print_options.page_ranges = ['1-2']
@@ -1304,35 +1293,35 @@ _Note: This requires Chromium Browsers to be in headless mode_
     driver.get("printPage.html")
 
     base64code = driver.print_page(print_options)
-  {{< / code-panel >}}
-  {{< code-panel language="csharp" >}}
-    // code sample not available please raise a PR
-  {{< / code-panel >}}
-  {{< code-panel language="ruby" >}}
-    driver.navigate_to 'https://www.selenium.dev'
+{{< / code-panel >}}
+{{< code-panel language="csharp" >}}
+// code sample not available please raise a PR
+{{< / code-panel >}}
+{{< code-panel language="ruby" >}}
+driver.navigate_to 'https://www.selenium.dev'
 
     base64encodedContent = driver.print_page(orientation: 'landscape')
-  {{< / code-panel >}}
-  {{< code-panel language="javascript" >}}
-  const {Builder} = require('selenium-webdriver');
-  const chrome = require('selenium-webdriver/chrome');
-  let opts = new chrome.Options();
-  let fs = require('fs');
-  (async function example() {
-  let driver = new Builder()
-  .forBrowser('chrome')
-  .setChromeOptions(opts.headless())
-  .build();
-  await driver.get('https://www.selenium.dev');
-  try {
-  let base64 = await driver.printPage({pageRanges:["1-2"]});
-  await fs.writeFileSync('./test.pdf', base64, 'base64');
-  } catch (e) {
-  console.log(e)
-  }
-  await driver.quit();
-  {{< / code-panel >}}
-  {{< code-panel language="kotlin" >}}
-    // code sample not available please raise a PR
-  {{< / code-panel >}}
+{{< / code-panel >}}
+{{< code-panel language="javascript" >}}
+const {Builder} = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
+let opts = new chrome.Options();
+let fs = require('fs');
+(async function example() {
+let driver = new Builder()
+.forBrowser('chrome')
+.setChromeOptions(opts.headless())
+.build();
+await driver.get('https://www.selenium.dev');
+try {
+let base64 = await driver.printPage({pageRanges:["1-2"]});
+await fs.writeFileSync('./test.pdf', base64, 'base64');
+} catch (e) {
+console.log(e)
+}
+await driver.quit();
+{{< / code-panel >}}
+{{< code-panel language="kotlin" >}}
+// code sample not available please raise a PR
+{{< / code-panel >}}
 {{< / code-tab >}}
