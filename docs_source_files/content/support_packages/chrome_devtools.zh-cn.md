@@ -96,10 +96,13 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Register Basic Auth:
+## 注册基本认证
 
-Some applications require to keep some pages behind an auth and most of the time to keep things simple, a developer uses Basic Auth.
-With Selenium and devtools integration, you can automate the input of basic auth credentials whenever they arise.
+一些应用要求某些页面基于认证过的状态, 
+而大多数时候为了保持简单, 
+开发者使用基本认证. 
+通过Selenium和开发者工具的集成, 
+您可以在出现自动认证的时候自动进行输入.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -125,9 +128,10 @@ await driver.get(server.url())
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Listen to DOM events on a web page
+## 监听页面元素的事件
 
-Using Selenium's integration with CDP, one can listen to the DOM events and register callbacks to process the DOM event.
+通过Selenium和开发者工具的集成,
+可以监听DOM事件并注册回调以处理DOM事件.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -162,9 +166,10 @@ await driver.wait(until.elementIsVisible(revealed), 5000);
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Listen to JS Exceptions on a web page
+## 监听页面JS异常
 
-Using Selenium's integration with CDP, one can listen to the JS Exceptions and register callbacks to process the exception details.
+通过Selenium和开发者工具的集成,
+可以监听JS异常并注册回调以处理异常详细信息.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -193,9 +198,10 @@ await element.click()
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-## Listen to console.log events on a web page
+## 监听页面的console.log事件
 
-Using Selenium's integration with CDP, one can listen to the `console.log` events and register callbacks to process the event.
+通过Selenium和开发者工具的集成,
+可以监听console.log事件并注册回调以处理该事件.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
