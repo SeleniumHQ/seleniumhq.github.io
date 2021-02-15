@@ -77,11 +77,11 @@
                     <td data-label="Language">{{ .Params.Language }}</td>
                     <td data-label="Stable Version">{{ .Params.ClientVersion }}</td>
                     <td data-label="Release Date">{{ .Date.Format "January 02, 2006" }}</td>
-                    <td data-label="Alpha Version">{{ .Params.AlphaClientVersion }}</td>
-                    <td data-label="Alpha Release Date">{{ .PublishDate.Format "January 02, 2006" }}</td>
+                    <td data-label="Beta Version">{{ .Params.BetaClientVersion }}</td>
+                    <td data-label="Beta Release Date">{{ .PublishDate.Format "January 02, 2006" }}</td>
                     <td data-label="Links">
                         <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
-                        <a href="{{ .Params.AlphaDownloadLink }}" class="link">Alpha Download</a>
+                        <a href="{{ .Params.BetaDownloadLink }}" class="link">Beta Download</a>
                         <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
                         <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
                     </td>
