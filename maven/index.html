@@ -18,11 +18,11 @@ if(aboutArrow.className==="arrow-up")aboutArrow.className="arrow-down";else abou
         &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
         &lt;version&gt;3.141.59&lt;/version&gt;
     &lt;/dependency&gt;
-</pre><div class=container>In order to start using <b>Selenium Alpha</b> version or one of the new WebDriver implementations in your Maven project, just add the following dependency to your pom.xml:</div><pre>
+</pre><div class=container>In order to start using <b>Selenium Beta</b> version or one of the new WebDriver implementations in your Maven project, just add the following dependency to your pom.xml:</div><pre>
     &lt;dependency&gt;
         &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
         &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
-        &lt;version&gt;4.0.0-alpha-5&lt;/version&gt;
+        &lt;version&gt;4.0.0-beta-1&lt;/version&gt;
     &lt;/dependency&gt;
 </pre><div class=container><i>Note: Before version 2.0rc3 the artifact was named selenium-remote-control.</i></div><div class="container dark-background maven-diagram-section"><p>To get an overview of the different Selenium Maven artifacts, click on the thumbnail below to open a diagram, which shows the dependencies between the Selenium Maven artifacts as well as the most important classes/interfaces in those artifacts:</p></div><div class="container dark-background maven-diagram-section"><div class=maven-diagram-container><a href=/images/maven-diagram.png><img class=maven-diagram src=/images/maven-diagram.png></a></div></div><div class=container>If you know that you will only use a certain WebDriver implementation, e.g. the FirefoxDriver, you don't need to depend on the selenium-java artifact (which has a lot of transitive dependencies). Instead you can just add the dependency on the artifact you need, e.g.</div><pre>
     &lt;dependency&gt;
