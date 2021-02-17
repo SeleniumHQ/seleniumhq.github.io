@@ -63,7 +63,7 @@ and as we improve our documentation.
 
 If this sounds interesting, please download the beta from your
 favourite package manager (maven, nuget, npm, pip, or the gem), or
-directly from the [selenium site][download].
+directly from the [Selenium site][download].
 
 [download]: /downloads
 [geckodriver]: https://github.com/mozilla/geckodriver/releases
