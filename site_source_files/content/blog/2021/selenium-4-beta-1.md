@@ -9,7 +9,7 @@ categories = ["general", "releases"]
 +++
 
 We're very happy to announce the release of the first beta of Selenium
-4. We're shipping this for Java, .Net, Python, Ruby, and Javascript,
+4. We're shipping this for Java, .Net, Python, Ruby, and JavaScript,
 so if you're using any of those languages, go and grab it from your
 package manager of choice!
 
@@ -38,7 +38,7 @@ drivers you need. In particular, please update [geckodriver][] to
 0.29.0 or later.
 
 By "**almost everything**", I mean that under the covers there have
-been substantial changes. We've rewritten the selenium server to allow
+been substantial changes. We've rewritten the Selenium server to allow
 it to work not only in the familiar "standalone" and "hub and node"
 modes, but also in a new "distributed" mode, which makes it
 signifcantly easier to deploy to something such as Kubernetes in a way
