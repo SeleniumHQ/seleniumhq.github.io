@@ -23,8 +23,8 @@
     <div class="right">
         <p>Latest stable version <a href="https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar">3.141.59</a></p>
         <p>To use the Selenium Server in a Grid configuration see the <a href="https://selenium.dev/documentation/en/grid/">documentation</a>.</p>
-        <p>Latest Selenium 4 Alpha version
-            <a href="https://selenium-release.storage.googleapis.com/4.0-alpha-7/selenium-server-4.0.0-alpha-7.jar">4.0.0-alpha-7</a>
+        <p>Latest Selenium 4 Beta version
+            <a href="https://selenium-release.storage.googleapis.com/4.0-beta-1/selenium-server-4.0.0-beta-1.jar">4.0.0-beta-1</a>
         </p>
     </div>
 </div>
@@ -65,8 +65,8 @@
                 <th scope="col">Language</th>
                 <th scope="col">Stable Version</th>
                 <th scope="col">Release Date</th>
-                <th scope="col">Alpha Version</th>
-                <th scope="col">Alpha Release Date</th>
+                <th scope="col">Beta Version</th>
+                <th scope="col">Beta Release Date</th>
                 <th scope="col">Links</th>
             </tr>
         </thead>
@@ -77,11 +77,11 @@
                     <td data-label="Language">{{ .Params.Language }}</td>
                     <td data-label="Stable Version">{{ .Params.ClientVersion }}</td>
                     <td data-label="Release Date">{{ .Date.Format "January 02, 2006" }}</td>
-                    <td data-label="Alpha Version">{{ .Params.AlphaClientVersion }}</td>
-                    <td data-label="Alpha Release Date">{{ .PublishDate.Format "January 02, 2006" }}</td>
+                    <td data-label="Beta Version">{{ .Params.BetaClientVersion }}</td>
+                    <td data-label="Beta Release Date">{{ .PublishDate.Format "January 02, 2006" }}</td>
                     <td data-label="Links">
                         <a href="{{ .Params.DownloadLink }}" class="link">Download</a>
-                        <a href="{{ .Params.AlphaDownloadLink }}" class="link">Alpha Download</a>
+                        <a href="{{ .Params.BetaDownloadLink }}" class="link">Beta Download</a>
                         <a href="{{ .Params.ChangelogLink }}" class="link">Changelog</a>
                         <a href="{{ .Params.DocsLink }}" class="link">API Docs</a>
                     </td>
