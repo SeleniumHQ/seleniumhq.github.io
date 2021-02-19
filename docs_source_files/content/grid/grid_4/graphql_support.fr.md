@@ -52,29 +52,8 @@ The structure of grid schema is as follows:
     }
     sessionsInfo: {
         sessionQueueRequests,
-        sessions: {
-            id,
-            capabilities,
-            startTime,
-            uri,
-            nodeId,
-            nodeUri,
-            sessionDurationMillis
-            slot : {
-                id,
-                stereotype,
-                lastStarted
-            }
-        }
-    }
-    nodesInfo: {
-        nodes {
-            id,
-            uri,
-            status,
-            maxSession,
-            slotCount,
-            sessions: {
+        sessions: [
+            {
                 id,
                 capabilities,
                 startTime,
@@ -87,16 +66,43 @@ The structure of grid schema is as follows:
                     stereotype,
                     lastStarted
                 }
-            },
-            sessionCount,
-            stereotypes,
-            version,
-            osInfo: {
-                arch,
-                name,
-                version
             }
-        }
+        ]
+    }
+    nodesInfo: {
+        nodes : [
+            {
+                id,
+                uri,
+                status,
+                maxSession,
+                slotCount,
+                sessions: [
+                    {
+                        id,
+                        capabilities,
+                        startTime,
+                        uri,
+                        nodeId,
+                        nodeUri,
+                        sessionDurationMillis
+                        slot : {
+                            id,
+                            stereotype,
+                            lastStarted
+                        }
+                    }
+                ],
+                sessionCount,
+                stereotypes,
+                version,
+                osInfo: {
+                    arch,
+                    name,
+                    version
+                }
+            }
+        ]
     }
 }
 ```

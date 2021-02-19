@@ -46,29 +46,8 @@ A estrutura do esquema de grade é a seguinte:
     }
     sessionsInfo: {
         sessionQueueRequests,
-        sessions: {
-            id,
-            capabilities,
-            startTime,
-            uri,
-            nodeId,
-            nodeUri,
-            sessionDurationMillis
-            slot : {
-                id,
-                stereotype,
-                lastStarted
-            }
-        }
-    }
-    nodesInfo: {
-        nodes {
-            id,
-            uri,
-            status,
-            maxSession,
-            slotCount,
-            sessions: {
+        sessions: [
+            {
                 id,
                 capabilities,
                 startTime,
@@ -81,16 +60,43 @@ A estrutura do esquema de grade é a seguinte:
                     stereotype,
                     lastStarted
                 }
-            },
-            sessionCount,
-            stereotypes,
-            version,
-            osInfo: {
-                arch,
-                name,
-                version
             }
-        }
+        ]
+    }
+    nodesInfo: {
+        nodes : [
+            {
+                id,
+                uri,
+                status,
+                maxSession,
+                slotCount,
+                sessions: [
+                    {
+                        id,
+                        capabilities,
+                        startTime,
+                        uri,
+                        nodeId,
+                        nodeUri,
+                        sessionDurationMillis
+                        slot : {
+                            id,
+                            stereotype,
+                            lastStarted
+                        }
+                    }
+                ],
+                sessionCount,
+                stereotypes,
+                version,
+                osInfo: {
+                    arch,
+                    name,
+                    version
+                }
+            }
+        ]
     }
 }
 ```

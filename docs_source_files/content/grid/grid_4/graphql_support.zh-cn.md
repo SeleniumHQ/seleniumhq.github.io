@@ -47,29 +47,8 @@ GraphQL 是一种用于API的查询语言, 也是用于使用现有数据完成�
     }
     sessionsInfo: {
         sessionQueueRequests,
-        sessions: {
-            id,
-            capabilities,
-            startTime,
-            uri,
-            nodeId,
-            nodeUri,
-            sessionDurationMillis
-            slot : {
-                id,
-                stereotype,
-                lastStarted
-            }
-        }
-    }
-    nodesInfo: {
-        nodes {
-            id,
-            uri,
-            status,
-            maxSession,
-            slotCount,
-            sessions: {
+        sessions: [
+            {
                 id,
                 capabilities,
                 startTime,
@@ -82,16 +61,43 @@ GraphQL 是一种用于API的查询语言, 也是用于使用现有数据完成�
                     stereotype,
                     lastStarted
                 }
-            },
-            sessionCount,
-            stereotypes,
-            version,
-            osInfo: {
-                arch,
-                name,
-                version
             }
-        }
+        ]
+    }
+    nodesInfo: {
+        nodes : [
+            {
+                id,
+                uri,
+                status,
+                maxSession,
+                slotCount,
+                sessions: [
+                    {
+                        id,
+                        capabilities,
+                        startTime,
+                        uri,
+                        nodeId,
+                        nodeUri,
+                        sessionDurationMillis
+                        slot : {
+                            id,
+                            stereotype,
+                            lastStarted
+                        }
+                    }
+                ],
+                sessionCount,
+                stereotypes,
+                version,
+                osInfo: {
+                    arch,
+                    name,
+                    version
+                }
+            }
+        ]
     }
 }
 ```
