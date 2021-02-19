@@ -3,13 +3,13 @@ title: "GraphQLクエリのサポート"
 weight: 4
 ---
 
-GraphQLは、APIのクエリ言語であり、既存のデータでこれらのクエリを実行するためのランタイムです。 
+GraphQLは、APIのクエリ言語であり、既存のデータでこれらのクエリを実行するためのランタイムです。
 これにより、ユーザーは必要なものだけを正確に要求することができます。
 
 ## 列挙型(Enum)
 列挙型は、フィールドの可能な値のセットを表します。
 
-たとえば、 `Node` オブジェクトには `status` というフィールドがあります。 
+たとえば、 `Node` オブジェクトには `status` というフィールドがあります。
 `UP` 、 `DRAINING` 、または `UNAVAILABLE` の可能性があるため、状態は、 列挙型（具体的には、`Status` タイプ）です。
 
 ## スカラー
@@ -39,49 +39,73 @@ GraphQL APIを呼び出すときは、スカラーのみを返すまでネスト
     grid: {
         uri,
         totalSlots,
-        usedSlots,
+        nodeCount,
+        maxSession,
         sessionCount,
-        sessionQueueSize,
+        version,
+        sessionQueueSize
+    }
+    sessionsInfo: {
         sessionQueueRequests,
-        nodes : [
-            {
+        sessions: {
+            id,
+            capabilities,
+            startTime,
+            uri,
+            nodeId,
+            nodeUri,
+            sessionDurationMillis
+            slot : {
                 id,
-                uri,
-                status,
-                maxSession,
-                sessions : [
-                       {
-                            id,
-                            capabilities,
-                            startTime,
-                            uri,
-                            nodeId,
-                            nodeUri,
-                            sessionDurationMillis
-                            slot : {
-                                id,
-                                stereotype,
-                                lastStarted
-                            }
-                        }
-                    ]
-               capabilities,
+                stereotype,
+                lastStarted
             }
-        ]
+        }
+    }
+    nodesInfo: {
+        nodes {
+            id,
+            uri,
+            status,
+            maxSession,
+            slotCount,
+            sessions: { 
+                id,
+                capabilities,
+                startTime,
+                uri,
+                nodeId,
+                nodeUri,
+                sessionDurationMillis
+                slot : {
+                    id,
+                    stereotype,
+                    lastStarted
+                }
+            },
+            sessionCount,
+            stereotypes,
+            version,
+            osInfo: {
+                arch,
+                name,
+                version
+            }
+        }
     }
 }
 ```
 ## GraphQLで照会する
 
-GraphQLをクエリする最良の方法は、 `curl` リクエストを使用することです。 
+GraphQLをクエリする最良の方法は、 `curl` リクエストを使用することです。
 GraphQLを使用すると、必要なデータのみをフェッチできます。それ以上でもそれ以下でもありません。
 
 Some of the example GraphQL queries are given below. You can build your own queries as you like.
 
-### グリッド内の `totalSlots`と` usedSlots`の数を照会する
+### グリッド内の `maxSession`と` sessionCount`の数を照会する
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { totalSlots, usedSlots } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { maxSession, sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 通常、ローカルマシンでは、 `<LINK_TO_GRAPHQL_ENDPOINT>` は `http://localhost:4444/graphql` になります。
@@ -89,7 +113,7 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { tot
 ### Querying all details for session, node and the Grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { id, uri, status, sessions {id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot {id, stereotype, lastStarted } ,uri }, maxSession, capabilities }, uri, totalSlots, usedSlots , sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { uri, maxSession, sessionCount }, nodesInfo { nodes { id, uri, status, sessions { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } }, slotCount, sessionCount }} }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting the current session count in the Grid :
@@ -100,46 +124,44 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sess
 
 ### Query for getting the max session count in the Grid :
 
-
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { maxSession } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { maxSession } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting all session details for all nodes in the Grid :
 
-
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query to get slot information for all sessions in each Node in the Grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, slot { id, stereotype, lastStarted } } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, slot { id, stereotype, lastStarted } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get session information for a given session: 
+### Query to get session information for a given session:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri , slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### グリッド内の各ノードのcapabilityを照会する
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { capabilities } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { stereotypes } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### グリッド内の各ノードのステータスを照会する
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### 各ノードとグリッドのURIを照会する
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { uri }, uri } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { uri } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting the current requests in the New Session Queue:
