@@ -40,6 +40,8 @@ A estrutura do esquema de grade é a seguinte:
         totalSlots,
         usedSlots,
         sessionCount,
+        sessionQueueSize,
+        sessionQueueRequests,
         nodes : [
             {
                 id,
@@ -136,3 +138,21 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nod
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { uri }, uri } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
+
+### Query for getting the current requests in the New Session Queue:
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
+
+### Query for getting the New Session Queue size :
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+```
+
+### Query for getting the New Session Queue info:
+
+```shell
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize, sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+``` 

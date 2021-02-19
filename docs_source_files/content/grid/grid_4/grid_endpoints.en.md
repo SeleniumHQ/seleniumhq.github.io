@@ -148,3 +148,21 @@ In the fully distributed mode, the queuer URL is New Session Queuer server addre
 cURL --request DELETE 'http://localhost:5559/se/grid/newsessionqueuer/queue'
 ```
 
+### Get New Session Queue Requests
+
+New Session Request Queue holds the new session requests. 
+To get the current requests in the queue, use the cURL command enlisted below. 
+The response returns the total number of requests in the queue and the request payloads.
+
+In the Standalone mode, the queuer URL is the Standalone server address. 
+
+In the Hub-Node mode, the queuer URL is the Hub server address.
+
+```shell
+cURL --request GET 'http://localhost:4444/se/grid/newsessionqueuer/queue'
+```
+
+In the fully distributed mode, the queuer URL is New Session Queuer server address.
+```shell
+cURL --request GET 'http://localhost:5559/se/grid/newsessionqueuer/queue'
+```
