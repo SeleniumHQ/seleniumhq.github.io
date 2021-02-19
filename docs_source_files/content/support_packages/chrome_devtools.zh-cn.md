@@ -96,3 +96,134 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+## 注册基本认证
+
+一些应用要求某些页面基于认证过的状态, 
+而大多数时候为了保持简单, 
+开发者使用基本认证. 
+通过Selenium和开发者工具的集成, 
+您可以在出现自动认证的时候自动进行输入.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const pageCdpConnection = await driver.createCDPConnection('page')
+
+await driver.register('username', 'password', pageCdpConnection)
+await driver.get(server.url())
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## 监听页面元素的事件
+
+通过Selenium和开发者工具的集成,
+可以监听DOM事件并注册回调以处理DOM事件.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.logMutationEvents(cdpConnection, function(event) {
+  assert.equal(event['attribute_name'], 'style')
+  assert.equal(event['current_value'], '')
+  assert.equal(event['old_value'], 'display:none;')
+})
+
+await driver.get(test.Pages.dynamicPage)
+
+let element = driver.findElement({id: 'reveal'})
+await element.click()
+let revealed = driver.findElement({id: 'revealed'});
+await driver.wait(until.elementIsVisible(revealed), 5000);
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## 监听页面JS异常
+
+通过Selenium和开发者工具的集成,
+可以监听JS异常并注册回调以处理异常详细信息.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogException(cdpConnection, function(event) {
+  assert.equal(event['exceptionDetails']['stackTrace']['callFrames'][0]['functionName'], 'onmouseover')
+})
+await driver.get(test.Pages.javascriptPage)
+let element = driver.findElement({id: 'throwing-mouseover'})
+await element.click()
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+## 监听页面的console.log事件
+
+通过Selenium和开发者工具的集成,
+可以监听console.log事件并注册回调以处理该事件.
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="python" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="csharp" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="ruby" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+  {{< code-panel language="javascript" >}}
+const cdpConnection = await driver.createCDPConnection('page')
+await driver.onLogEvent(cdpConnection, function(event) {
+  assert.equal(event['args'][0]['value'], 'here')
+})
+await driver.executeScript('console.log("here")')
+  {{< / code-panel >}}
+  {{< code-panel language="kotlin" >}}
+# Please raise a PR to add code sample
+  {{< / code-panel >}}
+{{< / code-tab >}}
