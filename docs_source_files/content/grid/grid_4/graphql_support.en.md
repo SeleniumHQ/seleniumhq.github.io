@@ -38,33 +38,63 @@ The structure of grid schema is as follows:
     grid: {
         uri,
         totalSlots,
-        usedSlots,
+        nodeCount,
+        maxSession,
         sessionCount,
-        sessionQueueSize,
+        version,
+        sessionQueueSize
+    }
+    sessionsInfo: {
         sessionQueueRequests,
+        sessions: [
+            {
+                id,
+                capabilities,
+                startTime,
+                uri,
+                nodeId,
+                nodeUri,
+                sessionDurationMillis
+                slot : {
+                    id,
+                    stereotype,
+                    lastStarted
+                }
+            }
+        ]
+    }
+    nodesInfo: {
         nodes : [
             {
                 id,
                 uri,
                 status,
                 maxSession,
-                sessions : [
-                       {
+                slotCount,
+                sessions: [
+                    {
+                        id,
+                        capabilities,
+                        startTime,
+                        uri,
+                        nodeId,
+                        nodeUri,
+                        sessionDurationMillis
+                        slot : {
                             id,
-                            capabilities,
-                            startTime,
-                            uri,
-                            nodeId,
-                            nodeUri,
-                            sessionDurationMillis
-                            slot : {
-                                id,
-                                stereotype,
-                                lastStarted
-                            }
+                            stereotype,
+                            lastStarted
                         }
-                    ]
-               capabilities,
+                    }
+                ],
+                sessionCount,
+                stereotypes,
+                version,
+                osInfo: {
+                    arch,
+                    name,
+                    version
+                }
             }
         ]
     }
@@ -77,10 +107,10 @@ The best way to query GraphQL is by using `curl` requests. GraphQL allows you to
 
 Some of the example GraphQL queries are given below. You can build your own queries as you like.
 
-### Querying the number of `totalSlots` and `usedSlots` in the grid :
+### Querying the number of `maxSession` and `sessionCount` in the grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { totalSlots, usedSlots } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { maxSession, sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 Generally on local machine the `<LINK_TO_GRAPHQL_ENDPOINT>` would be `http://localhost:4444/graphql`
@@ -88,7 +118,7 @@ Generally on local machine the `<LINK_TO_GRAPHQL_ENDPOINT>` would be `http://loc
 ### Querying all details for session, node and the Grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { id, uri, status, sessions {id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot {id, stereotype, lastStarted } ,uri }, maxSession, capabilities }, uri, totalSlots, usedSlots , sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { uri, maxSession, sessionCount }, nodesInfo { nodes { id, uri, status, sessions { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } }, slotCount, sessionCount }} }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting the current session count in the Grid :
@@ -99,46 +129,44 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sess
 
 ### Query for getting the max session count in the Grid :
 
-
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { maxSession } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { maxSession } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting all session details for all nodes in the Grid :
 
-
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query to get slot information for all sessions in each Node in the Grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { nodes { sessions { id, slot { id, stereotype, lastStarted } } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, slot { id, stereotype, lastStarted } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get session information for a given session: 
+### Query to get session information for a given session:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri , slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Querying the capabilities of each node in the grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { capabilities } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { stereotypes } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Querying the status of each node in the grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { status } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Querying the URI of each node and the grid :
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { nodes { uri }, uri } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { uri } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting the current requests in the New Session Queue:
@@ -158,4 +186,3 @@ curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sess
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize, sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
-
