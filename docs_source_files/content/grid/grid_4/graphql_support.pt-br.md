@@ -172,17 +172,11 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo 
 ### Query for getting the current requests in the New Session Queue:
 
 ```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
+curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
 ### Query for getting the New Session Queue size :
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
-```
-
-### Query for getting the New Session Queue info:
-
-```shell
-curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize, sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
