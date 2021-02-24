@@ -3,107 +3,102 @@ title: "構成ヘルプ"
 weight: 1
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Japanese. Do you speak Japanese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+ヘルプコマンドは、現在のコード実装に基づいて情報を表示します。
+したがって、ドキュメントが更新されない場合に備えて、正確な情報を提供します。
+それは、新しいバージョンのグリッド4の構成について学習する最も簡単な方法です。
 
-The help commands display information based on the current code implementation.
-Hence, it will provide accurate information in case the documentation is not updated. 
-It is the easiest way to learn about Grid 4 configuration for any new version.
+## Info コマンド
 
-## Info Command
+infoコマンドは、次のトピックに関する詳細なドキュメントを提供します。
 
-The info command provides detailed docs on the following topics:
-* Configuring Selenium
-* Security
-* Session Map setup
-* Tracing
+* Seleniumの構成
+* セキュリティ
+* セッションマップの設定
+* トレース
 
-### Config help 
+### 構成ヘルプ
 
-Quick config help and overview is provided by running:
+クイック設定のヘルプと概要は、以下を実行することで提供されます。
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info config
 ```
 
-### Security
+### セキュリティ
 
-To get details on setting up the Grid servers for secure communication and node registration:
+安全な通信とノード登録のためのグリッドサーバーの設定の詳細を取得するには、以下を実行します。
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info security
 ```
 
-### Session Map setup
+### セッションマップの設定
 
-By default, Grid uses a local session map to store session information. 
-Grid supports additional storage options like Redis and JDBC - SQL supported databases. 
-To set up different session storage, use the following command to get setup steps:
+デフォルトでは、グリッドはローカルセッションマップを使用してセッション情報を保存します。
+グリッドは、RedisやJDBC-SQLがサポートするデータベースなどの追加のストレージオプションをサポートしています。
+別のセッションストレージをセットアップするには、次のコマンドを使用してセットアップ手順を取得します。
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info sessionmap
 ```
 
-### Setting up tracing with OpenTelemetry and Jaeger
+### OpenTelemetryとJaegerを使用したトレースの設定
 
-By default, tracing is enabled. To export traces and visualize them via Jaeger, use the following command for instructions:
+デフォルトでは、トレースは有効になっています。
+トレースをエクスポートしてJaeger経由で視覚化するには、次のコマンドを使用して手順を実行します。
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar info tracing
 ```
 
-## List the Selenium Grid commands  
+## SeleniumGridコマンドを一覧表示する  
  
-
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar --config-help
 ```
 
-It will show all the available commands and description for each one.
+使用可能なすべてのコマンドとそれぞれの説明が表示されます。
 
-## Component help commands
+## コンポーネントヘルプコマンド
 
-Pass --help config option after the Selenium role to get component-specific config information.
+Seleniumロールの後に–help configオプションを渡して、コンポーネント固有の構成情報を取得します。
 
-### Standalone 
+### スタンドアロン 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar standalone --help
 ```
-### Hub 
+### ハブ 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar hub --help
 ```
 
-### Sessions 
+### セッション 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar sessions --help
 ```
 
-### New Session Queuer
+### 新しいセッションキューラー
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer --help
 ```
 
-### Distributor 
+### ディストリビューター 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar distributor --help
 ```
 
-### Router 
+### ルーター 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar router --help
 ```
 
-### Node 
+### ノード 
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar node --help
