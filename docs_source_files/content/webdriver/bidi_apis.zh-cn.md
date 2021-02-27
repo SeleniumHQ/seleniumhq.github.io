@@ -3,30 +3,22 @@ title: "WebDriver Bidi APIs"
 weight: 3
 ---
 
-{{% notice %}}
-<i class="fas fa-language"></i> Page being translated from
-English to Simplified Chinese. Do you speak Simplified? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
-In Selenium 4, new Evented APIs were introduced that
-allow users to be able to capture events from the
-browser as they happen rather than using the
-traditional approach of Request/Response that
-WebDriver has used for other APIs.
+在Selenium 4中, 引入了新的事件API,
+使用户能够在事件发生时从浏览器捕获事件, 
+并非WebDriver用于其他API的传统请求/响应方法.
 
-Internally WebDriver will create a WebSocket connection
-to the browser for events and commands to be transmitted.
+WebDriver将在内部创建针对浏览器的WebSocket连接,
+用于传输事件和命令.
 
-The following list of APIs will be growing as the Selenium
-project works through supporting real world use cases. If there
-is a missing API, please raise a [feature request](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md).
+随着Selenium项目更多地用于实际案例, 相应的API列表将不断扩充.
+如果缺少API, 请提出[功能请求](https://github.com/SeleniumHQ/selenium/issues/new?assignees=&labels=&template=feature.md). 
 
-## Mutation Observation
+## 变化监测
 
-Mutation Observation is the ability to capture events via
-WebDriver BiDi when there are DOM mutations on a specific
-element in the DOM.
+变化监测是一种能力,
+用于当特定元素的DOM发生变化时,
+得以通过WebDriver BiDi捕获事件.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
