@@ -1,23 +1,31 @@
 ---
-title: "Localizando elementos"
+title: "Localisatie van elementen"
 weight: 3
 ---
 
-### Localizando elementos
+{{% notice info %}}
+### Localisatie van elementen
+<i class="fas fa-language"></i> Page being translated from
+English to Dutch. Do you speak Dutch? Help us to translate
+it by sending us pull requests!
+{{% /notice %}}
 
-Uma das técnicas mais fundamentais para aprender ao usar o WebDriver é
-como encontrar elementos na página. WebDriver oferece uma série de tipos de seletores embutidos,
-entre eles encontrar um elemento por seu atributo de ID:
+### Localisatie van elementen
+
+Een van de meest fundamentele technieken die nodig zijn om WebDriver onder
+de knie te krijgen, is het lokaliseren van elementen op een pagina.
+WebDriver beschikt over een aantal ingebouwde selector types, een van hen
+is het lokaliseren van een element op basis van zijn ID:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement cheese = driver.findElement(By.id("cheese"));  
+WebElement cheese = driver.findElement(By.id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 driver.find_element(By.ID, "cheese")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IWebElement element = driver.FindElement(By.Id("cheese"));  
+IWebElement element = driver.FindElement(By.Id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cheese = driver.find_element(id: 'cheese')
@@ -30,17 +38,16 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Como visto no exemplo, a localização de elementos no WebDriver é feita no
-objeto da instância `WebDriver`. O método `findElement(By)` retorna
-outro tipo de objeto fundamental, o `WebElement`.
+In het bovenstaande voorbeeld kan je zien dat het lokaliseren van de elementen
+gedaan word op een instantie van het `WebDriver` object. De methode
+`findElement(By)` geeft een ander fundamenteel object type terug: `WebElement`.
 
-* `WebDriver` representa o navegador
-* `WebElement` representa um nó DOM específico
-   (um controle, por exemplo, um link ou input, etc.)
+* `WebDriver` stelt de browser voor
+* `WebElement` stelt een bepaalde DOM node voor (een link, input veld etc)
 
-Depois de ter uma referência a um elemento da web que foi "encontrado",
-você pode restringir o escopo de sua pesquisa
-usando a mesma chamada nessa instância do objeto:
+Wanneer een web element gevonden is, kan je op basis van dat element een nieuwe
+opzoeking starten. Deze zal dan binnen de scope van het gevonden element gedaan
+worden:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -69,26 +76,30 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-Você pode fazer isso porque ambos os tipos _WebDriver_ e _WebElement_
-implementam a interface [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html). No WebDriver, isso é conhecido como _interface baseada em função_.
-As interfaces baseadas em funções permitem que você determine se uma implementação do driver suporta um determinado recurso. Essas interfaces são
-claramente definidas e tentam aderir a ter apenas uma única função de
-responsabilidade. Você pode ler mais sobre o design do WebDriver e quais
-funções são suportadas em quais drivers em [Alguma outra seção que
-deve ser nomeada](#).
+Dit is mogelijk omdat zowel _WebDriver_ als _WebElement_ de [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)
+interface implementeren. Binnen WebDriver staat dit bekend als een _role-based interface_.
+
+
+. In WebDriver, this is known as a _role-based interface_.
+Role-based interfaces allow you to determine whether a particular
+driver implementation supports a given feature. These interfaces are
+clearly defined and try to adhere to having only a single role of
+responsibility.  You can read more about WebDriver's design and what
+roles are supported in which drivers in the [Some Other Section Which
+Must Be Named](#).
 <!-- TODO: A new section needs to be created for the above.-->
 
-Consequentemente, a interface _By_ usada acima também suporta um
-número de estratégias de localização adicionais. Uma pesquisa aninhada pode não ser
-a estratégia de localização de *cheese* mais eficaz, pois requer dois
-comandos separados a serem emitidos para o navegador; primeiro pesquisando o DOM
-para um elemento com o ID "cheese", em seguida, uma pesquisa por "cheddar" em um
-contexto restrito.
+Consequently, the _By_ interface used above also supports a
+number of additional locator strategies.  A nested lookup might not be
+the most effective cheese location strategy since it requires two
+separate commands to be issued to the browser; first searching the DOM
+for an element with ID “cheese”, then a search for “cheddar” in a
+narrowed context.
 
-Para melhorar um pouco o desempenho, devemos tentar usar um
-localizador mais específico: WebDriver suporta a procura de elementos
-por localizadores CSS, o que nos permite combinar os dois localizadores anteriores em
-uma única pesquisa:
+To improve the performance slightly, we should try to use a more
+specific locator: WebDriver supports looking up elements
+by CSS locators, allowing us to combine the two previous locators into
+one search:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -111,10 +122,10 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Localizando mútliplos elementos
+### Locating multiple elements
 
-É possível que o documento com o qual estamos trabalhando tenha uma
-lista ordenada dos queijos que mais gostamos:
+It's possible that the document we are working with may turn out to have an
+ordered list of the cheese we like the best:
 
 ```html
 <ol id=cheese>
@@ -125,13 +136,13 @@ lista ordenada dos queijos que mais gostamos:
 </ol>
 ```
 
-Uma vez que mais queijo é indiscutivelmente melhor, e seria complicado
-ter que recuperar cada um dos itens individualmente, uma
-técnica melhor para buscar *cheese* é fazer uso da versão pluralizada `findElements(By)`.
-Este método retorna uma coleção de elementos web.
-Se apenas um elemento for encontrado, ele ainda retornará uma
-coleção (de um elemento). Se nenhum elemento corresponder ao localizador, um
-lista vazia será retornada.
+Since more cheese is undisputably better, and it would be cumbersome
+to have to retrieve each of the items individually, a superior
+technique for retrieving cheese is to make use of the pluralized
+version `findElements(By)`. This method returns a collection of web
+elements. If only one element is found, it will still return a
+collection (of one element). If no element matches the locator, an
+empty list will be returned.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -154,53 +165,54 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Estratégias de seleção de elemento
+### Element selection strategies
 
-Existem oito estratégias diferentes de localização de elementos embutidas no WebDriver:
+There are eight different built-in element location strategies in WebDriver:
 
-| Localizador | Descrição |
+| Locator | Description |
 | -------- | ---------- |
-| class name | Localiza elementos cujo nome de classe contém o valor de pesquisa (nomes de classes compostas não são permitidos) |
-| css selector | Localiza elementos que correspondem a um seletor CSS |
-| id | Localiza elementos cujo atributo de ID corresponde ao valor de pesquisa |
-| name | Localiza elementos cujo atributo NAME corresponde ao valor de pesquisa |
-| link text | Localiza elementos âncora cujo texto visível corresponde ao valor de pesquisa |
-| partial link text | Localiza elementos âncora cujo texto visível contém o valor da pesquisa. Se vários elementos forem correspondentes, apenas o primeiro será selecionado. |
-| tag name | Localiza elementos cujo nome de tag corresponde ao valor de pesquisa |
-| xpath | Localiza elementos que correspondem a uma expressão XPath |
+| class name | Locates elements whose class name contains the search value (compound class names are not permitted) |
+| css selector | Locates elements matching a CSS selector |
+| id | Locates elements whose ID attribute matches the search value |
+| name | Locates elements whose NAME attribute matches the search value |
+| link text | Locates anchor elements whose visible text matches the search value |
+| partial link text | Locates anchor elements whose visible text matches the search value |
+| tag name | Locates elements whose tag name matches the search value |
+| xpath | Locates elements matching an XPath expression |
 
-### Dicas sobre como usar seletores
+### Tips on using selectors
 
-No geral, se os IDs de HTML estiverem disponíveis, únicos e consistentemente
-previsíveis, eles são o método preferido para localizar um elemento
-uma página. Eles tendem a trabalhar muito rapidamente e dispensar muito processamento
-que vem com travessias de DOM complicadas.
+In general, if HTML IDs are available, unique, and consistently
+predictable, they are the preferred method for locating an element on
+a page. They tend to work very quickly, and forego much processing
+that comes with complicated DOM traversals.
 
-Se IDs exclusivos não estiverem disponíveis, um seletor CSS bem escrito é o
-método preferido de localização de um elemento. XPath funciona bem como CSS
-seletores, mas a sintaxe é complicada e frequentemente difícil de
-depurar. Embora os seletores XPath sejam muito flexíveis, eles não são tipicamente testados em performance por fornecedores de navegadores e tendem a ser bastante lentos.
+If unique IDs are unavailable, a well-written CSS selector is the
+preferred method of locating an element. XPath works as well as CSS
+selectors, but the syntax is complicated and frequently difficult to
+debug. Though XPath selectors are very flexible, they are typically
+not performance tested by browser vendors and tend to be quite slow.
 
-As estratégias de seleção baseadas em _linkText_ e _partialLinkText_ têm
-desvantagens porque eles só funcionam em elementos de link. Além disso, eles
-chamam seletores XPath internamente no WebDriver.
+Selection strategies based on _linkText_ and _partialLinkText_ have
+drawbacks in that they only work on link elements. Additionally, they
+call down to XPath selectors internally in WebDriver.
 
-O nome da tag pode ser uma maneira perigosa de localizar elementos. tem
-frequentemente, vários elementos da mesma tag presentes na página.
-Isso é útil principalmente ao chamar o método _findElements(By) _ que
-retorna uma coleção de elementos.
+Tag name can be a dangerous way to locate elements. There are
+frequently multiple elements of the same tag present on the page.
+This is mostly useful when calling the _findElements(By)_ method which
+returns a collection of elements.
 
-A recomendação é manter seus localizadores compactos e
-legíveis quanto possível. Pedir ao WebDriver para percorrer a estrutura DOM
-é uma operação cara, e quanto mais você pode restringir o escopo de
-sua pesquisa, melhor.
+The recommendation is to keep your locators as compact and
+readable as possible. Asking WebDriver to traverse the DOM structure
+is an expensive operation, and the more you can narrow the scope of
+your search, the better.
 
-## Localizadores relativos
+## Relative Locators
 
-**Selenium 4** traz localizadores relativos que eram anteriormente
-chamado de _Localizadores Amigáveis_. Esta funcionalidade foi
-adicionada para ajudá-lo a localizar elementos que estão próximos a outros elementos.
-Os localizadores relativos disponíveis são:
+**Selenium 4** brings Relative Locators which are previously
+called as _Friendly Locators_. This functionality was
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
 
 * *above*
 * *below*
@@ -208,46 +220,49 @@ Os localizadores relativos disponíveis são:
 * *toRightOf*
 * *near*
 
-O método _findElement_ agora aceita um novo método `withTagName()`
-que retorna um RelativeLocator.
+_findElement_ method now accepts a new method `withTagName()`
+which returns a RelativeLocator.
 
-### Como funciona
+### How does it work
 
-Selenium usa a função JavaScript
+Selenium uses the JavaScript function
 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-para encontrar os elementos relativos. Esta função retorna
-propriedades de um elemento, como
+to find the relative elements. This function returns
+properties of an element such as
 right, left, bottom, and top.
 
-Vamos considerar o exemplo abaixo para entender os localizadores relativos.
+Let us consider the below example for understanding the relative locators.
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
 ### above()
 
-Retorna o WebElement, que aparece
-acima do elemento especificado
+Returns the WebElement, which appears
+above to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-WebElement passwordField = driver.findElement(By.id("password"));
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
+WebElement passwordField= driver.findElement(By.id("password"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 passwordField = driver.find_element(By.ID, "password")
 emailAddressField = driver.find_element(with_tag_name("input").above(passwordField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement passwordField = driver.FindElement(By.Id("password"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-password_field = driver.find_element(:id, "password")
+password_field= driver.find_element(:id, "password")
 email_address_field = driver.find_element(relative: {tag_name: 'input', above:password_field})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
@@ -263,29 +278,32 @@ val emailAddressField = driver.findElement(withTagName("input").above(passwordFi
 
 ### below()
 
-Retorna o WebElement, que aparece
-abaixo do elemento especificado
+Returns the WebElement, which appears
+below to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-WebElement emailAddressField = driver.findElement(By.id("email"));
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
+WebElement emailAddressField= driver.findElement(By.id("email"));
 WebElement passwordField = driver.findElement(withTagName("input")
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;  
+
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
 IWebElement passwordField = driver.FindElement(WithTagName("input")
                                                .Below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-email_address_field = driver.find_element(:id, "email")
+email_address_field= driver.find_element(:id, "email")
 password_field = driver.find_element(relative: {tag_name: 'input', below: email_address_field})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
@@ -301,30 +319,33 @@ val passwordField = driver.findElement(withTagName("input").below(emailAddressFi
 
 ### toLeftOf()
 
-Retorna o WebElement, que aparece
-à esquerda do elemento especificado
+Returns the WebElement, which appears
+to left of specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-WebElement submitButton = driver.findElement(By.id("submit"));
-WebElement cancelButton = driver.findElement(withTagName("button")
-                                            .toLeftOf(submitButton));   
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
+WebElement submitButton= driver.findElement(By.id("submit"));
+WebElement cancelButton= driver.findElement(withTagName("button")
+                                            .toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 submitButton = driver.find_element(By.ID, "submit")
 cancelButton = driver.find_element(with_tag_name("button").
                                    to_left_of(submitButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
 IWebElement cancelButton = driver.FindElement(WithTagName("button")
                                               .LeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-submit_button = driver.find_element(:id, "submit")
+submit_button= driver.find_element(:id, "submit")
 cancel_button = driver.find_element(relative: {tag_name: 'button', left:submit_button})
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
@@ -332,32 +353,35 @@ let submitButton = driver.findElement(By.id("submit"));
 let cancelButton = await driver.findElements(withTagName("button").toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val submitButton = driver.findElement(By.id("submit"))
-val cancelButton = driver.findElement(withTagName("button").toLeftOf(submitButton))
+val submitButton= driver.findElement(By.id("submit"))
+val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 
 ### toRightOf()
 
-Retorna o WebElement, que aparece
-à direita do elemento especificado
+Returns the WebElement, which appears
+to right of the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-WebElement cancelButton = driver.findElement(By.id("cancel"));
-WebElement submitButton = driver.findElement(withTagName("button")
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
+WebElement cancelButton= driver.findElement(By.id("cancel"));
+WebElement submitButton= driver.findElement(withTagName("button")
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 cancelButton = driver.find_element(By.ID, "cancel")
 submitButton = driver.find_element(with_tag_name("button").
                                    to_right_of(cancelButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
 IWebElement submitButton = driver.FindElement(WithTagName("button")
                                               .RightOf(cancelButton));
@@ -371,31 +395,34 @@ let cancelButton = driver.findElement(By.id('cancel'));
 let submitButton = await driver.findElements(withTagName('button').toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
-val cancelButton = driver.findElement(By.id("cancel"))
-val submitButton = driver.findElement(withTagName("button").toRightOf(cancelButton))
+val cancelButton= driver.findElement(By.id("cancel"))
+val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButton))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
 ### near()
 
-Retorna o WebElement, que está
-no máximo a `50px` de distância do elemento especificado.
+Returns the WebElement, which is
+at most `50px` away from the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
-WebElement emailAddressLabel = driver.findElement(By.id("lbl-email"));
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
+WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
-emailAddressLabel = driver.find_element(By.ID, "lbl-email")    
+from selenium.webdriver.support.relative_locator import with_tag_name
+
+emailAddressLabel = driver.find_element(By.ID, "lbl-email")
 emailAddressField = driver.find_element(with_tag_name("input").
                                        near(emailAddressLabel))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Near(emailAddressLabel));

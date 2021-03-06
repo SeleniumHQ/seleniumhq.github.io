@@ -5,7 +5,7 @@ weight: 9
 
 
 WebElement表示DOM元素.
-可以通过使用WebDriver实例从文档根节点进行搜索, 
+可以通过使用WebDriver实例从文档根节点进行搜索,
 或者在另一个WebElement下进行搜索来找到WebElement.
 
 WebDriver API提供了内置方法来查找基于不同属性的WebElement
@@ -98,7 +98,7 @@ searchBox.sendKeys("webdriver")
 ## Find Elements
 
 与"Find Element"相似, 但返回的是匹配WebElement列表.
-要使用列表中的特定WebElement, 
+要使用列表中的特定WebElement,
 您需要遍历元素列表以对选定元素执行操作.
 
 {{< code-tab >}}
@@ -221,6 +221,7 @@ fun main() {
 }
   {{< / code-panel >}}
 {{< / code-tab >}}
+
 
 ## Find Element From Element
 
@@ -550,22 +551,22 @@ namespace FindElementsFromElement {
 ## Is Element Enabled
 
 此方法用于检查网页上连接的元素是否被启用或禁用.
-返回一个布尔值, 
+返回一个布尔值,
 如果在当前浏览上下文中`启用`了连接的元素, 则返回True；
 否则返回`false` .
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  //navigates to url 
+  //navigates to url
   driver.get("https://www.google.com/");
-  
+
   //returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("http://www.google.com")
-   
+
 # Returns true if element is enabled else returns false
 value = driver.find_element(By.NAME, 'btnK').is_enabled()
   {{< / code-panel >}}
@@ -594,9 +595,9 @@ await driver.get('https://www.google.com');
 let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.google.com/")
- 
+
  //returns true if element is enabled else returns false
  val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
@@ -607,15 +608,15 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
 此方法确定是否 _已选择_ 引用的元素.
 此方法广泛用于复选框, 单选按钮, 输入元素和选项元素.
 
-返回一个布尔值, 
-如果在当前浏览上下文中 **已选择** 引用的元素, 
+返回一个布尔值,
+如果在当前浏览上下文中 **已选择** 引用的元素,
 则返回 **True**, 否则返回 **False**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes");
-  
+
  //returns true if element is checked else returns false
  boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
   {{< / code-panel >}}
@@ -629,7 +630,7 @@ value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-ty
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
-  
+
 // Returns true if element ins checked else returns false
 bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
   {{< / code-panel >}}
@@ -648,9 +649,9 @@ await driver.get('https://the-internet.herokuapp.com/checkboxes');
 let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes")
- 
+
  //returns true if element is checked else returns false
  val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
@@ -664,7 +665,7 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com");
 
  //returns TagName of the element
@@ -680,7 +681,7 @@ attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://www.example.com");
-  
+
 // Returns TagName of the element
 string attr = driver.FindElement(By.CssSelector("h1")).TagName;
   {{< / code-panel >}}
@@ -699,9 +700,9 @@ await driver.get('https://www.example.com');
 let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com")
- 
+
  //returns TagName of the element
  val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
   {{< / code-panel >}}
@@ -709,7 +710,7 @@ let value = await driver.findElement(By.css('h1')).getTagName();
 
 ## Get Element Rect
 
-用于获取参考元素的尺寸和坐标. 
+用于获取参考元素的尺寸和坐标.
 
 提取的数据主体包含以下详细信息:
 * 元素左上角的X轴位置
@@ -731,7 +732,7 @@ System.out.println(res.getX());
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("https://www.example.com")
-    
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
@@ -748,7 +749,7 @@ System.Console.WriteLine(res.Size);
   {{< code-panel language="ruby" >}}
 # Navigate to url
 driver.get 'https://www.example.com'
-  
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(css: "h1").rect
   {{< / code-panel >}}
@@ -815,7 +816,7 @@ cssValue = driver.find_element(:link_text, 'More information...').css_value('col
     {{< code-panel language="javascript" >}}
 // Navigate to Url
 await driver.get('https://www.example.com');
-    
+
 // Retrieves the computed style property 'color' of linktext
 let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
     {{< / code-panel >}}
