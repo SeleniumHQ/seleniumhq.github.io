@@ -5,5 +5,4 @@
 이러한 플러그인은 Selenium 프로젝트에서 지원, 유지 관리, 호스팅 또는 보증하지 않는다는 점에서 유의하십시오.
 또한 아래 나열된 플러그인이 반드시 Apache License v2.0에 따라 라이센스가 부여되지 않는다는 것을 유념하십시오.
 일부 플러그인은 다른 모료 오픈소스 소프트웨어 라이센스로 사용할 수 있으며, 다른 플러그인은 독점 라이센스로만 사용할 수 있습니다.
-플러그인과 해당 플러그인의 배포 라이센스에 대한 모든 질문은 해당 개발자와 함께 제기해 주세요.</description></item><item><title>Element 찾기</title><link>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.selenium.dev/documentation/ko/getting_started_with_webdriver/locating_elements/</guid><description>하나의 element 찾기 웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
-Java Python C# Ruby JavaScript Kotlin WebElement cheese = driver.findElement(By.id(&amp;#34;cheese&amp;#34;)); driver.find_element(By.ID, &amp;#34;cheese&amp;#34;) IWebElement element = driver.FindElement(By.Id(&amp;#34;cheese&amp;#34;)); cheese = driver.find_element(id: &amp;#39;cheese&amp;#39;) const cheese = driver.findElement(By.id(&amp;#39;cheese&amp;#39;)); val cheese: WebElement = driver.</description></item></channel></rss>
+플러그인과 해당 플러그인의 배포 라이센스에 대한 모든 질문은 해당 개발자와 함께 제기해 주세요.</description></item></channel></rss>
