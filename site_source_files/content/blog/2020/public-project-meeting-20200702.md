@@ -3,7 +3,7 @@ Description = "Public Project Meeting - July 02, 2020"
 Title = "Public Project Meeting - July 02, 2020"
 Date = 2020-07-02
 Author = "Harsha"
-AuthorLink = "https://twitter.com/harsha509"
+AuthorLink = "https://twitter.com/sri_harsha509"
 tags = ["slack","meeting","tlc"]
 categories = ["general","governance"]
 +++
