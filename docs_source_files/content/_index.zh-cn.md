@@ -4,7 +4,7 @@ title: "Selenium 浏览器自动化项目"
 
 # Selenium 浏览器自动化项目
 
-Selenium 是支持 web 浏览器自动化的一系列工具和库的综合项目。
+Selenium是一个免费的（开放源代码）自动化测试工具，用于验证跨不同浏览器和平台的桌面Web和移动Web应用程序。您可以使用Java，C＃，Python等多种编程语言来创建Selenium测试脚本，以启用并支持台式机和移动Web浏览器的自动化。
 
 它提供了扩展来模拟用户与浏览器的交互，用于扩展浏览器分配的分发服务器，以及用于实现 [W3C WebDriver 规范](//www.w3.org/TR/webdriver/) 的基础结构，该 规范 允许您为所有主要 Web 浏览器编写可互换的代码。
 

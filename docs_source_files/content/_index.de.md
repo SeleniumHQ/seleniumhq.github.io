@@ -5,8 +5,7 @@ title: "Das Selenium Browser Automations Projekt"
 
 # Das Selenium Browser Automations Projekt
 
-Selenium ist ein Sammlung von Projekten für einige Werkzeuge und Programmbibliotheken
-die es ermöglichen Webbrowser zu automatisieren.
+Selenium ist ein kostenloses (Open-Source-) automatisiertes Testtool zur Validierung von Desktop-Web- und mobilen Webanwendungen in verschiedenen Browsern und Plattformen. Sie können mehrere Programmiersprachen wie Java, C #, Python usw. verwenden, um Selenium-Testskripte zu erstellen, die die Automatisierung von Desktop- und mobilen Webbrowsern ermöglichen und unterstützen.
 
 Selenium bietet Erweiterungen um Benutzereingaben in Browsern zu simulieren,
 einen Server um eine vielzahl von Browsern anzusprechen und eine Infrastruktur

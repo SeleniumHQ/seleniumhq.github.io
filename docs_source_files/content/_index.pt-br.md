@@ -4,8 +4,7 @@ title: "O Projeto Selenium de Automação de Navegadores"
 
 # O Projeto Selenium de Automação de Navegadores
 
-Selenium é um projeto que abrange uma variedade de ferramentas e bibliotecas
-que permitem e suportam a automação de navegadores da web.
+Selenium é uma ferramenta de teste automatizada gratuita (código aberto) usada para validar aplicativos da web para desktop e móveis em diferentes navegadores e plataformas. Você pode usar várias linguagens de programação como Java, C #, Python etc. para criar Scripts de Teste Selenium, que habilitam e suportam a automação de navegadores da web para desktop e móveis.
 
 Ele fornece extensões para emular a interação do usuário com os navegadores,
 um servidor de distribuição para escalonar a alocação do navegador,
