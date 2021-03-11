@@ -9,7 +9,7 @@ English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
-In-order to create a new session by Selenium WebDriver, 
+In order to create a new session by Selenium WebDriver, 
 local end should provide the basic capabilities to remote end. 
 The remote end uses the same set of capabilities to 
 create a session and describes the current session features. 

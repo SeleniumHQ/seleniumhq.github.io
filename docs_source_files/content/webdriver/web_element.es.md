@@ -4,17 +4,17 @@ weight: 9
 ---
 
 WebElement representa un elemento del DOM. Los WebElements se pueden
-encontrar buscando desde la raíz del documento utilizando una instancia de 
-WebDriver o buscando en otra WebElement. 
+encontrar buscando desde la raíz del documento utilizando una instancia de
+WebDriver o buscando en otra WebElement.
 
-El API WebDriver proporciona métodos integrados para encontrar los 
-elementos web que son basados en diferentes propiedades como ID, 
+El API WebDriver proporciona métodos integrados para encontrar los
+elementos web que son basados en diferentes propiedades como ID,
 Nombre, Clase, XPath, Selectores CSS, Texto de enlace, etc.
 
 ## Find Element
 
 Se utiliza para encontrar un elemento y devuelve la primera
-referencia única de WebElement que coincide, que puede usarse para 
+referencia única de WebElement que coincide, que puede usarse para
 acciones futuras con el elemento
 
 {{< code-tab >}}
@@ -98,10 +98,10 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements
 
-Similar a 'Find Element', pero devuelve una lista 
-de elementos web coincidentes. 
-Para usar un WebElement particular de la lista, 
-debes recorrerla lista de elementos para realizar 
+Similar a 'Find Element', pero devuelve una lista
+de elementos web coincidentes.
+Para usar un WebElement particular de la lista,
+debes recorrerla lista de elementos para realizar
 acciones con el elemento seleccionado.
 
 {{< code-tab >}}
@@ -225,6 +225,7 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+
 ## Find Element desde Element
 
 Se utiliza para encontrar un elemento hijo dentro
@@ -307,9 +308,9 @@ searchBox.sendKeys("webdriver")
 
 ## Find Elements desde Element
 
-Se utiliza para encontrar una lista de elementos 
+Se utiliza para encontrar una lista de elementos
 hijos dentro del contexto del elemento padre.
-Para lograr esto, el WebElement primario se encadena 
+Para lograr esto, el WebElement primario se encadena
 con 'findElements'para acceder a elementos secundarios.
 
 {{< code-tab >}}
@@ -448,7 +449,7 @@ namespace FindElementsFromElement {
 
 ## Get Active Element
 
-Se utiliza para rastrear (o) encontrar el elemento DOM 
+Se utiliza para rastrear (o) encontrar el elemento DOM
 que tiene el foco en el contexto de navegación actual.
 
 {{< code-tab >}}
@@ -559,21 +560,21 @@ que tiene el foco en el contexto de navegación actual.
 Este método se utiliza para comprobar si el elemento conectado
 está habilitado o deshabilitado en una página web.
 Devuelve un valor booleano, **True** si el elemento conectado es
-**habilitado** en el contexto de navegación actual, 
+**habilitado** en el contexto de navegación actual,
 de lo contrario, devuelve **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  //navigates to url 
+  //navigates to url
   driver.get("https://www.google.com/");
-  
+
   //returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("http://www.google.com")
-   
+
 # Returns true if element is enabled else returns false
 value = driver.find_element(By.NAME, 'btnK').is_enabled()
   {{< / code-panel >}}
@@ -602,9 +603,9 @@ await driver.get('https://www.google.com');
 let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.google.com/")
- 
+
  //returns true if element is enabled else returns false
  val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
@@ -612,18 +613,18 @@ let element =  await driver.findElement(By.name("btnK")).isEnabled();
 
 ## Is Element Selected
 
-This method determines if the referenced Element 
-is _Selected_ or not. This method is widely used on 
+This method determines if the referenced Element
+is _Selected_ or not. This method is widely used on
 Check boxes, radio buttons, input elements, and option elements.
 
-Returns a boolean value, **True** if referenced element is 
+Returns a boolean value, **True** if referenced element is
 **selected** in the current browsing context else returns **false**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes");
-  
+
  //returns true if element is checked else returns false
  boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
   {{< / code-panel >}}
@@ -637,7 +638,7 @@ value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-ty
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
-  
+
 // Returns true if element ins checked else returns false
 bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
   {{< / code-panel >}}
@@ -656,9 +657,9 @@ await driver.get('https://the-internet.herokuapp.com/checkboxes');
 let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes")
- 
+
  //returns true if element is checked else returns false
  val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
@@ -666,12 +667,12 @@ let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")
 
 ## Get Element TagName
 
-It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name) 
+It is used to fetch the [TagName](https://www.w3.org/TR/webdriver/#dfn-get-element-tag-name)
 of the referenced Element which has the focus in the current browsing context.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com");
 
  //returns TagName of the element
@@ -687,7 +688,7 @@ attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://www.example.com");
-  
+
 // Returns TagName of the element
 string attr = driver.FindElement(By.CssSelector("h1")).TagName;
   {{< / code-panel >}}
@@ -706,9 +707,9 @@ await driver.get('https://www.example.com');
 let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com")
- 
+
  //returns TagName of the element
  val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
   {{< / code-panel >}}
@@ -716,7 +717,7 @@ let value = await driver.findElement(By.css('h1')).getTagName();
 
 ## Get Element Rect
 
-It is used to fetch the dimensions and coordinates 
+It is used to fetch the dimensions and coordinates
 of the referenced element.
 
 The fetched data body contain the following details:
@@ -739,7 +740,7 @@ System.out.println(res.getX());
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("https://www.example.com")
-    
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
@@ -756,7 +757,7 @@ System.Console.WriteLine(res.Size);
   {{< code-panel language="ruby" >}}
 # Navigate to url
 driver.get 'https://www.example.com'
-  
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(css: "h1").rect
   {{< / code-panel >}}
@@ -781,7 +782,7 @@ println(res.getX())
 
 ## Get Element CSS Value
 
-Retrieves the value of specified computed style property 
+Retrieves the value of specified computed style property
 of an element in the current browsing context.
 
 {{< code-tab >}}
@@ -824,7 +825,7 @@ cssValue = driver.find_element(:link_text, 'More information...').css_value('col
     {{< code-panel language="javascript" >}}
 // Navigate to Url
 await driver.get('https://www.example.com');
-    
+
 // Retrieves the computed style property 'color' of linktext
 let cssValue = await driver.findElement(By.linkText("More information...")).getCssValue('color');
     {{< / code-panel >}}

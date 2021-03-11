@@ -1,21 +1,24 @@
 ---
-title: "Element 찾기"
+title: "Localizando elementos"
 weight: 3
 ---
 
-### 하나의 element 찾기
+### Localizando un elemento
 
-웹드라이버를 사용할 때 알아야할 가장 기본적인 테크닉 중 하나는 페이지에서 element들을 찾는 것입니다. 웹드라이버는 다양한 종류의 내장된 셀렉터 타입들을 제공해주고, 그 중 하나는 ID 속성을 통해 element들을 찾는 것입니다:
+Una de las técnicas más fundamentales para aprender al usar WebDriver
+es cómo encontrar elementos en la página. WebDriver ofrece varios
+tipos de selectores integrados, entre ellos encontrar un elemento por
+su atributo ID:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement cheese = driver.findElement(By.id("cheese"));  
+WebElement cheese = driver.findElement(By.id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 driver.find_element(By.ID, "cheese")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IWebElement element = driver.FindElement(By.Id("cheese"));  
+IWebElement element = driver.FindElement(By.Id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cheese = driver.find_element(id: 'cheese')
@@ -28,12 +31,19 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-예시와 같이, 웹드라이버에서 element들을 찾는 것은 `WebDriver`  인스턴스 객체에서 시행됩니다. `findElement(By)` 메소드는 `WebElement`라는 기초적인 객체를 반환합니다.
+Como se ve en el ejemplo, localizar elementos en WebDriver
+se realiza en la instancia del objeto `WebDriver`. El método
+`findElement(By)` devuelve otro tipo de objeto fundamental,
+el `WebElement`.
 
-* `WebDriver` 는 브라우저를 나타냅니다.
-* `WebElement` 는 특정한 DOM 노드를 나타냅니다. (링크나 인풋 필드 등)
+* `WebDriver` representa el navegador
+* `WebElement` representa un
+nodo particular del DOM (un control, por ejemplo un enlace o campo de
+entrada, etc.)
 
-발견된 웹 element에 대한 참조가 있다면, 그 참조를 통해 검색 범위를 좁힐 수 있습니다:
+Una vez que tengas una referencia a un elemento web que se ha
+"encontrado", puedes reducir el alcance de tu búsqueda utilizando la
+misma llamada en la instancia de ese objeto:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -62,12 +72,25 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-이것이 가능한 이유는 *WebDriver* 과 *WebElement* 모두 [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)라는 인터페이스를 구현한 것이기 때문입니다.이것은 웹드라이버에서 role-based(역할 기반) 인터페이스라고 알려져 있습니다. Role-based 인터페이스는 특정 드라이버 구현이 주어진 기능을 지원하는지 확인할 수 있게 해줍니다. 이러한 인터페이스는 명확하게 정의되어 있으며, 단 하나의 역할만을 가지고 있는 것을 고수하려고 노력합니다.  웹드라이버의 디자인이나 어떠한 드라이버에서 어떠한 역할을 지원하는지에 대해서는  [여기(아직 미구현)](#)를 참고하십시오.
+Puedes hacer esto porque los tipos _WebDriver_ y _WebElement_
+implementan la interfaz  [_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html).
+En WebDriver, esto se conoce como _interfaz basada en roles_.
+Las interfaces basadas en roles te permiten determinar si
+la implementación del controlador admite una característica dada.
+Estas interfaces están claramente definidas y tratan de cumplir con
+tener un solo rol de responsabilidad. Puede leer más sobre el diseño
+de WebDriver y qué roles son compatibles con qué controladores en [Otra sección](#).
 <!-- TODO: A new section needs to be created for the above.-->
 
-따라서, 위에서 사용한 *By*인터페이스도 다양한 추가 locator 전략을 지원합니다. 중첩된 조회는 브라우저에 별도의 두 개 명령을 실행해야하므로 가장 효과적인 cheese 찾기 전략이 아닐 수 있습니다. 별도의 두 개 명령은 ID "cheese"를 DOM에서 찾는 명령과 그 곳에서 "cheddar"를 그 다음에 찾는 명령을 말합니다. 
+En consecuencia, la interfaz _By_ utilizada anteriormente también permite una serie de
+estrategias adicionales de localización. Una búsqueda anidada podría no ser la
+estrategia mas efectiva para localizar _cheese_ ya que requiere dos
+comandos que se emitirán al navegador; primero buscando en el DOM un
+elemento con ID "cheese", luego una búsqueda de "cheddar" en un contexto reducido.
 
-성능을 향상시키기 위해서는 좀 더 세부적인 locator를 사용해야합니다. 웹드라이버는 CSS locator를 통해 element를 검색하는 기능을 지원하고, 이는 위처럼 두 개의 locator를 사용할 필요가 없게 해줍니다:
+Para mejorar ligeramente el rendimiento, deberíamos intentar utilizar un
+localizador más específico: WebDriver permite buscar elementos por localizadores CSS,
+lo que nos permite combinar los dos localizadores anteriores en una sola búsqueda:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -90,9 +113,10 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### 다수의 element 찾기
+### Localizando múltiples elementos
 
-우리가 작업하고 있는 문서가 다음과 같이 우리가 제일 좋아하는 치즈들의 정렬된 리스트일 수 있습니다:
+Es posible que el documento con el que estamos trabajando contenga
+una lista ordenada del queso que más nos gusta:
 
 ```html
 <ol id=cheese>
@@ -102,9 +126,13 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
  <li id=camembert>…
 </ol>
 ```
-
-더 많은 치즈는 의심할 여지 없이 더 좋지만, 각각의 아이템들을 따로 회수하기에는 너무 복잡하고 힘들어질 것입니다. 이를 위한 좀 더 상급 테크닉은 바로 다수 버전의  `findElements(By)`를 사용하는 것입니다. 이 메소드는 web elements들의 컬렉션을 반환합니다. 하나의 element만 발견되어도 여전히 컬렉션을 반환합니다. (이 때의 컬렉션은 하나의 element로 이루어져 있습니다). 만약 아무 element가 발견되지 않는다면, 빈 리스트가 반환됩니다.
-
+Dado que más queso es indiscutiblemente mejor, y sería engorroso
+tener que recuperar cada uno de los elementos individualmente,
+una técnica superior para recuperar _cheese_ es hacer uso de la
+versión pluralizada `findElements(By)`. Este método devuelve una
+colección de elementos web. Si solo se encuentra un elemento, aún devolverá una
+colección (de un elemento). Si ningún elemento coincide con el localizador,
+se devolverá la lista vacía.
 {{< code-tab >}}
   {{< code-panel language="java" >}}
 List<WebElement> muchoCheese = driver.findElements(By.cssSelector("#cheese li"));
@@ -126,38 +154,57 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### Element 선택 전략
+### Estrategias de localización de elementos
 
-웹드라이버에는 여덟 가지의 내장된 element location 전략이 있습니다:
+Hay ocho estrategias diferentes de ubicación de elementos integradas en WebDriver:
 
-| Locator | Description |
+| Localizador | Descripción |
 | -------- | ---------- |
-| class name | class name 중에서 검색한 값이 있는지 찾습니다. |
-| css selector | CSS selector 속성 중에서 검색한 값이 있는지 찾습니다. |
-| id | ID 속성 중에서 검색한 값이 있는지 찾습니다. |
-| name | NAME 속성 중에서 검색한 값이 있는지 찾습니다. |
-| link text | 보이는 텍스트 중에서 검색한 값이 있는지 찾습니다. |
-| partial link text | 보이는 텍스트 중에서 검색한 값이 있는지 찾습니다. |
-| tag name | tag name 중에서 검색한 값이 있는지 찾습니다. |
-| xpath | Xpath expression 중에서 검색한 값이 있는지 찾습니다. |
+| class name | Localiza elementos en el que el nombre de su clase contiene el valor de la búsqueda (no se permiten nombres de clase compuestos) |
+| css selector | Localiza elementos que coinciden con un selector CSS |
+| id | Localiza elementos cuyo atributo ID coincide con el valor de la búsqueda |
+| name | Localiza elementos cuyo atributo NAME coincide con el valor de la búsqueda |
+| link text | Localiza elementos de anclaje cuyo texto visible coincide con el valor de búsqueda |
+| partial link text | Localiza elementos de anclaje cuyo texto visible coincide con el valor de búsqueda. Si varios elementos coinciden, solo se seleccionará el primero. |
+| tag name | Localiza elementos cuyo nombre de etiqueta (tagName) coincide con el valor de búsqueda |
+| xpath | Localiza elementos que coinciden con una expresión XPath |
 
-### Selector 사용 팁
+### Consejos sobre el uso de selectores
 
-일반적으로 HTML ID가 사용가능하고, 고유하며, 예측가능하다면 검색할 때 HTML ID를 통해 하는 것이 좋습니다. HTML ID로 검색하는 것은 매우 빠르며, 복잡하게 DOM을 이용하는 방법들을 속도에서 앞섭니다.
+En general, si los ID del HTML están disponibles, son únicos y
+consistentemente predecibles, son el método preferido para ubicar un
+elemento en una página. Tienden a trabajar muy rápido y renuncian al
+mucho procesamiento que viene con recorridos DOM complicados.
 
-고유한 ID가 없다면, CSS selector이 그 다음으로 선호되는 방법입니다. XPath 또한 CSS selector만큼 잘 작동되지만, 구문이 복잡하며 디버깅을 하기 힘듭니다. 하지만 XPath selector는 매우 유연하기 때문에 일반적으로 브라우저 벤더에 의해 성능 테스트를 받지 않으며 꽤 느린 경향이 있다.
+Si las ID únicas no están disponibles, un selector CSS bien escrito
+es el método preferido para localizar un elemento. XPath funciona tan
+bien como los selectores CSS, pero la sintaxis es complicada y con
+frecuencia difícil de depurar. Aunque los selectores XPath son muy
+flexibles, generalmente su desempeño no es probado por lo proveedores
+de navegadores y tienden a ser bastante lentos.
 
-linkText와 partialLinkText를 이용한 전략은 link element에서만 사용이 가능합니다. 또한, 웹드라이버 내부적으로는 XPath selector를 사용하여 작동합니다.
+Las estrategias de selección basadas en enlaces de texto y enlaces de
+texto parciales tienen el inconveniente en que solo funcionan en
+elementos de enlace. Además, internamente en WebDriver llaman a los
+selectores XPath.
 
-Tag name은 element 검색을 할 때 위험한 방법이 될 수도 있습니다. 한 페이지에는 종종 동일한 tag를 가진 여러 element들이 있습니다. 이 방법은 주로 _findElements(By)_ 메소드를 통해 element의 컬렉션을 반환할 때 유용합니다.
+El nombre de la etiqueta puede ser una forma peligrosa de localizar
+elementos. Existen frecuentemente múltiples elementos con la misma
+etiqueta presentes en la página. Esto es mayormente útil cuando se
+llama al método _findElements(By)_ que devuelve una colección de
+elementos.
 
-Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천드립니다. 웹 드라이버에게 DOM 전체를 검색하라는 것은 성능이 많이 들어가기 때문에, 검색범위를 좁히면 좁힐수록 좋습니다.
+La recomendación es mantener tus localizadores tan compactos y
+legibles como sea posible. Pedirle a WebDriver que atraviese la
+estructura del DOM es una operación costosa, y cuanto más se pueda
+reducir el alcance de tu búsqueda, mejor.
 
 ## Relative Locators
 
-**Selenium 4**는 Relative Locators, 또는 _Friendly Locators_를 지원합니다. 이 기능은 다른 element 근처에 있는 element를 검색할 때 도움이 됩니다.
-
-사용가능한 Relative Locators들은 다음과 같습니다:
+**Selenium 4** brings Relative Locators which are previously
+called as _Friendly Locators_. This functionality was
+added to help you locate elements that are nearby other elements.
+The Available Relative Locators are:
 
 * *above*
 * *below*
@@ -165,34 +212,43 @@ Locator들을 최대한 가독성 있고 간단하게 유지하는 것을 추천
 * *toRightOf*
 * *near*
 
-_findElement_ 메소드는 또다른 메소드 `withTagName()` 를 받습니다. 이 메소드는 Relative Locator를 반환합니다.
+_findElement_ method now accepts a new method `withTagName()`
+which returns a RelativeLocator.
 
-### 어떻게 작동하는가
+### How does it work
 
-셀레니움은 자바스크립트 함수 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) 를 사용해서 releative element를 찾습니다. 이 함수는 right(오른쪽), left(왼쪽), bottom(아래), top(위)와 같은 element의 속성들을 반환합니다.
+Selenium uses the JavaScript function
+[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+to find the relative elements. This function returns
+properties of an element such as
+right, left, bottom, and top.
 
-아래 사진을 예시로 relative locator에 대해 알아봅시다.
+Let us consider the below example for understanding the relative locators.
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
 ### above()
 
-특정 element 위의 WebElement를 반환합니다.
+Returns the WebElement, which appears
+above to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement passwordField= driver.findElement(By.id("password"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 passwordField = driver.find_element(By.ID, "password")
 emailAddressField = driver.find_element(with_tag_name("input").above(passwordField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement passwordField = driver.FindElement(By.Id("password"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Above(passwordField));
@@ -214,22 +270,26 @@ val emailAddressField = driver.findElement(withTagName("input").above(passwordFi
 
 ### below()
 
-특정 element 아래의 WebElement를 반환합니다.
+Returns the WebElement, which appears
+below to the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement emailAddressField= driver.findElement(By.id("email"));
 WebElement passwordField = driver.findElement(withTagName("input")
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;  
+
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
 IWebElement passwordField = driver.FindElement(WithTagName("input")
                                                .Below(emailAddressField));
@@ -251,23 +311,27 @@ val passwordField = driver.findElement(withTagName("input").below(emailAddressFi
 
 ### toLeftOf()
 
-특정 element 왼쪽의 WebElement를 반환합니다.
+Returns the WebElement, which appears
+to left of specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement submitButton= driver.findElement(By.id("submit"));
 WebElement cancelButton= driver.findElement(withTagName("button")
                                             .toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 submitButton = driver.find_element(By.ID, "submit")
 cancelButton = driver.find_element(with_tag_name("button").
                                    to_left_of(submitButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
 IWebElement cancelButton = driver.FindElement(WithTagName("button")
                                               .LeftOf(submitButton));
@@ -289,23 +353,27 @@ val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton
 
 ### toRightOf()
 
-특정 element 오른쪽의 WebElement를 반환합니다.
+Returns the WebElement, which appears
+to right of the specified element
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement cancelButton= driver.findElement(By.id("cancel"));
 WebElement submitButton= driver.findElement(withTagName("button")
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 cancelButton = driver.find_element(By.ID, "cancel")
 submitButton = driver.find_element(with_tag_name("button").
                                    to_right_of(cancelButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
 IWebElement submitButton = driver.FindElement(WithTagName("button")
                                               .RightOf(cancelButton));
@@ -326,23 +394,27 @@ val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButto
 
 ### near()
 
-특정 element의 최대 50px 근처의 WebElement를 반환합니다.
+Returns the WebElement, which is
+at most `50px` away from the specified element.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
-emailAddressLabel = driver.find_element(By.ID, "lbl-email")  
+from selenium.webdriver.support.relative_locator import with_tag_name
+
+emailAddressLabel = driver.find_element(By.ID, "lbl-email")
 emailAddressField = driver.find_element(with_tag_name("input").
                                        near(emailAddressLabel))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Near(emailAddressLabel));

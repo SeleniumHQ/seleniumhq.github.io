@@ -224,6 +224,7 @@ fun main() {
   {{< / code-panel >}}
 {{< / code-tab >}}
 
+
 ## Encontrar Elemento a partir do Elemento
 
 É usado para localizar um elemento filho dentro do contexto do elemento
@@ -561,16 +562,16 @@ retorna **False**.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-  //navigates to url 
+  //navigates to url
   driver.get("https://www.google.com/");
-  
+
   //returns true if element is enabled else returns false
   boolean value = driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("http://www.google.com")
-   
+
 # Returns true if element is enabled else returns false
 value = driver.find_element(By.NAME, 'btnK').is_enabled()
   {{< / code-panel >}}
@@ -599,9 +600,9 @@ await driver.get('https://www.google.com');
 let element =  await driver.findElement(By.name("btnK")).isEnabled();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.google.com/")
- 
+
  //returns true if element is enabled else returns false
  val attr = driver.findElement(By.name("btnK")).isEnabled()
   {{< / code-panel >}}
@@ -620,9 +621,9 @@ Retorna um valor booleano, **true** se o elemento referenciado for
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes");
-  
+
  //returns true if element is checked else returns false
  boolean value = driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected();
   {{< / code-panel >}}
@@ -636,7 +637,7 @@ value = driver.find_element(By.CSS_SELECTOR, "input[type='checkbox']:first-of-ty
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/checkboxes");
-  
+
 // Returns true if element ins checked else returns false
 bool value = driver.FindElement(By.CssSelector("input[type='checkbox']:last-of-type")).Selected;
   {{< / code-panel >}}
@@ -655,9 +656,9 @@ await driver.get('https://the-internet.herokuapp.com/checkboxes');
 let res = await driver.findElement(By.css("input[type='checkbox']:last-of-type")).isSelected();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://the-internet.herokuapp.com/checkboxes")
- 
+
  //returns true if element is checked else returns false
  val attr =  driver.findElement(By.cssSelector("input[type='checkbox']:first-of-type")).isSelected()
   {{< / code-panel >}}
@@ -670,7 +671,7 @@ do elemento referenciado que tem o foco no contexto de navegação atual.
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com");
 
  //returns TagName of the element
@@ -686,7 +687,7 @@ attr = driver.find_element(By.CSS_SELECTOR, "h1").tag_name
   {{< code-panel language="csharp" >}}
 // Navigate to Url
 driver.Navigate().GoToUrl("https://www.example.com");
-  
+
 // Returns TagName of the element
 string attr = driver.FindElement(By.CssSelector("h1")).TagName;
   {{< / code-panel >}}
@@ -705,9 +706,9 @@ await driver.get('https://www.example.com');
 let value = await driver.findElement(By.css('h1')).getTagName();
   {{< / code-panel >}}
   {{< code-panel language="kotlin" >}}
- //navigates to url 
+ //navigates to url
  driver.get("https://www.example.com")
- 
+
  //returns TagName of the element
  val attr =  driver.findElement(By.cssSelector("h1")).getTagName()
   {{< / code-panel >}}
@@ -738,7 +739,7 @@ System.out.println(res.getX());
   {{< code-panel language="python" >}}
 # Navigate to url
 driver.get("https://www.example.com")
-    
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(By.CSS_SELECTOR, "h1").rect
   {{< / code-panel >}}
@@ -755,7 +756,7 @@ System.Console.WriteLine(res.Size);
   {{< code-panel language="ruby" >}}
 # Navigate to url
 driver.get 'https://www.example.com'
-  
+
 # Returns height, width, x and y coordinates referenced element
 res = driver.find_element(css: "h1").rect
   {{< / code-panel >}}

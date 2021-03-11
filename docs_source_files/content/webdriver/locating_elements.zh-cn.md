@@ -1,22 +1,22 @@
 ---
-title: "要素を探す"
+title: "定位元素"
 weight: 3
 ---
 
+### 定位元素
 
-### 一つの要素を探す
-
-ページ上で要素を探す方法は、WebDriverを使う上で最初に学ばなければならない技術です。WebDriverは多数のセレクタを標準で用意しています。その中で、id属性を使って要素を探す方法が次のコードです。
+使用 WebDriver 时要学习的最基本的技术之一是如何查找页面上的元素。
+WebDriver 提供了许多内置的选择器类型，其中包括根据 id 属性查找元素:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-WebElement cheese = driver.findElement(By.id("cheese"));  
+WebElement cheese = driver.findElement(By.id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
 driver.find_element(By.ID, "cheese")
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-IWebElement element = driver.FindElement(By.Id("cheese"));  
+IWebElement element = driver.FindElement(By.Id("cheese"));
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
 cheese = driver.find_element(id: 'cheese')
@@ -29,12 +29,13 @@ val cheese: WebElement = driver.findElement(By.id("cheese"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-例を見ての通り、WebDriverで要素を特定するには、`WebDriver`クラスのインスタンスを使います。`findElement(By)`メソッドは`WebElement`という別の基本的なオブジェクトを返します。
+如示例所示，在 WebDriver 中定位元素是在 `WebDriver` 实例对象上完成的。
+ `findElement(By)` 方法返回另一个基本对象类型 `WebElement`。
 
-* `WebDriver`はブラウザをあらわす
-* `WebElement`は特定のDOMノード（コントロール、例えばリンクやインプットフィールドなど）をあらわす
+* `WebDriver` 代表浏览器
+* `WebElement` 表示特定的 DOM 节点（控件，例如链接或输入栏等）
 
-一度「見つかった」Web要素への参照を取得すれば、そのインスタンスで同じメソッドを呼ぶことで検索の範囲を狭めることができます。
+一旦你已经找到一个元素的引用，你可以通过对该对象实例使用相同的调用来缩小搜索范围：
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -63,19 +64,12 @@ val cheddar = cheese.findElement(By.id("cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-これは _WebDriver_ と _WebElement_ クラスの両方が[_SearchContext_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html)インターフェイスを実装しているため可能になっています。
-これはWebDriverでは _ロールベースインターフェイス (role-based interface)_ と呼ばれています。
-ロールベースインターフェイスは、どのドライバー実装がどの機能をサポートしているかどうかを判断する助けになります。これらのインターフェイスは明確に定義され、単一の役割の責任のみを持つことを守っています。
-WebDriverの設計と、どんな役割がどのドライバでサポートされているかは[Some Other Section Which Must Be Named](#)で読むことができます。
+你可以这样做是因为， _WebDriver_ 和 _WebElement_ 类型都实现了 [_搜索上下文_](//seleniumhq.github.io/selenium/docs/api/java/org/openqa/selenium/SearchContext.html) 接口。在 WebDriver 中，这称为 _基于角色的接口_。基于角色的接口允许你确定特定的驱动程序实现是否支持给定的功能。这些接口定义得很清楚，并且尽量只承担单一的功能。你可以阅读更多关于 WebDriver 的设计，以及在 WebDriver 中有哪些角色被支持，在[其他被命名的部分](#)。
 <!-- TODO: A new section needs to be created for the above.-->
 
-その結果、 上で使っていた _By_ インターフェイスはいくつものロケータストラテジをサポートしています。
-ネストした探索はcheeseを探す方法としてもっとも効率的なものではないかもしれません。
-なぜなら、この方法は二つに分割されたコマンドをブラウザに発行するからです。具体的には、まずDOMから"cheese"というidの要素を探し出し、それから狭まった範囲で"cheddar"という要素を探しています。
+因此，上面使用的 _By_ 接口也支持许多附加的定位器策略。嵌套查找可能不是最有效的定位 cheese 的策略，因为它需要向浏览器发出两个单独的命令：首先在 DOM 中搜索 id 为“cheese”的元素，然后在较小范围的上下文中搜索“cheddar”。
 
-パフォーマンスをわずかに向上させるために、より効果的なロケータを使ってみましょう。
-WebDriverはCSSロケータによる要素の探索をサポートしています。
-これは先ほどの二つのロケータを1回の検索に組み合わせることができます。
+为了稍微提高性能，我们应该尝试使用一个更具体的定位器：WebDriver 支持通过 CSS 定位器查找元素，我们可以将之前的两个定位器合并到一个搜索里面:
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -98,9 +92,9 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### 複数の要素を探す
+### 定位多个元素
 
-今作業しているドキュメントに、私たちが一番好きなチーズについての順序付きリストがあるとします。
+我们正在处理的文本中可能会有一个我们最喜欢的奶酪的订单列表：
 
 ```html
 <ol id=cheese>
@@ -111,11 +105,7 @@ driver.findElement(By.cssSelector("#cheese #cheddar"))
 </ol>
 ```
 
-チーズがたくさんある方が良いのは疑いの余地がなく、また一個一個取らなければなければならないのは面倒です。
-なので、チーズを取得する上位のテクニックは、複数形の`findElements(By)`を使うことです。
-このメソッドはWeb要素のコレクションを返します。
-もし一つの要素しか見つからなかった場合も、（一つの要素だけの）コレクションを返します。
-もしロケータにマッチする要素が一つもなかった場合は、空のリストが返ります。
+因为有更多的奶酪无疑是更好的，但是单独检索每一个项目是很麻烦的，检索奶酪的一个更好的方式是使用复数版本 `findElements(By)` 。此方法返回 web 元素的集合。如果只找到一个元素，它仍然返回(一个元素的)集合。如果没有元素被定位器匹配到，它将返回一个空列表。
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
@@ -138,81 +128,78 @@ val muchoCheese: List<WebElement>  = driver.findElements(By.cssSelector("#cheese
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### 要素選択の方法
+### 元素选择策略
 
-WebDriverには標準のロケータが8種類あります。
+在 WebDriver 中有 8 种不同的内置元素定位策略：
 
-| ロケータ | 詳細 |
+| 定位器 Locator | 描述 |
 | -------- | ---------- |
-| class name | class名に値を含む要素を探す (複合クラス名は使えない) |
-| css selector | CSSセレクタが一致する要素を探す |
-| id | id属性が一致する要素を探す |
-| name | name属性が一致する要素を探す |
-| link text | a要素のテキストが一致する要素を探す|
-| partial link text | a要素のテキストが部分一致する要素を探す |
-| tag name | タグ名が一致する要素を探す |
-| xpath | XPathと一致する要素を探す |
+| class name | 定位class属性与搜索值匹配的元素（不允许使用复合类名） |
+| css selector | 定位 CSS 选择器匹配的元素 |
+| id | 定位 id 属性与搜索值匹配的元素 |
+| name | 定位 name 属性与搜索值匹配的元素 |
+| link text | 定位link text可视文本与搜索值完全匹配的锚元素 |
+| partial link text | 定位link text可视文本部分与搜索值部分匹配的锚点元素。如果匹配多个元素，则只选择第一个元素。 |
+| tag name | 定位标签名称与搜索值匹配的元素 |
+| xpath | 定位与 XPath 表达式匹配的元素 |
 
-### セレクタを使うときのコツ
+### 使用选择器的提示
 
-一般に、HTMLのid属性が利用可能でユニークかつ一貫している場合、ページで要素を探す方法として適しています。
-idは動作がとても速い傾向があり、複雑なDOMトラバースに伴う処理を省略できます。
+一般来说，如果 HTML 的 id 是可用的、唯一的且是可预测的，那么它就是在页面上定位元素的首选方法。它们的工作速度非常快，可以避免复杂的 DOM 遍历带来的大量处理。
 
-ユニークなidが使えない場合、きれいに書かれたCSSセレクタが要素を探す方法として適しています。
-XPathはCSSセレクタと同様に動作しますが、シンタックスは複雑で大抵の場合デバッグが困難です。
-XPathはとても柔軟ですが、ブラウザベンダは性能テストを通常行っておらず、非常に動作が遅い傾向があります。
+如果没有唯一的 id，那么最好使用写得好的 CSS 选择器来查找元素。XPath 和 CSS 选择器一样好用，但是它语法很复杂，并且经常很难调试。尽管 XPath 选择器非常灵活，但是他们通常未经过浏览器厂商的性能测试，并且运行速度很慢。
 
-link textセレクタとpartial _linkText_ セレクタはa要素でしか動作しないという欠点があります。
-加えて、これらはWebDriverの内部でXPathの呼び出しに置き換えられます。
+基于链接文本和部分链接文本的选择策略有其缺点，即只能对链接元素起作用。此外，它们在 WebDriver 内部调用 XPath 选择器。
 
-タグ名によるロケータは危険な方法になり得ます。
-大抵の場合ページ上には同じタグ名の要素が複数あります。タグ名は要素のコレクションを返す _findElements(By)_ メソッドを使う時にもっとも役に立ちます。
+标签名可能是一种危险的定位元素的方法。页面上经常出现同一标签的多个元素。这在调用 _findElements(By)_ 方法返回元素集合的时候非常有用。
 
-ロケータは可能な限り簡潔に、読みやすい状態を保つことを推奨します。
-WebDriverでDOM構造のトラバースを行うのは重い処理となります。
-検索の範囲を狭めた方がより良い結果を得られます。
+建议您尽可能保持定位器的紧凑性和可读性。使用 WebDriver 遍历 DOM 结构是一项性能花销很大的操作，搜索范围越小越好。
 
-## レラティブ（相対）ロケーター
+## 相对定位
 
-**Selenium 4** は、以前は _Friendly Locators_ と呼ばれていたレラティブ ロケーターをもたらします。
-この機能は、他の要素の近くにある要素を見つけるのに役立つように追加されました。
-使用可能なレラティブ ロケーターは次のとおりです。
+在**Selenium 4**中带来了相对定位这个新功能，在以前的版本中被称之为"好友定位 (Friendly Locators)"。
+它可以帮助你通过某些元素作为参考来定位其附近的元素。
+现在可用的相对定位有：
 
-* *above*
-* *below*
-* *toLeftOf*
-* *toRightOf*
-* *near*
+* *above* 元素上
+* *below* 元素下
+* *toLeftOf* 元素左
+* *toRightOf* 元素右
+* *near* 附近
 
-_findElement_ メソッドは、レラティブ ロケーター を返す新しいメソッド `withTagName（）` を受け入れるようになりました。
+_findElement_ 方法现在支持`witTagName()`新方法其可返回RelativeLocator相对定位对象。
 
-### どのように機能するか
+### 如何工作
 
-Seleniumは、JavaScript関数 [getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) を使用して相対要素を見つけます。
-この関数は、right、left、bottom、topなどの要素のプロパティを返します。
+Selenium是通过使用JavaScript函数
+[getBoundingClientRect()](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+来查找相对元素的。这个函数能够返回对应元素的各种属性例如：右，左，下，上。
 
-レラティブ ロケーターを理解するために、以下の例を考えてみましょう。
+通过下面的例子我们来理解一下关于相对定位的使用
 
 ![Relative Locators](/images/relative_locators.png?width=400px)
 
-### above()
+### above() 元素上
 
-指定された要素の上に表示されるWebElementを返します。
+返回当前指定元素位置上方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement passwordField= driver.findElement(By.id("password"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .above(passwordField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 passwordField = driver.find_element(By.ID, "password")
 emailAddressField = driver.find_element(with_tag_name("input").above(passwordField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement passwordField = driver.FindElement(By.Id("password"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Above(passwordField));
@@ -232,24 +219,28 @@ val emailAddressField = driver.findElement(withTagName("input").above(passwordFi
 {{< / code-tab >}}
 
 
-### below()
+### below() 元素下
 
-指定された要素の下に表示されるWebElementを返します。
+返回当前指定元素位置下方的WebElement对象
+
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement emailAddressField= driver.findElement(By.id("email"));
 WebElement passwordField = driver.findElement(withTagName("input")
 	                                          .below(emailAddressField));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 emailAddressField = driver.find_element(By.ID, "email")
 passwordField = driver.find_element(with_tag_name("input").below(emailAddressField))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;  
+using static OpenQA.Selenium.RelativeBy;  
+
 IWebElement emailAddressField = driver.FindElement(By.Id("email"));
 IWebElement passwordField = driver.FindElement(WithTagName("input")
                                                .Below(emailAddressField));
@@ -269,25 +260,28 @@ val passwordField = driver.findElement(withTagName("input").below(emailAddressFi
 {{< / code-tab >}}
 
 
-### toLeftOf()
+### toLeftOf() 元素左
 
-指定された要素の左側に表示されるWebElementを返します。
+返回当前指定元素位置左方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement submitButton= driver.findElement(By.id("submit"));
 WebElement cancelButton= driver.findElement(withTagName("button")
-                                            .toLeftOf(submitButton));   
+                                            .toLeftOf(submitButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 submitButton = driver.find_element(By.ID, "submit")
 cancelButton = driver.find_element(with_tag_name("button").
                                    to_left_of(submitButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement submitButton = driver.FindElement(By.Id("submit"));
 IWebElement cancelButton = driver.FindElement(WithTagName("button")
                                               .LeftOf(submitButton));
@@ -307,25 +301,28 @@ val cancelButton= driver.findElement(withTagName("button").toLeftOf(submitButton
 {{< / code-tab >}}
 
 
-### toRightOf()
+### toRightOf() 元素右
 
-指定された要素の右側に表示されるWebElementを返します。
+返回当前指定元素位置右方的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement cancelButton= driver.findElement(By.id("cancel"));
 WebElement submitButton= driver.findElement(withTagName("button")
                                             .toRightOf(cancelButton));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
+from selenium.webdriver.support.relative_locator import with_tag_name
+
 cancelButton = driver.find_element(By.ID, "cancel")
 submitButton = driver.find_element(with_tag_name("button").
                                    to_right_of(cancelButton))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement cancelButton = driver.FindElement(By.Id("cancel"));
 IWebElement submitButton = driver.FindElement(WithTagName("button")
                                               .RightOf(cancelButton));
@@ -344,25 +341,28 @@ val submitButton= driver.findElement(withTagName("button").toRightOf(cancelButto
   {{< / code-panel >}}
 {{< / code-tab >}}
 
-### near()
+### near() 附近
 
-指定した要素から最大 `50px` 離れたWebElementを返します。
+返回当前指定元素位置附近大约`px50`50像素的WebElement对象
 
 {{< code-tab >}}
   {{< code-panel language="java" >}}
-//import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+import static org.openqa.selenium.support.locators.RelativeLocator.withTagName;
+
 WebElement emailAddressLabel= driver.findElement(By.id("lbl-email"));
 WebElement emailAddressField = driver.findElement(withTagName("input")
                                                   .near(emailAddressLabel));
   {{< / code-panel >}}
   {{< code-panel language="python" >}}
-#from selenium.webdriver.support.relative_locator import with_tag_name
-emailAddressLabel = driver.find_element(By.ID, "lbl-email") 
+from selenium.webdriver.support.relative_locator import with_tag_name
+
+emailAddressLabel = driver.find_element(By.ID, "lbl-email")
 emailAddressField = driver.find_element(with_tag_name("input").
                                        near(emailAddressLabel))
   {{< / code-panel >}}
   {{< code-panel language="csharp" >}}
-//using static OpenQA.Selenium.RelativeBy;
+using static OpenQA.Selenium.RelativeBy;
+
 IWebElement emailAddressLabel = driver.FindElement(By.Id("lbl-email"));
 IWebElement emailAddressField = driver.FindElement(WithTagName("input")
                                                    .Near(emailAddressLabel));

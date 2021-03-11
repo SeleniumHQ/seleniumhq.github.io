@@ -9,7 +9,7 @@ meets the customer expectations and requirements.
 This type of testing generally involves the customer's 
 cooperation or feedback, being a validation activity that
 answers the question:
->Are we building the **_right_** product?.
+>Are we building the **_right_** product?
 
 For web applications, the automation of this testing can be done
 directly with Selenium by simulating user expected behaviour.
@@ -22,10 +22,10 @@ which some people might also refer to.
 This type of testing is done to determine if a
 feature or system functions properly without issues. It checks
 the system at different levels to ensure that all scenarios
-are covered and that the system does _what's_ 
+are covered and that the system does _what_ it's 
 supposed to do. It's a verification activity that
 answers the question:
->Are we building the product **_right?_**.
+>Are we building the product **_right?_**
              
 This generally includes: the tests work without errors 
 (404, exceptions...), in a usable way (correct redirections),   
