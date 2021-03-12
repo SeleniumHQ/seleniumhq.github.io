@@ -2,40 +2,40 @@
 title: "配置自己的服务网格"
 weight: 2
 ---
+ 
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Chinese. Do you speak Chinese? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
-
-## Different Modes of Grid setup in Selenium 4:
-* Standalone
-* Hub and Node
-* Distributed
+## Selenium 4中不同的网格设置模式:
+* 单机
+* Hub和Node
+* 分布式
 * Docker
 
-## Standalone Mode:
-The new Selenium Server Jar contains everything you'd need to run a grid. It is also the easiest mode to spin up a Selenium Grid. By default the server will be listening on http://localhost:4444, and that's the URL you should point your RemoteWebDriver tests. The server will detect the available drivers that it can use from the System PATH
+## 单机模式:
+新的Selenium服务器Jar
+包含运行网格所需的全部内容.
+这也是最简单的模式来玩转Selenium网格.
+默认情况下, 服务器将监听http://localhost:4444, 
+这是您应该指向的RemoteWebDriver测试URL.
+服务器将从系统路径中检测可用的驱动程序.
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar standalone
 ```
 
-## Hub and Node Mode:
+## Hub和Node模式:
 
-### Start the Hub:
+### 启动Hub:
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar hub
 ```
 
-### Register a Node:
+### 注册Node:
 
 ```shell
 java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
 ```
 
-### Query Selenium Grid:
+### 查询Selenium网格:
 
 In Selenium 4, we've added GraphQL, a new way to query the necessary data easily and get exactly the same.
 
@@ -44,53 +44,61 @@ curl -X POST -H "Content-Type: application/json" --data '{ "query": "{grid{uri}}
 ```
 <br><br>
 
-## Distributed Mode:
+## 分布式模式:
 
-* Step 1: Firstly, start the Event Bus, it serves as a communication path to other Grid components in subsequent steps.
+* 第1步: 首先, 启动事件总线,  
+  它在后续步骤中充当到其他网格组件的通信路径.
 
     ```shell
     java -jar selenium-server-4.0.0-alpha-7.jar  event-bus
     ```
 
-* Step 2: Start the session map, which is responsible for mapping session IDs to the node the session is running on:
+* 第2步: 启动会话映射,
+  其负责将会话ID到会话运行节点的映射.
         
     ```shell 
         java -jar selenium-server-4.0.0-alpha-7.jar sessions
     ```
 
-* Step 3: Start the new session queuer, it adds the new session request to a local queue. The distributor picks up the request from the queue.
+* 第3步: 启动新的会话队列,
+  它将新的会话请求添加到本地队列中.
+  分发服务器从队列中接收请求.
         
     ```shell 
         java -jar selenium-server-4.0.0-alpha-7.jar sessionqueuer
     ```
 
-* Step 4: Start the Distributor. All the nodes are attached as part of Distributor process. It is responsible for assigning a node, when a create session request in invoked.
+* 第4步: 启动分配器.
+  所有节点都附加到发进程上, 作为其组成的一部分,
+  负责在会话的创建时分配节点.
 
     ```shell 
         java -jar selenium-server-4.0.0-alpha-7.jar distributor --sessions http://localhost:5556 --sessionqueuer http://localhost:5559 --bind-bus false
     ```
 
-* Step 5: Next step is to start the Router, an address that you'd expose to web
+* 第5步:下一步是启动路由器,
+  你将暴露给网络一个地址.
 
     ```shell 
         java -jar selenium-server-4.0.0-alpha-7.jar router --sessions http://localhost:5556 --distributor http://localhost:5553 --sessionqueuer http://localhost:5559
     ```
 
-* Step 6: Finally, add a Node
+* 第6步: 最终，添加节点.
 
     ```shell 
         java -jar selenium-server-4.0.0-alpha-7.jar node --detect-drivers
     ```
 
-## Start Standalone Grid via Docker Images
+## 通过Docker映像启动独立网格
 
-  You can just start a node by the following command:
+您可以通过以下命令启动一个节点:
       
 ```shell 
     java -jar selenium-server-4.0.0-alpha-7.jar node -D selenium/standalone-firefox:latest '{"browserName": "firefox"}'
 ```
 
-  You can start the Selenium server and delegate it to docker for creating new instances:
+您可以启动Selenium服务器
+并将其委托给docker以创建新实例:
       
 ```shell 
      java -jar selenium-server-4.0.0-alpha-7.jar standalone -D selenium/standalone-firefox:latest '{"browserName": "firefox"}' --detect-drivers false
