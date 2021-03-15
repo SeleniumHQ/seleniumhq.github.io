@@ -91,9 +91,9 @@ driver = Selenium::WebDriver.for :chrome
 
 begin
   # Latitude and longitude of Tokyo, Japan
-  coordinates = { 'latitude': 35.689487,
-                  'longitude': 139.691706,
-                  'accuracy': 100 }
+  coordinates = { latitude: 35.689487,
+                  longitude: 139.691706,
+                  accuracy: 100 }
   driver.execute_cdp('Emulation.setGeolocationOverride', coordinates)
   driver.get 'https://www.google.com/search?q=selenium'
 ensure
