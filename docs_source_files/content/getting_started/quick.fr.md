@@ -29,13 +29,11 @@ d'apprentissage de la syntaxe du script Selenium.
 
 ## Grid
 
-Selenium Grid allows you to run test cases in different 
-machines across different platforms. The control of 
-triggering the test cases is on the local end, and 
-when the test cases are triggered, they are automatically 
-executed by the remote end.
+Selenium Grid vous permet de lancer des tests dans différentes 
+machines et depuis différentes plateformes. Le lancement des tests
+se fait en local, et une fois les tests lancés, ils sont automatiquement
+exécutés sur le serveur distant.
 
-After the development of the WebDriver tests, you may face 
-the need of running your tests on multiple browser and 
-operating system combinations.
-This is where _[Grid]({{< ref "/grid/_index.md" >}})_ comes into the picture.
+Après le développement des tests WebDriver, vous pouvez être confronté
+à la nécessité de lancer vos tests sur toutes combinaisons de navigateurs et systèmes d'exploitation.
+C'est là que _[Grid]({{< ref "/grid/_index.md" >}})_ entre en scène.
