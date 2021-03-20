@@ -1,17 +1,9 @@
 ---
-title: "Legacy"
+title: "레거시"
 chapter: true
 weight: 12
 ---
 
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
+# 레거시
 
-# Legacy
-
-Under this section you can find all the documentation related to the legacy components of Selenium.
-This is meant to be kept purely for historical reasons and not as a incentive to use deprecated
-components. 
+이 섹션에는 Selenium의 레거시 항목에 관한 문서들이 있습니다. 이 문서들은 순전히 기록을 남기기 위한 용도로 작성된 것이며, 더 이상 사용되지 않는(deprecated) 컴포넌트들의 사용을 독려하기 위한 것이 아닙니다.
