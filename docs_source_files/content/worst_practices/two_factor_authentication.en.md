@@ -18,3 +18,4 @@ use those user credentials in the automation.
 * Disable 2FA in your test environment.
 * Disable 2FA if you login from certain IPs. That way we can configure our 
 test machine IPs to avoid this.
+* Use https://messages.google.com/web/ 
