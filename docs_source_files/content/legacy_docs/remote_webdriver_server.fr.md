@@ -1,6 +1,6 @@
 ---
 title: "Le serveur Remote WebDriver"
-weight: 1
+weight: 5
 ---
 
 Le serveur fonctionnera toujours sur la machine avec le navigateur que vous souhaitez

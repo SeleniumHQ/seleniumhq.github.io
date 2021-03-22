@@ -1,6 +1,6 @@
 ---
 title: "Remote WebDriver Server"
-weight: 1
+weight: 5
 ---
 
 Der Server wird immer auf der Maschine ausgeführt, der den gewünschten 

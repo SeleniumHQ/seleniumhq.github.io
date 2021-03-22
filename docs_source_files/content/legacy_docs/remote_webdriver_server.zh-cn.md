@@ -1,6 +1,6 @@
 ---
 title: "远程WebDriver服务器"
-weight: 1
+weight: 5
 ---
 
 服务器将始终在安装了待测浏览器的机器上运行. 
