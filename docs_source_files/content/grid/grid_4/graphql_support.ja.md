@@ -106,7 +106,7 @@ GraphQL APIを呼び出すときは、スカラーのみを返すまでネスト
 GraphQLをクエリする最良の方法は、 `curl` リクエストを使用することです。
 GraphQLを使用すると、必要なデータのみをフェッチできます。それ以上でもそれ以下でもありません。
 
-Some of the example GraphQL queries are given below. You can build your own queries as you like.
+GraphQLクエリの例のいくつかを以下に示します。 必要に応じて独自のクエリを作成できます。
 
 ### グリッド内の `maxSession`と` sessionCount`の数を照会する
 
@@ -116,37 +116,37 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ grid { max
 
 通常、ローカルマシンでは、 `<LINK_TO_GRAPHQL_ENDPOINT>` は `http://localhost:4444/graphql` になります。
 
-### Querying all details for session, node and the Grid :
+### セッション、ノード、グリッドのすべての詳細を照会する
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { uri, maxSession, sessionCount }, nodesInfo { nodes { id, uri, status, sessions { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } }, slotCount, sessionCount }} }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the current session count in the Grid :
+### グリッドで現在のセッション数を取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionCount } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the max session count in the Grid :
+### グリッドで最大セッション数を取得するためのクエリ 
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { maxSession } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting all session details for all nodes in the Grid :
+### グリッド内のすべてのノードのすべてのセッションの詳細を取得するためのクエリ 
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, capabilities, startTime, uri, nodeId, nodeId, sessionDurationMillis } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get slot information for all sessions in each Node in the Grid :
+### グリッド内の各ノードのすべてのセッションのスロット情報を取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessions { id, slot { id, stereotype, lastStarted } } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query to get session information for a given session:
+### 特定のセッションのセッション情報を取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ session (id: "<session-id>") { id, capabilities, startTime, uri, nodeId, nodeUri, sessionDurationMillis, slot { id, stereotype, lastStarted } } } "}' -s <LINK_TO_GRAPHQL_ENDPOINT>
@@ -170,13 +170,13 @@ curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo 
 curl -X POST -H "Content-Type: application/json" --data '{"query": "{ nodesInfo { nodes { uri } } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the current requests in the New Session Queue:
+### 新しいセッションキューで現在のリクエストを取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ sessionsInfo { sessionQueueRequests } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
 ```
 
-### Query for getting the New Session Queue size :
+### 新しいセッションキューのサイズを取得するためのクエリ
 
 ```shell
 curl -X POST -H "Content-Type: application/json" --data '{"query":"{ grid { sessionQueueSize } }"}' -s <LINK_TO_GRAPHQL_ENDPOINT>
