@@ -220,3 +220,102 @@ val upload: WebElement = driver.findElement(By.id("myfile"))
 upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
   {{< / code-panel >}}
 {{< / code-tab >}}
+
+## Tracing client requests
+
+This feature is only available for Java client binding (Beta onwards). The Remote Webdriver client sends requests to the Selenium Grid server, which passes them to the WebDriver. Tracing should be enabled at the server and client-side to trace the HTTP requests end-to-end. Both ends should have a trace exporter setup pointing to the visualization framework. 
+By default, tracing is enabled for both client and server. 
+To set up the visualization framework Jaeger UI and Selenium Grid 4, please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for the desired version.
+
+For client-side setup, follow the steps below.
+
+### Beta 1 
+
+#### Add the required dependencies
+
+Installation of external libraries for tracing exporter can be done using Maven.
+Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+
+```xml
+  <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-exporter-jaeger</artifactId>
+      <version>0.14.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-netty</artifactId>
+      <version>1.34.1</version>
+    </dependency>
+``` 
+
+ 
+#### Add/pass the required system properties while running the client
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+
+System.setProperty("JAEGER_SERVICE_NAME", "selenium-java-client");
+System.setProperty("JAEGER_AGENT_HOST","localhost");
+System.setProperty("JAEGER_AGENT_PORT","14250");
+
+ImmutableCapabilities capabilities = new ImmutableCapabilities("browserName", "chrome");
+
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), capabilities);
+
+driver.get("http://www.google.com");
+
+driver.quit();
+
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+### Beta 2 onwards 
+
+#### Add the required dependencies
+
+Installation of external libraries for tracing exporter can be done using Maven.
+Add the _opentelemetry-exporter-jaeger_ and _grpc-netty_ dependency in your project pom.xml:
+
+```xml
+  <dependency>
+      <groupId>io.opentelemetry</groupId>
+      <artifactId>opentelemetry-exporter-jaeger</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>io.grpc</groupId>
+      <artifactId>grpc-netty</artifactId>
+      <version>1.35.0</version>
+    </dependency>
+``` 
+ 
+#### Add/pass the required system properties while running the client
+
+{{< code-tab >}}
+  {{< code-panel language="java" >}}
+System.setProperty("otel.traces.exporter", "jaeger");
+System.setProperty("otel.exporter.jaeger.endpoint", "http://localhost:14250");
+System.setProperty("otel.resource.attributes", "service.name=selenium-java-client");
+
+ImmutableCapabilities capabilities = new ImmutableCapabilities("browserName", "chrome");
+
+WebDriver driver = new RemoteWebDriver(new URL("http://www.example.com"), capabilities);
+
+driver.get("http://www.google.com");
+
+driver.quit();
+
+  {{< / code-panel >}}
+{{< / code-tab >}}
+
+Please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for more information on external dependencies versions required for the desired Selenium version.
+
+More information can be found at:
+
+* OpenTelemetry: https://opentelemetry.io
+* Configuring OpenTelemetry:
+    https://github.com/open-telemetry/opentelemetry-java/tree/main/sdk-extensions/autoconfigure
+* Jaeger: https://www.jaegertracing.io
+* [Selenium Grid Observability]({{< ref "grid/grid_4/advanced_features/observability.de.md" >}}) 
+
