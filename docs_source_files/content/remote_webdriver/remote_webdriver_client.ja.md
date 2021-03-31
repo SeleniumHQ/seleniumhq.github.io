@@ -213,7 +213,7 @@ upload.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg")
 
 ## Tracing client requests
 
-This feature is only available for Java client binding (Beta onwards). The Remote Webdriver client sends requests to the Selenium Grid server, which passes them to the web driver. Tracing should be enabled at the server and client-side to trace the HTTP requests end-to-end. Both ends should have a trace exporter setup pointing to the visualization framework. 
+This feature is only available for Java client binding (Beta onwards). The Remote Webdriver client sends requests to the Selenium Grid server, which passes them to the WebDriver. Tracing should be enabled at the server and client-side to trace the HTTP requests end-to-end. Both ends should have a trace exporter setup pointing to the visualization framework. 
 By default, tracing is enabled for both client and server. 
 To set up the visualization framework Jaeger UI and Selenium Grid 4, please refer to [Tracing Setup](https://github.com/SeleniumHQ/selenium/blob/selenium-4.0.0-beta-1/java/server/src/org/openqa/selenium/grid/commands/tracing.txt) for the desired version.
 
