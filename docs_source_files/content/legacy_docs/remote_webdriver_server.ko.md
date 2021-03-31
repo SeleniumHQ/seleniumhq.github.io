@@ -1,11 +1,11 @@
 ---
 title: "Remote WebDriver server"
-weight: 1
+weight: 5
 ---
 
 {{% notice info %}}
 <i class="fas fa-language"></i> Page being translated from 
-English to Dutch. Do you speak Dutch? Help us to translate
+English to Korean. Do you speak Korean? Help us to translate
 it by sending us pull requests!
 {{% /notice %}}
 
@@ -64,14 +64,13 @@ polluting the runtime environment.
 ## Configuring the server programmatically
 
 In theory, the process is as simple as mapping the `DriverServlet` to
-a URL, but it's also possible to host the page in a lightweight
-container, such as Jetty configured entirely in code. Steps to do this
-follow.
+a URL, but it is also possible to host the page in a lightweight
+container, such as Jetty, configured entirely in code.
 
 * Download the `selenium-server.zip` and unpack. 
 * Put the JARs on the CLASSPATH. 
-* Create a new class called `AppServer`. Here, I'm using
-Jetty, so you'll need to [download](//www.eclipse.org/jetty/download.html) 
+* Create a new class called `AppServer`. 
+Here, we are using Jetty, so you will need to [download](//www.eclipse.org/jetty/download.html) 
 that as well:
 
 ```java

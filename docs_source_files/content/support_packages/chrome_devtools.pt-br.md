@@ -75,7 +75,20 @@ namespace dotnet_test {
 }
   {{< / code-panel >}}
   {{< code-panel language="ruby" >}}
-# Please raise a PR to add code sample
+require 'selenium-webdriver'
+
+driver = Selenium::WebDriver.for :chrome
+
+begin
+  # Latitude and longitude of Tokyo, Japan
+  coordinates = { latitude: 35.689487,
+                  longitude: 139.691706,
+                  accuracy: 100 }
+  driver.execute_cdp('Emulation.setGeolocationOverride', coordinates)
+  driver.get 'https://www.google.com/search?q=selenium'
+ensure
+  driver.quit
+end
   {{< / code-panel >}}
   {{< code-panel language="javascript" >}}
 // Please raise a PR to add code sample  

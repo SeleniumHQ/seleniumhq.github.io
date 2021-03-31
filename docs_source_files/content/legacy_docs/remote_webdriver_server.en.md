@@ -1,13 +1,7 @@
 ---
 title: "Remote WebDriver server"
-weight: 1
+weight: 5
 ---
-
-{{% notice info %}}
-<i class="fas fa-language"></i> Page being translated from 
-English to Korean. Do you speak Korean? Help us to translate
-it by sending us pull requests!
-{{% /notice %}}
 
 The server will always run on the machine with the browser you want to
 test. The server can be used either from the command line or through code

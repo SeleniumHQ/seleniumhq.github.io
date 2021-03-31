@@ -1,6 +1,6 @@
 ---
 title: "WebDriver remoto - servidor"
-weight: 1
+weight: 5
 ---
 
 El servidor siempre se ejecutará en la máquina con el navegador que deseas
